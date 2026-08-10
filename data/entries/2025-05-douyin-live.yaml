@@ -1,0 +1,728 @@
+# 采集任务 #004 · 2025-05 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2025-05-03-live-01
+  type: live
+  date: "2025-05-03"
+  title: "女流66】狗头军师上暗，66带你开大金 2025/05/03 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ACGdzyEai"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-03-live-02
+  type: live
+  date: "2025-05-03"
+  title: "狗头军师上暗66带你开大金"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1G4VnzYESi"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Y4VnzaEaF"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-06-live-01
+  type: live
+  date: "2025-05-06"
+  title: "兔子先生的魔术秀"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1XqVmzzEe8"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-06-live-02
+  type: live
+  date: "2025-05-06"
+  title: "女流66】绣湖最新作，独立游戏动动脑，快坐 2025/05/06 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1kdVpznEkP"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-06-live-03
+  type: live
+  date: "2025-05-06"
+  title: "绣湖最新作独立游戏动动脑快坐"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1cEVmzXEPC"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1fHVmzSEYR"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-07-live-01
+  type: live
+  date: "2025-05-07"
+  title: "先挣钱1000W 然后帮水友圆梦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1T9V4zuEHH"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1szVtzqEQk"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-08-live-01
+  type: live
+  date: "2025-05-08"
+  title: "先挣钱1000W 然后帮水友圆梦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1U35AzkEGA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1VP5AzEE5t"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-09-live-01
+  type: live
+  date: "2025-05-09"
+  title: "FPS恐怖老手！"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1JX5VzxES8"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1D355zGEep"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-09-live-02
+  type: live
+  date: "2025-05-09"
+  title: "女流66】暗区突围pc，66带你摸大金~ 2025/05/09 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15655zpEYE"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-09-live-03
+  type: live
+  date: "2025-05-09"
+  title: "暗区突围pc，66带你摸大金"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Ja55zZE5Y"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1AN5LzKEef"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1PA5LzqEJJ"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-10-live-01
+  type: live
+  date: "2025-05-10"
+  title: "FPS恐怖老手！"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1xaVZz9EEq"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1b6VRzDEGH"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-11-live-01
+  type: live
+  date: "2025-05-11"
+  title: "实力不祥 遇强则强"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1CrEKzWE71"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1dcETz6Ev4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-13-live-01
+  type: live
+  date: "2025-05-13"
+  title: "别只知道吃 记得多看多学"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Hg7fzaEbb"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1av7fzLE5N"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-14-live-01
+  type: live
+  date: "2025-05-14"
+  title: "The Precinct 警区"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1qtEvzdEXV"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-14-live-02
+  type: live
+  date: "2025-05-14"
+  title: "什么游戏？让咱尝尝咸淡"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1QHEizUEMt"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1KhEizCEnQ"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1SWEiz7EL2"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-14-live-03
+  type: live
+  date: "2025-05-14"
+  title: "回归初心 超认真跑刀"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1mxEezMEEM"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1riEezhEmd"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-14-live-04
+  type: live
+  date: "2025-05-14"
+  title: "女流66】什么游戏？让咱尝尝咸淡 2025/05/14 17时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1KvEBzUEAG"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-15-live-01
+  type: live
+  date: "2025-05-15"
+  title: "回归初心 超认真跑刀"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1cVEkzJE5X"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1mBEkzwEBS"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-16-live-01
+  type: live
+  date: "2025-05-16"
+  title: "不要笑挑战 687423"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV11ZExz5Enp"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1kLEWzNEqY"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-16-live-02
+  type: live
+  date: "2025-05-16"
+  title: "女流66】燕云今天更新的凉州地图！玩玩看 2025/05/16 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV12JE8zdE6q"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-16-live-03
+  type: live
+  date: "2025-05-16"
+  title: "燕云今天更新的凉州地图！玩玩看"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1c2E4zrEPL"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1PqE4zmEpA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1xiE4zEET4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-17-live-01
+  type: live
+  date: "2025-05-17"
+  title: "不要笑挑战 687423"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ooJAzzE6a"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1KnJwzjEAr"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-17-live-02
+  type: live
+  date: "2025-05-17"
+  title: "什么游戏，让我尝尝咸淡"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1VhJNzKEXG"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1t9JwzXEVz"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV17eJwzqESe"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-17-live-03
+  type: live
+  date: "2025-05-17"
+  title: "女流66】什么游戏，让我尝尝咸淡~ 2025/05/17 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV12cJNzdEF9"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-18-live-01
+  type: live
+  date: "2025-05-18"
+  title: "超级无敌之灭一队吃两口直接走流"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV13kJuz5EC1"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1oMJgzxEQ5"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-20-live-01
+  type: live
+  date: "2025-05-20"
+  title: "新显卡+新显示器 = 无敌"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1p9JtzUEkJ"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1KxJbzoE7X"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-21-live-01
+  type: live
+  date: "2025-05-21"
+  title: "新显卡+新显示器 = 无敌"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1gzJzzZEuE"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1PmJqzyEm1"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-22-live-01
+  type: live
+  date: "2025-05-22"
+  title: "世界上最清晰的直播间"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV163JxzzEFP"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-22-live-02
+  type: live
+  date: "2025-05-22"
+  title: "什么游戏，让我尝尝咸淡"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1W6JHzPEUj"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV14hJHzgEzp"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV18tJHzGEE5"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-22-live-03
+  type: live
+  date: "2025-05-22"
+  title: "女流66】什么游戏，让我尝尝咸淡~ 2025/05/22 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV16AJHzbEn4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-22-live-04
+  type: live
+  date: "2025-05-22"
+  title: "新显卡+新显示器 = 无敌"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15SJ7zrEWj"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-23-live-01
+  type: live
+  date: "2025-05-23"
+  title: "回北京了，1点来"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV13vjEzFEWx"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1SEjJzfExf"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-24-live-01
+  type: live
+  date: "2025-05-24"
+  title: "超级恐怖 无敌疯狂"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV17vj4zwEgw"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1f5jtzeEcF"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-25-live-01
+  type: live
+  date: "2025-05-25"
+  title: "【双倍】我是一名跑刀主播吗？"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1fBjMzjE6g"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1SFjuzwEcd"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-25-live-02
+  type: live
+  date: "2025-05-25"
+  title: "女流66】重生之我是石国长公主，游戏：长安石之舞 2025/05/25 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WQjuz4Epq"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-25-live-03
+  type: live
+  date: "2025-05-25"
+  title: "重生之我是石国长公主游戏长安石之舞"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1dXjGzpEWw"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1AzjGzAEM3"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-26-live-01
+  type: live
+  date: "2025-05-26"
+  title: "女流66】重生之我是石国长公主，游戏：长安石之舞 2025/05/26 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1BajSzaECF"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-26-live-02
+  type: live
+  date: "2025-05-26"
+  title: "看看考试啥的"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1HAjUzYEn2"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV16sj1zDEhk"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-26-live-03
+  type: live
+  date: "2025-05-26"
+  title: "重生之我是石国长公主，游戏：长安石之舞"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Qwjmz5EGN"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1DMjmzgExE"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1kyj2zoE3q"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1XAjmzCEc3"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-27-live-01
+  type: live
+  date: "2025-05-27"
+  title: "了不起的恐怖炮"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1bwjRztEdQ"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV18RjQzsE2Z"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-28-live-01
+  type: live
+  date: "2025-05-28"
+  title: "【双倍】一天吃满1E计划 正式启动"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1XJjvz5EKG"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1T3jizzE1F"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-29-live-01
+  type: live
+  date: "2025-05-29"
+  title: "一天吃满1E计划 正式启动"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1uG7GzyESL"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1PhjyzZEYG"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-30-live-01
+  type: live
+  date: "2025-05-30"
+  title: "今天只有一个字 爆！"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV19f7nz5EGn"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1wn7JzpEiR"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-30-live-02
+  type: live
+  date: "2025-05-30"
+  title: "和壮壮cg玩玩老头环黑夜君临"
+  platform: douyin
+  confidence: high
+  games: [elden-ring]
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Du7WzLEiC"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1RF7WzHEdu"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-30-live-03
+  type: live
+  date: "2025-05-30"
+  title: "女流66】和壮壮cg玩玩老头环黑夜君临 2025/05/30 17时场"
+  platform: douyin
+  confidence: medium
+  games: [elden-ring]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Uv7sz7EQ5"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-31-live-01
+  type: live
+  date: "2025-05-31"
+  title: "女流66】玩老头环黑夜君临，队友壮壮cg 2025/05/31 18时场"
+  platform: douyin
+  confidence: medium
+  games: [elden-ring]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1TP7KzdEq4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-05-31-live-02
+  type: live
+  date: "2025-05-31"
+  title: "玩老头环黑夜君临队友壮壮cg"
+  platform: douyin
+  confidence: high
+  games: [elden-ring]
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1u67PzWE3y"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1KC7PzHEsq"
+      kind: replay
+  contributed_by: data-agent

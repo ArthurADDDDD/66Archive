@@ -1,0 +1,478 @@
+# 采集任务 #004 · 2026-07 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2026-07-02-live-01
+  type: live
+  date: "2026-07-02"
+  title: "Switch 2 最新节奏天国来啦！"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1LdTE6AE63"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1qRTr6wEww"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-02-live-02
+  type: live
+  date: "2026-07-02"
+  title: "和炮炮在永劫“经常见”"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV19ETn6KEdU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1aBT76dE9i"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Z4T76AEBc"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-02-live-03
+  type: live
+  date: "2026-07-02"
+  title: "永劫无间"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1o8T76cEY2"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1LYT76FEhB"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-02-live-04
+  type: live
+  date: "2026-07-02"
+  title: "节奏天国，点头准备开始啦"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV13rTb6WEeo"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-02-live-05
+  type: live
+  date: "2026-07-02"
+  title: "节奏天国：奇迹之星"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1YFTk6ZE9W"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1r1Tr6MEHe"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-03-live-01
+  type: live
+  date: "2026-07-03"
+  title: "节奏天国，点头准备开始啦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1nPMP6vEdc"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1QXTx67ExU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1SfTx6VEyX"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-03-live-02
+  type: live
+  date: "2026-07-03"
+  title: "节奏天国：奇迹之星"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1SATb6EEBN"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV19XTx67EAJ"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-04-live-01
+  type: live
+  date: "2026-07-04"
+  title: "画画躲猫猫"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV17GMP6FETb"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-04-live-02
+  type: live
+  date: "2026-07-04"
+  title: "节奏天国，点头准备开始啦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1F1MP6qEPR"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1AkMP6zEPo"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-04-live-03
+  type: live
+  date: "2026-07-04"
+  title: "节奏天国：奇迹之星"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WzMP6rEXM"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1xiMP6CE43"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-06-live-01
+  type: live
+  date: "2026-07-06"
+  title: "刺客信条：黑旗 记忆重置"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV191Td6eEus"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV13PT96REyv"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1n2TX6TEDC"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV162TX6TEQe"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1oXTX6AEcr"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-07-live-01
+  type: live
+  date: "2026-07-07"
+  title: "节奏天国，点头！"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1CSMh6UE7d"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1a5Ma6aEn3"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1hjMa6cEBt"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-07-live-02
+  type: live
+  date: "2026-07-07"
+  title: "节奏天国：奇迹之星"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1k3Mh6yEbA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1giMh6bE52"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-09-live-01
+  type: live
+  date: "2026-07-09"
+  title: "遗忘之海"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1SDMj6SEJJ"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-09-live-02
+  type: live
+  date: "2026-07-09"
+  title: "遗忘之海公测开门！和女流船长一起上船开荒"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1AVMH6pE7r"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1dnM76cEv5"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1o7M76AEih"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-10-live-01
+  type: live
+  date: "2026-07-10"
+  title: "遗忘之海"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1a2NE6HEMM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-10-live-02
+  type: live
+  date: "2026-07-10"
+  title: "遗忘之海公测开门！和女流船长一起上船开荒"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1UXNE67E5i"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ECNL6oE6h"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1P7Nj6eEsd"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-15-live-01
+  type: live
+  date: "2026-07-15"
+  title: "节奏天国今日通关"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1z3K56XENe"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV17DNB6nEL7"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1cpNz6bEMi"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-15-live-02
+  type: live
+  date: "2026-07-15"
+  title: "节奏天国：奇迹之星"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1tbNB6vEn7"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1XcNz6CEgx"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-16-live-01
+  type: live
+  date: "2026-07-16"
+  title: "鸣潮"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1XkKV6kEbK"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1enK562ESE"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-16-live-02
+  type: live
+  date: "2026-07-16"
+  title: "鸣潮3.5"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1f8KV6DEJG"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1dJK567E5w"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1zMK56REgX"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-18-live-01
+  type: live
+  date: "2026-07-18"
+  title: "鸣潮"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1foKN6cEmg"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-18-live-02
+  type: live
+  date: "2026-07-18"
+  title: "鸣潮3.5"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1qcKK6tEMW"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1xpKK6VE3o"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1p4KK66ETL"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-18-live-03
+  type: live
+  date: "2026-07-18"
+  title: "鸣潮演唱会"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1mJKK6LEBH"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-19-live-01
+  type: live
+  date: "2026-07-19"
+  title: "鸣潮"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1McKr6LEeu"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1XYKr6pEAa"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-19-live-02
+  type: live
+  date: "2026-07-19"
+  title: "鸣潮3.5"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1NyKt6BE4m"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ZJKr6wEko"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV16jKr6NE9J"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-26-live-01
+  type: live
+  date: "2026-07-26"
+  title: "风暴怕死队"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV127g96dEEz"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1RPg96vEzR"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Lcg96BEUp"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Xug96wEhR"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Qgg96hEvA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Qug96wE2v"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-07-27-live-01
+  type: live
+  date: "2026-07-27"
+  title: "风暴怕死队"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Md3A6QE3E"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV16K3w6TE5q"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1HP3w6BExU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1kP3w6BEw4"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1g13c6DEqU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1TR3c6yEPd"
+      kind: replay
+  contributed_by: data-agent

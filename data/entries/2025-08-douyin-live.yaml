@@ -1,0 +1,72 @@
+# 采集任务 #004 · 2025-08 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2025-08-02-live-01
+  type: live
+  date: "2025-08-02"
+  title: "和炮炮壮壮一家三口打矩阵"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1rChNz7ER3"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV11ohbzREXp"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-08-02-live-02
+  type: live
+  date: "2025-08-02"
+  title: "女流66】和炮炮壮壮一家三口打矩阵 2025/08/02 18时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1prhNzUE5h"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-08-07-live-01
+  type: live
+  date: "2025-08-07"
+  title: "女流66】战地666666666666666 2025/08/07 17时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15htBz9Eia"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-08-08-live-01
+  type: live
+  date: "2025-08-08"
+  title: "女流66】和炮炮一起远光84排位 2025/08/08 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1SZt2zTEGM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-08-10-live-01
+  type: live
+  date: "2025-08-10"
+  title: "女流66】玩游戏就是要开心嘛 2025/08/10 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1dEbKzvEvc"
+      kind: replay
+  contributed_by: data-agent
