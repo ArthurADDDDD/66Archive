@@ -1,0 +1,248 @@
+# 采集任务 #003 · 2017-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-11-04-live-01
+  type: live
+  date: "2017-11-04"
+  title: "小猫钓鱼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4066447"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-05-live-01
+  type: live
+  date: "2017-11-05"
+  title: "Castle Crusher 城堡毁灭者"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4067788"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-05-live-02
+  type: live
+  date: "2017-11-05"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4069473"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-06-live-01
+  type: live
+  date: "2017-11-06"
+  title: "66约冷冷双排吃鸡"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4069742"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-07-live-01
+  type: live
+  date: "2017-11-07"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4072119"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-10-live-01
+  type: live
+  date: "2017-11-10"
+  title: "绝地求生&amp; 超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4078341"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-11-live-01
+  type: live
+  date: "2017-11-11"
+  title: "绝地求生&amp;超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4079503"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-12-live-01
+  type: live
+  date: "2017-11-12"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4080881"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-13-live-01
+  type: live
+  date: "2017-11-13"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4082621"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-14-live-01
+  type: live
+  date: "2017-11-14"
+  title: "和班尼特福迪一起攻克难关"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4084862"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-15-live-01
+  type: live
+  date: "2017-11-15"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4086833"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-17-live-01
+  type: live
+  date: "2017-11-17"
+  title: "和班尼特福迪一起攻克难关&amp;超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4091308"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-18-live-01
+  type: live
+  date: "2017-11-18"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4093091"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-19-live-01
+  type: live
+  date: "2017-11-19"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4094419"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-21-live-01
+  type: live
+  date: "2017-11-21"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4098179"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-22-live-01
+  type: live
+  date: "2017-11-22"
+  title: "兔宝宝历险记&amp;超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4100187"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-23-live-01
+  type: live
+  date: "2017-11-23"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4102271"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-24-live-01
+  type: live
+  date: "2017-11-24"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4107292"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-25-live-01
+  type: live
+  date: "2017-11-25"
+  title: "超级马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4107286"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-11-26-live-01
+  type: live
+  date: "2017-11-26"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4107290"
+      kind: replay
+  contributed_by: data-agent

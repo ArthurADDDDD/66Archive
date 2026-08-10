@@ -1,0 +1,304 @@
+# 采集任务 #003 · 2023-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-06-01-live-01
+  type: live
+  date: "2023-06-01"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41503160"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-02-live-01
+  type: live
+  date: "2023-06-02"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41510625"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-05-live-01
+  type: live
+  date: "2023-06-05"
+  title: "Only UP"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41538892"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-06-live-01
+  type: live
+  date: "2023-06-06"
+  title: "Only UP"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41543907"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-07-live-01
+  type: live
+  date: "2023-06-07"
+  title: "Only UP"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41554820"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-09-live-01
+  type: live
+  date: "2023-06-09"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41564078"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-10-live-01
+  type: live
+  date: "2023-06-10"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41572175"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-11-live-01
+  type: live
+  date: "2023-06-11"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41585873"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-12-live-01
+  type: live
+  date: "2023-06-12"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41593078"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-13-live-01
+  type: live
+  date: "2023-06-13"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41599276"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-14-live-01
+  type: live
+  date: "2023-06-14"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41601809"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-16-live-01
+  type: live
+  date: "2023-06-16"
+  title: "冒险岛 枫之传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41624386"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-17-live-01
+  type: live
+  date: "2023-06-17"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41638441"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-18-live-01
+  type: live
+  date: "2023-06-18"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41638221"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-19-live-01
+  type: live
+  date: "2023-06-19"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41646301"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-20-live-01
+  type: live
+  date: "2023-06-20"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41651119"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-21-live-01
+  type: live
+  date: "2023-06-21"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41668166"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-22-live-01
+  type: live
+  date: "2023-06-22"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41669910"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-23-live-01
+  type: live
+  date: "2023-06-23"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41670789"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-24-live-01
+  type: live
+  date: "2023-06-24"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41681958"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-25-live-01
+  type: live
+  date: "2023-06-25"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41682260"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-26-live-01
+  type: live
+  date: "2023-06-26"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41690006"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-27-live-01
+  type: live
+  date: "2023-06-27"
+  title: "最终幻想XVI"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41698726"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-29-live-01
+  type: live
+  date: "2023-06-29"
+  title: "卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41715610"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-06-30-live-01
+  type: live
+  date: "2023-06-30"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41724303"
+      kind: replay
+  contributed_by: data-agent

@@ -1,0 +1,164 @@
+# 采集任务 #003 · 2019-07 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 13 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-07-02-live-01
+  type: live
+  date: "2019-07-02"
+  title: "Bossgard"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10379501"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-07-live-01
+  type: live
+  date: "2019-07-07"
+  title: "戏说封神第二十一期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10398603"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-07-live-02
+  type: live
+  date: "2019-07-07"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10399675"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-10-live-01
+  type: live
+  date: "2019-07-10"
+  title: "Sky Noon &amp;人类一败涂地"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10411735"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-12-live-01
+  type: live
+  date: "2019-07-12"
+  title: "Northgard"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10422318"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-14-live-01
+  type: live
+  date: "2019-07-14"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10442583"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-20-live-01
+  type: live
+  date: "2019-07-20"
+  title: "天下第一斗歌大会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10514048"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-21-live-01
+  type: live
+  date: "2019-07-21"
+  title: "天下第一斗歌大会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10513103"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-22-live-01
+  type: live
+  date: "2019-07-22"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10518584"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-26-live-01
+  type: live
+  date: "2019-07-26"
+  title: "2020东京奥运，66号选手请准备"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10591122"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-28-live-01
+  type: live
+  date: "2019-07-28"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10613129"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-29-live-01
+  type: live
+  date: "2019-07-29"
+  title: "天下第一斗歌大会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10634077"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-07-30-live-01
+  type: live
+  date: "2019-07-30"
+  title: "牧场物语，不种地是不可能的"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10646808"
+      kind: replay
+  contributed_by: data-agent

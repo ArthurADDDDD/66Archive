@@ -1,0 +1,259 @@
+# 采集任务 #003 · 2017-05 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 21 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-05-02-live-01
+  type: live
+  date: "2017-05-02"
+  title: "大周，还好么"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3671580"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-03-live-01
+  type: live
+  date: "2017-05-03"
+  title: "你写我猜"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3674258"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-04-live-01
+  type: live
+  date: "2017-05-04"
+  title: "今天不休息"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3677150"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-05-live-01
+  type: live
+  date: "2017-05-05"
+  title: "马里奥赛车"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3677716"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-06-live-01
+  type: live
+  date: "2017-05-06"
+  title: "小小噩梦"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3679707"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-07-live-01
+  type: live
+  date: "2017-05-07"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3686402"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-09-live-01
+  type: live
+  date: "2017-05-09"
+  title: "汐"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3688984"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-12-live-02
+  type: live
+  date: "2017-05-12"
+  title: "艾迪芬奇的记忆（What Remains of Edith Finch）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3694238"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-13-live-01
+  type: live
+  date: "2017-05-13"
+  title: "final station"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3696258"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-14-live-01
+  type: live
+  date: "2017-05-14"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3701247"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-15-live-01
+  type: live
+  date: "2017-05-15"
+  title: "final station"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3701252"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-16-live-01
+  type: live
+  date: "2017-05-16"
+  title: "final station"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3703278"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-17-live-01
+  type: live
+  date: "2017-05-17"
+  title: "死亡细胞(Dead Cells）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3706532"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-19-live-01
+  type: live
+  date: "2017-05-19"
+  title: "死亡细胞(Dead Cells）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3711692"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-20-live-01
+  type: live
+  date: "2017-05-20"
+  title: "核聚变2017电游嘉年华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3713948"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-21-live-01
+  type: live
+  date: "2017-05-21"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3718887"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-22-live-01
+  type: live
+  date: "2017-05-22"
+  title: "吕牛随缘演唱会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3724175"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-22-live-02
+  type: live
+  date: "2017-05-22"
+  title: "缺氧（Oxygen Not Included）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3719014"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-23-live-01
+  type: live
+  date: "2017-05-23"
+  title: "缺氧（Oxygen Not Included）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3755487"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-24-live-01
+  type: live
+  date: "2017-05-24"
+  title: "见证者（The Witness）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3740355"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-05-29-live-01
+  type: live
+  date: "2017-05-29"
+  title: "2017斗鱼嘉年华（武汉）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3740240"
+      kind: replay
+  contributed_by: data-agent

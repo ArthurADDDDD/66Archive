@@ -1,0 +1,297 @@
+# 女流66（石悦）各平台公开账号 + 录播搬运号盘点
+# 采集任务 #001 · 数据源盘点 · 2026-08-10（第二轮扩充：补档/搬运号深挖）
+# 说明：只收录已检索到公开信息源的账号；每个条目的 URL/日期均来自公开检索，未核实项一律省略或标低置信度。
+
+# ═══ 一、本人官方号 ═══
+
+- id: youku-official
+  platform: youku
+  name: "女流"
+  url: "https://i.youku.com/nvliu66"
+  role: official
+  active_from: "2010-05"
+  confidence: high
+  note: "账号身份确凿（2010-05-08 首条解说视频《小型单机游戏之迷画之塔》，见维基词条与多篇 2010 报道）。但 i.youku.com/nvliu66 现会 302 跳转到新主页系统（uid=UNzU1MTI5OTc2OA==），新主页显示 0 视频 0 粉丝，早期内容已不在公开页展示；2017-08 互联网存档仍可佐证原空间。已停更的具体日期未确认，故省略 active_to。"
+
+- id: bilibili-official
+  platform: bilibili
+  name: "女流66"
+  url: "https://space.bilibili.com/2304046"
+  role: official
+  active_from: "2016-07"
+  confidence: high
+  note: "官方号，粉丝约 60 万（2025-11 维基词条 59.5 万）。最早确认的官方投稿为 2016-07-04《Inside 全收集通关解说》（另见 2016-12-21《Event[0]》），实际开通可能更早。空间内含部分优酷期老内容的重传（如《风之旅人》第 1、3 部分仅 360P，见囿于厨房的猫的合集简介）。"
+
+- id: douyu-official
+  platform: douyu
+  name: "女流66"
+  url: "https://www.douyu.com/156277"
+  role: official
+  active_from: "2015-02"
+  active_to: "2023-12"
+  confidence: high
+  note: "主机游戏区直播间，房间号 156277。2026-08 实测房间页仍在但处于停播状态（页面显示 see you around~，贵宾/钻粉为 0）。起止时间依维基词条 infobox（2015-02 至 2023-12）。"
+
+- id: douyin-official
+  platform: douyin
+  name: "女流66"
+  url: "https://www.douyin.com/user/MS4wLjABAAAADMUuYd94dyMX-dk5ySiz7NparVSHy6JwCG9sk1mKuHg"
+  role: official
+  active_from: "2024-08"
+  confidence: high
+  note: "抖音号 629458933，粉丝约 319 万（飞瓜 2026-08），简介自述『已播 12 年的主机主播』。主页 URL 依维基词条 infobox；主页需登录后可见，未能在无登录态下直接验证页面内容。直播间地址直播中会变（实测见 live.douyin.com/629458933 与视频简介中的 /531854687617 两种写法），统一以主页 URL 为准。"
+
+# ═══ 二、完整录播搬运号（fan-archive），按检索价值排序 ═══
+
+- id: bili-fan-record-house
+  platform: bilibili
+  name: "女流录像小屋"
+  url: "https://space.bilibili.com/29418340"
+  role: fan-archive
+  active_from: "2016-05"
+  confidence: medium
+  note: "斗鱼直播期最完整的录播存档号，粉丝约 10.5 万。早期（2017 年前）简介署名『政委9527』，2017 年后改署『高妹』（证据：av9202505 与 BV1ix411B7mu 视频页简介落款分别为两代署名，均属本号 UID），简介明言『我不是女流，我只是女流直播录像的搬运工』。同内容同步发布 A 站(acfun)频道 u/4397992——2026-08-10 已全量枚举 A 站目录共 2672 条投稿，覆盖 2016-05-07 至 2023-12-02（首个 ac2722963《4月30日66砒霜直播实录》标题对应直播日 2016-04-30，末个 ac43118934 上传日 2023-12-02）。A 站目录内『补投』内容（2015-02 至 2016-04 的早期斗鱼录像《去月球》《Undertale》等）未出现，该批补投系列只在 B 站（B 站最早确认投稿 2016-08-17《逆转裁判6》，另有 2015.2.4/7.22/8.20 风之旅人补投，星露谷物语 2016.3.22 补投）。《心灵砒霜》栏目全目录共 488 条（含弹幕版），『戏说聊斋』系列 34 条（B 站侧 sid=1289751）。注意：B 站搜索页显示该号 2026 年仍发布抖音期切片（如『节奏天国当领舞』），即 B 站侧未完全停更，A 站侧 2023-12-02 后停更——因空间页 JS 渲染无法逐页核实，此点置信度 medium。完整目录见 data/catalogs/acfun-record-house.csv（枚举原始输出，未逐一人工复核）。"
+
+- id: bili-fan-kid-replay
+  platform: bilibili
+  name: "怪盗基德KID"
+  url: "https://space.bilibili.com/1610592"
+  role: fan-archive
+  confidence: high
+  note: "当前抖音期的完整直播回放搬运号，标题格式『[女流66/直播回放] 游戏名 日期 (弹幕版)』，用 DanmakuRender 渲染弹幕并分段投稿。最早确认投稿 2026-07（风暴怕死队 2026-07-26），故省略 active_from。该号是否还有更早的女流内容未核实。"
+
+- id: bili-fan-fuchen
+  platform: bilibili
+  name: "浮尘呃"
+  url: "https://space.bilibili.com/348485198"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号（弹幕版，按小时分段）。最早确认投稿 2024-08-18——抖音开播首日的回放，是抖音期回放时间线目前最早确认的起点。"
+
+- id: bili-fan-threecats
+  platform: bilibili
+  name: "三只Cats"
+  url: "https://space.bilibili.com/49987469"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号。最早确认投稿 2024-08-26（黑神话 Day7）。2024-09 月回放覆盖较稀疏（仅 9.11 一例），是抖音期时间线 2024-09 月的主要补源。"
+
+- id: bili-fan-bulanbot
+  platform: bilibili
+  name: "不懒bot"
+  url: "https://space.bilibili.com/2794753"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号，建有合集《66弹幕录像屋》162P。最早确认投稿 2024-10-04，持续更新至 2026。"
+
+- id: bili-fan-heiji
+  platform: bilibili
+  name: "服部平次"
+  url: "https://space.bilibili.com/169965283"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号兼切片，粉丝约 4.2 万（弹幕版）。最早投稿约 2024-12 前后，未精确确认。UID 抓自 B 站 upuser 搜索页。"
+
+- id: bili-fan-yjj-house
+  platform: bilibili
+  name: "YJJ和女流66的录像小屋"
+  url: "https://space.bilibili.com/65883155"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号（纯净版，标题格式『【女流66直播回放YYYYMMDD】』）。最早确认投稿 2026-03-14，实际开通可能更早未核实（空间页 JS 渲染无法解析）。"
+
+- id: bili-fan-benxueren
+  platform: bilibili
+  name: "笨蛋雪人像素头"
+  url: "https://space.bilibili.com/53065916"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号（自动录制命名格式）。最早确认投稿 2026-08-06，实际开通可能更早未核实。"
+
+- id: bili-fan-aimir
+  platform: bilibili
+  name: "艾米尔Official"
+  url: "https://space.bilibili.com/397111654"
+  role: fan-archive
+  confidence: medium
+  note: "抖音期直播回放搬运号（弹幕版，零散更新）。最早确认投稿 2026-07-02。疑似非女流专属搬运号，置信度 medium。"
+
+- id: bili-fan-secret-house
+  platform: bilibili
+  name: "秘密录像屋"
+  url: "https://space.bilibili.com/28047516"
+  role: fan-archive
+  confidence: high
+  note: "斗鱼期录播搬运号，已注销（空间页不存在，UID 抓自视频页）。最早确认投稿 2019-12-09，实际更早未确认。"
+
+- id: bili-fan-warehouser
+  platform: bilibili
+  name: "仓储员"
+  url: "https://space.bilibili.com/324445265"
+  role: fan-archive
+  confidence: high
+  note: "斗鱼期录播搬运号，签名自述『纳豆录了4个T』（纳豆为女流家猫，指其早期录像体量）。最早确认投稿 2019-07-31。"
+
+- id: bili-fan-zytau
+  platform: bilibili
+  name: "Zytau"
+  url: "https://space.bilibili.com/35246867"
+  role: fan-archive
+  confidence: high
+  note: "斗鱼期特定游戏录播搬运号（如《森林之子》2023-02-25/26 系列，标题格式『[女流66][森林之子玩玩看]』）。最早确认投稿 2023-02-26。"
+
+- id: bili-fan-xiaomoe
+  platform: bilibili
+  name: "小恶魔灬汨汨"
+  url: "https://space.bilibili.com/587489"
+  role: fan-archive
+  confidence: high
+  note: "2015 年斗鱼早期录像的单发补档号。最早确认投稿 2023-04-16，历史投稿时间线未核实。"
+
+- id: bili-fan-single-slowly
+  platform: bilibili
+  name: "Slowly1234"
+  url: "https://space.bilibili.com/32135116"
+  role: fan-archive
+  confidence: high
+  note: "单发补档号：2017-09-27 上传早期唱歌视频（转自微博@女流），签名『视频大多搬运而来』。仅发现此条相关投稿。"
+
+- id: bili-fan-bobi-replay
+  platform: bilibili
+  name: "bobi华"
+  url: "https://space.bilibili.com/2087289560"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号，标题格式『【女流66】【日期】《游戏》』。最早确认投稿 2026-03-28（《睡了吗》2026-03-27），故省略 active_from。简介附直播间与开播提醒群，属稳定运营的搬运号。"
+
+- id: bili-fan-digital-replay
+  platform: bilibili
+  name: "数码3C小子"
+  url: "https://space.bilibili.com/3493290087286919"
+  role: fan-archive
+  confidence: high
+  note: "抖音期直播回放搬运号，标题格式『【女流-66】日期 游戏 ◇弹幕版●（女流66）直播录像回放』，账号内有『女流66』合集（已见 3/14 集）。最早确认投稿 2025-12-06，故省略 active_from。请求一键三连，属活跃小号。"
+
+- id: bili-fan-clean-replay
+  platform: bilibili
+  name: "直播回放巴拉蹦吧"
+  url: "https://space.bilibili.com/12477143"
+  role: fan-archive
+  confidence: high
+  note: "抖音期回放搬运号，『纯净版』（无弹幕）格式，简介含抖音直播间 629458933。最早确认投稿 2026-08-08，故省略 active_from。该号疑似同时搬运多位主播回放，非女流专属。"
+
+- id: youku-fan-honglingjin
+  platform: youku
+  name: "俺是红领巾"
+  url: "https://list.youku.com/albumlist/show/id_49327740.html"
+  role: fan-archive
+  confidence: medium
+  note: "优酷上《女流之心灵砒霜》2016 年系列的原上传者（专辑 49327740，含 20160306 等期），B 站补档视频简介明确标注『原作者优酷id：俺是红领巾』。注意：url 为其专辑页而非账号主页，账号主页 URL 未确认；专辑页当前是否仍可访问未验证。"
+
+# ═══ 三、切片/考古号（非完整录播，作补充入口） ═══
+
+- id: bili-fan-clip-pao
+  platform: bilibili
+  name: "恶龙炮OvO"
+  url: "https://space.bilibili.com/3546735938898827"
+  role: fan-archive
+  confidence: high
+  note: "直播切片（精彩片段）号，非完整录播；标题多为【女流66】日常互动切片。最早确认投稿 2026-04-21。对批量采集价值低于完整录播号，仅作补充入口。"
+
+- id: bili-fan-games-archaeology
+  platform: bilibili
+  name: "66的小游戏"
+  url: "https://space.bilibili.com/212628380"
+  role: fan-archive
+  confidence: high
+  note: "早期内容『考古』号：2017 年起挖掘并发布女流屏风时代/36D 传说等早期碎片内容（如 2017-09-21《脱'贫'致富（第一次36D考古发现）》）。非完整录播，但对优酷期老内容考古有索引价值。"
+
+- id: bili-fan-clip-chi66
+  platform: bilibili
+  name: "chi66女流"
+  url: "https://space.bilibili.com/2110481152"
+  role: fan-archive
+  confidence: high
+  note: "直播切片号（319 个视频，『高光时刻』系列，与内蒙特产店 Chi66 相关）。最早确认投稿 2023-12-06。"
+
+- id: bili-fan-clip-dazhou
+  platform: bilibili
+  name: "大周素材"
+  url: "https://space.bilibili.com/299544251"
+  role: fan-archive
+  confidence: high
+  note: "切片/合集号，签名『爱某鱼156277』（斗鱼房间号）。最早确认投稿 2018-09-24，斗鱼中期切片的主要早期来源之一。"
+
+- id: bili-fan-clip-hehua
+  platform: bilibili
+  name: "荷花姨"
+  url: "https://space.bilibili.com/198339534"
+  role: fan-archive
+  confidence: high
+  note: "《心灵砒霜》栏目选摘切片号。最早确认投稿 2022-07-04。"
+
+- id: bili-fan-clip-pishuang
+  platform: bilibili
+  name: "十月的砒霜迷"
+  url: "https://space.bilibili.com/398134181"
+  role: fan-archive
+  confidence: high
+  note: "《心灵砒霜》栏目切片号。最早确认投稿 2021-10-18。"
+
+- id: bili-fan-clip-liuyueyi
+  platform: bilibili
+  name: "liuyueyi93"
+  url: "https://space.bilibili.com/17407534"
+  role: fan-archive
+  confidence: high
+  note: "单发剪辑：2016-01-12 上传《风之旅人》超级小桀&女流相遇剪辑（标注『自制』）。仅发现此条相关投稿。"
+
+- id: bili-fan-clip-qianli
+  platform: bilibili
+  name: "浅理粥荞"
+  url: "https://space.bilibili.com/83546471"
+  role: fan-archive
+  confidence: high
+  note: "单发剪辑：2019-01-22 上传直播四周年纪念视频（素材来自录像小屋）。仅发现此条相关投稿。"
+
+- id: bili-fan-unknown-nvliu66
+  platform: bilibili
+  name: "女流66来了"
+  url: "https://space.bilibili.com/107393413"
+  role: fan-archive
+  confidence: low
+  note: "UID 抓自 B 站 upuser 搜索页（85 视频），但空间主页 JS 渲染无法解析，内容是否女流相关未确认，角色待验证。"
+
+# ═══ 四、单发补档/合集号（优酷期内容在 B 站的存在证据，批量采集价值低） ═══
+
+- id: bili-fan-single-yiyi
+  platform: bilibili
+  name: "影忆丶Yi"
+  url: "https://space.bilibili.com/15800276"
+  role: fan-archive
+  confidence: high
+  note: "2021-05-17 上传《女流之心灵砒霜-2016补档》（BV1ZN411o7VN）：从优酷搬运 2016-01 至 2016-07 共 14 期《心灵砒霜》（原作者俺是红领巾），仅作个人 Podcast 用途。另有《女流之心灵砒霜-2015补档》（BV1ef4y1Y7T2，19 集：20150705-20151219），简介自述『网络冲浪考古找到的』——是目前最完整的 2015 年优酷期心灵砒霜补档入口。是优酷期内容补档的实例与检索入口。"
+
+- id: bili-fan-single-ecthellin
+  platform: bilibili
+  name: "Ecthellin"
+  url: "https://space.bilibili.com/19377889"
+  role: fan-archive
+  confidence: high
+  note: "2019-07-21 转投优酷期代表作《变态人生大冒险》（『转自网络』）。仅发现此一条相关投稿，系单发补档号。"
+
+- id: bili-fan-compile-shuoshu
+  platform: bilibili
+  name: "Ctrl说书人"
+  url: "https://space.bilibili.com/50646401"
+  role: fan-archive
+  confidence: high
+  note: "2024-05-13 发布《女流66戏说聊斋合集》：取材自女流录像小屋的『戏说聊斋』系列（sid=1289751）自制的合集（按故事名分集）。二次合集号，非独立内容源。"
+
+- id: bili-fan-compile-cat
+  platform: bilibili
+  name: "囿于厨房的猫"
+  url: "https://space.bilibili.com/44776091"
+  role: fan-archive
+  confidence: high
+  note: "2022-06-01 发布《【梦开始的地方】女流66 风之旅人全流程赏析合集（720P）》：因官方号上传的 1、3 部分只有 360P，自找 720P 源做成合集。佐证官方号含优酷期重传内容，但该号自身仅此一条相关投稿。"

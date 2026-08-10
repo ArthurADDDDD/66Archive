@@ -1,0 +1,4738 @@
+# 自动生成的演示数据 —— 非真实记录，勿引用。
+# 由 scripts/gen-demo.ts 生成；真实数据进入 data/entries/ 后本文件自动失效。
+- id: 2010-01-02-video-08
+  type: video
+  date: '2010-01-02'
+  title: 【示例】实况解说 第18期
+  platform: youku
+  duration_min: 36
+  games:
+    - resident-evil-4
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100102-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-01-16-live-01
+  type: live
+  date: '2010-01-16'
+  time: '16:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 552
+  games:
+    - hollow-knight
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100116-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: hollow-knight
+      label: 开播
+    - at: '02:56:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-01-18-live-10
+  type: live
+  date: '2010-01-18'
+  time: '16:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 446
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100118-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-01-28-video-11
+  type: video
+  date: '2010-01-28'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 22
+  games:
+    - outer-wilds
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100128-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-02-23-video-12
+  type: video
+  date: '2010-02-23'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 28
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100223-11
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-02-27-video-04
+  type: video
+  date: '2010-02-27'
+  title: 【示例】开箱与吐槽 第48期
+  platform: youku
+  duration_min: 12
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100227-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-03-06-video-05
+  type: video
+  date: '2010-03-06'
+  title: 【示例】实况解说 第14期
+  platform: bilibili
+  duration_min: 8
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100306-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-03-11-video-06
+  type: video
+  date: '2010-03-11'
+  title: 【示例】开箱与吐槽 第28期
+  platform: youku
+  duration_min: 40
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100311-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-05-06-video-09
+  type: video
+  date: '2010-05-06'
+  title: 【示例】实况解说 第33期
+  platform: youku
+  duration_min: 10
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100506-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-05-14-video-13
+  type: video
+  date: '2010-05-14'
+  title: 【示例】流程攻略 第3集
+  platform: youku
+  duration_min: 40
+  games: []
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100514-12
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-05-17-live-07
+  type: live
+  date: '2010-05-17'
+  time: '17:30'
+  title: 【示例】这个结局我真没想到
+  platform: youku
+  duration_min: 286
+  games:
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100517-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2010-6
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:17:00'
+      game: stardew-valley
+      label: 开播
+    - at: '03:03:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-06-04-video-14
+  type: video
+  date: '2010-06-04'
+  title: 【示例】剧情向剪辑 第31期
+  platform: youku
+  duration_min: 30
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100604-13
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-09-28-video-03
+  type: video
+  date: '2010-09-28'
+  title: 【示例】实况解说 第29期
+  platform: youku
+  duration_min: 28
+  games:
+    - outer-wilds
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20100928-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2010-10-20-video-02
+  type: video
+  date: '2010-10-20'
+  title: 【示例】开箱与吐槽 第51期
+  platform: youku
+  duration_min: 18
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20101020-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-02-07-video-02
+  type: video
+  date: '2011-02-07'
+  title: 【示例】开箱与吐槽 第7期
+  platform: youku
+  duration_min: 18
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110207-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-02-07-video-05
+  type: video
+  date: '2011-02-07'
+  title: 【示例】剧情向剪辑 第31期
+  platform: youku
+  duration_min: 34
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110207-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-04-01-video-01
+  type: video
+  date: '2011-04-01'
+  title: 【示例】流程攻略 第12集
+  platform: youku
+  duration_min: 16
+  games:
+    - the-witcher-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110401-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-05-10-live-06
+  type: live
+  date: '2011-05-10'
+  time: '18:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: youku
+  duration_min: 364
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110510-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2011-5
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: portal-2
+      label: 开播
+    - at: '03:02:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-05-14-video-04
+  type: video
+  date: '2011-05-14'
+  title: 【示例】实况解说 第4期
+  platform: youku
+  duration_min: 34
+  games: []
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110514-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-06-14-video-09
+  type: video
+  date: '2011-06-14'
+  title: 【示例】流程攻略 第28集
+  platform: bilibili
+  duration_min: 27
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110614-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-08-10-video-07
+  type: video
+  date: '2011-08-10'
+  title: 【示例】流程攻略 第42集
+  platform: youku
+  duration_min: 9
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110810-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-08-16-video-10
+  type: video
+  date: '2011-08-16'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 36
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20110816-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-10-26-live-11
+  type: live
+  date: '2011-10-26'
+  time: '21:00'
+  title: 【示例】全成就收集 第51天
+  platform: bilibili
+  duration_min: 408
+  games: []
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20111026-10
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2011-10
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-11-21-video-08
+  type: video
+  date: '2011-11-21'
+  title: 【示例】实况解说 第41期
+  platform: bilibili
+  duration_min: 42
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20111121-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2011-12-23-video-03
+  type: video
+  date: '2011-12-23'
+  title: 【示例】剧情向剪辑 第35期
+  platform: bilibili
+  duration_min: 27
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20111223-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-01-09-video-09
+  type: video
+  date: '2012-01-09'
+  title: 【示例】流程攻略 第26集
+  platform: youku
+  duration_min: 41
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120109-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-01-18-live-08
+  type: live
+  date: '2012-01-18'
+  time: '15:00'
+  title: 【示例】这个结局我真没想到
+  platform: youku
+  duration_min: 190
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120118-7
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2012-7
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:19:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:45:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-04-13-video-05
+  type: video
+  date: '2012-04-13'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 21
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120413-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-05-05-video-07
+  type: video
+  date: '2012-05-05'
+  title: 【示例】新手向教程 第44集
+  platform: bilibili
+  duration_min: 30
+  games:
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120505-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-05-22-video-06
+  type: video
+  date: '2012-05-22'
+  title: 【示例】实况解说 第51期
+  platform: youku
+  duration_min: 36
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120522-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-08-10-video-10
+  type: video
+  date: '2012-08-10'
+  title: 【示例】新手向教程 第16集
+  platform: youku
+  duration_min: 14
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20120810-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-10-21-video-03
+  type: video
+  date: '2012-10-21'
+  title: 【示例】开箱与吐槽 第59期
+  platform: bilibili
+  duration_min: 15
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20121021-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-11-08-video-01
+  type: video
+  date: '2012-11-08'
+  title: 【示例】新手向教程 第25集
+  platform: bilibili
+  duration_min: 41
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20121108-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-11-15-video-02
+  type: video
+  date: '2012-11-15'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 20
+  games:
+    - minecraft
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20121115-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-11-21-live-04
+  type: live
+  date: '2012-11-21'
+  time: '20:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 173
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20121121-3
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:19:00'
+      game: hollow-knight
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2012-11-28-video-11
+  type: video
+  date: '2012-11-28'
+  title: 【示例】新手向教程 第19集
+  platform: youku
+  duration_min: 43
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20121128-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-02-19-video-01
+  type: video
+  date: '2013-02-19'
+  title: 【示例】开箱与吐槽 第30期
+  platform: youku
+  duration_min: 41
+  games:
+    - dark-souls-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20130219-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-05-19-video-03
+  type: video
+  date: '2013-05-19'
+  title: 【示例】开箱与吐槽 第2期
+  platform: bilibili
+  duration_min: 22
+  games:
+    - the-witcher-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20130519-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-05-27-video-05
+  type: video
+  date: '2013-05-27'
+  title: 【示例】流程攻略 第43集
+  platform: youku
+  duration_min: 20
+  games:
+    - the-witcher-3
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20130527-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-09-22-video-06
+  type: video
+  date: '2013-09-22'
+  title: 【示例】开箱与吐槽 第33期
+  platform: bilibili
+  duration_min: 19
+  games:
+    - dark-souls-3
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20130922-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-10-01-video-07
+  type: video
+  date: '2013-10-01'
+  title: 【示例】开箱与吐槽 第29期
+  platform: bilibili
+  duration_min: 39
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20131001-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-10-15-video-04
+  type: video
+  date: '2013-10-15'
+  title: 【示例】流程攻略 第52集
+  platform: bilibili
+  duration_min: 17
+  games:
+    - dark-souls-3
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20131015-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-10-17-video-02
+  type: video
+  date: '2013-10-17'
+  title: 【示例】实况解说 第8期
+  platform: youku
+  duration_min: 35
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20131017-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2013-12-28-video-08
+  type: video
+  date: '2013-12-28'
+  title: 【示例】新手向教程 第16集
+  platform: bilibili
+  duration_min: 34
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20131228-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-01-20-video-02
+  type: video
+  date: '2014-01-20'
+  title: 【示例】新手向教程 第19集
+  platform: youku
+  duration_min: 16
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140120-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-04-06-video-06
+  type: video
+  date: '2014-04-06'
+  title: 【示例】流程攻略 第47集
+  platform: bilibili
+  duration_min: 19
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140406-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-05-01-video-09
+  type: video
+  date: '2014-05-01'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 21
+  games:
+    - dark-souls-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140501-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-05-16-video-01
+  type: video
+  date: '2014-05-16'
+  title: 【示例】剧情向剪辑 第24期
+  platform: youku
+  duration_min: 43
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140516-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-05-28-video-10
+  type: video
+  date: '2014-05-28'
+  title: 【示例】流程攻略 第22集
+  platform: bilibili
+  duration_min: 22
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140528-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-06-12-live-03
+  type: live
+  date: '2014-06-12'
+  time: '15:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 139
+  games: []
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140612-2
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2014-2
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-06-15-video-04
+  type: video
+  date: '2014-06-15'
+  title: 【示例】流程攻略 第38集
+  platform: youku
+  duration_min: 33
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140615-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-09-05-video-08
+  type: video
+  date: '2014-09-05'
+  title: 【示例】剧情向剪辑 第6期
+  platform: bilibili
+  duration_min: 11
+  games:
+    - baldurs-gate-3
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20140905-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-10-12-video-07
+  type: video
+  date: '2014-10-12'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 16
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20141012-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2014-11-25-video-05
+  type: video
+  date: '2014-11-25'
+  title: 【示例】实况解说 第35期
+  platform: youku
+  duration_min: 21
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20141125-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-03-09-video-03
+  type: video
+  date: '2015-03-09'
+  title: 【示例】剧情向剪辑 第35期
+  platform: youku
+  duration_min: 17
+  games:
+    - outer-wilds
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150309-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-03-20-video-01
+  type: video
+  date: '2015-03-20'
+  title: 【示例】流程攻略 第44集
+  platform: bilibili
+  duration_min: 18
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150320-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-04-14-video-02
+  type: video
+  date: '2015-04-14'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 43
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150414-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-06-24-video-07
+  type: video
+  date: '2015-06-24'
+  title: 【示例】流程攻略 第28集
+  platform: youku
+  duration_min: 35
+  games:
+    - elden-ring
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150624-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-06-28-video-06
+  type: video
+  date: '2015-06-28'
+  title: 【示例】流程攻略 第8集
+  platform: youku
+  duration_min: 39
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150628-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-09-19-video-05
+  type: video
+  date: '2015-09-19'
+  title: 【示例】这一关我卡了三小时
+  platform: youku
+  duration_min: 26
+  games:
+    - baldurs-gate-3
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20150919-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2015-10-05-video-04
+  type: video
+  date: '2015-10-05'
+  title: 【示例】流程攻略 第39集
+  platform: youku
+  duration_min: 39
+  games:
+    - baldurs-gate-3
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20151005-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-02-09-live-08
+  type: live
+  date: '2016-02-09'
+  time: '16:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyin
+  duration_min: 180
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160209-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-02-28-live-02
+  type: live
+  date: '2016-02-28'
+  time: '15:30'
+  title: 【示例】联动直播 一起玩
+  platform: douyin
+  duration_min: 599
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160228-1
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: outer-wilds
+      label: 开播
+    - at: '01:08:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-02-28-live-06
+  type: live
+  date: '2016-02-28'
+  time: '21:30'
+  title: 【示例】全成就收集 第8天
+  platform: bilibili
+  duration_min: 519
+  games:
+    - stardew-valley
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160228-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2016-5
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:08:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:17:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-03-04-live-11
+  type: live
+  date: '2016-03-04'
+  time: '15:30'
+  title: 【示例】这个结局我真没想到
+  platform: douyin
+  duration_min: 448
+  games:
+    - resident-evil-4
+    - minecraft
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160304-10
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2016-10
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: resident-evil-4
+      label: 开播
+    - at: '02:31:00'
+      game: minecraft
+      label: 换游戏
+    - at: '04:29:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-04-04-live-10
+  type: live
+  date: '2016-04-04'
+  time: '17:30'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 606
+  games:
+    - baldurs-gate-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160404-9
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '02:12:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-05-07-live-03
+  type: live
+  date: '2016-05-07'
+  time: '17:30'
+  title: 【示例】全成就收集 第15天
+  platform: douyin
+  duration_min: 533
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160507-2
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:19:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:50:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-07-08-live-07
+  type: live
+  date: '2016-07-08'
+  time: '16:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 472
+  games:
+    - portal-2
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160708-6
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: portal-2
+      label: 开播
+    - at: '01:22:00'
+      game: hollow-knight
+      label: 换游戏
+    - at: '03:24:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-07-22-live-04
+  type: live
+  date: '2016-07-22'
+  time: '16:00'
+  title: 【示例】全成就收集 第6天
+  platform: douyu
+  duration_min: 424
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160722-3
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:08:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '01:40:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-08-09-live-01
+  type: live
+  date: '2016-08-09'
+  time: '20:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 492
+  games:
+    - elden-ring
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20160809-0
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2016-0
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: elden-ring
+      label: 开播
+    - at: '02:01:00'
+      game: portal-2
+      label: 换游戏
+    - at: '04:19:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-10-26-live-05
+  type: live
+  date: '2016-10-26'
+  time: '15:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 517
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20161026-4
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2016-4
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: portal-2
+      label: 开播
+    - at: '02:55:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2016-11-25-live-09
+  type: live
+  date: '2016-11-25'
+  time: '18:30'
+  title: 【示例】全成就收集 第48天
+  platform: douyin
+  duration_min: 388
+  games:
+    - red-dead-redemption-2
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20161125-8
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:16:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '02:29:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-02-06-live-05
+  type: live
+  date: '2017-02-06'
+  time: '14:30'
+  title: 【示例】联动直播 一起玩
+  platform: douyin
+  duration_min: 370
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170206-4
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-4
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '02:48:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-02-25-live-04
+  type: live
+  date: '2017-02-25'
+  time: '19:00'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 100
+  games:
+    - stardew-valley
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170225-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-3
+      kind: replay
+      parts: 2
+      status: dead
+  segments:
+    - at: '00:07:00'
+      game: stardew-valley
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-03-12-live-13
+  type: live
+  date: '2017-03-12'
+  time: '19:30'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 228
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170312-12
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-12
+      kind: replay
+      parts: 6
+      status: dead
+  segments:
+    - at: '00:14:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '01:23:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-03-17-video-10
+  type: video
+  date: '2017-03-17'
+  title: 【示例】新手向教程 第8集
+  platform: bilibili
+  duration_min: 38
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170317-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-03-26-video-07
+  type: video
+  date: '2017-03-26'
+  title: 【示例】开箱与吐槽 第18期
+  platform: bilibili
+  duration_min: 36
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170326-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-04-12-live-12
+  type: live
+  date: '2017-04-12'
+  time: '18:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyu
+  duration_min: 385
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170412-11
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-11
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: minecraft
+      label: 开播
+    - at: '01:12:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-05-03-live-09
+  type: live
+  date: '2017-05-03'
+  time: '19:00'
+  title: 【示例】联动直播 一起玩
+  platform: douyin
+  duration_min: 284
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170503-8
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-8
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: minecraft
+      label: 开播
+    - at: '02:33:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-05-12-live-01
+  type: live
+  date: '2017-05-12'
+  time: '17:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 224
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170512-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:20:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-08-18-video-06
+  type: video
+  date: '2017-08-18'
+  title: 【示例】实况解说 第6期
+  platform: bilibili
+  duration_min: 31
+  games:
+    - outer-wilds
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20170818-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-10-13-live-03
+  type: live
+  date: '2017-10-13'
+  time: '20:00'
+  title: 【示例】这个结局我真没想到
+  platform: douyu
+  duration_min: 342
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20171013-2
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2017-2
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-11-07-live-02
+  type: live
+  date: '2017-11-07'
+  time: '21:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 109
+  games:
+    - red-dead-redemption-2
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20171107-1
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: red-dead-redemption-2
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-11-18-video-08
+  type: video
+  date: '2017-11-18'
+  title: 【示例】开箱与吐槽 第49期
+  platform: bilibili
+  duration_min: 12
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20171118-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2017-12-15-video-11
+  type: video
+  date: '2017-12-15'
+  title: 【示例】流程攻略 第1集
+  platform: bilibili
+  duration_min: 8
+  games:
+    - red-dead-redemption-2
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20171215-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-02-09-live-15
+  type: live
+  date: '2018-02-09'
+  time: '18:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 203
+  games:
+    - hollow-knight
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180209-14
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: hollow-knight
+      label: 开播
+    - at: '02:30:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-03-10-live-17
+  type: live
+  date: '2018-03-10'
+  time: '20:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 374
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180310-16
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-16
+      kind: replay
+      parts: 5
+      status: dead
+  segments:
+    - at: '00:13:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '02:40:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-03-13-live-05
+  type: live
+  date: '2018-03-13'
+  time: '21:30'
+  title: 【示例】晚上好，继续开荒
+  platform: douyu
+  duration_min: 589
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180313-4
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-4
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '03:04:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-03-22-live-14
+  type: live
+  date: '2018-03-22'
+  time: '18:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 490
+  games:
+    - red-dead-redemption-2
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180322-13
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-13
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:04:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '01:14:00'
+      game: stardew-valley
+      label: 换游戏
+    - at: '03:22:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-04-20-live-12
+  type: live
+  date: '2018-04-20'
+  time: '15:30'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 606
+  games:
+    - disco-elysium
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180420-11
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: disco-elysium
+      label: 开播
+    - at: '01:58:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-05-04-live-11
+  type: live
+  date: '2018-05-04'
+  time: '14:00'
+  title: 【示例】这个结局我真没想到
+  platform: douyin
+  duration_min: 411
+  games:
+    - baldurs-gate-3
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180504-10
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:13:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '03:13:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-05-05-live-07
+  type: live
+  date: '2018-05-05'
+  time: '19:30'
+  title: 【示例】全成就收集 第11天
+  platform: douyin
+  duration_min: 486
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180505-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-6
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: portal-2
+      label: 开播
+    - at: '02:07:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-06-13-live-06
+  type: live
+  date: '2018-06-13'
+  time: '15:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyin
+  duration_min: 459
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180613-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-06-18-live-03
+  type: live
+  date: '2018-06-18'
+  time: '17:00'
+  title: 【示例】晚上好，继续开荒
+  platform: douyin
+  duration_min: 259
+  games:
+    - red-dead-redemption-2
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180618-2
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '02:13:00'
+      game: the-witcher-3
+      label: 换游戏
+    - at: '03:40:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-09-07-live-04
+  type: live
+  date: '2018-09-07'
+  time: '15:30'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 601
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180907-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-3
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '01:57:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-09-16-live-01
+  type: live
+  date: '2018-09-16'
+  time: '20:00'
+  title: 【示例】全成就收集 第4天
+  platform: douyin
+  duration_min: 320
+  games: []
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180916-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-09-24-video-13
+  type: video
+  date: '2018-09-24'
+  title: 【示例】实况解说 第3期
+  platform: bilibili
+  duration_min: 10
+  games:
+    - resident-evil-4
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180924-12
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-09-27-live-08
+  type: live
+  date: '2018-09-27'
+  time: '19:00'
+  title: 【示例】全成就收集 第32天
+  platform: bilibili
+  duration_min: 170
+  games:
+    - outer-wilds
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20180927-7
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: outer-wilds
+      label: 开播
+    - at: '01:11:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-10-12-live-10
+  type: live
+  date: '2018-10-12'
+  time: '20:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 400
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20181012-9
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-9
+      kind: replay
+      parts: 6
+      status: dead
+  segments:
+    - at: '00:20:00'
+      game: resident-evil-4
+      label: 开播
+    - at: '01:53:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-11-04-live-02
+  type: live
+  date: '2018-11-04'
+  time: '21:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 95
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20181104-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-1
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: resident-evil-4
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-12-02-video-16
+  type: video
+  date: '2018-12-02'
+  title: 【示例】开箱与吐槽 第10期
+  platform: bilibili
+  duration_min: 10
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20181202-15
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-12-20-live-09
+  type: live
+  date: '2018-12-20'
+  time: '21:00'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 497
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20181220-8
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:19:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '01:19:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2018-12-20-live-18
+  type: live
+  date: '2018-12-20'
+  time: '14:00'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 106
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20181220-17
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2018-17
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: the-witcher-3
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-01-25-video-01
+  type: video
+  date: '2019-01-25'
+  title: 【示例】开箱与吐槽 第38期
+  platform: bilibili
+  duration_min: 27
+  games:
+    - dark-souls-3
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190125-0
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-01-25-video-11
+  type: video
+  date: '2019-01-25'
+  title: 【示例】实况解说 第5期
+  platform: bilibili
+  duration_min: 20
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190125-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-03-09-live-05
+  type: live
+  date: '2019-03-09'
+  time: '20:30'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 497
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190309-4
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:32:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-03-15-live-04
+  type: live
+  date: '2019-03-15'
+  time: '18:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyin
+  duration_min: 432
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190315-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2019-3
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:40:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-03-24-live-10
+  type: live
+  date: '2019-03-24'
+  time: '14:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyin
+  duration_min: 208
+  games:
+    - outer-wilds
+    - portal-2
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190324-9
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2019-9
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:11:00'
+      game: outer-wilds
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-05-23-live-02
+  type: live
+  date: '2019-05-23'
+  time: '16:00'
+  title: 【示例】全成就收集 第16天
+  platform: bilibili
+  duration_min: 237
+  games:
+    - resident-evil-4
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190523-1
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:16:00'
+      game: resident-evil-4
+      label: 开播
+    - at: '01:48:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-06-28-live-03
+  type: live
+  date: '2019-06-28'
+  time: '16:30'
+  title: 【示例】全成就收集 第11天
+  platform: douyu
+  duration_min: 374
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190628-2
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2019-2
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-09-19-video-06
+  type: video
+  date: '2019-09-19'
+  title: 【示例】流程攻略 第20集
+  platform: bilibili
+  duration_min: 37
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190919-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-09-25-live-07
+  type: live
+  date: '2019-09-25'
+  time: '19:30'
+  title: 【示例】这个结局我真没想到
+  platform: douyu
+  duration_min: 293
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20190925-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2019-6
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '03:06:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-11-07-video-09
+  type: video
+  date: '2019-11-07'
+  title: 【示例】新手向教程 第8集
+  platform: bilibili
+  duration_min: 29
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20191107-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2019-12-15-live-08
+  type: live
+  date: '2019-12-15'
+  time: '14:00'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 332
+  games:
+    - stardew-valley
+    - baldurs-gate-3
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20191215-7
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2019-7
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:06:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:10:00'
+      game: baldurs-gate-3
+      label: 换游戏
+    - at: '02:11:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-02-02-live-16
+  type: live
+  date: '2020-02-02'
+  time: '19:00'
+  title: 【示例】这个结局我真没想到
+  platform: douyin
+  duration_min: 414
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200202-15
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-15
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '02:28:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-02-07-live-14
+  type: live
+  date: '2020-02-07'
+  time: '15:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 468
+  games:
+    - dark-souls-3
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200207-13
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-13
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:09:00'
+      game: dark-souls-3
+      label: 开播
+    - at: '02:37:00'
+      game: portal-2
+      label: 换游戏
+    - at: '04:17:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-02-08-live-01
+  type: live
+  date: '2020-02-08'
+  time: '14:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 185
+  games:
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200208-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:24:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-03-02-live-15
+  type: live
+  date: '2020-03-02'
+  time: '15:00'
+  title: 【示例】全成就收集 第17天
+  platform: douyu
+  duration_min: 589
+  games:
+    - outer-wilds
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200302-14
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-14
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:12:00'
+      game: outer-wilds
+      label: 开播
+    - at: '03:01:00'
+      game: minecraft
+      label: 换游戏
+    - at: '04:44:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-03-03-live-11
+  type: live
+  date: '2020-03-03'
+  time: '16:00'
+  title: 【示例】全成就收集 第24天
+  platform: bilibili
+  duration_min: 478
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200303-10
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:12:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '03:10:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-03-22-video-17
+  type: video
+  date: '2020-03-22'
+  title: 【示例】开箱与吐槽 第22期
+  platform: bilibili
+  duration_min: 9
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200322-16
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-05-03-video-03
+  type: video
+  date: '2020-05-03'
+  title: 【示例】开箱与吐槽 第57期
+  platform: bilibili
+  duration_min: 42
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200503-2
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-05-11-live-10
+  type: live
+  date: '2020-05-11'
+  time: '21:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 106
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200511-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-06-06-live-02
+  type: live
+  date: '2020-06-06'
+  time: '16:00'
+  title: 【示例】全成就收集 第23天
+  platform: douyu
+  duration_min: 453
+  games: []
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200606-1
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-07-13-video-04
+  type: video
+  date: '2020-07-13'
+  title: 【示例】开箱与吐槽 第55期
+  platform: bilibili
+  duration_min: 14
+  games:
+    - minecraft
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200713-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-07-13-live-05
+  type: live
+  date: '2020-07-13'
+  time: '19:30'
+  title: 【示例】全成就收集 第45天
+  platform: douyu
+  duration_min: 565
+  games:
+    - stardew-valley
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200713-4
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: stardew-valley
+      label: 开播
+    - at: '03:01:00'
+      game: red-dead-redemption-2
+      label: 换游戏
+    - at: '05:09:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-07-19-live-08
+  type: live
+  date: '2020-07-19'
+  time: '16:30'
+  title: 【示例】全成就收集 第57天
+  platform: bilibili
+  duration_min: 563
+  games:
+    - outer-wilds
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200719-7
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: outer-wilds
+      label: 开播
+    - at: '02:35:00'
+      game: red-dead-redemption-2
+      label: 换游戏
+    - at: '04:06:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-08-19-live-12
+  type: live
+  date: '2020-08-19'
+  time: '19:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 106
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200819-11
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-11
+      kind: replay
+      parts: 4
+      status: dead
+  segments:
+    - at: '00:08:00'
+      game: elden-ring
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-09-16-live-13
+  type: live
+  date: '2020-09-16'
+  time: '19:00'
+  title: 【示例】这个结局我真没想到
+  platform: douyu
+  duration_min: 425
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20200916-12
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-12
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:06:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '01:41:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-10-23-live-09
+  type: live
+  date: '2020-10-23'
+  time: '14:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyu
+  duration_min: 146
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20201023-8
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-8
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: the-witcher-3
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-12-11-live-06
+  type: live
+  date: '2020-12-11'
+  time: '21:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 404
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20201211-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-5
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:16:00'
+      game: portal-2
+      label: 开播
+    - at: '02:43:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2020-12-16-live-07
+  type: live
+  date: '2020-12-16'
+  time: '17:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 499
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20201216-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2020-6
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: elden-ring
+      label: 开播
+    - at: '02:50:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-01-27-video-16
+  type: video
+  date: '2021-01-27'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 14
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210127-15
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-02-13-video-10
+  type: video
+  date: '2021-02-13'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 25
+  games:
+    - stardew-valley
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210213-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-04-11-live-19
+  type: live
+  date: '2021-04-11'
+  time: '16:00'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 347
+  games:
+    - outer-wilds
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210411-18
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:08:00'
+      game: outer-wilds
+      label: 开播
+    - at: '01:59:00'
+      game: stardew-valley
+      label: 换游戏
+    - at: '04:04:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-04-26-live-02
+  type: live
+  date: '2021-04-26'
+  time: '15:00'
+  title: 【示例】这个结局我真没想到
+  platform: douyin
+  duration_min: 453
+  games:
+    - dark-souls-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210426-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-1
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:12:00'
+      game: dark-souls-3
+      label: 开播
+    - at: '01:25:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-05-02-live-03
+  type: live
+  date: '2021-05-02'
+  time: '14:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 396
+  games:
+    - elden-ring
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210502-2
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-2
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: elden-ring
+      label: 开播
+    - at: '02:18:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-05-04-live-08
+  type: live
+  date: '2021-05-04'
+  time: '14:00'
+  title: 【示例】晚上好，继续开荒
+  platform: douyin
+  duration_min: 288
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210504-7
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:16:00'
+      game: elden-ring
+      label: 开播
+    - at: '02:59:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-05-24-live-11
+  type: live
+  date: '2021-05-24'
+  time: '19:30'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 233
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210524-10
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-10
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: portal-2
+      label: 开播
+    - at: '02:00:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-07-05-live-18
+  type: live
+  date: '2021-07-05'
+  time: '14:30'
+  title: 【示例】全成就收集 第50天
+  platform: douyu
+  duration_min: 472
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210705-17
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:04:00'
+      game: elden-ring
+      label: 开播
+    - at: '02:07:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-07-06-live-07
+  type: live
+  date: '2021-07-06'
+  time: '21:30'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 291
+  games:
+    - the-witcher-3
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210706-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-6
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '02:50:00'
+      game: red-dead-redemption-2
+      label: 换游戏
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-07-07-live-20
+  type: live
+  date: '2021-07-07'
+  time: '14:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 140
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210707-19
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-19
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:04:00'
+      game: baldurs-gate-3
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-07-11-live-13
+  type: live
+  date: '2021-07-11'
+  time: '19:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 563
+  games:
+    - the-witcher-3
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210711-12
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-12
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '01:51:00'
+      game: hollow-knight
+      label: 换游戏
+    - at: '04:02:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-08-26-live-14
+  type: live
+  date: '2021-08-26'
+  time: '14:30'
+  title: 【示例】全成就收集 第5天
+  platform: bilibili
+  duration_min: 392
+  games:
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210826-13
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-13
+      kind: replay
+      parts: 2
+      status: dead
+  segments:
+    - at: '00:17:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:35:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-08-28-live-12
+  type: live
+  date: '2021-08-28'
+  time: '18:30'
+  title: 【示例】晚上好，继续开荒
+  platform: douyu
+  duration_min: 583
+  games:
+    - dark-souls-3
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210828-11
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-11
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: dark-souls-3
+      label: 开播
+    - at: '01:47:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-09-01-live-15
+  type: live
+  date: '2021-09-01'
+  time: '15:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 262
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20210901-14
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-14
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '02:09:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-10-02-video-05
+  type: video
+  date: '2021-10-02'
+  title: 【示例】剧情向剪辑 第52期
+  platform: bilibili
+  duration_min: 38
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211002-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-10-04-live-09
+  type: live
+  date: '2021-10-04'
+  time: '16:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 609
+  games:
+    - stardew-valley
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211004-8
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:10:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:40:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-10-22-live-01
+  type: live
+  date: '2021-10-22'
+  time: '18:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 546
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211022-0
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-0
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:11:00'
+      game: red-dead-redemption-2
+      label: 开播
+    - at: '02:10:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-11-19-live-04
+  type: live
+  date: '2021-11-19'
+  time: '17:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 134
+  games:
+    - hollow-knight
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211119-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-3
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: hollow-knight
+      label: 开播
+    - at: '01:09:00'
+      game: resident-evil-4
+      label: 换游戏
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-11-27-live-06
+  type: live
+  date: '2021-11-27'
+  time: '17:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 358
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211127-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-5
+      kind: replay
+      parts: 2
+      status: dead
+  segments:
+    - at: '00:05:00'
+      game: disco-elysium
+      label: 开播
+    - at: '01:46:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2021-12-13-live-17
+  type: live
+  date: '2021-12-13'
+  time: '17:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 504
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20211213-16
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2021-16
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: outer-wilds
+      label: 开播
+    - at: '01:29:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-02-05-live-07
+  type: live
+  date: '2022-02-05'
+  time: '19:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 434
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220205-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2022-6
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-02-19-live-02
+  type: live
+  date: '2022-02-19'
+  time: '15:00'
+  title: 【示例】晚上好，继续开荒
+  platform: douyu
+  duration_min: 610
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220219-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2022-1
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:04:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:52:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-02-26-video-09
+  type: video
+  date: '2022-02-26'
+  title: 【示例】剧情向剪辑 第10期
+  platform: bilibili
+  duration_min: 39
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220226-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-05-10-live-01
+  type: live
+  date: '2022-05-10'
+  time: '14:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 350
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220510-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:09:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:41:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-06-24-live-10
+  type: live
+  date: '2022-06-24'
+  time: '16:00'
+  title: 【示例】全成就收集 第8天
+  platform: douyin
+  duration_min: 110
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220624-9
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2022-9
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: hollow-knight
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-07-08-video-04
+  type: video
+  date: '2022-07-08'
+  title: 【示例】实况解说 第34期
+  platform: bilibili
+  duration_min: 37
+  games:
+    - dark-souls-3
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220708-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-09-21-video-06
+  type: video
+  date: '2022-09-21'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 14
+  games:
+    - elden-ring
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20220921-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-10-12-video-05
+  type: video
+  date: '2022-10-12'
+  title: 【示例】新手向教程 第14集
+  platform: bilibili
+  duration_min: 16
+  games:
+    - red-dead-redemption-2
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20221012-4
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-11-13-live-03
+  type: live
+  date: '2022-11-13'
+  time: '17:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 408
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20221113-2
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: outer-wilds
+      label: 开播
+    - at: '01:55:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2022-12-20-video-08
+  type: video
+  date: '2022-12-20'
+  title: 【示例】剧情向剪辑 第52期
+  platform: bilibili
+  duration_min: 12
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20221220-7
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-01-08-live-07
+  type: live
+  date: '2023-01-08'
+  time: '18:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 432
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230108-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2023-6
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-03-10-live-09
+  type: live
+  date: '2023-03-10'
+  time: '20:30'
+  title: 【示例】全成就收集 第20天
+  platform: bilibili
+  duration_min: 186
+  games:
+    - dark-souls-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230310-8
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2023-8
+      kind: replay
+      parts: 3
+      status: dead
+  segments:
+    - at: '00:18:00'
+      game: dark-souls-3
+      label: 开播
+    - at: '02:10:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-03-24-live-08
+  type: live
+  date: '2023-03-24'
+  time: '21:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 519
+  games:
+    - minecraft
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230324-7
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: minecraft
+      label: 开播
+    - at: '01:20:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-04-06-live-04
+  type: live
+  date: '2023-04-06'
+  time: '21:00'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 479
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230406-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-05-17-live-10
+  type: live
+  date: '2023-05-17'
+  time: '15:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 107
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230517-9
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:18:00'
+      game: the-witcher-3
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-07-12-live-03
+  type: live
+  date: '2023-07-12'
+  time: '20:00'
+  title: 【示例】全成就收集 第30天
+  platform: douyin
+  duration_min: 135
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230712-2
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: elden-ring
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-08-21-live-06
+  type: live
+  date: '2023-08-21'
+  time: '20:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 273
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230821-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2023-5
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:13:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:33:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-08-23-live-02
+  type: live
+  date: '2023-08-23'
+  time: '18:30'
+  title: 【示例】联动直播 一起玩
+  platform: douyu
+  duration_min: 382
+  games:
+    - outer-wilds
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230823-1
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:20:00'
+      game: outer-wilds
+      label: 开播
+    - at: '02:32:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-09-02-live-11
+  type: live
+  date: '2023-09-02'
+  time: '16:00'
+  title: 【示例】全成就收集 第49天
+  platform: bilibili
+  duration_min: 532
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230902-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-09-16-live-01
+  type: live
+  date: '2023-09-16'
+  time: '14:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 365
+  games:
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20230916-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:09:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:49:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2023-10-15-live-05
+  type: live
+  date: '2023-10-15'
+  time: '20:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 383
+  games:
+    - disco-elysium
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20231015-4
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: disco-elysium
+      label: 开播
+    - at: '02:20:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-01-09-live-15
+  type: live
+  date: '2024-01-09'
+  time: '19:30'
+  title: 【示例】联动直播 一起玩
+  platform: douyu
+  duration_min: 120
+  games:
+    - red-dead-redemption-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240109-14
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:17:00'
+      game: red-dead-redemption-2
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-01-27-live-01
+  type: live
+  date: '2024-01-27'
+  time: '14:30'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 157
+  games:
+    - portal-2
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240127-0
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: portal-2
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-03-21-live-03
+  type: live
+  date: '2024-03-21'
+  time: '21:30'
+  title: 【示例】全成就收集 第33天
+  platform: douyu
+  duration_min: 364
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240321-2
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: outer-wilds
+      label: 开播
+    - at: '02:08:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-04-02-live-14
+  type: live
+  date: '2024-04-02'
+  time: '15:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 542
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240402-13
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-13
+      kind: replay
+      parts: 5
+      status: dead
+  segments:
+    - at: '00:07:00'
+      game: hollow-knight
+      label: 开播
+    - at: '01:23:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-05-02-live-05
+  type: live
+  date: '2024-05-02'
+  time: '21:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 225
+  games:
+    - resident-evil-4
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240502-4
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: resident-evil-4
+      label: 开播
+    - at: '02:08:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-05-20-live-13
+  type: live
+  date: '2024-05-20'
+  time: '16:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 607
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240520-12
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-12
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-05-21-live-12
+  type: live
+  date: '2024-05-21'
+  time: '20:30'
+  title: 【示例】晚上好，继续开荒
+  platform: douyu
+  duration_min: 182
+  games:
+    - red-dead-redemption-2
+    - the-witcher-3
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240521-11
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-11
+      kind: replay
+      parts: 2
+      status: dead
+  segments:
+    - at: '00:09:00'
+      game: red-dead-redemption-2
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-06-10-video-11
+  type: video
+  date: '2024-06-10'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 11
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240610-10
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-06-20-live-08
+  type: live
+  date: '2024-06-20'
+  time: '21:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 388
+  games:
+    - stardew-valley
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240620-7
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-7
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:49:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-07-02-video-10
+  type: video
+  date: '2024-07-02'
+  title: 【示例】剧情向剪辑 第59期
+  platform: bilibili
+  duration_min: 24
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240702-9
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-07-08-live-07
+  type: live
+  date: '2024-07-08'
+  time: '21:30'
+  title: 【示例】晚上好，继续开荒
+  platform: douyin
+  duration_min: 615
+  games:
+    - elden-ring
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240708-6
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-6
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:11:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:48:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-09-04-live-02
+  type: live
+  date: '2024-09-04'
+  time: '18:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 559
+  games:
+    - dark-souls-3
+  tags:
+    - 首播
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20240904-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-1
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:19:00'
+      game: dark-souls-3
+      label: 开播
+    - at: '02:44:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-10-16-live-06
+  type: live
+  date: '2024-10-16'
+  time: '16:30'
+  title: 【示例】全成就收集 第35天
+  platform: douyu
+  duration_min: 176
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20241016-5
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2024-5
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-11-27-live-04
+  type: live
+  date: '2024-11-27'
+  time: '20:30'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 344
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20241127-3
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2024-12-10-live-09
+  type: live
+  date: '2024-12-10'
+  time: '18:00'
+  title: 【示例】晚上好，继续开荒
+  platform: douyin
+  duration_min: 588
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20241210-8
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: hollow-knight
+      label: 开播
+    - at: '01:39:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-01-03-live-15
+  type: live
+  date: '2025-01-03'
+  time: '21:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: douyin
+  duration_min: 308
+  games:
+    - hollow-knight
+    - the-witcher-3
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250103-14
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-14
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:08:00'
+      game: hollow-knight
+      label: 开播
+    - at: '02:59:00'
+      game: the-witcher-3
+      label: 换游戏
+    - at: '04:32:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-01-09-live-09
+  type: live
+  date: '2025-01-09'
+  time: '21:30'
+  title: 【示例】这个结局我真没想到
+  platform: douyin
+  duration_min: 222
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250109-8
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-8
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-02-08-live-05
+  type: live
+  date: '2025-02-08'
+  time: '19:00'
+  title: 【示例】晚上好，继续开荒
+  platform: douyin
+  duration_min: 558
+  games:
+    - baldurs-gate-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250208-4
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:07:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:45:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-03-26-live-10
+  type: live
+  date: '2025-03-26'
+  time: '16:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 607
+  games:
+    - minecraft
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250326-9
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-9
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:14:00'
+      game: minecraft
+      label: 开播
+    - at: '01:47:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-04-15-live-13
+  type: live
+  date: '2025-04-15'
+  time: '19:30'
+  title: 【示例】联动直播 一起玩
+  platform: douyin
+  duration_min: 163
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250415-12
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-12
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-04-16-live-08
+  type: live
+  date: '2025-04-16'
+  time: '16:30'
+  title: 【示例】全成就收集 第5天
+  platform: bilibili
+  duration_min: 589
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250416-7
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: hollow-knight
+      label: 开播
+    - at: '01:15:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-04-22-live-02
+  type: live
+  date: '2025-04-22'
+  time: '15:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyin
+  duration_min: 418
+  games: []
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250422-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-1
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-07-12-live-06
+  type: live
+  date: '2025-07-12'
+  time: '17:00'
+  title: 【示例】全成就收集 第8天
+  platform: douyu
+  duration_min: 151
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250712-5
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-07-27-live-04
+  type: live
+  date: '2025-07-27'
+  time: '18:30'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 173
+  games:
+    - baldurs-gate-3
+  tags:
+    - 完结
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250727-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-3
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:04:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:52:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-08-12-live-12
+  type: live
+  date: '2025-08-12'
+  time: '21:30'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 302
+  games:
+    - outer-wilds
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250812-11
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: outer-wilds
+      label: 开播
+    - at: '02:21:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-08-14-live-11
+  type: live
+  date: '2025-08-14'
+  time: '15:30'
+  title: 【示例】这个结局我真没想到
+  platform: douyu
+  duration_min: 567
+  games:
+    - baldurs-gate-3
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20250814-10
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:05:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:33:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-10-03-live-16
+  type: live
+  date: '2025-10-03'
+  time: '18:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 454
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251003-15
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: hollow-knight
+      label: 开播
+    - at: '01:52:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-10-11-live-14
+  type: live
+  date: '2025-10-11'
+  time: '17:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 230
+  games:
+    - elden-ring
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251011-13
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-13
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:16:00'
+      game: elden-ring
+      label: 开播
+    - at: '01:39:00'
+      game: hollow-knight
+      label: 换游戏
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-10-18-video-07
+  type: video
+  date: '2025-10-18'
+  title: 【示例】开箱与吐槽 第30期
+  platform: bilibili
+  duration_min: 38
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251018-6
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-11-21-live-03
+  type: live
+  date: '2025-11-21'
+  time: '18:30'
+  title: 【示例】晚上好，继续开荒
+  platform: douyu
+  duration_min: 160
+  games:
+    - stardew-valley
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251121-2
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-2
+      kind: replay
+      parts: 5
+      status: unchecked
+  segments:
+    - at: '00:06:00'
+      game: stardew-valley
+      label: 开播
+    - at: '01:40:00'
+      game: baldurs-gate-3
+      label: 换游戏
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-12-23-live-01
+  type: live
+  date: '2025-12-23'
+  time: '16:30'
+  title: 【示例】晚上好，继续开荒
+  platform: bilibili
+  duration_min: 233
+  games:
+    - disco-elysium
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251223-0
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2025-0
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:09:00'
+      game: disco-elysium
+      label: 开播
+    - at: '01:55:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2025-12-26-video-17
+  type: video
+  date: '2025-12-26'
+  title: 【示例】开箱与吐槽 第25期
+  platform: bilibili
+  duration_min: 42
+  games:
+    - outer-wilds
+    - hollow-knight
+  tags:
+    - 通宵
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20251226-16
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-01-04-live-11
+  type: live
+  date: '2026-01-04'
+  time: '21:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 237
+  games:
+    - baldurs-gate-3
+  tags:
+    - 杂谈
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260104-10
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-10
+      kind: replay
+      parts: 4
+      status: unchecked
+  segments:
+    - at: '00:02:00'
+      game: baldurs-gate-3
+      label: 开播
+    - at: '01:33:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-02-10-video-09
+  type: video
+  date: '2026-02-10'
+  title: 【示例】这一关我卡了三小时
+  platform: bilibili
+  duration_min: 12
+  games:
+    - hollow-knight
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260210-8
+      kind: original
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-02-12-live-10
+  type: live
+  date: '2026-02-12'
+  time: '19:30'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: douyu
+  duration_min: 167
+  games:
+    - disco-elysium
+  tags:
+    - 联动
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260212-9
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-9
+      kind: replay
+      parts: 6
+      status: unchecked
+  segments:
+    - at: '00:15:00'
+      game: disco-elysium
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-03-06-live-08
+  type: live
+  date: '2026-03-06'
+  time: '17:00'
+  title: 【示例】通宵挑战最终 BOSS
+  platform: bilibili
+  duration_min: 155
+  games:
+    - portal-2
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260306-7
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-7
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:03:00'
+      game: portal-2
+      label: 开播
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-04-04-live-04
+  type: live
+  date: '2026-04-04'
+  time: '15:00'
+  title: 【示例】这个结局我真没想到
+  platform: bilibili
+  duration_min: 131
+  games: []
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260404-3
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-3
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments: []
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-04-20-live-02
+  type: live
+  date: '2026-04-20'
+  time: '19:00'
+  title: 【示例】随便播播 顺便聊天
+  platform: bilibili
+  duration_min: 271
+  games:
+    - the-witcher-3
+    - dark-souls-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260420-1
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-1
+      kind: replay
+      parts: 3
+      status: unchecked
+  segments:
+    - at: '00:09:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '02:23:00'
+      game: dark-souls-3
+      label: 换游戏
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-07-07-live-07
+  type: live
+  date: '2026-07-07'
+  time: '19:00'
+  title: 【示例】联动直播 一起玩
+  platform: bilibili
+  duration_min: 216
+  games:
+    - the-witcher-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260707-6
+      kind: original
+      status: unchecked
+  segments:
+    - at: '00:11:00'
+      game: the-witcher-3
+      label: 开播
+    - at: '02:32:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true
+- id: 2026-08-02-live-05
+  type: live
+  date: '2026-08-02'
+  time: '17:30'
+  title: 【示例】全成就收集 第35天
+  platform: douyu
+  duration_min: 447
+  games:
+    - disco-elysium
+    - baldurs-gate-3
+  tags: []
+  confidence: low
+  sources:
+    - url: https://example.invalid/demo/20260802-4
+      kind: original
+      status: unchecked
+    - url: https://example.invalid/demo-replay/2026-4
+      kind: replay
+      parts: 2
+      status: unchecked
+  segments:
+    - at: '00:12:00'
+      game: disco-elysium
+      label: 开播
+    - at: '01:25:00'
+      game: baldurs-gate-3
+      label: 换游戏
+    - at: '03:10:00'
+      game: null
+      label: 杂谈 / 读评论
+  note: 演示数据，非真实记录
+  demo: true

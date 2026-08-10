@@ -1,0 +1,284 @@
+# 采集任务 #003 · 2017-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-08-01-live-01
+  type: live
+  date: "2017-08-01"
+  title: "我的世界"
+  platform: douyu
+  confidence: high
+  games: [minecraft]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3891890"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-02-live-01
+  type: live
+  date: "2017-08-02"
+  title: "我的世界"
+  platform: douyu
+  confidence: high
+  games: [minecraft]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3896510"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-04-live-01
+  type: live
+  date: "2017-08-04"
+  title: "大周MC第八天：末影龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3899264"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-05-live-01
+  type: live
+  date: "2017-08-05"
+  title: "绝地求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3900684"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-07-live-01
+  type: live
+  date: "2017-08-07"
+  title: "大周MC第九天：末地之城"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3904373"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-08-live-01
+  type: live
+  date: "2017-08-08"
+  title: "半夜不睡觉聊一聊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3904704"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-08-live-02
+  type: live
+  date: "2017-08-08"
+  title: "大周MC第十天：建筑大赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3906556"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-09-live-01
+  type: live
+  date: "2017-08-09"
+  title: "大周有嘻哈"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3908573"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-11-live-01
+  type: live
+  date: "2017-08-11"
+  title: "我的世界中国版PC不限号"
+  platform: douyu
+  confidence: high
+  games: [minecraft]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3913398"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-12-live-01
+  type: live
+  date: "2017-08-12"
+  title: "大周MC之竞选武状元"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3915556"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-13-live-01
+  type: live
+  date: "2017-08-13"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3918562"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-13-live-02
+  type: live
+  date: "2017-08-13"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3916709"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-14-live-01
+  type: live
+  date: "2017-08-14"
+  title: "大周好声音"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3930608"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-19-live-01
+  type: live
+  date: "2017-08-19"
+  title: "尼德霍格+吃鸡"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3929159"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-20-live-01
+  type: live
+  date: "2017-08-20"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3932607"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-21-live-01
+  type: live
+  date: "2017-08-21"
+  title: "人力资源机器"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3932798"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-22-live-01
+  type: live
+  date: "2017-08-22"
+  title: "绝地求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3934836"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-23-live-01
+  type: live
+  date: "2017-08-23"
+  title: "百战天虫W.M.D"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3936778"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-25-live-01
+  type: live
+  date: "2017-08-25"
+  title: "缺氧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3941729"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-26-live-01
+  type: live
+  date: "2017-08-26"
+  title: "缺氧再试水"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3942686"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-27-live-01
+  type: live
+  date: "2017-08-27"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3946059"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-29-live-01
+  type: live
+  date: "2017-08-29"
+  title: "大周MC第15天：七夕过后建筑大赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3948001"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-08-30-live-01
+  type: live
+  date: "2017-08-30"
+  title: "相扑人(Sumoman)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3950282"
+      kind: replay
+  contributed_by: data-agent

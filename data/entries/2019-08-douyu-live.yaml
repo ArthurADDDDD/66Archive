@@ -1,0 +1,91 @@
+# 采集任务 #003 · 2019-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 7 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-08-02-live-01
+  type: live
+  date: "2019-08-02"
+  title: "女流带你走进2019ChinaJoy现场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10659369"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-04-live-01
+  type: live
+  date: "2019-08-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10678520"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-07-live-01
+  type: live
+  date: "2019-08-07"
+  title: "Jump King"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10678313"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-18-live-01
+  type: live
+  date: "2019-08-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10777155"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-23-live-01
+  type: live
+  date: "2019-08-23"
+  title: "遗迹灰烬重生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10803804"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-25-live-01
+  type: live
+  date: "2019-08-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10814645"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-08-30-live-01
+  type: live
+  date: "2019-08-30"
+  title: "Heave Ho&amp;死神对决"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10841151"
+      kind: replay
+  contributed_by: data-agent

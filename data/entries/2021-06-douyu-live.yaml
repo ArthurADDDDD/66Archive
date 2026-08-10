@@ -1,0 +1,332 @@
+# 采集任务 #003 · 2021-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-06-01-live-01
+  type: live
+  date: "2021-06-01"
+  title: "下午茶时间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29390922"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-02-live-01
+  type: live
+  date: "2021-06-02"
+  title: "魔兽怀旧服"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29430144"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-03-live-01
+  type: live
+  date: "2021-06-03"
+  title: "魔兽怀旧服"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29439384"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-04-live-01
+  type: live
+  date: "2021-06-04"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29449434"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-05-live-01
+  type: live
+  date: "2021-06-05"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29458998"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-06-live-01
+  type: live
+  date: "2021-06-06"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29493793"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-08-live-01
+  type: live
+  date: "2021-06-08"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29558922"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-09-live-01
+  type: live
+  date: "2021-06-09"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29625319"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-10-live-01
+  type: live
+  date: "2021-06-10"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29652965"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-11-live-01
+  type: live
+  date: "2021-06-11"
+  title: "你画我猜"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29675884"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-12-live-01
+  type: live
+  date: "2021-06-12"
+  title: "PowerWash Simulator"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29698266"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-13-live-01
+  type: live
+  date: "2021-06-13"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29740163"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-15-live-01
+  type: live
+  date: "2021-06-15"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29795203"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-15-live-02
+  type: live
+  date: "2021-06-15"
+  title: "空洞骑士（中）"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac29795099"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-16-live-01
+  type: live
+  date: "2021-06-16"
+  title: "周三晚上66"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29822588"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-17-live-01
+  type: live
+  date: "2021-06-17"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29823979"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-18-live-01
+  type: live
+  date: "2021-06-18"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29853069"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-19-live-01
+  type: live
+  date: "2021-06-19"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29886242"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-20-live-01
+  type: live
+  date: "2021-06-20"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29885872"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-21-live-01
+  type: live
+  date: "2021-06-21"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29909138"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-22-live-01
+  type: live
+  date: "2021-06-22"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29949972"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-22-live-02
+  type: live
+  date: "2021-06-22"
+  title: "永劫无间（中）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac29950812"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-27-live-01
+  type: live
+  date: "2021-06-27"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30088639"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-27-live-02
+  type: live
+  date: "2021-06-27"
+  title: "砒霜前聊10块钱的"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [砒霜前聊10块钱的]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30077895"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-28-live-01
+  type: live
+  date: "2021-06-28"
+  title: "迷宫大侦探"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30090133"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-29-live-01
+  type: live
+  date: "2021-06-29"
+  title: "霓虹深渊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30100911"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-06-30-live-01
+  type: live
+  date: "2021-06-30"
+  title: "霓虹深渊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30109533"
+      kind: replay
+  contributed_by: data-agent

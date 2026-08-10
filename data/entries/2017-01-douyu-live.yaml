@@ -1,0 +1,308 @@
+# 采集任务 #003 · 2017-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-01-01-live-01
+  type: live
+  date: "2017-01-01"
+  title: "英雄联盟之我家又爆炸啦！~"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3373572"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-02-live-01
+  type: live
+  date: "2017-01-02"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3378069"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-03-live-01
+  type: live
+  date: "2017-01-03"
+  title: "盛世天下·媚娘篇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3378212"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-04-live-01
+  type: live
+  date: "2017-01-04"
+  title: "盛世天下·媚娘篇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3380641"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-07-live-01
+  type: live
+  date: "2017-01-07"
+  title: "英雄联盟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3388459"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-10-live-01
+  type: live
+  date: "2017-01-10"
+  title: "聊天"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [聊天]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3395388"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-10-live-02
+  type: live
+  date: "2017-01-10"
+  title: "黑暗之魂3"
+  platform: douyu
+  confidence: high
+  games: [dark-souls-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3395343"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-11-live-01
+  type: live
+  date: "2017-01-11"
+  title: "快快好起来啊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3398386"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-12-live-01
+  type: live
+  date: "2017-01-12"
+  title: "英雄联盟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3400771"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-12-live-02
+  type: live
+  date: "2017-01-12"
+  title: "黑暗之魂3"
+  platform: douyu
+  confidence: high
+  games: [dark-souls-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3400881"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-13-live-01
+  type: live
+  date: "2017-01-13"
+  title: "A站年会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3403380"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-13-live-02
+  type: live
+  date: "2017-01-13"
+  title: "年会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3405022"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-15-live-01
+  type: live
+  date: "2017-01-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3410716"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-16-live-01
+  type: live
+  date: "2017-01-16"
+  title: "Move or Die"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3409502"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-17-live-01
+  type: live
+  date: "2017-01-17"
+  title: "战斗方块剧场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3412287"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-18-live-01
+  type: live
+  date: "2017-01-18"
+  title: "几何冲刺"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3415692"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-18-live-02
+  type: live
+  date: "2017-01-18"
+  title: "王权"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3415701"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-20-live-01
+  type: live
+  date: "2017-01-20"
+  title: "两周年彩排"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3422132"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-21-live-01
+  type: live
+  date: "2017-01-21"
+  title: "直播2周年"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3422739"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-22-live-01
+  type: live
+  date: "2017-01-22"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3429201"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-25-live-01
+  type: live
+  date: "2017-01-25"
+  title: "事已至此案发现场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3431422"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-26-live-01
+  type: live
+  date: "2017-01-26"
+  title: "可乐鸡翅"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3432913"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-26-live-02
+  type: live
+  date: "2017-01-26"
+  title: "维尼噗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3432740"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-27-live-01
+  type: live
+  date: "2017-01-27"
+  title: "我画你猜"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3435002"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-01-29-live-01
+  type: live
+  date: "2017-01-29"
+  title: "82年的雪碧会上头"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3437161"
+      kind: replay
+  contributed_by: data-agent

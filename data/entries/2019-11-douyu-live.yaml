@@ -1,0 +1,140 @@
+# 采集任务 #003 · 2019-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 11 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-11-03-live-01
+  type: live
+  date: "2019-11-03"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11553091"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-04-live-01
+  type: live
+  date: "2019-11-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11561209"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-07-live-01
+  type: live
+  date: "2019-11-07"
+  title: "没有信号，主要靠听"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11629299"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-09-live-01
+  type: live
+  date: "2019-11-09"
+  title: "死亡搁浅"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11618768"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-10-live-01
+  type: live
+  date: "2019-11-10"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11629445"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-13-live-01
+  type: live
+  date: "2019-11-13"
+  title: "死亡搁浅"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11651121"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-17-live-01
+  type: live
+  date: "2019-11-17"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11689940"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-20-live-01
+  type: live
+  date: "2019-11-20"
+  title: "We werehere together"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11707262"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-24-live-01
+  type: live
+  date: "2019-11-24"
+  title: "怪物猎人狩猎季"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11740245"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-26-live-01
+  type: live
+  date: "2019-11-26"
+  title: "Tangle Tower"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11780573"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-11-29-live-01
+  type: live
+  date: "2019-11-29"
+  title: "Farmers Dynasty"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11786188"
+      kind: replay
+  contributed_by: data-agent

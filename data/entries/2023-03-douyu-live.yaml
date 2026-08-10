@@ -1,0 +1,245 @@
+# 采集任务 #003 · 2023-03 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-03-02-live-01
+  type: live
+  date: "2023-03-02"
+  title: "卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40806148"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-02-live-02
+  type: live
+  date: "2023-03-02"
+  title: "土豆兄弟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40805824"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-03-live-01
+  type: live
+  date: "2023-03-03"
+  title: "卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40806260"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-04-live-01
+  type: live
+  date: "2023-03-04"
+  title: "卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40813613"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-05-live-01
+  type: live
+  date: "2023-03-05"
+  title: "卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40814176"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-08-live-01
+  type: live
+  date: "2023-03-08"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40837353"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-09-live-01
+  type: live
+  date: "2023-03-09"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40845663"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-10-live-01
+  type: live
+  date: "2023-03-10"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40853612"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-11-live-01
+  type: live
+  date: "2023-03-11"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40860740"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-15-live-01
+  type: live
+  date: "2023-03-15"
+  title: "生化危机2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40923395"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-16-live-01
+  type: live
+  date: "2023-03-16"
+  title: "生化危机2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40916940"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-17-live-01
+  type: live
+  date: "2023-03-17"
+  title: "生化危机2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40916713"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-18-live-01
+  type: live
+  date: "2023-03-18"
+  title: "英雄联盟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40916735"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-20-live-01
+  type: live
+  date: "2023-03-20"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40930954"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-22-live-01
+  type: live
+  date: "2023-03-22"
+  title: "生化危机3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40946153"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-24-live-01
+  type: live
+  date: "2023-03-24"
+  title: "生化危机4"
+  platform: douyu
+  confidence: high
+  games: [resident-evil-4]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40963849"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-25-live-01
+  type: live
+  date: "2023-03-25"
+  title: "生化危机4"
+  platform: douyu
+  confidence: high
+  games: [resident-evil-4]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40971370"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-26-live-01
+  type: live
+  date: "2023-03-26"
+  title: "生化危机4"
+  platform: douyu
+  confidence: high
+  games: [resident-evil-4]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40978796"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-29-live-01
+  type: live
+  date: "2023-03-29"
+  title: "Storyteller"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41011142"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-03-29-live-02
+  type: live
+  date: "2023-03-29"
+  title: "生化危机编年史记"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41002688"
+      kind: replay
+  contributed_by: data-agent

@@ -1,0 +1,370 @@
+# 采集任务 #003 · 2018-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 30 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-12-01-live-01
+  type: live
+  date: "2018-12-01"
+  title: "欢乐斗地主&amp;古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4755826"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-02-live-01
+  type: live
+  date: "2018-12-02"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4759318"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-02-live-02
+  type: live
+  date: "2018-12-02"
+  title: "请叫我女流55"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4756910"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-03-live-01
+  type: live
+  date: "2018-12-03"
+  title: "古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4759690"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-04-live-01
+  type: live
+  date: "2018-12-04"
+  title: "古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4762377"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-06-live-01
+  type: live
+  date: "2018-12-06"
+  title: "古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4767323"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-07-live-01
+  type: live
+  date: "2018-12-07"
+  title: "古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4770094"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-08-live-01
+  type: live
+  date: "2018-12-08"
+  title: "任天堂明星大乱斗特别版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4772330"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-08-live-02
+  type: live
+  date: "2018-12-08"
+  title: "古剑奇谭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4772541"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-09-live-01
+  type: live
+  date: "2018-12-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4773762"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-10-live-01
+  type: live
+  date: "2018-12-10"
+  title: "彩虹坠入(Iris.Fall)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4776091"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-11-live-01
+  type: live
+  date: "2018-12-11"
+  title: "任天堂明星大乱斗特别版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4778405"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-14-live-01
+  type: live
+  date: "2018-12-14"
+  title: "Farm Simulator 19"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4786386"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-14-live-02
+  type: live
+  date: "2018-12-14"
+  title: "斗地主之神表演赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4786031"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-15-live-01
+  type: live
+  date: "2018-12-15"
+  title: "Farm Simulator 19"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4787968"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-16-live-01
+  type: live
+  date: "2018-12-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4790314"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-17-live-01
+  type: live
+  date: "2018-12-17"
+  title: "模拟农场19"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4792138"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-18-live-01
+  type: live
+  date: "2018-12-18"
+  title: "幽林怪谈"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4795387"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-19-live-01
+  type: live
+  date: "2018-12-19"
+  title: "GRIS"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4797700"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-21-live-01
+  type: live
+  date: "2018-12-21"
+  title: "Treasure Hunter Simulator（宝藏猎人模拟器）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4803056"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-22-live-01
+  type: live
+  date: "2018-12-22"
+  title: "Return of the Obra Dinn(奥布拉丁恩的回归)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4805171"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-23-live-01
+  type: live
+  date: "2018-12-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4807883"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-24-live-01
+  type: live
+  date: "2018-12-24"
+  title: "Return of the Obra Dinn(奥布拉丁恩的回归)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4810142"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-25-live-01
+  type: live
+  date: "2018-12-25"
+  title: "Kingdom Rush Origins（王国保卫战起源）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4812563"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-26-live-01
+  type: live
+  date: "2018-12-26"
+  title: "Pummel Party（揍击派对）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4815317"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-28-live-01
+  type: live
+  date: "2018-12-28"
+  title: "Parkitect(游乐园建造师)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4820550"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-31-live-01
+  type: live
+  date: "2018-12-31"
+  title: "156277明天会更好"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4828112"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-31-live-02
+  type: live
+  date: "2018-12-31"
+  title: "2017感谢有你"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4167422"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-31-live-03
+  type: live
+  date: "2018-12-31"
+  title: "大周脚展"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4167402"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-12-31-live-04
+  type: live
+  date: "2018-12-31"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4167351"
+      kind: replay
+  contributed_by: data-agent

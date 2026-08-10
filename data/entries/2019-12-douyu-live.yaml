@@ -1,0 +1,179 @@
+# 采集任务 #003 · 2019-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 14 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-12-01-live-01
+  type: live
+  date: "2019-12-01"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11814290"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-03-live-01
+  type: live
+  date: "2019-12-03"
+  title: "2019.12.3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11823157"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-08-live-01
+  type: live
+  date: "2019-12-08"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11889199"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-09-live-01
+  type: live
+  date: "2019-12-09"
+  title: "佩奇的唱歌歌友会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11901272"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-10-live-01
+  type: live
+  date: "2019-12-10"
+  title: "游戏前聊10块钱的"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [游戏前聊10块钱的]
+  sources:
+    - url: "https://www.acfun.cn/v/ac11901879"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-13-live-01
+  type: live
+  date: "2019-12-13"
+  title: "Raft姐弟大海漂流记"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11936638"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-15-live-01
+  type: live
+  date: "2019-12-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac12027566"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-18-live-01
+  type: live
+  date: "2019-12-18"
+  title: "Raft"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac12045067"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-20-live-01
+  type: live
+  date: "2019-12-20"
+  title: "Feel The Snow&amp;Ashen"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac12115123"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-21-live-01
+  type: live
+  date: "2019-12-21"
+  title: "Ashen"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac12117242"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-22-live-01
+  type: live
+  date: "2019-12-22"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac12126748"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-23-live-01
+  type: live
+  date: "2019-12-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac12132513"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-27-live-01
+  type: live
+  date: "2019-12-27"
+  title: "你的脑年龄是几岁"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac12167053"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-12-29-live-01
+  type: live
+  date: "2019-12-29"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac12201808"
+      kind: replay
+  contributed_by: data-agent

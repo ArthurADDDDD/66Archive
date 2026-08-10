@@ -1,0 +1,370 @@
+# 采集任务 #003 · 2021-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 30 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-08-01-live-01
+  type: live
+  date: "2021-08-01"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30494403"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-01-live-02
+  type: live
+  date: "2021-08-01"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30494413"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-02-live-01
+  type: live
+  date: "2021-08-02"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30494793"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-03-live-01
+  type: live
+  date: "2021-08-03"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30508330"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-04-live-01
+  type: live
+  date: "2021-08-04"
+  title: "数独&amp;节奏医生&amp;上古之魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30523644"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-04-live-02
+  type: live
+  date: "2021-08-04"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30523449"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-05-live-01
+  type: live
+  date: "2021-08-05"
+  title: "上古之魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30538781"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-06-live-01
+  type: live
+  date: "2021-08-06"
+  title: "上古之魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30552665"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-06-live-02
+  type: live
+  date: "2021-08-06"
+  title: "上古之魂&amp;永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30552893"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-07-live-01
+  type: live
+  date: "2021-08-07"
+  title: "明日之后"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30566377"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-07-live-02
+  type: live
+  date: "2021-08-07"
+  title: "游戏之前有佩奇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30566750"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-08-live-01
+  type: live
+  date: "2021-08-08"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30609039"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-08-live-02
+  type: live
+  date: "2021-08-08"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30587140"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-09-live-01
+  type: live
+  date: "2021-08-09"
+  title: "Toodee and Topdee"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30651839"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-09-live-02
+  type: live
+  date: "2021-08-09"
+  title: "Toodee and Topdee（中）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30651837"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-10-live-01
+  type: live
+  date: "2021-08-10"
+  title: "黑暗侦探"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30624156"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-16-live-01
+  type: live
+  date: "2021-08-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30704016"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-17-live-01
+  type: live
+  date: "2021-08-17"
+  title: "九十六号公路"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30743712"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-18-live-01
+  type: live
+  date: "2021-08-18"
+  title: "GRIME"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30757457"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-18-live-02
+  type: live
+  date: "2021-08-18"
+  title: "九十六号公路"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30756071"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-19-live-01
+  type: live
+  date: "2021-08-19"
+  title: "GRIME"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30768142"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-20-live-01
+  type: live
+  date: "2021-08-20"
+  title: "GRIME"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30769978"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-22-live-01
+  type: live
+  date: "2021-08-22"
+  title: "桌游模拟《截码战"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30816729"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-23-live-01
+  type: live
+  date: "2021-08-23"
+  title: "桌游模拟《截码战"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30836162"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-25-live-01
+  type: live
+  date: "2021-08-25"
+  title: "花之灵（Hoa）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30852788"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-26-live-01
+  type: live
+  date: "2021-08-26"
+  title: "对马岛之魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30875727"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-27-live-01
+  type: live
+  date: "2021-08-27"
+  title: "对马岛之魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30887698"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-28-live-01
+  type: live
+  date: "2021-08-28"
+  title: "Fling to the Finish"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30896471"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-29-live-01
+  type: live
+  date: "2021-08-29"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30913125"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-08-29-live-02
+  type: live
+  date: "2021-08-29"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30922232"
+      kind: replay
+  contributed_by: data-agent
