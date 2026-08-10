@@ -1,0 +1,375 @@
+# 采集任务 #004 · 2026-02 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2026-02-02-live-01
+  type: live
+  date: "2026-02-02"
+  title: "鸣潮"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1kUFszdERG"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-05-live-01
+  type: live
+  date: "2026-02-05"
+  title: "乱剪一通"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WyFeznE47"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1fvFvzLEVU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1FYFvzmE4C"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1MjFvzbEaC"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-05-live-02
+  type: live
+  date: "2026-02-05"
+  title: "女流66】今天播鸣潮2.5版本，很后悔没直播玩2.4版本，要是直播就可以跟大家讨论，2.4剧情真不错"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1kNNgztEc2"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-05-live-03
+  type: live
+  date: "2026-02-05"
+  title: "鸣潮"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV18eNGzjEgk"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-06-live-01
+  type: live
+  date: "2026-02-06"
+  title: "仁王3"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1LGFrzxENg"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1nrFrziEbD"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1uxFrz2EHE"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-06-live-02
+  type: live
+  date: "2026-02-06"
+  title: "女流66】【2026-02-06】[ 仁王3]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1nwFrzAEdH"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-06-live-03
+  type: live
+  date: "2026-02-06"
+  title: "女流66】【2026-02-06】[ 更新拉~燕云新地图皇宫]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ijFCzhEG5"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-06-live-04
+  type: live
+  date: "2026-02-06"
+  title: "燕云十六声"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1KUF7zCE9H"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-07-live-01
+  type: live
+  date: "2026-02-07"
+  title: "体验鸣潮2.2主线剧情"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1moFWzaEt8"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1TdFWzAE86"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-07-live-02
+  type: live
+  date: "2026-02-07"
+  title: "女流66】4月份之前播鸣潮2.7！朵朵会看我直播录像吗？突然间有点上包袱了，压力大了出汗了，炮炮不知道想没想过这个问题？"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV186AVz5EgM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-07-live-03
+  type: live
+  date: "2026-02-07"
+  title: "女流66】【2026-02-07】[ 体验鸣潮2.2主线剧情]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1CbFxzbEGP"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-07-live-04
+  type: live
+  date: "2026-02-07"
+  title: "女流66】鸣潮2.7在四月份前，朵朵会看我们的直播录像吗，婴儿期特别珍贵，17岁年少成名"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV11QALzCEck"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-09-live-01
+  type: live
+  date: "2026-02-09"
+  title: "女流66】【2026-02-09】[ 燕云中渡桥剧情来了]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1BJcgzVEXJ"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-09-live-02
+  type: live
+  date: "2026-02-09"
+  title: "燕云中渡桥剧情来了"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1V8cgzqEqk"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1qJcgzVEfc"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-13-live-01
+  type: live
+  date: "2026-02-13"
+  title: "女流66正在直播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1J3cJz6Ebm"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV16ecnzCEUP"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-13-live-02
+  type: live
+  date: "2026-02-13"
+  title: "生灵重塑"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1k8cnzjEo3"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-14-live-01
+  type: live
+  date: "2026-02-14"
+  title: "生灵重塑"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1VdZLBVEcA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV13oZLBkEyz"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1tAZjBBEJa"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-26-live-01
+  type: live
+  date: "2026-02-26"
+  title: "生化危机9最高画质首播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1nxAkzjEx1"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV13DAkzFEP5"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1PEA6z5EJB"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-26-live-02
+  type: live
+  date: "2026-02-26"
+  title: "生化危机9：安魂曲"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1bXAkzZEn8"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-27-live-01
+  type: live
+  date: "2026-02-27"
+  title: "生化危机9最高画质首播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1o8AQzeEaG"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV19DA2z1EVX"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1naA2zZESw"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-27-live-02
+  type: live
+  date: "2026-02-27"
+  title: "生化危机9最高画质首播2"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WBADzgEx5"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1eRAUzDE6S"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-27-live-03
+  type: live
+  date: "2026-02-27"
+  title: "生化危机9：安魂曲"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1o8ASzdEJ4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-28-live-01
+  type: live
+  date: "2026-02-28"
+  title: "生化危机9最高画质首播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ZZAazCEw7"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV14BAaztEUv"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-28-live-02
+  type: live
+  date: "2026-02-28"
+  title: "生化危机9最高画质首播3"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1UvAaz8EoC"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2026-02-28-live-03
+  type: live
+  date: "2026-02-28"
+  title: "生化危机9：安魂曲"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ghAazAE8k"
+      kind: replay
+  contributed_by: data-agent
