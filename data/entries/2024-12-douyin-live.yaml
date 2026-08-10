@@ -1,0 +1,785 @@
+# 采集任务 #004 · 2024-12 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2024-12-01-live-01
+  type: live
+  date: "2024-12-01"
+  title: "5点dfmPRX决赛BO5"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1x8zdYMEPU"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV144zdYgE8E"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-03-live-01
+  type: live
+  date: "2024-12-03"
+  title: "3点呆猪杯，1点来"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1aqz1YXEP8"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV13zz1YHEm4"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-03-live-02
+  type: live
+  date: "2024-12-03"
+  title: "今天这么热闹"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1y5zmYjEpr"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-04-live-01
+  type: live
+  date: "2024-12-04"
+  title: "3点呆猪杯，2点来"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Hez9YZEP8"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-04-live-02
+  type: live
+  date: "2024-12-04"
+  title: "我总是突然的出现，好多人呐"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV199iUYoEVp"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-05-live-01
+  type: live
+  date: "2024-12-05"
+  title: "11点来 上上分"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1o9iXYVEdw"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV19ci9YBE7c"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-06-live-01
+  type: live
+  date: "2024-12-06"
+  title: "【一元+双倍】11点来  转个信息位玩玩"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1YjiqYWEB2"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1UBieYrEnS"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-06-live-02
+  type: live
+  date: "2024-12-06"
+  title: "今晚玩新的射击游戏！好多人呐"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV136iBYoESP"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-07-live-01
+  type: live
+  date: "2024-12-07"
+  title: "今晚玩新的射击游戏！好多人呐"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV14YqVYEE2x"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-07-live-02
+  type: live
+  date: "2024-12-07"
+  title: "换成高敏重新出发"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV12Ai1YNEK7"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1tri1YuEQE"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-08-live-01
+  type: live
+  date: "2024-12-08"
+  title: "【双倍】换成高敏重新出发"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1P8qnYeEVL"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1piqnY8E7A"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-08-live-02
+  type: live
+  date: "2024-12-08"
+  title: "今儿好热闹喔"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1zHqHYZExY"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-09-live-01
+  type: live
+  date: "2024-12-09"
+  title: "11点来 11点来 上上赋能"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1BbqcYYE3o"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ZTqwYiEdb"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-09-live-02
+  type: live
+  date: "2024-12-09"
+  title: "今儿好热闹喔"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1J5qKYEEBF"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-10-live-01
+  type: live
+  date: "2024-12-10"
+  title: "今天的头 晕晕滴"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1daqGYFEBb"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Y9quYEELH"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-10-live-02
+  type: live
+  date: "2024-12-10"
+  title: "黑神话悟空大更新！好多人呐"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ErqrY2EDG"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-11-live-01
+  type: live
+  date: "2024-12-11"
+  title: "【双倍】炮之食堂，吃过的别来"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1rNqmYvEH5"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1UYqmYjEkJ"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-11-live-02
+  type: live
+  date: "2024-12-11"
+  title: "黑神话悟空大更新！进来下饭"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1qJqQYrEgX"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1WkqmYgEZu"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-12-live-01
+  type: live
+  date: "2024-12-12"
+  title: "感冒第三天 先打CS轻松一下 下午再瓦"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1HMqbYDEUf"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-12-live-02
+  type: live
+  date: "2024-12-12"
+  title: "黑神话悟空大更新！进来下饭"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WGqYYeEr1"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-13-live-01
+  type: live
+  date: "2024-12-13"
+  title: "2024.12.13"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Kwq6YsEeN"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-13-live-02
+  type: live
+  date: "2024-12-13"
+  title: "TGA正在直播中"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1oRqiYaEbr"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-13-live-03
+  type: live
+  date: "2024-12-13"
+  title: "【双倍】先瓦 2点看看MAJOR"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV14LqzYdE9B"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1EYqqYiE56"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-14-live-01
+  type: live
+  date: "2024-12-14"
+  title: "【一毛牌子+双倍】先瓦2点看看MAJOR"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1UHBLYtE8r"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV15GBLYvE5s"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-14-live-02
+  type: live
+  date: "2024-12-14"
+  title: "黑神话悟空大更新，进来下饭"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1hdBLYNEaW"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-15-live-01
+  type: live
+  date: "2024-12-15"
+  title: "【双倍】FPS新人主播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1HfqdYhEtY"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV18kqdYGE1P"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-15-live-02
+  type: live
+  date: "2024-12-15"
+  title: "黑神话悟空大更新，挑战boss连战！"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1M4qoYGERR"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-18-live-01
+  type: live
+  date: "2024-12-18"
+  title: "【双倍】161718在外拍摄，19播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1sLkwYfEpy"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1WnkwYxEpA"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-19-live-01
+  type: live
+  date: "2024-12-19"
+  title: "【双倍】先上赋能再玩别的"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ajkMYpEPL"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1DjkMYpExG"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-20-live-01
+  type: live
+  date: "2024-12-20"
+  title: "【双倍】先虐一 GO学长 再6点瓦比赛"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1fPkyYTEha"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1zPkyYTEEt"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-20-live-02
+  type: live
+  date: "2024-12-20"
+  title: "【双倍】瓦瓦瓦瓦瓦瓦瓦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV115k1YJENA"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1hwk1YtE6N"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-21-live-01
+  type: live
+  date: "2024-12-21"
+  title: "【双倍】 比赛JETT首秀"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1tfk4YiEk1"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1sNktYaEz5"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-21-live-02
+  type: live
+  date: "2024-12-21"
+  title: "出差回北京了，好久不见"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1eWktYJE9e"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-21-live-03
+  type: live
+  date: "2024-12-21"
+  title: "前排有手柄，进来坐"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1KkktYTEMB"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-22-live-01
+  type: live
+  date: "2024-12-22"
+  title: "【双倍】 比赛JETT首秀"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1x5kiYtEoq"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1CCkvYUEVB"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-22-live-02
+  type: live
+  date: "2024-12-22"
+  title: "古希腊掌管独立游戏的ruen"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1iaCKYtEPz"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-23-live-01
+  type: live
+  date: "2024-12-23"
+  title: "先搞点节目  下午瓦一瓦"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1JeCgYkELV"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1LqCgY6EfM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-24-live-01
+  type: live
+  date: "2024-12-24"
+  title: "先上赋能 再玩点别的"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1UNkRYjEjv"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1KWkQYqEVM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-25-live-01
+  type: live
+  date: "2024-12-25"
+  title: "完成 任务 开开心心玩游戏"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV118CAYwEnC"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1dMCAYjE3f"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-26-live-01
+  type: live
+  date: "2024-12-26"
+  title: "6点来，有个活动"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1B9CrYFEV3"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1A6CzYwEeE"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-27-live-01
+  type: live
+  date: "2024-12-27"
+  title: "【双倍】10点开播 燕云"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1F4CJYuE6A"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1uKCJYXE2j"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-27-live-02
+  type: live
+  date: "2024-12-27"
+  title: "最高难度燕云十六声开荒，好多人呐"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1xmCsYFEif"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1skCpYREvq"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1VfCEYtEc6"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-28-live-01
+  type: live
+  date: "2024-12-28"
+  title: "一名专业的10FPS主播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ehC4YUE98"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ZtC4YDE3Q"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-28-live-02
+  type: live
+  date: "2024-12-28"
+  title: "女流66】弹幕好多，最高难度燕云十六声开荒 2024/12/28 12时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1sZChY2En2"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-28-live-03
+  type: live
+  date: "2024-12-28"
+  title: "女流66】能不能超过100人，最高难度燕云十六声 2024/12/28 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV11H6WY7E74"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-28-live-04
+  type: live
+  date: "2024-12-28"
+  title: "弹幕好多，最高难度燕云十六声开荒"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1cmC8YvETv"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1NBC8YrE6H"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-28-live-05
+  type: live
+  date: "2024-12-28"
+  title: "能不能超过100人，最高难度燕云十六声"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1qv6WYBEJq"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ZSC8YAE8P"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-29-live-01
+  type: live
+  date: "2024-12-29"
+  title: "一名专业的10年的FPS主播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1VX6tYkE9J"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Rt6bYmE7L"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-29-live-02
+  type: live
+  date: "2024-12-29"
+  title: "女流66】好多人呐，燕云十六声浴血难度开荒 2024/12/29 16时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1v368YEEAV"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-29-live-03
+  type: live
+  date: "2024-12-29"
+  title: "好多人呐，燕云十六声浴血难度开荒"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1e368YEEJu"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1nr68YZE2t"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-30-live-01
+  type: live
+  date: "2024-12-30"
+  title: "【双倍】一名专业的10年的FPS主播"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1SM6gYUEG4"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1156gYyEZe"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-30-live-02
+  type: live
+  date: "2024-12-30"
+  title: "今天去开封！好多人呐"
+  platform: douyin
+  confidence: high
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1sK6LYxEhY"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1Py6VYQEfV"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2024-12-30-live-03
+  type: live
+  date: "2024-12-30"
+  title: "女流66】今天去开封！好多人呐 2024/12/30 19时场"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15x6LYkEEW"
+      kind: replay
+  contributed_by: data-agent

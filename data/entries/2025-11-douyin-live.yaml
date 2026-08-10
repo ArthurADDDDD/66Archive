@@ -1,0 +1,134 @@
+# 采集任务 #004 · 2025-11 抖音期直播场次（首播平台：抖音）
+# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
+# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+
+- id: 2025-11-14-live-01
+  type: live
+  date: "2025-11-14"
+  title: "使命召唤：黑色行动7"
+  platform: douyin
+  confidence: medium
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1hDCuBHERK"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-14-live-02
+  type: live
+  date: "2025-11-14"
+  title: "女流66】【2025-11-14】[没错 就是使命召唤]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ZRCMBfEUk"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-14-live-03
+  type: live
+  date: "2025-11-14"
+  title: "没错，就是使命召唤"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1kbCCBeEuw"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1HgCyBiELM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-19-live-01
+  type: live
+  date: "2025-11-19"
+  title: "女流66】【2025-11-19】[今天当个天龙手游轻松掌门_女流学姐的养成经济学]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1q8ypBTE2h"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-20-live-01
+  type: live
+  date: "2025-11-20"
+  title: "女流66】【2025-11-20】[江山北望：立个称霸的小目标]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1hMyPBzEVr"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-20-live-02
+  type: live
+  date: "2025-11-20"
+  title: "江山北望：立个称霸的小目标"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15CyPB1E6F"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1jQycBkEVs"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-28-live-01
+  type: live
+  date: "2025-11-28"
+  title: "女流66】【2025-11-28】[江山北望：立个称霸的小目标]"
+  platform: douyin
+  confidence: medium
+  games: []
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1uASJBoExM"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-28-live-02
+  type: live
+  date: "2025-11-28"
+  title: "江山北望"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1weSEB2EUp"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1eQSEBPEuT"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2025-11-28-live-03
+  type: live
+  date: "2025-11-28"
+  title: "江山北望：立个称霸的小目标"
+  platform: douyin
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1yhSnBxEkx"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1QZSEBFESZ"
+      kind: replay
+  contributed_by: data-agent
