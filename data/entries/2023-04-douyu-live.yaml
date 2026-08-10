@@ -1,0 +1,282 @@
+# 采集任务 #003 · 2023-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-04-01-live-01
+  type: live
+  date: "2023-04-01"
+  title: "渔帆暗涌"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41027442"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-02-live-01
+  type: live
+  date: "2023-04-02"
+  title: "渔帆暗涌"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41034691"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-03-live-01
+  type: live
+  date: "2023-04-03"
+  title: "AltF4 2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41042766"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-04-live-01
+  type: live
+  date: "2023-04-04"
+  title: "AltF4 2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41058573"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-06-live-01
+  type: live
+  date: "2023-04-06"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41067368"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-08-live-01
+  type: live
+  date: "2023-04-08"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41103808"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-09-live-01
+  type: live
+  date: "2023-04-09"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41104588"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-10-live-01
+  type: live
+  date: "2023-04-10"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41105284"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-12-live-01
+  type: live
+  date: "2023-04-12"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41114717"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-14-live-01
+  type: live
+  date: "2023-04-14"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41131763"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-16-live-01
+  type: live
+  date: "2023-04-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac41145985"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-18-live-01
+  type: live
+  date: "2023-04-18"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41162832"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-19-live-01
+  type: live
+  date: "2023-04-19"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41195523"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-20-live-01
+  type: live
+  date: "2023-04-20"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41188371"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-22-live-01
+  type: live
+  date: "2023-04-22"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41203339"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-23-live-01
+  type: live
+  date: "2023-04-23"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41203549"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-24-live-01
+  type: live
+  date: "2023-04-24"
+  title: "满庭芳：宋上繁华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41211940"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-24-live-02
+  type: live
+  date: "2023-04-24"
+  title: "火山的女儿"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41212108"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-26-live-01
+  type: live
+  date: "2023-04-26"
+  title: "火山的女儿"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41228674"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-27-live-01
+  type: live
+  date: "2023-04-27"
+  title: "火山的女儿"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41237282"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-28-live-01
+  type: live
+  date: "2023-04-28"
+  title: "长梦"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41245018"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-29-live-01
+  type: live
+  date: "2023-04-29"
+  title: "饥荒联机版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41258883"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-04-30-live-01
+  type: live
+  date: "2023-04-30"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac41293206"
+      kind: replay
+  contributed_by: data-agent

@@ -1,0 +1,248 @@
+# 采集任务 #003 · 2018-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-09-05-live-01
+  type: live
+  date: "2018-09-05"
+  title: "Two Point Hospital"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4567379"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-06-live-01
+  type: live
+  date: "2018-09-06"
+  title: "Data 2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4569103"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-08-live-01
+  type: live
+  date: "2018-09-08"
+  title: "Donut County"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4572853"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-09-live-01
+  type: live
+  date: "2018-09-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4574749"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-11-live-01
+  type: live
+  date: "2018-09-11"
+  title: "过山车之星"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4578858"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-12-live-01
+  type: live
+  date: "2018-09-12"
+  title: "极限巅峰(Steep)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4580885"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-13-live-01
+  type: live
+  date: "2018-09-13"
+  title: "Strange Brigade"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4583069"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-14-live-01
+  type: live
+  date: "2018-09-14"
+  title: "Strange Brigade"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4585388"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-15-live-01
+  type: live
+  date: "2018-09-15"
+  title: "Strange Brigade"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4586843"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-16-live-02
+  type: live
+  date: "2018-09-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4588929"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-17-live-01
+  type: live
+  date: "2018-09-17"
+  title: "Witch It &amp;39天到火星"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4590602"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-18-live-01
+  type: live
+  date: "2018-09-18"
+  title: "武汉校招宣讲会之学霸驾到"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4612888"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-21-live-01
+  type: live
+  date: "2018-09-21"
+  title: "Rusty Lake Paradox（《锈湖》新作《悖论》）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4599258"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-22-live-01
+  type: live
+  date: "2018-09-22"
+  title: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4601198"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-23-live-01
+  type: live
+  date: "2018-09-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4603370"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-26-live-01
+  type: live
+  date: "2018-09-26"
+  title: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4608456"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-27-live-01
+  type: live
+  date: "2018-09-27"
+  title: "恐龙公园Parkasaurus"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4610364"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-28-live-01
+  type: live
+  date: "2018-09-28"
+  title: "中国式家长"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4612623"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-29-live-01
+  type: live
+  date: "2018-09-29"
+  title: "中国式家长"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4614712"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-09-30-live-01
+  type: live
+  date: "2018-09-30"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4617033"
+      kind: replay
+  contributed_by: data-agent

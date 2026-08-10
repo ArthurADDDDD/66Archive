@@ -1,0 +1,341 @@
+# 采集任务 #003 · 2023-05 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-05-01-live-01
+  type: live
+  date: "2023-05-01"
+  title: "How to Get Rich"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41293737"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-03-live-01
+  type: live
+  date: "2023-05-03"
+  title: "BrambleThe Mountain King"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41278299"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-04-live-01
+  type: live
+  date: "2023-05-04"
+  title: "候鸟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41285689"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-05-live-01
+  type: live
+  date: "2023-05-05"
+  title: "候鸟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41293800"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-06-live-01
+  type: live
+  date: "2023-05-06"
+  title: "邪恶冥刻"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41301099"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-07-live-01
+  type: live
+  date: "2023-05-07"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac41314142"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-08-live-01
+  type: live
+  date: "2023-05-08"
+  title: "虚空列车"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41316665"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-09-live-01
+  type: live
+  date: "2023-05-09"
+  title: "邪恶冥刻"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41324451"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-10-live-01
+  type: live
+  date: "2023-05-10"
+  title: "六六聊聊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41335802"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-11-live-01
+  type: live
+  date: "2023-05-11"
+  title: "邪恶冥刻"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41341144"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-12-live-01
+  type: live
+  date: "2023-05-12"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41348914"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-13-live-01
+  type: live
+  date: "2023-05-13"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41362265"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-14-live-01
+  type: live
+  date: "2023-05-14"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41367564"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-15-live-01
+  type: live
+  date: "2023-05-15"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41374321"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-16-live-01
+  type: live
+  date: "2023-05-16"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41382283"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-17-live-01
+  type: live
+  date: "2023-05-17"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41395756"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-18-live-01
+  type: live
+  date: "2023-05-18"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41395836"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-19-live-01
+  type: live
+  date: "2023-05-19"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41414298"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-20-live-01
+  type: live
+  date: "2023-05-20"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41411635"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-21-live-01
+  type: live
+  date: "2023-05-21"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41418401"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-22-live-01
+  type: live
+  date: "2023-05-22"
+  title: "斗鱼高校音乐盛典"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41423753"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-23-live-01
+  type: live
+  date: "2023-05-23"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41434911"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-25-live-01
+  type: live
+  date: "2023-05-25"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41447811"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-26-live-01
+  type: live
+  date: "2023-05-26"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41456449"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-27-live-01
+  type: live
+  date: "2023-05-27"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41470831"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-28-live-01
+  type: live
+  date: "2023-05-28"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41478688"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-30-live-01
+  type: live
+  date: "2023-05-30"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41486826"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-05-31-live-01
+  type: live
+  date: "2023-05-31"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41494860"
+      kind: replay
+  contributed_by: data-agent

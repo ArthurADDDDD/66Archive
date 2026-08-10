@@ -1,0 +1,112 @@
+# 采集任务 #003 · 2016-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 9 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2016-06-01-live-01
+  type: live
+  date: "2016-06-01"
+  title: "9小时9个人9之门"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2785333"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-01-live-02
+  type: live
+  date: "2016-06-01"
+  title: "逆袭"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2785322"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-02-live-01
+  type: live
+  date: "2016-06-02"
+  title: "Little Inferno"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2788082"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-02-live-02
+  type: live
+  date: "2016-06-02"
+  title: "Once Upon A Time"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2787997"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-02-live-03
+  type: live
+  date: "2016-06-02"
+  title: "怒海求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2787920"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-03-live-01
+  type: live
+  date: "2016-06-03"
+  title: "小小地狱之火(Little Inferno)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2791321"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-04-live-01
+  type: live
+  date: "2016-06-04"
+  title: "几何冲刺"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2792700"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-04-live-02
+  type: live
+  date: "2016-06-04"
+  title: "盐与避难所"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2793187"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-06-05-live-01
+  type: live
+  date: "2016-06-05"
+  title: "5日"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac2795451"
+      kind: replay
+  contributed_by: data-agent

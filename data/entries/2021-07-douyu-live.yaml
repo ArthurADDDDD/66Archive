@@ -1,0 +1,354 @@
+# 采集任务 #003 · 2021-07 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 29 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-07-02-live-01
+  type: live
+  date: "2021-07-02"
+  title: "霓虹深渊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30134539"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-03-live-01
+  type: live
+  date: "2021-07-03"
+  title: "周六来个下午茶吧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30143440"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-04-live-01
+  type: live
+  date: "2021-07-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30162195"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-05-live-01
+  type: live
+  date: "2021-07-05"
+  title: "出门走走逛逛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30162193"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-06-live-01
+  type: live
+  date: "2021-07-06"
+  title: "Creaks"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30173210"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-07-live-01
+  type: live
+  date: "2021-07-07"
+  title: "空洞骑士"
+  platform: douyu
+  confidence: high
+  games: [hollow-knight]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30183981"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-08-live-01
+  type: live
+  date: "2021-07-08"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30194595"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-09-live-01
+  type: live
+  date: "2021-07-09"
+  title: "斩妖行"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30206106"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-10-live-01
+  type: live
+  date: "2021-07-10"
+  title: "Operation Tango"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30216668"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-12-live-01
+  type: live
+  date: "2021-07-12"
+  title: "Pico Park"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30236346"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-13-live-01
+  type: live
+  date: "2021-07-13"
+  title: "美好的下午时光"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30249183"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-14-live-01
+  type: live
+  date: "2021-07-14"
+  title: "怪物猎人物语2破灭之翼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30274620"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-16-live-01
+  type: live
+  date: "2021-07-16"
+  title: "怪物猎人物语2破灭之翼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30285765"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-18-live-01
+  type: live
+  date: "2021-07-18"
+  title: "TapTap 游戏发布会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30317751"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-18-live-02
+  type: live
+  date: "2021-07-18"
+  title: "周末的上海"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30307409"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-20-live-01
+  type: live
+  date: "2021-07-20"
+  title: "怪物猎人物语2破灭之翼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30331324"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-21-live-01
+  type: live
+  date: "2021-07-21"
+  title: "怪物猎人物语2破灭之翼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30344411"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-22-live-01
+  type: live
+  date: "2021-07-22"
+  title: "蛊婆"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30369286"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-23-live-01
+  type: live
+  date: "2021-07-23"
+  title: "全明星娱乐赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30369451"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-24-live-01
+  type: live
+  date: "2021-07-24"
+  title: "永劫无间全明星"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30390163"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-24-live-02
+  type: live
+  date: "2021-07-24"
+  title: "永劫无间全明星（x）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30389941"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-25-live-01
+  type: live
+  date: "2021-07-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac30400928"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-26-live-01
+  type: live
+  date: "2021-07-26"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30411814"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-27-live-01
+  type: live
+  date: "2021-07-27"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30412901"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-28-live-01
+  type: live
+  date: "2021-07-28"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30427288"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-29-live-01
+  type: live
+  date: "2021-07-29"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30452442"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-30-live-01
+  type: live
+  date: "2021-07-30"
+  title: "光遇&amp;永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30457834"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-30-live-02
+  type: live
+  date: "2021-07-30"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30457279"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-07-31-live-01
+  type: live
+  date: "2021-07-31"
+  title: "OneWay"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30464385"
+      kind: replay
+  contributed_by: data-agent

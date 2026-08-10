@@ -1,0 +1,244 @@
+# 采集任务 #003 · 2023-02 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-02-01-live-01
+  type: live
+  date: "2023-02-01"
+  title: "飞跃13号房"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40566209"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-02-live-01
+  type: live
+  date: "2023-02-02"
+  title: "飞跃13号房"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40574061"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-04-live-01
+  type: live
+  date: "2023-02-04"
+  title: "死亡空间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40589850"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-06-live-01
+  type: live
+  date: "2023-02-06"
+  title: "死亡空间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40613167"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-07-live-01
+  type: live
+  date: "2023-02-07"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40625982"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-08-live-01
+  type: live
+  date: "2023-02-08"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40626168"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-09-live-01
+  type: live
+  date: "2023-02-09"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40627403"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-10-live-01
+  type: live
+  date: "2023-02-10"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40642031"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-11-live-01
+  type: live
+  date: "2023-02-11"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40650243"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-12-live-01
+  type: live
+  date: "2023-02-12"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40657800"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-13-live-01
+  type: live
+  date: "2023-02-13"
+  title: "霍格沃茨之遗"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40664729"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-16-live-01
+  type: live
+  date: "2023-02-16"
+  title: "死亡教堂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40688757"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-17-live-01
+  type: live
+  date: "2023-02-17"
+  title: "死亡教堂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40696413"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-18-live-01
+  type: live
+  date: "2023-02-18"
+  title: "Brotato"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40696606"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-20-live-01
+  type: live
+  date: "2023-02-20"
+  title: "Brotato"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40710824"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-21-live-01
+  type: live
+  date: "2023-02-21"
+  title: "原子之心"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40719033"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-22-live-01
+  type: live
+  date: "2023-02-22"
+  title: "原子之心"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40726919"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-23-live-01
+  type: live
+  date: "2023-02-23"
+  title: "原子之心"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40734479"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-24-live-01
+  type: live
+  date: "2023-02-24"
+  title: "原子之心&amp;卧龙"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40750522"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-02-26-live-01
+  type: live
+  date: "2023-02-26"
+  title: "森林之子"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40765653"
+      kind: replay
+  contributed_by: data-agent

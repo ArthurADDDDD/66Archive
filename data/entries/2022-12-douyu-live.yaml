@@ -1,0 +1,246 @@
+# 采集任务 #003 · 2022-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2022-12-01-live-01
+  type: live
+  date: "2022-12-01"
+  title: "Ship of Fools"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40014492"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-04-live-01
+  type: live
+  date: "2022-12-04"
+  title: "Tunic"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40060182"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-04-live-02
+  type: live
+  date: "2022-12-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40059510"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-07-live-01
+  type: live
+  date: "2022-12-07"
+  title: "Tunic"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40082663"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-08-live-01
+  type: live
+  date: "2022-12-08"
+  title: "Tunic"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40103750"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-11-live-01
+  type: live
+  date: "2022-12-11"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac40137339"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-13-live-01
+  type: live
+  date: "2022-12-13"
+  title: "天命奇御 归途"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40148586"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-16-live-01
+  type: live
+  date: "2022-12-16"
+  title: "黑羊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40182199"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-17-live-01
+  type: live
+  date: "2022-12-17"
+  title: "A Little to the Left"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40188881"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-18-live-01
+  type: live
+  date: "2022-12-18"
+  title: "Springblades"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40208157"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-18-live-02
+  type: live
+  date: "2022-12-18"
+  title: "失眠"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40207858"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-20-live-01
+  type: live
+  date: "2022-12-20"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40220049"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-21-live-01
+  type: live
+  date: "2022-12-21"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40225738"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-22-live-01
+  type: live
+  date: "2022-12-22"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40235986"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-23-live-01
+  type: live
+  date: "2022-12-23"
+  title: "深海迷航&amp;光遇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40245602"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-24-live-01
+  type: live
+  date: "2022-12-24"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40254488"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-25-live-01
+  type: live
+  date: "2022-12-25"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40262721"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-26-live-01
+  type: live
+  date: "2022-12-26"
+  title: "深海迷航"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40272353"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-28-live-01
+  type: live
+  date: "2022-12-28"
+  title: "The House of Da Vinci 3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40291151"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-12-30-live-01
+  type: live
+  date: "2022-12-30"
+  title: "Fresh start"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac40311583"
+      kind: replay
+  contributed_by: data-agent

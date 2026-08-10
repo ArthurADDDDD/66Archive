@@ -1,0 +1,320 @@
+# 采集任务 #003 · 2020-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 26 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2020-08-01-live-01
+  type: live
+  date: "2020-08-01"
+  title: "纸片马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17171064"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-02-live-01
+  type: live
+  date: "2020-08-02"
+  title: "逛吃逛吃"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17291974"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-03-live-01
+  type: live
+  date: "2020-08-03"
+  title: "20.8.3--纸片马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17227286"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-04-live-01
+  type: live
+  date: "2020-08-04"
+  title: "20.8.4--纸片马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17227141"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-05-live-01
+  type: live
+  date: "2020-08-05"
+  title: "纸片马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17243005"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-06-live-01
+  type: live
+  date: "2020-08-06"
+  title: "66来聊聊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17260074"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-07-live-01
+  type: live
+  date: "2020-08-07"
+  title: "纸片马里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17293939"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-09-live-01
+  type: live
+  date: "2020-08-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac17325712"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-10-live-01
+  type: live
+  date: "2020-08-10"
+  title: "纸片马里奥&amp;Fall Guys"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17326766"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-11-live-01
+  type: live
+  date: "2020-08-11"
+  title: "Fall Guys&amp;Grounded"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17343071"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-11-live-02
+  type: live
+  date: "2020-08-11"
+  title: "Thereis no game"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17497100"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-12-live-01
+  type: live
+  date: "2020-08-12"
+  title: "Fall Guys"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17360848"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-15-live-01
+  type: live
+  date: "2020-08-15"
+  title: "Avengers"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17437382"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-16-live-01
+  type: live
+  date: "2020-08-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac17455160"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-20-live-01
+  type: live
+  date: "2020-08-20"
+  title: "Spiritfarer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17528113"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-21-live-01
+  type: live
+  date: "2020-08-21"
+  title: "Spiritfarer&amp;帕斯卡契约"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17528771"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-22-live-01
+  type: live
+  date: "2020-08-22"
+  title: "Spiritfarer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17546172"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-23-live-01
+  type: live
+  date: "2020-08-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac17579755"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-24-live-01
+  type: live
+  date: "2020-08-24"
+  title: "Spiritfarer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17580808"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-25-live-01
+  type: live
+  date: "2020-08-25"
+  title: "Spiritfarer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17597578"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-26-live-01
+  type: live
+  date: "2020-08-26"
+  title: "Spiritfarer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17614575"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-27-live-01
+  type: live
+  date: "2020-08-27"
+  title: "周四没66，有佩奇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17630928"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-29-live-01
+  type: live
+  date: "2020-08-29"
+  title: "Inmost"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17669805"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-30-live-01
+  type: live
+  date: "2020-08-30"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac17701108"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-31-live-01
+  type: live
+  date: "2020-08-31"
+  title: "Fall Guys"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17727788"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-08-31-live-02
+  type: live
+  date: "2020-08-31"
+  title: "高殿战记"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac17701429"
+      kind: replay
+  contributed_by: data-agent

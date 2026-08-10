@@ -1,0 +1,310 @@
+# 采集任务 #003 · 2018-05 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-05-01-live-01
+  type: live
+  date: "2018-05-01"
+  title: "与长安福特翼搏同游嘉年华"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4335284"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-03-live-01
+  type: live
+  date: "2018-05-03"
+  title: "任天堂labo了解一下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4338655"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-04-live-01
+  type: live
+  date: "2018-05-04"
+  title: "任天堂Labo继续了解一下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4340289"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-05-live-01
+  type: live
+  date: "2018-05-05"
+  title: "核聚变"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4341540"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-06-live-01
+  type: live
+  date: "2018-05-06"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4343089"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-08-live-01
+  type: live
+  date: "2018-05-08"
+  title: "杀戮尖塔"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4346066"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-09-live-01
+  type: live
+  date: "2018-05-09"
+  title: "Ylands"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4347722"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-10-live-01
+  type: live
+  date: "2018-05-10"
+  title: "试试VR的感觉"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4349631"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-11-live-01
+  type: live
+  date: "2018-05-11"
+  title: "Unity 开发者大会现场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4351221"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-12-live-01
+  type: live
+  date: "2018-05-12"
+  title: "健身"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [健身]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4352519"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-13-live-01
+  type: live
+  date: "2018-05-13"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4354154"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-14-live-01
+  type: live
+  date: "2018-05-14"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4355310"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-16-live-01
+  type: live
+  date: "2018-05-16"
+  title: "We were here too"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4358956"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-18-live-01
+  type: live
+  date: "2018-05-18"
+  title: "传奇巫师（Wizard of Legend）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4362514"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-20-live-01
+  type: live
+  date: "2018-05-20"
+  title: "胃肠炎不舒服，就和大家聊会天吧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4364978"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-21-live-01
+  type: live
+  date: "2018-05-21"
+  title: "传奇巫师（Wizard of Legend）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4366902"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-22-live-01
+  type: live
+  date: "2018-05-22"
+  title: "房产达人 ( House Flipper )"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4368621"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-24-live-01
+  type: live
+  date: "2018-05-24"
+  title: "黑暗之魂1重置版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4372502"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-25-live-01
+  type: live
+  date: "2018-05-25"
+  title: "黑暗之魂1重置版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4374120"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-27-live-01
+  type: live
+  date: "2018-05-27"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4377300"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-27-live-02
+  type: live
+  date: "2018-05-27"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4377237"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-28-live-01
+  type: live
+  date: "2018-05-28"
+  title: "黑暗之魂1重置版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4378669"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-29-live-01
+  type: live
+  date: "2018-05-29"
+  title: "黑暗之魂1重置版"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4380521"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-30-live-01
+  type: live
+  date: "2018-05-30"
+  title: "女巫来了（Witch It）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4382292"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-05-31-live-01
+  type: live
+  date: "2018-05-31"
+  title: "木筏生存（Raft）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4384209"
+      kind: replay
+  contributed_by: data-agent

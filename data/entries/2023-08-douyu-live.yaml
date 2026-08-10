@@ -1,0 +1,352 @@
+# 采集任务 #003 · 2023-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 29 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-08-01-live-01
+  type: live
+  date: "2023-08-01"
+  title: "学园构想家"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41984944"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-02-live-01
+  type: live
+  date: "2023-08-02"
+  title: "Payday3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41993584"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-03-live-01
+  type: live
+  date: "2023-08-03"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42001907"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-04-live-01
+  type: live
+  date: "2023-08-04"
+  title: "Baldur s Gate 3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42013220"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-05-live-01
+  type: live
+  date: "2023-08-05"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42021085"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-06-live-01
+  type: live
+  date: "2023-08-06"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42034844"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-07-live-01
+  type: live
+  date: "2023-08-07"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42038614"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-08-live-01
+  type: live
+  date: "2023-08-08"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42041749"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-09-live-01
+  type: live
+  date: "2023-08-09"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42052362"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-10-live-01
+  type: live
+  date: "2023-08-10"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42058593"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-11-live-01
+  type: live
+  date: "2023-08-11"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42075019"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-13-live-01
+  type: live
+  date: "2023-08-13"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42091677"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-13-live-02
+  type: live
+  date: "2023-08-13"
+  title: "女巫来了 Witch It"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42091386"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-14-live-01
+  type: live
+  date: "2023-08-14"
+  title: "博德之门 3"
+  platform: douyu
+  confidence: high
+  games: [baldurs-gate-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42099064"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-15-live-01
+  type: live
+  date: "2023-08-15"
+  title: "博德完结 下午茶"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42099488"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-16-live-01
+  type: live
+  date: "2023-08-16"
+  title: "雀魂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42106946"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-17-live-01
+  type: live
+  date: "2023-08-17"
+  title: "Viewfinder"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42115189"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-17-live-02
+  type: live
+  date: "2023-08-17"
+  title: "冒险岛：枫之传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42114933"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-17-live-03
+  type: live
+  date: "2023-08-17"
+  title: "绝地求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42122772"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-18-live-01
+  type: live
+  date: "2023-08-18"
+  title: "A Little to the Left"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42123335"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-18-live-02
+  type: live
+  date: "2023-08-18"
+  title: "Viewfinder"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42123276"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-18-live-03
+  type: live
+  date: "2023-08-18"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42122767"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-19-live-01
+  type: live
+  date: "2023-08-19"
+  title: "无畏契约"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42130075"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-20-live-01
+  type: live
+  date: "2023-08-20"
+  title: "黑神话 悟空"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42136402"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-21-live-01
+  type: live
+  date: "2023-08-21"
+  title: "AltF4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42146492"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-29-live-01
+  type: live
+  date: "2023-08-29"
+  title: "老六归来"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42219783"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-30-live-01
+  type: live
+  date: "2023-08-30"
+  title: "装甲核心6境界天火"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42228756"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-31-live-01
+  type: live
+  date: "2023-08-31"
+  title: "AltF4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42232943"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-08-31-live-02
+  type: live
+  date: "2023-08-31"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42232740"
+      kind: replay
+  contributed_by: data-agent
