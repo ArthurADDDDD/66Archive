@@ -1,0 +1,296 @@
+# 采集任务 #003 · 2019-03 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-03-01-live-01
+  type: live
+  date: "2019-03-01"
+  title: "特技摩托：崛起&amp;秘奥法师"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4985423"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-02-live-01
+  type: live
+  date: "2019-03-02"
+  title: "Mages of Mystralia （秘奥法师）&amp;特技摩托：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4987876"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-03-live-01
+  type: live
+  date: "2019-03-03"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4991712"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-03-live-02
+  type: live
+  date: "2019-03-03"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4989814"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-04-live-01
+  type: live
+  date: "2019-03-04"
+  title: "嗜血印&amp;特技摩托：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4992698"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-06-live-01
+  type: live
+  date: "2019-03-06"
+  title: "探班 From Software 隻狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4998782"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-07-live-01
+  type: live
+  date: "2019-03-07"
+  title: "鬼泣5发布会后台（画质感人敬请谅解）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac5002265"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-09-live-01
+  type: live
+  date: "2019-03-09"
+  title: "Devi May Cry 5 《鬼泣5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac5008935"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-10-live-01
+  type: live
+  date: "2019-03-10"
+  title: "Devi May Cry 5 《鬼泣5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac5011369"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-10-live-02
+  type: live
+  date: "2019-03-10"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac5012009"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-13-live-01
+  type: live
+  date: "2019-03-13"
+  title: "Devi May Cry 5 《鬼泣5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac5020913"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-14-live-01
+  type: live
+  date: "2019-03-14"
+  title: "特技摩托：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10002952"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-15-live-01
+  type: live
+  date: "2019-03-15"
+  title: "Baba Is You"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10006046"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-16-live-01
+  type: live
+  date: "2019-03-16"
+  title: "只狼&amp;特技摩托：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10008549"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-18-live-01
+  type: live
+  date: "2019-03-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10013069"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-18-live-02
+  type: live
+  date: "2019-03-18"
+  title: "特技摩托：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10014556"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-19-live-01
+  type: live
+  date: "2019-03-19"
+  title: "猫里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10018970"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-22-live-01
+  type: live
+  date: "2019-03-22"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10036493"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-23-live-01
+  type: live
+  date: "2019-03-23"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10036198"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-24-live-01
+  type: live
+  date: "2019-03-24"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10039992"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-25-live-01
+  type: live
+  date: "2019-03-25"
+  title: "只狼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10040545"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-26-live-01
+  type: live
+  date: "2019-03-26"
+  title: "只狼》媒体体验会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10043642"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-29-live-01
+  type: live
+  date: "2019-03-29"
+  title: "只狼&amp;疑案追声"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10057218"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-03-30-live-01
+  type: live
+  date: "2019-03-30"
+  title: "猫里奥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10060526"
+      kind: replay
+  contributed_by: data-agent

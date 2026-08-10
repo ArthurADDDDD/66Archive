@@ -1,0 +1,297 @@
+# 采集任务 #003 · 2018-03 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-03-03-live-01
+  type: live
+  date: "2018-03-03"
+  title: "弹丸论破：希望的学园和绝望高中生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4249674"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-03-live-02
+  type: live
+  date: "2018-03-03"
+  title: "程序员升职记"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4249664"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-04-live-01
+  type: live
+  date: "2018-03-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4250978"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-05-live-01
+  type: live
+  date: "2018-03-05"
+  title: "弹丸论破：希望的学园和绝望高中生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4252211"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-07-live-01
+  type: live
+  date: "2018-03-07"
+  title: "弹丸论破：希望的学园和绝望高中生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4255227"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-08-live-01
+  type: live
+  date: "2018-03-08"
+  title: "弹丸论破：希望的学园和绝望高中生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4256834"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-09-live-01
+  type: live
+  date: "2018-03-09"
+  title: "弹丸论破：希望的学园和绝望高中生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4258348"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-11-live-01
+  type: live
+  date: "2018-03-11"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4260758"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-14-live-01
+  type: live
+  date: "2018-03-14"
+  title: "SKY光遇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4271558"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-14-live-02
+  type: live
+  date: "2018-03-14"
+  title: "蔚蓝Celeste"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4265243"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-14-live-03
+  type: live
+  date: "2018-03-14"
+  title: "陈星汉《Sky光·遇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4265234"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-16-live-01
+  type: live
+  date: "2018-03-16"
+  title: "蔚蓝 Celeste"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4268478"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-17-live-01
+  type: live
+  date: "2018-03-17"
+  title: "蔚蓝 Celeste"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4269624"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-18-live-01
+  type: live
+  date: "2018-03-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4271395"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-21-live-01
+  type: live
+  date: "2018-03-21"
+  title: "海盗之海 Sea of Theives"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4275592"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-22-live-01
+  type: live
+  date: "2018-03-22"
+  title: "海盗之海 &amp; 绝地求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4277158"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-24-live-01
+  type: live
+  date: "2018-03-24"
+  title: "没人会被炸掉 Keep Talking and Nobody Explodes"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4280005"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-25-live-01
+  type: live
+  date: "2018-03-25"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4281019"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-26-live-01
+  type: live
+  date: "2018-03-26"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4281402"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-26-live-02
+  type: live
+  date: "2018-03-26"
+  title: "没人会被炸掉 Keep Talking and Nobody Explodes"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4282625"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-27-live-01
+  type: live
+  date: "2018-03-27"
+  title: "拆弹姐弟继续"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4284201"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-28-live-01
+  type: live
+  date: "2018-03-28"
+  title: "UNO益智桌游"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4285875"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-30-live-01
+  type: live
+  date: "2018-03-30"
+  title: "星之卡比 新星同盟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4289259"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-03-31-live-01
+  type: live
+  date: "2018-03-31"
+  title: "黑脸先生 &amp; 妈妈把我的游戏藏起来了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4290285"
+      kind: replay
+  contributed_by: data-agent

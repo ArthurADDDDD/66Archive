@@ -1,0 +1,308 @@
+# 采集任务 #003 · 2022-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2022-01-01-live-01
+  type: live
+  date: "2022-01-01"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac32978680"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-02-live-01
+  type: live
+  date: "2022-01-02"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac32981961"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-03-live-01
+  type: live
+  date: "2022-01-03"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33005338"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-04-live-01
+  type: live
+  date: "2022-01-04"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33006232"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-05-live-01
+  type: live
+  date: "2022-01-05"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33029956"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-06-live-01
+  type: live
+  date: "2022-01-06"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33030337"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-08-live-01
+  type: live
+  date: "2022-01-08"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33054048"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-09-live-01
+  type: live
+  date: "2022-01-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac33060159"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-10-live-01
+  type: live
+  date: "2022-01-10"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33062952"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-11-live-01
+  type: live
+  date: "2022-01-11"
+  title: "勇网直前"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33074775"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-13-live-01
+  type: live
+  date: "2022-01-13"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33109479"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-14-live-01
+  type: live
+  date: "2022-01-14"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33114995"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-15-live-01
+  type: live
+  date: "2022-01-15"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33122133"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-16-live-01
+  type: live
+  date: "2022-01-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac33147567"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-17-live-01
+  type: live
+  date: "2022-01-17"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33149321"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-18-live-01
+  type: live
+  date: "2022-01-18"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33159656"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-19-live-01
+  type: live
+  date: "2022-01-19"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33194216"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-20-live-01
+  type: live
+  date: "2022-01-20"
+  title: "战神4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33196140"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-21-live-01
+  type: live
+  date: "2022-01-21"
+  title: "暖雪"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33223938"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-22-live-01
+  type: live
+  date: "2022-01-22"
+  title: "暖雪"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33242908"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-23-live-01
+  type: live
+  date: "2022-01-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac33290566"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-24-live-01
+  type: live
+  date: "2022-01-24"
+  title: "暖雪"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33323324"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-25-live-01
+  type: live
+  date: "2022-01-25"
+  title: "文字游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33355828"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-26-live-01
+  type: live
+  date: "2022-01-26"
+  title: "文字游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33384977"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-01-26-live-02
+  type: live
+  date: "2022-01-26"
+  title: "雀魂麻将"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac33385054"
+      kind: replay
+  contributed_by: data-agent

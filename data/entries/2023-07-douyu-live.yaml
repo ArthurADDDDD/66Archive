@@ -1,0 +1,340 @@
+# 采集任务 #003 · 2023-07 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-07-01-live-01
+  type: live
+  date: "2023-07-01"
+  title: "潜水员戴夫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41731896"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-02-live-01
+  type: live
+  date: "2023-07-02"
+  title: "潜水员戴夫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41741395"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-02-live-02
+  type: live
+  date: "2023-07-02"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41741667"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-04-live-01
+  type: live
+  date: "2023-07-04"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41759048"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-05-live-01
+  type: live
+  date: "2023-07-05"
+  title: "土豆兄弟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41765542"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-06-live-01
+  type: live
+  date: "2023-07-06"
+  title: "潜水员戴夫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41774214"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-07-live-01
+  type: live
+  date: "2023-07-07"
+  title: "潜水员戴夫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41782596"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-08-live-01
+  type: live
+  date: "2023-07-08"
+  title: "GYLT"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41792300"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-08-live-02
+  type: live
+  date: "2023-07-08"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41792117"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-10-live-01
+  type: live
+  date: "2023-07-10"
+  title: "土豆兄弟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41805412"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-10-live-02
+  type: live
+  date: "2023-07-10"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41807150"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-11-live-01
+  type: live
+  date: "2023-07-11"
+  title: "土豆兄弟"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41813790"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-11-live-02
+  type: live
+  date: "2023-07-11"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41815240"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-12-live-01
+  type: live
+  date: "2023-07-12"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41826274"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-13-live-01
+  type: live
+  date: "2023-07-13"
+  title: "糖豆人&amp;面包和年糕"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41832476"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-14-live-01
+  type: live
+  date: "2023-07-14"
+  title: "六六聊封神"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41839125"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-15-live-01
+  type: live
+  date: "2023-07-15"
+  title: "永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41846278"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-19-live-01
+  type: live
+  date: "2023-07-19"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41879207"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-20-live-01
+  type: live
+  date: "2023-07-20"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41887686"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-21-live-01
+  type: live
+  date: "2023-07-21"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41895971"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-22-live-01
+  type: live
+  date: "2023-07-22"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41903538"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-22-live-02
+  type: live
+  date: "2023-07-22"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41910168"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-23-live-01
+  type: live
+  date: "2023-07-23"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41912952"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-24-live-01
+  type: live
+  date: "2023-07-24"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41926799"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-25-live-01
+  type: live
+  date: "2023-07-25"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41952410"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-26-live-01
+  type: live
+  date: "2023-07-26"
+  title: "Street Fighter"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41952897"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-26-live-02
+  type: live
+  date: "2023-07-26"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41953027"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-07-28-live-01
+  type: live
+  date: "2023-07-28"
+  title: "三伏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac41953247"
+      kind: replay
+  contributed_by: data-agent

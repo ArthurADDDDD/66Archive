@@ -1,0 +1,223 @@
+# 采集任务 #003 · 2020-05 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 18 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2020-05-04-live-01
+  type: live
+  date: "2020-05-04"
+  title: "恶果之地"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15347812"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-07-live-01
+  type: live
+  date: "2020-05-07"
+  title: "周四休息，佩奇上"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15404822"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-08-live-01
+  type: live
+  date: "2020-05-08"
+  title: "十年"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15435107"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-09-live-01
+  type: live
+  date: "2020-05-09"
+  title: "冒险公社"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15451024"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-09-live-02
+  type: live
+  date: "2020-05-09"
+  title: "冬日计划"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15450853"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-10-live-01
+  type: live
+  date: "2020-05-10"
+  title: "冰与火之舞"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15470460"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-11-live-01
+  type: live
+  date: "2020-05-11"
+  title: "冰与火之舞"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15496084"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-12-live-01
+  type: live
+  date: "2020-05-12"
+  title: "活着真好，美梦成真"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15495211"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-15-live-01
+  type: live
+  date: "2020-05-15"
+  title: "Hydroneer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15555303"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-16-live-01
+  type: live
+  date: "2020-05-16"
+  title: "Hydroneer"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15574903"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-17-live-01
+  type: live
+  date: "2020-05-17"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac15617457"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-19-live-01
+  type: live
+  date: "2020-05-19"
+  title: "云城朋克"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15658758"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-21-live-01
+  type: live
+  date: "2020-05-21"
+  title: "女流网课时间，敲黑板，认真听"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15681795"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-22-live-01
+  type: live
+  date: "2020-05-22"
+  title: "Tsioque"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15703417"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-24-live-01
+  type: live
+  date: "2020-05-24"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac15758557"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-28-live-01
+  type: live
+  date: "2020-05-28"
+  title: "节奏快打"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15833367"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-30-live-01
+  type: live
+  date: "2020-05-30"
+  title: "Poly Bridge"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac15895043"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-05-31-live-01
+  type: live
+  date: "2020-05-31"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac15918867"
+      kind: replay
+  contributed_by: data-agent

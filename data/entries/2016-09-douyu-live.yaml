@@ -1,0 +1,223 @@
+# 采集任务 #003 · 2016-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 18 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2016-09-07-live-01
+  type: live
+  date: "2016-09-07"
+  title: "请个假"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3086697"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-11-live-01
+  type: live
+  date: "2016-09-11"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3097354"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-12-live-01
+  type: live
+  date: "2016-09-12"
+  title: "逆袭dayX+4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3100227"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-12-live-02
+  type: live
+  date: "2016-09-12"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3100224"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-13-live-01
+  type: live
+  date: "2016-09-13"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3102878"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-14-live-01
+  type: live
+  date: "2016-09-14"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3105090"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-15-live-01
+  type: live
+  date: "2016-09-15"
+  title: "MC建筑大赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3107263"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-16-live-01
+  type: live
+  date: "2016-09-16"
+  title: "加油向未来"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3109297"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-16-live-02
+  type: live
+  date: "2016-09-16"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3110151"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-18-live-01
+  type: live
+  date: "2016-09-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3115391"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-19-live-01
+  type: live
+  date: "2016-09-19"
+  title: "百战天虫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3118204"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-21-live-01
+  type: live
+  date: "2016-09-21"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3123322"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-22-live-01
+  type: live
+  date: "2016-09-22"
+  title: "逆转裁判6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3126317"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-24-live-01
+  type: live
+  date: "2016-09-24"
+  title: "马不停蹄来拍照"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3130573"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-25-live-01
+  type: live
+  date: "2016-09-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3132575"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-26-live-01
+  type: live
+  date: "2016-09-26"
+  title: "trueorfalse"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3135402"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-27-live-01
+  type: live
+  date: "2016-09-27"
+  title: "突然有事请假一天"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3137428"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-09-28-live-01
+  type: live
+  date: "2016-09-28"
+  title: "广州户外"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3141395"
+      kind: replay
+  contributed_by: data-agent

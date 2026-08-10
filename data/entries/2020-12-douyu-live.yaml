@@ -1,0 +1,308 @@
+# 采集任务 #003 · 2020-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2020-12-01-live-01
+  type: live
+  date: "2020-12-01"
+  title: "恶魔之魂二周目"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20239985"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-02-live-01
+  type: live
+  date: "2020-12-02"
+  title: "恶魔之魂二周目"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20271529"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-03-live-01
+  type: live
+  date: "2020-12-03"
+  title: "恶魔之魂三周目搞搞"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20298711"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-06-live-01
+  type: live
+  date: "2020-12-06"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac20431312"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-08-live-01
+  type: live
+  date: "2020-12-08"
+  title: "谁是内鬼"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20467396"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-09-live-01
+  type: live
+  date: "2020-12-09"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20534676"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-10-live-01
+  type: live
+  date: "2020-12-10"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20571499"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-12-live-01
+  type: live
+  date: "2020-12-12"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20602883"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-13-live-01
+  type: live
+  date: "2020-12-13"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac20696024"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-15-live-01
+  type: live
+  date: "2020-12-15"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20732986"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-16-live-01
+  type: live
+  date: "2020-12-16"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20764711"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-17-live-01
+  type: live
+  date: "2020-12-17"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20819562"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-18-live-01
+  type: live
+  date: "2020-12-18"
+  title: "赛博朋克2077&amp;自由篮球"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20831325"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-19-live-01
+  type: live
+  date: "2020-12-19"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20861912"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-20-live-01
+  type: live
+  date: "2020-12-20"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac20919614"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-21-live-01
+  type: live
+  date: "2020-12-21"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20922907"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-22-live-01
+  type: live
+  date: "2020-12-22"
+  title: "chi66女队再战糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20954758"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-23-live-01
+  type: live
+  date: "2020-12-23"
+  title: "佩奇来了，你呢"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac20984238"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-25-live-01
+  type: live
+  date: "2020-12-25"
+  title: "亚索我还是不玩了吧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac21052271"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-26-live-01
+  type: live
+  date: "2020-12-26"
+  title: "经典就是经典呐"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac21084338"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-27-live-01
+  type: live
+  date: "2020-12-27"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21136970"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-28-live-01
+  type: live
+  date: "2020-12-28"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21138243"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-29-live-01
+  type: live
+  date: "2020-12-29"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21177812"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-30-live-01
+  type: live
+  date: "2020-12-30"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21212474"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-12-31-live-01
+  type: live
+  date: "2020-12-31"
+  title: "跨年歌会一起跨年"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac21284409"
+      kind: replay
+  contributed_by: data-agent

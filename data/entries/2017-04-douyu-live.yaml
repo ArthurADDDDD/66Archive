@@ -1,0 +1,295 @@
+# 采集任务 #003 · 2017-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-04-01-live-01
+  type: live
+  date: "2017-04-01"
+  title: "剪剪世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3593776"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-02-live-01
+  type: live
+  date: "2017-04-02"
+  title: "12switch"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3595208"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-02-live-02
+  type: live
+  date: "2017-04-02"
+  title: "噗哟噗哟VS俄罗斯方块"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3595184"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-02-live-03
+  type: live
+  date: "2017-04-02"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3595183"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-03-live-01
+  type: live
+  date: "2017-04-03"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3597706"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-04-live-01
+  type: live
+  date: "2017-04-04"
+  title: "12switch"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3601502"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-04-live-02
+  type: live
+  date: "2017-04-04"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3601510"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-04-live-03
+  type: live
+  date: "2017-04-04"
+  title: "超级炸弹人R"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3601511"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-05-live-01
+  type: live
+  date: "2017-04-05"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3601688"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-06-live-01
+  type: live
+  date: "2017-04-06"
+  title: "冒险岛2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3611999"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-06-live-02
+  type: live
+  date: "2017-04-06"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3607602"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-10-live-01
+  type: live
+  date: "2017-04-10"
+  title: "塞尔达传说荒野之息"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3617769"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-11-live-01
+  type: live
+  date: "2017-04-11"
+  title: "塞尔达传说荒野之息"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3620435"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-12-live-01
+  type: live
+  date: "2017-04-12"
+  title: "血源诅咒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3623220"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-14-live-01
+  type: live
+  date: "2017-04-14"
+  title: "盛世天下之女帝篇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3627063"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-15-live-01
+  type: live
+  date: "2017-04-15"
+  title: "武则天盛世天下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3629867"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-16-live-01
+  type: live
+  date: "2017-04-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3638083"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-16-live-02
+  type: live
+  date: "2017-04-16"
+  title: "盛世天下之女帝篇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3632501"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-17-live-01
+  type: live
+  date: "2017-04-17"
+  title: "星露谷物语"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3633932"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-18-live-01
+  type: live
+  date: "2017-04-18"
+  title: "俄罗斯方块大战噗呦噗呦"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3638192"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-19-live-01
+  type: live
+  date: "2017-04-19"
+  title: "神奇男孩3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3640849"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-21-live-01
+  type: live
+  date: "2017-04-21"
+  title: "神奇男孩3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3643728"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-23-live-01
+  type: live
+  date: "2017-04-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3648161"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-04-24-live-01
+  type: live
+  date: "2017-04-24"
+  title: "剪剪世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3650804"
+      kind: replay
+  contributed_by: data-agent

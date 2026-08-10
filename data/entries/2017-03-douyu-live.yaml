@@ -1,0 +1,246 @@
+# 采集任务 #003 · 2017-03 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-03-01-live-01
+  type: live
+  date: "2017-03-01"
+  title: "伊森卡特的消失"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3514575"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-03-live-01
+  type: live
+  date: "2017-03-03"
+  title: "Hidden Folks"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3518038"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-04-live-01
+  type: live
+  date: "2017-03-04"
+  title: "热血物语：地下世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3520053"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-05-live-01
+  type: live
+  date: "2017-03-05"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3526345"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-07-live-01
+  type: live
+  date: "2017-03-07"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3526301"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-13-live-01
+  type: live
+  date: "2017-03-13"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3545359"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-14-live-01
+  type: live
+  date: "2017-03-14"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3547680"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-15-live-01
+  type: live
+  date: "2017-03-15"
+  title: "chi66诞生记"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3550581"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-15-live-02
+  type: live
+  date: "2017-03-15"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3550686"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-16-live-01
+  type: live
+  date: "2017-03-16"
+  title: "塞尔达传说+LOL"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3553718"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-17-live-01
+  type: live
+  date: "2017-03-17"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3555112"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-18-live-01
+  type: live
+  date: "2017-03-18"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3563645"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-19-live-01
+  type: live
+  date: "2017-03-19"
+  title: "1，2switch"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3561618"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-20-live-01
+  type: live
+  date: "2017-03-20"
+  title: "户外直播"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3564094"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-22-live-01
+  type: live
+  date: "2017-03-22"
+  title: "砒霜兼索尼2周年户外~"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3566723"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-24-live-01
+  type: live
+  date: "2017-03-24"
+  title: "rusty lake新章节和塞尔达"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3572214"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-25-live-01
+  type: live
+  date: "2017-03-25"
+  title: "塞尔达传说"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3574522"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-26-live-01
+  type: live
+  date: "2017-03-26"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3584867"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-29-live-01
+  type: live
+  date: "2017-03-29"
+  title: "黑暗之魂3DLC2"
+  platform: douyu
+  confidence: high
+  games: [dark-souls-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3587442"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-03-30-live-01
+  type: live
+  date: "2017-03-30"
+  title: "黑暗之魂3DLC2"
+  platform: douyu
+  confidence: high
+  games: [dark-souls-3]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3591061"
+      kind: replay
+  contributed_by: data-agent
