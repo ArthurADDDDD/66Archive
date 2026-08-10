@@ -1,0 +1,114 @@
+# 采集任务 #003 · 2019-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 9 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-09-03-live-01
+  type: live
+  date: "2019-09-03"
+  title: "双人配合Heave Ho"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10863183"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-05-live-01
+  type: live
+  date: "2019-09-05"
+  title: "大雄好久不见"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10875058"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-09-live-01
+  type: live
+  date: "2019-09-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10905302"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-10-live-01
+  type: live
+  date: "2019-09-10"
+  title: "怪物猎人：世界 冰原"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10917297"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-14-live-01
+  type: live
+  date: "2019-09-14"
+  title: "怪物猎人：世界 冰原"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10954601"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-15-live-01
+  type: live
+  date: "2019-09-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10968579"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-23-live-01
+  type: live
+  date: "2019-09-23"
+  title: "塞尔达传说 织梦岛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11164528"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-25-live-01
+  type: live
+  date: "2019-09-25"
+  title: "A Short Hike"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11171141"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-09-28-live-01
+  type: live
+  date: "2019-09-28"
+  title: "Green Hell"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac11258173"
+      kind: replay
+  contributed_by: data-agent

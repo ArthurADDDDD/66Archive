@@ -1,0 +1,401 @@
+# 采集任务 #003 · 2023-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 33 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-09-01-live-01
+  type: live
+  date: "2023-09-01"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42245324"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-01-live-02
+  type: live
+  date: "2023-09-01"
+  title: "星空"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42245110"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-01-live-03
+  type: live
+  date: "2023-09-01"
+  title: "猛兽派对"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42245390"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-02-live-01
+  type: live
+  date: "2023-09-02"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42251975"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-03-live-01
+  type: live
+  date: "2023-09-03"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42251964"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-03-live-02
+  type: live
+  date: "2023-09-03"
+  title: "装甲核心6境界天火"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42251942"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-05-live-01
+  type: live
+  date: "2023-09-05"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42268687"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-05-live-02
+  type: live
+  date: "2023-09-05"
+  title: "装甲核心6境界天火"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42268738"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-06-live-01
+  type: live
+  date: "2023-09-06"
+  title: "Trine 5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42278014"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-07-live-01
+  type: live
+  date: "2023-09-07"
+  title: "街霸明新主播赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42289721"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-07-live-02
+  type: live
+  date: "2023-09-07"
+  title: "鹅鸭杀"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42289537"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-08-live-01
+  type: live
+  date: "2023-09-08"
+  title: "街霸"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42305620"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-10-live-01
+  type: live
+  date: "2023-09-10"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42318590"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-10-live-02
+  type: live
+  date: "2023-09-10"
+  title: "猛兽派对"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42312833"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-12-live-01
+  type: live
+  date: "2023-09-12"
+  title: "光头鉴宝"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42340389"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-12-live-02
+  type: live
+  date: "2023-09-12"
+  title: "无畏契约"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42340048"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-13-live-01
+  type: live
+  date: "2023-09-13"
+  title: "岛潮酒店"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42360985"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-14-live-01
+  type: live
+  date: "2023-09-14"
+  title: "街霸"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42361021"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-15-live-01
+  type: live
+  date: "2023-09-15"
+  title: "We Were Here Expeditions"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42360997"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-16-live-02
+  type: live
+  date: "2023-09-16"
+  title: "匹诺曹的谎言"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42370248"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-17-live-01
+  type: live
+  date: "2023-09-17"
+  title: "匹诺曹的谎言&amp;猛兽派对"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42398618"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-18-live-01
+  type: live
+  date: "2023-09-18"
+  title: "匹诺曹的谎言"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42399553"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-19-live-01
+  type: live
+  date: "2023-09-19"
+  title: "匹诺曹的谎言"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42410356"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-21-live-01
+  type: live
+  date: "2023-09-21"
+  title: "匹诺曹的谎言"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42436116"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-22-live-01
+  type: live
+  date: "2023-09-22"
+  title: "生化危机4"
+  platform: douyu
+  confidence: high
+  games: [resident-evil-4]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42436285"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-23-live-01
+  type: live
+  date: "2023-09-23"
+  title: "Payday 3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42455226"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-24-live-01
+  type: live
+  date: "2023-09-24"
+  title: "新出道女歌手"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42465103"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-26-live-01
+  type: live
+  date: "2023-09-26"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42493961"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-27-live-01
+  type: live
+  date: "2023-09-27"
+  title: "赛博朋克2077"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42504588"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-28-live-01
+  type: live
+  date: "2023-09-28"
+  title: "地铁繁花"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42504581"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-29-live-01
+  type: live
+  date: "2023-09-29"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42511931"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-29-live-02
+  type: live
+  date: "2023-09-29"
+  title: "跑跑卡丁车"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42512128"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-09-30-live-01
+  type: live
+  date: "2023-09-30"
+  title: "卧龙 称霸江东"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42520780"
+      kind: replay
+  contributed_by: data-agent

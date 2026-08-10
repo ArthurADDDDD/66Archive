@@ -1,0 +1,259 @@
+# 采集任务 #003 · 2020-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 21 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2020-10-02-live-01
+  type: live
+  date: "2020-10-02"
+  title: "Phasmophobia"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18342452"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-04-live-01
+  type: live
+  date: "2020-10-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac18399121"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-05-live-01
+  type: live
+  date: "2020-10-05"
+  title: "Party Animals"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18398871"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-06-live-01
+  type: live
+  date: "2020-10-06"
+  title: "art of rally&amp;Fall Guys&amp;F1 2020"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18423949"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-12-live-01
+  type: live
+  date: "2020-10-12"
+  title: "中世纪王朝"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18593394"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-13-live-01
+  type: live
+  date: "2020-10-13"
+  title: "中世纪王朝&amp;Party Animals"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18620844"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-14-live-01
+  type: live
+  date: "2020-10-14"
+  title: "中世纪王朝"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18653394"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-15-live-01
+  type: live
+  date: "2020-10-15"
+  title: "舞蹈迷藏&amp;Fall Guys"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18685618"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-16-live-01
+  type: live
+  date: "2020-10-16"
+  title: "不思议的皇冠"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18717588"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-17-live-01
+  type: live
+  date: "2020-10-17"
+  title: "不思议的皇冠"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18751857"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-18-live-01
+  type: live
+  date: "2020-10-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac18801851"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-19-live-01
+  type: live
+  date: "2020-10-19"
+  title: "儿时的游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18803859"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-20-live-01
+  type: live
+  date: "2020-10-20"
+  title: "儿时的游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18837459"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-23-live-01
+  type: live
+  date: "2020-10-23"
+  title: "儿时的游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac18960227"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-24-live-01
+  type: live
+  date: "2020-10-24"
+  title: "Manifold Garden"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19004989"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-25-live-01
+  type: live
+  date: "2020-10-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac19076724"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-26-live-01
+  type: live
+  date: "2020-10-26"
+  title: "Manifold Garden"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19080895"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-28-live-01
+  type: live
+  date: "2020-10-28"
+  title: "佩奇补场你补票"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19146701"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-29-live-01
+  type: live
+  date: "2020-10-29"
+  title: "轩辕剑7"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19172801"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-30-live-01
+  type: live
+  date: "2020-10-30"
+  title: "轩辕剑7"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19197004"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2020-10-31-live-01
+  type: live
+  date: "2020-10-31"
+  title: "轩辕剑7"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac19267803"
+      kind: replay
+  contributed_by: data-agent

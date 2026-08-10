@@ -1,0 +1,333 @@
+# 采集任务 #003 · 2021-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-04-06-live-01
+  type: live
+  date: "2021-04-06"
+  title: "打猎的日子不刮痧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27513425"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-07-live-01
+  type: live
+  date: "2021-04-07"
+  title: "怪物猎人：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27551106"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-08-live-01
+  type: live
+  date: "2021-04-08"
+  title: "怪物猎人：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27573183"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-09-live-01
+  type: live
+  date: "2021-04-09"
+  title: "怪物猎人：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27601702"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-10-live-01
+  type: live
+  date: "2021-04-10"
+  title: "怪物猎人：崛起"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27620220"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-11-live-01
+  type: live
+  date: "2021-04-11"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac27672198"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-13-live-01
+  type: live
+  date: "2021-04-13"
+  title: "Genesis Noir"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27734800"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-14-live-01
+  type: live
+  date: "2021-04-14"
+  title: "鬼谷八荒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27737097"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-15-live-01
+  type: live
+  date: "2021-04-15"
+  title: "鬼谷八荒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27775135"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-16-live-01
+  type: live
+  date: "2021-04-16"
+  title: "鬼谷八荒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27852232"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-17-live-01
+  type: live
+  date: "2021-04-17"
+  title: "Hidden Through Time"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27884083"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-17-live-02
+  type: live
+  date: "2021-04-17"
+  title: "鬼谷八荒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac27884269"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-18-live-01
+  type: live
+  date: "2021-04-18"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac27932190"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-19-live-01
+  type: live
+  date: "2021-04-19"
+  title: "佩奇的快乐你想象不到"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28284810"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-20-live-01
+  type: live
+  date: "2021-04-20"
+  title: "Hidden Through Time"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28001573"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-21-live-01
+  type: live
+  date: "2021-04-21"
+  title: "怪物男孩"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28077546"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-22-live-01
+  type: live
+  date: "2021-04-22"
+  title: "怪物男孩"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28080717"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-22-live-02
+  type: live
+  date: "2021-04-22"
+  title: "怪物男孩 夜间场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28111011"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-23-live-01
+  type: live
+  date: "2021-04-23"
+  title: "怪物男孩"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28153508"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-24-live-01
+  type: live
+  date: "2021-04-24"
+  title: "怪物男孩"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28159371"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-24-live-02
+  type: live
+  date: "2021-04-24"
+  title: "怪物男孩&amp;永劫无间"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28159717"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-25-live-01
+  type: live
+  date: "2021-04-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac28231255"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-25-live-02
+  type: live
+  date: "2021-04-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac28273471"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-25-live-03
+  type: live
+  date: "2021-04-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac28234389"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-26-live-01
+  type: live
+  date: "2021-04-26"
+  title: "21.4.26 天神镇物语试玩"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28284808"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-27-live-01
+  type: live
+  date: "2021-04-27"
+  title: "世界游戏大全51&amp;坎公骑冠剑"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28310058"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-04-30-live-01
+  type: live
+  date: "2021-04-30"
+  title: "PS发布会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac28399662"
+      kind: replay
+  contributed_by: data-agent

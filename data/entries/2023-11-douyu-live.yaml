@@ -1,0 +1,295 @@
+# 采集任务 #003 · 2023-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2023-11-01-live-01
+  type: live
+  date: "2023-11-01"
+  title: "无畏契约"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42821016"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-08-live-01
+  type: live
+  date: "2023-11-08"
+  title: "节奏鸽子"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42898970"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-09-live-01
+  type: live
+  date: "2023-11-09"
+  title: "魔法工艺"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42909913"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-10-live-01
+  type: live
+  date: "2023-11-10"
+  title: "魔法工艺"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42927657"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-11-live-01
+  type: live
+  date: "2023-11-11"
+  title: "超级舞动瓦里奥制造"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42928130"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-12-live-01
+  type: live
+  date: "2023-11-12"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac42944703"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-16-live-01
+  type: live
+  date: "2023-11-16"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42981801"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-17-live-01
+  type: live
+  date: "2023-11-17"
+  title: "节奏医生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42983241"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-17-live-02
+  type: live
+  date: "2023-11-17"
+  title: "遗迹2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42985255"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-18-live-01
+  type: live
+  date: "2023-11-18"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac42995237"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-19-live-01
+  type: live
+  date: "2023-11-19"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43013632"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-20-live-01
+  type: live
+  date: "2023-11-20"
+  title: "因果动物园"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43014439"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-20-live-02
+  type: live
+  date: "2023-11-20"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43016014"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-20-live-03
+  type: live
+  date: "2023-11-20"
+  title: "溜溜聊聊"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43016013"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-21-live-01
+  type: live
+  date: "2023-11-21"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43023987"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-22-live-01
+  type: live
+  date: "2023-11-22"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43033660"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-23-live-01
+  type: live
+  date: "2023-11-23"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43042677"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-24-live-01
+  type: live
+  date: "2023-11-24"
+  title: "大侠立志传"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43053478"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-25-live-01
+  type: live
+  date: "2023-11-25"
+  title: "吃香"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43062929"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-26-live-01
+  type: live
+  date: "2023-11-26"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac43073431"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-27-live-01
+  type: live
+  date: "2023-11-27"
+  title: "英雄杀手"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43081532"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-28-live-01
+  type: live
+  date: "2023-11-28"
+  title: "街霸"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43090636"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-29-live-01
+  type: live
+  date: "2023-11-29"
+  title: "英雄杀手"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac43111506"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2023-11-30-live-01
+  type: live
+  date: "2023-11-30"
+  title: "66聊聊"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [66聊聊]
+  sources:
+    - url: "https://www.acfun.cn/v/ac43118934"
+      kind: replay
+  contributed_by: data-agent

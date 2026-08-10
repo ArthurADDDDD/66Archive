@@ -1,0 +1,343 @@
+# 采集任务 #003 · 2022-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2022-09-01-live-01
+  type: live
+  date: "2022-09-01"
+  title: "Sun Haven"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37121343"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-02-live-01
+  type: live
+  date: "2022-09-02"
+  title: "Sun Haven"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37122191"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-03-live-01
+  type: live
+  date: "2022-09-03"
+  title: "女鬼桥"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37209823"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-04-live-01
+  type: live
+  date: "2022-09-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac37187150"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-05-live-01
+  type: live
+  date: "2022-09-05"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37210713"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-06-live-01
+  type: live
+  date: "2022-09-06"
+  title: "The House of Da Vinci 2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37238366"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-08-live-01
+  type: live
+  date: "2022-09-08"
+  title: "Little Witch in the Woods"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37331103"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-09-live-01
+  type: live
+  date: "2022-09-09"
+  title: "今天是个好日子"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37381154"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-10-live-01
+  type: live
+  date: "2022-09-10"
+  title: "修仙故事 轮回"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37364730"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-12-live-01
+  type: live
+  date: "2022-09-12"
+  title: "修仙故事 轮回"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37398633"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-13-live-01
+  type: live
+  date: "2022-09-13"
+  title: "The Wandering Village"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37416141"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-14-live-01
+  type: live
+  date: "2022-09-14"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37431426"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-15-live-01
+  type: live
+  date: "2022-09-15"
+  title: "Psychonauts 2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37446735"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-16-live-01
+  type: live
+  date: "2022-09-16"
+  title: "脑航员2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37464342"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-17-live-01
+  type: live
+  date: "2022-09-17"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac37499604"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-20-live-01
+  type: live
+  date: "2022-09-20"
+  title: "脑航员2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37527647"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-21-live-01
+  type: live
+  date: "2022-09-21"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37544001"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-21-live-02
+  type: live
+  date: "2022-09-21"
+  title: "脑航员2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37543919"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-22-live-01
+  type: live
+  date: "2022-09-22"
+  title: "卧龙 苍天陨落"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37572459"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-23-live-01
+  type: live
+  date: "2022-09-23"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37573023"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-24-live-01
+  type: live
+  date: "2022-09-24"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37590944"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-25-live-01
+  type: live
+  date: "2022-09-25"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac37619071"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-26-live-01
+  type: live
+  date: "2022-09-26"
+  title: "史莱姆农场2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37620098"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-26-live-02
+  type: live
+  date: "2022-09-26"
+  title: "糖豆人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37619943"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-27-live-01
+  type: live
+  date: "2022-09-27"
+  title: "史莱姆农场2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37633953"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-28-live-01
+  type: live
+  date: "2022-09-28"
+  title: "Dome Keeper"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37646907"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-29-live-01
+  type: live
+  date: "2022-09-29"
+  title: "Brotato"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37662662"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2022-09-29-live-02
+  type: live
+  date: "2022-09-29"
+  title: "暗黑破坏神 不朽"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac37662729"
+      kind: replay
+  contributed_by: data-agent

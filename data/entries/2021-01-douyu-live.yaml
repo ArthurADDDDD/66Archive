@@ -1,0 +1,383 @@
+# 采集任务 #003 · 2021-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 31 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-01-01-live-01
+  type: live
+  date: "2021-01-01"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21287167"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-02-live-01
+  type: live
+  date: "2021-01-02"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21317278"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-03-live-01
+  type: live
+  date: "2021-01-03"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21385606"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-04-live-01
+  type: live
+  date: "2021-01-04"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21396712"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-05-live-01
+  type: live
+  date: "2021-01-05"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21441992"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-06-live-01
+  type: live
+  date: "2021-01-06"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21478834"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-07-live-01
+  type: live
+  date: "2021-01-07"
+  title: "星露谷物语联机版"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21551022"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-08-live-01
+  type: live
+  date: "2021-01-08"
+  title: "星露谷物语联机版&amp;使命战场"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21664877"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-10-live-01
+  type: live
+  date: "2021-01-10"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21769028"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-11-live-01
+  type: live
+  date: "2021-01-11"
+  title: "星露谷物语继续耕耘"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21776992"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-12-live-01
+  type: live
+  date: "2021-01-12"
+  title: "星露谷物语继续耕耘"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac21857452"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-13-live-01
+  type: live
+  date: "2021-01-13"
+  title: "星露谷物语继续耕耘"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22027262"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-14-live-01
+  type: live
+  date: "2021-01-14"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac32128863"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-14-live-02
+  type: live
+  date: "2021-01-14"
+  title: "星露谷物语继续耕耘"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22032474"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-15-live-01
+  type: live
+  date: "2021-01-15"
+  title: "仙剑奇侠传7试玩&amp;星露谷物语&amp;游戏王：决斗链接"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22113044"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-16-live-01
+  type: live
+  date: "2021-01-16"
+  title: "星露谷物语"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22183924"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-17-live-01
+  type: live
+  date: "2021-01-17"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22356133"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-18-live-01
+  type: live
+  date: "2021-01-18"
+  title: "星露谷物语"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22364964"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-19-live-01
+  type: live
+  date: "2021-01-19"
+  title: "星露谷物语"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22436407"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-20-live-01
+  type: live
+  date: "2021-01-20"
+  title: "星露谷物语全收集之路"
+  platform: douyu
+  confidence: high
+  games: [stardew-valley]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22519025"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-21-live-01
+  type: live
+  date: "2021-01-21"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac32434021"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-22-live-01
+  type: live
+  date: "2021-01-22"
+  title: "Shady Part of Me&amp;归家异途2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac22712405"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-24-live-01
+  type: live
+  date: "2021-01-24"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac22975377"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-25-live-01
+  type: live
+  date: "2021-01-25"
+  title: "Shady Part of Me&amp;糖豆人&amp;文明6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac22986109"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-26-live-01
+  type: live
+  date: "2021-01-26"
+  title: "文明6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23080553"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-27-live-01
+  type: live
+  date: "2021-01-27"
+  title: "文明6"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23163357"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-28-live-01
+  type: live
+  date: "2021-01-28"
+  title: "橙光 传闻中的女帝后宫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23259917"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-29-live-01
+  type: live
+  date: "2021-01-29"
+  title: "高殿战记&amp;橙光 传闻中的女帝后宫"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23358929"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-30-live-01
+  type: live
+  date: "2021-01-30"
+  title: "戴森球计划"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23446918"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-31-live-01
+  type: live
+  date: "2021-01-31"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac23637191"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-01-31-live-02
+  type: live
+  date: "2021-01-31"
+  title: "戴森球计划"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac23644448"
+      kind: replay
+  contributed_by: data-agent

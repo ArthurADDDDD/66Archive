@@ -1,0 +1,198 @@
+# 采集任务 #003 · 2021-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 16 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2021-09-02-live-01
+  type: live
+  date: "2021-09-02"
+  title: "符文工厂5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30961552"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-03-live-01
+  type: live
+  date: "2021-09-03"
+  title: "符文工厂5"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac30973137"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-04-live-01
+  type: live
+  date: "2021-09-04"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac31007934"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-09-live-01
+  type: live
+  date: "2021-09-09"
+  title: "暗影火炬城"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31050416"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-10-live-01
+  type: live
+  date: "2021-09-10"
+  title: "暗影火炬城"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31064318"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-11-live-01
+  type: live
+  date: "2021-09-11"
+  title: "暗影火炬城"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31076461"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-12-live-01
+  type: live
+  date: "2021-09-12"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac31085992"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-14-live-01
+  type: live
+  date: "2021-09-14"
+  title: "山海旅人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31114927"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-16-live-01
+  type: live
+  date: "2021-09-16"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31124448"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-17-live-01
+  type: live
+  date: "2021-09-17"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31134904"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-18-live-01
+  type: live
+  date: "2021-09-18"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31144413"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-20-live-01
+  type: live
+  date: "2021-09-20"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31165587"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-22-live-01
+  type: live
+  date: "2021-09-22"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31183994"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-23-live-01
+  type: live
+  date: "2021-09-23"
+  title: "风来之国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31197074"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-29-live-01
+  type: live
+  date: "2021-09-29"
+  title: "审判之逝：湮灭的记忆"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31261853"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2021-09-30-live-01
+  type: live
+  date: "2021-09-30"
+  title: "审判之逝：湮灭的记忆"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac31284041"
+      kind: replay
+  contributed_by: data-agent

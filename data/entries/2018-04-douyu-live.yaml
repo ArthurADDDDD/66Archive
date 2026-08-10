@@ -1,0 +1,346 @@
+# 采集任务 #003 · 2018-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-04-01-live-01
+  type: live
+  date: "2018-04-01"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4291800"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-02-live-01
+  type: live
+  date: "2018-04-02"
+  title: "噗哟噗哟vs俄罗斯方块S"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4292873"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-03-live-01
+  type: live
+  date: "2018-04-03"
+  title: "噗哟噗哟vs俄罗斯方块S &amp; 洞窟物语"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4294449"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-04-live-01
+  type: live
+  date: "2018-04-04"
+  title: "专属鼠标垫 &amp; 童年动漫歌曲了解一下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4295971"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-06-live-01
+  type: live
+  date: "2018-04-06"
+  title: "豆6组合了解一下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4298460"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-06-live-02
+  type: live
+  date: "2018-04-06"
+  title: "豆豆来啦"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4298163"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-07-live-01
+  type: live
+  date: "2018-04-07"
+  title: "户外之跑跑卡丁车"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4299386"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-08-live-01
+  type: live
+  date: "2018-04-08"
+  title: "到底怎么了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4300876"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-11-live-01
+  type: live
+  date: "2018-04-11"
+  title: "节奏天国"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4305998"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-12-live-01
+  type: live
+  date: "2018-04-12"
+  title: "欢迎丁丁张老师做客156277"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4325869"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-13-live-01
+  type: live
+  date: "2018-04-13"
+  title: "回忆之旅 &amp; 众生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4309315"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-15-live-01
+  type: live
+  date: "2018-04-15"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4311550"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-15-live-02
+  type: live
+  date: "2018-04-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4311945"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-15-live-03
+  type: live
+  date: "2018-04-15"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4311943"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-16-live-01
+  type: live
+  date: "2018-04-16"
+  title: "冒险岛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4313461"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-17-live-01
+  type: live
+  date: "2018-04-17"
+  title: "堡垒之夜（Fortnite）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4314886"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-20-live-01
+  type: live
+  date: "2018-04-20"
+  title: "战神 （God of War ）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4319752"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-21-live-01
+  type: live
+  date: "2018-04-21"
+  title: "战神 （God of War ）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4321083"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-22-live-01
+  type: live
+  date: "2018-04-22"
+  title: "冒险岛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4321955"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-22-live-02
+  type: live
+  date: "2018-04-22"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4322255"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-23-live-01
+  type: live
+  date: "2018-04-23"
+  title: "堡垒之夜第三赛季"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4323634"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-23-live-02
+  type: live
+  date: "2018-04-23"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4323551"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-23-live-03
+  type: live
+  date: "2018-04-23"
+  title: "战神（God of War）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4323624"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-25-live-01
+  type: live
+  date: "2018-04-25"
+  title: "Play Station 媒体体验会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4326732"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-25-live-02
+  type: live
+  date: "2018-04-25"
+  title: "堡垒之夜主播擂台赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4326869"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-26-live-01
+  type: live
+  date: "2018-04-26"
+  title: "堡垒之夜主播擂台赛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4328697"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-27-live-01
+  type: live
+  date: "2018-04-27"
+  title: "战神 God of War"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4330195"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-04-30-live-01
+  type: live
+  date: "2018-04-30"
+  title: "大周聚餐暨女流水友交流会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4334406"
+      kind: replay
+  contributed_by: data-agent

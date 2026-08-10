@@ -1,0 +1,335 @@
+# 采集任务 #003 · 2018-07 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-07-01-live-01
+  type: live
+  date: "2018-07-01"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4440588"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-01-live-02
+  type: live
+  date: "2018-07-01"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4440576"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-02-live-01
+  type: live
+  date: "2018-07-02"
+  title: "VR乒乓了解一下"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4441949"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-06-live-01
+  type: live
+  date: "2018-07-06"
+  title: "蒸汽世界 Steam World Dig"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4449957"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-07-live-01
+  type: live
+  date: "2018-07-07"
+  title: "蒸汽世界&amp;极限巅峰&amp;逆水寒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4451378"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-08-live-01
+  type: live
+  date: "2018-07-08"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4452475"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-08-live-02
+  type: live
+  date: "2018-07-08"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4452632"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-10-live-01
+  type: live
+  date: "2018-07-10"
+  title: "极限巅峰 （Steep）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4456409"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-11-live-01
+  type: live
+  date: "2018-07-11"
+  title: "我被男神捅死了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4458161"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-13-live-01
+  type: live
+  date: "2018-07-13"
+  title: "我被男神捅死了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4461994"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-14-live-01
+  type: live
+  date: "2018-07-14"
+  title: "来访者"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4463451"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-15-live-01
+  type: live
+  date: "2018-07-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4464939"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-17-live-01
+  type: live
+  date: "2018-07-17"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4468653"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-18-live-01
+  type: live
+  date: "2018-07-18"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4470628"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-19-live-01
+  type: live
+  date: "2018-07-19"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4472749"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-20-live-01
+  type: live
+  date: "2018-07-20"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4474728"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-21-live-01
+  type: live
+  date: "2018-07-21"
+  title: "八方旅人&amp; 绝地求生"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4476097"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-22-live-01
+  type: live
+  date: "2018-07-22"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4478022"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-23-live-01
+  type: live
+  date: "2018-07-23"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4479395"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-24-live-01
+  type: live
+  date: "2018-07-24"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4481661"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-25-live-01
+  type: live
+  date: "2018-07-25"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4483445"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-26-live-01
+  type: live
+  date: "2018-07-26"
+  title: "八方旅人（Octopath Traveler）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4485376"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-27-live-01
+  type: live
+  date: "2018-07-27"
+  title: "太鼓达人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4487651"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-28-live-01
+  type: live
+  date: "2018-07-28"
+  title: "炸弹鸡(Bomb Chicken)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4488998"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-29-live-01
+  type: live
+  date: "2018-07-29"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4490868"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-30-live-01
+  type: live
+  date: "2018-07-30"
+  title: "波西亚时光"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4492025"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-07-31-live-01
+  type: live
+  date: "2018-07-31"
+  title: "炸弹鸡&amp;逆水寒"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4494319"
+      kind: replay
+  contributed_by: data-agent

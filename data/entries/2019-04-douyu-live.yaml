@@ -1,0 +1,286 @@
+# 采集任务 #003 · 2019-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2019-04-02-live-01
+  type: live
+  date: "2019-04-02"
+  title: "新浪游戏年度盛典"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10071047"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-03-live-01
+  type: live
+  date: "2019-04-03"
+  title: "游请制作人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10075064"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-05-live-01
+  type: live
+  date: "2019-04-05"
+  title: "雨中暴毙2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10082659"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-06-live-01
+  type: live
+  date: "2019-04-06"
+  title: "疑案追声&amp;雨中暴毙2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10086101"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-07-live-01
+  type: live
+  date: "2019-04-07"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10093198"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-12-live-01
+  type: live
+  date: "2019-04-12"
+  title: "Supraland"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10110418"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-13-live-01
+  type: live
+  date: "2019-04-13"
+  title: "Supraland"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10113845"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-14-live-01
+  type: live
+  date: "2019-04-14"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10117506"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-19-live-01
+  type: live
+  date: "2019-04-19"
+  title: "浮岛物语"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10137206"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-21-live-01
+  type: live
+  date: "2019-04-21"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10143087"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-21-live-02
+  type: live
+  date: "2019-04-21"
+  title: "戏说封神第1期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10157954"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-22-live-01
+  type: live
+  date: "2019-04-22"
+  title: "浮岛物语"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10149668"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-23-live-01
+  type: live
+  date: "2019-04-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10150917"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-23-live-02
+  type: live
+  date: "2019-04-23"
+  title: "戏说封神第2期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10157993"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-23-live-03
+  type: live
+  date: "2019-04-23"
+  title: "武士零"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10151288"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-26-live-01
+  type: live
+  date: "2019-04-26"
+  title: "Hardware Engineers"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10161622"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-26-live-02
+  type: live
+  date: "2019-04-26"
+  title: "戏说封神第3期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10161687"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-27-live-01
+  type: live
+  date: "2019-04-27"
+  title: "戏说封神"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10164751"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-27-live-02
+  type: live
+  date: "2019-04-27"
+  title: "聊天"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [聊天]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10164722"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-28-live-01
+  type: live
+  date: "2019-04-28"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10171020"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-29-live-01
+  type: live
+  date: "2019-04-29"
+  title: "Biped"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10170959"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-29-live-02
+  type: live
+  date: "2019-04-29"
+  title: "戏说封神第五期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10170970"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2019-04-30-live-01
+  type: live
+  date: "2019-04-30"
+  title: "戏说封神第六期"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10174460"
+      kind: replay
+  contributed_by: data-agent

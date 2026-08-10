@@ -1,0 +1,503 @@
+# 采集任务 #003 · 2018-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 41 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2018-01-02-live-01
+  type: live
+  date: "2018-01-02"
+  title: "传送门：桥梁构造者(Bridge Constructor Portal)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4169872"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-03-live-01
+  type: live
+  date: "2018-01-03"
+  title: "传送门：桥梁构造者(Bridge Constructor Portal)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4171880"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-05-live-01
+  type: live
+  date: "2018-01-05"
+  title: "传送门：桥梁构造者(Bridge Constructor Portal)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4176059"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-06-live-01
+  type: live
+  date: "2018-01-06"
+  title: "女流66开年Party约战SHIELD马力欧"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4177609"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-07-live-01
+  type: live
+  date: "2018-01-07"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4179221"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-08-live-01
+  type: live
+  date: "2018-01-08"
+  title: "人类一败涂地 Human Fall Flat"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4180732"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-09-live-01
+  type: live
+  date: "2018-01-09"
+  title: "人类一败涂地 Human Fall Flat"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4182682"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-10-live-01
+  type: live
+  date: "2018-01-10"
+  title: "传送门：桥梁构造者"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4184762"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-12-live-01
+  type: live
+  date: "2018-01-12"
+  title: "Rusty Lake 锈湖"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4188857"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-13-live-01
+  type: live
+  date: "2018-01-13"
+  title: "鱼乐盛典"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4190883"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-14-live-01
+  type: live
+  date: "2018-01-14"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4193694"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-15-live-01
+  type: live
+  date: "2018-01-15"
+  title: "Just Shapes &amp; Beats"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4400022"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-15-live-02
+  type: live
+  date: "2018-01-15"
+  title: "Rusty Lake Paradise 锈湖天堂岛"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4193508"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-15-live-03
+  type: live
+  date: "2018-01-15"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac10010771"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-15-live-04
+  type: live
+  date: "2018-01-15"
+  title: "戏说聊斋"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [戏说聊斋]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4314841"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-15-live-05
+  type: live
+  date: "2018-01-15"
+  title: "疑案追声中元节特别版&amp;牧场物语"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac10746697"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-16-live-01
+  type: live
+  date: "2018-01-16"
+  title: "66、炮炮、壮壮、维乐一起吃鸡"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4195599"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-17-live-01
+  type: live
+  date: "2018-01-17"
+  title: "大周MC第四目：第六天之七夕建筑大赛&amp;无人深空"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4528865"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-17-live-02
+  type: live
+  date: "2018-01-17"
+  title: "调酒师的生活 VA"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4197468"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-19-live-01
+  type: live
+  date: "2018-01-19"
+  title: "调酒师的生活 VA"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4201748"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-20-live-01
+  type: live
+  date: "2018-01-20"
+  title: "乞丐模拟器 Hobo Tough Life"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4203116"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-01
+  type: live
+  date: "2018-01-21"
+  title: "Just The Way 6 Are（Themysc1ra）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204292"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-02
+  type: live
+  date: "2018-01-21"
+  title: "三周年GIF（黄图哥）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204299"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-03
+  type: live
+  date: "2018-01-21"
+  title: "三周年盛典"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4205249"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-04
+  type: live
+  date: "2018-01-21"
+  title: "三周年祝福（木由叶&amp;播音彬）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204306"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-05
+  type: live
+  date: "2018-01-21"
+  title: "大周三周年盛典"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204275"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-06
+  type: live
+  date: "2018-01-21"
+  title: "大周女皇最牛逼（月野兔Usagi）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204294"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-07
+  type: live
+  date: "2018-01-21"
+  title: "女流直播三周年（010）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204297"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-08
+  type: live
+  date: "2018-01-21"
+  title: "搞事部集体出品"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204301"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-21-live-09
+  type: live
+  date: "2018-01-21"
+  title: "追光者（明筱岩）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4204314"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-22-live-01
+  type: live
+  date: "2018-01-22"
+  title: "乞丐模拟器 Hobo Tough Life"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4206352"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-24-live-01
+  type: live
+  date: "2018-01-24"
+  title: "6酱音乐专辑第三波"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4209093"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-24-live-02
+  type: live
+  date: "2018-01-24"
+  title: "Stick Fight ：The Game 坚持战斗：游戏"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4210340"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-24-live-03
+  type: live
+  date: "2018-01-24"
+  title: "相声专场《看病"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4215902"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-25-live-01
+  type: live
+  date: "2018-01-25"
+  title: "带赵鑫小姐姐参加2017直播行业精英会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4212224"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-26-live-01
+  type: live
+  date: "2018-01-26"
+  title: "怪物猎人：世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4214322"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-28-live-01
+  type: live
+  date: "2018-01-28"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4217185"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-29-live-01
+  type: live
+  date: "2018-01-29"
+  title: "真·三国无双8体验会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4218475"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-30-live-01
+  type: live
+  date: "2018-01-30"
+  title: "勇者斗恶龙创世小玩家2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4909237"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-30-live-02
+  type: live
+  date: "2018-01-30"
+  title: "怪物猎人：世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4220976"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2018-01-31-live-01
+  type: live
+  date: "2018-01-31"
+  title: "怪物猎人：世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4222978"
+      kind: replay
+  contributed_by: data-agent

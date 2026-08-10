@@ -1,0 +1,261 @@
+# 采集任务 #003 · 2016-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 21 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2016-10-03-live-01
+  type: live
+  date: "2016-10-03"
+  title: "生日特辑"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3154320"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-04-live-01
+  type: live
+  date: "2016-10-04"
+  title: "煮糊了(overcooked)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3154403"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-05-live-01
+  type: live
+  date: "2016-10-05"
+  title: "煮糊了(overcooked)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3157494"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-06-live-01
+  type: live
+  date: "2016-10-06"
+  title: "煮糊了(overcooked)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3158187"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-07-live-01
+  type: live
+  date: "2016-10-07"
+  title: "战斗方块剧场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3160298"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-09-live-01
+  type: live
+  date: "2016-10-09"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3164916"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-13-live-01
+  type: live
+  date: "2016-10-13"
+  title: "PlayStation VR中国新品发布会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3175879"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-14-live-01
+  type: live
+  date: "2016-10-14"
+  title: "仙剑奇侠传3D回合"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3178955"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-16-live-01
+  type: live
+  date: "2016-10-16"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3183453"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-20-live-01
+  type: live
+  date: "2016-10-20"
+  title: "做头发"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3193762"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-20-live-02
+  type: live
+  date: "2016-10-20"
+  title: "聊天"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [聊天]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3193768"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-21-live-01
+  type: live
+  date: "2016-10-21"
+  title: "生锈小湖"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3196655"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-23-live-01
+  type: live
+  date: "2016-10-23"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3200852"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-24-live-01
+  type: live
+  date: "2016-10-24"
+  title: "后宫三千人P0P1"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3204283"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-24-live-02
+  type: live
+  date: "2016-10-24"
+  title: "后宫三千人P2P3"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3203589"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-25-live-01
+  type: live
+  date: "2016-10-25"
+  title: "微博峰会"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3205854"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-26-live-01
+  type: live
+  date: "2016-10-26"
+  title: "VR体验拍摄"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3209456"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-27-live-01
+  type: live
+  date: "2016-10-27"
+  title: "后宫三千人P1P3P4"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3210928"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-27-live-02
+  type: live
+  date: "2016-10-27"
+  title: "后宫三千人P2"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3211585"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-28-live-01
+  type: live
+  date: "2016-10-28"
+  title: "后宫三千人"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac3214138"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2016-10-30-live-01
+  type: live
+  date: "2016-10-30"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac3219712"
+      kind: replay
+  contributed_by: data-agent

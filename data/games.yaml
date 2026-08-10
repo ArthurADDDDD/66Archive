@@ -1,0 +1,38 @@
+# 游戏库。这是关于「游戏」本身的客观资料，与主播的游玩记录无关。
+# 采集 Agent 需要新游戏时，在交付说明里单列，由人类添加到此处。
+- id: the-witcher-3
+  name: 巫师3：狂猎
+  aliases: [The Witcher 3, 猎魔人3]
+- id: dark-souls-3
+  name: 黑暗之魂3
+  aliases: [Dark Souls III, 魂3]
+- id: stardew-valley
+  name: 星露谷物语
+  aliases: [Stardew Valley]
+- id: minecraft
+  name: 我的世界
+  aliases: [Minecraft, MC]
+- id: portal-2
+  name: 传送门2
+  aliases: [Portal 2]
+- id: red-dead-redemption-2
+  name: 荒野大镖客2
+  aliases: [Red Dead Redemption 2, RDR2, 大表哥2]
+- id: hollow-knight
+  name: 空洞骑士
+  aliases: [Hollow Knight]
+- id: disco-elysium
+  name: 极乐迪斯科
+  aliases: [Disco Elysium]
+- id: baldurs-gate-3
+  name: 博德之门3
+  aliases: [Baldur's Gate 3, BG3]
+- id: resident-evil-4
+  name: 生化危机4
+  aliases: [Resident Evil 4, RE4]
+- id: outer-wilds
+  name: 星际拓荒
+  aliases: [Outer Wilds]
+- id: elden-ring
+  name: 艾尔登法环
+  aliases: [Elden Ring, 老头环]

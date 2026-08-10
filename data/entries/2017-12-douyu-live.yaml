@@ -1,0 +1,337 @@
+# 采集任务 #003 · 2017-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
+# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
+# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
+# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
+
+- id: 2017-12-02-live-01
+  type: live
+  date: "2017-12-02"
+  title: "Ice Lakes 冰湖"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4114988"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-04-live-01
+  type: live
+  date: "2017-12-04"
+  title: "钓鱼大赛（Ice Lakes）"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4118007"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-05-live-01
+  type: live
+  date: "2017-12-05"
+  title: "肯·福莱特的《圣殿春秋》：死灰复燃（第一卷第1"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4120105"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-06-live-01
+  type: live
+  date: "2017-12-06"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4125032"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-06-live-02
+  type: live
+  date: "2017-12-06"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4122087"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-08-live-01
+  type: live
+  date: "2017-12-08"
+  title: "钓会儿鱼，开会儿火车，吃会儿鸡"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4126689"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-09-live-01
+  type: live
+  date: "2017-12-09"
+  title: "人气独立续作《王权：女王陛下》&amp; 谋杀之谜"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4128003"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-10-live-01
+  type: live
+  date: "2017-12-10"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4129454"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-11-live-01
+  type: live
+  date: "2017-12-11"
+  title: "我是大老板"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4131089"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-12-live-01
+  type: live
+  date: "2017-12-12"
+  title: "K歌不停歇"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4134496"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-13-live-01
+  type: live
+  date: "2017-12-13"
+  title: "和YJJ双排吃鸡 &amp; 漫漫长夜"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4135224"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-15-live-01
+  type: live
+  date: "2017-12-15"
+  title: "GOROGOA 画中世界"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4139436"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-15-live-02
+  type: live
+  date: "2017-12-15"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘, 弹幕版]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4140602"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-15-live-03
+  type: live
+  date: "2017-12-15"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4140326"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-16-live-01
+  type: live
+  date: "2017-12-16"
+  title: "去月球》续作《寻找天堂"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4140972"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-17-live-01
+  type: live
+  date: "2017-12-17"
+  title: "看着豆豆和壮壮滑雪，女皇只能羡慕嫉妒恨了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4142321"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-18-live-01
+  type: live
+  date: "2017-12-18"
+  title: "Death Coming 死神来了"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4144095"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-20-live-01
+  type: live
+  date: "2017-12-20"
+  title: "MONOPOLY PLUS 大富翁"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4148109"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-21-live-01
+  type: live
+  date: "2017-12-21"
+  title: "大周桌面展"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4150104"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-23-live-01
+  type: live
+  date: "2017-12-23"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4154223"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-24-live-01
+  type: live
+  date: "2017-12-24"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4154898"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-25-live-01
+  type: live
+  date: "2017-12-25"
+  title: "大周MC圣诞专场"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4156666"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-26-live-01
+  type: live
+  date: "2017-12-26"
+  title: "青蛙爆破者(Kero Blaster)"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4158411"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-27-live-01
+  type: live
+  date: "2017-12-27"
+  title: "青蛙爆破者"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4160261"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-29-live-01
+  type: live
+  date: "2017-12-29"
+  title: "欢迎关注颜值主播6酱"
+  platform: douyu
+  confidence: high
+  games: []
+  sources:
+    - url: "https://www.acfun.cn/v/ac4164567"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-30-live-01
+  type: live
+  date: "2017-12-30"
+  title: "吃鸡佳缘"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [吃鸡佳缘]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4166010"
+      kind: replay
+  contributed_by: data-agent
+
+- id: 2017-12-31-live-01
+  type: live
+  date: "2017-12-31"
+  title: "心灵砒霜"
+  platform: douyu
+  confidence: high
+  games: []
+  tags: [心灵砒霜]
+  sources:
+    - url: "https://www.acfun.cn/v/ac4166820"
+      kind: replay
+  contributed_by: data-agent
