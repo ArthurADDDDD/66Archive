@@ -8,6 +8,7 @@ import type { Platform } from '@/lib/schema'
 import { EntryRow } from './EntryRow'
 import { Preview } from './Preview'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
+import { SiteNav } from './SiteNav'
 
 type Era = {
   id: string
@@ -46,15 +47,15 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     [entries],
   )
 
-  // 首次进入时恢复分享链接；没有参数时定位到最新一个有记录的月份。
+  // 首次进入时恢复分享链接；没有月份参数时停在全年目录。
   useEffect(() => {
     const p = new URLSearchParams(window.location.search)
     const requestedYear = Number(p.get('y'))
     const initialYear = years.includes(requestedYear) ? requestedYear : latestYear
-    const requestedMonth = Number(p.get('m'))
+    const requestedMonth = p.has('m') ? Number(p.get('m')) : null
     const availableMonths = monthsForYear(initialYear)
     setActiveYear(initialYear)
-    setActiveMonth(availableMonths.includes(requestedMonth) ? requestedMonth : (availableMonths[0] ?? null))
+    setActiveMonth(requestedMonth !== null && availableMonths.includes(requestedMonth) ? requestedMonth : null)
     setFilters({
       q: p.get('q') ?? '',
       platforms: p.get('p')?.split(',').filter(Boolean) ?? [],
@@ -77,6 +78,18 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
   }, [latestYear])
 
+  const hrefFor = useCallback((year: number, month: number | null) => {
+    const p = new URLSearchParams()
+    if (year !== latestYear) p.set('y', String(year))
+    if (month !== null) p.set('m', String(month))
+    if (filters.platforms.length) p.set('p', filters.platforms.join(','))
+    if (filters.types.length) p.set('t', filters.types.join(','))
+    if (filters.games.length) p.set('g', filters.games.join(','))
+    if (filters.onlyAlive) p.set('alive', '1')
+    const qs = p.toString()
+    return `/chronicle/${qs ? `?${qs}` : ''}`
+  }, [filters, latestYear])
+
   const set = useCallback((patch: Partial<Filters>) => {
     setFilters((prev) => {
       const next = { ...prev, ...patch }
@@ -86,15 +99,14 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   }, [activeMonth, activeYear, writeUrl])
 
   const selectYear = useCallback((year: number) => {
-    const month = monthsForYear(year)[0] ?? null
     const nextFilters = filters.q ? { ...filters, q: '' } : filters
     setActiveYear(year)
-    setActiveMonth(month)
+    setActiveMonth(null)
     setFilters(nextFilters)
     setExpanded(null)
     setHovered(null)
-    writeUrl(nextFilters, year, month)
-  }, [filters, monthsForYear, writeUrl])
+    writeUrl(nextFilters, year, null)
+  }, [filters, writeUrl])
 
   const selectMonth = useCallback((month: number | null) => {
     setActiveMonth(month)
@@ -112,7 +124,7 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     if (filters.types.length && !filters.types.includes(entry.type)) return false
     if (filters.platforms.length && !filters.platforms.includes(entry.platform)) return false
     if (filters.games.length && !entry.games.some((game) => filters.games.includes(game.id))) return false
-    if (filters.onlyAlive && entry.sourceCount > 0 && entry.aliveCount === 0) return false
+    if (filters.onlyAlive && entry.aliveCount === 0) return false
     const q = filters.q.trim().toLowerCase()
     if (includeSearch && q) {
       const haystack = `${entry.title} ${entry.games.map((game) => game.name).join(' ')} ${entry.tags.join(' ')} ${entry.seriesName ?? ''}`
@@ -133,16 +145,6 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     }
     return counts
   }, [filterOnly])
-
-  const monthCounts = useMemo(() => {
-    const counts = new Map<number, number>()
-    for (const entry of filterOnly) {
-      if (Number(entry.date.slice(0, 4)) !== activeYear) continue
-      const month = Number(entry.date.slice(5, 7))
-      counts.set(month, (counts.get(month) ?? 0) + 1)
-    }
-    return counts
-  }, [activeYear, filterOnly])
 
   const visible = useMemo(() => {
     if (searching) return filtered
@@ -170,7 +172,64 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     return [...counts.values()].sort((a, b) => b.count - a.count)
   }, [entries])
 
+  const durationStats = useMemo(() => {
+    const known = entries.filter((entry) => entry.duration_min)
+    const minutes = known.reduce((sum, entry) => sum + (entry.duration_min ?? 0), 0)
+    return {
+      hours: Math.round(minutes / 60),
+      coverage: entries.length ? Math.round((known.length / entries.length) * 100) : 0,
+    }
+  }, [entries])
+
   const activeEra = ERAS.find((era) => activeYear >= era.from && activeYear <= era.to) ?? ERAS[0]
+  const activeEraYears = years
+    .filter((year) => year >= activeEra.from && year <= activeEra.to)
+    .sort((a, b) => a - b)
+
+  const yearSummaries = useMemo(() => {
+    const accumulators = new Map<number, { months: Set<number>; titleCounts: Map<string, number>; durationMinutes: number; durationCount: number }>()
+    for (const entry of filterOnly) {
+      const year = Number(entry.date.slice(0, 4))
+      const month = Number(entry.date.slice(5, 7))
+      const summary = accumulators.get(year) ?? { months: new Set<number>(), titleCounts: new Map<string, number>(), durationMinutes: 0, durationCount: 0 }
+      summary.months.add(month)
+      summary.titleCounts.set(entry.title, (summary.titleCounts.get(entry.title) ?? 0) + 1)
+      if (entry.duration_min) {
+        summary.durationMinutes += entry.duration_min
+        summary.durationCount++
+      }
+      accumulators.set(year, summary)
+    }
+    const summaries = new Map<number, { months: Set<number>; titles: string[]; durationMinutes: number; durationCount: number }>()
+    for (const [year, summary] of accumulators) {
+      const titles = [...summary.titleCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([title]) => title)
+      summaries.set(year, { months: summary.months, titles, durationMinutes: summary.durationMinutes, durationCount: summary.durationCount })
+    }
+    return summaries
+  }, [filterOnly])
+
+  const monthSummaries = useMemo(() => {
+    const accumulators = new Map<number, { count: number; titleCounts: Map<string, number>; durationMinutes: number; durationCount: number }>()
+    for (const entry of filterOnly) {
+      if (Number(entry.date.slice(0, 4)) !== activeYear) continue
+      const month = Number(entry.date.slice(5, 7))
+      const summary = accumulators.get(month) ?? { count: 0, titleCounts: new Map<string, number>(), durationMinutes: 0, durationCount: 0 }
+      summary.count++
+      summary.titleCounts.set(entry.title, (summary.titleCounts.get(entry.title) ?? 0) + 1)
+      if (entry.duration_min) {
+        summary.durationMinutes += entry.duration_min
+        summary.durationCount++
+      }
+      accumulators.set(month, summary)
+    }
+    const summaries = new Map<number, { count: number; titles: string[]; durationMinutes: number; durationCount: number }>()
+    for (const [month, summary] of accumulators) {
+      const titles = [...summary.titleCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([title]) => title)
+      summaries.set(month, { count: summary.count, titles, durationMinutes: summary.durationMinutes, durationCount: summary.durationCount })
+    }
+    return summaries
+  }, [activeYear, filterOnly])
+
   const dirtyCount = filters.platforms.length + filters.types.length + filters.games.length + Number(filters.onlyAlive)
   const searchLimit = 300
   const rendered = searching ? visible.slice(0, searchLimit) : visible
@@ -193,11 +252,9 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   return (
     <>
       <header className="sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-3 sm:px-6">
-          <a href="/" className="shrink-0 font-mono text-[13px] font-semibold tracking-tight text-ink">六六编年史</a>
-          <span className="hidden h-4 w-px bg-line sm:block" />
-          <span className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-faint sm:block">公开作品索引</span>
-          <div className="relative ml-auto w-full max-w-[360px]">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
+          <SiteNav active="chronicle" />
+          <div className="relative order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
             <input
               ref={searchRef}
               value={filters.q}
@@ -223,16 +280,16 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-live">2010 — {latestYear}</p>
               <h1 className="mt-2 max-w-2xl text-[27px] font-semibold leading-tight tracking-tight sm:text-[36px]">
-                先找到一年，再打开那个月。
+                从记得的内容，找到那段时间。
               </h1>
               <p className="mt-3 max-w-xl text-[13px] leading-relaxed text-muted">
-                不用从一条十六年的长轴里翻找。按时期、年份和月份逐层定位；搜索会直接检索全部公开记录。
+                每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
               </p>
             </div>
             <dl className="flex gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-faint tnum">
               <Stat label="条目" value={entries.length.toLocaleString()} />
-              <Stat label="年份" value={years.length.toString()} />
-              <Stat label="已关联游戏" value={gameCounts.length.toString()} />
+              <Stat label="已录时长" value={`${durationStats.hours.toLocaleString()} 小时`} />
+              <Stat label="时长覆盖" value={`${durationStats.coverage}%`} />
             </dl>
           </div>
 
@@ -271,41 +328,44 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
 
           <div className="mt-5 border-t border-line pt-4">
             <div className="mb-2 flex items-center justify-between">
-              <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">年份</h2>
-              <span className="font-mono text-[10px] text-faint">{searching ? '正在搜索全部年份' : `${activeYear} 年 · ${(yearCounts.get(activeYear) ?? 0).toLocaleString()} 条`}</span>
+              <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">年度线索</h2>
+              <span className="font-mono text-[10px] text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选择一年查看月度目录`}</span>
             </div>
-            <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-6 lg:grid-cols-9 xl:grid-cols-[repeat(17,minmax(0,1fr))]">
-              {[...years].reverse().map((year) => {
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {activeEraYears.map((year) => {
                 const active = year === activeYear && !searching
+                const summary = yearSummaries.get(year)
                 return (
-                  <button
+                  <a
                     key={year}
-                    onClick={() => selectYear(year)}
-                    aria-pressed={active}
-                    className={`rounded-md border px-2 py-2 font-mono text-[11px] transition-colors tnum ${active ? 'border-live bg-live/10 text-live' : 'border-line bg-base/40 text-muted hover:border-muted hover:text-ink'}`}
+                    href={hrefFor(year, null)}
+                    onClick={(event) => {
+                      event.preventDefault()
+                      selectYear(year)
+                    }}
+                    aria-current={active ? 'true' : undefined}
+                    className={`min-h-[116px] rounded-lg border p-3 text-left transition-colors ${active ? 'border-live bg-live/10' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
                   >
-                    <span className="block">{year}</span>
-                    <span className="mt-0.5 block text-[9px] text-faint">{yearCounts.get(year) ?? 0}</span>
-                  </button>
+                    <span className="flex items-baseline justify-between">
+                      <span className={`font-display text-[20px] font-bold tnum ${active ? 'text-live' : 'text-ink'}`}>{year}</span>
+                      <span className="font-mono text-[9px] text-faint tnum">{summary?.months.size ?? 0} 个月 · {yearCounts.get(year) ?? 0} 条</span>
+                    </span>
+                    {summary && (
+                      <span className="mt-1 block font-mono text-[9px] text-faint tnum">
+                        {summary.durationCount > 0 ? `已录 ${Math.round(summary.durationMinutes / 60).toLocaleString()} 小时` : '时长待补'}
+                      </span>
+                    )}
+                    <span className="mt-2 block space-y-1">
+                      {summary?.titles.slice(0, 2).map((title) => (
+                        <span key={title} className="block truncate text-[11px] leading-snug text-muted">{title}</span>
+                      ))}
+                      {!summary?.titles.length && <span className="block text-[11px] text-faint">暂无符合条件的内容</span>}
+                    </span>
+                  </a>
                 )
               })}
             </div>
           </div>
-
-          {!searching && (
-            <div className="mt-4 border-t border-line pt-4">
-              <div className="mb-2 flex items-center justify-between">
-                <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">月份</h2>
-                <span className="font-mono text-[10px] text-faint">默认只展开一个月，避免长滚动</span>
-              </div>
-              <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-7 lg:grid-cols-13">
-                <MonthButton label="全年" count={[...monthCounts.values()].reduce((sum, count) => sum + count, 0)} active={activeMonth === null} onClick={() => selectMonth(null)} />
-                {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => (
-                  <MonthButton key={month} label={MONTH_CN[month - 1]} count={monthCounts.get(month) ?? 0} active={activeMonth === month} onClick={() => selectMonth(month)} />
-                ))}
-              </div>
-            </div>
-          )}
         </section>
 
         <section className="mt-7">
@@ -318,6 +378,9 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
             </div>
             <div className="flex items-center gap-3 font-mono text-[11px] text-faint tnum">
               <span>{visible.length.toLocaleString()} 条</span>
+              {!searching && activeMonth !== null && (
+                <button onClick={() => selectMonth(null)} className="text-live underline underline-offset-4">返回全年目录</button>
+              )}
               {(filters.platforms.length > 0 || filters.types.length > 0 || filters.games.length > 0 || filters.onlyAlive) && (
                 <button onClick={() => set(EMPTY_FILTERS)} className="text-live underline underline-offset-4">清除筛选</button>
               )}
@@ -329,6 +392,8 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
               <p className="text-[14px] text-muted">这里暂时没有符合条件的条目。</p>
               <button onClick={() => set(EMPTY_FILTERS)} className="mt-3 font-mono text-[11px] text-live underline underline-offset-4">清除搜索与筛选</button>
             </div>
+          ) : !searching && activeMonth === null ? (
+            <MonthArchive summaries={monthSummaries} onSelect={selectMonth} hrefFor={(month) => hrefFor(activeYear, month)} />
           ) : (
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]" onMouseLeave={() => setHovered(null)}>
               <div className="min-w-0 divide-y divide-line/50">
@@ -382,17 +447,65 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   )
 }
 
-function MonthButton({ label, count, active, onClick }: { label: string; count: number; active: boolean; onClick: () => void }) {
+function MonthArchive({
+  summaries,
+  onSelect,
+  hrefFor,
+}: {
+  summaries: Map<number, { count: number; titles: string[]; durationMinutes: number; durationCount: number }>
+  onSelect: (month: number) => void
+  hrefFor: (month: number) => string
+}) {
   return (
-    <button
-      onClick={onClick}
-      aria-pressed={active}
-      disabled={count === 0}
-      className={`rounded-md border px-1.5 py-2 font-mono text-[10px] transition-colors disabled:cursor-not-allowed disabled:opacity-25 ${active ? 'border-live bg-live/10 text-live' : 'border-line bg-base/40 text-muted hover:border-muted hover:text-ink'}`}
-    >
-      <span className="block">{label}</span>
-      <span className="mt-0.5 block text-[9px] text-faint tnum">{count}</span>
-    </button>
+    <div>
+      <p className="mb-4 max-w-2xl text-[12px] leading-relaxed text-muted">
+        下面是这一年的月度年表。标题均来自现有记录，仅作为寻找内容的线索；点击月份后再展开全部条目。
+      </p>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => {
+          const summary = summaries.get(month)
+          const content = (
+            <>
+              <span className="flex items-baseline justify-between border-b border-line pb-2">
+                <span className="text-[15px] font-medium text-ink">{MONTH_CN[month - 1]}</span>
+                <span className="font-mono text-[10px] text-faint tnum">{summary?.count ?? 0} 条</span>
+              </span>
+              {summary ? (
+                <span className="mt-3 block space-y-1.5">
+                  <span className="block font-mono text-[9px] text-faint tnum">
+                    {summary.durationCount > 0
+                      ? `已录 ${Math.round(summary.durationMinutes / 60).toLocaleString()} 小时 · ${summary.durationCount}/${summary.count} 条有时长`
+                      : '时长待补'}
+                  </span>
+                  {summary.titles.map((title) => (
+                    <span key={title} className="block truncate text-[12px] leading-snug text-muted">{title}</span>
+                  ))}
+                </span>
+              ) : (
+                <span className="mt-3 block font-mono text-[10px] text-faint">没有记录</span>
+              )}
+            </>
+          )
+          return summary ? (
+            <a
+              key={month}
+              href={hrefFor(month)}
+              onClick={(event) => {
+                event.preventDefault()
+                onSelect(month)
+              }}
+              className="min-h-[148px] rounded-xl border border-line bg-surface/45 p-4 text-left transition-all hover:-translate-y-0.5 hover:border-live/60 hover:bg-raised/70 hover:shadow-[0_14px_40px_rgba(91,200,232,0.08)]"
+            >
+              {content}
+            </a>
+          ) : (
+            <div key={month} className="min-h-[148px] rounded-xl border border-line bg-surface/25 p-4 opacity-30">
+              {content}
+            </div>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 

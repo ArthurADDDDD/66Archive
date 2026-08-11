@@ -1,9 +1,12 @@
 import type { TimelineEntry } from './data'
 
-/** 直播条的像素高度直接由真实时长决定——这是本站时间轴的核心隐喻 */
-export const PX_PER_MIN = 0.18
+/**
+ * 时长条在常见区间内保持线性，但设置上限，避免补齐长直播时长后
+ * 又把月度列表撑成一条需要滚很久的长轴。
+ */
+export const PX_PER_MIN = 0.12
 export const BAR_MIN = 8
-export const BAR_MAX = 140
+export const BAR_MAX = 64
 
 export function barHeight(e: TimelineEntry): number {
   if (!e.duration_min) return BAR_MIN
