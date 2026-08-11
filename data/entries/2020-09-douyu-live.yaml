@@ -34,21 +34,11 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播（人类一败涂地 & 心灵砒霜）的纯净版（ac17777864）与弹幕版（ac17788089）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac17777864"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2020-09-06-live-02
-  type: live
-  date: "2020-09-06"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
     - url: "https://www.acfun.cn/v/ac17788089"
       kind: replay
   contributed_by: data-agent
