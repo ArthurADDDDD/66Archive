@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2017-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2017-04-01-live-01
   type: live
   date: "2017-04-01"
   title: "剪剪世界"
   platform: douyu
   confidence: high
+  duration_min: 259
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491097724.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3593776"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-04-02-live-01
@@ -21,10 +19,13 @@
   title: "12switch"
   platform: douyu
   confidence: high
+  duration_min: 103
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491141307.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3595208"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-02-live-02
@@ -33,10 +34,13 @@
   title: "噗哟噗哟VS俄罗斯方块"
   platform: douyu
   confidence: high
+  duration_min: 59
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491140793.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3595184"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-04-02-live-03
@@ -45,10 +49,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 134
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491141273.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3595183"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-03-live-01
@@ -57,10 +64,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 347
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_04/1491274206.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3597706"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-04-04-live-01
@@ -69,10 +79,13 @@
   title: "12switch"
   platform: douyu
   confidence: high
+  duration_min: 40
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394664.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3601502"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-04-04-live-02
@@ -81,10 +94,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 143
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394788.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3601510"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-04-live-03
@@ -93,10 +109,13 @@
   title: "超级炸弹人R"
   platform: douyu
   confidence: high
+  duration_min: 106
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394731.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3601511"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-04-05-live-01
@@ -105,10 +124,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 237
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491399782.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3601688"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-06-live-01
@@ -117,10 +139,13 @@
   title: "冒险岛2"
   platform: douyu
   confidence: high
+  duration_min: 55
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_09/1491744393.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3611999"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-04-06-live-02
@@ -129,11 +154,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 189
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_07/1491575832.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3607602"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-10-live-01
@@ -142,10 +170,13 @@
   title: "塞尔达传说荒野之息"
   platform: douyu
   confidence: high
+  duration_min: 231
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_11/1491915677.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3617769"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-11-live-01
@@ -154,10 +185,13 @@
   title: "塞尔达传说荒野之息"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_12/1492002662.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3620435"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-12-live-01
@@ -166,10 +200,13 @@
   title: "血源诅咒"
   platform: douyu
   confidence: high
+  duration_min: 236
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_13/1492089354.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3623220"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-14-live-01
@@ -178,10 +215,13 @@
   title: "盛世天下之女帝篇"
   platform: douyu
   confidence: high
+  duration_min: 275
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_15/1492234500.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3627063"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-04-15-live-01
@@ -190,10 +230,13 @@
   title: "武则天盛世天下"
   platform: douyu
   confidence: high
+  duration_min: 365
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_16/1492343182.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3629867"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2017-04-16-live-01
@@ -202,11 +245,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 148
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_19/1492608663.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3638083"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-16-live-02
@@ -215,10 +261,13 @@
   title: "盛世天下之女帝篇"
   platform: douyu
   confidence: high
+  duration_min: 95
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_17/1492434616.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3632501"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-17-live-01
@@ -227,10 +276,13 @@
   title: "星露谷物语"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_18/1492486853.JPG?imageslim"
   games: [stardew-valley]
   sources:
     - url: "https://www.acfun.cn/v/ac3633932"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-18-live-01
@@ -239,10 +291,13 @@
   title: "俄罗斯方块大战噗呦噗呦"
   platform: douyu
   confidence: high
+  duration_min: 209
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_19/1492610927.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3638192"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-19-live-01
@@ -251,10 +306,13 @@
   title: "神奇男孩3"
   platform: douyu
   confidence: high
+  duration_min: 289
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_20/1492693656.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3640849"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-04-21-live-01
@@ -263,10 +321,13 @@
   title: "神奇男孩3"
   platform: douyu
   confidence: high
+  duration_min: 247
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_21/1492781776.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3643728"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-04-23-live-01
@@ -275,11 +336,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 214
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_05_02/1493746236.jpg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac3648161"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-04-24-live-01
@@ -288,8 +352,11 @@
   title: "剪剪世界"
   platform: douyu
   confidence: high
+  duration_min: 276
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_24/1493045788.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3650804"
       kind: replay
+      parts: 2
   contributed_by: data-agent

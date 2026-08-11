@@ -1,19 +1,17 @@
-# 采集任务 #003 · 2016-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2016-11-06-live-01
   type: live
   date: "2016-11-06"
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 213
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_07/1478511128.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3237639"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-07-live-01
@@ -22,10 +20,13 @@
   title: "女流教你如何练习劈叉神功"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_07/1478522157.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3237732"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-08-live-01
@@ -34,10 +35,13 @@
   title: "我的电台inside my radio"
   platform: douyu
   confidence: high
+  duration_min: 248
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_08/1478612034.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3240551"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2016-11-09-live-01
@@ -46,10 +50,13 @@
   title: "松鼠大作战"
   platform: douyu
   confidence: high
+  duration_min: 155
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_09/1478687569.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3242894"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-11-live-01
@@ -58,10 +65,13 @@
   title: "战斗方块剧场"
   platform: douyu
   confidence: high
+  duration_min: 244
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_11/1478879823.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3248717"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-12-live-01
@@ -70,10 +80,13 @@
   title: "女流歌友会谁是真正电音之王"
   platform: douyu
   confidence: high
+  duration_min: 245
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_12/1478965038.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3250678"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-13-live-01
@@ -82,10 +95,13 @@
   title: "学霸是如何炼成的"
   platform: douyu
   confidence: high
+  duration_min: 137
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_14/1479118287.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3254280"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-14-live-01
@@ -94,10 +110,13 @@
   title: "Things change，roll with it"
   platform: douyu
   confidence: high
+  duration_min: 62
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_14/1479122908.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3254432"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-11-15-live-01
@@ -106,10 +125,13 @@
   title: "百战天虫"
   platform: douyu
   confidence: high
+  duration_min: 154
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_15/1479219305.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3257419"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-16-live-01
@@ -118,10 +140,13 @@
   title: "大厦管理者"
   platform: douyu
   confidence: high
+  duration_min: 191
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_16/1479297932.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3259813"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-17-live-01
@@ -130,10 +155,13 @@
   title: "节奏天国"
   platform: douyu
   confidence: high
+  duration_min: 102
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_17/1479381156.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3262194"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-18-live-01
@@ -142,10 +170,13 @@
   title: "这是警察"
   platform: douyu
   confidence: high
+  duration_min: 241
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_18/1479474368.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3265237"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-19-live-01
@@ -154,10 +185,13 @@
   title: "极限竞速：地平线 3"
   platform: douyu
   confidence: high
+  duration_min: 77
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_19/1479565685.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3267468"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-11-20-live-01
@@ -166,11 +200,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 148
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_20/1479656487.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3269864"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-21-live-01
@@ -179,10 +216,13 @@
   title: "黑魂3DLC"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_21/1479736301.JPG?imageslim"
   games: [dark-souls-3]
   sources:
     - url: "https://www.acfun.cn/v/ac3272324"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-22-live-01
@@ -191,10 +231,13 @@
   title: "黑魂3DLC"
   platform: douyu
   confidence: high
+  duration_min: 135
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_22/1479816412.JPG?imageslim"
   games: [dark-souls-3]
   sources:
     - url: "https://www.acfun.cn/v/ac3274811"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-23-live-01
@@ -203,10 +246,13 @@
   title: "黑暗之魂3DLC"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_23/1479906207.JPG?imageslim"
   games: [dark-souls-3]
   sources:
     - url: "https://www.acfun.cn/v/ac3277637"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-24-live-01
@@ -215,10 +261,13 @@
   title: "黑暗之魂3DLC"
   platform: douyu
   confidence: high
+  duration_min: 68
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_24/1479996596.JPG?imageslim"
   games: [dark-souls-3]
   sources:
     - url: "https://www.acfun.cn/v/ac3280444"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-25-live-01
@@ -227,10 +276,13 @@
   title: "黑暗之魂3DLC"
   platform: douyu
   confidence: high
+  duration_min: 251
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_25/1480077891.JPG?imageslim"
   games: [dark-souls-3]
   sources:
     - url: "https://www.acfun.cn/v/ac3283032"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-11-26-live-01
@@ -239,11 +291,14 @@
   title: "健身"
   platform: douyu
   confidence: high
+  duration_min: 48
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_26/1480165066.JPG?imageslim"
   games: []
   tags: [健身]
   sources:
     - url: "https://www.acfun.cn/v/ac3285025"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-11-26-live-02
@@ -252,10 +307,13 @@
   title: "战斗方块剧场"
   platform: douyu
   confidence: high
+  duration_min: 133
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_28/1480294553.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3287740"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-27-live-01
@@ -264,11 +322,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 136
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_10_28/1480328723.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3289507"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-11-29-live-01
@@ -277,8 +338,11 @@
   title: "在京都"
   platform: douyu
   confidence: high
+  duration_min: 76
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_01/1480594496.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3297657"
       kind: replay
+      parts: 2
   contributed_by: data-agent

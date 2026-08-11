@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2023-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 29 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2023-08-01-live-01
   type: live
   date: "2023-08-01"
   title: "学园构想家"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b420c65634244a2babeceeb097f4e01f.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41984944"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-02-live-01
@@ -21,10 +19,13 @@
   title: "Payday3"
   platform: douyu
   confidence: high
+  duration_min: 326
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8b5ccd415ac743e9905c0c6b72af657a.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41993584"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-03-live-01
@@ -33,10 +34,13 @@
   title: "Street Fighter"
   platform: douyu
   confidence: high
+  duration_min: 147
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6d6562a7c1d748d799fb49307c80781b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42001907"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-04-live-01
@@ -45,10 +49,13 @@
   title: "Baldur s Gate 3"
   platform: douyu
   confidence: high
-  games: []
+  duration_min: 265
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e9c8615444e14ae1bf6684852413f0bf.jpeg?imageslim"
+  games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42013220"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-05-live-01
@@ -57,10 +64,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 187
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_33a7cf6156f4411084e3f02fe55806ba.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42021085"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-06-live-01
@@ -69,10 +79,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 191
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a16b9574cec941859a0196993155adf2.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42034844"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-07-live-01
@@ -81,10 +94,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 258
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3301ca5aa2e84aafa15dae1a7423a9e9.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42038614"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-08-live-01
@@ -93,10 +109,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_89631c5fa14a43ba8c623c12e15ff994.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42041749"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-09-live-01
@@ -105,10 +124,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 233
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_29d8628f40aa4b668db7fc64b9ca5872.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42052362"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-10-live-01
@@ -117,10 +139,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 179
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c29a6a0eb0ed473881d7b43403c9e2c3.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42058593"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-11-live-01
@@ -129,10 +154,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 584
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8bc1a0444d1d4465b16414f7a795a18c.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42075019"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-13-live-01
@@ -141,10 +169,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 139
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71ad8a6629464e36ab2788582ccadda8.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42091677"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-13-live-02
@@ -153,10 +184,13 @@
   title: "女巫来了 Witch It"
   platform: douyu
   confidence: high
+  duration_min: 202
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9aee7fd755e349b9b3fd0dec5ffe1e94.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42091386"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-14-live-01
@@ -165,10 +199,13 @@
   title: "博德之门 3"
   platform: douyu
   confidence: high
+  duration_min: 223
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_54157b0cc4844515a633480fa84d8203.jpeg?imageslim"
   games: [baldurs-gate-3]
   sources:
     - url: "https://www.acfun.cn/v/ac42099064"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-15-live-01
@@ -177,10 +214,13 @@
   title: "博德完结 下午茶"
   platform: douyu
   confidence: high
+  duration_min: 154
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c4e047ef15c431a95c282c355cdd24d.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42099488"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-16-live-01
@@ -189,10 +229,13 @@
   title: "雀魂"
   platform: douyu
   confidence: high
+  duration_min: 213
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d0887597bf6145c4b7e5632c15f2a98c.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42106946"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-17-live-01
@@ -201,10 +244,13 @@
   title: "Viewfinder"
   platform: douyu
   confidence: high
+  duration_min: 213
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_854f09deba5945be83f469b95a66b0f6.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42115189"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-17-live-02
@@ -213,10 +259,13 @@
   title: "冒险岛：枫之传说"
   platform: douyu
   confidence: high
+  duration_min: 90
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3f9b4ed46c6d4cf2a7b0ab3a050bc488.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42114933"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-17-live-03
@@ -225,10 +274,13 @@
   title: "绝地求生"
   platform: douyu
   confidence: high
+  duration_min: 161
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1d75e1d45f0c47e88d1aa1be25e99b5b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42122772"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-18-live-01
@@ -237,10 +289,13 @@
   title: "A Little to the Left"
   platform: douyu
   confidence: high
+  duration_min: 133
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8946a109ca5349d7abb3cc55d7fb8554.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42123335"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-18-live-02
@@ -249,10 +304,13 @@
   title: "Viewfinder"
   platform: douyu
   confidence: high
+  duration_min: 197
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e381d8923ec04d0cbe675a3765dc6508.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42123276"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-18-live-03
@@ -261,10 +319,13 @@
   title: "糖豆人"
   platform: douyu
   confidence: high
+  duration_min: 214
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_619d729ef0a24f658998b187cb32587b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42122767"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-19-live-01
@@ -273,10 +334,13 @@
   title: "无畏契约"
   platform: douyu
   confidence: high
+  duration_min: 244
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ae392d79cd5b4b80bc9cd750724f5053.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42130075"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-20-live-01
@@ -285,10 +349,13 @@
   title: "黑神话 悟空"
   platform: douyu
   confidence: high
+  duration_min: 233
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03007fc2571c4c69bd6829fdca45446d.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42136402"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-21-live-01
@@ -297,10 +364,13 @@
   title: "AltF4"
   platform: douyu
   confidence: high
+  duration_min: 212
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_49ab329ebcf94923904016b9352cd554.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42146492"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-29-live-01
@@ -309,10 +379,13 @@
   title: "老六归来"
   platform: douyu
   confidence: high
+  duration_min: 250
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e69fe9c782d7463493b3bce3a0111f57.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42219783"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-30-live-01
@@ -321,10 +394,13 @@
   title: "装甲核心6境界天火"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c305d6f12d164582ae8ed869ea7830f0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42228756"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-31-live-01
@@ -333,10 +409,13 @@
   title: "AltF4"
   platform: douyu
   confidence: high
+  duration_min: 186
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_402f50c93b2b4f219c811aad8e76283e.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42232943"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-08-31-live-02
@@ -345,8 +424,11 @@
   title: "Trine 5"
   platform: douyu
   confidence: high
+  duration_min: 111
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e630a1fe2b5e43639a3fbc8ccf64b851.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac42232740"
       kind: replay
+      parts: 1
   contributed_by: data-agent

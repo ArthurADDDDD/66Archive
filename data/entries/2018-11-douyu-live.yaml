@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2018-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-11-02-live-01
   type: live
   date: "2018-11-02"
   title: "明日之后+荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 243
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_03/1541214440.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4691398"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-04-live-01
@@ -21,11 +19,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 222
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_05/1541387197.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4695275"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-05-live-01
@@ -34,10 +35,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 296
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_05/1541423684.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4696762"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-06-live-01
@@ -46,10 +50,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 122
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_06/1541505454.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4699126"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-08-live-01
@@ -58,10 +65,13 @@
   title: "荒野大镖客2：救赎"
   platform: douyu
   confidence: high
+  duration_min: 303
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_08/1541684931.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4704054"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-09-live-01
@@ -70,10 +80,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 234
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_09/1541766135.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4706494"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-10-live-01
@@ -82,10 +95,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 224
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_10/1541850947.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4708260"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-12-live-01
@@ -94,10 +110,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_12/1542034854.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4712729"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-11-13-live-01
@@ -106,10 +125,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 228
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_13/1542115653.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4715092"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-14-live-01
@@ -118,10 +140,13 @@
   title: "欢迎BBC来到女流直播间"
   platform: douyu
   confidence: high
+  duration_min: 169
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_14/1542170260.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4716083"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-14-live-02
@@ -130,10 +155,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 170
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_14/1542198211.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4717409"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-16-live-01
@@ -142,10 +170,13 @@
   title: "超级马里奥派对&荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 290
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_16/1542377677.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4722896"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-11-17-live-01
@@ -154,10 +185,13 @@
   title: "Earthworms（蚯蚓）"
   platform: douyu
   confidence: high
+  duration_min: 297
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_17/1542462098.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4724575"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-18-live-01
@@ -166,11 +200,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 194
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_10_18/1542582064.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4726594"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-20-live-01
@@ -179,10 +216,13 @@
   title: "Do Not Feed the Monkeys"
   platform: douyu
   confidence: high
+  duration_min: 274
+  cover: "https://tx-free-imgs.acfun.cn/FmHXbs8N6Tzuzaw7C16j4DV5m2T6?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4730727"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-21-live-01
@@ -191,10 +231,13 @@
   title: "Do Not Feed the Monkeys"
   platform: douyu
   confidence: high
+  duration_min: 204
+  cover: "https://tx-free-imgs.acfun.cn/FjUReukw23-zs_NKhmwctN4vBdAe?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4732922"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-23-live-01
@@ -203,10 +246,13 @@
   title: "中国青年好网民（P3有66呦）"
   platform: douyu
   confidence: high
+  duration_min: 139
+  cover: "https://tx-free-imgs.acfun.cn/Fq46Ce_OLSD_blzdAGgkcB9ugL_z?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4737904"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-25-live-01
@@ -215,11 +261,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 235
+  cover: "https://tx-free-imgs.acfun.cn/FrSqGHvWIgJV1HiK15BcNHTtPcAm?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4741571"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-11-26-live-01
@@ -228,10 +277,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 273
+  cover: "https://tx-free-imgs.acfun.cn/FrKaW_amBOMpXa33ru08UFKeDhiy?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4743699"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-11-27-live-01
@@ -240,10 +292,13 @@
   title: "户外聊一小会儿"
   platform: douyu
   confidence: high
+  duration_min: 19
+  cover: "https://tx-free-imgs.acfun.cn/FvFdRswUbADKyjKhIAjAgbIDv7W3?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4746405"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-11-28-live-01
@@ -252,10 +307,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 442
+  cover: "https://tx-free-imgs.acfun.cn/FoF0exsOGj9cp_3owYd0nwxukkbF?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4753179"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-11-29-live-01
@@ -264,10 +322,13 @@
   title: "不可思议之梦蝶"
   platform: douyu
   confidence: high
+  duration_min: 101
+  cover: "https://tx-free-imgs.acfun.cn/FlUKcJuVX6juCatXmdJ7pQtxw8Q3?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4751526"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-11-29-live-02
@@ -276,8 +337,11 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 554
+  cover: "https://tx-free-imgs.acfun.cn/FoEaZ4C-2Kw3QDZ8ab2eJ_sE09-n?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4753948"
       kind: replay
+      parts: 8
   contributed_by: data-agent

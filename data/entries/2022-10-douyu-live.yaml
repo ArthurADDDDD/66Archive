@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2022-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 25 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2022-10-01-live-01
   type: live
   date: "2022-10-01"
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_337cb4dfb79f49238d62348608facfce.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac37729454"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-02-live-01
@@ -21,11 +19,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 248
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_eaf54de9b64e4f7690d5f36cdac1bb3f.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac38800745"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-03-live-01
@@ -34,10 +35,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 403
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92abd1eceafb4bce805fcb6e0ff4d603.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac38811072"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-04-live-01
@@ -46,10 +50,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 462
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_77f0b25d2c6d483fa2bb7749c18a3fdb.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39061963"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-05-live-01
@@ -58,10 +65,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 707
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4024557a84b14b68aa5d5f2265d6cfd8.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39081714"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-06-live-01
@@ -70,10 +80,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 697
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ffa00a6711c1469db02aed26c1f01121.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39098269"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-07-live-01
@@ -82,10 +95,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 438
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2ac16d89a227489baf3908d39b7bdb8c.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39113637"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-08-live-01
@@ -94,10 +110,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_89c0cc9794e94062975a712636b5c01c.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39146440"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-09-live-01
@@ -106,10 +125,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 376
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f87d0d7b65e24b4ebb7299a80544ad50.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39147233"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-10-live-01
@@ -118,10 +140,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 348
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c214f6ca436546afa4b098321493cb21.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39170704"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-11-live-01
@@ -130,10 +155,13 @@
   title: "Brotato"
   platform: douyu
   confidence: high
+  duration_min: 262
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_383136c093d64edbb8402be275b408f9.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39171423"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-12-live-01
@@ -142,10 +170,13 @@
   title: "Coral Island"
   platform: douyu
   confidence: high
+  duration_min: 228
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_202806fd30a341bc9910c6b769d37aaa.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39190001"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-15-live-01
@@ -154,10 +185,13 @@
   title: "Coral Island"
   platform: douyu
   confidence: high
+  duration_min: 437
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d0193c43a08c4245961ec57145bd1cf3.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39258381"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-16-live-01
@@ -166,10 +200,13 @@
   title: "Coral Island"
   platform: douyu
   confidence: high
+  duration_min: 266
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_19c9b55ce5c7489a8c9a16cdce5bd2e7.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39259580"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-17-live-01
@@ -178,10 +215,13 @@
   title: "Coral Island"
   platform: douyu
   confidence: high
+  duration_min: 267
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5946184076f84e169c42f5f79e671263.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39272069"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-18-live-01
@@ -190,10 +230,13 @@
   title: "瘟疫传说2 安魂曲"
   platform: douyu
   confidence: high
+  duration_min: 345
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6602d72abf254c1c819903adf26f1682.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39287408"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-19-live-01
@@ -202,10 +245,13 @@
   title: "瘟疫传说2 安魂曲"
   platform: douyu
   confidence: high
+  duration_min: 446
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_262558b847b74a41869ee1365f29423b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39316375"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-20-live-01
@@ -214,10 +260,13 @@
   title: "瘟疫传说2 安魂曲"
   platform: douyu
   confidence: high
+  duration_min: 150
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b019862fd3b2446798d104f445f01bb3.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39316348"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-24-live-01
@@ -226,10 +275,13 @@
   title: "神秘海域：盗贼传奇合辑"
   platform: douyu
   confidence: high
+  duration_min: 265
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2024c768f90849d998ce64d7ee43cde0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39377804"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-25-live-01
@@ -238,10 +290,13 @@
   title: "神秘海域：盗贼传奇合辑"
   platform: douyu
   confidence: high
+  duration_min: 331
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b71128cc62b2431887a9044c33d05bed.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39394921"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-26-live-01
@@ -250,10 +305,13 @@
   title: "神秘海域：盗贼传奇合辑"
   platform: douyu
   confidence: high
+  duration_min: 217
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3d070c849a094c34965bb05d8d1fc1ca.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39407748"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-28-live-01
@@ -262,10 +320,13 @@
   title: "神秘海域：盗贼传奇合辑"
   platform: douyu
   confidence: high
+  duration_min: 289
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_303a92c9e432411aaf229e1b486414bc.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39440391"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-29-live-01
@@ -274,10 +335,13 @@
   title: "神秘海域：盗贼传奇合辑"
   platform: douyu
   confidence: high
+  duration_min: 189
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7a5fa853e44646a48e46bb396c0bf222.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39456243"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-30-live-01
@@ -286,10 +350,13 @@
   title: "生化危机8 DLC"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_508e3e612fbb4cf1ad6a6d6c890c2b7f.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39503951"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-10-31-live-01
@@ -298,8 +365,11 @@
   title: "DAVE THE DIVER"
   platform: douyu
   confidence: high
+  duration_min: 266
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_54a68dcda61d4cb7bb112448387072bd.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac39486788"
       kind: replay
+      parts: 1
   contributed_by: data-agent

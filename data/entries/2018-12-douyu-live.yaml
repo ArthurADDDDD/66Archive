@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2018-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 30 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-12-01-live-01
   type: live
   date: "2018-12-01"
   title: "欢乐斗地主&古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 269
+  cover: "https://tx-free-imgs.acfun.cn/Ft-C45DqF2WyrZQ_g_fmahILxnaX?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4755826"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-02-live-01
@@ -21,11 +19,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 157
+  cover: "https://tx-free-imgs.acfun.cn/FsnLlDXdOnOWNk1832x0SAA139WY?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4759318"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-12-02-live-02
@@ -34,10 +35,13 @@
   title: "请叫我女流55"
   platform: douyu
   confidence: high
+  duration_min: 5
+  cover: "https://tx-free-imgs.acfun.cn/Fgnt2tXSneXWvxGXwCV1x1laPm5r?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4756910"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-12-03-live-01
@@ -46,10 +50,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/Fn1k7-qizUmnxzzu0Kzo5O_Zd0UM?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4759690"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-04-live-01
@@ -58,10 +65,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 250
+  cover: "https://tx-free-imgs.acfun.cn/Fmiknq0aPssWiePcgr-peqXljy_M?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4762377"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-06-live-01
@@ -70,10 +80,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 239
+  cover: "https://tx-free-imgs.acfun.cn/FrCqCu-v2fZah5ZbR6BILAoARcjz?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4767323"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-07-live-01
@@ -82,10 +95,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 294
+  cover: "https://tx-free-imgs.acfun.cn/FohnbsFO0zlSFa92pKjP2TUYSKu3?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4770094"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-12-08-live-01
@@ -94,10 +110,13 @@
   title: "任天堂明星大乱斗特别版"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/FgIDo98jYeEwwCxstv_i_mwLUS-S?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4772330"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-08-live-02
@@ -106,10 +125,13 @@
   title: "古剑奇谭"
   platform: douyu
   confidence: high
+  duration_min: 283
+  cover: "https://tx-free-imgs.acfun.cn/FoD8AP3LRyG39ExawCDpG2_Tg6Lm?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4772541"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-12-09-live-01
@@ -118,11 +140,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/FgGOWnpXUSGXrvzCKk2CweUb5bTN?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4773762"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-10-live-01
@@ -131,10 +156,13 @@
   title: "彩虹坠入(Iris.Fall)"
   platform: douyu
   confidence: high
+  duration_min: 180
+  cover: "https://tx-free-imgs.acfun.cn/Fjd9i1JLibBIM5AI3U7j8U2ssGqE?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4776091"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-11-live-01
@@ -143,10 +171,13 @@
   title: "任天堂明星大乱斗特别版"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/Fsa5917adJInvuqugXKLWQU7XimW?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4778405"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-14-live-01
@@ -155,10 +186,13 @@
   title: "Farm Simulator 19"
   platform: douyu
   confidence: high
+  duration_min: 250
+  cover: "https://tx-free-imgs.acfun.cn/Fo9WOgbk_987ud1vPNY9boV89fat?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4786386"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-12-14-live-02
@@ -167,10 +201,13 @@
   title: "斗地主之神表演赛"
   platform: douyu
   confidence: high
+  duration_min: 63
+  cover: "https://tx-free-imgs.acfun.cn/FtoZokdpz_a-y-Htgvcx9hHy9NSl?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4786031"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-12-15-live-01
@@ -179,10 +216,13 @@
   title: "Farm Simulator 19"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/FsqkyhoTkIL8r1-1u1Z0JnFg6plz?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4787968"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-16-live-01
@@ -191,11 +231,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 246
+  cover: "https://tx-free-imgs.acfun.cn/FgX5jIPHPNaNDyoQzVZgn3lUeiF_?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4790314"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-17-live-01
@@ -204,10 +247,13 @@
   title: "模拟农场19"
   platform: douyu
   confidence: high
+  duration_min: 238
+  cover: "https://tx-free-imgs.acfun.cn/Fo776PmoXS46rl1JrKz9A5SYA0qT?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4792138"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-18-live-01
@@ -216,10 +262,13 @@
   title: "幽林怪谈"
   platform: douyu
   confidence: high
+  duration_min: 299
+  cover: "https://tx-free-imgs.acfun.cn/FhFQRvsDQvmpxMUUM6PVWziS3mOs?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4795387"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-12-19-live-01
@@ -228,10 +277,13 @@
   title: "GRIS"
   platform: douyu
   confidence: high
+  duration_min: 217
+  cover: "https://tx-free-imgs.acfun.cn/FtMQMnvIUeU6tJUpbcBc_DediWfQ?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4797700"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-21-live-01
@@ -240,10 +292,13 @@
   title: "Treasure Hunter Simulator（宝藏猎人模拟器）"
   platform: douyu
   confidence: high
+  duration_min: 234
+  cover: "https://tx-free-imgs.acfun.cn/Fi1kilXV8mXl1b236b6Jy1TzY8z9?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4803056"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-22-live-01
@@ -252,10 +307,13 @@
   title: "Return of the Obra Dinn(奥布拉丁恩的回归)"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/FpPLIM1N991RNQhmfBPhzL-UbpSL?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4805171"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-23-live-01
@@ -264,11 +322,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 215
+  cover: "https://tx-free-imgs.acfun.cn/FjsRhPFTl45yccQYB98yWGnblKGg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4807883"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-12-24-live-01
@@ -277,10 +338,13 @@
   title: "Return of the Obra Dinn(奥布拉丁恩的回归)"
   platform: douyu
   confidence: high
+  duration_min: 332
+  cover: "https://tx-free-imgs.acfun.cn/FuMfhscWr5V2lV_EKX6bljmOdJja?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4810142"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-12-25-live-01
@@ -289,10 +353,13 @@
   title: "Kingdom Rush Origins（王国保卫战起源）"
   platform: douyu
   confidence: high
+  duration_min: 220
+  cover: "https://tx-free-imgs.acfun.cn/FrwDgrB9rWfwOt9hDY2vFlEVFkDK?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4812563"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-26-live-01
@@ -301,10 +368,13 @@
   title: "Pummel Party（揍击派对）"
   platform: douyu
   confidence: high
+  duration_min: 279
+  cover: "https://tx-free-imgs.acfun.cn/Fv4cuddQNIzdNT2wlsAC8xCnghd6?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4815317"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-28-live-01
@@ -313,10 +383,13 @@
   title: "Parkitect(游乐园建造师)"
   platform: douyu
   confidence: high
+  duration_min: 220
+  cover: "https://tx-free-imgs.acfun.cn/Fl5p6i29T4FsJyoBurbA2IH-PNn8?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4820550"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-12-31-live-01
@@ -325,10 +398,13 @@
   title: "156277明天会更好"
   platform: douyu
   confidence: high
+  duration_min: 76
+  cover: "https://tx-free-imgs.acfun.cn/Fmebfr3UVTTSLVN56yr6MoA-D69k?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4828112"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-12-31-live-02
@@ -337,10 +413,13 @@
   title: "2017感谢有你"
   platform: douyu
   confidence: high
+  duration_min: 33
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_01/1514786965.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4167422"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-12-31-live-03
@@ -349,11 +428,14 @@
   title: "大周脚展"
   platform: douyu
   confidence: high
+  duration_min: 103
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_01/1514784566.JPG?imageslim"
   games: []
   tags: [弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4167402"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-12-31-live-04
@@ -362,9 +444,12 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 138
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_01/1514781835.png?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4167351"
       kind: replay
+      parts: 5
   contributed_by: data-agent

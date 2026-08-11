@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2022-08 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 24 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2022-08-01-live-01
   type: live
   date: "2022-08-01"
   title: "Inside the Backroom"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6777770ba24a423096bdde68fe375859.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36022646"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-02-live-01
@@ -21,10 +19,13 @@
   title: "Bear and Breakfast"
   platform: douyu
   confidence: high
+  duration_min: 285
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_365ebe40e3654b06958c6851f5e559f6.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36039889"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-04-live-01
@@ -33,10 +34,13 @@
   title: "糖豆人"
   platform: douyu
   confidence: high
+  duration_min: 297
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0eb556428c9045af9cbf0274d95a45eb.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36074490"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-05-live-01
@@ -45,10 +49,13 @@
   title: "Bear and Breakfast"
   platform: douyu
   confidence: high
+  duration_min: 376
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fd7834039504dafa39499f7f3590022.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36095370"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-07-live-01
@@ -57,11 +64,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 268
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7fe236df94f42d6967859a3ab2bfece.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac36175338"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-08-live-01
@@ -70,10 +80,13 @@
   title: "Bear and Breakfast"
   platform: douyu
   confidence: high
+  duration_min: 264
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2f4e5398d43c44d6809494f33c511e66.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36221080"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-09-live-01
@@ -82,10 +95,13 @@
   title: "Two Point Campus"
   platform: douyu
   confidence: high
+  duration_min: 169
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4bb7a74814b44e9baebf7ea6d4453740.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36272882"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-09-live-02
@@ -94,10 +110,13 @@
   title: "咩咩启示录"
   platform: douyu
   confidence: high
+  duration_min: 83
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2598550ccbc74356b6a0773c5524cb95.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36272443"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-10-live-01
@@ -106,10 +125,13 @@
   title: "雀魂"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_88ec98468cb048909b914058af07a73e.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36321006"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-11-live-01
@@ -118,10 +140,13 @@
   title: "咩咩启示录"
   platform: douyu
   confidence: high
+  duration_min: 270
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ed4f458c251a4d46a44967a1f225b821.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36365246"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-12-live-01
@@ -130,10 +155,13 @@
   title: "咩咩启示录"
   platform: douyu
   confidence: high
+  duration_min: 203
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a9025eb0526040f29b1083be0478b957.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36411418"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-13-live-01
@@ -142,10 +170,13 @@
   title: "咩咩启示录"
   platform: douyu
   confidence: high
+  duration_min: 302
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_497e6e7a38d34abbb91b41d87da30d74.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36496913"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-14-live-01
@@ -154,11 +185,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 278
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d408de96e0744b87b79c1df3d65156af.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac36497050"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-15-live-01
@@ -167,10 +201,13 @@
   title: "咩咩启示录"
   platform: douyu
   confidence: high
+  duration_min: 287
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3600e3a7346b49b0a62cea2953390d8e.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36536974"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-17-live-01
@@ -179,10 +216,13 @@
   title: "Lost in Play"
   platform: douyu
   confidence: high
+  duration_min: 300
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d2d243ea9566486e95c4737701c40095.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36609984"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-18-live-01
@@ -191,10 +231,13 @@
   title: "Mark of the Ninja"
   platform: douyu
   confidence: high
+  duration_min: 300
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d675e2c812184cc79dccc2ad9dbc30c2.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36645423"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-19-live-01
@@ -203,10 +246,13 @@
   title: "Rumbleverse"
   platform: douyu
   confidence: high
+  duration_min: 313
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6046d59898e44139981f742965c5c74f.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36725550"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-20-live-01
@@ -215,10 +261,13 @@
   title: "记忆边境"
   platform: douyu
   confidence: high
+  duration_min: 338
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7bb881d800904ba5af114a6d0945c2cf.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36763947"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-21-live-01
@@ -227,11 +276,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 171
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36b2942807214637a79039c1e3caec5d.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac36764401"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-22-live-01
@@ -240,10 +292,13 @@
   title: "记忆边境day2"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f99aec68eeb147ddba993bf615efa50e.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36805377"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-23-live-01
@@ -252,10 +307,13 @@
   title: "港诡实录"
   platform: douyu
   confidence: high
+  duration_min: 235
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ae3e99af93f946539e4a076225e1d3f5.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36835828"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-24-live-01
@@ -264,10 +322,13 @@
   title: "The House of Da Vinci"
   platform: douyu
   confidence: high
+  duration_min: 254
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_17ea9f72c78147f88737a1703fa6df84.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36887206"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-26-live-01
@@ -276,10 +337,13 @@
   title: "AmongUs"
   platform: douyu
   confidence: high
+  duration_min: 260
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a0b18b8f225e4d118870875f910878aa.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac36917436"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-08-28-live-01
@@ -288,9 +352,12 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_155fce1cb35e4439aad58f8be5f86d57.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac37010457"
       kind: replay
+      parts: 1
   contributed_by: data-agent

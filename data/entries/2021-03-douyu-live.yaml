@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2021-03 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 37 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2021-03-01-live-01
   type: live
   date: "2021-03-01"
   title: "节奏医生"
   platform: douyu
   confidence: high
+  duration_min: 138
+  cover: "https://tx-free-imgs.acfun.cn/o_1evmpj97j13g1em91ejj1s5918db0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26103734"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-03-02-live-01
@@ -21,10 +19,13 @@
   title: "鬼谷八荒"
   platform: douyu
   confidence: high
+  duration_min: 119
+  cover: "https://tx-free-imgs.acfun.cn/o_1evpiek97iv81uulps210623if0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26178904"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-03-03-live-01
@@ -33,10 +34,13 @@
   title: "ALTF4"
   platform: douyu
   confidence: high
+  duration_min: 203
+  cover: "https://tx-free-imgs.acfun.cn/o_1evs18v40noacg4f0an51v3n0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26236002"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-04-live-01
@@ -45,10 +49,13 @@
   title: "ALTF4"
   platform: douyu
   confidence: high
+  duration_min: 198
+  cover: "https://tx-free-imgs.acfun.cn/o_1evul09r517551omr1k7s1ime3ft0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26297737"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-05-live-01
@@ -57,10 +64,13 @@
   title: "节奏医生"
   platform: douyu
   confidence: high
+  duration_min: 81
+  cover: "https://tx-free-imgs.acfun.cn/o_1f01c77cj1hf8114slc4dr46bj0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26348917"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-06-live-01
@@ -69,10 +79,13 @@
   title: "ALTF4"
   platform: douyu
   confidence: high
+  duration_min: 104
+  cover: "https://tx-free-imgs.acfun.cn/o_1f03s7cpsu2p1eeh1n3it89e3s0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26366420"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-03-06-live-02
@@ -81,10 +94,13 @@
   title: "节奏医生"
   platform: douyu
   confidence: high
+  duration_min: 141
+  cover: "https://tx-free-imgs.acfun.cn/o_1f03s6vg51co51elcpegepoknm0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26367245"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-03-07-live-01
@@ -93,11 +109,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 273
+  cover: "https://tx-free-imgs.acfun.cn/o_1f08jq3pcspe3b1vt7o7b1b100.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac26408836"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-08-live-01
@@ -106,10 +125,13 @@
   title: "大富翁10"
   platform: douyu
   confidence: high
+  duration_min: 176
+  cover: "https://tx-free-imgs.acfun.cn/o_1f09173d21df61aip64f1q54pu00.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26425905"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-09-live-01
@@ -118,10 +140,13 @@
   title: "Tiny Lands"
   platform: douyu
   confidence: high
+  duration_min: 127
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0beihd5ljquee11k51sk21t1b0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26476396"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-03-09-live-02
@@ -130,10 +155,13 @@
   title: "节奏医生"
   platform: douyu
   confidence: high
+  duration_min: 113
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0bej1u91q1b62c10utp06156a0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26478113"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-03-11-live-01
@@ -142,10 +170,13 @@
   title: "阿尔芭与野生动物的故事"
   platform: douyu
   confidence: high
+  duration_min: 84
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0gmcu0q1i0gm0l1ks61g0oqm30.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26630182"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-12-live-01
@@ -154,10 +185,13 @@
   title: "CSGO"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0j6nk1apvh1ptm1k3optp1muu0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26691826"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-12-live-02
@@ -166,10 +200,13 @@
   title: "魔兽争霸rpg"
   platform: douyu
   confidence: high
+  duration_min: 77
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0j70utj153fknfoqs1gh3th90.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26693309"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-13-live-01
@@ -178,10 +215,13 @@
   title: "雀魂"
   platform: douyu
   confidence: high
+  duration_min: 68
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0lvemp91sjiporndb1i561ilo0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26761234"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-14-live-01
@@ -190,11 +230,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0qmhlmb13dc1hdo1od7hvj18ab0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac26869011"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-15-live-01
@@ -203,10 +246,13 @@
   title: "Hades"
   platform: douyu
   confidence: high
+  duration_min: 179
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0qspn04q2p1svudkctl2lvp0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26873129"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-16-live-01
@@ -215,10 +261,13 @@
   title: "Hades"
   platform: douyu
   confidence: high
+  duration_min: 110
+  cover: "https://tx-free-imgs.acfun.cn/o_1f0tjvh8ghtq1c6arcr1trb1t530.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26910411"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-03-17-live-01
@@ -227,10 +276,13 @@
   title: "Hades"
   platform: douyu
   confidence: high
+  duration_min: 71
+  cover: "https://tx-free-imgs.acfun.cn/o_1f108ejuiveuc5s19621lui1fe50.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26950397"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-18-live-01
@@ -239,10 +291,13 @@
   title: "Hades"
   platform: douyu
   confidence: high
+  duration_min: 208
+  cover: "https://tx-free-imgs.acfun.cn/o_1f12m04ci303ff71771frfsmt0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac26979859"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-18-live-02
@@ -251,10 +306,13 @@
   title: "The Room4"
   platform: douyu
   confidence: high
+  duration_min: 35
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1568jji8pj16ju44t1a5n1d2b0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27004130"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2021-03-19-live-01
@@ -263,10 +321,13 @@
   title: "The Room4"
   platform: douyu
   confidence: high
+  duration_min: 200
+  cover: "https://tx-free-imgs.acfun.cn/o_1f154nf9t1kn81sov2854k7hmv0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27004224"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-20-live-01
@@ -275,10 +336,13 @@
   title: "战意"
   platform: douyu
   confidence: high
+  duration_min: 70
+  cover: "https://tx-free-imgs.acfun.cn/o_1f17utr79893865h721glpij30.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27028479"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-20-live-02
@@ -287,10 +351,13 @@
   title: "绝地求生"
   platform: douyu
   confidence: high
+  duration_min: 202
+  cover: "https://tx-free-imgs.acfun.cn/o_1f17uubpq10f71uu6hl4pnnh1n0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27028197"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-21-live-01
@@ -299,11 +366,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1clmfgfuu51ti2gr1146116740.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac27071329"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-21-live-02
@@ -312,10 +382,13 @@
   title: "极限竞速地平线4"
   platform: douyu
   confidence: high
+  duration_min: 95
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1ah5sj51gld1vlmkoc1dh8spd0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27048216"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-03-22-live-01
@@ -324,10 +397,13 @@
   title: "末日准备狂"
   platform: douyu
   confidence: high
+  duration_min: 84
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1d5rq2e1a03vc2pbh666b950.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27085144"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-24-live-01
@@ -336,10 +412,13 @@
   title: "Puyo Puyo Tetris 2"
   platform: douyu
   confidence: high
+  duration_min: 174
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1i4ocjibag19dd1p5o1c50vev0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27146913"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-25-live-01
@@ -348,10 +427,13 @@
   title: "Puyo Puyo Tetris 2"
   platform: douyu
   confidence: high
+  duration_min: 42
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1kn59ao6p8kaq10oiuas1j9m0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27179432"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2021-03-25-live-02
@@ -360,10 +442,13 @@
   title: "察言观色3部曲"
   platform: douyu
   confidence: high
+  duration_min: 183
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1km6npvn2t2up7i31qo61l2i0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27179430"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-26-live-01
@@ -372,10 +457,13 @@
   title: "1.怪物猎人 崛起"
   platform: douyu
   confidence: high
+  duration_min: 182
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1nfqlabulu1v154g4ihlbu0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27236153"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-26-live-02
@@ -384,10 +472,13 @@
   title: "2.怪物猎人 崛起"
   platform: douyu
   confidence: high
+  duration_min: 73
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1nggojr1hd6m4vqe81vqi12gq0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27236154"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2021-03-26-live-03
@@ -396,10 +487,13 @@
   title: "坎公骑冠剑"
   platform: douyu
   confidence: high
+  duration_min: 128
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1ngi6db8471o5cr4e9o6t080.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27236155"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-03-27-live-01
@@ -408,10 +502,13 @@
   title: "怪物猎人 弓箭手的修行"
   platform: douyu
   confidence: high
+  duration_min: 172
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1ptn5s51v5a1nj0fud1ts4r060.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27238768"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-03-28-live-01
@@ -420,11 +517,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 260
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1uofvij6vmvis1f1kerp3vg0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac27281328"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-03-29-live-01
@@ -433,10 +533,13 @@
   title: "It Takes Two"
   platform: douyu
   confidence: high
+  duration_min: 168
+  cover: "https://tx-free-imgs.acfun.cn/o_1f1v2ui1jfno1n2l3vuqlp1jqm0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27288688"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-03-30-live-01
@@ -445,8 +548,11 @@
   title: "It Takes Two"
   platform: douyu
   confidence: high
+  duration_min: 190
+  cover: "https://tx-free-imgs.acfun.cn/o_1f21m2ms3fudc6b2gl177our60.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac27349793"
       kind: replay
+      parts: 5
   contributed_by: data-agent

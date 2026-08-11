@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2023-05 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2023-05-01-live-01
   type: live
   date: "2023-05-01"
   title: "How to Get Rich"
   platform: douyu
   confidence: high
+  duration_min: 147
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03397b91d4e545f0968a04ba6e1badaa.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41293737"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-03-live-01
@@ -21,10 +19,13 @@
   title: "BrambleThe Mountain King"
   platform: douyu
   confidence: high
+  duration_min: 205
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_98fb829abad443ffb889e5983f5338b4.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41278299"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-04-live-01
@@ -33,10 +34,13 @@
   title: "候鸟"
   platform: douyu
   confidence: high
+  duration_min: 305
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_05495e9546174203ace7bd78417c65fe.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41285689"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-05-live-01
@@ -45,10 +49,13 @@
   title: "候鸟"
   platform: douyu
   confidence: high
+  duration_min: 145
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bdc0d0a02adb44bfa211d8a1dc7dd473.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41293800"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-06-live-01
@@ -57,10 +64,13 @@
   title: "邪恶冥刻"
   platform: douyu
   confidence: high
+  duration_min: 130
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c8fc50a33e634ec19db29515d1845274.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41301099"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-07-live-01
@@ -69,11 +79,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 261
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_402a852182fb4f788e625c574773cfa7.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac41314142"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-08-live-01
@@ -82,10 +95,13 @@
   title: "虚空列车"
   platform: douyu
   confidence: high
+  duration_min: 288
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c2477f2c0f3b4e39b7e52483aac042bb.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41316665"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-09-live-01
@@ -94,10 +110,13 @@
   title: "邪恶冥刻"
   platform: douyu
   confidence: high
+  duration_min: 224
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bab352a729914b75a3e59e6bee0c1a47.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41324451"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-10-live-01
@@ -106,10 +125,13 @@
   title: "六六聊聊"
   platform: douyu
   confidence: high
+  duration_min: 242
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_da997403144c45dd8e62ea4a517f465c.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41335802"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-11-live-01
@@ -118,10 +140,13 @@
   title: "邪恶冥刻"
   platform: douyu
   confidence: high
+  duration_min: 187
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_24fd3569b92941089b93df679a2ef795.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41341144"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-12-live-01
@@ -130,10 +155,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 565
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d014a6ba2de5413ea1e1dded61001a21.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41348914"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-13-live-01
@@ -142,10 +170,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 551
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3136d00979214b2cbda5c1176086645e.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41362265"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-14-live-01
@@ -154,10 +185,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 308
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2735f48f9fdd45e3bcf9ff1b34ea80ce.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41367564"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-15-live-01
@@ -166,10 +200,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 308
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_00cecffff9f54f3c8abddf8e3cf7a5db.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41374321"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-16-live-01
@@ -178,10 +215,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 252
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_24f015d8bfb2422b8891d8620c585ca5.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41382283"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-17-live-01
@@ -190,10 +230,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 550
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b4d63ef5fbeb4f9bb00cd148ea84b099.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41395756"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-18-live-01
@@ -202,10 +245,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 544
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9b1839e4ae2c4784ad8625f91765d2d9.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41395836"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-19-live-01
@@ -214,10 +260,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_51bfc2362afd4b2aa567c70a767a7462.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41414298"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-20-live-01
@@ -226,10 +275,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 549
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9acf666f6c6f466ba6de9247110364da.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41411635"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-21-live-01
@@ -238,10 +290,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dc647ba198b44deb9d16784a3c760932.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41418401"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-22-live-01
@@ -250,10 +305,13 @@
   title: "斗鱼高校音乐盛典"
   platform: douyu
   confidence: high
+  duration_min: 144
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fb1bdecfd0d241839b714dd7e8a61227.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41423753"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-23-live-01
@@ -262,10 +320,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 182
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_820dd4db14c949ff862bbe74a2a94249.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41434911"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-25-live-01
@@ -274,10 +335,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 218
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_908e078b7d1b4dcab2302c55e155d36b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41447811"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-26-live-01
@@ -286,10 +350,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 226
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5ac08b83dd4649fcaeae6c831898b006.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41456449"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-27-live-01
@@ -298,10 +365,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 223
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_84fb4b777f424c9a955fb73a38914926.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41470831"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-28-live-01
@@ -310,10 +380,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f6b660169cbd4a5395259d97514374cc.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41478688"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-30-live-01
@@ -322,10 +395,13 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c2ea5133516143baa54772e8e1fc3f94.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41486826"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2023-05-31-live-01
@@ -334,8 +410,11 @@
   title: "塞尔达传说"
   platform: douyu
   confidence: high
+  duration_min: 182
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_aae65ffd84ad4a6fbec229f5cffc302f.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac41494860"
       kind: replay
+      parts: 1
   contributed_by: data-agent

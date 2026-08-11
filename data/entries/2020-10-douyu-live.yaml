@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2020-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 21 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2020-10-02-live-01
   type: live
   date: "2020-10-02"
   title: "Phasmophobia"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/o_1ejne2v3h1t6d1qi8j8jdn1r060.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18342452"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-04-live-01
@@ -21,11 +19,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 223
+  cover: "https://tx-free-imgs.acfun.cn/o_1ejsi1j2e19c1dqj14231liocaf0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac18399121"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-05-live-01
@@ -34,10 +35,13 @@
   title: "Party Animals"
   platform: douyu
   confidence: high
+  duration_min: 271
+  cover: "https://tx-free-imgs.acfun.cn/o_1ejsj8t0d1gt21lrnogvin2raj0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18398871"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-06-live-01
@@ -46,10 +50,13 @@
   title: "art of rally&Fall Guys&F1 2020"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/o_1ejv9iklu5fs13bn1oatejr1d6g0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18423949"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-12-live-01
@@ -58,10 +65,13 @@
   title: "中世纪王朝"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekeg2en412j612bh1fqacsg1es0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18593394"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2020-10-13-live-01
@@ -70,10 +80,13 @@
   title: "中世纪王朝&Party Animals"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekgtb9r2f96bb61jir1q4c14df0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18620844"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-14-live-01
@@ -82,10 +95,13 @@
   title: "中世纪王朝"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekjldm3n1fi31p7t1p5pvrvev70.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18653394"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2020-10-15-live-01
@@ -94,10 +110,13 @@
   title: "舞蹈迷藏&Fall Guys"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekm53q7ce839ji1t2q1eb911d90.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18685618"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-16-live-01
@@ -106,10 +125,13 @@
   title: "不思议的皇冠"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekokrghg1gbs1n1g1du6160283l0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18717588"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-17-live-01
@@ -118,10 +140,13 @@
   title: "不思议的皇冠"
   platform: douyu
   confidence: high
+  duration_min: 262
+  cover: "https://tx-free-imgs.acfun.cn/o_1ekra2del8rj1ggp18h27vasva0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18751857"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-18-live-01
@@ -130,11 +155,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 243
+  cover: "https://tx-free-imgs.acfun.cn/o_1el073khe1j2l1tl4apg1opf1f0q0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac18801851"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-19-live-01
@@ -143,10 +171,13 @@
   title: "儿时的游戏"
   platform: douyu
   confidence: high
+  duration_min: 235
+  cover: "https://tx-free-imgs.acfun.cn/o_1el0fl9pp1vvr16691j75i3k1tjg0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18803859"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2020-10-20-live-01
@@ -155,10 +186,13 @@
   title: "儿时的游戏"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/o_1el2ume6772n18ra1fma1g1bue00.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18837459"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-23-live-01
@@ -167,10 +201,13 @@
   title: "儿时的游戏"
   platform: douyu
   confidence: high
+  duration_min: 231
+  cover: "https://tx-free-imgs.acfun.cn/o_1elam8j129gcmag1q9b1en2vk90.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac18960227"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-24-live-01
@@ -179,10 +216,13 @@
   title: "Manifold Garden"
   platform: douyu
   confidence: high
+  duration_min: 279
+  cover: "https://tx-free-imgs.acfun.cn/o_1eld9vhbe1e9dv0l162e11da1kr90.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19004989"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-25-live-01
@@ -191,11 +231,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 210
+  cover: "https://tx-free-imgs.acfun.cn/o_1eli54di41n51voedr1125krbb0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac19076724"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-26-live-01
@@ -204,10 +247,13 @@
   title: "Manifold Garden"
   platform: douyu
   confidence: high
+  duration_min: 168
+  cover: "https://tx-free-imgs.acfun.cn/o_1elicb6k21jh61u4e1vc215lc1uo80.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19080895"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-28-live-01
@@ -216,10 +262,13 @@
   title: "佩奇补场你补票"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/o_1elngvfb1o8b4u324fovbmo40.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19146701"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2020-10-29-live-01
@@ -228,10 +277,13 @@
   title: "轩辕剑7"
   platform: douyu
   confidence: high
+  duration_min: 291
+  cover: "https://tx-free-imgs.acfun.cn/o_1elq9dpvg1osh1ibsmui1km12bh0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19172801"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-10-30-live-01
@@ -240,10 +292,13 @@
   title: "轩辕剑7"
   platform: douyu
   confidence: high
+  duration_min: 289
+  cover: "https://tx-free-imgs.acfun.cn/o_1elsvjss01oo6o6e4u9nbt13n00.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19197004"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-10-31-live-01
@@ -252,8 +307,11 @@
   title: "轩辕剑7"
   platform: douyu
   confidence: high
+  duration_min: 358
+  cover: "https://tx-free-imgs.acfun.cn/o_1em1vv0am1j0c11m76io1u0r3d80.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac19267803"
       kind: replay
+      parts: 5
   contributed_by: data-agent
