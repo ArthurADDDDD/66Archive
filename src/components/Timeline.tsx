@@ -6,7 +6,6 @@ import { MONTH_CN } from '@/lib/ui'
 import { PLATFORM_META } from '@/lib/platforms'
 import type { Platform } from '@/lib/schema'
 import { EntryRow } from './EntryRow'
-import { Preview } from './Preview'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
 import { SiteNav } from './SiteNav'
 
@@ -34,7 +33,6 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS)
   const [activeYear, setActiveYear] = useState(latestYear)
   const [activeMonth, setActiveMonth] = useState<number | null>(null)
-  const [hovered, setHovered] = useState<TimelineEntry | null>(null)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [sheetOpen, setSheetOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
@@ -104,14 +102,12 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
     setActiveMonth(null)
     setFilters(nextFilters)
     setExpanded(null)
-    setHovered(null)
     writeUrl(nextFilters, year, null)
   }, [filters, writeUrl])
 
   const selectMonth = useCallback((month: number | null) => {
     setActiveMonth(month)
     setExpanded(null)
-    setHovered(null)
     writeUrl(filters, activeYear, month)
   }, [activeYear, filters, writeUrl])
 
@@ -395,8 +391,7 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
           ) : !searching && activeMonth === null ? (
             <MonthArchive summaries={monthSummaries} onSelect={selectMonth} hrefFor={(month) => hrefFor(activeYear, month)} />
           ) : (
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]" onMouseLeave={() => setHovered(null)}>
-              <div className="min-w-0 divide-y divide-line/50">
+            <div className="max-w-[1080px] divide-y divide-line/50">
                 {rendered.map((entry, index) => {
                   const year = entry.date.slice(0, 4)
                   const previousYear = rendered[index - 1]?.date.slice(0, 4)
@@ -410,7 +405,6 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
                       <EntryRow
                         entry={entry}
                         expanded={expanded === entry.id}
-                        onHover={(value) => setHovered(value)}
                         onToggle={() => setExpanded(expanded === entry.id ? null : entry.id)}
                       />
                     </div>
@@ -419,10 +413,6 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
                 {searching && visible.length > searchLimit && (
                   <p className="py-6 text-center font-mono text-[11px] text-faint">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
                 )}
-              </div>
-              <aside className="sticky top-[76px] hidden h-fit lg:block">
-                <Preview entry={hovered} />
-              </aside>
             </div>
           )}
         </section>

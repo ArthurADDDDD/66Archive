@@ -34,6 +34,22 @@ export default function ContactPage() {
               正式渠道会在互动审核机制确定后公布。当前页面先用于明确站点结构，避免展示未经确认的联系方式。
             </p>
           </article>
+
+          <a
+            href="https://github.com/ArthurADDDDD/66archive"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-live/40 sm:col-span-2"
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-live">项目仓库</span>
+            <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h2 className="text-[20px] font-medium">GitHub · 66archive</h2>
+                <p className="mt-2 text-[13px] leading-relaxed text-muted">查看项目源码、数据更新和版本记录。</p>
+              </div>
+              <span className="font-mono text-[11px] text-live transition-transform group-hover:translate-x-1">打开仓库 ↗</span>
+            </div>
+          </a>
         </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
