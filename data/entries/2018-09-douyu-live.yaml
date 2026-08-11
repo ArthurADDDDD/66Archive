@@ -6,7 +6,14 @@
     confidence: high
     duration_min: 311
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536193115.JPG?imageslim"
-    games: []
+    games: [two-point-hospital]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:45:00"
+        label: "Two Point Hospital"
+      - at: "02:58:12"
+        label: "Two Point Hospital"
     sources:
       - url: "https://www.acfun.cn/v/ac4567379"
         kind: replay
@@ -23,6 +30,13 @@
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536235361.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:55"
+        label: "Dota 2"
+      - at: "02:15:46"
+        label: "Dota 2"
     sources:
       - url: "https://www.acfun.cn/v/ac4569103"
         kind: replay
@@ -38,7 +52,16 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_08/1536409742.jpg?imageslim"
-    games: []
+    games: [donut-county]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:20:42"
+        label: "Part2"
+      - at: "02:00:02"
+        label: "Part3"
+      - at: "04:00:02"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac4572853"
         kind: replay
@@ -56,6 +79,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_10/1536537933.jpg?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "戏说聊斋第十八期-弹幕版"
+      - at: "01:24:45"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:45:14"
+        label: "心灵砒霜-弹幕版"
+      - at: "04:05:39"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4574749"
         kind: replay
@@ -71,7 +103,14 @@
     confidence: high
     duration_min: 307
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_11/1536665200.JPG?imageslim"
-    games: []
+    games: [planet-coaster]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:44:22"
+        label: "过山车之星"
+      - at: "02:58:22"
+        label: "过山车之星"
     sources:
       - url: "https://www.acfun.cn/v/ac4578858"
         kind: replay
@@ -87,7 +126,14 @@
     confidence: high
     duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_12/1536756016.jpg?imageslim"
-    games: []
+    games: [steep]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:56:34"
+        label: "极限巅峰(Steep)"
+      - at: "02:57:15"
+        label: "极限巅峰(Steep)"
     sources:
       - url: "https://www.acfun.cn/v/ac4580885"
         kind: replay
@@ -103,7 +149,18 @@
     confidence: high
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_13/1536837882.JPG?imageslim"
-    games: []
+    games: [strange-brigade]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:40:57"
+        label: "Strange Brigade"
+      - at: "01:30:00"
+        label: "Strange Brigade"
+      - at: "02:16:42"
+        label: "Strange Brigade"
+      - at: "03:03:25"
+        label: "Strange Brigade"
     sources:
       - url: "https://www.acfun.cn/v/ac4583069"
         kind: replay
@@ -119,7 +176,20 @@
     confidence: high
     duration_min: 308
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_14/1536936793.JPG?imageslim"
-    games: []
+    games: [strange-brigade]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:28:17"
+        label: "Strange Brigade"
+      - at: "01:24:10"
+        label: "Strange Brigade"
+      - at: "02:20:02"
+        label: "Strange Brigade"
+      - at: "03:15:56"
+        label: "Strange Brigade"
+      - at: "04:11:48"
+        label: "Strange Brigade"
     sources:
       - url: "https://www.acfun.cn/v/ac4585388"
         kind: replay
@@ -135,7 +205,12 @@
     confidence: high
     duration_min: 155
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_15/1537013621.JPG?imageslim"
-    games: []
+    games: [strange-brigade]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:47:40"
+        label: "Strange Brigade"
     sources:
       - url: "https://www.acfun.cn/v/ac4586843"
         kind: replay
@@ -153,6 +228,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537143832.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:10:13"
+        label: "心灵砒霜-心灵砒霜"
+      - at: "02:10:38"
+        label: "心灵砒霜-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4588929"
         kind: replay
@@ -168,7 +250,14 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537186010.JPG?imageslim"
-    games: []
+    games: [witch-it]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:19"
+        label: "Witch It"
+      - at: "02:03:42"
+        label: "39天到火星"
     sources:
       - url: "https://www.acfun.cn/v/ac4590602"
         kind: replay
@@ -200,7 +289,13 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_21/1537529735.JPG?imageslim"
-    games: []
+    games: [rusty-lake]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:48:41"
+        label: "Rusty Lake Paradox（《锈湖》新作《悖论》）"
+        game: rusty-lake
     sources:
       - url: "https://www.acfun.cn/v/ac4599258"
         kind: replay
@@ -216,7 +311,12 @@
     confidence: high
     duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_22/1537617579.JPG?imageslim"
-    games: []
+    games: [ultimate-fishing-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:13:39"
+        label: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
     sources:
       - url: "https://www.acfun.cn/v/ac4601198"
         kind: replay
@@ -234,6 +334,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_24/1537754100.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:28:15"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:25:54"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4603370"
         kind: replay
@@ -249,7 +356,12 @@
     confidence: high
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_26/1537968116.jpg?imageslim"
-    games: []
+    games: [ultimate-fishing-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:45"
+        label: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
     sources:
       - url: "https://www.acfun.cn/v/ac4608456"
         kind: replay
@@ -265,7 +377,12 @@
     confidence: high
     duration_min: 147
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_27/1538048840.jpg?imageslim"
-    games: []
+    games: [parkasaurus]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:47"
+        label: "恐龙公园Parkasaurus"
     sources:
       - url: "https://www.acfun.cn/v/ac4610364"
         kind: replay
@@ -281,7 +398,12 @@
     confidence: high
     duration_min: 350
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_28/1538141473.JPG?imageslim"
-    games: []
+    games: [chinese-parents]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:19:10"
+        label: "中国式家长"
     sources:
       - url: "https://www.acfun.cn/v/ac4612623"
         kind: replay
@@ -297,7 +419,12 @@
     confidence: high
     duration_min: 311
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538230725.JPG?imageslim"
-    games: []
+    games: [chinese-parents]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:45:35"
+        label: "中国式家长"
     sources:
       - url: "https://www.acfun.cn/v/ac4614712"
         kind: replay
@@ -315,6 +442,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_01/1538357203.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:20:59"
+        label: "戏说聊斋第十九期-弹幕版"
+      - at: "01:13:40"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4617033"
         kind: replay

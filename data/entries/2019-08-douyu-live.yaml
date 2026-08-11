@@ -7,6 +7,11 @@
     duration_min: 129
     cover: "https://tx-free-imgs.acfun.cn/FqRAQKgGaLPx25cymr7SLfgoVDr4?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:49:04"
+        label: "Part2"
     sources:
       - url: "https://www.acfun.cn/v/ac10659369"
         kind: replay
@@ -24,6 +29,13 @@
     cover: "https://tx-free-imgs.acfun.cn/FqlaT6LSWOceTmXnuQ_3R0gDkN-F?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:44:29"
+        label: "心灵砒霜"
+      - at: "02:36:08"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10678520"
         kind: replay
@@ -39,7 +51,22 @@
     confidence: high
     duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/Fpy-AL_4ADt7Q6N8QZz20MzXDrh_?imageslim"
-    games: []
+    games: [jump-king]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:50"
+        label: "Jump King"
+        game: jump-king
+      - at: "02:00:02"
+        label: "Jump King"
+        game: jump-king
+      - at: "03:00:02"
+        label: "Jump King"
+        game: jump-king
+      - at: "04:00:03"
+        label: "Jump King"
+        game: jump-king
     sources:
       - url: "https://www.acfun.cn/v/ac10678313"
         kind: replay
@@ -57,6 +84,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FpYom1943gI990yVBkgBWcRi1PdN?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "02:30:04"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10777155"
         kind: replay
@@ -72,7 +104,20 @@
     confidence: high
     duration_min: 283
     cover: "https://tx-free-imgs.acfun.cn/FrwCZ-8zW9yWqhXaw_iHQbyuGE-T?imageslim"
-    games: []
+    games: [remnant-from-the-ashes]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:00"
+        label: "遗迹灰烬重生"
+      - at: "01:09:01"
+        label: "遗迹灰烬重生"
+      - at: "02:00:02"
+        label: "遗迹灰烬重生"
+      - at: "03:00:03"
+        label: "遗迹灰烬重生"
+      - at: "04:00:05"
+        label: "遗迹灰烬重生"
     sources:
       - url: "https://www.acfun.cn/v/ac10803804"
         kind: replay
@@ -90,6 +135,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FopRRtHn3JpFZqRNGwnRRSuvo2P6?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "02:03:01"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10814645"
         kind: replay
@@ -105,7 +155,23 @@
     confidence: high
     duration_min: 319
     cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
-    games: []
+    games: [heave-ho]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:50"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "01:45:55"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "02:48:00"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "03:50:04"
+        label: "死神对决"
+      - at: "04:34:20"
+        label: "死神对决"
     sources:
       - url: "https://www.acfun.cn/v/ac10841151"
         kind: replay

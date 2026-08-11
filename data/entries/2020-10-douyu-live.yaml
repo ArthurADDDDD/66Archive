@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/o_1ejne2v3h1t6d1qi8j8jdn1r060.jpeg?imageslim"
-    games: []
+    games: [phasmophobia]
+    segments:
+      - at: "00:00:00"
+        label: "Phasmophobia"
+        game: phasmophobia
+      - at: "00:56:18"
+        label: "Phasmophobia"
+        game: phasmophobia
+      - at: "01:52:39"
+        label: "Phasmophobia"
+        game: phasmophobia
+      - at: "02:49:00"
+        label: "Phasmophobia"
+        game: phasmophobia
     sources:
       - url: "https://www.acfun.cn/v/ac18342452"
         kind: replay
@@ -24,6 +37,15 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ejsi1j2e19c1dqj14231liocaf0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块"
+      - at: "00:36:44"
+        label: "心灵砒霜弹幕版"
+      - at: "01:38:50"
+        label: "心灵砒霜弹幕版"
+      - at: "02:40:51"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac18399121"
         kind: replay
@@ -39,7 +61,20 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/o_1ejsj8t0d1gt21lrnogvin2raj0.jpeg?imageslim"
-    games: []
+    games: [party-animals]
+    segments:
+      - at: "00:00:00"
+        label: "Party Animals"
+        game: party-animals
+      - at: "01:07:36"
+        label: "Party Animals"
+        game: party-animals
+      - at: "02:15:20"
+        label: "Party Animals"
+        game: party-animals
+      - at: "03:22:58"
+        label: "Party Animals"
+        game: party-animals
     sources:
       - url: "https://www.acfun.cn/v/ac18398871"
         kind: replay
@@ -55,7 +90,19 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ejv9iklu5fs13bn1oatejr1d6g0.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "art of rally"
+      - at: "00:32:43"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "01:28:26"
+        label: "F1 2020"
+      - at: "02:21:47"
+        label: "F1 2020"
+      - at: "03:15:07"
+        label: "F1 2020"
     sources:
       - url: "https://www.acfun.cn/v/ac18423949"
         kind: replay
@@ -71,7 +118,17 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ekeg2en412j612bh1fqacsg1es0.jpeg?imageslim"
-    games: []
+    games: [medieval-dynasty]
+    segments:
+      - at: "00:00:00"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "01:22:51"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "02:45:42"
+        label: "中世纪王朝"
+        game: medieval-dynasty
     sources:
       - url: "https://www.acfun.cn/v/ac18593394"
         kind: replay
@@ -87,7 +144,21 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1ekgtb9r2f96bb61jir1q4c14df0.jpeg?imageslim"
-    games: []
+    games: [party-animals, medieval-dynasty]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:19:04"
+        label: "十月有佩奇"
+      - at: "00:41:18"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "01:46:42"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "02:52:05"
+        label: "Party Animals"
+        game: party-animals
     sources:
       - url: "https://www.acfun.cn/v/ac18620844"
         kind: replay
@@ -103,7 +174,24 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1ekjldm3n1fi31p7t1p5pvrvev70.jpeg?imageslim"
-    games: []
+    games: [medieval-dynasty]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:08:23"
+        label: "十月有佩奇"
+      - at: "00:28:57"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "01:14:31"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "02:00:04"
+        label: "中世纪王朝"
+        game: medieval-dynasty
+      - at: "03:00:05"
+        label: "中世纪王朝"
+        game: medieval-dynasty
     sources:
       - url: "https://www.acfun.cn/v/ac18653394"
         kind: replay
@@ -119,7 +207,18 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ekm53q7ce839ji1t2q1eb911d90.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:22:03"
+        label: "舞蹈迷藏"
+      - at: "01:36:11"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:52:42"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac18685618"
         kind: replay
@@ -135,7 +234,16 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ekokrghg1gbs1n1g1du6160283l0.jpeg?imageslim"
-    games: []
+    games: [crown-trick]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:51:59"
+        label: "不思议的皇冠"
+      - at: "01:57:39"
+        label: "不思议的皇冠"
+      - at: "03:03:20"
+        label: "不思议的皇冠"
     sources:
       - url: "https://www.acfun.cn/v/ac18717588"
         kind: replay
@@ -151,7 +259,16 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/o_1ekra2del8rj1ggp18h27vasva0.jpeg?imageslim"
-    games: []
+    games: [crown-trick]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:48:21"
+        label: "不思议的皇冠"
+      - at: "01:59:24"
+        label: "不思议的皇冠"
+      - at: "03:10:28"
+        label: "不思议的皇冠"
     sources:
       - url: "https://www.acfun.cn/v/ac18751857"
         kind: replay
@@ -169,6 +286,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1el073khe1j2l1tl4apg1opf1f0q0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:25:15"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:19:44"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:14:12"
+        label: "心灵砒霜-弹幕版"
+      - at: "03:08:39"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac18801851"
         kind: replay
@@ -185,6 +313,13 @@
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/o_1el0fl9pp1vvr16691j75i3k1tjg0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "儿时的游戏"
+      - at: "01:18:28"
+        label: "儿时的游戏"
+      - at: "02:36:58"
+        label: "儿时的游戏"
     sources:
       - url: "https://www.acfun.cn/v/ac18803859"
         kind: replay
@@ -201,6 +336,15 @@
     duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/o_1el2ume6772n18ra1fma1g1bue00.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "儿时的游戏"
+      - at: "01:16:07"
+        label: "儿时的游戏"
+      - at: "02:32:17"
+        label: "儿时的游戏"
+      - at: "03:48:26"
+        label: "儿时的游戏"
     sources:
       - url: "https://www.acfun.cn/v/ac18837459"
         kind: replay
@@ -217,6 +361,17 @@
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/o_1elam8j129gcmag1q9b1en2vk90.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:09"
+        label: "儿时的游戏"
+      - at: "01:06:04"
+        label: "儿时的游戏"
+      - at: "01:59:59"
+        label: "儿时的游戏"
+      - at: "02:55:24"
+        label: "儿时的游戏"
     sources:
       - url: "https://www.acfun.cn/v/ac18960227"
         kind: replay
@@ -232,7 +387,19 @@
     confidence: high
     duration_min: 279
     cover: "https://tx-free-imgs.acfun.cn/o_1eld9vhbe1e9dv0l162e11da1kr90.jpeg?imageslim"
-    games: []
+    games: [manifold-garden]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:22"
+        label: "Manifold Garden"
+        game: manifold-garden
+      - at: "02:01:58"
+        label: "Manifold Garden"
+        game: manifold-garden
+      - at: "03:20:35"
+        label: "Manifold Garden"
+        game: manifold-garden
     sources:
       - url: "https://www.acfun.cn/v/ac19004989"
         kind: replay
@@ -265,7 +432,19 @@
     confidence: high
     duration_min: 168
     cover: "https://tx-free-imgs.acfun.cn/o_1elicb6k21jh61u4e1vc215lc1uo80.jpeg?imageslim"
-    games: []
+    games: [manifold-garden]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:08:49"
+        label: "Manifold Garden"
+        game: manifold-garden
+      - at: "01:02:02"
+        label: "Manifold Garden"
+        game: manifold-garden
+      - at: "01:55:15"
+        label: "Manifold Garden"
+        game: manifold-garden
     sources:
       - url: "https://www.acfun.cn/v/ac19080895"
         kind: replay
@@ -297,7 +476,22 @@
     confidence: high
     duration_min: 291
     cover: "https://tx-free-imgs.acfun.cn/o_1elq9dpvg1osh1ibsmui1km12bh0.jpeg?imageslim"
-    games: []
+    games: [xuan-yuan-sword-7]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:08:31"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "01:19:06"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "02:29:41"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "03:40:18"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
     sources:
       - url: "https://www.acfun.cn/v/ac19172801"
         kind: replay
@@ -313,7 +507,20 @@
     confidence: high
     duration_min: 289
     cover: "https://tx-free-imgs.acfun.cn/o_1elsvjss01oo6o6e4u9nbt13n00.jpeg?imageslim"
-    games: []
+    games: [xuan-yuan-sword-7]
+    segments:
+      - at: "00:00:00"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "01:12:07"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "02:24:17"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "03:36:26"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
     sources:
       - url: "https://www.acfun.cn/v/ac19197004"
         kind: replay
@@ -329,7 +536,23 @@
     confidence: high
     duration_min: 358
     cover: "https://tx-free-imgs.acfun.cn/o_1em1vv0am1j0c11m76io1u0r3d80.jpeg?imageslim"
-    games: []
+    games: [xuan-yuan-sword-7]
+    segments:
+      - at: "00:00:00"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "01:14:59"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "02:29:59"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "03:45:00"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
+      - at: "05:00:00"
+        label: "轩辕剑7"
+        game: xuan-yuan-sword-7
     sources:
       - url: "https://www.acfun.cn/v/ac19267803"
         kind: replay

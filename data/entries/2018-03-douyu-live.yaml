@@ -6,7 +6,22 @@
     confidence: high
     duration_min: 191
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_03/1520083714.JPG?imageslim"
-    games: []
+    games: [danganronpa-1]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:23:32"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "00:51:25"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "01:19:20"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "01:47:15"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "02:15:09"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "02:43:05"
+        label: "弹丸论破：希望的学园和绝望高中生"
     sources:
       - url: "https://www.acfun.cn/v/ac4249674"
         kind: replay
@@ -22,7 +37,16 @@
     confidence: high
     duration_min: 114
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_03/1520084011.JPG?imageslim"
-    games: []
+    games: [7-billion-humans]
+    segments:
+      - at: "00:00:00"
+        label: "程序员升职记"
+      - at: "00:28:26"
+        label: "程序员升职记"
+      - at: "00:56:52"
+        label: "程序员升职记"
+      - at: "01:25:18"
+        label: "程序员升职记"
     sources:
       - url: "https://www.acfun.cn/v/ac4249664"
         kind: replay
@@ -40,6 +64,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_05/1520208562.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.4-砒霜前聊10块钱的"
+      - at: "00:17:32"
+        label: "P1.2-2018.3.4-砒霜前聊10块钱的"
+      - at: "00:35:06"
+        label: "P2.1-2018.3.4-心灵砒霜-弹幕版"
+      - at: "01:04:51"
+        label: "P2.2-2018.3.4-心灵砒霜-弹幕版"
+      - at: "01:34:45"
+        label: "P2.3-2018.3.4-心灵砒霜-弹幕版"
+      - at: "02:04:36"
+        label: "P2.4-2018.3.4-心灵砒霜-弹幕版"
+      - at: "02:34:20"
+        label: "P2.5-2018.3.4-心灵砒霜-弹幕版"
+      - at: "03:04:09"
+        label: "P2.6-2018.3.4-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4250978"
         kind: replay
@@ -55,7 +96,28 @@
     confidence: high
     duration_min: 277
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_05/1520256856.JPG?imageslim"
-    games: []
+    games: [danganronpa-1]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.5-游戏前聊10块钱的"
+      - at: "00:22:04"
+        label: "P1.2-2018.3.5-游戏前聊10块钱的"
+      - at: "00:44:09"
+        label: "P2.1-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "01:13:12"
+        label: "P2.2-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "01:42:16"
+        label: "P2.3-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "02:11:20"
+        label: "P2.4-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "02:40:24"
+        label: "P2.5-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "03:09:27"
+        label: "P2.5-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "03:38:31"
+        label: "P2.7-2018.3.5-弹丸论破：希望的学园和绝望高中生"
+      - at: "04:07:34"
+        label: "P2.8-2018.3.5-弹丸论破：希望的学园和绝望高中生"
     sources:
       - url: "https://www.acfun.cn/v/ac4252211"
         kind: replay
@@ -71,7 +133,28 @@
     confidence: high
     duration_min: 269
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_07/1520422827.JPG?imageslim"
-    games: []
+    games: [danganronpa-1]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.7-游戏前聊10块钱的"
+      - at: "00:16:19"
+        label: "P1.2-2018.3.7-游戏前聊10块钱的"
+      - at: "00:32:38"
+        label: "P2.1-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "01:02:08"
+        label: "P2.2-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "01:31:39"
+        label: "P2.3-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "02:01:10"
+        label: "P2.4-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "02:30:40"
+        label: "P2.5-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "03:00:10"
+        label: "P2.6-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "03:29:40"
+        label: "P2.7-2018.3.7-弹丸论破：希望的学园和绝望高中生"
+      - at: "03:59:11"
+        label: "P2.8-2018.3.7-弹丸论破：希望的学园和绝望高中生"
     sources:
       - url: "https://www.acfun.cn/v/ac4255227"
         kind: replay
@@ -87,7 +170,30 @@
     confidence: high
     duration_min: 309
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_08/1520513555.JPG?imageslim"
-    games: []
+    games: [danganronpa-1]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:28:09"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "00:56:10"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "01:24:12"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "01:52:14"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "02:20:16"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "02:48:19"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "03:16:20"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "03:44:22"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "04:12:25"
+        label: "弹丸论破：希望的学园和绝望高中生"
+      - at: "04:40:28"
+        label: "弹丸论破：希望的学园和绝望高中生"
     sources:
       - url: "https://www.acfun.cn/v/ac4256834"
         kind: replay
@@ -103,7 +209,28 @@
     confidence: high
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_09/1520595491.JPG?imageslim"
-    games: []
+    games: [danganronpa-1]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊一小会儿"
+      - at: "00:06:18"
+        label: "P2.1-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "00:34:33"
+        label: "P2.2-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "01:02:49"
+        label: "P2.3-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "01:31:04"
+        label: "P2.4-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "01:59:19"
+        label: "P2.5-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "02:27:33"
+        label: "P2.6-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "02:55:48"
+        label: "P2.7-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "03:24:03"
+        label: "P2.8-2018.3.9-弹丸论破：希望的学园和绝望高中生-大结局"
+      - at: "03:52:18"
+        label: "大周秘史"
     sources:
       - url: "https://www.acfun.cn/v/ac4258348"
         kind: replay
@@ -121,6 +248,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_11/1520810510.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.11-砒霜前聊10块钱的"
+      - at: "00:20:56"
+        label: "P1.2-2018.3.11-砒霜前聊10块钱的"
+      - at: "00:41:59"
+        label: "P2.1-2018.3.11-心灵砒霜"
+      - at: "01:10:25"
+        label: "P2.2-2018.3.11-心灵砒霜"
+      - at: "01:38:57"
+        label: "P2.3-2018.3.11-心灵砒霜"
+      - at: "02:07:31"
+        label: "P2.4-2018.3.11-心灵砒霜"
+      - at: "02:35:56"
+        label: "P2.5-2018.3.11-心灵砒霜"
+      - at: "03:04:27"
+        label: "P2.6-2018.3.11-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4260758"
         kind: replay
@@ -152,7 +296,20 @@
     confidence: high
     duration_min: 177
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_14/1521029278.jpg?imageslim"
-    games: []
+    games: [celeste]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.14-游戏前聊10块钱的"
+      - at: "00:27:49"
+        label: "P2-3.14-蔚蓝Celeste"
+      - at: "00:57:34"
+        label: "P3-3.14-蔚蓝Celeste"
+      - at: "01:27:19"
+        label: "P4-3.14-蔚蓝Celeste"
+      - at: "01:57:04"
+        label: "P5-3.14-蔚蓝Celeste"
+      - at: "02:26:50"
+        label: "P6-3.14-蔚蓝Celeste"
     sources:
       - url: "https://www.acfun.cn/v/ac4265243"
         kind: replay
@@ -168,7 +325,14 @@
     confidence: high
     duration_min: 79
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_14/1521029371.jpg?imageslim"
-    games: []
+    games: [sky-children-of-the-light]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.14-陈星汉《Sky光·遇》"
+      - at: "00:26:21"
+        label: "P2-3.14-陈星汉《Sky光·遇》"
+      - at: "00:52:43"
+        label: "P3-3.14-陈星汉《Sky光·遇》"
     sources:
       - url: "https://www.acfun.cn/v/ac4265234"
         kind: replay
@@ -184,7 +348,26 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_16/1521201732.JPG?imageslim"
-    games: []
+    games: [celeste]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:29"
+        label: "蔚蓝 Celeste"
+      - at: "00:50:40"
+        label: "蔚蓝 Celeste"
+      - at: "01:19:51"
+        label: "蔚蓝 Celeste"
+      - at: "01:49:02"
+        label: "蔚蓝 Celeste"
+      - at: "02:18:15"
+        label: "蔚蓝 Celeste"
+      - at: "02:47:26"
+        label: "蔚蓝 Celeste"
+      - at: "03:16:39"
+        label: "蔚蓝 Celeste"
+      - at: "03:45:51"
+        label: "蔚蓝 Celeste"
     sources:
       - url: "https://www.acfun.cn/v/ac4268478"
         kind: replay
@@ -200,7 +383,30 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_17/1521289369.JPG?imageslim"
-    games: []
+    games: [celeste]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:45"
+        label: "蔚蓝 Celeste"
+      - at: "00:41:17"
+        label: "蔚蓝 Celeste"
+      - at: "01:06:50"
+        label: "蔚蓝 Celeste"
+      - at: "01:32:22"
+        label: "蔚蓝 Celeste"
+      - at: "01:57:54"
+        label: "蔚蓝 Celeste"
+      - at: "02:23:27"
+        label: "蔚蓝 Celeste"
+      - at: "02:48:59"
+        label: "蔚蓝 Celeste"
+      - at: "03:14:32"
+        label: "蔚蓝 Celeste"
+      - at: "03:40:05"
+        label: "蔚蓝 Celeste"
+      - at: "04:05:37"
+        label: "蔚蓝 Celeste"
     sources:
       - url: "https://www.acfun.cn/v/ac4269624"
         kind: replay
@@ -218,6 +424,27 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_19/1521432470.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.18-电音之王石狮子了解一下-弹幕版"
+      - at: "00:29:02"
+        label: "P1.2-2018.3.18-电音之王石狮子了解一下-弹幕版"
+      - at: "00:58:06"
+        label: "P2.1-2018.3.18-心灵砒霜-弹幕版"
+      - at: "01:21:41"
+        label: "P2.2-2018.3.18-心灵砒霜-弹幕版"
+      - at: "01:45:26"
+        label: "P2.3-2018.3.18-心灵砒霜-弹幕版"
+      - at: "02:09:02"
+        label: "P2.4-2018.3.18-心灵砒霜-弹幕版"
+      - at: "02:32:39"
+        label: "P2.5-2018.3.18-心灵砒霜-弹幕版"
+      - at: "02:56:15"
+        label: "P2.6-2018.3.18-心灵砒霜-弹幕版"
+      - at: "03:19:58"
+        label: "P2.7-2018.3.18-心灵砒霜-弹幕版"
+      - at: "03:43:40"
+        label: "P2.8-2018.3.18-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4271395"
         kind: replay
@@ -233,7 +460,32 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_21/1521636890.JPG?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:52"
+        label: "P2-018.3.21-海盗之海 Sea of Theives"
+      - at: "00:41:56"
+        label: "P3-018.3.21-海盗之海 Sea of Theives"
+      - at: "01:06:01"
+        label: "P4-018.3.21-海盗之海 Sea of Theives"
+      - at: "01:30:07"
+        label: "P5-018.3.21-海盗之海 Sea of Theives"
+      - at: "01:54:13"
+        label: "P6-018.3.21-海盗之海 Sea of Theives"
+      - at: "02:18:17"
+        label: "P7-018.3.21-海盗之海 Sea of Theives"
+      - at: "02:42:23"
+        label: "P8-018.3.21-海盗之海 Sea of Theives"
+      - at: "03:06:28"
+        label: "P9-018.3.21-海盗之海 Sea of Theives"
+      - at: "03:30:33"
+        label: "P10-018.3.21-海盗之海 Sea of Theives"
+      - at: "03:56:00"
+        label: "P11-018.3.21-海盗之海 Sea of Theives"
+      - at: "04:21:28"
+        label: "P12-018.3.21-海盗之海 Sea of Theives"
     sources:
       - url: "https://www.acfun.cn/v/ac4275592"
         kind: replay
@@ -249,7 +501,28 @@
     confidence: high
     duration_min: 259
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_22/1521719114.JPG?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊会儿天"
+      - at: "00:09:34"
+        label: "海盗之海 Sea of Theives"
+      - at: "00:37:20"
+        label: "海盗之海 Sea of Theives"
+      - at: "01:05:07"
+        label: "海盗之海 Sea of Theives"
+      - at: "01:32:54"
+        label: "海盗之海 Sea of Theives"
+      - at: "02:00:39"
+        label: "绝地求生"
+      - at: "02:28:26"
+        label: "绝地求生"
+      - at: "02:56:12"
+        label: "绝地求生"
+      - at: "03:23:57"
+        label: "绝地求生"
+      - at: "03:51:43"
+        label: "绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac4277158"
         kind: replay
@@ -265,7 +538,28 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_24/1521892514.JPG?imageslim"
-    games: []
+    games: [keep-talking-and-nobody-explodes]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.24-游戏前聊10块钱的"
+      - at: "00:15:44"
+        label: "P1.2-2018.3.24-游戏前聊10块钱的"
+      - at: "00:31:29"
+        label: "p2-2018.3.24-"
+      - at: "00:59:50"
+        label: "Part4"
+      - at: "01:28:12"
+        label: "Part5"
+      - at: "01:56:33"
+        label: "Part6"
+      - at: "02:24:56"
+        label: "Part7"
+      - at: "02:53:18"
+        label: "Part8"
+      - at: "03:21:40"
+        label: "Part9"
+      - at: "03:50:02"
+        label: "Part10"
     sources:
       - url: "https://www.acfun.cn/v/ac4280005"
         kind: replay
@@ -283,6 +577,29 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_25/1521981416.jpg?imageslim"
     games: []
     tags: [戏说聊斋]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.25-戏说聊斋"
+      - at: "00:23:49"
+        label: "P1.2-2018.3.25-戏说聊斋"
+      - at: "00:47:39"
+        label: "P1.3-2018.3.25-戏说聊斋"
+      - at: "01:11:30"
+        label: "P1.4-2018.3.25-戏说聊斋"
+      - at: "01:35:20"
+        label: "P1.5-2018.3.25-戏说聊斋"
+      - at: "01:59:09"
+        label: "P1.6-2018.3.25-戏说聊斋"
+      - at: "02:22:59"
+        label: "P1.7-2018.3.25-戏说聊斋"
+      - at: "02:46:49"
+        label: "P1.8-2018.3.25-戏说聊斋"
+      - at: "03:10:39"
+        label: "P2.1-2018.3.25-超级兔子人"
+      - at: "03:33:41"
+        label: "P2.2-2018.3.25-超级兔子人"
+      - at: "03:56:45"
+        label: "P2.3-2018.3.25-超级兔子人"
     sources:
       - url: "https://www.acfun.cn/v/ac4281019"
         kind: replay
@@ -300,6 +617,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_26/1522027750.jpg?imageslim"
     games: []
     tags: [戏说聊斋, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "00:23:15"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "00:46:30"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "01:09:45"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "01:33:00"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "01:56:15"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "02:19:31"
+        label: "女流戏说聊斋-弹幕版-重转码"
+      - at: "02:42:47"
+        label: "女流戏说聊斋-弹幕版-重转码"
     sources:
       - url: "https://www.acfun.cn/v/ac4281402"
         kind: replay
@@ -315,7 +649,26 @@
     confidence: high
     duration_min: 229
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_26/1522066254.JPG?imageslim"
-    games: []
+    games: [keep-talking-and-nobody-explodes]
+    segments:
+      - at: "00:00:00"
+        label: "没人会被炸掉"
+      - at: "00:20:27"
+        label: "没人会被炸掉"
+      - at: "00:48:25"
+        label: "没人会被炸掉"
+      - at: "01:16:24"
+        label: "没人会被炸掉"
+      - at: "01:44:23"
+        label: "没人会被炸掉"
+      - at: "02:12:22"
+        label: "没人会被炸掉"
+      - at: "02:40:21"
+        label: "没人会被炸掉"
+      - at: "03:08:21"
+        label: "没人会被炸掉"
+      - at: "03:28:47"
+        label: "没人会被炸掉"
     sources:
       - url: "https://www.acfun.cn/v/ac4282625"
         kind: replay
@@ -332,6 +685,23 @@
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_27/1522150181.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.27-游戏前聊10块钱的"
+      - at: "00:15:54"
+        label: "P1.2-2018.3.27-游戏前聊10块钱的"
+      - at: "00:31:49"
+        label: "P2.1-2018.3.27-拆弹姐弟继续"
+      - at: "01:00:26"
+        label: "P2.2-2018.3.27-拆弹姐弟继续"
+      - at: "01:29:05"
+        label: "P2.3-2018.3.27-拆弹姐弟继续"
+      - at: "01:57:44"
+        label: "P2.4-2018.3.27-拆弹姐弟继续"
+      - at: "02:26:21"
+        label: "P2.5-2018.3.27-拆弹姐弟继续"
+      - at: "02:54:58"
+        label: "P2.6-2018.3.27-拆弹姐弟继续"
     sources:
       - url: "https://www.acfun.cn/v/ac4284201"
         kind: replay
@@ -347,7 +717,26 @@
     confidence: high
     duration_min: 223
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_28/1522239136.JPG?imageslim"
-    games: []
+    games: [uno]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.28-聊天环节"
+      - at: "00:29:02"
+        label: "P1.2-2018.3.28-聊天环节"
+      - at: "00:58:05"
+        label: "P1.3-2018.3.28-聊天环节"
+      - at: "01:27:08"
+        label: "P1.4-2018.3.28-聊天环节"
+      - at: "01:39:28"
+        label: "P2.1-2018.3.28-UNO益智桌游"
+      - at: "02:04:08"
+        label: "P2.2-2018.3.28-UNO益智桌游"
+      - at: "02:28:50"
+        label: "P2.3-2018.3.28-UNO益智桌游"
+      - at: "02:53:30"
+        label: "P2.4-2018.3.28-UNO益智桌游"
+      - at: "03:18:10"
+        label: "P2.5-2018.3.28-UNO益智桌游"
     sources:
       - url: "https://www.acfun.cn/v/ac4285875"
         kind: replay
@@ -363,7 +752,28 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_30/1522410559.JPG?imageslim"
-    games: []
+    games: [kirby-star-allies]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.3.30-游戏前聊10块钱的"
+      - at: "00:25:22"
+        label: "P1.2-2018.3.30-游戏前聊10块钱的"
+      - at: "00:50:46"
+        label: "P2.1-018.3.30-星之卡比 新星同盟"
+      - at: "01:15:34"
+        label: "P2.2-018.3.30-星之卡比 新星同盟"
+      - at: "01:40:23"
+        label: "P2.3-018.3.30-星之卡比 新星同盟"
+      - at: "02:05:12"
+        label: "P2.4-018.3.30-星之卡比 新星同盟"
+      - at: "02:30:01"
+        label: "P2.5-018.3.30-星之卡比 新星同盟"
+      - at: "02:54:49"
+        label: "P2.6-018.3.30-星之卡比 新星同盟"
+      - at: "03:19:39"
+        label: "P2.7-018.3.30-星之卡比 新星同盟"
+      - at: "03:44:28"
+        label: "P2.8-018.3.30-星之卡比 新星同盟"
     sources:
       - url: "https://www.acfun.cn/v/ac4289259"
         kind: replay
@@ -379,7 +789,24 @@
     confidence: high
     duration_min: 216
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_31/1522496073.JPG?imageslim"
-    games: []
+    games: [mom-hid-my-game]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-游戏前聊10块钱的"
+      - at: "00:23:20"
+        label: "P1.2-游戏前聊10块钱的"
+      - at: "00:46:42"
+        label: "P2.1-黑脸先生"
+      - at: "01:16:37"
+        label: "P2.2-黑脸先生"
+      - at: "01:46:33"
+        label: "P2.3-黑脸先生"
+      - at: "02:16:29"
+        label: "P2.4-黑脸先生"
+      - at: "02:46:25"
+        label: "P3.1-妈妈把我的游戏藏起来了"
+      - at: "03:11:26"
+        label: "P3.2-妈妈把我的游戏藏起来了"
     sources:
       - url: "https://www.acfun.cn/v/ac4290285"
         kind: replay

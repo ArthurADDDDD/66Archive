@@ -7,6 +7,19 @@
     duration_min: 338
     cover: "https://tx-free-imgs.acfun.cn/o_1e2dt0rq51roc1dcm11r7nn7rno0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:45:43"
+        label: "游戏前聊10块钱的"
+      - at: "01:31:30"
+        label: "游戏前聊10块钱的"
+      - at: "02:17:18"
+        label: "陶艺大师"
+      - at: "03:24:06"
+        label: "陶艺大师"
+      - at: "04:30:51"
+        label: "陶艺大师"
     sources:
       - url: "https://www.acfun.cn/v/ac13362785"
         kind: replay
@@ -22,7 +35,18 @@
     confidence: high
     duration_min: 299
     cover: "https://tx-free-imgs.acfun.cn/o_1e2miec171025gengvq57h1ndh0.jpeg?imageslim"
-    games: []
+    games: [luna-shadow]
+    segments:
+      - at: "00:00:00"
+        label: "P4-2020-03-04-月影之塔"
+      - at: "00:59:42"
+        label: "P5-2020-03-04-月影之塔"
+      - at: "01:59:26"
+        label: "P6-2020-03-04-月影之塔"
+      - at: "02:59:11"
+        label: "P7-2020-03-04-月影之塔"
+      - at: "03:59:01"
+        label: "P8-2020-03-04-月影之塔"
     sources:
       - url: "https://www.acfun.cn/v/ac13514908"
         kind: replay
@@ -39,6 +63,19 @@
     duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/o_1e2o6rkk212kt5881d2q1f221brj0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "吟诵者"
+      - at: "01:01:39"
+        label: "吟诵者"
+      - at: "02:03:19"
+        label: "吟诵者"
+      - at: "03:04:59"
+        label: "吟诵者"
+      - at: "04:06:39"
+        label: "吟诵者"
+      - at: "05:08:23"
+        label: "吟诵者"
     sources:
       - url: "https://www.acfun.cn/v/ac13533751"
         kind: replay
@@ -55,6 +92,19 @@
     duration_min: 350
     cover: "https://tx-free-imgs.acfun.cn/o_1e2t7eqfm1lpd1psd1hb2rn3f410.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-2020-03-07-游戏前查查房"
+      - at: "01:02:12"
+        label: "P2-2020-03-07-游戏前查查房"
+      - at: "02:04:32"
+        label: "P3-2020-03-07-游戏前查查房"
+      - at: "03:06:49"
+        label: "吟诵者"
+      - at: "04:01:06"
+        label: "吟诵者"
+      - at: "04:55:21"
+        label: "吟诵者"
     sources:
       - url: "https://www.acfun.cn/v/ac13576435"
         kind: replay
@@ -71,6 +121,15 @@
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/o_1e32guio9ajs174vvks6je1te50.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "吟诵者"
+      - at: "00:42:38"
+        label: "吟诵者"
+      - at: "01:25:11"
+        label: "吟诵者"
+      - at: "02:07:43"
+        label: "吟诵者"
     sources:
       - url: "https://www.acfun.cn/v/ac13619965"
         kind: replay
@@ -86,7 +145,24 @@
     confidence: high
     duration_min: 194
     cover: "https://tx-free-imgs.acfun.cn/o_1e37imoujp1t9h1m861prkpp90.jpeg?imageslim"
-    games: []
+    games: [ori-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:29"
+        label: "游戏前聊10块钱的"
+      - at: "00:53:06"
+        label: "奥日2"
+        game: ori-2
+      - at: "01:26:43"
+        label: "奥日2"
+        game: ori-2
+      - at: "02:00:17"
+        label: "奥日2"
+        game: ori-2
+      - at: "02:35:21"
+        label: "奥日2"
+        game: ori-2
     sources:
       - url: "https://www.acfun.cn/v/ac13667371"
         kind: replay
@@ -102,7 +178,26 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/o_1e3a9bicivlauics81oo0m5v0.jpeg?imageslim"
-    games: []
+    games: [ori-2]
+    segments:
+      - at: "00:00:00"
+        label: "奥日2"
+        game: ori-2
+      - at: "00:37:30"
+        label: "奥日2"
+        game: ori-2
+      - at: "01:15:03"
+        label: "奥日2"
+        game: ori-2
+      - at: "01:54:00"
+        label: "奥日2"
+        game: ori-2
+      - at: "02:33:01"
+        label: "奥日2"
+        game: ori-2
+      - at: "03:11:59"
+        label: "奥日2"
+        game: ori-2
     sources:
       - url: "https://www.acfun.cn/v/ac13809459"
         kind: replay
@@ -118,7 +213,23 @@
     confidence: high
     duration_min: 157
     cover: "https://tx-free-imgs.acfun.cn/o_1e3cntd7b1ph2cstm3r1m3j15c70.jpeg?imageslim"
-    games: []
+    games: [nioh-2, ori-2]
+    segments:
+      - at: "00:00:00"
+        label: "奥日2"
+        game: ori-2
+      - at: "00:38:34"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:08:20"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:38:00"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:07:40"
+        label: "仁王2"
+        game: nioh-2
     sources:
       - url: "https://www.acfun.cn/v/ac13850617"
         kind: replay
@@ -134,7 +245,23 @@
     confidence: high
     duration_min: 224
     cover: "https://tx-free-imgs.acfun.cn/o_1e3fb7k8hr093mu1agc1cnf1na60.jpeg?imageslim"
-    games: []
+    games: [nioh-2]
+    segments:
+      - at: "00:00:00"
+        label: "仁王2"
+        game: nioh-2
+      - at: "00:44:42"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:29:25"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:14:05"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:58:48"
+        label: "仁王2"
+        game: nioh-2
     sources:
       - url: "https://www.acfun.cn/v/ac13873032"
         kind: replay
@@ -150,7 +277,23 @@
     confidence: high
     duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/o_1e3ki8n0m16kn14k91b8posc110j0.jpeg?imageslim"
-    games: []
+    games: [nioh-2]
+    segments:
+      - at: "00:00:00"
+        label: "仁王2"
+        game: nioh-2
+      - at: "00:43:40"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:27:23"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:11:05"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:54:47"
+        label: "仁王2"
+        game: nioh-2
     sources:
       - url: "https://www.acfun.cn/v/ac13922064"
         kind: replay
@@ -166,7 +309,20 @@
     confidence: high
     duration_min: 172
     cover: "https://tx-free-imgs.acfun.cn/o_1e3plsts5dbc17m8rpih3i1r5v0.jpeg?imageslim"
-    games: []
+    games: [nioh-2]
+    segments:
+      - at: "00:00:00"
+        label: "仁王2"
+        game: nioh-2
+      - at: "00:43:03"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:26:12"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:09:15"
+        label: "仁王2"
+        game: nioh-2
     sources:
       - url: "https://www.acfun.cn/v/ac13969834"
         kind: replay
@@ -182,7 +338,20 @@
     confidence: high
     duration_min: 162
     cover: "https://tx-free-imgs.acfun.cn/o_1e41dg7p0182s15el1ahqjol1p5e0.jpeg?imageslim"
-    games: []
+    games: [nioh-2]
+    segments:
+      - at: "00:00:00"
+        label: "仁王2"
+        game: nioh-2
+      - at: "00:40:26"
+        label: "仁王2"
+        game: nioh-2
+      - at: "01:20:49"
+        label: "仁王2"
+        game: nioh-2
+      - at: "02:01:13"
+        label: "仁王2"
+        game: nioh-2
     sources:
       - url: "https://www.acfun.cn/v/ac14087923"
         kind: replay
@@ -198,7 +367,20 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/o_1e43ujbo69fi91i1qi91kn1hh10.jpeg?imageslim"
-    games: []
+    games: [animal-crossing-nh]
+    segments:
+      - at: "00:00:00"
+        label: "集合啦！动物森友会"
+      - at: "00:32:13"
+        label: "集合啦！动物森友会"
+      - at: "01:12:47"
+        label: "集合啦！动物森友会"
+      - at: "01:53:16"
+        label: "集合啦！动物森友会"
+      - at: "02:33:49"
+        label: "集合啦！动物森友会"
+      - at: "03:14:16"
+        label: "集合啦！动物森友会"
     sources:
       - url: "https://www.acfun.cn/v/ac14112830"
         kind: replay
@@ -214,7 +396,20 @@
     confidence: high
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/o_1e46fd45a1a02v87drl1gm01e080.jpeg?imageslim"
-    games: []
+    games: [animal-crossing-nh]
+    segments:
+      - at: "00:00:00"
+        label: "集合啦！动物森友会"
+      - at: "00:34:59"
+        label: "集合啦！动物森友会"
+      - at: "01:10:01"
+        label: "集合啦！动物森友会"
+      - at: "01:50:05"
+        label: "集合啦！动物森友会"
+      - at: "02:30:10"
+        label: "集合啦！动物森友会"
+      - at: "03:10:15"
+        label: "集合啦！动物森友会"
     sources:
       - url: "https://www.acfun.cn/v/ac14141028"
         kind: replay
@@ -230,7 +425,12 @@
     confidence: high
     duration_min: 79
     cover: "https://tx-free-imgs.acfun.cn/o_1e492hk7p3f1acn1tmk1fjs1fh10.jpeg?imageslim"
-    games: []
+    games: [animal-crossing-nh]
+    segments:
+      - at: "00:00:00"
+        label: "集合啦！动物森友会"
+      - at: "00:39:21"
+        label: "集合啦！动物森友会"
     sources:
       - url: "https://www.acfun.cn/v/ac14247807"
         kind: replay
@@ -246,7 +446,18 @@
     confidence: high
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/o_1e4bi96v2dnb1o6c1svv1qq78lv0.jpeg?imageslim"
-    games: []
+    games: [animal-crossing-nh]
+    segments:
+      - at: "00:00:00"
+        label: "集合啦！动物森友会"
+      - at: "00:39:59"
+        label: "集合啦！动物森友会"
+      - at: "01:20:07"
+        label: "集合啦！动物森友会"
+      - at: "01:57:49"
+        label: "集合啦！动物森友会"
+      - at: "02:35:27"
+        label: "集合啦！动物森友会"
     sources:
       - url: "https://www.acfun.cn/v/ac14250412"
         kind: replay
@@ -262,7 +473,18 @@
     confidence: high
     duration_min: 188
     cover: "https://tx-free-imgs.acfun.cn/o_1e4e6r2fi4oiolu1m3lpqh10rm0.jpeg?imageslim"
-    games: []
+    games: [animal-crossing-nh]
+    segments:
+      - at: "00:00:00"
+        label: "集合啦！动物森友会"
+      - at: "00:39:59"
+        label: "集合啦！动物森友会"
+      - at: "01:20:01"
+        label: "集合啦！动物森友会"
+      - at: "01:56:04"
+        label: "集合啦！动物森友会"
+      - at: "02:32:07"
+        label: "集合啦！动物森友会"
     sources:
       - url: "https://www.acfun.cn/v/ac14278877"
         kind: replay
@@ -278,7 +500,18 @@
     confidence: high
     duration_min: 198
     cover: "https://tx-free-imgs.acfun.cn/o_1e4e91mhq164c1k5814hk46m6dm0.jpeg?imageslim"
-    games: []
+    games: [biped]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:42:29"
+        label: "只只大冒险"
+      - at: "01:21:20"
+        label: "只只大冒险"
+      - at: "02:00:12"
+        label: "只只大冒险"
+      - at: "02:39:09"
+        label: "只只大冒险"
     sources:
       - url: "https://www.acfun.cn/v/ac14279131"
         kind: replay
@@ -294,7 +527,23 @@
     confidence: high
     duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/o_1e4m13hi51qh88rehqnd7k1th50.jpeg?imageslim"
-    games: []
+    games: [stilt-fella]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:36:17"
+        label: "游戏前聊10块钱的"
+      - at: "01:12:37"
+        label: "游戏前聊10块钱的"
+      - at: "01:49:01"
+        label: "踩高跷stilt fella"
+        game: stilt-fella
+      - at: "02:25:27"
+        label: "踩高跷stilt fella"
+        game: stilt-fella
+      - at: "03:01:49"
+        label: "踩高跷stilt fella"
+        game: stilt-fella
     sources:
       - url: "https://www.acfun.cn/v/ac14355451"
         kind: replay

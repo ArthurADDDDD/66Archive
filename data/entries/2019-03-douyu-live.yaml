@@ -6,7 +6,23 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/Fp--3qr1I9y9OIGGl2TmRHBlE1MW?imageslim"
-    games: []
+    games: [trials-rising, mages-of-mystralia]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的&特技摩托：崛起"
+        game: trials-rising
+      - at: "00:25:35"
+        label: "Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
+      - at: "00:52:51"
+        label: "Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
+      - at: "02:01:17"
+        label: "Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
+      - at: "03:09:45"
+        label: "Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
     sources:
       - url: "https://www.acfun.cn/v/ac4985423"
         kind: replay
@@ -22,7 +38,31 @@
     confidence: high
     duration_min: 372
     cover: "https://tx-free-imgs.acfun.cn/FqJgvFay6DIZpbS0G6oD9kevf0Rq?imageslim"
-    games: []
+    games: [mages-of-mystralia, trials-rising]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:33"
+        label: "P2.1-2019.3.2-Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
+      - at: "01:06:20"
+        label: "P2.2-2019.3.2-Mages of Mystralia （秘奥法师）"
+        game: mages-of-mystralia
+      - at: "01:27:34"
+        label: "P3.1-2019.3.2-特技摩托：崛起"
+        game: trials-rising
+      - at: "02:24:25"
+        label: "P3.2-2019.3.2-特技摩托：崛起"
+        game: trials-rising
+      - at: "03:21:15"
+        label: "P3.3-2019.3.2-特技摩托：崛起"
+        game: trials-rising
+      - at: "04:18:06"
+        label: "P3.4-2019.3.2-特技摩托：崛起"
+        game: trials-rising
+      - at: "05:14:56"
+        label: "P3.5-2019.3.2-特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac4987876"
         kind: replay
@@ -38,9 +78,24 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/FqsJ9Zf7pkganLid4Ca-FdZdqQPi?imageslim"
-    games: []
+    games: [trials-rising]
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播（心灵砒霜 & 特技摩托：崛起）的弹幕版（ac4991712）与纯净版（ac4989814）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "P1-2019.3.3砒霜前聊10块钱的"
+      - at: "00:27:36"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "01:01:02"
+        label: "心灵砒霜"
+      - at: "02:00:44"
+        label: "心灵砒霜"
+      - at: "03:00:27"
+        label: "心灵砒霜"
+      - at: "04:00:09"
+        label: "特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac4991712"
         kind: replay
@@ -60,7 +115,22 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/FotEZkHI_k1B1_BcMgFHxMd4w6TF?imageslim"
-    games: []
+    games: [trials-rising]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:02"
+        label: "P2.1-2019.3.4-嗜血印"
+      - at: "00:58:49"
+        label: "P2.2-2019.3.4-嗜血印"
+      - at: "01:46:36"
+        label: "P2.3-2019.3.4-嗜血印"
+      - at: "02:34:22"
+        label: "P3.1-2019.3.4-特技摩托：崛起"
+        game: trials-rising
+      - at: "03:28:11"
+        label: "P3.2-2019.3.4-特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac4992698"
         kind: replay
@@ -76,7 +146,26 @@
     confidence: high
     duration_min: 115
     cover: "https://tx-free-imgs.acfun.cn/Fv-tsB2HerU_H7-HrJQuVc7XzOlt?imageslim"
-    games: []
+    games: [sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
+      - at: "00:12:02"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
+      - at: "00:12:29"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
+      - at: "00:16:58"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
+      - at: "00:21:27"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
+      - at: "01:40:13"
+        label: "探班 fromsoftware 隻狼"
+        game: sekiro
     sources:
       - url: "https://www.acfun.cn/v/ac4998782"
         kind: replay
@@ -92,7 +181,14 @@
     confidence: high
     duration_min: 33
     cover: "https://tx-free-imgs.acfun.cn/Fv4-iRXKvbfWVM77e5dfiq04Z0mW?imageslim"
-    games: []
+    games: [devil-may-cry-5]
+    segments:
+      - at: "00:00:00"
+        label: "鬼泣5发布会后台（画质感人敬请谅解）"
+        game: devil-may-cry-5
+      - at: "00:08:14"
+        label: "鬼泣5发布会后台（画质感人敬请谅解）"
+        game: devil-may-cry-5
     sources:
       - url: "https://www.acfun.cn/v/ac5002265"
         kind: replay
@@ -108,7 +204,22 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/Fo9oXGLCK2hT84kVSajPLYnXk6nY?imageslim"
-    games: []
+    games: [devil-may-cry-5]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:37"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
+      - at: "01:22:03"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
+      - at: "02:22:29"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
+      - at: "03:22:55"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
     sources:
       - url: "https://www.acfun.cn/v/ac5008935"
         kind: replay
@@ -142,6 +253,11 @@
     cover: "https://tx-free-imgs.acfun.cn/Flaz7MqzNAp46jnZDOCoVpbzYMSI?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:37:15"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac5012009"
         kind: replay
@@ -157,7 +273,16 @@
     confidence: high
     duration_min: 143
     cover: "https://tx-free-imgs.acfun.cn/Fial0fLtJqwApPgUb9NL44JQXf2c?imageslim"
-    games: []
+    games: [devil-may-cry-5]
+    segments:
+      - at: "00:00:00"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
+      - at: "00:56:54"
+        label: "Devi May Cry 5 《鬼泣5》"
+        game: devil-may-cry-5
+      - at: "01:53:51"
+        label: "游戏前聊10块钱的"
     sources:
       - url: "https://www.acfun.cn/v/ac5020913"
         kind: replay
@@ -173,7 +298,25 @@
     confidence: high
     duration_min: 338
     cover: "https://tx-free-imgs.acfun.cn/FjfYm0y0XKD6gJa9BW9mYBRA3G8m?imageslim"
-    games: []
+    games: [trials-rising]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:05:01"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "01:59:33"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "02:54:05"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "03:48:37"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "04:43:08"
+        label: "特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac10002952"
         kind: replay
@@ -189,7 +332,19 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/FoxAkVF9zxcyj8SfhOI1kyviKU19?imageslim"
-    games: []
+    games: [baba-is-you]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:31:04"
+        label: "Baba Is You"
+        game: baba-is-you
+      - at: "01:46:23"
+        label: "Baba Is You"
+        game: baba-is-you
+      - at: "03:01:42"
+        label: "Baba Is You"
+        game: baba-is-you
     sources:
       - url: "https://www.acfun.cn/v/ac10006046"
         kind: replay
@@ -205,7 +360,23 @@
     confidence: high
     duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/Fn9FIzHYLkom4_LEWgIgHRQobujo?imageslim"
-    games: []
+    games: [trials-rising, sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2019.3.16-只狼"
+        game: sekiro
+      - at: "01:03:54"
+        label: "P1.2-2019.3.16-只狼"
+        game: sekiro
+      - at: "02:07:50"
+        label: "P2.1-2019.3.16-特技摩托：崛起"
+        game: trials-rising
+      - at: "03:01:56"
+        label: "P2.2-2019.3.16-特技摩托：崛起"
+        game: trials-rising
+      - at: "03:56:00"
+        label: "P2.3-2019.3.16-特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac10008549"
         kind: replay
@@ -223,6 +394,11 @@
     cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:50:59"
+        label: "Part2"
     sources:
       - url: "https://www.acfun.cn/v/ac10013069"
         kind: replay
@@ -238,7 +414,22 @@
     confidence: high
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/FklpRjiN-IFFicahioCRwKflt8fC?imageslim"
-    games: []
+    games: [trials-rising]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:07:59"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "01:03:27"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "01:58:55"
+        label: "特技摩托：崛起"
+        game: trials-rising
+      - at: "02:54:22"
+        label: "特技摩托：崛起"
+        game: trials-rising
     sources:
       - url: "https://www.acfun.cn/v/ac10014556"
         kind: replay
@@ -254,7 +445,16 @@
     confidence: high
     duration_min: 209
     cover: "https://tx-free-imgs.acfun.cn/FoeBnZCsdswr82viUZEfJAzjOi9F?imageslim"
-    games: []
+    games: [cat-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:51:59"
+        label: "猫里奥"
+      - at: "01:44:12"
+        label: "猫里奥"
+      - at: "02:36:23"
+        label: "猫里奥"
     sources:
       - url: "https://www.acfun.cn/v/ac10018970"
         kind: replay
@@ -270,7 +470,34 @@
     confidence: high
     duration_min: 452
     cover: "https://tx-free-imgs.acfun.cn/FqacD4zbUMvMjNvLyb32tZgZ8NEk?imageslim"
-    games: []
+    games: [sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "P1-2019-03-22-游戏前聊10块钱的"
+      - at: "00:09:48"
+        label: "只狼"
+        game: sekiro
+      - at: "01:07:22"
+        label: "只狼"
+        game: sekiro
+      - at: "02:04:56"
+        label: "只狼"
+        game: sekiro
+      - at: "03:02:30"
+        label: "只狼"
+        game: sekiro
+      - at: "04:00:04"
+        label: "只狼"
+        game: sekiro
+      - at: "04:52:59"
+        label: "只狼"
+        game: sekiro
+      - at: "05:45:56"
+        label: "只狼"
+        game: sekiro
+      - at: "06:38:51"
+        label: "只狼"
+        game: sekiro
     sources:
       - url: "https://www.acfun.cn/v/ac10036493"
         kind: replay
@@ -286,7 +513,28 @@
     confidence: high
     duration_min: 327
     cover: "https://tx-free-imgs.acfun.cn/Fn9XOy9n7xL4pn-oRmvIlez-oEJI?imageslim"
-    games: []
+    games: [sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "P1-2019-03-23-游戏前聊10块钱的"
+      - at: "00:11:19"
+        label: "P2-2019-03-23-只狼"
+        game: sekiro
+      - at: "01:07:35"
+        label: "P3-2019-03-23-只狼"
+        game: sekiro
+      - at: "02:03:49"
+        label: "P4-2019-03-23-只狼"
+        game: sekiro
+      - at: "03:00:04"
+        label: "P5-2019-03-23-只狼"
+        game: sekiro
+      - at: "03:49:06"
+        label: "P6-2019-03-23-只狼"
+        game: sekiro
+      - at: "04:38:09"
+        label: "P7-2019-03-23-只狼"
+        game: sekiro
     sources:
       - url: "https://www.acfun.cn/v/ac10036198"
         kind: replay
@@ -302,7 +550,24 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/FpgwWD3tQq8j91n0fMWcSh3ApBZs?imageslim"
-    games: []
+    games: [sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:30:00"
+        label: "Part2"
+      - at: "00:59:59"
+        label: "Part3"
+      - at: "01:29:59"
+        label: "Part4"
+      - at: "01:59:59"
+        label: "Part5"
+      - at: "02:29:59"
+        label: "Part6"
+      - at: "03:00:00"
+        label: "Part7"
+      - at: "03:30:00"
+        label: "Part8"
     sources:
       - url: "https://www.acfun.cn/v/ac10039992"
         kind: replay
@@ -318,7 +583,25 @@
     confidence: high
     duration_min: 267
     cover: "https://tx-free-imgs.acfun.cn/FmFtR_OOFeiSQxSf2VP0LCaybbHB?imageslim"
-    games: []
+    games: [sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:57"
+        label: "只狼"
+        game: sekiro
+      - at: "01:09:30"
+        label: "只狼"
+        game: sekiro
+      - at: "02:00:01"
+        label: "只狼"
+        game: sekiro
+      - at: "02:53:32"
+        label: "只狼"
+        game: sekiro
+      - at: "03:40:04"
+        label: "只狼"
+        game: sekiro
     sources:
       - url: "https://www.acfun.cn/v/ac10040545"
         kind: replay
@@ -350,7 +633,22 @@
     confidence: high
     duration_min: 267
     cover: "https://tx-free-imgs.acfun.cn/FtYRlmKnmUJnFgoByEG3yT4718gw?imageslim"
-    games: []
+    games: [unheard, sekiro]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:32:43"
+        label: "P2.1-2019.03.29-只狼"
+        game: sekiro
+      - at: "01:20:34"
+        label: "P2.2-2019.03.29-只狼"
+        game: sekiro
+      - at: "02:08:26"
+        label: "P3.1-2019.03.29-疑案追声"
+        game: unheard
+      - at: "03:17:57"
+        label: "P3.2-2019.03.29-疑案追声"
+        game: unheard
     sources:
       - url: "https://www.acfun.cn/v/ac10057218"
         kind: replay
@@ -366,7 +664,20 @@
     confidence: high
     duration_min: 347
     cover: "https://tx-free-imgs.acfun.cn/FrNIAAnY1Jxb1n_wfgHVf6aOxDFL?imageslim"
-    games: []
+    games: [cat-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:29:49"
+        label: "猫里奥"
+      - at: "01:33:18"
+        label: "猫里奥"
+      - at: "02:36:46"
+        label: "猫里奥"
+      - at: "03:40:15"
+        label: "猫里奥"
+      - at: "04:43:44"
+        label: "猫里奥"
     sources:
       - url: "https://www.acfun.cn/v/ac10060526"
         kind: replay

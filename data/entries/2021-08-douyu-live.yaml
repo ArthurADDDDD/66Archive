@@ -9,6 +9,13 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播按上（ac30494403）、下（ac30494413）分 P 的弹幕版原本被建模为两条重复条目，已合并（纯净版未收录）。"
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:22:14"
+        label: "心灵砒霜弹幕版"
+      - at: "01:07:20"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac30494403"
         kind: replay
@@ -28,7 +35,16 @@
     confidence: high
     duration_min: 121
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d23a25e5c53a43da9e54b2f66e7645e4.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:09"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:05:45"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30494793"
         kind: replay
@@ -44,7 +60,23 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6ea3c816ef5549b4b9664ca71f0cbe6a.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:51:44"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:46:21"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:40:59"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:35:39"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30508330"
         kind: replay
@@ -60,7 +92,22 @@
     confidence: high
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6fddae7c1f5b4b57ac87fbbf735314b6.jpeg?imageslim"
-    games: []
+    games: [rhythm-doctor]
+    segments:
+      - at: "00:00:00"
+        label: "数独"
+      - at: "00:37:30"
+        label: "数独"
+      - at: "01:15:00"
+        label: "数独"
+      - at: "01:52:31"
+        label: "数独"
+      - at: "02:30:01"
+        label: "节奏医生"
+      - at: "02:38:01"
+        label: "上古之魂"
+      - at: "03:10:13"
+        label: "上古之魂"
     sources:
       - url: "https://www.acfun.cn/v/ac30523644"
         kind: replay
@@ -76,7 +123,23 @@
     confidence: high
     duration_min: 200
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f7b78d40164a4b299f940cc05dec254b.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:43:27"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:26:57"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:10:26"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:53:55"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30523449"
         kind: replay
@@ -92,7 +155,16 @@
     confidence: high
     duration_min: 186
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_da8537bdb69645cc9bd0156ae5fd43d6.jpeg?imageslim"
-    games: []
+    games: [eldest-souls]
+    segments:
+      - at: "00:00:00"
+        label: "上古之魂"
+      - at: "00:46:28"
+        label: "上古之魂"
+      - at: "01:32:57"
+        label: "上古之魂"
+      - at: "02:19:27"
+        label: "上古之魂"
     sources:
       - url: "https://www.acfun.cn/v/ac30538781"
         kind: replay
@@ -108,7 +180,18 @@
     confidence: high
     duration_min: 234
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92b437d132e941f7b92185ba7d1db7ca.jpeg?imageslim"
-    games: []
+    games: [eldest-souls]
+    segments:
+      - at: "00:00:00"
+        label: "上古之魂"
+      - at: "00:46:59"
+        label: "上古之魂"
+      - at: "01:33:47"
+        label: "上古之魂"
+      - at: "02:20:34"
+        label: "上古之魂"
+      - at: "03:07:21"
+        label: "上古之魂"
     sources:
       - url: "https://www.acfun.cn/v/ac30552665"
         kind: replay
@@ -124,7 +207,22 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c6dd4c5f3f447efb7452b66e63aa6d8.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "上古之魂"
+      - at: "00:46:46"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:31:31"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:16:16"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:01:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30552893"
         kind: replay
@@ -140,7 +238,14 @@
     confidence: high
     duration_min: 77
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b3b21c8332084ffa885d647d2ea60057.jpeg?imageslim"
-    games: []
+    games: [lifeafter]
+    segments:
+      - at: "00:00:00"
+        label: "明日之后"
+        game: lifeafter
+      - at: "00:38:26"
+        label: "明日之后"
+        game: lifeafter
     sources:
       - url: "https://www.acfun.cn/v/ac30566377"
         kind: replay
@@ -157,6 +262,17 @@
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c5d4321c2f44327b597097c6d1df298.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏之前有佩奇"
+      - at: "00:44:59"
+        label: "游戏之前有佩奇"
+      - at: "01:30:02"
+        label: "游戏之前有佩奇"
+      - at: "02:15:05"
+        label: "游戏之前有佩奇"
+      - at: "03:00:08"
+        label: "游戏之前有佩奇"
     sources:
       - url: "https://www.acfun.cn/v/ac30566750"
         kind: replay
@@ -174,6 +290,17 @@
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_722c79feb8404696912a2f413af7607d.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:26:55"
+        label: "心灵砒霜弹幕版"
+      - at: "01:11:32"
+        label: "心灵砒霜弹幕版"
+      - at: "01:56:10"
+        label: "心灵砒霜弹幕版"
+      - at: "02:40:47"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac30609039"
         kind: replay
@@ -189,7 +316,17 @@
     confidence: high
     duration_min: 126
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4ec34f314ccc44f68a1d8d9cf711e850.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:42:07"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:24:16"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30587140"
         kind: replay
@@ -205,7 +342,17 @@
     confidence: high
     duration_min: 140
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_70833a21b63349c0a86e15288f3592ba.jpeg?imageslim"
-    games: []
+    games: [toodee-and-topdee]
+    segments:
+      - at: "00:00:00"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
+      - at: "00:46:45"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
+      - at: "01:33:33"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
     sources:
       - url: "https://www.acfun.cn/v/ac30651839"
         kind: replay
@@ -221,7 +368,20 @@
     confidence: high
     duration_min: 187
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_42f16e4838e146eda40f6cb93f93fc1d.jpeg?imageslim"
-    games: []
+    games: [toodee-and-topdee]
+    segments:
+      - at: "00:00:00"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
+      - at: "00:46:52"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
+      - at: "01:33:42"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
+      - at: "02:20:29"
+        label: "Toodee and Topdee"
+        game: toodee-and-topdee
     sources:
       - url: "https://www.acfun.cn/v/ac30651837"
         kind: replay
@@ -238,6 +398,17 @@
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_23e2098a78044eab910dd26dbf9d7510.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "黑暗侦探"
+      - at: "00:29:59"
+        label: "黑暗侦探"
+      - at: "01:11:07"
+        label: "黑暗侦探"
+      - at: "01:52:15"
+        label: "黑暗侦探"
+      - at: "02:33:24"
+        label: "黑暗侦探"
     sources:
       - url: "https://www.acfun.cn/v/ac30624156"
         kind: replay
@@ -255,6 +426,17 @@
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629126955796.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:36:28"
+        label: "心灵砒霜弹幕版"
+      - at: "01:13:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:49:31"
+        label: "心灵砒霜弹幕版"
+      - at: "02:26:04"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac30704016"
         kind: replay
@@ -270,7 +452,16 @@
     confidence: high
     duration_min: 158
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629390230872.jpeg?imageslim"
-    games: []
+    games: [road-96]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:44"
+        label: "九十六号公路"
+      - at: "01:03:42"
+        label: "九十六号公路"
+      - at: "01:50:37"
+        label: "九十六号公路"
     sources:
       - url: "https://www.acfun.cn/v/ac30743712"
         kind: replay
@@ -286,7 +477,20 @@
     confidence: high
     duration_min: 176
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629469555268.jpeg?imageslim"
-    games: []
+    games: [grime]
+    segments:
+      - at: "00:00:00"
+        label: "GRIME"
+        game: grime
+      - at: "00:45:46"
+        label: "GRIME"
+        game: grime
+      - at: "01:31:32"
+        label: "GRIME"
+        game: grime
+      - at: "02:13:33"
+        label: "GRIME"
+        game: grime
     sources:
       - url: "https://www.acfun.cn/v/ac30757457"
         kind: replay
@@ -302,7 +506,16 @@
     confidence: high
     duration_min: 154
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629469417494.jpeg?imageslim"
-    games: []
+    games: [road-96]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:10"
+        label: "九十六号公路"
+      - at: "01:07:58"
+        label: "九十六号公路"
+      - at: "01:50:46"
+        label: "九十六号公路"
     sources:
       - url: "https://www.acfun.cn/v/ac30756071"
         kind: replay
@@ -318,7 +531,25 @@
     confidence: high
     duration_min: 228
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629561615296.jpeg?imageslim"
-    games: []
+    games: [grime]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:08"
+        label: "GRIME"
+        game: grime
+      - at: "01:02:27"
+        label: "GRIME"
+        game: grime
+      - at: "01:43:46"
+        label: "GRIME"
+        game: grime
+      - at: "02:25:05"
+        label: "GRIME"
+        game: grime
+      - at: "03:06:22"
+        label: "GRIME"
+        game: grime
     sources:
       - url: "https://www.acfun.cn/v/ac30768142"
         kind: replay
@@ -334,7 +565,19 @@
     confidence: high
     duration_min: 178
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629561730487.jpeg?imageslim"
-    games: []
+    games: [grime]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前赏悟空CG"
+      - at: "00:42:32"
+        label: "GRIME"
+        game: grime
+      - at: "01:28:02"
+        label: "GRIME"
+        game: grime
+      - at: "02:13:06"
+        label: "GRIME"
+        game: grime
     sources:
       - url: "https://www.acfun.cn/v/ac30769978"
         kind: replay
@@ -351,6 +594,17 @@
     duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629821195875.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "桌游模拟《截码战》"
+      - at: "00:43:35"
+        label: "桌游模拟《截码战》"
+      - at: "01:27:09"
+        label: "桌游模拟《截码战》"
+      - at: "02:10:43"
+        label: "桌游模拟《截码战》"
+      - at: "02:54:16"
+        label: "桌游模拟《截码战》"
     sources:
       - url: "https://www.acfun.cn/v/ac30816729"
         kind: replay
@@ -367,6 +621,17 @@
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629905773812.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:28:59"
+        label: "桌游模拟《截码战》"
+      - at: "01:12:42"
+        label: "桌游模拟《截码战》"
+      - at: "01:56:24"
+        label: "桌游模拟《截码战》"
+      - at: "02:40:04"
+        label: "桌游模拟《截码战》"
     sources:
       - url: "https://www.acfun.cn/v/ac30836162"
         kind: replay
@@ -382,7 +647,19 @@
     confidence: high
     duration_min: 147
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629991723918.jpeg?imageslim"
-    games: []
+    games: [hoa]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:00"
+        label: "花之灵（Hoa）"
+        game: hoa
+      - at: "01:00:02"
+        label: "花之灵（Hoa）"
+        game: hoa
+      - at: "01:43:17"
+        label: "花之灵（Hoa）"
+        game: hoa
     sources:
       - url: "https://www.acfun.cn/v/ac30852788"
         kind: replay
@@ -398,7 +675,18 @@
     confidence: high
     duration_min: 169
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630079560640.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:30"
+        label: "游戏前聊10块钱的"
+      - at: "00:51:03"
+        label: "对马岛之魂"
+      - at: "01:30:05"
+        label: "对马岛之魂"
+      - at: "02:09:25"
+        label: "对马岛之魂"
     sources:
       - url: "https://www.acfun.cn/v/ac30875727"
         kind: replay
@@ -414,7 +702,18 @@
     confidence: high
     duration_min: 213
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630166334554.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之魂"
+      - at: "00:42:36"
+        label: "对马岛之魂"
+      - at: "01:25:15"
+        label: "对马岛之魂"
+      - at: "02:07:51"
+        label: "对马岛之魂"
+      - at: "02:50:30"
+        label: "对马岛之魂"
     sources:
       - url: "https://www.acfun.cn/v/ac30887698"
         kind: replay
@@ -430,7 +729,17 @@
     confidence: high
     duration_min: 131
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630250673913.jpeg?imageslim"
-    games: []
+    games: [fling-to-the-finish]
+    segments:
+      - at: "00:00:00"
+        label: "Fling to the Finish"
+        game: fling-to-the-finish
+      - at: "00:43:37"
+        label: "Fling to the Finish"
+        game: fling-to-the-finish
+      - at: "01:27:15"
+        label: "Fling to the Finish"
+        game: fling-to-the-finish
     sources:
       - url: "https://www.acfun.cn/v/ac30896471"
         kind: replay
@@ -449,6 +758,15 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播原本被建模为两条重复条目，已合并；并补齐目录中同场其余投稿：纯净版 ac30913126、弹幕版（上）ac30922231。"
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:24:25"
+        label: "砒霜前聊10块钱的"
+      - at: "00:48:52"
+        label: "心灵砒霜"
+      - at: "01:31:07"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac30913125"
         kind: replay

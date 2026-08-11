@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 138
     cover: "https://tx-free-imgs.acfun.cn/o_1evmpj97j13g1em91ejj1s5918db0.jpeg?imageslim"
-    games: []
+    games: [rhythm-doctor]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:34:59"
+        label: "游戏前聊10块钱的"
+      - at: "01:09:59"
+        label: "节奏医生"
+      - at: "01:43:45"
+        label: "节奏医生"
     sources:
       - url: "https://www.acfun.cn/v/ac26103734"
         kind: replay
@@ -22,7 +31,14 @@
     confidence: high
     duration_min: 119
     cover: "https://tx-free-imgs.acfun.cn/o_1evpiek97iv81uulps210623if0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "鬼谷八荒"
+      - at: "00:39:32"
+        label: "鬼谷八荒"
+      - at: "01:19:03"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac26178904"
         kind: replay
@@ -38,7 +54,25 @@
     confidence: high
     duration_min: 203
     cover: "https://tx-free-imgs.acfun.cn/o_1evs18v40noacg4f0an51v3n0.jpeg?imageslim"
-    games: []
+    games: [alt-f4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:13:56"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "00:55:03"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "01:32:04"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "02:09:06"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "02:46:08"
+        label: "ALTF4"
+        game: alt-f4
     sources:
       - url: "https://www.acfun.cn/v/ac26236002"
         kind: replay
@@ -54,7 +88,23 @@
     confidence: high
     duration_min: 198
     cover: "https://tx-free-imgs.acfun.cn/o_1evul09r517551omr1k7s1ime3ft0.jpeg?imageslim"
-    games: []
+    games: [alt-f4]
+    segments:
+      - at: "00:00:00"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "00:39:59"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "01:20:02"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "01:59:11"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "02:38:19"
+        label: "ALTF4"
+        game: alt-f4
     sources:
       - url: "https://www.acfun.cn/v/ac26297737"
         kind: replay
@@ -70,7 +120,12 @@
     confidence: high
     duration_min: 81
     cover: "https://tx-free-imgs.acfun.cn/o_1f01c77cj1hf8114slc4dr46bj0.jpeg?imageslim"
-    games: []
+    games: [rhythm-doctor]
+    segments:
+      - at: "00:00:00"
+        label: "节奏医生"
+      - at: "00:40:40"
+        label: "节奏医生"
     sources:
       - url: "https://www.acfun.cn/v/ac26348917"
         kind: replay
@@ -86,7 +141,17 @@
     confidence: high
     duration_min: 104
     cover: "https://tx-free-imgs.acfun.cn/o_1f03s7cpsu2p1eeh1n3it89e3s0.jpeg?imageslim"
-    games: []
+    games: [alt-f4]
+    segments:
+      - at: "00:00:00"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "00:34:33"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "01:09:09"
+        label: "ALTF4"
+        game: alt-f4
     sources:
       - url: "https://www.acfun.cn/v/ac26366420"
         kind: replay
@@ -102,7 +167,16 @@
     confidence: high
     duration_min: 141
     cover: "https://tx-free-imgs.acfun.cn/o_1f03s6vg51co51elcpegepoknm0.jpeg?imageslim"
-    games: []
+    games: [rhythm-doctor]
+    segments:
+      - at: "00:00:00"
+        label: "节奏医生"
+      - at: "00:35:16"
+        label: "节奏医生"
+      - at: "01:10:30"
+        label: "节奏医生"
+      - at: "01:45:45"
+        label: "节奏医生"
     sources:
       - url: "https://www.acfun.cn/v/ac26367245"
         kind: replay
@@ -120,6 +194,19 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f08jq3pcspe3b1vt7o7b1b100.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:24:36"
+        label: "心灵砒霜弹幕版"
+      - at: "01:14:22"
+        label: "心灵砒霜弹幕版"
+      - at: "02:04:07"
+        label: "心灵砒霜弹幕版"
+      - at: "02:53:52"
+        label: "心灵砒霜弹幕版"
+      - at: "03:43:36"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac26408836"
         kind: replay
@@ -135,7 +222,18 @@
     confidence: high
     duration_min: 176
     cover: "https://tx-free-imgs.acfun.cn/o_1f09173d21df61aip64f1q54pu00.jpeg?imageslim"
-    games: []
+    games: [monopoly-plus]
+    segments:
+      - at: "00:00:00"
+        label: "大富翁10"
+      - at: "00:35:11"
+        label: "大富翁10"
+      - at: "01:10:23"
+        label: "大富翁10"
+      - at: "01:45:34"
+        label: "大富翁10"
+      - at: "02:20:47"
+        label: "大富翁10"
     sources:
       - url: "https://www.acfun.cn/v/ac26425905"
         kind: replay
@@ -151,7 +249,19 @@
     confidence: high
     duration_min: 127
     cover: "https://tx-free-imgs.acfun.cn/o_1f0beihd5ljquee11k51sk21t1b0.jpeg?imageslim"
-    games: []
+    games: [tiny-lands]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:42"
+        label: "Tiny Lands"
+        game: tiny-lands
+      - at: "00:54:55"
+        label: "Tiny Lands"
+        game: tiny-lands
+      - at: "01:31:08"
+        label: "Tiny Lands"
+        game: tiny-lands
     sources:
       - url: "https://www.acfun.cn/v/ac26476396"
         kind: replay
@@ -167,7 +277,14 @@
     confidence: high
     duration_min: 113
     cover: "https://tx-free-imgs.acfun.cn/o_1f0bej1u91q1b62c10utp06156a0.jpeg?imageslim"
-    games: []
+    games: [rhythm-doctor]
+    segments:
+      - at: "00:00:00"
+        label: "节奏医生"
+      - at: "00:37:38"
+        label: "节奏医生"
+      - at: "01:15:18"
+        label: "节奏医生"
     sources:
       - url: "https://www.acfun.cn/v/ac26478113"
         kind: replay
@@ -183,7 +300,12 @@
     confidence: high
     duration_min: 84
     cover: "https://tx-free-imgs.acfun.cn/o_1f0gmcu0q1i0gm0l1ks61g0oqm30.jpeg?imageslim"
-    games: []
+    games: [alba]
+    segments:
+      - at: "00:00:00"
+        label: "阿尔芭与野生动物的故事"
+      - at: "00:42:08"
+        label: "阿尔芭与野生动物的故事"
     sources:
       - url: "https://www.acfun.cn/v/ac26630182"
         kind: replay
@@ -199,7 +321,22 @@
     confidence: high
     duration_min: 178
     cover: "https://tx-free-imgs.acfun.cn/o_1f0j6nk1apvh1ptm1k3optp1muu0.jpeg?imageslim"
-    games: []
+    games: [csgo]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:28"
+        label: "CSGO"
+        game: csgo
+      - at: "00:55:25"
+        label: "CSGO"
+        game: csgo
+      - at: "01:36:21"
+        label: "CSGO"
+        game: csgo
+      - at: "02:17:17"
+        label: "CSGO"
+        game: csgo
     sources:
       - url: "https://www.acfun.cn/v/ac26691826"
         kind: replay
@@ -215,7 +352,14 @@
     confidence: high
     duration_min: 77
     cover: "https://tx-free-imgs.acfun.cn/o_1f0j70utj153fknfoqs1gh3th90.jpeg?imageslim"
-    games: []
+    games: [warcraft-3]
+    segments:
+      - at: "00:00:00"
+        label: "魔兽争霸rpg"
+        game: warcraft-3
+      - at: "00:38:39"
+        label: "魔兽争霸rpg"
+        game: warcraft-3
     sources:
       - url: "https://www.acfun.cn/v/ac26693309"
         kind: replay
@@ -231,7 +375,12 @@
     confidence: high
     duration_min: 68
     cover: "https://tx-free-imgs.acfun.cn/o_1f0lvemp91sjiporndb1i561ilo0.jpeg?imageslim"
-    games: []
+    games: [majsoul]
+    segments:
+      - at: "00:00:00"
+        label: "雀魂"
+      - at: "00:33:48"
+        label: "雀魂"
     sources:
       - url: "https://www.acfun.cn/v/ac26761234"
         kind: replay
@@ -249,6 +398,19 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f0qmhlmb13dc1hdo1od7hvj18ab0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:15:25"
+        label: "心灵砒霜弹幕版"
+      - at: "01:03:48"
+        label: "心灵砒霜弹幕版"
+      - at: "01:52:11"
+        label: "心灵砒霜弹幕版"
+      - at: "02:40:36"
+        label: "心灵砒霜弹幕版"
+      - at: "03:28:57"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac26869011"
         kind: replay
@@ -264,7 +426,22 @@
     confidence: high
     duration_min: 179
     cover: "https://tx-free-imgs.acfun.cn/o_1f0qspn04q2p1svudkctl2lvp0.jpeg?imageslim"
-    games: []
+    games: [hades]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:27"
+        label: "Hades"
+        game: hades
+      - at: "00:52:02"
+        label: "Hades"
+        game: hades
+      - at: "01:34:11"
+        label: "Hades"
+        game: hades
+      - at: "02:16:20"
+        label: "Hades"
+        game: hades
     sources:
       - url: "https://www.acfun.cn/v/ac26873129"
         kind: replay
@@ -280,7 +457,17 @@
     confidence: high
     duration_min: 110
     cover: "https://tx-free-imgs.acfun.cn/o_1f0tjvh8ghtq1c6arcr1trb1t530.jpeg?imageslim"
-    games: []
+    games: [hades]
+    segments:
+      - at: "00:00:00"
+        label: "Hades"
+        game: hades
+      - at: "00:36:35"
+        label: "Hades"
+        game: hades
+      - at: "01:13:10"
+        label: "Hades"
+        game: hades
     sources:
       - url: "https://www.acfun.cn/v/ac26910411"
         kind: replay
@@ -296,7 +483,14 @@
     confidence: high
     duration_min: 71
     cover: "https://tx-free-imgs.acfun.cn/o_1f108ejuiveuc5s19621lui1fe50.jpeg?imageslim"
-    games: []
+    games: [hades]
+    segments:
+      - at: "00:00:00"
+        label: "Hades"
+        game: hades
+      - at: "00:35:23"
+        label: "Hades"
+        game: hades
     sources:
       - url: "https://www.acfun.cn/v/ac26950397"
         kind: replay
@@ -312,7 +506,25 @@
     confidence: high
     duration_min: 208
     cover: "https://tx-free-imgs.acfun.cn/o_1f12m04ci303ff71771frfsmt0.jpeg?imageslim"
-    games: []
+    games: [hades]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:22"
+        label: "Hades"
+        game: hades
+      - at: "00:52:15"
+        label: "Hades"
+        game: hades
+      - at: "01:33:06"
+        label: "Hades"
+        game: hades
+      - at: "02:11:32"
+        label: "Hades"
+        game: hades
+      - at: "02:50:00"
+        label: "Hades"
+        game: hades
     sources:
       - url: "https://www.acfun.cn/v/ac26979859"
         kind: replay
@@ -344,7 +556,20 @@
     confidence: high
     duration_min: 200
     cover: "https://tx-free-imgs.acfun.cn/o_1f154nf9t1kn81sov2854k7hmv0.jpeg?imageslim"
-    games: []
+    games: [the-room-4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:30:30"
+        label: "游戏前聊10块钱的"
+      - at: "01:01:02"
+        label: "The Room4"
+      - at: "01:35:50"
+        label: "The Room4"
+      - at: "02:10:38"
+        label: "The Room4"
+      - at: "02:45:28"
+        label: "The Room4"
     sources:
       - url: "https://www.acfun.cn/v/ac27004224"
         kind: replay
@@ -361,6 +586,11 @@
     duration_min: 70
     cover: "https://tx-free-imgs.acfun.cn/o_1f17utr79893865h721glpij30.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "战意"
+      - at: "00:34:46"
+        label: "战意"
     sources:
       - url: "https://www.acfun.cn/v/ac27028479"
         kind: replay
@@ -376,7 +606,18 @@
     confidence: high
     duration_min: 202
     cover: "https://tx-free-imgs.acfun.cn/o_1f17uubpq10f71uu6hl4pnnh1n0.jpeg?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "绝地求生"
+      - at: "00:40:22"
+        label: "绝地求生"
+      - at: "01:20:42"
+        label: "绝地求生"
+      - at: "02:01:02"
+        label: "绝地求生"
+      - at: "02:41:25"
+        label: "绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac27028197"
         kind: replay
@@ -394,6 +635,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f1clmfgfuu51ti2gr1146116740.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "00:26:25"
+        label: "心灵砒霜弹幕版"
+      - at: "01:16:06"
+        label: "心灵砒霜弹幕版"
+      - at: "02:05:45"
+        label: "心灵砒霜弹幕版"
+      - at: "02:55:27"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac27071329"
         kind: replay
@@ -409,7 +661,17 @@
     confidence: high
     duration_min: 95
     cover: "https://tx-free-imgs.acfun.cn/o_1f1ah5sj51gld1vlmkoc1dh8spd0.jpeg?imageslim"
-    games: []
+    games: [forza-horizon-4]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
+      - at: "00:31:40"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
+      - at: "01:03:17"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
     sources:
       - url: "https://www.acfun.cn/v/ac27048216"
         kind: replay
@@ -425,7 +687,12 @@
     confidence: high
     duration_min: 84
     cover: "https://tx-free-imgs.acfun.cn/o_1f1d5rq2e1a03vc2pbh666b950.jpeg?imageslim"
-    games: []
+    games: [mr-prepper]
+    segments:
+      - at: "00:00:00"
+        label: "末日准备狂"
+      - at: "00:41:57"
+        label: "末日准备狂"
     sources:
       - url: "https://www.acfun.cn/v/ac27085144"
         kind: replay
@@ -441,7 +708,22 @@
     confidence: high
     duration_min: 174
     cover: "https://tx-free-imgs.acfun.cn/o_1f1i4ocjibag19dd1p5o1c50vev0.jpeg?imageslim"
-    games: []
+    games: [puyo-puyo-tetris-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:21"
+        label: "Puyo Puyo Tetris 2"
+        game: puyo-puyo-tetris-2
+      - at: "00:53:00"
+        label: "Puyo Puyo Tetris 2"
+        game: puyo-puyo-tetris-2
+      - at: "01:33:24"
+        label: "Puyo Puyo Tetris 2"
+        game: puyo-puyo-tetris-2
+      - at: "02:13:48"
+        label: "Puyo Puyo Tetris 2"
+        game: puyo-puyo-tetris-2
     sources:
       - url: "https://www.acfun.cn/v/ac27146913"
         kind: replay
@@ -474,6 +756,19 @@
     duration_min: 183
     cover: "https://tx-free-imgs.acfun.cn/o_1f1km6npvn2t2up7i31qo61l2i0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:42"
+        label: "游戏前聊10块钱的"
+      - at: "00:53:27"
+        label: "察言观色3部曲"
+      - at: "01:25:43"
+        label: "察言观色3部曲"
+      - at: "01:58:02"
+        label: "察言观色3部曲"
+      - at: "02:30:18"
+        label: "察言观色3部曲"
     sources:
       - url: "https://www.acfun.cn/v/ac27179430"
         kind: replay
@@ -489,7 +784,18 @@
     confidence: high
     duration_min: 182
     cover: "https://tx-free-imgs.acfun.cn/o_1f1nfqlabulu1v154g4ihlbu0.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人 崛起"
+      - at: "00:36:29"
+        label: "怪物猎人 崛起"
+      - at: "01:13:02"
+        label: "怪物猎人 崛起"
+      - at: "01:49:25"
+        label: "怪物猎人 崛起"
+      - at: "02:25:50"
+        label: "怪物猎人 崛起"
     sources:
       - url: "https://www.acfun.cn/v/ac27236153"
         kind: replay
@@ -505,7 +811,12 @@
     confidence: high
     duration_min: 73
     cover: "https://tx-free-imgs.acfun.cn/o_1f1nggojr1hd6m4vqe81vqi12gq0.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人 崛起"
+      - at: "00:36:22"
+        label: "怪物猎人 崛起"
     sources:
       - url: "https://www.acfun.cn/v/ac27236154"
         kind: replay
@@ -521,7 +832,20 @@
     confidence: high
     duration_min: 128
     cover: "https://tx-free-imgs.acfun.cn/o_1f1ngi6db8471o5cr4e9o6t080.jpeg?imageslim"
-    games: []
+    games: [guardian-tales]
+    segments:
+      - at: "00:00:00"
+        label: "坎公骑冠剑"
+        game: guardian-tales
+      - at: "00:32:05"
+        label: "坎公骑冠剑"
+        game: guardian-tales
+      - at: "01:04:10"
+        label: "坎公骑冠剑"
+        game: guardian-tales
+      - at: "01:36:16"
+        label: "坎公骑冠剑"
+        game: guardian-tales
     sources:
       - url: "https://www.acfun.cn/v/ac27236155"
         kind: replay
@@ -538,6 +862,17 @@
     duration_min: 172
     cover: "https://tx-free-imgs.acfun.cn/o_1f1ptn5s51v5a1nj0fud1ts4r060.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:09:49"
+        label: "怪物猎人 弓箭手的修行"
+      - at: "00:49:56"
+        label: "怪物猎人 弓箭手的修行"
+      - at: "01:30:03"
+        label: "怪物猎人 弓箭手的修行"
+      - at: "02:10:48"
+        label: "怪物猎人 弓箭手的修行"
     sources:
       - url: "https://www.acfun.cn/v/ac27238768"
         kind: replay
@@ -555,6 +890,19 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f1uofvij6vmvis1f1kerp3vg0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:11:58"
+        label: "心灵砒霜弹幕版"
+      - at: "01:01:38"
+        label: "心灵砒霜弹幕版"
+      - at: "01:51:15"
+        label: "心灵砒霜弹幕版"
+      - at: "02:40:53"
+        label: "心灵砒霜弹幕版"
+      - at: "03:30:32"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac27281328"
         kind: replay
@@ -570,7 +918,20 @@
     confidence: high
     duration_min: 168
     cover: "https://tx-free-imgs.acfun.cn/o_1f1v2ui1jfno1n2l3vuqlp1jqm0.jpeg?imageslim"
-    games: []
+    games: [it-takes-two]
+    segments:
+      - at: "00:00:00"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "00:41:59"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "01:24:03"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "02:06:05"
+        label: "It Takes Two"
+        game: it-takes-two
     sources:
       - url: "https://www.acfun.cn/v/ac27288688"
         kind: replay
@@ -586,7 +947,23 @@
     confidence: high
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/o_1f21m2ms3fudc6b2gl177our60.jpeg?imageslim"
-    games: []
+    games: [it-takes-two]
+    segments:
+      - at: "00:00:00"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "00:37:59"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "01:16:00"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "01:54:02"
+        label: "It Takes Two"
+        game: it-takes-two
+      - at: "02:32:04"
+        label: "It Takes Two"
+        game: it-takes-two
     sources:
       - url: "https://www.acfun.cn/v/ac27349793"
         kind: replay

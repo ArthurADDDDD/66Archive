@@ -8,6 +8,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_01/1530458097.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:08:27"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:14:59"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4440588"
         kind: replay
@@ -41,6 +48,13 @@
     duration_min: 168
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_02/1530528321.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:12"
+        label: "VR乒乓了解一下"
+      - at: "01:11:19"
+        label: "聊天环节继续"
     sources:
       - url: "https://www.acfun.cn/v/ac4441949"
         kind: replay
@@ -56,7 +70,14 @@
     confidence: high
     duration_min: 252
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_06/1530881261.JPG?imageslim"
-    games: []
+    games: [steamworld-dig]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:40:21"
+        label: "蒸汽世界 SteamWorld Dig"
+      - at: "02:26:19"
+        label: "蒸汽世界 SteamWorld Dig"
     sources:
       - url: "https://www.acfun.cn/v/ac4449957"
         kind: replay
@@ -72,7 +93,14 @@
     confidence: high
     duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_07/1530969394.JPG?imageslim"
-    games: []
+    games: [steamworld-dig, steep]
+    segments:
+      - at: "00:00:00"
+        label: "蒸汽世界（ Steam World Dig）"
+      - at: "01:13:22"
+        label: "极限巅峰（Steep）"
+      - at: "02:55:23"
+        label: "逆水寒"
     sources:
       - url: "https://www.acfun.cn/v/ac4451378"
         kind: replay
@@ -91,6 +119,13 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播（心灵砒霜 & 戏说聊斋第十二期）的纯净版（ac4452475）与弹幕版（ac4452632）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前的聊天部分"
+      - at: "00:05:17"
+        label: "戏说聊斋第十二期"
+      - at: "01:31:18"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4452475"
         kind: replay
@@ -110,7 +145,16 @@
     confidence: high
     duration_min: 323
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_10/1531228815.JPG?imageslim"
-    games: []
+    games: [steep]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:30"
+        label: "极限巅峰 （Steep）"
+      - at: "02:00:00"
+        label: "极限巅峰 （Steep）-211108"
+      - at: "03:25:19"
+        label: "极限巅峰 （Steep）-211108"
     sources:
       - url: "https://www.acfun.cn/v/ac4456409"
         kind: replay
@@ -127,6 +171,13 @@
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_11/1531309605.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:29"
+        label: "我被男神捅死了"
+      - at: "04:29:16"
+        label: "我被男神捅死了"
     sources:
       - url: "https://www.acfun.cn/v/ac4458161"
         kind: replay
@@ -143,6 +194,11 @@
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_13/1531482259.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:19"
+        label: "我被男神捅死了"
     sources:
       - url: "https://www.acfun.cn/v/ac4461994"
         kind: replay
@@ -159,6 +215,11 @@
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_14/1531571741.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:46"
+        label: "来访者"
     sources:
       - url: "https://www.acfun.cn/v/ac4463451"
         kind: replay
@@ -176,6 +237,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_15/1531674140.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "聊天部分-弹幕版"
+      - at: "00:05:47"
+        label: "戏说聊斋第十三期-弹幕版"
+      - at: "01:12:57"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:44:18"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4464939"
         kind: replay
@@ -191,7 +261,14 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_17/1531828061.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:31:09"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:55:39"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4468653"
         kind: replay
@@ -207,7 +284,14 @@
     confidence: high
     duration_min: 321
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_18/1531914668.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:09:01"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "03:02:05"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4470628"
         kind: replay
@@ -223,7 +307,14 @@
     confidence: high
     duration_min: 387
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_19/1532005602.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:00:02"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "04:00:03"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4472749"
         kind: replay
@@ -239,7 +330,14 @@
     confidence: high
     duration_min: 277
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_20/1532090738.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:04"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:25:32"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4474728"
         kind: replay
@@ -255,7 +353,14 @@
     confidence: high
     duration_min: 278
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_21/1532176568.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:39"
+        label: "八方旅人& 绝地求生"
+      - at: "02:25:11"
+        label: "八方旅人& 绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac4476097"
         kind: replay
@@ -273,6 +378,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_23/1532306025.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:11:41"
+        label: "戏说聊斋第十四期-弹幕版"
+      - at: "01:58:25"
+        label: "心灵砒霜-弹幕版"
+      - at: "03:05:00"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4478022"
         kind: replay
@@ -288,7 +402,12 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_23/1532345827.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:08:37"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4479395"
         kind: replay
@@ -304,7 +423,14 @@
     confidence: high
     duration_min: 427
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_24/1532442251.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:22:17"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "04:44:36"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4481661"
         kind: replay
@@ -320,7 +446,12 @@
     confidence: high
     duration_min: 304
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_25/1532521439.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:31:53"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4483445"
         kind: replay
@@ -336,7 +467,14 @@
     confidence: high
     duration_min: 260
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_26/1532606610.JPG?imageslim"
-    games: []
+    games: [octopath-traveler]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:27:49"
+        label: "八方旅人（Octopath Traveler）"
+      - at: "02:23:43"
+        label: "八方旅人（Octopath Traveler）"
     sources:
       - url: "https://www.acfun.cn/v/ac4485376"
         kind: replay
@@ -352,7 +490,16 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_27/1532694000.JPG?imageslim"
-    games: []
+    games: [taiko-no-tatsujin]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:51"
+        label: "太鼓达人"
+      - at: "01:59:54"
+        label: "太鼓达人"
+      - at: "03:59:56"
+        label: "太鼓达人"
     sources:
       - url: "https://www.acfun.cn/v/ac4487651"
         kind: replay
@@ -368,7 +515,14 @@
     confidence: high
     duration_min: 281
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_28/1532781454.jpg?imageslim"
-    games: []
+    games: [bomb-chicken]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:56:41"
+        label: "炸弹鸡(Bomb Chicken)"
+      - at: "02:48:56"
+        label: "炸弹鸡(Bomb Chicken)"
     sources:
       - url: "https://www.acfun.cn/v/ac4488998"
         kind: replay
@@ -386,6 +540,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_30/1532912753.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:11:29"
+        label: "戏说聊斋第十五期-弹幕版"
+      - at: "01:51:02"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:39:12"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4490868"
         kind: replay
@@ -401,7 +564,12 @@
     confidence: high
     duration_min: 213
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_30/1532947632.JPG?imageslim"
-    games: []
+    games: [my-time-at-portia]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:24:56"
+        label: "波西亚时光"
     sources:
       - url: "https://www.acfun.cn/v/ac4492025"
         kind: replay
@@ -417,7 +585,14 @@
     confidence: high
     duration_min: 203
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_31/1533041112.jpg?imageslim"
-    games: []
+    games: [bomb-chicken]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:29:01"
+        label: "炸弹鸡"
+      - at: "01:57:13"
+        label: "逆水寒"
     sources:
       - url: "https://www.acfun.cn/v/ac4494319"
         kind: replay

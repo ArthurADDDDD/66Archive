@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 279
     cover: "https://tx-free-imgs.acfun.cn/o_1etf0dud41k911mql1ni81aig1r550.jpeg?imageslim"
-    games: []
+    games: [dyson-sphere-program]
+    segments:
+      - at: "00:00:00"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "01:09:41"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "02:19:23"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "03:29:05"
+        label: "戴森球计划"
+        game: dyson-sphere-program
     sources:
       - url: "https://www.acfun.cn/v/ac23648475"
         kind: replay
@@ -22,7 +35,20 @@
     confidence: high
     duration_min: 260
     cover: "https://tx-free-imgs.acfun.cn/o_1ethjud2f1f851hnpfi6o8511qg0.jpeg?imageslim"
-    games: []
+    games: [dyson-sphere-program]
+    segments:
+      - at: "00:00:00"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "01:04:56"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "02:09:53"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "03:14:51"
+        label: "戴森球计划"
+        game: dyson-sphere-program
     sources:
       - url: "https://www.acfun.cn/v/ac23730366"
         kind: replay
@@ -38,7 +64,24 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/o_1etk5omhn197eofo108qegg15ld0.jpeg?imageslim"
-    games: []
+    games: [among-us, witch-it]
+    segments:
+      - at: "00:00:00"
+        label: "女巫来了"
+        game: witch-it
+      - at: "00:59:59"
+        label: "女巫来了"
+        game: witch-it
+      - at: "02:00:01"
+        label: "女巫来了"
+        game: witch-it
+      - at: "02:10:11"
+        label: "绝地求生"
+      - at: "03:05:08"
+        label: "绝地求生"
+      - at: "04:00:03"
+        label: "谁是内鬼"
+        game: among-us
     sources:
       - url: "https://www.acfun.cn/v/ac23824361"
         kind: replay
@@ -54,7 +97,19 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/o_1etml5ssv1bia2ki8aat0o1p640.jpeg?imageslim"
-    games: []
+    games: [dyson-sphere-program]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:06:58"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "01:23:10"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "02:39:22"
+        label: "戴森球计划"
+        game: dyson-sphere-program
     sources:
       - url: "https://www.acfun.cn/v/ac23907923"
         kind: replay
@@ -70,7 +125,22 @@
     confidence: high
     duration_min: 306
     cover: "https://tx-free-imgs.acfun.cn/o_1etp7saop5ve1chsrme1cern870.jpeg?imageslim"
-    games: []
+    games: [dyson-sphere-program, lifeafter]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:35:21"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "01:38:22"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "02:41:23"
+        label: "戴森球计划"
+        game: dyson-sphere-program
+      - at: "03:44:24"
+        label: "明日之后"
+        game: lifeafter
     sources:
       - url: "https://www.acfun.cn/v/ac24004812"
         kind: replay
@@ -88,6 +158,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1eu10pge22hg1u9ngfnmg9136u0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:23:36"
+        label: "心灵砒霜弹幕版"
+      - at: "01:20:53"
+        label: "心灵砒霜弹幕版"
+      - at: "02:18:09"
+        label: "心灵砒霜弹幕版"
+      - at: "03:15:28"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac24285697"
         kind: replay
@@ -103,7 +184,20 @@
     confidence: high
     duration_min: 325
     cover: "https://tx-free-imgs.acfun.cn/o_1eu13coa61nc11gvcuf26ku1o6h0.jpeg?imageslim"
-    games: []
+    games: [yanhua]
+    segments:
+      - at: "00:00:00"
+        label: "烟火"
+      - at: "00:59:59"
+        label: "烟火"
+      - at: "02:00:00"
+        label: "烟火"
+      - at: "03:00:00"
+        label: "烟火"
+      - at: "04:00:02"
+        label: "一梦江湖"
+      - at: "04:42:20"
+        label: "一梦江湖"
     sources:
       - url: "https://www.acfun.cn/v/ac24290442"
         kind: replay
@@ -120,6 +214,13 @@
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/o_1eu3jp5mm1ovq6401jos8oi1nni0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "出门买个糖葫芦"
+      - at: "00:20:12"
+        label: "出门买个糖葫芦"
+      - at: "02:20:13"
+        label: "出门买个糖葫芦"
     sources:
       - url: "https://www.acfun.cn/v/ac24369028"
         kind: replay
@@ -135,7 +236,14 @@
     confidence: high
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/o_1eu8gdh8gcm5v4h14bp1gdp1tm90.jpeg?imageslim"
-    games: []
+    games: [little-nightmares-2]
+    segments:
+      - at: "00:00:00"
+        label: "小小梦魔2"
+      - at: "00:59:59"
+        label: "小小梦魔2"
+      - at: "02:00:01"
+        label: "小小梦魔2"
     sources:
       - url: "https://www.acfun.cn/v/ac24545907"
         kind: replay
@@ -151,7 +259,22 @@
     confidence: high
     duration_min: 232
     cover: "https://tx-free-imgs.acfun.cn/o_1eub5dje7il41rrf1jkj1mud11590.jpeg?imageslim"
-    games: []
+    games: [little-nightmares-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:31"
+        label: "小小梦魇2"
+        game: little-nightmares-2
+      - at: "01:10:15"
+        label: "小小梦魇2"
+        game: little-nightmares-2
+      - at: "02:00:00"
+        label: "小小梦魇2"
+        game: little-nightmares-2
+      - at: "02:55:45"
+        label: "小小梦魇2"
+        game: little-nightmares-2
     sources:
       - url: "https://www.acfun.cn/v/ac24641799"
         kind: replay
@@ -167,7 +290,19 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/o_1eudpk6f4d3vj7t1bcc35l18a10.jpeg?imageslim"
-    games: []
+    games: [super-mario-3d-world]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:59"
+        label: "马里奥3D世界NS版来啦"
+        game: super-mario-3d-world
+      - at: "01:22:49"
+        label: "马里奥3D世界NS版来啦"
+        game: super-mario-3d-world
+      - at: "02:34:39"
+        label: "马里奥3D世界NS版来啦"
+        game: super-mario-3d-world
     sources:
       - url: "https://www.acfun.cn/v/ac24733031"
         kind: replay
@@ -185,6 +320,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1euirl6t11dhgdpu11lt19pt1aqd0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:24:43"
+        label: "心灵砒霜弹幕版"
+      - at: "01:17:00"
+        label: "心灵砒霜弹幕版"
+      - at: "02:09:17"
+        label: "心灵砒霜弹幕版"
+      - at: "03:01:33"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac24912113"
         kind: replay
@@ -200,7 +346,12 @@
     confidence: high
     duration_min: 97
     cover: "https://tx-free-imgs.acfun.cn/o_1euivk9jq2scial1ai317voc3d0.jpeg?imageslim"
-    games: []
+    games: [majsoul]
+    segments:
+      - at: "00:00:00"
+        label: "雀魂麻將"
+      - at: "00:48:39"
+        label: "雀魂麻將"
     sources:
       - url: "https://www.acfun.cn/v/ac24914321"
         kind: replay
@@ -216,7 +367,14 @@
     confidence: high
     duration_min: 125
     cover: "https://tx-free-imgs.acfun.cn/o_1euo30b231mgtp2j1tlrms319ia0.jpeg?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "大吉大利 今晚吃鸡"
+      - at: "00:41:39"
+        label: "大吉大利 今晚吃鸡"
+      - at: "01:23:22"
+        label: "大吉大利 今晚吃鸡"
     sources:
       - url: "https://www.acfun.cn/v/ac25093509"
         kind: replay
@@ -248,7 +406,18 @@
     confidence: high
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/o_1euo5rgr516lf80avmsdv91kab0.jpeg?imageslim"
-    games: []
+    games: [super-mario-3d-world]
+    segments:
+      - at: "00:00:00"
+        label: "马里奥3d世界+狂怒世界"
+      - at: "00:24:57"
+        label: "马里奥3d世界+狂怒世界"
+      - at: "01:06:11"
+        label: "马里奥3d世界+狂怒世界"
+      - at: "01:47:24"
+        label: "马里奥3d世界+狂怒世界"
+      - at: "02:28:36"
+        label: "马里奥3d世界+狂怒世界"
     sources:
       - url: "https://www.acfun.cn/v/ac25101273"
         kind: replay
@@ -264,7 +433,18 @@
     confidence: high
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/o_1euvtt1io8rg2jc16sj1ffu1mdo0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "鬼谷八荒"
+      - at: "00:48:14"
+        label: "鬼谷八荒"
+      - at: "01:36:31"
+        label: "鬼谷八荒"
+      - at: "02:24:47"
+        label: "鬼谷八荒"
+      - at: "03:13:06"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac25374839"
         kind: replay
@@ -282,6 +462,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ev4vdh7d1uf71g2tpjh1ojbcql0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:24:19"
+        label: "心灵砒霜弹幕版"
+      - at: "01:17:43"
+        label: "心灵砒霜弹幕版"
+      - at: "02:11:08"
+        label: "心灵砒霜弹幕版"
+      - at: "03:04:31"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac25570282"
         kind: replay
@@ -297,7 +488,18 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/o_1ev53a76j1h13aruiij1jjp1p6p0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "鬼谷八荒"
+      - at: "00:54:49"
+        label: "鬼谷八荒"
+      - at: "01:49:40"
+        label: "鬼谷八荒"
+      - at: "02:44:32"
+        label: "鬼谷八荒"
+      - at: "03:39:22"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac25581655"
         kind: replay
@@ -313,7 +515,20 @@
     confidence: high
     duration_min: 210
     cover: "https://tx-free-imgs.acfun.cn/o_1ev7f4haalcpkr1n7213ivi8a0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:27"
+        label: "鬼谷八荒"
+      - at: "00:53:35"
+        label: "鬼谷八荒"
+      - at: "01:32:44"
+        label: "鬼谷八荒"
+      - at: "02:11:52"
+        label: "鬼谷八荒"
+      - at: "02:51:01"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac25663058"
         kind: replay
@@ -330,6 +545,17 @@
     duration_min: 181
     cover: "https://tx-free-imgs.acfun.cn/o_1eva6iuiu85c4vm9ip1tig1m970.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "痞子英雄"
+      - at: "00:29:30"
+        label: "痞子英雄"
+      - at: "01:07:20"
+        label: "痞子英雄"
+      - at: "01:45:15"
+        label: "痞子英雄"
+      - at: "02:23:09"
+        label: "痞子英雄"
     sources:
       - url: "https://www.acfun.cn/v/ac25772153"
         kind: replay
@@ -379,6 +605,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1evli8pq02glf2t12p9aqs1lpj0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:26:26"
+        label: "心灵砒霜弹幕版"
+      - at: "01:20:44"
+        label: "心灵砒霜弹幕版"
+      - at: "02:15:01"
+        label: "心灵砒霜弹幕版"
+      - at: "03:09:19"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac26081711"
         kind: replay
