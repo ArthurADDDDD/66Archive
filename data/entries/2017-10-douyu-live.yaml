@@ -1,19 +1,17 @@
-# 采集任务 #003 · 2017-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2017-10-01-live-01
   type: live
   date: "2017-10-01"
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 198
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_01/1506868978.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4009606"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-10-01-live-02
@@ -22,10 +20,13 @@
   title: "茶杯头cuphead"
   platform: douyu
   confidence: high
+  duration_min: 162
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_01/1506874110.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4009664"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2017-10-02-live-01
@@ -34,10 +35,13 @@
   title: "茶杯头cuphead"
   platform: douyu
   confidence: high
+  duration_min: 212
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_02/1506952460.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4010656"
       kind: replay
+      parts: 13
   contributed_by: data-agent
 
 - id: 2017-10-03-live-01
@@ -46,10 +50,13 @@
   title: "大周歌会"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_03/1507037400.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4011690"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-10-05-live-01
@@ -58,10 +65,13 @@
   title: "和豆豆的美好时光"
   platform: douyu
   confidence: high
+  duration_min: 142
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_05/1507207539.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4013663"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-10-06-live-01
@@ -70,10 +80,13 @@
   title: "悠闲时刻"
   platform: douyu
   confidence: high
+  duration_min: 209
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_06/1507298859.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4014819"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-10-07-live-01
@@ -82,10 +95,13 @@
   title: "cosplay"
   platform: douyu
   confidence: high
+  duration_min: 91
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_07/1507381874.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4015990"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-10-08-live-01
@@ -94,10 +110,13 @@
   title: "在家闲逛"
   platform: douyu
   confidence: high
+  duration_min: 115
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_08/1507468417.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4017197"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-10-10-live-01
@@ -106,10 +125,13 @@
   title: "THE AMAZING FROG"
   platform: douyu
   confidence: high
+  duration_min: 348
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_10/1507645482.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4021156"
       kind: replay
+      parts: 14
   contributed_by: data-agent
 
 - id: 2017-10-11-live-01
@@ -118,10 +140,13 @@
   title: "Don t cut your hand & 欧洲卡车模拟2"
   platform: douyu
   confidence: high
+  duration_min: 260
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_11/1507726208.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4022934"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2017-10-13-live-01
@@ -130,10 +155,13 @@
   title: "绝地求生"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_13/1507894692.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4026757"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-10-14-live-01
@@ -142,10 +170,13 @@
   title: "Youtubers Life"
   platform: douyu
   confidence: high
+  duration_min: 259
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_14/1507991098.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4028303"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-10-15-live-01
@@ -154,11 +185,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 243
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_16/1508140346.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4030901"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-10-17-live-01
@@ -167,10 +201,13 @@
   title: "Linelight 光线"
   platform: douyu
   confidence: high
+  duration_min: 377
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_17/1508247880.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4033439"
       kind: replay
+      parts: 13
   contributed_by: data-agent
 
 - id: 2017-10-18-live-01
@@ -179,10 +216,13 @@
   title: "GT sport 线下活动"
   platform: douyu
   confidence: high
+  duration_min: 117
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_18/1508328433.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4035201"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-10-18-live-02
@@ -191,10 +231,13 @@
   title: "石六六个人演唱会"
   platform: douyu
   confidence: high
+  duration_min: 148
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_18/1508330018.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4035279"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-10-20-live-01
@@ -203,10 +246,13 @@
   title: "Stickman"
   platform: douyu
   confidence: high
+  duration_min: 86
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_20/1508512070.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4039445"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-10-20-live-02
@@ -215,10 +261,13 @@
   title: "大周好声音"
   platform: douyu
   confidence: high
+  duration_min: 215
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_20/1508509999.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4039443"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2017-10-21-live-01
@@ -227,10 +276,13 @@
   title: "stickman火柴人大乱斗"
   platform: douyu
   confidence: high
+  duration_min: 248
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_21/1508600436.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4040822"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-10-22-live-01
@@ -239,11 +291,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_23/1508763129.jpg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4043890"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-10-23-live-01
@@ -252,10 +307,13 @@
   title: "Rusty Lake"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_23/1508762134.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4043809"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2017-10-24-live-01
@@ -264,10 +322,13 @@
   title: "Rusty Lake"
   platform: douyu
   confidence: high
+  duration_min: 235
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_24/1508848300.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4045812"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-10-25-live-01
@@ -276,10 +337,13 @@
   title: "Rusty Lake"
   platform: douyu
   confidence: high
+  duration_min: 183
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_25/1508936992.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4047769"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-10-26-live-01
@@ -288,10 +352,13 @@
   title: "Rusty Lake"
   platform: douyu
   confidence: high
+  duration_min: 247
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_26/1509021706.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4049650"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-10-27-live-01
@@ -300,10 +367,13 @@
   title: "大周网吧正式开业（绝地求生）"
   platform: douyu
   confidence: high
+  duration_min: 287
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_27/1509106483.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4051917"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-10-28-live-01
@@ -312,10 +382,13 @@
   title: "宝藏世界"
   platform: douyu
   confidence: high
+  duration_min: 101
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_28/1509196104.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4053275"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-10-29-live-01
@@ -324,11 +397,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_30/1509329991.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4054991"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-10-30-live-01
@@ -337,8 +413,11 @@
   title: "欢乐斗地主专场"
   platform: douyu
   confidence: high
+  duration_min: 134
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_9_30/1509363503.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4056313"
       kind: replay
+      parts: 5
   contributed_by: data-agent

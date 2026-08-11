@@ -1,23 +1,18 @@
-# 采集任务 #008 · 优酷视频时代目录补齐（2010-05 ~ 2015-02）
-# 来源：data/catalogs/youku-video-era.csv（archive.org 优酷空间快照目录，2026-08-11 探测原页面存活状态）
-# 本文件收录 CSV 中日期完整且未收录于 video-era-milestones.yaml 的全部记录，共 68 条。
-# alive=Y → sources.status=alive（原页可访问）；alive=N → dead（目录快照可证实，原页当前失效，confidence=medium）。
-# 禁止编造：日期/标题/时长仅取 CSV 实际值；games 一律空；本文件仅优酷链接。
-# id 序号已避开 video-era-milestones.yaml 已占用的同日期 id（如 2010-06-27-video-01 被《欢乐呀欢乐》占用）。
-
 - id: 2010-05-09-video-01
   type: video
   date: "2010-05-09"
   title: "【女流】迷你单机游戏之 阿扎达经典系列第二部"
   platform: youku
-  confidence: medium
+  duration_min: 16
+  cover: "https://m.ykimg.com/054204085257608A6A0A481CF167D8AD"
+  confidence: high
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长 976s，上传时间 2010-05-09 17:25 与条目日期吻合，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcxNjU2Mzk2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-05-10-video-01
@@ -27,13 +22,15 @@
   platform: youku
   series: xiaoyouxi-hen-baoli
   confidence: medium
+  duration_min: 11
+  cover: "https://m.ykimg.com/05420408525687FB6A0A4B7E17466B27"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcxNzY2Mjg4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-05-10-video-02
@@ -45,6 +42,7 @@
   series: xiaoyouxi-hen-baoli
   duration_min: 13
   confidence: high
+  cover: "https://m.ykimg.com/054204085252CD966A0A4C5B5C751BA8"
   games: []
   tags: [视频时代]
   sources:
@@ -62,6 +60,7 @@
   series: xingtan-guide
   duration_min: 14
   confidence: high
+  cover: "https://m.ykimg.com/054204085253DB206A0A4E5F7544BF48"
   games: []
   tags: [视频时代]
   sources:
@@ -79,6 +78,7 @@
   series: xingtan-guide
   duration_min: 14
   confidence: high
+  cover: "https://m.ykimg.com/0542040852586FA46A0A487F19892BE5"
   games: []
   tags: [视频时代]
   sources:
@@ -96,6 +96,7 @@
   series: xingtan-guide
   duration_min: 9
   confidence: high
+  cover: "https://m.ykimg.com/054204085256F30F6A0A4A3DECEF5185"
   games: []
   tags: [视频时代]
   sources:
@@ -110,13 +111,15 @@
   title: "群星璀璨，怒骂怒骂"
   platform: youku
   confidence: medium
+  duration_min: 4
+  cover: "https://m.ykimg.com/054104085B2994CA00000101AF0B6CC5"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTgxMjgyODcy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-06-16-video-01
@@ -128,6 +131,7 @@
   series: anqila-zhige
   duration_min: 21
   confidence: high
+  cover: "https://m.ykimg.com/054204085252E8A86A0A4C5B5AB67AE8"
   games: []
   tags: [视频时代]
   sources:
@@ -142,13 +146,15 @@
   title: "应景世界杯----足球小游戏三部曲"
   platform: youku
   confidence: medium
+  duration_min: 9
+  cover: "https://m.ykimg.com/05420408525DDB3B6A0A4D3E27AD900C"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTg0OTYwMzYw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-06-29-video-01
@@ -159,6 +165,7 @@
   platform: youku
   duration_min: 7
   confidence: high
+  cover: "https://m.ykimg.com/05420408525C006F6A0A444369BC460A"
   games: []
   tags: [视频时代]
   sources:
@@ -175,6 +182,7 @@
   platform: youku
   duration_min: 6
   confidence: high
+  cover: "https://m.ykimg.com/054204085B29FDA000000101CD0D8DAD"
   games: []
   tags: [视频时代]
   sources:
@@ -191,6 +199,7 @@
   platform: youku
   duration_min: 10
   confidence: high
+  cover: "https://m.ykimg.com/05420408525382AB6A0A4E5F7B63FAFB"
   games: []
   tags: [视频时代]
   sources:
@@ -205,13 +214,15 @@
   title: "是时候发泄怨念了"
   platform: youku
   confidence: medium
+  duration_min: 9
+  cover: "https://m.ykimg.com/054204085258ECD66A0A405DBE33DE85"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTg4MzczNDAw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-07-11-video-01
@@ -222,6 +233,7 @@
   platform: youku
   duration_min: 16
   confidence: high
+  cover: "https://m.ykimg.com/05420408525AD15A6A0A4142D71B7052"
   games: []
   tags: [视频时代]
   sources:
@@ -238,6 +250,7 @@
   platform: youku
   duration_min: 17
   confidence: high
+  cover: "https://m.ykimg.com/05420408525C27E96A0A471F1044D76D"
   games: []
   tags: [视频时代]
   sources:
@@ -252,13 +265,15 @@
   title: "【经典回顾】小婴儿逃脱系列2解说"
   platform: youku
   confidence: medium
+  duration_min: 18
+  cover: "https://m.ykimg.com/054204085324CDD86A0A4C02A4282C24"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTkxNjU0NDMy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-07-24-video-01
@@ -267,13 +282,15 @@
   title: "女流小游戏视频录制教学"
   platform: youku
   confidence: medium
+  duration_min: 7
+  cover: "https://m.ykimg.com/05420408525DF2256A0A3F40A4EF815E"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTkyMTkyNDE2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-07-29-video-01
@@ -282,13 +299,15 @@
   title: "【女流】真伪笑容大判断"
   platform: youku
   confidence: medium
+  duration_min: 12
+  cover: "https://m.ykimg.com/05420408525582BD6A0A4E5F6962A472"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTkzNTk2OTM2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-08-03-video-01
@@ -297,13 +316,15 @@
   title: "【女流】魔术师之梦（The Illusionist's Dream）解说"
   platform: youku
   confidence: medium
+  duration_min: 13
+  cover: "https://m.ykimg.com/0542040852672C8B6A0A4501777CCDED"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMTk0ODI1MDEy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-09-09-video-01
@@ -312,13 +333,15 @@
   title: "萝卜白菜，各有所爱"
   platform: youku
   confidence: medium
+  duration_min: 12
+  cover: "https://m.ykimg.com/05420408526967BB6A0A3F42D2662286"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMjA0OTMwOTk2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-09-19-video-01
@@ -327,13 +350,15 @@
   title: "【女流】爱丽丝之死全系列解说"
   platform: youku
   confidence: medium
+  duration_min: 31
+  cover: "https://m.ykimg.com/05420408523A12786A0A454B5E9C8BC8"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMjA3NjU0NDE2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-10-05-video-01
@@ -343,13 +368,15 @@
   platform: youku
   series: huanxing-hezi
   confidence: medium
+  duration_min: 14
+  cover: "https://m.ykimg.com/05420408526B6D9A6A0A4C215C541C7A"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMjExOTQ1NDY4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2010-12-02-video-01
@@ -358,13 +385,15 @@
   title: "【特别剪辑】纪念那些没能跟大家见面的小游戏录像"
   platform: youku
   confidence: medium
+  duration_min: 12
+  cover: "https://m.ykimg.com/054204085263278C6A0A46305E0B7AB9"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMjI2NzA4Njc2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2012-05-20-video-01
@@ -374,13 +403,15 @@
   platform: youku
   series: anqila-zhige
   confidence: medium
+  duration_min: 24
+  cover: "https://m.ykimg.com/0542070852DDE3F96A0A4377D0697A51"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XMzk5NjE3NjI0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2012-05-24-video-01
@@ -390,13 +421,15 @@
   platform: youku
   series: anqila-zhige
   confidence: medium
+  duration_min: 18
+  cover: "https://m.ykimg.com/0542020852E409FB6A0A3F42B8C4AA39"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNDAxNzU1MzE2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2012-05-31-video-01
@@ -405,13 +438,15 @@
   title: "【女流】儿童节送小羊回家"
   platform: youku
   confidence: medium
+  duration_min: 20
+  cover: "https://m.ykimg.com/0542060852E13A116A0A4504465B2D0C"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNDA1NzE4OTA0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2012-08-26-video-01
@@ -421,13 +456,15 @@
   platform: youku
   series: huanxing-hezi
   confidence: medium
+  duration_min: 24
+  cover: "https://m.ykimg.com/0542030852E801C86A0A4C4C3EC80A83"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNDQzNTY0MDky.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-09-04-video-01
@@ -436,13 +473,15 @@
   title: "【女流】进击的巨人同人游戏【巨人の猎手】试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 11
+  cover: "https://m.ykimg.com/0542030852272C916A0A4329658FC71E"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjA1MDcxMTQ0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-09-25-video-01
@@ -452,13 +491,15 @@
   platform: youku
   series: journey-playthrough
   confidence: medium
+  duration_min: 28
+  cover: "https://m.ykimg.com/05420308525FB49D6A0A4142D39D92AC"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjEzMjI2ODI0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-09-30-video-01
@@ -468,13 +509,15 @@
   platform: youku
   series: journey-playthrough
   confidence: medium
+  duration_min: 32
+  cover: "https://m.ykimg.com/054204085248F5EA6A0A481CE5DE5FE5"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjE1Mzg2OTMy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-10-18-video-01
@@ -483,13 +526,15 @@
   title: "【女流】自从玩了小游戏，妈妈再也不用担心我的厨艺（误）！"
   platform: youku
   confidence: medium
+  duration_min: 13
+  cover: "https://m.ykimg.com/05420408526135776A0A405DC73573C4"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjIzMTYxMTY0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-10-20-video-01
@@ -498,13 +543,15 @@
   title: "【女流】小游戏实况：小红球闯关RedBall4"
   platform: youku
   confidence: medium
+  duration_min: 20
+  cover: "https://m.ykimg.com/05420408526361956A0A4142D39AA711"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjIzNzgwNzUy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-11-02-video-01
@@ -513,13 +560,15 @@
   title: "【女流】Enough Plumbers 2很多马里奥试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 24
+  cover: "https://m.ykimg.com/054204085273EE196A0A4F52023A5210"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjI5Mjk1NDgw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-11-09-video-01
@@ -528,13 +577,15 @@
   title: "【女流】不可信的肉眼：Naya's Quest试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 45
+  cover: "https://m.ykimg.com/05420508527D4D5B6A0A491BDBF88832"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjMyMzc3Nzg0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-11-18-video-01
@@ -543,13 +594,15 @@
   title: "【女流】被这款游戏彻底打败了"
   platform: youku
   confidence: medium
+  duration_min: 17
+  cover: "https://m.ykimg.com/054204085289FF546A0A462EF221B3E4"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjM2NDM4NDY0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-11-22-video-01
@@ -558,13 +611,15 @@
   title: "【女流】又送小羊回家Home Sheep Home 2"
   platform: youku
   confidence: medium
+  duration_min: 32
+  cover: "https://m.ykimg.com/05420808528F63E46A0A41238499D75E"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjM4Mjc3ODg4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-11-30-video-01
@@ -573,13 +628,15 @@
   title: "【女流】遇上话痨就要开外挂【危险的蝎子】The Scorpion Box解说"
   platform: youku
   confidence: medium
+  duration_min: 21
+  cover: "https://m.ykimg.com/0542060852998A146A0A451E10F29B89"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjQxNzMxNzMy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-12-09-video-01
@@ -588,13 +645,15 @@
   title: "【女流】下海做贼难自弃-the very organized thief解说"
   platform: youku
   confidence: medium
+  duration_min: 18
+  cover: "https://m.ykimg.com/0542040852A5C33B6A0A4C4C3F50B6D3"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjQ1OTY2MTI0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-12-13-video-01
@@ -603,13 +662,15 @@
   title: "【女流】关于救赎Persist【坚持】解说"
   platform: youku
   confidence: medium
+  duration_min: 14
+  cover: "https://m.ykimg.com/0542010852AAB6C66A0A4B12515FE88F"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjQ3NjI5MjYw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2013-12-19-video-01
@@ -618,13 +679,15 @@
   title: "【女流】圣诞夜跑酷SANTA RUN 2试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 11
+  cover: "https://m.ykimg.com/0542020852B31F8A6A0A4377C71643F8"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjUwNDcyMTQw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-01-06-video-01
@@ -633,13 +696,15 @@
   title: "【女流】玩了这个整个人都不好了The Impossible Quiz 2"
   platform: youku
   confidence: medium
+  duration_min: 11
+  cover: "https://m.ykimg.com/0542040852CAD7CD6A0A4E4BC55731B1"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjU4MzM5MTM2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-01-23-video-01
@@ -648,13 +713,15 @@
   title: "【女流】世界名画知多少？Famous Painting Parodies 2 解说"
   platform: youku
   confidence: medium
+  duration_min: 24
+  cover: "https://m.ykimg.com/0542040852E09EC36A0A424A5D074FF1"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjY1MTkwOTAw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-02-25-video-01
@@ -663,13 +730,15 @@
   title: "【女流】被玩坏了的FLAPPY BIRD"
   platform: youku
   confidence: medium
+  duration_min: 10
+  cover: "https://m.ykimg.com/05420608530C6E3A6A0A45045BCDA3D8"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjc3Njk1NTE2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-07-27-video-01
@@ -678,13 +747,15 @@
   title: "【女流】CSonline机甲斗兽模式试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 9
+  cover: "https://m.ykimg.com/0542040853D50A746A0A4160A29D64B0"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNzQ3MDE3OTcy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-09-10-video-01
@@ -694,13 +765,15 @@
   platform: youku
   series: anqila-zhige
   confidence: medium
+  duration_min: 28
+  cover: "https://m.ykimg.com/054204085410016D6A0A4E14251E68DC"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNzc4NTY1ODM2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-09-12-video-01
@@ -709,13 +782,15 @@
   title: "【女流】升职加薪也是分分钟的事儿[Corporate Climber]解说"
   platform: youku
   confidence: medium
+  duration_min: 18
+  cover: "https://m.ykimg.com/054205085412D19B6A0A433168F9B652"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNzgwNDUzMDYw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-09-19-video-01
@@ -724,13 +799,15 @@
   title: "[游戏新作]奇幻大陆的勇士Phoenitopia试玩Part1"
   platform: youku
   confidence: medium
+  duration_min: 39
+  cover: "https://m.ykimg.com/05420408541BB7BD6A0A4F30A3453C3D"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNzg1ODQ4ODIw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-10-09-video-01
@@ -740,13 +817,15 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: medium
+  duration_min: 12
+  cover: "https://m.ykimg.com/0542040854368EA36A0A4F30AA514A7F"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODAwMDQwMTg4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-10-17-video-01
@@ -758,6 +837,7 @@
   series: bukan-ye-aikan
   duration_min: 15
   confidence: high
+  cover: "https://m.ykimg.com/05420408543FFD046A0A450457A17810"
   games: []
   tags: [视频时代]
   sources:
@@ -773,13 +853,15 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: medium
-  games: []
+  duration_min: 13
+  cover: "https://m.ykimg.com/0542020854492A2B6A0A45045E16A7C5"
+  games: [minecraft]
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODEwMzQyNDYw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-11-08-video-01
@@ -789,13 +871,15 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: medium
+  duration_min: 28
+  cover: "https://m.ykimg.com/05420101545D8BDA6A0A4962A57A6011"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODIyNTU3MzU2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-11-14-video-01
@@ -805,13 +889,15 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: medium
+  duration_min: 43
+  cover: "https://m.ykimg.com/05420408546633716A0A4160B12AABB9"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODI2Njg3MzIw.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-11-26-video-01
@@ -821,13 +907,15 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: medium
+  duration_min: 39
+  cover: "https://m.ykimg.com/0542040854759A596A0A4B045B13207F"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODM1Mjg4MTA4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-11-26-video-02
@@ -836,13 +924,15 @@
   title: "【女流】Perdition*灭亡*试玩解说"
   platform: youku
   confidence: medium
+  duration_min: 27
+  cover: "https://m.ykimg.com/054201085474D5626A0A4004E3251793"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODM1MTMyMTM2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-01-video-01
@@ -851,13 +941,15 @@
   title: "【女流】谋杀篡位之后的安稳生活"
   platform: youku
   confidence: medium
+  duration_min: 7
+  cover: "https://m.ykimg.com/05420408547C02F66A0A4160B1FD9DD1"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODM5MTgyNjM2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-06-video-01
@@ -867,13 +959,15 @@
   platform: youku
   series: child-of-light
   confidence: medium
+  duration_min: 33
+  cover: "https://m.ykimg.com/05410408548189436A0A4004DE90F1DC"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODQyNzY5NzQ4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-08-video-01
@@ -882,13 +976,15 @@
   title: "【萨曼莎赢了】那些根本走不出的伤痛"
   platform: youku
   confidence: medium
+  duration_min: 20
+  cover: "https://m.ykimg.com/0541050854852E916A0A440930DB5CD5"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODQ0MTA5OTQ4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-10-video-01
@@ -900,6 +996,7 @@
   series: child-of-light
   duration_min: 39
   confidence: high
+  cover: "https://m.ykimg.com/0541040854888CB26A0A4004CB08BAD8"
   games: []
   tags: [视频时代]
   sources:
@@ -915,13 +1012,15 @@
   platform: youku
   series: child-of-light
   confidence: medium
+  duration_min: 37
+  cover: "https://m.ykimg.com/05410408548A93336A0A4746D320DD2A"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODQ4NDkzNTQ4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-16-video-01
@@ -931,13 +1030,15 @@
   platform: youku
   series: child-of-light
   confidence: medium
+  duration_min: 28
+  cover: "https://m.ykimg.com/0541040854900CA46A0A4004E184338E"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODUwMDAwODcy.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2014-12-16-video-02
@@ -948,6 +1049,7 @@
   platform: youku
   duration_min: 32
   confidence: high
+  cover: "https://m.ykimg.com/05410408548FB5866A0A4B044D358450"
   games: []
   tags: [视频时代]
   sources:
@@ -964,6 +1066,7 @@
   platform: youku
   duration_min: 10
   confidence: high
+  cover: "https://m.ykimg.com/05410808549A983C6A0A4160B1CC36B9"
   games: []
   tags: [视频时代]
   sources:
@@ -979,13 +1082,15 @@
   platform: youku
   series: child-of-light
   confidence: medium
+  duration_min: 62
+  cover: "https://m.ykimg.com/05410408549A31326A0A42045ACABE31"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODU2Mzg1NDE2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2015-01-05-video-01
@@ -996,6 +1101,7 @@
   platform: youku
   duration_min: 11
   confidence: high
+  cover: "https://m.ykimg.com/0541040854AAAC4A6A0A4409335124FD"
   games: []
   tags: [视频时代]
   sources:
@@ -1012,6 +1118,7 @@
   platform: youku
   duration_min: 24
   confidence: high
+  cover: "https://m.ykimg.com/0541070854B009696A0A433162EE1BC5"
   games: []
   tags: [视频时代]
   sources:
@@ -1028,6 +1135,7 @@
   platform: youku
   duration_min: 13
   confidence: high
+  cover: "https://m.ykimg.com/0541070854B76DFA6A0A45045EB98328"
   games: []
   tags: [视频时代]
   sources:
@@ -1042,13 +1150,15 @@
   title: "【女流】小小大星球3探索之旅"
   platform: youku
   confidence: medium
+  duration_min: 16
+  cover: "https://m.ykimg.com/0541040854BAEBC06A0A42045B45D7E5"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODc3MTM3Nzc2.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 
 - id: 2015-01-23-video-01
@@ -1057,11 +1167,13 @@
   title: "【女流】大金刚热带雨林勇斗马达加斯加企鹅"
   platform: youku
   confidence: medium
+  duration_min: 12
+  cover: "https://m.ykimg.com/054102015B16AD64AD86941AC20863D8"
   games: []
   tags: [视频时代]
-  note: "目录快照可证实，原页当前失效。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XODc4ODM0NDY4.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent

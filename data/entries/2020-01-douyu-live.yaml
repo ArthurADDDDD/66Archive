@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2020-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 8 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2020-01-01-live-01
   type: live
   date: "2020-01-01"
   title: "新年快乐"
   platform: douyu
   confidence: high
+  duration_min: 65
+  cover: "https://tx-free-imgs.acfun.cn/o_1dtf8e5e1vnu16g9119i1h81uik0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac12216546"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2020-01-01-live-02
@@ -21,11 +19,14 @@
   title: "莎木3"
   platform: douyu
   confidence: high
+  duration_min: 247
+  cover: "https://tx-free-imgs.acfun.cn/o_1dtj7oojl1h6d105v1he81r3i1j350.jpeg?imageslim"
   games: []
   note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（28分），P2~6 为《莎木3》主体内容（次日 01-02/01-03 亦为莎木3），标题按主游戏命名。"
   sources:
     - url: "https://www.acfun.cn/v/ac12228285"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2020-01-02-live-01
@@ -34,10 +35,13 @@
   title: "莎木3"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/o_1dtj58ggtv3p3hq8ee78sc2i0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac12228063"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-01-03-live-01
@@ -46,10 +50,13 @@
   title: "莎木3"
   platform: douyu
   confidence: high
+  duration_min: 293
+  cover: "https://tx-free-imgs.acfun.cn/o_1dtlr207b1kn9kmnr11c5p1hvk0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac12235973"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2020-01-05-live-01
@@ -58,11 +65,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 258
+  cover: "https://tx-free-imgs.acfun.cn/o_1dttjfvju160g1nbp18221rt1pgn0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac12260389"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2020-01-12-live-01
@@ -71,11 +81,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/o_1duflv6b11e2o1vf71ndn1esg10lr0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac12384734"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-01-16-live-01
@@ -84,10 +97,13 @@
   title: "时光之帽"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/o_1dupsbhob1gb41sob1dfup3uim70.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac12451122"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2020-01-19-live-01
@@ -96,9 +112,12 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/o_1dv5b012d1vjq1u7vr0a184e1l600.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac12570465"
       kind: replay
+      parts: 4
   contributed_by: data-agent

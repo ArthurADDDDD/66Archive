@@ -1,0 +1,5145 @@
+# 游戏候选报告 —— 仅供人工审核
+#
+# 用途：为以下决策提供材料：
+#   1. 是否在 games.yaml 登记新游戏（new_game_candidates）
+#   2. 是否给已有条目补 games 字段（game_assignment_pending）
+# 前端不得将此报告当作已确认游戏展示。
+#
+# 数据来源：A 站详情页 desc「游戏名称」字段 + 条目标题（2026-08-11 采集）。
+# 可靠性说明：desc 字段由搬运工填写，可能存在模板默认值（"我的世界（Minecraft）"）
+#   与拷贝残留，单凭 desc 不足为证；title 与 desc 一致（或 title 明确）时证据更强。
+
+new_game_candidates:
+  - candidate_name: "糖豆人"
+    entry_count: 27
+    example:
+      entry_id: 2022-07-07-live-02
+      source_url: "https://www.acfun.cn/v/ac35738996"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（26/27 条）"
+    confidence: high
+  - candidate_name: "永劫无间"
+    entry_count: 20
+    example:
+      entry_id: 2021-06-17-live-01
+      source_url: "https://www.acfun.cn/v/ac29823979"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（19/20 条）"
+    confidence: high
+  - candidate_name: "塞尔达传说"
+    entry_count: 19
+    example:
+      entry_id: 2023-05-12-live-01
+      source_url: "https://www.acfun.cn/v/ac41348914"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（19/19 条）"
+    confidence: high
+  - candidate_name: "绝地求生"
+    entry_count: 15
+    example:
+      entry_id: 2017-08-22-live-01
+      source_url: "https://www.acfun.cn/v/ac3934836"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/15 条）"
+    confidence: high
+  - candidate_name: "勇者斗恶龙创世小玩家2"
+    entry_count: 14
+    example:
+      entry_id: 2018-01-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4909237"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（14/14 条）"
+    confidence: high
+  - candidate_name: "Brotato"
+    entry_count: 14
+    example:
+      entry_id: 2022-09-29-live-01
+      source_url: "https://www.acfun.cn/v/ac37662662"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（13/14 条）"
+    confidence: high
+  - candidate_name: "Street Fighter"
+    entry_count: 14
+    example:
+      entry_id: 2023-06-09-live-01
+      source_url: "https://www.acfun.cn/v/ac41564078"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（13/14 条）"
+    confidence: high
+  - candidate_name: "符文工坊4模拟经营"
+    entry_count: 11
+    example:
+      entry_id: 2020-02-04-live-01
+      source_url: "https://www.acfun.cn/v/ac12711755"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（11/11 条）"
+    confidence: high
+  - candidate_name: "深海迷航"
+    entry_count: 11
+    example:
+      entry_id: 2021-05-18-live-02
+      source_url: "https://www.acfun.cn/v/ac28949328"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（11/11 条）"
+    confidence: high
+  - candidate_name: "只狼"
+    entry_count: 10
+    example:
+      entry_id: 2019-03-22-live-01
+      source_url: "https://www.acfun.cn/v/ac10036493"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（10/10 条）"
+    confidence: high
+  - candidate_name: "赛博朋克2077"
+    entry_count: 10
+    example:
+      entry_id: 2020-12-09-live-01
+      source_url: "https://www.acfun.cn/v/ac20534676"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（10/10 条）"
+    confidence: high
+  - candidate_name: "血源诅咒"
+    entry_count: 10
+    example:
+      entry_id: 2021-12-29-live-01
+      source_url: "https://www.acfun.cn/v/ac32930277"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（10/10 条）"
+    confidence: high
+  - candidate_name: "大侠立志传"
+    entry_count: 10
+    example:
+      entry_id: 2023-03-08-live-01
+      source_url: "https://www.acfun.cn/v/ac40837353"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（10/10 条）"
+    confidence: high
+  - candidate_name: "八方旅人（Octopath Traveler）"
+    entry_count: 9
+    example:
+      entry_id: 2018-07-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4468653"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/9 条）"
+    confidence: high
+  - candidate_name: "超级马里奥-奥德赛"
+    entry_count: 8
+    example:
+      entry_id: 2017-11-07-live-01
+      source_url: "https://www.acfun.cn/v/ac4072119"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "古剑奇谭"
+    entry_count: 8
+    example:
+      entry_id: 2018-11-26-live-01
+      source_url: "https://www.acfun.cn/v/ac4743699"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "对马岛之鬼"
+    entry_count: 8
+    example:
+      entry_id: 2020-07-07-live-02
+      source_url: "https://www.acfun.cn/v/ac16879036"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "Fall Guys"
+    entry_count: 8
+    example:
+      entry_id: 2020-08-12-live-01
+      source_url: "https://www.acfun.cn/v/ac17360848"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "鬼谷八荒"
+    entry_count: 8
+    example:
+      entry_id: 2021-02-19-live-01
+      source_url: "https://www.acfun.cn/v/ac25374839"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "审判之逝：湮灭的记忆"
+    entry_count: 8
+    example:
+      entry_id: 2021-09-29-live-01
+      source_url: "https://www.acfun.cn/v/ac31261853"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "暖雪"
+    entry_count: 8
+    example:
+      entry_id: 2022-01-21-live-01
+      source_url: "https://www.acfun.cn/v/ac33223938"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "大多数"
+    entry_count: 8
+    example:
+      entry_id: 2022-11-22-live-01
+      source_url: "https://www.acfun.cn/v/ac39915982"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（8/8 条）"
+    confidence: high
+  - candidate_name: "雀魂"
+    entry_count: 7
+    example:
+      entry_id: 2020-02-28-live-01
+      source_url: "https://www.acfun.cn/v/ac13298989"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51"
+    entry_count: 7
+    example:
+      entry_id: 2020-07-07-live-01
+      source_url: "https://www.acfun.cn/v/ac16704479"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "战神4"
+    entry_count: 7
+    example:
+      entry_id: 2022-01-13-live-01
+      source_url: "https://www.acfun.cn/v/ac33109479"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "战神5"
+    entry_count: 7
+    example:
+      entry_id: 2022-11-14-live-01
+      source_url: "https://www.acfun.cn/v/ac39760898"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "霍格沃茨之遗"
+    entry_count: 7
+    example:
+      entry_id: 2023-02-07-live-01
+      source_url: "https://www.acfun.cn/v/ac40625982"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "遗迹2"
+    entry_count: 7
+    example:
+      entry_id: 2023-07-22-live-02
+      source_url: "https://www.acfun.cn/v/ac41910168"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（7/7 条）"
+    confidence: high
+  - candidate_name: "纸片马里奥"
+    entry_count: 6
+    example:
+      entry_id: 2020-07-27-live-01
+      source_url: "https://www.acfun.cn/v/ac17057112"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "怪物猎人：崛起"
+    entry_count: 6
+    example:
+      entry_id: 2021-04-07-live-01
+      source_url: "https://www.acfun.cn/v/ac27551106"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "怪物男孩"
+    entry_count: 6
+    example:
+      entry_id: 2021-04-21-live-01
+      source_url: "https://www.acfun.cn/v/ac28077546"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "风来之国"
+    entry_count: 6
+    example:
+      entry_id: 2021-09-16-live-01
+      source_url: "https://www.acfun.cn/v/ac31124448"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "地平线：西部禁域"
+    entry_count: 6
+    example:
+      entry_id: 2022-02-18-live-01
+      source_url: "https://www.acfun.cn/v/ac33695473"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "满庭芳：宋上繁华"
+    entry_count: 6
+    example:
+      entry_id: 2023-04-18-live-01
+      source_url: "https://www.acfun.cn/v/ac41162832"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "最终幻想XVI"
+    entry_count: 6
+    example:
+      entry_id: 2023-06-22-live-01
+      source_url: "https://www.acfun.cn/v/ac41669910"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "Trine 5"
+    entry_count: 6
+    example:
+      entry_id: 2023-08-31-live-02
+      source_url: "https://www.acfun.cn/v/ac42232740"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（6/6 条）"
+    confidence: high
+  - candidate_name: "集合啦！动物森友会"
+    entry_count: 5
+    example:
+      entry_id: 2020-03-22-live-01
+      source_url: "https://www.acfun.cn/v/ac14112830"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "Spiritfarer"
+    entry_count: 5
+    example:
+      entry_id: 2020-08-20-live-01
+      source_url: "https://www.acfun.cn/v/ac17528113"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "天穗之咲稻姬"
+    entry_count: 5
+    example:
+      entry_id: 2020-11-11-live-01
+      source_url: "https://www.acfun.cn/v/ac19571771"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "恶魔之魂"
+    entry_count: 5
+    example:
+      entry_id: 2020-11-20-live-01
+      source_url: "https://www.acfun.cn/v/ac19894789"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "戴森球计划"
+    entry_count: 5
+    example:
+      entry_id: 2021-01-30-live-01
+      source_url: "https://www.acfun.cn/v/ac23446918"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "节奏医生"
+    entry_count: 5
+    example:
+      entry_id: 2021-02-27-live-01
+      source_url: "https://www.acfun.cn/v/ac26047503"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "ALTF4"
+    entry_count: 5
+    example:
+      entry_id: 2021-03-03-live-01
+      source_url: "https://www.acfun.cn/v/ac26236002"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "仙剑奇侠传七"
+    entry_count: 5
+    example:
+      entry_id: 2021-10-15-live-01
+      source_url: "https://www.acfun.cn/v/ac31443068"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "消逝的光芒2"
+    entry_count: 5
+    example:
+      entry_id: 2022-02-04-live-01
+      source_url: "https://www.acfun.cn/v/ac33508021"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "星之卡比：探索发现"
+    entry_count: 5
+    example:
+      entry_id: 2022-03-25-live-01
+      source_url: "https://www.acfun.cn/v/ac34166731"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "咩咩启示录"
+    entry_count: 5
+    example:
+      entry_id: 2022-08-09-live-02
+      source_url: "https://www.acfun.cn/v/ac36272443"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "神秘海域：盗贼传奇合辑"
+    entry_count: 5
+    example:
+      entry_id: 2022-10-24-live-01
+      source_url: "https://www.acfun.cn/v/ac39377804"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "卧龙"
+    entry_count: 5
+    example:
+      entry_id: 2023-03-02-live-01
+      source_url: "https://www.acfun.cn/v/ac40806148"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "超级马里奥兄弟 惊奇"
+    entry_count: 5
+    example:
+      entry_id: 2023-10-20-live-01
+      source_url: "https://www.acfun.cn/v/ac42703217"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "蜘蛛侠2"
+    entry_count: 5
+    example:
+      entry_id: 2023-10-21-live-01
+      source_url: "https://www.acfun.cn/v/ac42719418"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（5/5 条）"
+    confidence: high
+  - candidate_name: "欧洲卡车模拟2"
+    entry_count: 4
+    example:
+      entry_id: 2017-09-20-live-01
+      source_url: "https://www.acfun.cn/v/ac3989684"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "Rusty Lake"
+    entry_count: 4
+    example:
+      entry_id: 2017-10-23-live-01
+      source_url: "https://www.acfun.cn/v/ac4043809"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "传送门：桥梁构造者》(Bridge Constructor Portal)"
+    entry_count: 4
+    example:
+      entry_id: 2018-01-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4169872"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "怪物猎人：世界"
+    entry_count: 4
+    example:
+      entry_id: 2018-01-26-live-01
+      source_url: "https://www.acfun.cn/v/ac4214322"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "亲爱的小鲜肉"
+    entry_count: 4
+    example:
+      entry_id: 2018-02-19-live-01
+      source_url: "https://www.acfun.cn/v/ac4233671"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "弹丸论破之希望的学园和绝望高中生"
+    entry_count: 4
+    example:
+      entry_id: 2018-03-03-live-01
+      source_url: "https://www.acfun.cn/v/ac4249674"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "黑暗之魂1重置版"
+    entry_count: 4
+    example:
+      entry_id: 2018-05-24-live-01
+      source_url: "https://www.acfun.cn/v/ac4372502"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "Farm Together"
+    entry_count: 4
+    example:
+      entry_id: 2018-06-25-live-01
+      source_url: "https://www.acfun.cn/v/ac4429168"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "Sea of Thieves"
+    entry_count: 4
+    example:
+      entry_id: 2019-05-27-live-01
+      source_url: "https://www.acfun.cn/v/ac10261079"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "心灵砒霜"
+    entry_count: 4
+    example:
+      entry_id: 2019-06-09-live-01
+      source_url: "https://www.acfun.cn/v/ac10304939"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+    note: "该名称同时用作部分条目的 tag，可能是栏目名而非游戏，需人工确认"
+  - candidate_name: "牧场物语：重聚矿石镇"
+    entry_count: 4
+    example:
+      entry_id: 2019-10-17-live-01
+      source_url: "https://www.acfun.cn/v/ac11396528"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "盗贼之海"
+    entry_count: 4
+    example:
+      entry_id: 2020-06-26-live-01
+      source_url: "https://www.acfun.cn/v/ac16474608"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "UnderMine"
+    entry_count: 4
+    example:
+      entry_id: 2020-09-22-live-01
+      source_url: "https://www.acfun.cn/v/ac18037119"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "Hades"
+    entry_count: 4
+    example:
+      entry_id: 2021-03-15-live-01
+      source_url: "https://www.acfun.cn/v/ac26873129"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "完美的一天"
+    entry_count: 4
+    example:
+      entry_id: 2022-03-15-live-01
+      source_url: "https://www.acfun.cn/v/ac34027747"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "一方灵田"
+    entry_count: 4
+    example:
+      entry_id: 2022-04-28-live-01
+      source_url: "https://www.acfun.cn/v/ac34625969"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "沙石镇时光"
+    entry_count: 4
+    example:
+      entry_id: 2022-05-25-live-02
+      source_url: "https://www.acfun.cn/v/ac35011139"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "RAFT"
+    entry_count: 4
+    example:
+      entry_id: 2022-06-28-live-01
+      source_url: "https://www.acfun.cn/v/ac35473608"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "脑航员2"
+    entry_count: 4
+    example:
+      entry_id: 2022-09-16-live-01
+      source_url: "https://www.acfun.cn/v/ac37464342"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/4 条）"
+    confidence: high
+  - candidate_name: "Coral Island"
+    entry_count: 4
+    example:
+      entry_id: 2022-10-12-live-01
+      source_url: "https://www.acfun.cn/v/ac39190001"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "生化危机2"
+    entry_count: 4
+    example:
+      entry_id: 2023-03-15-live-01
+      source_url: "https://www.acfun.cn/v/ac40923395"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/4 条）"
+    confidence: high
+  - candidate_name: "装甲核心6:境界天火"
+    entry_count: 4
+    example:
+      entry_id: 2023-08-29-live-01
+      source_url: "https://www.acfun.cn/v/ac42219783"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "街霸"
+    entry_count: 4
+    example:
+      entry_id: 2023-09-07-live-01
+      source_url: "https://www.acfun.cn/v/ac42289721"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "匹诺曹的谎言"
+    entry_count: 4
+    example:
+      entry_id: 2023-09-16-live-02
+      source_url: "https://www.acfun.cn/v/ac42370248"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（4/4 条）"
+    confidence: high
+  - candidate_name: "啪嗒砰"
+    entry_count: 3
+    example:
+      entry_id: 2017-09-02-live-01
+      source_url: "https://www.acfun.cn/v/ac3955661"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "茶杯头cuphead"
+    entry_count: 3
+    example:
+      entry_id: 2017-09-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4008554"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "没人会被炸掉 Keep Talking and Nobody Explodes"
+    entry_count: 3
+    example:
+      entry_id: 2018-03-24-live-01
+      source_url: "https://www.acfun.cn/v/ac4280005"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/3 条）"
+    confidence: high
+  - candidate_name: "Strange Brigade"
+    entry_count: 3
+    example:
+      entry_id: 2018-09-13-live-01
+      source_url: "https://www.acfun.cn/v/ac4583069"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "超级马里奥派对"
+    entry_count: 3
+    example:
+      entry_id: 2018-10-10-live-01
+      source_url: "https://www.acfun.cn/v/ac4632146"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "迷雾侦探"
+    entry_count: 3
+    example:
+      entry_id: 2019-05-01-live-02
+      source_url: "https://www.acfun.cn/v/ac10184551"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "瘟疫传说"
+    entry_count: 3
+    example:
+      entry_id: 2019-05-17-live-01
+      source_url: "https://www.acfun.cn/v/ac10228874"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "莎木3"
+    entry_count: 3
+    example:
+      entry_id: 2020-01-01-live-02
+      source_url: "https://www.acfun.cn/v/ac12228285"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "吟诵者"
+    entry_count: 3
+    example:
+      entry_id: 2020-03-06-live-01
+      source_url: "https://www.acfun.cn/v/ac13533751"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "仁王2"
+    entry_count: 3
+    example:
+      entry_id: 2020-03-14-live-01
+      source_url: "https://www.acfun.cn/v/ac13873032"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Poly Bridge 2"
+    entry_count: 3
+    example:
+      entry_id: 2020-06-01-live-01
+      source_url: "https://www.acfun.cn/v/ac15959411"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "心灵砒霜弹幕版"
+    entry_count: 3
+    example:
+      entry_id: 2020-08-09-live-01
+      source_url: "https://www.acfun.cn/v/ac17325712"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Phasmophobia"
+    entry_count: 3
+    example:
+      entry_id: 2020-09-30-live-01
+      source_url: "https://www.acfun.cn/v/ac18340307"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "儿时的游戏"
+    entry_count: 3
+    example:
+      entry_id: 2020-10-19-live-01
+      source_url: "https://www.acfun.cn/v/ac18803859"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "轩辕剑7"
+    entry_count: 3
+    example:
+      entry_id: 2020-10-29-live-01
+      source_url: "https://www.acfun.cn/v/ac19172801"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "皮克敏3"
+    entry_count: 3
+    example:
+      entry_id: 2020-11-02-live-01
+      source_url: "https://www.acfun.cn/v/ac19291782"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "生化危机8：村庄"
+    entry_count: 3
+    example:
+      entry_id: 2021-05-07-live-01
+      source_url: "https://www.acfun.cn/v/ac28543727"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "霓虹深渊"
+    entry_count: 3
+    example:
+      entry_id: 2021-06-29-live-01
+      source_url: "https://www.acfun.cn/v/ac30100911"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "怪物猎人物语2破灭之翼"
+    entry_count: 3
+    example:
+      entry_id: 2021-07-14-live-01
+      source_url: "https://www.acfun.cn/v/ac30274620"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "上古之魂"
+    entry_count: 3
+    example:
+      entry_id: 2021-08-05-live-01
+      source_url: "https://www.acfun.cn/v/ac30538781"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "GRIME"
+    entry_count: 3
+    example:
+      entry_id: 2021-08-18-live-01
+      source_url: "https://www.acfun.cn/v/ac30757457"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "暗影火炬城"
+    entry_count: 3
+    example:
+      entry_id: 2021-09-09-live-01
+      source_url: "https://www.acfun.cn/v/ac31050416"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "雀魂麻将"
+    entry_count: 3
+    example:
+      entry_id: 2021-12-01-live-01
+      source_url: "https://www.acfun.cn/v/ac32617279"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "密室逃脱模拟器"
+    entry_count: 3
+    example:
+      entry_id: 2021-12-21-live-01
+      source_url: "https://www.acfun.cn/v/ac32851208"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/3 条）"
+    confidence: high
+  - candidate_name: "吸血鬼幸存者"
+    entry_count: 3
+    example:
+      entry_id: 2022-02-17-live-01
+      source_url: "https://www.acfun.cn/v/ac33678538"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Ranch Simulator"
+    entry_count: 3
+    example:
+      entry_id: 2022-05-16-live-01
+      source_url: "https://www.acfun.cn/v/ac34903716"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "时空勇士"
+    entry_count: 3
+    example:
+      entry_id: 2022-07-22-live-01
+      source_url: "https://www.acfun.cn/v/ac35854739"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Bear and Breakfast"
+    entry_count: 3
+    example:
+      entry_id: 2022-08-02-live-01
+      source_url: "https://www.acfun.cn/v/ac36039889"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "瘟疫传说2 安魂曲"
+    entry_count: 3
+    example:
+      entry_id: 2022-10-18-live-01
+      source_url: "https://www.acfun.cn/v/ac39287408"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Tunic"
+    entry_count: 3
+    example:
+      entry_id: 2022-12-04-live-01
+      source_url: "https://www.acfun.cn/v/ac40060182"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "原子之心"
+    entry_count: 3
+    example:
+      entry_id: 2023-02-21-live-01
+      source_url: "https://www.acfun.cn/v/ac40719033"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "火山的女儿"
+    entry_count: 3
+    example:
+      entry_id: 2023-04-24-live-02
+      source_url: "https://www.acfun.cn/v/ac41212108"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "邪恶冥刻"
+    entry_count: 3
+    example:
+      entry_id: 2023-05-06-live-01
+      source_url: "https://www.acfun.cn/v/ac41301099"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "Only UP"
+    entry_count: 3
+    example:
+      entry_id: 2023-06-05-live-01
+      source_url: "https://www.acfun.cn/v/ac41538892"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "潜水员戴夫"
+    entry_count: 3
+    example:
+      entry_id: 2023-07-02-live-01
+      source_url: "https://www.acfun.cn/v/ac41741395"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "土豆兄弟"
+    entry_count: 3
+    example:
+      entry_id: 2023-07-05-live-01
+      source_url: "https://www.acfun.cn/v/ac41765542"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "刺客信条 幻景"
+    entry_count: 3
+    example:
+      entry_id: 2023-10-05-live-01
+      source_url: "https://www.acfun.cn/v/ac42569725"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "心灵杀手2"
+    entry_count: 3
+    example:
+      entry_id: 2023-10-28-live-01
+      source_url: "https://www.acfun.cn/v/ac42788790"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（3/3 条）"
+    confidence: high
+  - candidate_name: "大侠立志传》&《因果动物园"
+    entry_count: 3
+    example:
+      entry_id: 2023-11-20-live-01
+      source_url: "https://www.acfun.cn/v/ac43014439"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/3 条）"
+    confidence: high
+  - candidate_name: "缺氧"
+    entry_count: 2
+    example:
+      entry_id: 2017-08-25-live-01
+      source_url: "https://www.acfun.cn/v/ac3941729"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "马里奥疯兔"
+    entry_count: 2
+    example:
+      entry_id: 2017-09-11-live-01
+      source_url: "https://www.acfun.cn/v/ac3972500"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "CookServeDelicious"
+    entry_count: 2
+    example:
+      entry_id: 2017-09-18-live-01
+      source_url: "https://www.acfun.cn/v/ac3985929"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "欢乐斗地主"
+    entry_count: 2
+    example:
+      entry_id: 2017-10-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4056313"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "绝地求生&amp;超级马里奥-奥德赛"
+    entry_count: 2
+    example:
+      entry_id: 2017-11-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4079503"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "人类一败涂地 Human Fall Flat"
+    entry_count: 2
+    example:
+      entry_id: 2018-01-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4180732"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "调酒师的生活 VA-11 HALL-A"
+    entry_count: 2
+    example:
+      entry_id: 2018-01-17-live-02
+      source_url: "https://www.acfun.cn/v/ac4197468"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "乞丐模拟器 Hobo Tough Life"
+    entry_count: 2
+    example:
+      entry_id: 2018-01-20-live-01
+      source_url: "https://www.acfun.cn/v/ac4203116"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "蔚蓝 Celeste"
+    entry_count: 2
+    example:
+      entry_id: 2018-03-16-live-01
+      source_url: "https://www.acfun.cn/v/ac4268478"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "海盗之海 Sea of Theives"
+    entry_count: 2
+    example:
+      entry_id: 2018-03-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4275592"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "冒险岛"
+    entry_count: 2
+    example:
+      entry_id: 2018-04-16-live-01
+      source_url: "https://www.acfun.cn/v/ac4313461"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "堡垒之夜"
+    entry_count: 2
+    example:
+      entry_id: 2018-04-25-live-02
+      source_url: "https://www.acfun.cn/v/ac4326869"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "VR系列游戏"
+    entry_count: 2
+    example:
+      entry_id: 2018-05-12-live-01
+      source_url: "https://www.acfun.cn/v/ac4352519"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "木筏生存（Raft）"
+    entry_count: 2
+    example:
+      entry_id: 2018-05-31-live-01
+      source_url: "https://www.acfun.cn/v/ac4384209"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "我被男神捅死了"
+    entry_count: 2
+    example:
+      entry_id: 2018-07-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4458161"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "波西亚时光"
+    entry_count: 2
+    example:
+      entry_id: 2018-07-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4492025"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "过山车之星"
+    entry_count: 2
+    example:
+      entry_id: 2018-08-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4538344"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
+    entry_count: 2
+    example:
+      entry_id: 2018-09-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4601198"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "中国式家长"
+    entry_count: 2
+    example:
+      entry_id: 2018-09-28-live-01
+      source_url: "https://www.acfun.cn/v/ac4612623"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "老爷车Jalopy"
+    entry_count: 2
+    example:
+      entry_id: 2018-10-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4619001"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Sheltered（庇护所）"
+    entry_count: 2
+    example:
+      entry_id: 2018-10-19-live-01
+      source_url: "https://www.acfun.cn/v/ac4657003"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Do Not Feed the Monkeys"
+    entry_count: 2
+    example:
+      entry_id: 2018-11-20-live-01
+      source_url: "https://www.acfun.cn/v/ac4730727"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "任天堂明星大乱斗特别版"
+    entry_count: 2
+    example:
+      entry_id: 2018-12-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4772330"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Farm Simulator 19"
+    entry_count: 2
+    example:
+      entry_id: 2018-12-14-live-01
+      source_url: "https://www.acfun.cn/v/ac4786386"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Return of the Obra Dinn(奥布拉丁恩的回归)"
+    entry_count: 2
+    example:
+      entry_id: 2018-12-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4805171"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "The Room Three (未上锁的房间3)"
+    entry_count: 2
+    example:
+      entry_id: 2019-01-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4831809"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "奇妙探险队"
+    entry_count: 2
+    example:
+      entry_id: 2019-01-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4847291"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "了不起的修仙模拟器"
+    entry_count: 2
+    example:
+      entry_id: 2019-01-12-live-01
+      source_url: "https://www.acfun.cn/v/ac4859355"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Devi May Cry 5 《鬼泣5"
+    entry_count: 2
+    example:
+      entry_id: 2019-03-09-live-01
+      source_url: "https://www.acfun.cn/v/ac5008935"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "特技摩托：崛起"
+    entry_count: 2
+    example:
+      entry_id: 2019-03-14-live-01
+      source_url: "https://www.acfun.cn/v/ac10002952"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "猫里奥"
+    entry_count: 2
+    example:
+      entry_id: 2019-03-19-live-01
+      source_url: "https://www.acfun.cn/v/ac10018970"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "雨中暴毙2"
+    entry_count: 2
+    example:
+      entry_id: 2019-04-05-live-01
+      source_url: "https://www.acfun.cn/v/ac10082659"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Supraland"
+    entry_count: 2
+    example:
+      entry_id: 2019-04-12-live-01
+      source_url: "https://www.acfun.cn/v/ac10110418"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "浮岛物语"
+    entry_count: 2
+    example:
+      entry_id: 2019-04-19-live-01
+      source_url: "https://www.acfun.cn/v/ac10137206"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Biped"
+    entry_count: 2
+    example:
+      entry_id: 2019-04-29-live-01
+      source_url: "https://www.acfun.cn/v/ac10170959"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "戏说封神"
+    entry_count: 2
+    example:
+      entry_id: 2019-05-22-live-01
+      source_url: "https://www.acfun.cn/v/ac10245320"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "牧场物语"
+    entry_count: 2
+    example:
+      entry_id: 2019-07-30-live-01
+      source_url: "https://www.acfun.cn/v/ac10646808"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "怪物猎人：世界 冰原"
+    entry_count: 2
+    example:
+      entry_id: 2019-09-10-live-01
+      source_url: "https://www.acfun.cn/v/ac10917297"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "死亡搁浅"
+    entry_count: 2
+    example:
+      entry_id: 2019-11-09-live-01
+      source_url: "https://www.acfun.cn/v/ac11618768"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "奥日2"
+    entry_count: 2
+    example:
+      entry_id: 2020-03-11-live-01
+      source_url: "https://www.acfun.cn/v/ac13667371"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "踩高跷stilt fella"
+    entry_count: 2
+    example:
+      entry_id: 2020-03-29-live-01
+      source_url: "https://www.acfun.cn/v/ac14355451"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "逆转裁判3，异议！"
+    entry_count: 2
+    example:
+      entry_id: 2020-04-18-live-01
+      source_url: "https://www.acfun.cn/v/ac14883639"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "冰与火之舞"
+    entry_count: 2
+    example:
+      entry_id: 2020-05-10-live-01
+      source_url: "https://www.acfun.cn/v/ac15470460"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Hydroneer"
+    entry_count: 2
+    example:
+      entry_id: 2020-05-15-live-01
+      source_url: "https://www.acfun.cn/v/ac15555303"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "最后生还者2"
+    entry_count: 2
+    example:
+      entry_id: 2020-06-20-live-01
+      source_url: "https://www.acfun.cn/v/ac16304104"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "心灵砒霜 弹幕版"
+    entry_count: 2
+    example:
+      entry_id: 2020-09-06-live-01
+      source_url: "https://www.acfun.cn/v/ac17788089"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "创世理想乡"
+    entry_count: 2
+    example:
+      entry_id: 2020-09-07-live-01
+      source_url: "https://www.acfun.cn/v/ac17789392"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "中世纪王朝"
+    entry_count: 2
+    example:
+      entry_id: 2020-10-12-live-01
+      source_url: "https://www.acfun.cn/v/ac18593394"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "不思议的皇冠"
+    entry_count: 2
+    example:
+      entry_id: 2020-10-16-live-01
+      source_url: "https://www.acfun.cn/v/ac18717588"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Manifold Garden"
+    entry_count: 2
+    example:
+      entry_id: 2020-10-24-live-01
+      source_url: "https://www.acfun.cn/v/ac19004989"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Teardown"
+    entry_count: 2
+    example:
+      entry_id: 2020-11-09-live-01
+      source_url: "https://www.acfun.cn/v/ac19510643"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "恶魔之魂二周目"
+    entry_count: 2
+    example:
+      entry_id: 2020-12-01-live-01
+      source_url: "https://www.acfun.cn/v/ac20239985"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "文明6"
+    entry_count: 2
+    example:
+      entry_id: 2021-01-26-live-01
+      source_url: "https://www.acfun.cn/v/ac23080553"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "The Room4"
+    entry_count: 2
+    example:
+      entry_id: 2021-03-18-live-02
+      source_url: "https://www.acfun.cn/v/ac27004130"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "察言观色3部曲&Puyo Puyo Tetris 2"
+    entry_count: 2
+    example:
+      entry_id: 2021-03-25-live-01
+      source_url: "https://www.acfun.cn/v/ac27179432"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "It Takes Two"
+    entry_count: 2
+    example:
+      entry_id: 2021-03-29-live-01
+      source_url: "https://www.acfun.cn/v/ac27288688"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Hidden Through Time"
+    entry_count: 2
+    example:
+      entry_id: 2021-04-17-live-01
+      source_url: "https://www.acfun.cn/v/ac27884083"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51&超级马里欧派对"
+    entry_count: 2
+    example:
+      entry_id: 2021-05-04-live-01
+      source_url: "https://www.acfun.cn/v/ac28481259"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "魔兽怀旧服"
+    entry_count: 2
+    example:
+      entry_id: 2021-06-02-live-01
+      source_url: "https://www.acfun.cn/v/ac29430144"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "明日之后"
+    entry_count: 2
+    example:
+      entry_id: 2021-08-07-live-01
+      source_url: "https://www.acfun.cn/v/ac30566377"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "Toodee and Topdee"
+    entry_count: 2
+    example:
+      entry_id: 2021-08-09-live-01
+      source_url: "https://www.acfun.cn/v/ac30651839"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "九十六号公路"
+    entry_count: 2
+    example:
+      entry_id: 2021-08-17-live-01
+      source_url: "https://www.acfun.cn/v/ac30743712"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "对马岛之魂"
+    entry_count: 2
+    example:
+      entry_id: 2021-08-26-live-01
+      source_url: "https://www.acfun.cn/v/ac30875727"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "符文工厂5"
+    entry_count: 2
+    example:
+      entry_id: 2021-09-02-live-01
+      source_url: "https://www.acfun.cn/v/ac30961552"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Back 4 Blood"
+    entry_count: 2
+    example:
+      entry_id: 2021-10-13-live-01
+      source_url: "https://www.acfun.cn/v/ac31421854"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "马里奥派对 超级巨星"
+    entry_count: 2
+    example:
+      entry_id: 2021-10-29-live-01
+      source_url: "https://www.acfun.cn/v/ac31610018"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "METROID DREAD"
+    entry_count: 2
+    example:
+      entry_id: 2021-11-07-live-01
+      source_url: "https://www.acfun.cn/v/ac32492104"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "雀圣"
+    entry_count: 2
+    example:
+      entry_id: 2021-11-27-live-01
+      source_url: "https://www.acfun.cn/v/ac32574369"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Propnight"
+    entry_count: 2
+    example:
+      entry_id: 2021-12-07-live-01
+      source_url: "https://www.acfun.cn/v/ac32685623"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "雀魂麻将&ICARUS"
+    entry_count: 2
+    example:
+      entry_id: 2021-12-09-live-01
+      source_url: "https://www.acfun.cn/v/ac32707433"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "精神之桥"
+    entry_count: 2
+    example:
+      entry_id: 2021-12-13-live-01
+      source_url: "https://www.acfun.cn/v/ac32753161"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "文字游戏"
+    entry_count: 2
+    example:
+      entry_id: 2022-01-25-live-01
+      source_url: "https://www.acfun.cn/v/ac33355828"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "三伏"
+    entry_count: 2
+    example:
+      entry_id: 2022-04-01-live-01
+      source_url: "https://www.acfun.cn/v/ac34263468"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "光之传说"
+    entry_count: 2
+    example:
+      entry_id: 2022-04-14-live-01
+      source_url: "https://www.acfun.cn/v/ac34441952"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "退休模拟器"
+    entry_count: 2
+    example:
+      entry_id: 2022-04-21-live-01
+      source_url: "https://www.acfun.cn/v/ac34528727"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "哥布林弹球"
+    entry_count: 2
+    example:
+      entry_id: 2022-04-26-live-01
+      source_url: "https://www.acfun.cn/v/ac34600362"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "手工六上线"
+    entry_count: 2
+    example:
+      entry_id: 2022-04-30-live-01
+      source_url: "https://www.acfun.cn/v/ac34657915"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "盐与献祭"
+    entry_count: 2
+    example:
+      entry_id: 2022-05-10-live-02
+      source_url: "https://www.acfun.cn/v/ac34799140"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "各年代老歌榜单盘点"
+    entry_count: 2
+    example:
+      entry_id: 2022-05-30-live-01
+      source_url: "https://www.acfun.cn/v/ac35091628"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "钓鱼天堂"
+    entry_count: 2
+    example:
+      entry_id: 2022-06-04-live-01
+      source_url: "https://www.acfun.cn/v/ac35150054"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Necesse"
+    entry_count: 2
+    example:
+      entry_id: 2022-06-08-live-01
+      source_url: "https://www.acfun.cn/v/ac35207890"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "采石场惊魂"
+    entry_count: 2
+    example:
+      entry_id: 2022-06-10-live-01
+      source_url: "https://www.acfun.cn/v/ac35221410"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "怪物猎人崛起：曙光"
+    entry_count: 2
+    example:
+      entry_id: 2022-06-30-live-01
+      source_url: "https://www.acfun.cn/v/ac35489533"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "仙剑客栈2"
+    entry_count: 2
+    example:
+      entry_id: 2022-07-10-live-01
+      source_url: "https://www.acfun.cn/v/ac35753988"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Stray"
+    entry_count: 2
+    example:
+      entry_id: 2022-07-19-live-01
+      source_url: "https://www.acfun.cn/v/ac35801405"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Inside the Backroom"
+    entry_count: 2
+    example:
+      entry_id: 2022-07-30-live-01
+      source_url: "https://www.acfun.cn/v/ac35988937"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Sun Haven"
+    entry_count: 2
+    example:
+      entry_id: 2022-09-01-live-01
+      source_url: "https://www.acfun.cn/v/ac37121343"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "修仙故事：轮回"
+    entry_count: 2
+    example:
+      entry_id: 2022-09-10-live-01
+      source_url: "https://www.acfun.cn/v/ac37364730"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "史莱姆农场2"
+    entry_count: 2
+    example:
+      entry_id: 2022-09-26-live-01
+      source_url: "https://www.acfun.cn/v/ac37620098"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "DAVE THE DIVER"
+    entry_count: 2
+    example:
+      entry_id: 2022-10-31-live-01
+      source_url: "https://www.acfun.cn/v/ac39486788"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "哆啦A梦牧场物语2"
+    entry_count: 2
+    example:
+      entry_id: 2022-11-03-live-01
+      source_url: "https://www.acfun.cn/v/ac39540251"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "A Little to the Left"
+    entry_count: 2
+    example:
+      entry_id: 2022-12-17-live-01
+      source_url: "https://www.acfun.cn/v/ac40188881"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "真探"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-03-live-01
+      source_url: "https://www.acfun.cn/v/ac40357337"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "The Long Dark"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-09-live-01
+      source_url: "https://www.acfun.cn/v/ac40406543"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "江湖十一"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-11-live-02
+      source_url: "https://www.acfun.cn/v/ac40423304"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "黄老饼梦游惊奇"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-13-live-01
+      source_url: "https://www.acfun.cn/v/ac40440083"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "跑跑卡丁车：漂移"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-15-live-01
+      source_url: "https://www.acfun.cn/v/ac40455228"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "隐秘的角落"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-18-live-01
+      source_url: "https://www.acfun.cn/v/ac40477461"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "Hi-Fi RUSH"
+    entry_count: 2
+    example:
+      entry_id: 2023-01-27-live-01
+      source_url: "https://www.acfun.cn/v/ac40535935"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "飞跃13号房"
+    entry_count: 2
+    example:
+      entry_id: 2023-02-01-live-01
+      source_url: "https://www.acfun.cn/v/ac40566209"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "死亡空间"
+    entry_count: 2
+    example:
+      entry_id: 2023-02-04-live-01
+      source_url: "https://www.acfun.cn/v/ac40589850"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "死亡教堂"
+    entry_count: 2
+    example:
+      entry_id: 2023-02-16-live-01
+      source_url: "https://www.acfun.cn/v/ac40688757"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "渔帆暗涌"
+    entry_count: 2
+    example:
+      entry_id: 2023-04-01-live-01
+      source_url: "https://www.acfun.cn/v/ac41027442"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "AltF4 2"
+    entry_count: 2
+    example:
+      entry_id: 2023-04-03-live-01
+      source_url: "https://www.acfun.cn/v/ac41042766"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "候鸟"
+    entry_count: 2
+    example:
+      entry_id: 2023-05-04-live-01
+      source_url: "https://www.acfun.cn/v/ac41285689"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "冒险岛：枫之传说"
+    entry_count: 2
+    example:
+      entry_id: 2023-08-17-live-02
+      source_url: "https://www.acfun.cn/v/ac42114933"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/2 条）"
+    confidence: high
+  - candidate_name: "无畏契约"
+    entry_count: 2
+    example:
+      entry_id: 2023-08-19-live-01
+      source_url: "https://www.acfun.cn/v/ac42130075"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "AltF4"
+    entry_count: 2
+    example:
+      entry_id: 2023-08-21-live-01
+      source_url: "https://www.acfun.cn/v/ac42146492"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "猛兽派对"
+    entry_count: 2
+    example:
+      entry_id: 2023-09-01-live-03
+      source_url: "https://www.acfun.cn/v/ac42245390"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "堕落之主"
+    entry_count: 2
+    example:
+      entry_id: 2023-10-13-live-01
+      source_url: "https://www.acfun.cn/v/ac42654617"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "英雄杀手"
+    entry_count: 2
+    example:
+      entry_id: 2023-11-27-live-01
+      source_url: "https://www.acfun.cn/v/ac43081532"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（2/2 条）"
+    confidence: high
+  - candidate_name: "人力资源机器"
+    entry_count: 1
+    example:
+      entry_id: 2017-08-21-live-01
+      source_url: "https://www.acfun.cn/v/ac3932798"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "百战天虫W.M.D"
+    entry_count: 1
+    example:
+      entry_id: 2017-08-23-live-01
+      source_url: "https://www.acfun.cn/v/ac3936778"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "相扑人(Sumoman)"
+    entry_count: 1
+    example:
+      entry_id: 2017-08-30-live-01
+      source_url: "https://www.acfun.cn/v/ac3950282"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "地平线零之曙光"
+    entry_count: 1
+    example:
+      entry_id: 2017-09-04-live-01
+      source_url: "https://www.acfun.cn/v/ac3959411"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "THE AMAZING FROG"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-10-live-01
+      source_url: "https://www.acfun.cn/v/ac4021156"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Don't cut your hand   &amp;    欧洲卡车模拟2"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4022934"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Youtubers Life"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-14-live-01
+      source_url: "https://www.acfun.cn/v/ac4028303"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Linelight 光线"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4033439"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "stickman火柴人大乱斗"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4040822"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "宝藏世界"
+    entry_count: 1
+    example:
+      entry_id: 2017-10-28-live-01
+      source_url: "https://www.acfun.cn/v/ac4053275"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "小猫钓鱼"
+    entry_count: 1
+    example:
+      entry_id: 2017-11-04-live-01
+      source_url: "https://www.acfun.cn/v/ac4066447"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Castle Crusher 城堡毁灭者"
+    entry_count: 1
+    example:
+      entry_id: 2017-11-05-live-01
+      source_url: "https://www.acfun.cn/v/ac4067788"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "和班尼特福迪一起攻克难关(Getting Over It with Bennett Foddy)"
+    entry_count: 1
+    example:
+      entry_id: 2017-11-14-live-01
+      source_url: "https://www.acfun.cn/v/ac4084862"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "和班尼特福迪一起攻克难关&amp;超级马里奥-奥德赛"
+    entry_count: 1
+    example:
+      entry_id: 2017-11-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4091308"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "兔宝宝历险记&amp;超级马里奥-奥德赛"
+    entry_count: 1
+    example:
+      entry_id: 2017-11-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4100187"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Ice Lakes 冰湖"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4114988"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冰湖（Ice Lakes ）"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-04-live-01
+      source_url: "https://www.acfun.cn/v/ac4118007"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "肯·福莱特的《圣殿春秋》：死灰复燃（第一卷第1-7章）"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-05-live-01
+      source_url: "https://www.acfun.cn/v/ac4120105"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冰湖（Ice Lake）， 轨道模型游戏（Tracks-The Train Set Game），绝地求生"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4126689"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "王权：女王陛下》&amp; 谋杀之谜"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-09-live-01
+      source_url: "https://www.acfun.cn/v/ac4128003"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "我是大老板"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4131089"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "绝地求生&amp;漫漫长夜"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-13-live-01
+      source_url: "https://www.acfun.cn/v/ac4135224"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "GOROGOA画中世界"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-15-live-01
+      source_url: "https://www.acfun.cn/v/ac4139436"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "去月球》续作《寻找天堂"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-16-live-01
+      source_url: "https://www.acfun.cn/v/ac4140972"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Death Coming 死神来了"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-18-live-01
+      source_url: "https://www.acfun.cn/v/ac4144095"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "MONOPOLY PLUS 大富翁"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-20-live-01
+      source_url: "https://www.acfun.cn/v/ac4148109"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "青蛙爆破者(Kero Blaster)"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-26-live-01
+      source_url: "https://www.acfun.cn/v/ac4158411"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "青蛙爆破者"
+    entry_count: 1
+    example:
+      entry_id: 2017-12-27-live-01
+      source_url: "https://www.acfun.cn/v/ac4160261"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "超级马力欧兄弟"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4177609"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Rusty Lake 锈湖"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-12-live-01
+      source_url: "https://www.acfun.cn/v/ac4188857"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Just Shapes &amp; Beats"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-15-live-01
+      source_url: "https://www.acfun.cn/v/ac4400022"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Rusty Lake Paradise 锈湖天堂岛"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-15-live-02
+      source_url: "https://www.acfun.cn/v/ac4193508"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "疑案追声中元节特别版&牧场物语"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-15-live-05
+      source_url: "https://www.acfun.cn/v/ac10746697"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Stick Fight ：The Game   坚持战斗：游戏"
+    entry_count: 1
+    example:
+      entry_id: 2018-01-24-live-02
+      source_url: "https://www.acfun.cn/v/ac4210340"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "程序员升职记"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-03-live-02
+      source_url: "https://www.acfun.cn/v/ac4249664"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "弹丸论破：希望的学园和绝望高中生"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-05-live-01
+      source_url: "https://www.acfun.cn/v/ac4252211"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "SKY 光遇"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-14-live-01
+      source_url: "https://www.acfun.cn/v/ac4271558"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "蔚蓝Celeste&amp;陈星汉《Sky光·遇"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-14-live-02
+      source_url: "https://www.acfun.cn/v/ac4265243"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "陈星汉《Sky光·遇"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-14-live-03
+      source_url: "https://www.acfun.cn/v/ac4265234"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "UNO益智桌游"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-28-live-01
+      source_url: "https://www.acfun.cn/v/ac4285875"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "星之卡比 新星同盟"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4289259"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "黑脸先生 &amp; 妈妈把我的游戏藏起来了"
+    entry_count: 1
+    example:
+      entry_id: 2018-03-31-live-01
+      source_url: "https://www.acfun.cn/v/ac4290285"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "噗哟噗哟俄罗斯方块S"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4292873"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "噗哟噗哟vs俄罗斯方块S &amp; 洞窟物语"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-03-live-01
+      source_url: "https://www.acfun.cn/v/ac4294449"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "节奏天国"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4305998"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "回忆之旅（Old Man's Journey） &amp;  众生 (The Lives)"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-13-live-01
+      source_url: "https://www.acfun.cn/v/ac4309315"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "堡垒之夜（Fortnite）"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4314886"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战神 （God of War ）"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-20-live-01
+      source_url: "https://www.acfun.cn/v/ac4319752"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战神 （God of  War ）"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4321083"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "堡垒之夜第三赛季-Chi66队"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-23-live-01
+      source_url: "https://www.acfun.cn/v/ac4323634"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战神（God of  War）"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-23-live-03
+      source_url: "https://www.acfun.cn/v/ac4323624"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战神 God of War"
+    entry_count: 1
+    example:
+      entry_id: 2018-04-27-live-01
+      source_url: "https://www.acfun.cn/v/ac4330195"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "杀戮尖塔"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4346066"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Ylands"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-09-live-01
+      source_url: "https://www.acfun.cn/v/ac4347722"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "We were here too"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-16-live-01
+      source_url: "https://www.acfun.cn/v/ac4358956"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "传奇巫师（Wizard of Legend）"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-18-live-01
+      source_url: "https://www.acfun.cn/v/ac4362514"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "传奇巫师（Wizard of  Legend）"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4366902"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "房产达人 ( House Flipper )"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4368621"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "女巫来了（Witch It）"
+    entry_count: 1
+    example:
+      entry_id: 2018-05-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4382292"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "孤帆远航 ( FAR： Lone Sails )"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-05-live-01
+      source_url: "https://www.acfun.cn/v/ac4392023"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战斗厨师旅团(Battle Chef Brigade)"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-07-live-01
+      source_url: "https://www.acfun.cn/v/ac4396310"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "间谍派对（Spy Party）"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4398551"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Golf with your friends"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-16-live-01
+      source_url: "https://www.acfun.cn/v/ac4412722"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Comedy Night （喜剧之夜）&amp; Hand Simulator（手掌模拟器）"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-22-live-01
+      source_url: "https://www.acfun.cn/v/ac4423742"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Farm Together &amp; 逆水寒"
+    entry_count: 1
+    example:
+      entry_id: 2018-06-30-live-01
+      source_url: "https://www.acfun.cn/v/ac4439116"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "VR乒乓了解一下"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4441949"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "蒸汽世界 SteamWorld Dig"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4449957"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "蒸汽世界&amp;amp;极限巅峰&amp;amp;逆水寒"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-07-live-01
+      source_url: "https://www.acfun.cn/v/ac4451378"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "极限巅峰 （Steep）"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-10-live-01
+      source_url: "https://www.acfun.cn/v/ac4456409"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "来访者"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-14-live-01
+      source_url: "https://www.acfun.cn/v/ac4463451"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "太鼓达人"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-27-live-01
+      source_url: "https://www.acfun.cn/v/ac4487651"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "炸弹鸡(Bomb Chicken)"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-28-live-01
+      source_url: "https://www.acfun.cn/v/ac4488998"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "炸弹及鸡&amp;amp;逆水寒"
+    entry_count: 1
+    example:
+      entry_id: 2018-07-31-live-01
+      source_url: "https://www.acfun.cn/v/ac4494319"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "playstation发布会"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4498195"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "无人深空"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4505280"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Overcooked 2"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4509318"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Overcooked 2&amp;amp;One Hand Clapping"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-09-live-01
+      source_url: "https://www.acfun.cn/v/ac4511477"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "星界边境(Starbound)"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-20-live-01
+      source_url: "https://www.acfun.cn/v/ac4533725"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "流星蝴蝶剑"
+    entry_count: 1
+    example:
+      entry_id: 2018-08-24-live-02
+      source_url: "https://www.acfun.cn/v/ac4542811"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Two Point Hospital"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-05-live-01
+      source_url: "https://www.acfun.cn/v/ac4567379"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Data 2"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4569103"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Donut County"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4572853"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "极限巅峰(Steep)"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-12-live-01
+      source_url: "https://www.acfun.cn/v/ac4580885"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Plunder Party&amp;amp;39天到火星"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4590602"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Rusty Lake Paradox（《锈湖》新作《悖论》）"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4599258"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "恐龙公园Parkasaurus"
+    entry_count: 1
+    example:
+      entry_id: 2018-09-27-live-01
+      source_url: "https://www.acfun.cn/v/ac4610364"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Hue"
+    entry_count: 1
+    example:
+      entry_id: 2018-10-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4624907"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "拣爱&amp;Old School Musical"
+    entry_count: 1
+    example:
+      entry_id: 2018-10-08-live-01
+      source_url: "https://www.acfun.cn/v/ac4627904"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Breathedge（呼吸边缘）"
+    entry_count: 1
+    example:
+      entry_id: 2018-10-23-live-01
+      source_url: "https://www.acfun.cn/v/ac4666674"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冰火王权Regins"
+    entry_count: 1
+    example:
+      entry_id: 2018-10-24-live-01
+      source_url: "https://www.acfun.cn/v/ac4668945"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Earthworms（蚯蚓）"
+    entry_count: 1
+    example:
+      entry_id: 2018-11-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4724575"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "不可思议之梦蝶"
+    entry_count: 1
+    example:
+      entry_id: 2018-11-29-live-01
+      source_url: "https://www.acfun.cn/v/ac4751526"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "欢乐斗地主&amp;古剑奇谭"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-03-live-01
+      source_url: "https://www.acfun.cn/v/ac4759690"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "彩虹坠入(Iris.Fall)"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-10-live-01
+      source_url: "https://www.acfun.cn/v/ac4776091"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "斗地主之神表演赛"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-14-live-02
+      source_url: "https://www.acfun.cn/v/ac4786031"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "模拟农场19 <br />主<br />"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-17-live-01
+      source_url: "https://www.acfun.cn/v/ac4792138"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "幽林怪谈"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-18-live-01
+      source_url: "https://www.acfun.cn/v/ac4795387"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "GRIS"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-19-live-01
+      source_url: "https://www.acfun.cn/v/ac4797700"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Treasure Hunter Simulator（宝藏猎人模拟器）"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-21-live-01
+      source_url: "https://www.acfun.cn/v/ac4803056"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Kingdom Rush Origins（王国保卫战起源）"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-25-live-01
+      source_url: "https://www.acfun.cn/v/ac4812563"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Pummel Party（揍击派对）"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-26-live-01
+      source_url: "https://www.acfun.cn/v/ac4815317"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Parkitect(游乐园建造师)"
+    entry_count: 1
+    example:
+      entry_id: 2018-12-28-live-01
+      source_url: "https://www.acfun.cn/v/ac4820550"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Life Goes On（生生不息）"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-01-live-01
+      source_url: "https://www.acfun.cn/v/ac4829319"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Equilinox（自然生态）"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-04-live-01
+      source_url: "https://www.acfun.cn/v/ac4837321"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Human Fall Falt &amp; Equilinox"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-07-live-01
+      source_url: "https://www.acfun.cn/v/ac4844762"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "了不起的修仙模拟器 <br />主<br />"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-11-live-01
+      source_url: "https://www.acfun.cn/v/ac4856613"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Yoku's Island Express（尤库的小岛速递）"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-15-live-01
+      source_url: "https://www.acfun.cn/v/ac4867181"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Rakuen(乐园)"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-18-live-01
+      source_url: "https://www.acfun.cn/v/ac4876456"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Dig or Die"
+    entry_count: 1
+    example:
+      entry_id: 2019-01-23-live-01
+      source_url: "https://www.acfun.cn/v/ac4891228"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Mages of Mystralia （奥秘法师）"
+    entry_count: 1
+    example:
+      entry_id: 2019-02-27-live-01
+      source_url: "https://www.acfun.cn/v/ac4979288"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "特技摩托：崛起&amp;秘奥法师"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-01-live-01
+      source_url: "https://www.acfun.cn/v/ac4985423"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Mages of Mystralia （秘奥法师）&amp;特技摩托：崛起"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-02-live-01
+      source_url: "https://www.acfun.cn/v/ac4987876"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "嗜血印&amp;特技摩托：崛起"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-04-live-01
+      source_url: "https://www.acfun.cn/v/ac4992698"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "探班 From Software  隻狼"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-06-live-01
+      source_url: "https://www.acfun.cn/v/ac4998782"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "鬼泣5发布会后台"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-07-live-01
+      source_url: "https://www.acfun.cn/v/ac5002265"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Devi May Cry 5 《鬼泣5》"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-13-live-01
+      source_url: "https://www.acfun.cn/v/ac5020913"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Baba Is You"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-15-live-01
+      source_url: "https://www.acfun.cn/v/ac10006046"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "只狼&amp;特技摩托：崛起"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-16-live-01
+      source_url: "https://www.acfun.cn/v/ac10008549"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "只狼》媒体体验会"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-26-live-01
+      source_url: "https://www.acfun.cn/v/ac10043642"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "只狼&amp;疑案追声"
+    entry_count: 1
+    example:
+      entry_id: 2019-03-29-live-01
+      source_url: "https://www.acfun.cn/v/ac10057218"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "新浪游戏年度盛典"
+    entry_count: 1
+    example:
+      entry_id: 2019-04-02-live-01
+      source_url: "https://www.acfun.cn/v/ac10071047"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "游请制作人"
+    entry_count: 1
+    example:
+      entry_id: 2019-04-03-live-01
+      source_url: "https://www.acfun.cn/v/ac10075064"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "武士零"
+    entry_count: 1
+    example:
+      entry_id: 2019-04-23-live-03
+      source_url: "https://www.acfun.cn/v/ac10151288"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Hardware Engineers"
+    entry_count: 1
+    example:
+      entry_id: 2019-04-26-live-01
+      source_url: "https://www.acfun.cn/v/ac10161622"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "戏说封神第十二期"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-10-live-01
+      source_url: "https://www.acfun.cn/v/ac10204101"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "迷雾侦探 &大富翁"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-10-live-02
+      source_url: "https://www.acfun.cn/v/ac10204199"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Winkeltje"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-14-live-01
+      source_url: "https://www.acfun.cn/v/ac10218109"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "LOL"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-15-live-01
+      source_url: "https://www.acfun.cn/v/ac10221373"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "王国之心"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-24-live-01
+      source_url: "https://www.acfun.cn/v/ac10252450"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "全面战争模拟器"
+    entry_count: 1
+    example:
+      entry_id: 2019-05-30-live-01
+      source_url: "https://www.acfun.cn/v/ac10271184"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "猫和老鼠"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-01-live-01
+      source_url: "https://www.acfun.cn/v/ac10280867"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "回家浪里个啷"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-06-live-01
+      source_url: "https://www.acfun.cn/v/ac10294033"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Cooking Simulator"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-08-live-01
+      source_url: "https://www.acfun.cn/v/ac10299692"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Cooking Simulator&全面战争模拟器"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-10-live-01
+      source_url: "https://www.acfun.cn/v/ac10305540"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "E3游戏展现场"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-13-live-01
+      source_url: "https://www.acfun.cn/v/ac10318866"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "作业疯了"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-17-live-01
+      source_url: "https://www.acfun.cn/v/ac10330630"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "疑案追声"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-18-live-01
+      source_url: "https://www.acfun.cn/v/ac10332690"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Pummel Party"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-19-live-01
+      source_url: "https://www.acfun.cn/v/ac10336144"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "东方驾考模拟器"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-21-live-01
+      source_url: "https://www.acfun.cn/v/ac10342995"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Sky光·遇 &节奏海拉鲁"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-22-live-01
+      source_url: "https://www.acfun.cn/v/ac10346043"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "节奏海拉鲁"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-24-live-01
+      source_url: "https://www.acfun.cn/v/ac10352181"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "圣书物语"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-25-live-01
+      source_url: "https://www.acfun.cn/v/ac10355697"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "My Friend Pedro"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-26-live-01
+      source_url: "https://www.acfun.cn/v/ac10358736"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "HARDCORE MECHA"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-28-live-01
+      source_url: "https://www.acfun.cn/v/ac10366357"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "非常英雄"
+    entry_count: 1
+    example:
+      entry_id: 2019-06-29-live-01
+      source_url: "https://www.acfun.cn/v/ac10369079"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Bossgard"
+    entry_count: 1
+    example:
+      entry_id: 2019-07-02-live-01
+      source_url: "https://www.acfun.cn/v/ac10379501"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Sky Noon &人类一败涂地"
+    entry_count: 1
+    example:
+      entry_id: 2019-07-10-live-01
+      source_url: "https://www.acfun.cn/v/ac10411735"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Northgard"
+    entry_count: 1
+    example:
+      entry_id: 2019-07-12-live-01
+      source_url: "https://www.acfun.cn/v/ac10422318"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "2020东京奥运"
+    entry_count: 1
+    example:
+      entry_id: 2019-07-26-live-01
+      source_url: "https://www.acfun.cn/v/ac10591122"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Jump King"
+    entry_count: 1
+    example:
+      entry_id: 2019-08-07-live-01
+      source_url: "https://www.acfun.cn/v/ac10678313"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "遗迹灰烬重生"
+    entry_count: 1
+    example:
+      entry_id: 2019-08-23-live-01
+      source_url: "https://www.acfun.cn/v/ac10803804"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Heave Ho&死神对决"
+    entry_count: 1
+    example:
+      entry_id: 2019-08-30-live-01
+      source_url: "https://www.acfun.cn/v/ac10841151"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Heave Ho"
+    entry_count: 1
+    example:
+      entry_id: 2019-09-03-live-01
+      source_url: "https://www.acfun.cn/v/ac10863183"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "塞尔达传说 织梦岛"
+    entry_count: 1
+    example:
+      entry_id: 2019-09-23-live-01
+      source_url: "https://www.acfun.cn/v/ac11164528"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "A Short Hike"
+    entry_count: 1
+    example:
+      entry_id: 2019-09-25-live-01
+      source_url: "https://www.acfun.cn/v/ac11171141"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Green Hell"
+    entry_count: 1
+    example:
+      entry_id: 2019-09-28-live-01
+      source_url: "https://www.acfun.cn/v/ac11258173"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "西游记之大圣归来》体验会"
+    entry_count: 1
+    example:
+      entry_id: 2019-10-16-live-01
+      source_url: "https://www.acfun.cn/v/ac11387366"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "健身环大冒险&牧场物语：重聚矿石镇"
+    entry_count: 1
+    example:
+      entry_id: 2019-10-18-live-01
+      source_url: "https://www.acfun.cn/v/ac11405767"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "We werehere together"
+    entry_count: 1
+    example:
+      entry_id: 2019-11-20-live-01
+      source_url: "https://www.acfun.cn/v/ac11707262"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怪物猎人狩猎季"
+    entry_count: 1
+    example:
+      entry_id: 2019-11-24-live-01
+      source_url: "https://www.acfun.cn/v/ac11740245"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Tangle Tower"
+    entry_count: 1
+    example:
+      entry_id: 2019-11-26-live-01
+      source_url: "https://www.acfun.cn/v/ac11780573"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Farmers Dynasty"
+    entry_count: 1
+    example:
+      entry_id: 2019-11-29-live-01
+      source_url: "https://www.acfun.cn/v/ac11786188"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇的唱歌歌友会"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-09-live-01
+      source_url: "https://www.acfun.cn/v/ac11901272"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Deliver Us The Moon"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-10-live-01
+      source_url: "https://www.acfun.cn/v/ac11901879"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Raft姐弟大海漂流记"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-13-live-01
+      source_url: "https://www.acfun.cn/v/ac11936638"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Raft"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-18-live-01
+      source_url: "https://www.acfun.cn/v/ac12045067"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Feel The Snow&Ashen"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-20-live-01
+      source_url: "https://www.acfun.cn/v/ac12115123"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Ashen"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-21-live-01
+      source_url: "https://www.acfun.cn/v/ac12117242"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "你的脑年龄是几岁"
+    entry_count: 1
+    example:
+      entry_id: 2019-12-27-live-01
+      source_url: "https://www.acfun.cn/v/ac12167053"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "新年快乐"
+    entry_count: 1
+    example:
+      entry_id: 2020-01-01-live-01
+      source_url: "https://www.acfun.cn/v/ac12216546"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "时光之帽"
+    entry_count: 1
+    example:
+      entry_id: 2020-01-16-live-01
+      source_url: "https://www.acfun.cn/v/ac12451122"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "疫情防控知识问答"
+    entry_count: 1
+    example:
+      entry_id: 2020-02-24-live-01
+      source_url: "https://www.acfun.cn/v/ac13171321"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "陶艺大师"
+    entry_count: 1
+    example:
+      entry_id: 2020-03-02-live-01
+      source_url: "https://www.acfun.cn/v/ac13362785"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "月影之塔"
+    entry_count: 1
+    example:
+      entry_id: 2020-03-04-live-01
+      source_url: "https://www.acfun.cn/v/ac13514908"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "奥日2 &仁王2"
+    entry_count: 1
+    example:
+      entry_id: 2020-03-13-live-01
+      source_url: "https://www.acfun.cn/v/ac13850617"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "只只大冒险"
+    entry_count: 1
+    example:
+      entry_id: 2020-03-27-live-01
+      source_url: "https://www.acfun.cn/v/ac14279131"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "集合啦！动物森友会&察言观色"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-02-live-01
+      source_url: "https://www.acfun.cn/v/ac14432591"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "用心组装&巨著"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-03-live-01
+      source_url: "https://www.acfun.cn/v/ac14460973"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "半衰期 Alyx"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-07-live-01
+      source_url: "https://www.acfun.cn/v/ac14530449"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "逆转裁判"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-08-live-01
+      source_url: "https://www.acfun.cn/v/ac14556632"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "逆转裁判2 异议"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-10-live-01
+      source_url: "https://www.acfun.cn/v/ac14625206"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "逆转裁判3 异议"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-12-live-01
+      source_url: "https://www.acfun.cn/v/ac14686496"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇又来了！！！"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-15-live-01
+      source_url: "https://www.acfun.cn/v/ac14767644"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "宝石商人桌游局"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-27-live-01
+      source_url: "https://www.acfun.cn/v/ac15184212"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "胡闹搬家"
+    entry_count: 1
+    example:
+      entry_id: 2020-04-29-live-01
+      source_url: "https://www.acfun.cn/v/ac15228923"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "恶果之地"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-04-live-01
+      source_url: "https://www.acfun.cn/v/ac15347812"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "周四休息，佩奇上"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-07-live-01
+      source_url: "https://www.acfun.cn/v/ac15404822"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冒险公社"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-09-live-01
+      source_url: "https://www.acfun.cn/v/ac15451024"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冬日计划"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-09-live-02
+      source_url: "https://www.acfun.cn/v/ac15450853"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "云城朋克"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-19-live-01
+      source_url: "https://www.acfun.cn/v/ac15658758"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Tsioque"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-22-live-01
+      source_url: "https://www.acfun.cn/v/ac15703417"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "节奏快打"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-28-live-01
+      source_url: "https://www.acfun.cn/v/ac15833367"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Poly Bridge"
+    entry_count: 1
+    example:
+      entry_id: 2020-05-30-live-01
+      source_url: "https://www.acfun.cn/v/ac15895043"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怒之铁拳"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-08-live-01
+      source_url: "https://www.acfun.cn/v/ac16079680"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51&荒野乱斗"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-12-live-01
+      source_url: "https://www.acfun.cn/v/ac16155971"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51&梦幻西游三维版 家园"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-13-live-01
+      source_url: "https://www.acfun.cn/v/ac16174797"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇不来66来"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-16-live-01
+      source_url: "https://www.acfun.cn/v/ac16230754"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Timelie&最强蜗牛"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-23-live-01
+      source_url: "https://www.acfun.cn/v/ac16355924"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Among Trees"
+    entry_count: 1
+    example:
+      entry_id: 2020-06-24-live-01
+      source_url: "https://www.acfun.cn/v/ac16382093"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "螺旋风暴"
+    entry_count: 1
+    example:
+      entry_id: 2020-07-03-live-01
+      source_url: "https://www.acfun.cn/v/ac16611265"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51&江南百景图"
+    entry_count: 1
+    example:
+      entry_id: 2020-07-04-live-01
+      source_url: "https://www.acfun.cn/v/ac16657662"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Superliminal&梦幻西游"
+    entry_count: 1
+    example:
+      entry_id: 2020-07-25-live-01
+      source_url: "https://www.acfun.cn/v/ac17023955"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怒海余生"
+    entry_count: 1
+    example:
+      entry_id: 2020-07-26-live-01
+      source_url: "https://www.acfun.cn/v/ac17055755"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "逛吃逛吃"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-02-live-01
+      source_url: "https://www.acfun.cn/v/ac17291974"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "66来聊聊"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-06-live-01
+      source_url: "https://www.acfun.cn/v/ac17260074"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "纸片马里奥&Fall Guys"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-10-live-01
+      source_url: "https://www.acfun.cn/v/ac17326766"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Fall Guys& Grounded"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-11-live-01
+      source_url: "https://www.acfun.cn/v/ac17343071"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Thereis no game"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-11-live-02
+      source_url: "https://www.acfun.cn/v/ac17497100"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Avengers"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-15-live-01
+      source_url: "https://www.acfun.cn/v/ac17437382"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Spiritfarer&帕斯卡契约"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-21-live-01
+      source_url: "https://www.acfun.cn/v/ac17528771"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇歌友会"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-27-live-01
+      source_url: "https://www.acfun.cn/v/ac17630928"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "Inmost"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-29-live-01
+      source_url: "https://www.acfun.cn/v/ac17669805"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "高殿战记"
+    entry_count: 1
+    example:
+      entry_id: 2020-08-31-live-02
+      source_url: "https://www.acfun.cn/v/ac17701429"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "火柴人亨利合集&魂斗罗"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-02-live-01
+      source_url: "https://www.acfun.cn/v/ac17727901"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "人类一败涂地 &心灵砒霜"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-06-live-01
+      source_url: "https://www.acfun.cn/v/ac17777864"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "创世理想乡&魂斗罗"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-09-live-01
+      source_url: "https://www.acfun.cn/v/ac17817269"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Kill It With Fire"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-12-live-01
+      source_url: "https://www.acfun.cn/v/ac17863279"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Pro Gymnast"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-14-live-01
+      source_url: "https://www.acfun.cn/v/ac17893978"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Pro Gymnast &Fall Guys"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-18-live-01
+      source_url: "https://www.acfun.cn/v/ac17960927"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "UnderMine&万国觉醒"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-26-live-01
+      source_url: "https://www.acfun.cn/v/ac18194859"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "When the Past was Around"
+    entry_count: 1
+    example:
+      entry_id: 2020-09-28-live-01
+      source_url: "https://www.acfun.cn/v/ac18200756"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Party Animals"
+    entry_count: 1
+    example:
+      entry_id: 2020-10-05-live-01
+      source_url: "https://www.acfun.cn/v/ac18398871"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "art of rally&Fall Guys&F1 2020"
+    entry_count: 1
+    example:
+      entry_id: 2020-10-06-live-01
+      source_url: "https://www.acfun.cn/v/ac18423949"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "中世纪王朝&Party Animals"
+    entry_count: 1
+    example:
+      entry_id: 2020-10-13-live-01
+      source_url: "https://www.acfun.cn/v/ac18620844"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "舞蹈迷藏&Fall Guys"
+    entry_count: 1
+    example:
+      entry_id: 2020-10-15-live-01
+      source_url: "https://www.acfun.cn/v/ac18685618"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇补场你补票"
+    entry_count: 1
+    example:
+      entry_id: 2020-10-28-live-01
+      source_url: "https://www.acfun.cn/v/ac19146701"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "腾讯科学WE大会"
+    entry_count: 1
+    example:
+      entry_id: 2020-11-07-live-01
+      source_url: "https://www.acfun.cn/v/ac19456271"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "宇宙机器人&麻布仔大冒险&天穗之咲稻姬"
+    entry_count: 1
+    example:
+      entry_id: 2020-11-13-live-01
+      source_url: "https://www.acfun.cn/v/ac19650558"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "恶魔之魂&暗影国度-助唱艾泽拉斯"
+    entry_count: 1
+    example:
+      entry_id: 2020-11-27-live-01
+      source_url: "https://www.acfun.cn/v/ac20120091"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "大周午夜音乐台"
+    entry_count: 1
+    example:
+      entry_id: 2020-11-30-live-01
+      source_url: "https://www.acfun.cn/v/ac20235350"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "恶魔之魂三周目搞搞"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-03-live-01
+      source_url: "https://www.acfun.cn/v/ac20298711"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "谁是内鬼"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-08-live-01
+      source_url: "https://www.acfun.cn/v/ac20467396"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "赛博朋克2077&自由篮球"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-18-live-01
+      source_url: "https://www.acfun.cn/v/ac20831325"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "chi66女队再战糖豆人"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-22-live-01
+      source_url: "https://www.acfun.cn/v/ac20954758"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇来了，你呢"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-23-live-01
+      source_url: "https://www.acfun.cn/v/ac20984238"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "亚索我还是不玩了吧"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-25-live-01
+      source_url: "https://www.acfun.cn/v/ac21052271"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "经典就是经典呐"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-26-live-01
+      source_url: "https://www.acfun.cn/v/ac21084338"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "跨年歌会一起跨年"
+    entry_count: 1
+    example:
+      entry_id: 2020-12-31-live-01
+      source_url: "https://www.acfun.cn/v/ac21284409"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Shady Part of Me&归家异途2"
+    entry_count: 1
+    example:
+      entry_id: 2021-01-22-live-01
+      source_url: "https://www.acfun.cn/v/ac22712405"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Shady Part of Me&糖豆人&文明6"
+    entry_count: 1
+    example:
+      entry_id: 2021-01-25-live-01
+      source_url: "https://www.acfun.cn/v/ac22986109"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "橙光 传闻中的女帝后宫"
+    entry_count: 1
+    example:
+      entry_id: 2021-01-28-live-01
+      source_url: "https://www.acfun.cn/v/ac23259917"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "高殿战记&橙光 传闻中的女帝后宫"
+    entry_count: 1
+    example:
+      entry_id: 2021-01-29-live-01
+      source_url: "https://www.acfun.cn/v/ac23358929"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "女巫来了&绝地求生&谁是内鬼"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-03-live-01
+      source_url: "https://www.acfun.cn/v/ac23824361"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "戴森球计划&明日之后"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-05-live-01
+      source_url: "https://www.acfun.cn/v/ac24004812"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "烟火&一梦江湖"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-08-live-01
+      source_url: "https://www.acfun.cn/v/ac24290442"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "户外"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-09-live-01
+      source_url: "https://www.acfun.cn/v/ac24369028"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "小小梦魔2"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-11-live-01
+      source_url: "https://www.acfun.cn/v/ac24545907"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "小小梦魇2"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-12-live-01
+      source_url: "https://www.acfun.cn/v/ac24641799"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "马里奥3D世界NS版"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-13-live-01
+      source_url: "https://www.acfun.cn/v/ac24733031"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "雀魂麻將"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-14-live-02
+      source_url: "https://www.acfun.cn/v/ac24914321"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "大吉大利 今晚吃鸡"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-16-live-01
+      source_url: "https://www.acfun.cn/v/ac25093509"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "马里奥3d世界新DLC"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-16-live-02
+      source_url: "https://www.acfun.cn/v/ac25018032"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "马里奥3d世界+狂怒世界"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-17-live-01
+      source_url: "https://www.acfun.cn/v/ac25101273"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "痞子英雄"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-24-live-01
+      source_url: "https://www.acfun.cn/v/ac25772153"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "牧场物语之橄榄镇与希望的大地"
+    entry_count: 1
+    example:
+      entry_id: 2021-02-25-live-01
+      source_url: "https://www.acfun.cn/v/ac25859321"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "大富翁10"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-08-live-01
+      source_url: "https://www.acfun.cn/v/ac26425905"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Tiny Lands"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-09-live-01
+      source_url: "https://www.acfun.cn/v/ac26476396"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "阿尔芭与野生动物的故事"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-11-live-01
+      source_url: "https://www.acfun.cn/v/ac26630182"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "CSGO"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-12-live-01
+      source_url: "https://www.acfun.cn/v/ac26691826"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "魔兽争霸rpg"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-12-live-02
+      source_url: "https://www.acfun.cn/v/ac26693309"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战意"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-20-live-01
+      source_url: "https://www.acfun.cn/v/ac27028479"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "绝地求生&战意"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-20-live-02
+      source_url: "https://www.acfun.cn/v/ac27028197"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "末日准备狂"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-22-live-01
+      source_url: "https://www.acfun.cn/v/ac27085144"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Puyo Puyo Tetris 2"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-24-live-01
+      source_url: "https://www.acfun.cn/v/ac27146913"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怪物猎人崛起"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-26-live-01
+      source_url: "https://www.acfun.cn/v/ac27236153"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "怪物猎人 崛起"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-26-live-02
+      source_url: "https://www.acfun.cn/v/ac27236154"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "坎公骑冠剑"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-26-live-03
+      source_url: "https://www.acfun.cn/v/ac27236155"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怪物猎人"
+    entry_count: 1
+    example:
+      entry_id: 2021-03-27-live-01
+      source_url: "https://www.acfun.cn/v/ac27238768"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "六六来聊聊"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-06-live-01
+      source_url: "https://www.acfun.cn/v/ac27513425"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "佩奇的快乐你想象不到"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-19-live-01
+      source_url: "https://www.acfun.cn/v/ac28284810"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "怪物男孩&永劫无念"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-24-live-02
+      source_url: "https://www.acfun.cn/v/ac28159717"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "天神镇物语试玩"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-26-live-01
+      source_url: "https://www.acfun.cn/v/ac28284808"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "世界游戏大全51&坎公骑冠剑"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-27-live-01
+      source_url: "https://www.acfun.cn/v/ac28310058"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "PS发布会"
+    entry_count: 1
+    example:
+      entry_id: 2021-04-30-live-01
+      source_url: "https://www.acfun.cn/v/ac28399662"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "超级马里欧派对"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-01-live-02
+      source_url: "https://www.acfun.cn/v/ac28432400"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "神奇男孩 爱莎在怪物世界"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-06-live-01
+      source_url: "https://www.acfun.cn/v/ac28520506"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "绿林侠盗"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-12-live-01
+      source_url: "https://www.acfun.cn/v/ac28687173"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "无尽旅途"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-18-live-01
+      source_url: "https://www.acfun.cn/v/ac28925578"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Turnip Boy"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-25-live-01
+      source_url: "https://www.acfun.cn/v/ac29144375"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "幸运房东"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-28-live-01
+      source_url: "https://www.acfun.cn/v/ac29245667"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "科学家面对面"
+    entry_count: 1
+    example:
+      entry_id: 2021-05-29-live-01
+      source_url: "https://www.acfun.cn/v/ac29294635"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "下午茶时间"
+    entry_count: 1
+    example:
+      entry_id: 2021-06-01-live-01
+      source_url: "https://www.acfun.cn/v/ac29390922"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "你画我猜"
+    entry_count: 1
+    example:
+      entry_id: 2021-06-11-live-01
+      source_url: "https://www.acfun.cn/v/ac29675884"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "PowerWash Simulator"
+    entry_count: 1
+    example:
+      entry_id: 2021-06-12-live-01
+      source_url: "https://www.acfun.cn/v/ac29698266"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "周三晚上66"
+    entry_count: 1
+    example:
+      entry_id: 2021-06-16-live-01
+      source_url: "https://www.acfun.cn/v/ac29822588"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "迷宫大侦探"
+    entry_count: 1
+    example:
+      entry_id: 2021-06-28-live-01
+      source_url: "https://www.acfun.cn/v/ac30090133"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "周六来个下午茶吧"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-03-live-01
+      source_url: "https://www.acfun.cn/v/ac30143440"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "出门走走逛逛"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-05-live-01
+      source_url: "https://www.acfun.cn/v/ac30162193"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Creaks"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-06-live-01
+      source_url: "https://www.acfun.cn/v/ac30173210"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "斩妖行"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-09-live-01
+      source_url: "https://www.acfun.cn/v/ac30206106"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Operation Tango"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-10-live-01
+      source_url: "https://www.acfun.cn/v/ac30216668"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Pico Park"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-12-live-01
+      source_url: "https://www.acfun.cn/v/ac30236346"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "美好的下午时光"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-13-live-01
+      source_url: "https://www.acfun.cn/v/ac30249183"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "TapTap 游戏发布会"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-18-live-01
+      source_url: "https://www.acfun.cn/v/ac30317751"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "周末的上海"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-18-live-02
+      source_url: "https://www.acfun.cn/v/ac30307409"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "蛊婆"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-22-live-01
+      source_url: "https://www.acfun.cn/v/ac30369286"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "光遇 &永劫无间"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-30-live-01
+      source_url: "https://www.acfun.cn/v/ac30457834"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "OneWay"
+    entry_count: 1
+    example:
+      entry_id: 2021-07-31-live-01
+      source_url: "https://www.acfun.cn/v/ac30464385"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "永劫无间&数独&节奏医生&上古之魂"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-04-live-01
+      source_url: "https://www.acfun.cn/v/ac30523644"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "黑暗侦探"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-10-live-01
+      source_url: "https://www.acfun.cn/v/ac30624156"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "桌游模拟《截码战"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-22-live-01
+      source_url: "https://www.acfun.cn/v/ac30816729"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "截码战"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-23-live-01
+      source_url: "https://www.acfun.cn/v/ac30836162"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "花之灵（Hoa）"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-25-live-01
+      source_url: "https://www.acfun.cn/v/ac30852788"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Fling to the Finish"
+    entry_count: 1
+    example:
+      entry_id: 2021-08-28-live-01
+      source_url: "https://www.acfun.cn/v/ac30896471"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "山海旅人"
+    entry_count: 1
+    example:
+      entry_id: 2021-09-14-live-01
+      source_url: "https://www.acfun.cn/v/ac31114927"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "影子工场"
+    entry_count: 1
+    example:
+      entry_id: 2021-10-21-live-01
+      source_url: "https://www.acfun.cn/v/ac31503301"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "墨影侠踪&文字游戏&落日山丘"
+    entry_count: 1
+    example:
+      entry_id: 2021-10-27-live-01
+      source_url: "https://www.acfun.cn/v/ac31584429"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "洞穴探险2"
+    entry_count: 1
+    example:
+      entry_id: 2021-10-27-live-02
+      source_url: "https://www.acfun.cn/v/ac31584613"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "摄影冒险"
+    entry_count: 1
+    example:
+      entry_id: 2021-10-30-live-01
+      source_url: "https://www.acfun.cn/v/ac31623392"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Unpacking"
+    entry_count: 1
+    example:
+      entry_id: 2021-11-05-live-01
+      source_url: "https://www.acfun.cn/v/ac31765818"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "雀士"
+    entry_count: 1
+    example:
+      entry_id: 2021-11-11-live-01
+      source_url: "https://www.acfun.cn/v/ac32057095"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "黑魂4荒野之息"
+    entry_count: 1
+    example:
+      entry_id: 2021-11-12-live-02
+      source_url: "https://www.acfun.cn/v/ac32072712"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇一哈哈"
+    entry_count: 1
+    example:
+      entry_id: 2021-11-16-live-01
+      source_url: "https://www.acfun.cn/v/ac32243778"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "笼中窥梦"
+    entry_count: 1
+    example:
+      entry_id: 2021-11-17-live-02
+      source_url: "https://www.acfun.cn/v/ac32260283"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "灵活脑学院"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-06-live-01
+      source_url: "https://www.acfun.cn/v/ac32674421"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "ICARUS"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-08-live-01
+      source_url: "https://www.acfun.cn/v/ac32698234"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Rubber Bandits"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-11-live-02
+      source_url: "https://www.acfun.cn/v/ac32733243"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "FallGuys"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-24-live-01
+      source_url: "https://www.acfun.cn/v/ac32877646"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "层层恐惧"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-24-live-02
+      source_url: "https://www.acfun.cn/v/ac32878030"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "小白兔电商"
+    entry_count: 1
+    example:
+      entry_id: 2021-12-25-live-01
+      source_url: "https://www.acfun.cn/v/ac32888266"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "勇网直前"
+    entry_count: 1
+    example:
+      entry_id: 2022-01-11-live-01
+      source_url: "https://www.acfun.cn/v/ac33074775"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "客厅户外"
+    entry_count: 1
+    example:
+      entry_id: 2022-02-03-live-01
+      source_url: "https://www.acfun.cn/v/ac33482357"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "SIFU"
+    entry_count: 1
+    example:
+      entry_id: 2022-02-11-live-01
+      source_url: "https://www.acfun.cn/v/ac33581440"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "归家异途"
+    entry_count: 1
+    example:
+      entry_id: 2022-02-17-live-02
+      source_url: "https://www.acfun.cn/v/ac33678301"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "游戏前聊10块钱的"
+    entry_count: 1
+    example:
+      entry_id: 2022-04-08-live-01
+      source_url: "https://www.acfun.cn/v/ac34363799"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "地心护核者"
+    entry_count: 1
+    example:
+      entry_id: 2022-04-11-live-01
+      source_url: "https://www.acfun.cn/v/ac34391907"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "彩虹深渊"
+    entry_count: 1
+    example:
+      entry_id: 2022-04-19-live-01
+      source_url: "https://www.acfun.cn/v/ac34503307"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "高尔夫大乱斗"
+    entry_count: 1
+    example:
+      entry_id: 2022-04-19-live-02
+      source_url: "https://www.acfun.cn/v/ac34502835"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "体能实验室"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-02-live-01
+      source_url: "https://www.acfun.cn/v/ac34702441"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "蜡笔小新 我与博士的暑假"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-04-live-01
+      source_url: "https://www.acfun.cn/v/ac34715823"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "纸嫁衣"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-05-live-02
+      source_url: "https://www.acfun.cn/v/ac34744349"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "恐龙化石猎人"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-06-live-01
+      source_url: "https://www.acfun.cn/v/ac34744473"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "神都不良探"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-07-live-01
+      source_url: "https://www.acfun.cn/v/ac34757969"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "V Rising"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-20-live-01
+      source_url: "https://www.acfun.cn/v/ac34944125"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "图游天下"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-21-live-01
+      source_url: "https://www.acfun.cn/v/ac34960375"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "10 Minutes Till Dawn"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-25-live-01
+      source_url: "https://www.acfun.cn/v/ac35010936"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Hellstuck: Rage With Your Friends"
+    entry_count: 1
+    example:
+      entry_id: 2022-05-31-live-01
+      source_url: "https://www.acfun.cn/v/ac35103569"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Hellstuck：Rage With Your Friends"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-01-live-01
+      source_url: "https://www.acfun.cn/v/ac35103915"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战匠杜沃"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-02-live-01
+      source_url: "https://www.acfun.cn/v/ac35116936"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "第一届画六大赛"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-06-live-01
+      source_url: "https://www.acfun.cn/v/ac35182040"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "老歌榜单盘点"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-09-live-01
+      source_url: "https://www.acfun.cn/v/ac35221430"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇演出"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-17-live-01
+      source_url: "https://www.acfun.cn/v/ac35314217"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "忍者神龟：施莱德的复仇"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-17-live-02
+      source_url: "https://www.acfun.cn/v/ac35329252"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Neon White&Fall Guys"
+    entry_count: 1
+    example:
+      entry_id: 2022-06-27-live-01
+      source_url: "https://www.acfun.cn/v/ac35448389"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "茶杯头 (Cuphead)"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-02-live-01
+      source_url: "https://www.acfun.cn/v/ac35518437"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "一起来玩吧!Oink Games"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-07-live-01
+      source_url: "https://www.acfun.cn/v/ac35737883"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "出发前聊聊"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-09-live-01
+      source_url: "https://www.acfun.cn/v/ac35739274"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "在路上"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-09-live-02
+      source_url: "https://www.acfun.cn/v/ac35739277"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "边钓边吃"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-09-live-03
+      source_url: "https://www.acfun.cn/v/ac35739450"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "美丽的大草原"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-14-live-01
+      source_url: "https://www.acfun.cn/v/ac35739652"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Dinkum"
+    entry_count: 1
+    example:
+      entry_id: 2022-07-16-live-01
+      source_url: "https://www.acfun.cn/v/ac35755218"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Two Point Campus"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-09-live-01
+      source_url: "https://www.acfun.cn/v/ac36272882"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Lost in Play"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-17-live-01
+      source_url: "https://www.acfun.cn/v/ac36609984"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Mark of the Ninja"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-18-live-01
+      source_url: "https://www.acfun.cn/v/ac36645423"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Rumbleverse"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-19-live-01
+      source_url: "https://www.acfun.cn/v/ac36725550"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "记忆边境"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-22-live-01
+      source_url: "https://www.acfun.cn/v/ac36805377"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "港诡实录"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-23-live-01
+      source_url: "https://www.acfun.cn/v/ac36835828"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "The House of Da Vinci"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-24-live-01
+      source_url: "https://www.acfun.cn/v/ac36887206"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "AmongUs"
+    entry_count: 1
+    example:
+      entry_id: 2022-08-26-live-01
+      source_url: "https://www.acfun.cn/v/ac36917436"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "The House of Da Vinci 2"
+    entry_count: 1
+    example:
+      entry_id: 2022-09-06-live-01
+      source_url: "https://www.acfun.cn/v/ac37238366"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Little Witch in the Woods"
+    entry_count: 1
+    example:
+      entry_id: 2022-09-08-live-01
+      source_url: "https://www.acfun.cn/v/ac37331103"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "卧龙 苍天陨落"
+    entry_count: 1
+    example:
+      entry_id: 2022-09-22-live-01
+      source_url: "https://www.acfun.cn/v/ac37572459"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Dome Keeper"
+    entry_count: 1
+    example:
+      entry_id: 2022-09-28-live-01
+      source_url: "https://www.acfun.cn/v/ac37646907"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "暗黑破坏神 不朽"
+    entry_count: 1
+    example:
+      entry_id: 2022-09-29-live-02
+      source_url: "https://www.acfun.cn/v/ac37662729"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "战锤40k"
+    entry_count: 1
+    example:
+      entry_id: 2022-11-26-live-02
+      source_url: "https://www.acfun.cn/v/ac39960868"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Ship of Fools"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-01-live-01
+      source_url: "https://www.acfun.cn/v/ac40014492"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "天命奇御 归途"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-13-live-01
+      source_url: "https://www.acfun.cn/v/ac40148586"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "黑羊"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-16-live-01
+      source_url: "https://www.acfun.cn/v/ac40182199"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Springblades"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-18-live-01
+      source_url: "https://www.acfun.cn/v/ac40208157"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "失眠"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-18-live-02
+      source_url: "https://www.acfun.cn/v/ac40207858"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "深海迷航&光遇"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-23-live-01
+      source_url: "https://www.acfun.cn/v/ac40245602"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "The House of Da Vinci 3"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-28-live-01
+      source_url: "https://www.acfun.cn/v/ac40291151"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Fresh start"
+    entry_count: 1
+    example:
+      entry_id: 2022-12-30-live-01
+      source_url: "https://www.acfun.cn/v/ac40311583"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "原子之心&卧龙"
+    entry_count: 1
+    example:
+      entry_id: 2023-02-24-live-01
+      source_url: "https://www.acfun.cn/v/ac40750522"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "森林之子"
+    entry_count: 1
+    example:
+      entry_id: 2023-02-26-live-01
+      source_url: "https://www.acfun.cn/v/ac40765653"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "生化危机3"
+    entry_count: 1
+    example:
+      entry_id: 2023-03-22-live-01
+      source_url: "https://www.acfun.cn/v/ac40946153"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Storyteller"
+    entry_count: 1
+    example:
+      entry_id: 2023-03-29-live-01
+      source_url: "https://www.acfun.cn/v/ac41011142"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "生化危机编年史记"
+    entry_count: 1
+    example:
+      entry_id: 2023-03-29-live-02
+      source_url: "https://www.acfun.cn/v/ac41002688"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "桃源深处有人家&长梦"
+    entry_count: 1
+    example:
+      entry_id: 2023-04-28-live-01
+      source_url: "https://www.acfun.cn/v/ac41245018"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "饥荒联机版"
+    entry_count: 1
+    example:
+      entry_id: 2023-04-29-live-01
+      source_url: "https://www.acfun.cn/v/ac41258883"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "BrambleThe Mountain King"
+    entry_count: 1
+    example:
+      entry_id: 2023-05-03-live-01
+      source_url: "https://www.acfun.cn/v/ac41278299"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "虚空列车"
+    entry_count: 1
+    example:
+      entry_id: 2023-05-08-live-01
+      source_url: "https://www.acfun.cn/v/ac41316665"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "冒险岛 枫之传说"
+    entry_count: 1
+    example:
+      entry_id: 2023-06-16-live-01
+      source_url: "https://www.acfun.cn/v/ac41624386"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "GYLT"
+    entry_count: 1
+    example:
+      entry_id: 2023-07-08-live-01
+      source_url: "https://www.acfun.cn/v/ac41792300"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "糖豆人&面包和年糕"
+    entry_count: 1
+    example:
+      entry_id: 2023-07-13-live-01
+      source_url: "https://www.acfun.cn/v/ac41832476"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "六六聊封神"
+    entry_count: 1
+    example:
+      entry_id: 2023-07-14-live-01
+      source_url: "https://www.acfun.cn/v/ac41839125"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "学园构想家"
+    entry_count: 1
+    example:
+      entry_id: 2023-08-01-live-01
+      source_url: "https://www.acfun.cn/v/ac41984944"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Payday3"
+    entry_count: 1
+    example:
+      entry_id: 2023-08-02-live-01
+      source_url: "https://www.acfun.cn/v/ac41993584"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "女巫来了 Witch It"
+    entry_count: 1
+    example:
+      entry_id: 2023-08-13-live-02
+      source_url: "https://www.acfun.cn/v/ac42091386"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "下午茶"
+    entry_count: 1
+    example:
+      entry_id: 2023-08-15-live-01
+      source_url: "https://www.acfun.cn/v/ac42099488"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Viewfinder"
+    entry_count: 1
+    example:
+      entry_id: 2023-08-18-live-02
+      source_url: "https://www.acfun.cn/v/ac42123276"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "星空"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-01-live-02
+      source_url: "https://www.acfun.cn/v/ac42245110"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "鹅鸭杀"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-07-live-02
+      source_url: "https://www.acfun.cn/v/ac42289537"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "光头鉴宝"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-12-live-01
+      source_url: "https://www.acfun.cn/v/ac42340389"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "岛潮酒店"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-13-live-01
+      source_url: "https://www.acfun.cn/v/ac42360985"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "We Were Here Expeditions"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-15-live-01
+      source_url: "https://www.acfun.cn/v/ac42360997"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "匹诺曹的谎言&猛兽派对"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-17-live-01
+      source_url: "https://www.acfun.cn/v/ac42398618"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Payday 3"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-23-live-01
+      source_url: "https://www.acfun.cn/v/ac42455226"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "新出道女歌手"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-24-live-01
+      source_url: "https://www.acfun.cn/v/ac42465103"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "地铁繁花"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-28-live-01
+      source_url: "https://www.acfun.cn/v/ac42504581"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "跑跑卡丁车"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-29-live-02
+      source_url: "https://www.acfun.cn/v/ac42512128"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "卧龙 称霸江东"
+    entry_count: 1
+    example:
+      entry_id: 2023-09-30-live-01
+      source_url: "https://www.acfun.cn/v/ac42520780"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Tricky Towers"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-02-live-01
+      source_url: "https://www.acfun.cn/v/ac42551996"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "巴别塔圣歌"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-04-live-01
+      source_url: "https://www.acfun.cn/v/ac42555162"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Goose Goose Duck"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-10-live-01
+      source_url: "https://www.acfun.cn/v/ac42618525"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "女鬼桥2"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-11-live-01
+      source_url: "https://www.acfun.cn/v/ac42625300"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Headbangers"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-12-live-01
+      source_url: "https://www.acfun.cn/v/ac42637720"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "佩奇6"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-19-live-01
+      source_url: "https://www.acfun.cn/v/ac42694020"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "Rhythm Royale"
+    entry_count: 1
+    example:
+      entry_id: 2023-10-31-live-01
+      source_url: "https://www.acfun.cn/v/ac42810207"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "无畏契约》&《Rhythm Royale"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-01-live-01
+      source_url: "https://www.acfun.cn/v/ac42821016"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "节奏鸽子》&《DON T SCREAM》&《揍击派对"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-08-live-01
+      source_url: "https://www.acfun.cn/v/ac42898970"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "魔法工艺》《鹅鹅鸭》《糖豆人"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-09-live-01
+      source_url: "https://www.acfun.cn/v/ac42909913"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "魔法工艺"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-10-live-01
+      source_url: "https://www.acfun.cn/v/ac42927657"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "超级舞动 瓦里奥制造"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-11-live-01
+      source_url: "https://www.acfun.cn/v/ac42928130"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    confidence: medium
+  - candidate_name: "吃香"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-25-live-01
+      source_url: "https://www.acfun.cn/v/ac43062929"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+  - candidate_name: "66聊聊"
+    entry_count: 1
+    example:
+      entry_id: 2023-11-30-live-01
+      source_url: "https://www.acfun.cn/v/ac43118934"
+    evidence: "A 站详情页 desc 游戏名称字段"
+    evidence_title: "条目标题/页面标题与 desc 游戏名称一致（1/1 条）"
+    confidence: high
+    note: "该名称同时用作部分条目的 tag，可能是栏目名而非游戏，需人工确认"
+
+game_assignment_pending:
+  # 大周MC 系列：标题为"大周MC…"（MC=我的世界 缩写推测），
+  # 证据：2017-08-04"末影龙"/2017-08-07"末地之城"/2018-08-15"MC水上乐园"为
+  # 我的世界特有术语；部分条目 desc 游戏名称以模板默认"我的世界（Minecraft）&"开头后追加真实游戏。
+  # 若人工确认大周MC=我的世界，可给以下条目填 games: [minecraft]
+  - game_id: minecraft
+    entry_count: 12
+    entries:
+      - entry_id: 2017-08-04-live-01
+      - entry_id: 2017-08-07-live-01
+      - entry_id: 2017-08-08-live-02
+      - entry_id: 2017-08-12-live-01
+      - entry_id: 2017-08-29-live-01
+      - entry_id: 2017-12-25-live-01
+      - entry_id: 2018-01-17-live-01
+      - entry_id: 2018-08-14-live-01
+      - entry_id: 2018-08-15-live-01
+      - entry_id: 2018-08-18-live-01
+      - entry_id: 2018-08-21-live-01
+      - entry_id: 2018-08-25-live-01
+    confidence: medium
+    note: "标题仅有「大周MC」缩写，无完整 Minecraft 字样；术语证据支持其为我的世界系列"
+
+hand_reviewed_title_evidence:
+  # 条目标题明确给出游戏名，games.yaml 未登记。
+  - candidate_name: "黑暗之魂1重置版（Dark Souls Remastered）"
+    entry_count: 4
+    entries: [2018-05-24-live-01, 2018-05-25-live-01, 2018-05-28-live-01, 2018-05-29-live-01]
+    evidence: "条目标题均为「黑暗之魂1重置版」；2018-05-25 详情页分P标题 P2-P4 亦为「黑暗之魂1重置版」"
+    confidence: high
+  - candidate_name: "无人深空（No Man Sky）"
+    entry_count: 1
+    entries: [2018-01-17-live-01]
+    evidence: "条目标题「大周MC第四目：第六天之七夕建筑大赛&无人深空」分P P3 为「无人深空」；desc 游戏名称含追加「&无人深空」"
+    confidence: high
+  - candidate_name: "星界边境（Starbound）"
+    entry_count: 1
+    entries: [2018-08-21-live-01]
+    evidence: "条目标题「大周MC第四目：第八天之拯救K神前的准备&星界边境(Starbound)」分P P3 为「星界边境(Starbound)」；desc 游戏名称含追加「&星界边境」"
+    confidence: high
+

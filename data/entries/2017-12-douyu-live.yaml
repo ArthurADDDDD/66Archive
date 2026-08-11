@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2017-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2017-12-02-live-01
   type: live
   date: "2017-12-02"
   title: "Ice Lakes 冰湖"
   platform: douyu
   confidence: high
+  duration_min: 261
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_02/1512224108.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4114988"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2017-12-04-live-01
@@ -21,10 +19,13 @@
   title: "钓鱼大赛（Ice Lakes）"
   platform: douyu
   confidence: high
+  duration_min: 282
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_04/1512388982.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4118007"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-12-05-live-01
@@ -33,10 +34,13 @@
   title: "肯·福莱特的《圣殿春秋》：死灰复燃（第一卷第1"
   platform: douyu
   confidence: high
+  duration_min: 348
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_05/1512480442.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4120105"
       kind: replay
+      parts: 13
   contributed_by: data-agent
 
 - id: 2017-12-06-live-01
@@ -45,14 +49,18 @@
   title: "吃鸡佳缘"
   platform: douyu
   confidence: high
+  duration_min: 273
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_06/1512562308.JPG?imageslim"
   games: []
   tags: [吃鸡佳缘, 弹幕版]
   note: "同一场直播（吃鸡佳缘第一期）的弹幕版（ac4125032）与纯净版（ac4122087）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac4125032"
       kind: replay
+      parts: 10
     - url: "https://www.acfun.cn/v/ac4122087"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2017-12-08-live-01
@@ -61,10 +69,13 @@
   title: "钓会儿鱼，开会儿火车，吃会儿鸡"
   platform: douyu
   confidence: high
+  duration_min: 341
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_08/1512740722.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4126689"
       kind: replay
+      parts: 13
   contributed_by: data-agent
 
 - id: 2017-12-09-live-01
@@ -73,10 +84,13 @@
   title: "人气独立续作《王权：女王陛下》& 谋杀之谜"
   platform: douyu
   confidence: high
+  duration_min: 348
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_09/1512827800.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4128003"
       kind: replay
+      parts: 14
   contributed_by: data-agent
 
 - id: 2017-12-10-live-01
@@ -85,11 +99,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_10/1512950336.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4129454"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2017-12-11-live-01
@@ -98,10 +115,13 @@
   title: "我是大老板"
   platform: douyu
   confidence: high
+  duration_min: 214
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_11/1512993307.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4131089"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2017-12-12-live-01
@@ -110,10 +130,13 @@
   title: "K歌不停歇"
   platform: douyu
   confidence: high
+  duration_min: 128
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_13/1513151274.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4134496"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-12-13-live-01
@@ -122,10 +145,13 @@
   title: "和YJJ双排吃鸡 & 漫漫长夜"
   platform: douyu
   confidence: high
+  duration_min: 238
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_13/1513166567.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4135224"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-12-15-live-01
@@ -134,10 +160,13 @@
   title: "GOROGOA 画中世界"
   platform: douyu
   confidence: high
+  duration_min: 169
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_15/1513338997.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4139436"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2017-12-15-live-02
@@ -146,14 +175,18 @@
   title: "吃鸡佳缘"
   platform: douyu
   confidence: high
+  duration_min: 114
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_16/1513403360.JPG?imageslim"
   games: []
   tags: [吃鸡佳缘, 弹幕版]
   note: "同一场直播（吃鸡佳缘第二期）的弹幕版（ac4140602）与纯净版（ac4140326）原本被建模为两条重复条目，已合并。同日另有 GOROGOA 画中世界 条目。"
   sources:
     - url: "https://www.acfun.cn/v/ac4140602"
       kind: replay
+      parts: 5
     - url: "https://www.acfun.cn/v/ac4140326"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-12-16-live-01
@@ -162,10 +195,13 @@
   title: "去月球》续作《寻找天堂"
   platform: douyu
   confidence: high
+  duration_min: 402
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_16/1513428074.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4140972"
       kind: replay
+      parts: 15
   contributed_by: data-agent
 
 - id: 2017-12-17-live-01
@@ -174,10 +210,13 @@
   title: "看着豆豆和壮壮滑雪，女皇只能羡慕嫉妒恨了"
   platform: douyu
   confidence: high
+  duration_min: 15
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_18/1513560700.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4142321"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-12-18-live-01
@@ -186,10 +225,13 @@
   title: "Death Coming 死神来了"
   platform: douyu
   confidence: high
+  duration_min: 301
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_18/1513600408.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4144095"
       kind: replay
+      parts: 12
   contributed_by: data-agent
 
 - id: 2017-12-20-live-01
@@ -198,10 +240,13 @@
   title: "MONOPOLY PLUS 大富翁"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_20/1513778269.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4148109"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-12-21-live-01
@@ -210,10 +255,13 @@
   title: "大周桌面展"
   platform: douyu
   confidence: high
+  duration_min: 258
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_21/1513867554.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4150104"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2017-12-23-live-01
@@ -222,11 +270,14 @@
   title: "吃鸡佳缘"
   platform: douyu
   confidence: high
+  duration_min: 264
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_24/1514083016.JPG?imageslim"
   games: []
   tags: [吃鸡佳缘]
   sources:
     - url: "https://www.acfun.cn/v/ac4154223"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-12-24-live-01
@@ -235,11 +286,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 208
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_25/1514162637.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4154898"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2017-12-25-live-01
@@ -248,10 +302,13 @@
   title: "大周MC圣诞专场"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_25/1514212571.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4156666"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2017-12-26-live-01
@@ -260,10 +317,13 @@
   title: "青蛙爆破者(Kero Blaster)"
   platform: douyu
   confidence: high
+  duration_min: 195
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_26/1514292762.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4158411"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2017-12-27-live-01
@@ -272,10 +332,13 @@
   title: "青蛙爆破者"
   platform: douyu
   confidence: high
+  duration_min: 185
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_27/1514377528.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4160261"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-12-29-live-01
@@ -284,10 +347,13 @@
   title: "欢迎关注颜值主播6酱"
   platform: douyu
   confidence: high
+  duration_min: 301
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_29/1514558691.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4164567"
       kind: replay
+      parts: 12
   contributed_by: data-agent
 
 - id: 2017-12-30-live-01
@@ -296,11 +362,14 @@
   title: "吃鸡佳缘"
   platform: douyu
   confidence: high
+  duration_min: 206
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_31/1514685446.JPG?imageslim"
   games: []
   tags: [吃鸡佳缘]
   sources:
     - url: "https://www.acfun.cn/v/ac4166010"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-12-31-live-01
@@ -309,9 +378,12 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 241
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_11_31/1514725419.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4166820"
       kind: replay
+      parts: 9
   contributed_by: data-agent

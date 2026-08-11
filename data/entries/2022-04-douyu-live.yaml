@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2022-04 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 28 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2022-04-01-live-01
   type: live
   date: "2022-04-01"
   title: "三伏"
   platform: douyu
   confidence: high
+  duration_min: 310
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1367e0901ea746b89557fb771bbeb473.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34263468"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-02-live-01
@@ -21,10 +19,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 284
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_561d8821dea54c0287affad50a939a97.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34278743"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-04-live-01
@@ -33,10 +34,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_21f3032fb897458abfe148e6cf2069d2.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34293288"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-05-live-01
@@ -45,10 +49,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 132
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e0680dc99f624358b6fe44762f56b797.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34317944"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-06-live-01
@@ -57,10 +64,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 128
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_26e83ce6ecbc44d7ba0fefe73d6aab69.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34329090"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-07-live-01
@@ -69,10 +79,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 119
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_72753bfa877a46d581575578a234ea75.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34347083"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-08-live-01
@@ -81,12 +94,15 @@
   title: "游戏前聊10块钱的"
   platform: douyu
   confidence: high
+  duration_min: 90
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_91686a655f43419f835e1bff774949d8.jpeg?imageslim"
   games: []
   tags: [聊天]
   note: "当日单 P 独立聊天视频（非完整录播分 P），标题如实反映直播前聊天环节，非错标。"
   sources:
     - url: "https://www.acfun.cn/v/ac34363799"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-09-live-01
@@ -95,10 +111,13 @@
   title: "Outer Wilds"
   platform: douyu
   confidence: high
+  duration_min: 323
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0698780b0eeb4c49b0f88e7ff020f9db.jpeg?imageslim"
   games: [outer-wilds]
   sources:
     - url: "https://www.acfun.cn/v/ac34379078"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-11-live-01
@@ -107,10 +126,13 @@
   title: "地心护核者"
   platform: douyu
   confidence: high
+  duration_min: 259
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b6e6aa60b1c246478ac54ab5e2753b32.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34391907"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-12-live-01
@@ -119,10 +141,13 @@
   title: "吸血鬼幸存者"
   platform: douyu
   confidence: high
+  duration_min: 268
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b950815df1a94668a5ade7f682c7397f.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34419560"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-13-live-01
@@ -131,10 +156,13 @@
   title: "吸血鬼幸存者"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6f66b617641a44be8c8a875e84c503ed.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34441353"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-14-live-01
@@ -143,10 +171,13 @@
   title: "光之传说"
   platform: douyu
   confidence: high
+  duration_min: 253
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_135b9144396c4e409f960d0b677fef73.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34441952"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-15-live-01
@@ -155,10 +186,13 @@
   title: "光之传说"
   platform: douyu
   confidence: high
+  duration_min: 330
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92d0a4f714e74c838cc408cfc0258a8b.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34446785"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-17-live-01
@@ -167,11 +201,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 134
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d1ac7dddda7641f19c2c459cd3207811.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac34488145"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-18-live-01
@@ -180,10 +217,13 @@
   title: "彩虹深渊"
   platform: douyu
   confidence: high
+  duration_min: 321
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36f6b052e878445c9a7506c2427d5c5c.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34490288"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-19-live-01
@@ -192,10 +232,13 @@
   title: "彩虹深渊"
   platform: douyu
   confidence: high
+  duration_min: 213
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d933b042378c47d295f9cbbe4e47ee98.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34503307"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-19-live-02
@@ -204,10 +247,13 @@
   title: "高尔夫大乱斗"
   platform: douyu
   confidence: high
+  duration_min: 37
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_37298acc2e9541d98882d6598f1ab743.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34502835"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-20-live-01
@@ -216,10 +262,13 @@
   title: "退休模拟器"
   platform: douyu
   confidence: high
+  duration_min: 341
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0d00784a13f14620a5ea9f8aa2bc8c97.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34516461"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-21-live-01
@@ -228,10 +277,13 @@
   title: "退休模拟器"
   platform: douyu
   confidence: high
+  duration_min: 328
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dcd5934cb25245e9b975ad643a0f2faf.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34528727"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-22-live-01
@@ -240,10 +292,13 @@
   title: "66工作室"
   platform: douyu
   confidence: high
+  duration_min: 113
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_90627517b11146ef8e5489e7c119881d.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34543966"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-22-live-02
@@ -252,10 +307,13 @@
   title: "退休模拟器"
   platform: douyu
   confidence: high
+  duration_min: 220
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bc8f7261553e44e68e973081cf3822b6.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34544344"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-24-live-01
@@ -264,11 +322,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 132
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_04bbc6e07998437380fed0933cf5086f.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac34588191"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-26-live-01
@@ -277,10 +338,13 @@
   title: "哥布林弹球"
   platform: douyu
   confidence: high
+  duration_min: 282
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_504494e6065842cb8f580cd2a958b28a.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34600362"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-27-live-01
@@ -289,10 +353,13 @@
   title: "哥布林弹球"
   platform: douyu
   confidence: high
+  duration_min: 180
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cdaeb28476034bb3868d8180248d18b8.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34613173"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-27-live-02
@@ -301,10 +368,13 @@
   title: "雀魂麻将"
   platform: douyu
   confidence: high
+  duration_min: 120
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_10f077157c704125ad7b171484e28f69.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34613136"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-28-live-01
@@ -313,10 +383,13 @@
   title: "一方灵田"
   platform: douyu
   confidence: high
+  duration_min: 128
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7619a81ecca465d8e81a0a0d8b67fd4.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34625969"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-29-live-01
@@ -325,10 +398,13 @@
   title: "一方灵田"
   platform: douyu
   confidence: high
+  duration_min: 335
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3d8062c1e0ef4762b95f7a13a8b37988.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34642093"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2022-04-30-live-01
@@ -337,8 +413,11 @@
   title: "手工六上线"
   platform: douyu
   confidence: high
+  duration_min: 252
+  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b34b9c28941e4e27b64da3ee63d33e55.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac34657915"
       kind: replay
+      parts: 1
   contributed_by: data-agent

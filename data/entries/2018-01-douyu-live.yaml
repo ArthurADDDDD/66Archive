@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2018-01 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 41 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-01-02-live-01
   type: live
   date: "2018-01-02"
   title: "传送门：桥梁构造者(Bridge Constructor Portal)"
   platform: douyu
   confidence: high
+  duration_min: 300
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_02/1514895676.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4169872"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2018-01-03-live-01
@@ -21,10 +19,13 @@
   title: "传送门：桥梁构造者(Bridge Constructor Portal)"
   platform: douyu
   confidence: high
+  duration_min: 247
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_03/1514980788.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4171880"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-05-live-01
@@ -33,10 +34,13 @@
   title: "传送门：桥梁构造者(Bridge Constructor Portal)"
   platform: douyu
   confidence: high
+  duration_min: 276
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_05/1515156998.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4176059"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-06-live-01
@@ -45,10 +49,13 @@
   title: "女流66开年Party约战SHIELD马力欧"
   platform: douyu
   confidence: high
+  duration_min: 119
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_06/1515245696.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4177609"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-01-07-live-01
@@ -57,11 +64,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 200
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_08/1515374130.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4179221"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2018-01-08-live-01
@@ -70,10 +80,13 @@
   title: "人类一败涂地 Human Fall Flat"
   platform: douyu
   confidence: high
+  duration_min: 203
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_08/1515415514.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4180732"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-09-live-01
@@ -82,10 +95,13 @@
   title: "人类一败涂地 Human Fall Flat"
   platform: douyu
   confidence: high
+  duration_min: 250
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_09/1515498176.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4182682"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-10-live-01
@@ -94,10 +110,13 @@
   title: "传送门：桥梁构造者"
   platform: douyu
   confidence: high
+  duration_min: 242
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_10/1515588758.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4184762"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-12-live-01
@@ -106,10 +125,13 @@
   title: "Rusty Lake 锈湖"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_12/1515762053.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4188857"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-13-live-01
@@ -118,10 +140,13 @@
   title: "鱼乐盛典"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_14/1515905823.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4190883"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-14-live-01
@@ -130,11 +155,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 140
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_15/1516027783.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4193694"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-01-15-live-01
@@ -143,10 +171,13 @@
   title: "Just Shapes & Beats"
   platform: douyu
   confidence: high
+  duration_min: 212
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_06_09/1528545956.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4400022"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-01-15-live-02
@@ -155,10 +186,13 @@
   title: "Rusty Lake Paradise 锈湖天堂岛"
   platform: douyu
   confidence: high
+  duration_min: 114
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_15/1516019426.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4193508"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-01-15-live-03
@@ -167,11 +201,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 247
+  cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac10010771"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-01-15-live-04
@@ -180,11 +217,14 @@
   title: "戏说聊斋"
   platform: douyu
   confidence: high
+  duration_min: 16
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965702.jpg?imageslim"
   games: []
   tags: [戏说聊斋]
   sources:
     - url: "https://www.acfun.cn/v/ac4314841"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-15-live-05
@@ -193,10 +233,13 @@
   title: "疑案追声中元节特别版&牧场物语"
   platform: douyu
   confidence: high
+  duration_min: 302
+  cover: "https://tx-free-imgs.acfun.cn/FotWaIDCUkQ0Ia0aLrNzgj6Lc7BT?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac10746697"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-01-16-live-01
@@ -205,10 +248,13 @@
   title: "66、炮炮、壮壮、维乐一起吃鸡"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_16/1516104037.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4195599"
       kind: replay
+      parts: 11
   contributed_by: data-agent
 
 - id: 2018-01-17-live-01
@@ -217,10 +263,13 @@
   title: "大周MC第四目：第六天之七夕建筑大赛&无人深空"
   platform: douyu
   confidence: high
+  duration_min: 340
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_17/1534514774.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4528865"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-01-17-live-02
@@ -229,10 +278,13 @@
   title: "调酒师的生活 VA"
   platform: douyu
   confidence: high
+  duration_min: 260
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_17/1516190339.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4197468"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-19-live-01
@@ -241,10 +293,13 @@
   title: "调酒师的生活 VA"
   platform: douyu
   confidence: high
+  duration_min: 248
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_19/1516364458.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4201748"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-20-live-01
@@ -253,10 +308,13 @@
   title: "乞丐模拟器 Hobo Tough Life"
   platform: douyu
   confidence: high
+  duration_min: 246
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_20/1516447526.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4203116"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-21-live-01
@@ -265,10 +323,13 @@
   title: "Just The Way 6 Are（Themysc1ra）"
   platform: douyu
   confidence: high
+  duration_min: 4
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516536648.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204292"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-02
@@ -277,10 +338,13 @@
   title: "三周年GIF（黄图哥）"
   platform: douyu
   confidence: high
+  duration_min: 5
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537732.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204299"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-03
@@ -289,11 +353,14 @@
   title: "三周年盛典"
   platform: douyu
   confidence: high
+  duration_min: 238
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_22/1516591218.JPG?imageslim"
   games: []
   tags: [弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4205249"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-21-live-04
@@ -302,10 +369,13 @@
   title: "三周年祝福（木由叶&播音彬）"
   platform: douyu
   confidence: high
+  duration_min: 2
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537973.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204306"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-05
@@ -314,10 +384,13 @@
   title: "大周三周年盛典"
   platform: douyu
   confidence: high
+  duration_min: 237
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516533733.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204275"
       kind: replay
+      parts: 8
   contributed_by: data-agent
 
 - id: 2018-01-21-live-06
@@ -326,10 +399,13 @@
   title: "大周女皇最牛逼（月野兔Usagi）"
   platform: douyu
   confidence: high
+  duration_min: 3
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537277.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204294"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-07
@@ -338,10 +414,13 @@
   title: "女流直播三周年（010）"
   platform: douyu
   confidence: high
+  duration_min: 11
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537574.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204297"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-08
@@ -350,10 +429,13 @@
   title: "搞事部集体出品"
   platform: douyu
   confidence: high
+  duration_min: 25
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537474.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204301"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-21-live-09
@@ -362,10 +444,13 @@
   title: "追光者（明筱岩）"
   platform: douyu
   confidence: high
+  duration_min: 4
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516538123.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204314"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-01-22-live-01
@@ -374,10 +459,13 @@
   title: "乞丐模拟器 Hobo Tough Life"
   platform: douyu
   confidence: high
+  duration_min: 254
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_22/1516622576.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4206352"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-24-live-01
@@ -386,10 +474,13 @@
   title: "6酱音乐专辑第三波"
   platform: douyu
   confidence: high
+  duration_min: 67
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_24/1516765270.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4209093"
       kind: replay
+      parts: 17
   contributed_by: data-agent
 
 - id: 2018-01-24-live-02
@@ -398,10 +489,13 @@
   title: "Stick Fight ：The Game 坚持战斗：游戏"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_24/1516796214.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4210340"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2018-01-24-live-03
@@ -410,11 +504,14 @@
   title: "相声专场《看病"
   platform: douyu
   confidence: high
+  duration_min: 96
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_27/1517062109.JPG?imageslim"
   games: []
   tags: [弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4215902"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-01-25-live-01
@@ -423,10 +520,13 @@
   title: "带赵鑫小姐姐参加2017直播行业精英会"
   platform: douyu
   confidence: high
+  duration_min: 87
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_25/1516878582.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4212224"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-01-26-live-01
@@ -435,10 +535,13 @@
   title: "怪物猎人：世界"
   platform: douyu
   confidence: high
+  duration_min: 222
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_26/1516965350.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4214322"
       kind: replay
+      parts: 9
   contributed_by: data-agent
 
 - id: 2018-01-28-live-01
@@ -447,11 +550,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 186
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_28/1517151320.png?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4217185"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-01-29-live-01
@@ -460,10 +566,13 @@
   title: "真·三国无双8体验会"
   platform: douyu
   confidence: high
+  duration_min: 98
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_29/1517216502.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4218475"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-01-30-live-01
@@ -472,10 +581,13 @@
   title: "勇者斗恶龙创世小玩家2"
   platform: douyu
   confidence: high
+  duration_min: 225
+  cover: "https://tx-free-imgs.acfun.cn/FlsWlUR6eFsIhjXi8AK1UUJwVR68?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4909237"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-01-30-live-02
@@ -484,10 +596,13 @@
   title: "怪物猎人：世界"
   platform: douyu
   confidence: high
+  duration_min: 239
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_30/1517318058.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4220976"
       kind: replay
+      parts: 10
   contributed_by: data-agent
 
 - id: 2018-01-31-live-01
@@ -496,8 +611,11 @@
   title: "怪物猎人：世界"
   platform: douyu
   confidence: high
+  duration_min: 263
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_31/1517399693.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4222978"
       kind: replay
+      parts: 10
   contributed_by: data-agent
