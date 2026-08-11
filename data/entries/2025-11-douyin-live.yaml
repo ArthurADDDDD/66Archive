@@ -3,79 +3,78 @@
 # 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
 # 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
 
-- id: 2025-11-14-live-01
-  type: live
-  date: "2025-11-14"
-  title: "使命召唤：黑色行动7"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/643eb1f395250affac56421416ca015ffc26ece8.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "同一场直播由 服部平次（BV1hDCuBHERK，2:24:42）、bobi华（BV1ZRCMBfEUk，2:23:13）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:24:18）分别搬运，总时长吻合，已合并为一天一条。"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1hDCuBHERK"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1ZRCMBfEUk"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1kbCCBeEuw"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1HgCyBiELM"
-      kind: replay
-  contributed_by: data-agent
+  - id: 2025-11-14-live-01
+    type: live
+    date: "2025-11-14"
+    title: "使命召唤：黑色行动7"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/643eb1f395250affac56421416ca015ffc26ece8.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "同一场直播由 服部平次（BV1hDCuBHERK，2:24:42）、bobi华（BV1ZRCMBfEUk，2:23:13）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:24:18）分别搬运，总时长吻合，已合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1hDCuBHERK"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1kbCCBeEuw"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-11-19-live-01
-  type: live
-  date: "2025-11-19"
-  title: "今天当个天龙手游轻松掌门_女流学姐的养成经济学"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/c35f322b95d2af7e5a4880478cbe39c43aeb2292.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1q8ypBTE2h"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 145
+  - id: 2025-11-19-live-01
+    type: live
+    date: "2025-11-19"
+    title: "今天当个天龙手游轻松掌门_女流学姐的养成经济学"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/c35f322b95d2af7e5a4880478cbe39c43aeb2292.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1q8ypBTE2h"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-11-20-live-01
-  type: live
-  date: "2025-11-20"
-  title: "江山北望：立个称霸的小目标"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/3169a97c97d96b0669c71c1ca3926c0f9d4cd540.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "同一场直播由 bobi华（BV1hMyPBzEVr，2:25:16）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:26:18）分别搬运，总时长吻合，已合并为一天一条。"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1hMyPBzEVr"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV15CyPB1E6F"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1jQycBkEVs"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 107
+  - id: 2025-11-20-live-01
+    type: live
+    date: "2025-11-20"
+    title: "江山北望：立个称霸的小目标"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/3169a97c97d96b0669c71c1ca3926c0f9d4cd540.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "同一场直播由 bobi华（BV1hMyPBzEVr，2:25:16）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:26:18）分别搬运，总时长吻合，已合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15CyPB1E6F"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1jQycBkEVs"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-11-28-live-01
-  type: live
-  date: "2025-11-28"
-  title: "江山北望：立个称霸的小目标"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/60149e83f68316083d9051e6bf68394deb8fad05.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "同一场直播由 bobi华（3:26:01）、服部平次（弹幕版 3:30:20）、直播回放巴拉蹦吧（弹幕/纯净双版 3:30:55）分别搬运，不懒bot 的投稿为剪辑分 P + 末尾整段完整录像（完整录像 3:30:01），总时长吻合，已合并为一天一条。"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1uASJBoExM"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1weSEB2EUp"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1eQSEBPEuT"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1yhSnBxEkx"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1QZSEBFESZ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 146
+  - id: 2025-11-28-live-01
+    type: live
+    date: "2025-11-28"
+    title: "江山北望：立个称霸的小目标"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/60149e83f68316083d9051e6bf68394deb8fad05.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "同一场直播由 bobi华（3:26:01）、服部平次（弹幕版 3:30:20）、直播回放巴拉蹦吧（弹幕/纯净双版 3:30:55）分别搬运，不懒bot 的投稿为剪辑分 P + 末尾整段完整录像（完整录像 3:30:01），总时长吻合，已合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1eQSEBPEuT"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1yhSnBxEkx"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 421

@@ -1,29 +1,31 @@
-- id: 2016-04-29-live-01
-  type: live
-  date: "2016-04-29"
-  title: "黑暗之魂3第一天"
-  platform: douyu
-  confidence: high
-  duration_min: 222
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889208.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2731728"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-04-29-live-01
+    type: live
+    date: "2016-04-29"
+    title: "黑暗之魂3第一天"
+    platform: douyu
+    confidence: high
+    duration_min: 222
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889208.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2731728"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-04-30-live-01
-  type: live
-  date: "2016-04-30"
-  title: "黑暗之魂3第二天"
-  platform: douyu
-  confidence: high
-  duration_min: 110
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714295.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2726616"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-04-30-live-01
+    type: live
+    date: "2016-04-30"
+    title: "黑暗之魂3第二天"
+    platform: douyu
+    confidence: high
+    duration_min: 110
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714295.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2726616"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent

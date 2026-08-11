@@ -1,379 +1,404 @@
-- id: 2020-11-01-live-01
-  type: live
-  date: "2020-11-01"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 256
-  cover: "https://tx-free-imgs.acfun.cn/o_1em45mg43pqvr2uj1911crb380.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac19288524"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-01-live-01
+    type: live
+    date: "2020-11-01"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    cover: "https://tx-free-imgs.acfun.cn/o_1em45mg43pqvr2uj1911crb380.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac19288524"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-02-live-01
-  type: live
-  date: "2020-11-02"
-  title: "皮克敏3"
-  platform: douyu
-  confidence: high
-  duration_min: 291
-  cover: "https://tx-free-imgs.acfun.cn/o_1em4i7l4rpj31fqu1olj5m31oek0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19291782"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-02-live-01
+    type: live
+    date: "2020-11-02"
+    title: "皮克敏3"
+    platform: douyu
+    confidence: high
+    duration_min: 291
+    cover: "https://tx-free-imgs.acfun.cn/o_1em4i7l4rpj31fqu1olj5m31oek0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19291782"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-03-live-01
-  type: live
-  date: "2020-11-03"
-  title: "皮克敏3"
-  platform: douyu
-  confidence: high
-  duration_min: 278
-  cover: "https://tx-free-imgs.acfun.cn/o_1em73n6r61kc17ms12q1427o480.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19318278"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-03-live-01
+    type: live
+    date: "2020-11-03"
+    title: "皮克敏3"
+    platform: douyu
+    confidence: high
+    duration_min: 278
+    cover: "https://tx-free-imgs.acfun.cn/o_1em73n6r61kc17ms12q1427o480.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19318278"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-04-live-01
-  type: live
-  date: "2020-11-04"
-  title: "皮克敏3"
-  platform: douyu
-  confidence: high
-  duration_min: 234
-  cover: "https://tx-free-imgs.acfun.cn/o_1em9lm3dm1jp9gfs1pj819g14g70.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19341793"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-04-live-01
+    type: live
+    date: "2020-11-04"
+    title: "皮克敏3"
+    platform: douyu
+    confidence: high
+    duration_min: 234
+    cover: "https://tx-free-imgs.acfun.cn/o_1em9lm3dm1jp9gfs1pj819g14g70.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19341793"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-06-live-01
-  type: live
-  date: "2020-11-06"
-  title: "只狼"
-  platform: douyu
-  confidence: high
-  duration_min: 296
-  cover: "https://tx-free-imgs.acfun.cn/o_1emeqmkkbehtogs1lld1in52g00.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19427375"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-06-live-01
+    type: live
+    date: "2020-11-06"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 296
+    cover: "https://tx-free-imgs.acfun.cn/o_1emeqmkkbehtogs1lld1in52g00.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19427375"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-07-live-01
-  type: live
-  date: "2020-11-07"
-  title: "腾讯科学WE大会"
-  platform: douyu
-  confidence: high
-  duration_min: 336
-  cover: "https://tx-free-imgs.acfun.cn/o_1emhdib5r1hqi13l6ln21qi27v0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19456271"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-11-07-live-01
+    type: live
+    date: "2020-11-07"
+    title: "腾讯科学WE大会"
+    platform: douyu
+    confidence: high
+    duration_min: 336
+    cover: "https://tx-free-imgs.acfun.cn/o_1emhdib5r1hqi13l6ln21qi27v0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19456271"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-08-live-01
-  type: live
-  date: "2020-11-08"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 245
-  cover: "https://tx-free-imgs.acfun.cn/o_1emm6am6d18h81bva14fq1pgk29h0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac19507225"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-08-live-01
+    type: live
+    date: "2020-11-08"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    cover: "https://tx-free-imgs.acfun.cn/o_1emm6am6d18h81bva14fq1pgk29h0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac19507225"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-09-live-01
-  type: live
-  date: "2020-11-09"
-  title: "Teardown"
-  platform: douyu
-  confidence: high
-  duration_min: 150
-  cover: "https://tx-free-imgs.acfun.cn/o_1emmhi2fn5ig1vhv1ub71m0pf2f0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19510643"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-11-09-live-01
+    type: live
+    date: "2020-11-09"
+    title: "Teardown"
+    platform: douyu
+    confidence: high
+    duration_min: 150
+    cover: "https://tx-free-imgs.acfun.cn/o_1emmhi2fn5ig1vhv1ub71m0pf2f0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19510643"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-10-live-01
-  type: live
-  date: "2020-11-10"
-  title: "Teardown"
-  platform: douyu
-  confidence: high
-  duration_min: 270
-  cover: "https://tx-free-imgs.acfun.cn/o_1emp2q9ae11ghhcphu140d1rg60.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19541827"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-10-live-01
+    type: live
+    date: "2020-11-10"
+    title: "Teardown"
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    cover: "https://tx-free-imgs.acfun.cn/o_1emp2q9ae11ghhcphu140d1rg60.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19541827"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-11-live-01
-  type: live
-  date: "2020-11-11"
-  title: "天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 294
-  cover: "https://tx-free-imgs.acfun.cn/o_1emrkebp03afa6t1eca883li60.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19571771"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-11-live-01
+    type: live
+    date: "2020-11-11"
+    title: "天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 294
+    cover: "https://tx-free-imgs.acfun.cn/o_1emrkebp03afa6t1eca883li60.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19571771"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-12-live-01
-  type: live
-  date: "2020-11-12"
-  title: "天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/o_1emu82s7t9geqkd1fmv1tf13hb0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19601862"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-12-live-01
+    type: live
+    date: "2020-11-12"
+    title: "天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/o_1emu82s7t9geqkd1fmv1tf13hb0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19601862"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-13-live-01
-  type: live
-  date: "2020-11-13"
-  title: "宇宙机器人&麻布仔大冒险&天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 320
-  cover: "https://tx-free-imgs.acfun.cn/o_1en0rssru1g6libg26b1jidrhd0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19650558"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2020-11-13-live-01
+    type: live
+    date: "2020-11-13"
+    title: "宇宙机器人&麻布仔大冒险&天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 320
+    cover: "https://tx-free-imgs.acfun.cn/o_1en0rssru1g6libg26b1jidrhd0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19650558"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-14-live-01
-  type: live
-  date: "2020-11-14"
-  title: "天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 311
-  cover: "https://tx-free-imgs.acfun.cn/o_1en3crmqmuseqk31tki14i81cjq0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19695177"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-11-14-live-01
+    type: live
+    date: "2020-11-14"
+    title: "天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 311
+    cover: "https://tx-free-imgs.acfun.cn/o_1en3crmqmuseqk31tki14i81cjq0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19695177"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-15-live-01
-  type: live
-  date: "2020-11-15"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 212
-  cover: "https://tx-free-imgs.acfun.cn/o_1en8d4k7s1at25a1sjg1hcm49o0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac19751235"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-15-live-01
+    type: live
+    date: "2020-11-15"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 212
+    cover: "https://tx-free-imgs.acfun.cn/o_1en8d4k7s1at25a1sjg1hcm49o0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac19751235"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-16-live-01
-  type: live
-  date: "2020-11-16"
-  title: "天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 259
-  cover: "https://tx-free-imgs.acfun.cn/o_1en8ij8jk1qkppnohlb1gnu11tf0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19753727"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-16-live-01
+    type: live
+    date: "2020-11-16"
+    title: "天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    cover: "https://tx-free-imgs.acfun.cn/o_1en8ij8jk1qkppnohlb1gnu11tf0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19753727"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-18-live-01
-  type: live
-  date: "2020-11-18"
-  title: "天穗之咲稻姬"
-  platform: douyu
-  confidence: high
-  duration_min: 256
-  cover: "https://tx-free-imgs.acfun.cn/o_1endoq2n11nqc1akn1011o6l1vqn0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19812004"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-18-live-01
+    type: live
+    date: "2020-11-18"
+    title: "天穗之咲稻姬"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    cover: "https://tx-free-imgs.acfun.cn/o_1endoq2n11nqc1akn1011o6l1vqn0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19812004"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-20-live-01
-  type: live
-  date: "2020-11-20"
-  title: "恶魔之魂"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/o_1eniubbtn19kk78917ab1lbl1bmg0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19894789"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-20-live-01
+    type: live
+    date: "2020-11-20"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/o_1eniubbtn19kk78917ab1lbl1bmg0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19894789"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-21-live-01
-  type: live
-  date: "2020-11-21"
-  title: "恶魔之魂"
-  platform: douyu
-  confidence: high
-  duration_min: 251
-  cover: "https://tx-free-imgs.acfun.cn/o_1enlg2rtr1koj1a39dcnbvn1eo40.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac19935556"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-21-live-01
+    type: live
+    date: "2020-11-21"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 251
+    cover: "https://tx-free-imgs.acfun.cn/o_1enlg2rtr1koj1a39dcnbvn1eo40.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac19935556"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-22-live-01
-  type: live
-  date: "2020-11-22"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 287
-  cover: "https://tx-free-imgs.acfun.cn/o_1enqb3kh8qjqnpmjbi1gdb1e860.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac20002665"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-22-live-01
+    type: live
+    date: "2020-11-22"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/o_1enqb3kh8qjqnpmjbi1gdb1e860.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac20002665"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-23-live-01
-  type: live
-  date: "2020-11-23"
-  title: "恶魔之魂"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/o_1enqh7cv8i37egd1kh86beneo0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac20004769"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-23-live-01
+    type: live
+    date: "2020-11-23"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/o_1enqh7cv8i37egd1kh86beneo0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac20004769"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-24-live-01
-  type: live
-  date: "2020-11-24"
-  title: "恶魔之魂"
-  platform: douyu
-  confidence: high
-  duration_min: 235
-  cover: "https://tx-free-imgs.acfun.cn/o_1envnsg324l3fo41rnv18m7hp0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac20056799"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-11-24-live-01
+    type: live
+    date: "2020-11-24"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    cover: "https://tx-free-imgs.acfun.cn/o_1envnsg324l3fo41rnv18m7hp0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac20056799"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-27-live-01
-  type: live
-  date: "2020-11-27"
-  title: "恶魔之魂&暗影国度"
-  platform: douyu
-  confidence: high
-  duration_min: 173
-  cover: "https://tx-free-imgs.acfun.cn/o_1eo54ndba1o122a61tv2l2blgf0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac20120091"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-27-live-01
+    type: live
+    date: "2020-11-27"
+    title: "恶魔之魂&暗影国度"
+    platform: douyu
+    confidence: high
+    duration_min: 173
+    cover: "https://tx-free-imgs.acfun.cn/o_1eo54ndba1o122a61tv2l2blgf0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac20120091"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-28-live-01
-  type: live
-  date: "2020-11-28"
-  title: "恶魔之魂"
-  platform: douyu
-  confidence: high
-  duration_min: 226
-  cover: "https://tx-free-imgs.acfun.cn/o_1eo7jv5g1fk31i4012om95ebl80.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac20147922"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-28-live-01
+    type: live
+    date: "2020-11-28"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    cover: "https://tx-free-imgs.acfun.cn/o_1eo7jv5g1fk31i4012om95ebl80.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac20147922"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-29-live-01
-  type: live
-  date: "2020-11-29"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 235
-  cover: "https://tx-free-imgs.acfun.cn/o_1eocikau011keh7u1nub0runn0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac20203920"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-11-29-live-01
+    type: live
+    date: "2020-11-29"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    cover: "https://tx-free-imgs.acfun.cn/o_1eocikau011keh7u1nub0runn0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac20203920"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-11-30-live-01
-  type: live
-  date: "2020-11-30"
-  title: "大周午夜音乐台"
-  platform: douyu
-  confidence: high
-  duration_min: 110
-  cover: "https://tx-free-imgs.acfun.cn/o_1eof1077f1vup1rrt199j4evote0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac20235350"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2020-11-30-live-01
+    type: live
+    date: "2020-11-30"
+    title: "大周午夜音乐台"
+    platform: douyu
+    confidence: high
+    duration_min: 110
+    cover: "https://tx-free-imgs.acfun.cn/o_1eof1077f1vup1rrt199j4evote0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac20235350"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

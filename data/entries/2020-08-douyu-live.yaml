@@ -1,393 +1,419 @@
-- id: 2020-08-01-live-01
-  type: live
-  date: "2020-08-01"
-  title: "纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 367
-  cover: "https://tx-free-imgs.acfun.cn/o_1eela63pq1m9216fhgmf1jc015ds0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17171064"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-08-01-live-01
+    type: live
+    date: "2020-08-01"
+    title: "纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 367
+    cover: "https://tx-free-imgs.acfun.cn/o_1eela63pq1m9216fhgmf1jc015ds0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17171064"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-02-live-01
-  type: live
-  date: "2020-08-02"
-  title: "逛吃逛吃"
-  platform: douyu
-  confidence: high
-  duration_min: 193
-  cover: "https://tx-free-imgs.acfun.cn/o_1ef751ft675413mvabs19dl1k1f0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17291974"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-08-02-live-01
+    type: live
+    date: "2020-08-02"
+    title: "逛吃逛吃"
+    platform: douyu
+    confidence: high
+    duration_min: 193
+    cover: "https://tx-free-imgs.acfun.cn/o_1ef751ft675413mvabs19dl1k1f0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17291974"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-03-live-01
-  type: live
-  date: "2020-08-03"
-  title: "20.8.3--纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 263
-  cover: "https://tx-free-imgs.acfun.cn/o_1eet856269jr1sn5jsajgargv0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17227286"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-03-live-01
+    type: live
+    date: "2020-08-03"
+    title: "20.8.3--纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 263
+    cover: "https://tx-free-imgs.acfun.cn/o_1eet856269jr1sn5jsajgargv0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17227286"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-04-live-01
-  type: live
-  date: "2020-08-04"
-  title: "20.8.4--纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/o_1eet92m301driu811d4r1amf187c0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17227141"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-04-live-01
+    type: live
+    date: "2020-08-04"
+    title: "20.8.4--纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/o_1eet92m301driu811d4r1amf187c0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17227141"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-05-live-01
-  type: live
-  date: "2020-08-05"
-  title: "纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 241
-  cover: "https://tx-free-imgs.acfun.cn/o_1eevkn6828pqgj41ok115vc1q7i0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17243005"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-05-live-01
+    type: live
+    date: "2020-08-05"
+    title: "纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 241
+    cover: "https://tx-free-imgs.acfun.cn/o_1eevkn6828pqgj41ok115vc1q7i0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17243005"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-06-live-01
-  type: live
-  date: "2020-08-06"
-  title: "66来聊聊"
-  platform: douyu
-  confidence: high
-  duration_min: 238
-  cover: "https://tx-free-imgs.acfun.cn/o_1ef1vc17dki7ev5shj8b7g2b0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17260074"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-08-06-live-01
+    type: live
+    date: "2020-08-06"
+    title: "66来聊聊"
+    platform: douyu
+    confidence: high
+    duration_min: 238
+    cover: "https://tx-free-imgs.acfun.cn/o_1ef1vc17dki7ev5shj8b7g2b0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17260074"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-07-live-01
-  type: live
-  date: "2020-08-07"
-  title: "纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 274
-  cover: "https://tx-free-imgs.acfun.cn/o_1ef75baum1gdg14tqa2gi741dm0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17293939"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-07-live-01
+    type: live
+    date: "2020-08-07"
+    title: "纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    cover: "https://tx-free-imgs.acfun.cn/o_1ef75baum1gdg14tqa2gi741dm0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17293939"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-09-live-01
-  type: live
-  date: "2020-08-09"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 245
-  cover: "https://tx-free-imgs.acfun.cn/o_1efc6gqss3on1jajorhsb1bmn0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac17325712"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-09-live-01
+    type: live
+    date: "2020-08-09"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    cover: "https://tx-free-imgs.acfun.cn/o_1efc6gqss3on1jajorhsb1bmn0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac17325712"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-10-live-01
-  type: live
-  date: "2020-08-10"
-  title: "纸片马里奥&Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 259
-  cover: "https://tx-free-imgs.acfun.cn/o_1efcecqrqr2919sk1452n313f70.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17326766"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-10-live-01
+    type: live
+    date: "2020-08-10"
+    title: "纸片马里奥&Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    cover: "https://tx-free-imgs.acfun.cn/o_1efcecqrqr2919sk1452n313f70.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17326766"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-11-live-01
-  type: live
-  date: "2020-08-11"
-  title: "Fall Guys&Grounded"
-  platform: douyu
-  confidence: high
-  duration_min: 226
-  cover: "https://tx-free-imgs.acfun.cn/o_1efeqag0agd31g2h1ipge0a2l80.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17343071"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-11-live-01
+    type: live
+    date: "2020-08-11"
+    title: "Fall Guys&Grounded"
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    cover: "https://tx-free-imgs.acfun.cn/o_1efeqag0agd31g2h1ipge0a2l80.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17343071"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-11-live-02
-  type: live
-  date: "2020-08-11"
-  title: "Thereis no game"
-  platform: douyu
-  confidence: high
-  duration_min: 287
-  cover: "https://tx-free-imgs.acfun.cn/o_1eg3ljnp31jl091qr8nufqh30.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17497100"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-11-live-02
+    type: live
+    date: "2020-08-11"
+    title: "Thereis no game"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/o_1eg3ljnp31jl091qr8nufqh30.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17497100"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-12-live-01
-  type: live
-  date: "2020-08-12"
-  title: "Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 277
-  cover: "https://tx-free-imgs.acfun.cn/o_1efhhp6g31puk1vskbgf8do1vvr0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17360848"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-12-live-01
+    type: live
+    date: "2020-08-12"
+    title: "Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 277
+    cover: "https://tx-free-imgs.acfun.cn/o_1efhhp6g31puk1vskbgf8do1vvr0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17360848"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-15-live-01
-  type: live
-  date: "2020-08-15"
-  title: "Avengers"
-  platform: douyu
-  confidence: high
-  duration_min: 224
-  cover: "https://tx-free-imgs.acfun.cn/o_1efrptqalolkgh5ir0108tesj0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17437382"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-15-live-01
+    type: live
+    date: "2020-08-15"
+    title: "Avengers"
+    platform: douyu
+    confidence: high
+    duration_min: 224
+    cover: "https://tx-free-imgs.acfun.cn/o_1efrptqalolkgh5ir0108tesj0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17437382"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-16-live-01
-  type: live
-  date: "2020-08-16"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 239
-  cover: "https://tx-free-imgs.acfun.cn/o_1efu7klv61otn188usgqnphpur0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac17455160"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-16-live-01
+    type: live
+    date: "2020-08-16"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    cover: "https://tx-free-imgs.acfun.cn/o_1efu7klv61otn188usgqnphpur0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac17455160"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-20-live-01
-  type: live
-  date: "2020-08-20"
-  title: "Spiritfarer"
-  platform: douyu
-  confidence: high
-  duration_min: 259
-  cover: "https://tx-free-imgs.acfun.cn/o_1eg8frhut72bqvk1opmgfnfpa0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17528113"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-20-live-01
+    type: live
+    date: "2020-08-20"
+    title: "Spiritfarer"
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    cover: "https://tx-free-imgs.acfun.cn/o_1eg8frhut72bqvk1opmgfnfpa0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17528113"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-21-live-01
-  type: live
-  date: "2020-08-21"
-  title: "Spiritfarer&帕斯卡契约"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/o_1eg8j2mi318vu1hc4p2r15mj1b2h0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17528771"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-21-live-01
+    type: live
+    date: "2020-08-21"
+    title: "Spiritfarer&帕斯卡契约"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/o_1eg8j2mi318vu1hc4p2r15mj1b2h0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17528771"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-22-live-01
-  type: live
-  date: "2020-08-22"
-  title: "Spiritfarer"
-  platform: douyu
-  confidence: high
-  duration_min: 247
-  cover: "https://tx-free-imgs.acfun.cn/o_1egb6jl8i7sitb2m611me18bv0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17546172"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-22-live-01
+    type: live
+    date: "2020-08-22"
+    title: "Spiritfarer"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    cover: "https://tx-free-imgs.acfun.cn/o_1egb6jl8i7sitb2m611me18bv0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17546172"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-23-live-01
-  type: live
-  date: "2020-08-23"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 231
-  cover: "https://tx-free-imgs.acfun.cn/o_1egg9aik11gjb1nnlrch1ssp7u00.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac17579755"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-23-live-01
+    type: live
+    date: "2020-08-23"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    cover: "https://tx-free-imgs.acfun.cn/o_1egg9aik11gjb1nnlrch1ssp7u00.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac17579755"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-24-live-01
-  type: live
-  date: "2020-08-24"
-  title: "Spiritfarer"
-  platform: douyu
-  confidence: high
-  duration_min: 263
-  cover: "https://tx-free-imgs.acfun.cn/o_1eggeccvh14pt1m9m171g1gs9rir0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17580808"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-08-24-live-01
+    type: live
+    date: "2020-08-24"
+    title: "Spiritfarer"
+    platform: douyu
+    confidence: high
+    duration_min: 263
+    cover: "https://tx-free-imgs.acfun.cn/o_1eggeccvh14pt1m9m171g1gs9rir0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17580808"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-25-live-01
-  type: live
-  date: "2020-08-25"
-  title: "Spiritfarer"
-  platform: douyu
-  confidence: high
-  duration_min: 289
-  cover: "https://tx-free-imgs.acfun.cn/o_1egiqbp18c7goiftng1g6mcpb0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17597578"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-08-25-live-01
+    type: live
+    date: "2020-08-25"
+    title: "Spiritfarer"
+    platform: douyu
+    confidence: high
+    duration_min: 289
+    cover: "https://tx-free-imgs.acfun.cn/o_1egiqbp18c7goiftng1g6mcpb0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17597578"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-26-live-01
-  type: live
-  date: "2020-08-26"
-  title: "Spiritfarer"
-  platform: douyu
-  confidence: high
-  duration_min: 348
-  cover: "https://tx-free-imgs.acfun.cn/o_1eglh746b1t1f1vdc11ok1ognqdc0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17614575"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-26-live-01
+    type: live
+    date: "2020-08-26"
+    title: "Spiritfarer"
+    platform: douyu
+    confidence: high
+    duration_min: 348
+    cover: "https://tx-free-imgs.acfun.cn/o_1eglh746b1t1f1vdc11ok1ognqdc0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17614575"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-27-live-01
-  type: live
-  date: "2020-08-27"
-  title: "周四没66，有佩奇"
-  platform: douyu
-  confidence: high
-  duration_min: 177
-  cover: "https://tx-free-imgs.acfun.cn/o_1egnvil0sfdm141iql7a7r1asi0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17630928"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2020-08-27-live-01
+    type: live
+    date: "2020-08-27"
+    title: "周四没66，有佩奇"
+    platform: douyu
+    confidence: high
+    duration_min: 177
+    cover: "https://tx-free-imgs.acfun.cn/o_1egnvil0sfdm141iql7a7r1asi0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17630928"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-29-live-01
-  type: live
-  date: "2020-08-29"
-  title: "Inmost"
-  platform: douyu
-  confidence: high
-  duration_min: 245
-  cover: "https://tx-free-imgs.acfun.cn/o_1egt7s16c33t1r3q1qi7tp71f6b0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17669805"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-08-29-live-01
+    type: live
+    date: "2020-08-29"
+    title: "Inmost"
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    cover: "https://tx-free-imgs.acfun.cn/o_1egt7s16c33t1r3q1qi7tp71f6b0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17669805"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-30-live-01
-  type: live
-  date: "2020-08-30"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/o_1eh2a06kitm01vag1b9j7id1vtb0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac17701108"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-08-30-live-01
+    type: live
+    date: "2020-08-30"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/o_1eh2a06kitm01vag1b9j7id1vtb0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac17701108"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-31-live-01
-  type: live
-  date: "2020-08-31"
-  title: "Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 71
-  cover: "https://tx-free-imgs.acfun.cn/o_1eh7cq87m6m61bqn1t8tm4dvok0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17727788"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2020-08-31-live-01
+    type: live
+    date: "2020-08-31"
+    title: "Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 71
+    cover: "https://tx-free-imgs.acfun.cn/o_1eh7cq87m6m61bqn1t8tm4dvok0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17727788"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-08-31-live-02
-  type: live
-  date: "2020-08-31"
-  title: "高殿战记"
-  platform: douyu
-  confidence: high
-  duration_min: 235
-  cover: "https://tx-free-imgs.acfun.cn/o_1eh2h0m1u177m9uab1ud71acj0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17701429"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-08-31-live-02
+    type: live
+    date: "2020-08-31"
+    title: "高殿战记"
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    cover: "https://tx-free-imgs.acfun.cn/o_1eh2h0m1u177m9uab1ud71acj0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17701429"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent

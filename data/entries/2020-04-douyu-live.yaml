@@ -1,194 +1,207 @@
-- id: 2020-04-01-live-01
-  type: live
-  date: "2020-04-01"
-  title: "踩高跷stilt fella"
-  platform: douyu
-  confidence: high
-  duration_min: 207
-  cover: "https://tx-free-imgs.acfun.cn/o_1e4r5o8jf1rqh1flgvbkr1e1kra0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14407628"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-04-01-live-01
+    type: live
+    date: "2020-04-01"
+    title: "踩高跷stilt fella"
+    platform: douyu
+    confidence: high
+    duration_min: 207
+    cover: "https://tx-free-imgs.acfun.cn/o_1e4r5o8jf1rqh1flgvbkr1e1kra0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14407628"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-02-live-01
-  type: live
-  date: "2020-04-02"
-  title: "集合啦！动物森友会&察言观色"
-  platform: douyu
-  confidence: high
-  duration_min: 204
-  cover: "https://tx-free-imgs.acfun.cn/o_1e4tpu9cr1hao1sn417a1med3ul0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14432591"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-04-02-live-01
+    type: live
+    date: "2020-04-02"
+    title: "集合啦！动物森友会&察言观色"
+    platform: douyu
+    confidence: high
+    duration_min: 204
+    cover: "https://tx-free-imgs.acfun.cn/o_1e4tpu9cr1hao1sn417a1med3ul0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14432591"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-03-live-01
-  type: live
-  date: "2020-04-03"
-  title: "用心组装&巨著"
-  platform: douyu
-  confidence: high
-  duration_min: 250
-  cover: "https://tx-free-imgs.acfun.cn/o_1e509kqsnot2i491a7jrfq3m70.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14460973"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-04-03-live-01
+    type: live
+    date: "2020-04-03"
+    title: "用心组装&巨著"
+    platform: douyu
+    confidence: high
+    duration_min: 250
+    cover: "https://tx-free-imgs.acfun.cn/o_1e509kqsnot2i491a7jrfq3m70.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14460973"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-07-live-01
-  type: live
-  date: "2020-04-07"
-  title: "半衰期 Alyx"
-  platform: douyu
-  confidence: high
-  duration_min: 231
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5aic6745501j3p1po81uef19500.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14530449"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-07-live-01
+    type: live
+    date: "2020-04-07"
+    title: "半衰期 Alyx"
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5aic6745501j3p1po81uef19500.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14530449"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-08-live-01
-  type: live
-  date: "2020-04-08"
-  title: "逆转裁判"
-  platform: douyu
-  confidence: high
-  duration_min: 267
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5d4n0dj1dcmn41veim1s1okd0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14556632"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-08-live-01
+    type: live
+    date: "2020-04-08"
+    title: "逆转裁判"
+    platform: douyu
+    confidence: high
+    duration_min: 267
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5d4n0dj1dcmn41veim1s1okd0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14556632"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-10-live-01
-  type: live
-  date: "2020-04-10"
-  title: "逆转裁判2 异议"
-  platform: douyu
-  confidence: high
-  duration_min: 260
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5i942mv1lk4scsd8ifbc1dj00.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14625206"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-10-live-01
+    type: live
+    date: "2020-04-10"
+    title: "逆转裁判2 异议"
+    platform: douyu
+    confidence: high
+    duration_min: 260
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5i942mv1lk4scsd8ifbc1dj00.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14625206"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-12-live-01
-  type: live
-  date: "2020-04-12"
-  title: "逆转裁判3 异议"
-  platform: douyu
-  confidence: high
-  duration_min: 296
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5nd94vm17ae190g84m4o4kar0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14686496"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-12-live-01
+    type: live
+    date: "2020-04-12"
+    title: "逆转裁判3 异议"
+    platform: douyu
+    confidence: high
+    duration_min: 296
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5nd94vm17ae190g84m4o4kar0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14686496"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-14-live-01
-  type: live
-  date: "2020-04-14"
-  title: "逆转裁判3，异议"
-  platform: douyu
-  confidence: high
-  duration_min: 252
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5sgqmivekt1b5rdpp4ve13d20.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14739585"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-14-live-01
+    type: live
+    date: "2020-04-14"
+    title: "逆转裁判3，异议"
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5sgqmivekt1b5rdpp4ve13d20.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14739585"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-15-live-01
-  type: live
-  date: "2020-04-15"
-  title: "佩奇又来了"
-  platform: douyu
-  confidence: high
-  duration_min: 283
-  cover: "https://tx-free-imgs.acfun.cn/o_1e5v40lgotjnfok1s0rcgl1jo60.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14767644"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-04-15-live-01
+    type: live
+    date: "2020-04-15"
+    title: "佩奇又来了"
+    platform: douyu
+    confidence: high
+    duration_min: 283
+    cover: "https://tx-free-imgs.acfun.cn/o_1e5v40lgotjnfok1s0rcgl1jo60.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14767644"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-18-live-01
-  type: live
-  date: "2020-04-18"
-  title: "逆转裁判3，异议"
-  platform: douyu
-  confidence: high
-  duration_min: 260
-  cover: "https://tx-free-imgs.acfun.cn/o_1e66sobgo1f4a33p1c591tvt16db0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14883639"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-18-live-01
+    type: live
+    date: "2020-04-18"
+    title: "逆转裁判3，异议"
+    platform: douyu
+    confidence: high
+    duration_min: 260
+    cover: "https://tx-free-imgs.acfun.cn/o_1e66sobgo1f4a33p1c591tvt16db0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14883639"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-19-live-01
-  type: live
-  date: "2020-04-19"
-  title: "逆转裁判3，异议"
-  platform: douyu
-  confidence: high
-  duration_min: 293
-  cover: "https://tx-free-imgs.acfun.cn/o_1e69gcas216501ndr12me1d9b17m50.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac14908138"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-19-live-01
+    type: live
+    date: "2020-04-19"
+    title: "逆转裁判3，异议"
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    cover: "https://tx-free-imgs.acfun.cn/o_1e69gcas216501ndr12me1d9b17m50.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac14908138"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-27-live-01
-  type: live
-  date: "2020-04-27"
-  title: "宝石商人桌游局"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/o_1e6u3rif21q371rhs1tk61h8m1fmg0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac15184212"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-04-27-live-01
+    type: live
+    date: "2020-04-27"
+    title: "宝石商人桌游局"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/o_1e6u3rif21q371rhs1tk61h8m1fmg0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac15184212"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-04-29-live-01
-  type: live
-  date: "2020-04-29"
-  title: "胡闹搬家"
-  platform: douyu
-  confidence: high
-  duration_min: 210
-  cover: "https://tx-free-imgs.acfun.cn/o_1e7386vnlauqqtc1ujj7d86q10.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac15228923"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-04-29-live-01
+    type: live
+    date: "2020-04-29"
+    title: "胡闹搬家"
+    platform: douyu
+    confidence: high
+    duration_min: 210
+    cover: "https://tx-free-imgs.acfun.cn/o_1e7386vnlauqqtc1ujj7d86q10.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac15228923"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
