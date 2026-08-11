@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { buildSourceGroups, getDataset } from '@/lib/data'
+import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, withTimestamp } from '@/lib/platforms'
 import { formatDuration, gameColor } from '@/lib/ui'
 import { toSeconds, type Platform } from '@/lib/schema'
@@ -17,6 +18,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   if (idx === -1) notFound()
 
   const entry = ds.entries[idx]
+  const compactGameIds = visibleGameIds(entry.games)
   const sourceGroup = buildSourceGroups(ds.entries).get(entry.id) ?? [entry]
   const groupedSources = sourceGroup
     .flatMap((item) => item.sources.map((source) => ({ ...source, entryTitle: item.title })))
@@ -77,8 +79,8 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         {entry.segments.length === 0 ? (
           <p className="text-[13px] text-muted">
             尚未录入分段信息。
-            {entry.games.length > 0 && (
-              <> 已知涉及：{entry.games.map((g) => ds.games.get(g)?.name ?? g).join('、')}。</>
+            {compactGameIds.length > 0 && (
+              <> 已知涉及：{compactGameIds.map((g) => ds.games.get(g)?.name ?? g).join('、')}。</>
             )}
           </p>
         ) : (
