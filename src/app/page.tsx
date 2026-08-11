@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { RotatingAvatar } from '@/components/RotatingAvatar'
-import { getDataset } from '@/lib/data'
+import { getDataset, toTimelineEntries } from '@/lib/data'
 
 export default function HomePage() {
   const ds = getDataset()
-  const years = new Set(ds.entries.map((entry) => entry.date.slice(0, 4))).size
-  const countBetween = (from: string, to: string) => ds.entries.filter((entry) => entry.date >= from && entry.date <= to).length
+  const timelineEntries = toTimelineEntries(ds)
+  const years = new Set(timelineEntries.map((entry) => entry.date.slice(0, 4))).size
+  const latestYear = timelineEntries[0]?.date.slice(0, 4) ?? new Date().getFullYear().toString()
+  const countBetween = (from: string, to: string) => timelineEntries.filter((entry) => entry.date >= from && entry.date <= to).length
 
   const chapters = [
     {
@@ -19,7 +21,7 @@ export default function HomePage() {
       href: '/chronicle/?y=2010',
     },
     {
-      year: '2015—2023',
+      year: '2016—2023',
       label: '斗鱼直播时期',
       title: '直播间 156277 与固定栏目',
       description: '2015 年转型为主机游戏主播，直播与解说继续围绕优秀、独特的游戏作品展开。',
@@ -43,7 +45,7 @@ export default function HomePage() {
       description: '直播记录由多个公开回放与搬运来源共同补齐，仍在持续更新。',
       count: countBetween('2024-08-01', '9999-12-31'),
       color: '#FF6B75',
-      href: '/chronicle/?y=2026',
+      href: `/chronicle/?y=${latestYear}`,
     },
   ]
 
@@ -52,7 +54,7 @@ export default function HomePage() {
       <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="home" />
         <Link href="/chronicle/" className="ui-press hidden rounded-sm font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
-          打开全部 {ds.entries.length.toLocaleString()} 条记录 →
+          打开全部 {timelineEntries.length.toLocaleString()} 条记录 →
         </Link>
       </header>
 
@@ -99,7 +101,7 @@ export default function HomePage() {
         </div>
 
         <dl className="ui-reveal ui-delay-2 relative mt-16 grid grid-cols-3 gap-3 border-y border-line py-5 sm:max-w-xl">
-          <Stat value={ds.entries.length.toLocaleString()} label="公开条目" />
+          <Stat value={timelineEntries.length.toLocaleString()} label="公开条目" />
           <Stat value={years.toString()} label="覆盖年份" />
           <Stat value={ds.series.size.toString()} label="系列栏目" />
         </dl>
