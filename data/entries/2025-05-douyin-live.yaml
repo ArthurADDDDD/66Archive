@@ -154,7 +154,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/e4795d0c61b52a401cb4082a204bedd3cdd0715f.jpg"
     confidence: medium
-    games: []
+    games:
+      - arena-breakout
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-09-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV15655zpEYE"
@@ -170,7 +171,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/f0db84f425cbdb5ff624d67240b86bdbbbd4b322.jpg"
     confidence: high
-    games: []
+    games:
+      - arena-breakout
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-09-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -363,7 +365,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/5e16c66fb88ac65781d5550906776ac2a0a30f68.jpg"
     confidence: medium
-    games: []
+    games:
+      - where-winds-meet
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-16-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV12JE8zdE6q"
@@ -379,7 +382,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/85614e4ad51212cb91377f7a0a1bcb978f2e8584.jpg"
     confidence: high
-    games: []
+    games:
+      - where-winds-meet
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-16-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -816,7 +820,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/a1f6acc547c482125ec7006feed39e05f4a6f804.jpg"
     confidence: high
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-30-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -836,7 +842,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/3aa0ce0cbc2f2ccf4bef7bd7ac3ed792534dfdfd.jpg"
     confidence: medium
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-30-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1Uv7sz7EQ5"
@@ -852,7 +860,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/c19291ad7dd9bfd7a7835fc3ee0951a230c246a4.jpg"
     confidence: medium
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-31-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1TP7KzdEq4"
@@ -868,7 +878,9 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/76d0d2b86e5db039cc94e549de16104dde0407a2.jpg"
     confidence: high
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-31-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
