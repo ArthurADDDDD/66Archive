@@ -181,7 +181,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/2f9d1949bb27b0896f507c6fe01f08bf7c7863c7.jpg"
     confidence: medium
-    games: []
+    games:
+      - snapshots-game
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -198,7 +199,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/7c4e76a291343d70554a18bbb522a8933858b3a0.jpg"
     confidence: medium
-    games: []
+    games:
+      - snapshots-game
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -311,7 +313,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/3f30af7b96498b48b6b1a3b626f45a1d784c7150.jpg"
     confidence: high
-    games: []
+    games:
+      - repair-story
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:

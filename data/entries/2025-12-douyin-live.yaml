@@ -82,7 +82,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/b93d94cb48cd319846dbc71dfdf836f57c241237.jpg"
     confidence: medium
-    games: []
+    games:
+      - a-little-to-the-left
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -119,7 +120,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/307b3b1cd45fc7147efa8dc75f7e5ed81acad0a4.jpg"
     confidence: medium
-    games: []
+    games:
+      - duckov
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -198,7 +200,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/8e6c1a12a197298e6466f9d2275e17945276b904.jpg"
     confidence: high
-    games: []
+    games:
+      - ragnarok-rebirth
     tags: [弹幕版]
     note: "同一场直播由 服部平次（BV1NFBRBxED2，2:17:39）、直播回放巴拉蹦吧（弹幕/纯净双版，2:18:07）与 bobi华（BV1HWBQBGEsN，2:17:19）分别搬运，总时长吻合，已合并为一天一条。"
     sources:

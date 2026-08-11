@@ -39,7 +39,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/ee723d7fd7ef7960388556e58b4703f7e16e90ac.jpg"
     confidence: medium
-    games: []
+    games:
+      - mecha-break
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-02-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1E934zHEUM"
@@ -55,7 +56,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/aa7753b9679f8d878d46d74af36a72e00124888e.jpg"
     confidence: high
-    games: []
+    games:
+      - mecha-break
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-02-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -75,7 +77,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/0a3ed8c8e83d140bc14f3068da6c2be80f6fc91a.jpg"
     confidence: medium
-    games: []
+    games:
+      - mecha-break
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-03-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1Pa33znENW"
@@ -91,7 +94,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/263e663d6d0ee4533859cae4415c58fbc9179eb3.jpg"
     confidence: high
-    games: []
+    games:
+      - mecha-break
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-03-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -207,7 +211,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/63198e0cfd27ebff25dbbf524185696e2b51e134.jpg"
     confidence: high
-    games: []
+    games:
+      - neon-abyss-2
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-16-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -227,7 +232,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2b9feaaf719102b9f48e2eba3a1e851c7629793e.jpg"
     confidence: medium
-    games: []
+    games:
+      - neon-abyss-2
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-16-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1hVubzzEc3"
@@ -243,7 +249,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/b43d9fd8ff8d468538fcffa52ab11d049a218528.jpg"
     confidence: high
-    games: []
+    games:
+      - donkey-kong-bananza
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-17-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -263,7 +270,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/3890bb2d6e569fb708bdf115942df54746cec5c4.jpg"
     confidence: medium
-    games: []
+    games:
+      - donkey-kong-bananza
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-17-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1tUgKzgE32"
@@ -455,7 +463,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/0b02c3da863b1d4bad567f005ba5691f20e78310.jpg"
     confidence: high
-    games: []
+    games:
+      - mecha-break
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -475,7 +484,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/3376725ff4f8383c469ee7d38eb086f307b3d8aa.jpg"
     confidence: medium
-    games: []
+    games:
+      - mecha-break
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1wQ8GzwEJe"
