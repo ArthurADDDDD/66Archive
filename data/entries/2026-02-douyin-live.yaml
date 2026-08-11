@@ -71,7 +71,7 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（13:54 仁王3 至 16:03）由 服部平次（2:09:08）与 bobi华（2:08:51）分别搬运，总时长吻合，已合并为一天一条。直播回放巴拉蹦吧的投稿为仁王3+燕云皇宫跨段合集（5:08:16），此处仅对应仁王3 段（2:09:01）。"
   sources:
     - url: "https://www.bilibili.com/video/BV1LGFrzxENg"
       kind: replay
@@ -79,17 +79,6 @@
       kind: replay
     - url: "https://www.bilibili.com/video/BV1uxFrz2EHE"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-06-live-02
-  type: live
-  date: "2026-02-06"
-  title: "仁王3"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1nwFrzAEdH"
       kind: replay
   contributed_by: data-agent
@@ -99,24 +88,13 @@
   date: "2026-02-06"
   title: "更新拉~燕云新地图皇宫"
   platform: douyin
-  confidence: medium
+  confidence: high
   games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  tags: [弹幕版]
+  note: "同一场直播（18:48 燕云新地图皇宫 至 21:48）由 bobi华（BV1ijFCzhEG5，3:00:17）与 不懒bot（BV1KUF7zCE9H，剪辑 2:59:33，投稿另含完整录像页）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1ijFCzhEG5"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-06-live-04
-  type: live
-  date: "2026-02-06"
-  title: "燕云十六声"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1KUF7zCE9H"
       kind: replay
   contributed_by: data-agent
@@ -129,11 +107,13 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 3:51:00）与 bobi华（3:51:47）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1moFWzaEt8"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1TdFWzAE86"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1CbFxzbEGP"
       kind: replay
   contributed_by: data-agent
 
@@ -147,19 +127,6 @@
   note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
   sources:
     - url: "https://www.bilibili.com/video/BV186AVz5EgM"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-07-live-03
-  type: live
-  date: "2026-02-07"
-  title: "体验鸣潮2.2主线剧情"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1CbFxzbEGP"
       kind: replay
   contributed_by: data-agent
 
@@ -181,24 +148,13 @@
   date: "2026-02-09"
   title: "燕云中渡桥剧情来了"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1BJcgzVEXJ"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-09-live-02
-  type: live
-  date: "2026-02-09"
-  title: "燕云中渡桥剧情来了"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1BJcgzVEXJ，2:42:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:42:26）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1BJcgzVEXJ"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1V8cgzqEqk"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1qJcgzVEfc"
@@ -208,28 +164,17 @@
 - id: 2026-02-13-live-01
   type: live
   date: "2026-02-13"
-  title: "女流66正在直播"
+  title: "生灵重塑"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（22:13 聊天→《生灵重塑》→次日 00:17 收尾）由 直播回放巴拉蹦吧（弹幕/纯净双版 2:33:39）与 bobi华（2:32:15）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1J3cJz6Ebm"
       kind: replay
     - url: "https://www.bilibili.com/video/BV16ecnzCEUP"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-13-live-02
-  type: live
-  date: "2026-02-13"
-  title: "生灵重塑"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1k8cnzjEo3"
       kind: replay
   contributed_by: data-agent
@@ -260,7 +205,7 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 4:04:04）、bobi华（4:04:01）与 服部平次（4:04:13）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1nxAkzjEx1"
       kind: replay
@@ -268,18 +213,6 @@
       kind: replay
     - url: "https://www.bilibili.com/video/BV1PEA6z5EJB"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-26-live-02
-  type: live
-  date: "2026-02-26"
-  title: "生化危机9：安魂曲"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1bXAkzZEn8"
       kind: replay
   contributed_by: data-agent
@@ -292,7 +225,7 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（13:01-16:01 下午段 + 19:38-22:56 晚上段）由 直播回放巴拉蹦吧（弹幕版拆两个投稿 5:29:36+1:31:06、纯净版 7:00:42）、bobi华（中午 3:29:38+晚上 3:31:14 两投稿）与 服部平次（7:00:02）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1o8AQzeEaG"
       kind: replay
@@ -300,33 +233,10 @@
       kind: replay
     - url: "https://www.bilibili.com/video/BV1naA2zZESw"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-27-live-02
-  type: live
-  date: "2026-02-27"
-  title: "生化危机9最高画质首播2"
-  platform: douyin
-  confidence: high
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1WBADzgEx5"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1eRAUzDE6S"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-27-live-03
-  type: live
-  date: "2026-02-27"
-  title: "生化危机9：安魂曲"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1o8ASzdEJ4"
       kind: replay
   contributed_by: data-agent
@@ -339,37 +249,14 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（18:15-23:00）由 直播回放巴拉蹦吧（弹幕版 3:38:43 缺首段、纯净版 4:38:44）、bobi华（4:39:03）与 服部平次（4:38:36）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1ZZAazCEw7"
       kind: replay
     - url: "https://www.bilibili.com/video/BV14BAaztEUv"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-28-live-02
-  type: live
-  date: "2026-02-28"
-  title: "生化危机9最高画质首播3"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1UvAaz8EoC"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-02-28-live-03
-  type: live
-  date: "2026-02-28"
-  title: "生化危机9：安魂曲"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1ghAazAE8k"
       kind: replay
   contributed_by: data-agent

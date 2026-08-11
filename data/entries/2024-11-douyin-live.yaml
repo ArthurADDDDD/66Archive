@@ -423,23 +423,12 @@
   date: "2024-11-26"
   title: "今儿直播间真热闹"
   platform: douyin
-  confidence: medium
+  confidence: high
   games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1ZNzGYiESr，3:28:42）与 怪盗基德KID（BV1ZwzGYqEqA，3:27:53）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1ZNzGYiESr"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2024-11-26-live-02
-  type: live
-  date: "2024-11-26"
-  title: "今儿直播间真热闹"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1ZwzGYqEqA"
       kind: replay
   contributed_by: data-agent
@@ -494,23 +483,12 @@
   date: "2024-11-28"
   title: "今天直播间开派对呢，这么热闹"
   platform: douyin
-  confidence: medium
+  confidence: high
   games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1wYzhYFEcs，3:25:38）与 怪盗基德KID（BV1xHzhYqEK7，3:27:20）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1wYzhYFEcs"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2024-11-28-live-02
-  type: live
-  date: "2024-11-28"
-  title: "今天直播间开派对呢，这么热闹"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1xHzhYqEK7"
       kind: replay
   contributed_by: data-agent

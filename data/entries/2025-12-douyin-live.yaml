@@ -108,42 +108,19 @@
 - id: 2025-12-06-live-01
   type: live
   date: "2025-12-06"
-  title: "来终末地武陵转转"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1Mf2XB2E6c"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-06-live-02
-  type: live
-  date: "2025-12-06"
   title: "明日方舟：终末地"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1Mf2XB2E6c，3:22:26）、服部平次（BV13V2XB7E1H，3:22:18）、不懒bot（BV1Zz2XBbEU2，3:22:41）与 直播回放巴拉蹦吧（弹幕/纯净双版，3:22:56）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1Mf2XB2E6c"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV13V2XB7E1H"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1Zz2XBbEU2"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-06-live-03
-  type: live
-  date: "2025-12-06"
-  title: "来终末地武陵转转"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1fi2XBhEeL"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1Ez2XB8EEZ"
@@ -153,56 +130,21 @@
 - id: 2025-12-12-live-01
   type: live
   date: "2025-12-12"
-  title: "TGA2025"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1wRmjBqEQC"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-12-live-02
-  type: live
-  date: "2025-12-12"
   title: "TGA游戏颁奖典礼一起看"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（TGA2025 颁奖典礼）由 不懒bot（剪辑上/下 3:25:42 + 完整 3:25:37）、直播回放巴拉蹦吧（弹幕/纯净双版 3:25:15）、bobi华（3:25:19）与 服部平次（3:25:10）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1wRmjBqEQC"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV19tm5BjEHj"
       kind: replay
     - url: "https://www.bilibili.com/video/BV19sm5BEELi"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-12-live-03
-  type: live
-  date: "2025-12-12"
-  title: "TGA游戏颁奖典礼一起看"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1Rsm5BEEQa"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-12-live-04
-  type: live
-  date: "2025-12-12"
-  title: "一起看TGA2025年度游戏大选，12.12直播录像弹幕版"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV16Lm5BxETi"
       kind: replay
   contributed_by: data-agent
@@ -210,69 +152,23 @@
 - id: 2025-12-17-live-01
   type: live
   date: "2025-12-17"
-  title: "PRAGMATA"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1FGq5BwEzG"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-17-live-02
-  type: live
-  date: "2025-12-17"
-  title: "主播，这是什么游戏？"
+  title: "虚实万象 Pragmata & 啵点节奏 Bits & Bops"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（18:15 开播聊天→虚实万象 Pragmata→啵点节奏 Bits & Bops→20:47 收尾）由 服部平次（2:31:44）、bobi华（2:32:22）与 直播回放巴拉蹦吧（弹幕/纯净双版 2:32:44）整场分别搬运，不懒bot 拆为两段投稿（PRAGMATA 段 ~1:10、啵点节奏段 ~1:22，均含剪辑分 P + 完整录像页，合 2:32），各来源总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1FGq5BwEzG"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1cgq5BYE79"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1fGq5BcEAn"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-17-live-03
-  type: live
-  date: "2025-12-17"
-  title: "啵点节奏 Bits & Bops"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1M9qVB5EQz"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-17-live-04
-  type: live
-  date: "2025-12-17"
-  title: "主播_这是什么游戏"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1Z5q5BfEaT"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-17-live-05
-  type: live
-  date: "2025-12-17"
-  title: "虚实万象 Pragmata"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1psqVBPEVh"
       kind: replay
   contributed_by: data-agent
@@ -282,40 +178,17 @@
   date: "2025-12-25"
   title: "仙境传说：重生"
   platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1NFBRBxED2"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-25-live-02
-  type: live
-  date: "2025-12-25"
-  title: "体验今天上线的仙境传说：重生"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 服部平次（BV1NFBRBxED2，2:17:39）、直播回放巴拉蹦吧（弹幕/纯净双版，2:18:07）与 bobi华（BV1HWBQBGEsN，2:17:19）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1NFBRBxED2"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV13yBQBZEP8"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1u2BQB4EBz"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-25-live-03
-  type: live
-  date: "2025-12-25"
-  title: "体验今天上线的仙境传说：重生"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1HWBQBGEsN"
       kind: replay
   contributed_by: data-agent
@@ -325,38 +198,15 @@
   date: "2025-12-27"
   title: "燕云周年庆啦，体验下不见山新地图"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV11HByB8Evv"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-27-live-02
-  type: live
-  date: "2025-12-27"
-  title: "燕云十六声"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1ysByBtETs"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-27-live-03
-  type: live
-  date: "2025-12-27"
-  title: "燕云周年庆啦，体验下不见山新地图"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV11HByB8Evv，4:03:58）、直播回放巴拉蹦吧（弹幕/纯净双版，4:04:17）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 4:03:49），总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV11HByB8Evv"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV1ysByBtETs"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1M7ByBPEWf"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1AxByBZESQ"
@@ -368,38 +218,15 @@
   date: "2025-12-28"
   title: "燕云周年庆啦，体验下不见山新地图"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1tMvkBDE1D"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-28-live-02
-  type: live
-  date: "2025-12-28"
-  title: "燕云十六声"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV11dvkBmEsE"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-12-28-live-03
-  type: live
-  date: "2025-12-28"
-  title: "燕云周年庆啦，体验下不见山新地图"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1tMvkBDE1D，2:43:40）、直播回放巴拉蹦吧（弹幕/纯净双版，2:43:48）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 2:43:04），总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1tMvkBDE1D"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV11dvkBmEsE"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1NXvkBDEsN"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1igvCBMEfX"

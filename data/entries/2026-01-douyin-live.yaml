@@ -11,37 +11,14 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 2:44:46）、bobi华（2:44:13）、不懒bot（2:43:55）与 服部平次（2:44:16）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1M2iqBVE8s"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1griqB2EhQ"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-03-live-02
-  type: live
-  date: "2026-01-03"
-  title: "聊天&体验鸣潮鸣潮3.0"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1PdiqBTEXo"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-03-live-03
-  type: live
-  date: "2026-01-03"
-  title: "鸣潮"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1fbijBPEqr"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1SKiqB6Ewz"
@@ -51,56 +28,21 @@
 - id: 2026-01-09-live-01
   type: live
   date: "2026-01-09"
-  title: "到杭州了"
+  title: "和壮壮一起逛「黑神话悟空」杭州线下店"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场户外直播（逛黑神话悟空杭州线下店）由 直播回放巴拉蹦吧（弹幕/纯净双版 1:37:49）、bobi华（1:38:12）、服部平次（1:37:44）分别搬运，不懒bot 的投稿自 16:10 起、短 6 分钟（1:31:36），总时长基本吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1PArTBfEqN"
       kind: replay
     - url: "https://www.bilibili.com/video/BV132rKB6EEP"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-09-live-02
-  type: live
-  date: "2026-01-09"
-  title: "户外到杭州了"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1ntrKBXEHV"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-09-live-03
-  type: live
-  date: "2026-01-09"
-  title: "和壮壮一起逛「黑神话悟空」杭州线下店，1.9直播录像弹幕版"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1snrKBtEix"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-09-live-04
-  type: live
-  date: "2026-01-09"
-  title: "黑神话线下零售店"
-  platform: douyin
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1vkrKBVEwC"
       kind: replay
   contributed_by: data-agent
@@ -108,44 +50,21 @@
 - id: 2026-01-10-live-01
   type: live
   date: "2026-01-10"
-  title: "太吾绘卷"
+  title: "太吾绘卷上海线下试玩会"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（太吾绘卷上海线下试玩会）由 服部平次（1:52:19，10:30 起）、直播回放巴拉蹦吧（弹幕/纯净双版 1:52:55）、bobi华（1:52:30）分别搬运，不懒bot 的投稿自 10:55 起、短 25 分钟（1:27:34），覆盖区间一致，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1MTrVBnEEm"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1e9rGBFEih"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-10-live-02
-  type: live
-  date: "2026-01-10"
-  title: "太吾绘卷上海线下试玩会"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1XirVB8Ebj"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1QqrVBfEpM"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-10-live-03
-  type: live
-  date: "2026-01-10"
-  title: "太吾绘卷上海线下试玩会"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1zkrGBqE2n"
       kind: replay
   contributed_by: data-agent
@@ -155,24 +74,13 @@
   date: "2026-01-15"
   title: "开播拉"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1NBkFB1E3f"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-15-live-02
-  type: live
-  date: "2026-01-15"
-  title: "开播拉"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1NBkFB1E3f，1:00:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，1:00:12）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1NBkFB1E3f"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1p6kFB5EHR"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1pCkFBGEsi"
@@ -198,40 +106,17 @@
   date: "2026-01-22"
   title: "明日方舟终末地公测啦"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1c7BfB8EDD"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-22-live-02
-  type: live
-  date: "2026-01-22"
-  title: "明日方舟终末地公测啦"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 bobi华（BV1c7BfB8EDD，3:07:38）、直播回放巴拉蹦吧（弹幕/纯净双版，3:06:43）、服部平次（BV1AVBfBAE6g，3:07:01）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 3:06:32），总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1c7BfB8EDD"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1gWzFBLEcE"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1gHzFB2Ekc"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-22-live-03
-  type: live
-  date: "2026-01-22"
-  title: "明日方舟：终末地"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1ucBfB3Edd"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1AVBfBAE6g"
@@ -241,42 +126,19 @@
 - id: 2026-01-28-live-01
   type: live
   date: "2026-01-28"
-  title: "娃睡了来唠会"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1CbzXBDEee"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-28-live-02
-  type: live
-  date: "2026-01-28"
-  title: "娃睡了来唠会"
+  title: "娃睡了来唠会：这是谐音梗"
   platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（22:16 开播聊天→玩《这是谐音梗》→23:24 收尾）由 bobi华（1:23:00）、直播回放巴拉蹦吧（弹幕/纯净双版 1:25:47）、服部平次（1:24:12）与 不懒bot（1:25:00）分别搬运，标题各异但总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1CbzXBDEee"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1RMzXBNEWQ"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1DLzXB8E24"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-28-live-03
-  type: live
-  date: "2026-01-28"
-  title: "这是谐音梗"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1VHzfBDECH"
       kind: replay
     - url: "https://www.bilibili.com/video/BV11xzXBXES2"
@@ -291,37 +153,14 @@
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 2:10:15）、bobi华（2:09:56）、服部平次（2:09:55）与 不懒bot（2:10:13）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
     - url: "https://www.bilibili.com/video/BV1LF61BHERA"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1oo6yBWEgu"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-31-live-02
-  type: live
-  date: "2026-01-31"
-  title: "在终末地里拉电线"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1J96yBxEAz"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2026-01-31-live-03
-  type: live
-  date: "2026-01-31"
-  title: "明日方舟：终末地"
-  platform: douyin
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
     - url: "https://www.bilibili.com/video/BV1GJ6JBkEQZ"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1zb6nBsEmv"
