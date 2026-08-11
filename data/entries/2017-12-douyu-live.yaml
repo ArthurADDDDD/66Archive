@@ -47,20 +47,10 @@
   confidence: high
   games: []
   tags: [吃鸡佳缘, 弹幕版]
+  note: "同一场直播（吃鸡佳缘第一期）的弹幕版（ac4125032）与纯净版（ac4122087）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac4125032"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2017-12-06-live-02
-  type: live
-  date: "2017-12-06"
-  title: "吃鸡佳缘"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [吃鸡佳缘]
-  sources:
     - url: "https://www.acfun.cn/v/ac4122087"
       kind: replay
   contributed_by: data-agent
@@ -158,20 +148,10 @@
   confidence: high
   games: []
   tags: [吃鸡佳缘, 弹幕版]
+  note: "同一场直播（吃鸡佳缘第二期）的弹幕版（ac4140602）与纯净版（ac4140326）原本被建模为两条重复条目，已合并。同日另有 GOROGOA 画中世界 条目。"
   sources:
     - url: "https://www.acfun.cn/v/ac4140602"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2017-12-15-live-03
-  type: live
-  date: "2017-12-15"
-  title: "吃鸡佳缘"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [吃鸡佳缘]
-  sources:
     - url: "https://www.acfun.cn/v/ac4140326"
       kind: replay
   contributed_by: data-agent

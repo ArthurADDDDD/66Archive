@@ -131,20 +131,10 @@
   confidence: high
   games: []
   tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播的弹幕版（ac3918562）与纯净版（ac3916709，目录标题『心灵砒霜21』）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac3918562"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2017-08-13-live-02
-  type: live
-  date: "2017-08-13"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜]
-  sources:
     - url: "https://www.acfun.cn/v/ac3916709"
       kind: replay
   contributed_by: data-agent
