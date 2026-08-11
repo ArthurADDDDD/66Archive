@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2017-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 29 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2017-06-01-live-01
   type: live
   date: "2017-06-01"
   title: "见证者（The Witness）"
   platform: douyu
   confidence: high
+  duration_min: 263
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_01/1496325437.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3744524"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-02-live-01
@@ -21,10 +19,13 @@
   title: "见证者（The Witness）"
   platform: douyu
   confidence: high
+  duration_min: 235
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_02/1496412227.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3747426"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-03-live-01
@@ -33,10 +34,13 @@
   title: "见证者（The Witness）"
   platform: douyu
   confidence: high
+  duration_min: 568
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_04/1496540839.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3750370"
       kind: replay
+      parts: 7
   contributed_by: data-agent
 
 - id: 2017-06-04-live-01
@@ -45,11 +49,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 320
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_07/1496832100.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3760083"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-05-live-01
@@ -58,10 +65,13 @@
   title: "Switch小游戏"
   platform: douyu
   confidence: high
+  duration_min: 149
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_05/1496669915.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3754354"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-06-live-01
@@ -70,10 +80,13 @@
   title: "大周庆典特辑"
   platform: douyu
   confidence: high
+  duration_min: 251
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_06/1496757660.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3757948"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-08-live-01
@@ -82,10 +95,13 @@
   title: "守望先锋"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_08/1496966051.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3764055"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-10-live-01
@@ -94,10 +110,13 @@
   title: "LOL英雄联盟"
   platform: douyu
   confidence: high
+  duration_min: 276
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_10/1497104261.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3768873"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-12-live-01
@@ -106,10 +125,13 @@
   title: "洛杉矶之行"
   platform: douyu
   confidence: high
+  duration_min: 170
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_12/1497276174.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3773619"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-13-live-01
@@ -118,10 +140,13 @@
   title: "育碧发布会"
   platform: douyu
   confidence: high
+  duration_min: 48
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_13/1497359221.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3776237"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-06-13-live-02
@@ -130,10 +155,13 @@
   title: "酒店休闲时光"
   platform: douyu
   confidence: high
+  duration_min: 126
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_13/1497359113.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3776236"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-14-live-01
@@ -142,10 +170,13 @@
   title: "E3展会第一天"
   platform: douyu
   confidence: high
+  duration_min: 229
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_14/1497483868.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3780006"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-06-14-live-02
@@ -154,10 +185,13 @@
   title: "任天堂游戏发布会视频"
   platform: douyu
   confidence: high
+  duration_min: 99
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_14/1497412168.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3777372"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-15-live-01
@@ -166,10 +200,13 @@
   title: "E3展会第二天"
   platform: douyu
   confidence: high
+  duration_min: 164
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_15/1497486771.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3780119"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-15-live-02
@@ -178,10 +215,13 @@
   title: "半夜不睡觉"
   platform: douyu
   confidence: high
+  duration_min: 15
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_16/1497581534.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3783663"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-06-18-live-01
@@ -190,11 +230,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 187
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_19/1497881842.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3792599"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-20-live-01
@@ -203,10 +246,13 @@
   title: "ARMS"
   platform: douyu
   confidence: high
+  duration_min: 56
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_21/1498053727.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3798171"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-21-live-01
@@ -215,10 +261,13 @@
   title: "RIME"
   platform: douyu
   confidence: high
+  duration_min: 171
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_21/1498053594.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3798217"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-23-live-01
@@ -227,10 +276,13 @@
   title: "RIME"
   platform: douyu
   confidence: high
+  duration_min: 117
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498307589.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3806231"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-23-live-02
@@ -239,10 +291,13 @@
   title: "公益项目拍摄现场"
   platform: douyu
   confidence: high
+  duration_min: 71
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498309745.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3806230"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-24-live-01
@@ -251,10 +306,13 @@
   title: "KALIMBA（克林巴）"
   platform: douyu
   confidence: high
+  duration_min: 216
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498316563.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3806751"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2017-06-25-live-01
@@ -263,11 +321,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 188
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_26/1498447067.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3809425"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-26-live-01
@@ -276,10 +337,13 @@
   title: "六酱萌妹的日常"
   platform: douyu
   confidence: high
+  duration_min: 39
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_27/1498528493.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3811659"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2017-06-26-live-02
@@ -288,10 +352,13 @@
   title: "有顶天家族2圣地巡礼"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_26/1498485864.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3810969"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2017-06-27-live-01
@@ -300,10 +367,13 @@
   title: "森见登美彦专访"
   platform: douyu
   confidence: high
+  duration_min: 92
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_27/1498571818.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3813739"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-28-live-01
@@ -312,10 +382,13 @@
   title: "下鸭神社&六道珍皇寺之旅"
   platform: douyu
   confidence: high
+  duration_min: 154
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_28/1498651039.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3816288"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-06-28-live-02
@@ -324,10 +397,13 @@
   title: "星野晚餐"
   platform: douyu
   confidence: high
+  duration_min: 105
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_29/1498702817.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3817325"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2017-06-29-live-01
@@ -336,10 +412,13 @@
   title: "吉原正行专访（有顶天家族2导演）"
   platform: douyu
   confidence: high
+  duration_min: 53
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_29/1498747677.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3819521"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2017-06-30-live-01
@@ -348,8 +427,11 @@
   title: "回国之前剪个头"
   platform: douyu
   confidence: high
+  duration_min: 88
+  cover: "https://tx-free-imgs.acfun.cn/content/2017_06_30/1498830233.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3822160"
       kind: replay
+      parts: 2
   contributed_by: data-agent

@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2018-10 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 23 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-10-02-live-01
   type: live
   date: "2018-10-02"
   title: "Jalopy（老爷车）"
   platform: douyu
   confidence: high
+  duration_min: 221
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_02/1538482354.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4619001"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-03-live-01
@@ -21,10 +19,13 @@
   title: "女流66生日快乐"
   platform: douyu
   confidence: high
+  duration_min: 224
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_04/1538629059.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4621569"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-03-live-02
@@ -33,10 +34,13 @@
   title: "女流66生日特辑（来自各个分部）"
   platform: douyu
   confidence: high
+  duration_min: 9
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_03/1538569886.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4620323"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-05-live-01
@@ -45,10 +49,13 @@
   title: "Jalopy（老爷车）"
   platform: douyu
   confidence: high
+  duration_min: 271
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_05/1538740454.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4623186"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-06-live-01
@@ -57,10 +64,13 @@
   title: "Hue"
   platform: douyu
   confidence: high
+  duration_min: 321
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_06/1538837214.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4624907"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-10-07-live-01
@@ -69,11 +79,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 245
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_07/1538923201.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4626249"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-08-live-01
@@ -82,10 +95,13 @@
   title: "拣爱&Old School Musical"
   platform: douyu
   confidence: high
+  duration_min: 227
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_08/1538998354.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4627904"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-10-live-01
@@ -94,10 +110,13 @@
   title: "超级马里奥派对"
   platform: douyu
   confidence: high
+  duration_min: 222
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_10/1539170072.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4632146"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-11-live-01
@@ -106,10 +125,13 @@
   title: "阳光路，关爱自闭症儿童"
   platform: douyu
   confidence: high
+  duration_min: 283
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_11/1539256657.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4634790"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-10-12-live-01
@@ -118,10 +140,13 @@
   title: "超级马里奥派对"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_12/1539342445.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4637755"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-14-live-01
@@ -130,11 +155,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 234
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_15/1539585242.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4644188"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-10-16-live-01
@@ -143,10 +171,13 @@
   title: "超级马里奥派对"
   platform: douyu
   confidence: high
+  duration_min: 194
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_16/1539691010.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4648180"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-19-live-01
@@ -155,10 +186,13 @@
   title: "Sheltered（庇护所）"
   platform: douyu
   confidence: high
+  duration_min: 295
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_19/1539953075.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4657003"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-20-live-01
@@ -167,10 +201,13 @@
   title: "Sheltered（庇护所）"
   platform: douyu
   confidence: high
+  duration_min: 342
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_20/1540047614.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4659464"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-21-live-01
@@ -179,10 +216,13 @@
   title: "三周年游戏混剪（007）"
   platform: douyu
   confidence: high
+  duration_min: 4
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_01_21/1516537858.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4204303"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-10-23-live-01
@@ -191,10 +231,13 @@
   title: "Breathedge（呼吸边缘）"
   platform: douyu
   confidence: high
+  duration_min: 313
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_23/1540296503.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4666674"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-10-24-live-01
@@ -203,10 +246,13 @@
   title: "冰火王权Regins"
   platform: douyu
   confidence: high
+  duration_min: 233
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_24/1540381381.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4668945"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-10-26-live-01
@@ -215,10 +261,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 351
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_26/1540558744.jpg?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4674387"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-10-27-live-01
@@ -227,10 +276,13 @@
   title: "荒野大镖客2"
   platform: douyu
   confidence: high
+  duration_min: 386
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_27/1540648057.jpg?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4676355"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-10-28-live-01
@@ -239,10 +291,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 317
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_28/1540731019.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4678152"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-10-29-live-01
@@ -251,10 +306,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 303
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_29/1540816251.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4680667"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-10-30-live-01
@@ -263,10 +321,13 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 312
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_30/1540910136.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4683270"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-10-31-live-01
@@ -275,8 +336,11 @@
   title: "荒野大镖客：救赎2"
   platform: douyu
   confidence: high
+  duration_min: 231
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_31/1540986776.JPG?imageslim"
   games: [red-dead-redemption-2]
   sources:
     - url: "https://www.acfun.cn/v/ac4685350"
       kind: replay
+      parts: 3
   contributed_by: data-agent

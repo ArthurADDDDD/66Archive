@@ -1,19 +1,17 @@
-# 采集任务 #003 · 2018-07 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-07-01-live-01
   type: live
   date: "2018-07-01"
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 142
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_01/1530458097.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4440588"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-01-live-02
@@ -22,11 +20,14 @@
   title: "戏说聊斋"
   platform: douyu
   confidence: high
+  duration_min: 63
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_01/1530458997.jpg?imageslim"
   games: []
   tags: [戏说聊斋]
   sources:
     - url: "https://www.acfun.cn/v/ac4440576"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-07-02-live-01
@@ -35,10 +36,13 @@
   title: "VR乒乓了解一下"
   platform: douyu
   confidence: high
+  duration_min: 168
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_02/1530528321.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4441949"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-06-live-01
@@ -47,10 +51,13 @@
   title: "蒸汽世界 Steam World Dig"
   platform: douyu
   confidence: high
+  duration_min: 252
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_06/1530881261.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4449957"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-07-live-01
@@ -59,10 +66,13 @@
   title: "蒸汽世界&极限巅峰&逆水寒"
   platform: douyu
   confidence: high
+  duration_min: 315
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_07/1530969394.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4451378"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-08-live-01
@@ -71,14 +81,18 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 181
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_08/1531050838.jpg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   note: "同一场直播（心灵砒霜 & 戏说聊斋第十二期）的纯净版（ac4452475）与弹幕版（ac4452632）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac4452475"
       kind: replay
+      parts: 3
     - url: "https://www.acfun.cn/v/ac4452632"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-10-live-01
@@ -87,10 +101,13 @@
   title: "极限巅峰 （Steep）"
   platform: douyu
   confidence: high
+  duration_min: 323
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_10/1531228815.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4456409"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-07-11-live-01
@@ -99,10 +116,13 @@
   title: "我被男神捅死了"
   platform: douyu
   confidence: high
+  duration_min: 282
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_11/1531309605.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4458161"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-13-live-01
@@ -111,10 +131,13 @@
   title: "我被男神捅死了"
   platform: douyu
   confidence: high
+  duration_min: 249
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_13/1531482259.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4461994"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-07-14-live-01
@@ -123,10 +146,13 @@
   title: "来访者"
   platform: douyu
   confidence: high
+  duration_min: 204
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_14/1531571741.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4463451"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-07-15-live-01
@@ -135,11 +161,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_15/1531674140.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4464939"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-07-17-live-01
@@ -148,10 +177,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 262
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_17/1531828061.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4468653"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-18-live-01
@@ -160,10 +192,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 321
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_18/1531914668.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4470628"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-19-live-01
@@ -172,10 +207,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 387
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_19/1532005602.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4472749"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-20-live-01
@@ -184,10 +222,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 277
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_20/1532090738.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4474728"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-21-live-01
@@ -196,10 +237,13 @@
   title: "八方旅人& 绝地求生"
   platform: douyu
   confidence: high
+  duration_min: 278
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_21/1532176568.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4476097"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-22-live-01
@@ -208,11 +252,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 252
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_23/1532306025.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4478022"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-07-23-live-01
@@ -221,10 +268,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_23/1532345827.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4479395"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-07-24-live-01
@@ -233,10 +283,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 427
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_24/1532442251.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4481661"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-25-live-01
@@ -245,10 +298,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 304
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_25/1532521439.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4483445"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-07-26-live-01
@@ -257,10 +313,13 @@
   title: "八方旅人（Octopath Traveler）"
   platform: douyu
   confidence: high
+  duration_min: 260
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_26/1532606610.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4485376"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-27-live-01
@@ -269,10 +328,13 @@
   title: "太鼓达人"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_27/1532694000.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4487651"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-07-28-live-01
@@ -281,10 +343,13 @@
   title: "炸弹鸡(Bomb Chicken)"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_28/1532781454.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4488998"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-07-29-live-01
@@ -293,11 +358,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 207
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_30/1532912753.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4490868"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-07-30-live-01
@@ -306,10 +374,13 @@
   title: "波西亚时光"
   platform: douyu
   confidence: high
+  duration_min: 213
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_30/1532947632.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4492025"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-07-31-live-01
@@ -318,8 +389,11 @@
   title: "炸弹鸡&逆水寒"
   platform: douyu
   confidence: high
+  duration_min: 203
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_07_31/1533041112.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4494319"
       kind: replay
+      parts: 3
   contributed_by: data-agent

@@ -1,19 +1,17 @@
-# 采集任务 #003 · 2019-11 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 11 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2019-11-03-live-01
   type: live
   date: "2019-11-03"
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 268
+  cover: "https://tx-free-imgs.acfun.cn/FkPzhTUZa28qvmkNJMI9nXaHsFF9?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac11553091"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2019-11-04-live-01
@@ -22,11 +20,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 268
+  cover: "https://tx-free-imgs.acfun.cn/FkPzhTUZa28qvmkNJMI9nXaHsFF9?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac11561209"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2019-11-07-live-01
@@ -35,10 +36,13 @@
   title: "没有信号，主要靠听"
   platform: douyu
   confidence: high
+  duration_min: 102
+  cover: "https://tx-free-imgs.acfun.cn/FqFJWHKUuxkPIOEJgZhDj4L0x8Xt?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11629299"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2019-11-09-live-01
@@ -47,10 +51,13 @@
   title: "死亡搁浅"
   platform: douyu
   confidence: high
+  duration_min: 256
+  cover: "https://tx-free-imgs.acfun.cn/Foi81EoyIALxGH8gxIIxudEWZL9k?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11618768"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2019-11-10-live-01
@@ -59,11 +66,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 183
+  cover: "https://tx-free-imgs.acfun.cn/FkuHg9jPwjdoNDXIC7vzwFrgnlUP?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac11629445"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2019-11-13-live-01
@@ -72,10 +82,13 @@
   title: "死亡搁浅"
   platform: douyu
   confidence: high
+  duration_min: 280
+  cover: "https://tx-free-imgs.acfun.cn/FmqNCEUansTRtyV7nuxU7Uxn9uy3?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11651121"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2019-11-17-live-01
@@ -84,11 +97,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 254
+  cover: "https://tx-free-imgs.acfun.cn/FgC1p5g-FxRDyLJtXorrej_f1FHz?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac11689940"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2019-11-20-live-01
@@ -97,10 +113,13 @@
   title: "We werehere together"
   platform: douyu
   confidence: high
+  duration_min: 120
+  cover: "https://tx-free-imgs.acfun.cn/FuUZvyu-So25vcFkV96pf5WXB0ht?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11707262"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2019-11-24-live-01
@@ -109,10 +128,13 @@
   title: "怪物猎人狩猎季"
   platform: douyu
   confidence: high
+  duration_min: 214
+  cover: "https://tx-free-imgs.acfun.cn/FpEvF3UCc6q0jH3JGBJ-Wf36smW9?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11740245"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2019-11-26-live-01
@@ -121,10 +143,13 @@
   title: "Tangle Tower"
   platform: douyu
   confidence: high
+  duration_min: 275
+  cover: "https://tx-free-imgs.acfun.cn/FgEcl6HUuUFmaQwh_7lpNhEnrGfW?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11780573"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2019-11-29-live-01
@@ -133,8 +158,11 @@
   title: "Farmers Dynasty"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/FuZGCDYkzV2qkWcYtFyh5opnp9al?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac11786188"
       kind: replay
+      parts: 5
   contributed_by: data-agent

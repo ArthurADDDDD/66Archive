@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2021-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2021-06-01-live-01
   type: live
   date: "2021-06-01"
   title: "下午茶时间"
   platform: douyu
   confidence: high
+  duration_min: 153
+  cover: "https://tx-free-imgs.acfun.cn/o_1f73pprh9duk1pav8hk119s120a0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29390922"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-06-02-live-01
@@ -21,10 +19,13 @@
   title: "魔兽怀旧服"
   platform: douyu
   confidence: high
+  duration_min: 248
+  cover: "https://tx-free-imgs.acfun.cn/o_1f76h2asl1o2l199q8i112vs1i7j0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29430144"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-03-live-01
@@ -33,10 +34,13 @@
   title: "魔兽怀旧服"
   platform: douyu
   confidence: high
+  duration_min: 240
+  cover: "https://tx-free-imgs.acfun.cn/o_1f78u1m391iqqdda1h0crhj128o0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29439384"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-04-live-01
@@ -45,10 +49,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 255
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7bq12dm1fah24gm9l6oj10fu0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29449434"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-06-05-live-01
@@ -57,10 +64,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 226
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7ecpgkotru2fqqm711rk1u1b0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29458998"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-06-06-live-01
@@ -69,11 +79,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 252
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7j1cobm1re6rc17cm1vj91g6n0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac29493793"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-06-08-live-01
@@ -82,10 +95,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 272
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7loeiv61goo1e1o1gug3vq198u0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29558922"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-06-09-live-01
@@ -94,10 +110,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 277
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7oe9t9612ukrijl491ja91s7r0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29625319"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2021-06-10-live-01
@@ -106,10 +125,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 258
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7r2210m6noho316h415u0mmr0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29652965"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-11-live-01
@@ -118,10 +140,13 @@
   title: "你画我猜"
   platform: douyu
   confidence: high
+  duration_min: 236
+  cover: "https://tx-free-imgs.acfun.cn/o_1f7tl2vsohvaqis169a106qqtf0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29675884"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-12-live-01
@@ -130,10 +155,13 @@
   title: "PowerWash Simulator"
   platform: douyu
   confidence: high
+  duration_min: 167
+  cover: "https://tx-free-imgs.acfun.cn/o_1f805n4gdmu65va1vcmsmo1co10.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29698266"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-06-13-live-01
@@ -142,11 +170,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 227
+  cover: "https://tx-free-imgs.acfun.cn/o_1f85atsu633om6lm9gnraqra0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac29740163"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-15-live-01
@@ -155,10 +186,13 @@
   title: "空洞骑士"
   platform: douyu
   confidence: high
+  duration_min: 160
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8a6qr2h1sse3e1ktf1ler8uu0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29795203"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-06-15-live-02
@@ -167,10 +201,13 @@
   title: "空洞骑士（中）"
   platform: douyu
   confidence: high
+  duration_min: 204
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8a6raol1la1p39kpg68u94q0.jpeg?imageslim"
   games: [hollow-knight]
   sources:
     - url: "https://www.acfun.cn/v/ac29795099"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-16-live-01
@@ -179,10 +216,13 @@
   title: "周三晚上66"
   platform: douyu
   confidence: high
+  duration_min: 156
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8cqjeta1tk1cpl13od28112570.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29822588"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-06-17-live-01
@@ -191,10 +231,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 168
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8d4jkpn1l1l104rcr7q25pki0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29823979"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2021-06-18-live-01
@@ -203,10 +246,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 206
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8gv6qiu103a12unhs7t7i8od0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29853069"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-06-19-live-01
@@ -215,10 +261,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 113
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8kq8ufq1p2p186mnch1k3hg5n0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29886242"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2021-06-20-live-01
@@ -227,10 +276,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 220
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8kpihllqrc1hsm1dnh33edd90.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29885872"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-06-21-live-01
@@ -239,10 +291,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8ndmjmq14ubp5617gnmr4gfs0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29909138"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-22-live-01
@@ -251,10 +306,13 @@
   title: "永劫无间"
   platform: douyu
   confidence: high
+  duration_min: 279
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8s6necagi51os71hl72kt1q1f0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29949972"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-22-live-02
@@ -263,10 +321,13 @@
   title: "永劫无间（中）"
   platform: douyu
   confidence: high
+  duration_min: 278
+  cover: "https://tx-free-imgs.acfun.cn/o_1f8s6ohej1ka414q63c09ac28l0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac29950812"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-27-live-01
@@ -275,14 +336,18 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 259
+  cover: "https://tx-free-imgs.acfun.cn/o_1f96kpfnmf1e2jk12314bj1hci0.jpeg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   note: "同一场直播的弹幕版（ac30088639，5P：砒霜前聊×2+心灵砒霜×3）与纯净版（ac30077895，5P：砒霜前聊+心灵砒霜×4）原本被建模为两条重复条目，已合并；主来源为弹幕版。"
   sources:
     - url: "https://www.acfun.cn/v/ac30088639"
       kind: replay
+      parts: 5
     - url: "https://www.acfun.cn/v/ac30077895"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-28-live-01
@@ -291,10 +356,13 @@
   title: "迷宫大侦探"
   platform: douyu
   confidence: high
+  duration_min: 279
+  cover: "https://tx-free-imgs.acfun.cn/o_1f99bnmeo3rmp73kcsuq1h9h0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac30090133"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2021-06-29-live-01
@@ -303,10 +371,13 @@
   title: "霓虹深渊"
   platform: douyu
   confidence: high
+  duration_min: 168
+  cover: "https://tx-free-imgs.acfun.cn/o_1f9bvr2q9skpe786f7tvs8ud0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac30100911"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2021-06-30-live-01
@@ -315,8 +386,11 @@
   title: "霓虹深渊"
   platform: douyu
   confidence: high
+  duration_min: 178
+  cover: "https://tx-free-imgs.acfun.cn/o_1f9eh9sec13u61hbu9h9ildnd0.jpeg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac30109533"
       kind: replay
+      parts: 5
   contributed_by: data-agent

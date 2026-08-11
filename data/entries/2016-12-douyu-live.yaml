@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2016-12 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 27 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2016-12-03-live-01
   type: live
   date: "2016-12-03"
   title: "王府井"
   platform: douyu
   confidence: high
+  duration_min: 47
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_03/1480766379.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3302357"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-12-04-live-01
@@ -21,11 +19,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 201
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_05/1480900488.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3305136"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-05-live-01
@@ -34,10 +35,13 @@
   title: "最终幻想15"
   platform: douyu
   confidence: high
+  duration_min: 302
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_05/1480953243.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3307418"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2016-12-07-live-01
@@ -46,10 +50,13 @@
   title: "吃火锅"
   platform: douyu
   confidence: high
+  duration_min: 33
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_07/1481111488.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3312290"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-12-07-live-02
@@ -58,10 +65,13 @@
   title: "最后的守护者"
   platform: douyu
   confidence: high
+  duration_min: 250
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_07/1481113918.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3312391"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2016-12-08-live-01
@@ -70,10 +80,13 @@
   title: "最后的守护者"
   platform: douyu
   confidence: high
+  duration_min: 287
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_08/1481205569.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3315291"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2016-12-09-live-01
@@ -82,10 +95,13 @@
   title: "最后的守护者"
   platform: douyu
   confidence: high
+  duration_min: 215
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_09/1481292833.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3317908"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-12-10-live-01
@@ -94,11 +110,14 @@
   title: "健身"
   platform: douyu
   confidence: high
+  duration_min: 122
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_10/1481384436.JPG?imageslim"
   games: []
   tags: [健身]
   sources:
     - url: "https://www.acfun.cn/v/ac3320202"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-12-10-live-02
@@ -107,10 +126,13 @@
   title: "煮糊了(overcooked)"
   platform: douyu
   confidence: high
+  duration_min: 191
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_10/1481384444.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3320199"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-11-live-01
@@ -119,11 +141,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 184
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481548467.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3324519"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-12-12-live-01
@@ -132,10 +157,13 @@
   title: "手机直播"
   platform: douyu
   confidence: high
+  duration_min: 89
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481553716.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3324711"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-12-12-live-02
@@ -144,10 +172,13 @@
   title: "零号事件(event[0])"
   platform: douyu
   confidence: high
+  duration_min: 237
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481553264.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3324703"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-12-14-live-01
@@ -156,10 +187,13 @@
   title: "出门溜达溜达憋坏啦"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_14/1481714772.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3329447"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-12-16-live-01
@@ -168,10 +202,13 @@
   title: "微软活动"
   platform: douyu
   confidence: high
+  duration_min: 28
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_16/1481880815.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3334394"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-12-17-live-01
@@ -180,11 +217,14 @@
   title: "健身"
   platform: douyu
   confidence: high
+  duration_min: 111
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_17/1481983958.jpg?imageslim"
   games: []
   tags: [健身]
   sources:
     - url: "https://www.acfun.cn/v/ac3337282"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-12-17-live-02
@@ -193,10 +233,13 @@
   title: "战斗方块剧场"
   platform: douyu
   confidence: high
+  duration_min: 146
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_17/1481983939.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3337283"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-12-19-live-01
@@ -205,11 +248,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 195
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_20/1482225651.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3343783"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-21-live-01
@@ -218,10 +264,13 @@
   title: "魔兽RPG"
   platform: douyu
   confidence: high
+  duration_min: 281
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_21/1482328080.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3347021"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2016-12-23-live-01
@@ -230,10 +279,13 @@
   title: "猫头鹰男孩(Owlboy)"
   platform: douyu
   confidence: high
+  duration_min: 271
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_23/1482500364.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3352127"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-12-24-live-01
@@ -242,10 +294,13 @@
   title: "MC建筑大赛"
   platform: douyu
   confidence: high
+  duration_min: 197
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_24/1482591196.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3354442"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-25-live-01
@@ -254,10 +309,13 @@
   title: "Xbox One S国行拆箱"
   platform: douyu
   confidence: high
+  duration_min: 39
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_25/1482669733.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3356095"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-12-25-live-02
@@ -266,11 +324,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 196
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_26/1482751064.JPG?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac3358586"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-27-live-01
@@ -279,10 +340,13 @@
   title: "猫头鹰男孩(Owlboy)"
   platform: douyu
   confidence: high
+  duration_min: 219
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_27/1482839749.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3361334"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-28-live-01
@@ -291,11 +355,14 @@
   title: "健身"
   platform: douyu
   confidence: high
+  duration_min: 126
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482944709.JPG?imageslim"
   games: []
   tags: [健身]
   sources:
     - url: "https://www.acfun.cn/v/ac3364670"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-28-live-02
@@ -304,10 +371,13 @@
   title: "猫头鹰男孩(Owlboy)"
   platform: douyu
   confidence: high
+  duration_min: 107
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482943599.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3364645"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2016-12-30-live-01
@@ -316,10 +386,13 @@
   title: "猫头鹰男孩(Owlboy)"
   platform: douyu
   confidence: high
+  duration_min: 146
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_30/1483102206.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac3369385"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-12-31-live-01
@@ -328,9 +401,12 @@
   title: "聊天"
   platform: douyu
   confidence: high
+  duration_min: 106
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_11_31/1483192023.JPG?imageslim"
   games: []
   tags: [聊天]
   sources:
     - url: "https://www.acfun.cn/v/ac3371728"
       kind: replay
+      parts: 2
   contributed_by: data-agent

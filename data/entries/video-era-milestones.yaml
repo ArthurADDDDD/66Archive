@@ -1,14 +1,11 @@
-# 采集任务：视频时代（2010-05 ~ 2015-02，优酷解说期）标志性作品
-# 数据来源：archive.org 快照（i.youku.com/u/UMjQyOTM1MzA4 用户空间 2013-07/2013-12/2014-11/2015-01 四个时点）
-# 全量作品目录（79 条）见 data/catalogs/youku-video-era.csv；本文件仅收录可访问/有代表性的里程碑。
-# 存活判定：2026-08-11 实测 v.youku.com 原视频页（HTTP 200 + JSON-LD 元数据完整）。
-# 上传者确认：首作简介自述"女流的优酷空间"；视频均来自该用户空间快照列表。
 - id: 2010-05-08-video-01
   type: video
   date: "2010-05-08"
   title: "【女流】小型单机游戏之迷画之塔"
   platform: youku
   confidence: high
+  duration_min: 13
+  cover: "https://m.ykimg.com/054204085251801B6A0A4354166C70A0"
   games: []
   tags: [视频时代, 首作]
   note: "视频时代第一支视频（大三期间上传）。上线时间 2010-05-08 17:55:58（页面 JSON-LD），时长 13:14。简介自述『有好的迷你单机游戏请到女流的优酷空间留言』，确认上传者为女流本人。原页面 2026-08-11 实测仍可访问。另有切片《女流66看自己制作的第一个视频《迷画之塔》的反应》（BV1rW411y7cc，2018-10-07）旁证此为第一个视频。"
@@ -23,6 +20,8 @@
   title: "【女流】变态人生大冒险"
   platform: youku
   confidence: high
+  duration_min: 9
+  cover: "https://m.ykimg.com/05420408525B51796A0A4E54EEB0D607"
   games: []
   tags: [视频时代, 代表作]
   note: "视频时代爆款代表作。上线 2010-06-30 14:59:05，时长 9:20，简介『比比巴巴波！』。2013 年快照时播放 210 万+（优酷侧，全网 1000 万播放为媒体口径），是早期粉丝积累与媒体关注的核心作品。原页面 2026-08-11 实测仍可访问。"
@@ -37,6 +36,8 @@
   title: "欢乐呀欢乐！欧洲超人气在线合作小游戏试玩解说"
   platform: youku
   confidence: high
+  duration_min: 19
+  cover: "https://m.ykimg.com/05420408525452AB6A0A405B9014D7D3"
   games: []
   tags: [视频时代, 多人在线]
   note: "《欢乐呀欢乐》为欧洲多人合作小游戏（Transformice）试玩，上线 2010-06-27 21:50:34，2013 年快照播放 57 万+。简介提及『期待国内服务器的出现』。原页面 2026-08-11 实测仍可访问。"
@@ -51,6 +52,8 @@
   title: "女流忠告！心脏不好的千万别看。。。。"
   platform: youku
   confidence: high
+  duration_min: 2
+  cover: "https://m.ykimg.com/054204085B29B7780000010184037193"
   games: []
   tags: [视频时代]
   note: "恐怖迷宫游戏试玩（winterrowd.com/maze），上线 2010-06-21 12:24:32，仅 1:58，2013 年快照播放 53 万+。原页面 2026-08-11 实测仍可访问。"
@@ -66,6 +69,8 @@
   platform: youku
   series: anqila-zhige
   confidence: high
+  duration_min: 25
+  cover: "https://m.ykimg.com/05420408525B7FA66A0A487F0E5F6E69"
   games: []
   tags: [视频时代, 系列解说]
   note: "《安琪拉之歌》（Aquaria）全剧情系列开端，上线 2010-06-09 21:19:08，时长 25:10。系列 Part 1~5 跨越 2010-06 ~ 2014-09（Part 2 2010-06-16、Part 3/4 2012-05、Part 5 2014-09-10，中间受台湾交换生停更影响）。Part 1 原页面 2026-08-11 实测仍可访问。"
@@ -81,13 +86,15 @@
   platform: youku
   series: journey-playthrough
   confidence: high
+  duration_min: 29
+  cover: "https://m.ykimg.com/05420408523296AA6A0A4D510EF78097"
   games: []
   tags: [视频时代, 系列解说, 代表作]
-  note: "《风之旅人》（Journey）全流程赏析，Part 1/2/3 于 2013-09-13/09-25/09-30 上线，是 2013 下半年恢复更新后的代表作。原优酷页面已删（2026-08-11 实测 404），现存可查：B 站考古/搬运号有该作 360P 重传（未逐条核实）。维基将其列为视频时代代表作品之一。"
+  note: "《风之旅人》（Journey）全流程赏析，Part 1/2/3 于 2013-09-13/09-25/09-30 上线，是 2013 下半年恢复更新后的代表作。原优酷页面复核（2026-08-11 双通道 PC/移动端 SSR）仍可访问，标题/时长/封面元数据齐全，恢复为 alive；Part 2/3 未见官方上传，B 站考古/搬运号有该作 360P 重传（未逐条核实）。维基将其列为视频时代代表作品之一。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNjA4NDc0Mzg0.html"
       kind: original
-      status: dead
+      status: alive
   contributed_by: data-agent
 - id: 2013-08-29-video-01
   type: video
@@ -95,6 +102,8 @@
   title: "【女流】拆！系列拆键盘攻略解说"
   platform: youku
   confidence: high
+  duration_min: 11
+  cover: "https://m.ykimg.com/05420101521F4F7F6A0A46759DB5DA65"
   games: []
   tags: [视频时代]
   note: "2012-08-26《唤醒盒子4》后停更约 11 个月（疑与读研/学业相关，未确认），2013-08-29 恢复更新的首作。上线 19:48:20，时长 10:37，简介『大家来吐槽我的麦吧~！』。原页面 2026-08-11 实测仍可访问。"
@@ -110,6 +119,8 @@
   platform: youku
   series: child-of-light
   confidence: high
+  duration_min: 34
+  cover: "https://m.ykimg.com/05420408546F81716A0A44092FCD3B23"
   games: []
   tags: [视频时代, 系列解说]
   note: "《光之子》（Child of Light）全剧情系列 Part 1~大结局共 8 期，2014-11-21 ~ 2014-12-25 密集更新（2014 末恢复更新期的代表系列）。Part1 上线 2014-11-21 23:50:02，时长 33:31。原页面 2026-08-11 实测仍可访问；Part 3 亦存活。"
@@ -125,6 +136,8 @@
   platform: youku
   series: bukan-ye-aikan
   confidence: high
+  duration_min: 20
+  cover: "https://m.ykimg.com/054204085453C5AF6A0A4B044BD234B0"
   games: []
   tags: [视频时代, 栏目]
   note: "《不玩也爱看》栏目作品（2014-10 ~ 2014-12 主打栏目，含我的世界漂流记、愤怒的小鸟、忍者神龟等）。本片上线 2014-11-02 11:54:16，时长 19:57，简介引『女流新浪微博：weibo.com/nvliu66，欢迎大家推荐游戏』。原页面 2026-08-11 实测仍可访问。"
@@ -139,6 +152,8 @@
   title: "[1.21直播录像]重启之后还是一条好汉"
   platform: youku
   confidence: medium
+  duration_min: 34
+  cover: "https://m.ykimg.com/0541040854C413476A0A4D04C6B90164"
   games: []
   tags: [视频时代, 直播过渡]
   note: "视频时代末期的重要过渡记录：2015-01-21 直播场次的录像（2015-01-24 上传，时长 34:25），简介『斗鱼直播间douyu.tv/nvliu 零食屋chi66.taobao.com』——说明入驻斗鱼前（维基口径 2015-02）已有斗鱼直播，直播时间最早可溯至 2015-01-21（更早场次未检索到）。视频时代结束的判定：2015-02 起优酷以直播录像为主、解说视频停更。原页面 2026-08-11 实测仍可访问。"

@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2016-06 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 9 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2016-06-01-live-01
   type: live
   date: "2016-06-01"
   title: "9小时9个人9之门"
   platform: douyu
   confidence: high
+  duration_min: 54
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783664.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2785333"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-06-01-live-02
@@ -21,10 +19,13 @@
   title: "逆袭"
   platform: douyu
   confidence: high
+  duration_min: 93
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783240.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2785322"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-06-02-live-01
@@ -33,10 +34,13 @@
   title: "Little Inferno"
   platform: douyu
   confidence: high
+  duration_min: 29
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464873196.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2788082"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-06-02-live-02
@@ -45,10 +49,13 @@
   title: "Once Upon A Time"
   platform: douyu
   confidence: high
+  duration_min: 58
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464870856.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2787997"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2016-06-02-live-03
@@ -57,10 +64,13 @@
   title: "怒海求生"
   platform: douyu
   confidence: high
+  duration_min: 122
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464868220.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2787920"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-06-03-live-01
@@ -69,10 +79,13 @@
   title: "小小地狱之火(Little Inferno)"
   platform: douyu
   confidence: high
+  duration_min: 236
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_03/1464968148.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2791321"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2016-06-04-live-01
@@ -81,10 +94,13 @@
   title: "几何冲刺"
   platform: douyu
   confidence: high
+  duration_min: 85
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465036729.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2792700"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-06-04-live-02
@@ -93,10 +109,13 @@
   title: "盐与避难所"
   platform: douyu
   confidence: high
+  duration_min: 159
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465052401.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2793187"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2016-06-05-live-01
@@ -105,8 +124,11 @@
   title: "5日"
   platform: douyu
   confidence: high
+  duration_min: 132
+  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_05/1465143423.gif?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac2795451"
       kind: replay
+      parts: 1
   contributed_by: data-agent
