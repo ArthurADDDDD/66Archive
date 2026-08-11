@@ -1,469 +1,500 @@
-- id: 2019-05-01-live-01
-  type: live
-  date: "2019-05-01"
-  title: "戏说封神第七期"
-  platform: douyu
-  confidence: high
-  duration_min: 76
-  cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184445"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-01-live-01
+    type: live
+    date: "2019-05-01"
+    title: "戏说封神第七期"
+    platform: douyu
+    confidence: high
+    duration_min: 76
+    cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184445"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-01-live-02
-  type: live
-  date: "2019-05-01"
-  title: "迷雾侦探"
-  platform: douyu
-  confidence: high
-  duration_min: 261
-  cover: "https://tx-free-imgs.acfun.cn/FpG-zhjgaMC9xGBCFNUB3Y0DMiEc?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184551"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-05-01-live-02
+    type: live
+    date: "2019-05-01"
+    title: "迷雾侦探"
+    platform: douyu
+    confidence: high
+    duration_min: 261
+    cover: "https://tx-free-imgs.acfun.cn/FpG-zhjgaMC9xGBCFNUB3Y0DMiEc?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184551"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-03-live-01
-  type: live
-  date: "2019-05-03"
-  title: "戏说封神第八期"
-  platform: douyu
-  confidence: high
-  duration_min: 83
-  cover: "https://tx-free-imgs.acfun.cn/FrWxbTglt8Yh2OjRqLIykkSI9AvL?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184427"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-03-live-01
+    type: live
+    date: "2019-05-03"
+    title: "戏说封神第八期"
+    platform: douyu
+    confidence: high
+    duration_min: 83
+    cover: "https://tx-free-imgs.acfun.cn/FrWxbTglt8Yh2OjRqLIykkSI9AvL?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184427"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-03-live-02
-  type: live
-  date: "2019-05-03"
-  title: "迷雾侦探"
-  platform: douyu
-  confidence: high
-  duration_min: 254
-  cover: "https://tx-free-imgs.acfun.cn/Fs0jjDjnsaL0iNt8RXAiINDG6OFq?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184490"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-05-03-live-02
+    type: live
+    date: "2019-05-03"
+    title: "迷雾侦探"
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    cover: "https://tx-free-imgs.acfun.cn/Fs0jjDjnsaL0iNt8RXAiINDG6OFq?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184490"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-04-live-01
-  type: live
-  date: "2019-05-04"
-  title: "戏说封神第九期"
-  platform: douyu
-  confidence: high
-  duration_min: 98
-  cover: "https://tx-free-imgs.acfun.cn/FiXXE0l77WbArEbsn-1gJmcpvvhi?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184747"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-04-live-01
+    type: live
+    date: "2019-05-04"
+    title: "戏说封神第九期"
+    platform: douyu
+    confidence: high
+    duration_min: 98
+    cover: "https://tx-free-imgs.acfun.cn/FiXXE0l77WbArEbsn-1gJmcpvvhi?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184747"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-04-live-02
-  type: live
-  date: "2019-05-04"
-  title: "迷雾侦探"
-  platform: douyu
-  confidence: high
-  duration_min: 256
-  cover: "https://tx-free-imgs.acfun.cn/FpD3Z5N-Egv1dBgry12hF3TNvedE?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10184723"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-04-live-02
+    type: live
+    date: "2019-05-04"
+    title: "迷雾侦探"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    cover: "https://tx-free-imgs.acfun.cn/FpD3Z5N-Egv1dBgry12hF3TNvedE?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10184723"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-05-live-01
-  type: live
-  date: "2019-05-05"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 239
-  cover: "https://tx-free-imgs.acfun.cn/FiE4LapJnRHVTQ-xdJOTGBUxwb4N?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10188313"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-05-live-01
+    type: live
+    date: "2019-05-05"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    cover: "https://tx-free-imgs.acfun.cn/FiE4LapJnRHVTQ-xdJOTGBUxwb4N?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10188313"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-06-live-01
-  type: live
-  date: "2019-05-06"
-  title: "戏说封神第十期"
-  platform: douyu
-  confidence: high
-  duration_min: 83
-  cover: "https://tx-free-imgs.acfun.cn/Fh7_0tIAbGt7iOI-0dNGEObXA1r1?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10190735"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-06-live-01
+    type: live
+    date: "2019-05-06"
+    title: "戏说封神第十期"
+    platform: douyu
+    confidence: high
+    duration_min: 83
+    cover: "https://tx-free-imgs.acfun.cn/Fh7_0tIAbGt7iOI-0dNGEObXA1r1?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10190735"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-08-live-01
-  type: live
-  date: "2019-05-08"
-  title: "戏说封神第十一期"
-  platform: douyu
-  confidence: high
-  duration_min: 77
-  cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10197236"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-08-live-01
+    type: live
+    date: "2019-05-08"
+    title: "戏说封神第十一期"
+    platform: douyu
+    confidence: high
+    duration_min: 77
+    cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10197236"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-10-live-01
-  type: live
-  date: "2019-05-10"
-  title: "戏说封神第十二期_1"
-  platform: douyu
-  confidence: high
-  duration_min: 73
-  cover: "https://tx-free-imgs.acfun.cn/FoBgGq7xT5qKKEgbb5Ra_0HTvnkC?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10204101"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-10-live-01
+    type: live
+    date: "2019-05-10"
+    title: "戏说封神第十二期_1"
+    platform: douyu
+    confidence: high
+    duration_min: 73
+    cover: "https://tx-free-imgs.acfun.cn/FoBgGq7xT5qKKEgbb5Ra_0HTvnkC?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10204101"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-10-live-02
-  type: live
-  date: "2019-05-10"
-  title: "迷雾侦探&大富翁"
-  platform: douyu
-  confidence: high
-  duration_min: 232
-  cover: "https://tx-free-imgs.acfun.cn/Fj22UUvanWvqmeeqteVyNfs4rMOj?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10204199"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-05-10-live-02
+    type: live
+    date: "2019-05-10"
+    title: "迷雾侦探&大富翁"
+    platform: douyu
+    confidence: high
+    duration_min: 232
+    cover: "https://tx-free-imgs.acfun.cn/Fj22UUvanWvqmeeqteVyNfs4rMOj?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10204199"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-11-live-01
-  type: live
-  date: "2019-05-11"
-  title: "北京核聚变现场"
-  platform: douyu
-  confidence: high
-  duration_min: 210
-  cover: "https://tx-free-imgs.acfun.cn/FlkCW3_kAs2eDw2Gx07gxPX3kvyH?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10207307"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-11-live-01
+    type: live
+    date: "2019-05-11"
+    title: "北京核聚变现场"
+    platform: douyu
+    confidence: high
+    duration_min: 210
+    cover: "https://tx-free-imgs.acfun.cn/FlkCW3_kAs2eDw2Gx07gxPX3kvyH?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10207307"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-12-live-01
-  type: live
-  date: "2019-05-12"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 228
-  cover: "https://tx-free-imgs.acfun.cn/FrGDBXWn8mx-ia9KXARP874wqOkU?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10214340"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-12-live-01
+    type: live
+    date: "2019-05-12"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 228
+    cover: "https://tx-free-imgs.acfun.cn/FrGDBXWn8mx-ia9KXARP874wqOkU?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10214340"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-12-live-02
-  type: live
-  date: "2019-05-12"
-  title: "戏说封神番外"
-  platform: douyu
-  confidence: high
-  duration_min: 10
-  cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10210502"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-05-12-live-02
+    type: live
+    date: "2019-05-12"
+    title: "戏说封神番外"
+    platform: douyu
+    confidence: high
+    duration_min: 10
+    cover: "https://tx-free-imgs.acfun.cn/FpH-84mj_wFePEoPNMwsSriyrZWn?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10210502"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-14-live-01
-  type: live
-  date: "2019-05-14"
-  title: "Winkeltje&你点我唱"
-  platform: douyu
-  confidence: high
-  duration_min: 282
-  cover: "https://tx-free-imgs.acfun.cn/Fjdf4ACbBUuliWuo3fWWv7lZ_BAY?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10218109"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2019-05-14-live-01
+    type: live
+    date: "2019-05-14"
+    title: "Winkeltje&你点我唱"
+    platform: douyu
+    confidence: high
+    duration_min: 282
+    cover: "https://tx-free-imgs.acfun.cn/Fjdf4ACbBUuliWuo3fWWv7lZ_BAY?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10218109"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-15-live-01
-  type: live
-  date: "2019-05-15"
-  title: "和老七玩玩丫嗦"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/Fo-AOx7YNdyrGPdgk7kRqsSgHUFW?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10221373"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-05-15-live-01
+    type: live
+    date: "2019-05-15"
+    title: "和老七玩玩丫嗦"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/Fo-AOx7YNdyrGPdgk7kRqsSgHUFW?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10221373"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-15-live-02
-  type: live
-  date: "2019-05-15"
-  title: "戏说封神第十三期"
-  platform: douyu
-  confidence: high
-  duration_min: 42
-  cover: "https://tx-free-imgs.acfun.cn/FrjKJXOxdvbbJzzChbElPFJzpuSX?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10221262"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-05-15-live-02
+    type: live
+    date: "2019-05-15"
+    title: "戏说封神第十三期"
+    platform: douyu
+    confidence: high
+    duration_min: 42
+    cover: "https://tx-free-imgs.acfun.cn/FrjKJXOxdvbbJzzChbElPFJzpuSX?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10221262"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-17-live-01
-  type: live
-  date: "2019-05-17"
-  title: "瘟疫传说"
-  platform: douyu
-  confidence: high
-  duration_min: 219
-  cover: "https://tx-free-imgs.acfun.cn/Foa4qdJSdVEy-E7Q1q2Csh3eQECx?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10228874"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-17-live-01
+    type: live
+    date: "2019-05-17"
+    title: "瘟疫传说"
+    platform: douyu
+    confidence: high
+    duration_min: 219
+    cover: "https://tx-free-imgs.acfun.cn/Foa4qdJSdVEy-E7Q1q2Csh3eQECx?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10228874"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-19-live-01
-  type: live
-  date: "2019-05-19"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 143
-  cover: "https://tx-free-imgs.acfun.cn/FnL2tK9lbfjzgwl-MwE81UeEchiP?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10238504"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-19-live-01
+    type: live
+    date: "2019-05-19"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 143
+    cover: "https://tx-free-imgs.acfun.cn/FnL2tK9lbfjzgwl-MwE81UeEchiP?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10238504"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-20-live-01
-  type: live
-  date: "2019-05-20"
-  title: "戏说封神第十五期"
-  platform: douyu
-  confidence: high
-  duration_min: 65
-  cover: "https://tx-free-imgs.acfun.cn/FhjpjLFiRqJ4EEuSZfPjMTiJTMsj?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10238960"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-05-20-live-01
+    type: live
+    date: "2019-05-20"
+    title: "戏说封神第十五期"
+    platform: douyu
+    confidence: high
+    duration_min: 65
+    cover: "https://tx-free-imgs.acfun.cn/FhjpjLFiRqJ4EEuSZfPjMTiJTMsj?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10238960"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-20-live-02
-  type: live
-  date: "2019-05-20"
-  title: "瘟疫传说"
-  platform: douyu
-  confidence: high
-  duration_min: 236
-  cover: "https://tx-free-imgs.acfun.cn/FpvR0UmcXtWhdfrmLYNs7-TByxYb?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10241474"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-20-live-02
+    type: live
+    date: "2019-05-20"
+    title: "瘟疫传说"
+    platform: douyu
+    confidence: high
+    duration_min: 236
+    cover: "https://tx-free-imgs.acfun.cn/FpvR0UmcXtWhdfrmLYNs7-TByxYb?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10241474"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-22-live-01
-  type: live
-  date: "2019-05-22"
-  title: "戏说封神第十六期"
-  platform: douyu
-  confidence: high
-  duration_min: 59
-  cover: "https://tx-free-imgs.acfun.cn/FhjpjLFiRqJ4EEuSZfPjMTiJTMsj?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10245320"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-05-22-live-01
+    type: live
+    date: "2019-05-22"
+    title: "戏说封神第十六期"
+    platform: douyu
+    confidence: high
+    duration_min: 59
+    cover: "https://tx-free-imgs.acfun.cn/FhjpjLFiRqJ4EEuSZfPjMTiJTMsj?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10245320"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-22-live-02
-  type: live
-  date: "2019-05-22"
-  title: "瘟疫传说"
-  platform: douyu
-  confidence: medium
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/FrSXV2d8FbImW33oJrWbBTqSpmBq?imageslim"
-  note: "标题写 2019.522（应为 2019.5.22，漏点）；上传 2019-05-22 同日，与同系列 5.17/5.20 场次（上传 5.17/5.21）吻合。推断日期，置信度 medium。"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10245512"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-22-live-02
+    type: live
+    date: "2019-05-22"
+    title: "瘟疫传说"
+    platform: douyu
+    confidence: medium
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/FrSXV2d8FbImW33oJrWbBTqSpmBq?imageslim"
+    note: "标题写 2019.522（应为 2019.5.22，漏点）；上传 2019-05-22 同日，与同系列 5.17/5.20 场次（上传 5.17/5.21）吻合。推断日期，置信度 medium。"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10245512"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-24-live-01
-  type: live
-  date: "2019-05-24"
-  title: "王国之心"
-  platform: douyu
-  confidence: high
-  duration_min: 212
-  cover: "https://tx-free-imgs.acfun.cn/FnC-AwO6GiItBTXXEky8ib3DC_gr?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10252450"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-05-24-live-01
+    type: live
+    date: "2019-05-24"
+    title: "王国之心"
+    platform: douyu
+    confidence: high
+    duration_min: 212
+    cover: "https://tx-free-imgs.acfun.cn/FnC-AwO6GiItBTXXEky8ib3DC_gr?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10252450"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-26-live-01
-  type: live
-  date: "2019-05-26"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 246
-  cover: "https://tx-free-imgs.acfun.cn/FkmLcTBgDLgMGs5ti5cuezHpInGy?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10260252"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-26-live-01
+    type: live
+    date: "2019-05-26"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/FkmLcTBgDLgMGs5ti5cuezHpInGy?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10260252"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-26-live-02
-  type: live
-  date: "2019-05-26"
-  title: "戏说封神第十七期"
-  platform: douyu
-  confidence: high
-  duration_min: 71
-  cover: "https://tx-free-imgs.acfun.cn/FqBHMoRoFnEd_jQ4_qWqvkoCz3LF?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10257517"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-26-live-02
+    type: live
+    date: "2019-05-26"
+    title: "戏说封神第十七期"
+    platform: douyu
+    confidence: high
+    duration_min: 71
+    cover: "https://tx-free-imgs.acfun.cn/FqBHMoRoFnEd_jQ4_qWqvkoCz3LF?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10257517"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-27-live-01
-  type: live
-  date: "2019-05-27"
-  title: "Sea of Thieves"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/Fq-NFxO-xKJkkawMpZR4gGa-pOvR?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10261079"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-27-live-01
+    type: live
+    date: "2019-05-27"
+    title: "Sea of Thieves"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/Fq-NFxO-xKJkkawMpZR4gGa-pOvR?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10261079"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-28-live-01
-  type: live
-  date: "2019-05-28"
-  title: "Sea of Thieves"
-  platform: douyu
-  confidence: high
-  duration_min: 251
-  cover: "https://tx-free-imgs.acfun.cn/FjKd-J2sGfOn9bu52HvNkxcMG18x?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10264375"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-05-28-live-01
+    type: live
+    date: "2019-05-28"
+    title: "Sea of Thieves"
+    platform: douyu
+    confidence: high
+    duration_min: 251
+    cover: "https://tx-free-imgs.acfun.cn/FjKd-J2sGfOn9bu52HvNkxcMG18x?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10264375"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-28-live-02
-  type: live
-  date: "2019-05-28"
-  title: "戏说封神第十八期"
-  platform: douyu
-  confidence: high
-  duration_min: 94
-  cover: "https://tx-free-imgs.acfun.cn/FnzwLdDl7Y8UQE5Avq6-bl-FTxOg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10271456"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-28-live-02
+    type: live
+    date: "2019-05-28"
+    title: "戏说封神第十八期"
+    platform: douyu
+    confidence: high
+    duration_min: 94
+    cover: "https://tx-free-imgs.acfun.cn/FnzwLdDl7Y8UQE5Avq6-bl-FTxOg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10271456"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-29-live-01
-  type: live
-  date: "2019-05-29"
-  title: "Sea of Thieves"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/FmTg0e8x4HJawOlDHbrW38yENVQo?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10267844"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-05-29-live-01
+    type: live
+    date: "2019-05-29"
+    title: "Sea of Thieves"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/FmTg0e8x4HJawOlDHbrW38yENVQo?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10267844"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-05-30-live-01
-  type: live
-  date: "2019-05-30"
-  title: "全面战争模拟器"
-  platform: douyu
-  confidence: high
-  duration_min: 93
-  cover: "https://tx-free-imgs.acfun.cn/FoagAWGgWLim1Ey3Ppcl2W1Zpuwc?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10271184"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-05-30-live-01
+    type: live
+    date: "2019-05-30"
+    title: "全面战争模拟器"
+    platform: douyu
+    confidence: high
+    duration_min: 93
+    cover: "https://tx-free-imgs.acfun.cn/FoagAWGgWLim1Ey3Ppcl2W1Zpuwc?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10271184"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent

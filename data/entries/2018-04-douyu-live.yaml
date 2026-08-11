@@ -1,413 +1,441 @@
-- id: 2018-04-01-live-01
-  type: live
-  date: "2018-04-01"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 256
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522629780.png?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4291800"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2018-04-01-live-01
+    type: live
+    date: "2018-04-01"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522629780.png?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4291800"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-02-live-01
-  type: live
-  date: "2018-04-02"
-  title: "噗哟噗哟vs俄罗斯方块S"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522669381.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4292873"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2018-04-02-live-01
+    type: live
+    date: "2018-04-02"
+    title: "噗哟噗哟vs俄罗斯方块S"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522669381.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4292873"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-03-live-01
-  type: live
-  date: "2018-04-03"
-  title: "噗哟噗哟vs俄罗斯方块S & 洞窟物语"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_03/1522757898.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4294449"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2018-04-03-live-01
+    type: live
+    date: "2018-04-03"
+    title: "噗哟噗哟vs俄罗斯方块S & 洞窟物语"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_03/1522757898.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4294449"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-04-live-01
-  type: live
-  date: "2018-04-04"
-  title: "专属鼠标垫 & 童年动漫歌曲了解一下"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_04/1522843836.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4295971"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2018-04-04-live-01
+    type: live
+    date: "2018-04-04"
+    title: "专属鼠标垫 & 童年动漫歌曲了解一下"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_04/1522843836.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4295971"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-06-live-01
-  type: live
-  date: "2018-04-06"
-  title: "豆6组合了解一下"
-  platform: douyu
-  confidence: high
-  duration_min: 101
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523061996.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4298460"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2018-04-06-live-01
+    type: live
+    date: "2018-04-06"
+    title: "豆6组合了解一下"
+    platform: douyu
+    confidence: high
+    duration_min: 101
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523061996.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4298460"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-06-live-02
-  type: live
-  date: "2018-04-06"
-  title: "豆豆来啦"
-  platform: douyu
-  confidence: high
-  duration_min: 85
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_06/1523016488.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4298163"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-04-06-live-02
+    type: live
+    date: "2018-04-06"
+    title: "豆豆来啦"
+    platform: douyu
+    confidence: high
+    duration_min: 85
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_06/1523016488.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4298163"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-07-live-01
-  type: live
-  date: "2018-04-07"
-  title: "户外之跑跑卡丁车"
-  platform: douyu
-  confidence: high
-  duration_min: 202
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523106647.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4299386"
-      kind: replay
-      parts: 11
-  contributed_by: data-agent
+  - id: 2018-04-07-live-01
+    type: live
+    date: "2018-04-07"
+    title: "户外之跑跑卡丁车"
+    platform: douyu
+    confidence: high
+    duration_min: 202
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523106647.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4299386"
+        kind: replay
+        parts: 11
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-08-live-01
-  type: live
-  date: "2018-04-08"
-  title: "到底怎么了"
-  platform: douyu
-  confidence: high
-  duration_min: 86
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_08/1523189351.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4300876"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-04-08-live-01
+    type: live
+    date: "2018-04-08"
+    title: "到底怎么了"
+    platform: douyu
+    confidence: high
+    duration_min: 86
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_08/1523189351.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4300876"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-11-live-01
-  type: live
-  date: "2018-04-11"
-  title: "节奏天国"
-  platform: douyu
-  confidence: high
-  duration_min: 191
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_11/1523447816.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4305998"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2018-04-11-live-01
+    type: live
+    date: "2018-04-11"
+    title: "节奏天国"
+    platform: douyu
+    confidence: high
+    duration_min: 191
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_11/1523447816.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4305998"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-12-live-01
-  type: live
-  date: "2018-04-12"
-  title: "欢迎丁丁张老师做客156277"
-  platform: douyu
-  confidence: high
-  duration_min: 68
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524632411.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4325869"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-04-12-live-01
+    type: live
+    date: "2018-04-12"
+    title: "欢迎丁丁张老师做客156277"
+    platform: douyu
+    confidence: high
+    duration_min: 68
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524632411.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4325869"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-13-live-01
-  type: live
-  date: "2018-04-13"
-  title: "回忆之旅 & 众生"
-  platform: douyu
-  confidence: high
-  duration_min: 247
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_13/1523620162.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4309315"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2018-04-13-live-01
+    type: live
+    date: "2018-04-13"
+    title: "回忆之旅 & 众生"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_13/1523620162.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4309315"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-15-live-01
-  type: live
-  date: "2018-04-15"
-  title: "戏说聊斋"
-  platform: douyu
-  confidence: high
-  duration_min: 93
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_15/1523792304.jpg?imageslim"
-  games: []
-  tags: [戏说聊斋, 弹幕版]
-  note: "同一场直播（戏说聊斋第三期）的纯净版（ac4311550）与弹幕版（ac4311943）原本被建模为两条重复条目，已合并。同日另有心灵砒霜条目。"
-  sources:
-    - url: "https://www.acfun.cn/v/ac4311550"
-      kind: replay
-      parts: 4
-    - url: "https://www.acfun.cn/v/ac4311943"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2018-04-15-live-01
+    type: live
+    date: "2018-04-15"
+    title: "戏说聊斋"
+    platform: douyu
+    confidence: high
+    duration_min: 93
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_15/1523792304.jpg?imageslim"
+    games: []
+    tags: [戏说聊斋, 弹幕版]
+    note: "同一场直播（戏说聊斋第三期）的纯净版（ac4311550）与弹幕版（ac4311943）原本被建模为两条重复条目，已合并。同日另有心灵砒霜条目。"
+    sources:
+      - url: "https://www.acfun.cn/v/ac4311550"
+        kind: replay
+        parts: 4
+        status: alive
+      - url: "https://www.acfun.cn/v/ac4311943"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-15-live-02
-  type: live
-  date: "2018-04-15"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 140
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523838578.png?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4311945"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2018-04-15-live-02
+    type: live
+    date: "2018-04-15"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 140
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523838578.png?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4311945"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-16-live-01
-  type: live
-  date: "2018-04-16"
-  title: "冒险岛"
-  platform: douyu
-  confidence: high
-  duration_min: 314
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523888489.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4313461"
-      kind: replay
-      parts: 12
-  contributed_by: data-agent
+  - id: 2018-04-16-live-01
+    type: live
+    date: "2018-04-16"
+    title: "冒险岛"
+    platform: douyu
+    confidence: high
+    duration_min: 314
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523888489.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4313461"
+        kind: replay
+        parts: 12
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-17-live-01
-  type: live
-  date: "2018-04-17"
-  title: "堡垒之夜（Fortnite）"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965798.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4314886"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2018-04-17-live-01
+    type: live
+    date: "2018-04-17"
+    title: "堡垒之夜（Fortnite）"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965798.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4314886"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-20-live-01
-  type: live
-  date: "2018-04-20"
-  title: "战神 （God of War ）"
-  platform: douyu
-  confidence: high
-  duration_min: 286
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_20/1524226134.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4319752"
-      kind: replay
-      parts: 13
-  contributed_by: data-agent
+  - id: 2018-04-20-live-01
+    type: live
+    date: "2018-04-20"
+    title: "战神 （God of War ）"
+    platform: douyu
+    confidence: high
+    duration_min: 286
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_20/1524226134.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4319752"
+        kind: replay
+        parts: 13
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-21-live-01
-  type: live
-  date: "2018-04-21"
-  title: "战神 （God of War ）"
-  platform: douyu
-  confidence: high
-  duration_min: 272
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_21/1524312954.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4321083"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2018-04-21-live-01
+    type: live
+    date: "2018-04-21"
+    title: "战神 （God of War ）"
+    platform: douyu
+    confidence: high
+    duration_min: 272
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_21/1524312954.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4321083"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-22-live-01
-  type: live
-  date: "2018-04-22"
-  title: "冒险岛"
-  platform: douyu
-  confidence: high
-  duration_min: 58
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_22/1524400508.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4321955"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2018-04-22-live-01
+    type: live
+    date: "2018-04-22"
+    title: "冒险岛"
+    platform: douyu
+    confidence: high
+    duration_min: 58
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_22/1524400508.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4321955"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-22-live-02
-  type: live
-  date: "2018-04-22"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 188
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524441673.png?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4322255"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2018-04-22-live-02
+    type: live
+    date: "2018-04-22"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 188
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524441673.png?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4322255"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-23-live-01
-  type: live
-  date: "2018-04-23"
-  title: "堡垒之夜第三赛季"
-  platform: douyu
-  confidence: high
-  duration_min: 128
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524491783.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4323634"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2018-04-23-live-01
+    type: live
+    date: "2018-04-23"
+    title: "堡垒之夜第三赛季"
+    platform: douyu
+    confidence: high
+    duration_min: 128
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524491783.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4323634"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-23-live-02
-  type: live
-  date: "2018-04-23"
-  title: "戏说聊斋"
-  platform: douyu
-  confidence: high
-  duration_min: 58
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486723.jpg?imageslim"
-  games: []
-  tags: [戏说聊斋]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4323551"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2018-04-23-live-02
+    type: live
+    date: "2018-04-23"
+    title: "戏说聊斋"
+    platform: douyu
+    confidence: high
+    duration_min: 58
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486723.jpg?imageslim"
+    games: []
+    tags: [戏说聊斋]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4323551"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-23-live-03
-  type: live
-  date: "2018-04-23"
-  title: "战神（God of War）"
-  platform: douyu
-  confidence: high
-  duration_min: 148
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486628.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4323624"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2018-04-23-live-03
+    type: live
+    date: "2018-04-23"
+    title: "战神（God of War）"
+    platform: douyu
+    confidence: high
+    duration_min: 148
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486628.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4323624"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-25-live-01
-  type: live
-  date: "2018-04-25"
-  title: "Play Station 媒体体验会"
-  platform: douyu
-  confidence: high
-  duration_min: 101
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524662418.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4326732"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2018-04-25-live-01
+    type: live
+    date: "2018-04-25"
+    title: "Play Station 媒体体验会"
+    platform: douyu
+    confidence: high
+    duration_min: 101
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524662418.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4326732"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-25-live-02
-  type: live
-  date: "2018-04-25"
-  title: "堡垒之夜主播擂台赛"
-  platform: douyu
-  confidence: high
-  duration_min: 180
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524668794.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4326869"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2018-04-25-live-02
+    type: live
+    date: "2018-04-25"
+    title: "堡垒之夜主播擂台赛"
+    platform: douyu
+    confidence: high
+    duration_min: 180
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524668794.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4326869"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-26-live-01
-  type: live
-  date: "2018-04-26"
-  title: "堡垒之夜主播擂台赛"
-  platform: douyu
-  confidence: high
-  duration_min: 207
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_26/1524754286.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4328697"
-      kind: replay
-      parts: 8
-  contributed_by: data-agent
+  - id: 2018-04-26-live-01
+    type: live
+    date: "2018-04-26"
+    title: "堡垒之夜主播擂台赛"
+    platform: douyu
+    confidence: high
+    duration_min: 207
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_26/1524754286.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4328697"
+        kind: replay
+        parts: 8
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-27-live-01
-  type: live
-  date: "2018-04-27"
-  title: "战神 God of War"
-  platform: douyu
-  confidence: high
-  duration_min: 166
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_27/1524826819.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4330195"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2018-04-27-live-01
+    type: live
+    date: "2018-04-27"
+    title: "战神 God of War"
+    platform: douyu
+    confidence: high
+    duration_min: 166
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_27/1524826819.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4330195"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-04-30-live-01
-  type: live
-  date: "2018-04-30"
-  title: "大周聚餐暨女流水友交流会"
-  platform: douyu
-  confidence: high
-  duration_min: 159
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_04_30/1525130359.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4334406"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2018-04-30-live-01
+    type: live
+    date: "2018-04-30"
+    title: "大周聚餐暨女流水友交流会"
+    platform: douyu
+    confidence: high
+    duration_min: 159
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_30/1525130359.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4334406"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent

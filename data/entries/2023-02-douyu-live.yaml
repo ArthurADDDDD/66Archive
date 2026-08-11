@@ -1,299 +1,319 @@
-- id: 2023-02-01-live-01
-  type: live
-  date: "2023-02-01"
-  title: "飞跃13号房"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d1e350ec39d34e988906ecf7af2eb636.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40566209"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-01-live-01
+    type: live
+    date: "2023-02-01"
+    title: "飞跃13号房"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d1e350ec39d34e988906ecf7af2eb636.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40566209"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-02-live-01
-  type: live
-  date: "2023-02-02"
-  title: "飞跃13号房"
-  platform: douyu
-  confidence: high
-  duration_min: 293
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab43d7cd221e4a28b40130c2404a3ca3.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40574061"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-02-live-01
+    type: live
+    date: "2023-02-02"
+    title: "飞跃13号房"
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab43d7cd221e4a28b40130c2404a3ca3.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40574061"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-04-live-01
-  type: live
-  date: "2023-02-04"
-  title: "死亡空间"
-  platform: douyu
-  confidence: high
-  duration_min: 284
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_732aa291204d4d4bbafa74e8fa70632b.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40589850"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-04-live-01
+    type: live
+    date: "2023-02-04"
+    title: "死亡空间"
+    platform: douyu
+    confidence: high
+    duration_min: 284
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_732aa291204d4d4bbafa74e8fa70632b.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40589850"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-06-live-01
-  type: live
-  date: "2023-02-06"
-  title: "死亡空间"
-  platform: douyu
-  confidence: high
-  duration_min: 479
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_10703552e44d487baf074d36636b1ba8.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40613167"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-06-live-01
+    type: live
+    date: "2023-02-06"
+    title: "死亡空间"
+    platform: douyu
+    confidence: high
+    duration_min: 479
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_10703552e44d487baf074d36636b1ba8.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40613167"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-07-live-01
-  type: live
-  date: "2023-02-07"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 320
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2331098a3f294766923194063dc660a9.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40625982"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-07-live-01
+    type: live
+    date: "2023-02-07"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 320
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2331098a3f294766923194063dc660a9.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40625982"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-08-live-01
-  type: live
-  date: "2023-02-08"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 384
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5255528362434f3db4597aaf3410c862.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40626168"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-08-live-01
+    type: live
+    date: "2023-02-08"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 384
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5255528362434f3db4597aaf3410c862.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40626168"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-09-live-01
-  type: live
-  date: "2023-02-09"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 427
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_838d2558c53e4683b0bdd55cd1e7e0d2.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40627403"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-09-live-01
+    type: live
+    date: "2023-02-09"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 427
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_838d2558c53e4683b0bdd55cd1e7e0d2.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40627403"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-10-live-01
-  type: live
-  date: "2023-02-10"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 368
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4ee140912d4f468881e799775ffdddb5.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40642031"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-10-live-01
+    type: live
+    date: "2023-02-10"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 368
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4ee140912d4f468881e799775ffdddb5.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40642031"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-11-live-01
-  type: live
-  date: "2023-02-11"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 414
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8001fd2b61574fd6a43d47c57622cd61.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40650243"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-11-live-01
+    type: live
+    date: "2023-02-11"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 414
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8001fd2b61574fd6a43d47c57622cd61.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40650243"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-12-live-01
-  type: live
-  date: "2023-02-12"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 398
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0719bbc9a8e54e9da4134c0b78e78fdf.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40657800"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-12-live-01
+    type: live
+    date: "2023-02-12"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 398
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0719bbc9a8e54e9da4134c0b78e78fdf.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40657800"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-13-live-01
-  type: live
-  date: "2023-02-13"
-  title: "霍格沃茨之遗"
-  platform: douyu
-  confidence: high
-  duration_min: 374
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_06e4e2757d0e4d3da1598b26c9372af7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40664729"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-13-live-01
+    type: live
+    date: "2023-02-13"
+    title: "霍格沃茨之遗"
+    platform: douyu
+    confidence: high
+    duration_min: 374
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_06e4e2757d0e4d3da1598b26c9372af7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40664729"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-16-live-01
-  type: live
-  date: "2023-02-16"
-  title: "死亡教堂"
-  platform: douyu
-  confidence: high
-  duration_min: 370
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e399919917e543be86b4b3f898134669.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40688757"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-16-live-01
+    type: live
+    date: "2023-02-16"
+    title: "死亡教堂"
+    platform: douyu
+    confidence: high
+    duration_min: 370
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e399919917e543be86b4b3f898134669.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40688757"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-17-live-01
-  type: live
-  date: "2023-02-17"
-  title: "死亡教堂"
-  platform: douyu
-  confidence: high
-  duration_min: 269
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1305a178d6114107afc69379135975e9.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40696413"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-17-live-01
+    type: live
+    date: "2023-02-17"
+    title: "死亡教堂"
+    platform: douyu
+    confidence: high
+    duration_min: 269
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1305a178d6114107afc69379135975e9.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40696413"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-18-live-01
-  type: live
-  date: "2023-02-18"
-  title: "Brotato"
-  platform: douyu
-  confidence: high
-  duration_min: 312
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_be3135747d484d4cb36989ea5a2ac9e2.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40696606"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-18-live-01
+    type: live
+    date: "2023-02-18"
+    title: "Brotato"
+    platform: douyu
+    confidence: high
+    duration_min: 312
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_be3135747d484d4cb36989ea5a2ac9e2.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40696606"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-20-live-01
-  type: live
-  date: "2023-02-20"
-  title: "Brotato"
-  platform: douyu
-  confidence: high
-  duration_min: 268
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5a31d76cd8f54e8490da0125fb34c2e7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40710824"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-20-live-01
+    type: live
+    date: "2023-02-20"
+    title: "Brotato"
+    platform: douyu
+    confidence: high
+    duration_min: 268
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5a31d76cd8f54e8490da0125fb34c2e7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40710824"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-21-live-01
-  type: live
-  date: "2023-02-21"
-  title: "原子之心"
-  platform: douyu
-  confidence: high
-  duration_min: 256
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5fd89299008241a79cc85a316422ca65.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40719033"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-21-live-01
+    type: live
+    date: "2023-02-21"
+    title: "原子之心"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5fd89299008241a79cc85a316422ca65.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40719033"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-22-live-01
-  type: live
-  date: "2023-02-22"
-  title: "原子之心"
-  platform: douyu
-  confidence: high
-  duration_min: 330
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7a2d8dde67c43249bbd55787759268b.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40726919"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-22-live-01
+    type: live
+    date: "2023-02-22"
+    title: "原子之心"
+    platform: douyu
+    confidence: high
+    duration_min: 330
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7a2d8dde67c43249bbd55787759268b.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40726919"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-23-live-01
-  type: live
-  date: "2023-02-23"
-  title: "原子之心"
-  platform: douyu
-  confidence: high
-  duration_min: 445
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df3187acbd284630a164c6ba1b67b29c.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40734479"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-23-live-01
+    type: live
+    date: "2023-02-23"
+    title: "原子之心"
+    platform: douyu
+    confidence: high
+    duration_min: 445
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df3187acbd284630a164c6ba1b67b29c.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40734479"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-24-live-01
-  type: live
-  date: "2023-02-24"
-  title: "原子之心&卧龙"
-  platform: douyu
-  confidence: high
-  duration_min: 469
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e5971f0795184920860bee0fa402c5fb.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40750522"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-24-live-01
+    type: live
+    date: "2023-02-24"
+    title: "原子之心&卧龙"
+    platform: douyu
+    confidence: high
+    duration_min: 469
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e5971f0795184920860bee0fa402c5fb.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40750522"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-02-26-live-01
-  type: live
-  date: "2023-02-26"
-  title: "森林之子"
-  platform: douyu
-  confidence: high
-  duration_min: 120
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1cf5be873ad746059ba990978cff8597.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac40765653"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-02-26-live-01
+    type: live
+    date: "2023-02-26"
+    title: "森林之子"
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1cf5be873ad746059ba990978cff8597.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac40765653"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

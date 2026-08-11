@@ -1,211 +1,225 @@
-- id: 2019-02-01-live-01
-  type: live
-  date: "2019-02-01"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 202
-  cover: "https://tx-free-imgs.acfun.cn/FlsWlUR6eFsIhjXi8AK1UUJwVR68?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4913929"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-01-live-01
+    type: live
+    date: "2019-02-01"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 202
+    cover: "https://tx-free-imgs.acfun.cn/FlsWlUR6eFsIhjXi8AK1UUJwVR68?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4913929"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-02-live-01
-  type: live
-  date: "2019-02-02"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 205
-  cover: "https://tx-free-imgs.acfun.cn/FqubLFHPnk1cUi3chHMo9Ts2o1tV?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4916200"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-02-02-live-01
+    type: live
+    date: "2019-02-02"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 205
+    cover: "https://tx-free-imgs.acfun.cn/FqubLFHPnk1cUi3chHMo9Ts2o1tV?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4916200"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-03-live-01
-  type: live
-  date: "2019-02-03"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 264
-  cover: "https://tx-free-imgs.acfun.cn/FphpJa6VBHi8O8Ke374-bnsgSwa5?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4918410"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-03-live-01
+    type: live
+    date: "2019-02-03"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 264
+    cover: "https://tx-free-imgs.acfun.cn/FphpJa6VBHi8O8Ke374-bnsgSwa5?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4918410"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-04-live-01
-  type: live
-  date: "2019-02-04"
-  title: "回内蒙过年啦，大家新年快乐"
-  platform: douyu
-  confidence: high
-  duration_min: 109
-  cover: "https://tx-free-imgs.acfun.cn/Fpbt9Ft8Ac25Iqc3T-Asgxn9hO4T?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4920485"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-04-live-01
+    type: live
+    date: "2019-02-04"
+    title: "回内蒙过年啦，大家新年快乐"
+    platform: douyu
+    confidence: high
+    duration_min: 109
+    cover: "https://tx-free-imgs.acfun.cn/Fpbt9Ft8Ac25Iqc3T-Asgxn9hO4T?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4920485"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-14-live-01
-  type: live
-  date: "2019-02-14"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 248
-  cover: "https://tx-free-imgs.acfun.cn/FlsWlUR6eFsIhjXi8AK1UUJwVR68?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4941391"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-14-live-01
+    type: live
+    date: "2019-02-14"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 248
+    cover: "https://tx-free-imgs.acfun.cn/FlsWlUR6eFsIhjXi8AK1UUJwVR68?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4941391"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-15-live-01
-  type: live
-  date: "2019-02-15"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 265
-  cover: "https://tx-free-imgs.acfun.cn/FgrpP-5D5Z21hurfV4pmRJwYI4Cj?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4944335"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-02-15-live-01
+    type: live
+    date: "2019-02-15"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 265
+    cover: "https://tx-free-imgs.acfun.cn/FgrpP-5D5Z21hurfV4pmRJwYI4Cj?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4944335"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-16-live-01
-  type: live
-  date: "2019-02-16"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 252
-  cover: "https://tx-free-imgs.acfun.cn/Fof3BlWaMFSqtg1Xv4DvNiLjFFao?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4946823"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-02-16-live-01
+    type: live
+    date: "2019-02-16"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    cover: "https://tx-free-imgs.acfun.cn/Fof3BlWaMFSqtg1Xv4DvNiLjFFao?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4946823"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-17-live-01
-  type: live
-  date: "2019-02-17"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 239
-  cover: "https://tx-free-imgs.acfun.cn/FgCLcQxZqfhcjn4KFBXWV14R2Xjs?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4949318"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-02-17-live-01
+    type: live
+    date: "2019-02-17"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    cover: "https://tx-free-imgs.acfun.cn/FgCLcQxZqfhcjn4KFBXWV14R2Xjs?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4949318"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-18-live-01
-  type: live
-  date: "2019-02-18"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4951652"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-18-live-01
+    type: live
+    date: "2019-02-18"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4951652"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-21-live-01
-  type: live
-  date: "2019-02-21"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 347
-  cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4961883"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-02-21-live-01
+    type: live
+    date: "2019-02-21"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 347
+    cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4961883"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-23-live-01
-  type: live
-  date: "2019-02-23"
-  title: "勇者斗恶龙创世小玩家2"
-  platform: douyu
-  confidence: high
-  duration_min: 273
-  cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4968033"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-02-23-live-01
+    type: live
+    date: "2019-02-23"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 273
+    cover: "https://tx-free-imgs.acfun.cn/Fr0UOIsAfV_NBYTi1ufvPiYTOei8?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4968033"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-24-live-01
-  type: live
-  date: "2019-02-24"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/Fr-KvQXHLrX09X9e3GhzF9yXINQN?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4970765"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2019-02-24-live-01
+    type: live
+    date: "2019-02-24"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/Fr-KvQXHLrX09X9e3GhzF9yXINQN?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4970765"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-25-live-01
-  type: live
-  date: "2019-02-25"
-  title: "6酱又来唱歌啦"
-  platform: douyu
-  confidence: high
-  duration_min: 233
-  cover: "https://tx-free-imgs.acfun.cn/FjXVcYsKDlNZjFBN_wgAn0q_2pen?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4973310"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-02-25-live-01
+    type: live
+    date: "2019-02-25"
+    title: "6酱又来唱歌啦"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    cover: "https://tx-free-imgs.acfun.cn/FjXVcYsKDlNZjFBN_wgAn0q_2pen?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4973310"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-02-27-live-01
-  type: live
-  date: "2019-02-27"
-  title: "Mages of Mystralia （秘奥法师）"
-  platform: douyu
-  confidence: high
-  duration_min: 260
-  cover: "https://tx-free-imgs.acfun.cn/Fk3lt8q94KHPwop5wmpNRnOWtXAy?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4979288"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-02-27-live-01
+    type: live
+    date: "2019-02-27"
+    title: "Mages of Mystralia （秘奥法师）"
+    platform: douyu
+    confidence: high
+    duration_min: 260
+    cover: "https://tx-free-imgs.acfun.cn/Fk3lt8q94KHPwop5wmpNRnOWtXAy?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4979288"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent

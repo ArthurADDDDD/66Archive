@@ -1,77 +1,83 @@
-# 采集任务 #004 · 2025-08 抖音期直播场次（首播平台：抖音）
-# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
-# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+  - id: 2025-08-02-live-01
+    type: live
+    date: "2025-08-02"
+    title: "和炮炮壮壮一家三口打矩阵"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/069a4a619d211e7259acfc9a5e78d90d8292a435.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-08-02-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1rChNz7ER3"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV11ohbzREXp"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-08-02-live-01
-  type: live
-  date: "2025-08-02"
-  title: "和炮炮壮壮一家三口打矩阵"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/069a4a619d211e7259acfc9a5e78d90d8292a435.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1rChNz7ER3"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV11ohbzREXp"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 105
+  - id: 2025-08-02-live-02
+    type: live
+    date: "2025-08-02"
+    title: "和炮炮壮壮一家三口打矩阵 2025/08/02 18时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/9f239c67d2e7d56b10e764a586a559f0bb66f96b.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-08-02-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1prhNzUE5h"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-08-02-live-02
-  type: live
-  date: "2025-08-02"
-  title: "和炮炮壮壮一家三口打矩阵 2025/08/02 18时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/9f239c67d2e7d56b10e764a586a559f0bb66f96b.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1prhNzUE5h"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 104
+  - id: 2025-08-07-live-01
+    type: live
+    date: "2025-08-07"
+    title: "战地666666666666666 2025/08/07 17时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/e90fb2640db9d474446ad4ec233ad4cd7e5ffe6a.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15htBz9Eia"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-08-07-live-01
-  type: live
-  date: "2025-08-07"
-  title: "战地666666666666666 2025/08/07 17时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/e90fb2640db9d474446ad4ec233ad4cd7e5ffe6a.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV15htBz9Eia"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 272
+  - id: 2025-08-08-live-01
+    type: live
+    date: "2025-08-08"
+    title: "和炮炮一起远光84排位 2025/08/08 19时场"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/c00b676b757da02ca7dbd1f4443bc5f02b554b10.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1SZt2zTEGM"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-08-08-live-01
-  type: live
-  date: "2025-08-08"
-  title: "和炮炮一起远光84排位 2025/08/08 19时场"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/c00b676b757da02ca7dbd1f4443bc5f02b554b10.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1SZt2zTEGM"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-08-10-live-01
-  type: live
-  date: "2025-08-10"
-  title: "玩游戏就是要开心嘛 2025/08/10 19时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/a1653093878606710a732b7cee9f51664e2d936c.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1dEbKzvEvc"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 129
+  - id: 2025-08-10-live-01
+    type: live
+    date: "2025-08-10"
+    title: "玩游戏就是要开心嘛 2025/08/10 19时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/a1653093878606710a732b7cee9f51664e2d936c.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1dEbKzvEvc"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 263
