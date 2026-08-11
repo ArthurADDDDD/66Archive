@@ -17,7 +17,7 @@ const mono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: '六六编年史 · 女流66 作品存档',
+  title: '女流66编年史 · 作品存档',
   description:
     '2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。',
 }
