@@ -70,7 +70,10 @@ export function Preview({ entry }: { entry: TimelineEntry | null }) {
 
         <div className="flex items-center justify-between border-t border-line pt-3 font-mono text-[11px]">
           <span className="text-faint">
-            {entry.sourceCount} 个来源{entry.aliveCount < entry.sourceCount && ` · ${entry.sourceCount - entry.aliveCount} 个失效`}
+            {entry.sourceCount} 个来源
+            {entry.aliveCount > 0 && ` · ${entry.aliveCount} 个已核验`}
+            {entry.uncheckedCount > 0 && ` · ${entry.uncheckedCount} 个未复查`}
+            {entry.deadCount > 0 && ` · ${entry.deadCount} 个失效`}
           </span>
           <Link href={`/e/${entry.id}/`} className="text-live underline underline-offset-4">
             详情 →

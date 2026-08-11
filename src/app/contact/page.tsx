@@ -1,0 +1,50 @@
+import Link from 'next/link'
+import { SiteNav } from '@/components/SiteNav'
+
+export default function ContactPage() {
+  return (
+    <main className="min-h-screen">
+      <header className="mx-auto flex max-w-[1100px] items-center px-4 py-5 sm:px-6">
+        <SiteNav active="contact" />
+      </header>
+
+      <section className="relative mx-auto max-w-[1100px] px-4 pb-20 pt-16 sm:px-6 sm:pt-24">
+        <div className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-today/10 blur-[100px]" />
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-today">Contact & correction</p>
+        <h1 className="mt-4 max-w-2xl text-[38px] font-semibold leading-tight tracking-tight sm:text-[56px]">让这份索引更准确。</h1>
+        <p className="mt-6 max-w-2xl text-[14px] leading-7 text-muted">
+          如果你发现日期、标题、链接或直播内容有误，可以提交线索。公开互动与用户贡献系统尚未上线，目前不会收集手机号、微信或第三方账号信息。
+        </p>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <article className="rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-live/40">
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-live">资料纠错</span>
+            <h2 className="mt-3 text-[20px] font-medium">需要提供什么</h2>
+            <ul className="mt-4 space-y-2 text-[13px] leading-relaxed text-muted">
+              <li>具体条目的页面地址</li>
+              <li>认为有误或缺失的字段</li>
+              <li>能够佐证修改的公开来源</li>
+            </ul>
+          </article>
+
+          <article className="rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-today/40">
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-today">联系渠道</span>
+            <h2 className="mt-3 text-[20px] font-medium">上线前暂未开放</h2>
+            <p className="mt-4 text-[13px] leading-relaxed text-muted">
+              正式渠道会在互动审核机制确定后公布。当前页面先用于明确站点结构，避免展示未经确认的联系方式。
+            </p>
+          </article>
+        </div>
+
+        <div className="mt-12 flex flex-wrap gap-3">
+          <Link href="/chronicle/" className="rounded-full bg-ink px-5 py-2.5 text-[12px] font-medium text-base hover:bg-white">
+            前往编年史
+          </Link>
+          <Link href="/" className="rounded-full border border-line px-5 py-2.5 text-[12px] text-muted hover:border-muted hover:text-ink">
+            返回首页
+          </Link>
+        </div>
+      </section>
+    </main>
+  )
+}

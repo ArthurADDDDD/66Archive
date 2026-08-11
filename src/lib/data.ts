@@ -82,7 +82,10 @@ export type TimelineEntry = {
   cover: string | null
   confidence: string
   sourceCount: number
+  /** 明确标记为 alive 的来源数；unchecked 不能冒充已核验可用。 */
   aliveCount: number
+  uncheckedCount: number
+  deadCount: number
   seriesName?: string
   /** 分段在时长上的占比，用于卡片上的色带 */
   bands: { game: string | null; name: string; from: number; to: number }[]
@@ -124,7 +127,9 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       cover: e.cover ?? null,
       confidence: e.confidence,
       sourceCount: e.sources.length,
-      aliveCount: e.sources.filter((s) => s.status !== 'dead').length,
+      aliveCount: e.sources.filter((s) => s.status === 'alive').length,
+      uncheckedCount: e.sources.filter((s) => s.status === 'unchecked').length,
+      deadCount: e.sources.filter((s) => s.status === 'dead').length,
       seriesName: e.series ? ds.series.get(e.series)?.name : undefined,
       bands: total ? bands : [],
       demo: e.demo,
