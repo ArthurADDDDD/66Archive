@@ -359,7 +359,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/0bd928f6c7ef4ffece7974befb88e2ef53fb4aa7.jpg"
     confidence: medium
-    games: []
+    games:
+      - infinity-nikki
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1Fe2gYWEZN"

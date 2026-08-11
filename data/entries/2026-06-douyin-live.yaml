@@ -221,7 +221,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/dc9b992cd70e5b17e88b379f758f54a1c454a23d.jpg"
     confidence: high
-    games: []
+    games:
+      - daodao-wizard
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -241,7 +242,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/dd2001e1f023c308a482cb78f97049f7d18df40a.jpg"
     confidence: high
-    games: []
+    games:
+      - meecha-chameleon
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -487,7 +489,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/03e588bd8a9d93be984757d1d8a55060777937aa.jpg"
     confidence: high
-    games: []
+    games:
+      - xin-qiannv-youhun
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -507,7 +510,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/94e22ecd5e2baf00be3531b651e319266ae27e97.jpg"
     confidence: high
-    games: []
+    games:
+      - lord-of-mysteries
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -527,7 +531,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/9e5f4a777ec803caddba17be37fda85327270b2c.jpg"
     confidence: medium
-    games: []
+    games:
+      - lord-of-mysteries
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -603,7 +608,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/b8d110875f96cb8b3480d94a2fd2c7b93a14bbae.jpg"
     confidence: medium
-    games: []
+    games:
+      - ai-escape-room
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -620,7 +626,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/5a518fedb6c235c354d813873db9e8c6ba93c7fe.jpg"
     confidence: medium
-    games: []
+    games:
+      - ai-escape-room
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:

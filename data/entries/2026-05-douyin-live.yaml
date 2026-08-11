@@ -83,7 +83,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/2b6fcc03d80a7487b02af6e8a80963e2ee83fb86.jpg"
     confidence: high
-    games: []
+    games:
+      - dig-for-dog
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
