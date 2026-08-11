@@ -24,7 +24,15 @@ const ERAS: Era[] = [
   { id: 'douyin', label: '抖音时期', detail: '2024—至今', from: 2024, to: 9999, color: '#FF6B75' },
 ]
 
-export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo: boolean }) {
+export function Timeline({
+  entries,
+  isDemo,
+  hiddenUnreviewed = 0,
+}: {
+  entries: TimelineEntry[]
+  isDemo: boolean
+  hiddenUnreviewed?: number
+}) {
   const years = useMemo(
     () => [...new Set(entries.map((entry) => Number(entry.date.slice(0, 4))))].sort((a, b) => b - a),
     [entries],
@@ -292,6 +300,11 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
           {isDemo && (
             <p className="mt-5 rounded border border-video/40 bg-video/5 px-3 py-2 font-mono text-[11px] text-video">
               当前展示演示数据，不是真实记录。
+            </p>
+          )}
+          {hiddenUnreviewed > 0 && (
+            <p className="mt-5 rounded border border-line bg-surface/60 px-3 py-2 font-mono text-[11px] text-faint">
+              开发版已隐藏 {hiddenUnreviewed.toLocaleString()} 条来源未复查的记录；来源完成复查后会自动显示。
             </p>
           )}
         </section>

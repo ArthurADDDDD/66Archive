@@ -125,7 +125,13 @@ export function EntryRow({
                 >
                   {cover ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={cover} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]" />
+                    <img
+                      src={cover}
+                      alt=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]"
+                    />
                   ) : (
                     <span className="flex h-full items-center justify-center font-mono text-[10px] text-faint">无封面</span>
                   )}
