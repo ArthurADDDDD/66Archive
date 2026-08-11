@@ -99,10 +99,13 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
       }))
   }, [filtered])
 
-  const totalHours = useMemo(
-    () => Math.round(filtered.reduce((n, e) => n + (e.duration_min ?? 0), 0) / 60),
-    [filtered],
-  )
+  // "0 小时"会被读成事实（他一小时都没播），但真相是没人录入过——
+  // 必须把"未知"和"零"分开显示，否则是在编造数据。
+  const durationStats = useMemo(() => {
+    const known = filtered.filter((e) => e.duration_min)
+    const hours = Math.round(known.reduce((n, e) => n + (e.duration_min ?? 0), 0) / 60)
+    return { known: known.length, hours }
+  }, [filtered])
 
   const jump = useCallback((year: number) => {
     yearRefs.current.get(year)?.scrollIntoView({ block: 'start' })
@@ -188,7 +191,19 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
 
           <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-mono text-[11px] text-faint tnum">
             <Stat label="条目" value={filtered.length.toString()} />
-            <Stat label="累计时长" value={`${totalHours.toLocaleString()} 小时`} />
+            <Stat
+              label="累计时长"
+              value={
+                durationStats.known === 0
+                  ? '尚未录入'
+                  : `${durationStats.hours.toLocaleString()} 小时`
+              }
+              hint={
+                durationStats.known > 0 && durationStats.known < filtered.length
+                  ? `仅 ${durationStats.known} / ${filtered.length} 条有时长数据`
+                  : undefined
+              }
+            />
             <Stat label="游戏" value={gameCounts.length.toString()} />
             <Stat
               label="时期分界"
@@ -313,11 +328,12 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   )
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
   return (
     <div>
       <dt className="uppercase tracking-[0.18em]">{label}</dt>
       <dd className="mt-1 text-[13px] text-ink">{value}</dd>
+      {hint && <dd className="mt-0.5 text-[10px] normal-case tracking-normal text-faint">{hint}</dd>}
     </div>
   )
 }

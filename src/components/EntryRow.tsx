@@ -40,31 +40,40 @@ export function EntryRow({
           {entry.time && <div className="text-faint">{entry.time}</div>}
         </div>
 
-        {/* 时长竖条 —— 本站的度量衡 */}
+        {/* 时长竖条 —— 本站的度量衡。时长未知时绝不能画得像"很短"，
+            那是在编造数据没有的信息，所以未知时只给一个空心点。 */}
         <div className="flex w-3 shrink-0 justify-center pt-[5px]">
-          <div
-            className="relative w-[7px] overflow-hidden rounded-full transition-[filter] group-hover:brightness-125"
-            style={{
-              height: h,
-              background: isLive ? 'rgba(91,200,232,0.22)' : 'rgba(224,162,68,0.30)',
-              opacity: dead ? 0.4 : 1,
-            }}
-          >
-            {isLive && entry.bands.length > 0
-              ? entry.bands.map((b, i) => (
-                  <span
-                    key={i}
-                    className="absolute left-0 w-full"
-                    style={{
-                      top: `${b.from * 100}%`,
-                      height: `${Math.max(0.02, b.to - b.from) * 100}%`,
-                      background: gameColor(b.game),
-                      opacity: b.game ? 0.9 : 0.35,
-                    }}
-                  />
-                ))
-              : !isLive && <span className="absolute inset-0 bg-video/80" />}
-          </div>
+          {entry.duration_min ? (
+            <div
+              className="relative w-[7px] overflow-hidden rounded-full transition-[filter] group-hover:brightness-125"
+              style={{
+                height: h,
+                background: isLive ? 'rgba(91,200,232,0.22)' : 'rgba(224,162,68,0.30)',
+                opacity: dead ? 0.4 : 1,
+              }}
+            >
+              {isLive && entry.bands.length > 0
+                ? entry.bands.map((b, i) => (
+                    <span
+                      key={i}
+                      className="absolute left-0 w-full"
+                      style={{
+                        top: `${b.from * 100}%`,
+                        height: `${Math.max(0.02, b.to - b.from) * 100}%`,
+                        background: gameColor(b.game),
+                        opacity: b.game ? 0.9 : 0.35,
+                      }}
+                    />
+                  ))
+                : !isLive && <span className="absolute inset-0 bg-video/80" />}
+            </div>
+          ) : (
+            <span
+              className="mt-[3px] h-[7px] w-[7px] shrink-0 rounded-full border"
+              style={{ borderColor: isLive ? 'rgba(91,200,232,0.45)' : 'rgba(224,162,68,0.5)' }}
+              title="时长未知"
+            />
+          )}
         </div>
 
         {/* 内容 */}
