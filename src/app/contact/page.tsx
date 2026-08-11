@@ -3,7 +3,7 @@ import { SiteNav } from '@/components/SiteNav'
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <main className="ui-page-in min-h-screen">
       <header className="mx-auto flex max-w-[1100px] items-center px-4 py-5 sm:px-6">
         <SiteNav active="contact" />
       </header>
@@ -17,7 +17,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          <article className="rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-live/40">
+          <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-live">资料纠错</span>
             <h2 className="mt-3 text-[20px] font-medium">需要提供什么</h2>
             <ul className="mt-4 space-y-2 text-[13px] leading-relaxed text-muted">
@@ -27,7 +27,7 @@ export default function ContactPage() {
             </ul>
           </article>
 
-          <article className="rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-today/40">
+          <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 hover:border-today/40">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-today">联系渠道</span>
             <h2 className="mt-3 text-[20px] font-medium">上线前暂未开放</h2>
             <p className="mt-4 text-[13px] leading-relaxed text-muted">
@@ -39,7 +39,7 @@ export default function ContactPage() {
             href="https://github.com/ArthurADDDDD/66archive"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-line bg-surface/55 p-6 transition-colors hover:border-live/40 sm:col-span-2"
+            className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-live">项目仓库</span>
             <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
@@ -53,10 +53,10 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
-          <Link href="/chronicle/" className="rounded-full bg-ink px-5 py-2.5 text-[12px] font-medium text-base hover:bg-white">
+          <Link href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-[12px] font-medium text-base hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
             前往编年史
           </Link>
-          <Link href="/" className="rounded-full border border-line px-5 py-2.5 text-[12px] text-muted hover:border-muted hover:text-ink">
+          <Link href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-[12px] text-muted hover:border-muted hover:text-ink">
             返回首页
           </Link>
         </div>

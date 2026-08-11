@@ -48,10 +48,10 @@ export default function HomePage() {
   ]
 
   return (
-    <main className="min-h-screen overflow-hidden">
-      <header className="relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
+    <main className="ui-page-in min-h-screen overflow-hidden">
+      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="home" />
-        <Link href="/chronicle/" className="hidden font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
           打开全部 {ds.entries.length.toLocaleString()} 条记录 →
         </Link>
       </header>
@@ -60,7 +60,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -right-24 -top-40 h-[520px] w-[520px] rounded-full bg-live/10 blur-[100px]" />
         <div className="pointer-events-none absolute -left-44 top-24 h-[460px] w-[460px] rounded-full bg-today/10 blur-[110px]" />
         <div className="relative grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
-          <div>
+          <div className="ui-reveal">
             <div className="inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-live">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
               2010 — 现在
@@ -74,16 +74,16 @@ export default function HomePage() {
               女流以独立游戏和具有艺术性的作品为主要内容，从优酷时代的原创游戏解说出发，后来转向主机游戏直播。这里整理她公开发表过的视频与直播场次，只建立索引，不搬运视频。
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/chronicle/" className="group rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_50px_rgba(91,200,232,0.22)]">
+              <Link href="/chronicle/" className="ui-press group rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(91,200,232,0.22)]">
                 浏览编年史 <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
               </Link>
-              <a href="#career" className="rounded-full border border-line bg-surface/60 px-6 py-3 text-[13px] text-muted transition-colors hover:border-muted hover:text-ink">
+              <a href="#career" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-[13px] text-muted hover:border-muted hover:text-ink">
                 先看生涯总览
               </a>
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-[440px]">
+          <div className="ui-reveal ui-delay-1 relative mx-auto aspect-square w-full max-w-[440px]">
             <div className="absolute inset-[8%] animate-[spin_35s_linear_infinite] rounded-full border border-dashed border-line" />
             <div className="absolute inset-[22%] animate-[spin_24s_linear_infinite_reverse] rounded-full border border-live/20" />
             <div className="absolute inset-[34%] rounded-full bg-gradient-to-br from-live/25 via-raised to-today/20 shadow-[0_0_90px_rgba(91,200,232,0.16)]" />
@@ -98,7 +98,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <dl className="relative mt-16 grid grid-cols-3 gap-3 border-y border-line py-5 sm:max-w-xl">
+        <dl className="ui-reveal ui-delay-2 relative mt-16 grid grid-cols-3 gap-3 border-y border-line py-5 sm:max-w-xl">
           <Stat value={ds.entries.length.toLocaleString()} label="公开条目" />
           <Stat value={years.toString()} label="覆盖年份" />
           <Stat value={ds.series.size.toString()} label="系列栏目" />
@@ -121,7 +121,7 @@ export default function HomePage() {
               <Link
                 key={chapter.year}
                 href={chapter.href}
-                className="group relative rounded-2xl border border-line bg-base/80 p-5 transition-all hover:-translate-y-1 hover:border-muted hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
+                className="ui-card ui-press group relative rounded-2xl border border-line bg-base/80 p-5 hover:border-muted hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
               >
                 <span className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full border-4 border-base text-[9px] font-bold text-base" style={{ background: chapter.color }}>
                   {index + 1}
@@ -142,7 +142,7 @@ export default function HomePage() {
 
       <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-faint sm:flex-row sm:px-6">
         <span>只索引，不搬运 · 所有播放回到原平台</span>
-        <Link href="/contact/" className="hover:text-live">资料纠错与联系 →</Link>
+        <Link href="/contact/" className="ui-press rounded-sm transition-colors hover:text-live">资料纠错与联系 →</Link>
       </footer>
     </main>
   )

@@ -30,11 +30,11 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
     .slice(0, 6)
 
   return (
-    <div className="mx-auto max-w-[900px] px-4 pb-8 sm:px-6">
+    <div className="ui-page-in mx-auto max-w-[900px] px-4 pb-8 sm:px-6">
       <header className="flex items-center py-5">
         <SiteNav active="entry" />
       </header>
-      <Link href={backHref} className="mt-5 inline-block font-mono text-[11px] text-muted underline underline-offset-4">
+      <Link href={backHref} className="ui-press mt-5 inline-block rounded-sm font-mono text-[11px] text-muted underline underline-offset-4 hover:text-live">
         ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
       </Link>
 
@@ -63,7 +63,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           src={cover}
           alt={`${entry.title} 封面`}
           referrerPolicy="no-referrer"
-          className="mt-6 aspect-video w-full rounded border border-line bg-raised object-cover"
+          className="ui-reveal mt-6 aspect-video w-full rounded border border-line bg-raised object-cover"
         />
       )}
 
@@ -79,7 +79,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           </p>
         ) : (
           <>
-            <div className="flex h-3 w-full overflow-hidden rounded-full bg-raised">
+            <div className="group/segments flex h-3 w-full overflow-hidden rounded-full bg-raised">
               {totalSec > 0 && toSeconds(entry.segments[0].at) > 0 && (
                 <span
                   style={{ width: `${(toSeconds(entry.segments[0].at) / totalSec) * 100}%` }}
@@ -95,6 +95,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                   <span
                     key={i}
                     style={{ width: `${width}%`, background: gameColor(s.game ?? null), opacity: s.game ? 0.9 : 0.3 }}
+                    className="transition-[filter,opacity] duration-300 group-hover/segments:brightness-125"
                     title={`${s.at} ${s.label}`}
                   />
                 )
@@ -119,7 +120,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 rounded px-2 py-1.5 transition-colors hover:bg-surface"
+                        className="group ui-press flex items-center gap-3 rounded px-2 py-1.5 transition-colors hover:bg-surface"
                       >
                         {Row}
                         <span className="ml-auto font-mono text-[10px] text-live opacity-0 transition-opacity group-hover:opacity-100">
@@ -151,7 +152,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               const dead = s.status === 'dead'
               const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
-                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2.5">
+                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2.5 transition-colors duration-200 hover:bg-surface/80">
                   <span className="font-mono text-[11px] text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
                   {acc && <span className="text-[12px] text-ink">{acc.name}</span>}
                   {s.parts && <span className="font-mono text-[11px] text-faint tnum">{s.parts} P</span>}
@@ -163,7 +164,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`ml-auto font-mono text-[11px] underline underline-offset-4 ${
+                    className={`ui-press ml-auto rounded-sm font-mono text-[11px] underline underline-offset-4 ${
                       dead ? 'text-faint' : 'text-live'
                     }`}
                   >
@@ -185,7 +186,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           <ul className="space-y-1">
             {related.map((r) => (
               <li key={r.id}>
-                <Link href={`/e/${r.id}/`} className="flex items-baseline gap-3 rounded px-2 py-1.5 hover:bg-surface">
+                <Link href={`/e/${r.id}/`} className="ui-press flex items-baseline gap-3 rounded px-2 py-1.5 transition-colors hover:bg-surface">
                   <span className="font-mono text-[11px] text-faint tnum">{r.date}</span>
                   <span className="truncate text-[13px] text-ink">{r.title}</span>
                 </Link>
