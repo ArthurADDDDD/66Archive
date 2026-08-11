@@ -72,21 +72,11 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播（心灵砒霜 & 戏说聊斋第十二期）的纯净版（ac4452475）与弹幕版（ac4452632）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac4452475"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2018-07-08-live-02
-  type: live
-  date: "2018-07-08"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
     - url: "https://www.acfun.cn/v/ac4452632"
       kind: replay
   contributed_by: data-agent

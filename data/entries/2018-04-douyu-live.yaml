@@ -143,9 +143,12 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [戏说聊斋]
+  tags: [戏说聊斋, 弹幕版]
+  note: "同一场直播（戏说聊斋第三期）的纯净版（ac4311550）与弹幕版（ac4311943）原本被建模为两条重复条目，已合并。同日另有心灵砒霜条目。"
   sources:
     - url: "https://www.acfun.cn/v/ac4311550"
+      kind: replay
+    - url: "https://www.acfun.cn/v/ac4311943"
       kind: replay
   contributed_by: data-agent
 
@@ -159,19 +162,6 @@
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4311945"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2018-04-15-live-03
-  type: live
-  date: "2018-04-15"
-  title: "戏说聊斋"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [戏说聊斋, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4311943"
       kind: replay
   contributed_by: data-agent
 

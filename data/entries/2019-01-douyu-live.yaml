@@ -192,21 +192,11 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播（乐园 & 心灵砒霜）的纯净版（ac4881886）与弹幕版（ac4882221）原本被建模为两条重复条目，已合并。"
   sources:
     - url: "https://www.acfun.cn/v/ac4881886"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2019-01-20-live-02
-  type: live
-  date: "2019-01-20"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
     - url: "https://www.acfun.cn/v/ac4882221"
       kind: replay
   contributed_by: data-agent

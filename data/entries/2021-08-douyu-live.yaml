@@ -10,21 +10,11 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播按上（ac30494403）、下（ac30494413）分 P 的弹幕版原本被建模为两条重复条目，已合并（纯净版未收录）。"
   sources:
     - url: "https://www.acfun.cn/v/ac30494403"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2021-08-01-live-02
-  type: live
-  date: "2021-08-01"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
     - url: "https://www.acfun.cn/v/ac30494413"
       kind: replay
   contributed_by: data-agent
@@ -350,21 +340,15 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播原本被建模为两条重复条目，已合并；并补齐目录中同场其余投稿：纯净版 ac30913126、弹幕版（上）ac30922231。"
   sources:
     - url: "https://www.acfun.cn/v/ac30913125"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2021-08-29-live-02
-  type: live
-  date: "2021-08-29"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [心灵砒霜]
-  sources:
     - url: "https://www.acfun.cn/v/ac30922232"
+      kind: replay
+    - url: "https://www.acfun.cn/v/ac30913126"
+      kind: replay
+    - url: "https://www.acfun.cn/v/ac30922231"
       kind: replay
   contributed_by: data-agent
