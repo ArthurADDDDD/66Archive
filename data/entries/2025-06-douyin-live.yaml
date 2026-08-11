@@ -475,37 +475,15 @@
   date: "2025-06-21"
   title: "点进直播间看游戏：多重人生"
   platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1zvN1z9Esj"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-06-21-live-02
-  type: live
-  date: "2025-06-21"
-  title: "点进直播间看游戏：多重人生 2025/06/21 19时场"
-  platform: douyin
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV16qNmzcE4h"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-06-21-live-03
-  type: live
-  date: "2025-06-21"
-  title: "点进直播间看游戏：多重人生"
-  platform: douyin
   confidence: high
   games: []
   tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+  note: "同一场直播（19时场）由 bobi华（4:23:58）、安乐冈花火w（4:22:39）、怪盗基德KID（弹幕版）与 直播回放巴拉蹦吧（4:20:00）分别搬运，总时长吻合，已合并为一天一条。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1zvN1z9Esj"
+      kind: replay
+    - url: "https://www.bilibili.com/video/BV16qNmzcE4h"
+      kind: replay
     - url: "https://www.bilibili.com/video/BV1RAN1z2Emh"
       kind: replay
     - url: "https://www.bilibili.com/video/BV1BeN1zsEup"
