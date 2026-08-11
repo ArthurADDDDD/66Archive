@@ -2,26 +2,59 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
-import { deriveEraBoundary, MONTH_CN } from '@/lib/ui'
+import { MONTH_CN } from '@/lib/ui'
+import { PLATFORM_META } from '@/lib/platforms'
+import type { Platform } from '@/lib/schema'
 import { EntryRow } from './EntryRow'
-import { EraStrip } from './EraStrip'
 import { Preview } from './Preview'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
 
+type Era = {
+  id: string
+  label: string
+  detail: string
+  from: number
+  to: number
+  color: string
+}
+
+const ERAS: Era[] = [
+  { id: 'video', label: '视频时期', detail: '2010—2015', from: 2010, to: 2015, color: '#E0A244' },
+  { id: 'douyu', label: '斗鱼时期', detail: '2016—2023', from: 2016, to: 2023, color: '#5BC8E8' },
+  { id: 'douyin', label: '抖音时期', detail: '2024—至今', from: 2024, to: 9999, color: '#FF6B75' },
+]
+
 export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo: boolean }) {
+  const years = useMemo(
+    () => [...new Set(entries.map((entry) => Number(entry.date.slice(0, 4))))].sort((a, b) => b - a),
+    [entries],
+  )
+  const latestYear = years[0] ?? new Date().getFullYear()
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS)
+  const [activeYear, setActiveYear] = useState(latestYear)
+  const [activeMonth, setActiveMonth] = useState<number | null>(null)
   const [hovered, setHovered] = useState<TimelineEntry | null>(null)
   const [expanded, setExpanded] = useState<string | null>(null)
-  const [activeYear, setActiveYear] = useState<number | null>(null)
   const [sheetOpen, setSheetOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
-  const yearRefs = useRef(new Map<number, HTMLElement>())
 
-  const boundary = useMemo(() => deriveEraBoundary(entries), [entries])
+  const monthsForYear = useCallback(
+    (year: number) =>
+      [...new Set(entries.filter((entry) => Number(entry.date.slice(0, 4)) === year).map((entry) => Number(entry.date.slice(5, 7))))].sort(
+        (a, b) => b - a,
+      ),
+    [entries],
+  )
 
-  // 筛选状态写进 URL，链接可分享、可回退
+  // 首次进入时恢复分享链接；没有参数时定位到最新一个有记录的月份。
   useEffect(() => {
     const p = new URLSearchParams(window.location.search)
+    const requestedYear = Number(p.get('y'))
+    const initialYear = years.includes(requestedYear) ? requestedYear : latestYear
+    const requestedMonth = Number(p.get('m'))
+    const availableMonths = monthsForYear(initialYear)
+    setActiveYear(initialYear)
+    setActiveMonth(availableMonths.includes(requestedMonth) ? requestedMonth : (availableMonths[0] ?? null))
     setFilters({
       q: p.get('q') ?? '',
       platforms: p.get('p')?.split(',').filter(Boolean) ?? [],
@@ -29,108 +62,126 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
       games: p.get('g')?.split(',').filter(Boolean) ?? [],
       onlyAlive: p.get('alive') === '1',
     })
-  }, [])
+  }, [latestYear, monthsForYear, years])
+
+  const writeUrl = useCallback((nextFilters: Filters, year: number, month: number | null) => {
+    const p = new URLSearchParams()
+    if (year !== latestYear) p.set('y', String(year))
+    if (month !== null) p.set('m', String(month))
+    if (nextFilters.q) p.set('q', nextFilters.q)
+    if (nextFilters.platforms.length) p.set('p', nextFilters.platforms.join(','))
+    if (nextFilters.types.length) p.set('t', nextFilters.types.join(','))
+    if (nextFilters.games.length) p.set('g', nextFilters.games.join(','))
+    if (nextFilters.onlyAlive) p.set('alive', '1')
+    const qs = p.toString()
+    window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
+  }, [latestYear])
 
   const set = useCallback((patch: Partial<Filters>) => {
     setFilters((prev) => {
       const next = { ...prev, ...patch }
-      const p = new URLSearchParams()
-      if (next.q) p.set('q', next.q)
-      if (next.platforms.length) p.set('p', next.platforms.join(','))
-      if (next.types.length) p.set('t', next.types.join(','))
-      if (next.games.length) p.set('g', next.games.join(','))
-      if (next.onlyAlive) p.set('alive', '1')
-      const qs = p.toString()
-      window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
+      writeUrl(next, activeYear, activeMonth)
       return next
     })
-  }, [])
+  }, [activeMonth, activeYear, writeUrl])
 
-  const filtered = useMemo(() => {
+  const selectYear = useCallback((year: number) => {
+    const month = monthsForYear(year)[0] ?? null
+    const nextFilters = filters.q ? { ...filters, q: '' } : filters
+    setActiveYear(year)
+    setActiveMonth(month)
+    setFilters(nextFilters)
+    setExpanded(null)
+    setHovered(null)
+    writeUrl(nextFilters, year, month)
+  }, [filters, monthsForYear, writeUrl])
+
+  const selectMonth = useCallback((month: number | null) => {
+    setActiveMonth(month)
+    setExpanded(null)
+    setHovered(null)
+    writeUrl(filters, activeYear, month)
+  }, [activeYear, filters, writeUrl])
+
+  const selectEra = useCallback((era: Era) => {
+    const candidates = years.filter((year) => year >= era.from && year <= era.to)
+    if (candidates[0] !== undefined) selectYear(candidates[0])
+  }, [selectYear, years])
+
+  const matchesFilters = useCallback((entry: TimelineEntry, includeSearch = true) => {
+    if (filters.types.length && !filters.types.includes(entry.type)) return false
+    if (filters.platforms.length && !filters.platforms.includes(entry.platform)) return false
+    if (filters.games.length && !entry.games.some((game) => filters.games.includes(game.id))) return false
+    if (filters.onlyAlive && entry.sourceCount > 0 && entry.aliveCount === 0) return false
     const q = filters.q.trim().toLowerCase()
-    return entries.filter((e) => {
-      if (filters.types.length && !filters.types.includes(e.type)) return false
-      if (filters.platforms.length && !filters.platforms.includes(e.platform)) return false
-      if (filters.games.length && !e.games.some((g) => filters.games.includes(g.id))) return false
-      if (filters.onlyAlive && e.sourceCount > 0 && e.aliveCount === 0) return false
-      if (q) {
-        const hay = `${e.title} ${e.games.map((g) => g.name).join(' ')} ${e.tags.join(' ')} ${e.seriesName ?? ''}`
-        if (!hay.toLowerCase().includes(q)) return false
-      }
-      return true
+    if (includeSearch && q) {
+      const haystack = `${entry.title} ${entry.games.map((game) => game.name).join(' ')} ${entry.tags.join(' ')} ${entry.seriesName ?? ''}`
+      if (!haystack.toLowerCase().includes(q)) return false
+    }
+    return true
+  }, [filters])
+
+  const filtered = useMemo(() => entries.filter((entry) => matchesFilters(entry)), [entries, matchesFilters])
+  const filterOnly = useMemo(() => entries.filter((entry) => matchesFilters(entry, false)), [entries, matchesFilters])
+  const searching = filters.q.trim().length > 0
+
+  const yearCounts = useMemo(() => {
+    const counts = new Map<number, number>()
+    for (const entry of filterOnly) {
+      const year = Number(entry.date.slice(0, 4))
+      counts.set(year, (counts.get(year) ?? 0) + 1)
+    }
+    return counts
+  }, [filterOnly])
+
+  const monthCounts = useMemo(() => {
+    const counts = new Map<number, number>()
+    for (const entry of filterOnly) {
+      if (Number(entry.date.slice(0, 4)) !== activeYear) continue
+      const month = Number(entry.date.slice(5, 7))
+      counts.set(month, (counts.get(month) ?? 0) + 1)
+    }
+    return counts
+  }, [activeYear, filterOnly])
+
+  const visible = useMemo(() => {
+    if (searching) return filtered
+    return filterOnly.filter((entry) => {
+      if (Number(entry.date.slice(0, 4)) !== activeYear) return false
+      return activeMonth === null || Number(entry.date.slice(5, 7)) === activeMonth
     })
-  }, [entries, filters])
+  }, [activeMonth, activeYear, filterOnly, filtered, searching])
 
   const platformCounts = useMemo(() => {
-    const m = new Map<string, number>()
-    for (const e of entries) m.set(e.platform, (m.get(e.platform) ?? 0) + 1)
-    return [...m.entries()].sort((a, b) => b[1] - a[1])
+    const counts = new Map<string, number>()
+    for (const entry of entries) counts.set(entry.platform, (counts.get(entry.platform) ?? 0) + 1)
+    return [...counts.entries()].sort((a, b) => b[1] - a[1])
   }, [entries])
 
   const gameCounts = useMemo(() => {
-    const m = new Map<string, { id: string; name: string; count: number }>()
-    for (const e of entries) {
-      for (const g of e.games) {
-        const cur = m.get(g.id) ?? { ...g, count: 0 }
-        cur.count++
-        m.set(g.id, cur)
+    const counts = new Map<string, { id: string; name: string; count: number }>()
+    for (const entry of entries) {
+      for (const game of entry.games) {
+        const current = counts.get(game.id) ?? { ...game, count: 0 }
+        current.count++
+        counts.set(game.id, current)
       }
     }
-    return [...m.values()].sort((a, b) => b.count - a.count)
+    return [...counts.values()].sort((a, b) => b.count - a.count)
   }, [entries])
 
-  // 按年 → 月分组
-  const groups = useMemo(() => {
-    const byYear = new Map<number, Map<number, TimelineEntry[]>>()
-    for (const e of filtered) {
-      const y = Number(e.date.slice(0, 4))
-      const mo = Number(e.date.slice(5, 7))
-      if (!byYear.has(y)) byYear.set(y, new Map())
-      const months = byYear.get(y)!
-      if (!months.has(mo)) months.set(mo, [])
-      months.get(mo)!.push(e)
-    }
-    return [...byYear.entries()]
-      .sort((a, b) => b[0] - a[0])
-      .map(([year, months]) => ({
-        year,
-        months: [...months.entries()].sort((a, b) => b[0] - a[0]).map(([month, items]) => ({ month, items })),
-        count: [...months.values()].reduce((n, v) => n + v.length, 0),
-      }))
-  }, [filtered])
-
-  // "0 小时"会被读成事实（他一小时都没播），但真相是没人录入过——
-  // 必须把"未知"和"零"分开显示，否则是在编造数据。
-  const durationStats = useMemo(() => {
-    const known = filtered.filter((e) => e.duration_min)
-    const hours = Math.round(known.reduce((n, e) => n + (e.duration_min ?? 0), 0) / 60)
-    return { known: known.length, hours }
-  }, [filtered])
-
-  const jump = useCallback((year: number) => {
-    yearRefs.current.get(year)?.scrollIntoView({ block: 'start' })
-  }, [])
-
-  // 滚动时同步高亮当前年份
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (es) => {
-        const visible = es.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActiveYear(Number((visible[0].target as HTMLElement).dataset.year))
-      },
-      { rootMargin: '-96px 0px -70% 0px' },
-    )
-    yearRefs.current.forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [groups])
+  const activeEra = ERAS.find((era) => activeYear >= era.from && activeYear <= era.to) ?? ERAS[0]
+  const dirtyCount = filters.platforms.length + filters.types.length + filters.games.length + Number(filters.onlyAlive)
+  const searchLimit = 300
+  const rendered = searching ? visible.slice(0, searchLimit) : visible
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === '/' && document.activeElement !== searchRef.current) {
-        e.preventDefault()
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === '/' && document.activeElement !== searchRef.current) {
+        event.preventDefault()
         searchRef.current?.focus()
       }
-      if (e.key === 'Escape') {
+      if (event.key === 'Escape') {
         searchRef.current?.blur()
         setSheetOpen(false)
       }
@@ -141,186 +192,189 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
 
   return (
     <>
-      {/* 顶部：品牌 + 搜索 + 压缩后的年份条 */}
-      <header className="sticky top-0 z-30 border-b border-line bg-base">
-        <div className="mx-auto flex max-w-[1400px] items-center gap-4 px-4 py-2.5 sm:px-6">
-          <a href="/" className="shrink-0 font-mono text-[13px] font-semibold tracking-tight text-ink">
-            六六编年史
-          </a>
-          <div className="hidden min-w-0 flex-1 md:block">
-            <EraStrip entries={entries} boundary={boundary} compact activeYear={activeYear} onJump={jump} />
-          </div>
-          <div className="relative ml-auto w-full max-w-[220px]">
+      <header className="sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
+        <div className="mx-auto flex max-w-[1400px] items-center gap-3 px-4 py-3 sm:px-6">
+          <a href="/" className="shrink-0 font-mono text-[13px] font-semibold tracking-tight text-ink">六六编年史</a>
+          <span className="hidden h-4 w-px bg-line sm:block" />
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-faint sm:block">公开作品索引</span>
+          <div className="relative ml-auto w-full max-w-[360px]">
             <input
               ref={searchRef}
               value={filters.q}
-              onChange={(e) => set({ q: e.target.value })}
-              placeholder="搜索标题、游戏、标签"
-              aria-label="搜索"
-              className="w-full rounded border border-line bg-surface py-1.5 pl-2.5 pr-7 text-[12px] text-ink placeholder:text-faint focus:border-live focus:outline-none"
+              onChange={(event) => set({ q: event.target.value })}
+              placeholder={`搜索全部 ${entries.length.toLocaleString()} 条记录`}
+              aria-label="搜索全部记录"
+              className="w-full rounded-md border border-line bg-surface py-2 pl-3 pr-9 text-[12px] text-ink placeholder:text-faint focus:border-live focus:outline-none"
             />
-            <kbd className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint">
-              /
-            </kbd>
+            <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint">/</kbd>
           </div>
           <button
             onClick={() => setSheetOpen(true)}
-            className="shrink-0 rounded border border-line px-2 py-1.5 font-mono text-[11px] text-muted lg:hidden"
+            className="relative shrink-0 rounded-md border border-line bg-surface px-3 py-2 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink"
           >
-            筛选
+            筛选{dirtyCount > 0 && <span className="ml-1.5 text-live">{dirtyCount}</span>}
           </button>
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1400px] px-4 sm:px-6">
-        {/* 开场：十六年的形状 */}
-        <section className="border-b border-line py-10 sm:py-14">
-          <h1 className="max-w-2xl text-[26px] font-semibold leading-tight tracking-tight sm:text-[34px]">
-            他从 2010 年开始发视频，一直播到现在。
-            <br />
-            <span className="text-muted">这里是每一次的索引。</span>
-          </h1>
-          <p className="mt-4 max-w-xl text-[13px] leading-relaxed text-muted">
-            不搬运任何资源，只收集公开链接——每一次播放都回到原平台、原 UP 主。
-            竖条的高度是那场直播的真实时长，条内的颜色是当时在打的游戏。
-          </p>
-
-          <div className="mt-8">
-            <EraStrip entries={entries} boundary={boundary} activeYear={activeYear} onJump={jump} />
+      <main className="mx-auto max-w-[1400px] px-4 pb-16 sm:px-6">
+        <section className="py-8 sm:py-10">
+          <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-live">2010 — {latestYear}</p>
+              <h1 className="mt-2 max-w-2xl text-[27px] font-semibold leading-tight tracking-tight sm:text-[36px]">
+                先找到一年，再打开那个月。
+              </h1>
+              <p className="mt-3 max-w-xl text-[13px] leading-relaxed text-muted">
+                不用从一条十六年的长轴里翻找。按时期、年份和月份逐层定位；搜索会直接检索全部公开记录。
+              </p>
+            </div>
+            <dl className="flex gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-faint tnum">
+              <Stat label="条目" value={entries.length.toLocaleString()} />
+              <Stat label="年份" value={years.length.toString()} />
+              <Stat label="已关联游戏" value={gameCounts.length.toString()} />
+            </dl>
           </div>
 
-          <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-mono text-[11px] text-faint tnum">
-            <Stat label="条目" value={filtered.length.toString()} />
-            <Stat
-              label="累计时长"
-              value={
-                durationStats.known === 0
-                  ? '尚未录入'
-                  : `${durationStats.hours.toLocaleString()} 小时`
-              }
-              hint={
-                durationStats.known > 0 && durationStats.known < filtered.length
-                  ? `仅 ${durationStats.known} / ${filtered.length} 条有时长数据`
-                  : undefined
-              }
-            />
-            <Stat label="游戏" value={gameCounts.length.toString()} />
-            <Stat
-              label="时期分界"
-              value={boundary ? `${boundary} 年（由数据推导，待考证）` : '待考证'}
-            />
-          </dl>
-
           {isDemo && (
-            <p className="mt-6 rounded border border-video/40 bg-video/5 px-3 py-2 font-mono text-[11px] leading-relaxed text-video">
-              当前展示的是演示数据，用于验证界面与数据结构，不是真实记录。
-              真实条目进入 <code>data/entries/</code> 后会自动替换。
+            <p className="mt-5 rounded border border-video/40 bg-video/5 px-3 py-2 font-mono text-[11px] text-video">
+              当前展示演示数据，不是真实记录。
             </p>
           )}
         </section>
 
-        <div className="flex gap-8">
-          {/* 筛选栏 */}
-          <aside className="sticky top-[57px] hidden h-[calc(100vh-57px)] w-[200px] shrink-0 overflow-y-auto py-6 lg:block">
-            <FilterRail
-              filters={filters}
-              set={set}
-              platformCounts={platformCounts}
-              gameCounts={gameCounts}
-              total={entries.length}
-              matched={filtered.length}
-            />
-          </aside>
-
-          {/* 时间轴 */}
-          <div className="min-w-0 flex-1 py-6" onMouseLeave={() => setHovered(null)}>
-            {groups.length === 0 && (
-              <div className="py-24 text-center">
-                <p className="text-[14px] text-muted">这些条件下没有条目。</p>
-                <button
-                  onClick={() => set(EMPTY_FILTERS)}
-                  className="mt-3 font-mono text-[12px] text-live underline underline-offset-4"
-                >
-                  清除筛选
-                </button>
-              </div>
-            )}
-
-            {groups.map((g, gi) => {
-              const prev = groups[gi - 1]
-              // 时期转折：从直播期滚入视频期的那一处
-              const crossing =
-                boundary !== null && prev && prev.year >= boundary && g.year < boundary
+        <section aria-label="时间定位" className="rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
+          <div className="grid gap-2 sm:grid-cols-3">
+            {ERAS.map((era) => {
+              const active = era.id === activeEra.id && !searching
+              const count = entries.filter((entry) => {
+                const year = Number(entry.date.slice(0, 4))
+                return year >= era.from && year <= era.to
+              }).length
               return (
-                <div key={g.year}>
-                  {crossing && <EraDivider boundary={boundary!} />}
-                  <section
-                    id={`y${g.year}`}
-                    data-year={g.year}
-                    ref={(el) => {
-                      if (el) yearRefs.current.set(g.year, el)
-                    }}
-                    className="scroll-mt-[57px]"
-                  >
-                    <div className="sticky top-[57px] z-10 -mx-1 flex items-baseline gap-3 bg-base px-1 py-2">
-                      <h2 className="font-display text-[22px] font-extrabold leading-none tracking-tight text-ink tnum">
-                        {g.year}
-                      </h2>
-                      <span className="font-mono text-[11px] text-faint tnum">{g.count} 条</span>
-                    </div>
-
-                    {g.months.map((m) => (
-                      <div key={m.month} className="mb-4">
-                        <h3 className="mb-1 pl-[60px] font-mono text-[10px] uppercase tracking-[0.18em] text-faint sm:pl-[72px]">
-                          {MONTH_CN[m.month - 1]}
-                        </h3>
-                        {m.items.map((e) => (
-                          <EntryRow
-                            key={e.id}
-                            entry={e}
-                            expanded={expanded === e.id}
-                            onHover={(en) => setHovered(en)}
-                            onToggle={() => setExpanded(expanded === e.id ? null : e.id)}
-                          />
-                        ))}
-                      </div>
-                    ))}
-                  </section>
-                </div>
+                <button
+                  key={era.id}
+                  onClick={() => selectEra(era)}
+                  aria-pressed={active}
+                  className={`flex items-center justify-between rounded-lg border px-4 py-3 text-left transition-colors ${active ? 'bg-raised text-ink' : 'border-line bg-base/30 text-muted hover:bg-raised/60'}`}
+                  style={{ borderColor: active ? era.color : undefined }}
+                >
+                  <span>
+                    <span className="block text-[13px] font-medium">{era.label}</span>
+                    <span className="mt-0.5 block font-mono text-[10px] text-faint">{era.detail}</span>
+                  </span>
+                  <span className="font-mono text-[11px] text-faint tnum">{count.toLocaleString()}</span>
+                </button>
               )
             })}
           </div>
 
-          {/* 停靠式悬停预览 */}
-          <aside className="sticky top-[73px] hidden h-fit w-[320px] shrink-0 py-6 lg:block">
-            <Preview entry={hovered} />
-          </aside>
-        </div>
+          <div className="mt-5 border-t border-line pt-4">
+            <div className="mb-2 flex items-center justify-between">
+              <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">年份</h2>
+              <span className="font-mono text-[10px] text-faint">{searching ? '正在搜索全部年份' : `${activeYear} 年 · ${(yearCounts.get(activeYear) ?? 0).toLocaleString()} 条`}</span>
+            </div>
+            <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-6 lg:grid-cols-9 xl:grid-cols-[repeat(17,minmax(0,1fr))]">
+              {[...years].reverse().map((year) => {
+                const active = year === activeYear && !searching
+                return (
+                  <button
+                    key={year}
+                    onClick={() => selectYear(year)}
+                    aria-pressed={active}
+                    className={`rounded-md border px-2 py-2 font-mono text-[11px] transition-colors tnum ${active ? 'border-live bg-live/10 text-live' : 'border-line bg-base/40 text-muted hover:border-muted hover:text-ink'}`}
+                  >
+                    <span className="block">{year}</span>
+                    <span className="mt-0.5 block text-[9px] text-faint">{yearCounts.get(year) ?? 0}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          {!searching && (
+            <div className="mt-4 border-t border-line pt-4">
+              <div className="mb-2 flex items-center justify-between">
+                <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">月份</h2>
+                <span className="font-mono text-[10px] text-faint">默认只展开一个月，避免长滚动</span>
+              </div>
+              <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-7 lg:grid-cols-13">
+                <MonthButton label="全年" count={[...monthCounts.values()].reduce((sum, count) => sum + count, 0)} active={activeMonth === null} onClick={() => selectMonth(null)} />
+                {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => (
+                  <MonthButton key={month} label={MONTH_CN[month - 1]} count={monthCounts.get(month) ?? 0} active={activeMonth === month} onClick={() => selectMonth(month)} />
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+        <section className="mt-7">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">{searching ? '全库搜索结果' : `${activeEra.label} / ${activeYear}`}</p>
+              <h2 className="mt-1 text-[22px] font-semibold tracking-tight">
+                {searching ? `“${filters.q.trim()}”` : activeMonth === null ? `${activeYear} 全年` : `${activeYear} 年 ${MONTH_CN[activeMonth - 1]}`}
+              </h2>
+            </div>
+            <div className="flex items-center gap-3 font-mono text-[11px] text-faint tnum">
+              <span>{visible.length.toLocaleString()} 条</span>
+              {(filters.platforms.length > 0 || filters.types.length > 0 || filters.games.length > 0 || filters.onlyAlive) && (
+                <button onClick={() => set(EMPTY_FILTERS)} className="text-live underline underline-offset-4">清除筛选</button>
+              )}
+            </div>
+          </div>
+
+          {visible.length === 0 ? (
+            <div className="rounded-xl border border-dashed border-line py-20 text-center">
+              <p className="text-[14px] text-muted">这里暂时没有符合条件的条目。</p>
+              <button onClick={() => set(EMPTY_FILTERS)} className="mt-3 font-mono text-[11px] text-live underline underline-offset-4">清除搜索与筛选</button>
+            </div>
+          ) : (
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]" onMouseLeave={() => setHovered(null)}>
+              <div className="min-w-0 divide-y divide-line/50">
+                {rendered.map((entry, index) => {
+                  const year = entry.date.slice(0, 4)
+                  const previousYear = rendered[index - 1]?.date.slice(0, 4)
+                  return (
+                    <div key={entry.id}>
+                      {searching && year !== previousYear && (
+                        <h3 className="border-b border-line bg-surface/35 px-3 py-2 font-mono text-[11px] tracking-[0.14em] text-live tnum">
+                          {year} 年
+                        </h3>
+                      )}
+                      <EntryRow
+                        entry={entry}
+                        expanded={expanded === entry.id}
+                        onHover={(value) => setHovered(value)}
+                        onToggle={() => setExpanded(expanded === entry.id ? null : entry.id)}
+                      />
+                    </div>
+                  )
+                })}
+                {searching && visible.length > searchLimit && (
+                  <p className="py-6 text-center font-mono text-[11px] text-faint">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
+                )}
+              </div>
+              <aside className="sticky top-[76px] hidden h-fit lg:block">
+                <Preview entry={hovered} />
+              </aside>
+            </div>
+          )}
+        </section>
       </main>
 
-      {/* 移动端筛选抽屉 */}
       {sheetOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <button
-            aria-label="关闭筛选"
-            onClick={() => setSheetOpen(false)}
-            className="absolute inset-0 bg-base/70 backdrop-blur-sm"
-          />
-          <div className="absolute inset-x-0 bottom-0 max-h-[80vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5">
-            <div className="mb-4 flex items-center justify-between">
-              <h3 className="font-mono text-[12px] text-ink">筛选</h3>
-              <button onClick={() => setSheetOpen(false)} className="font-mono text-[12px] text-live">
-                完成
-              </button>
+        <div className="fixed inset-0 z-50">
+          <button aria-label="关闭筛选" onClick={() => setSheetOpen(false)} className="absolute inset-0 bg-base/80 backdrop-blur-sm" />
+          <div className="absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5 sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:rounded-xl sm:border">
+            <div className="mb-5 flex items-center justify-between border-b border-line pb-3">
+              <div>
+                <h3 className="text-[14px] font-medium text-ink">筛选记录</h3>
+                <p className="mt-0.5 font-mono text-[10px] text-faint">搜索词会跨全部年份生效</p>
+              </div>
+              <button onClick={() => setSheetOpen(false)} className="font-mono text-[11px] text-live">完成</button>
             </div>
-            <FilterRail
-              filters={filters}
-              set={set}
-              platformCounts={platformCounts}
-              gameCounts={gameCounts}
-              total={entries.length}
-              matched={filtered.length}
-            />
+            <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>
         </div>
       )}
@@ -328,28 +382,25 @@ export function Timeline({ entries, isDemo }: { entries: TimelineEntry[]; isDemo
   )
 }
 
-function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
+function MonthButton({ label, count, active, onClick }: { label: string; count: number; active: boolean; onClick: () => void }) {
   return (
-    <div>
-      <dt className="uppercase tracking-[0.18em]">{label}</dt>
-      <dd className="mt-1 text-[13px] text-ink">{value}</dd>
-      {hint && <dd className="mt-0.5 text-[10px] normal-case tracking-normal text-faint">{hint}</dd>}
-    </div>
+    <button
+      onClick={onClick}
+      aria-pressed={active}
+      disabled={count === 0}
+      className={`rounded-md border px-1.5 py-2 font-mono text-[10px] transition-colors disabled:cursor-not-allowed disabled:opacity-25 ${active ? 'border-live bg-live/10 text-live' : 'border-line bg-base/40 text-muted hover:border-muted hover:text-ink'}`}
+    >
+      <span className="block">{label}</span>
+      <span className="mt-0.5 block text-[9px] text-faint tnum">{count}</span>
+    </button>
   )
 }
 
-/** 视频期与直播期之间的转折。分界年份由数据推导，不是考证结论。 */
-function EraDivider({ boundary }: { boundary: number }) {
+function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="my-10 border-y border-line py-6">
-      <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em]">
-        <span className="text-live">直播期</span>
-        <span className="h-px flex-1 bg-gradient-to-l from-video/40 to-live/40" />
-        <span className="text-video">视频期</span>
-      </div>
-      <p className="mt-3 text-[12px] leading-relaxed text-muted">
-        往下是以投稿视频为主的年份。<span className="text-faint">分界（{boundary} 年）由条目数量推导得出，真实的转折点尚未考证。</span>
-      </p>
+    <div>
+      <dt>{label}</dt>
+      <dd className="mt-1 text-[13px] tracking-normal text-ink">{value}</dd>
     </div>
   )
 }
