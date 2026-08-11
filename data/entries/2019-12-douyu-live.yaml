@@ -1,216 +1,230 @@
-- id: 2019-12-01-live-01
-  type: live
-  date: "2019-12-01"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 244
-  cover: "https://tx-free-imgs.acfun.cn/FqaBtfz9PfRGcuGv9OU0TTqn1E1F?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac11814290"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-12-01-live-01
+    type: live
+    date: "2019-12-01"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 244
+    cover: "https://tx-free-imgs.acfun.cn/FqaBtfz9PfRGcuGv9OU0TTqn1E1F?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac11814290"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-03-live-01
-  type: live
-  date: "2019-12-03"
-  title: "系统认证的好听"
-  platform: douyu
-  confidence: high
-  duration_min: 110
-  cover: "https://tx-free-imgs.acfun.cn/FlU02RYSd4u-TKzwsTWaKKu_9Ooi?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11823157"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-12-03-live-01
+    type: live
+    date: "2019-12-03"
+    title: "系统认证的好听"
+    platform: douyu
+    confidence: high
+    duration_min: 110
+    cover: "https://tx-free-imgs.acfun.cn/FlU02RYSd4u-TKzwsTWaKKu_9Ooi?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11823157"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-08-live-01
-  type: live
-  date: "2019-12-08"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 259
-  cover: "https://tx-free-imgs.acfun.cn/FieHWRVx6V3kzJTelK53n7uWB7R7?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac11889199"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-12-08-live-01
+    type: live
+    date: "2019-12-08"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    cover: "https://tx-free-imgs.acfun.cn/FieHWRVx6V3kzJTelK53n7uWB7R7?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac11889199"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-09-live-01
-  type: live
-  date: "2019-12-09"
-  title: "佩奇的唱歌歌友会"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/Fri1ANQhN4PVZX3r3Ukl432hxlg4?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11901272"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2019-12-09-live-01
+    type: live
+    date: "2019-12-09"
+    title: "佩奇的唱歌歌友会"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/Fri1ANQhN4PVZX3r3Ukl432hxlg4?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11901272"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-10-live-01
-  type: live
-  date: "2019-12-10"
-  title: "飞向月球"
-  platform: douyu
-  confidence: high
-  duration_min: 386
-  cover: "https://tx-free-imgs.acfun.cn/FrIbUztwtGZa8AhFJT8eo9lR631A?imageslim"
-  games: []
-  note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（32分），P2~7 为《Deliver Us The Moon》（飞向月球）主体内容，标题按主游戏命名。"
-  sources:
-    - url: "https://www.acfun.cn/v/ac11901879"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2019-12-10-live-01
+    type: live
+    date: "2019-12-10"
+    title: "飞向月球"
+    platform: douyu
+    confidence: high
+    duration_min: 386
+    cover: "https://tx-free-imgs.acfun.cn/FrIbUztwtGZa8AhFJT8eo9lR631A?imageslim"
+    games: []
+    note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（32分），P2~7 为《Deliver Us The Moon》（飞向月球）主体内容，标题按主游戏命名。"
+    sources:
+      - url: "https://www.acfun.cn/v/ac11901879"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-13-live-01
-  type: live
-  date: "2019-12-13"
-  title: "Raft姐弟大海漂流记"
-  platform: douyu
-  confidence: high
-  duration_min: 230
-  cover: "https://tx-free-imgs.acfun.cn/FuYww_69U2o9MuffQXHbwqeYs_NU?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11936638"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-12-13-live-01
+    type: live
+    date: "2019-12-13"
+    title: "Raft姐弟大海漂流记"
+    platform: douyu
+    confidence: high
+    duration_min: 230
+    cover: "https://tx-free-imgs.acfun.cn/FuYww_69U2o9MuffQXHbwqeYs_NU?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11936638"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-15-live-01
-  type: live
-  date: "2019-12-15"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 255
-  cover: "https://tx-free-imgs.acfun.cn/FkwPH0TYInwvOKPB_coJh6g1QnAg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12027566"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-12-15-live-01
+    type: live
+    date: "2019-12-15"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    cover: "https://tx-free-imgs.acfun.cn/FkwPH0TYInwvOKPB_coJh6g1QnAg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12027566"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-18-live-01
-  type: live
-  date: "2019-12-18"
-  title: "Raft"
-  platform: douyu
-  confidence: high
-  duration_min: 284
-  cover: "https://tx-free-imgs.acfun.cn/o_1dscq3fabmh1185b1as6enc1rm60.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12045067"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-12-18-live-01
+    type: live
+    date: "2019-12-18"
+    title: "Raft"
+    platform: douyu
+    confidence: high
+    duration_min: 284
+    cover: "https://tx-free-imgs.acfun.cn/o_1dscq3fabmh1185b1as6enc1rm60.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12045067"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-20-live-01
-  type: live
-  date: "2019-12-20"
-  title: "Feel The Snow&Ashen"
-  platform: douyu
-  confidence: high
-  duration_min: 237
-  cover: "https://tx-free-imgs.acfun.cn/o_1dskab04qh3ulkc1lga1pukcam0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12115123"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-12-20-live-01
+    type: live
+    date: "2019-12-20"
+    title: "Feel The Snow&Ashen"
+    platform: douyu
+    confidence: high
+    duration_min: 237
+    cover: "https://tx-free-imgs.acfun.cn/o_1dskab04qh3ulkc1lga1pukcam0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12115123"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-21-live-01
-  type: live
-  date: "2019-12-21"
-  title: "Ashen"
-  platform: douyu
-  confidence: high
-  duration_min: 230
-  cover: "https://tx-free-imgs.acfun.cn/o_1dskdn8lu16ljkgd80g3f6a2n0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12117242"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-12-21-live-01
+    type: live
+    date: "2019-12-21"
+    title: "Ashen"
+    platform: douyu
+    confidence: high
+    duration_min: 230
+    cover: "https://tx-free-imgs.acfun.cn/o_1dskdn8lu16ljkgd80g3f6a2n0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12117242"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-22-live-01
-  type: live
-  date: "2019-12-22"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 222
-  cover: "https://tx-free-imgs.acfun.cn/o_1dsn04c1bm4lksq1htc1kic1kr10.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12126748"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-12-22-live-01
+    type: live
+    date: "2019-12-22"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 222
+    cover: "https://tx-free-imgs.acfun.cn/o_1dsn04c1bm4lksq1htc1kic1kr10.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12126748"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-23-live-01
-  type: live
-  date: "2019-12-23"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 221
-  cover: "https://tx-free-imgs.acfun.cn/o_1dspan5dg12tq55ptp1t8j1vtn0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12132513"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-12-23-live-01
+    type: live
+    date: "2019-12-23"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 221
+    cover: "https://tx-free-imgs.acfun.cn/o_1dspan5dg12tq55ptp1t8j1vtn0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12132513"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-27-live-01
-  type: live
-  date: "2019-12-27"
-  title: "你的脑年龄是几岁"
-  platform: douyu
-  confidence: high
-  duration_min: 196
-  cover: "https://tx-free-imgs.acfun.cn/o_1dt3sumk61olj14821h98ki1126i0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12167053"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2019-12-27-live-01
+    type: live
+    date: "2019-12-27"
+    title: "你的脑年龄是几岁"
+    platform: douyu
+    confidence: high
+    duration_min: 196
+    cover: "https://tx-free-imgs.acfun.cn/o_1dt3sumk61olj14821h98ki1126i0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12167053"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-12-29-live-01
-  type: live
-  date: "2019-12-29"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 252
-  cover: "https://tx-free-imgs.acfun.cn/o_1dtb4mv2o1kbi1if7ma8dgk3l10.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12201808"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-12-29-live-01
+    type: live
+    date: "2019-12-29"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    cover: "https://tx-free-imgs.acfun.cn/o_1dtb4mv2o1kbi1if7ma8dgk3l10.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12201808"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent

@@ -1,765 +1,843 @@
-# 采集任务 #004 · 2025-06 抖音期直播场次（首播平台：抖音）
-# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
-# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+  - id: 2025-06-01-live-01
+    type: live
+    date: "2025-06-01"
+    title: "玩老头环黑夜君临，队友壮壮cg 2025/06/01 21时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/5b999bef8e273e1ef2d3b8a79646c4f01515531c.jpg"
+    confidence: medium
+    games: [elden-ring]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-01-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1uM7yzqEZA"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-01-live-01
-  type: live
-  date: "2025-06-01"
-  title: "玩老头环黑夜君临，队友壮壮cg 2025/06/01 21时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/5b999bef8e273e1ef2d3b8a79646c4f01515531c.jpg"
-  confidence: medium
-  games: [elden-ring]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1uM7yzqEZA"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 203
+  - id: 2025-06-01-live-02
+    type: live
+    date: "2025-06-01"
+    title: "玩老头环黑夜君临，队友壮壮cg"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/372d0693a1ca92d00bee493e05221df3a1806ab1.jpg"
+    confidence: high
+    games: [elden-ring]
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-01-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ET7rzrEke"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1QJ7rzaEoJ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-01-live-02
-  type: live
-  date: "2025-06-01"
-  title: "玩老头环黑夜君临，队友壮壮cg"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/372d0693a1ca92d00bee493e05221df3a1806ab1.jpg"
-  confidence: high
-  games: [elden-ring]
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1jZ7Cz5EwW"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1n17rzyEvu"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1ET7rzrEke"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1QJ7rzaEoJ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 203
+  - id: 2025-06-02-live-01
+    type: live
+    date: "2025-06-02"
+    title: "玩老头环黑夜君临，队友壮壮cg 2025/06/02 18时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/954dfedf66d290e43ddca24ce0d6d16f98d6eb93.jpg"
+    confidence: medium
+    games: [elden-ring]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-02-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV16E7SzNE1L"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-02-live-01
-  type: live
-  date: "2025-06-02"
-  title: "玩老头环黑夜君临，队友壮壮cg 2025/06/02 18时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/954dfedf66d290e43ddca24ce0d6d16f98d6eb93.jpg"
-  confidence: medium
-  games: [elden-ring]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV16E7SzNE1L"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 224
+  - id: 2025-06-02-live-02
+    type: live
+    date: "2025-06-02"
+    title: "玩老头环黑夜君临，队友壮壮cg"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/886218ce80f93c0024e13f557ab5ff42fa2224d0.jpg"
+    confidence: high
+    games: [elden-ring]
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-02-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1pz7Dz6EVb"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1om7DzPEC7"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-02-live-02
-  type: live
-  date: "2025-06-02"
-  title: "玩老头环黑夜君临，队友壮壮cg"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/886218ce80f93c0024e13f557ab5ff42fa2224d0.jpg"
-  confidence: high
-  games: [elden-ring]
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1sQ7SzkEUW"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1cr7DzuEN2"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1pz7Dz6EVb"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1om7DzPEC7"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 225
+  - id: 2025-06-03-live-01
+    type: live
+    date: "2025-06-03"
+    title: "这是个能发现宝藏游戏的直播间_今日体验：沙丘觉醒"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/52947471b81c254c7aabd588aa430a526749192e.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1eLTuzUE6b"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-03-live-01
-  type: live
-  date: "2025-06-03"
-  title: "这是个能发现宝藏游戏的直播间_今日体验：沙丘觉醒"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/52947471b81c254c7aabd588aa430a526749192e.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1eLTuzUE6b"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 228
+  - id: 2025-06-03-live-02
+    type: live
+    date: "2025-06-03"
+    title: "艾尔登法环：黑夜君临，队友壮壮cg 2025/06/03 18时场"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/870095c727c218b00e544579394e3ea6a1425349.jpg"
+    confidence: medium
+    games: [elden-ring]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-03-live-04 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1FV7ezWEhJ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-03-live-02
-  type: live
-  date: "2025-06-03"
-  title: "艾尔登法环：黑夜君临，队友壮壮cg 2025/06/03 18时场"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/870095c727c218b00e544579394e3ea6a1425349.jpg"
-  confidence: medium
-  games: [elden-ring]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1FV7ezWEhJ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 196
+  - id: 2025-06-03-live-03
+    type: live
+    date: "2025-06-03"
+    title: "小炮开业！今天超级吃吃吃"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/e36ba7c4c21d08cd7cfed0b3c02dbad37e57c09c.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1iX78zgEY9"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV16f74zzEmq"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-03-live-03
-  type: live
-  date: "2025-06-03"
-  title: "小炮开业！今天超级吃吃吃"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/e36ba7c4c21d08cd7cfed0b3c02dbad37e57c09c.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1iX78zgEY9"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV16f74zzEmq"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 685
+  - id: 2025-06-03-live-04
+    type: live
+    date: "2025-06-03"
+    title: "艾尔登法环：黑夜君临，队友壮壮cg"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/ddccf93bf6f3c966da29c812bac3f313415a84c3.jpg"
+    confidence: high
+    games: [elden-ring]
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-03-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1dv7hzrEcp"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1T97hzbEaw"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-03-live-04
-  type: live
-  date: "2025-06-03"
-  title: "艾尔登法环：黑夜君临，队友壮壮cg"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/ddccf93bf6f3c966da29c812bac3f313415a84c3.jpg"
-  confidence: high
-  games: [elden-ring]
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1dv7hzrEcp"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1T97hzbEaw"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1XJ7az6E2k"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 197
+  - id: 2025-06-04-live-01
+    type: live
+    date: "2025-06-04"
+    title: "人性的巴克什"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/d9ca9d04a3ebab220ff12162d6f724e7a6abfc60.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV19e7BzsE5r"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1aL7zz4EzP"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-04-live-01
-  type: live
-  date: "2025-06-04"
-  title: "人性的巴克什"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/d9ca9d04a3ebab220ff12162d6f724e7a6abfc60.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV19e7BzsE5r"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1aL7zz4EzP"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 559
+  - id: 2025-06-05-live-01
+    type: live
+    date: "2025-06-05"
+    title: "人性的巴克什"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/ad29a99f7f8b0accf20ad2d6aaefd2dae48c37b2.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ypTWzgE8f"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1KcTszLE4z"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-05-live-01
-  type: live
-  date: "2025-06-05"
-  title: "人性的巴克什"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/ad29a99f7f8b0accf20ad2d6aaefd2dae48c37b2.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1ypTWzgE8f"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1KcTszLE4z"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 483
+  - id: 2025-06-06-live-01
+    type: live
+    date: "2025-06-06"
+    title: "不再维持技术主播人设"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/2f6b8d2923a4a358a5165ec34116d7a016209954.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1HaTNzHEGW"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1YXTTz1ESd"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-06-live-01
-  type: live
-  date: "2025-06-06"
-  title: "不再维持技术主播人设"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/2f6b8d2923a4a358a5165ec34116d7a016209954.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1P3TMzYEEN"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1XzTMzVEGR"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1YXTTz1ESd"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1HaTNzHEGW"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 480
+  - id: 2025-06-06-live-02
+    type: live
+    date: "2025-06-06"
+    title: "这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒 2025/06/06 19时场"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/6afc04780b743c8b0d67acc12edb1c98013ec1be.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-06-live-03 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1iVT3zZEUK"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-06-live-02
-  type: live
-  date: "2025-06-06"
-  title: "这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒 2025/06/06 19时场"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/6afc04780b743c8b0d67acc12edb1c98013ec1be.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1iVT3zZEUK"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 227
+  - id: 2025-06-06-live-03
+    type: live
+    date: "2025-06-06"
+    title: "这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/037169b5e7a65a3d3e2d2b95f37781aab1541d3e.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-06-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1QqTMzyE86"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1XeTMz2Ehw"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-06-live-03
-  type: live
-  date: "2025-06-06"
-  title: "这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/037169b5e7a65a3d3e2d2b95f37781aab1541d3e.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV11STMziEWV"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1yRTMzAEq6"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1QqTMzyE86"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1XeTMz2Ehw"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 230
+  - id: 2025-06-07-live-01
+    type: live
+    date: "2025-06-07"
+    title: "本饭店禁止外带食物"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/1717e68ddb7f7233e64b02be1d7ec2b3c0ca2604.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15MTjzqEan"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV15gTjzKENh"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-07-live-01
-  type: live
-  date: "2025-06-07"
-  title: "本饭店禁止外带食物"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/1717e68ddb7f7233e64b02be1d7ec2b3c0ca2604.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV15MTjzqEan"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV15gTjzKENh"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 499
+  - id: 2025-06-08-live-01
+    type: live
+    date: "2025-06-08"
+    title: "小炮正式开业·"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/e24f14a6a16c2850fe43d1095b5055fa7115efd9.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1A3TQzpECj"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1e8TQzuEWE"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-08-live-01
-  type: live
-  date: "2025-06-08"
-  title: "小炮正式开业·"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/e24f14a6a16c2850fe43d1095b5055fa7115efd9.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1A3TQzpECj"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1e8TQzuEWE"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 480
+  - id: 2025-06-10-live-01
+    type: live
+    date: "2025-06-10"
+    title: "修复超过12小时之无敌状态"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/5678210e35e2c6d5b56d4aeca04e4f6a86b8fe13.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1CfTkztErd"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1CRT6zpEJy"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-10-live-01
-  type: live
-  date: "2025-06-10"
-  title: "修复超过12小时之无敌状态"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/5678210e35e2c6d5b56d4aeca04e4f6a86b8fe13.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1CfTkztErd"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1CRT6zpEJy"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 522
+  - id: 2025-06-10-live-02
+    type: live
+    date: "2025-06-10"
+    title: "无主星渊，和YJJ小叮当组队挑战匹配 2025/06/10 18时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/4c93f3c06c942e9d43b8970f01678401c8ba253d.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jyM3zaEyZ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-10-live-02
-  type: live
-  date: "2025-06-10"
-  title: "无主星渊，和YJJ小叮当组队挑战匹配 2025/06/10 18时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/4c93f3c06c942e9d43b8970f01678401c8ba253d.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1jyM3zaEyZ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 103
+  - id: 2025-06-10-live-03
+    type: live
+    date: "2025-06-10"
+    title: "无主星渊，和YJJ小叮当组队挑战匹配"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/68c2cbd648b0182f0cdb929a66953c2095ae563e.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1goM3zpEYY"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1goM3zpEvy"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-10-live-03
-  type: live
-  date: "2025-06-10"
-  title: "无主星渊，和YJJ小叮当组队挑战匹配"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/68c2cbd648b0182f0cdb929a66953c2095ae563e.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1goM3zpEYY"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1goM3zpEvy"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 6
+  - id: 2025-06-10-live-04
+    type: live
+    date: "2025-06-10"
+    title: "这是个能发现宝藏游戏的直播间今日体验沙丘觉醒"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/56a97661e36e4a8ddfbd1266fa3ff068078a1848.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1eDM3z4EAa"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1phM3zgEJb"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-10-live-04
-  type: live
-  date: "2025-06-10"
-  title: "这是个能发现宝藏游戏的直播间今日体验沙丘觉醒"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/56a97661e36e4a8ddfbd1266fa3ff068078a1848.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1eDM3z4EAa"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1phM3zgEJb"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 104
+  - id: 2025-06-11-live-01
+    type: live
+    date: "2025-06-11"
+    title: "伟大就需要多说实话"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/eb499884b720823f985838d9278651c351b877c0.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1GFMEzyEeW"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Q2MEzGEmh"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-11-live-01
-  type: live
-  date: "2025-06-11"
-  title: "伟大就需要多说实话"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/eb499884b720823f985838d9278651c351b877c0.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1GFMEzyEeW"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1Q2MEzGEmh"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 479
+  - id: 2025-06-12-live-01
+    type: live
+    date: "2025-06-12"
+    title: "开饭开饭开饭！ 687423"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/08b1a9debcb3df5a2e39b1ee8d42aa8bbc93a8a4.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1XGMwzhE9o"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV11HMFz2EMF"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-12-live-01
-  type: live
-  date: "2025-06-12"
-  title: "开饭开饭开饭！ 687423"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/08b1a9debcb3df5a2e39b1ee8d42aa8bbc93a8a4.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1XGMwzhE9o"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV11HMFz2EMF"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 515
+  - id: 2025-06-13-live-01
+    type: live
+    date: "2025-06-13"
+    title: "回归修脚！ 687423"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/342070663cb27894623cdd7ebc8686cea38e7dd6.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jYMTzpESv"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-13-live-01
-  type: live
-  date: "2025-06-13"
-  title: "回归修脚！ 687423"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/342070663cb27894623cdd7ebc8686cea38e7dd6.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1jYMTzpESv"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 630
+  - id: 2025-06-13-live-02
+    type: live
+    date: "2025-06-13"
+    title: "沙丘觉醒，从零开始异星探险 2025/06/13 18时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/bc250608c1febfe7821e12080efcadc4b09b6ed9.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-13-live-03 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1CiMBzDEGJ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-13-live-02
-  type: live
-  date: "2025-06-13"
-  title: "沙丘觉醒，从零开始异星探险 2025/06/13 18时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/bc250608c1febfe7821e12080efcadc4b09b6ed9.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1CiMBzDEGJ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 186
+  - id: 2025-06-13-live-03
+    type: live
+    date: "2025-06-13"
+    title: "沙丘觉醒，从零开始异星探险"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/b832b9397c7719b7fde705fed3e197f1e5ef6a52.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-13-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ckMBzmEDM"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1fmMBzVE8Y"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-13-live-03
-  type: live
-  date: "2025-06-13"
-  title: "沙丘觉醒，从零开始异星探险"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/b832b9397c7719b7fde705fed3e197f1e5ef6a52.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1ckMBzmEDM"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1fmMBzVE8Y"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1crMBzEErm"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 173
+  - id: 2025-06-14-live-01
+    type: live
+    date: "2025-06-14"
+    title: "和壮壮组队无主星渊老六当到底"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/112e61dae62624cd41f8d774019b13b5c1a6bd39.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-14-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vTMmzaEW2"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1qKMmzAE4w"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-14-live-01
-  type: live
-  date: "2025-06-14"
-  title: "和壮壮组队无主星渊老六当到底"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/112e61dae62624cd41f8d774019b13b5c1a6bd39.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1vTMmzaEW2"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1qKMmzAE4w"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 134
+  - id: 2025-06-14-live-02
+    type: live
+    date: "2025-06-14"
+    title: "和壮壮组队无主星渊，老六当到底 2025/06/14 17时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/212e928bddebbe227f8bdf405340fffb9fa46813.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-14-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1T1M2zmEr5"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-14-live-02
-  type: live
-  date: "2025-06-14"
-  title: "和壮壮组队无主星渊，老六当到底 2025/06/14 17时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/212e928bddebbe227f8bdf405340fffb9fa46813.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1T1M2zmEr5"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 140
+  - id: 2025-06-15-live-01
+    type: live
+    date: "2025-06-15"
+    title: "和壮壮组队无主星渊老六当到底"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/e21ea3aec30911ce38b112cdc95019ed897f460c.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-15-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV12gMtzZEKk"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1a6MtzMEGP"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-15-live-01
-  type: live
-  date: "2025-06-15"
-  title: "和壮壮组队无主星渊老六当到底"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/e21ea3aec30911ce38b112cdc95019ed897f460c.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV12gMtzZEKk"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1a6MtzMEGP"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 139
+  - id: 2025-06-15-live-02
+    type: live
+    date: "2025-06-15"
+    title: "和壮壮组队无主星渊，老六当到底 2025/06/15 17时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/201c8e9dab32d7ba0c9cccc666d6ef4f8e44dcd7.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-15-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1CjMtz9EVS"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-15-live-02
-  type: live
-  date: "2025-06-15"
-  title: "和壮壮组队无主星渊，老六当到底 2025/06/15 17时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/201c8e9dab32d7ba0c9cccc666d6ef4f8e44dcd7.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1CjMtz9EVS"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 141
+  - id: 2025-06-16-live-01
+    type: live
+    date: "2025-06-16"
+    title: "wegame游戏之夜关注新游信息"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/51791597a9ed0153ffe98feae149d23b8300b6c4.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-16-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV153NbzTEar"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1xhNbzpE4X"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-16-live-01
-  type: live
-  date: "2025-06-16"
-  title: "wegame游戏之夜关注新游信息"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/51791597a9ed0153ffe98feae149d23b8300b6c4.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV153NbzTEar"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1xhNbzpE4X"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 75
+  - id: 2025-06-16-live-02
+    type: live
+    date: "2025-06-16"
+    title: "wegame游戏之夜，关注新游信息 2025/06/16 19时场"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/d4f0e02dcd8ba04e1ca5f484aa3e298555e516d0.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-16-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1xhNbzpEm6"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-16-live-02
-  type: live
-  date: "2025-06-16"
-  title: "wegame游戏之夜，关注新游信息 2025/06/16 19时场"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/d4f0e02dcd8ba04e1ca5f484aa3e298555e516d0.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1xhNbzpEm6"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 75
+  - id: 2025-06-21-live-01
+    type: live
+    date: "2025-06-21"
+    title: "点进直播间看游戏：多重人生"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/1868637a3d335cc2c4f556d17704dbea736cfad7.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "同一场直播（19时场）由 bobi华（4:23:58）、安乐冈花火w（4:22:39）、怪盗基德KID（弹幕版）与 直播回放巴拉蹦吧（4:20:00）分别搬运，总时长吻合，已合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1zvN1z9Esj"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1RAN1z2Emh"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-21-live-01
-  type: live
-  date: "2025-06-21"
-  title: "点进直播间看游戏：多重人生"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/1868637a3d335cc2c4f556d17704dbea736cfad7.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "同一场直播（19时场）由 bobi华（4:23:58）、安乐冈花火w（4:22:39）、怪盗基德KID（弹幕版）与 直播回放巴拉蹦吧（4:20:00）分别搬运，总时长吻合，已合并为一天一条。"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1zvN1z9Esj"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV16qNmzcE4h"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1RAN1z2Emh"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1BeN1zsEup"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1YmN1z1EHm"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV16bN1zZETG"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 264
+  - id: 2025-06-22-live-01
+    type: live
+    date: "2025-06-22"
+    title: "主播没洗头，但沉迷游戏"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/88fc228da29114b6e02bb01c7ad60cfe272df988.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-22-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV193KWz9EcF"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1z1NQz3EzN"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-22-live-01
-  type: live
-  date: "2025-06-22"
-  title: "主播没洗头，但沉迷游戏"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/88fc228da29114b6e02bb01c7ad60cfe272df988.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV193KWz9EcF"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1z1NQz3EzN"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1psNRzpEin"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1qSNQzBEo9"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 313
+  - id: 2025-06-22-live-02
+    type: live
+    date: "2025-06-22"
+    title: "主播没洗头，但沉迷游戏 2025/06/22 15时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/b85ddf2b99eb784831e67301dff1bb0c9e21cb37.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-22-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1meN9z4EgQ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-22-live-02
-  type: live
-  date: "2025-06-22"
-  title: "主播没洗头，但沉迷游戏 2025/06/22 15时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/b85ddf2b99eb784831e67301dff1bb0c9e21cb37.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1meN9z4EgQ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 312
+  - id: 2025-06-23-live-01
+    type: live
+    date: "2025-06-23"
+    title: "单机游戏：多重人生"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/7c779e8f457a08997da23db9e95c0f3e912d9cb1.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-23-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1mrKazKESp"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1ZpKazEEPs"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-23-live-01
-  type: live
-  date: "2025-06-23"
-  title: "单机游戏：多重人生"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/7c779e8f457a08997da23db9e95c0f3e912d9cb1.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1ZpKazEEPs"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1PKKazcEHv"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1mrKazKESp"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 248
+  - id: 2025-06-23-live-02
+    type: live
+    date: "2025-06-23"
+    title: "单机游戏：多重人生 2025/06/23 19时场"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/7bb56f77c34574ce5eff47d92dcd3b4b7c92218f.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-23-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1WWKhzfEs1"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-23-live-02
-  type: live
-  date: "2025-06-23"
-  title: "单机游戏：多重人生 2025/06/23 19时场"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/7bb56f77c34574ce5eff47d92dcd3b4b7c92218f.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1WWKhzfEs1"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 253
+  - id: 2025-06-24-live-01
+    type: live
+    date: "2025-06-24"
+    title: "新作一起玩：死亡搁浅2 2025/06/24 11时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/438924bc372a5b79a62edd8ed19ba15b816e39af.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV14CK3zLE6y"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-24-live-01
-  type: live
-  date: "2025-06-24"
-  title: "新作一起玩：死亡搁浅2 2025/06/24 11时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/438924bc372a5b79a62edd8ed19ba15b816e39af.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV14CK3zLE6y"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 279
+  - id: 2025-06-24-live-02
+    type: live
+    date: "2025-06-24"
+    title: "新作一起玩：死亡搁浅2 2025/06/24 19时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/5a14b82dffb671f23546aa4d7b9ba7fb125592b6.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wqKGzMEP9"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-24-live-02
-  type: live
-  date: "2025-06-24"
-  title: "新作一起玩：死亡搁浅2 2025/06/24 19时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/5a14b82dffb671f23546aa4d7b9ba7fb125592b6.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1wqKGzMEP9"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 123
+  - id: 2025-06-24-live-03
+    type: live
+    date: "2025-06-24"
+    title: "新作一起玩死亡搁浅2"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/85c0b862486598a8feaab888fd42738474252186.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1aYKuzVEMs"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1vWKuzJELx"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-24-live-03
-  type: live
-  date: "2025-06-24"
-  title: "新作一起玩死亡搁浅2"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/85c0b862486598a8feaab888fd42738474252186.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1aYKuzVEMs"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1vWKuzJELx"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 406
+  - id: 2025-06-25-live-01
+    type: live
+    date: "2025-06-25"
+    title: "新作一起玩：死亡搁浅2 2025/06/25 12时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/e1f5ca4ea3e3947ec53e3854649754f1497daa55.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-25-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1j1KHz9EJN"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-25-live-01
-  type: live
-  date: "2025-06-25"
-  title: "新作一起玩：死亡搁浅2 2025/06/25 12时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/e1f5ca4ea3e3947ec53e3854649754f1497daa55.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1j1KHz9EJN"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 300
+  - id: 2025-06-25-live-02
+    type: live
+    date: "2025-06-25"
+    title: "新作一起玩死亡搁浅2"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/d5794552eb2b47eeedfb8aabaf9e3b49177fbab6.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-25-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1nVKnzdEv5"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1xFKnzvEmZ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-25-live-02
-  type: live
-  date: "2025-06-25"
-  title: "新作一起玩死亡搁浅2"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/d5794552eb2b47eeedfb8aabaf9e3b49177fbab6.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1nVKnzdEv5"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1xFKnzvEmZ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 301
+  - id: 2025-06-26-live-01
+    type: live
+    date: "2025-06-26"
+    title: "新作一起玩：死亡搁浅2最高难度 2025/06/26 12时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/a1a18555021e13f49c03514f51a2540af8e8958e.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wRKozeEUd"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-26-live-01
-  type: live
-  date: "2025-06-26"
-  title: "新作一起玩：死亡搁浅2最高难度 2025/06/26 12时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/a1a18555021e13f49c03514f51a2540af8e8958e.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1wRKozeEUd"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 303
+  - id: 2025-06-26-live-02
+    type: live
+    date: "2025-06-26"
+    title: "新作一起玩死亡搁浅2最高难度"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/4e79e23f293fe81159fb8dafa93cde9371c45546.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1NSKRzFEK9"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1hvKRzzEPJ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-26-live-02
-  type: live
-  date: "2025-06-26"
-  title: "新作一起玩死亡搁浅2最高难度"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/4e79e23f293fe81159fb8dafa93cde9371c45546.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1NSKRzFEK9"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1hvKRzzEPJ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 422
+  - id: 2025-06-27-live-01
+    type: live
+    date: "2025-06-27"
+    title: "死亡搁浅2最高画质最高难度 2025/06/27 18时场"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/cba6f08f25c6408f266c5f86c260184d01f0b4cb.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1EDKzzVEbe"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-27-live-01
-  type: live
-  date: "2025-06-27"
-  title: "死亡搁浅2最高画质最高难度 2025/06/27 18时场"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/cba6f08f25c6408f266c5f86c260184d01f0b4cb.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1EDKzzVEbe"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 217
+  - id: 2025-06-27-live-02
+    type: live
+    date: "2025-06-27"
+    title: "死亡搁浅2最高画质最高难度"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/8756031676369b9f21ddb1a3b4e27dbeab2dbf55.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vVKUz8En8"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1hbKrzKEX3"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-27-live-02
-  type: live
-  date: "2025-06-27"
-  title: "死亡搁浅2最高画质最高难度"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/8756031676369b9f21ddb1a3b4e27dbeab2dbf55.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1vVKUz8En8"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1hbKrzKEX3"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1NWKkzbEUZ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 298
+  - id: 2025-06-28-live-01
+    type: live
+    date: "2025-06-28"
+    title: "死亡搁浅2最高画质最高难度 2025/06/28 18时场"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/0eb07c126b80f5fbf2bbb9770e608c978d7f650b.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1AAgRzKEsi"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2025-06-28-live-01
-  type: live
-  date: "2025-06-28"
-  title: "死亡搁浅2最高画质最高难度 2025/06/28 18时场"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/0eb07c126b80f5fbf2bbb9770e608c978d7f650b.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1AAgRzKEsi"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2025-06-28-live-02
-  type: live
-  date: "2025-06-28"
-  title: "死亡搁浅2最高画质最高难度"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/3f5cdfac93df87908ef5a1854c5638610f921a53.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1megXzKErG"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV18yKmznEaM"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 297
+  - id: 2025-06-28-live-02
+    type: live
+    date: "2025-06-28"
+    title: "死亡搁浅2最高画质最高难度"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/3f5cdfac93df87908ef5a1854c5638610f921a53.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1megXzKErG"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV18yKmznEaM"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 298

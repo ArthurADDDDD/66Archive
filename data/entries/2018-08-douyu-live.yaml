@@ -1,272 +1,295 @@
-- id: 2018-08-02-live-01
-  type: live
-  date: "2018-08-02"
-  title: "playstation发布会"
-  platform: douyu
-  confidence: high
-  duration_min: 101
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_02/1533214967.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4498195"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-02-live-01
+    type: live
+    date: "2018-08-02"
+    title: "playstation发布会"
+    platform: douyu
+    confidence: high
+    duration_min: 101
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_02/1533214967.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4498195"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-06-live-01
-  type: live
-  date: "2018-08-06"
-  title: "无人深空"
-  platform: douyu
-  confidence: high
-  duration_min: 273
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_06/1533561706.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4505280"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-06-live-01
+    type: live
+    date: "2018-08-06"
+    title: "无人深空"
+    platform: douyu
+    confidence: high
+    duration_min: 273
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_06/1533561706.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4505280"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-08-live-01
-  type: live
-  date: "2018-08-08"
-  title: "Overcooked 2"
-  platform: douyu
-  confidence: high
-  duration_min: 232
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_08/1533733118.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4509318"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-08-live-01
+    type: live
+    date: "2018-08-08"
+    title: "Overcooked 2"
+    platform: douyu
+    confidence: high
+    duration_min: 232
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_08/1533733118.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4509318"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-09-live-01
-  type: live
-  date: "2018-08-09"
-  title: "Overcooked 2&One Hand Clapping"
-  platform: douyu
-  confidence: high
-  duration_min: 190
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_09/1533818442.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4511477"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2018-08-09-live-01
+    type: live
+    date: "2018-08-09"
+    title: "Overcooked 2&One Hand Clapping"
+    platform: douyu
+    confidence: high
+    duration_min: 190
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_09/1533818442.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4511477"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-12-live-01
-  type: live
-  date: "2018-08-12"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 251
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_13/1534167903.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4520222"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2018-08-12-live-01
+    type: live
+    date: "2018-08-12"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 251
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_13/1534167903.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4520222"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-14-live-01
-  type: live
-  date: "2018-08-14"
-  title: "大周MC第四目：第四天之建设城市"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_14/1534249051.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4521994"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-14-live-01
+    type: live
+    date: "2018-08-14"
+    title: "大周MC第四目：第四天之建设城市"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_14/1534249051.jpg?imageslim"
+    games:
+      - minecraft
+    sources:
+      - url: "https://www.acfun.cn/v/ac4521994"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-15-live-01
-  type: live
-  date: "2018-08-15"
-  title: "大周MC第四目：第五天之MC水上乐园"
-  platform: douyu
-  confidence: high
-  duration_min: 120
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534338341.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4524053"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-15-live-01
+    type: live
+    date: "2018-08-15"
+    title: "大周MC第四目：第五天之MC水上乐园"
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534338341.JPG?imageslim"
+    games:
+      - minecraft
+    sources:
+      - url: "https://www.acfun.cn/v/ac4524053"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-15-live-02
-  type: live
-  date: "2018-08-15"
-  title: "幸福列车关注留守儿童"
-  platform: douyu
-  confidence: high
-  duration_min: 91
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534343303.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4524101"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2018-08-15-live-02
+    type: live
+    date: "2018-08-15"
+    title: "幸福列车关注留守儿童"
+    platform: douyu
+    confidence: high
+    duration_min: 91
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534343303.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4524101"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-18-live-01
-  type: live
-  date: "2018-08-18"
-  title: "大周MC第四目：第七天之大周MC歌会"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_18/1534595835.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4530216"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-18-live-01
+    type: live
+    date: "2018-08-18"
+    title: "大周MC第四目：第七天之大周MC歌会"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_18/1534595835.jpg?imageslim"
+    games:
+      - minecraft
+    sources:
+      - url: "https://www.acfun.cn/v/ac4530216"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-19-live-01
-  type: live
-  date: "2018-08-19"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 238
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_19/1534691484.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4531874"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2018-08-19-live-01
+    type: live
+    date: "2018-08-19"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 238
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_19/1534691484.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4531874"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-20-live-01
-  type: live
-  date: "2018-08-20"
-  title: "星界边境(Starbound)"
-  platform: douyu
-  confidence: high
-  duration_min: 169
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_20/1534767781.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4533725"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-20-live-01
+    type: live
+    date: "2018-08-20"
+    title: "星界边境(Starbound)"
+    platform: douyu
+    confidence: high
+    duration_min: 169
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_20/1534767781.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4533725"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-21-live-01
-  type: live
-  date: "2018-08-21"
-  title: "大周MC第四目：第八天之拯救K神前的准备&星界边境(Starbound)"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_21/1534856542.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4536156"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-21-live-01
+    type: live
+    date: "2018-08-21"
+    title: "大周MC第四目：第八天之拯救K神前的准备&星界边境(Starbound)"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_21/1534856542.jpg?imageslim"
+    games:
+      - minecraft
+    sources:
+      - url: "https://www.acfun.cn/v/ac4536156"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-22-live-01
-  type: live
-  date: "2018-08-22"
-  title: "过山车之星"
-  platform: douyu
-  confidence: high
-  duration_min: 253
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_22/1534938954.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4538344"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-22-live-01
+    type: live
+    date: "2018-08-22"
+    title: "过山车之星"
+    platform: douyu
+    confidence: high
+    duration_min: 253
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_22/1534938954.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4538344"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-24-live-01
-  type: live
-  date: "2018-08-24"
-  title: "大周MC第四目：第九天之继续拯救我的世界"
-  platform: douyu
-  confidence: high
-  duration_min: 118
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110561.JPG?imageslim"
-  games: [minecraft]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4542816"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2018-08-24-live-01
+    type: live
+    date: "2018-08-24"
+    title: "大周MC第四目：第九天之继续拯救我的世界"
+    platform: douyu
+    confidence: high
+    duration_min: 118
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110561.JPG?imageslim"
+    games: [minecraft]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4542816"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-24-live-02
-  type: live
-  date: "2018-08-24"
-  title: "流星蝴蝶剑"
-  platform: douyu
-  confidence: high
-  duration_min: 108
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110479.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4542811"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2018-08-24-live-02
+    type: live
+    date: "2018-08-24"
+    title: "流星蝴蝶剑"
+    platform: douyu
+    confidence: high
+    duration_min: 108
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110479.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4542811"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-25-live-01
-  type: live
-  date: "2018-08-25"
-  title: "大周MC第四目：最终回"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_25/1535198050.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4544463"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2018-08-25-live-01
+    type: live
+    date: "2018-08-25"
+    title: "大周MC第四目：最终回"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_25/1535198050.JPG?imageslim"
+    games:
+      - minecraft
+    sources:
+      - url: "https://www.acfun.cn/v/ac4544463"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-26-live-01
-  type: live
-  date: "2018-08-26"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_26/1535321479.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4546325"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2018-08-26-live-01
+    type: live
+    date: "2018-08-26"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_26/1535321479.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4546325"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2018-08-27-live-01
-  type: live
-  date: "2018-08-27"
-  title: "5亿台纪念限定PS4pro开箱"
-  platform: douyu
-  confidence: high
-  duration_min: 56
-  cover: "https://tx-free-imgs.acfun.cn/content/2018_08_27/1535369077.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4548052"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2018-08-27-live-01
+    type: live
+    date: "2018-08-27"
+    title: "5亿台纪念限定PS4pro开箱"
+    platform: douyu
+    confidence: high
+    duration_min: 56
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_27/1535369077.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4548052"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

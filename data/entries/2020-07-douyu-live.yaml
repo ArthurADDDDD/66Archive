@@ -1,314 +1,335 @@
-- id: 2020-07-01-live-01
-  type: live
-  date: "2020-07-01"
-  title: "盗贼之海"
-  platform: douyu
-  confidence: high
-  duration_min: 288
-  cover: "https://tx-free-imgs.acfun.cn/o_1ec7t9f9eaa9mlpnml15bi4lp0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16594590"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-01-live-01
+    type: live
+    date: "2020-07-01"
+    title: "盗贼之海"
+    platform: douyu
+    confidence: high
+    duration_min: 288
+    cover: "https://tx-free-imgs.acfun.cn/o_1ec7t9f9eaa9mlpnml15bi4lp0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16594590"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-02-live-01
-  type: live
-  date: "2020-07-02"
-  title: "盗贼之海"
-  platform: douyu
-  confidence: high
-  duration_min: 248
-  cover: "https://tx-free-imgs.acfun.cn/o_1ec82i33d9ejb5cs7012hpd2l0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16594526"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-02-live-01
+    type: live
+    date: "2020-07-02"
+    title: "盗贼之海"
+    platform: douyu
+    confidence: high
+    duration_min: 248
+    cover: "https://tx-free-imgs.acfun.cn/o_1ec82i33d9ejb5cs7012hpd2l0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16594526"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-03-live-01
-  type: live
-  date: "2020-07-03"
-  title: "螺旋风暴"
-  platform: douyu
-  confidence: high
-  duration_min: 236
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecal7rek19dj1c4e1i421mc41v0g0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16611265"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-07-03-live-01
+    type: live
+    date: "2020-07-03"
+    title: "螺旋风暴"
+    platform: douyu
+    confidence: high
+    duration_min: 236
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecal7rek19dj1c4e1i421mc41v0g0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16611265"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-04-live-01
-  type: live
-  date: "2020-07-04"
-  title: "世界游戏大全51&江南百景图"
-  platform: douyu
-  confidence: high
-  duration_min: 261
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecd4jgii152m15jf3blscs149q0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16657662"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-04-live-01
+    type: live
+    date: "2020-07-04"
+    title: "世界游戏大全51&江南百景图"
+    platform: douyu
+    confidence: high
+    duration_min: 261
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecd4jgii152m15jf3blscs149q0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16657662"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-07-live-01
-  type: live
-  date: "2020-07-07"
-  title: "世界游戏大全51"
-  platform: douyu
-  confidence: high
-  duration_min: 271
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecktntdjinvtbc12kdtqf1t490.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16704479"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-07-live-01
+    type: live
+    date: "2020-07-07"
+    title: "世界游戏大全51"
+    platform: douyu
+    confidence: high
+    duration_min: 271
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecktntdjinvtbc12kdtqf1t490.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16704479"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-07-live-02
-  type: live
-  date: "2020-07-07"
-  title: "对马岛之鬼(下部分）"
-  platform: douyu
-  confidence: high
-  duration_min: 170
-  cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16879036"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-07-07-live-02
+    type: live
+    date: "2020-07-07"
+    title: "对马岛之鬼(下部分）"
+    platform: douyu
+    confidence: high
+    duration_min: 170
+    cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16879036"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-08-live-01
-  type: live
-  date: "2020-07-08"
-  title: "世界游戏大全51"
-  platform: douyu
-  confidence: high
-  duration_min: 248
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecnhe18m1qlb1dmvnti1kc88f50.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16719249"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-07-08-live-01
+    type: live
+    date: "2020-07-08"
+    title: "世界游戏大全51"
+    platform: douyu
+    confidence: high
+    duration_min: 248
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecnhe18m1qlb1dmvnti1kc88f50.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16719249"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-09-live-01
-  type: live
-  date: "2020-07-09"
-  title: "世界游戏大全51"
-  platform: douyu
-  confidence: high
-  duration_min: 245
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecscbann175bg0he7ho0a1qfb0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16746931"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-09-live-01
+    type: live
+    date: "2020-07-09"
+    title: "世界游戏大全51"
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecscbann175bg0he7ho0a1qfb0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16746931"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-10-live-01
-  type: live
-  date: "2020-07-10"
-  title: "世界游戏大全51"
-  platform: douyu
-  confidence: high
-  duration_min: 231
-  cover: "https://tx-free-imgs.acfun.cn/o_1ecse9lrh12qd7guhsmgnb1od80.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16747453"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-07-10-live-01
+    type: live
+    date: "2020-07-10"
+    title: "世界游戏大全51"
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    cover: "https://tx-free-imgs.acfun.cn/o_1ecse9lrh12qd7guhsmgnb1od80.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16747453"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-14-live-01
-  type: live
-  date: "2020-07-14"
-  title: "世界游戏大全51"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/o_1ed6sqc33166ngprvdi1qh47340.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16830939"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-14-live-01
+    type: live
+    date: "2020-07-14"
+    title: "世界游戏大全51"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/o_1ed6sqc33166ngprvdi1qh47340.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16830939"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-16-live-01
-  type: live
-  date: "2020-07-16"
-  title: "输掉的佩奇，悲伤的唱"
-  platform: douyu
-  confidence: high
-  duration_min: 288
-  cover: "https://tx-free-imgs.acfun.cn/o_1edeb9qvije11mgm12do8erse30.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16876378"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2020-07-16-live-01
+    type: live
+    date: "2020-07-16"
+    title: "输掉的佩奇，悲伤的唱"
+    platform: douyu
+    confidence: high
+    duration_min: 288
+    cover: "https://tx-free-imgs.acfun.cn/o_1edeb9qvije11mgm12do8erse30.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16876378"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-18-live-01
-  type: live
-  date: "2020-07-18"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/o_1edh2sqsa1ef31noo30o1t8dgqm0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16894131"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-18-live-01
+    type: live
+    date: "2020-07-18"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/o_1edh2sqsa1ef31noo30o1t8dgqm0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16894131"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-18-live-02
-  type: live
-  date: "2020-07-18"
-  title: "对马岛之鬼(下部分）"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/o_1edh2ur331rflv6e5kj2m6nec0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16894792"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-18-live-02
+    type: live
+    date: "2020-07-18"
+    title: "对马岛之鬼(下部分）"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/o_1edh2ur331rflv6e5kj2m6nec0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16894792"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-19-live-01
-  type: live
-  date: "2020-07-19"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 364
-  cover: "https://tx-free-imgs.acfun.cn/o_1edjqg5731ft896cnnna1s1p9a0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16909140"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-07-19-live-01
+    type: live
+    date: "2020-07-19"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 364
+    cover: "https://tx-free-imgs.acfun.cn/o_1edjqg5731ft896cnnna1s1p9a0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16909140"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-20-live-01
-  type: live
-  date: "2020-07-20"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 373
-  cover: "https://tx-free-imgs.acfun.cn/o_1edmc8kr41i7t1pb21oomtobngl0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16923130"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-07-20-live-01
+    type: live
+    date: "2020-07-20"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 373
+    cover: "https://tx-free-imgs.acfun.cn/o_1edmc8kr41i7t1pb21oomtobngl0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16923130"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-21-live-01
-  type: live
-  date: "2020-07-21"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 396
-  cover: "https://tx-free-imgs.acfun.cn/o_1edovcvkp134qee1noq1cf114js0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16938446"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-07-21-live-01
+    type: live
+    date: "2020-07-21"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 396
+    cover: "https://tx-free-imgs.acfun.cn/o_1edovcvkp134qee1noq1cf114js0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16938446"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-22-live-01
-  type: live
-  date: "2020-07-22"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 264
-  cover: "https://tx-free-imgs.acfun.cn/o_1edrf95or1bvs1m3029p1s0qb3q0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac16975617"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-22-live-01
+    type: live
+    date: "2020-07-22"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 264
+    cover: "https://tx-free-imgs.acfun.cn/o_1edrf95or1bvs1m3029p1s0qb3q0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac16975617"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-24-live-01
-  type: live
-  date: "2020-07-24"
-  title: "对马岛之鬼"
-  platform: douyu
-  confidence: high
-  duration_min: 244
-  cover: "https://tx-free-imgs.acfun.cn/o_1ee0jnee21v4e1e6mec61u40j9o0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17006418"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-24-live-01
+    type: live
+    date: "2020-07-24"
+    title: "对马岛之鬼"
+    platform: douyu
+    confidence: high
+    duration_min: 244
+    cover: "https://tx-free-imgs.acfun.cn/o_1ee0jnee21v4e1e6mec61u40j9o0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17006418"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-25-live-01
-  type: live
-  date: "2020-07-25"
-  title: "Superliminal&梦幻西游"
-  platform: douyu
-  confidence: high
-  duration_min: 282
-  cover: "https://tx-free-imgs.acfun.cn/o_1ee36nmop167d19lu3navk3db90.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17023955"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-25-live-01
+    type: live
+    date: "2020-07-25"
+    title: "Superliminal&梦幻西游"
+    platform: douyu
+    confidence: high
+    duration_min: 282
+    cover: "https://tx-free-imgs.acfun.cn/o_1ee36nmop167d19lu3navk3db90.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17023955"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-26-live-01
-  type: live
-  date: "2020-07-26"
-  title: "怒海余生"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/o_1ee84sphqnnh1q816k51amehu90.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17055755"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2020-07-26-live-01
+    type: live
+    date: "2020-07-26"
+    title: "怒海余生"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/o_1ee84sphqnnh1q816k51amehu90.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17055755"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-07-27-live-01
-  type: live
-  date: "2020-07-27"
-  title: "纸片马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 261
-  cover: "https://tx-free-imgs.acfun.cn/o_1ee89v1m4p1b1gtg8at1t6klpd0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac17057112"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-07-27-live-01
+    type: live
+    date: "2020-07-27"
+    title: "纸片马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 261
+    cover: "https://tx-free-imgs.acfun.cn/o_1ee89v1m4p1b1gtg8at1t6klpd0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac17057112"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent

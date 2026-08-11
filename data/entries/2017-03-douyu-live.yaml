@@ -1,301 +1,321 @@
-- id: 2017-03-01-live-01
-  type: live
-  date: "2017-03-01"
-  title: "伊森卡特的消失"
-  platform: douyu
-  confidence: high
-  duration_min: 60
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_02/1488448684.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3514575"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-01-live-01
+    type: live
+    date: "2017-03-01"
+    title: "伊森卡特的消失"
+    platform: douyu
+    confidence: high
+    duration_min: 60
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_02/1488448684.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3514575"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-03-live-01
-  type: live
-  date: "2017-03-03"
-  title: "Hidden Folks"
-  platform: douyu
-  confidence: high
-  duration_min: 241
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_03/1488554456.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3518038"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-03-03-live-01
+    type: live
+    date: "2017-03-03"
+    title: "Hidden Folks"
+    platform: douyu
+    confidence: high
+    duration_min: 241
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_03/1488554456.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3518038"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-04-live-01
-  type: live
-  date: "2017-03-04"
-  title: "热血物语：地下世界"
-  platform: douyu
-  confidence: high
-  duration_min: 254
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_04/1488632689.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3520053"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-03-04-live-01
+    type: live
+    date: "2017-03-04"
+    title: "热血物语：地下世界"
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_04/1488632689.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3520053"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-05-live-01
-  type: live
-  date: "2017-03-05"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 182
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488878437.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3526345"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-05-live-01
+    type: live
+    date: "2017-03-05"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 182
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488878437.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3526345"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-07-live-01
-  type: live
-  date: "2017-03-07"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 112
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488877782.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3526301"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-03-07-live-01
+    type: live
+    date: "2017-03-07"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 112
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488877782.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3526301"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-13-live-01
-  type: live
-  date: "2017-03-13"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 253
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_14/1489505066.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3545359"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2017-03-13-live-01
+    type: live
+    date: "2017-03-13"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 253
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_14/1489505066.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3545359"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-14-live-01
-  type: live
-  date: "2017-03-14"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 128
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_15/1489576551.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3547680"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-03-14-live-01
+    type: live
+    date: "2017-03-14"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 128
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_15/1489576551.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3547680"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-15-live-01
-  type: live
-  date: "2017-03-15"
-  title: "chi66诞生记"
-  platform: douyu
-  confidence: high
-  duration_min: 116
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489667536.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3550581"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-15-live-01
+    type: live
+    date: "2017-03-15"
+    title: "chi66诞生记"
+    platform: douyu
+    confidence: high
+    duration_min: 116
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489667536.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3550581"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-15-live-02
-  type: live
-  date: "2017-03-15"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 359
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489670783.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3550686"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-03-15-live-02
+    type: live
+    date: "2017-03-15"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 359
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489670783.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3550686"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-16-live-01
-  type: live
-  date: "2017-03-16"
-  title: "塞尔达传说+LOL"
-  platform: douyu
-  confidence: high
-  duration_min: 347
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_17/1489761673.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3553718"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2017-03-16-live-01
+    type: live
+    date: "2017-03-16"
+    title: "塞尔达传说+LOL"
+    platform: douyu
+    confidence: high
+    duration_min: 347
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_17/1489761673.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3553718"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-17-live-01
-  type: live
-  date: "2017-03-17"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 195
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_18/1489823710.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3555112"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2017-03-17-live-01
+    type: live
+    date: "2017-03-17"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_18/1489823710.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3555112"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-18-live-01
-  type: live
-  date: "2017-03-18"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 248
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490101397.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3563645"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-03-18-live-01
+    type: live
+    date: "2017-03-18"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 248
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490101397.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3563645"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-19-live-01
-  type: live
-  date: "2017-03-19"
-  title: "1，2switch"
-  platform: douyu
-  confidence: high
-  duration_min: 118
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490061685.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3561618"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2017-03-19-live-01
+    type: live
+    date: "2017-03-19"
+    title: "1，2switch"
+    platform: douyu
+    confidence: high
+    duration_min: 118
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490061685.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3561618"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-20-live-01
-  type: live
-  date: "2017-03-20"
-  title: "户外直播"
-  platform: douyu
-  confidence: high
-  duration_min: 108
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490115053.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3564094"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-20-live-01
+    type: live
+    date: "2017-03-20"
+    title: "户外直播"
+    platform: douyu
+    confidence: high
+    duration_min: 108
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490115053.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3564094"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-22-live-01
-  type: live
-  date: "2017-03-22"
-  title: "砒霜兼索尼2周年户外~"
-  platform: douyu
-  confidence: high
-  duration_min: 244
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_22/1490199775.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3566723"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-22-live-01
+    type: live
+    date: "2017-03-22"
+    title: "砒霜兼索尼2周年户外~"
+    platform: douyu
+    confidence: high
+    duration_min: 244
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_22/1490199775.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3566723"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-24-live-01
-  type: live
-  date: "2017-03-24"
-  title: "rusty lake新章节和塞尔达"
-  platform: douyu
-  confidence: high
-  duration_min: 307
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_24/1490364607.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3572214"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-03-24-live-01
+    type: live
+    date: "2017-03-24"
+    title: "rusty lake新章节和塞尔达"
+    platform: douyu
+    confidence: high
+    duration_min: 307
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_24/1490364607.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3572214"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-25-live-01
-  type: live
-  date: "2017-03-25"
-  title: "塞尔达传说"
-  platform: douyu
-  confidence: high
-  duration_min: 249
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_25/1490439123.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3574522"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-25-live-01
+    type: live
+    date: "2017-03-25"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: high
+    duration_min: 249
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_25/1490439123.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3574522"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-26-live-01
-  type: live
-  date: "2017-03-26"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 160
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_29/1490796034.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3584867"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-03-26-live-01
+    type: live
+    date: "2017-03-26"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 160
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_29/1490796034.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3584867"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-29-live-01
-  type: live
-  date: "2017-03-29"
-  title: "黑暗之魂3DLC2"
-  platform: douyu
-  confidence: high
-  duration_min: 291
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_03_30/1490877224.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3587442"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-03-29-live-01
+    type: live
+    date: "2017-03-29"
+    title: "黑暗之魂3DLC2"
+    platform: douyu
+    confidence: high
+    duration_min: 291
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_03_30/1490877224.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3587442"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-03-30-live-01
-  type: live
-  date: "2017-03-30"
-  title: "黑暗之魂3DLC2"
-  platform: douyu
-  confidence: high
-  duration_min: 42
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_04_01/1491007468.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3591061"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2017-03-30-live-01
+    type: live
+    date: "2017-03-30"
+    title: "黑暗之魂3DLC2"
+    platform: douyu
+    confidence: high
+    duration_min: 42
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_01/1491007468.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3591061"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

@@ -1,136 +1,145 @@
-- id: 2019-09-03-live-01
-  type: live
-  date: "2019-09-03"
-  title: "双人配合Heave Ho"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/FnCQrM2b3iGXpGxYFz1oohe7gXks?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10863183"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-09-03-live-01
+    type: live
+    date: "2019-09-03"
+    title: "双人配合Heave Ho"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/FnCQrM2b3iGXpGxYFz1oohe7gXks?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10863183"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-05-live-01
-  type: live
-  date: "2019-09-05"
-  title: "大雄好久不见"
-  platform: douyu
-  confidence: high
-  duration_min: 236
-  cover: "https://tx-free-imgs.acfun.cn/Fm-XuMcIx2-OtxYkREQNIKi7ddTS?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10875058"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-09-05-live-01
+    type: live
+    date: "2019-09-05"
+    title: "大雄好久不见"
+    platform: douyu
+    confidence: high
+    duration_min: 236
+    cover: "https://tx-free-imgs.acfun.cn/Fm-XuMcIx2-OtxYkREQNIKi7ddTS?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10875058"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-09-live-01
-  type: live
-  date: "2019-09-09"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 243
-  cover: "https://tx-free-imgs.acfun.cn/FivtRBxGSSpYXfDKnwp06ein3xIO?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10905302"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-09-09-live-01
+    type: live
+    date: "2019-09-09"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 243
+    cover: "https://tx-free-imgs.acfun.cn/FivtRBxGSSpYXfDKnwp06ein3xIO?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10905302"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-10-live-01
-  type: live
-  date: "2019-09-10"
-  title: "怪物猎人：世界 冰原"
-  platform: douyu
-  confidence: high
-  duration_min: 255
-  cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10917297"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-09-10-live-01
+    type: live
+    date: "2019-09-10"
+    title: "怪物猎人：世界 冰原"
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10917297"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-14-live-01
-  type: live
-  date: "2019-09-14"
-  title: "怪物猎人：世界 冰原"
-  platform: douyu
-  confidence: high
-  duration_min: 287
-  cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10954601"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-09-14-live-01
+    type: live
+    date: "2019-09-14"
+    title: "怪物猎人：世界 冰原"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10954601"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-15-live-01
-  type: live
-  date: "2019-09-15"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 469
-  cover: "https://tx-free-imgs.acfun.cn/Fl3qakjaWiqM4PP2LPJ0X0TuthTP?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10968579"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-09-15-live-01
+    type: live
+    date: "2019-09-15"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 469
+    cover: "https://tx-free-imgs.acfun.cn/Fl3qakjaWiqM4PP2LPJ0X0TuthTP?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10968579"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-23-live-01
-  type: live
-  date: "2019-09-23"
-  title: "塞尔达传说 织梦岛"
-  platform: douyu
-  confidence: high
-  duration_min: 269
-  cover: "https://tx-free-imgs.acfun.cn/FlWT4O5rhhAoFFtnMxZWvQFxf0v8?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11164528"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-09-23-live-01
+    type: live
+    date: "2019-09-23"
+    title: "塞尔达传说 织梦岛"
+    platform: douyu
+    confidence: high
+    duration_min: 269
+    cover: "https://tx-free-imgs.acfun.cn/FlWT4O5rhhAoFFtnMxZWvQFxf0v8?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11164528"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-25-live-01
-  type: live
-  date: "2019-09-25"
-  title: "A Short Hike"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/Fut6Q6-YFW7pGTqSCHVi8mrKdbCi?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11171141"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-09-25-live-01
+    type: live
+    date: "2019-09-25"
+    title: "A Short Hike"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/Fut6Q6-YFW7pGTqSCHVi8mrKdbCi?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11171141"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-09-28-live-01
-  type: live
-  date: "2019-09-28"
-  title: "Green Hell"
-  platform: douyu
-  confidence: high
-  duration_min: 308
-  cover: "https://tx-free-imgs.acfun.cn/FhqBfq-rGtmCg5BdUL4PrG1GxWLa?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac11258173"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-09-28-live-01
+    type: live
+    date: "2019-09-28"
+    title: "Green Hell"
+    platform: douyu
+    confidence: high
+    duration_min: 308
+    cover: "https://tx-free-imgs.acfun.cn/FhqBfq-rGtmCg5BdUL4PrG1GxWLa?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac11258173"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent

@@ -1,393 +1,419 @@
-- id: 2022-06-01-live-01
-  type: live
-  date: "2022-06-01"
-  title: "Hellstuck：Rage With Your Friends"
-  platform: douyu
-  confidence: high
-  duration_min: 300
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e656a408087040a29088daa407a69f3c.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35103915"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-01-live-01
+    type: live
+    date: "2022-06-01"
+    title: "Hellstuck：Rage With Your Friends"
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e656a408087040a29088daa407a69f3c.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35103915"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-02-live-01
-  type: live
-  date: "2022-06-02"
-  title: "战匠杜沃"
-  platform: douyu
-  confidence: high
-  duration_min: 219
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36e2f43538b849d9a2107fe713fc1098.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35116936"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-02-live-01
+    type: live
+    date: "2022-06-02"
+    title: "战匠杜沃"
+    platform: douyu
+    confidence: high
+    duration_min: 219
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36e2f43538b849d9a2107fe713fc1098.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35116936"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-04-live-01
-  type: live
-  date: "2022-06-04"
-  title: "钓鱼天堂"
-  platform: douyu
-  confidence: high
-  duration_min: 159
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_934b8af646a5428e815858858b7409b3.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35150054"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-04-live-01
+    type: live
+    date: "2022-06-04"
+    title: "钓鱼天堂"
+    platform: douyu
+    confidence: high
+    duration_min: 159
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_934b8af646a5428e815858858b7409b3.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35150054"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-05-live-01
-  type: live
-  date: "2022-06-05"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 279
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d0b218e9268f4d4b8356e159d406e70b.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac35158423"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-05-live-01
+    type: live
+    date: "2022-06-05"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 279
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d0b218e9268f4d4b8356e159d406e70b.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac35158423"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-06-live-01
-  type: live
-  date: "2022-06-06"
-  title: "第一届画六大赛"
-  platform: douyu
-  confidence: high
-  duration_min: 415
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3b22029284a54d4bb4aff339e64cfde1.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35182040"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-06-live-01
+    type: live
+    date: "2022-06-06"
+    title: "第一届画六大赛"
+    platform: douyu
+    confidence: high
+    duration_min: 415
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3b22029284a54d4bb4aff339e64cfde1.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35182040"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-07-live-01
-  type: live
-  date: "2022-06-07"
-  title: "钓鱼天堂"
-  platform: douyu
-  confidence: high
-  duration_min: 270
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9e0ca996f0e84f70bd2d95688abc6fdc.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35182256"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-07-live-01
+    type: live
+    date: "2022-06-07"
+    title: "钓鱼天堂"
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9e0ca996f0e84f70bd2d95688abc6fdc.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35182256"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-08-live-01
-  type: live
-  date: "2022-06-08"
-  title: "Necesse"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_28a3c8fa1be141ba905f7748993c1873.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35207890"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-08-live-01
+    type: live
+    date: "2022-06-08"
+    title: "Necesse"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_28a3c8fa1be141ba905f7748993c1873.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35207890"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-09-live-01
-  type: live
-  date: "2022-06-09"
-  title: "各年代老歌榜单盘点"
-  platform: douyu
-  confidence: high
-  duration_min: 277
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dee818a4a2f14f17a598889381914a00.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35221430"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-09-live-01
+    type: live
+    date: "2022-06-09"
+    title: "各年代老歌榜单盘点"
+    platform: douyu
+    confidence: high
+    duration_min: 277
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dee818a4a2f14f17a598889381914a00.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35221430"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-10-live-01
-  type: live
-  date: "2022-06-10"
-  title: "采石场惊魂"
-  platform: douyu
-  confidence: high
-  duration_min: 277
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b90623f068ae4297bda6c96b3d1d4b77.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35221410"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-10-live-01
+    type: live
+    date: "2022-06-10"
+    title: "采石场惊魂"
+    platform: douyu
+    confidence: high
+    duration_min: 277
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b90623f068ae4297bda6c96b3d1d4b77.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35221410"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-11-live-01
-  type: live
-  date: "2022-06-11"
-  title: "采石场惊魂"
-  platform: douyu
-  confidence: high
-  duration_min: 246
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd46b41ceb15401c9e52d1588fbb56c5.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35234943"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-11-live-01
+    type: live
+    date: "2022-06-11"
+    title: "采石场惊魂"
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd46b41ceb15401c9e52d1588fbb56c5.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35234943"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-12-live-01
-  type: live
-  date: "2022-06-12"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 249
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6472e06399ed443fbce87921c5ff575e.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac35249595"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-12-live-01
+    type: live
+    date: "2022-06-12"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 249
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6472e06399ed443fbce87921c5ff575e.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac35249595"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-13-live-01
-  type: live
-  date: "2022-06-13"
-  title: "Necesse"
-  platform: douyu
-  confidence: high
-  duration_min: 314
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8168db2a26f2464da32247cb2f7c419d.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35261586"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-13-live-01
+    type: live
+    date: "2022-06-13"
+    title: "Necesse"
+    platform: douyu
+    confidence: high
+    duration_min: 314
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8168db2a26f2464da32247cb2f7c419d.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35261586"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-17-live-01
-  type: live
-  date: "2022-06-17"
-  title: "一年一次的佩奇演出"
-  platform: douyu
-  confidence: high
-  duration_min: 145
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3f15059ab4f45b4b03112b6b4d5c11f.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35314217"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-17-live-01
+    type: live
+    date: "2022-06-17"
+    title: "一年一次的佩奇演出"
+    platform: douyu
+    confidence: high
+    duration_min: 145
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3f15059ab4f45b4b03112b6b4d5c11f.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35314217"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-17-live-02
-  type: live
-  date: "2022-06-17"
-  title: "忍者神龟：施莱德的复仇"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fc5e5711c8a5473b93eb99d0ef38208a.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35329252"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-17-live-02
+    type: live
+    date: "2022-06-17"
+    title: "忍者神龟：施莱德的复仇"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fc5e5711c8a5473b93eb99d0ef38208a.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35329252"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-18-live-01
-  type: live
-  date: "2022-06-18"
-  title: "暖雪"
-  platform: douyu
-  confidence: high
-  duration_min: 279
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e354fde9d6a440598f25485ecdc1f70a.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35328916"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-18-live-01
+    type: live
+    date: "2022-06-18"
+    title: "暖雪"
+    platform: douyu
+    confidence: high
+    duration_min: 279
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e354fde9d6a440598f25485ecdc1f70a.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35328916"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-19-live-01
-  type: live
-  date: "2022-06-19"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 132
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c3dbab47ab91420393dd8b425e661278.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac35352584"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-19-live-01
+    type: live
+    date: "2022-06-19"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 132
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c3dbab47ab91420393dd8b425e661278.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac35352584"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-20-live-01
-  type: live
-  date: "2022-06-20"
-  title: "暖雪"
-  platform: douyu
-  confidence: high
-  duration_min: 305
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f1a2ef6f9aa24e0d86469e29339ff58f.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35354151"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-20-live-01
+    type: live
+    date: "2022-06-20"
+    title: "暖雪"
+    platform: douyu
+    confidence: high
+    duration_min: 305
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f1a2ef6f9aa24e0d86469e29339ff58f.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35354151"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-21-live-01
-  type: live
-  date: "2022-06-21"
-  title: "暖雪"
-  platform: douyu
-  confidence: high
-  duration_min: 147
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_005a7a86af00413caa7f23204005dbd9.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35378831"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-21-live-01
+    type: live
+    date: "2022-06-21"
+    title: "暖雪"
+    platform: douyu
+    confidence: high
+    duration_min: 147
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_005a7a86af00413caa7f23204005dbd9.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35378831"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-22-live-01
-  type: live
-  date: "2022-06-22"
-  title: "Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 300
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2ff9e69ce009429fb4e9a7519cd23fb7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35405861"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-22-live-01
+    type: live
+    date: "2022-06-22"
+    title: "Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2ff9e69ce009429fb4e9a7519cd23fb7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35405861"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-22-live-02
-  type: live
-  date: "2022-06-22"
-  title: "暖雪"
-  platform: douyu
-  confidence: high
-  duration_min: 239
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ed5fde190381491a9844b8809a12494c.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35378851"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-22-live-02
+    type: live
+    date: "2022-06-22"
+    title: "暖雪"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ed5fde190381491a9844b8809a12494c.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35378851"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-26-live-01
-  type: live
-  date: "2022-06-26"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 136
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a46285121c5f473ab2fbb6912eef283c.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac35447902"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-26-live-01
+    type: live
+    date: "2022-06-26"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 136
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a46285121c5f473ab2fbb6912eef283c.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac35447902"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-27-live-01
-  type: live
-  date: "2022-06-27"
-  title: "Neon White&Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 238
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7e594731bbb84c7e95c830748a0c6bbd.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35448389"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-27-live-01
+    type: live
+    date: "2022-06-27"
+    title: "Neon White&Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 238
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7e594731bbb84c7e95c830748a0c6bbd.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35448389"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-28-live-01
-  type: live
-  date: "2022-06-28"
-  title: "RAFT"
-  platform: douyu
-  confidence: high
-  duration_min: 135
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_62d1d9a581394f60b66a82757627d699.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35473608"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-28-live-01
+    type: live
+    date: "2022-06-28"
+    title: "RAFT"
+    platform: douyu
+    confidence: high
+    duration_min: 135
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_62d1d9a581394f60b66a82757627d699.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35473608"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-29-live-01
-  type: live
-  date: "2022-06-29"
-  title: "Fall Guys"
-  platform: douyu
-  confidence: high
-  duration_min: 224
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_91bd00309edb4555a0dfc047cf111f59.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35474050"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-29-live-01
+    type: live
+    date: "2022-06-29"
+    title: "Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 224
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_91bd00309edb4555a0dfc047cf111f59.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35474050"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-29-live-02
-  type: live
-  date: "2022-06-29"
-  title: "RAFT"
-  platform: douyu
-  confidence: high
-  duration_min: 29
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5d559ed9362f4c8385846ae36077f34d.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35473768"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-29-live-02
+    type: live
+    date: "2022-06-29"
+    title: "RAFT"
+    platform: douyu
+    confidence: high
+    duration_min: 29
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5d559ed9362f4c8385846ae36077f34d.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35473768"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-06-30-live-01
-  type: live
-  date: "2022-06-30"
-  title: "怪物猎人崛起：曙光"
-  platform: douyu
-  confidence: high
-  duration_min: 239
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8928ed05816e49a8b54222e9712c0081.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac35489533"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-06-30-live-01
+    type: live
+    date: "2022-06-30"
+    title: "怪物猎人崛起：曙光"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8928ed05816e49a8b54222e9712c0081.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac35489533"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

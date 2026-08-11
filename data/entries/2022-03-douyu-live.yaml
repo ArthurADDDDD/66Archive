@@ -1,434 +1,463 @@
-- id: 2022-03-01-live-01
-  type: live
-  date: "2022-03-01"
-  title: "艾尔登法环 P1"
-  platform: douyu
-  confidence: high
-  duration_min: 195
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a352e974d1c49a18de2511f0d5da23a.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33847866"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-01-live-01
+    type: live
+    date: "2022-03-01"
+    title: "艾尔登法环 P1"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a352e974d1c49a18de2511f0d5da23a.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33847866"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-01-live-02
-  type: live
-  date: "2022-03-01"
-  title: "艾尔登法环 P2"
-  platform: douyu
-  confidence: high
-  duration_min: 195
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2fc6299765664dccae7a6e9c6ab32943.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33847792"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-01-live-02
+    type: live
+    date: "2022-03-01"
+    title: "艾尔登法环 P2"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2fc6299765664dccae7a6e9c6ab32943.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33847792"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-01-live-03
-  type: live
-  date: "2022-03-01"
-  title: "艾尔登法环 P3"
-  platform: douyu
-  confidence: high
-  duration_min: 195
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8f3f29fbf344409591e54def595a5dba.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33847793"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-01-live-03
+    type: live
+    date: "2022-03-01"
+    title: "艾尔登法环 P3"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8f3f29fbf344409591e54def595a5dba.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33847793"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-02-live-01
-  type: live
-  date: "2022-03-02"
-  title: "艾尔登法环 P1"
-  platform: douyu
-  confidence: high
-  duration_min: 120
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02d601c45d0d46f28fbce24d19777983.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33860764"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-02-live-01
+    type: live
+    date: "2022-03-02"
+    title: "艾尔登法环 P1"
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02d601c45d0d46f28fbce24d19777983.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33860764"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-02-live-02
-  type: live
-  date: "2022-03-02"
-  title: "艾尔登法环 P2"
-  platform: douyu
-  confidence: high
-  duration_min: 120
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a6005696bf024875ae73bb6632c012ff.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33861287"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-02-live-02
+    type: live
+    date: "2022-03-02"
+    title: "艾尔登法环 P2"
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a6005696bf024875ae73bb6632c012ff.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33861287"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-02-live-03
-  type: live
-  date: "2022-03-02"
-  title: "艾尔登法环 P3"
-  platform: douyu
-  confidence: high
-  duration_min: 189
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab5a245b4cda443ca8dcc53344a98ff0.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33861382"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-02-live-03
+    type: live
+    date: "2022-03-02"
+    title: "艾尔登法环 P3"
+    platform: douyu
+    confidence: high
+    duration_min: 189
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab5a245b4cda443ca8dcc53344a98ff0.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33861382"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-02-live-04
-  type: live
-  date: "2022-03-02"
-  title: "艾尔登法环 P4"
-  platform: douyu
-  confidence: high
-  duration_min: 189
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b82dee5e9c504c9d955eb615c7227f7b.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33861243"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-02-live-04
+    type: live
+    date: "2022-03-02"
+    title: "艾尔登法环 P4"
+    platform: douyu
+    confidence: high
+    duration_min: 189
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b82dee5e9c504c9d955eb615c7227f7b.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33861243"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-04-live-01
-  type: live
-  date: "2022-03-04"
-  title: "艾尔登法环 P1"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2196141b41724f5e841d27126c9e916f.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33888760"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-04-live-01
+    type: live
+    date: "2022-03-04"
+    title: "艾尔登法环 P1"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2196141b41724f5e841d27126c9e916f.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33888760"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-04-live-02
-  type: live
-  date: "2022-03-04"
-  title: "艾尔登法环 P2"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_311fcc6883f1485a9e36777bd54467eb.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33888712"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-04-live-02
+    type: live
+    date: "2022-03-04"
+    title: "艾尔登法环 P2"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_311fcc6883f1485a9e36777bd54467eb.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33888712"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-04-live-03
-  type: live
-  date: "2022-03-04"
-  title: "艾尔登法环 P3"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71a4c2d8a11b4f6f9f83bdd2fa1a1d39.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33888711"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-04-live-03
+    type: live
+    date: "2022-03-04"
+    title: "艾尔登法环 P3"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71a4c2d8a11b4f6f9f83bdd2fa1a1d39.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33888711"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-04-live-04
-  type: live
-  date: "2022-03-04"
-  title: "艾尔登法环 P4"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cfa7363d448246f8a29d97a0dea249d9.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33888722"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-04-live-04
+    type: live
+    date: "2022-03-04"
+    title: "艾尔登法环 P4"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cfa7363d448246f8a29d97a0dea249d9.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33888722"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-05-live-01
-  type: live
-  date: "2022-03-05"
-  title: "艾尔登法环 P1"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7d46747535d8425e88c318c0bfbd39c5.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33902778"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-05-live-01
+    type: live
+    date: "2022-03-05"
+    title: "艾尔登法环 P1"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7d46747535d8425e88c318c0bfbd39c5.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33902778"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-05-live-02
-  type: live
-  date: "2022-03-05"
-  title: "艾尔登法环 P2"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_08c64e0a48c64c888c8f2b60b9ad7560.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33902729"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-05-live-02
+    type: live
+    date: "2022-03-05"
+    title: "艾尔登法环 P2"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_08c64e0a48c64c888c8f2b60b9ad7560.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33902729"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-05-live-03
-  type: live
-  date: "2022-03-05"
-  title: "艾尔登法环 P3"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_78588246991c4a6594700e6ab3b692e8.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33902718"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-05-live-03
+    type: live
+    date: "2022-03-05"
+    title: "艾尔登法环 P3"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_78588246991c4a6594700e6ab3b692e8.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33902718"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-06-live-01
-  type: live
-  date: "2022-03-06"
-  title: "艾尔登法环 上"
-  platform: douyu
-  confidence: high
-  duration_min: 237
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33910899"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-06-live-01
+    type: live
+    date: "2022-03-06"
+    title: "艾尔登法环 上"
+    platform: douyu
+    confidence: high
+    duration_min: 237
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33910899"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-06-live-02
-  type: live
-  date: "2022-03-06"
-  title: "艾尔登法环 下"
-  platform: douyu
-  confidence: high
-  duration_min: 237
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36f3c78ece2346ed9b4b1763bfe4d8f6.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33910802"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-06-live-02
+    type: live
+    date: "2022-03-06"
+    title: "艾尔登法环 下"
+    platform: douyu
+    confidence: high
+    duration_min: 237
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36f3c78ece2346ed9b4b1763bfe4d8f6.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33910802"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-08-live-01
-  type: live
-  date: "2022-03-08"
-  title: "艾尔登法环"
-  platform: douyu
-  confidence: high
-  duration_min: 397
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab4753ad2f764da88c83f7a42b974be8.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33935290"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-08-live-01
+    type: live
+    date: "2022-03-08"
+    title: "艾尔登法环"
+    platform: douyu
+    confidence: high
+    duration_min: 397
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab4753ad2f764da88c83f7a42b974be8.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33935290"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-09-live-01
-  type: live
-  date: "2022-03-09"
-  title: "艾尔登法环"
-  platform: douyu
-  confidence: high
-  duration_min: 489
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f2c0924488d34f21866501374bfc2dfc.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33948371"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-09-live-01
+    type: live
+    date: "2022-03-09"
+    title: "艾尔登法环"
+    platform: douyu
+    confidence: high
+    duration_min: 489
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f2c0924488d34f21866501374bfc2dfc.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33948371"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-10-live-01
-  type: live
-  date: "2022-03-10"
-  title: "艾尔登法环"
-  platform: douyu
-  confidence: high
-  duration_min: 474
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dfdac34ddf814a47971568246e3a9bac.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33960181"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-10-live-01
+    type: live
+    date: "2022-03-10"
+    title: "艾尔登法环"
+    platform: douyu
+    confidence: high
+    duration_min: 474
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dfdac34ddf814a47971568246e3a9bac.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33960181"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-11-live-01
-  type: live
-  date: "2022-03-11"
-  title: "艾尔登法环（二周目法师）"
-  platform: douyu
-  confidence: high
-  duration_min: 342
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9615b7898c1d453eaa9c30e66a722698.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac33973370"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-11-live-01
+    type: live
+    date: "2022-03-11"
+    title: "艾尔登法环（二周目法师）"
+    platform: douyu
+    confidence: high
+    duration_min: 342
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9615b7898c1d453eaa9c30e66a722698.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac33973370"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-15-live-01
-  type: live
-  date: "2022-03-15"
-  title: "完美的一天"
-  platform: douyu
-  confidence: high
-  duration_min: 398
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5e364e436237492badbe23b5d814c075.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34027747"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-15-live-01
+    type: live
+    date: "2022-03-15"
+    title: "完美的一天"
+    platform: douyu
+    confidence: high
+    duration_min: 398
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5e364e436237492badbe23b5d814c075.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34027747"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-16-live-01
-  type: live
-  date: "2022-03-16"
-  title: "完美的一天"
-  platform: douyu
-  confidence: high
-  duration_min: 170
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_35201534710f42939ea649f9690b5811.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34041424"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-16-live-01
+    type: live
+    date: "2022-03-16"
+    title: "完美的一天"
+    platform: douyu
+    confidence: high
+    duration_min: 170
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_35201534710f42939ea649f9690b5811.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34041424"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-17-live-01
-  type: live
-  date: "2022-03-17"
-  title: "完美的一天"
-  platform: douyu
-  confidence: high
-  duration_min: 158
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fe3616c7e42949509715fdadb3e558dd.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34056124"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-17-live-01
+    type: live
+    date: "2022-03-17"
+    title: "完美的一天"
+    platform: douyu
+    confidence: high
+    duration_min: 158
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fe3616c7e42949509715fdadb3e558dd.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34056124"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-18-live-01
-  type: live
-  date: "2022-03-18"
-  title: "完美的一天"
-  platform: douyu
-  confidence: high
-  duration_min: 152
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53f8c97b013a47929b372686000b62c8.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34072346"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-18-live-01
+    type: live
+    date: "2022-03-18"
+    title: "完美的一天"
+    platform: douyu
+    confidence: high
+    duration_min: 152
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53f8c97b013a47929b372686000b62c8.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34072346"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-25-live-01
-  type: live
-  date: "2022-03-25"
-  title: "星之卡比：探索发现"
-  platform: douyu
-  confidence: high
-  duration_min: 312
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7795184d89bf4a83af947e53eb8d25d4.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34166731"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-25-live-01
+    type: live
+    date: "2022-03-25"
+    title: "星之卡比：探索发现"
+    platform: douyu
+    confidence: high
+    duration_min: 312
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7795184d89bf4a83af947e53eb8d25d4.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34166731"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-26-live-01
-  type: live
-  date: "2022-03-26"
-  title: "星之卡比：探索发现"
-  platform: douyu
-  confidence: high
-  duration_min: 436
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2871a8dd9fd344e296032975e15c4e07.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34179709"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-26-live-01
+    type: live
+    date: "2022-03-26"
+    title: "星之卡比：探索发现"
+    platform: douyu
+    confidence: high
+    duration_min: 436
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2871a8dd9fd344e296032975e15c4e07.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34179709"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-27-live-01
-  type: live
-  date: "2022-03-27"
-  title: "星之卡比：探索发现"
-  platform: douyu
-  confidence: high
-  duration_min: 439
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9cd14e8ed089455592e75f1b10cd5dff.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34191490"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-27-live-01
+    type: live
+    date: "2022-03-27"
+    title: "星之卡比：探索发现"
+    platform: douyu
+    confidence: high
+    duration_min: 439
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9cd14e8ed089455592e75f1b10cd5dff.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34191490"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-28-live-01
-  type: live
-  date: "2022-03-28"
-  title: "星之卡比：探索发现"
-  platform: douyu
-  confidence: high
-  duration_min: 134
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3da4453925e94b3188145ef8dc1be801.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34201099"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-28-live-01
+    type: live
+    date: "2022-03-28"
+    title: "星之卡比：探索发现"
+    platform: douyu
+    confidence: high
+    duration_min: 134
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3da4453925e94b3188145ef8dc1be801.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34201099"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2022-03-29-live-01
-  type: live
-  date: "2022-03-29"
-  title: "星之卡比：探索发现"
-  platform: douyu
-  confidence: high
-  duration_min: 126
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3346b74627e847819d329275b8cf2858.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac34214608"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2022-03-29-live-01
+    type: live
+    date: "2022-03-29"
+    title: "星之卡比：探索发现"
+    platform: douyu
+    confidence: high
+    duration_min: 126
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3346b74627e847819d329275b8cf2858.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac34214608"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

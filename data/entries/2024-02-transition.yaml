@@ -2,17 +2,19 @@
 # 背景：2023-12 女流在斗鱼合同到期停播（本人表示与斗鱼平台事件无关）；2024-08-18 起转抖音直播。
 # 本文件为过渡期内唯一检索到的开播记录：B 站直播间语音直播（2024-02-29）。
 # 来源：粉丝补档号「六六的治疗」2024-03-06 上传，简介注明"素材来自女流直播间，66姐B站账号：女流66"。
-- id: 2024-02-29-live-01
-  type: live
-  date: "2024-02-29"
-  title: "语音直播"
-  platform: bilibili
-  confidence: medium
-  games: []
-  tags: [语音直播]
-  cover: "https://i2.hdslb.com/bfs/archive/dcedc8abf3206faa68a5c56348a2edd708298bd0.jpg"
-  note: "过渡期（2023-12 斗鱼停播后）唯一找到的开播记录：B 站直播间语音直播（无画面）。来源为粉丝补档号「六六的治疗」2024-03-06 上传（视频简介注明『素材来自女流直播间，66姐B站账号：女流66』），补档内容为直播后 1.5 小时，总时长未确认；直播主题未检索到公开信息。"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1kx421y7EY"
-      kind: replay
-  contributed_by: data-agent
+  - id: 2024-02-29-live-01
+    type: live
+    date: "2024-02-29"
+    title: "语音直播"
+    platform: bilibili
+    confidence: medium
+    games: []
+    tags: [语音直播]
+    cover: "https://i2.hdslb.com/bfs/archive/dcedc8abf3206faa68a5c56348a2edd708298bd0.jpg"
+    note: "过渡期（2023-12 斗鱼停播后）唯一找到的开播记录：B 站直播间语音直播（无画面）。来源为粉丝补档号「六六的治疗」2024-03-06 上传（视频简介注明『素材来自女流直播间，66姐B站账号：女流66』），补档内容为直播后 1.5 小时，总时长未确认；直播主题未检索到公开信息。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kx421y7EY"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 91

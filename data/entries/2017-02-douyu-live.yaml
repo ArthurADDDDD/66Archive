@@ -1,271 +1,289 @@
-- id: 2017-02-04-live-01
-  type: live
-  date: "2017-02-04"
-  title: "春节期间不定期直播"
-  platform: douyu
-  confidence: high
-  duration_min: 83
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_04/1486218277.png?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3447881"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2017-02-04-live-01
+    type: live
+    date: "2017-02-04"
+    title: "春节期间不定期直播"
+    platform: douyu
+    confidence: high
+    duration_min: 83
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_04/1486218277.png?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3447881"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-05-live-01
-  type: live
-  date: "2017-02-05"
-  title: "大明塔"
-  platform: douyu
-  confidence: high
-  duration_min: 168
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_05/1486286530.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3449327"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-02-05-live-01
+    type: live
+    date: "2017-02-05"
+    title: "大明塔"
+    platform: douyu
+    confidence: high
+    duration_min: 168
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_05/1486286530.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3449327"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-06-live-01
-  type: live
-  date: "2017-02-06"
-  title: "汗蒸的时候不要喝菊花茶"
-  platform: douyu
-  confidence: high
-  duration_min: 140
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_06/1486380902.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3452264"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-02-06-live-01
+    type: live
+    date: "2017-02-06"
+    title: "汗蒸的时候不要喝菊花茶"
+    platform: douyu
+    confidence: high
+    duration_min: 140
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_06/1486380902.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3452264"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-08-live-01
-  type: live
-  date: "2017-02-08"
-  title: "小猫钓鱼(Cat Goes Fishing)"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560350.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3457776"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2017-02-08-live-01
+    type: live
+    date: "2017-02-08"
+    title: "小猫钓鱼(Cat Goes Fishing)"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560350.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3457776"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-08-live-02
-  type: live
-  date: "2017-02-08"
-  title: "黑暗之魂3"
-  platform: douyu
-  confidence: high
-  duration_min: 63
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560177.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3457748"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-02-08-live-02
+    type: live
+    date: "2017-02-08"
+    title: "黑暗之魂3"
+    platform: douyu
+    confidence: high
+    duration_min: 63
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560177.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3457748"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-09-live-01
-  type: live
-  date: "2017-02-09"
-  title: "小猫钓鱼(Cat Goes Fishing)"
-  platform: douyu
-  confidence: high
-  duration_min: 189
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_09/1486649481.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3460648"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-02-09-live-01
+    type: live
+    date: "2017-02-09"
+    title: "小猫钓鱼(Cat Goes Fishing)"
+    platform: douyu
+    confidence: high
+    duration_min: 189
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_09/1486649481.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3460648"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-09-live-02
-  type: live
-  date: "2017-02-09"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 126
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_12/1486904976.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3467198"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-02-09-live-02
+    type: live
+    date: "2017-02-09"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 126
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_12/1486904976.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3467198"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-10-live-01
-  type: live
-  date: "2017-02-10"
-  title: "小猫钓鱼(Cat Goes Fishing)"
-  platform: douyu
-  confidence: high
-  duration_min: 287
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_10/1486729429.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3462913"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-02-10-live-01
+    type: live
+    date: "2017-02-10"
+    title: "小猫钓鱼(Cat Goes Fishing)"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_10/1486729429.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3462913"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-11-live-01
-  type: live
-  date: "2017-02-11"
-  title: "小猫钓鱼(Cat Goes Fishing)"
-  platform: douyu
-  confidence: high
-  duration_min: 175
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_11/1486814339.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3464926"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2017-02-11-live-01
+    type: live
+    date: "2017-02-11"
+    title: "小猫钓鱼(Cat Goes Fishing)"
+    platform: douyu
+    confidence: high
+    duration_min: 175
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_11/1486814339.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3464926"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-13-live-01
-  type: live
-  date: "2017-02-13"
-  title: "科目2练习day"
-  platform: douyu
-  confidence: high
-  duration_min: 122
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_13/1486960533.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3468648"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2017-02-13-live-01
+    type: live
+    date: "2017-02-13"
+    title: "科目2练习day"
+    platform: douyu
+    confidence: high
+    duration_min: 122
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_13/1486960533.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3468648"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-14-live-01
-  type: live
-  date: "2017-02-14"
-  title: "科目2练习day"
-  platform: douyu
-  confidence: high
-  duration_min: 349
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_14/1487048767.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3471359"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2017-02-14-live-01
+    type: live
+    date: "2017-02-14"
+    title: "科目2练习day"
+    platform: douyu
+    confidence: high
+    duration_min: 349
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_14/1487048767.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3471359"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-16-live-01
-  type: live
-  date: "2017-02-16"
-  title: "几何冲刺(Geometry Dash)"
-  platform: douyu
-  confidence: high
-  duration_min: 438
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_16/1487260389.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3478890"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-02-16-live-01
+    type: live
+    date: "2017-02-16"
+    title: "几何冲刺(Geometry Dash)"
+    platform: douyu
+    confidence: high
+    duration_min: 438
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_16/1487260389.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3478890"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-17-live-01
-  type: live
-  date: "2017-02-17"
-  title: "没错还是几何冲刺(Geometry Dash)"
-  platform: douyu
-  confidence: high
-  duration_min: 201
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_17/1487327336.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3481423"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-02-17-live-01
+    type: live
+    date: "2017-02-17"
+    title: "没错还是几何冲刺(Geometry Dash)"
+    platform: douyu
+    confidence: high
+    duration_min: 201
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_17/1487327336.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3481423"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-18-live-01
-  type: live
-  date: "2017-02-18"
-  title: "Kalimba 和 The Vanishing of Ethan Carter"
-  platform: douyu
-  confidence: high
-  duration_min: 246
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_18/1487420938.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3484443"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-02-18-live-01
+    type: live
+    date: "2017-02-18"
+    title: "Kalimba 和 The Vanishing of Ethan Carter"
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_18/1487420938.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3484443"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-20-live-01
-  type: live
-  date: "2017-02-20"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 246
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487683480.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac3491948"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-02-20-live-01
+    type: live
+    date: "2017-02-20"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487683480.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac3491948"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-21-live-01
-  type: live
-  date: "2017-02-21"
-  title: "上高铁前在猴山"
-  platform: douyu
-  confidence: high
-  duration_min: 167
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487668039.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3491355"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2017-02-21-live-01
+    type: live
+    date: "2017-02-21"
+    title: "上高铁前在猴山"
+    platform: douyu
+    confidence: high
+    duration_min: 167
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487668039.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3491355"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-22-live-01
-  type: live
-  date: "2017-02-22"
-  title: "短暂的2月啊"
-  platform: douyu
-  confidence: high
-  duration_min: 57
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_22/1487756408.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3493972"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2017-02-22-live-01
+    type: live
+    date: "2017-02-22"
+    title: "短暂的2月啊"
+    platform: douyu
+    confidence: high
+    duration_min: 57
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_22/1487756408.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3493972"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-02-23-live-01
-  type: live
-  date: "2017-02-23"
-  title: "做头发"
-  platform: douyu
-  confidence: high
-  duration_min: 199
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_02_23/1487854241.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac3497214"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2017-02-23-live-01
+    type: live
+    date: "2017-02-23"
+    title: "做头发"
+    platform: douyu
+    confidence: high
+    duration_min: 199
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_02_23/1487854241.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac3497214"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent

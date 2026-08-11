@@ -1,316 +1,337 @@
-- id: 2021-11-02-live-01
-  type: live
-  date: "2021-11-02"
-  title: "马里奥派对 超级巨星"
-  platform: douyu
-  confidence: high
-  duration_min: 181
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1c5b291c846e4fe3b93e8468021799d0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac31665346"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-02-live-01
+    type: live
+    date: "2021-11-02"
+    title: "马里奥派对 超级巨星"
+    platform: douyu
+    confidence: high
+    duration_min: 181
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1c5b291c846e4fe3b93e8468021799d0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac31665346"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-03-live-01
-  type: live
-  date: "2021-11-03"
-  title: "House Of Ashes"
-  platform: douyu
-  confidence: high
-  duration_min: 165
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2a8d3f7f631a408bb82dc80953bba4e3.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac31696915"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-03-live-01
+    type: live
+    date: "2021-11-03"
+    title: "House Of Ashes"
+    platform: douyu
+    confidence: high
+    duration_min: 165
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2a8d3f7f631a408bb82dc80953bba4e3.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac31696915"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-05-live-01
-  type: live
-  date: "2021-11-05"
-  title: "Unpacking"
-  platform: douyu
-  confidence: high
-  duration_min: 166
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_550c826c82284e1ba8957409fd84a0bd.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac31765818"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-05-live-01
+    type: live
+    date: "2021-11-05"
+    title: "Unpacking"
+    platform: douyu
+    confidence: high
+    duration_min: 166
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_550c826c82284e1ba8957409fd84a0bd.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac31765818"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-07-live-01
-  type: live
-  date: "2021-11-07"
-  title: "24"
-  platform: douyu
-  confidence: high
-  duration_min: 135
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d93005f375de4f88a663ad066e5667ec.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32492104"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-07-live-01
+    type: live
+    date: "2021-11-07"
+    title: "24"
+    platform: douyu
+    confidence: high
+    duration_min: 135
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d93005f375de4f88a663ad066e5667ec.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32492104"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-07-live-02
-  type: live
-  date: "2021-11-07"
-  title: "25"
-  platform: douyu
-  confidence: high
-  duration_min: 133
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_585086e62a8341b7b225536daa31eebe.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32549028"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-07-live-02
+    type: live
+    date: "2021-11-07"
+    title: "25"
+    platform: douyu
+    confidence: high
+    duration_min: 133
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_585086e62a8341b7b225536daa31eebe.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32549028"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-07-live-03
-  type: live
-  date: "2021-11-07"
-  title: "26"
-  platform: douyu
-  confidence: high
-  duration_min: 166
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f115c6c88a87400186f2e5c08b5a6b98.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32564231"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-07-live-03
+    type: live
+    date: "2021-11-07"
+    title: "26"
+    platform: douyu
+    confidence: high
+    duration_min: 166
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f115c6c88a87400186f2e5c08b5a6b98.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32564231"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-11-live-01
-  type: live
-  date: "2021-11-11"
-  title: "雀士"
-  platform: douyu
-  confidence: high
-  duration_min: 194
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_25d5b5be286b4382ae5a1dabfcecce27.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32057095"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2021-11-11-live-01
+    type: live
+    date: "2021-11-11"
+    title: "雀士"
+    platform: douyu
+    confidence: high
+    duration_min: 194
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_25d5b5be286b4382ae5a1dabfcecce27.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32057095"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-12-live-01
-  type: live
-  date: "2021-11-12"
-  title: "Phasmophobia"
-  platform: douyu
-  confidence: high
-  duration_min: 233
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_38311f1dc57f4888a3e54e97ec0f1560.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32072563"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2021-11-12-live-01
+    type: live
+    date: "2021-11-12"
+    title: "Phasmophobia"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_38311f1dc57f4888a3e54e97ec0f1560.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32072563"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-12-live-02
-  type: live
-  date: "2021-11-12"
-  title: "黑魂4荒野之息"
-  platform: douyu
-  confidence: high
-  duration_min: 186
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6b04c7e518e6431aa1b135d5070b7ee2.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32072712"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-12-live-02
+    type: live
+    date: "2021-11-12"
+    title: "黑魂4荒野之息"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6b04c7e518e6431aa1b135d5070b7ee2.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32072712"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-13-live-01
-  type: live
-  date: "2021-11-13"
-  title: "Elden Ring"
-  platform: douyu
-  confidence: high
-  duration_min: 225
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d837f1a7ae9a4ee5be1f2d38388f3fb5.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac32081571"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2021-11-13-live-01
+    type: live
+    date: "2021-11-13"
+    title: "Elden Ring"
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d837f1a7ae9a4ee5be1f2d38388f3fb5.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac32081571"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-14-live-01
-  type: live
-  date: "2021-11-14"
-  title: "Elden Ring"
-  platform: douyu
-  confidence: high
-  duration_min: 186
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c19bfd4b5e6b4f20a848d9626063d90d.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac32127983"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-14-live-01
+    type: live
+    date: "2021-11-14"
+    title: "Elden Ring"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c19bfd4b5e6b4f20a848d9626063d90d.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac32127983"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-15-live-01
-  type: live
-  date: "2021-11-15"
-  title: "Elden Ring"
-  platform: douyu
-  confidence: high
-  duration_min: 220
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_017bab67beb34f82a8fe0f61a01c274a.jpeg?imageslim"
-  games: [elden-ring]
-  sources:
-    - url: "https://www.acfun.cn/v/ac32173345"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2021-11-15-live-01
+    type: live
+    date: "2021-11-15"
+    title: "Elden Ring"
+    platform: douyu
+    confidence: high
+    duration_min: 220
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_017bab67beb34f82a8fe0f61a01c274a.jpeg?imageslim"
+    games: [elden-ring]
+    sources:
+      - url: "https://www.acfun.cn/v/ac32173345"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-16-live-01
-  type: live
-  date: "2021-11-16"
-  title: "佩奇一哈哈"
-  platform: douyu
-  confidence: high
-  duration_min: 172
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e6a866f28aaa4c7a95f43f655506ac31.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32243778"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-16-live-01
+    type: live
+    date: "2021-11-16"
+    title: "佩奇一哈哈"
+    platform: douyu
+    confidence: high
+    duration_min: 172
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e6a866f28aaa4c7a95f43f655506ac31.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32243778"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-17-live-01
-  type: live
-  date: "2021-11-17"
-  title: "ALTF4"
-  platform: douyu
-  confidence: high
-  duration_min: 125
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2e03c5b3871a4918b0467f9512a3977d.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32260925"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-17-live-01
+    type: live
+    date: "2021-11-17"
+    title: "ALTF4"
+    platform: douyu
+    confidence: high
+    duration_min: 125
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2e03c5b3871a4918b0467f9512a3977d.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32260925"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-17-live-02
-  type: live
-  date: "2021-11-17"
-  title: "笼中窥梦"
-  platform: douyu
-  confidence: high
-  duration_min: 227
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c722b2e8e5cc43378978b41719ed3529.png?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32260283"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2021-11-17-live-02
+    type: live
+    date: "2021-11-17"
+    title: "笼中窥梦"
+    platform: douyu
+    confidence: high
+    duration_min: 227
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c722b2e8e5cc43378978b41719ed3529.png?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32260283"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-18-live-01
-  type: live
-  date: "2021-11-18"
-  title: "ALTF4"
-  platform: douyu
-  confidence: high
-  duration_min: 186
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd0c6f6d03b043b88abeac232b7acbcb.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32400395"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-18-live-01
+    type: live
+    date: "2021-11-18"
+    title: "ALTF4"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd0c6f6d03b043b88abeac232b7acbcb.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32400395"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-27-live-01
-  type: live
-  date: "2021-11-27"
-  title: "雀圣"
-  platform: douyu
-  confidence: high
-  duration_min: 137
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6e8b67e9ff8d42e094751a2389a5f6b8.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32574369"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-27-live-01
+    type: live
+    date: "2021-11-27"
+    title: "雀圣"
+    platform: douyu
+    confidence: high
+    duration_min: 137
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6e8b67e9ff8d42e094751a2389a5f6b8.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32574369"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-28-live-01
-  type: live
-  date: "2021-11-28"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 198
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e35e48b043eb48b080fd6176c17c4e3a.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac32585614"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2021-11-28-live-01
+    type: live
+    date: "2021-11-28"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 198
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e35e48b043eb48b080fd6176c17c4e3a.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac32585614"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-28-live-02
-  type: live
-  date: "2021-11-28"
-  title: "雀圣"
-  platform: douyu
-  confidence: high
-  duration_min: 140
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1baee79e8bfe46ea9ec2ea6316eed1d7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32584787"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-28-live-02
+    type: live
+    date: "2021-11-28"
+    title: "雀圣"
+    platform: douyu
+    confidence: high
+    duration_min: 140
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1baee79e8bfe46ea9ec2ea6316eed1d7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32584787"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-29-live-01
-  type: live
-  date: "2021-11-29"
-  title: "雀圣"
-  platform: douyu
-  confidence: high
-  duration_min: 126
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d9e53e7ee3bf468e854933299b2729d4.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac32598175"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2021-11-29-live-01
+    type: live
+    date: "2021-11-29"
+    title: "雀圣"
+    platform: douyu
+    confidence: high
+    duration_min: 126
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d9e53e7ee3bf468e854933299b2729d4.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac32598175"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2021-11-31-live-01
-  type: live
-  date: "2021-11-31"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 142
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb6e4c5448e2459e81854753c1ddca2f.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac31636579"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2021-11-31-live-01
+    type: live
+    date: "2021-11-31"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 142
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb6e4c5448e2459e81854753c1ddca2f.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac31636579"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent

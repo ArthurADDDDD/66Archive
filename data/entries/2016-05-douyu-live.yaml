@@ -1,314 +1,335 @@
-- id: 2016-05-02-live-01
-  type: live
-  date: "2016-05-02"
-  title: "黑暗之魂3第三天"
-  platform: douyu
-  confidence: high
-  duration_min: 188
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714445.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2726626"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-02-live-01
+    type: live
+    date: "2016-05-02"
+    title: "黑暗之魂3第三天"
+    platform: douyu
+    confidence: high
+    duration_min: 188
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714445.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2726626"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-03-live-01
-  type: live
-  date: "2016-05-03"
-  title: "黑暗之魂3第四天"
-  platform: douyu
-  confidence: high
-  duration_min: 170
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714694.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2726624"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-03-live-01
+    type: live
+    date: "2016-05-03"
+    title: "黑暗之魂3第四天"
+    platform: douyu
+    confidence: high
+    duration_min: 170
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714694.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2726624"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-04-live-01
-  type: live
-  date: "2016-05-04"
-  title: "黑暗之魂3第五天"
-  platform: douyu
-  confidence: high
-  duration_min: 193
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889405.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2731730"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-04-live-01
+    type: live
+    date: "2016-05-04"
+    title: "黑暗之魂3第五天"
+    platform: douyu
+    confidence: high
+    duration_min: 193
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889405.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2731730"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-05-live-01
-  type: live
-  date: "2016-05-05"
-  title: "黑暗之魂3第六天"
-  platform: douyu
-  confidence: high
-  duration_min: 171
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889582.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2731736"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-05-live-01
+    type: live
+    date: "2016-05-05"
+    title: "黑暗之魂3第六天"
+    platform: douyu
+    confidence: high
+    duration_min: 171
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889582.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2731736"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-06-live-01
-  type: live
-  date: "2016-05-06"
-  title: "黑暗之魂3第七天"
-  platform: douyu
-  confidence: high
-  duration_min: 175
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889697.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2731789"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-06-live-01
+    type: live
+    date: "2016-05-06"
+    title: "黑暗之魂3第七天"
+    platform: douyu
+    confidence: high
+    duration_min: 175
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889697.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2731789"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-08-live-01
-  type: live
-  date: "2016-05-08"
-  title: "8日"
-  platform: douyu
-  confidence: high
-  duration_min: 149
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_11/1462957055.gif?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2734298"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-05-08-live-01
+    type: live
+    date: "2016-05-08"
+    title: "8日"
+    platform: douyu
+    confidence: high
+    duration_min: 149
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_11/1462957055.gif?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2734298"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-08-live-02
-  type: live
-  date: "2016-05-08"
-  title: "黑暗之魂3第八天"
-  platform: douyu
-  confidence: high
-  duration_min: 72
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_09/1462807657.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2729380"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-05-08-live-02
+    type: live
+    date: "2016-05-08"
+    title: "黑暗之魂3第八天"
+    platform: douyu
+    confidence: high
+    duration_min: 72
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_09/1462807657.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2729380"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-09-live-01
-  type: live
-  date: "2016-05-09"
-  title: "黑暗之魂3第九天-完结"
-  platform: douyu
-  confidence: high
-  duration_min: 80
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462891334.jpg?imageslim"
-  games: [dark-souls-3]
-  sources:
-    - url: "https://www.acfun.cn/v/ac2731879"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-05-09-live-01
+    type: live
+    date: "2016-05-09"
+    title: "黑暗之魂3第九天-完结"
+    platform: douyu
+    confidence: high
+    duration_min: 80
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462891334.jpg?imageslim"
+    games: [dark-souls-3]
+    sources:
+      - url: "https://www.acfun.cn/v/ac2731879"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-10-live-01
-  type: live
-  date: "2016-05-10"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 366
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_11/1462980803.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2734541"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2016-05-10-live-01
+    type: live
+    date: "2016-05-10"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 366
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_11/1462980803.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2734541"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-11-live-01
-  type: live
-  date: "2016-05-11"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 151
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_12/1463017953.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2735016"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-05-11-live-01
+    type: live
+    date: "2016-05-11"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 151
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_12/1463017953.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2735016"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-16-live-01
-  type: live
-  date: "2016-05-16"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 282
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_16/1463433905.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2747170"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2016-05-16-live-01
+    type: live
+    date: "2016-05-16"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 282
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_16/1463433905.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2747170"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-17-live-01
-  type: live
-  date: "2016-05-17"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_17/1463492112.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2749217"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-17-live-01
+    type: live
+    date: "2016-05-17"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_17/1463492112.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2749217"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-19-live-01
-  type: live
-  date: "2016-05-19"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_19/1463684008.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2754485"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2016-05-19-live-01
+    type: live
+    date: "2016-05-19"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_19/1463684008.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2754485"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-20-live-01
-  type: live
-  date: "2016-05-20"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 274
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_20/1463758766.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2757146"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-20-live-01
+    type: live
+    date: "2016-05-20"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_20/1463758766.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2757146"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-22-live-01
-  type: live
-  date: "2016-05-22"
-  title: "22日"
-  platform: douyu
-  confidence: high
-  duration_min: 121
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_23/1463965869.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2762062"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-05-22-live-01
+    type: live
+    date: "2016-05-22"
+    title: "22日"
+    platform: douyu
+    confidence: high
+    duration_min: 121
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_23/1463965869.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2762062"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-23-live-01
-  type: live
-  date: "2016-05-23"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 270
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_23/1464019166.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2764008"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2016-05-23-live-01
+    type: live
+    date: "2016-05-23"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_23/1464019166.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2764008"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-24-live-01
-  type: live
-  date: "2016-05-24"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 277
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_25/1464164507.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2768116"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2016-05-24-live-01
+    type: live
+    date: "2016-05-24"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 277
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_25/1464164507.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2768116"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-25-live-01
-  type: live
-  date: "2016-05-25"
-  title: "宝宝生病了"
-  platform: douyu
-  confidence: high
-  duration_min: 51
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_25/1464184369.PNG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2768648"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-05-25-live-01
+    type: live
+    date: "2016-05-25"
+    title: "宝宝生病了"
+    platform: douyu
+    confidence: high
+    duration_min: 51
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_25/1464184369.PNG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2768648"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-26-live-01
-  type: live
-  date: "2016-05-26"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 231
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_26/1464303913.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2771725"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-26-live-01
+    type: live
+    date: "2016-05-26"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_26/1464303913.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2771725"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-27-live-01
-  type: live
-  date: "2016-05-27"
-  title: "DQ建造者"
-  platform: douyu
-  confidence: high
-  duration_min: 125
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_05_27/1464356560.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2774058"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-05-27-live-01
+    type: live
+    date: "2016-05-27"
+    title: "DQ建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 125
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_27/1464356560.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2774058"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-05-31-live-01
-  type: live
-  date: "2016-05-31"
-  title: "逆袭"
-  platform: douyu
-  confidence: high
-  duration_min: 170
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464744618.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2783777"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2016-05-31-live-01
+    type: live
+    date: "2016-05-31"
+    title: "逆袭"
+    platform: douyu
+    confidence: high
+    duration_min: 170
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464744618.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2783777"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent

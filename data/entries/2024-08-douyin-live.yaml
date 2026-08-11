@@ -3,16 +3,18 @@
 # 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
 # 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
 
-- id: 2024-08-18-live-01
-  type: live
-  date: "2024-08-18"
-  title: "2024-08-18 首秀"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/2343cfd4ddfa91ff389267db6643b738adb89b4a.jpg"
-  confidence: medium
-  games: []
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV16wpreAEto"
-      kind: replay
-  contributed_by: data-agent
+  - id: 2024-08-18-live-01
+    type: live
+    date: "2024-08-18"
+    title: "2024-08-18 首秀"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/2343cfd4ddfa91ff389267db6643b738adb89b4a.jpg"
+    confidence: medium
+    games: []
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV16wpreAEto"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 327
