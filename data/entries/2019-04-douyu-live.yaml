@@ -214,10 +214,11 @@
 - id: 2019-04-27-live-01
   type: live
   date: "2019-04-27"
-  title: "戏说封神"
+  title: "戏说封神第四期"
   platform: douyu
   confidence: high
   games: []
+  note: "视频 P1/P2 标题均为『女流-2019.4.27-戏说封神第四期』，确认本期为该系列第四期（原条目标题漏标期数，已补齐）。"
   sources:
     - url: "https://www.acfun.cn/v/ac10164751"
       kind: replay
@@ -226,11 +227,12 @@
 - id: 2019-04-27-live-02
   type: live
   date: "2019-04-27"
-  title: "聊天"
+  title: "聊天封神看电影"
   platform: douyu
   confidence: high
   games: []
   tags: [聊天]
+  note: "目录标题为『女流-2019.4.27-聊天封神看电影』；视频 P1『先聊10块钱的再封神』+ P2『电影之前把神先封了』，内容为聊天+封神+看电影。当日另一视频 ac10164751 为《戏说封神第四期》。"
   sources:
     - url: "https://www.acfun.cn/v/ac10164722"
       kind: replay

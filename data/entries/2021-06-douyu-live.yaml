@@ -276,21 +276,11 @@
   platform: douyu
   confidence: high
   games: []
-  tags: [心灵砒霜]
+  tags: [心灵砒霜, 弹幕版]
+  note: "同一场直播的弹幕版（ac30088639，5P：砒霜前聊×2+心灵砒霜×3）与纯净版（ac30077895，5P：砒霜前聊+心灵砒霜×4）原本被建模为两条重复条目，已合并；主来源为弹幕版。"
   sources:
     - url: "https://www.acfun.cn/v/ac30088639"
       kind: replay
-  contributed_by: data-agent
-
-- id: 2021-06-27-live-02
-  type: live
-  date: "2021-06-27"
-  title: "砒霜前聊10块钱的"
-  platform: douyu
-  confidence: high
-  games: []
-  tags: [砒霜前聊10块钱的]
-  sources:
     - url: "https://www.acfun.cn/v/ac30077895"
       kind: replay
   contributed_by: data-agent
