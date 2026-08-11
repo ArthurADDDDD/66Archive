@@ -131,7 +131,8 @@ export function Timeline({
     if (filters.onlyAlive && entry.aliveCount === 0) return false
     const q = filters.q.trim().toLowerCase()
     if (includeSearch && q) {
-      const haystack = `${entry.title} ${entry.games.map((game) => game.name).join(' ')} ${entry.tags.join(' ')} ${entry.seriesName ?? ''}`
+      const sourceTitles = entry.sources.map((source) => source.entryTitle).join(' ')
+      const haystack = `${entry.title} ${sourceTitles} ${entry.games.map((game) => game.name).join(' ')} ${entry.tags.join(' ')} ${entry.seriesName ?? ''}`
       if (!haystack.toLowerCase().includes(q)) return false
     }
     return true

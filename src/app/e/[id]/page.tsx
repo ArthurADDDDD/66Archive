@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getDataset } from '@/lib/data'
+import { buildSourceGroups, getDataset } from '@/lib/data'
 import { PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, withTimestamp } from '@/lib/platforms'
 import { formatDuration, gameColor } from '@/lib/ui'
 import { toSeconds, type Platform } from '@/lib/schema'
@@ -17,12 +17,16 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   if (idx === -1) notFound()
 
   const entry = ds.entries[idx]
+  const sourceGroup = buildSourceGroups(ds.entries).get(entry.id) ?? [entry]
+  const groupedSources = sourceGroup
+    .flatMap((item) => item.sources.map((source) => ({ ...source, entryTitle: item.title })))
+    .filter((source, index, all) => all.findIndex((candidate) => candidate.url === source.url) === index)
   const newer = ds.entries[idx - 1]
   const older = ds.entries[idx + 1]
   const platform = PLATFORM_META[entry.platform as Platform]
   const totalSec = (entry.duration_min ?? 0) * 60
   const cover = proxyImage(entry.cover, 720)
-  const primary = entry.sources[0]
+  const primary = groupedSources.find((source) => source.status === 'alive') ?? groupedSources[0]
   const backHref = `/chronicle/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
 
   const related = ds.entries
@@ -141,20 +145,24 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       {/* 来源：同一场的官方回放与各路录播 */}
       <section className="mt-10">
         <h2 className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-          来源 · {entry.sources.length}
+          来源 · {groupedSources.length}
         </h2>
-        {entry.sources.length === 0 ? (
+        {groupedSources.length === 0 ? (
           <p className="text-[13px] text-muted">还没有可用链接。如果你手上有，欢迎补录。</p>
         ) : (
           <ul className="divide-y divide-line rounded border border-line">
-            {entry.sources.map((s, i) => {
+            {groupedSources.map((s, i) => {
               const acc = s.account ? ds.accounts.get(s.account) : undefined
               const dead = s.status === 'dead'
               const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
                 <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2.5 transition-colors duration-200 hover:bg-surface/80">
+                  <span className={`rounded-sm border px-1.5 py-0.5 font-mono text-[10px] ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
+                    {i === 0 ? '主链接' : `备选 ${i}`}
+                  </span>
                   <span className="font-mono text-[11px] text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
                   {acc && <span className="text-[12px] text-ink">{acc.name}</span>}
+                  {s.entryTitle !== entry.title && <span className="max-w-full truncate text-[12px] text-faint">{s.entryTitle}</span>}
                   {s.parts && <span className="font-mono text-[11px] text-faint tnum">{s.parts} P</span>}
                   <span className={`font-mono text-[11px] ${s.status === 'alive' ? 'text-live/80' : dead ? 'text-today/80' : 'text-faint'}`}>
                     {statusLabel}

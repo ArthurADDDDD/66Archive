@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
-import { PLATFORM_META, proxyImage } from '@/lib/platforms'
+import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
 
@@ -24,9 +25,12 @@ export function EntryRow({
   const platform = PLATFORM_META[entry.platform as Platform]
   const h = barHeight(entry)
   const dead = entry.sourceCount > 0 && entry.deadCount === entry.sourceCount
-  const destination = entry.primaryUrl ?? `/e/${entry.id}/`
+  const defaultSourceIndex = Math.max(0, entry.sources.findIndex((source) => source.url === entry.primaryUrl))
+  const [sourceIndex, setSourceIndex] = useState(defaultSourceIndex)
+  const selectedSource = entry.sources[sourceIndex] ?? entry.sources[0]
+  const destination = selectedSource?.url ?? `/e/${entry.id}/`
   const cover = proxyImage(entry.cover ?? undefined, 640)
-  const opensSource = Boolean(entry.primaryUrl)
+  const opensSource = Boolean(selectedSource)
 
   return (
     <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
@@ -103,7 +107,7 @@ export function EntryRow({
                 {g.name}
               </span>
             ))}
-            {entry.sourceCount > 1 && <span className="text-muted">{entry.sourceCount} 源</span>}
+            {entry.sourceCount > 1 && <span className="text-muted">1 主 + {entry.sourceCount - 1} 备选</span>}
             {entry.aliveCount > 0 && <span className="text-live/80">已核验</span>}
             {entry.aliveCount === 0 && entry.uncheckedCount > 0 && <span className="text-faint">来源未复查</span>}
             {entry.confidence === 'low' && (
@@ -143,7 +147,7 @@ export function EntryRow({
 
                 <div className="flex min-w-0 flex-col p-4 sm:p-5">
                   <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-                    {opensSource ? '点击标题或封面打开原平台' : '当前没有外部来源'}
+                    {opensSource ? '选择来源，再点击标题或封面打开原平台' : '当前没有外部来源'}
                   </p>
                   <Link
                     href={destination}
@@ -151,7 +155,7 @@ export function EntryRow({
                     rel={opensSource ? 'noopener noreferrer' : undefined}
                     className="mt-2 block text-[17px] font-medium leading-snug text-ink transition-colors hover:text-live"
                   >
-                    {entry.title} <span className="font-mono text-[11px] text-live">{opensSource ? '↗' : '→'}</span>
+                    {selectedSource?.entryTitle ?? entry.title} <span className="font-mono text-[11px] text-live">{opensSource ? '↗' : '→'}</span>
                   </Link>
 
                   <div className="mt-2 flex flex-wrap gap-x-2.5 gap-y-1 font-mono text-[10px] text-faint tnum">
@@ -164,6 +168,35 @@ export function EntryRow({
                     <SegmentBar entry={entry} />
                   </div>
 
+                  {entry.sources.length > 1 && (
+                    <div className="mt-4 border-t border-line pt-4">
+                      <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">选择录像来源</p>
+                      <div className="flex flex-wrap gap-2">
+                        {entry.sources.map((source, index) => {
+                          const sourcePlatform = detectPlatform(source.url)
+                          const sourceMeta = sourcePlatform ? PLATFORM_META[sourcePlatform] : undefined
+                          const active = index === sourceIndex
+                          return (
+                            <button
+                              key={source.url}
+                              type="button"
+                              aria-pressed={active}
+                              onClick={() => setSourceIndex(index)}
+                              title={source.entryTitle}
+                              className={`ui-press rounded-md border px-2.5 py-1.5 text-left font-mono text-[10px] transition-colors ${
+                                active ? 'border-live bg-live/10 text-ink' : 'border-line bg-base/45 text-muted hover:border-muted hover:text-ink'
+                              }`}
+                            >
+                              <span style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
+                              <span className="ml-1.5 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
+                              {source.accountName && <span className="ml-1.5 text-faint">{source.accountName}</span>}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                   {entry.tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {entry.tags.map((tag) => (
@@ -174,7 +207,8 @@ export function EntryRow({
 
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 font-mono text-[10px]">
                     <span className="text-faint">
-                      {entry.sourceCount} 个来源
+                      {entry.sourceCount > 1 ? `1 个主链接 · ${entry.sourceCount - 1} 个备选` : `${entry.sourceCount} 个来源`}
+                      {entry.mergedEntryCount > 0 && ` · 已折叠 ${entry.mergedEntryCount} 条同场记录`}
                       {entry.aliveCount > 0 && ` · ${entry.aliveCount} 个已核验`}
                       {entry.uncheckedCount > 0 && ` · ${entry.uncheckedCount} 个未复查`}
                       {entry.deadCount > 0 && ` · ${entry.deadCount} 个失效`}
