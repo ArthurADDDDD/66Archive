@@ -26,6 +26,7 @@ export function EntryRow({
   const platform = PLATFORM_META[entry.platform as Platform]
   const h = barHeight(entry)
   const dead = entry.sourceCount > 0 && entry.deadCount === entry.sourceCount
+  const destination = entry.primaryUrl ?? `/e/${entry.id}/`
 
   return (
     <article
@@ -78,8 +79,11 @@ export function EntryRow({
         {/* 内容 */}
         <div className="min-w-0 flex-1 pb-1">
           <Link
-            href={`/e/${entry.id}/`}
+            href={destination}
+            target={entry.primaryUrl ? '_blank' : undefined}
+            rel={entry.primaryUrl ? 'noopener noreferrer' : undefined}
             className="hidden w-full text-left lg:block"
+            title={entry.primaryUrl ? '打开原平台' : '查看详情'}
           >
             <h3
               className={`truncate text-[15px] leading-snug transition-colors group-hover:text-white ${

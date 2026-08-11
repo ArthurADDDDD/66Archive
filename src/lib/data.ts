@@ -80,6 +80,8 @@ export type TimelineEntry = {
   games: { id: string; name: string }[]
   tags: string[]
   cover: string | null
+  /** 首个来源的原平台地址，列表标题可直接打开。 */
+  primaryUrl: string | null
   confidence: string
   sourceCount: number
   /** 明确标记为 alive 的来源数；unchecked 不能冒充已核验可用。 */
@@ -125,6 +127,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       games: e.games.map((g) => ({ id: g, name: ds.games.get(g)?.name ?? g })),
       tags: e.tags,
       cover: e.cover ?? null,
+      primaryUrl: e.sources[0]?.url ?? null,
       confidence: e.confidence,
       sourceCount: e.sources.length,
       aliveCount: e.sources.filter((s) => s.status === 'alive').length,
