@@ -253,33 +253,42 @@ export function Timeline({
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  useEffect(() => {
+    if (!sheetOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [sheetOpen])
+
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
+      <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
           <SiteNav active="chronicle" />
-          <div className="relative order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
+          <div className="group/search relative order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
             <input
               ref={searchRef}
               value={filters.q}
               onChange={(event) => set({ q: event.target.value })}
               placeholder={`搜索全部 ${entries.length.toLocaleString()} 条记录`}
               aria-label="搜索全部记录"
-              className="w-full rounded-md border border-line bg-surface py-2 pl-3 pr-9 text-[12px] text-ink placeholder:text-faint focus:border-live focus:outline-none"
+              className="w-full rounded-md border border-line bg-surface py-2 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none"
             />
-            <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint">/</kbd>
+            <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint transition-[opacity,transform] duration-200 group-focus-within/search:translate-x-1 group-focus-within/search:opacity-0">/</kbd>
           </div>
           <button
             onClick={() => setSheetOpen(true)}
-            className="relative shrink-0 rounded-md border border-line bg-surface px-3 py-2 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink"
+            className="ui-press relative shrink-0 rounded-md border border-line bg-surface px-3 py-2 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)]"
           >
             筛选{dirtyCount > 0 && <span className="ml-1.5 text-live">{dirtyCount}</span>}
           </button>
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1400px] px-4 pb-16 sm:px-6">
-        <section className="py-8 sm:py-10">
+      <main className="ui-page-in mx-auto max-w-[1400px] px-4 pb-16 sm:px-6">
+        <section className="ui-reveal py-8 sm:py-10">
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-live">2010 — {latestYear}</p>
@@ -309,7 +318,7 @@ export function Timeline({
           )}
         </section>
 
-        <section aria-label="时间定位" className="rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
+        <section aria-label="时间定位" className="ui-reveal ui-delay-1 rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
           <div className="grid gap-2 sm:grid-cols-3">
             {ERAS.map((era) => {
               const active = era.id === activeEra.id && !searching
@@ -322,7 +331,7 @@ export function Timeline({
                   key={era.id}
                   onClick={() => selectEra(era)}
                   aria-pressed={active}
-                  className={`flex items-center justify-between rounded-lg border px-4 py-3 text-left transition-colors ${active ? 'bg-raised text-ink' : 'border-line bg-base/30 text-muted hover:bg-raised/60'}`}
+                  className={`ui-card ui-press flex items-center justify-between rounded-lg border px-4 py-3 text-left ${active ? 'bg-raised text-ink shadow-[0_10px_35px_rgba(0,0,0,0.14)]' : 'border-line bg-base/30 text-muted hover:bg-raised/60'}`}
                   style={{ borderColor: active ? era.color : undefined }}
                 >
                   <span>
@@ -353,7 +362,7 @@ export function Timeline({
                       selectYear(year)
                     }}
                     aria-current={active ? 'true' : undefined}
-                    className={`min-h-[116px] rounded-lg border p-3 text-left transition-colors ${active ? 'border-live bg-live/10' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
+                    className={`ui-card ui-press min-h-[116px] rounded-lg border p-3 text-left ${active ? 'border-live bg-live/10 shadow-[0_12px_36px_rgba(91,200,232,0.08)]' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
                   >
                     <span className="flex items-baseline justify-between">
                       <span className={`font-display text-[20px] font-bold tnum ${active ? 'text-live' : 'text-ink'}`}>{year}</span>
@@ -377,7 +386,7 @@ export function Timeline({
           </div>
         </section>
 
-        <section className="mt-7">
+        <section className="ui-reveal ui-delay-2 mt-7">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">{searching ? '全库搜索结果' : `${activeEra.label} / ${activeYear}`}</p>
@@ -404,7 +413,10 @@ export function Timeline({
           ) : !searching && activeMonth === null ? (
             <MonthArchive summaries={monthSummaries} onSelect={selectMonth} hrefFor={(month) => hrefFor(activeYear, month)} />
           ) : (
-            <div className="max-w-[1080px] divide-y divide-line/50">
+            <div
+              key={searching ? 'search-results' : `${activeYear}-${activeMonth}`}
+              className={`ui-content-swap max-w-[1080px] divide-y divide-line/50 ${searching ? '' : 'ui-stagger'}`}
+            >
                 {rendered.map((entry, index) => {
                   const year = entry.date.slice(0, 4)
                   const previousYear = rendered[index - 1]?.date.slice(0, 4)
@@ -433,14 +445,14 @@ export function Timeline({
 
       {sheetOpen && (
         <div className="fixed inset-0 z-50">
-          <button aria-label="关闭筛选" onClick={() => setSheetOpen(false)} className="absolute inset-0 bg-base/80 backdrop-blur-sm" />
-          <div className="absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5 sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:rounded-xl sm:border">
+          <button aria-label="关闭筛选" onClick={() => setSheetOpen(false)} className="ui-backdrop-in absolute inset-0 bg-base/80 backdrop-blur-sm" />
+          <div className="ui-sheet-in absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5 shadow-[0_-20px_70px_rgba(0,0,0,0.3)] sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:origin-top-right sm:rounded-xl sm:border sm:shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
             <div className="mb-5 flex items-center justify-between border-b border-line pb-3">
               <div>
                 <h3 className="text-[14px] font-medium text-ink">筛选记录</h3>
                 <p className="mt-0.5 font-mono text-[10px] text-faint">搜索词会跨全部年份生效</p>
               </div>
-              <button onClick={() => setSheetOpen(false)} className="font-mono text-[11px] text-live">完成</button>
+              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-1 font-mono text-[11px] text-live hover:bg-live/10">完成</button>
             </div>
             <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>
@@ -464,7 +476,7 @@ function MonthArchive({
       <p className="mb-4 max-w-2xl text-[12px] leading-relaxed text-muted">
         下面是这一年的月度年表。标题均来自现有记录，仅作为寻找内容的线索；点击月份后再展开全部条目。
       </p>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="ui-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => {
           const summary = summaries.get(month)
           const content = (
@@ -497,7 +509,7 @@ function MonthArchive({
                 event.preventDefault()
                 onSelect(month)
               }}
-              className="min-h-[148px] rounded-xl border border-line bg-surface/45 p-4 text-left transition-all hover:-translate-y-0.5 hover:border-live/60 hover:bg-raised/70 hover:shadow-[0_14px_40px_rgba(91,200,232,0.08)]"
+              className="ui-card ui-press min-h-[148px] rounded-xl border border-line bg-surface/45 p-4 text-left hover:border-live/60 hover:bg-raised/70 hover:shadow-[0_14px_40px_rgba(91,200,232,0.08)]"
             >
               {content}
             </a>

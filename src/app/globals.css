@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: dark;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft-spring: cubic-bezier(0.22, 1.15, 0.36, 1);
 }
 
 html {
@@ -30,7 +32,9 @@ body {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -58,4 +62,160 @@ body {
 
 .tnum {
   font-variant-numeric: tabular-nums;
+}
+
+/* 统一的动效语言：短、轻、带方向，并且不改变文档流高度。 */
+@keyframes ui-page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ui-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ui-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ui-sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ui-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ui-avatar-in {
+  from {
+    opacity: 0;
+    filter: blur(5px) saturate(0.7);
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0) saturate(1);
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .ui-page-in {
+    animation: ui-page-in 520ms var(--ease-out-expo) both;
+  }
+
+  .ui-slide-down {
+    animation: ui-slide-down 420ms var(--ease-out-expo) both;
+  }
+
+  .ui-reveal {
+    animation: ui-page-in 560ms var(--ease-out-expo) both;
+  }
+
+  .ui-delay-1 { animation-delay: 80ms; }
+  .ui-delay-2 { animation-delay: 150ms; }
+
+  .ui-panel-in {
+    transform-origin: top center;
+    animation: ui-panel-in 360ms var(--ease-out-expo) both;
+  }
+
+  .ui-sheet-in {
+    transform-origin: bottom center;
+    animation: ui-sheet-in 380ms var(--ease-out-expo) both;
+  }
+
+  .ui-backdrop-in {
+    animation: ui-backdrop-in 220ms ease-out both;
+  }
+
+  .ui-content-swap {
+    animation: ui-page-in 320ms var(--ease-out-expo) both;
+  }
+
+  .ui-avatar-in {
+    animation: ui-avatar-in 620ms var(--ease-out-expo) both;
+  }
+
+  .ui-card {
+    transition:
+      transform 260ms var(--ease-out-expo),
+      border-color 220ms ease,
+      background-color 220ms ease,
+      box-shadow 260ms ease;
+  }
+
+  .ui-press {
+    transition:
+      transform 180ms var(--ease-soft-spring),
+      border-color 180ms ease,
+      background-color 180ms ease,
+      color 180ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .ui-stagger > * {
+    animation: ui-page-in 420ms var(--ease-out-expo) both;
+  }
+
+  .ui-stagger > :nth-child(2) { animation-delay: 30ms; }
+  .ui-stagger > :nth-child(3) { animation-delay: 60ms; }
+  .ui-stagger > :nth-child(4) { animation-delay: 90ms; }
+  .ui-stagger > :nth-child(5) { animation-delay: 120ms; }
+  .ui-stagger > :nth-child(6) { animation-delay: 150ms; }
+  .ui-stagger > :nth-child(n + 7) { animation-delay: 180ms; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ui-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .ui-press:hover {
+    transform: translateY(-1px);
+  }
+}
+
+a[href],
+button:not(:disabled) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a[href]:active,
+button:not(:disabled):active,
+.ui-press:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.ui-card.ui-press:active {
+  transform: translateY(1px) scale(0.985);
 }
