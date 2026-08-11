@@ -32,7 +32,7 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate data
+    name: Validate and build
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -49,5 +49,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate schema and data
-        run: npm run validate
+      - name: Validate data and build static site
+        run: npm run build
