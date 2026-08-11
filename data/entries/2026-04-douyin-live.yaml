@@ -131,7 +131,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/a3a387c2c4c77d5340865b2fc66a80ad440a02cb.jpg"
     confidence: medium
-    games: []
+    games:
+      - bento-blocks
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -168,7 +169,9 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/fc294fa3c1baed3467e494336a096652a353ee91.jpg"
     confidence: medium
-    games: []
+    games:
+      - auction-king
+      - bento-blocks
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -247,7 +250,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/6de5f16cf77097337f4ed393cdc21a4b892ee881.jpg"
     confidence: high
-    games: []
+    games:
+      - nvdiao
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -288,7 +292,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/ab6bdb785ce8907afb6c69e37960e450d6e736ec.jpg"
     confidence: medium
-    games: []
+    games:
+      - auction-king
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -325,7 +330,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/005fd5987d6221145a43e3ab971069072228ba69.jpg"
     confidence: high
-    games: []
+    games:
+      - zheshi-xieyinggen
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -345,7 +351,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/1cc8189434adad710804923a723f76e8f5493a66.jpg"
     confidence: high
-    games: []
+    games:
+      - card-devil
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -365,7 +372,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/be0edee26a34ba605afc1173015f42ae4d6f514c.jpg"
     confidence: high
-    games: []
+    games:
+      - card-devil
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:

@@ -124,7 +124,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/a72cbf442be0667380ac61f845e981b6bae604d0.jpg"
     confidence: high
-    games: []
+    games:
+      - zheshi-xieyinggen
     tags: [弹幕版]
     note: "同一场直播（22:16 开播聊天→玩《这是谐音梗》→23:24 收尾）由 bobi华（1:23:00）、直播回放巴拉蹦吧（弹幕/纯净双版 1:25:47）、服部平次（1:24:12）与 不懒bot（1:25:00）分别搬运，标题各异但总时长吻合，已合并为一天一条。"
     sources:
@@ -144,7 +145,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/c8a97ceff01a7e8d6a6aa7c915a447b8851e4f0d.jpg"
     confidence: high
-    games: []
+    games:
+      - arknights-endfield
     tags: [弹幕版]
     note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 2:10:15）、bobi华（2:09:56）、服部平次（2:09:55）与 不懒bot（2:10:13）分别搬运，总时长吻合，已合并为一天一条。"
     sources:

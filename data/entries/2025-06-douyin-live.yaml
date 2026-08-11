@@ -85,7 +85,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/52947471b81c254c7aabd588aa430a526749192e.jpg"
     confidence: medium
-    games: []
+    games:
+      - dune-awakening
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1eLTuzUE6b"
@@ -221,7 +222,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/6afc04780b743c8b0d67acc12edb1c98013ec1be.jpg"
     confidence: medium
-    games: []
+    games:
+      - dune-awakening
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-06-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1iVT3zZEUK"
@@ -237,7 +239,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/037169b5e7a65a3d3e2d2b95f37781aab1541d3e.jpg"
     confidence: high
-    games: []
+    games:
+      - dune-awakening
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-06-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -355,7 +358,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/56a97661e36e4a8ddfbd1266fa3ff068078a1848.jpg"
     confidence: high
-    games: []
+    games:
+      - dune-awakening
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -431,7 +435,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/bc250608c1febfe7821e12080efcadc4b09b6ed9.jpg"
     confidence: medium
-    games: []
+    games:
+      - dune-awakening
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-13-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1CiMBzDEGJ"
@@ -447,7 +452,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/b832b9397c7719b7fde705fed3e197f1e5ef6a52.jpg"
     confidence: high
-    games: []
+    games:
+      - dune-awakening
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-13-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -579,7 +585,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/1868637a3d335cc2c4f556d17704dbea736cfad7.jpg"
     confidence: high
-    games: []
+    games:
+      - the-alters
     tags: [弹幕版]
     note: "同一场直播（19时场）由 bobi华（4:23:58）、安乐冈花火w（4:22:39）、怪盗基德KID（弹幕版）与 直播回放巴拉蹦吧（4:20:00）分别搬运，总时长吻合，已合并为一天一条。"
     sources:
@@ -635,7 +642,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/7c779e8f457a08997da23db9e95c0f3e912d9cb1.jpg"
     confidence: high
-    games: []
+    games:
+      - the-alters
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-23-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -655,7 +663,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/7bb56f77c34574ce5eff47d92dcd3b4b7c92218f.jpg"
     confidence: medium
-    games: []
+    games:
+      - the-alters
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-23-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1WWKhzfEs1"
