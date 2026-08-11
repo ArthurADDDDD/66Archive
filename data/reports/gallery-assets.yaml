@@ -1,0 +1,173 @@
+# 女流66 Gallery 素材清单 — 2026-08-11
+# 供前端 Codex 直接引用：每个 item 含 file / alt / caption / period
+# 图片存于 data/assets/avatars/ 和 data/assets/gallery/
+
+meta:
+  collected_by: data-agent
+  date: "2026-08-11"
+  sources: [wayback_machine, douyu_betard_api, bilibili_api, youku]
+
+# ============================================================
+# 头像时间线 — 斗鱼直播间 156277
+# ============================================================
+avatars:
+  - id: douyu_v1
+    file: data/assets/avatars/avatar_douyu_v1_2015.jpg
+    alt: "女流66 斗鱼头像 第一版"
+    caption: "初代头像，斗鱼开播 ~ 2017年4月"
+    period: "2015-01 ~ 2017-04"
+    dimensions: "192×207"
+
+  - id: douyu_v2
+    file: data/assets/avatars/avatar_douyu_v2_201712.jpg
+    alt: "女流66 斗鱼头像 第二版"
+    caption: "第二代头像，2017年12月19日更换"
+    period: "2017-12 ~ 2022-04"
+    dimensions: "200×198"
+
+  - id: douyu_v3
+    file: data/assets/avatars/avatar_douyu_v3_202204.jpg
+    alt: "女流66 斗鱼头像 第三版"
+    caption: "第三代头像（当前），2022年4月更换，停播后未变"
+    period: "2022-04 ~ 至今"
+    dimensions: "200×200"
+
+# ============================================================
+# 周年纪念封面 — 按时间排列
+# ============================================================
+gallery:
+  # ---- 2016：一周年 ----
+  - id: anniv_01
+    file: data/assets/gallery/anniv_01_1st_2016_bilibili.jpg
+    alt: "女流66 直播一周年纪念 2016年1月24日"
+    caption: "一周年直播纪念（B站超清搬运）。粉丝用《我的世界》搭建黄渤、约会、淘宝店版祝福模型，25万粉参与。"
+    date: "2016-01-24"
+    source: "bilibili BV1Rx411S7Ta"
+    dimensions: "1104×622"
+
+  - id: anniv_02
+    file: data/assets/gallery/anniv_02_1st_2016_fanmade.jpg
+    alt: "女流直播一周年纪念《致女流》粉丝自制"
+    caption: "一周年粉丝自制纪念视频《致女流》，BGM 陈一发儿《尚好的青春》。"
+    date: "2016-01-24"
+    source: "bilibili BV1zs411R7nJ"
+    dimensions: "639×399"
+
+  - id: anniv_03
+    file: data/assets/gallery/anniv_03_1st_2016_youku.jpg
+    alt: "女流直播一周年纪念 优酷原视频封面"
+    caption: "一周年优酷原始视频封面。原视频仍存活（v.youku.com/v_show/id_XMTQ1ODg5MzQyOA==.html）。"
+    date: "2016-01-24"
+    source: "优酷 XMTQ1ODg5MzQyOA=="
+    dimensions: "200×112"
+
+  - id: anniv_04
+    file: data/assets/gallery/anniv_04_debut_2016.jpg
+    alt: "女流66 露脸周年纪念 一代女皇六则天"
+    caption: "早期露脸纪念视频《一代女皇六则天》，女流亲自献唱，粉丝剪辑。"
+    date: "2016"
+    source: "bilibili BV14x411H75G"
+    dimensions: "960×720"
+
+  - id: anniv_05
+    file: data/assets/gallery/anniv_05_birthday_2016.jpg
+    alt: "女流66 2016年生日 粉丝祝福视频"
+    caption: "2016年10月3日生日粉丝祝福视频，粉丝搬运保留。"
+    date: "2016-10-03"
+    source: "bilibili BV1xx411n7jQ"
+    dimensions: "1280×720"
+
+  # ---- 2018：三周年 ----
+  - id: anniv_06
+    file: data/assets/gallery/anniv_06_3rd_2018_gala.jpg
+    alt: "女流66 三周年盛典 2018年1月21日"
+    caption: "三周年盛典全场录播（高清弹幕版），1300+飞机、冯提莫跨平台送超火、大主播祝福。"
+    date: "2018-01-21"
+    source: "bilibili BV1nW411i7sV"
+    dimensions: "1728×1080"
+
+  - id: anniv_07
+    file: data/assets/gallery/anniv_07_3rd_2018_blessing.jpg
+    alt: "女流66 三周年粉丝祝福特稿"
+    caption: "三周年粉丝自制祝福特稿，木由叶 & 播音彬制作。"
+    date: "2018-01-21"
+    source: "bilibili BV1PW411i7G8"
+    dimensions: "1152×720"
+
+  # ---- 2018：特别时刻 ----
+  - id: anniv_08
+    file: data/assets/gallery/anniv_08_carnival_2018.jpg
+    alt: "女流66 斗鱼嘉年华后台"
+    caption: "斗鱼嘉年华后台花絮，高清记录。"
+    date: "2018"
+    source: "bilibili BV1tW4113783"
+    dimensions: "3072×1920"
+
+  - id: anniv_09
+    file: data/assets/gallery/anniv_09_duet_2018.jpg
+    alt: "女流66 与表妹豆豆合唱《理想之歌》"
+    caption: "直播现场与表妹豆豆合唱《理想之歌》，经典时刻。"
+    date: "2018"
+    source: "bilibili BV1WW411M7oq"
+    dimensions: "1449×906"
+
+  # ---- 2020：五周年 ----
+  - id: anniv_10
+    file: data/assets/gallery/anniv_10_5th_2020.jpg
+    alt: "女流66 与YJJ观看五周年祝福视频"
+    caption: "五周年祝福视频 reaction，女流与 YJJ 同框观看粉丝祝福。"
+    date: "2020-01"
+    source: "bilibili BV1sq4y1L7sa"
+    dimensions: "1728×1080"
+
+  # ---- 2022：七周年 ----
+  - id: anniv_11
+    file: data/assets/gallery/anniv_11_7th_2022.jpg
+    alt: "女流66 七周年纪念"
+    caption: "七周年纪念视频：沿海见证了我的直播生涯。2023年12月停播前倒数第二个周年。"
+    date: "2022-01"
+    source: "bilibili BV1Xq4y1k7AU"
+    dimensions: "1146×728"
+
+# ============================================================
+# 缺口说明（供前端处理空状态）
+# ============================================================
+gaps:
+  - years: "2017年（二周年）"
+    reason: "B站无独立周年纪念录播；微博 1 月无 Wayback 快照"
+
+  - years: "2019年（四周年）"
+    reason: "同上，B站与微博均无覆盖"
+
+  - years: "2021年（六周年）"
+    reason: "同上"
+
+  - years: "2023-01（八周年）"
+    reason: "停播前最后一个整年（2023-12 离开斗鱼）；B站无独立录播；微博需登录"
+
+  - years: "2024-01（九周年）"
+    reason: "此时已停播（2023-12 离开斗鱼），尚未在抖音复播（2024-08 复播）"
+
+  - years: "2025-01（十周年）"
+    reason: "此时在抖音平台（2024-08 复播），B站无相关录播"
+
+  - item: "微博周年帖原图"
+    reason: "微博全面需登录访问历史帖；Wayback Machine 对 1 月零快照覆盖"
+
+# ============================================================
+# 数据来源详情
+# ============================================================
+sources_detail:
+  douyu_betard_api: "https://www.douyu.com/betard/156277 — 2026-08-11 调用，确认当前房间归属与头像"
+  wayback_snapshots: "douyu.com/156277 共 12 个快照（2015-12 ~ 2026-02），从中提取头像 URL 变迁"
+  bilibili_search: "api.bilibili.com 搜索「女流66 周年」等关键词，匹配周年录播视频并下载封面缩略图"
+  youku_original: "v.youku.com/v_show/id_XMTQ1ODg5MzQyOA==.html — 一周年原始视频（2016-01-24），仍存活"
+  news_corroboration:
+    - "douyu.com/cms/new_list/201601/26/3022.shtml — 斗鱼官方一周年报道"
+    - "163.com/dy/article/D9AKPKM50526FF7L.html — 三周年报道"
+    - "k.sina.cn/article_3991239517_ede57b5d00101j3es.html — 五周年报道"
+
+# ============================================================
+# 关于"新马甲女流66"
+# ============================================================
+note_new_majia: "用户以「新马甲」比喻换头像（更换网络身份形象），非指独立账号。女流在斗鱼的唯一直播间始终是 156277，昵称始终是「女流66」，房间名从未更改。全网搜索未找到名为「新马甲女流66」的独立账号。"
