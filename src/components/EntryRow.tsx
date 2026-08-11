@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import type { TimelineEntry } from '@/lib/data'
-import { PLATFORM_META } from '@/lib/platforms'
+import { PLATFORM_META, proxyImage } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
 
@@ -14,12 +14,10 @@ import type { Platform } from '@/lib/schema'
 export function EntryRow({
   entry,
   expanded,
-  onHover,
   onToggle,
 }: {
   entry: TimelineEntry
   expanded: boolean
-  onHover: (e: TimelineEntry | null, rect?: DOMRect) => void
   onToggle: () => void
 }) {
   const isLive = entry.type === 'live'
@@ -27,12 +25,11 @@ export function EntryRow({
   const h = barHeight(entry)
   const dead = entry.sourceCount > 0 && entry.deadCount === entry.sourceCount
   const destination = entry.primaryUrl ?? `/e/${entry.id}/`
+  const cover = proxyImage(entry.cover ?? undefined, 640)
+  const opensSource = Boolean(entry.primaryUrl)
 
   return (
-    <article
-      className="group relative"
-      onMouseEnter={(ev) => onHover(entry, ev.currentTarget.getBoundingClientRect())}
-    >
+    <article className="group relative">
       <div className="flex gap-3 py-1.5 sm:gap-4">
         {/* 日期与开播时间 */}
         <div className="w-11 shrink-0 pt-[3px] text-right font-mono text-[11px] leading-tight tnum sm:w-14">
@@ -78,33 +75,22 @@ export function EntryRow({
 
         {/* 内容 */}
         <div className="min-w-0 flex-1 pb-1">
-          <Link
-            href={destination}
-            target={entry.primaryUrl ? '_blank' : undefined}
-            rel={entry.primaryUrl ? 'noopener noreferrer' : undefined}
-            className="hidden w-full text-left lg:block"
-            title={entry.primaryUrl ? '打开原平台' : '查看详情'}
-          >
-            <h3
-              className={`truncate text-[15px] leading-snug transition-colors group-hover:text-white ${
-                dead ? 'text-muted line-through decoration-faint' : 'text-ink'
-              }`}
-            >
-              {entry.title}
-            </h3>
-          </Link>
           <button
             onClick={onToggle}
-            className="block w-full text-left lg:hidden"
+            className="flex w-full items-start gap-3 text-left"
             aria-expanded={expanded}
+            aria-controls={`entry-preview-${entry.id}`}
           >
             <h3
-              className={`truncate text-[15px] leading-snug transition-colors group-hover:text-white ${
+              className={`min-w-0 flex-1 truncate text-[15px] leading-snug transition-colors group-hover:text-white ${
                 dead ? 'text-muted line-through decoration-faint' : 'text-ink'
               }`}
             >
               {entry.title}
             </h3>
+            <span className={`shrink-0 font-mono text-[11px] text-faint transition-transform ${expanded ? 'rotate-45 text-live' : ''}`} aria-hidden>
+              +
+            </span>
           </button>
 
           <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 font-mono text-[11px] text-faint tnum">
@@ -126,16 +112,70 @@ export function EntryRow({
             {dead && <span className="text-today/80">全部链接已失效</span>}
           </div>
 
-          {/* 触摸设备没有 hover：点击就地展开，不跳页 */}
+          {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
-            <div className="mt-2.5 rounded border border-line bg-surface/70 p-3 lg:hidden">
-              <SegmentBar entry={entry} />
-              <Link
-                href={`/e/${entry.id}/`}
-                className="mt-3 inline-block font-mono text-[11px] text-live underline underline-offset-4"
-              >
-                查看全部来源 →
-              </Link>
+            <div id={`entry-preview-${entry.id}`} className="mt-4 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
+              <div className="grid sm:grid-cols-[minmax(220px,36%)_1fr]">
+                <Link
+                  href={destination}
+                  target={opensSource ? '_blank' : undefined}
+                  rel={opensSource ? 'noopener noreferrer' : undefined}
+                  className="group/cover relative aspect-video overflow-hidden bg-raised sm:aspect-auto sm:min-h-[220px]"
+                  aria-label={opensSource ? `打开原平台：${entry.title}` : `查看详情：${entry.title}`}
+                >
+                  {cover ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={cover} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]" />
+                  ) : (
+                    <span className="flex h-full items-center justify-center font-mono text-[10px] text-faint">无封面</span>
+                  )}
+                  <span className="absolute bottom-3 right-3 rounded-full border border-white/20 bg-black/55 px-2.5 py-1 font-mono text-[9px] text-white backdrop-blur-sm">
+                    {opensSource ? '打开原平台 ↗' : '查看详情 →'}
+                  </span>
+                </Link>
+
+                <div className="flex min-w-0 flex-col p-4 sm:p-5">
+                  <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
+                    {opensSource ? '点击标题或封面打开原平台' : '当前没有外部来源'}
+                  </p>
+                  <Link
+                    href={destination}
+                    target={opensSource ? '_blank' : undefined}
+                    rel={opensSource ? 'noopener noreferrer' : undefined}
+                    className="mt-2 block text-[17px] font-medium leading-snug text-ink transition-colors hover:text-live"
+                  >
+                    {entry.title} <span className="font-mono text-[11px] text-live">{opensSource ? '↗' : '→'}</span>
+                  </Link>
+
+                  <div className="mt-2 flex flex-wrap gap-x-2.5 gap-y-1 font-mono text-[10px] text-faint tnum">
+                    <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
+                    <span>{entry.date}{entry.time ? ` ${entry.time}` : ''}</span>
+                    <span>{formatDuration(entry.duration_min)}</span>
+                  </div>
+
+                  <div className="mt-4">
+                    <SegmentBar entry={entry} />
+                  </div>
+
+                  {entry.tags.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {entry.tags.map((tag) => (
+                        <span key={tag} className="rounded-sm border border-line px-1.5 py-0.5 font-mono text-[9px] text-muted">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 font-mono text-[10px]">
+                    <span className="text-faint">
+                      {entry.sourceCount} 个来源
+                      {entry.aliveCount > 0 && ` · ${entry.aliveCount} 个已核验`}
+                      {entry.uncheckedCount > 0 && ` · ${entry.uncheckedCount} 个未复查`}
+                      {entry.deadCount > 0 && ` · ${entry.deadCount} 个失效`}
+                    </span>
+                    <Link href={`/e/${entry.id}/`} className="text-live underline underline-offset-4">完整详情 →</Link>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
