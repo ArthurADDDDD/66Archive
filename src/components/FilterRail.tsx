@@ -45,7 +45,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={t.id}
                 onClick={() => set({ types: toggle(filters.types, t.id) })}
                 aria-pressed={on}
-                className="flex flex-1 items-center justify-center gap-1.5 rounded border py-1.5 font-mono text-[11px] transition-colors"
+                className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-1.5 font-mono text-[11px]"
                 style={{
                   borderColor: on ? t.color : '#2C3140',
                   color: on ? t.color : '#8B8FA3',
@@ -70,7 +70,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={p}
                 onClick={() => set({ platforms: toggle(filters.platforms, p) })}
                 aria-pressed={on}
-                className="rounded border px-2 py-1 font-mono text-[11px] transition-colors tnum"
+                className="ui-press rounded border px-2 py-1 font-mono text-[11px] tnum"
                 style={{
                   borderColor: on ? meta?.color : '#2C3140',
                   color: on ? meta?.color : '#8B8FA3',
@@ -93,7 +93,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 <button
                   onClick={() => set({ games: toggle(filters.games, g.id) })}
                   aria-pressed={on}
-                  className={`flex w-full items-center gap-2 rounded px-1.5 py-1 text-left text-[12px] transition-colors ${
+                  className={`ui-press flex w-full items-center gap-2 rounded px-1.5 py-1 text-left text-[12px] ${
                     on ? 'bg-raised text-ink' : 'text-muted hover:bg-surface hover:text-ink'
                   }`}
                 >
@@ -108,7 +108,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
       </Section>
 
       <Section label="来源">
-        <label className="flex cursor-pointer items-center gap-2 text-[12px] text-muted">
+        <label className="ui-press flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-[12px] text-muted hover:bg-raised/60 hover:text-ink">
           <input
             type="checkbox"
             checked={filters.onlyAlive}
@@ -124,7 +124,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
           {matched} / {total} 条
         </div>
         {dirty && (
-          <button onClick={() => set(EMPTY_FILTERS)} className="mt-2 text-live underline underline-offset-4">
+          <button onClick={() => set(EMPTY_FILTERS)} className="ui-press mt-2 rounded-sm text-live underline underline-offset-4">
             清除筛选
           </button>
         )}

@@ -29,7 +29,7 @@ export function EntryRow({
   const opensSource = Boolean(entry.primaryUrl)
 
   return (
-    <article className="group relative">
+    <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
       <div className="flex gap-3 py-1.5 sm:gap-4">
         {/* 日期与开播时间 */}
         <div className="w-11 shrink-0 pt-[3px] text-right font-mono text-[11px] leading-tight tnum sm:w-14">
@@ -77,7 +77,7 @@ export function EntryRow({
         <div className="min-w-0 flex-1 pb-1">
           <button
             onClick={onToggle}
-            className="flex w-full items-start gap-3 text-left"
+            className="ui-press flex w-full items-start gap-3 rounded-sm text-left"
             aria-expanded={expanded}
             aria-controls={`entry-preview-${entry.id}`}
           >
@@ -88,7 +88,7 @@ export function EntryRow({
             >
               {entry.title}
             </h3>
-            <span className={`shrink-0 font-mono text-[11px] text-faint transition-transform ${expanded ? 'rotate-45 text-live' : ''}`} aria-hidden>
+            <span className={`shrink-0 font-mono text-[11px] text-faint transition-[transform,color] duration-300 ${expanded ? 'rotate-45 scale-110 text-live' : 'group-hover:text-muted'}`} aria-hidden>
               +
             </span>
           </button>
@@ -114,7 +114,7 @@ export function EntryRow({
 
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
-            <div id={`entry-preview-${entry.id}`} className="mt-4 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
+            <div id={`entry-preview-${entry.id}`} className="ui-panel-in mt-4 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
               <div className="grid sm:grid-cols-[minmax(220px,36%)_1fr]">
                 <Link
                   href={destination}
@@ -135,6 +135,7 @@ export function EntryRow({
                   ) : (
                     <span className="flex h-full items-center justify-center font-mono text-[10px] text-faint">无封面</span>
                   )}
+                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover/cover:opacity-80" />
                   <span className="absolute bottom-3 right-3 rounded-full border border-white/20 bg-black/55 px-2.5 py-1 font-mono text-[9px] text-white backdrop-blur-sm">
                     {opensSource ? '打开原平台 ↗' : '查看详情 →'}
                   </span>
@@ -197,10 +198,11 @@ export function SegmentBar({ entry }: { entry: TimelineEntry }) {
   }
   return (
     <div>
-      <div className="flex h-2 w-full overflow-hidden rounded-full bg-raised">
+      <div className="group/segments flex h-2 w-full overflow-hidden rounded-full bg-raised">
         {entry.bands.map((b, i) => (
           <span
             key={i}
+            className="transition-[filter,opacity] duration-300 group-hover/segments:brightness-125"
             style={{ width: `${(b.to - b.from) * 100}%`, background: gameColor(b.game), opacity: b.game ? 0.9 : 0.3 }}
             title={b.name}
           />
