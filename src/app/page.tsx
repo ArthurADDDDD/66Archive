@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
+import { RotatingAvatar } from '@/components/RotatingAvatar'
 import { getDataset } from '@/lib/data'
 
 export default function HomePage() {
@@ -88,7 +89,7 @@ export default function HomePage() {
             <div className="absolute inset-[34%] rounded-full bg-gradient-to-br from-live/25 via-raised to-today/20 shadow-[0_0_90px_rgba(91,200,232,0.16)]" />
             <div className="absolute inset-0 flex items-center justify-center text-center">
               <div className="relative h-[38%] w-[38%] overflow-hidden rounded-full border-4 border-base/80 shadow-[0_0_35px_rgba(91,200,232,0.24)] ring-1 ring-live/40">
-                <span className="flex h-full w-full items-center justify-center font-display text-[52px] font-bold text-ink">66</span>
+                <RotatingAvatar />
               </div>
             </div>
             {[['12%', '48%', '#E0A244'], ['78%', '18%', '#5BC8E8'], ['83%', '72%', '#FF6B75'], ['25%', '82%', '#A78BFA']].map(([left, top, color], index) => (
