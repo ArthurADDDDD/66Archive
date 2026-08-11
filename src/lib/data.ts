@@ -10,6 +10,7 @@ import {
   GamesFile,
   Series,
   SeriesFile,
+  Source,
 } from './schema'
 
 const ROOT = process.cwd()
@@ -80,8 +81,11 @@ export type TimelineEntry = {
   games: { id: string; name: string }[]
   tags: string[]
   cover: string | null
-  /** 首个来源的原平台地址，列表标题可直接打开。 */
+  /** 默认来源的原平台地址；展开后可切换到其他来源。 */
   primaryUrl: string | null
+  sources: TimelineSource[]
+  /** 被数据审校明确标成同场、并在时间轴中折叠的其他记录数。 */
+  mergedEntryCount: number
   confidence: string
   sourceCount: number
   /** 明确标记为 alive 的来源数；unchecked 不能冒充已核验可用。 */
@@ -94,8 +98,73 @@ export type TimelineEntry = {
   demo?: boolean
 }
 
+export type TimelineSource = Pick<Source, 'url' | 'kind' | 'status'> & {
+  accountName?: string
+  /** 来源原本所属条目的标题，帮助用户区分不同录像版本。 */
+  entryTitle: string
+}
+
+const SAME_LIVE_NOTE = /与 ([a-z0-9-]+) 属同场直播的不同录像，前端可作备选源切换/g
+
+function linkedEntryIds(note?: string): string[] {
+  if (!note) return []
+  return [...note.matchAll(SAME_LIVE_NOTE)].map((match) => match[1])
+}
+
+/**
+ * DeepSeek 的 #017 把同场录像保留为独立条目，并在 note 中互相标记。
+ * 前端只消费这项明确标记，不按“同一天”猜测，避免误合并同日不同节目。
+ */
+export function buildSourceGroups(entries: Entry[]): Map<string, Entry[]> {
+  const byId = new Map(entries.map((entry) => [entry.id, entry]))
+  const adjacent = new Map<string, Set<string>>()
+
+  for (const entry of entries) {
+    for (const linkedId of linkedEntryIds(entry.note)) {
+      if (!byId.has(linkedId)) continue
+      if (!adjacent.has(entry.id)) adjacent.set(entry.id, new Set())
+      if (!adjacent.has(linkedId)) adjacent.set(linkedId, new Set())
+      adjacent.get(entry.id)?.add(linkedId)
+      adjacent.get(linkedId)?.add(entry.id)
+    }
+  }
+
+  const groups = new Map<string, Entry[]>()
+  for (const entry of entries) {
+    if (groups.has(entry.id)) continue
+    const pending = [entry.id]
+    const seen = new Set<string>()
+    while (pending.length) {
+      const id = pending.pop()
+      if (!id || seen.has(id)) continue
+      seen.add(id)
+      for (const neighbor of adjacent.get(id) ?? []) pending.push(neighbor)
+    }
+    const group = [...seen]
+      .map((id) => byId.get(id))
+      .filter((item): item is Entry => Boolean(item))
+      .sort((a, b) => a.id.localeCompare(b.id))
+    for (const item of group) groups.set(item.id, group)
+  }
+  return groups
+}
+
 export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
-  return ds.entries.map((e) => {
+  const groups = buildSourceGroups(ds.entries)
+
+  return ds.entries.flatMap((e) => {
+    const group = groups.get(e.id) ?? [e]
+    if (group[0]?.id !== e.id) return []
+
+    const sources = group
+      .flatMap((item) => item.sources.map((source) => ({
+        url: source.url,
+        kind: source.kind,
+        status: source.status,
+        accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
+        entryTitle: item.title,
+      })))
+      .filter((source, index, all) => all.findIndex((candidate) => candidate.url === source.url) === index)
     const total = (e.duration_min ?? 0) * 60
     const rawBands = e.segments.map((s, i) => {
       const from = hms(s.at)
@@ -127,12 +196,14 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       games: e.games.map((g) => ({ id: g, name: ds.games.get(g)?.name ?? g })),
       tags: e.tags,
       cover: e.cover ?? null,
-      primaryUrl: e.sources[0]?.url ?? null,
+      primaryUrl: sources.find((source) => source.status === 'alive')?.url ?? sources[0]?.url ?? null,
+      sources,
+      mergedEntryCount: group.length - 1,
       confidence: e.confidence,
-      sourceCount: e.sources.length,
-      aliveCount: e.sources.filter((s) => s.status === 'alive').length,
-      uncheckedCount: e.sources.filter((s) => s.status === 'unchecked').length,
-      deadCount: e.sources.filter((s) => s.status === 'dead').length,
+      sourceCount: sources.length,
+      aliveCount: sources.filter((s) => s.status === 'alive').length,
+      uncheckedCount: sources.filter((s) => s.status === 'unchecked').length,
+      deadCount: sources.filter((s) => s.status === 'dead').length,
       seriesName: e.series ? ds.series.get(e.series)?.name : undefined,
       bands: total ? bands : [],
       demo: e.demo,
