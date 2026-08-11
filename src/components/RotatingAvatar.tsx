@@ -16,6 +16,6 @@ export function RotatingAvatar() {
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={avatar.src} alt={avatar.alt} className="h-full w-full object-cover" />
+    <img key={avatar.src} src={avatar.src} alt={avatar.alt} className="ui-avatar-in h-full w-full object-cover" />
   )
 }

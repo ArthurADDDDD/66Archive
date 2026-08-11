@@ -17,14 +17,14 @@ export default function GalleryPage() {
   const years = [...groups.keys()].sort()
 
   return (
-    <main className="min-h-screen overflow-hidden">
-      <header className="relative z-20 mx-auto flex max-w-[1240px] items-center px-4 py-5 sm:px-6">
+    <main className="ui-page-in min-h-screen overflow-hidden">
+      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center px-4 py-5 sm:px-6">
         <SiteNav active="gallery" />
       </header>
 
       <section className="relative mx-auto max-w-[1240px] px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
         <div className="pointer-events-none absolute -right-20 -top-32 h-[420px] w-[420px] rounded-full bg-today/10 blur-[110px]" />
-        <div className="relative grid gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
+        <div className="ui-reveal relative grid gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
           <div className="max-w-3xl">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-today">Gallery · Annual gifts</p>
             <h1 className="mt-4 text-[42px] font-semibold leading-[1.08] tracking-tight sm:text-[64px]">
@@ -60,7 +60,7 @@ export default function GalleryPage() {
             return (
               <section key={year} id={`gallery-${year}`} className="relative grid gap-6 pl-12 sm:pl-16 lg:grid-cols-[210px_1fr] lg:gap-10 lg:pl-0">
                 <div className="relative lg:pt-2">
-                  <span className="absolute -left-[calc(3rem+5px)] top-1.5 h-3 w-3 rounded-full border-2 border-base bg-live shadow-[0_0_0_4px_rgba(91,200,232,0.14)] sm:-left-[calc(4rem+5px)] lg:left-auto lg:right-[-25px]">
+                  <span className="absolute -left-[calc(3rem+5px)] top-1.5 h-3 w-3 rounded-full border-2 border-base bg-live shadow-[0_0_0_4px_rgba(91,200,232,0.14)] transition-[box-shadow,transform] duration-300 hover:scale-125 hover:shadow-[0_0_0_7px_rgba(91,200,232,0.12)] sm:-left-[calc(4rem+5px)] lg:left-auto lg:right-[-25px]">
                     
                   </span>
                   <p className="font-display text-[48px] font-bold leading-none tracking-[-0.06em] text-ink sm:text-[68px]">{year}</p>
@@ -82,7 +82,7 @@ export default function GalleryPage() {
             <span className="absolute -left-[calc(3rem+1px)] top-0 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-base font-mono text-[10px] text-faint sm:-left-[calc(4rem+1px)] lg:left-[calc(210px-25px)]">
               ···
             </span>
-            <div className="rounded-2xl border border-dashed border-line bg-surface/25 p-5 sm:p-7">
+            <div className="ui-card rounded-2xl border border-dashed border-line bg-surface/25 p-5 hover:border-muted sm:p-7">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">Missing chapters</p>
               <h2 className="mt-3 text-[24px] font-medium tracking-tight text-ink">还有一些年份，正在等待被找回。</h2>
               <p className="mt-3 max-w-2xl text-[13px] leading-7 text-muted">
@@ -95,7 +95,7 @@ export default function GalleryPage() {
                   </span>
                 ))}
               </div>
-              <Link href="/contact/" className="mt-6 inline-block font-mono text-[11px] text-live underline underline-offset-4">
+              <Link href="/contact/" className="ui-press mt-6 inline-block rounded-sm font-mono text-[11px] text-live underline underline-offset-4">
                 提供画作线索 →
               </Link>
             </div>
@@ -110,7 +110,7 @@ function GalleryCard({ item, featured }: { item: GalleryItem; featured: boolean 
   const sourceHref = gallerySourceHref(item.source)
 
   return (
-    <figure className={`mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-line bg-surface/55 shadow-[0_14px_40px_rgba(0,0,0,0.12)] ${featured ? 'sm:break-before-avoid' : ''}`}>
+    <figure className={`ui-card mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-line bg-surface/55 shadow-[0_14px_40px_rgba(0,0,0,0.12)] hover:border-muted ${featured ? 'sm:break-before-avoid' : ''}`}>
       <div className="group relative overflow-hidden bg-raised">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={item.src} alt={item.alt} loading="lazy" className="block w-full transition duration-500 group-hover:scale-[1.025]" />
@@ -127,7 +127,7 @@ function GalleryCard({ item, featured }: { item: GalleryItem; featured: boolean 
         <p className="mt-2 text-[12px] leading-6 text-muted">{item.caption}</p>
         <p className="mt-3 border-t border-line pt-3 font-mono text-[9px] leading-5 text-faint">
           {sourceHref ? (
-            <a href={sourceHref} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-live">
+            <a href={sourceHref} target="_blank" rel="noopener noreferrer" className="ui-press inline-block rounded-sm transition-colors hover:text-live">
               来源 · {item.source} ↗
             </a>
           ) : (
