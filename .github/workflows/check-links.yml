@@ -1,0 +1,68 @@
+name: Check links
+
+on:
+  workflow_dispatch:
+    inputs:
+      host:
+        description: Host to check
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - acfun.cn
+          - bilibili.com
+          - youku.com
+      limit:
+        description: Maximum unique URLs (leave empty for all)
+        required: false
+        default: '100'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-links
+  cancel-in-progress: false
+
+jobs:
+  report:
+    name: Build read-only link report
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check links without modifying data
+        env:
+          CHECK_HOST: ${{ inputs.host }}
+          CHECK_LIMIT: ${{ inputs.limit }}
+        run: |
+          args=(--report --output link-report.json --concurrency 6 --timeout-ms 10000)
+          if [[ "$CHECK_HOST" != "all" ]]; then
+            args+=(--host "$CHECK_HOST")
+          fi
+          if [[ -n "$CHECK_LIMIT" ]]; then
+            args+=(--limit "$CHECK_LIMIT")
+          fi
+          npx tsx scripts/check-links.ts "${args[@]}"
+
+      - name: Upload JSON report
+        uses: actions/upload-artifact@v7
+        with:
+          name: link-report-${{ inputs.host }}
+          path: link-report.json
+          if-no-files-found: error
+          retention-days: 14
