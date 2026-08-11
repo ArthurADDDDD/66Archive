@@ -1,0 +1,6036 @@
+task: 022-round1
+description: 第一轮：全面复核365个未识别事件
+summary:
+  total: 365
+  high: 54
+  medium: 38
+  non_game: 66
+  unresolved: 207
+classifications:
+  high:
+  - canonical_entry_id: 2024-10-10-live-02
+    linked_entry_ids: []
+    date: '2024-10-10'
+    title: 无限暖暖，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1Fe2gYWEZN
+    catalog_sample:
+    - '[女流66/女流直播回放] 无限暖暖，好多人呐 2024年10月10日'
+    classification: high
+    candidate_game_ids:
+    - infinity-nikki
+    confidence: high
+    evidence: '标题明确写出游戏名: 无限暖暖'
+    reason: ''
+    game_details:
+    - canonical_name: 无限暖暖
+      game_id_hint: infinity-nikki
+      confidence: high
+      matched_keyword: 无限暖暖
+  - canonical_entry_id: 2024-11-01-live-02
+    linked_entry_ids: []
+    date: '2024-11-01'
+    title: 寻龙诀 寻龙诀
+    source_urls:
+    - https://www.bilibili.com/video/BV1bHS9YwEn9
+    - https://www.bilibili.com/video/BV1hLS9YKEmW
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 寻龙诀 寻龙诀 2024年11月01日 （带弹幕版）'
+    classification: high
+    candidate_game_ids:
+    - xunlong-jue
+    confidence: high
+    evidence: '标题明确写出游戏名: 寻龙诀'
+    reason: ''
+    game_details:
+    - canonical_name: 寻龙诀
+      game_id_hint: xunlong-jue
+      confidence: high
+      matched_keyword: 寻龙诀
+  - canonical_entry_id: 2025-04-01-live-03
+    linked_entry_ids:
+    - 2025-04-01-live-02
+    date: '2025-04-01'
+    title: 明日之后校园服擂台开战~！
+    source_urls:
+    - https://www.bilibili.com/video/BV11aZ8Y1ENd
+    - https://www.bilibili.com/video/BV1LvZhYYEhg
+    - https://www.bilibili.com/video/BV1bTZhYQECA
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-04-01】【明日之后校园服擂台开战】
+    - 【女流66】明日之后校园服擂台开战~！ 2025/04/01 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - lifeafter
+    confidence: high
+    evidence: '标题明确写出游戏名: 明日之后'
+    reason: ''
+    game_details:
+    - canonical_name: 明日之后
+      game_id_hint: lifeafter
+      confidence: high
+      matched_keyword: 明日之后
+  - canonical_entry_id: 2025-04-12-live-03
+    linked_entry_ids:
+    - 2025-04-12-live-02
+    date: '2025-04-12'
+    title: 新赛季流放之路2？考研之路！
+    source_urls:
+    - https://www.bilibili.com/video/BV14LdaYEEsn
+    - https://www.bilibili.com/video/BV1FGdYYgE2U
+    - https://www.bilibili.com/video/BV1FbdaYzEjB
+    catalog_sample:
+    - '[女流66/女流直播回放] 新赛季流放之路2？考研之路！ 2025年04月12日'
+    - 【女流66】新赛季流放之路2？考研之路！ 2025/04/12 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - path-of-exile-2
+    confidence: high
+    evidence: '标题明确写出游戏名: 流放之路2'
+    reason: ''
+    game_details:
+    - canonical_name: 流放之路2
+      game_id_hint: path-of-exile-2
+      confidence: high
+      matched_keyword: 流放之路2
+  - canonical_entry_id: 2025-04-14-live-01
+    linked_entry_ids:
+    - 2025-04-14-live-03
+    date: '2025-04-14'
+    title: 勇闯死人谷，玩玩看
+    source_urls:
+    - https://www.bilibili.com/video/BV18UoLYyE8Q
+    - https://www.bilibili.com/video/BV1BBo7YFENs
+    - https://www.bilibili.com/video/BV1zboLYtEQi
+    catalog_sample:
+    - '[女流66/女流直播回放] 勇闯死人谷，玩玩看 2025年04月14日'
+    - 【女流66】勇闯死人谷，玩玩看 2025/04/14 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - into-the-dead
+    confidence: high
+    evidence: '标题明确写出游戏名: 勇闯死人谷'
+    reason: ''
+    game_details:
+    - canonical_name: 勇闯死人谷
+      game_id_hint: into-the-dead
+      confidence: high
+      matched_keyword: 勇闯死人谷
+  - canonical_entry_id: 2025-04-15-live-02
+    linked_entry_ids:
+    - 2025-04-15-live-03
+    date: '2025-04-15'
+    title: 勇闯死人谷，这个主播真是勇
+    source_urls:
+    - https://www.bilibili.com/video/BV1FnoFYUEhq
+    - https://www.bilibili.com/video/BV1VQdfYBEPa
+    - https://www.bilibili.com/video/BV1ssdoYEEjr
+    catalog_sample:
+    - '[女流66/女流直播回放] 勇闯死人谷，这个主播真是勇 2025年04月15日'
+    - 【女流66】勇闯死人谷，这个主播真是勇 2025/04/15 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - into-the-dead
+    confidence: high
+    evidence: '标题明确写出游戏名: 勇闯死人谷'
+    reason: ''
+    game_details:
+    - canonical_name: 勇闯死人谷
+      game_id_hint: into-the-dead
+      confidence: high
+      matched_keyword: 勇闯死人谷
+  - canonical_entry_id: 2025-04-16-live-02
+    linked_entry_ids:
+    - 2025-04-16-live-03
+    date: '2025-04-16'
+    title: 勇闯死人谷，今天通关
+    source_urls:
+    - https://www.bilibili.com/video/BV11PoTYkE3S
+    - https://www.bilibili.com/video/BV1N4oMY2Eyk
+    - https://www.bilibili.com/video/BV1agoMYtEGS
+    catalog_sample:
+    - '[女流66/女流直播回放] 勇闯死人谷，今天通关 2025年04月16日'
+    - 【女流66】勇闯死人谷，今天通关 2025/04/16 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - into-the-dead
+    confidence: high
+    evidence: '标题明确写出游戏名: 勇闯死人谷'
+    reason: ''
+    game_details:
+    - canonical_name: 勇闯死人谷
+      game_id_hint: into-the-dead
+      confidence: high
+      matched_keyword: 勇闯死人谷
+  - canonical_entry_id: 2025-05-06-live-01
+    linked_entry_ids: []
+    date: '2025-05-06'
+    title: 兔子先生的魔术秀
+    source_urls:
+    - https://www.bilibili.com/video/BV1XqVmzzEe8
+    catalog_sample:
+    - 【女流】66开播聊天、玩锈湖十周年新作《兔子先生的魔术秀》，5.6直播录像弹幕版，更新完毕~
+    classification: high
+    candidate_game_ids:
+    - rusty-lake
+    confidence: high
+    evidence: '标题明确写出游戏名: 锈湖'
+    reason: ''
+    game_details:
+    - canonical_name: 绣湖系列
+      game_id_hint: rusty-lake
+      confidence: high
+      matched_keyword: 锈湖
+  - canonical_entry_id: 2025-05-06-live-02
+    linked_entry_ids:
+    - 2025-05-06-live-03
+    date: '2025-05-06'
+    title: 绣湖最新作，独立游戏动动脑，快坐 2025/05/06 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1cEVmzXEPC
+    - https://www.bilibili.com/video/BV1fHVmzSEYR
+    - https://www.bilibili.com/video/BV1kdVpznEkP
+    catalog_sample:
+    - 【女流66】绣湖最新作，独立游戏动动脑，快坐 2025/05/06 18时场 直播回放
+    - 【弹幕版】【女流66】【2025-05-06】【绣湖最新作独立游戏动动脑快坐】
+    classification: high
+    candidate_game_ids:
+    - rusty-lake
+    confidence: high
+    evidence: '标题明确写出游戏名: 绣湖'
+    reason: ''
+    game_details:
+    - canonical_name: 绣湖系列
+      game_id_hint: rusty-lake
+      confidence: high
+      matched_keyword: 绣湖
+  - canonical_entry_id: 2025-05-14-live-01
+    linked_entry_ids: []
+    date: '2025-05-14'
+    title: The Precinct 警区
+    source_urls:
+    - https://www.bilibili.com/video/BV1qtEvzdEXV
+    catalog_sample:
+    - 【女流】66玩《The Precinct 警区》，5.14直播录像弹幕版，更新完毕~
+    classification: high
+    candidate_game_ids:
+    - the-precinct
+    confidence: high
+    evidence: '标题明确写出游戏名: The Precinct'
+    reason: ''
+    game_details:
+    - canonical_name: The Precinct
+      game_id_hint: the-precinct
+      confidence: high
+      matched_keyword: The Precinct
+  - canonical_entry_id: 2025-05-25-live-03
+    linked_entry_ids:
+    - 2025-05-25-live-02
+    date: '2025-05-25'
+    title: 重生之我是石国长公主游戏长安石之舞
+    source_urls:
+    - https://www.bilibili.com/video/BV1AzjGzAEM3
+    - https://www.bilibili.com/video/BV1WQjuz4Epq
+    - https://www.bilibili.com/video/BV1dXjGzpEWw
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-05-25】【重生之我是石国长公主游戏长安石之舞】
+    - 【女流66】重生之我是石国长公主，游戏：长安石之舞 2025/05/25 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - changan-stone-dance
+    confidence: high
+    evidence: '标题明确写出游戏名: 长安石之舞'
+    reason: ''
+    game_details:
+    - canonical_name: 长安石之舞
+      game_id_hint: changan-stone-dance
+      confidence: high
+      matched_keyword: 长安石之舞
+  - canonical_entry_id: 2025-05-26-live-01
+    linked_entry_ids:
+    - 2025-05-26-live-03
+    date: '2025-05-26'
+    title: 重生之我是石国长公主，游戏：长安石之舞 2025/05/26 19时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1BajSzaECF
+    - https://www.bilibili.com/video/BV1XAjmzCEc3
+    - https://www.bilibili.com/video/BV1kyj2zoE3q
+    catalog_sample:
+    - 【女流66】重生之我是石国长公主，游戏：长安石之舞 2025/05/26 19时场 直播回放
+    - 【弹幕版】【女流66】【2025-05-26】【重生之我是石国长公主游戏长安石之舞】
+    classification: high
+    candidate_game_ids:
+    - changan-stone-dance
+    confidence: high
+    evidence: '标题明确写出游戏名: 长安石之舞'
+    reason: ''
+    game_details:
+    - canonical_name: 长安石之舞
+      game_id_hint: changan-stone-dance
+      confidence: high
+      matched_keyword: 长安石之舞
+  - canonical_entry_id: 2025-06-03-live-01
+    linked_entry_ids: []
+    date: '2025-06-03'
+    title: 这是个能发现宝藏游戏的直播间_今日体验：沙丘觉醒
+    source_urls:
+    - https://www.bilibili.com/video/BV1eLTuzUE6b
+    catalog_sample:
+    - 【女流66】【2025.06.03】[这是个能发现宝藏游戏的直播间_今日体验：沙丘觉醒]
+    classification: high
+    candidate_game_ids:
+    - dune-awakening
+    confidence: high
+    evidence: '标题明确写出游戏名: 沙丘觉醒'
+    reason: ''
+    game_details:
+    - canonical_name: 沙丘：觉醒
+      game_id_hint: dune-awakening
+      confidence: high
+      matched_keyword: 沙丘觉醒
+  - canonical_entry_id: 2025-06-06-live-03
+    linked_entry_ids:
+    - 2025-06-06-live-02
+    date: '2025-06-06'
+    title: 这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒
+    source_urls:
+    - https://www.bilibili.com/video/BV1QqTMzyE86
+    - https://www.bilibili.com/video/BV1XeTMz2Ehw
+    - https://www.bilibili.com/video/BV1iVT3zZEUK
+    catalog_sample:
+    - '[女流66/直播回放] 这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒 2025年06月06日 (弹幕版)'
+    - 【女流66】这是个能发现宝藏游戏的直播间，今日体验：沙丘觉醒 2025/06/06 19时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - dune-awakening
+    confidence: high
+    evidence: '标题明确写出游戏名: 沙丘觉醒'
+    reason: ''
+    game_details:
+    - canonical_name: 沙丘：觉醒
+      game_id_hint: dune-awakening
+      confidence: high
+      matched_keyword: 沙丘觉醒
+  - canonical_entry_id: 2025-06-10-live-04
+    linked_entry_ids: []
+    date: '2025-06-10'
+    title: 这是个能发现宝藏游戏的直播间今日体验沙丘觉醒
+    source_urls:
+    - https://www.bilibili.com/video/BV1eDM3z4EAa
+    - https://www.bilibili.com/video/BV1phM3zgEJb
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-06-10】【这是个能发现宝藏游戏的直播间今日体验沙丘觉醒】
+    classification: high
+    candidate_game_ids:
+    - dune-awakening
+    confidence: high
+    evidence: '标题明确写出游戏名: 沙丘觉醒'
+    reason: ''
+    game_details:
+    - canonical_name: 沙丘：觉醒
+      game_id_hint: dune-awakening
+      confidence: high
+      matched_keyword: 沙丘觉醒
+  - canonical_entry_id: 2025-06-13-live-02
+    linked_entry_ids:
+    - 2025-06-13-live-03
+    date: '2025-06-13'
+    title: 沙丘觉醒，从零开始异星探险 2025/06/13 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1CiMBzDEGJ
+    - https://www.bilibili.com/video/BV1ckMBzmEDM
+    - https://www.bilibili.com/video/BV1fmMBzVE8Y
+    catalog_sample:
+    - 【女流66】沙丘觉醒，从零开始异星探险 2025/06/13 18时场 直播回放
+    - 【弹幕版】【女流66】【2025-06-13】【沙丘觉醒从零开始异星探险】
+    classification: high
+    candidate_game_ids:
+    - dune-awakening
+    confidence: high
+    evidence: '标题明确写出游戏名: 沙丘觉醒'
+    reason: ''
+    game_details:
+    - canonical_name: 沙丘：觉醒
+      game_id_hint: dune-awakening
+      confidence: high
+      matched_keyword: 沙丘觉醒
+  - canonical_entry_id: 2025-06-21-live-01
+    linked_entry_ids: []
+    date: '2025-06-21'
+    title: 点进直播间看游戏：多重人生
+    source_urls:
+    - https://www.bilibili.com/video/BV1RAN1z2Emh
+    - https://www.bilibili.com/video/BV1zvN1z9Esj
+    catalog_sample:
+    - 【女流66】【2025.06.21】[点进直播间看游戏：多重人生]
+    classification: high
+    candidate_game_ids:
+    - the-alters
+    confidence: high
+    evidence: '标题明确写出游戏名: 多重人生'
+    reason: ''
+    game_details:
+    - canonical_name: 多重人生
+      game_id_hint: the-alters
+      confidence: high
+      matched_keyword: 多重人生
+  - canonical_entry_id: 2025-06-23-live-02
+    linked_entry_ids:
+    - 2025-06-23-live-01
+    date: '2025-06-23'
+    title: 单机游戏：多重人生 2025/06/23 19时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1WWKhzfEs1
+    - https://www.bilibili.com/video/BV1ZpKazEEPs
+    - https://www.bilibili.com/video/BV1mrKazKESp
+    catalog_sample:
+    - 【女流66】单机游戏：多重人生 2025/06/23 19时场 直播回放
+    - '[女流66/直播回放] 单机游戏：多重人生 2025年06月23日'
+    classification: high
+    candidate_game_ids:
+    - the-alters
+    confidence: high
+    evidence: '标题明确写出游戏名: 多重人生'
+    reason: ''
+    game_details:
+    - canonical_name: 多重人生
+      game_id_hint: the-alters
+      confidence: high
+      matched_keyword: 多重人生
+  - canonical_entry_id: 2025-07-02-live-01
+    linked_entry_ids: []
+    date: '2025-07-02'
+    title: 解限机，我来啦~ 2025/07/02 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1E934zHEUM
+    catalog_sample:
+    - 【女流66】解限机，我来啦~ 2025/07/02 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-07-02-live-02
+    linked_entry_ids: []
+    date: '2025-07-02'
+    title: 解限机我来啦
+    source_urls:
+    - https://www.bilibili.com/video/BV19F3tzjEhN
+    - https://www.bilibili.com/video/BV1yJ3tzYESg
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-07-02】【解限机我来啦】
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-07-03-live-01
+    linked_entry_ids: []
+    date: '2025-07-03'
+    title: 解限机，我来啦~ 2025/07/03 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1Pa33znENW
+    catalog_sample:
+    - 【女流66】解限机，我来啦~ 2025/07/03 18时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-07-03-live-02
+    linked_entry_ids: []
+    date: '2025-07-03'
+    title: 解限机我来啦
+    source_urls:
+    - https://www.bilibili.com/video/BV16d3MzTE6G
+    - https://www.bilibili.com/video/BV1bv3MzDEEh
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-07-03】【解限机我来啦】
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-07-16-live-02
+    linked_entry_ids:
+    - 2025-07-16-live-01
+    date: '2025-07-16'
+    title: 国产独立游戏，霓虹深渊2 2025/07/16 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1hVubzzEc3
+    - https://www.bilibili.com/video/BV1iWu8zDEN4
+    - https://www.bilibili.com/video/BV1vxu8zJEKC
+    catalog_sample:
+    - 【女流66】国产独立游戏，霓虹深渊2 2025/07/16 18时场 直播回放
+    - 【弹幕版】【女流66】【2025-07-16】【国产独立游戏霓虹深渊2】
+    classification: high
+    candidate_game_ids:
+    - neon-abyss-2
+    confidence: high
+    evidence: '标题明确写出游戏名: 霓虹深渊2'
+    reason: ''
+    game_details:
+    - canonical_name: 霓虹深渊2
+      game_id_hint: neon-abyss-2
+      confidence: high
+      matched_keyword: 霓虹深渊2
+  - canonical_entry_id: 2025-07-17-live-02
+    linked_entry_ids:
+    - 2025-07-17-live-01
+    date: '2025-07-17'
+    title: Switch2新作，咚奇刚：蕉力全开 2025/07/17 22时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1jxgPzEEKV
+    - https://www.bilibili.com/video/BV1pRgPztExD
+    - https://www.bilibili.com/video/BV1tUgKzgE32
+    catalog_sample:
+    - 【女流66】Switch2新作，咚奇刚：蕉力全开 2025/07/17 22时场 直播回放
+    - 【弹幕版】【女流66】【2025-07-17】【Switch2新作咚奇刚蕉力全开】
+    classification: high
+    candidate_game_ids:
+    - donkey-kong-bananza
+    confidence: high
+    evidence: '标题明确写出游戏名: 咚奇刚'
+    reason: ''
+    game_details:
+    - canonical_name: 咚奇刚：蕉力全开
+      game_id_hint: donkey-kong-bananza
+      confidence: high
+      matched_keyword: 咚奇刚
+  - canonical_entry_id: 2025-07-27-live-01
+    linked_entry_ids: []
+    date: '2025-07-27'
+    title: 姐弟之战机甲之战解限机
+    source_urls:
+    - https://www.bilibili.com/video/BV1LZ8JzgEHq
+    - https://www.bilibili.com/video/BV1VN8pzVERW
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-07-27】【姐弟之战机甲之战解限机】
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-07-27-live-02
+    linked_entry_ids: []
+    date: '2025-07-27'
+    title: 解限机
+    source_urls:
+    - https://www.bilibili.com/video/BV1wQ8GzwEJe
+    catalog_sample:
+    - 【女流66】姐弟之战，机甲之战~《解限机》 2025/07/27 19时场 直播回放
+    classification: high
+    candidate_game_ids:
+    - mecha-break
+    confidence: high
+    evidence: '标题明确写出游戏名: 解限机'
+    reason: ''
+    game_details:
+    - canonical_name: 解限机
+      game_id_hint: mecha-break
+      confidence: high
+      matched_keyword: 解限机
+  - canonical_entry_id: 2025-12-05-live-01
+    linked_entry_ids: []
+    date: '2025-12-05'
+    title: A Little to the Left
+    source_urls:
+    - https://www.bilibili.com/video/BV1xr27B3Exk
+    catalog_sample:
+    - 【女流66】继续玩《A Little to the Left》强迫症解压整理游戏【弹幕版】12.05女流完整直播录像
+    classification: high
+    candidate_game_ids:
+    - a-little-to-the-left
+    confidence: high
+    evidence: '标题明确写出游戏名: A Little to the Left'
+    reason: ''
+    game_details:
+    - canonical_name: A Little to the Left
+      game_id_hint: a-little-to-the-left
+      confidence: high
+      matched_keyword: A Little to the Left
+  - canonical_entry_id: 2025-12-05-live-03
+    linked_entry_ids: []
+    date: '2025-12-05'
+    title: 逃离鸭科夫
+    source_urls:
+    - https://www.bilibili.com/video/BV1CP27BiEdS
+    catalog_sample:
+    - 【女流66】跟YJJ玩《逃离鸭科夫》PVE俯视角撤离射击游戏【弹幕版】12.05女流完整直播录像
+    classification: high
+    candidate_game_ids:
+    - duckov
+    confidence: high
+    evidence: '标题明确写出游戏名: 逃离鸭科夫'
+    reason: ''
+    game_details:
+    - canonical_name: 逃离鸭科夫
+      game_id_hint: duckov
+      confidence: high
+      matched_keyword: 逃离鸭科夫
+  - canonical_entry_id: 2025-12-25-live-01
+    linked_entry_ids: []
+    date: '2025-12-25'
+    title: 仙境传说：重生
+    source_urls:
+    - https://www.bilibili.com/video/BV13yBQBZEP8
+    - https://www.bilibili.com/video/BV1NFBRBxED2
+    catalog_sample:
+    - 【女流66】开播聊天、玩《仙境传说：重生》公测，12.25直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - ragnarok-rebirth
+    confidence: high
+    evidence: '标题明确写出游戏名: 仙境传说：重生'
+    reason: ''
+    game_details:
+    - canonical_name: 仙境传说：重生
+      game_id_hint: ragnarok-rebirth
+      confidence: high
+      matched_keyword: 仙境传说：重生
+  - canonical_entry_id: 2026-01-28-live-01
+    linked_entry_ids: []
+    date: '2026-01-28'
+    title: 娃睡了来唠会：这是谐音梗
+    source_urls:
+    - https://www.bilibili.com/video/BV1DLzXB8E24
+    - https://www.bilibili.com/video/BV1RMzXBNEWQ
+    catalog_sample:
+    - 【弹幕版】【娃睡了来唠会】【2026-01-28】【女流66】
+    classification: high
+    candidate_game_ids:
+    - zheshi-xieyinggen
+    confidence: high
+    evidence: '标题明确写出游戏名: 这是谐音梗'
+    reason: ''
+    game_details:
+    - canonical_name: 这是谐音梗
+      game_id_hint: zheshi-xieyinggen
+      confidence: high
+      matched_keyword: 这是谐音梗
+  - canonical_entry_id: 2026-01-31-live-01
+    linked_entry_ids: []
+    date: '2026-01-31'
+    title: 在终末地里拉电线
+    source_urls:
+    - https://www.bilibili.com/video/BV1LF61BHERA
+    - https://www.bilibili.com/video/BV1oo6yBWEgu
+    catalog_sample:
+    - 【弹幕版】【在终末地里拉电线】【2026-01-31】【女流66】
+    classification: high
+    candidate_game_ids:
+    - arknights-endfield
+    confidence: high
+    evidence: '标题明确写出游戏名: 终末地'
+    reason: ''
+    game_details:
+    - canonical_name: 明日方舟：终末地
+      game_id_hint: arknights-endfield
+      confidence: high
+      matched_keyword: 终末地
+  - canonical_entry_id: 2026-02-05-live-01
+    linked_entry_ids: []
+    date: '2026-02-05'
+    title: 乱剪一通
+    source_urls:
+    - https://www.bilibili.com/video/BV1WyFeznE47
+    - https://www.bilibili.com/video/BV1fvFvzLEVU
+    catalog_sample:
+    - 【女流66】《乱剪一通》欢乐理发店！跟炮炮壮壮一家人经营理发店，联机洗剪吹，友尽游戏【弹幕版】02.05女流完整直播录像
+    classification: high
+    candidate_game_ids:
+    - barber-shop-simulator
+    confidence: high
+    evidence: '标题明确写出游戏名: 乱剪一通'
+    reason: ''
+    game_details:
+    - canonical_name: 乱剪一通
+      game_id_hint: barber-shop-simulator
+      confidence: high
+      matched_keyword: 乱剪一通
+  - canonical_entry_id: 2026-02-13-live-01
+    linked_entry_ids: []
+    date: '2026-02-13'
+    title: 生灵重塑
+    source_urls:
+    - https://www.bilibili.com/video/BV16ecnzCEUP
+    - https://www.bilibili.com/video/BV1J3cJz6Ebm
+    catalog_sample:
+    - 【弹幕版】【女流66正在直播】【2026-02-13】【女流66】
+    classification: high
+    candidate_game_ids:
+    - reanimal
+    confidence: high
+    evidence: '标题明确写出游戏名: 生灵重塑'
+    reason: ''
+    game_details:
+    - canonical_name: 生灵重塑
+      game_id_hint: reanimal
+      confidence: high
+      matched_keyword: 生灵重塑
+  - canonical_entry_id: 2026-02-14-live-01
+    linked_entry_ids: []
+    date: '2026-02-14'
+    title: 生灵重塑
+    source_urls:
+    - https://www.bilibili.com/video/BV13oZLBkEyz
+    - https://www.bilibili.com/video/BV1VdZLBVEcA
+    catalog_sample:
+    - 【女流66】【2026-02-14】《生灵重塑》
+    classification: high
+    candidate_game_ids:
+    - reanimal
+    confidence: high
+    evidence: '标题明确写出游戏名: 生灵重塑'
+    reason: ''
+    game_details:
+    - canonical_name: 生灵重塑
+      game_id_hint: reanimal
+      confidence: high
+      matched_keyword: 生灵重塑
+  - canonical_entry_id: 2026-03-16-live-02
+    linked_entry_ids: []
+    date: '2026-03-16'
+    title: 这是谐音梗
+    source_urls:
+    - https://www.bilibili.com/video/BV16uw2zSENe
+    - https://www.bilibili.com/video/BV1MXw1zaEGm
+    catalog_sample:
+    - 【女流66】跟YJJ玩《这是谐音梗》新关卡03.16女流完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - zheshi-xieyinggen
+    confidence: high
+    evidence: '标题明确写出游戏名: 这是谐音梗'
+    reason: ''
+    game_details:
+    - canonical_name: 这是谐音梗
+      game_id_hint: zheshi-xieyinggen
+      confidence: high
+      matched_keyword: 这是谐音梗
+  - canonical_entry_id: 2026-03-21-live-02
+    linked_entry_ids: []
+    date: '2026-03-21'
+    title: 她的树：迷梦
+    source_urls:
+    - https://www.bilibili.com/video/BV1QcAKzoETe
+    - https://www.bilibili.com/video/BV1fcAAzFEsz
+    catalog_sample:
+    - 【女流66】玩解谜游戏《她的树：迷梦》，排列组合挑战脑洞，03.21直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - her-trees
+    confidence: high
+    evidence: '标题明确写出游戏名: 她的树'
+    reason: ''
+    game_details:
+    - canonical_name: 她的树
+      game_id_hint: her-trees
+      confidence: high
+      matched_keyword: 她的树
+  - canonical_entry_id: 2026-03-27-live-01
+    linked_entry_ids: []
+    date: '2026-03-27'
+    title: 她的树
+    source_urls:
+    - https://www.bilibili.com/video/BV1CEXMBoEGH
+    catalog_sample:
+    - 【女流66】《她的树》HER TREES THE PUZZLE HOUSE 跟YJJ玩解谜游戏实况 03.27完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - her-trees
+    confidence: high
+    evidence: '标题明确写出游戏名: 她的树'
+    reason: ''
+    game_details:
+    - canonical_name: 她的树
+      game_id_hint: her-trees
+      confidence: high
+      matched_keyword: 她的树
+  - canonical_entry_id: 2026-03-27-live-02
+    linked_entry_ids: []
+    date: '2026-03-27'
+    title: 她的树：迷梦
+    source_urls:
+    - https://www.bilibili.com/video/BV1RVXTB3EJq
+    catalog_sample:
+    - 【女流66】和炮炮玩解谜游戏《她的树：迷梦》，排列组合挑战脑洞，03.27直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - her-trees
+    confidence: high
+    evidence: '标题明确写出游戏名: 她的树'
+    reason: ''
+    game_details:
+    - canonical_name: 她的树
+      game_id_hint: her-trees
+      confidence: high
+      matched_keyword: 她的树
+  - canonical_entry_id: 2026-03-27-live-03
+    linked_entry_ids: []
+    date: '2026-03-27'
+    title: 睡了吗
+    source_urls:
+    - https://www.bilibili.com/video/BV18NXMBqEmr
+    - https://www.bilibili.com/video/BV1yiXTBxE5Q
+    catalog_sample:
+    - 【女流66】【2026-03-27】《睡了吗》
+    classification: high
+    candidate_game_ids:
+    - are-you-sleeping
+    confidence: high
+    evidence: '标题明确写出游戏名: 睡了吗'
+    reason: ''
+    game_details:
+    - canonical_name: 睡了吗
+      game_id_hint: are-you-sleeping
+      confidence: high
+      matched_keyword: 睡了吗
+  - canonical_entry_id: 2026-04-16-live-01
+    linked_entry_ids: []
+    date: '2026-04-16'
+    title: Bento Blocks
+    source_urls:
+    - https://www.bilibili.com/video/BV1VsdaBQEmX
+    catalog_sample:
+    - 【女流66】《Bento Blocks》便当积木 跟YJJ玩解谜游戏实况 04.16完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - bento-blocks
+    confidence: high
+    evidence: '标题明确写出游戏名: Bento Blocks'
+    reason: ''
+    game_details:
+    - canonical_name: Bento Blocks
+      game_id_hint: bento-blocks
+      confidence: high
+      matched_keyword: Bento Blocks
+  - canonical_entry_id: 2026-04-16-live-03
+    linked_entry_ids: []
+    date: '2026-04-16'
+    title: 竞拍之王
+    source_urls:
+    - https://www.bilibili.com/video/BV1nrdqBLEQX
+    catalog_sample:
+    - 【女流66】试玩《竞拍之王》、和炮炮一起玩解谜游戏《便当积木 Bento Blocks》，04.16直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - bento-blocks
+    - auction-king
+    confidence: high
+    evidence: '标题明确写出游戏名: Bento Blocks, 竞拍之王'
+    reason: ''
+    game_details:
+    - canonical_name: Bento Blocks
+      game_id_hint: bento-blocks
+      confidence: high
+      matched_keyword: Bento Blocks
+    - canonical_name: 竞拍之王
+      game_id_hint: auction-king
+      confidence: high
+      matched_keyword: 竞拍之王
+  - canonical_entry_id: 2026-04-21-live-02
+    linked_entry_ids: []
+    date: '2026-04-21'
+    title: 女吊
+    source_urls:
+    - https://www.bilibili.com/video/BV1BUdUBgE8M
+    - https://www.bilibili.com/video/BV1WidUBEEyB
+    catalog_sample:
+    - 【女流66】和壮壮双人联机吴越民俗解谜游戏《女吊》，04.21直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - nvdiao
+    confidence: high
+    evidence: '标题明确写出游戏名: 女吊'
+    reason: ''
+    game_details:
+    - canonical_name: 女吊
+      game_id_hint: nvdiao
+      confidence: high
+      matched_keyword: 女吊
+  - canonical_entry_id: 2026-04-22-live-02
+    linked_entry_ids: []
+    date: '2026-04-22'
+    title: 竞拍之王
+    source_urls:
+    - https://www.bilibili.com/video/BV1Mqo4BwE3j
+    catalog_sample:
+    - 【女流66】跟YJJ玩《竞拍之王》04.22完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - auction-king
+    confidence: high
+    evidence: '标题明确写出游戏名: 竞拍之王'
+    reason: ''
+    game_details:
+    - canonical_name: 竞拍之王
+      game_id_hint: auction-king
+      confidence: high
+      matched_keyword: 竞拍之王
+  - canonical_entry_id: 2026-04-28-live-02
+    linked_entry_ids: []
+    date: '2026-04-28'
+    title: 这是谐音梗
+    source_urls:
+    - https://www.bilibili.com/video/BV1Rh9yBEEHe
+    - https://www.bilibili.com/video/BV1rj9yBZEVz
+    catalog_sample:
+    - 【女流66】跟YJJ玩《这是谐音梗》正式版 04.28完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - zheshi-xieyinggen
+    confidence: high
+    evidence: '标题明确写出游戏名: 这是谐音梗'
+    reason: ''
+    game_details:
+    - canonical_name: 这是谐音梗
+      game_id_hint: zheshi-xieyinggen
+      confidence: high
+      matched_keyword: 这是谐音梗
+  - canonical_entry_id: 2026-04-30-live-01
+    linked_entry_ids:
+    - 2026-04-30-live-02
+    date: '2026-04-30'
+    title: 卡片魔王
+    source_urls:
+    - https://www.bilibili.com/video/BV13f9eBJEii
+    - https://www.bilibili.com/video/BV17f9hBQEZf
+    - https://www.bilibili.com/video/BV1879aBzEHa
+    - https://www.bilibili.com/video/BV1Jd9hB9E19
+    catalog_sample:
+    - 【女流66】【2026-04-30】《卡片魔王》
+    - 【女流66】玩回合制肉鸽游戏《卡片魔王：只剩个头！》，04.30直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - card-devil
+    confidence: high
+    evidence: '标题明确写出游戏名: 卡片魔王'
+    reason: ''
+    game_details:
+    - canonical_name: 卡片魔王
+      game_id_hint: card-devil
+      confidence: high
+      matched_keyword: 卡片魔王
+  - canonical_entry_id: 2026-05-13-live-03
+    linked_entry_ids: []
+    date: '2026-05-13'
+    title: 掘地求狗
+    source_urls:
+    - https://www.bilibili.com/video/BV15t5m68EVy
+    - https://www.bilibili.com/video/BV1xN5m6LEHi
+    catalog_sample:
+    - 【女流66】和壮壮战鹰驴酱一起玩《掘地求狗》，四人联机下洞救狗！05.13直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - dig-for-dog
+    confidence: high
+    evidence: '标题明确写出游戏名: 掘地求狗'
+    reason: ''
+    game_details:
+    - canonical_name: 掘地求狗
+      game_id_hint: dig-for-dog
+      confidence: high
+      matched_keyword: 掘地求狗
+  - canonical_entry_id: 2026-06-16-live-01
+    linked_entry_ids: []
+    date: '2026-06-16'
+    title: 叨叨巫师
+    source_urls:
+    - https://www.bilibili.com/video/BV1JajV62EbW
+    - https://www.bilibili.com/video/BV1ZejV65EdK
+    catalog_sample:
+    - 【弹幕版】【叨叨巫师】【2026-06-16】【女流66】
+    classification: high
+    candidate_game_ids:
+    - daodao-wizard
+    confidence: high
+    evidence: '标题明确写出游戏名: 叨叨巫师'
+    reason: ''
+    game_details:
+    - canonical_name: 叨叨巫师
+      game_id_hint: daodao-wizard
+      confidence: high
+      matched_keyword: 叨叨巫师
+  - canonical_entry_id: 2026-06-18-live-01
+    linked_entry_ids: []
+    date: '2026-06-18'
+    title: 画画躲猫猫
+    source_urls:
+    - https://www.bilibili.com/video/BV15vja64ECt
+    - https://www.bilibili.com/video/BV1tUja6mEk3
+    catalog_sample:
+    - 【女流66】和炮炮XDD皮皮兔子一起玩《画画躲猫猫》，爆笑多人联机游戏，06.18直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - meecha-chameleon
+    confidence: high
+    evidence: '标题明确写出游戏名: 画画躲猫猫'
+    reason: ''
+    game_details:
+    - canonical_name: 画画躲猫猫
+      game_id_hint: meecha-chameleon
+      confidence: high
+      matched_keyword: 画画躲猫猫
+  - canonical_entry_id: 2026-06-26-live-03
+    linked_entry_ids: []
+    date: '2026-06-26'
+    title: 新倩女幽魂
+    source_urls:
+    - https://www.bilibili.com/video/BV1MU7L6qEPK
+    - https://www.bilibili.com/video/BV1i37j6DEUA
+    catalog_sample:
+    - 【女流66】和炮炮一起玩《新倩女幽魂》，双视角侠侣挑战副本，考验默契的时刻到了！06.26直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - xin-qiannv-youhun
+    confidence: high
+    evidence: '标题明确写出游戏名: 新倩女幽魂'
+    reason: ''
+    game_details:
+    - canonical_name: 新倩女幽魂
+      game_id_hint: xin-qiannv-youhun
+      confidence: high
+      matched_keyword: 新倩女幽魂
+  - canonical_entry_id: 2026-06-28-live-01
+    linked_entry_ids:
+    - 2026-06-28-live-02
+    date: '2026-06-28'
+    title: 诡秘之主
+    source_urls:
+    - https://www.bilibili.com/video/BV1BXTu65E9F
+    - https://www.bilibili.com/video/BV1aKTg6eEb3
+    - https://www.bilibili.com/video/BV1voTu66Exs
+    catalog_sample:
+    - 【弹幕版】【诡秘之主】【2026-06-28】【女流66】
+    - 【女流66】《诡秘之主测试》跟炮炮壮壮一起玩，窥秘人主线+多人副本 06.28完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - lord-of-mysteries
+    confidence: high
+    evidence: '标题明确写出游戏名: 诡秘之主'
+    reason: ''
+    game_details:
+    - canonical_name: 诡秘之主
+      game_id_hint: lord-of-mysteries
+      confidence: high
+      matched_keyword: 诡秘之主
+  - canonical_entry_id: 2026-06-30-live-01
+    linked_entry_ids:
+    - 2026-06-30-live-02
+    date: '2026-06-30'
+    title: AI密室逃脱互动闯关
+    source_urls:
+    - https://www.bilibili.com/video/BV1FeTc6sEaJ
+    - https://www.bilibili.com/video/BV1HGTw6tEPQ
+    catalog_sample:
+    - 【女流66】跟炮炮壮壮一起玩《AI密室逃脱互动闯关》贝果AI欢乐空间解谜小游戏，06.30完整直播录像弹幕版
+    - 【女流66】和壮壮炮炮一起玩《AI密室逃脱闯关》，爆笑空间解谜小游戏，06.30直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - ai-escape-room
+    confidence: high
+    evidence: '标题明确写出游戏名: AI密室逃脱'
+    reason: ''
+    game_details:
+    - canonical_name: AI密室逃脱
+      game_id_hint: ai-escape-room
+      confidence: high
+      matched_keyword: AI密室逃脱
+  - canonical_entry_id: 2026-07-04-live-01
+    linked_entry_ids: []
+    date: '2026-07-04'
+    title: 画画躲猫猫
+    source_urls:
+    - https://www.bilibili.com/video/BV17GMP6FETb
+    catalog_sample:
+    - 【女流66】《画画躲猫猫》跟YJJ壮壮XDD玩 欢乐多人捉迷藏 超级变色龙 07.04 完整直播录像弹幕版
+    classification: high
+    candidate_game_ids:
+    - meecha-chameleon
+    confidence: high
+    evidence: '标题明确写出游戏名: 画画躲猫猫'
+    reason: ''
+    game_details:
+    - canonical_name: 画画躲猫猫
+      game_id_hint: meecha-chameleon
+      confidence: high
+      matched_keyword: 画画躲猫猫
+  - canonical_entry_id: 2026-08-06-live-01
+    linked_entry_ids:
+    - 2026-08-06-live-02
+    date: '2026-08-06'
+    title: Snapshots
+    source_urls:
+    - https://www.bilibili.com/video/BV1XpuH6uECU
+    - https://www.bilibili.com/video/BV1aWuH6zEh5
+    catalog_sample:
+    - 【女流66】《Snapshots》解压整理收纳解谜休闲游戏 08.06完整直播录像弹幕版
+    - 【女流66】HyperX 飓风3S耳机代言，《快照 Snapshots》解谜休闲游戏，08.06直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - snapshots-game
+    confidence: high
+    evidence: '标题明确写出游戏名: Snapshots'
+    reason: ''
+    game_details:
+    - canonical_name: Snapshots
+      game_id_hint: snapshots-game
+      confidence: high
+      matched_keyword: Snapshots
+  - canonical_entry_id: 2026-08-09-live-02
+    linked_entry_ids: []
+    date: '2026-08-09'
+    title: 维修物语
+    source_urls:
+    - https://www.bilibili.com/video/BV1NUuU6TET9
+    - https://www.bilibili.com/video/BV1wBuQ6rEfg
+    catalog_sample:
+    - 【女流66】玩《维修物语》电器维修模拟器，休闲模拟经营商店游戏，08.09直播录像弹幕版~
+    classification: high
+    candidate_game_ids:
+    - repair-story
+    confidence: high
+    evidence: '标题明确写出游戏名: 维修物语'
+    reason: ''
+    game_details:
+    - canonical_name: 维修物语
+      game_id_hint: repair-story
+      confidence: high
+      matched_keyword: 维修物语
+  medium:
+  - canonical_entry_id: 2024-10-22-live-01
+    linked_entry_ids: []
+    date: '2024-10-22'
+    title: 6点AG-WOL 8点DRG-NOVA
+    source_urls:
+    - https://www.bilibili.com/video/BV1AjyWYxETq
+    - https://www.bilibili.com/video/BV1DryWYME2j
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 6点AG-WOL 8点DRG-NOVA 2024年10月22日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(0+2)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-10-27-live-01
+    linked_entry_ids: []
+    date: '2024-10-27'
+    title: 剪个头  2点半来COD21
+    source_urls:
+    - https://www.bilibili.com/video/BV1BM1YY1ES2
+    - https://www.bilibili.com/video/BV1UU1aYbELU
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 剪个头  2点半来COD21 2024年10月27日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - call-of-duty
+    confidence: medium
+    evidence: 含COD21信号但无法确定具体作品
+    reason: ''
+    game_details:
+    - canonical_name: 使命召唤
+      game_id_hint: call-of-duty
+      confidence: medium
+      matched_keyword: COD21
+      evidence: 标题含COD21，但未明确为哪部CoD作品
+  - canonical_entry_id: 2024-11-02-live-01
+    linked_entry_ids: []
+    date: '2024-11-02'
+    title: 下午1点有EDG TE
+    source_urls:
+    - https://www.bilibili.com/video/BV1iHDwYPEvF
+    - https://www.bilibili.com/video/BV1rgDwYrEq5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 下午1点有EDG TE 2024年11月02日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(0+2)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-11-24-live-01
+    linked_entry_ids: []
+    date: '2024-11-24'
+    title: 先上赋能 再跟浩东看比赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1VmBsYaEyz
+    - https://www.bilibili.com/video/BV1XmBsYhESp
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先上赋能 再跟浩东看比赛 2024年11月24日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-11-25-live-01
+    linked_entry_ids: []
+    date: '2024-11-25'
+    title: 先上赋能 再跟浩东看EDG比赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1pZzwYJEwc
+    - https://www.bilibili.com/video/BV1zuBYY8ER3
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先上赋能 再跟浩东看EDG比赛 2024年11月25日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含3个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+1)
+      evidence: 匹配3个Valorant相关术语
+  - canonical_entry_id: 2024-11-30-live-01
+    linked_entry_ids: []
+    date: '2024-11-30'
+    title: 5点TE PRX败决BO5
+    source_urls:
+    - https://www.bilibili.com/video/BV18qznY2EKb
+    - https://www.bilibili.com/video/BV1L1zJYHEAE
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5点TE PRX败决BO5 2024年11月30日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(0+2)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-12-01-live-01
+    linked_entry_ids: []
+    date: '2024-12-01'
+    title: 5点dfmPRX决赛BO5
+    source_urls:
+    - https://www.bilibili.com/video/BV144zdYgE8E
+    - https://www.bilibili.com/video/BV1x8zdYMEPU
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5点dfmPRX决赛BO5 2024年12月01日'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(0+2)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-12-09-live-01
+    linked_entry_ids: []
+    date: '2024-12-09'
+    title: 11点来 11点来 上上赋能
+    source_urls:
+    - https://www.bilibili.com/video/BV1BbqcYYE3o
+    - https://www.bilibili.com/video/BV1ZTqwYiEdb
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点来 11点来 上上赋能 2024年12月09日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-12-12-live-01
+    linked_entry_ids: []
+    date: '2024-12-12'
+    title: 感冒第三天 先打CS轻松一下 下午再瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV1HMqbYDEUf
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 感冒第三天 先打CS轻松一下 下午再瓦 2024年12月12日'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-13-live-03
+    linked_entry_ids: []
+    date: '2024-12-13'
+    title: 【双倍】先瓦 2点看看MAJOR
+    source_urls:
+    - https://www.bilibili.com/video/BV14LqzYdE9B
+    - https://www.bilibili.com/video/BV1EYqqYiE56
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】先瓦 2点看看MAJOR 2024年12月13日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-14-live-01
+    linked_entry_ids: []
+    date: '2024-12-14'
+    title: 【一毛牌子+双倍】先瓦2点看看MAJOR
+    source_urls:
+    - https://www.bilibili.com/video/BV15GBLYvE5s
+    - https://www.bilibili.com/video/BV1UHBLYtE8r
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【一毛牌子+双倍】先瓦2点看看MAJOR 2024年12月14日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-19-live-01
+    linked_entry_ids: []
+    date: '2024-12-19'
+    title: 【双倍】先上赋能再玩别的
+    source_urls:
+    - https://www.bilibili.com/video/BV1DjkMYpExG
+    - https://www.bilibili.com/video/BV1ajkMYpEPL
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】先上赋能再玩别的 2024年12月19日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2024-12-20-live-01
+    linked_entry_ids: []
+    date: '2024-12-20'
+    title: 【双倍】先虐一 GO学长 再6点瓦比赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1fPkyYTEha
+    - https://www.bilibili.com/video/BV1zPkyYTEEt
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】先虐一 GO学长 再6点瓦比赛 2024年12月20日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-20-live-02
+    linked_entry_ids: []
+    date: '2024-12-20'
+    title: 【双倍】瓦瓦瓦瓦瓦瓦瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV115k1YJENA
+    - https://www.bilibili.com/video/BV1hwk1YtE6N
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】瓦瓦瓦瓦瓦瓦瓦 2024年12月20日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-23-live-01
+    linked_entry_ids: []
+    date: '2024-12-23'
+    title: 先搞点节目  下午瓦一瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV1JeCgYkELV
+    - https://www.bilibili.com/video/BV1LqCgY6EfM
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先搞点节目  下午瓦一瓦 2024年12月23日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2024-12-24-live-01
+    linked_entry_ids: []
+    date: '2024-12-24'
+    title: 先上赋能 再玩点别的
+    source_urls:
+    - https://www.bilibili.com/video/BV1KWkQYqEVM
+    - https://www.bilibili.com/video/BV1UNkRYjEjv
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先上赋能 再玩点别的 2024年12月24日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2025-01-10-live-01
+    linked_entry_ids: []
+    date: '2025-01-10'
+    title: 老头FPS  瓦新赛季 上上分
+    source_urls:
+    - https://www.bilibili.com/video/BV17hc7ezEnt
+    - https://www.bilibili.com/video/BV1u2c7ebEHF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 老头FPS  瓦新赛季 上上分 2025年01月10日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含Valorant简称"瓦"
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"（Valorant简称）
+  - canonical_entry_id: 2025-01-11-live-01
+    linked_entry_ids: []
+    date: '2025-01-11'
+    title: 11号 5点vct 启点赛开赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1HRcFeFE5R
+    - https://www.bilibili.com/video/BV1VKcceQEXD
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11号 5点vct 启点赛开赛。 2025年01月11日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2025-01-12-live-01
+    linked_entry_ids: []
+    date: '2025-01-12'
+    title: 【双倍】12号 5点vct 启点赛开赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1sfcMebE7a
+    - https://www.bilibili.com/video/BV1swcue4EPG
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】12号 5点vct 启点赛开赛。 2025年01月12日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含2个Valorant相关术语
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: Valorant术语(2+0)
+      evidence: 匹配2个Valorant相关术语
+  - canonical_entry_id: 2025-02-26-live-01
+    linked_entry_ids: []
+    date: '2025-02-26'
+    title: 开始航天跑刀一个1E计划！
+    source_urls:
+    - https://www.bilibili.com/video/BV1cwP5eCENd
+    - https://www.bilibili.com/video/BV1eJP5ecEY8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 开始航天跑刀一个1E计划！ 2025年02月26日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-02-27-live-02
+    linked_entry_ids: []
+    date: '2025-02-27'
+    title: 开始航天跑刀一个1E计划！
+    source_urls:
+    - https://www.bilibili.com/video/BV11gPpeuEBJ
+    - https://www.bilibili.com/video/BV1dSPHeXEnS
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 开始航天跑刀一个1E计划！ 2025年02月27日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-02-28-live-03
+    linked_entry_ids: []
+    date: '2025-02-28'
+    title: 航天跑刀 10分钟 随便100W
+    source_urls:
+    - https://www.bilibili.com/video/BV1Cr9TYiEBq
+    - https://www.bilibili.com/video/BV1kb9gYGEBh
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 航天跑刀 10分钟 随便100W 2025年02月28日'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-03-16-live-01
+    linked_entry_ids: []
+    date: '2025-03-16'
+    title: 恐怖右脑怪兽袭击航天基地
+    source_urls:
+    - https://www.bilibili.com/video/BV1NcQbY4E4V
+    - https://www.bilibili.com/video/BV1o5QbY2Er9
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 恐怖右脑怪兽袭击航天基地 2025年03月16日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-03-22-live-01
+    linked_entry_ids: []
+    date: '2025-03-22'
+    title: 可怕的航天噩梦正在恐怖的游走
+    source_urls:
+    - https://www.bilibili.com/video/BV1QfXJYUE4u
+    - https://www.bilibili.com/video/BV1oSXJYREAR
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 可怕的航天噩梦正在恐怖的游走 2025年03月22日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2025-03-23-live-01
+    linked_entry_ids: []
+    date: '2025-03-23'
+    title: 可怕的航天噩梦正在恐怖的游走
+    source_urls:
+    - https://www.bilibili.com/video/BV11YXhYKEWB
+    - https://www.bilibili.com/video/BV14uXaYrEns
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 可怕的航天噩梦正在恐怖的游走 2025年03月23日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2025-03-24-live-01
+    linked_entry_ids: []
+    date: '2025-03-24'
+    title: 可怕的航天噩梦正在恐怖的游走
+    source_urls:
+    - https://www.bilibili.com/video/BV1SZokYpEik
+    - https://www.bilibili.com/video/BV1oboCYwEF5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 可怕的航天噩梦正在恐怖的游走 2025年03月24日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2025-03-25-live-01
+    linked_entry_ids: []
+    date: '2025-03-25'
+    title: 可怕的航天噩梦正在恐怖的游走
+    source_urls:
+    - https://www.bilibili.com/video/BV1MboWYhEpC
+    - https://www.bilibili.com/video/BV1zmoWY7EKj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 可怕的航天噩梦正在恐怖的游走 2025年03月25日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2025-03-28-live-03
+    linked_entry_ids: []
+    date: '2025-03-28'
+    title: 航天基地之看到就吃掉
+    source_urls:
+    - https://www.bilibili.com/video/BV1XToQYEE3n
+    - https://www.bilibili.com/video/BV1ocoQYpEZY
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 航天基地之看到就吃掉 2025年03月28日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-04-10-live-02
+    linked_entry_ids: []
+    date: '2025-04-10'
+    title: 看我直播又练跑刀又练修脚
+    source_urls:
+    - https://www.bilibili.com/video/BV15tdGYBEKg
+    - https://www.bilibili.com/video/BV1oBduYPELB
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 看我直播又练跑刀又练修脚 2025年04月10日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=0, items=1'
+  - canonical_entry_id: 2025-04-15-live-01
+    linked_entry_ids: []
+    date: '2025-04-15'
+    title: Smg45跑刀 今日航天大坝
+    source_urls:
+    - https://www.bilibili.com/video/BV14eoAYiEWo
+    - https://www.bilibili.com/video/BV1hCopYwEhi
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] Smg45跑刀 今日航天大坝 2025年04月15日'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=2, maps=2, items=0'
+  - canonical_entry_id: 2025-04-16-live-01
+    linked_entry_ids: []
+    date: '2025-04-16'
+    title: Smg45跑刀 今日航天大坝
+    source_urls:
+    - https://www.bilibili.com/video/BV1FboPYfEXW
+    - https://www.bilibili.com/video/BV1uuoPYkEfe
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] Smg45跑刀 今日航天大坝 2025年04月16日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=2, maps=2, items=0'
+  - canonical_entry_id: 2025-04-19-live-01
+    linked_entry_ids: []
+    date: '2025-04-19'
+    title: 开始跑刀 只差失去联系和收集者
+    source_urls:
+    - https://www.bilibili.com/video/BV15A5xz7E6h
+    - https://www.bilibili.com/video/BV1GA5WzzEy2
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 开始跑刀 只差失去联系和收集者 2025年04月19日'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=0, items=2'
+  - canonical_entry_id: 2025-04-24-live-01
+    linked_entry_ids: []
+    date: '2025-04-24'
+    title: 11点半，强势黑夜大坝
+    source_urls:
+    - https://www.bilibili.com/video/BV1cvLezHEEW
+    - https://www.bilibili.com/video/BV1kVLqzAECc
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点半，强势黑夜大坝 2025年04月24日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-04-25-live-01
+    linked_entry_ids: []
+    date: '2025-04-25'
+    title: 11点半，强势黑夜大坝
+    source_urls:
+    - https://www.bilibili.com/video/BV17aLEzMEdC
+    - https://www.bilibili.com/video/BV1eoL7zwEtT
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点半，强势黑夜大坝 2025年04月25日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动跑刀/地图/装备术语
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 跑刀+地图/装备术语
+      evidence: '跑刀相关术语: strong=1, maps=1, items=0'
+  - canonical_entry_id: 2025-06-04-live-01
+    linked_entry_ids: []
+    date: '2025-06-04'
+    title: 人性的巴克什
+    source_urls:
+    - https://www.bilibili.com/video/BV19e7BzsE5r
+    - https://www.bilibili.com/video/BV1aL7zz4EzP
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 人性的巴克什~ 2025年06月04日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2025-06-05-live-01
+    linked_entry_ids: []
+    date: '2025-06-05'
+    title: 人性的巴克什
+    source_urls:
+    - https://www.bilibili.com/video/BV1KcTszLE4z
+    - https://www.bilibili.com/video/BV1ypTWzgE8f
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 人性的巴克什~ 2025年06月05日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - delta-force
+    confidence: medium
+    evidence: 含三角洲行动地图/模式名称
+    reason: ''
+    game_details:
+    - canonical_name: 三角洲行动
+      game_id_hint: delta-force
+      confidence: medium
+      matched_keyword: 地图/模式名
+      evidence: 含三角洲行动地图/模式名
+  - canonical_entry_id: 2024-11-03-live-01
+    linked_entry_ids: []
+    date: '2024-11-03'
+    title: 没关系，我们还有瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV1hoSkYBEyv
+    - https://www.bilibili.com/video/BV1vSSkYVEVw
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 没关系，我们还有瓦 2024年11月03日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含"瓦"（Valorant简称），yjjimpaopao语境下明确指无畏契约
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"，yjjimpaopao语境下指无畏契约
+  - canonical_entry_id: 2024-11-04-live-01
+    linked_entry_ids: []
+    date: '2024-11-04'
+    title: 没关系，我们还有瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV1MaDnYgEn2
+    - https://www.bilibili.com/video/BV1YwDHYUEkD
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 没关系，我们还有瓦 2024年11月04日 （带弹幕版）'
+    classification: medium
+    candidate_game_ids:
+    - valorant
+    confidence: medium
+    evidence: 含"瓦"（Valorant简称），yjjimpaopao语境下明确指无畏契约
+    reason: ''
+    game_details:
+    - canonical_name: 无畏契约
+      game_id_hint: valorant
+      confidence: medium
+      matched_keyword: 瓦
+      evidence: 含"瓦"，yjjimpaopao语境下指无畏契约
+  non_game:
+  - canonical_entry_id: 2024-08-18-live-01
+    linked_entry_ids: []
+    date: '2024-08-18'
+    title: 2024-08-18 首秀
+    source_urls:
+    - https://www.bilibili.com/video/BV16wpreAEto
+    catalog_sample:
+    - 【女流66】2024-08-18 首秀直播录像
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: 首秀/首播
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-18-live-01
+    linked_entry_ids: []
+    date: '2024-09-18'
+    title: 头有点疼的，可能播不久
+    source_urls:
+    - https://www.bilibili.com/video/BV11HtVeVERR
+    - https://www.bilibili.com/video/BV1CttVeuELd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 头有点疼的，可能播不久 2024年09月18日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 头有点疼的'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-20-live-01
+    linked_entry_ids: []
+    date: '2024-09-20'
+    title: 好好好好好好好好
+    source_urls:
+    - https://www.bilibili.com/video/BV14EtoeNESQ
+    - https://www.bilibili.com/video/BV1PstoewEZk
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 好好好好好好好好。 2024年09月20日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 好好好好好好好好'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-26-live-01
+    linked_entry_ids: []
+    date: '2024-09-26'
+    title: 东京电玩展现场，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV19YxLedEJ2
+    catalog_sample:
+    - '[女流66/女流直播回放] 东京电玩展现场，好多人呐 2024年09月26日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: 东京电玩展'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-26-live-02
+    linked_entry_ids: []
+    date: '2024-09-26'
+    title: 感冒了 4点来解说个比赛
+    source_urls:
+    - https://www.bilibili.com/video/BV17mxjeKEm3
+    - https://www.bilibili.com/video/BV1J1xjeqEMt
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 感冒了 4点来解说个比赛 2024年09月26日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: 解说/观看比赛，未指定游戏
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-26-live-03
+    linked_entry_ids: []
+    date: '2024-09-26'
+    title: 感冒了 状态一般 呜呜呜
+    source_urls:
+    - https://www.bilibili.com/video/BV1VQx5eRE6G
+    - https://www.bilibili.com/video/BV1xgxLekEPq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 感冒了 状态一般 呜呜呜 2024年09月26日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: 身体不适休息
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-28-live-01
+    linked_entry_ids: []
+    date: '2024-09-28'
+    title: 一个香香的直播间
+    source_urls:
+    - https://www.bilibili.com/video/BV1JTxTekEnE
+    - https://www.bilibili.com/video/BV1zHxPevEo9
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一个香香的直播间 2024年09月28日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '固定标题模板: 一个香香的直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-29-live-01
+    linked_entry_ids: []
+    date: '2024-09-29'
+    title: 一个香香的直播间
+    source_urls:
+    - https://www.bilibili.com/video/BV18MxkeZExn
+    - https://www.bilibili.com/video/BV1LzxkeqEtj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一个香香的直播间 2024年09月29日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '固定标题模板: 一个香香的直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-09-30-live-01
+    linked_entry_ids: []
+    date: '2024-09-30'
+    title: 一个香香的直播间
+    source_urls:
+    - https://www.bilibili.com/video/BV1nZxsehEcK
+    - https://www.bilibili.com/video/BV1zJxse4Ehq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一个香香的直播间 2024年09月30日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '固定标题模板: 一个香香的直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-01-live-01
+    linked_entry_ids: []
+    date: '2024-10-01'
+    title: 国庆快乐，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1owxveUEfa
+    catalog_sample:
+    - '[女流66/女流直播回放] 国庆快乐，好多人呐 2024年10月01日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 国庆快乐'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-02-live-02
+    linked_entry_ids: []
+    date: '2024-10-02'
+    title: 国庆快乐，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1H74gexEVY
+    catalog_sample:
+    - '[女流66/女流直播回放] 国庆快乐，好多人呐 2024年10月02日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 国庆快乐'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-03-live-02
+    linked_entry_ids: []
+    date: '2024-10-03'
+    title: 国庆快乐，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1kMxRejE36
+    catalog_sample:
+    - '[女流66/女流直播回放] 国庆快乐，好多人呐 2024年10月03日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 国庆快乐'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-11-live-01
+    linked_entry_ids: []
+    date: '2024-10-11'
+    title: 摄像头坏了 没有头
+    source_urls:
+    - https://www.bilibili.com/video/BV1Hc2UY8ELk
+    - https://www.bilibili.com/video/BV1TN21YcEjQ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 摄像头坏了 没有头 2024年10月11日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 摄像头坏了'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-14-live-01
+    linked_entry_ids: []
+    date: '2024-10-14'
+    title: 下午 杭州户外
+    source_urls:
+    - https://www.bilibili.com/video/BV1Z9mVYcEic
+    - https://www.bilibili.com/video/BV1zDmVYAEoo
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 下午 杭州户外 2024年10月14日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: 杭州户外'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-15-live-01
+    linked_entry_ids: []
+    date: '2024-10-15'
+    title: 下午 杭州户外
+    source_urls:
+    - https://www.bilibili.com/video/BV1Aa2dYpEH5
+    - https://www.bilibili.com/video/BV1rY2dYDEdt
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 下午 杭州户外 2024年10月15日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: 杭州户外'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-21-live-01
+    linked_entry_ids: []
+    date: '2024-10-21'
+    title: 来啦来了来啊
+    source_urls:
+    - https://www.bilibili.com/video/BV1LoyBYsE9c
+    - https://www.bilibili.com/video/BV1fUyBYfEQZ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 来啦来了来啊 2024年10月21日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 来啦来了来啊'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-22-live-02
+    linked_entry_ids: []
+    date: '2024-10-22'
+    title: 好久不见，今日有 6
+    source_urls:
+    - https://www.bilibili.com/video/BV1P7yxYYETk
+    catalog_sample:
+    - '[女流66/女流直播回放] 好久不见，今日有 6 2024年10月22日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 好久不见'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-22-live-03
+    linked_entry_ids: []
+    date: '2024-10-22'
+    title: 累成蛤蟆狗，等会可能户外记录美好生活
+    source_urls:
+    - https://www.bilibili.com/video/BV1A9yHYpEZv
+    - https://www.bilibili.com/video/BV1yQyHYXEwL
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 累成蛤蟆狗，等会可能户外记录美好生活 2024年10月22日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 累成蛤蟆狗'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-10-23-live-01
+    linked_entry_ids: []
+    date: '2024-10-23'
+    title: 出去拍东西 6点回来看比赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1ESyfYSEFv
+    - https://www.bilibili.com/video/BV1WzyfY4ENB
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 出去拍东西 6点回来看比赛 2024年10月23日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 出去拍东西'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-08-live-01
+    linked_entry_ids: []
+    date: '2024-11-08'
+    title: 爸妈来北京去接他们，下午3点播
+    source_urls:
+    - https://www.bilibili.com/video/BV1KwDfY5EUm
+    - https://www.bilibili.com/video/BV1u9DZYSE9Z
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 爸妈来北京去接他们，下午3点播 2024年11月08日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 爸妈来北京'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-11-live-02
+    linked_entry_ids: []
+    date: '2024-11-11'
+    title: 陪爸妈吃饭去了，吃完回来
+    source_urls:
+    - https://www.bilibili.com/video/BV1acmWY7EfT
+    - https://www.bilibili.com/video/BV1rpmWYwEdx
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 陪爸妈吃饭去了，吃完回来 2024年11月11日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 陪爸妈'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-12-live-01
+    linked_entry_ids: []
+    date: '2024-11-12'
+    title: 陪爸妈去机场 晚点播5点大炮杯
+    source_urls:
+    - https://www.bilibili.com/video/BV1i1m8Y6EdQ
+    - https://www.bilibili.com/video/BV1zzm8YyEiu
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 陪爸妈去机场 晚点播5点大炮杯 2024年11月12日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 陪爸妈'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-25-live-02
+    linked_entry_ids: []
+    date: '2024-11-25'
+    title: 欢迎关注耕田游戏头号玩家
+    source_urls:
+    - https://www.bilibili.com/video/BV1rHzPYQEQa
+    catalog_sample:
+    - '[女流66/女流直播回放] 欢迎关注耕田游戏头号玩家 2024年11月25日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '固定标题模板: 欢迎关注耕田游戏'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-26-live-01
+    linked_entry_ids: []
+    date: '2024-11-26'
+    title: 今儿直播间真热闹
+    source_urls:
+    - https://www.bilibili.com/video/BV1ZNzGYiESr
+    - https://www.bilibili.com/video/BV1ZwzGYqEqA
+    catalog_sample:
+    - 【女流66】【2024.11.26】[今儿直播间真热闹]
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 今儿直播间真热闹'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-11-28-live-01
+    linked_entry_ids: []
+    date: '2024-11-28'
+    title: 今天直播间开派对呢，这么热闹
+    source_urls:
+    - https://www.bilibili.com/video/BV1wYzhYFEcs
+    - https://www.bilibili.com/video/BV1xHzhYqEK7
+    catalog_sample:
+    - 【女流66】【2024.11.28】[今天直播间开派对呢，这么热闹]
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 今天直播间开派对'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-03-live-02
+    linked_entry_ids: []
+    date: '2024-12-03'
+    title: 今天这么热闹
+    source_urls:
+    - https://www.bilibili.com/video/BV1y5zmYjEpr
+    catalog_sample:
+    - '[女流66/女流直播回放] 今天这么热闹 2024年12月03日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 今天这么热闹'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-08-live-02
+    linked_entry_ids: []
+    date: '2024-12-08'
+    title: 今儿好热闹喔
+    source_urls:
+    - https://www.bilibili.com/video/BV1zHqHYZExY
+    catalog_sample:
+    - '[女流66/女流直播回放] 今儿好热闹喔 2024年12月08日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 今儿好热闹'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-09-live-02
+    linked_entry_ids: []
+    date: '2024-12-09'
+    title: 今儿好热闹喔
+    source_urls:
+    - https://www.bilibili.com/video/BV1J5qKYEEBF
+    catalog_sample:
+    - '[女流66/女流直播回放] 今儿好热闹喔 2024年12月09日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 今儿好热闹'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-13-live-02
+    linked_entry_ids:
+    - 2024-12-13-live-01
+    date: '2024-12-13'
+    title: TGA正在直播中
+    source_urls:
+    - https://www.bilibili.com/video/BV1Kwq6YsEeN
+    - https://www.bilibili.com/video/BV1oRqiYaEbr
+    catalog_sample:
+    - '[女流66/女流直播回放] TGA正在直播中 2024年12月13日'
+    - 【女流66】【2024.12.13】[TGA正在直播]
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: TGA正在直播'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-18-live-01
+    linked_entry_ids: []
+    date: '2024-12-18'
+    title: 【双倍】161718在外拍摄，19播
+    source_urls:
+    - https://www.bilibili.com/video/BV1WnkwYxEpA
+    - https://www.bilibili.com/video/BV1sLkwYfEpy
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】161718在外拍摄，19播 2024年12月18日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 在外拍摄'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2024-12-21-live-02
+    linked_entry_ids: []
+    date: '2024-12-21'
+    title: 出差回北京了，好久不见
+    source_urls:
+    - https://www.bilibili.com/video/BV1eWktYJE9e
+    catalog_sample:
+    - '[女流66/女流直播回放] 出差回北京了，好久不见 2024年12月21日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 好久不见'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-02-live-01
+    linked_entry_ids: []
+    date: '2025-01-02'
+    title: 【双倍】元旦快乐 ！2025发大财
+    source_urls:
+    - https://www.bilibili.com/video/BV1NW6qYWExw
+    - https://www.bilibili.com/video/BV1iP6qYTEbK
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】元旦快乐 ！2025发大财 2025年01月02日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 元旦快乐'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-06-live-02
+    linked_entry_ids:
+    - 2025-01-06-live-03
+    date: '2025-01-06'
+    title: 突袭式直播间，2025头一播 2025/01/06 21时场
+    source_urls:
+    - https://www.bilibili.com/video/BV14brLYeESk
+    - https://www.bilibili.com/video/BV17PrLYDED1
+    catalog_sample:
+    - 【女流66】突袭式直播间，2025头一播 2025/01/06 21时场 直播回放
+    - '[女流66/女流直播回放] 突袭式直播间，2025头一播 2025年01月06日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 突袭式直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-08-live-03
+    linked_entry_ids:
+    - 2025-01-08-live-02
+    date: '2025-01-08'
+    title: 突袭式直播间刷到就是缘
+    source_urls:
+    - https://www.bilibili.com/video/BV14TrvYnEvN
+    - https://www.bilibili.com/video/BV1BcreYvEw7
+    - https://www.bilibili.com/video/BV1bfreYdE3B
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-01-08】【突袭式直播间刷到就是缘】
+    - 【女流66】突袭式直播间，刷到就是缘 2025/01/08 22时场 直播回放
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 突袭式直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-09-live-01
+    linked_entry_ids: []
+    date: '2025-01-09'
+    title: 突袭式直播间，刷到就是缘 2025/01/09 10时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1DCrzY3E15
+    catalog_sample:
+    - 【女流66】突袭式直播间，刷到就是缘 2025/01/09 10时场 直播回放
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 突袭式直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-09-live-02
+    linked_entry_ids: []
+    date: '2025-01-09'
+    title: 突袭式直播间刷到就是缘
+    source_urls:
+    - https://www.bilibili.com/video/BV1NdrzYPEaH
+    - https://www.bilibili.com/video/BV1zgr6YXEQh
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-01-09】【突袭式直播间刷到就是缘】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 突袭式直播间'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-13-live-01
+    linked_entry_ids: []
+    date: '2025-01-13'
+    title: 回归回归生活了
+    source_urls:
+    - https://www.bilibili.com/video/BV1KCc1eNEpr
+    - https://www.bilibili.com/video/BV1eScye3Exi
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归回归生活了。 2025年01月13日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 回归回归生活了'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-14-live-01
+    linked_entry_ids: []
+    date: '2025-01-14'
+    title: 回归回归生活了
+    source_urls:
+    - https://www.bilibili.com/video/BV126cXeJEcW
+    - https://www.bilibili.com/video/BV1xvc8esEDS
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归回归生活了。 2025年01月14日'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 回归回归生活了'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-01-15-live-01
+    linked_entry_ids: []
+    date: '2025-01-15'
+    title: 回归回归生活了
+    source_urls:
+    - https://www.bilibili.com/video/BV1dUcqeZEVk
+    - https://www.bilibili.com/video/BV1hhceeCEXc
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归回归生活了。 2025年01月15日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 回归回归生活了'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-09-live-01
+    linked_entry_ids: []
+    date: '2025-02-09'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1PZNye6EoG
+    - https://www.bilibili.com/video/BV1dJN1esExT
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月09日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-15-live-01
+    linked_entry_ids: []
+    date: '2025-02-15'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV16oAAeGEyN
+    - https://www.bilibili.com/video/BV1XbAAehEdZ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月15日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-16-live-01
+    linked_entry_ids: []
+    date: '2025-02-16'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1H2AgeAEZk
+    - https://www.bilibili.com/video/BV1joAgexENW
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月16日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-17-live-01
+    linked_entry_ids: []
+    date: '2025-02-17'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1Epw9eyEtY
+    - https://www.bilibili.com/video/BV1tyw9e8E2d
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月17日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-18-live-01
+    linked_entry_ids: []
+    date: '2025-02-18'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1LaA8e5EiX
+    - https://www.bilibili.com/video/BV1j5Ahe1Etn
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月18日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-20-live-01
+    linked_entry_ids: []
+    date: '2025-02-20'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1U7AseEErX
+    - https://www.bilibili.com/video/BV1r7AxeMEKh
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月20日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-20-live-02
+    linked_entry_ids: []
+    date: '2025-02-20'
+    title: 我的智力没问题2点来
+    source_urls:
+    - https://www.bilibili.com/video/BV1HKAHeFEXJ
+    - https://www.bilibili.com/video/BV1YWAHemEjg
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题2点来 2025年02月20日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-02-21-live-03
+    linked_entry_ids: []
+    date: '2025-02-21'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1JsAte3EHv
+    - https://www.bilibili.com/video/BV1xNAZeiEHe
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年02月21日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-03-06-live-01
+    linked_entry_ids: []
+    date: '2025-03-06'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1VnRwYzEps
+    - https://www.bilibili.com/video/BV1XcRAY3E29
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年03月06日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-03-17-live-01
+    linked_entry_ids: []
+    date: '2025-03-17'
+    title: 周一休息一天
+    source_urls:
+    - https://www.bilibili.com/video/BV1aWQBYaExC
+    - https://www.bilibili.com/video/BV1eJQBYNE3m
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 周一休息一天 2025年03月17日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 周一休息'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-03-26-live-01
+    linked_entry_ids: []
+    date: '2025-03-26'
+    title: 我的智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1C9oaYLEVn
+    - https://www.bilibili.com/video/BV1hpovYPEdg
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的智力没问题 2025年03月26日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的智力没问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-04-02-live-01
+    linked_entry_ids:
+    - 2025-04-02-live-03
+    date: '2025-04-02'
+    title: NS2任天堂直面会直播
+    source_urls:
+    - https://www.bilibili.com/video/BV1APfMYJE4J
+    - https://www.bilibili.com/video/BV1DafMYFEwc
+    - https://www.bilibili.com/video/BV1dnfMYqE61
+    catalog_sample:
+    - '[女流66/女流直播回放] NS2任天堂直面会直播 2025年04月02日'
+    - 【女流66】NS2任天堂直面会直播 2025/04/02 20时场 直播回放
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: NS2任天堂直面会'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-04-04-live-01
+    linked_entry_ids: []
+    date: '2025-04-04'
+    title: 有点事大概11点开
+    source_urls:
+    - https://www.bilibili.com/video/BV16uZRYBEbV
+    - https://www.bilibili.com/video/BV1eqZ9Y8Eaj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 有点事大概11点开 2025年04月04日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 有点事大概'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-04-07-live-01
+    linked_entry_ids: []
+    date: '2025-04-07'
+    title: 行走的人肉超级计算机~周一休息
+    source_urls:
+    - https://www.bilibili.com/video/BV1s5RyYCEZw
+    - https://www.bilibili.com/video/BV1sVRyY5EJw
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 行走的人肉超级计算机~周一休息 2025年04月07日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 周一休息'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-04-21-live-01
+    linked_entry_ids: []
+    date: '2025-04-21'
+    title: 周一休息一下下
+    source_urls:
+    - https://www.bilibili.com/video/BV1Cj5yznEyz
+    - https://www.bilibili.com/video/BV1bW5CzoEaM
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 周一休息一下下 2025年04月21日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '生活/暂停直播: 周一休息'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-05-23-live-01
+    linked_entry_ids: []
+    date: '2025-05-23'
+    title: 回北京了，1点来
+    source_urls:
+    - https://www.bilibili.com/video/BV13vjEzFEWx
+    - https://www.bilibili.com/video/BV1SEjJzfExf
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回北京了，1点来 2025年05月23日 （带弹幕版）'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 回北京了'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-06-16-live-01
+    linked_entry_ids:
+    - 2025-06-16-live-02
+    date: '2025-06-16'
+    title: wegame游戏之夜关注新游信息
+    source_urls:
+    - https://www.bilibili.com/video/BV153NbzTEar
+    - https://www.bilibili.com/video/BV1xhNbzpE4X
+    - https://www.bilibili.com/video/BV1xhNbzpEm6
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-06-16】【wegame游戏之夜关注新游信息】
+    - 【女流66】wegame游戏之夜，关注新游信息 2025/06/16 19时场 直播回放
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: wegame游戏之夜'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-08-07-live-01
+    linked_entry_ids: []
+    date: '2025-08-07'
+    title: 战地666666666666666 2025/08/07 17时场
+    source_urls:
+    - https://www.bilibili.com/video/BV15htBz9Eia
+    catalog_sample:
+    - 【女流66】战地666666666666666 2025/08/07 17时场 直播回放
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 战地666'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2025-12-12-live-01
+    linked_entry_ids: []
+    date: '2025-12-12'
+    title: TGA游戏颁奖典礼一起看
+    source_urls:
+    - https://www.bilibili.com/video/BV19tm5BjEHj
+    - https://www.bilibili.com/video/BV1wRmjBqEQC
+    catalog_sample:
+    - 【女流66】一起看《TGA2025》颁奖典礼【弹幕版】12.12女流完整直播录像
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '非游戏: TGA游戏颁奖典礼'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-01-09-live-01
+    linked_entry_ids: []
+    date: '2026-01-09'
+    title: 和壮壮一起逛「黑神话悟空」杭州线下店
+    source_urls:
+    - https://www.bilibili.com/video/BV132rKB6EEP
+    - https://www.bilibili.com/video/BV1PArTBfEqN
+    catalog_sample:
+    - 【弹幕版】【到杭州了】【2026-01-09】【女流66】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: 线下探店非游戏内容
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-01-15-live-01
+    linked_entry_ids:
+    - 2026-01-15-live-03
+    date: '2026-01-15'
+    title: 开播拉
+    source_urls:
+    - https://www.bilibili.com/video/BV1EDkFBqEdt
+    - https://www.bilibili.com/video/BV1NBkFB1E3f
+    - https://www.bilibili.com/video/BV1p6kFB5EHR
+    catalog_sample:
+    - 【女流66】【2026-01-15】[开播拉]
+    - 【女流66】《开播聊会》【弹幕版】01.15女流完整直播录像
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 开播拉'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-04-28-live-01
+    linked_entry_ids: []
+    date: '2026-04-28'
+    title: 晚上好
+    source_urls:
+    - https://www.bilibili.com/video/BV14c9kBcEpX
+    - https://www.bilibili.com/video/BV1K29yBMESK
+    catalog_sample:
+    - 【弹幕版】【晚上好】【2026-04-28】【女流66】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '聊天/日常: 晚上好'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-08-06-live-03
+    linked_entry_ids: []
+    date: '2026-08-06'
+    title: 我的脑子应该没有问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1Ywup6kEqN
+    - https://www.bilibili.com/video/BV1eZuH6LEZj
+    catalog_sample:
+    - 【纯净版】【我的脑子应该没有问题】【2026-08-06】【女流66】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的脑子应该没有问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-08-07-live-01
+    linked_entry_ids: []
+    date: '2026-08-07'
+    title: 我的脑子应该没有问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1wwuH69EBB
+    catalog_sample:
+    - '[女流66/直播回放] 我的脑子应该没有问题 2026年08月07日 (弹幕版)'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '口头禅/状态: 我的脑子应该没有问题'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-08-09-live-01
+    linked_entry_ids: []
+    date: '2026-08-09'
+    title: 娃睡了来突袭
+    source_urls:
+    - https://www.bilibili.com/video/BV1hiuU6LEJV
+    - https://www.bilibili.com/video/BV1ueuU62EQx
+    catalog_sample:
+    - 【纯净版】【娃睡了来突袭】【2026-08-09】【女流66】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 娃睡了来突袭'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-08-10-live-02
+    linked_entry_ids: []
+    date: '2026-08-10'
+    title: 娃睡了来突袭
+    source_urls:
+    - https://www.bilibili.com/video/BV1JFuQ6qEtQ
+    catalog_sample:
+    - '[女流66/直播回放] 娃睡了来突袭 2026年08月10日 (弹幕版)'
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '状态/节日: 娃睡了来突袭'
+    reason: ''
+    game_details: []
+  - canonical_entry_id: 2026-08-10-live-03
+    linked_entry_ids: []
+    date: '2026-08-10'
+    title: 点关注解锁游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV1gQuo6TE5V
+    - https://www.bilibili.com/video/BV1m7uo68Ejy
+    catalog_sample:
+    - 【弹幕版】【点关注解锁游戏】【2026-08-10】【女流66】
+    classification: non_game
+    candidate_game_ids: []
+    confidence: non_game
+    evidence: '固定标题模板: 点关注解锁游戏'
+    reason: ''
+    game_details: []
+  unresolved:
+  - canonical_entry_id: 2024-09-12-live-01
+    linked_entry_ids: []
+    date: '2024-09-12'
+    title: 11点播，下午567训练赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1aX4EeeEGS
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点播，下午567训练赛 2024年09月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-13-live-01
+    linked_entry_ids: []
+    date: '2024-09-13'
+    title: 手机横过来解锁新世界，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1uXtFe1EWN
+    catalog_sample:
+    - '[女流66/女流直播回放] 手机横过来解锁新世界，好多人呐 2024年09月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-13-live-02
+    linked_entry_ids: []
+    date: '2024-09-13'
+    title: 高敏遇到低敏一颗秒了就老实了
+    source_urls:
+    - https://www.bilibili.com/video/BV1TH48esEGH
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 高敏遇到低敏一颗秒了就老实了 2024年09月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-14-live-01
+    linked_entry_ids: []
+    date: '2024-09-14'
+    title: 30岁中年家庭妇男的枪法
+    source_urls:
+    - https://www.bilibili.com/video/BV14mtNeWEAY
+    - https://www.bilibili.com/video/BV1C9tNeJEhg
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 30岁中年家庭妇男的枪法 2024年09月14日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-15-live-01
+    linked_entry_ids: []
+    date: '2024-09-15'
+    title: 30岁中年家庭妇男的枪法
+    source_urls:
+    - https://www.bilibili.com/video/BV1i941emEKw
+    - https://www.bilibili.com/video/BV1z241epEFe
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 30岁中年家庭妇男的枪法 2024年09月15日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-19-live-01
+    linked_entry_ids: []
+    date: '2024-09-19'
+    title: 我就是来上网玩游戏的
+    source_urls:
+    - https://www.bilibili.com/video/BV1UhtHeuERC
+    - https://www.bilibili.com/video/BV1metHeTEWV
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我就是来上网玩游戏的 2024年09月19日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-21-live-01
+    linked_entry_ids: []
+    date: '2024-09-21'
+    title: 进来学不到东西 你喷 我不说
+    source_urls:
+    - https://www.bilibili.com/video/BV1L9t6eTEuf
+    - https://www.bilibili.com/video/BV1QFtrewEtj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 进来学不到东西 你喷 我不说 2024年09月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-22-live-01
+    linked_entry_ids: []
+    date: '2024-09-22'
+    title: 在武汉出活动，23回
+    source_urls:
+    - https://www.bilibili.com/video/BV1BktSevE8n
+    - https://www.bilibili.com/video/BV1imtSewEEf
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 在武汉出活动，23回 2024年09月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-24-live-01
+    linked_entry_ids: []
+    date: '2024-09-24'
+    title: 什么下饭神器？12点抽点啥
+    source_urls:
+    - https://www.bilibili.com/video/BV1ASste6E3x
+    - https://www.bilibili.com/video/BV1RKsbeZE1U
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 什么下饭神器？12点抽点啥 2024年09月24日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-25-live-01
+    linked_entry_ids: []
+    date: '2024-09-25'
+    title: 什么下饭神器？12点抽点啥
+    source_urls:
+    - https://www.bilibili.com/video/BV1eus6exEjo
+    - https://www.bilibili.com/video/BV1jAs6ehEi8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 什么下饭神器？12点抽点啥 2024年09月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-09-27-live-01
+    linked_entry_ids: []
+    date: '2024-09-27'
+    title: 27号11点 来夜市
+    source_urls:
+    - https://www.bilibili.com/video/BV1Nvsde9Eyu
+    - https://www.bilibili.com/video/BV1pfsReEEaq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 27号11点 来夜市 2024年09月27日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-01-live-02
+    linked_entry_ids: []
+    date: '2024-10-01'
+    title: 跟国一步打打国服
+    source_urls:
+    - https://www.bilibili.com/video/BV19MxveyEE8
+    - https://www.bilibili.com/video/BV1xyxeewE7Q
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 跟国一步打打国服 2024年10月01日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-02-live-01
+    linked_entry_ids: []
+    date: '2024-10-02'
+    title: OB一下子龙杯
+    source_urls:
+    - https://www.bilibili.com/video/BV1S74ueiEyt
+    - https://www.bilibili.com/video/BV1V34uerEfK
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] OB一下子龙杯 2024年10月02日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-03-live-01
+    linked_entry_ids: []
+    date: '2024-10-03'
+    title: 11点来 8点跟66玩
+    source_urls:
+    - https://www.bilibili.com/video/BV119xSegE4n
+    - https://www.bilibili.com/video/BV1BTxDehEXJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点来 8点跟66玩 2024年10月03日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-04-live-01
+    linked_entry_ids: []
+    date: '2024-10-04'
+    title: 10点子龙杯
+    source_urls:
+    - https://www.bilibili.com/video/BV1JT4wecEKy
+    - https://www.bilibili.com/video/BV1t24ceyEDm
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 10点子龙杯 2024年10月04日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-04-live-02
+    linked_entry_ids: []
+    date: '2024-10-04'
+    title: 11点整来 迟到惩罚
+    source_urls:
+    - https://www.bilibili.com/video/BV1CGxfeFE1o
+    - https://www.bilibili.com/video/BV1kVxfebEDT
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点整来 迟到惩罚 2024年10月04日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-05-live-01
+    linked_entry_ids: []
+    date: '2024-10-05'
+    title: 你就说 你的眼前有没有一亮
+    source_urls:
+    - https://www.bilibili.com/video/BV1ut19YWEsu
+    - https://www.bilibili.com/video/BV1ux19YRE58
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 你就说 你的眼前有没有一亮 2024年10月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-05-live-02
+    linked_entry_ids: []
+    date: '2024-10-05'
+    title: 养猪场怎么赚钱，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1k619Y5EW1
+    catalog_sample:
+    - '[女流66/女流直播回放] 养猪场怎么赚钱，好多人呐 2024年10月05日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-06-live-01
+    linked_entry_ids: []
+    date: '2024-10-06'
+    title: 6点半来 子龙杯 BO5
+    source_urls:
+    - https://www.bilibili.com/video/BV17d1vYHEyL
+    - https://www.bilibili.com/video/BV1p41iYcERJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 6点半来 子龙杯 BO5 2024年10月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-06-live-03
+    linked_entry_ids: []
+    date: '2024-10-06'
+    title: 转型信息位~ 才是我的归宿
+    source_urls:
+    - https://www.bilibili.com/video/BV1R61eYkELr
+    - https://www.bilibili.com/video/BV1vE1vY2E9h
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 转型信息位~ 才是我的归宿 2024年10月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-07-live-02
+    linked_entry_ids:
+    - 2024-10-07-live-01
+    date: '2024-10-07'
+    title: 7点 子龙杯 BO5决赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1731yYVEyM
+    - https://www.bilibili.com/video/BV1EU1kYgEn9
+    - https://www.bilibili.com/video/BV1Zo12YJE8g
+    - https://www.bilibili.com/video/BV1dR1kYNEMe
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 7点 子龙杯 BO5决赛 2024年10月07日 （带弹幕版）'
+    - '[yjjimpaopao/yjj直播回放] 6点半来 子龙杯 BO5 2024年10月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-09-live-01
+    linked_entry_ids: []
+    date: '2024-10-09'
+    title: 今天单排单排单排 说三次
+    source_urls:
+    - https://www.bilibili.com/video/BV12m2wYrEh1
+    - https://www.bilibili.com/video/BV1Ur2wY1Edc
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天单排单排单排 说三次 2024年10月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-10-live-01
+    linked_entry_ids: []
+    date: '2024-10-10'
+    title: 10月10号 赋能之日 今天必上
+    source_urls:
+    - https://www.bilibili.com/video/BV1TH2gYaEKq
+    - https://www.bilibili.com/video/BV1ca2gYREJW
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 10月10号 赋能之日 今天必上 2024年10月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-12-live-01
+    linked_entry_ids: []
+    date: '2024-10-12'
+    title: 10点半来，不来不是阿猫阿狗
+    source_urls:
+    - https://www.bilibili.com/video/BV1aS29YwE64
+    - https://www.bilibili.com/video/BV1dC29YKE5k
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 10点半来，不来不是阿猫阿狗 2024年10月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-13-live-01
+    linked_entry_ids: []
+    date: '2024-10-13'
+    title: 早起的鸟儿有虫吃 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV1gA2BYEELZ
+    - https://www.bilibili.com/video/BV1h72vY3EEJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 早起的鸟儿有虫吃 687423 2024年10月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-16-live-01
+    linked_entry_ids: []
+    date: '2024-10-16'
+    title: 小小的打个麻将
+    source_urls:
+    - https://www.bilibili.com/video/BV1UzmKY4EME
+    - https://www.bilibili.com/video/BV1opmKYMENM
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 小小的打个麻将~ 2024年10月16日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-17-live-01
+    linked_entry_ids: []
+    date: '2024-10-17'
+    title: 17号播播播播 12点来
+    source_urls:
+    - https://www.bilibili.com/video/BV14XyAYgEgG
+    - https://www.bilibili.com/video/BV1pFyPYvEGH
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 17号播播播播 12点来 2024年10月17日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-18-live-01
+    linked_entry_ids: []
+    date: '2024-10-18'
+    title: 封心老头，开心为主。去医院了11点30来
+    source_urls:
+    - https://www.bilibili.com/video/BV11ty3YbEUD
+    - https://www.bilibili.com/video/BV1Byy3YmEYG
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 封心老头，开心为主。去医院了11点30来 2024年10月18日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-24-live-01
+    linked_entry_ids: []
+    date: '2024-10-24'
+    title: 11点55分61秒播
+    source_urls:
+    - https://www.bilibili.com/video/BV19Q1KYhEtX
+    - https://www.bilibili.com/video/BV1vQ1KYaEg1
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点55分61秒播 2024年10月24日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-25-live-01
+    linked_entry_ids: []
+    date: '2024-10-25'
+    title: 新赛季新子龙上点分，下午3点杀狐
+    source_urls:
+    - https://www.bilibili.com/video/BV1KaymYYECt
+    - https://www.bilibili.com/video/BV1SxymYiEA2
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新赛季新子龙上点分，下午3点杀狐 2024年10月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-26-live-01
+    linked_entry_ids: []
+    date: '2024-10-26'
+    title: 新赛季就做个好人吧 12点准时！
+    source_urls:
+    - https://www.bilibili.com/video/BV1Ar1HYsErf
+    - https://www.bilibili.com/video/BV1GP1pYzEjP
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新赛季就做个好人吧 12点准时！ 2024年10月26日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-28-live-01
+    linked_entry_ids: []
+    date: '2024-10-28'
+    title: 11点准时直播   迟到的话严重惩罚
+    source_urls:
+    - https://www.bilibili.com/video/BV1RN1LY9Eww
+    - https://www.bilibili.com/video/BV1V415YDEHg
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点准时直播   迟到的话严重惩罚 2024年10月28日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-29-live-01
+    linked_entry_ids: []
+    date: '2024-10-29'
+    title: 先上点小分 再搞点别的
+    source_urls:
+    - https://www.bilibili.com/video/BV1JSSxYuEdR
+    - https://www.bilibili.com/video/BV1NJS4YUEbn
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先上点小分 再搞点别的 2024年10月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-29-live-02
+    linked_entry_ids: []
+    date: '2024-10-29'
+    title: 新人太刀打猎啦，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1HQS8YWEih
+    catalog_sample:
+    - '[女流66/女流直播回放] 新人太刀打猎啦，好多人呐 2024年10月29日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-30-live-01
+    linked_entry_ids: []
+    date: '2024-10-30'
+    title: 主机区第一手速，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1LaS3YsEtr
+    catalog_sample:
+    - '[女流66/女流直播回放] 主机区第一手速，好多人呐 2024年10月30日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-30-live-02
+    linked_entry_ids: []
+    date: '2024-10-30'
+    title: 先上点小分 再搞点别的
+    source_urls:
+    - https://www.bilibili.com/video/BV19eSeYHEZu
+    - https://www.bilibili.com/video/BV1BxSeYoEpW
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先上点小分 再搞点别的 2024年10月30日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-31-live-01
+    linked_entry_ids: []
+    date: '2024-10-31'
+    title: 11点11分你的唯一准时开播
+    source_urls:
+    - https://www.bilibili.com/video/BV1dpSEYCEKb
+    - https://www.bilibili.com/video/BV1m6SEYwEXF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点11分你的唯一准时开播~ 2024年10月31日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-10-31-live-02
+    linked_entry_ids: []
+    date: '2024-10-31'
+    title: 主机区第一手速，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1bESJYKEoV
+    catalog_sample:
+    - '[女流66/女流直播回放] 主机区第一手速，好多人呐 2024年10月31日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-01-live-01
+    linked_entry_ids: []
+    date: '2024-11-01'
+    title: 主机区第一手速，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1xuSRYFEMY
+    catalog_sample:
+    - '[女流66/女流直播回放] 主机区第一手速，好多人呐 2024年11月01日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-02-live-02
+    linked_entry_ids: []
+    date: '2024-11-02'
+    title: 主机区第一手速，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV1eySBYcEGZ
+    catalog_sample:
+    - '[女流66/女流直播回放] 主机区第一手速，好多人呐 2024年11月02日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-05-live-01
+    linked_entry_ids: []
+    date: '2024-11-05'
+    title: 没关系，你们还有炮
+    source_urls:
+    - https://www.bilibili.com/video/BV11QDbYtEWV
+    - https://www.bilibili.com/video/BV1kfDbYXELJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 没关系，你们还有炮 2024年11月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-06-live-01
+    linked_entry_ids: []
+    date: '2024-11-06'
+    title: 没关系，你们还有炮
+    source_urls:
+    - https://www.bilibili.com/video/BV16tDgYwEXt
+    - https://www.bilibili.com/video/BV1ZQDuYdEHu
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 没关系，你们还有炮 2024年11月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-07-live-01
+    linked_entry_ids: []
+    date: '2024-11-07'
+    title: 6点大炮杯  选人分组
+    source_urls:
+    - https://www.bilibili.com/video/BV1AQDmY3EEm
+    - https://www.bilibili.com/video/BV1HVDmYTEGq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 6点大炮杯  选人分组 2024年11月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-09-live-01
+    linked_entry_ids: []
+    date: '2024-11-09'
+    title: 看看比赛 抽抽新皮肤
+    source_urls:
+    - https://www.bilibili.com/video/BV1qkDqYqE77
+    - https://www.bilibili.com/video/BV1wYDqYCETp
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 看看比赛 抽抽新皮肤 2024年11月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-11-live-01
+    linked_entry_ids: []
+    date: '2024-11-11'
+    title: 大炮杯2点准时开赛！！
+    source_urls:
+    - https://www.bilibili.com/video/BV1ijmmYWEfs
+    - https://www.bilibili.com/video/BV1zgmmYtEzK
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 大炮杯2点准时开赛！！ 2024年11月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-13-live-01
+    linked_entry_ids: []
+    date: '2024-11-13'
+    title: 4点大炮杯～～！
+    source_urls:
+    - https://www.bilibili.com/video/BV1GYUAYZERP
+    - https://www.bilibili.com/video/BV1myUAYnEsF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 4点大炮杯～～！ 2024年11月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-17-live-01
+    linked_entry_ids: []
+    date: '2024-11-17'
+    title: 大炮杯生死局 ~干秃头
+    source_urls:
+    - https://www.bilibili.com/video/BV18PUzYWEN1
+    - https://www.bilibili.com/video/BV1x3UzYUEHf
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 大炮杯生死局 ~干秃头 2024年11月17日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-21-live-01
+    linked_entry_ids: []
+    date: '2024-11-21'
+    title: 5点 成都国际邀请赛
+    source_urls:
+    - https://www.bilibili.com/video/BV12yU2YuE9Q
+    - https://www.bilibili.com/video/BV1UrU2Y3EKg
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5点 成都国际邀请赛 2024年11月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-22-live-01
+    linked_entry_ids: []
+    date: '2024-11-22'
+    title: 5点 成都国际邀请赛
+    source_urls:
+    - https://www.bilibili.com/video/BV14zBvYmEeF
+    - https://www.bilibili.com/video/BV1r9BvYMENW
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5点 成都国际邀请赛 2024年11月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-23-live-01
+    linked_entry_ids: []
+    date: '2024-11-23'
+    title: 5点 成都国际邀请赛
+    source_urls:
+    - https://www.bilibili.com/video/BV1LiBCYQErg
+    - https://www.bilibili.com/video/BV1cTByYaE2N
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5点 成都国际邀请赛 2024年11月23日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-26-live-03
+    linked_entry_ids: []
+    date: '2024-11-26'
+    title: 今天干一天  上个赋能
+    source_urls:
+    - https://www.bilibili.com/video/BV17pz3YNEXY
+    - https://www.bilibili.com/video/BV1R2zgYfE9F
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天干一天  上个赋能 2024年11月26日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-27-live-02
+    linked_entry_ids: []
+    date: '2024-11-27'
+    title: 还老孩童版 上个赋能
+    source_urls:
+    - https://www.bilibili.com/video/BV1HBBQYpEyE
+    - https://www.bilibili.com/video/BV1VoBQYgEMa
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 还老孩童版 上个赋能 2024年11月27日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-28-live-03
+    linked_entry_ids: []
+    date: '2024-11-28'
+    title: 带一下66特训瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV18zzFY9EF9
+    - https://www.bilibili.com/video/BV1yTzFY1Eqc
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 带一下66特训瓦 2024年11月28日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-11-29-live-01
+    linked_entry_ids: []
+    date: '2024-11-29'
+    title: 我bule了！
+    source_urls:
+    - https://www.bilibili.com/video/BV1AvzvY5EoS
+    - https://www.bilibili.com/video/BV1m3zBY4EKZ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我bule了！ 2024年11月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-03-live-01
+    linked_entry_ids: []
+    date: '2024-12-03'
+    title: 3点呆猪杯，1点来
+    source_urls:
+    - https://www.bilibili.com/video/BV13zz1YHEm4
+    - https://www.bilibili.com/video/BV1aqz1YXEP8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 3点呆猪杯，1点来 2024年12月03日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-04-live-01
+    linked_entry_ids: []
+    date: '2024-12-04'
+    title: 3点呆猪杯，2点来
+    source_urls:
+    - https://www.bilibili.com/video/BV1Hez9YZEP8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 3点呆猪杯，2点来 2024年12月04日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-04-live-02
+    linked_entry_ids: []
+    date: '2024-12-04'
+    title: 我总是突然的出现，好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV199iUYoEVp
+    catalog_sample:
+    - '[女流66/女流直播回放] 我总是突然的出现，好多人呐 2024年12月04日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-05-live-01
+    linked_entry_ids: []
+    date: '2024-12-05'
+    title: 11点来 上上分
+    source_urls:
+    - https://www.bilibili.com/video/BV19ci9YBE7c
+    - https://www.bilibili.com/video/BV1o9iXYVEdw
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点来 上上分 2024年12月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-06-live-01
+    linked_entry_ids: []
+    date: '2024-12-06'
+    title: 【一元+双倍】11点来  转个信息位玩玩
+    source_urls:
+    - https://www.bilibili.com/video/BV1UBieYrEnS
+    - https://www.bilibili.com/video/BV1YjiqYWEB2
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【一元+双倍】11点来  转个信息位玩玩 2024年12月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-06-live-02
+    linked_entry_ids: []
+    date: '2024-12-06'
+    title: 今晚玩新的射击游戏！好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV136iBYoESP
+    catalog_sample:
+    - '[女流66/女流直播回放] 今晚玩新的射击游戏！好多人呐 2024年12月06日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-07-live-01
+    linked_entry_ids: []
+    date: '2024-12-07'
+    title: 今晚玩新的射击游戏！好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV14YqVYEE2x
+    catalog_sample:
+    - '[女流66/女流直播回放] 今晚玩新的射击游戏！好多人呐 2024年12月07日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-07-live-02
+    linked_entry_ids: []
+    date: '2024-12-07'
+    title: 换成高敏重新出发
+    source_urls:
+    - https://www.bilibili.com/video/BV12Ai1YNEK7
+    - https://www.bilibili.com/video/BV1tri1YuEQE
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 换成高敏重新出发 2024年12月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-08-live-01
+    linked_entry_ids: []
+    date: '2024-12-08'
+    title: 【双倍】换成高敏重新出发
+    source_urls:
+    - https://www.bilibili.com/video/BV1P8qnYeEVL
+    - https://www.bilibili.com/video/BV1piqnY8E7A
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】换成高敏重新出发 2024年12月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-10-live-01
+    linked_entry_ids: []
+    date: '2024-12-10'
+    title: 今天的头 晕晕滴
+    source_urls:
+    - https://www.bilibili.com/video/BV1Y9quYEELH
+    - https://www.bilibili.com/video/BV1daqGYFEBb
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天的头 晕晕滴 2024年12月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-11-live-01
+    linked_entry_ids: []
+    date: '2024-12-11'
+    title: 【双倍】炮之食堂，吃过的别来
+    source_urls:
+    - https://www.bilibili.com/video/BV1UYqmYjEkJ
+    - https://www.bilibili.com/video/BV1rNqmYvEH5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】炮之食堂，吃过的别来 2024年12月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-15-live-01
+    linked_entry_ids: []
+    date: '2024-12-15'
+    title: 【双倍】FPS新人主播
+    source_urls:
+    - https://www.bilibili.com/video/BV18kqdYGE1P
+    - https://www.bilibili.com/video/BV1HfqdYhEtY
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】FPS新人主播 2024年12月15日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-21-live-01
+    linked_entry_ids: []
+    date: '2024-12-21'
+    title: 【双倍】 比赛JETT首秀
+    source_urls:
+    - https://www.bilibili.com/video/BV1sNktYaEz5
+    - https://www.bilibili.com/video/BV1tfk4YiEk1
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】 比赛JETT首秀 2024年12月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-21-live-03
+    linked_entry_ids: []
+    date: '2024-12-21'
+    title: 前排有手柄，进来坐
+    source_urls:
+    - https://www.bilibili.com/video/BV1KkktYTEMB
+    catalog_sample:
+    - '[女流66/女流直播回放] 前排有手柄，进来坐~ 2024年12月21日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-22-live-01
+    linked_entry_ids: []
+    date: '2024-12-22'
+    title: 【双倍】 比赛JETT首秀
+    source_urls:
+    - https://www.bilibili.com/video/BV1CCkvYUEVB
+    - https://www.bilibili.com/video/BV1x5kiYtEoq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】 比赛JETT首秀 2024年12月22日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-22-live-02
+    linked_entry_ids: []
+    date: '2024-12-22'
+    title: 古希腊掌管独立游戏的ruen
+    source_urls:
+    - https://www.bilibili.com/video/BV1iaCKYtEPz
+    catalog_sample:
+    - '[女流66/女流直播回放] 古希腊掌管独立游戏的ruen~ 2024年12月22日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-25-live-01
+    linked_entry_ids: []
+    date: '2024-12-25'
+    title: 完成 任务 开开心心玩游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV118CAYwEnC
+    - https://www.bilibili.com/video/BV1dMCAYjE3f
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 完成 任务 开开心心玩游戏 2024年12月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-26-live-01
+    linked_entry_ids: []
+    date: '2024-12-26'
+    title: 6点来，有个活动
+    source_urls:
+    - https://www.bilibili.com/video/BV1A6CzYwEeE
+    - https://www.bilibili.com/video/BV1B9CrYFEV3
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 6点来，有个活动 2024年12月26日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-28-live-01
+    linked_entry_ids: []
+    date: '2024-12-28'
+    title: 一名专业的10FPS主播
+    source_urls:
+    - https://www.bilibili.com/video/BV1ZtC4YDE3Q
+    - https://www.bilibili.com/video/BV1ehC4YUE98
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一名专业的10FPS主播 2024年12月28日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-29-live-01
+    linked_entry_ids: []
+    date: '2024-12-29'
+    title: 一名专业的10年的FPS主播
+    source_urls:
+    - https://www.bilibili.com/video/BV1Rt6bYmE7L
+    - https://www.bilibili.com/video/BV1VX6tYkE9J
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一名专业的10年的FPS主播 2024年12月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-30-live-01
+    linked_entry_ids: []
+    date: '2024-12-30'
+    title: 【双倍】一名专业的10年的FPS主播
+    source_urls:
+    - https://www.bilibili.com/video/BV1156gYyEZe
+    - https://www.bilibili.com/video/BV1SM6gYUEG4
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】一名专业的10年的FPS主播 2024年12月30日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2024-12-30-live-02
+    linked_entry_ids:
+    - 2024-12-30-live-03
+    date: '2024-12-30'
+    title: 今天去开封！好多人呐
+    source_urls:
+    - https://www.bilibili.com/video/BV15x6LYkEEW
+    - https://www.bilibili.com/video/BV1Py6VYQEfV
+    - https://www.bilibili.com/video/BV1sK6LYxEhY
+    catalog_sample:
+    - 【纯净版】【女流66】【2024-12-30】【今天去开封好多人呐】
+    - 【女流66】今天去开封！好多人呐 2024/12/30 19时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-06-live-01
+    linked_entry_ids: []
+    date: '2025-01-06'
+    title: 今天帮水友瓦一瓦
+    source_urls:
+    - https://www.bilibili.com/video/BV1v4rGYMEiU
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天帮水友瓦一瓦 2025年01月06日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-07-live-01
+    linked_entry_ids: []
+    date: '2025-01-07'
+    title: FPS新人主播 看看新英雄
+    source_urls:
+    - https://www.bilibili.com/video/BV1DArDYMEE4
+    - https://www.bilibili.com/video/BV1ZDrSYjE1V
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] FPS新人主播 看看新英雄 2025年01月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-08-live-01
+    linked_entry_ids: []
+    date: '2025-01-08'
+    title: FPS新人主播 今天晚点来
+    source_urls:
+    - https://www.bilibili.com/video/BV1YKraYWEaP
+    - https://www.bilibili.com/video/BV1atrhYnEac
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] FPS新人主播 今天晚点来 2025年01月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-09-live-03
+    linked_entry_ids: []
+    date: '2025-01-09'
+    title: 老头FPS 玩的开心就行了
+    source_urls:
+    - https://www.bilibili.com/video/BV1AFr6YhEmw
+    - https://www.bilibili.com/video/BV1eJr6Y2E4A
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 老头FPS 玩的开心就行了 2025年01月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-16-live-01
+    linked_entry_ids: []
+    date: '2025-01-16'
+    title: 专业团队 还能再赚点！
+    source_urls:
+    - https://www.bilibili.com/video/BV1mNwgeTEiu
+    - https://www.bilibili.com/video/BV1vBw5ecEws
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 专业团队 还能再赚点！ 2025年01月16日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-17-live-01
+    linked_entry_ids: []
+    date: '2025-01-17'
+    title: 专业团队 还能再赚点！
+    source_urls:
+    - https://www.bilibili.com/video/BV13qwJeTEWU
+    - https://www.bilibili.com/video/BV1BywnenEmQ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 专业团队 还能再赚点！ 2025年01月17日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-18-live-01
+    linked_entry_ids: []
+    date: '2025-01-18'
+    title: 【双倍】今天成高手 不装菜了11点半来
+    source_urls:
+    - https://www.bilibili.com/video/BV1DCwceJErf
+    - https://www.bilibili.com/video/BV1kfwceuEhY
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】今天成高手 不装菜了11点半来 2025年01月18日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-19-live-01
+    linked_entry_ids: []
+    date: '2025-01-19'
+    title: 【双倍】卧薪尝胆 从零开始
+    source_urls:
+    - https://www.bilibili.com/video/BV1BvwqeaEDM
+    - https://www.bilibili.com/video/BV1RzwqeZEzc
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】卧薪尝胆 从零开始 2025年01月19日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-20-live-01
+    linked_entry_ids: []
+    date: '2025-01-20'
+    title: 【双倍】卧薪尝胆 从零开始
+    source_urls:
+    - https://www.bilibili.com/video/BV1CWwUeBEEK
+    - https://www.bilibili.com/video/BV1HywmeKE4M
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】卧薪尝胆 从零开始 2025年01月20日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-21-live-01
+    linked_entry_ids: []
+    date: '2025-01-21'
+    title: 卧薪尝胆 从零开始
+    source_urls:
+    - https://www.bilibili.com/video/BV1EJwbe6E71
+    - https://www.bilibili.com/video/BV1FLwbeVEkF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 卧薪尝胆 从零开始 2025年01月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-22-live-01
+    linked_entry_ids: []
+    date: '2025-01-22'
+    title: 【双倍】卧薪尝胆 从零开始
+    source_urls:
+    - https://www.bilibili.com/video/BV1BSf4YhEGY
+    - https://www.bilibili.com/video/BV1dXf4YtEDF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】卧薪尝胆 从零开始 2025年01月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-23-live-01
+    linked_entry_ids: []
+    date: '2025-01-23'
+    title: 【双倍】卧薪尝胆 从零开始
+    source_urls:
+    - https://www.bilibili.com/video/BV1fmfBYhE8C
+    - https://www.bilibili.com/video/BV1o3fiY7Eju
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】卧薪尝胆 从零开始 2025年01月23日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-25-live-01
+    linked_entry_ids: []
+    date: '2025-01-25'
+    title: 【双倍】25号11点半来 看看新皮肤
+    source_urls:
+    - https://www.bilibili.com/video/BV1DZfRYZEn4
+    - https://www.bilibili.com/video/BV1QofRYbEgp
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】25号11点半来 看看新皮肤 2025年01月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-26-live-01
+    linked_entry_ids: []
+    date: '2025-01-26'
+    title: 【双倍+1元】 今天开始 成为电竞貔貅
+    source_urls:
+    - https://www.bilibili.com/video/BV1GxFAeXEYg
+    - https://www.bilibili.com/video/BV1jjFAefEXa
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍+1元】 今天开始 成为电竞貔貅 2025年01月26日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-29-live-01
+    linked_entry_ids: []
+    date: '2025-01-29'
+    title: 【双倍】新年快快乐！
+    source_urls:
+    - https://www.bilibili.com/video/BV181FaeaEdn
+    - https://www.bilibili.com/video/BV1HwFYeDEBq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】新年快快乐！ 2025年01月29日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-01-30-live-01
+    linked_entry_ids: []
+    date: '2025-01-30'
+    title: 【双倍】新年快快乐！2月1号恢复直播
+    source_urls:
+    - https://www.bilibili.com/video/BV1EzFLeaEho
+    - https://www.bilibili.com/video/BV1p4FLe6ERJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】新年快快乐！2月1号恢复直播 2025年01月30日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-01-live-01
+    linked_entry_ids: []
+    date: '2025-02-01'
+    title: 新年快快乐！2月1号恢复直播
+    source_urls:
+    - https://www.bilibili.com/video/BV1haFZeTEcB
+    - https://www.bilibili.com/video/BV1xzFZeaEqZ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新年快快乐！2月1号恢复直播 2025年02月01日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-02-live-01
+    linked_entry_ids: []
+    date: '2025-02-02'
+    title: 新年快快乐！
+    source_urls:
+    - https://www.bilibili.com/video/BV16eFBePEKk
+    - https://www.bilibili.com/video/BV1sKFzeGEvL
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新年快快乐！ 2025年02月02日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-03-live-01
+    linked_entry_ids: []
+    date: '2025-02-03'
+    title: 我的指挥就得吃
+    source_urls:
+    - https://www.bilibili.com/video/BV14vPDedEBV
+    - https://www.bilibili.com/video/BV1atPDehE1p
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的指挥就得吃 2025年02月03日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-04-live-01
+    linked_entry_ids: []
+    date: '2025-02-04'
+    title: 我的指挥就得吃
+    source_urls:
+    - https://www.bilibili.com/video/BV14ZNceDES1
+    - https://www.bilibili.com/video/BV1MiNweREi4
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的指挥就得吃 2025年02月04日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-05-live-01
+    linked_entry_ids: []
+    date: '2025-02-05'
+    title: 我的指挥就得吃
+    source_urls:
+    - https://www.bilibili.com/video/BV1WMPCewEC1
+    - https://www.bilibili.com/video/BV1stPkebEEx
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的指挥就得吃 2025年02月05日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-06-live-01
+    linked_entry_ids: []
+    date: '2025-02-06'
+    title: 我的指挥就得吃
+    source_urls:
+    - https://www.bilibili.com/video/BV12mN7eaEwR
+    - https://www.bilibili.com/video/BV1yQN7efE2J
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我的指挥就得吃 2025年02月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-07-live-01
+    linked_entry_ids: []
+    date: '2025-02-07'
+    title: 先跑跑刀，再说
+    source_urls:
+    - https://www.bilibili.com/video/BV18kNbevEzG
+    - https://www.bilibili.com/video/BV1t1NbeYERa
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先跑跑刀，再说 2025年02月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-08-live-01
+    linked_entry_ids: []
+    date: '2025-02-08'
+    title: 先跑跑刀，再说
+    source_urls:
+    - https://www.bilibili.com/video/BV1aPNgeUEuz
+    - https://www.bilibili.com/video/BV1sjNge6E3w
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先跑跑刀，再说 2025年02月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-11-live-01
+    linked_entry_ids: []
+    date: '2025-02-11'
+    title: 炮炮炮炮刀
+    source_urls:
+    - https://www.bilibili.com/video/BV1hdNqeZEjL
+    - https://www.bilibili.com/video/BV1vmNqePEBK
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 炮炮炮炮刀 2025年02月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-12-live-01
+    linked_entry_ids: []
+    date: '2025-02-12'
+    title: 元宵节1点开播
+    source_urls:
+    - https://www.bilibili.com/video/BV1GiK5eTEy8
+    - https://www.bilibili.com/video/BV1emK3ewEy4
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 元宵节1点开播 2025年02月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-13-live-01
+    linked_entry_ids: []
+    date: '2025-02-13'
+    title: 智力UPUP
+    source_urls:
+    - https://www.bilibili.com/video/BV1DVKnejEmn
+    - https://www.bilibili.com/video/BV1vwKne9ETN
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 智力UPUP 2025年02月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-13-live-02
+    linked_entry_ids: []
+    date: '2025-02-13'
+    title: 智力加武力的跑刀
+    source_urls:
+    - https://www.bilibili.com/video/BV1r3NfeMESu
+    - https://www.bilibili.com/video/BV1yANfeCEy1
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 智力加武力的跑刀 2025年02月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-14-live-01
+    linked_entry_ids: []
+    date: '2025-02-14'
+    title: 智力加武力的跑刀
+    source_urls:
+    - https://www.bilibili.com/video/BV19ZKPe3EeG
+    - https://www.bilibili.com/video/BV1SNKNeiE4o
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 智力加武力的跑刀 2025年02月14日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-22-live-01
+    linked_entry_ids: []
+    date: '2025-02-22'
+    title: FPS圣体集合，挑战速通黑鹰世界纪录
+    source_urls:
+    - https://www.bilibili.com/video/BV18gPKeNEz1
+    - https://www.bilibili.com/video/BV1iZPNeVEMm
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] FPS圣体集合，挑战速通黑鹰世界纪录 2025年02月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-23-live-01
+    linked_entry_ids: []
+    date: '2025-02-23'
+    title: 【双倍】智力王中王
+    source_urls:
+    - https://www.bilibili.com/video/BV1bBA2e5ETE
+    - https://www.bilibili.com/video/BV1x1A2ezE7i
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】智力王中王 2025年02月23日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-02-25-live-01
+    linked_entry_ids: []
+    date: '2025-02-25'
+    title: 我本来就很强·
+    source_urls:
+    - https://www.bilibili.com/video/BV19uPYeSEnB
+    - https://www.bilibili.com/video/BV1rePYeYEzj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 我本来就很强· 2025年02月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-01-live-01
+    linked_entry_ids: []
+    date: '2025-03-01'
+    title: 大脑正在发育
+    source_urls:
+    - https://www.bilibili.com/video/BV1crXQYHEsK
+    - https://www.bilibili.com/video/BV1f1XQYmE7B
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 大脑正在发育 2025年03月01日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-05-live-01
+    linked_entry_ids: []
+    date: '2025-03-05'
+    title: 感觉自己智力没问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1Qz94YzEmZ
+    - https://www.bilibili.com/video/BV1Zx94YEEfH
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 感觉自己智力没问题 2025年03月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-05-live-02
+    linked_entry_ids: []
+    date: '2025-03-05'
+    title: 感觉马上要出心
+    source_urls:
+    - https://www.bilibili.com/video/BV1k59oYMEE7
+    - https://www.bilibili.com/video/BV1pZ9fY2EMP
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 感觉马上要出心 2025年03月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-09-live-01
+    linked_entry_ids: []
+    date: '2025-03-09'
+    title: 恐怖 邪恶 无敌 变态 鼠
+    source_urls:
+    - https://www.bilibili.com/video/BV137R8YLEKP
+    - https://www.bilibili.com/video/BV17AR8YREvZ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 恐怖 邪恶 无敌 变态 鼠 2025年03月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-10-live-01
+    linked_entry_ids: []
+    date: '2025-03-10'
+    title: 像一头雄狮一样吃掉所有
+    source_urls:
+    - https://www.bilibili.com/video/BV1KURgYpEqv
+    - https://www.bilibili.com/video/BV1YzRgYbENq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 像一头雄狮一样吃掉所有 2025年03月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-11-live-01
+    linked_entry_ids: []
+    date: '2025-03-11'
+    title: 11点播 啥也别说，今天310m 不然就
+    source_urls:
+    - https://www.bilibili.com/video/BV1QAQ5YZEKZ
+    - https://www.bilibili.com/video/BV1gCQ5YaEib
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点播 啥也别说，今天310m 不然就 2025年03月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-11-live-02
+    linked_entry_ids: []
+    date: '2025-03-11'
+    title: 没事播一播 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV1bHRnYDEPp
+    - https://www.bilibili.com/video/BV1shRnYyEcA
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 没事播一播 687423 2025年03月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-12-live-01
+    linked_entry_ids: []
+    date: '2025-03-12'
+    title: 11点播 啥也别说，今天310m 不然就
+    source_urls:
+    - https://www.bilibili.com/video/BV1PDQJYwEFC
+    - https://www.bilibili.com/video/BV1UJQnY3ERt
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点播 啥也别说，今天310m 不然就 2025年03月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-13-live-01
+    linked_entry_ids: []
+    date: '2025-03-13'
+    title: 今天吃到330
+    source_urls:
+    - https://www.bilibili.com/video/BV16FQwYGEBH
+    - https://www.bilibili.com/video/BV1ZsQcYKEtr
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天吃到330 2025年03月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-13-live-02
+    linked_entry_ids: []
+    date: '2025-03-13'
+    title: 六心帅炮·
+    source_urls:
+    - https://www.bilibili.com/video/BV15FQTYmE98
+    - https://www.bilibili.com/video/BV1hWQPYeE1H
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 六心帅炮· 2025年03月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-14-live-01
+    linked_entry_ids: []
+    date: '2025-03-14'
+    title: 六心帅炮·
+    source_urls:
+    - https://www.bilibili.com/video/BV13GQuY7EKu
+    - https://www.bilibili.com/video/BV1orQuY4E1D
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 六心帅炮· 2025年03月14日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-15-live-01
+    linked_entry_ids: []
+    date: '2025-03-15'
+    title: 看我直播提高智力
+    source_urls:
+    - https://www.bilibili.com/video/BV1M4QmYHEDD
+    - https://www.bilibili.com/video/BV1hBQyYjEDu
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 看我直播提高智力 2025年03月15日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-18-live-01
+    linked_entry_ids: []
+    date: '2025-03-18'
+    title: 是什么样的怪物在袭击你的饭碗？
+    source_urls:
+    - https://www.bilibili.com/video/BV1TdX3YSETv
+    - https://www.bilibili.com/video/BV1ovX3YAEH5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 是什么样的怪物在袭击你的饭碗？ 2025年03月18日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-19-live-01
+    linked_entry_ids: []
+    date: '2025-03-19'
+    title: 全新的打法带来的是无穷的浩瀚的存在
+    source_urls:
+    - https://www.bilibili.com/video/BV1cAQfYqEqd
+    - https://www.bilibili.com/video/BV1oGQfY8Ekj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 全新的打法带来的是无穷的浩瀚的存在 2025年03月19日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-19-live-02
+    linked_entry_ids: []
+    date: '2025-03-19'
+    title: 是什么样的怪物在袭击你的饭碗？
+    source_urls:
+    - https://www.bilibili.com/video/BV13qQdY2E1E
+    - https://www.bilibili.com/video/BV1M1QdY3Ecz
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 是什么样的怪物在袭击你的饭碗？ 2025年03月19日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-20-live-01
+    linked_entry_ids: []
+    date: '2025-03-20'
+    title: 今天百分之百挣钱跑刀 新版本
+    source_urls:
+    - https://www.bilibili.com/video/BV1niXPYJEu6
+    - https://www.bilibili.com/video/BV1zRXAY7EyT
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天百分之百挣钱跑刀 新版本 2025年03月20日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-20-live-02
+    linked_entry_ids:
+    - 2025-03-20-live-03
+    date: '2025-03-20'
+    title: 联动DD龙息神寂来啦
+    source_urls:
+    - https://www.bilibili.com/video/BV17WXNY7EFP
+    - https://www.bilibili.com/video/BV1H3XNYxEmc
+    - https://www.bilibili.com/video/BV1TwXNYaE61
+    - https://www.bilibili.com/video/BV1dEXvYwELW
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-03-20】【联动DD龙息神寂来啦】
+    - 【女流66】联动D＆D？《龙息神寂》来啦 2025/03/20 17时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-21-live-01
+    linked_entry_ids: []
+    date: '2025-03-21'
+    title: 今天百分之百挣钱跑刀 新版本
+    source_urls:
+    - https://www.bilibili.com/video/BV1PuXzYRExV
+    - https://www.bilibili.com/video/BV1oWXzY5ERA
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天百分之百挣钱跑刀 新版本 2025年03月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-29-live-01
+    linked_entry_ids: []
+    date: '2025-03-29'
+    title: 不说了 今天把把撤
+    source_urls:
+    - https://www.bilibili.com/video/BV14dofYfEH6
+    - https://www.bilibili.com/video/BV1YrofYuE7a
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 不说了 今天把把撤 2025年03月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-29-live-02
+    linked_entry_ids: []
+    date: '2025-03-29'
+    title: 不说了 回本就爆
+    source_urls:
+    - https://www.bilibili.com/video/BV1UVZYYxEn9
+    - https://www.bilibili.com/video/BV1jGZaYMECd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 不说了 回本就爆 2025年03月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-30-live-01
+    linked_entry_ids: []
+    date: '2025-03-30'
+    title: 【双倍+1元粉丝牌】吃饭吃饭吃饭
+    source_urls:
+    - https://www.bilibili.com/video/BV1NNZBYTEi6
+    - https://www.bilibili.com/video/BV1wLZBY8EkP
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍+1元粉丝牌】吃饭吃饭吃饭 2025年03月30日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-30-live-02
+    linked_entry_ids: []
+    date: '2025-03-30'
+    title: 周末好呀
+    source_urls:
+    - https://www.bilibili.com/video/BV16FZzYbEeN
+    - https://www.bilibili.com/video/BV1zAZzY4Ea8
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-03-30】【周末好呀】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-30-live-03
+    linked_entry_ids: []
+    date: '2025-03-30'
+    title: 周末好呀 2025/03/30 18时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1rcZrYiEEM
+    catalog_sample:
+    - 【女流66】周末好呀 2025/03/30 18时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-03-31-live-01
+    linked_entry_ids: []
+    date: '2025-03-31'
+    title: 今天是大发明
+    source_urls:
+    - https://www.bilibili.com/video/BV1VLZEYZE9J
+    - https://www.bilibili.com/video/BV1dSZEYeESL
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天是大发明 2025年03月31日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-01-live-01
+    linked_entry_ids: []
+    date: '2025-04-01'
+    title: 【双倍+1元粉丝牌】今天是大发明
+    source_urls:
+    - https://www.bilibili.com/video/BV1aQZxYjENv
+    - https://www.bilibili.com/video/BV1gzZ4Y5EJn
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍+1元粉丝牌】今天是大发明 2025年04月01日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-02-live-02
+    linked_entry_ids: []
+    date: '2025-04-02'
+    title: 今天是大发明
+    source_urls:
+    - https://www.bilibili.com/video/BV1JxfNYqEz7
+    - https://www.bilibili.com/video/BV1mtfwYBEeX
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天是大发明 2025年04月02日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-03-live-01
+    linked_entry_ids: []
+    date: '2025-04-03'
+    title: 成熟的大脑＋疯狂的操作=直播的的这个男人
+    source_urls:
+    - https://www.bilibili.com/video/BV1MLZ2YaEWz
+    - https://www.bilibili.com/video/BV1z9Z1Y2EPr
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 成熟的大脑＋疯狂的操作=直播的的这个男人 2025年04月03日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-05-live-01
+    linked_entry_ids: []
+    date: '2025-04-05'
+    title: 行走的人肉超级计算机
+    source_urls:
+    - https://www.bilibili.com/video/BV1Y5RRYWEtc
+    - https://www.bilibili.com/video/BV1nBRXYFEx1
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 行走的人肉超级计算机~ 2025年04月05日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-06-live-01
+    linked_entry_ids: []
+    date: '2025-04-06'
+    title: 行走的人肉超级计算机
+    source_urls:
+    - https://www.bilibili.com/video/BV1U3RqYaEDq
+    - https://www.bilibili.com/video/BV1Y4dcYzE6J
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 行走的人肉超级计算机~ 2025年04月06日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-08-live-01
+    linked_entry_ids: []
+    date: '2025-04-08'
+    title: 行走的人肉超级计算机~11点来 7点测试
+    source_urls:
+    - https://www.bilibili.com/video/BV1PkdJYGEQB
+    - https://www.bilibili.com/video/BV1w2dJYzEvi
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 行走的人肉超级计算机~11点来 7点测试 2025年04月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-09-live-01
+    linked_entry_ids: []
+    date: '2025-04-09'
+    title: 行走的人肉超级计算机~11点来 7点测试
+    source_urls:
+    - https://www.bilibili.com/video/BV1FWdtY4EqV
+    - https://www.bilibili.com/video/BV1bkdAYTEto
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 行走的人肉超级计算机~11点来 7点测试 2025年04月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-10-live-01
+    linked_entry_ids: []
+    date: '2025-04-10'
+    title: 加练加加练
+    source_urls:
+    - https://www.bilibili.com/video/BV1BJd5YQECz
+    - https://www.bilibili.com/video/BV1qzd1YuEZd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 加练加加练 2025年04月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-11-live-01
+    linked_entry_ids: []
+    date: '2025-04-11'
+    title: 今天战斗就是爽
+    source_urls:
+    - https://www.bilibili.com/video/BV1eGdmYiEvL
+    - https://www.bilibili.com/video/BV1znd2Y3ETo
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天战斗就是爽 2025年04月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-12-live-01
+    linked_entry_ids: []
+    date: '2025-04-12'
+    title: 今天战斗就是爽
+    source_urls:
+    - https://www.bilibili.com/video/BV1FLddYiEMN
+    - https://www.bilibili.com/video/BV1eFdaYbEqe
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天战斗就是爽 2025年04月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-13-live-01
+    linked_entry_ids: []
+    date: '2025-04-13'
+    title: 回归初心 回归初心
+    source_urls:
+    - https://www.bilibili.com/video/BV1TYdkY2EWN
+    - https://www.bilibili.com/video/BV1omdBYSE5Z
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归初心 回归初心 2025年04月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题含糊，可能为游戏但未指明
+    reason: B站catalog同样未标注游戏名
+    game_details: []
+  - canonical_entry_id: 2025-04-14-live-02
+    linked_entry_ids: []
+    date: '2025-04-14'
+    title: 回归初心 回归初心
+    source_urls:
+    - https://www.bilibili.com/video/BV1DKoLYVE7v
+    - https://www.bilibili.com/video/BV1NBo5YYEx7
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归初心 回归初心 2025年04月14日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题含糊，可能为游戏但未指明
+    reason: B站catalog同样未标注游戏名
+    game_details: []
+  - canonical_entry_id: 2025-04-17-live-01
+    linked_entry_ids: []
+    date: '2025-04-17'
+    title: 11点来 新赛季3X3
+    source_urls:
+    - https://www.bilibili.com/video/BV17N5azgESM
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点来 新赛季3X3 2025年04月17日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-18-live-01
+    linked_entry_ids: []
+    date: '2025-04-18'
+    title: 11点来 新赛季3X3
+    source_urls:
+    - https://www.bilibili.com/video/BV1jh5kzAEp1
+    - https://www.bilibili.com/video/BV1vS5rzcENi
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点来 新赛季3X3 2025年04月18日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-20-live-01
+    linked_entry_ids: []
+    date: '2025-04-20'
+    title: 来这里吃饭就好 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV11ULAz3EGi
+    - https://www.bilibili.com/video/BV1d2LwzXE62
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 来这里吃饭就好 687423 2025年04月20日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-22-live-01
+    linked_entry_ids: []
+    date: '2025-04-22'
+    title: 海纳百川 勇闯天下
+    source_urls:
+    - https://www.bilibili.com/video/BV1YR5Xz4EEo
+    - https://www.bilibili.com/video/BV1iK5DzHEw7
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 海纳百川 勇闯天下 2025年04月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-23-live-01
+    linked_entry_ids: []
+    date: '2025-04-23'
+    title: 5天内先开始挣他一个小目标
+    source_urls:
+    - https://www.bilibili.com/video/BV1CfLtz6Eqm
+    - https://www.bilibili.com/video/BV1NdLtzCEUK
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5天内先开始挣他一个小目标。 2025年04月23日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-24-live-02
+    linked_entry_ids: []
+    date: '2025-04-24'
+    title: 5天内先开始挣他一个小目标
+    source_urls:
+    - https://www.bilibili.com/video/BV14eLhzsEna
+    - https://www.bilibili.com/video/BV16KLhzCEuG
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 5天内先开始挣他一个小目标。 2025年04月24日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-27-live-03
+    linked_entry_ids: []
+    date: '2025-04-27'
+    title: 真诚的主播，善良的男人
+    source_urls:
+    - https://www.bilibili.com/video/BV1GFLzzDE2X
+    - https://www.bilibili.com/video/BV1usLBzyEs8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 真诚的主播，善良的男人 2025年04月27日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-28-live-01
+    linked_entry_ids: []
+    date: '2025-04-28'
+    title: 11点半来
+    source_urls:
+    - https://www.bilibili.com/video/BV16YL1zHEqi
+    - https://www.bilibili.com/video/BV1mnL1z8Exp
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 11点半来 2025年04月28日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-04-29-live-01
+    linked_entry_ids: []
+    date: '2025-04-29'
+    title: 【双倍】11点半来
+    source_urls:
+    - https://www.bilibili.com/video/BV1AAGyzVEsf
+    - https://www.bilibili.com/video/BV1oLGyzPER5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】11点半来 2025年04月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-03-live-01
+    linked_entry_ids:
+    - 2025-05-03-live-02
+    date: '2025-05-03'
+    title: 狗头军师上暗，66带你开大金 2025/05/03 19时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1ACGdzyEai
+    - https://www.bilibili.com/video/BV1G4VnzYESi
+    - https://www.bilibili.com/video/BV1Y4VnzaEaF
+    catalog_sample:
+    - 【女流66】狗头军师上暗，66带你开大金 2025/05/03 19时场 直播回放
+    - 【弹幕版】【女流66】【2025-05-03】【狗头军师上暗66带你开大金】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-07-live-01
+    linked_entry_ids: []
+    date: '2025-05-07'
+    title: 先挣钱1000W 然后帮水友圆梦
+    source_urls:
+    - https://www.bilibili.com/video/BV1T9V4zuEHH
+    - https://www.bilibili.com/video/BV1szVtzqEQk
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先挣钱1000W 然后帮水友圆梦 2025年05月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-08-live-01
+    linked_entry_ids: []
+    date: '2025-05-08'
+    title: 先挣钱1000W 然后帮水友圆梦
+    source_urls:
+    - https://www.bilibili.com/video/BV1U35AzkEGA
+    - https://www.bilibili.com/video/BV1VP5AzEE5t
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 先挣钱1000W 然后帮水友圆梦 2025年05月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-09-live-01
+    linked_entry_ids: []
+    date: '2025-05-09'
+    title: FPS恐怖老手！
+    source_urls:
+    - https://www.bilibili.com/video/BV1D355zGEep
+    - https://www.bilibili.com/video/BV1JX5VzxES8
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] FPS恐怖老手！ 2025年05月09日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-10-live-01
+    linked_entry_ids: []
+    date: '2025-05-10'
+    title: FPS恐怖老手！
+    source_urls:
+    - https://www.bilibili.com/video/BV1b6VRzDEGH
+    - https://www.bilibili.com/video/BV1xaVZz9EEq
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] FPS恐怖老手！ 2025年05月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-11-live-01
+    linked_entry_ids: []
+    date: '2025-05-11'
+    title: 实力不祥 遇强则强
+    source_urls:
+    - https://www.bilibili.com/video/BV1CrEKzWE71
+    - https://www.bilibili.com/video/BV1dcETz6Ev4
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 实力不祥 遇强则强 2025年05月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-13-live-01
+    linked_entry_ids: []
+    date: '2025-05-13'
+    title: 别只知道吃 记得多看多学
+    source_urls:
+    - https://www.bilibili.com/video/BV1Hg7fzaEbb
+    - https://www.bilibili.com/video/BV1av7fzLE5N
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 别只知道吃 记得多看多学 2025年05月13日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-14-live-04
+    linked_entry_ids:
+    - 2025-05-14-live-02
+    date: '2025-05-14'
+    title: 什么游戏？让咱尝尝咸淡 2025/05/14 17时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1KhEizCEnQ
+    - https://www.bilibili.com/video/BV1KvEBzUEAG
+    - https://www.bilibili.com/video/BV1SWEiz7EL2
+    catalog_sample:
+    - 【女流66】什么游戏？让咱尝尝咸淡 2025/05/14 17时场 直播回放
+    - 【纯净版】【女流66】【2025-05-14】【什么游戏让咱尝尝咸淡】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-14-live-03
+    linked_entry_ids: []
+    date: '2025-05-14'
+    title: 回归初心 超认真跑刀
+    source_urls:
+    - https://www.bilibili.com/video/BV1mxEezMEEM
+    - https://www.bilibili.com/video/BV1riEezhEmd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归初心 超认真跑刀 2025年05月14日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-15-live-01
+    linked_entry_ids: []
+    date: '2025-05-15'
+    title: 回归初心 超认真跑刀
+    source_urls:
+    - https://www.bilibili.com/video/BV1cVEkzJE5X
+    - https://www.bilibili.com/video/BV1mBEkzwEBS
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归初心 超认真跑刀 2025年05月15日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-16-live-01
+    linked_entry_ids: []
+    date: '2025-05-16'
+    title: 不要笑挑战 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV11ZExz5Enp
+    - https://www.bilibili.com/video/BV1kLEWzNEqY
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 不要笑挑战 687423 2025年05月16日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-17-live-01
+    linked_entry_ids: []
+    date: '2025-05-17'
+    title: 不要笑挑战 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV1KnJwzjEAr
+    - https://www.bilibili.com/video/BV1ooJAzzE6a
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 不要笑挑战 687423 2025年05月17日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-17-live-02
+    linked_entry_ids:
+    - 2025-05-17-live-03
+    date: '2025-05-17'
+    title: 什么游戏，让我尝尝咸淡
+    source_urls:
+    - https://www.bilibili.com/video/BV12cJNzdEF9
+    - https://www.bilibili.com/video/BV17eJwzqESe
+    - https://www.bilibili.com/video/BV1VhJNzKEXG
+    catalog_sample:
+    - '[女流66/女流直播回放] 什么游戏，让我尝尝咸淡~ 2025年05月17日'
+    - 【女流66】什么游戏，让我尝尝咸淡~ 2025/05/17 18时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-18-live-01
+    linked_entry_ids: []
+    date: '2025-05-18'
+    title: 超级无敌之灭一队吃两口直接走流
+    source_urls:
+    - https://www.bilibili.com/video/BV13kJuz5EC1
+    - https://www.bilibili.com/video/BV1oMJgzxEQ5
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 超级无敌之灭一队吃两口直接走流 2025年05月18日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-20-live-01
+    linked_entry_ids: []
+    date: '2025-05-20'
+    title: 新显卡+新显示器 = 无敌
+    source_urls:
+    - https://www.bilibili.com/video/BV1KxJbzoE7X
+    - https://www.bilibili.com/video/BV1p9JtzUEkJ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新显卡+新显示器 = 无敌 2025年05月20日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-21-live-01
+    linked_entry_ids: []
+    date: '2025-05-21'
+    title: 新显卡+新显示器 = 无敌
+    source_urls:
+    - https://www.bilibili.com/video/BV1PmJqzyEm1
+    - https://www.bilibili.com/video/BV1gzJzzZEuE
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新显卡+新显示器 = 无敌 2025年05月21日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-22-live-01
+    linked_entry_ids: []
+    date: '2025-05-22'
+    title: 世界上最清晰的直播间
+    source_urls:
+    - https://www.bilibili.com/video/BV163JxzzEFP
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 世界上最清晰的直播间 2025年05月22日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-22-live-02
+    linked_entry_ids:
+    - 2025-05-22-live-03
+    date: '2025-05-22'
+    title: 什么游戏，让我尝尝咸淡
+    source_urls:
+    - https://www.bilibili.com/video/BV16AJHzbEn4
+    - https://www.bilibili.com/video/BV18tJHzGEE5
+    - https://www.bilibili.com/video/BV1W6JHzPEUj
+    catalog_sample:
+    - '[女流66/女流直播回放] 什么游戏，让我尝尝咸淡~ 2025年05月22日'
+    - 【女流66】什么游戏，让我尝尝咸淡~ 2025/05/22 18时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-22-live-04
+    linked_entry_ids: []
+    date: '2025-05-22'
+    title: 新显卡+新显示器 = 无敌
+    source_urls:
+    - https://www.bilibili.com/video/BV15SJ7zrEWj
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 新显卡+新显示器 = 无敌 2025年05月22日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-24-live-01
+    linked_entry_ids: []
+    date: '2025-05-24'
+    title: 超级恐怖 无敌疯狂
+    source_urls:
+    - https://www.bilibili.com/video/BV17vj4zwEgw
+    - https://www.bilibili.com/video/BV1f5jtzeEcF
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 超级恐怖 无敌疯狂 2025年05月24日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-25-live-01
+    linked_entry_ids: []
+    date: '2025-05-25'
+    title: 【双倍】我是一名跑刀主播吗？
+    source_urls:
+    - https://www.bilibili.com/video/BV1SFjuzwEcd
+    - https://www.bilibili.com/video/BV1fBjMzjE6g
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】我是一名跑刀主播吗？ 2025年05月25日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-26-live-02
+    linked_entry_ids: []
+    date: '2025-05-26'
+    title: 看看考试啥的
+    source_urls:
+    - https://www.bilibili.com/video/BV16sj1zDEhk
+    - https://www.bilibili.com/video/BV1HAjUzYEn2
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 看看考试啥的 2025年05月26日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-27-live-01
+    linked_entry_ids: []
+    date: '2025-05-27'
+    title: 了不起的恐怖炮
+    source_urls:
+    - https://www.bilibili.com/video/BV18RjQzsE2Z
+    - https://www.bilibili.com/video/BV1bwjRztEdQ
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 了不起的恐怖炮 2025年05月27日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-28-live-01
+    linked_entry_ids: []
+    date: '2025-05-28'
+    title: 【双倍】一天吃满1E计划 正式启动
+    source_urls:
+    - https://www.bilibili.com/video/BV1T3jizzE1F
+    - https://www.bilibili.com/video/BV1XJjvz5EKG
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 【双倍】一天吃满1E计划 正式启动 2025年05月28日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-29-live-01
+    linked_entry_ids: []
+    date: '2025-05-29'
+    title: 一天吃满1E计划 正式启动
+    source_urls:
+    - https://www.bilibili.com/video/BV1PhjyzZEYG
+    - https://www.bilibili.com/video/BV1uG7GzyESL
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 一天吃满1E计划 正式启动 2025年05月29日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-05-30-live-01
+    linked_entry_ids: []
+    date: '2025-05-30'
+    title: 今天只有一个字 爆！
+    source_urls:
+    - https://www.bilibili.com/video/BV19f7nz5EGn
+    - https://www.bilibili.com/video/BV1wn7JzpEiR
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 今天只有一个字 爆！ 2025年05月30日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-03-live-03
+    linked_entry_ids: []
+    date: '2025-06-03'
+    title: 小炮开业！今天超级吃吃吃
+    source_urls:
+    - https://www.bilibili.com/video/BV16f74zzEmq
+    - https://www.bilibili.com/video/BV1iX78zgEY9
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 小炮开业！今天超级吃吃吃 2025年06月03日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-06-live-01
+    linked_entry_ids: []
+    date: '2025-06-06'
+    title: 不再维持技术主播人设
+    source_urls:
+    - https://www.bilibili.com/video/BV1HaTNzHEGW
+    - https://www.bilibili.com/video/BV1YXTTz1ESd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 不再维持技术主播人设 2025年06月06日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-07-live-01
+    linked_entry_ids: []
+    date: '2025-06-07'
+    title: 本饭店禁止外带食物
+    source_urls:
+    - https://www.bilibili.com/video/BV15MTjzqEan
+    - https://www.bilibili.com/video/BV15gTjzKENh
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 本饭店禁止外带食物 2025年06月07日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-08-live-01
+    linked_entry_ids: []
+    date: '2025-06-08'
+    title: 小炮正式开业·
+    source_urls:
+    - https://www.bilibili.com/video/BV1A3TQzpECj
+    - https://www.bilibili.com/video/BV1e8TQzuEWE
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 小炮正式开业· 2025年06月08日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-10-live-01
+    linked_entry_ids: []
+    date: '2025-06-10'
+    title: 修复超过12小时之无敌状态
+    source_urls:
+    - https://www.bilibili.com/video/BV1CRT6zpEJy
+    - https://www.bilibili.com/video/BV1CfTkztErd
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 修复超过12小时之无敌状态 2025年06月10日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-11-live-01
+    linked_entry_ids: []
+    date: '2025-06-11'
+    title: 伟大就需要多说实话
+    source_urls:
+    - https://www.bilibili.com/video/BV1GFMEzyEeW
+    - https://www.bilibili.com/video/BV1Q2MEzGEmh
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 伟大就需要多说实话 2025年06月11日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-12-live-01
+    linked_entry_ids: []
+    date: '2025-06-12'
+    title: 开饭开饭开饭！ 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV11HMFz2EMF
+    - https://www.bilibili.com/video/BV1XGMwzhE9o
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 开饭开饭开饭！ 687423 2025年06月12日 （带弹幕版）'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-13-live-01
+    linked_entry_ids: []
+    date: '2025-06-13'
+    title: 回归修脚！ 687423
+    source_urls:
+    - https://www.bilibili.com/video/BV1jYMTzpESv
+    catalog_sample:
+    - '[yjjimpaopao/yjj直播回放] 回归修脚！ 687423 2025年06月13日'
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-06-22-live-01
+    linked_entry_ids:
+    - 2025-06-22-live-02
+    date: '2025-06-22'
+    title: 主播没洗头，但沉迷游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV193KWz9EcF
+    - https://www.bilibili.com/video/BV1meN9z4EgQ
+    - https://www.bilibili.com/video/BV1z1NQz3EzN
+    catalog_sample:
+    - '[女流66/直播回放] 主播没洗头，但沉迷游戏 2025年06月22日 (弹幕版)'
+    - 【女流66】主播没洗头，但沉迷游戏 2025/06/22 15时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-07-15-live-01
+    linked_entry_ids: []
+    date: '2025-07-15'
+    title: 独立游戏缓解你的压力
+    source_urls:
+    - https://www.bilibili.com/video/BV11dupz1EpK
+    - https://www.bilibili.com/video/BV1wVunzqExr
+    catalog_sample:
+    - 【弹幕版】【女流66】【2025-07-15】【独立游戏缓解你的压力】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-08-02-live-01
+    linked_entry_ids:
+    - 2025-08-02-live-02
+    date: '2025-08-02'
+    title: 和炮炮壮壮一家三口打矩阵
+    source_urls:
+    - https://www.bilibili.com/video/BV11ohbzREXp
+    - https://www.bilibili.com/video/BV1prhNzUE5h
+    - https://www.bilibili.com/video/BV1rChNz7ER3
+    catalog_sample:
+    - 【弹幕版】【和炮炮壮壮一家三口打矩阵】【2025-08-02】【女流66】
+    - 【女流66】和炮炮壮壮一家三口打矩阵 2025/08/02 18时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-08-10-live-01
+    linked_entry_ids: []
+    date: '2025-08-10'
+    title: 玩游戏就是要开心嘛 2025/08/10 19时场
+    source_urls:
+    - https://www.bilibili.com/video/BV1dEbKzvEvc
+    catalog_sample:
+    - 【女流66】玩游戏就是要开心嘛 2025/08/10 19时场 直播回放
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-11-19-live-01
+    linked_entry_ids: []
+    date: '2025-11-19'
+    title: 今天当个天龙手游轻松掌门_女流学姐的养成经济学
+    source_urls:
+    - https://www.bilibili.com/video/BV1q8ypBTE2h
+    catalog_sample:
+    - 【女流66】【2025-11-19】[今天当个天龙手游轻松掌门_女流学姐的养成经济学]
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-12-04-live-02
+    linked_entry_ids: []
+    date: '2025-12-04'
+    title: 不是强迫症玩不了的游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV11Y2iBbEgP
+    - https://www.bilibili.com/video/BV17K2eBgEsz
+    catalog_sample:
+    - 【弹幕版】【不是强迫症玩不了的游戏】【2025-12-04】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-12-04-live-03
+    linked_entry_ids: []
+    date: '2025-12-04'
+    title: 不是强迫症玩不了的游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV1YJ2iBuEpi
+    catalog_sample:
+    - 【女流66】【2025-12-04】[不是强迫症玩不了的游戏]
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-12-04-live-04
+    linked_entry_ids: []
+    date: '2025-12-04'
+    title: 你我的游戏时光
+    source_urls:
+    - https://www.bilibili.com/video/BV1Ev2jB4EPg
+    catalog_sample:
+    - 【女流66】【2025-12-04】[你我的游戏时光]
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2025-12-05-live-02
+    linked_entry_ids: []
+    date: '2025-12-05'
+    title: 你我的游戏时光
+    source_urls:
+    - https://www.bilibili.com/video/BV1M72EB2E4M
+    - https://www.bilibili.com/video/BV1Rr2EBFEoH
+    catalog_sample:
+    - 【弹幕版】【你我的游戏时光】【2025-12-05】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-03-16-live-01
+    linked_entry_ids: []
+    date: '2026-03-16'
+    title: 别笑
+    source_urls:
+    - https://www.bilibili.com/video/BV1PFw2zoEE1
+    - https://www.bilibili.com/video/BV1pyw2zdEPH
+    catalog_sample:
+    - 【弹幕版】【别笑】【2026-03-16】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-03-21-live-01
+    linked_entry_ids: []
+    date: '2026-03-21'
+    title: 多久没这么用过脑子了
+    source_urls:
+    - https://www.bilibili.com/video/BV1FfAwzaEqD
+    - https://www.bilibili.com/video/BV1oAAAzZE9Q
+    catalog_sample:
+    - 【弹幕版】【多久没这么用过脑子了】【2026-03-21】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-04-16-live-02
+    linked_entry_ids: []
+    date: '2026-04-16'
+    title: 别笑
+    source_urls:
+    - https://www.bilibili.com/video/BV1f5daBtEZz
+    - https://www.bilibili.com/video/BV1fGdaBfEeN
+    catalog_sample:
+    - 【纯净版】【别笑】【2026-04-16】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-04-21-live-01
+    linked_entry_ids: []
+    date: '2026-04-21'
+    title: 别怕，躲我身后
+    source_urls:
+    - https://www.bilibili.com/video/BV1gPdSBFEUt
+    - https://www.bilibili.com/video/BV1m3dSBWEKm
+    catalog_sample:
+    - 【弹幕版】【别怕，躲我身后】【2026-04-21】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-05-13-live-02
+    linked_entry_ids:
+    - 2026-05-13-live-01
+    date: '2026-05-13'
+    title: 和战鹰，壮壮，驴酱玩游戏
+    source_urls:
+    - https://www.bilibili.com/video/BV16L5m6BEtr
+    - https://www.bilibili.com/video/BV17n5m6NEY7
+    - https://www.bilibili.com/video/BV1E75m6TEMf
+    catalog_sample:
+    - 【弹幕版】【和战鹰，壮壮，驴酱玩游戏】【2026-05-13】【女流66】
+    - 【女流66】【2026-05-13】《和战鹰_壮壮_驴酱玩游戏 》
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-05-19-live-03
+    linked_entry_ids: []
+    date: '2026-05-19'
+    title: 突袭
+    source_urls:
+    - https://www.bilibili.com/video/BV1FmLB6SEp7
+    - https://www.bilibili.com/video/BV1NJLz6oEu5
+    catalog_sample:
+    - 【弹幕版】【突袭】【2026-05-19】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-05-23-live-01
+    linked_entry_ids: []
+    date: '2026-05-23'
+    title: 听说是娅娅
+    source_urls:
+    - https://www.bilibili.com/video/BV12bG66ZEQj
+    - https://www.bilibili.com/video/BV1aiGq64EAh
+    catalog_sample:
+    - 【弹幕版】【听说是娅娅】【2026-05-23】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-06-18-live-02
+    linked_entry_ids: []
+    date: '2026-06-18'
+    title: 这游戏还得看本灵魂画手
+    source_urls:
+    - https://www.bilibili.com/video/BV1SHjh6jEvE
+    - https://www.bilibili.com/video/BV1sVja6rEZQ
+    catalog_sample:
+    - 【弹幕版】【这游戏还得看本灵魂画手】【2026-06-18】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-06-26-live-02
+    linked_entry_ids:
+    - 2026-06-26-live-01
+    date: '2026-06-26'
+    title: 双人挑战落霞共誓殊途道，全靠配合
+    source_urls:
+    - https://www.bilibili.com/video/BV1Dk7L66Es9
+    - https://www.bilibili.com/video/BV1eV7j6JErE
+    - https://www.bilibili.com/video/BV1qM7j6XEZr
+    catalog_sample:
+    - 【弹幕版】【双人挑战落霞共誓殊途道，全靠配合】【2026-06-26】【女流66】
+    - 【女流66】【2026-06-26】《双人挑战落霞共誓殊途道》
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-06-30-live-03
+    linked_entry_ids: []
+    date: '2026-06-30'
+    title: AI新内容实时生成中
+    source_urls:
+    - https://www.bilibili.com/video/BV1QVTq6CEqy
+    - https://www.bilibili.com/video/BV1nGTw6tEYT
+    catalog_sample:
+    - 【弹幕版】【AI新内容实时生成中】【2026-06-30】【女流66】
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []
+  - canonical_entry_id: 2026-08-05-live-04
+    linked_entry_ids: []
+    date: '2026-08-05'
+    title: 我的智力没有问题
+    source_urls:
+    - https://www.bilibili.com/video/BV1D1M26qEF4
+    - https://www.bilibili.com/video/BV1YdMC6PEjg
+    catalog_sample:
+    - 【女流66】【2026-08-05 晚间 】《我的智力没有问题》
+    classification: unresolved
+    candidate_game_ids: []
+    confidence: unresolved
+    evidence: 标题和B站搬运均未标注具体游戏名
+    reason: 缺少B站搬运标题中的游戏标注
+    game_details: []

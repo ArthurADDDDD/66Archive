@@ -41,7 +41,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2c9f8daa16fc5310489d509eb4a57d3833ace7e0.jpg"
     confidence: medium
-    games: []
+    games:
+      - rusty-lake
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -58,7 +59,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/d6137b991c988f8667fff6042e76a66d82cbcfe4.jpg"
     confidence: medium
-    games: []
+    games:
+      - rusty-lake
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-06-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1kdVpznEkP"
@@ -74,7 +76,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/7a7f3f92c57ad1310b86709fa0c343f9cd7e5a77.jpg"
     confidence: high
-    games: []
+    games:
+      - rusty-lake
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-06-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -252,7 +255,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/3cd03318bcb856a734f7852e523deed426dc7bb6.jpg"
     confidence: medium
-    games: []
+    games:
+      - the-precinct
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -648,7 +652,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/260e824057bcd2a017c0df98cb83ed501b78c2b1.jpg"
     confidence: medium
-    games: []
+    games:
+      - changan-stone-dance
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-25-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1WQjuz4Epq"
@@ -664,7 +669,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/0955815a30e0ee19f948ec14548ec56287e6ff2f.jpg"
     confidence: high
-    games: []
+    games:
+      - changan-stone-dance
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-25-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -684,7 +690,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/e6ebef1a9d58a8bcc16307053443a829aac6a7d0.jpg"
     confidence: medium
-    games: []
+    games:
+      - changan-stone-dance
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-26-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1BajSzaECF"
@@ -720,7 +727,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/5351bd8912d03e8ecf7f7415db03aa5cbc50acc5.jpg"
     confidence: high
-    games: []
+    games:
+      - changan-stone-dance
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-26-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:

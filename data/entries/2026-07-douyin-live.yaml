@@ -147,7 +147,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/3a11b4469178adf3f14798cad716fbfeeb677372.jpg"
     confidence: medium
-    games: []
+    games:
+      - meecha-chameleon
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:

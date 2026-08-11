@@ -25,7 +25,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/2b8d2f8f25c6df26c6707c81f008cf3d86570722.jpg"
     confidence: medium
-    games: []
+    games:
+      - lifeafter
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-01-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV11aZ8Y1ENd"
@@ -41,7 +42,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/8e0b22292eebeed5bc8e09c80077c1f3a2b4e9d3.jpg"
     confidence: high
-    games: []
+    games:
+      - lifeafter
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-01-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -337,7 +339,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/fbed4e1c48605c84ade8d69c30041698f61e2000.jpg"
     confidence: medium
-    games: []
+    games:
+      - path-of-exile-2
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-12-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV14LdaYEEsn"
@@ -353,7 +356,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/c3ea27e8b87272c399f42777148233355f2bbffd.jpg"
     confidence: high
-    games: []
+    games:
+      - path-of-exile-2
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-12-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -393,7 +397,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/75c2345c42820a8261faa779d06c30159faa1222.jpg"
     confidence: high
-    games: []
+    games:
+      - into-the-dead
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-14-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -433,7 +438,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/3d75e5628999cc2ec3078578f0045defe2cd40ff.jpg"
     confidence: medium
-    games: []
+    games:
+      - into-the-dead
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-14-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1BBo7YFENs"
@@ -469,7 +475,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/53ec0522ab6f1bfb4512e5ec41d7c849e651c13c.jpg"
     confidence: high
-    games: []
+    games:
+      - into-the-dead
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-15-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -489,7 +496,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/490b68f5a437e4683ca6aaacb44623f3b9c5e5a0.jpg"
     confidence: medium
-    games: []
+    games:
+      - into-the-dead
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-15-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1VQdfYBEPa"
@@ -525,7 +533,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/8071784fdcc480550dc41c53158767793ee66cce.jpg"
     confidence: high
-    games: []
+    games:
+      - into-the-dead
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-16-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -545,7 +554,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/e8a4110fd1506ff7d9ff588cba653b4186f88576.jpg"
     confidence: medium
-    games: []
+    games:
+      - into-the-dead
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-04-16-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV11PoTYkE3S"
