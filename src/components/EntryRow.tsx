@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
+import { visibleGameIds } from '@/lib/games'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
@@ -31,6 +32,7 @@ export function EntryRow({
   const destination = selectedSource?.url ?? `/e/${entry.id}/`
   const cover = proxyImage(entry.cover ?? undefined, 640)
   const opensSource = Boolean(selectedSource)
+  const compactGameIds = new Set(visibleGameIds(entry.games.map((game) => game.id)))
 
   return (
     <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
@@ -101,7 +103,7 @@ export function EntryRow({
             <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
             <span className="text-line">·</span>
             <span>{formatDuration(entry.duration_min)}</span>
-            {entry.games.slice(0, 2).map((g) => (
+            {entry.games.filter((game) => compactGameIds.has(game.id)).slice(0, 2).map((g) => (
               <span key={g.id} className="flex items-center gap-1 text-muted">
                 <span className="inline-block h-1.5 w-1.5 rounded-sm" style={{ background: gameColor(g.id) }} />
                 {g.name}
