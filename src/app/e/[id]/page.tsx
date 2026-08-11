@@ -4,6 +4,7 @@ import { getDataset } from '@/lib/data'
 import { PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, withTimestamp } from '@/lib/platforms'
 import { formatDuration, gameColor } from '@/lib/ui'
 import { toSeconds, type Platform } from '@/lib/schema'
+import { SiteNav } from '@/components/SiteNav'
 
 export function generateStaticParams() {
   return getDataset().entries.map((e) => ({ id: e.id }))
@@ -22,15 +23,19 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const totalSec = (entry.duration_min ?? 0) * 60
   const cover = proxyImage(entry.cover, 720)
   const primary = entry.sources[0]
+  const backHref = `/chronicle/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
 
   const related = ds.entries
     .filter((e) => e.id !== entry.id && e.games.some((g) => entry.games.includes(g)))
     .slice(0, 6)
 
   return (
-    <div className="mx-auto max-w-[900px] px-4 py-6 sm:px-6">
-      <Link href="/" className="font-mono text-[11px] text-muted underline underline-offset-4">
-        ← 回到时间轴
+    <div className="mx-auto max-w-[900px] px-4 pb-8 sm:px-6">
+      <header className="flex items-center py-5">
+        <SiteNav active="entry" />
+      </header>
+      <Link href={backHref} className="mt-5 inline-block font-mono text-[11px] text-muted underline underline-offset-4">
+        ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
       </Link>
 
       <header className="mt-6 border-b border-line pb-6">
@@ -54,7 +59,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
 
       {cover && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={cover} alt="" className="mt-6 w-full rounded border border-line" />
+        <img src={cover} alt={`${entry.title} 封面`} className="mt-6 aspect-video w-full rounded border border-line bg-raised object-cover" />
       )}
 
       {/* 分段：这场几点在打什么，点色块直接跳到对应时间 */}
@@ -139,12 +144,15 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             {entry.sources.map((s, i) => {
               const acc = s.account ? ds.accounts.get(s.account) : undefined
               const dead = s.status === 'dead'
+              const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
                 <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2.5">
                   <span className="font-mono text-[11px] text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
                   {acc && <span className="text-[12px] text-ink">{acc.name}</span>}
                   {s.parts && <span className="font-mono text-[11px] text-faint tnum">{s.parts} P</span>}
-                  {dead && <span className="font-mono text-[11px] text-today/80">已失效</span>}
+                  <span className={`font-mono text-[11px] ${s.status === 'alive' ? 'text-live/80' : dead ? 'text-today/80' : 'text-faint'}`}>
+                    {statusLabel}
+                  </span>
                   {s.note && <span className="text-[12px] text-faint">{s.note}</span>}
                   <a
                     href={s.url}
