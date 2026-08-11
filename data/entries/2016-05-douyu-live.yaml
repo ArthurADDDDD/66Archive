@@ -7,6 +7,13 @@
     duration_min: 188
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714445.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "结晶老者P1"
+      - at: "00:58:23"
+        label: "P2"
+      - at: "01:54:11"
+        label: "幽邃主教群P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2726626"
         kind: replay
@@ -23,6 +30,13 @@
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714694.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "灭火P1"
+      - at: "00:56:58"
+        label: "深渊的监视者P2"
+      - at: "01:50:08"
+        label: "霸王沃尼尔P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2726624"
         kind: replay
@@ -39,6 +53,13 @@
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889405.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "老恶魔王P1"
+      - at: "01:23:04"
+        label: "宗教沙力万P2"
+      - at: "02:30:12"
+        label: "巨人尤姆没打过@_@P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2731730"
         kind: replay
@@ -55,6 +76,13 @@
     duration_min: 171
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889582.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "巨人尤姆P1"
+      - at: "00:58:37"
+        label: "订约仪式P2"
+      - at: "01:30:19"
+        label: "吞噬神明的埃尔德里奇-冷冽谷的舞娘P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2731736"
         kind: replay
@@ -71,6 +99,13 @@
     duration_min: 175
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889697.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "英雄古达P1"
+      - at: "01:09:22"
+        label: "猎龙铠甲P2"
+      - at: "02:36:56"
+        label: "古老飞龙-打个招呼P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2731789"
         kind: replay
@@ -119,6 +154,11 @@
     duration_min: 80
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462891334.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "双子P1"
+      - at: "00:58:01"
+        label: "薪王P2"
     sources:
       - url: "https://www.acfun.cn/v/ac2731879"
         kind: replay
@@ -134,7 +174,20 @@
     confidence: high
     duration_min: 366
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_11/1462980803.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:54:56"
+        label: "P2"
+      - at: "01:57:59"
+        label: "P3"
+      - at: "03:01:03"
+        label: "P4"
+      - at: "04:04:07"
+        label: "P5"
+      - at: "05:10:43"
+        label: "P6"
     sources:
       - url: "https://www.acfun.cn/v/ac2734541"
         kind: replay
@@ -150,7 +203,12 @@
     confidence: high
     duration_min: 151
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_12/1463017953.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:55:46"
+        label: "Part2"
     sources:
       - url: "https://www.acfun.cn/v/ac2735016"
         kind: replay
@@ -166,7 +224,18 @@
     confidence: high
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_16/1463433905.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "麦尔基德篇P1"
+      - at: "00:33:18"
+        label: "麦尔基德岛完结-利姆尔达篇P2"
+      - at: "01:08:29"
+        label: "利姆尔达篇P3"
+      - at: "02:29:25"
+        label: "利姆尔达篇P4"
+      - at: "03:35:33"
+        label: "利姆尔达篇P5"
     sources:
       - url: "https://www.acfun.cn/v/ac2747170"
         kind: replay
@@ -182,7 +251,14 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_17/1463492112.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "利姆尔达篇P1"
+      - at: "01:15:24"
+        label: "利姆尔达篇P2"
+      - at: "02:30:49"
+        label: "利姆尔达篇P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2749217"
         kind: replay
@@ -198,7 +274,16 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_19/1463684008.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "利姆尔达篇P1"
+      - at: "01:29:01"
+        label: "利姆尔达篇P2"
+      - at: "02:20:34"
+        label: "利姆尔达篇-麦拉加雷亚篇P3"
+      - at: "03:21:18"
+        label: "麦拉加雷亚篇P4"
     sources:
       - url: "https://www.acfun.cn/v/ac2754485"
         kind: replay
@@ -214,7 +299,14 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_20/1463758766.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "麦拉加雷亚篇P1"
+      - at: "01:28:45"
+        label: "麦拉加雷亚篇P2"
+      - at: "02:57:30"
+        label: "麦拉加雷亚篇P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2757146"
         kind: replay
@@ -246,7 +338,16 @@
     confidence: high
     duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_23/1464019166.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "麦拉加雷亚篇P1"
+      - at: "01:08:32"
+        label: "麦拉加雷亚篇P2"
+      - at: "02:17:06"
+        label: "麦拉加雷亚篇P3"
+      - at: "03:25:40"
+        label: "麦拉加雷亚篇P4"
     sources:
       - url: "https://www.acfun.cn/v/ac2764008"
         kind: replay
@@ -262,7 +363,16 @@
     confidence: high
     duration_min: 277
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_25/1464164507.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "麦拉加雷亚篇-拉达托姆篇P1"
+      - at: "01:30:47"
+        label: "拉达托姆篇P2"
+      - at: "02:53:36"
+        label: "拉达托姆篇P3"
+      - at: "03:45:09"
+        label: "拉达托姆篇P4"
     sources:
       - url: "https://www.acfun.cn/v/ac2768116"
         kind: replay
@@ -294,7 +404,14 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_26/1464303913.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "拉达托姆篇P1"
+      - at: "01:17:01"
+        label: "拉达托姆篇P2"
+      - at: "02:34:04"
+        label: "拉达托姆篇P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2771725"
         kind: replay
@@ -310,7 +427,12 @@
     confidence: high
     duration_min: 125
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_27/1464356560.jpg?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "拉达托姆篇P1"
+      - at: "00:54:21"
+        label: "拉达托姆篇P2"
     sources:
       - url: "https://www.acfun.cn/v/ac2774058"
         kind: replay
@@ -327,6 +449,13 @@
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464744618.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:10:43"
+        label: "P2"
+      - at: "02:21:28"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2783777"
         kind: replay

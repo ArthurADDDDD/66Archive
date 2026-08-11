@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/o_1ec7t9f9eaa9mlpnml15bi4lp0.jpeg?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "01:11:52"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "02:23:47"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "03:35:40"
+        label: "盗贼之海"
+        game: sea-of-thieves
     sources:
       - url: "https://www.acfun.cn/v/ac16594590"
         kind: replay
@@ -22,7 +35,20 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/o_1ec82i33d9ejb5cs7012hpd2l0.jpeg?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "01:01:52"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "02:03:45"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "03:05:39"
+        label: "盗贼之海"
+        game: sea-of-thieves
     sources:
       - url: "https://www.acfun.cn/v/ac16594526"
         kind: replay
@@ -39,6 +65,13 @@
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/o_1ecal7rek19dj1c4e1i421mc41v0g0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "佩奇又见佩奇"
+      - at: "01:24:43"
+        label: "佩奇又见佩奇"
+      - at: "02:49:28"
+        label: "螺旋风暴"
     sources:
       - url: "https://www.acfun.cn/v/ac16611265"
         kind: replay
@@ -54,7 +87,20 @@
     confidence: high
     duration_min: 261
     cover: "https://tx-free-imgs.acfun.cn/o_1ecd4jgii152m15jf3blscs149q0.jpeg?imageslim"
-    games: []
+    games: [world-games-51, jiangnan-baijingtu]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:04:10"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:08:22"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "03:12:33"
+        label: "江南百景图"
+        game: jiangnan-baijingtu
     sources:
       - url: "https://www.acfun.cn/v/ac16657662"
         kind: replay
@@ -70,7 +116,19 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/o_1ecktntdjinvtbc12kdtqf1t490.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:33:02"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:52:22"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "03:11:42"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac16704479"
         kind: replay
@@ -86,7 +144,14 @@
     confidence: high
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:00:01"
+        label: "对马岛之鬼"
+      - at: "02:00:04"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac16879036"
         kind: replay
@@ -102,7 +167,17 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/o_1ecnhe18m1qlb1dmvnti1kc88f50.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:22:39"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:45:20"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac16719249"
         kind: replay
@@ -118,7 +193,19 @@
     confidence: high
     duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/o_1ecscbann175bg0he7ho0a1qfb0.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:57:19"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:42:37"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:53:49"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac16746931"
         kind: replay
@@ -134,7 +221,17 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/o_1ecse9lrh12qd7guhsmgnb1od80.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:17:03"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:34:08"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac16747453"
         kind: replay
@@ -150,7 +247,20 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/o_1ed6sqc33166ngprvdi1qh47340.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:04:32"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:09:07"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "03:13:40"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac16830939"
         kind: replay
@@ -167,6 +277,11 @@
     duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/o_1edeb9qvije11mgm12do8erse30.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "输掉的佩奇，悲伤的唱"
+      - at: "01:39:29"
+        label: "输掉的佩奇，悲伤的唱"
     sources:
       - url: "https://www.acfun.cn/v/ac16876378"
         kind: replay
@@ -182,7 +297,16 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1edh2sqsa1ef31noo30o1t8dgqm0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:00:01"
+        label: "Part2"
+      - at: "02:00:01"
+        label: "Part3"
+      - at: "03:00:04"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac16894131"
         kind: replay
@@ -198,7 +322,16 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/o_1edh2ur331rflv6e5kj2m6nec0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:00:02"
+        label: "Part2"
+      - at: "02:00:04"
+        label: "Part3"
+      - at: "03:00:06"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac16894792"
         kind: replay
@@ -214,7 +347,18 @@
     confidence: high
     duration_min: 364
     cover: "https://tx-free-imgs.acfun.cn/o_1edjqg5731ft896cnnna1s1p9a0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:15:03"
+        label: "对马岛之鬼"
+      - at: "02:30:08"
+        label: "对马岛之鬼"
+      - at: "03:45:13"
+        label: "对马岛之鬼"
+      - at: "05:00:19"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac16909140"
         kind: replay
@@ -230,7 +374,18 @@
     confidence: high
     duration_min: 373
     cover: "https://tx-free-imgs.acfun.cn/o_1edmc8kr41i7t1pb21oomtobngl0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:14:59"
+        label: "对马岛之鬼"
+      - at: "02:29:59"
+        label: "对马岛之鬼"
+      - at: "03:45:00"
+        label: "对马岛之鬼"
+      - at: "04:59:02"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac16923130"
         kind: replay
@@ -246,7 +401,18 @@
     confidence: high
     duration_min: 396
     cover: "https://tx-free-imgs.acfun.cn/o_1edovcvkp134qee1noq1cf114js0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:19:14"
+        label: "对马岛之鬼"
+      - at: "02:38:29"
+        label: "对马岛之鬼"
+      - at: "03:57:45"
+        label: "对马岛之鬼"
+      - at: "05:17:02"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac16938446"
         kind: replay
@@ -262,7 +428,16 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/o_1edrf95or1bvs1m3029p1s0qb3q0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:06:06"
+        label: "对马岛之鬼"
+      - at: "02:12:14"
+        label: "对马岛之鬼"
+      - at: "03:18:22"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac16975617"
         kind: replay
@@ -278,7 +453,16 @@
     confidence: high
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/o_1ee0jnee21v4e1e6mec61u40j9o0.jpeg?imageslim"
-    games: []
+    games: [ghost-of-tsushima]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:38:30"
+        label: "对马岛之鬼"
+      - at: "01:47:01"
+        label: "对马岛之鬼"
+      - at: "02:55:32"
+        label: "对马岛之鬼"
     sources:
       - url: "https://www.acfun.cn/v/ac17006418"
         kind: replay
@@ -294,7 +478,17 @@
     confidence: high
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/o_1ee36nmop167d19lu3navk3db90.jpeg?imageslim"
-    games: []
+    games: [menghuan-xiyou]
+    segments:
+      - at: "00:00:00"
+        label: "梦幻西游送福利了"
+        game: menghuan-xiyou
+      - at: "01:15:45"
+        label: "Superliminal"
+      - at: "02:24:36"
+        label: "Superliminal"
+      - at: "03:33:27"
+        label: "Superliminal"
     sources:
       - url: "https://www.acfun.cn/v/ac17023955"
         kind: replay
@@ -311,6 +505,13 @@
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/o_1ee84sphqnnh1q816k51amehu90.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "怒海余生"
+      - at: "01:15:07"
+        label: "怒海余生"
+      - at: "02:30:16"
+        label: "怒海余生"
     sources:
       - url: "https://www.acfun.cn/v/ac17055755"
         kind: replay
@@ -326,7 +527,19 @@
     confidence: high
     duration_min: 261
     cover: "https://tx-free-imgs.acfun.cn/o_1ee89v1m4p1b1gtg8at1t6klpd0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:48:29"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "01:59:16"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:10:02"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17057112"
         kind: replay

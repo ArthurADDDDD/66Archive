@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_01/1496325437.jpg?imageslim"
-    games: []
+    games: [the-witness]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.1-游戏前聊10块钱的"
+      - at: "00:57:53"
+        label: "P2-6.1-见证者（The Witness）"
+      - at: "02:06:14"
+        label: "P3-6.1-见证者（The Witness）"
+      - at: "03:14:36"
+        label: "P4-6.1-见证者（The Witness）"
     sources:
       - url: "https://www.acfun.cn/v/ac3744524"
         kind: replay
@@ -22,7 +31,16 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_02/1496412227.jpg?imageslim"
-    games: []
+    games: [the-witness]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.2-游戏前聊10块钱的"
+      - at: "00:38:33"
+        label: "P2-6.2-见证者（The Witness）"
+      - at: "01:44:11"
+        label: "P3-6.2-见证者（The Witness）"
+      - at: "02:49:48"
+        label: "P4-6.2-见证者（The Witness）"
     sources:
       - url: "https://www.acfun.cn/v/ac3747426"
         kind: replay
@@ -38,7 +56,22 @@
     confidence: high
     duration_min: 568
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_04/1496540839.jpg?imageslim"
-    games: []
+    games: [the-witness]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.3-游戏前聊10块钱的"
+      - at: "00:42:42"
+        label: "P2-6.3-见证者（The Witness）"
+      - at: "01:59:59"
+        label: "P3-6.3-见证者（The Witness）"
+      - at: "03:29:39"
+        label: "P4-6.3-见证者（The Witness）"
+      - at: "04:59:19"
+        label: "P5-6.3-见证者（The Witness）"
+      - at: "06:28:58"
+        label: "P6-6.3-见证者（The Witness）"
+      - at: "07:58:38"
+        label: "P7-6.3-见证者（The Witness）"
     sources:
       - url: "https://www.acfun.cn/v/ac3750370"
         kind: replay
@@ -56,6 +89,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_07/1496832100.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.4-砒霜前聊10块钱的"
+      - at: "00:24:25"
+        label: "P2-6.4-心灵砒霜弹幕版"
+      - at: "02:03:05"
+        label: "P3-6.4-心灵砒霜弹幕版"
+      - at: "03:41:40"
+        label: "P4-6.4-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3760083"
         kind: replay
@@ -72,6 +114,15 @@
     duration_min: 149
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_05/1496669915.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.5-游戏前聊10块钱的"
+      - at: "00:42:43"
+        label: "P2-6.5-Switch小游戏"
+      - at: "01:26:16"
+        label: "P3-6.5-Switch小游戏"
+      - at: "02:09:47"
+        label: "P4-6.5-水墨苏绣"
     sources:
       - url: "https://www.acfun.cn/v/ac3754354"
         kind: replay
@@ -88,6 +139,15 @@
     duration_min: 251
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_06/1496757660.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.6-大周庆典特辑"
+      - at: "00:49:34"
+        label: "P2-6.6-大周庆典特辑"
+      - at: "01:39:08"
+        label: "P3-6.6-大周庆典特辑"
+      - at: "03:08:27"
+        label: "P4-6.6-大周庆典特辑"
     sources:
       - url: "https://www.acfun.cn/v/ac3757948"
         kind: replay
@@ -103,7 +163,16 @@
     confidence: high
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_08/1496966051.jpg?imageslim"
-    games: []
+    games: [overwatch]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.8-游戏前聊10块钱的"
+      - at: "00:25:26"
+        label: "P2-6.8-守望先锋"
+      - at: "01:30:11"
+        label: "P3-6.8-守望先锋"
+      - at: "02:47:32"
+        label: "P4-6.8-守望先锋"
     sources:
       - url: "https://www.acfun.cn/v/ac3764055"
         kind: replay
@@ -119,7 +188,18 @@
     confidence: high
     duration_min: 276
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_10/1497104261.jpg?imageslim"
-    games: []
+    games: [league-of-legends]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.10-游戏前聊10块钱的"
+      - at: "01:02:53"
+        label: "P2-6.10-游戏前聊10块钱的"
+      - at: "02:05:47"
+        label: "P3-6.10-LOL英雄联盟"
+        game: league-of-legends
+      - at: "03:21:03"
+        label: "P4-6.10-LOL英雄联盟"
+        game: league-of-legends
     sources:
       - url: "https://www.acfun.cn/v/ac3768873"
         kind: replay
@@ -136,6 +216,13 @@
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_12/1497276174.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.12-洛杉矶之行-发布会之前休整"
+      - at: "00:30:48"
+        label: "P2-6.12-洛杉矶之行-发布会之前休整"
+      - at: "00:46:14"
+        label: "P3-6.12-洛杉矶之行-发布会之前休整"
     sources:
       - url: "https://www.acfun.cn/v/ac3773619"
         kind: replay
@@ -168,6 +255,11 @@
     duration_min: 126
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_13/1497359113.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.13-酒店休闲时光"
+      - at: "00:46:37"
+        label: "P2-6.13-酒店休闲时光"
     sources:
       - url: "https://www.acfun.cn/v/ac3776236"
         kind: replay
@@ -200,6 +292,11 @@
     duration_min: 99
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_14/1497412168.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.14-任天堂游戏发布会视频"
+      - at: "00:09:41"
+        label: "P2-6.14-任天堂游戏发布会视频"
     sources:
       - url: "https://www.acfun.cn/v/ac3777372"
         kind: replay
@@ -216,6 +313,13 @@
     duration_min: 164
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_15/1497486771.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.15-整装出发"
+      - at: "00:44:44"
+        label: "P2-6.15-E3展会第二天"
+      - at: "02:18:02"
+        label: "P3-6.15-E3展会第二天"
     sources:
       - url: "https://www.acfun.cn/v/ac3780119"
         kind: replay
@@ -249,6 +353,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_19/1497881842.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.18-心灵砒霜弹幕版"
+      - at: "01:33:24"
+        label: "P2-6.18-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3792599"
         kind: replay
@@ -264,7 +373,12 @@
     confidence: high
     duration_min: 56
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_21/1498053727.JPG?imageslim"
-    games: []
+    games: [arms]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.20-我很累，但依然想念你们"
+      - at: "00:28:12"
+        label: "P2-6.20-ARMS"
     sources:
       - url: "https://www.acfun.cn/v/ac3798171"
         kind: replay
@@ -280,7 +394,14 @@
     confidence: high
     duration_min: 171
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_21/1498053594.JPG?imageslim"
-    games: []
+    games: [rime]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.21-RIME"
+      - at: "00:56:54"
+        label: "P2-6.21-RIME"
+      - at: "01:53:48"
+        label: "P3-6.21-RIME"
     sources:
       - url: "https://www.acfun.cn/v/ac3798217"
         kind: replay
@@ -296,7 +417,12 @@
     confidence: high
     duration_min: 117
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498307589.JPG?imageslim"
-    games: []
+    games: [rime]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.23-RIME"
+      - at: "00:58:42"
+        label: "P2-6.23-RIME"
     sources:
       - url: "https://www.acfun.cn/v/ac3806231"
         kind: replay
@@ -313,6 +439,13 @@
     duration_min: 71
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498309745.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.23-公益项目拍摄现场"
+      - at: "00:17:33"
+        label: "P2-6.23-公益项目拍摄现场"
+      - at: "00:31:37"
+        label: "P3-6.23-公益项目拍摄现场"
     sources:
       - url: "https://www.acfun.cn/v/ac3806230"
         kind: replay
@@ -328,7 +461,16 @@
     confidence: high
     duration_min: 216
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_24/1498316563.JPG?imageslim"
-    games: []
+    games: [kalimba]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.24-游戏前聊10块钱的"
+      - at: "00:25:20"
+        label: "P2-6.24-KALIMBA（克林巴）"
+      - at: "01:28:53"
+        label: "P3-6.24-KALIMBA（克林巴）"
+      - at: "02:32:26"
+        label: "P4-6.24-KALIMBA（克林巴）P4"
     sources:
       - url: "https://www.acfun.cn/v/ac3806751"
         kind: replay
@@ -346,6 +488,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_26/1498447067.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.25-砒霜前聊10块钱的"
+      - at: "00:32:10"
+        label: "P2-6.25-心灵砒霜弹幕版"
+      - at: "01:49:57"
+        label: "P3-.25-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3809425"
         kind: replay
@@ -362,6 +511,13 @@
     duration_min: 39
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_27/1498528493.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.26-六酱萌妹的日常"
+      - at: "00:07:05"
+        label: "P2-6.26-六酱萌妹的日常"
+      - at: "00:30:09"
+        label: "P3-6.26-六酱萌妹的日常"
     sources:
       - url: "https://www.acfun.cn/v/ac3811659"
         kind: replay
@@ -378,6 +534,17 @@
     duration_min: 181
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_26/1498485864.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.26-有顶天家族2圣地巡礼"
+      - at: "00:56:16"
+        label: "P2-6.26-有顶天家族2圣地巡礼"
+      - at: "02:30:08"
+        label: "P3-6.26-有顶天家族2圣地巡礼"
+      - at: "02:45:23"
+        label: "P4-6.26-有顶天家族2圣地巡礼"
+      - at: "02:51:37"
+        label: "P5-6.26-有顶天家族2圣地巡礼"
     sources:
       - url: "https://www.acfun.cn/v/ac3810969"
         kind: replay
@@ -394,6 +561,11 @@
     duration_min: 92
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_27/1498571818.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.27-森见登美彦专访"
+      - at: "01:17:39"
+        label: "P2-6.27-森见登美彦专访"
     sources:
       - url: "https://www.acfun.cn/v/ac3813739"
         kind: replay
@@ -442,6 +614,11 @@
     duration_min: 53
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_29/1498747677.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-6.29-采访前准备"
+      - at: "00:13:13"
+        label: "P2-6.29-吉原正行专访（有顶天家族2导演）"
     sources:
       - url: "https://www.acfun.cn/v/ac3819521"
         kind: replay
@@ -458,6 +635,11 @@
     duration_min: 88
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_30/1498830233.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-女流-6.30-回国之前剪个头"
+      - at: "00:50:04"
+        label: "P2-女流-6.30-回国之前剪个头"
     sources:
       - url: "https://www.acfun.cn/v/ac3822160"
         kind: replay

@@ -6,7 +6,32 @@
     confidence: high
     duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_04/1509804296.JPG?imageslim"
-    games: []
+    games: [cat-goes-fishing]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.4-游戏前聊10块钱的"
+      - at: "00:22:59"
+        label: "P1.2-11.4-游戏前聊10块钱的"
+      - at: "00:46:00"
+        label: "P2.1-11.4-小猫钓鱼"
+      - at: "01:10:46"
+        label: "P2.2-11.4-小猫钓鱼"
+      - at: "01:35:34"
+        label: "P2.3-11.4-小猫钓鱼"
+      - at: "02:00:21"
+        label: "P2.4-11.4-小猫钓鱼"
+      - at: "02:25:09"
+        label: "P2.5-11.4-小猫钓鱼"
+      - at: "02:49:56"
+        label: "P2.6-11.4-小猫钓鱼"
+      - at: "03:14:43"
+        label: "P2.7-11.4-小猫钓鱼"
+      - at: "03:39:31"
+        label: "P2.8-11.4-小猫钓鱼"
+      - at: "04:04:18"
+        label: "P2.9-11.4-小猫钓鱼"
+      - at: "04:29:06"
+        label: "P2.10-11.4-小猫钓鱼"
     sources:
       - url: "https://www.acfun.cn/v/ac4066447"
         kind: replay
@@ -22,7 +47,18 @@
     confidence: high
     duration_min: 121
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_05/1509892266.JPG?imageslim"
-    games: []
+    games: [castle-crashers]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.5-Castle Crusher 城堡毁灭者"
+      - at: "00:25:52"
+        label: "P2-11.5-Castle Crusher 城堡毁灭者"
+      - at: "00:51:46"
+        label: "P3-11.5-Castle Crusher 城堡毁灭者"
+      - at: "01:17:39"
+        label: "P4-11.5-Castle Crusher 城堡毁灭者"
+      - at: "01:39:22"
+        label: "P5-11.5-Castle Crusher 城堡毁灭者"
     sources:
       - url: "https://www.acfun.cn/v/ac4067788"
         kind: replay
@@ -40,6 +76,25 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509957195.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.5-心灵砒霜-弹幕版"
+      - at: "00:23:37"
+        label: "P2-11.5-心灵砒霜-弹幕版"
+      - at: "00:47:14"
+        label: "P3-11.5-心灵砒霜-弹幕版"
+      - at: "01:10:58"
+        label: "P4-11.5-心灵砒霜-弹幕版"
+      - at: "01:34:37"
+        label: "P5-11.5-心灵砒霜-弹幕版"
+      - at: "01:58:20"
+        label: "P6-11.5-心灵砒霜-弹幕版"
+      - at: "02:22:06"
+        label: "P7-11.5-心灵砒霜-弹幕版"
+      - at: "02:45:44"
+        label: "P8-11.5-心灵砒霜-弹幕版"
+      - at: "03:09:23"
+        label: "P9-11.5-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4069473"
         kind: replay
@@ -55,7 +110,28 @@
     confidence: high
     duration_min: 242
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509968922.JPG?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.6-游戏前聊10块钱的"
+      - at: "00:13:19"
+        label: "P2-11.6-66约冷冷双排吃鸡"
+      - at: "00:38:40"
+        label: "P3-11.6-66约冷冷双排吃鸡"
+      - at: "01:04:02"
+        label: "P4-11.6-66约冷冷双排吃鸡"
+      - at: "01:29:23"
+        label: "P5-11.6-66约冷冷双排吃鸡"
+      - at: "01:54:44"
+        label: "P6-11.6-66约冷冷双排吃鸡"
+      - at: "02:20:05"
+        label: "P7-11.6-66约冷冷双排吃鸡"
+      - at: "02:45:27"
+        label: "P8-11.6-66约冷冷双排吃鸡"
+      - at: "03:10:48"
+        label: "P9-11.6-66约冷冷双排吃鸡"
+      - at: "03:36:11"
+        label: "P10-11.6-66约冷冷双排吃鸡"
     sources:
       - url: "https://www.acfun.cn/v/ac4069742"
         kind: replay
@@ -71,7 +147,28 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_07/1510057926.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.7-超级马里奥-奥德赛"
+      - at: "00:27:12"
+        label: "P2-11.7-超级马里奥-奥德赛"
+      - at: "00:54:25"
+        label: "P3-11.7-超级马里奥-奥德赛"
+      - at: "01:21:37"
+        label: "P4-11.7-超级马里奥-奥德赛"
+      - at: "01:48:50"
+        label: "P5-11.7-超级马里奥-奥德赛"
+      - at: "02:14:21"
+        label: "P6-11.7-超级马里奥-奥德赛"
+      - at: "02:39:54"
+        label: "P7-11.7-超级马里奥-奥德赛"
+      - at: "03:05:27"
+        label: "P8-11.7-超级马里奥-奥德赛"
+      - at: "03:30:58"
+        label: "P9-11.7-超级马里奥-奥德赛"
+      - at: "03:56:29"
+        label: "P10-11.7-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4072119"
         kind: replay
@@ -87,7 +184,30 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_10/1510325253.jpg?imageslim"
-    games: []
+    games: [super-mario-odyssey, pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.10-游戏前聊10块钱的"
+      - at: "00:18:50"
+        label: "P2-11.10-绝地求生"
+      - at: "00:28:24"
+        label: "P3-11.10-超级马里奥-奥德赛"
+      - at: "00:53:34"
+        label: "P4-11.10-超级马里奥-奥德赛"
+      - at: "01:18:46"
+        label: "P5-11.10-超级马里奥-奥德赛"
+      - at: "01:43:57"
+        label: "P6-11.10-超级马里奥-奥德赛"
+      - at: "02:09:08"
+        label: "P7-11.10-超级马里奥-奥德赛"
+      - at: "02:34:19"
+        label: "P8-11.10-超级马里奥-奥德赛"
+      - at: "02:59:31"
+        label: "P9-11.10-超级马里奥-奥德赛"
+      - at: "03:24:42"
+        label: "P10-11.10-超级马里奥-奥德赛"
+      - at: "03:49:54"
+        label: "P11-11.10-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4078341"
         kind: replay
@@ -103,7 +223,30 @@
     confidence: high
     duration_min: 305
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_11/1510403586.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey, pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.11-游戏前聊10块钱的"
+      - at: "00:20:30"
+        label: "P2-11.11-绝地求生"
+      - at: "00:46:20"
+        label: "P3.1-11.11-超级马里奥-奥德赛"
+      - at: "01:15:07"
+        label: "P3.2-11.11-超级马里奥-奥德赛"
+      - at: "01:43:55"
+        label: "P3.3-11.11-超级马里奥-奥德赛"
+      - at: "02:12:44"
+        label: "P3.4-11.11-超级马里奥-奥德赛"
+      - at: "02:41:31"
+        label: "P3.5-11.11-超级马里奥-奥德赛"
+      - at: "03:10:19"
+        label: "P3.6-11.11-超级马里奥-奥德赛"
+      - at: "03:39:07"
+        label: "P3.7-11.11-超级马里奥-奥德赛"
+      - at: "04:07:54"
+        label: "P3.8-11.11-超级马里奥-奥德赛"
+      - at: "04:36:41"
+        label: "P3.9-11.11-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4079503"
         kind: replay
@@ -121,6 +264,29 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510533134.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.12-砒霜前聊10块钱的-弹幕版"
+      - at: "00:16:14"
+        label: "P1.2-11.12-砒霜前聊10块钱的-弹幕版"
+      - at: "00:32:36"
+        label: "P2.1-心灵砒霜-弹幕版"
+      - at: "00:57:11"
+        label: "P2.2-心灵砒霜-弹幕版"
+      - at: "01:21:47"
+        label: "P2.3-心灵砒霜-弹幕版"
+      - at: "01:46:24"
+        label: "P2.4-心灵砒霜-弹幕版"
+      - at: "02:10:59"
+        label: "P2.5-心灵砒霜-弹幕版"
+      - at: "02:35:35"
+        label: "P2.6-心灵砒霜-弹幕版"
+      - at: "03:00:10"
+        label: "P2.7-心灵砒霜-弹幕版"
+      - at: "03:24:44"
+        label: "P2.8-心灵砒霜-弹幕版"
+      - at: "03:49:25"
+        label: "P2.9-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4080881"
         kind: replay
@@ -136,7 +302,28 @@
     confidence: high
     duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510574079.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.13-游戏前聊10块钱的"
+      - at: "00:09:19"
+        label: "P2-11.13-超级马里奥-奥德赛"
+      - at: "00:38:14"
+        label: "P3-11.13-超级马里奥-奥德赛"
+      - at: "01:07:10"
+        label: "P4-11.13-超级马里奥-奥德赛"
+      - at: "01:36:06"
+        label: "P5-11.13-超级马里奥-奥德赛"
+      - at: "02:05:02"
+        label: "P6-11.13-超级马里奥-奥德赛"
+      - at: "02:33:59"
+        label: "P7-11.13-超级马里奥-奥德赛"
+      - at: "03:02:57"
+        label: "P8-11.13-超级马里奥-奥德赛"
+      - at: "03:31:53"
+        label: "P9-11.13-超级马里奥-奥德赛"
+      - at: "04:00:50"
+        label: "P10-11.13-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4082621"
         kind: replay
@@ -152,7 +339,32 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_14/1510664434.JPG?imageslim"
-    games: []
+    games: [getting-over-it]
+    segments:
+      - at: "00:00:00"
+        label: "P1-游戏前聊10块钱的"
+      - at: "00:07:59"
+        label: "P2-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "00:35:07"
+        label: "P3-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "01:02:16"
+        label: "P4-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "01:29:26"
+        label: "P5-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "01:56:36"
+        label: "P6-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "02:23:45"
+        label: "P7-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "02:48:28"
+        label: "P8-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "03:13:12"
+        label: "P9-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "03:37:56"
+        label: "P10-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "04:02:40"
+        label: "P11-11.14-游戏名称：和班尼特福迪一起攻克难关"
+      - at: "04:27:25"
+        label: "P12-11.14-游戏名称：和班尼特福迪一起攻克难关"
     sources:
       - url: "https://www.acfun.cn/v/ac4084862"
         kind: replay
@@ -168,7 +380,32 @@
     confidence: high
     duration_min: 283
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_15/1510755479.jpg?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.15-游戏前聊10块钱的"
+      - at: "00:12:46"
+        label: "P2-11.15-超级马里奥-奥德赛"
+      - at: "00:30:59"
+        label: "P3-11.15-超级马里奥-奥德赛"
+      - at: "00:49:13"
+        label: "P4-11.15-超级马里奥-奥德赛"
+      - at: "01:15:08"
+        label: "P5-11.15-超级马里奥-奥德赛"
+      - at: "01:41:05"
+        label: "P6-11.15-超级马里奥-奥德赛"
+      - at: "02:07:00"
+        label: "P7-11.15-超级马里奥-奥德赛"
+      - at: "02:32:56"
+        label: "P8-11.15-超级马里奥-奥德赛"
+      - at: "02:58:53"
+        label: "P9-11.15-超级马里奥-奥德赛"
+      - at: "03:24:50"
+        label: "P10-11.15-超级马里奥-奥德赛"
+      - at: "03:50:46"
+        label: "P11-11.15-超级马里奥-奥德赛"
+      - at: "04:16:43"
+        label: "P12-11.15-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4086833"
         kind: replay
@@ -184,7 +421,28 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_17/1510921212.jpg?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.17-游戏前聊10块钱的"
+      - at: "00:15:36"
+        label: "P1.2-11.17-游戏前聊10块钱的"
+      - at: "00:31:12"
+        label: "P2.1-11.17-和班尼特福迪一起攻克难关"
+      - at: "00:59:38"
+        label: "P2.2-11.17-和班尼特福迪一起攻克难关"
+      - at: "01:28:06"
+        label: "P3.1-11.17-超级马里奥-奥德赛"
+      - at: "01:52:32"
+        label: "P3.2-11.17-超级马里奥-奥德赛"
+      - at: "02:17:00"
+        label: "P3.3-11.17-超级马里奥-奥德赛"
+      - at: "02:41:28"
+        label: "P3.4-11.17-超级马里奥-奥德赛"
+      - at: "03:05:54"
+        label: "P3.5-11.17-超级马里奥-奥德赛"
+      - at: "03:30:21"
+        label: "P3.6-11.17-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4091308"
         kind: replay
@@ -200,7 +458,40 @@
     confidence: high
     duration_min: 383
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_18/1511018447.jpg?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.18-游戏前聊10块钱的"
+      - at: "00:17:53"
+        label: "P2-11.18-超级马里奥-奥德赛"
+      - at: "00:41:58"
+        label: "P3-11.18-超级马里奥-奥德赛"
+      - at: "01:06:04"
+        label: "P4-11.18-超级马里奥-奥德赛"
+      - at: "01:30:10"
+        label: "P5-11.18-超级马里奥-奥德赛"
+      - at: "01:54:15"
+        label: "P6-11.18-超级马里奥-奥德赛"
+      - at: "02:18:20"
+        label: "P7-11.18-超级马里奥-奥德赛"
+      - at: "02:42:26"
+        label: "P8-11.18-超级马里奥-奥德赛"
+      - at: "03:06:58"
+        label: "P9-11.18-超级马里奥-奥德赛"
+      - at: "03:31:31"
+        label: "P10-11.18-超级马里奥-奥德赛"
+      - at: "03:56:04"
+        label: "P11-11.18-超级马里奥-奥德赛"
+      - at: "04:20:36"
+        label: "P12-11.18-超级马里奥-奥德赛"
+      - at: "04:45:09"
+        label: "P13-11.18-超级马里奥-奥德赛"
+      - at: "05:09:43"
+        label: "P14-11.18-超级马里奥-奥德赛"
+      - at: "05:34:16"
+        label: "P15-11.18-超级马里奥-奥德赛"
+      - at: "05:58:50"
+        label: "P16-11.18-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4093091"
         kind: replay
@@ -218,6 +509,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_20/1511139166.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.19-砒霜前聊10块钱的-弹幕版"
+      - at: "00:20:29"
+        label: "P2-11.19-砒霜前聊10块钱的-弹幕版"
+      - at: "00:40:59"
+        label: "P3-11.19-心灵砒霜-弹幕版"
+      - at: "01:10:23"
+        label: "P4-11.19-心灵砒霜-弹幕版"
+      - at: "01:39:54"
+        label: "P5-11.19-心灵砒霜-弹幕版"
+      - at: "02:09:24"
+        label: "P6-11.19-心灵砒霜-弹幕版"
+      - at: "02:38:47"
+        label: "P7-11.19-心灵砒霜-弹幕版"
+      - at: "03:08:15"
+        label: "P8-11.19-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4094419"
         kind: replay
@@ -233,7 +541,36 @@
     confidence: high
     duration_min: 323
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_21/1511271440.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.21-游戏前聊10块钱的"
+      - at: "00:20:02"
+        label: "P1.2-11.21-游戏前聊10块钱的"
+      - at: "00:40:06"
+        label: "P1.3-11.21-游戏前聊10块钱的"
+      - at: "01:00:09"
+        label: "P2.1-11.21-超级马里奥-奥德赛"
+      - at: "01:30:04"
+        label: "P2.2-11.21-超级马里奥-奥德赛"
+      - at: "02:00:00"
+        label: "P2.3-11.21-超级马里奥-奥德赛"
+      - at: "02:20:00"
+        label: "P2.4-11.21-超级马里奥-奥德赛"
+      - at: "02:40:01"
+        label: "P2.5-11.21-超级马里奥-奥德赛"
+      - at: "03:00:01"
+        label: "P2.6-11.21-超级马里奥-奥德赛"
+      - at: "03:20:01"
+        label: "P2.7-11.21-超级马里奥-奥德赛"
+      - at: "03:40:02"
+        label: "P2.8-11.21-超级马里奥-奥德赛"
+      - at: "04:00:03"
+        label: "P2.9-11.21-超级马里奥-奥德赛"
+      - at: "04:27:38"
+        label: "P2.10-11.21-超级马里奥-奥德赛"
+      - at: "04:55:13"
+        label: "P2.11-11.21-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4098179"
         kind: replay
@@ -249,7 +586,36 @@
     confidence: high
     duration_min: 352
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_22/1511358141.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.22-游戏前聊10块钱的"
+      - at: "00:27:45"
+        label: "P2.1-11.22-兔宝宝历险记"
+      - at: "00:44:01"
+        label: "P2.2-11.22-兔宝宝历险记"
+      - at: "01:00:18"
+        label: "P3.1-11.22-超级马里奥-奥德赛"
+      - at: "01:18:56"
+        label: "P3.2-11.22-超级马里奥-奥德赛"
+      - at: "01:37:34"
+        label: "P3.3-11.22-超级马里奥-奥德赛"
+      - at: "02:05:47"
+        label: "P3.4-11.22-超级马里奥-奥德赛"
+      - at: "02:34:01"
+        label: "P3.5-11.22-超级马里奥-奥德赛"
+      - at: "03:02:15"
+        label: "P3.6-11.22-超级马里奥-奥德赛"
+      - at: "03:30:29"
+        label: "P3.7-11.22-超级马里奥-奥德赛"
+      - at: "03:58:43"
+        label: "P3.8-11.22-超级马里奥-奥德赛"
+      - at: "04:26:58"
+        label: "P3.9-11.22-超级马里奥-奥德赛"
+      - at: "04:55:12"
+        label: "P3.10-11.22-超级马里奥-奥德赛"
+      - at: "05:23:27"
+        label: "P3.11-11.22-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4100187"
         kind: replay
@@ -265,7 +631,24 @@
     confidence: high
     duration_min: 175
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_23/1511443737.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.23-游戏前聊10块钱的"
+      - at: "00:25:19"
+        label: "P1.2-11.23-游戏前聊10块钱的"
+      - at: "00:50:38"
+        label: "P2.1-11.23-超级马里奥-奥德赛"
+      - at: "01:11:19"
+        label: "P2.2-11.23-超级马里奥-奥德赛"
+      - at: "01:32:02"
+        label: "P2.3-11.23-超级马里奥-奥德赛"
+      - at: "01:52:44"
+        label: "P2.4-11.23-超级马里奥-奥德赛"
+      - at: "02:13:25"
+        label: "P2.5-11.23-超级马里奥-奥德赛"
+      - at: "02:34:08"
+        label: "P2.6-11.23-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4102271"
         kind: replay
@@ -281,7 +664,38 @@
     confidence: high
     duration_min: 410
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867522.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.24-游戏前聊好多钱的"
+      - at: "00:20:46"
+        label: "P1.2-11.24-游戏前聊好多钱的"
+      - at: "00:41:34"
+        label: "P1.3-11.24-游戏前聊好多钱的"
+      - at: "01:02:21"
+        label: "P2.1-11.24-超级马里奥-奥德赛"
+      - at: "01:31:18"
+        label: "P2.2-11.24-超级马里奥-奥德赛"
+      - at: "02:00:16"
+        label: "P2.3-11.24-超级马里奥-奥德赛"
+      - at: "02:29:15"
+        label: "P2.4-11.24-超级马里奥-奥德赛"
+      - at: "02:58:12"
+        label: "P2.5-11.24-超级马里奥-奥德赛"
+      - at: "03:27:10"
+        label: "P2.6-11.24-超级马里奥-奥德赛"
+      - at: "03:56:08"
+        label: "P2.7-11.24-超级马里奥-奥德赛"
+      - at: "04:25:05"
+        label: "P2.8-11.24-超级马里奥-奥德赛"
+      - at: "04:54:03"
+        label: "P2.9-11.24-超级马里奥-奥德赛"
+      - at: "05:23:01"
+        label: "P2.10-11.24-超级马里奥-奥德赛"
+      - at: "05:51:59"
+        label: "P2.11-11.24-超级马里奥-奥德赛"
+      - at: "06:20:58"
+        label: "P2.12-11.24-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4107292"
         kind: replay
@@ -297,7 +711,32 @@
     confidence: high
     duration_min: 321
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867891.JPG?imageslim"
-    games: []
+    games: [super-mario-odyssey]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.25-游戏前聊好多钱的"
+      - at: "00:27:29"
+        label: "P1.2-11.25-游戏前聊好多钱的"
+      - at: "00:54:59"
+        label: "P1.3-11.25-游戏前聊好多钱的"
+      - at: "01:22:29"
+        label: "P2.1-11.25-超级马里奥-奥德赛"
+      - at: "01:48:59"
+        label: "P2.2-11.25-超级马里奥-奥德赛"
+      - at: "02:15:30"
+        label: "P2.3-11.25-超级马里奥-奥德赛"
+      - at: "02:42:02"
+        label: "P2.4-11.25-超级马里奥-奥德赛"
+      - at: "03:08:32"
+        label: "P2.5-11.25-超级马里奥-奥德赛"
+      - at: "03:35:03"
+        label: "P2.6-11.25-超级马里奥-奥德赛"
+      - at: "04:01:35"
+        label: "P2.7-11.25-超级马里奥-奥德赛"
+      - at: "04:28:05"
+        label: "P2.8-11.25-超级马里奥-奥德赛"
+      - at: "04:54:37"
+        label: "P2.9-11.25-超级马里奥-奥德赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4107286"
         kind: replay
@@ -315,6 +754,27 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511870023.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-11.26-砒霜前聊10块钱的-弹幕版"
+      - at: "00:20:04"
+        label: "P1.2-11.26-砒霜前聊10块钱的-弹幕版"
+      - at: "00:40:13"
+        label: "P2.1-11.26-心灵砒霜-弹幕版"
+      - at: "01:04:20"
+        label: "P2.2-11.26-心灵砒霜-弹幕版"
+      - at: "01:28:34"
+        label: "P2.3-11.26-心灵砒霜-弹幕版"
+      - at: "01:52:46"
+        label: "P2.4-11.26-心灵砒霜-弹幕版"
+      - at: "02:16:55"
+        label: "P2.5-11.26-心灵砒霜-弹幕版"
+      - at: "02:41:02"
+        label: "P2.6-11.26-心灵砒霜-弹幕版"
+      - at: "03:05:17"
+        label: "P2.7-11.26-心灵砒霜-弹幕版"
+      - at: "03:29:30"
+        label: "P2.8-11.26-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4107290"
         kind: replay

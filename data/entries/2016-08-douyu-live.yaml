@@ -8,6 +8,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_08/1470619273.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P3-8.7-心灵砒霜"
+      - at: "01:04:17"
+        label: "P1-8.7-心灵砒霜"
+      - at: "02:08:33"
+        label: "P2-8.7-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3004568"
         kind: replay
@@ -23,7 +30,18 @@
     confidence: high
     duration_min: 174
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_08/1470656775.JPG?imageslim"
-    games: []
+    games: [dota-2]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.8-DOTA2"
+      - at: "00:32:11"
+        label: "P2-8.8-DOTA2"
+      - at: "01:36:29"
+        label: "P3-8.8-DOTA2"
+      - at: "02:17:16"
+        label: "P4-8.8-DOTA2"
+      - at: "02:54:05"
+        label: "P5-8.8-DOTA2"
     sources:
       - url: "https://www.acfun.cn/v/ac3006501"
         kind: replay
@@ -39,7 +57,14 @@
     confidence: high
     duration_min: 73
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_09/1470755980.JPG?imageslim"
-    games: []
+    games: [no-mans-sky]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.9-无人深空"
+      - at: "00:00:03"
+        label: "P2-8.9-无人深空"
+      - at: "01:13:14"
+        label: "P3-8.9-无人深空"
     sources:
       - url: "https://www.acfun.cn/v/ac3009606"
         kind: replay
@@ -55,7 +80,16 @@
     confidence: high
     duration_min: 185
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_10/1470843127.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.10-逆转裁判6-day1"
+      - at: "01:01:40"
+        label: "P2-8.10-逆转裁判6-day1"
+      - at: "02:03:21"
+        label: "P3-8.10-逆转裁判6-day1"
+      - at: "03:05:02"
+        label: "P4-8.10-逆转裁判6-day1"
     sources:
       - url: "https://www.acfun.cn/v/ac3012359"
         kind: replay
@@ -71,7 +105,18 @@
     confidence: high
     duration_min: 205
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_12/1471005582.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.12-逆转裁判6-day2"
+      - at: "00:18:42"
+        label: "P2-8.12-逆转裁判6-day2"
+      - at: "01:20:42"
+        label: "P3-8.12-逆转裁判6-day2"
+      - at: "02:22:40"
+        label: "P4-8.12-逆转裁判6-day2"
+      - at: "03:24:39"
+        label: "P5-8.12-逆转裁判6-day2"
     sources:
       - url: "https://www.acfun.cn/v/ac3017376"
         kind: replay
@@ -87,7 +132,18 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_16/1471364449.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.16-逆转裁判6-day3"
+      - at: "01:05:59"
+        label: "P2-8.16-逆转裁判6-day3"
+      - at: "02:11:59"
+        label: "P3-8.16-逆转裁判6-day3"
+      - at: "03:13:06"
+        label: "P4没有游戏"
+      - at: "03:58:43"
+        label: "P5没有游戏"
     sources:
       - url: "https://www.acfun.cn/v/ac3027438"
         kind: replay
@@ -103,7 +159,12 @@
     confidence: high
     duration_min: 76
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_17/1471435399.JPG?imageslim"
-    games: []
+    games: [overwatch]
+    segments:
+      - at: "00:00:00"
+        label: "P4-守望先锋"
+      - at: "00:23:53"
+        label: "P5-守望先锋"
     sources:
       - url: "https://www.acfun.cn/v/ac3029731"
         kind: replay
@@ -119,7 +180,12 @@
     confidence: high
     duration_min: 94
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_17/1471435139.jpg?imageslim"
-    games: []
+    games: [starbound]
+    segments:
+      - at: "00:00:00"
+        label: "P2-星界边境(starbound)"
+      - at: "00:46:57"
+        label: "P3-星界边境(starbound)"
     sources:
       - url: "https://www.acfun.cn/v/ac3029701"
         kind: replay
@@ -151,7 +217,20 @@
     confidence: high
     duration_min: 343
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_19/1471625847.JPG?imageslim"
-    games: []
+    games: [turmoil]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:43:12"
+        label: "P2-8.19-石油骚动(turmoil)"
+      - at: "01:55:36"
+        label: "P3-8.19-石油骚动(turmoil)"
+      - at: "03:13:32"
+        label: "P4-8.19-石油骚动(turmoil)"
+      - at: "03:57:20"
+        label: "P5-8.19-石油骚动(turmoil)"
+      - at: "04:50:05"
+        label: "P6-8.19-石油骚动(turmoil)"
     sources:
       - url: "https://www.acfun.cn/v/ac3035804"
         kind: replay
@@ -169,6 +248,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_22/1471868725.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-砒霜"
+      - at: "00:00:04"
+        label: "P2-砒霜"
+      - at: "01:06:58"
+        label: "P3-砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3042155"
         kind: replay
@@ -184,7 +270,12 @@
     confidence: high
     duration_min: 52
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_22/1471869210.JPG?imageslim"
-    games: []
+    games: [contra]
+    segments:
+      - at: "00:00:00"
+        label: "P4-魂斗罗"
+      - at: "00:11:03"
+        label: "P5-魂斗罗"
     sources:
       - url: "https://www.acfun.cn/v/ac3042164"
         kind: replay
@@ -200,7 +291,16 @@
     confidence: high
     duration_min: 149
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_23/1471967822.JPG?imageslim"
-    games: []
+    games: [contra]
+    segments:
+      - at: "00:00:00"
+        label: "P1-魂斗罗"
+      - at: "00:36:51"
+        label: "P2-魂斗罗"
+      - at: "01:35:11"
+        label: "P3-雪人兄弟"
+      - at: "02:11:33"
+        label: "P4-雪人兄弟"
     sources:
       - url: "https://www.acfun.cn/v/ac3045395"
         kind: replay
@@ -216,7 +316,12 @@
     confidence: high
     duration_min: 142
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_25/1472136269.JPG?imageslim"
-    games: []
+    games: [worms-wmd]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.24-百战天虫"
+      - at: "01:10:56"
+        label: "P2-8.24-百战天虫"
     sources:
       - url: "https://www.acfun.cn/v/ac3050901"
         kind: replay
@@ -232,7 +337,16 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_25/1472136915.JPG?imageslim"
-    games: []
+    games: [worms-wmd]
+    segments:
+      - at: "00:00:00"
+        label: "P4-8.25-百战天虫"
+      - at: "01:03:43"
+        label: "P3-8.25-百战天虫"
+      - at: "02:07:28"
+        label: "P2-8.25-百战天虫"
+      - at: "03:11:11"
+        label: "P1-没有游戏"
     sources:
       - url: "https://www.acfun.cn/v/ac3050922"
         kind: replay
@@ -248,7 +362,16 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_26/1472225667.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-没有游戏"
+      - at: "00:28:45"
+        label: "P2-8.26-逆转裁判6-day4"
+      - at: "01:44:11"
+        label: "P3-8.26-逆转裁判6-day4"
+      - at: "02:59:39"
+        label: "P4-8.26-逆转裁判6-day4"
     sources:
       - url: "https://www.acfun.cn/v/ac3053918"
         kind: replay
@@ -266,6 +389,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_28/1472382642.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.28-心灵砒霜"
+      - at: "00:56:55"
+        label: "P2-8.28-心灵砒霜"
+      - at: "00:59:40"
+        label: "P3-8.28-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3057784"
         kind: replay
@@ -281,7 +411,16 @@
     confidence: high
     duration_min: 234
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_29/1472477996.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:39:31"
+        label: "P2-逆转裁判6-day5"
+      - at: "01:44:25"
+        label: "P3-逆转裁判6-day5"
+      - at: "02:49:21"
+        label: "P4-逆转裁判6-day5"
     sources:
       - url: "https://www.acfun.cn/v/ac3060766"
         kind: replay
@@ -297,7 +436,14 @@
     confidence: high
     duration_min: 131
     cover: "https://tx-free-imgs.acfun.cn/content/2016_08_30/1472561822.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天-小游戏"
+      - at: "00:37:00"
+        label: "P2-8.30-逆转裁判6-day6"
+      - at: "01:24:11"
+        label: "P3-8.30-逆转裁判6-day6"
     sources:
       - url: "https://www.acfun.cn/v/ac3063305"
         kind: replay

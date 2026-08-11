@@ -6,7 +6,23 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/o_1e9qlu0p111solj11t9h8he16re0.jpeg?imageslim"
-    games: []
+    games: [poly-bridge-2]
+    segments:
+      - at: "00:00:00"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "00:57:22"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "01:54:48"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "02:52:13"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "03:49:39"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
     sources:
       - url: "https://www.acfun.cn/v/ac15959411"
         kind: replay
@@ -22,7 +38,13 @@
     confidence: high
     duration_min: 129
     cover: "https://tx-free-imgs.acfun.cn/o_1e9t4p783u267nbivn42hqsi0.jpeg?imageslim"
-    games: []
+    games: [poly-bridge-2]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:04:34"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
     sources:
       - url: "https://www.acfun.cn/v/ac15979907"
         kind: replay
@@ -38,7 +60,21 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/o_1ea2fgdrs6qf1t1id1kod210e60.jpeg?imageslim"
-    games: []
+    games: [poly-bridge-2]
+    segments:
+      - at: "00:00:00"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "00:58:40"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "01:57:23"
+        label: "Poly Bridge 2"
+        game: poly-bridge-2
+      - at: "02:56:08"
+        label: "怒之铁拳"
+      - at: "03:32:08"
+        label: "怒之铁拳"
     sources:
       - url: "https://www.acfun.cn/v/ac16018989"
         kind: replay
@@ -56,6 +92,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ea9qb07o3sv16uri7db0lmjl0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:28:03"
+        label: "心灵砒霜弹幕版"
+      - at: "01:23:41"
+        label: "心灵砒霜弹幕版"
+      - at: "02:19:22"
+        label: "心灵砒霜弹幕版"
+      - at: "03:15:06"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac16077154"
         kind: replay
@@ -72,6 +119,17 @@
     duration_min: 251
     cover: "https://tx-free-imgs.acfun.cn/o_1eaa5bnq91i3v1ajn1msn181ck430.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:37:15"
+        label: "怒之铁拳"
+      - at: "01:30:45"
+        label: "怒之铁拳"
+      - at: "02:24:15"
+        label: "怒之铁拳"
+      - at: "03:17:44"
+        label: "怒之铁拳"
     sources:
       - url: "https://www.acfun.cn/v/ac16079680"
         kind: replay
@@ -87,7 +145,20 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1eakftcql3i3eqbc471cg8ogh0.jpeg?imageslim"
-    games: []
+    games: [world-games-51, brawl-stars]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "00:59:03"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:58:09"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:57:20"
+        label: "荒野乱斗"
+        game: brawl-stars
     sources:
       - url: "https://www.acfun.cn/v/ac16155971"
         kind: replay
@@ -103,7 +174,24 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1ean2odfso5g8li0e1tnkt20.jpeg?imageslim"
-    games: []
+    games: [world-games-51, menghuan-xiyou]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:41:18"
+        label: "游戏前聊10块钱的"
+      - at: "01:22:44"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:03:25"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:44:03"
+        label: "P5- 2020.06.13-梦幻西游三维版 家园"
+        game: menghuan-xiyou
+      - at: "03:22:17"
+        label: "P6- 2020.06.13-梦幻西游三维版 家园"
+        game: menghuan-xiyou
     sources:
       - url: "https://www.acfun.cn/v/ac16174797"
         kind: replay
@@ -121,6 +209,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1eas769lms7m18tk1hi8tbi1djh0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "00:47:59"
+        label: "心灵砒霜弹幕版"
+      - at: "01:39:27"
+        label: "心灵砒霜弹幕版"
+      - at: "02:30:55"
+        label: "心灵砒霜弹幕版"
+      - at: "03:22:22"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac16213808"
         kind: replay
@@ -137,6 +236,15 @@
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/o_1eaumpq11r79eoi1idd5kj1rg80.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "佩奇不来66来"
+      - at: "01:00:04"
+        label: "佩奇不来66来"
+      - at: "02:00:12"
+        label: "佩奇不来66来"
+      - at: "03:00:24"
+        label: "佩奇不来66来"
     sources:
       - url: "https://www.acfun.cn/v/ac16230754"
         kind: replay
@@ -152,7 +260,14 @@
     confidence: high
     duration_min: 131
     cover: "https://tx-free-imgs.acfun.cn/o_1eb9492nu1btv4n2qfi5o21aa20.jpeg?imageslim"
-    games: []
+    games: [the-last-of-us-2]
+    segments:
+      - at: "00:00:00"
+        label: "最后生还者2"
+        game: the-last-of-us-2
+      - at: "01:05:33"
+        label: "最后生还者2"
+        game: the-last-of-us-2
     sources:
       - url: "https://www.acfun.cn/v/ac16304104"
         kind: replay
@@ -168,7 +283,23 @@
     confidence: high
     duration_min: 326
     cover: "https://tx-free-imgs.acfun.cn/o_1ebbj3cv0dlrcrv1d6q1f83pi90.jpeg?imageslim"
-    games: []
+    games: [the-last-of-us-2]
+    segments:
+      - at: "00:00:00"
+        label: "最后生还者2"
+        game: the-last-of-us-2
+      - at: "01:05:00"
+        label: "最后生还者2"
+        game: the-last-of-us-2
+      - at: "02:10:09"
+        label: "最后生还者2"
+        game: the-last-of-us-2
+      - at: "03:15:17"
+        label: "最后生还者2"
+        game: the-last-of-us-2
+      - at: "04:20:26"
+        label: "最后生还者2"
+        game: the-last-of-us-2
     sources:
       - url: "https://www.acfun.cn/v/ac16319443"
         kind: replay
@@ -184,7 +315,22 @@
     confidence: high
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/o_1ebgq2ai41mfi38lc0ni911nge0.jpeg?imageslim"
-    games: []
+    games: [timelie, zuiqiang-woniu]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:31:35"
+        label: "Timelie"
+        game: timelie
+      - at: "01:34:04"
+        label: "Timelie"
+        game: timelie
+      - at: "02:36:33"
+        label: "最强蜗牛"
+        game: zuiqiang-woniu
+      - at: "03:18:33"
+        label: "最强蜗牛"
+        game: zuiqiang-woniu
     sources:
       - url: "https://www.acfun.cn/v/ac16355924"
         kind: replay
@@ -200,7 +346,22 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1ebjaa44a1a52pap6hij6r1gl20.jpeg?imageslim"
-    games: []
+    games: [among-trees]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:17"
+        label: "Among Trees"
+        game: among-trees
+      - at: "01:21:33"
+        label: "Among Trees"
+        game: among-trees
+      - at: "01:59:55"
+        label: "Among Trees"
+        game: among-trees
+      - at: "02:59:58"
+        label: "Among Trees"
+        game: among-trees
     sources:
       - url: "https://www.acfun.cn/v/ac16382093"
         kind: replay
@@ -216,7 +377,20 @@
     confidence: high
     duration_min: 259
     cover: "https://tx-free-imgs.acfun.cn/o_1ebr27jaq1vjn1u0fp5v6f9160.jpeg?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "01:04:50"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "02:09:40"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "03:14:36"
+        label: "盗贼之海"
+        game: sea-of-thieves
     sources:
       - url: "https://www.acfun.cn/v/ac16474608"
         kind: replay
@@ -232,7 +406,19 @@
     confidence: high
     duration_min: 252
     cover: "https://tx-free-imgs.acfun.cn/o_1ebtl2b331u2c5qkidt1ann1esg0.jpeg?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:02:59"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "02:06:00"
+        label: "盗贼之海"
+        game: sea-of-thieves
+      - at: "03:09:03"
+        label: "盗贼之海"
+        game: sea-of-thieves
     sources:
       - url: "https://www.acfun.cn/v/ac16490061"
         kind: replay
@@ -250,6 +436,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ec058bn01dot2rvft8a6o1u6r0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:27:07"
+        label: "心灵砒霜弹幕版"
+      - at: "01:20:39"
+        label: "心灵砒霜弹幕版"
+      - at: "02:14:11"
+        label: "心灵砒霜弹幕版"
+      - at: "03:07:42"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac16509817"
         kind: replay

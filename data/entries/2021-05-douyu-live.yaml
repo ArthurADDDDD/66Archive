@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 163
     cover: "https://tx-free-imgs.acfun.cn/o_1f4mn30msmr290112d51uj6mdr0.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "00:40:41"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:21:21"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:02:02"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac28433673"
         kind: replay
@@ -22,7 +35,22 @@
     confidence: high
     duration_min: 138
     cover: "https://tx-free-imgs.acfun.cn/o_1f4mmgj45u8a1dev193b1k70klh0.jpeg?imageslim"
-    games: []
+    games: [super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:23:05"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "00:59:15"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "01:35:26"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "02:11:38"
+        label: "超级马里欧派对"
+        game: super-mario-party
     sources:
       - url: "https://www.acfun.cn/v/ac28432400"
         kind: replay
@@ -40,6 +68,13 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f4rshbf1b0eod91rp11skr1lor0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:22:28"
+        label: "心灵砒霜弹幕版"
+      - at: "01:16:12"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac28479093"
         kind: replay
@@ -55,7 +90,22 @@
     confidence: high
     duration_min: 182
     cover: "https://tx-free-imgs.acfun.cn/o_1f4s3mmup1ned1ns11et4pkl1p120.jpeg?imageslim"
-    games: []
+    games: [world-games-51]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:26"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:00:01"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:40:37"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "02:21:15"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac28482826"
         kind: replay
@@ -71,7 +121,19 @@
     confidence: high
     duration_min: 130
     cover: "https://tx-free-imgs.acfun.cn/o_1f4s3v4l3tkdgpb19uq1a001ac80.jpeg?imageslim"
-    games: []
+    games: [world-games-51, super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:39:57"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:10:06"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "01:40:12"
+        label: "世界游戏大全51"
+        game: world-games-51
     sources:
       - url: "https://www.acfun.cn/v/ac28481259"
         kind: replay
@@ -87,7 +149,20 @@
     confidence: high
     duration_min: 147
     cover: "https://tx-free-imgs.acfun.cn/o_1f4s41k5n1nreddg3qotm1om60.jpeg?imageslim"
-    games: []
+    games: [super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "00:36:47"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "01:13:39"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "01:50:29"
+        label: "超级马里欧派对"
+        game: super-mario-party
     sources:
       - url: "https://www.acfun.cn/v/ac28481360"
         kind: replay
@@ -103,7 +178,16 @@
     confidence: high
     duration_min: 151
     cover: "https://tx-free-imgs.acfun.cn/o_1f50v580u1mm71dtpi2h1egecr10.jpeg?imageslim"
-    games: []
+    games: [wonder-boy-asha, wonder-boy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:34:59"
+        label: "神奇男孩 爱莎在怪物世界"
+      - at: "01:09:59"
+        label: "神奇男孩 爱莎在怪物世界"
+      - at: "01:50:22"
+        label: "神奇男孩 爱莎在怪物世界"
     sources:
       - url: "https://www.acfun.cn/v/ac28520506"
         kind: replay
@@ -119,7 +203,20 @@
     confidence: high
     duration_min: 160
     cover: "https://tx-free-imgs.acfun.cn/o_1f53h924h6v9166dnv88j1hoj0.jpeg?imageslim"
-    games: []
+    games: [resident-evil-8]
+    segments:
+      - at: "00:00:00"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "00:39:59"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "01:19:59"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "01:59:59"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
     sources:
       - url: "https://www.acfun.cn/v/ac28543727"
         kind: replay
@@ -135,7 +232,20 @@
     confidence: high
     duration_min: 167
     cover: "https://tx-free-imgs.acfun.cn/o_1f561sq7r1f061k0vrhv1est320.jpeg?imageslim"
-    games: []
+    games: [resident-evil-8]
+    segments:
+      - at: "00:00:00"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "00:41:41"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "01:23:23"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "02:05:05"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
     sources:
       - url: "https://www.acfun.cn/v/ac28560944"
         kind: replay
@@ -151,7 +261,20 @@
     confidence: high
     duration_min: 162
     cover: "https://tx-free-imgs.acfun.cn/o_1f58r67si187p152q1l787fh3es0.jpeg?imageslim"
-    games: []
+    games: [resident-evil-8]
+    segments:
+      - at: "00:00:00"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "00:40:30"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "01:21:00"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
+      - at: "02:01:32"
+        label: "生化危机8：村庄"
+        game: resident-evil-8
     sources:
       - url: "https://www.acfun.cn/v/ac28591116"
         kind: replay
@@ -168,6 +291,17 @@
     duration_min: 198
     cover: "https://tx-free-imgs.acfun.cn/o_1f5b780tc1mf11vdb1vv51viofut0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "出门前佩奇会儿"
+      - at: "00:39:39"
+        label: "出门前佩奇会儿"
+      - at: "01:19:19"
+        label: "出门前佩奇会儿"
+      - at: "01:59:00"
+        label: "出门前佩奇会儿"
+      - at: "02:38:40"
+        label: "出门前佩奇会儿"
     sources:
       - url: "https://www.acfun.cn/v/ac28613597"
         kind: replay
@@ -183,7 +317,16 @@
     confidence: high
     duration_min: 166
     cover: "https://tx-free-imgs.acfun.cn/o_1f5gd8g4m1qg8lq9qok1qk91eam0.jpeg?imageslim"
-    games: []
+    games: [hood-outlaws]
+    segments:
+      - at: "00:00:00"
+        label: "绿林侠盗"
+      - at: "00:41:22"
+        label: "绿林侠盗"
+      - at: "01:22:46"
+        label: "绿林侠盗"
+      - at: "02:04:08"
+        label: "绿林侠盗"
     sources:
       - url: "https://www.acfun.cn/v/ac28687173"
         kind: replay
@@ -199,7 +342,16 @@
     confidence: high
     duration_min: 144
     cover: "https://tx-free-imgs.acfun.cn/o_1f5ivhkrv6ei16qkc3bm5eq7p0.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "怪物男孩"
+      - at: "00:35:54"
+        label: "怪物男孩"
+      - at: "01:11:50"
+        label: "怪物男孩"
+      - at: "01:47:43"
+        label: "怪物男孩"
     sources:
       - url: "https://www.acfun.cn/v/ac28722583"
         kind: replay
@@ -217,6 +369,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f5st8dakceh1ur11q051uj91br80.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:54:45"
+        label: "心灵砒霜弹幕版"
+      - at: "01:43:17"
+        label: "心灵砒霜弹幕版"
+      - at: "02:31:49"
+        label: "心灵砒霜弹幕版"
+      - at: "03:20:21"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac28886182"
         kind: replay
@@ -233,6 +396,13 @@
     duration_min: 165
     cover: "https://tx-free-imgs.acfun.cn/o_1f5ug1of2nce1mupita12f76t10.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "无尽旅途"
+      - at: "00:55:00"
+        label: "无尽旅途"
+      - at: "01:50:01"
+        label: "无尽旅途"
     sources:
       - url: "https://www.acfun.cn/v/ac28925578"
         kind: replay
@@ -248,7 +418,14 @@
     confidence: high
     duration_min: 164
     cover: "https://tx-free-imgs.acfun.cn/o_1f5vqu25n18ua1g0g1h971gmk16210.jpeg?imageslim"
-    games: []
+    games: [subnautica]
+    segments:
+      - at: "00:00:00"
+        label: "深海迷航"
+      - at: "00:54:46"
+        label: "深海迷航"
+      - at: "01:49:34"
+        label: "深海迷航"
     sources:
       - url: "https://www.acfun.cn/v/ac28949328"
         kind: replay
@@ -264,7 +441,20 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/o_1f62989c2pf91fq41q0l1mqq1udj0.jpeg?imageslim"
-    games: []
+    games: [subnautica]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:29"
+        label: "深海迷航"
+      - at: "01:04:49"
+        label: "深海迷航"
+      - at: "01:54:09"
+        label: "深海迷航"
+      - at: "02:43:30"
+        label: "深海迷航"
+      - at: "03:32:51"
+        label: "深海迷航"
     sources:
       - url: "https://www.acfun.cn/v/ac28979818"
         kind: replay
@@ -280,7 +470,14 @@
     confidence: high
     duration_min: 164
     cover: "https://tx-free-imgs.acfun.cn/o_1f652ec61unu1nmjpsl5mvrab0.jpeg?imageslim"
-    games: []
+    games: [subnautica]
+    segments:
+      - at: "00:00:00"
+        label: "深海迷航"
+      - at: "00:54:36"
+        label: "深海迷航"
+      - at: "01:49:11"
+        label: "深海迷航"
     sources:
       - url: "https://www.acfun.cn/v/ac29013227"
         kind: replay
@@ -296,7 +493,20 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/o_1f67hap7u17j41ah0199b1am0u340.jpeg?imageslim"
-    games: []
+    games: [subnautica]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:02"
+        label: "深海迷航"
+      - at: "01:12:50"
+        label: "深海迷航"
+      - at: "02:00:34"
+        label: "深海迷航"
+      - at: "02:48:21"
+        label: "深海迷航"
+      - at: "03:36:09"
+        label: "深海迷航"
     sources:
       - url: "https://www.acfun.cn/v/ac29053665"
         kind: replay
@@ -312,7 +522,20 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/o_1f6f9m84l1gptrla1p330s1450.jpeg?imageslim"
-    games: []
+    games: [subnautica]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:43"
+        label: "深海迷航"
+      - at: "01:07:37"
+        label: "深海迷航"
+      - at: "01:58:31"
+        label: "深海迷航"
+      - at: "02:49:24"
+        label: "深海迷航"
+      - at: "03:40:18"
+        label: "深海迷航"
     sources:
       - url: "https://www.acfun.cn/v/ac29116535"
         kind: replay
@@ -328,7 +551,24 @@
     confidence: high
     duration_min: 205
     cover: "https://tx-free-imgs.acfun.cn/o_1f6hnkeqm1qj01l90fnf5ehfkk0.jpeg?imageslim"
-    games: []
+    games: [turnip-boy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:38"
+        label: "Turnip Boy"
+        game: turnip-boy
+      - at: "00:57:39"
+        label: "Turnip Boy"
+        game: turnip-boy
+      - at: "01:43:40"
+        label: "Turnip Boy"
+        game: turnip-boy
+      - at: "02:29:39"
+        label: "Turnip Boy"
+        game: turnip-boy
+      - at: "03:15:39"
+        label: "饭前K两首"
     sources:
       - url: "https://www.acfun.cn/v/ac29144375"
         kind: replay
@@ -344,7 +584,14 @@
     confidence: high
     duration_min: 150
     cover: "https://tx-free-imgs.acfun.cn/o_1f6pj0bht5qr1chihnp1tn710im0.jpeg?imageslim"
-    games: []
+    games: [luck-be-a-landlord]
+    segments:
+      - at: "00:00:00"
+        label: "幸运房东"
+      - at: "00:50:03"
+        label: "幸运房东"
+      - at: "01:40:06"
+        label: "幸运房东"
     sources:
       - url: "https://www.acfun.cn/v/ac29245667"
         kind: replay
@@ -361,6 +608,13 @@
     duration_min: 493
     cover: "https://tx-free-imgs.acfun.cn/o_1f6s9duumof288d1mf01agb1nml0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "科学家面对面"
+      - at: "01:42:54"
+        label: "逛吃逛吃"
+      - at: "04:57:56"
+        label: "逛吃逛吃"
     sources:
       - url: "https://www.acfun.cn/v/ac29294635"
         kind: replay

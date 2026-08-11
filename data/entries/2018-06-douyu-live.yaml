@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 250
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_01/1527854113.JPG?imageslim"
-    games: []
+    games: [raft]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:23:46"
+        label: "木筏生存（Raft）"
+      - at: "01:49:42"
+        label: "木筏生存（Raft）"
+      - at: "03:15:38"
+        label: "木筏生存（Raft）"
     sources:
       - url: "https://www.acfun.cn/v/ac4386027"
         kind: replay
@@ -24,6 +33,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_03/1528039330.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前的聊天部分-弹幕版"
+      - at: "00:06:56"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:50:45"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4388515"
         kind: replay
@@ -56,7 +72,12 @@
     confidence: high
     duration_min: 172
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_05/1528198572.JPG?imageslim"
-    games: []
+    games: [far-lone-sails]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:15"
+        label: "孤帆远航 ( FAR： Lone Sails )"
     sources:
       - url: "https://www.acfun.cn/v/ac4392023"
         kind: replay
@@ -88,7 +109,14 @@
     confidence: high
     duration_min: 196
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_07/1528370691.JPG?imageslim"
-    games: []
+    games: [battle-chef-brigade]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:21"
+        label: "战斗厨师旅团(Battle Chef Brigade)"
+      - at: "01:48:01"
+        label: "战斗厨师旅团(Battle Chef Brigade)"
     sources:
       - url: "https://www.acfun.cn/v/ac4396310"
         kind: replay
@@ -104,7 +132,12 @@
     confidence: high
     duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_08/1528459052.JPG?imageslim"
-    games: []
+    games: [spy-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:49"
+        label: "间谍派对（Spy Party）"
     sources:
       - url: "https://www.acfun.cn/v/ac4398551"
         kind: replay
@@ -138,6 +171,19 @@
     duration_min: 334
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_12/1528777598.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "E3之旅，前往索尼发布会现场"
+      - at: "01:57:47"
+        label: "E3之旅，前往索尼发布会现场"
+      - at: "02:24:41"
+        label: "前往索尼发布会现场"
+      - at: "02:55:39"
+        label: "E3索尼发布会现场"
+      - at: "04:27:31"
+        label: "E3索尼发布会现场"
+      - at: "05:02:54"
+        label: "E3索尼发布会场外"
     sources:
       - url: "https://www.acfun.cn/v/ac4404472"
         kind: replay
@@ -154,6 +200,11 @@
     duration_min: 132
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_12/1528766691.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "E3之旅，在路上"
+      - at: "00:30:15"
+        label: "育碧发布会现场会"
     sources:
       - url: "https://www.acfun.cn/v/ac4404006"
         kind: replay
@@ -170,6 +221,17 @@
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_12/1528847149.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "E3展会第一天"
+      - at: "01:54:44"
+        label: "E3展会第一天"
+      - at: "02:51:51"
+        label: "E3展会第一天"
+      - at: "03:23:47"
+        label: "E3展会第一天"
+      - at: "04:40:16"
+        label: "Part 5"
     sources:
       - url: "https://www.acfun.cn/v/ac4406087"
         kind: replay
@@ -185,7 +247,14 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_16/1529148217.JPG?imageslim"
-    games: []
+    games: [golf-with-your-friends]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:38:49"
+        label: "Golf with your friends"
+      - at: "02:12:26"
+        label: "Golf with your friends"
     sources:
       - url: "https://www.acfun.cn/v/ac4412722"
         kind: replay
@@ -203,6 +272,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_18/1529288658.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:08:44"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4414660"
         kind: replay
@@ -252,6 +326,11 @@
     duration_min: 101
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_21/1529580129.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "我的童年"
+      - at: "00:11:07"
+        label: "我的童年"
     sources:
       - url: "https://www.acfun.cn/v/ac4421625"
         kind: replay
@@ -268,6 +347,13 @@
     duration_min: 184
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_22/1529664317.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:10"
+        label: "Comedy Night（喜剧之夜）"
+      - at: "00:43:04"
+        label: "Hand Simulator（手掌模拟器）"
     sources:
       - url: "https://www.acfun.cn/v/ac4423742"
         kind: replay
@@ -285,6 +371,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_23/1529753246.JPG?imageslim"
     games: []
     tags: [健身]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:33"
+        label: "VR健身Best健身"
+      - at: "02:05:27"
+        label: "VR健身Best健身"
     sources:
       - url: "https://www.acfun.cn/v/ac4425426"
         kind: replay
@@ -302,6 +395,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_25/1529895800.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:08:16"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4427739"
         kind: replay
@@ -334,7 +432,16 @@
     confidence: high
     duration_min: 279
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_25/1529929466.JPG?imageslim"
-    games: []
+    games: [farm-together]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:10"
+        label: "Farm Together"
+      - at: "02:00:01"
+        label: "Farm Together"
+      - at: "04:00:02"
+        label: "Farm Together"
     sources:
       - url: "https://www.acfun.cn/v/ac4429168"
         kind: replay
@@ -350,7 +457,14 @@
     confidence: high
     duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_26/1530013885.JPG?imageslim"
-    games: []
+    games: [farm-together]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:24"
+        label: "Farm Together"
+      - at: "02:13:25"
+        label: "Farm Together"
     sources:
       - url: "https://www.acfun.cn/v/ac4431089"
         kind: replay
@@ -366,7 +480,16 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_27/1530115753.JPG?imageslim"
-    games: []
+    games: [farm-together]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:19:31"
+        label: "Farm Together"
+      - at: "01:49:47"
+        label: "Farm Together"
+      - at: "03:20:04"
+        label: "福利时刻"
     sources:
       - url: "https://www.acfun.cn/v/ac4433532"
         kind: replay
@@ -382,7 +505,14 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_29/1530272000.JPG?imageslim"
-    games: []
+    games: [farm-together]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:10"
+        label: "Farm Together"
+      - at: "02:04:04"
+        label: "Farm Together"
     sources:
       - url: "https://www.acfun.cn/v/ac4437404"
         kind: replay
@@ -398,7 +528,16 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_30/1530366519.JPG?imageslim"
-    games: []
+    games: [farm-together]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:20"
+        label: "Farm Together"
+      - at: "01:25:30"
+        label: "逆水寒"
+      - at: "02:53:48"
+        label: "逆水寒"
     sources:
       - url: "https://www.acfun.cn/v/ac4439116"
         kind: replay
