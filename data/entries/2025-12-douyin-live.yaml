@@ -136,7 +136,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/1227babac1e0f49ffadb231529253753af81a3bf.jpg"
     confidence: high
-    games: []
+    games:
+      - arknights-endfield
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1Mf2XB2E6c，3:22:26）、服部平次（BV13V2XB7E1H，3:22:18）、不懒bot（BV1Zz2XBbEU2，3:22:41）与 直播回放巴拉蹦吧（弹幕/纯净双版，3:22:56）分别搬运，总时长吻合，已合并为一天一条。"
     sources:
@@ -176,7 +177,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/a2b675aad69456e2408e2a69445a9cf761538416.jpg"
     confidence: high
-    games: []
+    games:
+      - rhythm-heaven
     tags: [弹幕版]
     note: "同一场直播（18:15 开播聊天→虚实万象 Pragmata→啵点节奏 Bits & Bops→20:47 收尾）由 服部平次（2:31:44）、bobi华（2:32:22）与 直播回放巴拉蹦吧（弹幕/纯净双版 2:32:44）整场分别搬运，不懒bot 拆为两段投稿（PRAGMATA 段 ~1:10、啵点节奏段 ~1:22，均含剪辑分 P + 完整录像页，合 2:32），各来源总时长吻合，已合并为一天一条。"
     sources:
@@ -216,7 +218,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/7bc0013537413baffef0003dfaab12cbaa463dee.jpg"
     confidence: high
-    games: []
+    games:
+      - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV11HByB8Evv，4:03:58）、直播回放巴拉蹦吧（弹幕/纯净双版，4:04:17）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 4:03:49），总时长吻合，已合并为一天一条。"
     sources:
@@ -236,7 +239,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/5dd6eaeb8b68261ff19e1c0d0bf3962bdd1d3d16.jpg"
     confidence: high
-    games: []
+    games:
+      - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1tMvkBDE1D，2:43:40）、直播回放巴拉蹦吧（弹幕/纯净双版，2:43:48）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 2:43:04），总时长吻合，已合并为一天一条。"
     sources:

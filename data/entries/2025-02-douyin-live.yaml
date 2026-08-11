@@ -577,7 +577,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/0b27df68291713bb2df45dff6dd7c030fae9796c.jpg"
     confidence: medium
-    games: []
+    games:
+      - monster-hunter-wilds
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-02-27-live-03 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1NS9wYdEb3"
@@ -613,7 +614,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/896a855d546fa5152a1bd8bbfcc27409d909f048.jpg"
     confidence: high
-    games: []
+    games:
+      - monster-hunter-wilds
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-02-27-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -633,7 +635,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/bfac2805d30c8b4a44cb9d1d304518372494b011.jpg"
     confidence: medium
-    games: []
+    games:
+      - monster-hunter-wilds
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-02-28-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV16o9VYSEdT"
@@ -649,7 +652,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/f98034a703b136e6747cd000d37d721d241f2015.jpg"
     confidence: high
-    games: []
+    games:
+      - monster-hunter-wilds
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-02-28-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
