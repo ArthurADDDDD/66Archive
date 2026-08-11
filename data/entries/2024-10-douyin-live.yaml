@@ -225,7 +225,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/23c63182494e619640903a7933f9450b449973e0.jpg"
     confidence: medium
-    games: []
+    games:
+      - rhythm-heaven
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV15w1iY7EU7"
@@ -301,7 +302,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/d7abc64b289920739e5baaa9f564d55c17ef1c26.jpg"
     confidence: medium
-    games: []
+    games:
+      - rhythm-heaven
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV15P1mY1EPA"

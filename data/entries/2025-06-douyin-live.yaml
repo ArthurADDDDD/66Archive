@@ -5,7 +5,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/5b999bef8e273e1ef2d3b8a79646c4f01515531c.jpg"
     confidence: medium
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-01-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1uM7yzqEZA"
@@ -21,7 +23,9 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/372d0693a1ca92d00bee493e05221df3a1806ab1.jpg"
     confidence: high
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-01-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -41,7 +45,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/954dfedf66d290e43ddca24ce0d6d16f98d6eb93.jpg"
     confidence: medium
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-02-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV16E7SzNE1L"
@@ -57,7 +63,9 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/886218ce80f93c0024e13f557ab5ff42fa2224d0.jpg"
     confidence: high
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-02-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -93,7 +101,9 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/870095c727c218b00e544579394e3ea6a1425349.jpg"
     confidence: medium
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-03-live-04 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1FV7ezWEhJ"
@@ -129,7 +139,9 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/ddccf93bf6f3c966da29c812bac3f313415a84c3.jpg"
     confidence: high
-    games: [elden-ring]
+    games:
+      - elden-ring
+      - elden-ring-nightreign
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-03-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -305,7 +317,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/4c93f3c06c942e9d43b8970f01678401c8ba253d.jpg"
     confidence: medium
-    games: []
+    games:
+      - wuzhu-xingyuan
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1jyM3zaEyZ"
@@ -321,7 +334,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/68c2cbd648b0182f0cdb929a66953c2095ae563e.jpg"
     confidence: high
-    games: []
+    games:
+      - wuzhu-xingyuan
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -453,7 +467,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/112e61dae62624cd41f8d774019b13b5c1a6bd39.jpg"
     confidence: high
-    games: []
+    games:
+      - wuzhu-xingyuan
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-14-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -473,7 +488,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/212e928bddebbe227f8bdf405340fffb9fa46813.jpg"
     confidence: medium
-    games: []
+    games:
+      - wuzhu-xingyuan
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-14-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1T1M2zmEr5"
@@ -489,7 +505,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/e21ea3aec30911ce38b112cdc95019ed897f460c.jpg"
     confidence: high
-    games: []
+    games:
+      - wuzhu-xingyuan
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-15-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -509,7 +526,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/201c8e9dab32d7ba0c9cccc666d6ef4f8e44dcd7.jpg"
     confidence: medium
-    games: []
+    games:
+      - wuzhu-xingyuan
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-15-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1CjMtz9EVS"
@@ -653,7 +671,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/438924bc372a5b79a62edd8ed19ba15b816e39af.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV14CK3zLE6y"
@@ -669,7 +688,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/5a14b82dffb671f23546aa4d7b9ba7fb125592b6.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1wqKGzMEP9"
@@ -685,7 +705,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/85c0b862486598a8feaab888fd42738474252186.jpg"
     confidence: high
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -705,7 +726,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/e1f5ca4ea3e3947ec53e3854649754f1497daa55.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-25-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1j1KHz9EJN"
@@ -721,7 +743,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/d5794552eb2b47eeedfb8aabaf9e3b49177fbab6.jpg"
     confidence: high
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-25-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
@@ -741,7 +764,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/a1a18555021e13f49c03514f51a2540af8e8958e.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1wRKozeEUd"
@@ -757,7 +781,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/4e79e23f293fe81159fb8dafa93cde9371c45546.jpg"
     confidence: high
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -777,7 +802,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/cba6f08f25c6408f266c5f86c260184d01f0b4cb.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1EDKzzVEbe"
@@ -793,7 +819,8 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/8756031676369b9f21ddb1a3b4e27dbeab2dbf55.jpg"
     confidence: high
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -813,7 +840,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/0eb07c126b80f5fbf2bbb9770e608c978d7f650b.jpg"
     confidence: medium
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-02 属同场直播的不同录像，前端可作备选源切换"
     sources:
       - url: "https://www.bilibili.com/video/BV1AAgRzKEsi"
@@ -829,7 +857,8 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/3f5cdfac93df87908ef5a1854c5638610f921a53.jpg"
     confidence: high
-    games: []
+    games:
+      - death-stranding-2-on-the-beach
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-01 属同场直播的不同录像，前端可作备选源切换"
     sources:
