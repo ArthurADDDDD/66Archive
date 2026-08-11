@@ -7,6 +7,17 @@
     duration_min: 134
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_01/1525174176.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "与长安福特翼搏同游嘉年华"
+      - at: "00:26:42"
+        label: "与长安福特翼搏同游嘉年华"
+      - at: "00:53:25"
+        label: "与长安福特翼搏同游嘉年华"
+      - at: "01:20:08"
+        label: "与长安福特翼搏同游嘉年华"
+      - at: "01:46:51"
+        label: "与长安福特翼搏同游嘉年华"
     sources:
       - url: "https://www.acfun.cn/v/ac4335284"
         kind: replay
@@ -23,6 +34,23 @@
     duration_min: 197
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_03/1525347891.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "任天堂labo了解一下"
+      - at: "00:06:57"
+        label: "任天堂labo了解一下"
+      - at: "00:34:05"
+        label: "任天堂labo了解一下"
+      - at: "01:01:13"
+        label: "任天堂labo了解一下"
+      - at: "01:28:20"
+        label: "任天堂labo了解一下"
+      - at: "01:55:27"
+        label: "任天堂labo了解一下"
+      - at: "02:22:34"
+        label: "任天堂labo了解一下"
+      - at: "02:49:41"
+        label: "任天堂labo了解一下"
     sources:
       - url: "https://www.acfun.cn/v/ac4338655"
         kind: replay
@@ -39,6 +67,27 @@
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_04/1525436901.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.4-拼图之前聊10块钱的"
+      - at: "00:15:07"
+        label: "P1.2-2018.5.4-拼图之前聊10块钱的"
+      - at: "00:30:14"
+        label: "P2.1-2018.5.4-任天堂Labo继续了解一下"
+      - at: "00:58:37"
+        label: "P2.2-2018.5.4-任天堂Labo继续了解一下"
+      - at: "01:27:00"
+        label: "P2.3-2018.5.4-任天堂Labo继续了解一下"
+      - at: "01:55:23"
+        label: "P2.4-2018.5.4-任天堂Labo继续了解一下"
+      - at: "02:23:46"
+        label: "P2.5-2018.5.4-任天堂Labo继续了解一下"
+      - at: "02:52:09"
+        label: "P2.6-2018.5.4-任天堂Labo继续了解一下"
+      - at: "03:20:32"
+        label: "P2.7-2018.5.4-任天堂Labo继续了解一下"
+      - at: "03:48:55"
+        label: "P2.8-2018.5.4-任天堂Labo继续了解一下"
     sources:
       - url: "https://www.acfun.cn/v/ac4340289"
         kind: replay
@@ -55,6 +104,15 @@
     duration_min: 107
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_05/1525525849.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "核聚变"
+      - at: "00:26:39"
+        label: "核聚变"
+      - at: "00:53:18"
+        label: "核聚变"
+      - at: "01:19:57"
+        label: "核聚变"
     sources:
       - url: "https://www.acfun.cn/v/ac4341540"
         kind: replay
@@ -72,6 +130,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_07/1525655543.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.6-砒霜前聊10块钱的-弹幕版"
+      - at: "00:27:06"
+        label: "P1.2-2018.5.6-砒霜前聊10块钱的-弹幕版"
+      - at: "00:54:20"
+        label: "P2.1-2018.5.6-心灵砒霜-弹幕版"
+      - at: "01:23:26"
+        label: "P2.2-2018.5.6-心灵砒霜-弹幕版"
+      - at: "01:52:34"
+        label: "P2.3-2018.5.6-心灵砒霜-弹幕版"
+      - at: "02:21:41"
+        label: "P2.4-2018.5.6-心灵砒霜-弹幕版"
+      - at: "02:50:47"
+        label: "P2.5-2018.5.6-心灵砒霜-弹幕版"
+      - at: "03:19:59"
+        label: "P2.6-2018.5.6-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4343089"
         kind: replay
@@ -87,7 +162,28 @@
     confidence: high
     duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_08/1525782385.JPG?imageslim"
-    games: []
+    games: [slay-the-spire]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:19"
+        label: "杀戮尖塔"
+      - at: "00:49:58"
+        label: "杀戮尖塔"
+      - at: "01:14:37"
+        label: "杀戮尖塔"
+      - at: "01:39:18"
+        label: "杀戮尖塔"
+      - at: "02:03:58"
+        label: "杀戮尖塔"
+      - at: "02:29:56"
+        label: "杀戮尖塔"
+      - at: "02:55:54"
+        label: "杀戮尖塔"
+      - at: "03:21:53"
+        label: "杀戮尖塔"
+      - at: "03:47:51"
+        label: "杀戮尖塔"
     sources:
       - url: "https://www.acfun.cn/v/ac4346066"
         kind: replay
@@ -103,7 +199,26 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_09/1525865915.JPG?imageslim"
-    games: []
+    games: [ylands]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:22:25"
+        label: "Ylands"
+      - at: "00:52:19"
+        label: "Ylands"
+      - at: "01:22:13"
+        label: "Ylands"
+      - at: "01:52:08"
+        label: "Ylands"
+      - at: "02:22:02"
+        label: "Ylands"
+      - at: "02:51:56"
+        label: "Ylands"
+      - at: "03:21:51"
+        label: "Ylands"
+      - at: "03:51:47"
+        label: "Ylands"
     sources:
       - url: "https://www.acfun.cn/v/ac4347722"
         kind: replay
@@ -120,6 +235,25 @@
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_10/1525953910.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "试试VR的感觉"
+      - at: "00:29:17"
+        label: "试试VR的感觉"
+      - at: "00:58:35"
+        label: "试试VR的感觉"
+      - at: "01:27:54"
+        label: "试试VR的感觉"
+      - at: "01:57:12"
+        label: "试试VR的感觉"
+      - at: "02:26:31"
+        label: "试试VR的感觉"
+      - at: "02:55:49"
+        label: "试试VR的感觉"
+      - at: "03:19:06"
+        label: "试试VR的感觉"
+      - at: "03:42:25"
+        label: "试试VR的感觉"
     sources:
       - url: "https://www.acfun.cn/v/ac4349631"
         kind: replay
@@ -136,6 +270,15 @@
     duration_min: 113
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_11/1526037293.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Unity 开发者大会现场"
+      - at: "00:28:08"
+        label: "Unity 开发者大会现场"
+      - at: "00:56:16"
+        label: "Unity 开发者大会现场"
+      - at: "01:24:24"
+        label: "Unity 开发者大会现场"
     sources:
       - url: "https://www.acfun.cn/v/ac4351221"
         kind: replay
@@ -153,6 +296,25 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_12/1526127128.JPG?imageslim"
     games: []
     tags: [健身]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.12-游戏前聊10块钱的"
+      - at: "00:19:43"
+        label: "P1.2-2018.5.12-游戏前聊10块钱的"
+      - at: "00:39:27"
+        label: "we were here 调试失败哦"
+      - at: "01:06:02"
+        label: "Zomday"
+      - at: "01:32:41"
+        label: "P4.1-2018.5.12-Best Saber"
+      - at: "01:55:52"
+        label: "P4.2-2018.5.12-Best Saber"
+      - at: "02:19:05"
+        label: "P4.3-2018.5.12-Best Saber"
+      - at: "02:42:18"
+        label: "P4.4-2018.5.12-Best Saber"
+      - at: "03:05:31"
+        label: "Tilt Brush"
     sources:
       - url: "https://www.acfun.cn/v/ac4352519"
         kind: replay
@@ -170,6 +332,25 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_14/1526257105.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.13-砒霜前聊10块钱的-弹幕版"
+      - at: "00:21:30"
+        label: "P1.2-2018.5.13-砒霜前聊10块钱的-弹幕版"
+      - at: "00:43:03"
+        label: "P1.3-2018.5.13-砒霜前聊10块钱的-弹幕版"
+      - at: "01:04:36"
+        label: "P2.1-5.13-心灵砒霜-弹幕版"
+      - at: "01:30:50"
+        label: "P2.2-5.13-心灵砒霜-弹幕版"
+      - at: "01:57:08"
+        label: "P2.3-5.13-心灵砒霜-弹幕版"
+      - at: "02:23:30"
+        label: "P2.4-5.13-心灵砒霜-弹幕版"
+      - at: "02:49:44"
+        label: "P2.5-5.13-心灵砒霜-弹幕版"
+      - at: "03:16:04"
+        label: "P2.6-5.13-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4354154"
         kind: replay
@@ -187,6 +368,21 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_14/1526296464.jpg?imageslim"
     games: []
     tags: [戏说聊斋]
+    segments:
+      - at: "00:00:00"
+        label: "戏说聊斋前聊10块钱的"
+      - at: "00:14:23"
+        label: "P2.1-2018.5.14-女流戏说聊斋第六期"
+      - at: "00:33:41"
+        label: "P2.2-2018.5.14-女流戏说聊斋第六期"
+      - at: "00:53:00"
+        label: "P3.1-2018.5.14-K歌环节"
+      - at: "01:16:54"
+        label: "P3.2-2018.5.14-K歌环节"
+      - at: "01:40:48"
+        label: "P3.3-2018.5.14-K歌环节"
+      - at: "02:04:43"
+        label: "P3.4-2018.5.14-K歌环节"
     sources:
       - url: "https://www.acfun.cn/v/ac4355310"
         kind: replay
@@ -202,7 +398,32 @@
     confidence: high
     duration_min: 317
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_16/1526474587.JPG?imageslim"
-    games: []
+    games: [we-were-here-too]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.16-游戏前聊10块钱的"
+      - at: "00:19:36"
+        label: "P1.2-2018.5.16-游戏前聊10块钱的"
+      - at: "00:39:14"
+        label: "P2.1-2018.5.16-We  were here too"
+      - at: "01:06:58"
+        label: "P2.2-2018.5.16-We  were here too"
+      - at: "01:34:43"
+        label: "P2.3-2018.5.16-We  were here too"
+      - at: "02:02:28"
+        label: "P2.4-2018.5.16-We  were here too"
+      - at: "02:30:14"
+        label: "P2.5-2018.5.16-We  were here too"
+      - at: "02:57:59"
+        label: "P2.6-2018.5.16-We  were here too"
+      - at: "03:25:43"
+        label: "P2.7-2018.5.16-We  were here too"
+      - at: "03:53:28"
+        label: "P2.8-2018.5.16-We  were here too"
+      - at: "04:21:13"
+        label: "P2.9-2018.5.16-We  were here too"
+      - at: "04:48:58"
+        label: "P2.10-2018.5.16-We  were here too"
     sources:
       - url: "https://www.acfun.cn/v/ac4358956"
         kind: replay
@@ -218,7 +439,28 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_18/1526643197.JPG?imageslim"
-    games: []
+    games: [wizard-of-legend]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.18-游戏前聊10块钱的"
+      - at: "00:20:11"
+        label: "P1.2-2018.5.18-游戏前聊10块钱的"
+      - at: "00:40:22"
+        label: "P2.1-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "01:07:07"
+        label: "P2.2-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "01:33:53"
+        label: "P2.3-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "02:00:40"
+        label: "P2.4-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "02:27:27"
+        label: "P2.5-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "02:54:12"
+        label: "P2.6-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "03:20:58"
+        label: "P2.7-2018.5.18-传奇巫师（Wizard of Legend）"
+      - at: "03:47:45"
+        label: "P2.8-2018.5.18-传奇巫师（Wizard of Legend）"
     sources:
       - url: "https://www.acfun.cn/v/ac4362514"
         kind: replay
@@ -235,6 +477,11 @@
     duration_min: 58
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_20/1526815774.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "胃肠炎不舒服，就和大家聊会天吧"
+      - at: "00:28:57"
+        label: "胃肠炎不舒服，就和大家聊会天吧"
     sources:
       - url: "https://www.acfun.cn/v/ac4364978"
         kind: replay
@@ -250,7 +497,28 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_21/1526903411.JPG?imageslim"
-    games: []
+    games: [wizard-of-legend]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2018.5.21-游戏前聊10块钱的"
+      - at: "00:21:14"
+        label: "P1.2-2018.5.21-游戏前聊10块钱的"
+      - at: "00:42:28"
+        label: "P2.1-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "01:08:12"
+        label: "P2.2-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "01:33:57"
+        label: "P2.3-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "01:59:43"
+        label: "P2.4-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "02:23:43"
+        label: "P2.5-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "02:47:44"
+        label: "P2.6-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "03:11:45"
+        label: "P2.7-2018.5.21-传奇巫师（Wizard of  Legend）"
+      - at: "03:35:47"
+        label: "P2.8-2018.5.21-传奇巫师（Wizard of  Legend）"
     sources:
       - url: "https://www.acfun.cn/v/ac4366902"
         kind: replay
@@ -266,7 +534,26 @@
     confidence: high
     duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_22/1526990472.JPG?imageslim"
-    games: []
+    games: [house-flipper]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:00"
+        label: "房产达人（House Flipper）"
+      - at: "00:55:52"
+        label: "房产达人（House Flipper）"
+      - at: "01:25:45"
+        label: "房产达人（House Flipper）"
+      - at: "01:55:38"
+        label: "房产达人（House Flipper）"
+      - at: "02:25:32"
+        label: "房产达人（House Flipper）"
+      - at: "02:55:24"
+        label: "房产达人（House Flipper）"
+      - at: "03:25:17"
+        label: "房产达人（House Flipper）"
+      - at: "03:55:10"
+        label: "房产达人（House Flipper）"
     sources:
       - url: "https://www.acfun.cn/v/ac4368621"
         kind: replay
@@ -282,7 +569,32 @@
     confidence: high
     duration_min: 269
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_24/1527168745.JPG?imageslim"
-    games: []
+    games: [dark-souls-remastered]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:13:40"
+        label: "黑暗之魂1重置版"
+      - at: "00:40:08"
+        label: "黑暗之魂1重置版"
+      - at: "01:06:37"
+        label: "黑暗之魂1重置版"
+      - at: "01:28:37"
+        label: "黑暗之魂1重置版"
+      - at: "01:50:37"
+        label: "黑暗之魂1重置版"
+      - at: "02:12:39"
+        label: "黑暗之魂1重置版"
+      - at: "02:34:39"
+        label: "黑暗之魂1重置版"
+      - at: "02:56:39"
+        label: "黑暗之魂1重置版"
+      - at: "03:18:40"
+        label: "黑暗之魂1重置版"
+      - at: "03:42:01"
+        label: "黑暗之魂1重置版"
+      - at: "04:05:23"
+        label: "黑暗之魂1重置版"
     sources:
       - url: "https://www.acfun.cn/v/ac4372502"
         kind: replay
@@ -298,8 +610,17 @@
     confidence: high
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_25/1527247736.JPG?imageslim"
-    games: []
+    games: [dark-souls-remastered]
     note: "A 站详情页确认：4 个分P（P1 游戏前聊10块钱的，P2-P4 黑暗之魂1重置版），总时长 244 分钟；游戏未登记于 games.yaml，已列入候选报告。"
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:32:54"
+        label: "黑暗之魂1重置版"
+      - at: "01:48:56"
+        label: "黑暗之魂1重置版"
+      - at: "03:04:56"
+        label: "黑暗之魂1重置版"
     sources:
       - url: "https://www.acfun.cn/v/ac4374120"
         kind: replay
@@ -317,6 +638,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_27/1527465507.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:18:44"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4377300"
         kind: replay
@@ -349,7 +675,14 @@
     confidence: high
     duration_min: 243
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_28/1527507683.JPG?imageslim"
-    games: []
+    games: [dark-souls-remastered]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:34"
+        label: "黑暗之魂1重置版"
+      - at: "02:14:15"
+        label: "黑暗之魂1重置版"
     sources:
       - url: "https://www.acfun.cn/v/ac4378669"
         kind: replay
@@ -365,7 +698,16 @@
     confidence: high
     duration_min: 250
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_29/1527593465.JPG?imageslim"
-    games: []
+    games: [dark-souls-remastered]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:38:29"
+        label: "黑暗之魂1重置版"
+      - at: "01:15:40"
+        label: "黑暗之魂1重置版"
+      - at: "02:42:50"
+        label: "黑暗之魂1重置版"
     sources:
       - url: "https://www.acfun.cn/v/ac4380521"
         kind: replay
@@ -381,7 +723,14 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_30/1527681587.JPG?imageslim"
-    games: []
+    games: [witch-it]
+    segments:
+      - at: "00:00:00"
+        label: "聊天&查房（惠普电竞超神日-游戏新品发布会）"
+      - at: "01:20:12"
+        label: "女巫来了（Witch It）"
+      - at: "02:43:54"
+        label: "女巫来了（Witch It）"
     sources:
       - url: "https://www.acfun.cn/v/ac4382292"
         kind: replay
@@ -397,7 +746,16 @@
     confidence: high
     duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_31/1527769858.JPG?imageslim"
-    games: []
+    games: [raft]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:09:49"
+        label: "木筏生存（Raft）"
+      - at: "00:47:42"
+        label: "木筏生存（Raft）"
+      - at: "02:17:27"
+        label: "木筏生存（Raft）"
     sources:
       - url: "https://www.acfun.cn/v/ac4384209"
         kind: replay

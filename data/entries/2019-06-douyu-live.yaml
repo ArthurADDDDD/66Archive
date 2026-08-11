@@ -24,6 +24,15 @@
     cover: "https://tx-free-imgs.acfun.cn/FrH2PZ8SB265WpvIg1CSriuqfI1B?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:53:10"
+        label: "心灵砒霜"
+      - at: "02:00:04"
+        label: "心灵砒霜"
+      - at: "02:45:18"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10280933"
         kind: replay
@@ -39,7 +48,22 @@
     confidence: high
     duration_min: 213
     cover: "https://tx-free-imgs.acfun.cn/FigbYYxXktJHU9IOAk4Wdeb9XZbE?imageslim"
-    games: []
+    games: [sea-of-thieves]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:52"
+        label: "Sea of Thieves"
+        game: sea-of-thieves
+      - at: "01:09:02"
+        label: "Sea of Thieves"
+        game: sea-of-thieves
+      - at: "02:00:11"
+        label: "Sea of Thieves"
+        game: sea-of-thieves
+      - at: "02:46:29"
+        label: "Sea of Thieves"
+        game: sea-of-thieves
     sources:
       - url: "https://www.acfun.cn/v/ac10284018"
         kind: replay
@@ -56,6 +80,11 @@
     duration_min: 174
     cover: "https://tx-free-imgs.acfun.cn/FlME0T0xB42q0PIFWErKZIzAFFFA?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "回家浪里个啷"
+      - at: "02:00:18"
+        label: "回家浪里个啷"
     sources:
       - url: "https://www.acfun.cn/v/ac10294033"
         kind: replay
@@ -71,7 +100,25 @@
     confidence: high
     duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/FgmAwNxuox94jUgPYsYvZbe30U-X?imageslim"
-    games: []
+    games: [cooking-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:57"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "01:09:29"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "02:00:01"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "03:00:01"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "04:00:03"
+        label: "Cooking Simulator"
+        game: cooking-simulator
     sources:
       - url: "https://www.acfun.cn/v/ac10299692"
         kind: replay
@@ -104,7 +151,25 @@
     confidence: high
     duration_min: 300
     cover: "https://tx-free-imgs.acfun.cn/Fi5M24aowucIG7xOtcxPhvgR02Q5?imageslim"
-    games: []
+    games: [cooking-simulator, totally-accurate-battle-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:34:03"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "01:17:03"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "02:00:03"
+        label: "Cooking Simulator"
+        game: cooking-simulator
+      - at: "02:59:23"
+        label: "全面战争模拟器"
+        game: totally-accurate-battle-simulator
+      - at: "04:00:06"
+        label: "全面战争模拟器"
+        game: totally-accurate-battle-simulator
     sources:
       - url: "https://www.acfun.cn/v/ac10305540"
         kind: replay
@@ -121,6 +186,17 @@
     duration_min: 443
     cover: "https://tx-free-imgs.acfun.cn/Fn-bzo-akeQTEQ7i3Ni8xCVCFI9d?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "E3游戏展现场"
+      - at: "01:59:55"
+        label: "E3游戏展现场"
+      - at: "03:59:55"
+        label: "E3游戏展现场"
+      - at: "05:02:22"
+        label: "E3游戏展现场"
+      - at: "05:34:46"
+        label: "E3游戏展现场"
     sources:
       - url: "https://www.acfun.cn/v/ac10318866"
         kind: replay
@@ -138,6 +214,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FijJy5OMwZK8fjFJIYLuLAuh7UDJ?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:09:12"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10329225"
         kind: replay
@@ -154,6 +235,19 @@
     duration_min: 545
     cover: "https://tx-free-imgs.acfun.cn/Fsdh0UrlLsIV5jCSqwT0_KR4lQ1Q?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:32:52"
+        label: "作业疯了"
+      - at: "02:00:07"
+        label: "作业疯了"
+      - at: "04:00:09"
+        label: "作业疯了"
+      - at: "06:00:11"
+        label: "作业疯了"
+      - at: "08:00:12"
+        label: "作业疯了"
     sources:
       - url: "https://www.acfun.cn/v/ac10330630"
         kind: replay
@@ -169,7 +263,21 @@
     confidence: high
     duration_min: 266
     cover: "https://tx-free-imgs.acfun.cn/FvtXZvWAH2Uisl4AljhueUzLyjok?imageslim"
-    games: []
+    games: [unheard]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:58:36"
+        label: "戏说封神第十九期"
+      - at: "02:00:02"
+        label: "疑案追声"
+        game: unheard
+      - at: "03:00:03"
+        label: "疑案追声"
+        game: unheard
+      - at: "04:00:04"
+        label: "疑案追声"
+        game: unheard
     sources:
       - url: "https://www.acfun.cn/v/ac10332690"
         kind: replay
@@ -185,7 +293,22 @@
     confidence: high
     duration_min: 219
     cover: "https://tx-free-imgs.acfun.cn/FrHgyBLhMiZ3l8piECrTSVLsSJgy?imageslim"
-    games: []
+    games: [pummel-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:42"
+        label: "Pummel Party"
+        game: pummel-party
+      - at: "01:09:23"
+        label: "Pummel Party"
+        game: pummel-party
+      - at: "01:58:39"
+        label: "Pummel Party"
+        game: pummel-party
+      - at: "02:49:18"
+        label: "Pummel Party"
+        game: pummel-party
     sources:
       - url: "https://www.acfun.cn/v/ac10336144"
         kind: replay
@@ -204,6 +327,15 @@
     games: []
     tags: [聊天]
     note: "当日直播全程为直播前聊天环节（4P 全聊天，无主游戏内容），标题如实反映，非错标。"
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:29:49"
+        label: "游戏前聊10块钱的"
+      - at: "02:00:01"
+        label: "游戏前聊10块钱的"
+      - at: "02:50:59"
+        label: "游戏前聊10块钱的"
     sources:
       - url: "https://www.acfun.cn/v/ac10342995"
         kind: replay
@@ -219,7 +351,18 @@
     confidence: high
     duration_min: 216
     cover: "https://tx-free-imgs.acfun.cn/FtY32tokUklKo1-AjlO5gsmBC7E5?imageslim"
-    games: []
+    games: [cadence-of-hyrule, sky-children-of-the-light]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:00"
+        label: "Sky光·遇"
+      - at: "00:55:53"
+        label: "Sky光·遇"
+      - at: "01:35:46"
+        label: "Sky光·遇"
+      - at: "02:09:49"
+        label: "节奏海拉鲁"
     sources:
       - url: "https://www.acfun.cn/v/ac10346043"
         kind: replay
@@ -252,7 +395,16 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/FpZGR_Eoo84jP22gjqIarrT8PPap?imageslim"
-    games: []
+    games: [cadence-of-hyrule]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:22:54"
+        label: "节奏海拉鲁"
+      - at: "01:43:07"
+        label: "节奏海拉鲁"
+      - at: "03:03:22"
+        label: "节奏海拉鲁"
     sources:
       - url: "https://www.acfun.cn/v/ac10352181"
         kind: replay
@@ -269,6 +421,17 @@
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/FugN2tfn_qcsJPlWavLU_EsE1DEK?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前K会儿歌"
+      - at: "01:20:00"
+        label: "圣书物语"
+      - at: "02:00:01"
+        label: "圣书物语"
+      - at: "03:00:02"
+        label: "圣书物语"
+      - at: "04:00:04"
+        label: "圣书物语"
     sources:
       - url: "https://www.acfun.cn/v/ac10355697"
         kind: replay
@@ -284,7 +447,22 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/FoPN53A6mx5MglKV2UMoKO6e96Jd?imageslim"
-    games: []
+    games: [my-friend-pedro]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前 聊10块钱的"
+      - at: "00:49:49"
+        label: "My Friend Pedro"
+        game: my-friend-pedro
+      - at: "01:15:24"
+        label: "My Friend Pedro"
+        game: my-friend-pedro
+      - at: "02:15:25"
+        label: "My Friend Pedro"
+        game: my-friend-pedro
+      - at: "03:15:26"
+        label: "My Friend Pedro"
+        game: my-friend-pedro
     sources:
       - url: "https://www.acfun.cn/v/ac10358736"
         kind: replay
@@ -300,7 +478,22 @@
     confidence: high
     duration_min: 273
     cover: "https://tx-free-imgs.acfun.cn/FnAvlcPfhk2FNOO02RrFPSqlbakG?imageslim"
-    games: []
+    games: [hardcore-mecha]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:41:13"
+        label: "HARDCORE MECHA"
+        game: hardcore-mecha
+      - at: "02:00:01"
+        label: "HARDCORE MECHA"
+        game: hardcore-mecha
+      - at: "03:00:01"
+        label: "HARDCORE MECHA"
+        game: hardcore-mecha
+      - at: "04:00:02"
+        label: "HARDCORE MECHA"
+        game: hardcore-mecha
     sources:
       - url: "https://www.acfun.cn/v/ac10366357"
         kind: replay
@@ -316,7 +509,18 @@
     confidence: high
     duration_min: 234
     cover: "https://tx-free-imgs.acfun.cn/FnswA0fM3D64UJiClmgxGl5aMNvI?imageslim"
-    games: []
+    games: [unruly-heroes]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:28:08"
+        label: "非常英雄"
+      - at: "01:14:06"
+        label: "非常英雄"
+      - at: "02:00:02"
+        label: "非常英雄"
+      - at: "02:57:04"
+        label: "非常英雄"
     sources:
       - url: "https://www.acfun.cn/v/ac10369079"
         kind: replay
@@ -334,6 +538,19 @@
     cover: "https://tx-free-imgs.acfun.cn/FkeSChjfjjrnyHe4rUbISIGG8i-d?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "你们说好听那肯定是真的"
+      - at: "01:00:01"
+        label: "你们说好听那肯定是真的"
+      - at: "02:00:02"
+        label: "你们说好听那肯定是真的"
+      - at: "02:35:52"
+        label: "心灵砒霜"
+      - at: "03:17:57"
+        label: "心灵砒霜"
+      - at: "04:00:04"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10371823"
         kind: replay

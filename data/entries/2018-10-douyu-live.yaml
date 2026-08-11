@@ -6,7 +6,12 @@
     confidence: high
     duration_min: 221
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_02/1538482354.JPG?imageslim"
-    games: []
+    games: [jalopy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:09:44"
+        label: "Jalopy（老爷车）"
     sources:
       - url: "https://www.acfun.cn/v/ac4619001"
         kind: replay
@@ -23,6 +28,11 @@
     duration_min: 224
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_04/1538629059.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "女流66生日快乐-弹幕版"
+      - at: "00:18:50"
+        label: "女流66生日快乐-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4621569"
         kind: replay
@@ -39,6 +49,13 @@
     duration_min: 9
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_03/1538569886.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "开场之我怎么这么好看（麦片熊制作）"
+      - at: "00:01:41"
+        label: "燃烧我的卡路里（月野兔Usagi）"
+      - at: "00:04:24"
+        label: "游戏人生（来自010）"
     sources:
       - url: "https://www.acfun.cn/v/ac4620323"
         kind: replay
@@ -54,7 +71,14 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_05/1538740454.JPG?imageslim"
-    games: []
+    games: [jalopy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:38:34"
+        label: "Jalopy（老爷车）"
+      - at: "04:12:31"
+        label: "女流和你一起看《主播真会玩女神篇》"
     sources:
       - url: "https://www.acfun.cn/v/ac4623186"
         kind: replay
@@ -70,7 +94,16 @@
     confidence: high
     duration_min: 321
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_06/1538837214.jpg?imageslim"
-    games: []
+    games: [hue]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:46:24"
+        label: "Part2"
+      - at: "02:17:51"
+        label: "Part3"
+      - at: "03:49:17"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac4624907"
         kind: replay
@@ -88,6 +121,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_07/1538923201.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:25:59"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:15:15"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4626249"
         kind: replay
@@ -103,7 +143,14 @@
     confidence: high
     duration_min: 227
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_08/1538998354.JPG?imageslim"
-    games: []
+    games: [jian-ai]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:10"
+        label: "拣爱"
+      - at: "01:10:19"
+        label: "Old School Musical"
     sources:
       - url: "https://www.acfun.cn/v/ac4627904"
         kind: replay
@@ -119,7 +166,14 @@
     confidence: high
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_10/1539170072.jpg?imageslim"
-    games: []
+    games: [super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:42:20"
+        label: "超级马里奥派对"
+      - at: "02:12:23"
+        label: "超级马里奥派对"
     sources:
       - url: "https://www.acfun.cn/v/ac4632146"
         kind: replay
@@ -151,7 +205,12 @@
     confidence: high
     duration_min: 178
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_12/1539342445.jpg?imageslim"
-    games: []
+    games: [super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "超级马里奥派对"
+      - at: "01:29:09"
+        label: "超级马里奥派对"
     sources:
       - url: "https://www.acfun.cn/v/ac4637755"
         kind: replay
@@ -169,6 +228,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_15/1539585242.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:19:23"
+        label: "Part2"
+      - at: "00:59:05"
+        label: "Part3"
+      - at: "02:26:44"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac4644188"
         kind: replay
@@ -184,7 +252,12 @@
     confidence: high
     duration_min: 194
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_16/1539691010.JPG?imageslim"
-    games: []
+    games: [super-mario-party]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:49:49"
+        label: "超级马里奥派对"
     sources:
       - url: "https://www.acfun.cn/v/ac4648180"
         kind: replay
@@ -200,7 +273,12 @@
     confidence: high
     duration_min: 295
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_19/1539953075.JPG?imageslim"
-    games: []
+    games: [sheltered]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:30"
+        label: "Sheltered（庇护所）"
     sources:
       - url: "https://www.acfun.cn/v/ac4657003"
         kind: replay
@@ -216,7 +294,14 @@
     confidence: high
     duration_min: 342
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_20/1540047614.JPG?imageslim"
-    games: []
+    games: [sheltered]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:32:39"
+        label: "Sheltered（庇护所）"
+      - at: "03:07:27"
+        label: "Sheltered（庇护所）"
     sources:
       - url: "https://www.acfun.cn/v/ac4659464"
         kind: replay
@@ -248,7 +333,18 @@
     confidence: high
     duration_min: 313
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_23/1540296503.JPG?imageslim"
-    games: []
+    games: [breathedge]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:50:29"
+        label: "Breathedge（呼吸边缘）"
+      - at: "02:48:51"
+        label: "Breathedge（呼吸边缘）"
+      - at: "04:59:09"
+        label: "Breathedge（呼吸边缘）"
+      - at: "05:10:13"
+        label: "Breathedge（呼吸边缘）"
     sources:
       - url: "https://www.acfun.cn/v/ac4666674"
         kind: replay
@@ -264,7 +360,12 @@
     confidence: high
     duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_24/1540381381.jpg?imageslim"
-    games: []
+    games: [reigns]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:52:04"
+        label: "冰火王权Regins"
     sources:
       - url: "https://www.acfun.cn/v/ac4668945"
         kind: replay
@@ -281,6 +382,17 @@
     duration_min: 351
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_26/1540558744.jpg?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:10"
+        label: "荒野大镖客：救赎2"
+      - at: "01:05:32"
+        label: "荒野大镖客：救赎2"
+      - at: "02:40:37"
+        label: "荒野大镖客：救赎2"
+      - at: "04:15:44"
+        label: "荒野大镖客：救赎2"
     sources:
       - url: "https://www.acfun.cn/v/ac4674387"
         kind: replay
@@ -297,6 +409,22 @@
     duration_min: 386
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_27/1540648057.jpg?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "荒野大镖客2"
+        game: red-dead-redemption-2
+      - at: "01:17:16"
+        label: "荒野大镖客2"
+        game: red-dead-redemption-2
+      - at: "02:34:33"
+        label: "荒野大镖客2"
+        game: red-dead-redemption-2
+      - at: "03:51:51"
+        label: "荒野大镖客2"
+        game: red-dead-redemption-2
+      - at: "05:09:07"
+        label: "荒野大镖客2"
+        game: red-dead-redemption-2
     sources:
       - url: "https://www.acfun.cn/v/ac4676355"
         kind: replay
@@ -313,6 +441,15 @@
     duration_min: 317
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_28/1540731019.JPG?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:44"
+        label: "荒野大镖客：救赎2"
+      - at: "01:56:04"
+        label: "荒野大镖客：救赎2"
+      - at: "03:36:24"
+        label: "荒野大镖客：救赎2"
     sources:
       - url: "https://www.acfun.cn/v/ac4678152"
         kind: replay
@@ -329,6 +466,15 @@
     duration_min: 303
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_29/1540816251.JPG?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:50"
+        label: "荒野大镖客：救赎2"
+      - at: "01:53:00"
+        label: "荒野大镖客：救赎2"
+      - at: "03:28:09"
+        label: "荒野大镖客：救赎2"
     sources:
       - url: "https://www.acfun.cn/v/ac4680667"
         kind: replay
@@ -345,6 +491,13 @@
     duration_min: 312
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_30/1540910136.JPG?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:59"
+        label: "荒野大镖客：救赎2"
+      - at: "02:30:30"
+        label: "荒野大镖客：救赎2"
     sources:
       - url: "https://www.acfun.cn/v/ac4683270"
         kind: replay
@@ -361,6 +514,13 @@
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_31/1540986776.JPG?imageslim"
     games: [red-dead-redemption-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:59"
+        label: "荒野大镖客：救赎2"
+      - at: "02:01:26"
+        label: "Part3"
     sources:
       - url: "https://www.acfun.cn/v/ac4685350"
         kind: replay

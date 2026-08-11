@@ -7,6 +7,17 @@
     duration_min: 183
     cover: "https://tx-free-imgs.acfun.cn/o_1f2jmath71d7ti67114j10lg1j090.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "打猎的日子不刮痧"
+      - at: "00:39:59"
+        label: "打猎的日子不刮痧"
+      - at: "01:15:38"
+        label: "打猎的日子不刮痧"
+      - at: "01:51:19"
+        label: "打猎的日子不刮痧"
+      - at: "02:27:01"
+        label: "打猎的日子不刮痧"
     sources:
       - url: "https://www.acfun.cn/v/ac27513425"
         kind: replay
@@ -22,7 +33,20 @@
     confidence: high
     duration_min: 169
     cover: "https://tx-free-imgs.acfun.cn/o_1f2mdkjlnl3t80b6pmnle840.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "00:42:10"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "01:24:19"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "02:06:30"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
     sources:
       - url: "https://www.acfun.cn/v/ac27551106"
         kind: replay
@@ -38,7 +62,17 @@
     confidence: high
     duration_min: 123
     cover: "https://tx-free-imgs.acfun.cn/o_1f2opiprdglmomt1vrm88pt3c0.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "00:41:07"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "01:22:11"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
     sources:
       - url: "https://www.acfun.cn/v/ac27573183"
         kind: replay
@@ -54,7 +88,23 @@
     confidence: high
     duration_min: 183
     cover: "https://tx-free-imgs.acfun.cn/o_1f2r9hfkf1aoga8s169l1cu75f30.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "00:29:59"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "00:59:59"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "01:40:59"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "02:22:01"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
     sources:
       - url: "https://www.acfun.cn/v/ac27601702"
         kind: replay
@@ -70,7 +120,23 @@
     confidence: high
     duration_min: 197
     cover: "https://tx-free-imgs.acfun.cn/o_1f2u1k2jf128ibsp9auqe21e010.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-rise]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "00:41:59"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "01:20:53"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "01:59:43"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
+      - at: "02:38:34"
+        label: "怪物猎人：崛起"
+        game: monster-hunter-rise
     sources:
       - url: "https://www.acfun.cn/v/ac27620220"
         kind: replay
@@ -88,6 +154,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f32oc6cjivk1ktsqim1efg15b0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P8.1-2021.4.11-砒霜前聊10块钱的弹幕版"
+      - at: "00:49:32"
+        label: "P8.2-2021.4.11-心灵砒霜弹幕版"
+      - at: "01:41:30"
+        label: "P8.3-2021.4.11-心灵砒霜弹幕版"
+      - at: "02:33:27"
+        label: "P8.4-2021.4.11-心灵砒霜弹幕版"
+      - at: "03:25:23"
+        label: "P8.5-2021.4.11-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac27672198"
         kind: replay
@@ -103,7 +180,17 @@
     confidence: high
     duration_min: 119
     cover: "https://tx-free-imgs.acfun.cn/o_1f38b04kc12se11651omt1kl91qhn0.jpeg?imageslim"
-    games: []
+    games: [genesis-noir]
+    segments:
+      - at: "00:00:00"
+        label: "Genesis Noir"
+        game: genesis-noir
+      - at: "00:39:32"
+        label: "Genesis Noir"
+        game: genesis-noir
+      - at: "01:19:08"
+        label: "Genesis Noir"
+        game: genesis-noir
     sources:
       - url: "https://www.acfun.cn/v/ac27734800"
         kind: replay
@@ -119,7 +206,18 @@
     confidence: high
     duration_min: 199
     cover: "https://tx-free-imgs.acfun.cn/o_1f38b45k13ce1tsr1u7jk341rip0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "鬼谷八荒"
+      - at: "00:39:59"
+        label: "鬼谷八荒"
+      - at: "01:19:59"
+        label: "鬼谷八荒"
+      - at: "01:59:38"
+        label: "鬼谷八荒"
+      - at: "02:39:20"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac27737097"
         kind: replay
@@ -135,7 +233,18 @@
     confidence: high
     duration_min: 198
     cover: "https://tx-free-imgs.acfun.cn/o_1f3atqo7112c6p1hss213dh1k550.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:32:12"
+        label: "鬼谷八荒"
+      - at: "01:13:40"
+        label: "鬼谷八荒"
+      - at: "01:55:07"
+        label: "鬼谷八荒"
+      - at: "02:36:36"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac27775135"
         kind: replay
@@ -151,7 +260,16 @@
     confidence: high
     duration_min: 160
     cover: "https://tx-free-imgs.acfun.cn/o_1f3dr7jea8kiqdej61kst14fr0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "鬼谷八荒"
+      - at: "00:38:03"
+        label: "鬼谷八荒"
+      - at: "01:18:43"
+        label: "鬼谷八荒"
+      - at: "01:59:27"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac27852232"
         kind: replay
@@ -167,7 +285,17 @@
     confidence: high
     duration_min: 110
     cover: "https://tx-free-imgs.acfun.cn/o_1f3g5t6141vqr1nj31mg08b5j320.jpeg?imageslim"
-    games: []
+    games: [hidden-through-time]
+    segments:
+      - at: "00:00:00"
+        label: "P6-2021.4.17 Hidden Through Time"
+        game: hidden-through-time
+      - at: "00:36:47"
+        label: "P7-2021.4.17 Hidden Through Time"
+        game: hidden-through-time
+      - at: "01:13:38"
+        label: "P8-2021.4.17 Hidden Through Time"
+        game: hidden-through-time
     sources:
       - url: "https://www.acfun.cn/v/ac27884083"
         kind: replay
@@ -183,7 +311,18 @@
     confidence: high
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/o_1f3g5rjmo1hh91v2m1iuk100t10qp0.jpeg?imageslim"
-    games: []
+    games: [guigu-bahuang]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:41:59"
+        label: "游戏前聊10块钱的"
+      - at: "01:24:03"
+        label: "鬼谷八荒"
+      - at: "01:59:07"
+        label: "鬼谷八荒"
+      - at: "02:34:10"
+        label: "鬼谷八荒"
     sources:
       - url: "https://www.acfun.cn/v/ac27884269"
         kind: replay
@@ -201,6 +340,19 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1f3kurrc518762ptr931h7ramc0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:17:24"
+        label: "心灵砒霜弹幕版"
+      - at: "01:09:25"
+        label: "心灵砒霜弹幕版"
+      - at: "02:01:24"
+        label: "心灵砒霜弹幕版"
+      - at: "02:53:21"
+        label: "心灵砒霜弹幕版"
+      - at: "03:45:21"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac27932190"
         kind: replay
@@ -217,6 +369,17 @@
     duration_min: 158
     cover: "https://tx-free-imgs.acfun.cn/o_1f47450trlu1r4t1apn1sn0aul0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:09"
+        label: "P2-2021.4.26 天神镇物语试玩"
+      - at: "00:49:26"
+        label: "P3-2021.4.26 天神镇物语试玩"
+      - at: "01:24:43"
+        label: "P4-2021.4.26 天神镇物语试玩"
+      - at: "01:59:59"
+        label: "P5-2021.4.26 天神镇物语试玩"
     sources:
       - url: "https://www.acfun.cn/v/ac28284810"
         kind: replay
@@ -232,7 +395,22 @@
     confidence: high
     duration_min: 182
     cover: "https://tx-free-imgs.acfun.cn/o_1f3nnaj9neth14dc1t15r9o1dt80.jpeg?imageslim"
-    games: []
+    games: [hidden-through-time]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:29:32"
+        label: "Hidden Through Time"
+        game: hidden-through-time
+      - at: "01:10:02"
+        label: "Hidden Through Time"
+        game: hidden-through-time
+      - at: "01:47:12"
+        label: "Hidden Through Time"
+        game: hidden-through-time
+      - at: "02:24:23"
+        label: "Hidden Through Time"
+        game: hidden-through-time
     sources:
       - url: "https://www.acfun.cn/v/ac28001573"
         kind: replay
@@ -248,7 +426,20 @@
     confidence: high
     duration_min: 202
     cover: "https://tx-free-imgs.acfun.cn/o_1f3sglbsq1g7i1eof59ufe38n50.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:08:39"
+        label: "怪物男孩"
+      - at: "00:38:03"
+        label: "怪物男孩"
+      - at: "01:19:07"
+        label: "怪物男孩"
+      - at: "02:00:11"
+        label: "怪物男孩"
+      - at: "02:41:16"
+        label: "怪物男孩"
     sources:
       - url: "https://www.acfun.cn/v/ac28077546"
         kind: replay
@@ -264,7 +455,18 @@
     confidence: high
     duration_min: 200
     cover: "https://tx-free-imgs.acfun.cn/o_1f3soufig140vpo2885hql41t0.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "怪物男孩"
+      - at: "00:39:59"
+        label: "怪物男孩"
+      - at: "01:20:00"
+        label: "怪物男孩"
+      - at: "02:00:02"
+        label: "怪物男孩"
+      - at: "02:40:04"
+        label: "怪物男孩"
     sources:
       - url: "https://www.acfun.cn/v/ac28080717"
         kind: replay
@@ -280,7 +482,16 @@
     confidence: high
     duration_min: 143
     cover: "https://tx-free-imgs.acfun.cn/o_1f3v3glon1go9feb141rbodcej0.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "怪物男孩"
+      - at: "00:35:49"
+        label: "怪物男孩"
+      - at: "01:11:41"
+        label: "怪物男孩"
+      - at: "01:47:33"
+        label: "怪物男孩"
     sources:
       - url: "https://www.acfun.cn/v/ac28111011"
         kind: replay
@@ -296,7 +507,18 @@
     confidence: high
     duration_min: 180
     cover: "https://tx-free-imgs.acfun.cn/o_1f41u0ccbq231lvn132qnah1g9b0.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "怪物男孩"
+      - at: "00:38:32"
+        label: "怪物男孩"
+      - at: "01:17:05"
+        label: "怪物男孩"
+      - at: "01:55:39"
+        label: "怪物男孩"
+      - at: "02:34:13"
+        label: "游戏前聊10块钱的"
     sources:
       - url: "https://www.acfun.cn/v/ac28153508"
         kind: replay
@@ -312,7 +534,18 @@
     confidence: high
     duration_min: 156
     cover: "https://tx-free-imgs.acfun.cn/o_1f41vcsv61u111pu1potsvj13at0.jpeg?imageslim"
-    games: []
+    games: [monster-boy]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:59"
+        label: "怪物男孩"
+      - at: "00:55:34"
+        label: "怪物男孩"
+      - at: "01:29:09"
+        label: "怪物男孩"
+      - at: "02:02:43"
+        label: "怪物男孩"
     sources:
       - url: "https://www.acfun.cn/v/ac28159371"
         kind: replay
@@ -328,7 +561,17 @@
     confidence: high
     duration_min: 107
     cover: "https://tx-free-imgs.acfun.cn/o_1f41vduo016mqk3a165a2q151d0.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:35:47"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:11:35"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac28159717"
         kind: replay
@@ -347,6 +590,15 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播按上（ac28231255）、下（ac28234389）分 P + 弹幕版（ac28273471）原本被建模为三条重复条目，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:22:18"
+        label: "心灵砒霜"
+      - at: "01:00:01"
+        label: "心灵砒霜"
+      - at: "01:40:27"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac28231255"
         kind: replay
@@ -371,6 +623,11 @@
     duration_min: 75
     cover: "https://tx-free-imgs.acfun.cn/o_1f4787lbs1elcfmouj0163s9os0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P6-2021.4.26 天神镇物语试玩"
+      - at: "00:37:30"
+        label: "P7-2021.4.26 天神镇物语试玩"
     sources:
       - url: "https://www.acfun.cn/v/ac28284808"
         kind: replay
@@ -386,7 +643,20 @@
     confidence: high
     duration_min: 137
     cover: "https://tx-free-imgs.acfun.cn/o_1f49q9bsp1c3v1guk18301lb51m6a0.jpeg?imageslim"
-    games: []
+    games: [world-games-51, guardian-tales]
+    segments:
+      - at: "00:00:00"
+        label: "世界游戏大全51"
+        game: world-games-51
+      - at: "00:34:38"
+        label: "坎公骑冠剑"
+        game: guardian-tales
+      - at: "01:08:52"
+        label: "坎公骑冠剑"
+        game: guardian-tales
+      - at: "01:43:05"
+        label: "坎公骑冠剑"
+        game: guardian-tales
     sources:
       - url: "https://www.acfun.cn/v/ac28310058"
         kind: replay

@@ -7,6 +7,13 @@
     duration_min: 101
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_02/1533214967.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "playstation发布会"
+      - at: "00:11:50"
+        label: "playstation发布会"
+      - at: "00:53:43"
+        label: "playstation发布会"
     sources:
       - url: "https://www.acfun.cn/v/ac4498195"
         kind: replay
@@ -22,7 +29,14 @@
     confidence: high
     duration_min: 273
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_06/1533561706.jpg?imageslim"
-    games: []
+    games: [no-mans-sky]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:32:14"
+        label: "P2-2018-8-6-无人深空"
+      - at: "02:32:38"
+        label: "P3-2018-8-6-无人深空"
     sources:
       - url: "https://www.acfun.cn/v/ac4505280"
         kind: replay
@@ -38,7 +52,14 @@
     confidence: high
     duration_min: 232
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_08/1533733118.jpg?imageslim"
-    games: []
+    games: [overcooked-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:45"
+        label: "Overcooked 2"
+      - at: "02:03:23"
+        label: "Overcooked 2"
     sources:
       - url: "https://www.acfun.cn/v/ac4509318"
         kind: replay
@@ -54,7 +75,16 @@
     confidence: high
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_09/1533818442.jpg?imageslim"
-    games: []
+    games: [overcooked-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:09"
+        label: "Overcooked 2"
+      - at: "02:34:10"
+        label: "Overcooked 2"
+      - at: "02:49:02"
+        label: "One Hand Clapping"
     sources:
       - url: "https://www.acfun.cn/v/ac4511477"
         kind: replay
@@ -72,6 +102,17 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_13/1534167903.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:24:29"
+        label: "戏说聊斋第十六期-弹幕版"
+      - at: "01:05:34"
+        label: "戏说聊斋第十六期-弹幕版"
+      - at: "01:46:34"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:58:38"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4520222"
         kind: replay
@@ -89,6 +130,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_14/1534249051.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:33:32"
+        label: "大周MC第四目：第四天之建设城市"
+        game: minecraft
+      - at: "02:17:57"
+        label: "大周MC第四目：第四天之建设城市"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac4521994"
         kind: replay
@@ -106,6 +156,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534338341.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:13"
+        label: "大周MC第四目：第五天之MC水上乐园"
+        game: minecraft
+      - at: "01:06:57"
+        label: "大周MC第四目：第五天之MC水上乐园"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac4524053"
         kind: replay
@@ -139,6 +198,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_18/1534595835.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:23:34"
+        label: "Part2"
+      - at: "02:11:40"
+        label: "Part3"
     sources:
       - url: "https://www.acfun.cn/v/ac4530216"
         kind: replay
@@ -156,6 +222,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_19/1534691484.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:16:27"
+        label: "戏说聊斋第十七期-弹幕版"
+      - at: "01:20:18"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:39:15"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4531874"
         kind: replay
@@ -171,7 +246,14 @@
     confidence: high
     duration_min: 169
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_20/1534767781.jpg?imageslim"
-    games: []
+    games: [starbound]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:30:05"
+        label: "游戏前聊10块钱的"
+      - at: "01:00:00"
+        label: "星界边境(Starbound)"
     sources:
       - url: "https://www.acfun.cn/v/ac4533725"
         kind: replay
@@ -189,6 +271,14 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_21/1534856542.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:30:39"
+        label: "大周MC第四目：第八天之拯救K神前的准备"
+        game: minecraft
+      - at: "02:51:24"
+        label: "星界边境(Starbound)"
     sources:
       - url: "https://www.acfun.cn/v/ac4536156"
         kind: replay
@@ -204,7 +294,14 @@
     confidence: high
     duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_22/1534938954.JPG?imageslim"
-    games: []
+    games: [planet-coaster]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:49:32"
+        label: "过山车之星"
+      - at: "02:31:01"
+        label: "过山车之星"
     sources:
       - url: "https://www.acfun.cn/v/ac4538344"
         kind: replay
@@ -236,7 +333,12 @@
     confidence: high
     duration_min: 108
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110479.JPG?imageslim"
-    games: []
+    games: [liuxing-hudiejian]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:16:21"
+        label: "流星蝴蝶剑"
     sources:
       - url: "https://www.acfun.cn/v/ac4542811"
         kind: replay
@@ -254,6 +356,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_25/1535198050.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "大周MC第四目：最终回"
+        game: minecraft
+      - at: "01:32:26"
+        label: "大周MC第四目：最终回"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac4544463"
         kind: replay
@@ -271,6 +380,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_26/1535321479.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:14:17"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:59:38"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4546325"
         kind: replay

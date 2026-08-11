@@ -24,6 +24,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_05/1480900488.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.4-心灵砒霜-弹幕版"
+      - at: "00:56:05"
+        label: "P2-12.4-心灵砒霜-弹幕版"
+      - at: "02:13:27"
+        label: "P3-12.4-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3305136"
         kind: replay
@@ -39,7 +46,18 @@
     confidence: high
     duration_min: 302
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_05/1480953243.jpg?imageslim"
-    games: []
+    games: [final-fantasy-15]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.5-聊天"
+      - at: "00:39:54"
+        label: "P2-12.5-最终幻想15"
+      - at: "01:45:18"
+        label: "P3-12.5-最终幻想15"
+      - at: "02:50:43"
+        label: "P4-12.5-最终幻想15"
+      - at: "03:56:08"
+        label: "P5-12.5-最终幻想15"
     sources:
       - url: "https://www.acfun.cn/v/ac3307418"
         kind: replay
@@ -71,7 +89,18 @@
     confidence: high
     duration_min: 250
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_07/1481113918.jpg?imageslim"
-    games: []
+    games: [the-last-guardian]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:19:38"
+        label: "P2-最后的守护者"
+      - at: "01:50:59"
+        label: "P3-最后的守护者"
+      - at: "03:22:21"
+        label: "P4-最后的守护者"
+      - at: "04:02:40"
+        label: "P5-最后的守护者"
     sources:
       - url: "https://www.acfun.cn/v/ac3312391"
         kind: replay
@@ -87,7 +116,18 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_08/1481205569.jpg?imageslim"
-    games: []
+    games: [the-last-guardian]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:02:48"
+        label: "P2-最后的守护者"
+      - at: "01:13:37"
+        label: "P3-最后的守护者"
+      - at: "02:24:27"
+        label: "P4-最后的守护者"
+      - at: "03:35:18"
+        label: "P5-最后的守护者"
     sources:
       - url: "https://www.acfun.cn/v/ac3315291"
         kind: replay
@@ -103,7 +143,16 @@
     confidence: high
     duration_min: 215
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_09/1481292833.jpg?imageslim"
-    games: []
+    games: [the-last-guardian]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.9-聊天"
+      - at: "00:26:45"
+        label: "P2-12.9-最后的守护者"
+      - at: "01:32:47"
+        label: "P3-12.9-最后的守护者"
+      - at: "02:38:49"
+        label: "P4-12.9-最后的守护者"
     sources:
       - url: "https://www.acfun.cn/v/ac3317908"
         kind: replay
@@ -121,6 +170,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_10/1481384436.JPG?imageslim"
     games: []
     tags: [健身]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:01:05"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3320202"
         kind: replay
@@ -136,7 +190,14 @@
     confidence: high
     duration_min: 191
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_10/1481384444.JPG?imageslim"
-    games: []
+    games: [overcooked]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:41:44"
+        label: "P2-12.10-煮糊了(overcooked)"
+      - at: "01:56:18"
+        label: "P3-12.10-煮糊了(overcooked)"
     sources:
       - url: "https://www.acfun.cn/v/ac3320199"
         kind: replay
@@ -154,6 +215,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481548467.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.11-心灵砒霜-弹幕版"
+      - at: "01:39:30"
+        label: "P2-12.11-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3324519"
         kind: replay
@@ -185,7 +251,16 @@
     confidence: high
     duration_min: 237
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481553264.JPG?imageslim"
-    games: []
+    games: [event-0]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.12-聊天"
+      - at: "01:04:20"
+        label: "P2-12.12-零号事件(event[0])"
+      - at: "02:19:50"
+        label: "P3-12.12-零号事件(event[0])"
+      - at: "03:35:20"
+        label: "P4-12.12-零号事件(event[0])"
     sources:
       - url: "https://www.acfun.cn/v/ac3324703"
         kind: replay
@@ -202,6 +277,11 @@
     duration_min: 230
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_14/1481714772.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.14-出门溜达溜达憋坏啦"
+      - at: "01:06:23"
+        label: "P2-12.14-出门溜达溜达憋坏啦"
     sources:
       - url: "https://www.acfun.cn/v/ac3329447"
         kind: replay
@@ -235,6 +315,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_17/1481983958.jpg?imageslim"
     games: []
     tags: [健身]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.17-健身"
+      - at: "01:30:31"
+        label: "P2-12.17-健身"
     sources:
       - url: "https://www.acfun.cn/v/ac3337282"
         kind: replay
@@ -250,7 +335,12 @@
     confidence: high
     duration_min: 146
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_17/1481983939.jpg?imageslim"
-    games: []
+    games: [battleblock-theater]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.17-战斗方块剧场"
+      - at: "00:51:23"
+        label: "P2-12.17-战斗方块剧场"
     sources:
       - url: "https://www.acfun.cn/v/ac3337283"
         kind: replay
@@ -268,6 +358,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_20/1482225651.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.19-心灵砒霜-弹幕版"
+      - at: "01:03:01"
+        label: "P2-12.19-心灵砒霜-弹幕版"
+      - at: "02:13:02"
+        label: "P3-12.19-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3343783"
         kind: replay
@@ -283,7 +380,18 @@
     confidence: high
     duration_min: 281
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_21/1482328080.JPG?imageslim"
-    games: []
+    games: [warcraft-3]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "01:11:56"
+        label: "P2-12.21-魔兽RPG"
+      - at: "01:48:45"
+        label: "P3-12.21-魔兽RPG"
+      - at: "02:56:14"
+        label: "P4-12.21-魔兽RPG"
+      - at: "03:44:33"
+        label: "P5-聊天"
     sources:
       - url: "https://www.acfun.cn/v/ac3347021"
         kind: replay
@@ -299,7 +407,16 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_23/1482500364.JPG?imageslim"
-    games: []
+    games: [owlboy]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:46:50"
+        label: "P2-12.23-猫头鹰男孩(Owlboy)"
+      - at: "01:44:32"
+        label: "P3-12.23-猫头鹰男孩(Owlboy)"
+      - at: "03:07:33"
+        label: "P4-12.23-猫头鹰男孩(Owlboy)"
     sources:
       - url: "https://www.acfun.cn/v/ac3352127"
         kind: replay
@@ -317,6 +434,15 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_24/1482591196.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1-11.24-聊天"
+      - at: "00:37:11"
+        label: "P2-11.24-MC建筑大赛"
+        game: minecraft
+      - at: "01:45:22"
+        label: "P3-11.24-MC建筑大赛"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3354442"
         kind: replay
@@ -350,6 +476,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_26/1482751064.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.25-心灵砒霜-弹幕版"
+      - at: "01:06:38"
+        label: "P2-12.25-心灵砒霜-弹幕版"
+      - at: "02:10:29"
+        label: "P3-12.25-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3358586"
         kind: replay
@@ -365,7 +498,14 @@
     confidence: high
     duration_min: 219
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_27/1482839749.JPG?imageslim"
-    games: []
+    games: [owlboy]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.27-聊天"
+      - at: "00:47:19"
+        label: "P2-12.27-猫头鹰男孩(Owlboy"
+      - at: "02:16:03"
+        label: "P3-12.27-猫头鹰男孩(Owlboy"
     sources:
       - url: "https://www.acfun.cn/v/ac3361334"
         kind: replay
@@ -383,6 +523,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482944709.JPG?imageslim"
     games: []
     tags: [健身]
+    segments:
+      - at: "00:00:00"
+        label: "P4-12.28-健身"
+      - at: "00:52:42"
+        label: "P5-12.28-健身"
+      - at: "01:56:59"
+        label: "P6-12.28-健身"
     sources:
       - url: "https://www.acfun.cn/v/ac3364670"
         kind: replay
@@ -398,7 +545,14 @@
     confidence: high
     duration_min: 107
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482943599.JPG?imageslim"
-    games: []
+    games: [owlboy]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.28-聊天-猫头鹰男孩(Owlboy)"
+      - at: "00:33:02"
+        label: "P2-12.28-猫头鹰男孩(Owlboy)"
+      - at: "01:47:23"
+        label: "P3-12.28-猫头鹰男孩(Owlboy)"
     sources:
       - url: "https://www.acfun.cn/v/ac3364645"
         kind: replay
@@ -414,7 +568,16 @@
     confidence: high
     duration_min: 146
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_30/1483102206.JPG?imageslim"
-    games: []
+    games: [owlboy]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:32:24"
+        label: "P4-猫头鹰男孩"
+      - at: "01:11:52"
+        label: "P2-12.30-猫头鹰男孩(Owlboy)"
+      - at: "01:11:57"
+        label: "P3-12.30-猫头鹰男孩(Owlboy)"
     sources:
       - url: "https://www.acfun.cn/v/ac3369385"
         kind: replay
@@ -432,6 +595,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_31/1483192023.JPG?imageslim"
     games: []
     tags: [聊天]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.31-聊天"
+      - at: "00:50:23"
+        label: "P2-12.31-聊天"
     sources:
       - url: "https://www.acfun.cn/v/ac3371728"
         kind: replay

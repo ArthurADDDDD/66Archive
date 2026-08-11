@@ -7,6 +7,13 @@
     duration_min: 196
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_04/1475596851.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.3-生日特辑"
+      - at: "01:05:28"
+        label: "P2-10.3-生日特辑"
+      - at: "02:10:57"
+        label: "P3-10.3-弟弟出现"
     sources:
       - url: "https://www.acfun.cn/v/ac3154320"
         kind: replay
@@ -22,7 +29,16 @@
     confidence: high
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_04/1475600123.JPG?imageslim"
-    games: []
+    games: [overcooked]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.4-弟弟"
+      - at: "00:40:00"
+        label: "Part2"
+      - at: "01:34:34"
+        label: "P3-10.4-煮糊了(overcooked)"
+      - at: "02:29:08"
+        label: "P4-10.4-煮糊了(overcooked)"
     sources:
       - url: "https://www.acfun.cn/v/ac3154403"
         kind: replay
@@ -38,7 +54,14 @@
     confidence: high
     duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_06/1475742983.JPG?imageslim"
-    games: []
+    games: [overcooked]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.5-煮糊了(overcooked)"
+      - at: "01:17:43"
+        label: "P2-10.5-煮糊了(overcooked)"
+      - at: "02:35:26"
+        label: "P3-10.5-煮糊了(overcooked)"
     sources:
       - url: "https://www.acfun.cn/v/ac3157494"
         kind: replay
@@ -54,7 +77,16 @@
     confidence: high
     duration_min: 211
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_06/1475763590.JPG?imageslim"
-    games: []
+    games: [overcooked]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.6-聊天"
+      - at: "00:37:28"
+        label: "P1-10.6-煮糊了(overcooked)"
+      - at: "01:51:03"
+        label: "P1-10.6-煮糊了(overcooked)"
+      - at: "02:40:53"
+        label: "P1-10.6-煮糊了(overcooked)"
     sources:
       - url: "https://www.acfun.cn/v/ac3158187"
         kind: replay
@@ -70,7 +102,16 @@
     confidence: high
     duration_min: 196
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_07/1475846813.JPG?imageslim"
-    games: []
+    games: [battleblock-theater]
+    segments:
+      - at: "00:00:00"
+        label: "P2-10.7-战斗方块剧场"
+      - at: "00:55:07"
+        label: "P3-10.7-战斗方块剧场"
+      - at: "01:50:15"
+        label: "P4-10.7-战斗方块剧场"
+      - at: "02:45:23"
+        label: "P1-10.7-这个嗡不是白嗡的"
     sources:
       - url: "https://www.acfun.cn/v/ac3160298"
         kind: replay
@@ -88,6 +129,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_09/1476012304.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.9-心灵砒霜"
+      - at: "01:07:53"
+        label: "P2-10.9-心灵砒霜"
+      - at: "02:15:47"
+        label: "P3-10.9-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3164916"
         kind: replay
@@ -104,6 +152,11 @@
     duration_min: 61
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_13/1476364447.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:09:41"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3175879"
         kind: replay
@@ -137,6 +190,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_16/1476638850.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:05:51"
+        label: "P2"
+      - at: "02:07:32"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3183453"
         kind: replay
@@ -153,6 +213,17 @@
     duration_min: 198
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_20/1476970938.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:39:53"
+        label: "P2"
+      - at: "01:19:12"
+        label: "P3"
+      - at: "01:59:09"
+        label: "P4"
+      - at: "02:38:33"
+        label: "P5"
     sources:
       - url: "https://www.acfun.cn/v/ac3193762"
         kind: replay
@@ -186,6 +257,15 @@
     duration_min: 284
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_21/1477060291.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:18:16"
+        label: "P2-生锈小湖"
+      - at: "01:46:48"
+        label: "P3-生锈小湖"
+      - at: "03:12:28"
+        label: "P4-生锈小湖"
     sources:
       - url: "https://www.acfun.cn/v/ac3196655"
         kind: replay
@@ -203,6 +283,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_23/1477235305.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:35:48"
+        label: "P2-心灵砒霜"
+      - at: "01:46:36"
+        label: "P3-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3200852"
         kind: replay
@@ -218,7 +305,12 @@
     confidence: high
     duration_min: 85
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_25/1477363930.JPG?imageslim"
-    games: []
+    games: [hougong-sanqianren]
+    segments:
+      - at: "00:00:00"
+        label: "P0-聊天"
+      - at: "00:20:18"
+        label: "P1-后宫三千人"
     sources:
       - url: "https://www.acfun.cn/v/ac3204283"
         kind: replay
@@ -234,7 +326,12 @@
     confidence: high
     duration_min: 171
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_24/1477318099.JPG?imageslim"
-    games: []
+    games: [hougong-sanqianren]
+    segments:
+      - at: "00:00:00"
+        label: "P2"
+      - at: "01:26:07"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3203589"
         kind: replay
@@ -251,6 +348,11 @@
     duration_min: 91
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_25/1477401772.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-微博峰会"
+      - at: "00:28:17"
+        label: "P2-微博峰会"
     sources:
       - url: "https://www.acfun.cn/v/ac3205854"
         kind: replay
@@ -282,7 +384,14 @@
     confidence: high
     duration_min: 158
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_27/1477570793.JPG?imageslim"
-    games: []
+    games: [hougong-sanqianren]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.27-聊天"
+      - at: "00:19:58"
+        label: "P3-10.27-后宫三千人"
+      - at: "01:28:56"
+        label: "P4-10.27-后宫三千人"
     sources:
       - url: "https://www.acfun.cn/v/ac3210928"
         kind: replay
@@ -314,7 +423,16 @@
     confidence: high
     duration_min: 146
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_28/1477672362.JPG?imageslim"
-    games: []
+    games: [hougong-sanqianren]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:20:35"
+        label: "P2-后宫三千人"
+      - at: "01:22:25"
+        label: "P3-后宫三千人"
+      - at: "02:24:15"
+        label: "P4-后宫三千人"
     sources:
       - url: "https://www.acfun.cn/v/ac3214138"
         kind: replay
@@ -332,6 +450,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_31/1477905285.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-10.30-心灵砒霜"
+      - at: "00:20:06"
+        label: "P2-10.30-心灵砒霜"
+      - at: "00:26:31"
+        label: "P3-10.30-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3219712"
         kind: replay

@@ -7,6 +7,63 @@
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_01/1501595373.JPG?imageslim"
     games: [minecraft]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-8.1-游戏前聊10块钱的"
+      - at: "00:13:53"
+        label: "P1.2-8.1-游戏前聊10块钱的"
+      - at: "00:27:48"
+        label: "P1.3-8.1-游戏前聊10块钱的"
+      - at: "00:41:42"
+        label: "P1.4-8.1-游戏前聊10块钱的"
+      - at: "00:55:37"
+        label: "P2.1-8.1-我的世界"
+        game: minecraft
+      - at: "01:07:06"
+        label: "P2.2-8.1-我的世界"
+        game: minecraft
+      - at: "01:18:37"
+        label: "P2.3-8.1-我的世界"
+        game: minecraft
+      - at: "01:30:07"
+        label: "P2.4-8.1-我的世界"
+        game: minecraft
+      - at: "01:41:36"
+        label: "P2.5-8.1-我的世界"
+        game: minecraft
+      - at: "01:53:05"
+        label: "P2.6-8.1-我的世界"
+        game: minecraft
+      - at: "02:04:35"
+        label: "P2.7-8.1-我的世界"
+        game: minecraft
+      - at: "02:16:05"
+        label: "P2.8-8.1-我的世界"
+        game: minecraft
+      - at: "02:27:34"
+        label: "P2.9-8.1-我的世界"
+        game: minecraft
+      - at: "02:39:03"
+        label: "P2.10-8.1-我的世界"
+        game: minecraft
+      - at: "02:50:33"
+        label: "P2.11-8.1-我的世界"
+        game: minecraft
+      - at: "03:02:02"
+        label: "P2.12-8.1-我的世界"
+        game: minecraft
+      - at: "03:13:32"
+        label: "P2.13-8.1-我的世界"
+        game: minecraft
+      - at: "03:25:01"
+        label: "P2.14-8.1-我的世界"
+        game: minecraft
+      - at: "03:36:31"
+        label: "P2.15-8.1-我的世界"
+        game: minecraft
+      - at: "03:48:02"
+        label: "P2.16-8.1-我的世界"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3891890"
         kind: replay
@@ -23,6 +80,58 @@
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_03/1501749633.JPG?imageslim"
     games: [minecraft]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-8.2-游戏前聊10块钱的"
+      - at: "00:12:52"
+        label: "P1.2-8.2-游戏前聊10块钱的"
+      - at: "00:25:45"
+        label: "P1.3-8.2-游戏前聊10块钱的"
+      - at: "00:38:37"
+        label: "P2.1-8.2-我的世界"
+        game: minecraft
+      - at: "00:52:27"
+        label: "P2.2-8.2-我的世界"
+        game: minecraft
+      - at: "01:06:18"
+        label: "P2.3-8.2-我的世界"
+        game: minecraft
+      - at: "01:20:08"
+        label: "P2.4-8.2-我的世界"
+        game: minecraft
+      - at: "01:33:59"
+        label: "P2.5-8.2-我的世界"
+        game: minecraft
+      - at: "01:47:49"
+        label: "P2.6-8.2-我的世界"
+        game: minecraft
+      - at: "02:01:39"
+        label: "P2.7-8.2-我的世界"
+        game: minecraft
+      - at: "02:15:30"
+        label: "P2.8-8.2-我的世界"
+        game: minecraft
+      - at: "02:29:20"
+        label: "P2.9-8.2-我的世界"
+        game: minecraft
+      - at: "02:43:10"
+        label: "P2.10-8.2-我的世界"
+        game: minecraft
+      - at: "02:57:00"
+        label: "P2.11-8.2-我的世界"
+        game: minecraft
+      - at: "03:10:50"
+        label: "P2.12-8.2-我的世界"
+        game: minecraft
+      - at: "03:24:41"
+        label: "P2.13-8.2-我的世界"
+        game: minecraft
+      - at: "03:38:33"
+        label: "P2.14-8.2-我的世界"
+        game: minecraft
+      - at: "03:52:24"
+        label: "P2.15-8.2-我的世界"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3896510"
         kind: replay
@@ -40,6 +149,58 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_04/1501852496.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-8.4-游戏前聊10块钱的"
+      - at: "00:11:29"
+        label: "P1.2-8.4-游戏前聊10块钱的"
+      - at: "00:22:59"
+        label: "P1.3-8.4-游戏前聊10块钱的"
+      - at: "00:34:28"
+        label: "P2.1-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "00:47:21"
+        label: "P2.2-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "01:00:14"
+        label: "P2.3-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "01:13:08"
+        label: "P2.4-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "01:26:01"
+        label: "P2.5-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "01:38:55"
+        label: "P2.6-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "01:51:48"
+        label: "P2.7-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "02:04:41"
+        label: "P2.8-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "02:17:35"
+        label: "P2.9-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "02:30:29"
+        label: "P2.10-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "02:43:23"
+        label: "P2.11-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "02:56:15"
+        label: "P2.12-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "03:09:09"
+        label: "P2.13-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "03:22:03"
+        label: "P2.14-8.4-大周MC第八天：末影龙"
+        game: minecraft
+      - at: "03:34:57"
+        label: "P2.15-8.4-大周MC第八天：末影龙"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3899264"
         kind: replay
@@ -55,7 +216,26 @@
     confidence: high
     duration_min: 110
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_05/1501937378.JPG?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-8.5-游戏前聊10块钱的"
+      - at: "00:10:33"
+        label: "P1.2-8.5-游戏前聊10块钱的"
+      - at: "00:21:07"
+        label: "P1.3-8.5-游戏前聊10块钱的"
+      - at: "00:31:41"
+        label: "P2.1-8.5-绝地求生"
+      - at: "00:44:44"
+        label: "P2.2-8.5-绝地求生"
+      - at: "00:57:47"
+        label: "P2.3-8.5-绝地求生"
+      - at: "01:10:50"
+        label: "P2.4-8.5-绝地求生"
+      - at: "01:23:54"
+        label: "P2.5-8.5-绝地求生"
+      - at: "01:36:59"
+        label: "P2.6-8.5-绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac3900684"
         kind: replay
@@ -73,6 +253,55 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_07/1502115849.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "00:13:33"
+        label: "P2-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "00:27:07"
+        label: "P3-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "00:40:40"
+        label: "P4-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "00:54:13"
+        label: "P5-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "01:07:46"
+        label: "P6-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "01:21:20"
+        label: "P7-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "01:34:55"
+        label: "P8-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "01:48:29"
+        label: "P9-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "02:02:02"
+        label: "P10-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "02:15:35"
+        label: "P11-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "02:29:10"
+        label: "P12-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "02:42:44"
+        label: "P13-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "02:56:17"
+        label: "P14-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "03:09:50"
+        label: "P15-8.7-大周MC第九天：末地之城"
+        game: minecraft
+      - at: "03:23:24"
+        label: "P16-8.7-大周MC第九天：末地之城"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3904373"
         kind: replay
@@ -89,6 +318,19 @@
     duration_min: 77
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_08/1502157294.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.8-半夜不睡觉聊一聊"
+      - at: "00:13:51"
+        label: "P2-8.8-半夜不睡觉聊一聊"
+      - at: "00:27:42"
+        label: "P3-8.8-半夜不睡觉聊一聊"
+      - at: "00:41:34"
+        label: "P4-8.8-半夜不睡觉聊一聊"
+      - at: "00:55:25"
+        label: "P5-8.8-半夜不睡觉聊一聊"
+      - at: "01:09:18"
+        label: "P6-8.8-半夜不睡觉聊一聊"
     sources:
       - url: "https://www.acfun.cn/v/ac3904704"
         kind: replay
@@ -106,6 +348,67 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_08/1502203157.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-8.8-游戏前聊10块钱的"
+      - at: "00:11:16"
+        label: "P1.2-8.8-游戏前聊10块钱的"
+      - at: "00:22:34"
+        label: "P1.3-8.8-游戏前聊10块钱的"
+      - at: "00:33:51"
+        label: "P2.1-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "00:48:12"
+        label: "P2.2-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "01:02:35"
+        label: "P2.3-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "01:16:58"
+        label: "P2.4-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "01:31:20"
+        label: "P2.5-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "01:45:44"
+        label: "P2.6-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "02:00:06"
+        label: "P2.7-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "02:12:06"
+        label: "P2.8-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "02:24:06"
+        label: "P2.9-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "02:36:07"
+        label: "P2.10-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "02:48:07"
+        label: "P2.11-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "03:00:08"
+        label: "P2.12-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "03:12:08"
+        label: "P2.13-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "03:24:08"
+        label: "P2.14-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "03:36:09"
+        label: "P2.15-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "03:48:09"
+        label: "P2.16-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "04:00:10"
+        label: "P2.17-8.8-大周MC建筑大赛"
+        game: minecraft
+      - at: "04:09:17"
+        label: "P2.18-8.8-大周MC建筑大赛"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3906556"
         kind: replay
@@ -122,6 +425,39 @@
     duration_min: 209
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_09/1502281426.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.9-大周有嘻哈"
+      - at: "00:13:26"
+        label: "P2-8.9-大周有嘻哈"
+      - at: "00:26:53"
+        label: "P3-8.9-大周有嘻哈"
+      - at: "00:40:21"
+        label: "P4-8.9-大周有嘻哈"
+      - at: "00:53:49"
+        label: "P5-8.9-大周有嘻哈"
+      - at: "01:07:15"
+        label: "P6-8.9-大周有嘻哈"
+      - at: "01:20:42"
+        label: "P7-8.9-大周有嘻哈"
+      - at: "01:34:09"
+        label: "P8-8.9-大周有嘻哈"
+      - at: "01:47:37"
+        label: "P9-8.9-大周有嘻哈"
+      - at: "02:00:18"
+        label: "P10-8.9-大周有嘻哈"
+      - at: "02:13:00"
+        label: "P11-8.9-大周有嘻哈"
+      - at: "02:25:42"
+        label: "P12-8.9-大周有嘻哈"
+      - at: "02:38:24"
+        label: "P13-8.9-大周有嘻哈"
+      - at: "02:51:06"
+        label: "P14-8.9-大周有嘻哈"
+      - at: "03:03:48"
+        label: "P15-8.9-大周有嘻哈"
+      - at: "03:16:30"
+        label: "P16-8.9-大周有嘻哈"
     sources:
       - url: "https://www.acfun.cn/v/ac3908573"
         kind: replay
@@ -137,7 +473,61 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_11/1502464752.jpg?imageslim"
-    games: [minecraft]
+    games: [minecraft, geometry-dash]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.11-游戏前聊10块钱的"
+      - at: "00:10:04"
+        label: "P2-8.11-游戏前聊10块钱的"
+      - at: "00:20:09"
+        label: "P3-8.11-几何冲刺"
+      - at: "00:35:00"
+        label: "P4-8.11-几何冲刺"
+      - at: "00:49:52"
+        label: "P5-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "01:02:16"
+        label: "P6-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "01:14:42"
+        label: "P7-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "01:27:08"
+        label: "P8-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "01:39:34"
+        label: "P9-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "01:51:59"
+        label: "P10-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "02:04:23"
+        label: "P11-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "02:16:48"
+        label: "P12-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "02:29:13"
+        label: "P13-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "02:41:38"
+        label: "P14-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "02:54:04"
+        label: "P15-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "03:06:28"
+        label: "P16-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "03:18:53"
+        label: "P17-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "03:31:19"
+        label: "P18-8.11-我的世界中国版PC不限号"
+        game: minecraft
+      - at: "03:43:45"
+        label: "P19-8.11-我的世界中国版PC不限号"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3913398"
         kind: replay
@@ -155,6 +545,43 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_13/1502600385.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:09:57"
+        label: "Part2"
+      - at: "00:19:53"
+        label: "Part3"
+      - at: "00:34:12"
+        label: "Part4"
+      - at: "00:48:31"
+        label: "Part5"
+      - at: "01:02:49"
+        label: "Part6"
+      - at: "01:17:08"
+        label: "Part7"
+      - at: "01:31:26"
+        label: "Part8"
+      - at: "01:45:44"
+        label: "Part9"
+      - at: "02:00:02"
+        label: "Part10"
+      - at: "02:14:20"
+        label: "Part11"
+      - at: "02:28:39"
+        label: "Part12"
+      - at: "02:42:58"
+        label: "Part13"
+      - at: "02:57:16"
+        label: "Part14"
+      - at: "03:11:35"
+        label: "Part15"
+      - at: "03:25:53"
+        label: "Part16"
+      - at: "03:40:11"
+        label: "Part17"
+      - at: "03:54:29"
+        label: "Part18"
     sources:
       - url: "https://www.acfun.cn/v/ac3915556"
         kind: replay
@@ -173,6 +600,31 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播的弹幕版（ac3918562）与纯净版（ac3916709，目录标题『心灵砒霜21』）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.13-心灵砒霜-弹幕版"
+      - at: "00:12:41"
+        label: "P2-8.13-心灵砒霜-弹幕版"
+      - at: "00:25:28"
+        label: "P3-8.13-心灵砒霜-弹幕版"
+      - at: "00:38:10"
+        label: "P4-8.13-心灵砒霜-弹幕版"
+      - at: "00:50:56"
+        label: "P6-8.13-心灵砒霜-弹幕版"
+      - at: "01:03:37"
+        label: "P6-8.13-心灵砒霜-弹幕版"
+      - at: "01:16:22"
+        label: "P7-8.13-心灵砒霜-弹幕版"
+      - at: "01:29:11"
+        label: "P8-8.13-心灵砒霜-弹幕版"
+      - at: "01:41:55"
+        label: "P9-8.13-心灵砒霜-弹幕版"
+      - at: "01:54:38"
+        label: "P10-8.13-心灵砒霜-弹幕版"
+      - at: "02:07:26"
+        label: "P11-8.13-心灵砒霜-弹幕版"
+      - at: "02:20:11"
+        label: "P12-8.13-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3918562"
         kind: replay
@@ -193,6 +645,17 @@
     duration_min: 135
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_20/1503236585.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.14-大周好声音弹幕版"
+      - at: "00:26:05"
+        label: "P2-8.14-大周好声音弹幕版"
+      - at: "00:52:13"
+        label: "P5-8.14-大周好声音弹幕版"
+      - at: "01:16:04"
+        label: "P3-8.14-大周好声音弹幕版"
+      - at: "01:45:36"
+        label: "P4-8.14-大周好声音弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3930608"
         kind: replay
@@ -208,7 +671,28 @@
     confidence: high
     duration_min: 239
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_19/1503150154.JPG?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.19-尼德霍格+吃鸡"
+      - at: "00:26:00"
+        label: "P2-8.19-尼德霍格+吃鸡"
+      - at: "00:50:03"
+        label: "P3-8.19-尼德霍格+吃鸡"
+      - at: "01:14:07"
+        label: "P4-8.19-尼德霍格+吃鸡"
+      - at: "01:38:10"
+        label: "P5-8.19-尼德霍格+吃鸡"
+      - at: "02:01:34"
+        label: "P6-8.19-尼德霍格+吃鸡"
+      - at: "02:24:59"
+        label: "P7-8.19-尼德霍格+吃鸡"
+      - at: "02:48:24"
+        label: "P8-8.19-尼德霍格+吃鸡"
+      - at: "03:11:48"
+        label: "P9-8.19-尼德霍格+吃鸡"
+      - at: "03:35:15"
+        label: "P10-8.19-尼德霍格+吃鸡"
     sources:
       - url: "https://www.acfun.cn/v/ac3929159"
         kind: replay
@@ -226,6 +710,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_21/1503319041.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.20-心灵砒霜弹幕版"
+      - at: "00:23:58"
+        label: "P2-8.20-心灵砒霜弹幕版"
+      - at: "00:48:02"
+        label: "P3-8.20-心灵砒霜弹幕版"
+      - at: "01:12:03"
+        label: "P4-8.20-心灵砒霜弹幕版"
+      - at: "01:36:09"
+        label: "P5-8.20-心灵砒霜弹幕版"
+      - at: "02:00:07"
+        label: "P6-8.20-心灵砒霜弹幕版"
+      - at: "02:24:11"
+        label: "P7-8.20-心灵砒霜弹幕版"
+      - at: "02:48:12"
+        label: "P8-8.20-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3932607"
         kind: replay
@@ -241,7 +742,32 @@
     confidence: high
     duration_min: 280
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_21/1503330301.jpg?imageslim"
-    games: []
+    games: [human-resource-machine]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.21-SpaceChem"
+      - at: "00:21:03"
+        label: "P2-8.21-人力资源机器"
+      - at: "00:45:47"
+        label: "P3-8.21-人力资源机器"
+      - at: "01:10:31"
+        label: "P4-8.21-人力资源机器"
+      - at: "01:35:16"
+        label: "P5-8.21-人力资源机器"
+      - at: "02:00:00"
+        label: "P6-8.21-人力资源机器"
+      - at: "02:24:01"
+        label: "P7-8.21-人力资源机器"
+      - at: "02:48:03"
+        label: "P8-8.21-人力资源机器"
+      - at: "03:12:04"
+        label: "P9-8.21-人力资源机器"
+      - at: "03:36:06"
+        label: "P10-8.21-人力资源机器"
+      - at: "04:00:07"
+        label: "P11-8.21-人力资源机器"
+      - at: "04:19:58"
+        label: "P12-8.21-人力资源机器"
     sources:
       - url: "https://www.acfun.cn/v/ac3932798"
         kind: replay
@@ -257,7 +783,22 @@
     confidence: high
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_22/1503411362.jpg?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.22-绝地求生"
+      - at: "00:29:13"
+        label: "P2-8.22-绝地求生"
+      - at: "00:55:46"
+        label: "P3-8.22-绝地求生"
+      - at: "01:22:20"
+        label: "P4-8.22-绝地求生"
+      - at: "01:48:54"
+        label: "P5-8.22-绝地求生"
+      - at: "02:15:28"
+        label: "P6-8.22-绝地求生"
+      - at: "02:42:03"
+        label: "P7-8.22-绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac3934836"
         kind: replay
@@ -273,7 +814,26 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_23/1503493312.jpg?imageslim"
-    games: []
+    games: [worms-wmd]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.23-百战天虫W.M.D"
+      - at: "00:17:07"
+        label: "P2-8.23-百战天虫W.M.D"
+      - at: "00:44:21"
+        label: "P3-8.23-百战天虫W.M.D"
+      - at: "01:11:37"
+        label: "P4-8.23-百战天虫W.M.D"
+      - at: "01:38:53"
+        label: "P5-8.23-百战天虫W.M.D"
+      - at: "02:06:09"
+        label: "P6-8.23-百战天虫W.M.D"
+      - at: "02:33:24"
+        label: "P7-8.23-百战天虫W.M.D"
+      - at: "03:00:40"
+        label: "P8-8.23-百战天虫W.M.D"
+      - at: "03:27:55"
+        label: "P9-8.23-百战天虫W.M.D"
     sources:
       - url: "https://www.acfun.cn/v/ac3936778"
         kind: replay
@@ -289,7 +849,30 @@
     confidence: high
     duration_min: 277
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_26/1503720000.JPG?imageslim"
-    games: []
+    games: [oxygen-not-included]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.25-游戏前聊10块钱的"
+      - at: "00:07:26"
+        label: "P2-8.25-太空化学"
+      - at: "00:34:52"
+        label: "P3-8.25-缺氧"
+      - at: "00:56:02"
+        label: "P4-8.25-缺氧"
+      - at: "01:17:12"
+        label: "P5-8.25-缺氧"
+      - at: "01:38:22"
+        label: "P6-8.25-缺氧"
+      - at: "02:08:05"
+        label: "P7-8.25-缺氧"
+      - at: "02:37:48"
+        label: "P8-8.25-缺氧"
+      - at: "03:07:31"
+        label: "P9-8.25-缺氧"
+      - at: "03:37:14"
+        label: "P10-8.25-缺氧"
+      - at: "04:06:57"
+        label: "P11-8.25-缺氧"
     sources:
       - url: "https://www.acfun.cn/v/ac3941729"
         kind: replay
@@ -305,7 +888,30 @@
     confidence: high
     duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_26/1503760487.jpg?imageslim"
-    games: []
+    games: [oxygen-not-included]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.26-游戏前聊10块钱的"
+      - at: "00:19:56"
+        label: "P2-8.26-游戏前聊10块钱的"
+      - at: "00:39:52"
+        label: "P3-8.26-缺氧再试水"
+      - at: "01:08:33"
+        label: "P4-8.26-缺氧再试水"
+      - at: "01:37:15"
+        label: "P5-8.26-缺氧再试水"
+      - at: "02:05:57"
+        label: "P6-8.26-缺氧再试水"
+      - at: "02:34:38"
+        label: "P7-8.26-缺氧再试水"
+      - at: "03:03:21"
+        label: "P8-8.26-缺氧再试水"
+      - at: "03:32:04"
+        label: "P9-8.26-缺氧再试水"
+      - at: "04:00:45"
+        label: "P10-8.26-缺氧再试水"
+      - at: "04:29:26"
+        label: "P11-8.26-缺氧再试水"
     sources:
       - url: "https://www.acfun.cn/v/ac3942686"
         kind: replay
@@ -323,6 +929,25 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_28/1503924559.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.27-砒霜前聊10块钱的-弹幕版"
+      - at: "00:26:14"
+        label: "P2-8.27-心灵砒霜弹幕版"
+      - at: "00:52:33"
+        label: "P3-8.27-心灵砒霜弹幕版"
+      - at: "01:18:56"
+        label: "P4-8.27-心灵砒霜弹幕版"
+      - at: "01:45:16"
+        label: "P5-8.27-心灵砒霜弹幕版"
+      - at: "02:11:40"
+        label: "P6-8.27-心灵砒霜弹幕版"
+      - at: "02:37:57"
+        label: "P7-8.27-心灵砒霜弹幕版"
+      - at: "03:04:17"
+        label: "P8-8.27-心灵砒霜弹幕版"
+      - at: "03:30:36"
+        label: "P9-8.27-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3946059"
         kind: replay
@@ -340,6 +965,33 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_29/1504011185.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.29-游戏前聊10块钱的"
+      - at: "00:21:25"
+        label: "P2-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "00:45:08"
+        label: "P3-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "01:08:52"
+        label: "P4-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "01:32:37"
+        label: "P5-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "01:56:21"
+        label: "P6-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "02:20:04"
+        label: "P7-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "02:43:48"
+        label: "P8-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
+      - at: "03:07:32"
+        label: "P9-8.29-大周MC：七夕过后建筑大赛"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3948001"
         kind: replay
@@ -356,6 +1008,33 @@
     duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/content/2017_08_30/1504105773.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-8.30-游戏前聊10块钱的"
+      - at: "00:09:39"
+        label: "P2-8.30-每天一点太空化学"
+      - at: "00:18:58"
+        label: "P3-8.30-相扑人(Sumoman)"
+      - at: "00:46:29"
+        label: "P4-8.30-相扑人(Sumoman)"
+      - at: "01:14:02"
+        label: "P5-8.30-相扑人(Sumoman)"
+      - at: "01:41:35"
+        label: "P6-8.30-相扑人(Sumoman)"
+      - at: "02:04:33"
+        label: "P7-8.30-相扑人(Sumoman)"
+      - at: "02:27:33"
+        label: "P8-8.30-相扑人(Sumoman)"
+      - at: "02:50:31"
+        label: "P9-8.30-相扑人(Sumoman)"
+      - at: "03:13:31"
+        label: "P10-8.30-相扑人(Sumoman)"
+      - at: "03:36:29"
+        label: "P11-8.30-相扑人(Sumoman)"
+      - at: "03:59:29"
+        label: "P12-8.30-相扑人(Sumoman)"
+      - at: "04:22:28"
+        label: "P13-8.30-相扑人(Sumoman)"
     sources:
       - url: "https://www.acfun.cn/v/ac3950282"
         kind: replay

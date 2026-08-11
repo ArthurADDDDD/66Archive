@@ -6,7 +6,25 @@
     confidence: high
     duration_min: 367
     cover: "https://tx-free-imgs.acfun.cn/o_1eela63pq1m9216fhgmf1jc015ds0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:13:29"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "01:24:05"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "02:34:43"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:45:20"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "04:55:57"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17171064"
         kind: replay
@@ -23,6 +41,19 @@
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/o_1ef751ft675413mvabs19dl1k1f0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "逛吃逛吃"
+      - at: "00:18:05"
+        label: "逛吃逛吃"
+      - at: "00:45:33"
+        label: "逛吃逛吃"
+      - at: "01:43:00"
+        label: "逛吃逛吃"
+      - at: "01:48:10"
+        label: "逛吃逛吃"
+      - at: "02:14:20"
+        label: "逛吃逛吃"
     sources:
       - url: "https://www.acfun.cn/v/ac17291974"
         kind: replay
@@ -38,7 +69,19 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/o_1eet856269jr1sn5jsajgargv0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:51:18"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "02:01:51"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:12:23"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17227286"
         kind: replay
@@ -54,7 +97,21 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/o_1eet92m301driu811d4r1amf187c0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:08"
+        label: "Part2"
+      - at: "01:13:08"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "02:16:08"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:19:07"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17227141"
         kind: replay
@@ -70,7 +127,20 @@
     confidence: high
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/o_1eevkn6828pqgj41ok115vc1q7i0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "01:00:10"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "02:00:20"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:00:31"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17243005"
         kind: replay
@@ -87,6 +157,13 @@
     duration_min: 238
     cover: "https://tx-free-imgs.acfun.cn/o_1ef1vc17dki7ev5shj8b7g2b0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "66来聊聊"
+      - at: "01:19:19"
+        label: "66来聊聊"
+      - at: "02:38:40"
+        label: "66来聊聊"
     sources:
       - url: "https://www.acfun.cn/v/ac17260074"
         kind: replay
@@ -102,7 +179,20 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/o_1ef75baum1gdg14tqa2gi741dm0.jpeg?imageslim"
-    games: []
+    games: [paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "01:08:22"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "02:16:44"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "03:25:07"
+        label: "纸片马里奥"
+        game: paper-mario
     sources:
       - url: "https://www.acfun.cn/v/ac17293939"
         kind: replay
@@ -120,6 +210,15 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1efc6gqss3on1jajorhsb1bmn0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:01:11"
+        label: "心灵砒霜弹幕版"
+      - at: "02:02:25"
+        label: "心灵砒霜弹幕版"
+      - at: "03:03:39"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac17325712"
         kind: replay
@@ -135,7 +234,23 @@
     confidence: high
     duration_min: 259
     cover: "https://tx-free-imgs.acfun.cn/o_1efcecqrqr2919sk1452n313f70.jpeg?imageslim"
-    games: []
+    games: [fall-guys, paper-mario]
+    segments:
+      - at: "00:00:00"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "00:44:13"
+        label: "纸片马里奥"
+        game: paper-mario
+      - at: "01:28:28"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:25:21"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "03:22:16"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17326766"
         kind: replay
@@ -151,7 +266,20 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/o_1efeqag0agd31g2h1ipge0a2l80.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:30"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "01:12:03"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:05:35"
+        label: "Grounded"
+      - at: "02:55:44"
+        label: "Grounded"
     sources:
       - url: "https://www.acfun.cn/v/ac17343071"
         kind: replay
@@ -167,7 +295,16 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/o_1eg3ljnp31jl091qr8nufqh30.jpeg?imageslim"
-    games: []
+    games: [there-is-no-game]
+    segments:
+      - at: "00:00:00"
+        label: "Thereis no game"
+      - at: "01:11:42"
+        label: "Thereis no game"
+      - at: "02:23:27"
+        label: "Thereis no game"
+      - at: "03:35:10"
+        label: "Thereis no game"
     sources:
       - url: "https://www.acfun.cn/v/ac17497100"
         kind: replay
@@ -183,7 +320,22 @@
     confidence: high
     duration_min: 277
     cover: "https://tx-free-imgs.acfun.cn/o_1efhhp6g31puk1vskbgf8do1vvr0.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前佩奇10块钱的"
+      - at: "00:29:44"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "01:31:28"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:33:11"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "03:34:55"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17360848"
         kind: replay
@@ -199,7 +351,20 @@
     confidence: high
     duration_min: 224
     cover: "https://tx-free-imgs.acfun.cn/o_1efrptqalolkgh5ir0108tesj0.jpeg?imageslim"
-    games: []
+    games: [avengers]
+    segments:
+      - at: "00:00:00"
+        label: "Avengers"
+        game: avengers
+      - at: "00:17:29"
+        label: "Avengers"
+        game: avengers
+      - at: "01:26:26"
+        label: "Avengers"
+        game: avengers
+      - at: "02:35:24"
+        label: "Avengers"
+        game: avengers
     sources:
       - url: "https://www.acfun.cn/v/ac17437382"
         kind: replay
@@ -217,6 +382,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1efu7klv61otn188usgqnphpur0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:28:27"
+        label: "心灵砒霜弹幕版"
+      - at: "01:21:09"
+        label: "心灵砒霜弹幕版"
+      - at: "02:13:49"
+        label: "心灵砒霜弹幕版"
+      - at: "03:06:29"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac17455160"
         kind: replay
@@ -232,7 +408,19 @@
     confidence: high
     duration_min: 259
     cover: "https://tx-free-imgs.acfun.cn/o_1eg8frhut72bqvk1opmgfnfpa0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer]
+    segments:
+      - at: "00:00:00"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "01:04:48"
+        label: "Part2"
+      - at: "02:09:37"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "03:14:27"
+        label: "Spiritfarer"
+        game: spiritfarer
     sources:
       - url: "https://www.acfun.cn/v/ac17528113"
         kind: replay
@@ -248,7 +436,20 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/o_1eg8j2mi318vu1hc4p2r15mj1b2h0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer, pascals-wager]
+    segments:
+      - at: "00:00:00"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "00:59:44"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "01:59:31"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "02:59:16"
+        label: "帕斯卡契约"
+        game: pascals-wager
     sources:
       - url: "https://www.acfun.cn/v/ac17528771"
         kind: replay
@@ -264,7 +465,19 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/o_1egb6jl8i7sitb2m611me18bv0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:23:11"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "01:37:41"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "02:52:12"
+        label: "Spiritfarer"
+        game: spiritfarer
     sources:
       - url: "https://www.acfun.cn/v/ac17546172"
         kind: replay
@@ -282,6 +495,15 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1egg9aik11gjb1nnlrch1ssp7u00.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:23:39"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:32:49"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:41:56"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac17579755"
         kind: replay
@@ -297,7 +519,25 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/o_1eggeccvh14pt1m9m171g1gs9rir0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:35:52"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "01:17:57"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "02:00:00"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "03:00:00"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "04:00:02"
+        label: "Spiritfarer"
+        game: spiritfarer
     sources:
       - url: "https://www.acfun.cn/v/ac17580808"
         kind: replay
@@ -313,7 +553,25 @@
     confidence: high
     duration_min: 289
     cover: "https://tx-free-imgs.acfun.cn/o_1egiqbp18c7goiftng1g6mcpb0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:34"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "01:13:18"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "02:00:02"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "03:00:02"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "04:00:04"
+        label: "Spiritfarer"
+        game: spiritfarer
     sources:
       - url: "https://www.acfun.cn/v/ac17597578"
         kind: replay
@@ -329,7 +587,22 @@
     confidence: high
     duration_min: 348
     cover: "https://tx-free-imgs.acfun.cn/o_1eglh746b1t1f1vdc11ok1ognqdc0.jpeg?imageslim"
-    games: []
+    games: [spiritfarer]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:59:59"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "02:59:59"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "04:00:01"
+        label: "Spiritfarer"
+        game: spiritfarer
+      - at: "04:54:10"
+        label: "Spiritfarer"
+        game: spiritfarer
     sources:
       - url: "https://www.acfun.cn/v/ac17614575"
         kind: replay
@@ -361,7 +634,19 @@
     confidence: high
     duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/o_1egt7s16c33t1r3q1qi7tp71f6b0.jpeg?imageslim"
-    games: []
+    games: [inmost]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:19"
+        label: "Inmost"
+        game: inmost
+      - at: "01:38:23"
+        label: "Inmost"
+        game: inmost
+      - at: "02:51:27"
+        label: "Inmost"
+        game: inmost
     sources:
       - url: "https://www.acfun.cn/v/ac17669805"
         kind: replay
@@ -379,6 +664,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1eh2a06kitm01vag1b9j7id1vtb0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:23:59"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:22:27"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:20:56"
+        label: "心灵砒霜-弹幕版"
+      - at: "03:19:22"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac17701108"
         kind: replay
@@ -394,7 +690,13 @@
     confidence: high
     duration_min: 71
     cover: "https://tx-free-imgs.acfun.cn/o_1eh7cq87m6m61bqn1t8tm4dvok0.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:29"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17727788"
         kind: replay
@@ -410,7 +712,17 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/o_1eh2h0m1u177m9uab1ud71acj0.jpeg?imageslim"
-    games: []
+    games: [gaodian-zhanji]
+    segments:
+      - at: "00:00:00"
+        label: "高殿战记"
+        game: gaodian-zhanji
+      - at: "01:18:21"
+        label: "高殿战记"
+        game: gaodian-zhanji
+      - at: "02:36:45"
+        label: "高殿战记"
+        game: gaodian-zhanji
     sources:
       - url: "https://www.acfun.cn/v/ac17701429"
         kind: replay

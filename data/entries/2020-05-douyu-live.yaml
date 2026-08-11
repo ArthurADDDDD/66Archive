@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 341
     cover: "https://tx-free-imgs.acfun.cn/o_1e7iqa4c8102h7p11mu5uib1gat0.jpeg?imageslim"
-    games: []
+    games: [juicy-realm]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:25"
+        label: "恶果之地"
+      - at: "01:18:02"
+        label: "恶果之地"
+      - at: "02:23:44"
+        label: "恶果之地"
+      - at: "03:29:27"
+        label: "恶果之地"
+      - at: "04:35:09"
+        label: "恶果之地"
     sources:
       - url: "https://www.acfun.cn/v/ac15347812"
         kind: replay
@@ -23,6 +36,15 @@
     duration_min: 206
     cover: "https://tx-free-imgs.acfun.cn/o_1e7p5o72p1nfof09vqihp7fbf0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "周四休息，佩奇上"
+      - at: "00:51:30"
+        label: "周四休息，佩奇上"
+      - at: "01:43:04"
+        label: "周四休息，佩奇上"
+      - at: "02:34:38"
+        label: "周四休息，佩奇上"
     sources:
       - url: "https://www.acfun.cn/v/ac15404822"
         kind: replay
@@ -39,6 +61,15 @@
     duration_min: 269
     cover: "https://tx-free-imgs.acfun.cn/o_1e7t16e6uvf3go41bbggi5at30.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "十年"
+      - at: "01:07:08"
+        label: "十年"
+      - at: "02:14:18"
+        label: "十年"
+      - at: "03:21:34"
+        label: "十年"
     sources:
       - url: "https://www.acfun.cn/v/ac15435107"
         kind: replay
@@ -55,6 +86,11 @@
     duration_min: 83
     cover: "https://tx-free-imgs.acfun.cn/o_1e7vi9bn7qbsck61p6n1m67g000.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:20"
+        label: "冒险公社"
     sources:
       - url: "https://www.acfun.cn/v/ac15451024"
         kind: replay
@@ -70,7 +106,20 @@
     confidence: high
     duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/o_1e7vifi9n1pfi1rsdbi8gsv47j0.jpeg?imageslim"
-    games: []
+    games: [project-winter]
+    segments:
+      - at: "00:00:00"
+        label: "冬日计划"
+      - at: "00:50:31"
+        label: "冬日计划"
+      - at: "01:32:21"
+        label: "冬日计划"
+      - at: "02:14:14"
+        label: "冬日计划"
+      - at: "03:04:19"
+        label: "冬日计划"
+      - at: "03:54:30"
+        label: "冬日计划"
     sources:
       - url: "https://www.acfun.cn/v/ac15450853"
         kind: replay
@@ -86,7 +135,18 @@
     confidence: high
     duration_min: 293
     cover: "https://tx-free-imgs.acfun.cn/o_1e821ns9pfjgju7ksrnrddqq0.jpeg?imageslim"
-    games: []
+    games: [a-dance-of-fire-and-ice]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:06:50"
+        label: "冰与火之舞"
+      - at: "02:03:25"
+        label: "冰与火之舞"
+      - at: "03:00:03"
+        label: "冰与火之舞"
+      - at: "03:56:35"
+        label: "冰与火之舞"
     sources:
       - url: "https://www.acfun.cn/v/ac15470460"
         kind: replay
@@ -102,7 +162,18 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/o_1e84nj46f1tvh1euc1t69mgv1e8i0.jpeg?imageslim"
-    games: []
+    games: [a-dance-of-fire-and-ice]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:33:00"
+        label: "冰与火之舞"
+      - at: "01:30:42"
+        label: "冰与火之舞"
+      - at: "02:28:27"
+        label: "冰与火之舞"
+      - at: "03:26:11"
+        label: "冰与火之舞"
     sources:
       - url: "https://www.acfun.cn/v/ac15496084"
         kind: replay
@@ -119,6 +190,15 @@
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/o_1e84oc1bra0214v9aariuq9df0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "活着真好，美梦成真"
+      - at: "01:04:33"
+        label: "活着真好，美梦成真"
+      - at: "02:09:12"
+        label: "活着真好，美梦成真"
+      - at: "03:13:50"
+        label: "活着真好，美梦成真"
     sources:
       - url: "https://www.acfun.cn/v/ac15495211"
         kind: replay
@@ -134,7 +214,22 @@
     confidence: high
     duration_min: 239
     cover: "https://tx-free-imgs.acfun.cn/o_1e8cdsqeh1brrgbjsf891es30.jpeg?imageslim"
-    games: []
+    games: [hydroneer]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:07:35"
+        label: "Hydroneer"
+        game: hydroneer
+      - at: "01:05:34"
+        label: "Hydroneer"
+        game: hydroneer
+      - at: "02:03:31"
+        label: "Hydroneer"
+        game: hydroneer
+      - at: "03:01:27"
+        label: "Hydroneer"
+        game: hydroneer
     sources:
       - url: "https://www.acfun.cn/v/ac15555303"
         kind: replay
@@ -150,7 +245,17 @@
     confidence: high
     duration_min: 178
     cover: "https://tx-free-imgs.acfun.cn/o_1e8f09aoffhp4g87511p2l1o2g0.jpeg?imageslim"
-    games: []
+    games: [hydroneer]
+    segments:
+      - at: "00:00:00"
+        label: "Hydroneer"
+        game: hydroneer
+      - at: "00:59:19"
+        label: "Hydroneer"
+        game: hydroneer
+      - at: "01:58:38"
+        label: "Hydroneer"
+        game: hydroneer
     sources:
       - url: "https://www.acfun.cn/v/ac15574903"
         kind: replay
@@ -168,6 +273,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1e8jvd4dk13f11htj1922j2u1rmp0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "久违的心灵砒霜-弹幕版"
+      - at: "00:54:42"
+        label: "久违的心灵砒霜-弹幕版"
+      - at: "01:49:31"
+        label: "久违的心灵砒霜-弹幕版"
+      - at: "02:44:19"
+        label: "久违的心灵砒霜-弹幕版"
+      - at: "03:39:06"
+        label: "久违的心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac15617457"
         kind: replay
@@ -183,7 +299,20 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/o_1e8otdo4c1hja1svohi81k491uoh0.jpeg?imageslim"
-    games: []
+    games: [cloudpunk]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:50:26"
+        label: "游戏前聊10块钱的"
+      - at: "01:40:58"
+        label: "云城朋克"
+      - at: "02:27:34"
+        label: "云城朋克"
+      - at: "03:14:07"
+        label: "云城朋克"
+      - at: "04:00:38"
+        label: "云城朋克"
     sources:
       - url: "https://www.acfun.cn/v/ac15658758"
         kind: replay
@@ -200,6 +329,15 @@
     duration_min: 194
     cover: "https://tx-free-imgs.acfun.cn/o_1e8rm1r2m1vsg1vps8ul1l2m11jr0.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "女流网课时间，敲黑板，认真听"
+      - at: "01:00:01"
+        label: "女流网课时间，敲黑板，认真听"
+      - at: "02:00:03"
+        label: "女流网课时间，敲黑板，认真听"
+      - at: "02:36:50"
+        label: "女流网课时间，敲黑板，认真听"
     sources:
       - url: "https://www.acfun.cn/v/ac15681795"
         kind: replay
@@ -215,7 +353,19 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/o_1e8udde021qgc2le1ovpvoa1ulj0.jpeg?imageslim"
-    games: []
+    games: [tsioque]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:59:50"
+        label: "Tsioque"
+        game: tsioque
+      - at: "01:55:20"
+        label: "Tsioque"
+        game: tsioque
+      - at: "02:50:47"
+        label: "Tsioque"
+        game: tsioque
     sources:
       - url: "https://www.acfun.cn/v/ac15703417"
         kind: replay
@@ -233,6 +383,15 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1e95kt8hj1196h661efc1cg1uev0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:01:28"
+        label: "心灵砒霜弹幕版"
+      - at: "02:03:01"
+        label: "心灵砒霜弹幕版"
+      - at: "03:04:31"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac15758557"
         kind: replay
@@ -248,7 +407,16 @@
     confidence: high
     duration_min: 219
     cover: "https://tx-free-imgs.acfun.cn/o_1e9dmlvhg1l391pi61odkgre1bfr0.jpeg?imageslim"
-    games: []
+    games: [rhythm-fighter]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:03:00"
+        label: "节奏快打"
+      - at: "02:00:06"
+        label: "节奏快打"
+      - at: "02:49:23"
+        label: "节奏快打"
     sources:
       - url: "https://www.acfun.cn/v/ac15833367"
         kind: replay
@@ -264,7 +432,20 @@
     confidence: high
     duration_min: 251
     cover: "https://tx-free-imgs.acfun.cn/o_1e9lhs7aa1bj01aov62q17dgfcl0.jpeg?imageslim"
-    games: []
+    games: [poly-bridge]
+    segments:
+      - at: "00:00:00"
+        label: "P1--2020.5.30-Poly Bridge"
+        game: poly-bridge
+      - at: "01:02:36"
+        label: "P2--2020.5.30-Poly Bridge"
+        game: poly-bridge
+      - at: "02:05:16"
+        label: "P3--2020.5.30-Poly Bridge"
+        game: poly-bridge
+      - at: "03:07:57"
+        label: "P4--2020.5.30-Poly Bridge"
+        game: poly-bridge
     sources:
       - url: "https://www.acfun.cn/v/ac15895043"
         kind: replay
@@ -282,6 +463,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1e9o03ub4oa2hams8gqqg8640.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:35:30"
+        label: "心灵砒霜"
+      - at: "01:35:54"
+        label: "心灵砒霜"
+      - at: "02:36:16"
+        label: "心灵砒霜"
+      - at: "03:36:44"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac15918867"
         kind: replay
