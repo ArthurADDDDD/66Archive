@@ -1,18 +1,16 @@
-# 采集任务 #003 · 2018-09 斗鱼期直播场次（源：女流录像小屋 A 站频道 u/4397992）
-# 生成自 data/catalogs/acfun-record-house-sessions.csv（2026-08-10 全量枚举 2672 条投稿去重后场次，共 20 场）
-# date 为直播日（标题提取）；title 即游戏名或栏目名；sources 为 A 站录播链接（B 站同步频道 bili-fan-record-house 未逐条反查 BV 号）
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；时长未知；status 留空由 check-links 回写
-
 - id: 2018-09-05-live-01
   type: live
   date: "2018-09-05"
   title: "Two Point Hospital"
   platform: douyu
   confidence: high
+  duration_min: 311
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536193115.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4567379"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-06-live-01
@@ -21,10 +19,13 @@
   title: "Data 2"
   platform: douyu
   confidence: high
+  duration_min: 257
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536235361.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4569103"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-08-live-01
@@ -33,10 +34,13 @@
   title: "Donut County"
   platform: douyu
   confidence: high
+  duration_min: 275
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_08/1536409742.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4572853"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-09-09-live-01
@@ -45,11 +49,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 271
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_10/1536537933.jpg?imageslim"
   games: []
   tags: [心灵砒霜, 弹幕版]
   sources:
     - url: "https://www.acfun.cn/v/ac4574749"
       kind: replay
+      parts: 4
   contributed_by: data-agent
 
 - id: 2018-09-11-live-01
@@ -58,10 +65,13 @@
   title: "过山车之星"
   platform: douyu
   confidence: high
+  duration_min: 307
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_11/1536665200.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4578858"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-12-live-01
@@ -70,10 +80,13 @@
   title: "极限巅峰(Steep)"
   platform: douyu
   confidence: high
+  duration_min: 298
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_12/1536756016.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4580885"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-13-live-01
@@ -82,10 +95,13 @@
   title: "Strange Brigade"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_13/1536837882.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4583069"
       kind: replay
+      parts: 5
   contributed_by: data-agent
 
 - id: 2018-09-14-live-01
@@ -94,10 +110,13 @@
   title: "Strange Brigade"
   platform: douyu
   confidence: high
+  duration_min: 308
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_14/1536936793.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4585388"
       kind: replay
+      parts: 6
   contributed_by: data-agent
 
 - id: 2018-09-15-live-01
@@ -106,10 +125,13 @@
   title: "Strange Brigade"
   platform: douyu
   confidence: high
+  duration_min: 155
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_15/1537013621.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4586843"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-16-live-02
@@ -118,11 +140,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 251
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537143832.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4588929"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-17-live-01
@@ -131,10 +156,13 @@
   title: "Witch It &39天到火星"
   platform: douyu
   confidence: high
+  duration_min: 263
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537186010.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4590602"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-18-live-01
@@ -143,10 +171,13 @@
   title: "武汉校招宣讲会之学霸驾到"
   platform: douyu
   confidence: high
+  duration_min: 15
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538181206.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4612888"
       kind: replay
+      parts: 1
   contributed_by: data-agent
 
 - id: 2018-09-21-live-01
@@ -155,10 +186,13 @@
   title: "Rusty Lake Paradox（《锈湖》新作《悖论》）"
   platform: douyu
   confidence: high
+  duration_min: 258
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_21/1537529735.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4599258"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-22-live-01
@@ -167,10 +201,13 @@
   title: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
   platform: douyu
   confidence: high
+  duration_min: 290
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_22/1537617579.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4601198"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-23-live-01
@@ -179,11 +216,14 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 204
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_24/1537754100.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4603370"
       kind: replay
+      parts: 3
   contributed_by: data-agent
 
 - id: 2018-09-26-live-01
@@ -192,10 +232,13 @@
   title: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
   platform: douyu
   confidence: high
+  duration_min: 230
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_26/1537968116.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4608456"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-27-live-01
@@ -204,10 +247,13 @@
   title: "恐龙公园Parkasaurus"
   platform: douyu
   confidence: high
+  duration_min: 147
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_27/1538048840.jpg?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4610364"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-28-live-01
@@ -216,10 +262,13 @@
   title: "中国式家长"
   platform: douyu
   confidence: high
+  duration_min: 350
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_28/1538141473.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4612623"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-29-live-01
@@ -228,10 +277,13 @@
   title: "中国式家长"
   platform: douyu
   confidence: high
+  duration_min: 311
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538230725.JPG?imageslim"
   games: []
   sources:
     - url: "https://www.acfun.cn/v/ac4614712"
       kind: replay
+      parts: 2
   contributed_by: data-agent
 
 - id: 2018-09-30-live-01
@@ -240,9 +292,12 @@
   title: "心灵砒霜"
   platform: douyu
   confidence: high
+  duration_min: 202
+  cover: "https://tx-free-imgs.acfun.cn/content/2018_9_01/1538357203.jpg?imageslim"
   games: []
   tags: [心灵砒霜]
   sources:
     - url: "https://www.acfun.cn/v/ac4617033"
       kind: replay
+      parts: 3
   contributed_by: data-agent
