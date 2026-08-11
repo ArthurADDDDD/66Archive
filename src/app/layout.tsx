@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: '女流66编年史 · 作品存档',
   description:
     '2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。',
+  icons: {
+    icon: '/images/avatars/v1_2015.jpg',
+    apple: '/images/avatars/v1_2015.jpg',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
