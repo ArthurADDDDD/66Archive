@@ -57,7 +57,8 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/c00b676b757da02ca7dbd1f4443bc5f02b554b10.jpg"
     confidence: medium
-    games: []
+    games:
+      - farlight-84
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1SZt2zTEGM"
