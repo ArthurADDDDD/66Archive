@@ -1,303 +1,323 @@
-- id: 2017-11-04-live-01
-  type: live
-  date: "2017-11-04"
-  title: "小猫钓鱼"
-  platform: douyu
-  confidence: high
-  duration_min: 294
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_04/1509804296.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4066447"
-      kind: replay
-      parts: 12
-  contributed_by: data-agent
+  - id: 2017-11-04-live-01
+    type: live
+    date: "2017-11-04"
+    title: "小猫钓鱼"
+    platform: douyu
+    confidence: high
+    duration_min: 294
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_04/1509804296.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4066447"
+        kind: replay
+        parts: 12
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-05-live-01
-  type: live
-  date: "2017-11-05"
-  title: "Castle Crusher 城堡毁灭者"
-  platform: douyu
-  confidence: high
-  duration_min: 121
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_05/1509892266.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4067788"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2017-11-05-live-01
+    type: live
+    date: "2017-11-05"
+    title: "Castle Crusher 城堡毁灭者"
+    platform: douyu
+    confidence: high
+    duration_min: 121
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_05/1509892266.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4067788"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-05-live-02
-  type: live
-  date: "2017-11-05"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 213
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509957195.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4069473"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2017-11-05-live-02
+    type: live
+    date: "2017-11-05"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 213
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509957195.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4069473"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-06-live-01
-  type: live
-  date: "2017-11-06"
-  title: "66约冷冷双排吃鸡"
-  platform: douyu
-  confidence: high
-  duration_min: 242
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509968922.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4069742"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2017-11-06-live-01
+    type: live
+    date: "2017-11-06"
+    title: "66约冷冷双排吃鸡"
+    platform: douyu
+    confidence: high
+    duration_min: 242
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_06/1509968922.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4069742"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-07-live-01
-  type: live
-  date: "2017-11-07"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_07/1510057926.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4072119"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2017-11-07-live-01
+    type: live
+    date: "2017-11-07"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_07/1510057926.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4072119"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-10-live-01
-  type: live
-  date: "2017-11-10"
-  title: "绝地求生& 超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 255
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_10/1510325253.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4078341"
-      kind: replay
-      parts: 11
-  contributed_by: data-agent
+  - id: 2017-11-10-live-01
+    type: live
+    date: "2017-11-10"
+    title: "绝地求生& 超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_10/1510325253.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4078341"
+        kind: replay
+        parts: 11
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-11-live-01
-  type: live
-  date: "2017-11-11"
-  title: "绝地求生&超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 305
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_11/1510403586.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4079503"
-      kind: replay
-      parts: 11
-  contributed_by: data-agent
+  - id: 2017-11-11-live-01
+    type: live
+    date: "2017-11-11"
+    title: "绝地求生&超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 305
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_11/1510403586.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4079503"
+        kind: replay
+        parts: 11
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-12-live-01
-  type: live
-  date: "2017-11-12"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 254
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510533134.jpg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4080881"
-      kind: replay
-      parts: 11
-  contributed_by: data-agent
+  - id: 2017-11-12-live-01
+    type: live
+    date: "2017-11-12"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510533134.jpg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4080881"
+        kind: replay
+        parts: 11
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-13-live-01
-  type: live
-  date: "2017-11-13"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 270
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510574079.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4082621"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2017-11-13-live-01
+    type: live
+    date: "2017-11-13"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_13/1510574079.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4082621"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-14-live-01
-  type: live
-  date: "2017-11-14"
-  title: "和班尼特福迪一起攻克难关"
-  platform: douyu
-  confidence: high
-  duration_min: 275
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_14/1510664434.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4084862"
-      kind: replay
-      parts: 12
-  contributed_by: data-agent
+  - id: 2017-11-14-live-01
+    type: live
+    date: "2017-11-14"
+    title: "和班尼特福迪一起攻克难关"
+    platform: douyu
+    confidence: high
+    duration_min: 275
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_14/1510664434.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4084862"
+        kind: replay
+        parts: 12
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-15-live-01
-  type: live
-  date: "2017-11-15"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 283
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_15/1510755479.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4086833"
-      kind: replay
-      parts: 12
-  contributed_by: data-agent
+  - id: 2017-11-15-live-01
+    type: live
+    date: "2017-11-15"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 283
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_15/1510755479.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4086833"
+        kind: replay
+        parts: 12
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-17-live-01
-  type: live
-  date: "2017-11-17"
-  title: "和班尼特福迪一起攻克难关&超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 235
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_17/1510921212.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4091308"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2017-11-17-live-01
+    type: live
+    date: "2017-11-17"
+    title: "和班尼特福迪一起攻克难关&超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_17/1510921212.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4091308"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-18-live-01
-  type: live
-  date: "2017-11-18"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 383
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_18/1511018447.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4093091"
-      kind: replay
-      parts: 16
-  contributed_by: data-agent
+  - id: 2017-11-18-live-01
+    type: live
+    date: "2017-11-18"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 383
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_18/1511018447.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4093091"
+        kind: replay
+        parts: 16
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-19-live-01
-  type: live
-  date: "2017-11-19"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 218
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_20/1511139166.png?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4094419"
-      kind: replay
-      parts: 8
-  contributed_by: data-agent
+  - id: 2017-11-19-live-01
+    type: live
+    date: "2017-11-19"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 218
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_20/1511139166.png?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4094419"
+        kind: replay
+        parts: 8
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-21-live-01
-  type: live
-  date: "2017-11-21"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 323
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_21/1511271440.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4098179"
-      kind: replay
-      parts: 14
-  contributed_by: data-agent
+  - id: 2017-11-21-live-01
+    type: live
+    date: "2017-11-21"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 323
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_21/1511271440.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4098179"
+        kind: replay
+        parts: 14
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-22-live-01
-  type: live
-  date: "2017-11-22"
-  title: "兔宝宝历险记&超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 352
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_22/1511358141.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4100187"
-      kind: replay
-      parts: 14
-  contributed_by: data-agent
+  - id: 2017-11-22-live-01
+    type: live
+    date: "2017-11-22"
+    title: "兔宝宝历险记&超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 352
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_22/1511358141.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4100187"
+        kind: replay
+        parts: 14
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-23-live-01
-  type: live
-  date: "2017-11-23"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 175
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_23/1511443737.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4102271"
-      kind: replay
-      parts: 8
-  contributed_by: data-agent
+  - id: 2017-11-23-live-01
+    type: live
+    date: "2017-11-23"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 175
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_23/1511443737.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4102271"
+        kind: replay
+        parts: 8
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-24-live-01
-  type: live
-  date: "2017-11-24"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 410
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867522.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4107292"
-      kind: replay
-      parts: 15
-  contributed_by: data-agent
+  - id: 2017-11-24-live-01
+    type: live
+    date: "2017-11-24"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 410
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867522.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4107292"
+        kind: replay
+        parts: 15
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-25-live-01
-  type: live
-  date: "2017-11-25"
-  title: "超级马里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 321
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867891.JPG?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4107286"
-      kind: replay
-      parts: 12
-  contributed_by: data-agent
+  - id: 2017-11-25-live-01
+    type: live
+    date: "2017-11-25"
+    title: "超级马里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 321
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511867891.JPG?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4107286"
+        kind: replay
+        parts: 12
+        status: alive
+    contributed_by: data-agent
 
-- id: 2017-11-26-live-01
-  type: live
-  date: "2017-11-26"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 234
-  cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511870023.png?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac4107290"
-      kind: replay
-      parts: 10
-  contributed_by: data-agent
+  - id: 2017-11-26-live-01
+    type: live
+    date: "2017-11-26"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 234
+    cover: "https://tx-free-imgs.acfun.cn/content/2017_10_28/1511870023.png?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4107290"
+        kind: replay
+        parts: 10
+        status: alive
+    contributed_by: data-agent

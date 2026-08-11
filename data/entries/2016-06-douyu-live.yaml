@@ -1,134 +1,143 @@
-- id: 2016-06-01-live-01
-  type: live
-  date: "2016-06-01"
-  title: "9小时9个人9之门"
-  platform: douyu
-  confidence: high
-  duration_min: 54
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783664.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2785333"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-06-01-live-01
+    type: live
+    date: "2016-06-01"
+    title: "9小时9个人9之门"
+    platform: douyu
+    confidence: high
+    duration_min: 54
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783664.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2785333"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-01-live-02
-  type: live
-  date: "2016-06-01"
-  title: "逆袭"
-  platform: douyu
-  confidence: high
-  duration_min: 93
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783240.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2785322"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-06-01-live-02
+    type: live
+    date: "2016-06-01"
+    title: "逆袭"
+    platform: douyu
+    confidence: high
+    duration_min: 93
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783240.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2785322"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-02-live-01
-  type: live
-  date: "2016-06-02"
-  title: "Little Inferno"
-  platform: douyu
-  confidence: high
-  duration_min: 29
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464873196.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2788082"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-06-02-live-01
+    type: live
+    date: "2016-06-02"
+    title: "Little Inferno"
+    platform: douyu
+    confidence: high
+    duration_min: 29
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464873196.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2788082"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-02-live-02
-  type: live
-  date: "2016-06-02"
-  title: "Once Upon A Time"
-  platform: douyu
-  confidence: high
-  duration_min: 58
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464870856.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2787997"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-06-02-live-02
+    type: live
+    date: "2016-06-02"
+    title: "Once Upon A Time"
+    platform: douyu
+    confidence: high
+    duration_min: 58
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464870856.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2787997"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-02-live-03
-  type: live
-  date: "2016-06-02"
-  title: "怒海求生"
-  platform: douyu
-  confidence: high
-  duration_min: 122
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464868220.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2787920"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-06-02-live-03
+    type: live
+    date: "2016-06-02"
+    title: "怒海求生"
+    platform: douyu
+    confidence: high
+    duration_min: 122
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464868220.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2787920"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-03-live-01
-  type: live
-  date: "2016-06-03"
-  title: "小小地狱之火(Little Inferno)"
-  platform: douyu
-  confidence: high
-  duration_min: 236
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_03/1464968148.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2791321"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2016-06-03-live-01
+    type: live
+    date: "2016-06-03"
+    title: "小小地狱之火(Little Inferno)"
+    platform: douyu
+    confidence: high
+    duration_min: 236
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_03/1464968148.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2791321"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-04-live-01
-  type: live
-  date: "2016-06-04"
-  title: "几何冲刺"
-  platform: douyu
-  confidence: high
-  duration_min: 85
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465036729.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2792700"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-06-04-live-01
+    type: live
+    date: "2016-06-04"
+    title: "几何冲刺"
+    platform: douyu
+    confidence: high
+    duration_min: 85
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465036729.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2792700"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-04-live-02
-  type: live
-  date: "2016-06-04"
-  title: "盐与避难所"
-  platform: douyu
-  confidence: high
-  duration_min: 159
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465052401.jpg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2793187"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2016-06-04-live-02
+    type: live
+    date: "2016-06-04"
+    title: "盐与避难所"
+    platform: douyu
+    confidence: high
+    duration_min: 159
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465052401.jpg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2793187"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2016-06-05-live-01
-  type: live
-  date: "2016-06-05"
-  title: "5日"
-  platform: douyu
-  confidence: high
-  duration_min: 132
-  cover: "https://tx-free-imgs.acfun.cn/content/2016_06_05/1465143423.gif?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac2795451"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2016-06-05-live-01
+    type: live
+    date: "2016-06-05"
+    title: "5日"
+    platform: douyu
+    confidence: high
+    duration_min: 132
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_05/1465143423.gif?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac2795451"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

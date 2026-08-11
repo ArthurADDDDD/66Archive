@@ -1,123 +1,131 @@
-- id: 2020-01-01-live-01
-  type: live
-  date: "2020-01-01"
-  title: "新年快乐"
-  platform: douyu
-  confidence: high
-  duration_min: 65
-  cover: "https://tx-free-imgs.acfun.cn/o_1dtf8e5e1vnu16g9119i1h81uik0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12216546"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2020-01-01-live-01
+    type: live
+    date: "2020-01-01"
+    title: "新年快乐"
+    platform: douyu
+    confidence: high
+    duration_min: 65
+    cover: "https://tx-free-imgs.acfun.cn/o_1dtf8e5e1vnu16g9119i1h81uik0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12216546"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-01-live-02
-  type: live
-  date: "2020-01-01"
-  title: "莎木3"
-  platform: douyu
-  confidence: high
-  duration_min: 247
-  cover: "https://tx-free-imgs.acfun.cn/o_1dtj7oojl1h6d105v1he81r3i1j350.jpeg?imageslim"
-  games: []
-  note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（28分），P2~6 为《莎木3》主体内容（次日 01-02/01-03 亦为莎木3），标题按主游戏命名。"
-  sources:
-    - url: "https://www.acfun.cn/v/ac12228285"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2020-01-01-live-02
+    type: live
+    date: "2020-01-01"
+    title: "莎木3"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    cover: "https://tx-free-imgs.acfun.cn/o_1dtj7oojl1h6d105v1he81r3i1j350.jpeg?imageslim"
+    games: []
+    note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（28分），P2~6 为《莎木3》主体内容（次日 01-02/01-03 亦为莎木3），标题按主游戏命名。"
+    sources:
+      - url: "https://www.acfun.cn/v/ac12228285"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-02-live-01
-  type: live
-  date: "2020-01-02"
-  title: "莎木3"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/o_1dtj58ggtv3p3hq8ee78sc2i0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12228063"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-01-02-live-01
+    type: live
+    date: "2020-01-02"
+    title: "莎木3"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/o_1dtj58ggtv3p3hq8ee78sc2i0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12228063"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-03-live-01
-  type: live
-  date: "2020-01-03"
-  title: "莎木3"
-  platform: douyu
-  confidence: high
-  duration_min: 293
-  cover: "https://tx-free-imgs.acfun.cn/o_1dtlr207b1kn9kmnr11c5p1hvk0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12235973"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2020-01-03-live-01
+    type: live
+    date: "2020-01-03"
+    title: "莎木3"
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    cover: "https://tx-free-imgs.acfun.cn/o_1dtlr207b1kn9kmnr11c5p1hvk0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12235973"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-05-live-01
-  type: live
-  date: "2020-01-05"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/o_1dttjfvju160g1nbp18221rt1pgn0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12260389"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2020-01-05-live-01
+    type: live
+    date: "2020-01-05"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/o_1dttjfvju160g1nbp18221rt1pgn0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12260389"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-12-live-01
-  type: live
-  date: "2020-01-12"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 253
-  cover: "https://tx-free-imgs.acfun.cn/o_1duflv6b11e2o1vf71ndn1esg10lr0.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12384734"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-01-12-live-01
+    type: live
+    date: "2020-01-12"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 253
+    cover: "https://tx-free-imgs.acfun.cn/o_1duflv6b11e2o1vf71ndn1esg10lr0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12384734"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-16-live-01
-  type: live
-  date: "2020-01-16"
-  title: "时光之帽"
-  platform: douyu
-  confidence: high
-  duration_min: 281
-  cover: "https://tx-free-imgs.acfun.cn/o_1dupsbhob1gb41sob1dfup3uim70.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac12451122"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-01-16-live-01
+    type: live
+    date: "2020-01-16"
+    title: "时光之帽"
+    platform: douyu
+    confidence: high
+    duration_min: 281
+    cover: "https://tx-free-imgs.acfun.cn/o_1dupsbhob1gb41sob1dfup3uim70.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac12451122"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2020-01-19-live-01
-  type: live
-  date: "2020-01-19"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 255
-  cover: "https://tx-free-imgs.acfun.cn/o_1dv5b012d1vjq1u7vr0a184e1l600.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac12570465"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2020-01-19-live-01
+    type: live
+    date: "2020-01-19"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    cover: "https://tx-free-imgs.acfun.cn/o_1dv5b012d1vjq1u7vr0a184e1l600.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac12570465"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent

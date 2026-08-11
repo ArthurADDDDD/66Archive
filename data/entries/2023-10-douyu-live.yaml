@@ -1,510 +1,544 @@
-- id: 2023-10-01-live-01
-  type: live
-  date: "2023-10-01"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 116
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb8517ed4f9b454f9dadb9ed6ff73323.jpeg?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac42555168"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-01-live-01
+    type: live
+    date: "2023-10-01"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 116
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb8517ed4f9b454f9dadb9ed6ff73323.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac42555168"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-02-live-01
-  type: live
-  date: "2023-10-02"
-  title: "Tricky Towers"
-  platform: douyu
-  confidence: high
-  duration_min: 203
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3dee78aed0042158262c6cea4564fbf.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42551996"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-02-live-01
+    type: live
+    date: "2023-10-02"
+    title: "Tricky Towers"
+    platform: douyu
+    confidence: high
+    duration_min: 203
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3dee78aed0042158262c6cea4564fbf.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42551996"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-03-live-01
-  type: live
-  date: "2023-10-03"
-  title: "巴别塔圣歌"
-  platform: douyu
-  confidence: high
-  duration_min: 181
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d2f531f22f724654a320949d51890695.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42552685"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-03-live-01
+    type: live
+    date: "2023-10-03"
+    title: "巴别塔圣歌"
+    platform: douyu
+    confidence: high
+    duration_min: 181
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d2f531f22f724654a320949d51890695.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42552685"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-03-live-02
-  type: live
-  date: "2023-10-03"
-  title: "糖豆人"
-  platform: douyu
-  confidence: high
-  duration_min: 168
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2530e21957974de7ba46692c97a95833.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42552801"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-03-live-02
+    type: live
+    date: "2023-10-03"
+    title: "糖豆人"
+    platform: douyu
+    confidence: high
+    duration_min: 168
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2530e21957974de7ba46692c97a95833.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42552801"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-04-live-01
-  type: live
-  date: "2023-10-04"
-  title: "巴别塔圣歌"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_32d6b91cbf294dfead0756e3d6998ec3.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42555162"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-04-live-01
+    type: live
+    date: "2023-10-04"
+    title: "巴别塔圣歌"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_32d6b91cbf294dfead0756e3d6998ec3.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42555162"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-05-live-01
-  type: live
-  date: "2023-10-05"
-  title: "刺客信条 幻景"
-  platform: douyu
-  confidence: high
-  duration_min: 315
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53266cda1f704967af7d99083636acf8.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42569725"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-05-live-01
+    type: live
+    date: "2023-10-05"
+    title: "刺客信条 幻景"
+    platform: douyu
+    confidence: high
+    duration_min: 315
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53266cda1f704967af7d99083636acf8.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42569725"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-06-live-01
-  type: live
-  date: "2023-10-06"
-  title: "刺客信条 幻景"
-  platform: douyu
-  confidence: high
-  duration_min: 149
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fad6c10378b4c7290fb6fee78e85a16.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42577685"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-06-live-01
+    type: live
+    date: "2023-10-06"
+    title: "刺客信条 幻景"
+    platform: douyu
+    confidence: high
+    duration_min: 149
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fad6c10378b4c7290fb6fee78e85a16.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42577685"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-07-live-01
-  type: live
-  date: "2023-10-07"
-  title: "刺客信条 幻景"
-  platform: douyu
-  confidence: high
-  duration_min: 180
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3f293307aca941edaaf920da0c2a8d36.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42579900"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-07-live-01
+    type: live
+    date: "2023-10-07"
+    title: "刺客信条 幻景"
+    platform: douyu
+    confidence: high
+    duration_min: 180
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3f293307aca941edaaf920da0c2a8d36.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42579900"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-08-live-01
-  type: live
-  date: "2023-10-08"
-  title: "刺客信条 幻景"
-  platform: douyu
-  confidence: high
-  duration_min: 424
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df82bb2ec09f438c975315f79c8f57ad.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42617191"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2023-10-08-live-01
+    type: live
+    date: "2023-10-08"
+    title: "刺客信条 幻景"
+    platform: douyu
+    confidence: high
+    duration_min: 424
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df82bb2ec09f438c975315f79c8f57ad.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42617191"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-10-live-01
-  type: live
-  date: "2023-10-10"
-  title: "Goose Goose Duck"
-  platform: douyu
-  confidence: high
-  duration_min: 188
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1ed61de65a9a4e64974ffe5f81c779a7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42618525"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-10-live-01
+    type: live
+    date: "2023-10-10"
+    title: "Goose Goose Duck"
+    platform: douyu
+    confidence: high
+    duration_min: 188
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1ed61de65a9a4e64974ffe5f81c779a7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42618525"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-10-live-02
-  type: live
-  date: "2023-10-10"
-  title: "糖豆人"
-  platform: douyu
-  confidence: high
-  duration_min: 39
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ba7a89892b4f4b509f308207fb0d21e5.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42617284"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-10-live-02
+    type: live
+    date: "2023-10-10"
+    title: "糖豆人"
+    platform: douyu
+    confidence: high
+    duration_min: 39
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ba7a89892b4f4b509f308207fb0d21e5.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42617284"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-11-live-01
-  type: live
-  date: "2023-10-11"
-  title: "女鬼桥2"
-  platform: douyu
-  confidence: high
-  duration_min: 377
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bee6f7e5748849a0af30d195167e70c7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42625300"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-11-live-01
+    type: live
+    date: "2023-10-11"
+    title: "女鬼桥2"
+    platform: douyu
+    confidence: high
+    duration_min: 377
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bee6f7e5748849a0af30d195167e70c7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42625300"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-12-live-01
-  type: live
-  date: "2023-10-12"
-  title: "Headbangers"
-  platform: douyu
-  confidence: high
-  duration_min: 159
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1174f130f115423fbdc30cdb331c871f.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42637720"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-12-live-01
+    type: live
+    date: "2023-10-12"
+    title: "Headbangers"
+    platform: douyu
+    confidence: high
+    duration_min: 159
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1174f130f115423fbdc30cdb331c871f.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42637720"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-13-live-01
-  type: live
-  date: "2023-10-13"
-  title: "堕落之主"
-  platform: douyu
-  confidence: high
-  duration_min: 230
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5463a1c6dd7a4d5783f34d417b390489.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42654617"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-13-live-01
+    type: live
+    date: "2023-10-13"
+    title: "堕落之主"
+    platform: douyu
+    confidence: high
+    duration_min: 230
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5463a1c6dd7a4d5783f34d417b390489.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42654617"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-14-live-01
-  type: live
-  date: "2023-10-14"
-  title: "播堕落之主"
-  platform: douyu
-  confidence: high
-  duration_min: 213
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2f37627290444ce78cd376529415078e.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42655208"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-14-live-01
+    type: live
+    date: "2023-10-14"
+    title: "播堕落之主"
+    platform: douyu
+    confidence: high
+    duration_min: 213
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2f37627290444ce78cd376529415078e.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42655208"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-17-live-01
-  type: live
-  date: "2023-10-17"
-  title: "堕落之主"
-  platform: douyu
-  confidence: high
-  duration_min: 701
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d604d149b2a54de6aed85a4559b9a2d8.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42693688"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-17-live-01
+    type: live
+    date: "2023-10-17"
+    title: "堕落之主"
+    platform: douyu
+    confidence: high
+    duration_min: 701
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d604d149b2a54de6aed85a4559b9a2d8.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42693688"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-17-live-02
-  type: live
-  date: "2023-10-17"
-  title: "我被美女包围了"
-  platform: douyu
-  confidence: high
-  duration_min: 224
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f25dc96438894c3ead20d4cc9029d0a6.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42692641"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-17-live-02
+    type: live
+    date: "2023-10-17"
+    title: "我被美女包围了"
+    platform: douyu
+    confidence: high
+    duration_min: 224
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f25dc96438894c3ead20d4cc9029d0a6.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42692641"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-18-live-01
-  type: live
-  date: "2023-10-18"
-  title: "堕落之主"
-  platform: douyu
-  confidence: high
-  duration_min: 231
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0b055690b2414a75837584e435ce88ca.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42692650"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-18-live-01
+    type: live
+    date: "2023-10-18"
+    title: "堕落之主"
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0b055690b2414a75837584e435ce88ca.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42692650"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-19-live-01
-  type: live
-  date: "2023-10-19"
-  title: "佩奇6"
-  platform: douyu
-  confidence: high
-  duration_min: 272
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bf2a90a3674849009ce0a964192f05e0.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42694020"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-19-live-01
+    type: live
+    date: "2023-10-19"
+    title: "佩奇6"
+    platform: douyu
+    confidence: high
+    duration_min: 272
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bf2a90a3674849009ce0a964192f05e0.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42694020"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-20-live-01
-  type: live
-  date: "2023-10-20"
-  title: "超级马里奥兄弟 惊奇"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_816cd8c1df1e4efca6f401edc1d2aa6e.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42703217"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-20-live-01
+    type: live
+    date: "2023-10-20"
+    title: "超级马里奥兄弟 惊奇"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_816cd8c1df1e4efca6f401edc1d2aa6e.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42703217"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-21-live-01
-  type: live
-  date: "2023-10-21"
-  title: "蜘蛛侠2"
-  platform: douyu
-  confidence: high
-  duration_min: 265
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_75053c86eab4433bb8218319a056267c.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42719418"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-21-live-01
+    type: live
+    date: "2023-10-21"
+    title: "蜘蛛侠2"
+    platform: douyu
+    confidence: high
+    duration_min: 265
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_75053c86eab4433bb8218319a056267c.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42719418"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-21-live-02
-  type: live
-  date: "2023-10-21"
-  title: "超级马里奥兄弟 惊奇"
-  platform: douyu
-  confidence: high
-  duration_min: 163
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7b4d6db3f5ec41118fcc467c6a936b51.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42719335"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-21-live-02
+    type: live
+    date: "2023-10-21"
+    title: "超级马里奥兄弟 惊奇"
+    platform: douyu
+    confidence: high
+    duration_min: 163
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7b4d6db3f5ec41118fcc467c6a936b51.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42719335"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-22-live-01
-  type: live
-  date: "2023-10-22"
-  title: "蜘蛛侠2"
-  platform: douyu
-  confidence: high
-  duration_min: 266
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fd8f5ac4c2804f31a221626064d97617.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42726916"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-22-live-01
+    type: live
+    date: "2023-10-22"
+    title: "蜘蛛侠2"
+    platform: douyu
+    confidence: high
+    duration_min: 266
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fd8f5ac4c2804f31a221626064d97617.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42726916"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-22-live-02
-  type: live
-  date: "2023-10-22"
-  title: "超级马里奥兄弟 惊奇"
-  platform: douyu
-  confidence: high
-  duration_min: 87
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_054fa9513e9544beb801df7c32bbc3d3.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42726914"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-22-live-02
+    type: live
+    date: "2023-10-22"
+    title: "超级马里奥兄弟 惊奇"
+    platform: douyu
+    confidence: high
+    duration_min: 87
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_054fa9513e9544beb801df7c32bbc3d3.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42726914"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-23-live-01
-  type: live
-  date: "2023-10-23"
-  title: "蜘蛛侠2"
-  platform: douyu
-  confidence: high
-  duration_min: 204
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fed67507b0d54290a8734626a1e059c7.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42728844"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-23-live-01
+    type: live
+    date: "2023-10-23"
+    title: "蜘蛛侠2"
+    platform: douyu
+    confidence: high
+    duration_min: 204
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fed67507b0d54290a8734626a1e059c7.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42728844"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-23-live-02
-  type: live
-  date: "2023-10-23"
-  title: "超级马里奥兄弟 惊奇"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8c54c2370ee74803955d590e0fabb25e.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42728845"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-23-live-02
+    type: live
+    date: "2023-10-23"
+    title: "超级马里奥兄弟 惊奇"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8c54c2370ee74803955d590e0fabb25e.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42728845"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-24-live-01
-  type: live
-  date: "2023-10-24"
-  title: "超级马里奥兄弟 惊奇"
-  platform: douyu
-  confidence: high
-  duration_min: 222
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_711acbd708fb43938fc808044898a83f.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42749781"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-24-live-01
+    type: live
+    date: "2023-10-24"
+    title: "超级马里奥兄弟 惊奇"
+    platform: douyu
+    confidence: high
+    duration_min: 222
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_711acbd708fb43938fc808044898a83f.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42749781"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-25-live-01
-  type: live
-  date: "2023-10-25"
-  title: "蜘蛛侠2"
-  platform: douyu
-  confidence: high
-  duration_min: 162
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_194eebe9aebf4802884026c23fe6fe9d.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42750475"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-25-live-01
+    type: live
+    date: "2023-10-25"
+    title: "蜘蛛侠2"
+    platform: douyu
+    confidence: high
+    duration_min: 162
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_194eebe9aebf4802884026c23fe6fe9d.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42750475"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-26-live-01
-  type: live
-  date: "2023-10-26"
-  title: "蜘蛛侠2"
-  platform: douyu
-  confidence: high
-  duration_min: 210
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2358c839dbab4d48ba68d3b7b403bff2.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42771944"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-26-live-01
+    type: live
+    date: "2023-10-26"
+    title: "蜘蛛侠2"
+    platform: douyu
+    confidence: high
+    duration_min: 210
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2358c839dbab4d48ba68d3b7b403bff2.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42771944"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-27-live-01
-  type: live
-  date: "2023-10-27"
-  title: "绝地求生"
-  platform: douyu
-  confidence: high
-  duration_min: 216
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1bce9053f98e4c67911a1beb2b7dc7e5.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42781087"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-27-live-01
+    type: live
+    date: "2023-10-27"
+    title: "绝地求生"
+    platform: douyu
+    confidence: high
+    duration_min: 216
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1bce9053f98e4c67911a1beb2b7dc7e5.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42781087"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-28-live-01
-  type: live
-  date: "2023-10-28"
-  title: "心灵杀手2"
-  platform: douyu
-  confidence: high
-  duration_min: 169
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e86d3aae6f6641559ef4ce635367fea6.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42788790"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-28-live-01
+    type: live
+    date: "2023-10-28"
+    title: "心灵杀手2"
+    platform: douyu
+    confidence: high
+    duration_min: 169
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e86d3aae6f6641559ef4ce635367fea6.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42788790"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-29-live-01
-  type: live
-  date: "2023-10-29"
-  title: "心灵杀手2"
-  platform: douyu
-  confidence: high
-  duration_min: 216
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ae46b124ee6844009d8ed37d6b34be9f.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42795994"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-29-live-01
+    type: live
+    date: "2023-10-29"
+    title: "心灵杀手2"
+    platform: douyu
+    confidence: high
+    duration_min: 216
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ae46b124ee6844009d8ed37d6b34be9f.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42795994"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-30-live-01
-  type: live
-  date: "2023-10-30"
-  title: "心灵杀手2"
-  platform: douyu
-  confidence: high
-  duration_min: 181
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_191865a833af437aa50f713155388471.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42800225"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-30-live-01
+    type: live
+    date: "2023-10-30"
+    title: "心灵杀手2"
+    platform: douyu
+    confidence: high
+    duration_min: 181
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_191865a833af437aa50f713155388471.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42800225"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2023-10-31-live-01
-  type: live
-  date: "2023-10-31"
-  title: "Rhythm Royale"
-  platform: douyu
-  confidence: high
-  duration_min: 153
-  cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e7c31948ebde4c678b3647e1ea0226a4.jpeg?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac42810207"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2023-10-31-live-01
+    type: live
+    date: "2023-10-31"
+    title: "Rhythm Royale"
+    platform: douyu
+    confidence: high
+    duration_min: 153
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e7c31948ebde4c678b3647e1ea0226a4.jpeg?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac42810207"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent

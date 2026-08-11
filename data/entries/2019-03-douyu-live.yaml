@@ -1,351 +1,375 @@
-- id: 2019-03-01-live-01
-  type: live
-  date: "2019-03-01"
-  title: "特技摩托：崛起&秘奥法师"
-  platform: douyu
-  confidence: high
-  duration_min: 258
-  cover: "https://tx-free-imgs.acfun.cn/Fp--3qr1I9y9OIGGl2TmRHBlE1MW?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4985423"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-03-01-live-01
+    type: live
+    date: "2019-03-01"
+    title: "特技摩托：崛起&秘奥法师"
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/Fp--3qr1I9y9OIGGl2TmRHBlE1MW?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4985423"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-02-live-01
-  type: live
-  date: "2019-03-02"
-  title: "Mages of Mystralia （秘奥法师）&特技摩托：崛起"
-  platform: douyu
-  confidence: high
-  duration_min: 372
-  cover: "https://tx-free-imgs.acfun.cn/FqJgvFay6DIZpbS0G6oD9kevf0Rq?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4987876"
-      kind: replay
-      parts: 8
-  contributed_by: data-agent
+  - id: 2019-03-02-live-01
+    type: live
+    date: "2019-03-02"
+    title: "Mages of Mystralia （秘奥法师）&特技摩托：崛起"
+    platform: douyu
+    confidence: high
+    duration_min: 372
+    cover: "https://tx-free-imgs.acfun.cn/FqJgvFay6DIZpbS0G6oD9kevf0Rq?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4987876"
+        kind: replay
+        parts: 8
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-03-live-01
-  type: live
-  date: "2019-03-03"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 271
-  cover: "https://tx-free-imgs.acfun.cn/FqsJ9Zf7pkganLid4Ca-FdZdqQPi?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  note: "同一场直播（心灵砒霜 & 特技摩托：崛起）的弹幕版（ac4991712）与纯净版（ac4989814）原本被建模为两条重复条目，已合并。"
-  sources:
-    - url: "https://www.acfun.cn/v/ac4991712"
-      kind: replay
-      parts: 1
-    - url: "https://www.acfun.cn/v/ac4989814"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-03-live-01
+    type: live
+    date: "2019-03-03"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 271
+    cover: "https://tx-free-imgs.acfun.cn/FqsJ9Zf7pkganLid4Ca-FdZdqQPi?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    note: "同一场直播（心灵砒霜 & 特技摩托：崛起）的弹幕版（ac4991712）与纯净版（ac4989814）原本被建模为两条重复条目，已合并。"
+    sources:
+      - url: "https://www.acfun.cn/v/ac4991712"
+        kind: replay
+        parts: 1
+        status: alive
+      - url: "https://www.acfun.cn/v/ac4989814"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-04-live-01
-  type: live
-  date: "2019-03-04"
-  title: "嗜血印&特技摩托：崛起"
-  platform: douyu
-  confidence: high
-  duration_min: 262
-  cover: "https://tx-free-imgs.acfun.cn/FotEZkHI_k1B1_BcMgFHxMd4w6TF?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4992698"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-04-live-01
+    type: live
+    date: "2019-03-04"
+    title: "嗜血印&特技摩托：崛起"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/FotEZkHI_k1B1_BcMgFHxMd4w6TF?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4992698"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-06-live-01
-  type: live
-  date: "2019-03-06"
-  title: "探班 From Software 隻狼"
-  platform: douyu
-  confidence: high
-  duration_min: 115
-  cover: "https://tx-free-imgs.acfun.cn/Fv-tsB2HerU_H7-HrJQuVc7XzOlt?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac4998782"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-06-live-01
+    type: live
+    date: "2019-03-06"
+    title: "探班 From Software 隻狼"
+    platform: douyu
+    confidence: high
+    duration_min: 115
+    cover: "https://tx-free-imgs.acfun.cn/Fv-tsB2HerU_H7-HrJQuVc7XzOlt?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac4998782"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-07-live-01
-  type: live
-  date: "2019-03-07"
-  title: "鬼泣5发布会后台（画质感人敬请谅解）"
-  platform: douyu
-  confidence: high
-  duration_min: 33
-  cover: "https://tx-free-imgs.acfun.cn/Fv4-iRXKvbfWVM77e5dfiq04Z0mW?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac5002265"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-03-07-live-01
+    type: live
+    date: "2019-03-07"
+    title: "鬼泣5发布会后台（画质感人敬请谅解）"
+    platform: douyu
+    confidence: high
+    duration_min: 33
+    cover: "https://tx-free-imgs.acfun.cn/Fv4-iRXKvbfWVM77e5dfiq04Z0mW?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac5002265"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-09-live-01
-  type: live
-  date: "2019-03-09"
-  title: "Devi May Cry 5 《鬼泣5"
-  platform: douyu
-  confidence: high
-  duration_min: 263
-  cover: "https://tx-free-imgs.acfun.cn/Fo9oXGLCK2hT84kVSajPLYnXk6nY?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac5008935"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-03-09-live-01
+    type: live
+    date: "2019-03-09"
+    title: "Devi May Cry 5 《鬼泣5"
+    platform: douyu
+    confidence: high
+    duration_min: 263
+    cover: "https://tx-free-imgs.acfun.cn/Fo9oXGLCK2hT84kVSajPLYnXk6nY?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac5008935"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-10-live-01
-  type: live
-  date: "2019-03-10"
-  title: "Devi May Cry 5 《鬼泣5"
-  platform: douyu
-  confidence: high
-  duration_min: 51
-  cover: "https://tx-free-imgs.acfun.cn/FuuaIDN17Val3MXu5L9Ap6qwZvZi?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac5011369"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-03-10-live-01
+    type: live
+    date: "2019-03-10"
+    title: "Devi May Cry 5 《鬼泣5"
+    platform: douyu
+    confidence: high
+    duration_min: 51
+    cover: "https://tx-free-imgs.acfun.cn/FuuaIDN17Val3MXu5L9Ap6qwZvZi?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac5011369"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-10-live-02
-  type: live
-  date: "2019-03-10"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 195
-  cover: "https://tx-free-imgs.acfun.cn/Flaz7MqzNAp46jnZDOCoVpbzYMSI?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac5012009"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-03-10-live-02
+    type: live
+    date: "2019-03-10"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    cover: "https://tx-free-imgs.acfun.cn/Flaz7MqzNAp46jnZDOCoVpbzYMSI?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac5012009"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-13-live-01
-  type: live
-  date: "2019-03-13"
-  title: "Devi May Cry 5 《鬼泣5"
-  platform: douyu
-  confidence: high
-  duration_min: 143
-  cover: "https://tx-free-imgs.acfun.cn/Fial0fLtJqwApPgUb9NL44JQXf2c?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac5020913"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2019-03-13-live-01
+    type: live
+    date: "2019-03-13"
+    title: "Devi May Cry 5 《鬼泣5"
+    platform: douyu
+    confidence: high
+    duration_min: 143
+    cover: "https://tx-free-imgs.acfun.cn/Fial0fLtJqwApPgUb9NL44JQXf2c?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac5020913"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-14-live-01
-  type: live
-  date: "2019-03-14"
-  title: "特技摩托：崛起"
-  platform: douyu
-  confidence: high
-  duration_min: 338
-  cover: "https://tx-free-imgs.acfun.cn/FjfYm0y0XKD6gJa9BW9mYBRA3G8m?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10002952"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-14-live-01
+    type: live
+    date: "2019-03-14"
+    title: "特技摩托：崛起"
+    platform: douyu
+    confidence: high
+    duration_min: 338
+    cover: "https://tx-free-imgs.acfun.cn/FjfYm0y0XKD6gJa9BW9mYBRA3G8m?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10002952"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-15-live-01
-  type: live
-  date: "2019-03-15"
-  title: "Baba Is You"
-  platform: douyu
-  confidence: high
-  duration_min: 257
-  cover: "https://tx-free-imgs.acfun.cn/FoxAkVF9zxcyj8SfhOI1kyviKU19?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10006046"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-03-15-live-01
+    type: live
+    date: "2019-03-15"
+    title: "Baba Is You"
+    platform: douyu
+    confidence: high
+    duration_min: 257
+    cover: "https://tx-free-imgs.acfun.cn/FoxAkVF9zxcyj8SfhOI1kyviKU19?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10006046"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-16-live-01
-  type: live
-  date: "2019-03-16"
-  title: "只狼&特技摩托：崛起"
-  platform: douyu
-  confidence: high
-  duration_min: 290
-  cover: "https://tx-free-imgs.acfun.cn/Fn9FIzHYLkom4_LEWgIgHRQobujo?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10008549"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-03-16-live-01
+    type: live
+    date: "2019-03-16"
+    title: "只狼&特技摩托：崛起"
+    platform: douyu
+    confidence: high
+    duration_min: 290
+    cover: "https://tx-free-imgs.acfun.cn/Fn9FIzHYLkom4_LEWgIgHRQobujo?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10008549"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-18-live-01
-  type: live
-  date: "2019-03-18"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 247
-  cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10013069"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-03-18-live-01
+    type: live
+    date: "2019-03-18"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10013069"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-18-live-02
-  type: live
-  date: "2019-03-18"
-  title: "特技摩托：崛起"
-  platform: douyu
-  confidence: high
-  duration_min: 230
-  cover: "https://tx-free-imgs.acfun.cn/FklpRjiN-IFFicahioCRwKflt8fC?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10014556"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-03-18-live-02
+    type: live
+    date: "2019-03-18"
+    title: "特技摩托：崛起"
+    platform: douyu
+    confidence: high
+    duration_min: 230
+    cover: "https://tx-free-imgs.acfun.cn/FklpRjiN-IFFicahioCRwKflt8fC?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10014556"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-19-live-01
-  type: live
-  date: "2019-03-19"
-  title: "猫里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 209
-  cover: "https://tx-free-imgs.acfun.cn/FoeBnZCsdswr82viUZEfJAzjOi9F?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10018970"
-      kind: replay
-      parts: 4
-  contributed_by: data-agent
+  - id: 2019-03-19-live-01
+    type: live
+    date: "2019-03-19"
+    title: "猫里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 209
+    cover: "https://tx-free-imgs.acfun.cn/FoeBnZCsdswr82viUZEfJAzjOi9F?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10018970"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-22-live-01
-  type: live
-  date: "2019-03-22"
-  title: "只狼"
-  platform: douyu
-  confidence: high
-  duration_min: 452
-  cover: "https://tx-free-imgs.acfun.cn/FqacD4zbUMvMjNvLyb32tZgZ8NEk?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10036493"
-      kind: replay
-      parts: 9
-  contributed_by: data-agent
+  - id: 2019-03-22-live-01
+    type: live
+    date: "2019-03-22"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 452
+    cover: "https://tx-free-imgs.acfun.cn/FqacD4zbUMvMjNvLyb32tZgZ8NEk?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10036493"
+        kind: replay
+        parts: 9
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-23-live-01
-  type: live
-  date: "2019-03-23"
-  title: "只狼"
-  platform: douyu
-  confidence: high
-  duration_min: 327
-  cover: "https://tx-free-imgs.acfun.cn/Fn9XOy9n7xL4pn-oRmvIlez-oEJI?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10036198"
-      kind: replay
-      parts: 7
-  contributed_by: data-agent
+  - id: 2019-03-23-live-01
+    type: live
+    date: "2019-03-23"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 327
+    cover: "https://tx-free-imgs.acfun.cn/Fn9XOy9n7xL4pn-oRmvIlez-oEJI?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10036198"
+        kind: replay
+        parts: 7
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-24-live-01
-  type: live
-  date: "2019-03-24"
-  title: "只狼"
-  platform: douyu
-  confidence: high
-  duration_min: 240
-  cover: "https://tx-free-imgs.acfun.cn/FpgwWD3tQq8j91n0fMWcSh3ApBZs?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10039992"
-      kind: replay
-      parts: 8
-  contributed_by: data-agent
+  - id: 2019-03-24-live-01
+    type: live
+    date: "2019-03-24"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    cover: "https://tx-free-imgs.acfun.cn/FpgwWD3tQq8j91n0fMWcSh3ApBZs?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10039992"
+        kind: replay
+        parts: 8
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-25-live-01
-  type: live
-  date: "2019-03-25"
-  title: "只狼"
-  platform: douyu
-  confidence: high
-  duration_min: 267
-  cover: "https://tx-free-imgs.acfun.cn/FmFtR_OOFeiSQxSf2VP0LCaybbHB?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10040545"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-25-live-01
+    type: live
+    date: "2019-03-25"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 267
+    cover: "https://tx-free-imgs.acfun.cn/FmFtR_OOFeiSQxSf2VP0LCaybbHB?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10040545"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-26-live-01
-  type: live
-  date: "2019-03-26"
-  title: "只狼》媒体体验会"
-  platform: douyu
-  confidence: high
-  duration_min: 66
-  cover: "https://tx-free-imgs.acfun.cn/Fkgl0ifCUpQlaDoIRNUfBkWwjdyd?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10043642"
-      kind: replay
-      parts: 1
-  contributed_by: data-agent
+  - id: 2019-03-26-live-01
+    type: live
+    date: "2019-03-26"
+    title: "只狼》媒体体验会"
+    platform: douyu
+    confidence: high
+    duration_min: 66
+    cover: "https://tx-free-imgs.acfun.cn/Fkgl0ifCUpQlaDoIRNUfBkWwjdyd?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10043642"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-29-live-01
-  type: live
-  date: "2019-03-29"
-  title: "只狼&疑案追声"
-  platform: douyu
-  confidence: high
-  duration_min: 267
-  cover: "https://tx-free-imgs.acfun.cn/FtYRlmKnmUJnFgoByEG3yT4718gw?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10057218"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-03-29-live-01
+    type: live
+    date: "2019-03-29"
+    title: "只狼&疑案追声"
+    platform: douyu
+    confidence: high
+    duration_min: 267
+    cover: "https://tx-free-imgs.acfun.cn/FtYRlmKnmUJnFgoByEG3yT4718gw?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10057218"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-03-30-live-01
-  type: live
-  date: "2019-03-30"
-  title: "猫里奥"
-  platform: douyu
-  confidence: high
-  duration_min: 347
-  cover: "https://tx-free-imgs.acfun.cn/FrNIAAnY1Jxb1n_wfgHVf6aOxDFL?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10060526"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-03-30-live-01
+    type: live
+    date: "2019-03-30"
+    title: "猫里奥"
+    platform: douyu
+    confidence: high
+    duration_min: 347
+    cover: "https://tx-free-imgs.acfun.cn/FrNIAAnY1Jxb1n_wfgHVf6aOxDFL?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10060526"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent

@@ -1,107 +1,114 @@
-- id: 2019-08-02-live-01
-  type: live
-  date: "2019-08-02"
-  title: "女流带你走进2019ChinaJoy现场"
-  platform: douyu
-  confidence: high
-  duration_min: 129
-  cover: "https://tx-free-imgs.acfun.cn/FqRAQKgGaLPx25cymr7SLfgoVDr4?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10659369"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-08-02-live-01
+    type: live
+    date: "2019-08-02"
+    title: "女流带你走进2019ChinaJoy现场"
+    platform: douyu
+    confidence: high
+    duration_min: 129
+    cover: "https://tx-free-imgs.acfun.cn/FqRAQKgGaLPx25cymr7SLfgoVDr4?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10659369"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-04-live-01
-  type: live
-  date: "2019-08-04"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 268
-  cover: "https://tx-free-imgs.acfun.cn/FqlaT6LSWOceTmXnuQ_3R0gDkN-F?imageslim"
-  games: []
-  tags: [心灵砒霜, 弹幕版]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10678520"
-      kind: replay
-      parts: 3
-  contributed_by: data-agent
+  - id: 2019-08-04-live-01
+    type: live
+    date: "2019-08-04"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 268
+    cover: "https://tx-free-imgs.acfun.cn/FqlaT6LSWOceTmXnuQ_3R0gDkN-F?imageslim"
+    games: []
+    tags: [心灵砒霜, 弹幕版]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10678520"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-07-live-01
-  type: live
-  date: "2019-08-07"
-  title: "Jump King"
-  platform: douyu
-  confidence: high
-  duration_min: 294
-  cover: "https://tx-free-imgs.acfun.cn/Fpy-AL_4ADt7Q6N8QZz20MzXDrh_?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10678313"
-      kind: replay
-      parts: 5
-  contributed_by: data-agent
+  - id: 2019-08-07-live-01
+    type: live
+    date: "2019-08-07"
+    title: "Jump King"
+    platform: douyu
+    confidence: high
+    duration_min: 294
+    cover: "https://tx-free-imgs.acfun.cn/Fpy-AL_4ADt7Q6N8QZz20MzXDrh_?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10678313"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-18-live-01
-  type: live
-  date: "2019-08-18"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 300
-  cover: "https://tx-free-imgs.acfun.cn/FpYom1943gI990yVBkgBWcRi1PdN?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10777155"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-08-18-live-01
+    type: live
+    date: "2019-08-18"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    cover: "https://tx-free-imgs.acfun.cn/FpYom1943gI990yVBkgBWcRi1PdN?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10777155"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-23-live-01
-  type: live
-  date: "2019-08-23"
-  title: "遗迹灰烬重生"
-  platform: douyu
-  confidence: high
-  duration_min: 283
-  cover: "https://tx-free-imgs.acfun.cn/FrwCZ-8zW9yWqhXaw_iHQbyuGE-T?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10803804"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-08-23-live-01
+    type: live
+    date: "2019-08-23"
+    title: "遗迹灰烬重生"
+    platform: douyu
+    confidence: high
+    duration_min: 283
+    cover: "https://tx-free-imgs.acfun.cn/FrwCZ-8zW9yWqhXaw_iHQbyuGE-T?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10803804"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-25-live-01
-  type: live
-  date: "2019-08-25"
-  title: "心灵砒霜"
-  platform: douyu
-  confidence: high
-  duration_min: 246
-  cover: "https://tx-free-imgs.acfun.cn/FopRRtHn3JpFZqRNGwnRRSuvo2P6?imageslim"
-  games: []
-  tags: [心灵砒霜]
-  sources:
-    - url: "https://www.acfun.cn/v/ac10814645"
-      kind: replay
-      parts: 2
-  contributed_by: data-agent
+  - id: 2019-08-25-live-01
+    type: live
+    date: "2019-08-25"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/FopRRtHn3JpFZqRNGwnRRSuvo2P6?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    sources:
+      - url: "https://www.acfun.cn/v/ac10814645"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
 
-- id: 2019-08-30-live-01
-  type: live
-  date: "2019-08-30"
-  title: "Heave Ho&死神对决"
-  platform: douyu
-  confidence: high
-  duration_min: 319
-  cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
-  games: []
-  sources:
-    - url: "https://www.acfun.cn/v/ac10841151"
-      kind: replay
-      parts: 6
-  contributed_by: data-agent
+  - id: 2019-08-30-live-01
+    type: live
+    date: "2019-08-30"
+    title: "Heave Ho&死神对决"
+    platform: douyu
+    confidence: high
+    duration_min: 319
+    cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10841151"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent

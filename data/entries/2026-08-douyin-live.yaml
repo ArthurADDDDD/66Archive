@@ -1,378 +1,369 @@
-# 采集任务 #004 · 2026-08 抖音期直播场次（首播平台：抖音）
-# 来源：B 站搜索枚举（2026-08-11，多关键词 × 最新排序，覆盖 2024-08 后搬运），场次按（直播日期+主题）归一化去重
-# 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
-# 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
+  - id: 2026-08-03-live-01
+    type: live
+    date: "2026-08-03"
+    title: "冒险岛"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/a1ff6c8a7bdfccf80834c2ecd0bbda7b699ac59b.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-03-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1HhMX63E2f"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-03-live-01
-  type: live
-  date: "2026-08-03"
-  title: "冒险岛"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/a1ff6c8a7bdfccf80834c2ecd0bbda7b699ac59b.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1HhMX63E2f"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 371
+  - id: 2026-08-03-live-02
+    type: live
+    date: "2026-08-03"
+    title: "冒险岛怀旧服"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/119bf285aa0be32462f7473d2ce0c42b08335d7b.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-03-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV17JM96BERD"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1FjM966EjU"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-03-live-02
-  type: live
-  date: "2026-08-03"
-  title: "冒险岛怀旧服"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/119bf285aa0be32462f7473d2ce0c42b08335d7b.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1bpMR6sETF"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1xpMX62EJM"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV13YM96fEyz"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV17JM96BERD"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1jsM96NEza"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1FjM966EjU"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 373
+  - id: 2026-08-04-live-02
+    type: live
+    date: "2026-08-04"
+    title: "冒险岛怀旧服"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/2bb09d856cff979cb427764e1d29775a044f32ac.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-04-live-03 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1druw6sE4S"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-04-live-01
-  type: live
-  date: "2026-08-04"
-  title: "冒险岛"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/3decc1303a19777414d4c15536342e90e226f493.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1iPuP6bEur"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 194
+  - id: 2026-08-04-live-03
+    type: live
+    date: "2026-08-04"
+    title: "冒险岛怀旧服三区绿水灵"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/6a9860ab32f4d98cb30bdc86e684f5aa3bf550a1.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-04-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ZBuw64Egw"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Gmuw6HEa5"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-04-live-02
-  type: live
-  date: "2026-08-04"
-  title: "冒险岛怀旧服"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/2bb09d856cff979cb427764e1d29775a044f32ac.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1druw6sE4S"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 194
+  - id: 2026-08-05-live-01
+    type: live
+    date: "2026-08-05"
+    title: "冒险岛"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/f10b012bf0ccad67b674a64f1ef4c7b1f8861455.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jWMk6KESW"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-04-live-03
-  type: live
-  date: "2026-08-04"
-  title: "冒险岛怀旧服三区绿水灵"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/6a9860ab32f4d98cb30bdc86e684f5aa3bf550a1.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1s4uP6CEqT"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1Rruw6sEXG"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1ZBuw64Egw"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1Gmuw6HEa5"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 165
+  - id: 2026-08-05-live-02
+    type: live
+    date: "2026-08-05"
+    title: "冒险岛怀旧服"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/6881ff83b84d53602012a5b7d112806f8c870d53.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1EnMk6MENQ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-05-live-01
-  type: live
-  date: "2026-08-05"
-  title: "冒险岛"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/f10b012bf0ccad67b674a64f1ef4c7b1f8861455.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1jWMk6KESW"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 165
+  - id: 2026-08-05-live-03
+    type: live
+    date: "2026-08-05"
+    title: "冒险岛怀旧服弓箭手"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/40fc09036468e8312cca03b8fc88d3531ef1c0a2.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jnMk6MEi1"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1ASMk6EE2z"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-05-live-02
-  type: live
-  date: "2026-08-05"
-  title: "冒险岛怀旧服"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/6881ff83b84d53602012a5b7d112806f8c870d53.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1EnMk6MENQ"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 297
+  - id: 2026-08-05-live-04
+    type: live
+    date: "2026-08-05"
+    title: "我的智力没有问题"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/d81b2f521725df71c240da3b27640cf35494a50b.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1D1M26qEF4"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1YdMC6PEjg"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-05-live-03
-  type: live
-  date: "2026-08-05"
-  title: "冒险岛怀旧服弓箭手"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/40fc09036468e8312cca03b8fc88d3531ef1c0a2.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1cFM16JE4R"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1jnMk6MEi1"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1H9Mk61Ed6"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1ASMk6EE2z"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 131
+  - id: 2026-08-05-live-05
+    type: live
+    date: "2026-08-05"
+    title: "机械狂欢"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/6d73284bf2c20ff153f3eda027ecb29c216fa7eb.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1soM26FEuS"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1uAMy6bEn7"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-05-live-04
-  type: live
-  date: "2026-08-05"
-  title: "我的智力没有问题"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/d81b2f521725df71c240da3b27640cf35494a50b.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1D1M26qEF4"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1YdMC6PEjg"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 130
+  - id: 2026-08-06-live-01
+    type: live
+    date: "2026-08-06"
+    title: "Snapshots"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/2f9d1949bb27b0896f507c6fe01f08bf7c7863c7.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1XpuH6uECU"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-05-live-05
-  type: live
-  date: "2026-08-05"
-  title: "机械狂欢"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/6d73284bf2c20ff153f3eda027ecb29c216fa7eb.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1soM26FEuS"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1uAMy6bEn7"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 110
+  - id: 2026-08-06-live-02
+    type: live
+    date: "2026-08-06"
+    title: "快照 Snapshots"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/7c4e76a291343d70554a18bbb522a8933858b3a0.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1aWuH6zEh5"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-06-live-01
-  type: live
-  date: "2026-08-06"
-  title: "Snapshots"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/2f9d1949bb27b0896f507c6fe01f08bf7c7863c7.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1XpuH6uECU"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 109
+  - id: 2026-08-06-live-03
+    type: live
+    date: "2026-08-06"
+    title: "我的脑子应该没有问题"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/49645e7bbe406808fd8bf140b82e19a415eb656f.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1eZuH6LEZj"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Ywup6kEqN"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-06-live-02
-  type: live
-  date: "2026-08-06"
-  title: "快照 Snapshots"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/7c4e76a291343d70554a18bbb522a8933858b3a0.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1aWuH6zEh5"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 111
+  - id: 2026-08-07-live-01
+    type: live
+    date: "2026-08-07"
+    title: "我的脑子应该没有问题"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/9b155b03fb5394237c7c3b159523b2d04ee80ce9.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wwuH69EBB"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-06-live-03
-  type: live
-  date: "2026-08-06"
-  title: "我的脑子应该没有问题"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/49645e7bbe406808fd8bf140b82e19a415eb656f.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1djuH6VE5i"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1eZuH6LEZj"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1Ywup6kEqN"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 110
+  - id: 2026-08-08-live-01
+    type: live
+    date: "2026-08-08"
+    title: "冒险岛"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/391c97523b01f3b81b18232c58c977f724159cbe.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-08-live-03 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1pTu56TE9w"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-07-live-01
-  type: live
-  date: "2026-08-07"
-  title: "我的脑子应该没有问题"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/9b155b03fb5394237c7c3b159523b2d04ee80ce9.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1wwuH69EBB"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 162
+  - id: 2026-08-08-live-03
+    type: live
+    date: "2026-08-08"
+    title: "冒险岛怀旧服二转"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/d0ab186feefb338f4272fb8bbee0d30ded0bc382.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-08-live-01 属同场直播的不同录像，前端可作备选源切换"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1rWu36ZELV"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV11Lu36PEo3"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-08-live-01
-  type: live
-  date: "2026-08-08"
-  title: "冒险岛"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/391c97523b01f3b81b18232c58c977f724159cbe.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1pTu56TE9w"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 163
+  - id: 2026-08-09-live-01
+    type: live
+    date: "2026-08-09"
+    title: "娃睡了来突袭"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/f67adcb28d61c7ca90d697814727ac359384bbbf.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ueuU62EQx"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1hiuU6LEJV"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-08-live-02
-  type: live
-  date: "2026-08-08"
-  title: "冒险岛怀旧服"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/fba7597c9d01f623e2f5ce391606e9ff5b148145.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1xcu563ES8"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 89
+  - id: 2026-08-09-live-02
+    type: live
+    date: "2026-08-09"
+    title: "维修物语"
+    platform: douyin
+    cover: "https://i2.hdslb.com/bfs/archive/3f30af7b96498b48b6b1a3b626f45a1d784c7150.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wBuQ6rEfg"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1NUuU6TET9"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-08-live-03
-  type: live
-  date: "2026-08-08"
-  title: "冒险岛怀旧服二转"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/d0ab186feefb338f4272fb8bbee0d30ded0bc382.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1Ffuj6gEx5"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1xfuV6kEs9"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1rWu36ZELV"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV11Lu36PEo3"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 89
+  - id: 2026-08-10-live-01
+    type: live
+    date: "2026-08-10"
+    title: "冒险岛怀旧服"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/2c38df4ed9fed7b466cf8f2552cd205f0528e71f.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1yHuo6oEyb"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-09-live-01
-  type: live
-  date: "2026-08-09"
-  title: "娃睡了来突袭"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/f67adcb28d61c7ca90d697814727ac359384bbbf.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1ueuU62EQx"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1hiuU6LEJV"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV154uU6HE9u"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 81
+  - id: 2026-08-10-live-02
+    type: live
+    date: "2026-08-10"
+    title: "娃睡了来突袭"
+    platform: douyin
+    cover: "https://i1.hdslb.com/bfs/archive/b0c5a45764dbd52c6ec2b3c785bba79e4bb3abf5.jpg"
+    confidence: medium
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1JFuQ6qEtQ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
 
-- id: 2026-08-09-live-02
-  type: live
-  date: "2026-08-09"
-  title: "维修物语"
-  platform: douyin
-  cover: "https://i2.hdslb.com/bfs/archive/3f30af7b96498b48b6b1a3b626f45a1d784c7150.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1wBuQ6rEfg"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1NUuU6TET9"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-08-10-live-01
-  type: live
-  date: "2026-08-10"
-  title: "冒险岛怀旧服"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/2c38df4ed9fed7b466cf8f2552cd205f0528e71f.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1yHuo6oEyb"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-08-10-live-02
-  type: live
-  date: "2026-08-10"
-  title: "娃睡了来突袭"
-  platform: douyin
-  cover: "https://i1.hdslb.com/bfs/archive/b0c5a45764dbd52c6ec2b3c785bba79e4bb3abf5.jpg"
-  confidence: medium
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1JFuQ6qEtQ"
-      kind: replay
-  contributed_by: data-agent
-
-- id: 2026-08-10-live-03
-  type: live
-  date: "2026-08-10"
-  title: "点关注解锁游戏"
-  platform: douyin
-  cover: "https://i0.hdslb.com/bfs/archive/48a3d379a656883b9486e47a194d18f4789a7484.jpg"
-  confidence: high
-  games: []
-  tags: [弹幕版]
-  note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-  sources:
-    - url: "https://www.bilibili.com/video/BV1m7uo68Ejy"
-      kind: replay
-    - url: "https://www.bilibili.com/video/BV1gQuo6TE5V"
-      kind: replay
-  contributed_by: data-agent
+    duration_min: 89
+  - id: 2026-08-10-live-03
+    type: live
+    date: "2026-08-10"
+    title: "点关注解锁游戏"
+    platform: douyin
+    cover: "https://i0.hdslb.com/bfs/archive/48a3d379a656883b9486e47a194d18f4789a7484.jpg"
+    confidence: high
+    games: []
+    tags: [弹幕版]
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1m7uo68Ejy"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1gQuo6TE5V"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 120
