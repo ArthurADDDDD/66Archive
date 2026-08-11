@@ -6,7 +6,12 @@
     confidence: high
     duration_min: 60
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_02/1488448684.jpg?imageslim"
-    games: []
+    games: [ethan-carter]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.1-教壮壮做主播"
+      - at: "00:24:59"
+        label: "P2-3.1-伊森卡特的消失-完结"
     sources:
       - url: "https://www.acfun.cn/v/ac3514575"
         kind: replay
@@ -22,7 +27,18 @@
     confidence: high
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_03/1488554456.jpg?imageslim"
-    games: []
+    games: [hidden-folks]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.3-江西省一模"
+      - at: "00:29:48"
+        label: "P2-3.3-隐藏的人(Hidden folks)"
+      - at: "01:37:26"
+        label: "P3-3.3-隐藏的人(Hidden folks)"
+      - at: "02:10:15"
+        label: "P4-3.3-隐藏的人(Hidden folks)"
+      - at: "02:41:29"
+        label: "P5-3.3-隐藏的人(Hidden folks)"
     sources:
       - url: "https://www.acfun.cn/v/ac3518038"
         kind: replay
@@ -38,7 +54,18 @@
     confidence: high
     duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_04/1488632689.jpg?imageslim"
-    games: []
+    games: [river-city-underground]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.4-口红色号"
+      - at: "00:15:50"
+        label: "P2-3.4-热血高校新版"
+      - at: "01:23:14"
+        label: "P3-3.4-热血高校新版"
+      - at: "02:28:52"
+        label: "P4-3.4-热血高校新版"
+      - at: "03:13:05"
+        label: "P5-3.4-热血高校新版"
     sources:
       - url: "https://www.acfun.cn/v/ac3520053"
         kind: replay
@@ -56,6 +83,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488878437.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.5-心灵砒霜-弹幕版"
+      - at: "01:26:00"
+        label: "P2-3.5-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3526345"
         kind: replay
@@ -71,7 +103,14 @@
     confidence: high
     duration_min: 112
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_07/1488877782.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.7-塞尔达传说-荒野之息"
+      - at: "00:19:16"
+        label: "P2-3.7-塞尔达传说-荒野之息"
+      - at: "01:18:36"
+        label: "P3-煮面传说"
     sources:
       - url: "https://www.acfun.cn/v/ac3526301"
         kind: replay
@@ -87,7 +126,16 @@
     confidence: high
     duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_14/1489505066.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.13-我也很绝望啊"
+      - at: "00:52:40"
+        label: "P2-3.13-塞尔达传说"
+      - at: "02:00:08"
+        label: "P3-3.13-塞尔达传说"
+      - at: "03:14:35"
+        label: "P4-3.13-塞尔达传说"
     sources:
       - url: "https://www.acfun.cn/v/ac3545359"
         kind: replay
@@ -103,7 +151,14 @@
     confidence: high
     duration_min: 128
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_15/1489576551.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.14-自动驾驶技术造福全人类"
+      - at: "00:16:31"
+        label: "P2-3.14-塞尔达传说-晚上"
+      - at: "01:14:11"
+        label: "P3-3.14-塞尔达传说-晚上"
     sources:
       - url: "https://www.acfun.cn/v/ac3547680"
         kind: replay
@@ -120,6 +175,11 @@
     duration_min: 116
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489667536.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.15-chi66诞生记？！"
+      - at: "01:11:40"
+        label: "P2-3.15-chi66诞生记？！"
     sources:
       - url: "https://www.acfun.cn/v/ac3550581"
         kind: replay
@@ -135,7 +195,18 @@
     confidence: high
     duration_min: 359
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_16/1489670783.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.15-塞尔达传说"
+      - at: "01:11:45"
+        label: "P2-3.15-塞尔达传说"
+      - at: "02:23:30"
+        label: "P3-3.15-塞尔达传说"
+      - at: "03:35:17"
+        label: "P4-3.15-塞尔达传说"
+      - at: "04:47:03"
+        label: "P5-3.15-塞尔达传说"
     sources:
       - url: "https://www.acfun.cn/v/ac3550686"
         kind: replay
@@ -151,7 +222,24 @@
     confidence: high
     duration_min: 347
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_17/1489761673.jpg?imageslim"
-    games: []
+    games: [league-of-legends]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天+塞尔达传说"
+      - at: "00:34:20"
+        label: "P2-塞尔达传说"
+      - at: "01:24:37"
+        label: "P3-LOL第一局"
+        game: league-of-legends
+      - at: "02:07:45"
+        label: "P4-LOL第二局"
+        game: league-of-legends
+      - at: "03:01:45"
+        label: "P5-塞尔达传说"
+      - at: "03:48:48"
+        label: "P6-塞尔达传说"
+      - at: "04:47:47"
+        label: "P7-塞尔达传说"
     sources:
       - url: "https://www.acfun.cn/v/ac3553718"
         kind: replay
@@ -167,7 +255,16 @@
     confidence: high
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_18/1489823710.JPG?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.17-这期聊天我想不出好标题"
+      - at: "00:26:16"
+        label: "P2-3.17-塞尔达传说"
+      - at: "01:22:30"
+        label: "P3-3.17-塞尔达传说"
+      - at: "02:18:45"
+        label: "P4-3.17-塞尔达传说"
     sources:
       - url: "https://www.acfun.cn/v/ac3555112"
         kind: replay
@@ -183,7 +280,14 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490101397.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "Part2"
+      - at: "01:21:34"
+        label: "Part3"
+      - at: "02:45:16"
+        label: "Part1"
     sources:
       - url: "https://www.acfun.cn/v/ac3563645"
         kind: replay
@@ -216,6 +320,11 @@
     duration_min: 108
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490115053.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part2"
+      - at: "01:22:16"
+        label: "Part1"
     sources:
       - url: "https://www.acfun.cn/v/ac3564094"
         kind: replay
@@ -232,6 +341,11 @@
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_22/1490199775.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "砒霜弹幕版"
+      - at: "02:01:38"
+        label: "索尼活动现场"
     sources:
       - url: "https://www.acfun.cn/v/ac3566723"
         kind: replay
@@ -247,7 +361,14 @@
     confidence: high
     duration_min: 307
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_24/1490364607.jpg?imageslim"
-    games: []
+    games: [rusty-lake]
+    segments:
+      - at: "00:00:00"
+        label: "Rusty lake"
+      - at: "02:20:41"
+        label: "塞尔达P1"
+      - at: "04:03:34"
+        label: "塞尔达P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3572214"
         kind: replay
@@ -263,7 +384,12 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_25/1490439123.jpg?imageslim"
-    games: []
+    games: [zelda-botw]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "02:00:46"
+        label: "Part2"
     sources:
       - url: "https://www.acfun.cn/v/ac3574522"
         kind: replay
@@ -281,6 +407,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_29/1490796034.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-3.26-心灵砒霜-弹幕版"
+      - at: "01:22:08"
+        label: "P2-3.26-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3584867"
         kind: replay
@@ -297,6 +428,21 @@
     duration_min: 291
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_30/1490877224.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "P1-Why？"
+      - at: "00:22:20"
+        label: "P2-黑暗之魂3DLC2"
+        game: dark-souls-3
+      - at: "01:29:22"
+        label: "P3-黑暗之魂3DLC2"
+        game: dark-souls-3
+      - at: "02:36:25"
+        label: "P4-黑暗之魂3DLC2"
+        game: dark-souls-3
+      - at: "03:43:28"
+        label: "P5-黑暗之魂3DLC2"
+        game: dark-souls-3
     sources:
       - url: "https://www.acfun.cn/v/ac3587442"
         kind: replay

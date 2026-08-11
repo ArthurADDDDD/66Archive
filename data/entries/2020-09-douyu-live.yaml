@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 234
     cover: "https://tx-free-imgs.acfun.cn/o_1eh7djek4161qm7v3kgf0t1jfe0.jpeg?imageslim"
-    games: []
+    games: [contra]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:21:58"
+        label: "火柴人亨利合集"
+      - at: "02:00:00"
+        label: "火柴人亨利合集"
+      - at: "03:18:35"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac17727901"
         kind: replay
@@ -22,7 +31,19 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/o_1ehf6n39ge1r1tt517hs5qg8as0.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:45:20"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "01:59:59"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:57:39"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17765445"
         kind: replay
@@ -38,9 +59,19 @@
     confidence: high
     duration_min: 266
     cover: "https://tx-free-imgs.acfun.cn/o_1ehhnetsgga92piaqs1ial1qdk0.jpeg?imageslim"
-    games: []
+    games: [human-fall-flat]
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播（人类一败涂地 & 心灵砒霜）的纯净版（ac17777864）与弹幕版（ac17788089）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "人类一败涂地"
+        game: human-fall-flat
+      - at: "01:05:29"
+        label: "心灵砒霜"
+      - at: "02:12:12"
+        label: "心灵砒霜"
+      - at: "03:18:56"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac17777864"
         kind: replay
@@ -60,7 +91,16 @@
     confidence: high
     duration_min: 217
     cover: "https://tx-free-imgs.acfun.cn/o_1ehk7ihea13it147190e3ad1bf60.jpeg?imageslim"
-    games: []
+    games: [craftopia]
+    segments:
+      - at: "00:00:00"
+        label: "创世理想乡"
+      - at: "00:16:41"
+        label: "创世理想乡"
+      - at: "01:16:40"
+        label: "创世理想乡"
+      - at: "02:16:39"
+        label: "创世理想乡"
     sources:
       - url: "https://www.acfun.cn/v/ac17789392"
         kind: replay
@@ -76,7 +116,18 @@
     confidence: high
     duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/o_1ehmskqom1v1lq871fqk14oc10r00.jpeg?imageslim"
-    games: []
+    games: [craftopia]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:36:04"
+        label: "创世理想乡"
+      - at: "01:38:12"
+        label: "创世理想乡"
+      - at: "02:40:19"
+        label: "创世理想乡"
+      - at: "03:42:26"
+        label: "创世理想乡"
     sources:
       - url: "https://www.acfun.cn/v/ac17802441"
         kind: replay
@@ -92,7 +143,18 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/o_1ehpgg8pc1n0e1nh86h01c8drct0.jpeg?imageslim"
-    games: []
+    games: [contra]
+    segments:
+      - at: "00:00:00"
+        label: "创世理想乡"
+      - at: "00:59:53"
+        label: "Part2"
+      - at: "01:59:48"
+        label: "创世理想乡"
+      - at: "02:59:42"
+        label: "魂斗罗"
+      - at: "03:41:24"
+        label: "魂斗罗"
     sources:
       - url: "https://www.acfun.cn/v/ac17817269"
         kind: replay
@@ -108,7 +170,22 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/o_1ei1bbbhd1gb0hfr1be23he8870.jpeg?imageslim"
-    games: []
+    games: [kill-it-with-fire]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:13:04"
+        label: "Kill It With Fire"
+        game: kill-it-with-fire
+      - at: "01:18:31"
+        label: "Kill It With Fire"
+        game: kill-it-with-fire
+      - at: "02:23:56"
+        label: "Kill It With Fire"
+        game: kill-it-with-fire
+      - at: "03:29:22"
+        label: "Kill It With Fire"
+        game: kill-it-with-fire
     sources:
       - url: "https://www.acfun.cn/v/ac17863279"
         kind: replay
@@ -126,6 +203,17 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ei63h891brqeih1otv1vrqt7l0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:32:09"
+        label: "心灵砒霜弹幕版"
+      - at: "01:24:30"
+        label: "心灵砒霜弹幕版"
+      - at: "02:16:53"
+        label: "心灵砒霜弹幕版"
+      - at: "03:09:14"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac17892207"
         kind: replay
@@ -141,7 +229,22 @@
     confidence: high
     duration_min: 267
     cover: "https://tx-free-imgs.acfun.cn/o_1ei6b6u6515pd1emi1r831k3p1c4v0.jpeg?imageslim"
-    games: []
+    games: [pro-gymnast]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:12:05"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "01:15:45"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "02:19:26"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "03:23:07"
+        label: "Pro Gymnast"
+        game: pro-gymnast
     sources:
       - url: "https://www.acfun.cn/v/ac17893978"
         kind: replay
@@ -157,7 +260,22 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1eigikm8ucnh1fbh1adso6a10kb0.jpeg?imageslim"
-    games: []
+    games: [fall-guys, pro-gymnast]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:59"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "01:05:41"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "02:00:25"
+        label: "Pro Gymnast"
+        game: pro-gymnast
+      - at: "02:55:08"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17960927"
         kind: replay
@@ -173,7 +291,18 @@
     confidence: high
     duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/o_1eija5ept1rk41h5i1quh27d1qdg0.jpeg?imageslim"
-    games: []
+    games: [fall-guys]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:19:59"
+        label: "Part2"
+      - at: "01:35:06"
+        label: "Fall Guys"
+        game: fall-guys
+      - at: "02:50:12"
+        label: "Fall Guys"
+        game: fall-guys
     sources:
       - url: "https://www.acfun.cn/v/ac17979028"
         kind: replay
@@ -205,7 +334,16 @@
     confidence: high
     duration_min: 232
     cover: "https://tx-free-imgs.acfun.cn/o_1eir48pfb1m5j9c3rjjmflmpb0.jpeg?imageslim"
-    games: []
+    games: [undermine]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:28:29"
+        label: "UnderMine"
+      - at: "01:36:22"
+        label: "UnderMine"
+      - at: "02:44:12"
+        label: "UnderMine"
     sources:
       - url: "https://www.acfun.cn/v/ac18037119"
         kind: replay
@@ -221,7 +359,16 @@
     confidence: high
     duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/o_1eitiopkb1lq71q82ns61peh57a0.jpeg?imageslim"
-    games: []
+    games: [undermine]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:11:14"
+        label: "UnderMine"
+      - at: "02:22:29"
+        label: "UnderMine"
+      - at: "03:33:45"
+        label: "UnderMine"
     sources:
       - url: "https://www.acfun.cn/v/ac18065077"
         kind: replay
@@ -237,7 +384,14 @@
     confidence: high
     duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/o_1eivuohi01l6eansi2e1g2r7gs0.jpeg?imageslim"
-    games: []
+    games: [undermine]
+    segments:
+      - at: "00:00:00"
+        label: "UnderMine"
+      - at: "01:17:45"
+        label: "UnderMine"
+      - at: "02:35:32"
+        label: "UnderMine"
     sources:
       - url: "https://www.acfun.cn/v/ac18093162"
         kind: replay
@@ -253,7 +407,16 @@
     confidence: high
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/o_1ej2lmm0a1bt81889116h1ptmt8n0.jpeg?imageslim"
-    games: []
+    games: [undermine]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:09:27"
+        label: "UnderMine"
+      - at: "01:28:18"
+        label: "UnderMine"
+      - at: "02:47:10"
+        label: "UnderMine"
     sources:
       - url: "https://www.acfun.cn/v/ac18121202"
         kind: replay
@@ -269,7 +432,19 @@
     confidence: high
     duration_min: 309
     cover: "https://tx-free-imgs.acfun.cn/o_1ej9plb241t8upqp182512fb1vd80.jpeg?imageslim"
-    games: []
+    games: [rise-of-kingdoms]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:13:19"
+        label: "UnderMine"
+      - at: "01:23:20"
+        label: "UnderMine"
+      - at: "02:33:20"
+        label: "UnderMine"
+      - at: "03:43:20"
+        label: "万国觉醒"
+        game: rise-of-kingdoms
     sources:
       - url: "https://www.acfun.cn/v/ac18194859"
         kind: replay
@@ -287,6 +462,15 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1ej9rne0i1gvif0a1ju610bi1atc0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "01:05:19"
+        label: "心灵砒霜弹幕版"
+      - at: "02:02:38"
+        label: "心灵砒霜弹幕版"
+      - at: "02:59:56"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac18196273"
         kind: replay
@@ -302,7 +486,22 @@
     confidence: high
     duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/o_1ejab2jvo9oe1posud310gb157m0.jpeg?imageslim"
-    games: []
+    games: [when-the-past-was-around]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:19:59"
+        label: "When the Past was Around"
+        game: when-the-past-was-around
+      - at: "01:22:26"
+        label: "When the Past was Around"
+        game: when-the-past-was-around
+      - at: "02:24:52"
+        label: "When the Past was Around"
+        game: when-the-past-was-around
+      - at: "03:27:19"
+        label: "When the Past was Around"
+        game: when-the-past-was-around
     sources:
       - url: "https://www.acfun.cn/v/ac18200756"
         kind: replay
@@ -318,7 +517,14 @@
     confidence: high
     duration_min: 107
     cover: "https://tx-free-imgs.acfun.cn/o_1ejnd5o9o16eg1hci1te6e3v5ug0.jpeg?imageslim"
-    games: []
+    games: [phasmophobia]
+    segments:
+      - at: "00:00:00"
+        label: "Phasmophobia"
+        game: phasmophobia
+      - at: "00:53:16"
+        label: "Phasmophobia"
+        game: phasmophobia
     sources:
       - url: "https://www.acfun.cn/v/ac18340307"
         kind: replay

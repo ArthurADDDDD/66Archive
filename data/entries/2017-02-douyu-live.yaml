@@ -23,6 +23,11 @@
     duration_min: 168
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_05/1486286530.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "大明塔弹幕版"
+      - at: "01:48:23"
+        label: "女流-2.5-大明塔"
     sources:
       - url: "https://www.acfun.cn/v/ac3449327"
         kind: replay
@@ -39,6 +44,11 @@
     duration_min: 140
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_06/1486380902.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:23:12"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3452264"
         kind: replay
@@ -54,7 +64,16 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560350.jpg?imageslim"
-    games: []
+    games: [cat-goes-fishing]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:04:30"
+        label: "P2"
+      - at: "02:06:46"
+        label: "P3"
+      - at: "03:39:38"
+        label: "P4"
     sources:
       - url: "https://www.acfun.cn/v/ac3457776"
         kind: replay
@@ -71,6 +90,12 @@
     duration_min: 63
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560177.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:00:02"
+        label: "P2-黑暗之魂3"
+        game: dark-souls-3
     sources:
       - url: "https://www.acfun.cn/v/ac3457748"
         kind: replay
@@ -86,7 +111,14 @@
     confidence: high
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_09/1486649481.jpg?imageslim"
-    games: []
+    games: [cat-goes-fishing]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:03:08"
+        label: "P2"
+      - at: "02:06:13"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3460648"
         kind: replay
@@ -104,6 +136,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_12/1486904976.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:56:08"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3467198"
         kind: replay
@@ -119,7 +156,18 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_10/1486729429.JPG?imageslim"
-    games: []
+    games: [cat-goes-fishing]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:57:26"
+        label: "P2"
+      - at: "01:54:53"
+        label: "P3"
+      - at: "02:52:21"
+        label: "P4"
+      - at: "03:49:47"
+        label: "P5"
     sources:
       - url: "https://www.acfun.cn/v/ac3462913"
         kind: replay
@@ -135,7 +183,12 @@
     confidence: high
     duration_min: 175
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_11/1486814339.JPG?imageslim"
-    games: []
+    games: [cat-goes-fishing]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:27:19"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3464926"
         kind: replay
@@ -168,6 +221,15 @@
     duration_min: 349
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_14/1487048767.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "上午P1"
+      - at: "00:53:01"
+        label: "上午P2"
+      - at: "02:55:38"
+        label: "下午"
+      - at: "05:46:49"
+        label: "彩蛋"
     sources:
       - url: "https://www.acfun.cn/v/ac3471359"
         kind: replay
@@ -183,7 +245,18 @@
     confidence: high
     duration_min: 438
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_16/1487260389.jpg?imageslim"
-    games: []
+    games: [geometry-dash]
+    segments:
+      - at: "00:00:00"
+        label: "聊天-科目2的真相"
+      - at: "00:39:56"
+        label: "P1-开始几何冲刺"
+      - at: "02:32:48"
+        label: "P2-也是几何冲刺"
+      - at: "04:22:28"
+        label: "P3-还是几何冲刺"
+      - at: "06:19:36"
+        label: "午夜彩蛋"
     sources:
       - url: "https://www.acfun.cn/v/ac3478890"
         kind: replay
@@ -199,7 +272,14 @@
     confidence: high
     duration_min: 201
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_17/1487327336.jpg?imageslim"
-    games: []
+    games: [geometry-dash]
+    segments:
+      - at: "00:00:00"
+        label: "1P没错还是几何冲刺"
+      - at: "01:08:04"
+        label: "2P你可能眼花了"
+      - at: "02:27:47"
+        label: "3P这回真的过了"
     sources:
       - url: "https://www.acfun.cn/v/ac3481423"
         kind: replay
@@ -215,7 +295,14 @@
     confidence: high
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_18/1487420938.jpg?imageslim"
-    games: []
+    games: [ethan-carter, kalimba]
+    segments:
+      - at: "00:00:00"
+        label: "1P Kalimba"
+      - at: "01:45:09"
+        label: "3P 继续消失的伊森卡特"
+      - at: "02:33:39"
+        label: "2P 消失的伊森卡特~这回没消失"
     sources:
       - url: "https://www.acfun.cn/v/ac3484443"
         kind: replay
@@ -233,6 +320,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487683480.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:28:59"
+        label: "P2"
+      - at: "02:54:28"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3491948"
         kind: replay
@@ -249,6 +343,15 @@
     duration_min: 167
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487668039.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:04:30"
+        label: "Part2"
+      - at: "01:53:41"
+        label: "Part3"
+      - at: "02:33:18"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac3491355"
         kind: replay
@@ -281,6 +384,13 @@
     duration_min: 199
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_23/1487854241.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:39:40"
+        label: "P2"
+      - at: "02:49:14"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3497214"
         kind: replay

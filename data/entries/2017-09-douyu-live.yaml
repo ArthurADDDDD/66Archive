@@ -6,7 +6,30 @@
     confidence: high
     duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_02/1504356455.jpg?imageslim"
-    games: []
+    games: [patapon]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.2-游戏前聊10块钱的"
+      - at: "00:21:02"
+        label: "P2-9.2-游戏前聊10块钱的"
+      - at: "00:42:05"
+        label: "P3-9.2-游戏前聊10块钱的"
+      - at: "01:03:09"
+        label: "P8-9.2-啪嗒砰"
+      - at: "01:25:53"
+        label: "P9-9.2-啪嗒砰"
+      - at: "01:48:38"
+        label: "P10-9.2-啪嗒砰"
+      - at: "02:11:23"
+        label: "P11-9.2-啪嗒砰"
+      - at: "02:34:08"
+        label: "P4-9.2-啪嗒砰"
+      - at: "02:56:51"
+        label: "P5-9.2-啪嗒砰"
+      - at: "03:19:36"
+        label: "P6-9.2-啪嗒砰"
+      - at: "03:42:21"
+        label: "P7-9.2-啪嗒砰"
     sources:
       - url: "https://www.acfun.cn/v/ac3955661"
         kind: replay
@@ -22,7 +45,18 @@
     confidence: high
     duration_min: 139
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_05/1504571017.JPG?imageslim"
-    games: []
+    games: [horizon-zero-dawn]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.4-地平线零之曙光体验会（PS4国际影院派对"
+      - at: "00:27:44"
+        label: "P2-9.4-地平线零之曙光体验会（PS4国际影院派对"
+      - at: "00:55:28"
+        label: "P3-9.4-地平线零之曙光体验会（PS4国际影院派对"
+      - at: "01:23:12"
+        label: "P4-9.4-地平线零之曙光体验会（PS4国际影院派对"
+      - at: "01:50:56"
+        label: "P5-9.4-地平线零之曙光体验会（PS4国际影院派对"
     sources:
       - url: "https://www.acfun.cn/v/ac3959411"
         kind: replay
@@ -38,7 +72,30 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_06/1504706209.jpg?imageslim"
-    games: []
+    games: [patapon]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.6-游戏前聊10块钱的"
+      - at: "00:29:28"
+        label: "P2-9.6-游戏前聊10块钱的"
+      - at: "00:58:57"
+        label: "P3-9.6-游戏前聊10块钱的"
+      - at: "01:28:27"
+        label: "P4-9.6-啪嗒砰"
+      - at: "01:51:45"
+        label: "P5-9.6-啪嗒砰"
+      - at: "02:15:04"
+        label: "P6-9.6-啪嗒砰"
+      - at: "02:38:24"
+        label: "P8-9.6-啪嗒砰"
+      - at: "03:01:42"
+        label: "P9-9.6-啪嗒砰"
+      - at: "03:25:02"
+        label: "P10-9.6-啪嗒砰"
+      - at: "03:48:21"
+        label: "P11-9.6-啪嗒砰"
+      - at: "04:11:40"
+        label: "P7-9.6-啪嗒砰"
     sources:
       - url: "https://www.acfun.cn/v/ac3963530"
         kind: replay
@@ -54,7 +111,24 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_07/1504791389.JPG?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.7-游戏前聊10块钱的"
+      - at: "00:30:00"
+        label: "P2-9.7-绝地求生"
+      - at: "01:00:01"
+        label: "P3-9.7-绝地求生"
+      - at: "01:30:01"
+        label: "P4-9.7-绝地求生"
+      - at: "02:00:02"
+        label: "P5-9.7-绝地求生"
+      - at: "02:30:03"
+        label: "P6-9.7-绝地求生"
+      - at: "03:00:04"
+        label: "P7-9.7-绝地求生"
+      - at: "03:30:04"
+        label: "P8-9.7-绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac3965707"
         kind: replay
@@ -70,7 +144,28 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_08/1504880454.jpg?imageslim"
-    games: []
+    games: [patapon]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.8-游戏前聊10块钱的"
+      - at: "00:29:53"
+        label: "P2-9.8-啪嗒砰"
+      - at: "00:55:54"
+        label: "P3-9.8-啪嗒砰"
+      - at: "01:21:56"
+        label: "P4-9.8-啪嗒砰"
+      - at: "01:47:59"
+        label: "P5-9.8-啪嗒砰"
+      - at: "02:14:00"
+        label: "P6-9.8-啪嗒砰"
+      - at: "02:40:03"
+        label: "P7-9.8-啪嗒砰"
+      - at: "03:06:06"
+        label: "P8-9.8-啪嗒砰"
+      - at: "03:32:07"
+        label: "P9-9.8-啪嗒砰"
+      - at: "03:58:09"
+        label: "P10-9.8-啪嗒砰"
     sources:
       - url: "https://www.acfun.cn/v/ac3967886"
         kind: replay
@@ -87,6 +182,23 @@
     duration_min: 215
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_09/1504967519.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.9-尬聊"
+      - at: "00:28:48"
+        label: "P2-9.9-尬聊"
+      - at: "00:57:38"
+        label: "P3-9.9-尬聊"
+      - at: "01:26:27"
+        label: "P4-9.9-尬聊"
+      - at: "01:55:15"
+        label: "P5-9.9-尬聊"
+      - at: "02:24:04"
+        label: "P6-9.9-尬聊"
+      - at: "02:52:54"
+        label: "P7-9.9-尬聊"
+      - at: "03:14:07"
+        label: "P8-9.9-尬聊"
     sources:
       - url: "https://www.acfun.cn/v/ac3969217"
         kind: replay
@@ -105,6 +217,19 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播的弹幕版（ac3971648）与纯净版（ac3970580）原本被建模为两条重复条目，已合并（两版本目录标题均注『无聊天部分』）。"
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.10-心灵砒霜-弹幕版（无聊天部分）"
+      - at: "00:23:42"
+        label: "P2-9.10-心灵砒霜-弹幕版（无聊天部分）"
+      - at: "00:47:31"
+        label: "P3-9.10-心灵砒霜-弹幕版（无聊天部分）"
+      - at: "01:11:18"
+        label: "P4-9.10-心灵砒霜-弹幕版（无聊天部分）"
+      - at: "01:34:59"
+        label: "P5-9.10-心灵砒霜-弹幕版（无聊天部分）"
+      - at: "01:58:44"
+        label: "P6-9.10-心灵砒霜-弹幕版（无聊天部分）"
     sources:
       - url: "https://www.acfun.cn/v/ac3971648"
         kind: replay
@@ -124,7 +249,28 @@
     confidence: high
     duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_11/1505137384.jpg?imageslim"
-    games: []
+    games: [mario-rabbids]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.11-游戏前聊10块钱的"
+      - at: "00:23:19"
+        label: "P2-9.11-马里奥疯兔"
+      - at: "00:48:53"
+        label: "P3-9.11-马里奥疯兔"
+      - at: "01:14:27"
+        label: "P4-9.11-马里奥疯兔"
+      - at: "01:40:01"
+        label: "P5-9.11-马里奥疯兔"
+      - at: "02:05:36"
+        label: "P6-9.11-马里奥疯兔"
+      - at: "02:31:11"
+        label: "P7-9.11-马里奥疯兔"
+      - at: "02:56:46"
+        label: "P8-9.11-马里奥疯兔"
+      - at: "03:22:21"
+        label: "P9-9.11-马里奥疯兔"
+      - at: "03:47:56"
+        label: "P10-9.11-马里奥疯兔"
     sources:
       - url: "https://www.acfun.cn/v/ac3972500"
         kind: replay
@@ -140,7 +286,30 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_13/1505311564.jpg?imageslim"
-    games: []
+    games: [mario-rabbids]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.13-游戏前聊10块钱的"
+      - at: "00:19:49"
+        label: "P2-9.13-游戏前聊10块钱的"
+      - at: "00:39:39"
+        label: "P3-9.13-马里奥疯兔"
+      - at: "01:06:06"
+        label: "P4-9.13-马里奥疯兔"
+      - at: "01:26:19"
+        label: "P5-9.13-马里奥疯兔"
+      - at: "01:46:33"
+        label: "P6-9.13-马里奥疯兔"
+      - at: "02:08:50"
+        label: "P7-9.13-马里奥疯兔"
+      - at: "02:31:07"
+        label: "P8-9.13-马里奥疯兔"
+      - at: "02:53:25"
+        label: "P9-9.13-马里奥疯兔"
+      - at: "03:15:42"
+        label: "P10-9.13-马里奥疯兔"
+      - at: "03:38:01"
+        label: "P11-9.13-马里奥疯兔"
     sources:
       - url: "https://www.acfun.cn/v/ac3976769"
         kind: replay
@@ -157,6 +326,13 @@
     duration_min: 80
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_15/1505433684.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.14-广州一日吃"
+      - at: "00:26:36"
+        label: "P2-9.14-广州一日吃"
+      - at: "00:53:14"
+        label: "P3-9.14-广州一日吃"
     sources:
       - url: "https://www.acfun.cn/v/ac3979127"
         kind: replay
@@ -173,6 +349,25 @@
     duration_min: 136
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_16/1505534577.jpg?imageslim"
     games: [minecraft]
+    segments:
+      - at: "00:00:00"
+        label: "P1-女流-9.15-《我的世界》手游上线"
+        game: minecraft
+      - at: "00:22:37"
+        label: "P2-女流-9.15-《我的世界》手游上线"
+        game: minecraft
+      - at: "00:45:16"
+        label: "P3-女流-9.15-《我的世界》手游上线"
+        game: minecraft
+      - at: "01:07:54"
+        label: "P4-女流-9.15-《我的世界》手游上线"
+        game: minecraft
+      - at: "01:30:31"
+        label: "P5-女流-9.15-《我的世界》手游上线"
+        game: minecraft
+      - at: "01:53:11"
+        label: "P6-女流-9.15-《我的世界》手游上线"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3981639"
         kind: replay
@@ -188,7 +383,24 @@
     confidence: high
     duration_min: 216
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_17/1505615884.jpg?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:27:10"
+        label: "P2-9.16-游戏前聊10块钱的"
+      - at: "00:54:22"
+        label: "Part3"
+      - at: "01:22:16"
+        label: "P4"
+      - at: "01:50:12"
+        label: "P5"
+      - at: "02:16:36"
+        label: "P6"
+      - at: "02:43:02"
+        label: "P7"
+      - at: "03:09:27"
+        label: "P8"
     sources:
       - url: "https://www.acfun.cn/v/ac3982859"
         kind: replay
@@ -206,6 +418,27 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_19/1505785714.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.17-砒霜前聊10块钱的-弹幕版"
+      - at: "00:22:39"
+        label: "P1.2-9.17-砒霜前聊10块钱的-弹幕版"
+      - at: "00:45:20"
+        label: "P2.1-9.17-心灵砒霜-弹幕版"
+      - at: "01:09:50"
+        label: "P2.2-9.17-心灵砒霜-弹幕版"
+      - at: "01:34:24"
+        label: "P2.3-9.17-心灵砒霜-弹幕版"
+      - at: "01:59:02"
+        label: "P2.4-9.17-心灵砒霜-弹幕版"
+      - at: "02:23:35"
+        label: "P2.5-9.17-心灵砒霜-弹幕版"
+      - at: "02:48:06"
+        label: "P2.6-9.17-心灵砒霜-弹幕版"
+      - at: "03:12:42"
+        label: "P2.7-9.17-心灵砒霜-弹幕版"
+      - at: "03:37:14"
+        label: "P2.8-9.17-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3986027"
         kind: replay
@@ -221,7 +454,24 @@
     confidence: high
     duration_min: 300
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_19/1505780142.JPG?imageslim"
-    games: []
+    games: [cook-serve-delicious]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.18-游戏前聊10块钱的"
+      - at: "00:21:45"
+        label: "P1.2-9.18-游戏前聊10块钱的"
+      - at: "00:48:58"
+        label: "P2.1-9.18-CookServeDelicious"
+      - at: "01:30:50"
+        label: "P2.2-9.18-CookServeDelicious"
+      - at: "02:12:44"
+        label: "P2.3-9.18-CookServeDelicious"
+      - at: "02:54:38"
+        label: "P2.4-9.18-CookServeDelicious"
+      - at: "03:36:30"
+        label: "P2.5-9.18-CookServeDelicious"
+      - at: "04:18:23"
+        label: "P2.6-9.18-CookServeDelicious"
     sources:
       - url: "https://www.acfun.cn/v/ac3985929"
         kind: replay
@@ -237,7 +487,28 @@
     confidence: high
     duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_20/1505866149.JPG?imageslim"
-    games: []
+    games: [cook-serve-delicious]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.19-游戏前聊10块钱的"
+      - at: "00:29:53"
+        label: "P1.2-9.19-游戏前聊10块钱的"
+      - at: "00:59:47"
+        label: "P2.1-9.19-CookServeDelicious"
+      - at: "01:23:53"
+        label: "P2.2-9.19-CookServeDelicious"
+      - at: "01:48:00"
+        label: "P2.3-9.19-CookServeDelicious"
+      - at: "02:12:08"
+        label: "P2.4-9.19-CookServeDelicious"
+      - at: "02:36:15"
+        label: "P2.5-9.19-CookServeDelicious"
+      - at: "03:00:21"
+        label: "P2.6-9.19-CookServeDelicious"
+      - at: "03:24:29"
+        label: "P2.7-9.19-CookServeDelicious"
+      - at: "03:48:38"
+        label: "P2.8-9.19-CookServeDelicious"
     sources:
       - url: "https://www.acfun.cn/v/ac3987863"
         kind: replay
@@ -253,7 +524,18 @@
     confidence: high
     duration_min: 131
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_20/1505916920.jpg?imageslim"
-    games: []
+    games: [euro-truck-simulator-2, cook-serve-delicious]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.20-游戏前聊20块钱的"
+      - at: "00:28:59"
+        label: "P2-9.20-游戏前聊20块钱的"
+      - at: "00:57:59"
+        label: "P3-9.20-CookServeDelicious"
+      - at: "01:13:12"
+        label: "P4-9.20-欧洲卡车模拟2_2.[SplitIt]"
+      - at: "01:41:52"
+        label: "P5-9.20-欧洲卡车模拟2_2.[SplitIt]"
     sources:
       - url: "https://www.acfun.cn/v/ac3989684"
         kind: replay
@@ -270,6 +552,33 @@
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_21/1506004904.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.21-车展之前逛会儿街"
+      - at: "00:17:48"
+        label: "P1.2-9.21-车展之前逛会儿街"
+      - at: "00:33:11"
+        label: "P1.3-9.21-车展之前逛会儿街"
+      - at: "00:48:35"
+        label: "P1.4-9.21-车展之前逛会儿街"
+      - at: "01:06:44"
+        label: "P1.5-9.21-车展之前聊会儿天"
+      - at: "01:30:34"
+        label: "P1.6-9.21-车展之前聊会儿天"
+      - at: "01:54:25"
+        label: "P1.7-9.21-车展之前聊会儿天"
+      - at: "02:18:15"
+        label: "P2.1-9.21-第二代Mazda CX-5上市直播"
+      - at: "02:27:25"
+        label: "P2.2-9.21-第二代Mazda CX-5上市直播"
+      - at: "02:55:16"
+        label: "P2.3-9.21-第二代Mazda CX-5上市直播"
+      - at: "03:23:09"
+        label: "P2.4-9.21-第二代Mazda CX-5上市直播"
+      - at: "03:51:02"
+        label: "P2.5-9.21-第二代Mazda CX-5上市直播"
+      - at: "04:18:54"
+        label: "P2.6-9.21-第二代Mazda CX-5上市直播"
     sources:
       - url: "https://www.acfun.cn/v/ac3991814"
         kind: replay
@@ -285,7 +594,20 @@
     confidence: high
     duration_min: 159
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_22/1506093005.JPG?imageslim"
-    games: []
+    games: [euro-truck-simulator-2]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.22-游戏前聊30块钱的"
+      - at: "00:26:57"
+        label: "P1.2-9.22-游戏前聊30块钱的"
+      - at: "00:53:55"
+        label: "P1.3-9.22-游戏前聊30块钱的"
+      - at: "01:20:52"
+        label: "P1.4-9.22-游戏前聊30块钱的"
+      - at: "01:47:51"
+        label: "P2-9.22-欧洲卡车模拟2"
+      - at: "02:13:40"
+        label: "P2-9.22-欧洲卡车模拟2"
     sources:
       - url: "https://www.acfun.cn/v/ac3994050"
         kind: replay
@@ -301,7 +623,30 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_24/1506215676.JPG?imageslim"
-    games: []
+    games: [euro-truck-simulator-2]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.23-游戏前聊10块钱的"
+      - at: "00:24:16"
+        label: "P1.2-9.23-游戏前聊10块钱的"
+      - at: "00:48:34"
+        label: "P1.3-9.23-游戏前聊10块钱的"
+      - at: "01:12:51"
+        label: "P2.1-9.23-欧洲卡车模拟2"
+      - at: "01:38:00"
+        label: "P2.2-9.23-欧洲卡车模拟2"
+      - at: "02:03:11"
+        label: "P2.3-9.23-欧洲卡车模拟2"
+      - at: "02:28:21"
+        label: "P2.4-9.23-欧洲卡车模拟2"
+      - at: "02:53:30"
+        label: "P2.5-9.23-欧洲卡车模拟2"
+      - at: "03:18:40"
+        label: "P2.6-9.23-欧洲卡车模拟2"
+      - at: "03:43:52"
+        label: "P2.7-9.23-欧洲卡车模拟2"
+      - at: "04:09:02"
+        label: "P2.8-9.23-欧洲卡车模拟2"
     sources:
       - url: "https://www.acfun.cn/v/ac3995750"
         kind: replay
@@ -319,6 +664,27 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_26/1506384849.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-9.25-砒霜前聊10块钱的-弹幕版"
+      - at: "00:19:19"
+        label: "P1.2-9.25-砒霜前聊10块钱的-弹幕版"
+      - at: "00:38:40"
+        label: "P2.1-9.25-心灵砒霜-弹幕版"
+      - at: "00:51:36"
+        label: "P2.2-9.25-心灵砒霜-弹幕版"
+      - at: "01:04:29"
+        label: "P2.3-9.25-心灵砒霜-弹幕版"
+      - at: "01:17:27"
+        label: "P2.4-9.25-心灵砒霜-弹幕版"
+      - at: "01:30:22"
+        label: "P2.5-9.25-心灵砒霜-弹幕版"
+      - at: "01:43:17"
+        label: "P2.6-9.25-心灵砒霜-弹幕版"
+      - at: "01:56:08"
+        label: "P2.7-9.25-心灵砒霜-弹幕版"
+      - at: "02:09:04"
+        label: "P2.8-9.25-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3998899"
         kind: replay
@@ -334,7 +700,20 @@
     confidence: high
     duration_min: 170
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_27/1506519353.jpg?imageslim"
-    games: []
+    games: [euro-truck-simulator-2]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.27-欧洲卡车模拟2"
+      - at: "00:28:18"
+        label: "P2-9.27-欧洲卡车模拟2"
+      - at: "00:56:38"
+        label: "P3-9.27-欧洲卡车模拟2"
+      - at: "01:24:56"
+        label: "P4-9.27-欧洲卡车模拟2"
+      - at: "01:53:15"
+        label: "P5-9.27-欧洲卡车模拟2"
+      - at: "02:21:36"
+        label: "P6-9.27-欧洲卡车模拟2"
     sources:
       - url: "https://www.acfun.cn/v/ac4002694"
         kind: replay
@@ -350,7 +729,26 @@
     confidence: high
     duration_min: 215
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_30/1506769675.jpg?imageslim"
-    games: []
+    games: [pubg]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.28-姐弟双排吃鸡"
+      - at: "00:23:54"
+        label: "P2-9.28-姐弟双排吃鸡"
+      - at: "00:47:48"
+        label: "P3-9.28-姐弟双排吃鸡"
+      - at: "01:11:42"
+        label: "P4-9.28-姐弟双排吃鸡"
+      - at: "01:35:35"
+        label: "P5-9.28-姐弟双排吃鸡"
+      - at: "01:59:29"
+        label: "P6-9.28-姐弟双排吃鸡"
+      - at: "02:23:23"
+        label: "P7-9.28-姐弟双排吃鸡"
+      - at: "02:47:16"
+        label: "P8-9.28-姐弟双排吃鸡"
+      - at: "03:11:10"
+        label: "P9-9.28-姐弟双排吃鸡"
     sources:
       - url: "https://www.acfun.cn/v/ac4008312"
         kind: replay
@@ -366,7 +764,32 @@
     confidence: high
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/content/2017_09_30/1506780946.jpg?imageslim"
-    games: []
+    games: [cuphead]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.30-茶杯头cuphead"
+      - at: "00:23:30"
+        label: "P2-9.30-茶杯头cuphead"
+      - at: "00:47:01"
+        label: "P3-9.30-茶杯头cuphead"
+      - at: "01:10:32"
+        label: "P4-9.30-茶杯头cuphead"
+      - at: "01:34:01"
+        label: "P5-9.30-茶杯头cuphead"
+      - at: "01:57:32"
+        label: "P6-9.30-茶杯头cuphead"
+      - at: "02:21:02"
+        label: "P7-9.30-茶杯头cuphead"
+      - at: "02:44:31"
+        label: "P8-9.30-茶杯头cuphead"
+      - at: "03:08:01"
+        label: "P9-9.30-茶杯头cuphead"
+      - at: "03:31:32"
+        label: "P10-9.30-茶杯头cuphead"
+      - at: "03:55:01"
+        label: "P11-9.30-茶杯头cuphead"
+      - at: "04:18:30"
+        label: "P12-9.30-茶杯头cuphead"
     sources:
       - url: "https://www.acfun.cn/v/ac4008554"
         kind: replay

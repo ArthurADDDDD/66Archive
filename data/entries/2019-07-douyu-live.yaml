@@ -6,7 +6,22 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/FlkDsKWY1pwdnASZPQmkTGnN_CJo?imageslim"
-    games: []
+    games: [bossgard]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:23:04"
+        label: "Bossgard"
+        game: bossgard
+      - at: "01:11:33"
+        label: "Bossgard"
+        game: bossgard
+      - at: "02:00:01"
+        label: "Bossgard"
+        game: bossgard
+      - at: "02:59:54"
+        label: "Bossgard"
+        game: bossgard
     sources:
       - url: "https://www.acfun.cn/v/ac10379501"
         kind: replay
@@ -55,7 +70,19 @@
     confidence: high
     duration_min: 209
     cover: "https://tx-free-imgs.acfun.cn/FghuLtOU3ZXqY-VAEkx84HrhnE77?imageslim"
-    games: []
+    games: [sky-noon, human-fall-flat]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:10:50"
+        label: "Sky Noon"
+        game: sky-noon
+      - at: "01:02:55"
+        label: "人类一败涂地"
+        game: human-fall-flat
+      - at: "02:15:53"
+        label: "人类一败涂地"
+        game: human-fall-flat
     sources:
       - url: "https://www.acfun.cn/v/ac10411735"
         kind: replay
@@ -71,7 +98,22 @@
     confidence: high
     duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/FhOv_9FAyWaT7LJWvYYYx-TQANMi?imageslim"
-    games: []
+    games: [northgard]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:51"
+        label: "Northgard"
+        game: northgard
+      - at: "01:21:48"
+        label: "Northgard"
+        game: northgard
+      - at: "02:22:45"
+        label: "Northgard"
+        game: northgard
+      - at: "03:23:41"
+        label: "Northgard"
+        game: northgard
     sources:
       - url: "https://www.acfun.cn/v/ac10422318"
         kind: replay
@@ -105,6 +147,13 @@
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/Ft6xgFlpLNV_uyIR009w1gzHAP9U?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "天下第一斗歌大会"
+      - at: "01:21:50"
+        label: "天下第一斗歌大会"
+      - at: "02:43:43"
+        label: "天下第一斗歌大会"
     sources:
       - url: "https://www.acfun.cn/v/ac10514048"
         kind: replay
@@ -121,6 +170,13 @@
     duration_min: 206
     cover: "https://tx-free-imgs.acfun.cn/FrbPngXJKa5LuvAytsSV80qZ_z8d?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "天下第一斗歌大会"
+      - at: "01:08:47"
+        label: "天下第一斗歌大会"
+      - at: "02:17:34"
+        label: "天下第一斗歌大会"
     sources:
       - url: "https://www.acfun.cn/v/ac10513103"
         kind: replay
@@ -138,6 +194,15 @@
     cover: "https://tx-free-imgs.acfun.cn/Fv-rcUT3x86LNiTTEUUrcKfvP-Dv?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:17:20"
+        label: "心灵砒霜"
+      - at: "01:35:45"
+        label: "心灵砒霜"
+      - at: "02:54:12"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10518584"
         kind: replay
@@ -154,6 +219,17 @@
     duration_min: 306
     cover: "https://tx-free-imgs.acfun.cn/FnFzpE0uRE9vtvNgW9zFKRcwbSyQ?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "2020东京奥运，66号选手请准备"
+      - at: "01:01:07"
+        label: "2020东京奥运，66号选手请准备"
+      - at: "02:02:16"
+        label: "2020东京奥运，66号选手请准备"
+      - at: "03:03:25"
+        label: "2020东京奥运，66号选手请准备"
+      - at: "04:04:33"
+        label: "2020东京奥运，66号选手请准备"
     sources:
       - url: "https://www.acfun.cn/v/ac10591122"
         kind: replay
@@ -171,6 +247,13 @@
     cover: "https://tx-free-imgs.acfun.cn/Fk5KRVvFDU4ZCov1i2mu7ZDL8aoH?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:36:59"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:23:49"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10613129"
         kind: replay
@@ -187,6 +270,11 @@
     duration_min: 116
     cover: "https://tx-free-imgs.acfun.cn/FlyCMEMbFnLsSi8RYurg6pMd7pWi?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "天下第一斗歌大会"
+      - at: "00:57:49"
+        label: "天下第一斗歌大会"
     sources:
       - url: "https://www.acfun.cn/v/ac10634077"
         kind: replay
@@ -202,7 +290,18 @@
     confidence: high
     duration_min: 332
     cover: "https://tx-free-imgs.acfun.cn/Frk51mg2tYGIC4GJRgFMsqQjnIzK?imageslim"
-    games: []
+    games: [sos-fomt]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:27:10"
+        label: "不种地是不可能的"
+      - at: "01:43:25"
+        label: "不种地是不可能的"
+      - at: "02:59:41"
+        label: "不种地是不可能的"
+      - at: "04:15:58"
+        label: "不种地是不可能的"
     sources:
       - url: "https://www.acfun.cn/v/ac10646808"
         kind: replay

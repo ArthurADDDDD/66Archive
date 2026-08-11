@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_758136616e90484f97e72187f8418bd8.jpeg?imageslim"
-    games: []
+    games: [neon-abyss]
+    segments:
+      - at: "00:00:00"
+        label: "霓虹深渊"
+      - at: "00:56:24"
+        label: "霓虹深渊"
+      - at: "01:52:51"
+        label: "霓虹深渊"
+      - at: "02:49:17"
+        label: "霓虹深渊"
     sources:
       - url: "https://www.acfun.cn/v/ac30134539"
         kind: replay
@@ -23,6 +32,17 @@
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b38f6bcac812474e84995048351cb970.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "周六来个下午茶吧"
+      - at: "00:48:00"
+        label: "周六来个下午茶吧"
+      - at: "01:36:03"
+        label: "周六来个下午茶吧"
+      - at: "02:24:07"
+        label: "周六来个下午茶吧"
+      - at: "03:12:08"
+        label: "周六来个下午茶吧"
     sources:
       - url: "https://www.acfun.cn/v/ac30143440"
         kind: replay
@@ -40,6 +60,19 @@
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e1dd3f0043ec4d4c9c242f085005e2e8.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:25:44"
+        label: "心灵砒霜弹幕版"
+      - at: "01:09:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:52:15"
+        label: "心灵砒霜弹幕版"
+      - at: "02:35:31"
+        label: "心灵砒霜弹幕版"
+      - at: "03:18:44"
+        label: "心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac30162195"
         kind: replay
@@ -56,6 +89,31 @@
     duration_min: 554
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_101fdf03068040d6a6cc8da658ffb899.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "出门走走逛逛"
+      - at: "00:07:12"
+        label: "出门走走逛逛"
+      - at: "00:32:45"
+        label: "出门走走逛逛"
+      - at: "01:02:57"
+        label: "出门走走逛逛"
+      - at: "01:15:12"
+        label: "出门走走逛逛"
+      - at: "03:15:13"
+        label: "出门走走逛逛"
+      - at: "03:49:04"
+        label: "出门走走逛逛"
+      - at: "04:00:57"
+        label: "出门走走逛逛"
+      - at: "04:12:31"
+        label: "出门走走逛逛"
+      - at: "06:12:32"
+        label: "出门走走逛逛"
+      - at: "08:12:33"
+        label: "出门走走逛逛"
+      - at: "08:40:30"
+        label: "出门走走逛逛"
     sources:
       - url: "https://www.acfun.cn/v/ac30162193"
         kind: replay
@@ -71,7 +129,17 @@
     confidence: high
     duration_min: 155
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_30d9e9dca9654ce491abc5d0d645a6ee.jpeg?imageslim"
-    games: []
+    games: [creaks]
+    segments:
+      - at: "00:00:00"
+        label: "Creaks"
+        game: creaks
+      - at: "00:51:39"
+        label: "Creaks"
+        game: creaks
+      - at: "01:43:21"
+        label: "Creaks"
+        game: creaks
     sources:
       - url: "https://www.acfun.cn/v/ac30173210"
         kind: replay
@@ -88,6 +156,22 @@
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b4e001dea059472996fa3831eeffb600.jpeg?imageslim"
     games: [hollow-knight]
+    segments:
+      - at: "00:00:00"
+        label: "空洞骑士"
+        game: hollow-knight
+      - at: "00:55:45"
+        label: "空洞骑士"
+        game: hollow-knight
+      - at: "01:51:30"
+        label: "空洞骑士"
+        game: hollow-knight
+      - at: "02:47:15"
+        label: "空洞骑士"
+        game: hollow-knight
+      - at: "03:23:35"
+        label: "空洞骑士"
+        game: hollow-knight
     sources:
       - url: "https://www.acfun.cn/v/ac30183981"
         kind: replay
@@ -103,7 +187,20 @@
     confidence: high
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d5e63c6f339849548e638e701dbdebc2.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:55:24"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:50:49"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:46:14"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30194595"
         kind: replay
@@ -119,7 +216,18 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6f844441297a44f6895bb5057bbaea9e.jpeg?imageslim"
-    games: []
+    games: [zhanyao-xing]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:08:28"
+        label: "斩妖行"
+      - at: "01:04:07"
+        label: "斩妖行"
+      - at: "01:59:46"
+        label: "斩妖行"
+      - at: "02:55:26"
+        label: "斩妖行"
     sources:
       - url: "https://www.acfun.cn/v/ac30206106"
         kind: replay
@@ -135,7 +243,17 @@
     confidence: high
     duration_min: 165
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_41f124dbc8a54f8cbfb26a1ae00081a9.jpeg?imageslim"
-    games: []
+    games: [operation-tango]
+    segments:
+      - at: "00:00:00"
+        label: "Operation Tango"
+        game: operation-tango
+      - at: "00:54:59"
+        label: "Operation Tango"
+        game: operation-tango
+      - at: "01:50:00"
+        label: "Operation Tango"
+        game: operation-tango
     sources:
       - url: "https://www.acfun.cn/v/ac30216668"
         kind: replay
@@ -151,7 +269,17 @@
     confidence: high
     duration_min: 163
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_18b63d657ece4f43bac0e05aa42d31dd.jpeg?imageslim"
-    games: []
+    games: [pico-park]
+    segments:
+      - at: "00:00:00"
+        label: "八人合作Pico Park"
+        game: pico-park
+      - at: "00:54:20"
+        label: "八人合作Pico Park"
+        game: pico-park
+      - at: "01:48:41"
+        label: "八人合作Pico Park"
+        game: pico-park
     sources:
       - url: "https://www.acfun.cn/v/ac30236346"
         kind: replay
@@ -168,6 +296,15 @@
     duration_min: 171
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3b56d579b6b04fa28fa6cb7bdeccde32.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "美好的下午时光"
+      - at: "00:42:39"
+        label: "美好的下午时光"
+      - at: "01:25:20"
+        label: "美好的下午时光"
+      - at: "02:08:01"
+        label: "美好的下午时光"
     sources:
       - url: "https://www.acfun.cn/v/ac30249183"
         kind: replay
@@ -183,7 +320,17 @@
     confidence: high
     duration_min: 164
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d4141096f169490e87151c2462631c7b.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-stories-2]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "00:54:43"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "01:49:25"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
     sources:
       - url: "https://www.acfun.cn/v/ac30274620"
         kind: replay
@@ -199,7 +346,20 @@
     confidence: high
     duration_min: 192
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9dea14cc416c4f62bb284ee74d66a11d.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-stories-2]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "00:39:59"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "01:30:33"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "02:21:07"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
     sources:
       - url: "https://www.acfun.cn/v/ac30285765"
         kind: replay
@@ -216,6 +376,17 @@
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6675595f85f8476799d06bc763a00508.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "TapTap 游戏发布会"
+      - at: "00:54:44"
+        label: "TapTap 游戏发布会"
+      - at: "01:49:29"
+        label: "TapTap 游戏发布会"
+      - at: "02:44:15"
+        label: "TapTap 游戏发布会"
+      - at: "03:39:00"
+        label: "TapTap 游戏发布会"
     sources:
       - url: "https://www.acfun.cn/v/ac30317751"
         kind: replay
@@ -247,7 +418,23 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a9061d4bd6a94f628739585eb4adaf15.jpeg?imageslim"
-    games: []
+    games: [monster-hunter-stories-2]
+    segments:
+      - at: "00:00:00"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "00:49:59"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "01:43:34"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "02:37:10"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
+      - at: "03:30:47"
+        label: "怪物猎人物语2破灭之翼"
+        game: monster-hunter-stories-2
     sources:
       - url: "https://www.acfun.cn/v/ac30331324"
         kind: replay
@@ -279,7 +466,18 @@
     confidence: high
     duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cd7ac49475594a1d8dcdf2c00ba9c42a.jpeg?imageslim"
-    games: []
+    games: [gupo]
+    segments:
+      - at: "00:00:00"
+        label: "蛊婆"
+      - at: "00:52:59"
+        label: "蛊婆"
+      - at: "01:45:59"
+        label: "蛊婆"
+      - at: "02:39:00"
+        label: "蛊婆"
+      - at: "03:32:00"
+        label: "蛊婆"
     sources:
       - url: "https://www.acfun.cn/v/ac30369286"
         kind: replay
@@ -296,6 +494,15 @@
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_303ed5e670c7402196a4f0540cd1a79d.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "全明星娱乐赛"
+      - at: "00:47:06"
+        label: "全明星娱乐赛"
+      - at: "01:34:15"
+        label: "全明星娱乐赛"
+      - at: "02:21:26"
+        label: "全明星娱乐赛"
     sources:
       - url: "https://www.acfun.cn/v/ac30369451"
         kind: replay
@@ -311,7 +518,23 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_265ab6fa93e84a81af57c30766afc403.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间全明星"
+        game: naraka-bladepoint
+      - at: "00:44:59"
+        label: "永劫无间全明星"
+        game: naraka-bladepoint
+      - at: "01:35:32"
+        label: "永劫无间全明星"
+        game: naraka-bladepoint
+      - at: "02:26:09"
+        label: "永劫无间全明星"
+        game: naraka-bladepoint
+      - at: "03:16:46"
+        label: "永劫无间全明星"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30390163"
         kind: replay
@@ -345,6 +568,17 @@
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c62f93f8abbe47b7afcaa965746a0633.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:25:02"
+        label: "P6.2-2021.7.25-心灵砒霜弹幕版"
+      - at: "01:08:52"
+        label: "P6.3-2021.7.25-心灵砒霜弹幕版"
+      - at: "01:52:40"
+        label: "P6.4-2021.7.25-心灵砒霜弹幕版"
+      - at: "02:36:30"
+        label: "P6.5-2021.7.25-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac30400928"
         kind: replay
@@ -360,7 +594,26 @@
     confidence: high
     duration_min: 286
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3b533f3cc8ad4ed6bf39230904743337.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:39:59"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:29:04"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:18:11"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:07:17"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:56:25"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30411814"
         kind: replay
@@ -376,7 +629,20 @@
     confidence: high
     duration_min: 479
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1172d01e3f954e4294d004e89481305b.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:59:59"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "04:55:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "05:50:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30412901"
         kind: replay
@@ -392,7 +658,20 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_808535f7676e4f9a940d7958a06d70fd.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:56:07"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:52:14"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:48:23"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30427288"
         kind: replay
@@ -408,7 +687,20 @@
     confidence: high
     duration_min: 196
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5f777582e16c444da5acb30d228ab5c1.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:48:55"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:37:51"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:26:47"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30452442"
         kind: replay
@@ -424,7 +716,21 @@
     confidence: high
     duration_min: 242
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dc03889f274042468089e1a08af77dd1.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "光遇"
+      - at: "00:46:10"
+        label: "光遇"
+      - at: "01:32:24"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:22:19"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:12:13"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30457834"
         kind: replay
@@ -440,7 +746,23 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7588eb6ae74243089b69facc68e2e400.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "00:47:06"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "01:34:15"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "02:21:25"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "03:08:33"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30457279"
         kind: replay
@@ -457,6 +779,17 @@
     duration_min: 261
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_096135c4082c487ead4cce4c47eb6ea5.jpeg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "OneWay"
+      - at: "00:49:59"
+        label: "OneWay"
+      - at: "01:42:41"
+        label: "OneWay"
+      - at: "02:35:25"
+        label: "OneWay"
+      - at: "03:28:09"
+        label: "OneWay"
     sources:
       - url: "https://www.acfun.cn/v/ac30464385"
         kind: replay

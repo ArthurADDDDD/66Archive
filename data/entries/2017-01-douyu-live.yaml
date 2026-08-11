@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_01/1483278784.jpg?imageslim"
-    games: []
+    games: [league-of-legends]
+    segments:
+      - at: "00:00:00"
+        label: "P1-第一局下半+第二局上半"
+      - at: "00:38:40"
+        label: "P2-第二局下半"
+      - at: "01:09:14"
+        label: "P3-第三局"
+      - at: "01:48:37"
+        label: "P4-第四局"
+      - at: "02:12:11"
+        label: "P5-第五局"
+      - at: "03:05:06"
+        label: "P6-第六局"
     sources:
       - url: "https://www.acfun.cn/v/ac3373572"
         kind: replay
@@ -24,6 +37,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483451376.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.2-心灵砒霜-弹幕版"
+      - at: "01:20:35"
+        label: "P2-1.2-心灵砒霜-弹幕版"
+      - at: "02:26:48"
+        label: "P3-1.2-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3378069"
         kind: replay
@@ -39,7 +59,17 @@
     confidence: high
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483455126.JPG?imageslim"
-    games: []
+    games: [shengshi-tianxia]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.3-盛世天下·媚娘篇"
+        game: shengshi-tianxia
+      - at: "00:22:44"
+        label: "P2-1.3-盛世天下·媚娘篇"
+        game: shengshi-tianxia
+      - at: "02:00:05"
+        label: "P3-1.3-盛世天下·媚娘篇"
+        game: shengshi-tianxia
     sources:
       - url: "https://www.acfun.cn/v/ac3378212"
         kind: replay
@@ -55,7 +85,16 @@
     confidence: high
     duration_min: 224
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_04/1483531948.JPG?imageslim"
-    games: []
+    games: [shengshi-tianxia]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.4-聊天"
+      - at: "00:26:21"
+        label: "P2-1.4-盛世天下·媚娘篇"
+        game: shengshi-tianxia
+      - at: "02:05:05"
+        label: "P3-1.4-盛世天下·媚娘篇"
+        game: shengshi-tianxia
     sources:
       - url: "https://www.acfun.cn/v/ac3380641"
         kind: replay
@@ -71,7 +110,22 @@
     confidence: high
     duration_min: 227
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_07/1483797274.JPG?imageslim"
-    games: []
+    games: [league-of-legends]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.7-聊天+第一局上半"
+      - at: "01:00:24"
+        label: "P2-1.7-英雄联盟-第一局上半+第二局"
+        game: league-of-legends
+      - at: "01:48:00"
+        label: "P3-1.7-英雄联盟-第三局"
+        game: league-of-legends
+      - at: "02:29:29"
+        label: "P4-1.7-英雄联盟-第四局"
+        game: league-of-legends
+      - at: "03:16:31"
+        label: "P5-1.7-英雄联盟-第五局"
+        game: league-of-legends
     sources:
       - url: "https://www.acfun.cn/v/ac3388459"
         kind: replay
@@ -89,6 +143,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_10/1484052496.JPG?imageslim"
     games: []
     tags: [聊天]
+    segments:
+      - at: "00:00:00"
+        label: "P1-炒饭聊天"
+      - at: "00:20:43"
+        label: "P2-炒饭聊天"
     sources:
       - url: "https://www.acfun.cn/v/ac3395388"
         kind: replay
@@ -105,6 +164,13 @@
     duration_min: 154
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_10/1484051182.JPG?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.10-黑魂3-2周目前准备"
+        game: dark-souls-3
+      - at: "01:13:02"
+        label: "P2-1.10-黑魂3-2周目前准备"
+        game: dark-souls-3
     sources:
       - url: "https://www.acfun.cn/v/ac3395343"
         kind: replay
@@ -121,6 +187,13 @@
     duration_min: 228
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_11/1484144133.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "01:15:59"
+        label: "P2"
+      - at: "02:31:58"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3398386"
         kind: replay
@@ -136,7 +209,13 @@
     confidence: high
     duration_min: 80
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_12/1484228962.jpg?imageslim"
-    games: []
+    games: [league-of-legends]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:21:00"
+        label: "P2-聊天+英雄联盟"
+        game: league-of-legends
     sources:
       - url: "https://www.acfun.cn/v/ac3400771"
         kind: replay
@@ -153,6 +232,13 @@
     duration_min: 144
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_12/1484232204.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.12-黑暗之魂3-2周目-day1"
+        game: dark-souls-3
+      - at: "01:11:52"
+        label: "P2-1.12-黑暗之魂3-2周目-day1"
+        game: dark-souls-3
     sources:
       - url: "https://www.acfun.cn/v/ac3400881"
         kind: replay
@@ -169,6 +255,13 @@
     duration_min: 213
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_13/1484319479.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.13-A站年会"
+      - at: "00:24:00"
+        label: "P2-1.13-A站年会"
+      - at: "01:58:14"
+        label: "P3-1.13-A站年会"
     sources:
       - url: "https://www.acfun.cn/v/ac3403380"
         kind: replay
@@ -185,6 +278,13 @@
     duration_min: 118
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_14/1484389612.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:23:59"
+        label: "P2-A"
+      - at: "01:11:07"
+        label: "P2-B"
     sources:
       - url: "https://www.acfun.cn/v/ac3405022"
         kind: replay
@@ -202,6 +302,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484617930.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.15-心灵砒霜-弹幕版"
+      - at: "01:11:17"
+        label: "P2-1.15-心灵砒霜-弹幕版"
+      - at: "02:30:42"
+        label: "P3-1.15-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3410716"
         kind: replay
@@ -217,7 +324,14 @@
     confidence: high
     duration_min: 125
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_16/1484562894.JPG?imageslim"
-    games: []
+    games: [move-or-die]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:22:30"
+        label: "P2-1.16-Move or Die"
+      - at: "01:14:54"
+        label: "P3-1.16-Move or Die"
     sources:
       - url: "https://www.acfun.cn/v/ac3409502"
         kind: replay
@@ -233,7 +347,16 @@
     confidence: high
     duration_min: 179
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484651137.JPG?imageslim"
-    games: []
+    games: [battleblock-theater]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:28:02"
+        label: "P2-1.17-战斗方块剧场"
+      - at: "01:59:58"
+        label: "P3-1.17-战斗方块剧场"
+      - at: "02:35:33"
+        label: "P4-1.17-战斗方块剧场"
     sources:
       - url: "https://www.acfun.cn/v/ac3412287"
         kind: replay
@@ -249,7 +372,12 @@
     confidence: high
     duration_min: 72
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760345.JPG?imageslim"
-    games: []
+    games: [geometry-dash]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:23:33"
+        label: "P2-几何冲刺"
     sources:
       - url: "https://www.acfun.cn/v/ac3415692"
         kind: replay
@@ -265,7 +393,12 @@
     confidence: high
     duration_min: 185
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760538.jpg?imageslim"
-    games: []
+    games: [reigns]
+    segments:
+      - at: "00:00:00"
+        label: "P3-1.18-王权"
+      - at: "01:30:05"
+        label: "P4-1.18-王权"
     sources:
       - url: "https://www.acfun.cn/v/ac3415701"
         kind: replay
@@ -282,6 +415,13 @@
     duration_min: 217
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1484988007.png?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-1.20-两周年彩排？！-弹幕版"
+      - at: "01:18:45"
+        label: "P2-1.20-两周年彩排？！-弹幕版"
+      - at: "02:38:45"
+        label: "P3-1.20-两周年彩排？！-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3422132"
         kind: replay
@@ -315,6 +455,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_24/1485261172.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:00:07"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3429201"
         kind: replay
@@ -331,6 +476,11 @@
     duration_min: 14
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_25/1485353057.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-岳父教你做直播"
+      - at: "00:13:38"
+        label: "P2-案发现场？"
     sources:
       - url: "https://www.acfun.cn/v/ac3431422"
         kind: replay
@@ -347,6 +497,11 @@
     duration_min: 209
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_26/1485427796.png?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P2"
+      - at: "01:59:45"
+        label: "P1"
     sources:
       - url: "https://www.acfun.cn/v/ac3432913"
         kind: replay
@@ -395,6 +550,11 @@
     duration_min: 32
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_29/1485689598.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+      - at: "00:32:00"
+        label: "P2"
     sources:
       - url: "https://www.acfun.cn/v/ac3437161"
         kind: replay

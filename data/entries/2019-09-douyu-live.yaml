@@ -6,7 +6,20 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/FnCQrM2b3iGXpGxYFz1oohe7gXks?imageslim"
-    games: []
+    games: [heave-ho]
+    segments:
+      - at: "00:00:00"
+        label: "双人配合Heave Ho"
+        game: heave-ho
+      - at: "01:00:00"
+        label: "双人配合Heave Ho"
+        game: heave-ho
+      - at: "02:00:02"
+        label: "双人配合Heave Ho"
+        game: heave-ho
+      - at: "02:52:27"
+        label: "双人配合Heave Ho"
+        game: heave-ho
     sources:
       - url: "https://www.acfun.cn/v/ac10863183"
         kind: replay
@@ -23,6 +36,15 @@
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/Fm-XuMcIx2-OtxYkREQNIKi7ddTS?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "大雄好久不见"
+      - at: "00:58:55"
+        label: "大雄好久不见"
+      - at: "01:57:52"
+        label: "大雄好久不见"
+      - at: "02:56:49"
+        label: "大雄好久不见"
     sources:
       - url: "https://www.acfun.cn/v/ac10875058"
         kind: replay
@@ -40,6 +62,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FivtRBxGSSpYXfDKnwp06ein3xIO?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:01:26"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10905302"
         kind: replay
@@ -55,7 +82,16 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
-    games: []
+    games: [monster-hunter-world]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:03:48"
+        label: "Part2"
+      - at: "02:07:38"
+        label: "Part3"
+      - at: "03:11:28"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac10917297"
         kind: replay
@@ -71,7 +107,20 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/FinkxF0bwgSInHCP3CdZb7qz5QKk?imageslim"
-    games: []
+    games: [monster-hunter-world]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:40:18"
+        label: "怪物猎人：世界 冰原"
+      - at: "01:20:12"
+        label: "怪物猎人：世界 冰原"
+      - at: "02:00:05"
+        label: "怪物猎人：世界 冰原"
+      - at: "03:00:09"
+        label: "怪物猎人：世界 冰原"
+      - at: "04:00:15"
+        label: "怪物猎人：世界 冰原"
     sources:
       - url: "https://www.acfun.cn/v/ac10954601"
         kind: replay
@@ -89,6 +138,17 @@
     cover: "https://tx-free-imgs.acfun.cn/Fl3qakjaWiqM4PP2LPJ0X0TuthTP?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:16:45"
+        label: "心灵砒霜"
+      - at: "01:29:19"
+        label: "心灵砒霜"
+      - at: "02:41:55"
+        label: "心灵砒霜"
+      - at: "03:54:31"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10968579"
         kind: replay
@@ -104,7 +164,18 @@
     confidence: high
     duration_min: 269
     cover: "https://tx-free-imgs.acfun.cn/FlWT4O5rhhAoFFtnMxZWvQFxf0v8?imageslim"
-    games: []
+    games: [zelda-links-awakening]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:56:14"
+        label: "塞尔达传说 织梦岛"
+      - at: "02:00:04"
+        label: "塞尔达传说 织梦岛"
+      - at: "03:00:07"
+        label: "塞尔达传说 织梦岛"
+      - at: "04:00:11"
+        label: "塞尔达传说 织梦岛"
     sources:
       - url: "https://www.acfun.cn/v/ac11164528"
         kind: replay
@@ -120,7 +191,22 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/Fut6Q6-YFW7pGTqSCHVi8mrKdbCi?imageslim"
-    games: []
+    games: [a-short-hike]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:41:14"
+        label: "P2-2019.09.25-A Short Hike"
+        game: a-short-hike
+      - at: "01:20:40"
+        label: "P3-2019.09.25-A Short Hike"
+        game: a-short-hike
+      - at: "02:00:05"
+        label: "P4-2019.09.25-A Short Hike"
+        game: a-short-hike
+      - at: "03:00:06"
+        label: "P5-2019.09.25-A Short Hike"
+        game: a-short-hike
     sources:
       - url: "https://www.acfun.cn/v/ac11171141"
         kind: replay
@@ -136,7 +222,22 @@
     confidence: high
     duration_min: 308
     cover: "https://tx-free-imgs.acfun.cn/FhqBfq-rGtmCg5BdUL4PrG1GxWLa?imageslim"
-    games: []
+    games: [green-hell]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:08:09"
+        label: "Green Hell"
+        game: green-hell
+      - at: "02:00:02"
+        label: "Green Hell"
+        game: green-hell
+      - at: "03:00:06"
+        label: "Green Hell"
+        game: green-hell
+      - at: "04:00:09"
+        label: "Green Hell"
+        game: green-hell
     sources:
       - url: "https://www.acfun.cn/v/ac11258173"
         kind: replay

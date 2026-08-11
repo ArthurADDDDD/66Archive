@@ -7,6 +7,13 @@
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_03/1493813209.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.2-大周，还好么"
+      - at: "01:41:07"
+        label: "P2-5.2-大周，还好么"
+      - at: "03:26:24"
+        label: "P3-5.2-大周，还好么"
     sources:
       - url: "https://www.acfun.cn/v/ac3671580"
         kind: replay
@@ -23,6 +30,11 @@
     duration_min: 191
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_04/1493900141.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.3-你写我猜"
+      - at: "01:39:53"
+        label: "P2-5.3-你写我猜"
     sources:
       - url: "https://www.acfun.cn/v/ac3674258"
         kind: replay
@@ -39,6 +51,11 @@
     duration_min: 188
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_05/1493992579.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.4-今天不休息"
+      - at: "01:33:58"
+        label: "P1-5.4-今天不休息"
     sources:
       - url: "https://www.acfun.cn/v/ac3677150"
         kind: replay
@@ -54,7 +71,16 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_06/1494033287.JPG?imageslim"
-    games: []
+    games: [mario-kart-8-deluxe]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.5-马里奥赛车"
+      - at: "00:57:08"
+        label: "P2-调试时间有点多"
+      - at: "01:32:00"
+        label: "P3-5.5-马里奥赛车"
+      - at: "02:54:36"
+        label: "P4-5.5-马里奥赛车"
     sources:
       - url: "https://www.acfun.cn/v/ac3677716"
         kind: replay
@@ -70,7 +96,16 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_07/1494127121.JPG?imageslim"
-    games: []
+    games: [little-nightmares]
+    segments:
+      - at: "00:00:00"
+        label: "P1-直播前聊10块钱的"
+      - at: "00:31:48"
+        label: "P2-小小噩梦"
+      - at: "01:43:38"
+        label: "P3-小小噩梦"
+      - at: "02:55:29"
+        label: "P4-小小噩梦"
     sources:
       - url: "https://www.acfun.cn/v/ac3679707"
         kind: replay
@@ -88,6 +123,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_09/1494341460.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.7-心灵砒霜-弹幕版"
+      - at: "01:09:58"
+        label: "P2-5.7-心灵砒霜-弹幕版"
+      - at: "02:10:52"
+        label: "P3-5.7-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3686402"
         kind: replay
@@ -104,6 +146,19 @@
     duration_min: 339
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_10/1494429609.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.9-被套路办卡"
+      - at: "00:25:42"
+        label: "P2-5.9-汐"
+      - at: "01:19:51"
+        label: "P3-5.9-汐"
+      - at: "02:14:01"
+        label: "P4-5.9-汐"
+      - at: "03:22:11"
+        label: "P5-5.9-汐"
+      - at: "04:30:22"
+        label: "P6-5.9-汐"
     sources:
       - url: "https://www.acfun.cn/v/ac3688984"
         kind: replay
@@ -119,7 +174,16 @@
     confidence: high
     duration_min: 186
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_12/1494605139.JPG?imageslim"
-    games: []
+    games: [what-remains-of-edith-finch]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.12-艾迪芬奇的记忆（What Remains of Edith Finch）"
+      - at: "00:46:29"
+        label: "P2-5.12-艾迪芬奇的记忆（What Remains of Edith Finch）"
+      - at: "01:32:59"
+        label: "P3-5.12-艾迪芬奇的记忆（What Remains of Edith Finch）"
+      - at: "02:19:30"
+        label: "P4-5.12-艾迪芬奇的记忆（What Remains of Edith Finch）"
     sources:
       - url: "https://www.acfun.cn/v/ac3694238"
         kind: replay
@@ -135,7 +199,16 @@
     confidence: high
     duration_min: 220
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_13/1494685331.jpg?imageslim"
-    games: []
+    games: [final-station]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.13-final station"
+      - at: "00:20:19"
+        label: "P2-5.13-final station"
+      - at: "01:26:56"
+        label: "P3-5.13-final station"
+      - at: "02:33:34"
+        label: "P4-5.13-final station"
     sources:
       - url: "https://www.acfun.cn/v/ac3696258"
         kind: replay
@@ -153,6 +226,11 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494898408.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.14-心灵砒霜-弹幕版"
+      - at: "01:15:23"
+        label: "P2-5.14-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3701247"
         kind: replay
@@ -168,7 +246,16 @@
     confidence: high
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494898197.jpg?imageslim"
-    games: []
+    games: [final-station]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.15-游戏前聊10块钱的"
+      - at: "00:09:45"
+        label: "P2-5.15-final station"
+      - at: "01:09:47"
+        label: "P3-5.15-final station"
+      - at: "02:09:49"
+        label: "P4-5.15-final station"
     sources:
       - url: "https://www.acfun.cn/v/ac3701252"
         kind: replay
@@ -184,7 +271,16 @@
     confidence: high
     duration_min: 187
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494934403.JPG?imageslim"
-    games: []
+    games: [final-station]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.16-游戏前聊10块钱的"
+      - at: "00:24:45"
+        label: "P2-5.16-final station"
+      - at: "01:18:49"
+        label: "P3-5.16-final station"
+      - at: "02:12:53"
+        label: "P4-5.16-final station"
     sources:
       - url: "https://www.acfun.cn/v/ac3703278"
         kind: replay
@@ -200,7 +296,16 @@
     confidence: high
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_17/1495033834.JPG?imageslim"
-    games: []
+    games: [dead-cells]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.17-游戏前聊10块钱的"
+      - at: "00:13:19"
+        label: "P2-5.17-死亡细胞(Dead Cells）"
+      - at: "01:30:48"
+        label: "P3-5.17-死亡细胞(Dead Cells）"
+      - at: "02:48:16"
+        label: "P4-5.17-死亡细胞(Dead Cells）"
     sources:
       - url: "https://www.acfun.cn/v/ac3706532"
         kind: replay
@@ -216,7 +321,16 @@
     confidence: high
     duration_min: 212
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_19/1495195678.jpg?imageslim"
-    games: []
+    games: [dead-cells]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.19-游戏前聊10块钱的"
+      - at: "00:15:21"
+        label: "P2-5.19-死亡细胞(Dead Cells）"
+      - at: "01:21:01"
+        label: "P3-5.19-死亡细胞(Dead Cells）"
+      - at: "02:26:41"
+        label: "P4-5.19-死亡细胞(Dead Cells）"
     sources:
       - url: "https://www.acfun.cn/v/ac3711692"
         kind: replay
@@ -233,6 +347,13 @@
     duration_min: 84
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_20/1495287191.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.20-核聚变2017电游嘉年华"
+      - at: "00:25:03"
+        label: "P2-5.20-核聚变2017电游嘉年华"
+      - at: "00:44:59"
+        label: "P3-5.20-核聚变2017电游嘉年华"
     sources:
       - url: "https://www.acfun.cn/v/ac3713948"
         kind: replay
@@ -250,6 +371,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_22/1495461031.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.21-心灵砒霜弹幕版"
+      - at: "01:16:51"
+        label: "P2-5.21-心灵砒霜弹幕版"
+      - at: "02:33:46"
+        label: "P3-5.21-心灵砒霜弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac3718887"
         kind: replay
@@ -281,7 +409,16 @@
     confidence: high
     duration_min: 267
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_22/1495463135.jpg?imageslim"
-    games: []
+    games: [oxygen-not-included]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.22-游戏前聊10块钱的"
+      - at: "00:28:14"
+        label: "P2-5.22-缺氧（Oxygen Not Included）"
+      - at: "01:47:40"
+        label: "P3-5.22-缺氧（Oxygen Not Included）"
+      - at: "03:07:06"
+        label: "P4-5.22-缺氧（Oxygen Not Included）"
     sources:
       - url: "https://www.acfun.cn/v/ac3719014"
         kind: replay
@@ -297,7 +434,16 @@
     confidence: high
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_06/1496718657.jpg?imageslim"
-    games: []
+    games: [oxygen-not-included]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.23-游戏前聊10块钱的"
+      - at: "00:19:35"
+        label: "P2-5.23-缺氧（Oxygen Not Included）"
+      - at: "01:18:07"
+        label: "P3-5.23-缺氧（Oxygen Not Included）"
+      - at: "02:16:39"
+        label: "P4-5.23-缺氧（Oxygen Not Included）"
     sources:
       - url: "https://www.acfun.cn/v/ac3755487"
         kind: replay
@@ -313,7 +459,16 @@
     confidence: high
     duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_31/1496198815.jpg?imageslim"
-    games: []
+    games: [the-witness]
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.24-游戏前聊10块钱的"
+      - at: "00:31:20"
+        label: "P2-5.24-见证者（The Witness）"
+      - at: "01:42:32"
+        label: "P3-5.24-见证者（The Witness）"
+      - at: "02:53:44"
+        label: "P4-5.24-见证者（The Witness）"
     sources:
       - url: "https://www.acfun.cn/v/ac3740355"
         kind: replay
@@ -330,6 +485,15 @@
     duration_min: 140
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_31/1496198089.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-5.29-2017斗鱼嘉年华（武汉）"
+      - at: "00:22:52"
+        label: "P2-5.29-2017斗鱼嘉年华（武汉）"
+      - at: "00:41:26"
+        label: "P3-5.29-2017斗鱼嘉年华（武汉）"
+      - at: "00:58:37"
+        label: "P4-5.29-2017斗鱼嘉年华（武汉）"
     sources:
       - url: "https://www.acfun.cn/v/ac3740240"
         kind: replay

@@ -6,7 +6,28 @@
     confidence: high
     duration_min: 261
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_02/1512224108.JPG?imageslim"
-    games: []
+    games: [ice-lakes]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.2-游戏前聊10块钱的"
+      - at: "00:24:33"
+        label: "P1.2-12.2-游戏前聊10块钱的"
+      - at: "00:49:07"
+        label: "P2.1-12.2-Ice Lakes 冰湖"
+      - at: "01:15:36"
+        label: "P2.2-12.2-Ice Lakes 冰湖"
+      - at: "01:42:07"
+        label: "P2.3-12.2-Ice Lakes 冰湖"
+      - at: "02:08:36"
+        label: "P2.4-12.2-Ice Lakes 冰湖"
+      - at: "02:35:06"
+        label: "P2.5-12.2-Ice Lakes 冰湖"
+      - at: "03:01:35"
+        label: "P2.6-12.2-Ice Lakes 冰湖"
+      - at: "03:28:05"
+        label: "P2.7-12.2-Ice Lakes 冰湖"
+      - at: "03:54:34"
+        label: "P2.8-12.2-Ice Lakes 冰湖"
     sources:
       - url: "https://www.acfun.cn/v/ac4114988"
         kind: replay
@@ -22,7 +43,30 @@
     confidence: high
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_04/1512388982.JPG?imageslim"
-    games: []
+    games: [ice-lakes]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.4-游戏前聊10块钱的"
+      - at: "00:27:48"
+        label: "P2-12.4-钓鱼大赛"
+      - at: "00:53:11"
+        label: "P3-12.4-钓鱼大赛"
+      - at: "01:18:35"
+        label: "P4-12.4-钓鱼大赛"
+      - at: "01:44:00"
+        label: "P5-12.4-钓鱼大赛"
+      - at: "02:09:24"
+        label: "P6-12.4-钓鱼大赛"
+      - at: "02:34:49"
+        label: "P7-12.4-钓鱼大赛"
+      - at: "03:00:10"
+        label: "P8-12.4-钓鱼大赛"
+      - at: "03:25:32"
+        label: "P9-12.4-钓鱼大赛"
+      - at: "03:50:54"
+        label: "P10-12.4-钓鱼大赛"
+      - at: "04:16:16"
+        label: "P11-12.4-钓鱼大赛"
     sources:
       - url: "https://www.acfun.cn/v/ac4118007"
         kind: replay
@@ -38,7 +82,34 @@
     confidence: high
     duration_min: 348
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_05/1512480442.JPG?imageslim"
-    games: []
+    games: [pillars-of-the-earth]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.5-游戏前聊10块钱的"
+      - at: "00:23:09"
+        label: "P2-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "00:50:12"
+        label: "P3-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "01:17:17"
+        label: "P4-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "01:44:22"
+        label: "P5-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "02:11:25"
+        label: "P6-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "02:38:30"
+        label: "P7-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "03:05:34"
+        label: "P8-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "03:32:37"
+        label: "P9-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "03:59:42"
+        label: "P10-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "04:26:47"
+        label: "P11-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "04:53:51"
+        label: "P12-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
+      - at: "05:20:56"
+        label: "P13-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
     sources:
       - url: "https://www.acfun.cn/v/ac4120105"
         kind: replay
@@ -54,9 +125,30 @@
     confidence: high
     duration_min: 273
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_06/1512562308.JPG?imageslim"
-    games: []
+    games: [pubg]
     tags: [吃鸡佳缘, 弹幕版]
     note: "同一场直播（吃鸡佳缘第一期）的弹幕版（ac4125032）与纯净版（ac4122087）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.6-【吃鸡佳缘】第一期弹幕版 聊天部分"
+      - at: "00:20:29"
+        label: "P1.2-12.6-【吃鸡佳缘】第一期弹幕版聊天部分"
+      - at: "00:41:07"
+        label: "P2.1-P1-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "01:10:09"
+        label: "P2.2-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "01:39:21"
+        label: "P2.3-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "02:08:19"
+        label: "P2.4-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "02:37:26"
+        label: "P2.5-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "03:06:25"
+        label: "P2.6-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "03:35:30"
+        label: "P2.7-12.6-【吃鸡佳缘】第一期弹幕版"
+      - at: "04:04:32"
+        label: "P2.8-12.6-【吃鸡佳缘】第一期弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4125032"
         kind: replay
@@ -77,6 +169,33 @@
     duration_min: 341
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_08/1512740722.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.8-女流戏说《红楼梦》"
+      - at: "00:23:52"
+        label: "P1.2-12.8-女流戏说《红楼梦》"
+      - at: "00:47:45"
+        label: "P1.3-12.8-女流戏说《红楼梦》"
+      - at: "01:11:37"
+        label: "P2.1-12.8-冰湖（Ice Lake）"
+      - at: "01:37:38"
+        label: "P2.2-12.8-冰湖（Ice Lake）"
+      - at: "02:03:40"
+        label: "P2.3-12.8-冰湖（Ice Lake）"
+      - at: "02:29:42"
+        label: "P2.4-12.8-冰湖（Ice Lake）"
+      - at: "02:55:44"
+        label: "P3.1-12.8-Tracks-The Train Set Game 轨道模型游戏"
+      - at: "03:25:35"
+        label: "P3.2-12.8-Tracks-The Train Set Game 轨道模型游戏"
+      - at: "03:55:28"
+        label: "P3.3-12.8-Tracks-The Train Set Game 轨道模型游戏"
+      - at: "04:25:20"
+        label: "P4.1-12.8-绝地求生"
+      - at: "04:50:31"
+        label: "P4.2-12.8-绝地求生"
+      - at: "05:15:43"
+        label: "P4.3-12.8-绝地求生"
     sources:
       - url: "https://www.acfun.cn/v/ac4126689"
         kind: replay
@@ -92,7 +211,36 @@
     confidence: high
     duration_min: 348
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_09/1512827800.JPG?imageslim"
-    games: []
+    games: [reigns]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.9-游戏前聊10块钱的"
+      - at: "00:18:59"
+        label: "P2.1-12.9-《王权：女王陛下》"
+      - at: "00:41:30"
+        label: "P2.2-12.9-《王权：女王陛下》"
+      - at: "01:04:03"
+        label: "P2.3-12.9-《王权：女王陛下》"
+      - at: "01:26:36"
+        label: "P3.1-12.9-谋杀之谜"
+      - at: "01:52:42"
+        label: "P3.2-12.9-谋杀之谜"
+      - at: "02:18:49"
+        label: "P3.3-12.9-谋杀之谜"
+      - at: "02:44:57"
+        label: "P3.4-12.9-谋杀之谜"
+      - at: "03:11:04"
+        label: "P3.5-12.9-谋杀之谜"
+      - at: "03:37:11"
+        label: "P3.6-12.9-谋杀之谜"
+      - at: "04:03:17"
+        label: "P3.7-12.9-谋杀之谜"
+      - at: "04:29:23"
+        label: "P3.8-12.9-谋杀之谜"
+      - at: "04:55:30"
+        label: "P3.9-12.9-谋杀之谜"
+      - at: "05:21:37"
+        label: "P3.10-12.9-谋杀之谜"
     sources:
       - url: "https://www.acfun.cn/v/ac4128003"
         kind: replay
@@ -110,6 +258,29 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_10/1512950336.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.10-砒霜前聊会儿天-透明弹幕版"
+      - at: "00:26:37"
+        label: "P1.2-12.10-砒霜前聊会儿天-透明弹幕版"
+      - at: "00:53:21"
+        label: "P1.3-12.10-砒霜前聊会儿天-透明弹幕版"
+      - at: "01:20:04"
+        label: "P2.1-12.10-吃会儿鸡-透明弹幕版"
+      - at: "01:41:23"
+        label: "P2.2-12.10-吃会儿鸡-透明弹幕版"
+      - at: "02:02:44"
+        label: "P3.1-12.10-心灵砒霜-透明弹幕版"
+      - at: "02:24:53"
+        label: "P3.2-12.10-心灵砒霜-透明弹幕版"
+      - at: "02:47:03"
+        label: "P3.3-12.10-心灵砒霜-透明弹幕版"
+      - at: "03:09:13"
+        label: "P3.4-12.10-心灵砒霜-透明弹幕版"
+      - at: "03:31:23"
+        label: "P3.5-12.10-心灵砒霜-透明弹幕版"
+      - at: "03:53:39"
+        label: "P3.6-12.10-心灵砒霜-透明弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4129454"
         kind: replay
@@ -126,6 +297,23 @@
     duration_min: 214
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_11/1512993307.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.11-游戏前聊10块钱的"
+      - at: "00:23:09"
+        label: "P2-12.11-游戏前聊10块钱的"
+      - at: "00:46:18"
+        label: "P3-12.11-我是大老板"
+      - at: "01:14:11"
+        label: "P4-12.11-我是大老板"
+      - at: "01:42:04"
+        label: "P5-12.11-我是大老板"
+      - at: "02:09:59"
+        label: "P6-12.11-我是大老板"
+      - at: "02:37:52"
+        label: "P7-12.11-我是大老板"
+      - at: "03:05:45"
+        label: "P8-12.11-我是大老板"
     sources:
       - url: "https://www.acfun.cn/v/ac4131089"
         kind: replay
@@ -142,6 +330,17 @@
     duration_min: 128
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_13/1513151274.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-K歌不停歇-弹幕版"
+      - at: "00:25:43"
+        label: "P2-K歌不停歇-弹幕版"
+      - at: "00:51:23"
+        label: "P3-K歌不停歇-弹幕版"
+      - at: "01:17:00"
+        label: "P4-K歌不停歇-弹幕版"
+      - at: "01:42:44"
+        label: "P5-K歌不停歇-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4134496"
         kind: replay
@@ -157,7 +356,26 @@
     confidence: high
     duration_min: 238
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_13/1513166567.JPG?imageslim"
-    games: []
+    games: [the-long-dark]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.13-游戏前聊10块钱的"
+      - at: "00:24:54"
+        label: "P1.2-12.13-游戏前聊10块钱的"
+      - at: "00:49:49"
+        label: "P2.1-12.13-和YJJ双排吃鸡"
+      - at: "01:19:47"
+        label: "P2.2-12.13-和YJJ双排吃鸡"
+      - at: "01:49:46"
+        label: "P3.1-12.13-漫漫长夜"
+      - at: "02:15:28"
+        label: "P3.2-12.13-漫漫长夜"
+      - at: "02:41:12"
+        label: "P3.3-12.13-漫漫长夜"
+      - at: "03:06:54"
+        label: "P3.4-12.13-漫漫长夜"
+      - at: "03:32:38"
+        label: "P3.5-12.13-漫漫长夜"
     sources:
       - url: "https://www.acfun.cn/v/ac4135224"
         kind: replay
@@ -173,7 +391,20 @@
     confidence: high
     duration_min: 169
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_15/1513338997.JPG?imageslim"
-    games: []
+    games: [gorogoa]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.15-游戏前聊10块钱的"
+      - at: "00:26:46"
+        label: "P2-12.15-GOROGOA 画中世界"
+      - at: "00:55:13"
+        label: "P3-12.15-GOROGOA 画中世界"
+      - at: "01:23:41"
+        label: "P4-12.15-GOROGOA 画中世界"
+      - at: "01:52:09"
+        label: "P5-12.15-GOROGOA 画中世界"
+      - at: "02:20:37"
+        label: "P6-12.15-GOROGOA 画中世界"
     sources:
       - url: "https://www.acfun.cn/v/ac4139436"
         kind: replay
@@ -189,9 +420,20 @@
     confidence: high
     duration_min: 114
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_16/1513403360.JPG?imageslim"
-    games: []
+    games: [pubg]
     tags: [吃鸡佳缘, 弹幕版]
     note: "同一场直播（吃鸡佳缘第二期）的弹幕版（ac4140602）与纯净版（ac4140326）原本被建模为两条重复条目，已合并。同日另有 GOROGOA 画中世界 条目。"
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.15-【吃鸡佳缘】第二期 弹幕版"
+      - at: "00:23:05"
+        label: "P2-12.15-【吃鸡佳缘】第二期 弹幕版"
+      - at: "00:46:16"
+        label: "P3-12.15-【吃鸡佳缘】第二期 弹幕版"
+      - at: "01:09:29"
+        label: "P4-12.15-【吃鸡佳缘】第二期 弹幕版"
+      - at: "01:31:32"
+        label: "P5-12.15-【吃鸡佳缘】第二期 弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4140602"
         kind: replay
@@ -211,7 +453,38 @@
     confidence: high
     duration_min: 402
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_16/1513428074.JPG?imageslim"
-    games: []
+    games: [finding-paradise]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.16-游戏前聊会天、看会片儿、唱会儿歌"
+      - at: "00:29:21"
+        label: "P1.2-12.16-游戏前聊会天、看会片儿、唱会儿歌"
+      - at: "00:58:43"
+        label: "P1.3-12.16-游戏前聊会天、看会片儿、唱会儿歌"
+      - at: "01:28:05"
+        label: "P2.1-12.16-《去月球》续作《寻找天堂》"
+      - at: "01:55:26"
+        label: "P2.2-12.16-《去月球》续作《寻找天堂"
+      - at: "02:22:49"
+        label: "P2.3-12.16-《去月球》续作《寻找天堂"
+      - at: "02:50:12"
+        label: "P2.4-12.16-《去月球》续作《寻找天堂"
+      - at: "03:17:34"
+        label: "P2.5-12.16-《去月球》续作《寻找天堂"
+      - at: "03:44:55"
+        label: "P2.6-12.16-《去月球》续作《寻找天堂"
+      - at: "04:12:16"
+        label: "P2.7-12.16-《去月球》续作《寻找天堂"
+      - at: "04:39:38"
+        label: "P2.8-12.16-《去月球》续作《寻找天堂"
+      - at: "05:07:00"
+        label: "P2.9-12.16-《去月球》续作《寻找天堂"
+      - at: "05:30:51"
+        label: "P2.10-12.16-《去月球》续作《寻找天堂"
+      - at: "05:54:44"
+        label: "P2.11-12.16-《去月球》续作《寻找天堂"
+      - at: "06:18:37"
+        label: "P2.12-12.16-《去月球》续作《寻找天堂"
     sources:
       - url: "https://www.acfun.cn/v/ac4140972"
         kind: replay
@@ -243,7 +516,32 @@
     confidence: high
     duration_min: 301
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_18/1513600408.JPG?imageslim"
-    games: []
+    games: [death-coming]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.18-游戏前聊10块钱的"
+      - at: "00:20:54"
+        label: "P1.2-12.18-游戏前聊10块钱的"
+      - at: "00:41:50"
+        label: "P2.1-12.18-Death Coming 死神来了"
+      - at: "01:04:31"
+        label: "P2.2-12.18-Death Coming 死神来了"
+      - at: "01:27:13"
+        label: "P2.3-12.18-Death Coming 死神来了"
+      - at: "01:49:55"
+        label: "P2.4-12.18-Death Coming 死神来了"
+      - at: "02:12:37"
+        label: "P2.5-12.18-Death Coming 死神来了"
+      - at: "02:40:44"
+        label: "P2.6-12.18-Death Coming 死神来了"
+      - at: "03:08:53"
+        label: "P2.7-12.18-Death Coming 死神来了"
+      - at: "03:37:00"
+        label: "P2.8-12.18-Death Coming 死神来了"
+      - at: "04:05:07"
+        label: "P2.9-12.18-Death Coming 死神来了"
+      - at: "04:33:14"
+        label: "P2.10-12.18-Death Coming 死神来了"
     sources:
       - url: "https://www.acfun.cn/v/ac4144095"
         kind: replay
@@ -259,7 +557,26 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_20/1513778269.jpg?imageslim"
-    games: []
+    games: [monopoly-plus]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.20-MONOPOLY PLUS 大富翁"
+      - at: "00:22:22"
+        label: "P2-12.20-MONOPOLY PLUS 大富翁"
+      - at: "00:44:45"
+        label: "P3-12.20-MONOPOLY PLUS 大富翁"
+      - at: "01:07:08"
+        label: "P4-12.20-MONOPOLY PLUS 大富翁"
+      - at: "01:38:25"
+        label: "P5-12.20-MONOPOLY PLUS 大富翁"
+      - at: "02:09:44"
+        label: "P6-12.20-MONOPOLY PLUS 大富翁"
+      - at: "02:41:02"
+        label: "P7-12.20-MONOPOLY PLUS 大富翁"
+      - at: "03:12:20"
+        label: "P8-12.20-MONOPOLY PLUS 大富翁"
+      - at: "03:43:38"
+        label: "P9-12.20-MONOPOLY PLUS 大富翁"
     sources:
       - url: "https://www.acfun.cn/v/ac4148109"
         kind: replay
@@ -276,6 +593,27 @@
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_21/1513867554.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.21-大周桌面展"
+      - at: "00:25:49"
+        label: "P2-12.21-大周桌面展"
+      - at: "00:51:39"
+        label: "P3-12.21-大周桌面展"
+      - at: "01:17:30"
+        label: "P4-12.21-大周桌面展"
+      - at: "01:43:20"
+        label: "P5-12.21-大周桌面展"
+      - at: "02:09:11"
+        label: "P6-12.21-大周桌面展"
+      - at: "02:35:01"
+        label: "P7-12.21-大周桌面展"
+      - at: "03:00:52"
+        label: "P8-12.21-大周桌面展"
+      - at: "03:26:42"
+        label: "P9-12.21-大周桌面展"
+      - at: "03:52:33"
+        label: "P10-12.21-大周桌面展"
     sources:
       - url: "https://www.acfun.cn/v/ac4150104"
         kind: replay
@@ -291,8 +629,27 @@
     confidence: high
     duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_24/1514083016.JPG?imageslim"
-    games: []
+    games: [pubg]
     tags: [吃鸡佳缘]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "00:29:14"
+        label: "P2-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "00:58:30"
+        label: "P3-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "01:27:45"
+        label: "P4-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "01:57:01"
+        label: "P5-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "02:26:24"
+        label: "P6-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "02:55:46"
+        label: "P7-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "03:25:02"
+        label: "P8-12.23-【吃鸡佳缘】第三期-弹幕版"
+      - at: "03:54:25"
+        label: "P9-12.23-【吃鸡佳缘】第三期-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4154223"
         kind: replay
@@ -310,6 +667,23 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_25/1514162637.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P2.1-12.24-心灵砒霜-弹幕版"
+      - at: "00:25:56"
+        label: "P2.2-12.24-心灵砒霜-弹幕版"
+      - at: "00:51:59"
+        label: "P2.3-12.24-心灵砒霜-弹幕版"
+      - at: "01:18:01"
+        label: "P2.4-12.24-心灵砒霜-弹幕版"
+      - at: "01:44:00"
+        label: "P2.5-12.24-心灵砒霜-弹幕版"
+      - at: "02:09:59"
+        label: "P2.6-12.24-心灵砒霜-弹幕版"
+      - at: "02:36:08"
+        label: "P2.7-12.24-心灵砒霜-弹幕版"
+      - at: "03:02:16"
+        label: "P2.8-12.24-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4154898"
         kind: replay
@@ -327,6 +701,34 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_25/1514212571.jpg?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P2-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "00:28:03"
+        label: "P3-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "00:56:06"
+        label: "P4-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "01:24:10"
+        label: "P5-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "01:52:13"
+        label: "P6-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "02:20:18"
+        label: "P7-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "02:48:23"
+        label: "P8-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "03:16:26"
+        label: "P9-12.25-大周MC圣诞专场"
+        game: minecraft
+      - at: "03:44:31"
+        label: "P10-12.25-大周MC圣诞专场"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac4156666"
         kind: replay
@@ -342,7 +744,24 @@
     confidence: high
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_26/1514292762.JPG?imageslim"
-    games: []
+    games: [kero-blaster]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.26-游戏前聊10块钱的"
+      - at: "00:21:34"
+        label: "P1.2-12.26-游戏前聊10块钱的"
+      - at: "00:43:09"
+        label: "P2.1-12.26-青蛙爆破者(Kero Blaster)"
+      - at: "01:08:30"
+        label: "P2.2-12.26-青蛙爆破者(Kero Blaster)"
+      - at: "01:33:51"
+        label: "P2.3-12.26-青蛙爆破者(Kero Blaster)"
+      - at: "01:59:12"
+        label: "P2.4-12.26-青蛙爆破者(Kero Blaster)"
+      - at: "02:24:34"
+        label: "P2.5-12.26-青蛙爆破者(Kero Blaster)"
+      - at: "02:49:56"
+        label: "P2.6-12.26-青蛙爆破者(Kero Blaster)"
     sources:
       - url: "https://www.acfun.cn/v/ac4158411"
         kind: replay
@@ -358,7 +777,22 @@
     confidence: high
     duration_min: 185
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_27/1514377528.jpg?imageslim"
-    games: []
+    games: [kero-blaster]
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.27-游戏前聊10块钱的"
+      - at: "00:20:15"
+        label: "P2-12.27-青蛙爆破者"
+      - at: "00:47:37"
+        label: "P3-12.27-青蛙爆破者"
+      - at: "01:15:00"
+        label: "P4-12.27-青蛙爆破者"
+      - at: "01:42:24"
+        label: "P5-12.27-青蛙爆破者"
+      - at: "02:09:47"
+        label: "P6-12.27-青蛙爆破者"
+      - at: "02:37:11"
+        label: "P7-12.27-青蛙爆破者"
     sources:
       - url: "https://www.acfun.cn/v/ac4160261"
         kind: replay
@@ -375,6 +809,31 @@
     duration_min: 301
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_29/1514558691.jpg?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-12.29-欢迎关注颜值主播6酱"
+      - at: "00:25:03"
+        label: "P2-12.29-欢迎关注颜值主播6酱"
+      - at: "00:50:07"
+        label: "P3-12.29-欢迎关注颜值主播6酱"
+      - at: "01:15:10"
+        label: "P4-12.29-欢迎关注颜值主播6酱"
+      - at: "01:40:13"
+        label: "P5-12.29-欢迎关注颜值主播6酱"
+      - at: "02:05:16"
+        label: "P6-12.29-欢迎关注颜值主播6酱"
+      - at: "02:30:19"
+        label: "P7-12.29-欢迎关注颜值主播6酱"
+      - at: "02:55:22"
+        label: "P8-12.29-欢迎关注颜值主播6酱"
+      - at: "03:20:25"
+        label: "P9-12.29-欢迎关注颜值主播6酱"
+      - at: "03:45:28"
+        label: "P10-12.29-欢迎关注颜值主播6酱"
+      - at: "04:10:31"
+        label: "P11-12.29-欢迎关注颜值主播6酱"
+      - at: "04:35:34"
+        label: "P12-12.29-欢迎关注颜值主播6酱"
     sources:
       - url: "https://www.acfun.cn/v/ac4164567"
         kind: replay
@@ -390,8 +849,23 @@
     confidence: high
     duration_min: 206
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_31/1514685446.JPG?imageslim"
-    games: []
+    games: [pubg]
     tags: [吃鸡佳缘]
+    segments:
+      - at: "00:00:00"
+        label: "P1-2.30-游戏前聊10块钱的-弹幕版"
+      - at: "00:27:55"
+        label: "P2-12.30-【吃鸡佳缘】第四期-弹幕版"
+      - at: "00:57:29"
+        label: "P3-12.30-【吃鸡佳缘】第四期-弹幕版"
+      - at: "01:27:09"
+        label: "P4-12.30-【吃鸡佳缘】第四期-弹幕版"
+      - at: "01:56:48"
+        label: "P5-12.30-【吃鸡佳缘】第四期-弹幕版"
+      - at: "02:26:21"
+        label: "P6-12.30-【吃鸡佳缘】第四期-弹幕版"
+      - at: "02:55:55"
+        label: "P7-12.30-【吃鸡佳缘】第四期-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4166010"
         kind: replay
@@ -409,6 +883,25 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_31/1514725419.png?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-12.31-隔着屏幕闻到一股脚臭味"
+      - at: "00:25:45"
+        label: "P1.2-12.31-隔着屏幕闻到一股脚臭味"
+      - at: "00:51:32"
+        label: "P1.3-12.31-隔着屏幕闻到一股脚臭味"
+      - at: "01:17:18"
+        label: "P1.4-12.31-隔着屏幕闻到一股脚臭味"
+      - at: "01:43:04"
+        label: "P2.1-12.31-心灵砒霜"
+      - at: "02:10:38"
+        label: "P2.2-12.31-心灵砒霜"
+      - at: "02:38:12"
+        label: "P2.3-12.31-心灵砒霜"
+      - at: "03:05:47"
+        label: "P2.4-12.31-心灵砒霜"
+      - at: "03:33:22"
+        label: "P2.5-12.31-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4166820"
         kind: replay

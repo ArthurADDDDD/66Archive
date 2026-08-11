@@ -24,6 +24,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_11/1473609037.jpg?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.11-心灵砒霜"
+      - at: "01:08:21"
+        label: "P2-9.11-心灵砒霜"
+      - at: "01:08:27"
+        label: "P3-9.11-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3097354"
         kind: replay
@@ -55,7 +62,12 @@
     confidence: high
     duration_min: 151
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_12/1473720068.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P2"
+      - at: "01:15:44"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3100224"
         kind: replay
@@ -71,7 +83,18 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_13/1473784844.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-没有游戏"
+      - at: "00:07:39"
+        label: "P2-9.13-逆转裁判6"
+      - at: "00:36:44"
+        label: "P3-9.13-逆转裁判6"
+      - at: "01:46:50"
+        label: "P4-9.13-逆转裁判6"
+      - at: "02:56:55"
+        label: "P5-9.13-逆转裁判6"
     sources:
       - url: "https://www.acfun.cn/v/ac3102878"
         kind: replay
@@ -87,7 +110,16 @@
     confidence: high
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_14/1473859029.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.14-没有游戏"
+      - at: "00:30:50"
+        label: "P2-9.14-逆转裁判6-day9"
+      - at: "01:25:02"
+        label: "P3-9.14-逆转裁判6-day9"
+      - at: "02:19:16"
+        label: "P4-9.14-逆转裁判6-day9"
     sources:
       - url: "https://www.acfun.cn/v/ac3105090"
         kind: replay
@@ -105,6 +137,16 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_15/1473952863.JPG?imageslim"
     games:
       - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.15-MC建筑大赛"
+        game: minecraft
+      - at: "00:55:58"
+        label: "P1-9.15-MC建筑大赛"
+        game: minecraft
+      - at: "01:51:56"
+        label: "P1-9.15-MC建筑大赛"
+        game: minecraft
     sources:
       - url: "https://www.acfun.cn/v/ac3107263"
         kind: replay
@@ -136,7 +178,16 @@
     confidence: high
     duration_min: 93
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_17/1474071215.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:20:45"
+        label: "P2-9.16-逆转裁判6-day10"
+      - at: "01:26:09"
+        label: "P3-9.16-逆转裁判6-day10"
+      - at: "01:26:16"
+        label: "P4-9.16-逆转裁判6-day10"
     sources:
       - url: "https://www.acfun.cn/v/ac3110151"
         kind: replay
@@ -169,7 +220,16 @@
     confidence: high
     duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_19/1474299619.JPG?imageslim"
-    games: []
+    games: [worms-wmd]
+    segments:
+      - at: "00:00:00"
+        label: "P1-聊天"
+      - at: "00:43:53"
+        label: "P2-9.19-百战天虫"
+      - at: "01:41:55"
+        label: "P3-9.19-百战天虫"
+      - at: "02:39:57"
+        label: "P4-9.19-百战天虫"
     sources:
       - url: "https://www.acfun.cn/v/ac3118204"
         kind: replay
@@ -185,7 +245,16 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_21/1474473089.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.21-聊天"
+      - at: "00:30:25"
+        label: "P2-9.21-逆转裁判6-day11"
+      - at: "01:37:11"
+        label: "P3-9.21-逆转裁判6-day11"
+      - at: "02:43:59"
+        label: "P4-9.21-逆转裁判6-day11"
     sources:
       - url: "https://www.acfun.cn/v/ac3123322"
         kind: replay
@@ -201,7 +270,14 @@
     confidence: high
     duration_min: 129
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_23/1474590406.JPG?imageslim"
-    games: []
+    games: [gyakuten-saiban-6]
+    segments:
+      - at: "00:00:00"
+        label: "P1-9.22-逆转裁判6"
+      - at: "00:00:01"
+        label: "P2-9.22-逆转裁判6"
+      - at: "01:04:30"
+        label: "P3-9.22-逆转裁判6"
     sources:
       - url: "https://www.acfun.cn/v/ac3126317"
         kind: replay
@@ -218,6 +294,15 @@
     duration_min: 117
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_24/1474727442.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:00:02"
+        label: "Part2"
+      - at: "00:57:51"
+        label: "Part3"
+      - at: "01:19:23"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac3130573"
         kind: replay
@@ -235,6 +320,13 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_25/1474812289.JPG?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P1-姐弟答题"
+      - at: "00:48:21"
+        label: "P2-9.25-砒霜"
+      - at: "01:44:44"
+        label: "P3-9.25-砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac3132575"
         kind: replay
@@ -251,6 +343,11 @@
     duration_min: 130
     cover: "https://tx-free-imgs.acfun.cn/content/2016_09_26/1474919554.JPG?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:04:47"
+        label: "Part2"
     sources:
       - url: "https://www.acfun.cn/v/ac3135402"
         kind: replay

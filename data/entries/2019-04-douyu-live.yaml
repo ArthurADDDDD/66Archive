@@ -7,6 +7,11 @@
     duration_min: 149
     cover: "https://tx-free-imgs.acfun.cn/Fnoaub6nMPJWO8WWFA75AvTFeG6q?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "新浪游戏年度盛典"
+      - at: "00:17:59"
+        label: "新浪游戏年度盛典"
     sources:
       - url: "https://www.acfun.cn/v/ac10071047"
         kind: replay
@@ -38,7 +43,18 @@
     confidence: high
     duration_min: 261
     cover: "https://tx-free-imgs.acfun.cn/FprxxwrxaGUpD7WdoIU2SOFMmWk3?imageslim"
-    games: []
+    games: [risk-of-rain-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:34:35"
+        label: "雨中暴毙2"
+      - at: "01:31:19"
+        label: "雨中暴毙2"
+      - at: "02:28:02"
+        label: "雨中暴毙2"
+      - at: "03:24:45"
+        label: "P52019.04.05-雨中暴毙2"
     sources:
       - url: "https://www.acfun.cn/v/ac10082659"
         kind: replay
@@ -54,7 +70,19 @@
     confidence: high
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/FrwPpydyZBKMny3-eXTZqc_JF8k7?imageslim"
-    games: []
+    games: [unheard]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:37:05"
+        label: "疑案追声"
+        game: unheard
+      - at: "01:50:52"
+        label: "P3.1-2019.4.6-雨中暴毙2"
+      - at: "02:40:02"
+        label: "P3.2-2019.4.6-雨中暴毙2"
+      - at: "03:29:13"
+        label: "P3.3-2019.4.6-雨中暴毙2"
     sources:
       - url: "https://www.acfun.cn/v/ac10086101"
         kind: replay
@@ -72,6 +100,13 @@
     cover: "https://tx-free-imgs.acfun.cn/Fsxk7y3AWzoH0QPk6Z5dtlO75eTJ?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:34:28"
+        label: "Part2"
+      - at: "02:22:59"
+        label: "Part3"
     sources:
       - url: "https://www.acfun.cn/v/ac10093198"
         kind: replay
@@ -87,7 +122,18 @@
     confidence: high
     duration_min: 281
     cover: "https://tx-free-imgs.acfun.cn/Fmf2alSeXKu8ae36B3zplD6Dj9bD?imageslim"
-    games: []
+    games: [supraland]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:30:29"
+        label: "Part2"
+      - at: "01:33:03"
+        label: "Part3"
+      - at: "02:35:37"
+        label: "Part4"
+      - at: "03:38:11"
+        label: "Part5"
     sources:
       - url: "https://www.acfun.cn/v/ac10110418"
         kind: replay
@@ -103,7 +149,16 @@
     confidence: high
     duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/Fgj5NCH5omf-HgplxN-hZ0Xx2tM7?imageslim"
-    games: []
+    games: [supraland]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:55:59"
+        label: "Part2"
+      - at: "02:02:38"
+        label: "Part3"
+      - at: "03:09:15"
+        label: "Part4"
     sources:
       - url: "https://www.acfun.cn/v/ac10113845"
         kind: replay
@@ -121,6 +176,19 @@
     cover: "https://tx-free-imgs.acfun.cn/FokzHe1GolI2Zp1xfYVzgv7kgC9r?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:25:49"
+        label: "P2.1-2019.4.14-心灵砒霜"
+      - at: "01:16:27"
+        label: "P2.2-2019.4.14-心灵砒霜"
+      - at: "02:07:03"
+        label: "P2.3-2019.4.14-心灵砒霜"
+      - at: "02:57:39"
+        label: "P2.4-2019.4.14-心灵砒霜"
+      - at: "03:48:17"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10117506"
         kind: replay
@@ -136,7 +204,18 @@
     confidence: high
     duration_min: 300
     cover: "https://tx-free-imgs.acfun.cn/Frd1eXEswrkv5xYwzwOKHv68mISR?imageslim"
-    games: []
+    games: [forager]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2019.4.19-游戏前聊天K歌了解一下"
+      - at: "00:46:39"
+        label: "P1.2-2019.4.19-游戏前聊天K歌了解一下"
+      - at: "01:33:20"
+        label: "浮岛物语"
+      - at: "02:42:21"
+        label: "浮岛物语"
+      - at: "03:51:21"
+        label: "浮岛物语"
     sources:
       - url: "https://www.acfun.cn/v/ac10137206"
         kind: replay
@@ -154,6 +233,17 @@
     cover: "https://tx-free-imgs.acfun.cn/FoKHYEL_i908HoJsASj8HcKA2bZQ?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的"
+      - at: "00:40:39"
+        label: "心灵砒霜"
+      - at: "01:38:19"
+        label: "心灵砒霜"
+      - at: "02:35:58"
+        label: "心灵砒霜"
+      - at: "03:33:37"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10143087"
         kind: replay
@@ -185,7 +275,20 @@
     confidence: high
     duration_min: 333
     cover: "https://tx-free-imgs.acfun.cn/FgKmoqtYdGsA8qpGbzfhLoFto_Fb?imageslim"
-    games: []
+    games: [forager]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10快钱的"
+      - at: "00:25:29"
+        label: "浮岛物语"
+      - at: "01:26:58"
+        label: "浮岛物语"
+      - at: "02:28:28"
+        label: "浮岛物语"
+      - at: "03:29:57"
+        label: "浮岛物语"
+      - at: "04:31:26"
+        label: "浮岛物语"
     sources:
       - url: "https://www.acfun.cn/v/ac10149668"
         kind: replay
@@ -203,6 +306,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FptdNdxuh_EhQah4MhmAYZQAfjjq?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜-弹幕版"
+      - at: "02:15:37"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac10150917"
         kind: replay
@@ -234,7 +342,22 @@
     confidence: high
     duration_min: 404
     cover: "https://tx-free-imgs.acfun.cn/FobqFpNyV7ndCSznstf7-t0qN3FF?imageslim"
-    games: []
+    games: [katana-zero]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的封神"
+      - at: "00:38:44"
+        label: "游戏前聊10块钱的封神"
+      - at: "01:17:30"
+        label: "武士零"
+      - at: "02:22:49"
+        label: "武士零"
+      - at: "03:28:07"
+        label: "武士零"
+      - at: "04:33:25"
+        label: "武士零"
+      - at: "05:38:43"
+        label: "武士零"
     sources:
       - url: "https://www.acfun.cn/v/ac10151288"
         kind: replay
@@ -250,7 +373,20 @@
     confidence: high
     duration_min: 267
     cover: "https://tx-free-imgs.acfun.cn/Fu4OeyzLgGUIywJ2DIVVNOmU0qxn?imageslim"
-    games: []
+    games: [hardware-engineers]
+    segments:
+      - at: "00:00:00"
+        label: "先聊天再封神"
+      - at: "00:54:23"
+        label: "先聊天再封神"
+      - at: "01:48:47"
+        label: "Hardware Engineers"
+      - at: "02:00:03"
+        label: "Hardware Engineers"
+      - at: "03:00:04"
+        label: "Hardware Engineers"
+      - at: "04:00:06"
+        label: "Hardware Engineers"
     sources:
       - url: "https://www.acfun.cn/v/ac10161622"
         kind: replay
@@ -267,6 +403,11 @@
     duration_min: 78
     cover: "https://tx-free-imgs.acfun.cn/FgYP6ZDrUxKDzJAhIVQzuYDGSpKV?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "戏说封神第3期"
+      - at: "00:39:03"
+        label: "戏说封神第3期"
     sources:
       - url: "https://www.acfun.cn/v/ac10161687"
         kind: replay
@@ -284,6 +425,11 @@
     cover: "https://tx-free-imgs.acfun.cn/FkXsq9EAfd4aEGgGbbwKeaXo6cBO?imageslim"
     games: []
     note: "视频 P1/P2 标题均为『女流-2019.4.27-戏说封神第四期』，确认本期为该系列第四期（原条目标题漏标期数，已补齐）。"
+    segments:
+      - at: "00:00:00"
+        label: "P1-女流-2019.4.27-戏说封神第四期"
+      - at: "00:36:53"
+        label: "P2-女流-2019.4.27-戏说封神第四期"
     sources:
       - url: "https://www.acfun.cn/v/ac10164751"
         kind: replay
@@ -302,6 +448,11 @@
     games: []
     tags: [聊天]
     note: "目录标题为『女流-2019.4.27-聊天封神看电影』；视频 P1『先聊10块钱的再封神』+ P2『电影之前把神先封了』，内容为聊天+封神+看电影。当日另一视频 ac10164751 为《戏说封神第四期》。"
+    segments:
+      - at: "00:00:00"
+        label: "先聊10块钱的再封神"
+      - at: "00:49:59"
+        label: "电影之前把神先封了"
     sources:
       - url: "https://www.acfun.cn/v/ac10164722"
         kind: replay
@@ -319,6 +470,11 @@
     cover: "https://tx-free-imgs.acfun.cn/Fh7t1n5SwjyOjvH2MjWld_wCsESQ?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜"
+      - at: "01:56:43"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac10171020"
         kind: replay
@@ -334,7 +490,16 @@
     confidence: high
     duration_min: 172
     cover: "https://tx-free-imgs.acfun.cn/FlCIXBivcqsazaRFY7Z9Kd-Tl1zP?imageslim"
-    games: []
+    games: [biped]
+    segments:
+      - at: "00:00:00"
+        label: "P1-2019-4-29-游戏前先封神"
+      - at: "00:57:39"
+        label: "P2-2019-4-29-Biped"
+        game: biped
+      - at: "01:59:59"
+        label: "P3-2019-4-29-Biped"
+        game: biped
     sources:
       - url: "https://www.acfun.cn/v/ac10170959"
         kind: replay

@@ -7,6 +7,13 @@
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889208.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "灰烬审判者古达P1"
+      - at: "01:23:30"
+        label: "冷冽谷的波尔多P2"
+      - at: "02:22:39"
+        label: "冰骑士P3"
     sources:
       - url: "https://www.acfun.cn/v/ac2731728"
         kind: replay
@@ -23,6 +30,11 @@
     duration_min: 110
     cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714295.jpg?imageslim"
     games: [dark-souls-3]
+    segments:
+      - at: "00:00:00"
+        label: "太刀哥P1"
+      - at: "00:55:23"
+        label: "咒蚀大树P2"
     sources:
       - url: "https://www.acfun.cn/v/ac2726616"
         kind: replay

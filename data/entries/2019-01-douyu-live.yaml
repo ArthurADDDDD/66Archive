@@ -6,7 +6,16 @@
     confidence: high
     duration_min: 210
     cover: "https://tx-free-imgs.acfun.cn/Fq-L0P8uW2kvLEOpmhQNkoELueez?imageslim"
-    games: []
+    games: [life-goes-on]
+    segments:
+      - at: "00:00:00"
+        label: "Life Goes On（生生不息）"
+      - at: "00:52:33"
+        label: "Life Goes On（生生不息）"
+      - at: "01:45:07"
+        label: "Life Goes On（生生不息）"
+      - at: "02:37:40"
+        label: "Life Goes On（生生不息）"
     sources:
       - url: "https://www.acfun.cn/v/ac4829319"
         kind: replay
@@ -22,7 +31,22 @@
     confidence: high
     duration_min: 223
     cover: "https://tx-free-imgs.acfun.cn/FtfBsbKczWOGpJbTqtFyIkpi7BR0?imageslim"
-    games: []
+    games: [the-room-three]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前黑屏聊天部分"
+      - at: "00:07:10"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "00:53:42"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "01:40:15"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "02:41:34"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
     sources:
       - url: "https://www.acfun.cn/v/ac4831809"
         kind: replay
@@ -38,7 +62,22 @@
     confidence: high
     duration_min: 252
     cover: "https://tx-free-imgs.acfun.cn/Fl8hTSVE4c_FjKeVkUHe8zmZPi15?imageslim"
-    games: []
+    games: [the-room-three]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:34:20"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "01:28:38"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "02:22:57"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
+      - at: "03:17:17"
+        label: "The Room Three (未上锁的房间3)"
+        game: the-room-three
     sources:
       - url: "https://www.acfun.cn/v/ac4834376"
         kind: replay
@@ -54,7 +93,19 @@
     confidence: high
     duration_min: 169
     cover: "https://tx-free-imgs.acfun.cn/Fv9Kx8fB4WHyXZkDzoYfAd1dvKbP?imageslim"
-    games: []
+    games: [equilinox]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:11:35"
+        label: "Equilinox（自然生态）"
+        game: equilinox
+      - at: "00:45:06"
+        label: "Equilinox（自然生态）"
+        game: equilinox
+      - at: "01:47:15"
+        label: "Equilinox（自然生态）"
+        game: equilinox
     sources:
       - url: "https://www.acfun.cn/v/ac4837321"
         kind: replay
@@ -72,6 +123,13 @@
     cover: "https://tx-free-imgs.acfun.cn/Fg6YD_J8iiPjCe5AC_lXMXZNcIaF?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:06:37"
+        label: "心灵砒霜-弹幕版"
+      - at: "01:33:23"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4842351"
         kind: replay
@@ -87,7 +145,27 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/FnXTEsQySvcpdGMcde7b_vg1Qxc-?imageslim"
-    games: []
+    games: [equilinox]
+    segments:
+      - at: "00:00:00"
+        label: "P1.1-2019.1.7-游戏前聊10块钱的"
+      - at: "00:03:39"
+        label: "P1.2-2019.1.7-游戏前聊10块钱的"
+      - at: "00:10:59"
+        label: "P2.1-2019.1.7-Human Fall Falt"
+      - at: "00:45:12"
+        label: "P2.2-2019.1.7-Human Fall Falt"
+      - at: "01:21:22"
+        label: "P2.3-2019.1.7-Human Fall Falt"
+      - at: "01:57:34"
+        label: "P3.1-2019.1.7-Equilinox（自然生态）"
+        game: equilinox
+      - at: "02:49:58"
+        label: "P3.2-2019.1.7-Equilinox（自然生态）"
+        game: equilinox
+      - at: "03:42:22"
+        label: "P3.3-2019.1.7-Equilinox（自然生态）"
+        game: equilinox
     sources:
       - url: "https://www.acfun.cn/v/ac4844762"
         kind: replay
@@ -103,7 +181,18 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/FhAl66vJwg9L3mfvRz8ZyZLemj48?imageslim"
-    games: []
+    games: [curious-expedition]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:05:15"
+        label: "奇妙探险队"
+      - at: "01:02:46"
+        label: "奇妙探险队"
+      - at: "02:00:18"
+        label: "奇妙探险队"
+      - at: "02:57:48"
+        label: "52-2019.1.8-奇妙探险队"
     sources:
       - url: "https://www.acfun.cn/v/ac4847291"
         kind: replay
@@ -119,7 +208,18 @@
     confidence: high
     duration_min: 281
     cover: "https://tx-free-imgs.acfun.cn/FvwCAF8Bhc0QEawKdq2YwR9ArZ_x?imageslim"
-    games: []
+    games: [curious-expedition]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:05:22"
+        label: "奇妙探险队"
+      - at: "01:14:15"
+        label: "奇妙探险队"
+      - at: "02:23:09"
+        label: "奇妙探险队"
+      - at: "03:32:02"
+        label: "奇妙探险队"
     sources:
       - url: "https://www.acfun.cn/v/ac4850598"
         kind: replay
@@ -135,7 +235,16 @@
     confidence: high
     duration_min: 215
     cover: "https://tx-free-imgs.acfun.cn/FvAvAUN5AgLsFzNKBPxHtWlN9HZa?imageslim"
-    games: []
+    games: [amazing-cultivation-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:23:30"
+        label: "Part2"
+      - at: "01:27:25"
+        label: "了不起的修仙模拟器"
+      - at: "02:31:21"
+        label: "了不起的修仙模拟器"
     sources:
       - url: "https://www.acfun.cn/v/ac4856613"
         kind: replay
@@ -151,7 +260,24 @@
     confidence: high
     duration_min: 461
     cover: "https://tx-free-imgs.acfun.cn/FlojuN7QBwZf6j9Z_Sy2njQOM3Kg?imageslim"
-    games: []
+    games: [amazing-cultivation-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "了不起的修仙模拟器"
+      - at: "01:00:01"
+        label: "了不起的修仙模拟器"
+      - at: "02:00:04"
+        label: "了不起的修仙模拟器"
+      - at: "03:00:05"
+        label: "了不起的修仙模拟器"
+      - at: "04:00:07"
+        label: "了不起的修仙模拟器"
+      - at: "05:00:09"
+        label: "了不起的修仙模拟器"
+      - at: "06:00:12"
+        label: "了不起的修仙模拟器"
+      - at: "06:50:29"
+        label: "了不起的修仙模拟器"
     sources:
       - url: "https://www.acfun.cn/v/ac4859355"
         kind: replay
@@ -169,6 +295,11 @@
     cover: "https://tx-free-imgs.acfun.cn/Fgf3hmrYkctD_cbyETHwwNE6xTjO?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "砒霜前聊10块钱的-弹幕版"
+      - at: "00:36:16"
+        label: "心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4861698"
         kind: replay
@@ -184,7 +315,18 @@
     confidence: high
     duration_min: 295
     cover: "https://tx-free-imgs.acfun.cn/Fj_gNexJI5SqGWsBHAUO4EpC6du4?imageslim"
-    games: []
+    games: [amazing-cultivation-simulator]
+    segments:
+      - at: "00:00:00"
+        label: "了不起的修仙模拟器"
+      - at: "00:59:03"
+        label: "了不起的修仙模拟器"
+      - at: "01:58:07"
+        label: "了不起的修仙模拟器"
+      - at: "02:57:10"
+        label: "了不起的修仙模拟器"
+      - at: "03:56:14"
+        label: "了不起的修仙模拟器"
     sources:
       - url: "https://www.acfun.cn/v/ac4864624"
         kind: replay
@@ -200,7 +342,25 @@
     confidence: high
     duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/FpV72bOkUmq-jpj_QSwTp-Z2m9Gm?imageslim"
-    games: []
+    games: [yokus-island-express]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:17:15"
+        label: "Yoku s Island Express（尤库的小岛速递）"
+        game: yokus-island-express
+      - at: "01:16:46"
+        label: "Yoku s Island Express（尤库的小岛速递）"
+        game: yokus-island-express
+      - at: "02:16:17"
+        label: "Yoku s Island Express（尤库的小岛速递）"
+        game: yokus-island-express
+      - at: "03:15:48"
+        label: "Yoku s Island Express（尤库的小岛速递）"
+        game: yokus-island-express
+      - at: "04:15:19"
+        label: "Yoku s Island Express（尤库的小岛速递）"
+        game: yokus-island-express
     sources:
       - url: "https://www.acfun.cn/v/ac4867181"
         kind: replay
@@ -216,7 +376,18 @@
     confidence: high
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/FuxAZqfkWwko7lIgtIsTBvrFyIlq?imageslim"
-    games: []
+    games: [my-time-at-portia]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:34"
+        label: "波西亚时光"
+      - at: "01:12:32"
+        label: "波西亚时光"
+      - at: "02:09:31"
+        label: "波西亚时光"
+      - at: "03:06:30"
+        label: "波西亚时光"
     sources:
       - url: "https://www.acfun.cn/v/ac4869936"
         kind: replay
@@ -232,7 +403,20 @@
     confidence: high
     duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/Fprpk3RBewvJTapz3G_b1vYxqdJl?imageslim"
-    games: []
+    games: [rakuen]
+    segments:
+      - at: "00:00:00"
+        label: "Rakuen(乐园)"
+        game: rakuen
+      - at: "01:03:26"
+        label: "Rakuen(乐园)"
+        game: rakuen
+      - at: "02:06:53"
+        label: "Rakuen(乐园)"
+        game: rakuen
+      - at: "03:10:20"
+        label: "Rakuen(乐园)"
+        game: rakuen
     sources:
       - url: "https://www.acfun.cn/v/ac4876456"
         kind: replay
@@ -248,9 +432,19 @@
     confidence: high
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/FjJiJKePlZpbiMh-Q03XDlUlhlAK?imageslim"
-    games: []
+    games: [rakuen]
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播（乐园 & 心灵砒霜）的纯净版（ac4881886）与弹幕版（ac4882221）原本被建模为两条重复条目，已合并。"
+    segments:
+      - at: "00:00:00"
+        label: "Rakuen(乐园)"
+        game: rakuen
+      - at: "01:00:38"
+        label: "P2.1-2019.1.20-心灵砒霜"
+      - at: "01:55:41"
+        label: "P2.2-2019.1.20-心灵砒霜"
+      - at: "02:50:46"
+        label: "P2.3-2019.1.20-心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4881886"
         kind: replay
@@ -271,6 +465,21 @@
     duration_min: 49
     cover: "https://tx-free-imgs.acfun.cn/Fp_PxgXItrwOToTDstcp1f-V72hT?imageslim"
     games: []
+    segments:
+      - at: "00:00:00"
+        label: "P1-北京部"
+      - at: "00:06:48"
+        label: "P2-搞事部"
+      - at: "00:25:55"
+        label: "P3-海外部"
+      - at: "00:30:00"
+        label: "P4-海外部"
+      - at: "00:35:58"
+        label: "P5-010"
+      - at: "00:39:27"
+        label: "P6-女皇密令"
+      - at: "00:44:37"
+        label: "P7-众人眼中的石66"
     sources:
       - url: "https://www.acfun.cn/v/ac4885083"
         kind: replay
@@ -302,7 +511,19 @@
     confidence: high
     duration_min: 174
     cover: "https://tx-free-imgs.acfun.cn/FkTl6rMvP6XAwhk26q51cGeL6JM5?imageslim"
-    games: []
+    games: [dig-or-die]
+    segments:
+      - at: "00:00:00"
+        label: "P1-20109.1.23-游戏前聊10块钱的"
+      - at: "00:21:57"
+        label: "Dig or Die"
+        game: dig-or-die
+      - at: "01:12:44"
+        label: "Dig or Die"
+        game: dig-or-die
+      - at: "02:03:32"
+        label: "Dig or Die"
+        game: dig-or-die
     sources:
       - url: "https://www.acfun.cn/v/ac4891228"
         kind: replay
@@ -318,7 +539,23 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/FuE_Lh2ZwBiG3g2bjgW_MF52wy75?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "00:39:48"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "01:19:37"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "02:20:21"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "03:21:07"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
     sources:
       - url: "https://www.acfun.cn/v/ac4894180"
         kind: replay
@@ -334,7 +571,22 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/Fp7BfQ8TpHu-bq2fljofcKz_DIGu?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:44"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "01:15:15"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "02:15:45"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "03:16:15"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
     sources:
       - url: "https://www.acfun.cn/v/ac4897438"
         kind: replay
@@ -350,7 +602,22 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/FsMRLoCb-qN8NHuazaVgVWSOHGF4?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:15:49"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "01:10:55"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "02:06:03"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "03:01:10"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
     sources:
       - url: "https://www.acfun.cn/v/ac4899266"
         kind: replay
@@ -368,6 +635,13 @@
     cover: "https://tx-free-imgs.acfun.cn/Fj2-dhsqrrobMjG2CIIKAJoNRCbQ?imageslim"
     games: []
     tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜"
+      - at: "01:05:47"
+        label: "心灵砒霜"
+      - at: "02:11:33"
+        label: "心灵砒霜"
     sources:
       - url: "https://www.acfun.cn/v/ac4901810"
         kind: replay
@@ -383,7 +657,16 @@
     confidence: high
     duration_min: 147
     cover: "https://tx-free-imgs.acfun.cn/FgS8RnviP7vnhY61ke2HM8NOrAEb?imageslim"
-    games: []
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:14:49"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
+      - at: "01:20:56"
+        label: "勇者斗恶龙创世小玩家2"
+        game: dragon-quest-builders-2
     sources:
       - url: "https://www.acfun.cn/v/ac4911437"
         kind: replay
