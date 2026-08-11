@@ -41,12 +41,20 @@ export function withTimestamp(url: string, seconds: number): string {
 }
 
 /**
- * 封面走图片代理：绕开 B 站等平台的防盗链，同时不占源站带宽。
- * NEXT_PUBLIC_IMG_PROXY 留空时直接用原图（本地开发用）。
+ * 封面可选走部署方图片代理；B 站封面在未配置时使用公开的缩略图代理，
+ * 以绕开图床对本地站点来源的防盗链。其他来源继续直接使用原图。
  */
 export function proxyImage(url: string | undefined, width = 480): string | null {
   if (!url) return null
   const base = process.env.NEXT_PUBLIC_IMG_PROXY
-  if (!base) return url
-  return `${base}?url=${encodeURIComponent(url)}&w=${width}`
+  if (base) return `${base}?url=${encodeURIComponent(url)}&w=${width}`
+  try {
+    const host = new URL(url).hostname
+    if (host === 'hdslb.com' || host.endsWith('.hdslb.com')) {
+      return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=${width}`
+    }
+  } catch {
+    return url
+  }
+  return url
 }

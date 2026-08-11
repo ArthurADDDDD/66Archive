@@ -30,7 +30,7 @@ export function Preview({ entry }: { entry: TimelineEntry | null }) {
       <div className="relative aspect-video w-full bg-raised">
         {cover ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={cover} alt="" loading="lazy" className="h-full w-full object-cover" />
+          <img src={cover} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover" />
         ) : (
           <div className="flex h-full w-full items-center justify-center">
             <span className="font-mono text-[10px] tracking-widest text-faint">无封面</span>

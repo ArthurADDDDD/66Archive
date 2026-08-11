@@ -59,7 +59,12 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
 
       {cover && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={cover} alt={`${entry.title} 封面`} className="mt-6 aspect-video w-full rounded border border-line bg-raised object-cover" />
+        <img
+          src={cover}
+          alt={`${entry.title} 封面`}
+          referrerPolicy="no-referrer"
+          className="mt-6 aspect-video w-full rounded border border-line bg-raised object-cover"
+        />
       )}
 
       {/* 分段：这场几点在打什么，点色块直接跳到对应时间 */}
