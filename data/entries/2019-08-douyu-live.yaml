@@ -75,6 +75,33 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2019-08-15-live-01
+    type: live
+    date: "2019-08-15"
+    title: "疑案追声中元节特别版&牧场物语"
+    platform: douyu
+    confidence: high
+    duration_min: 302
+    cover: "https://tx-free-imgs.acfun.cn/FotWaIDCUkQ0Ia0aLrNzgj6Lc7BT?imageslim"
+    games: [unheard, sos-fomt]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:11"
+        label: "疑案追声中元节特别版"
+      - at: "02:00:14"
+        label: "疑案追声中元节特别版"
+      - at: "02:30:14"
+        label: "牧场物语"
+      - at: "04:00:22"
+        label: "牧场物语"
+    sources:
+      - url: "https://www.acfun.cn/v/ac10746697"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
+    note: "原误标 2018-01-15；fileName 全为 2019.8.15（中元节，疑案追声 2019-03-29 才发售），上传 8.16，归此日"
   - id: 2019-08-18-live-01
     type: live
     date: "2019-08-18"

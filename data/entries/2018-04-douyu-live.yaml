@@ -506,6 +506,24 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2018-04-17-live-02
+    type: live
+    date: "2018-04-17"
+    series: xishuo-liaozhai
+    title: "戏说聊斋"
+    platform: douyu
+    confidence: high
+    duration_min: 16
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965702.jpg?imageslim"
+    games: []
+    tags: [戏说聊斋]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4314841"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
+    note: "原误标 2018-01-15；fileName/上传/封面均为 2018-04-17（戏说聊斋第四期），归此日"
   - id: 2018-04-20-live-01
     type: live
     date: "2018-04-20"

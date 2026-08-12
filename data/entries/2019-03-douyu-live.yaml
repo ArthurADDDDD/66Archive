@@ -386,9 +386,9 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2019-03-18-live-01
+  - id: 2019-03-17-live-01
     type: live
-    date: "2019-03-18"
+    date: "2019-03-17"
     title: "【心灵砒霜】娶一个蛇精当老婆是一种怎么样的体验"
     series: xinling-pishuang
     platform: douyu
@@ -396,19 +396,27 @@
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
     games: []
-    tags: [心灵砒霜, 弹幕版]
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
-        label: "Part1"
+        label: "砒霜前聊10块钱的"
       - at: "00:50:59"
-        label: "Part2"
+        label: "心灵砒霜"
+      - at: "01:56:18"
+        label: "心灵砒霜"
+      - at: "03:01:37"
+        label: "心灵砒霜"
     sources:
+      - url: "https://www.acfun.cn/v/ac10010771"
+        kind: replay
+        parts: 4
+        status: alive
       - url: "https://www.acfun.cn/v/ac10013069"
         kind: replay
         parts: 2
         status: alive
+    note: "原数据两条分别误标 2018-01-15 与 2019-03-18；实为 2019-03-17 同场砒霜的纯净版（ac10010771，247min）与次日上传弹幕版（ac10013069，247min），合并"
     contributed_by: data-agent
-
   - id: 2019-03-18-live-02
     type: live
     date: "2019-03-18"
