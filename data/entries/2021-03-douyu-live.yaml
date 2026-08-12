@@ -634,9 +634,10 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 225
+    duration_min: 320
+    note: "同一场直播（周日砒霜场）拆为 2 个回放视频：ac27048216 含 P7-P9（砒霜+极限竞速混段）、ac27071329 含 P10 弹幕版（次日渲染后上传），P 编号连续，按一天一条原则合并为单条。"
     cover: "https://tx-free-imgs.acfun.cn/o_1f1clmfgfuu51ti2gr1146116740.jpeg?imageslim"
-    games: []
+    games: [forza-horizon-4]
     tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
@@ -649,33 +650,20 @@
         label: "心灵砒霜弹幕版"
       - at: "02:55:27"
         label: "心灵砒霜弹幕版"
+      - at: "03:45:00"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
+      - at: "04:16:40"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
+      - at: "04:48:17"
+        label: "心灵砒霜极限竞速地平线4"
+        game: forza-horizon-4
     sources:
       - url: "https://www.acfun.cn/v/ac27071329"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-03-21-live-02
-    type: live
-    date: "2021-03-21"
-    title: "极限竞速地平线4"
-    platform: douyu
-    confidence: high
-    duration_min: 95
-    cover: "https://tx-free-imgs.acfun.cn/o_1f1ah5sj51gld1vlmkoc1dh8spd0.jpeg?imageslim"
-    games: [forza-horizon-4]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜极限竞速地平线4"
-        game: forza-horizon-4
-      - at: "00:31:40"
-        label: "心灵砒霜极限竞速地平线4"
-        game: forza-horizon-4
-      - at: "01:03:17"
-        label: "心灵砒霜极限竞速地平线4"
-        game: forza-horizon-4
-    sources:
       - url: "https://www.acfun.cn/v/ac27048216"
         kind: replay
         parts: 3
