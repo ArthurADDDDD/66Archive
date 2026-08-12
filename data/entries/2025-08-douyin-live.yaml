@@ -8,6 +8,11 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-08-02-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "和炮炮壮壮一家三口打矩阵"
+      - at: "01:00:01"
+        label: "和炮炮壮壮一家三口打矩阵"
     sources:
       - url: "https://www.bilibili.com/video/BV1rChNz7ER3"
         kind: replay
