@@ -11,6 +11,8 @@ export function RotatingAvatar() {
     const current = Number.isInteger(saved) && saved >= 0 && saved < AVATARS.length ? saved : -1
     const next = (current + 1) % AVATARS.length
     window.localStorage.setItem(AVATAR_STORAGE_KEY, String(next))
+    // 头像轮换只能客户端做（localStorage 在 SSR 不可读），一次性且无外部依赖
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAvatar(AVATARS[next])
   }, [])
 

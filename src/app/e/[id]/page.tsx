@@ -5,7 +5,9 @@ import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, withTimestamp } from '@/lib/platforms'
 import { formatDuration, gameColor } from '@/lib/ui'
 import { toSeconds, type Platform } from '@/lib/schema'
+import { buildEntryRails } from '@/lib/relations'
 import { SiteNav } from '@/components/SiteNav'
+import { RelatedRail } from '@/components/RelatedRail'
 
 export function generateStaticParams() {
   return getDataset().entries.map((e) => ({ id: e.id }))
@@ -31,9 +33,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const primary = groupedSources.find((source) => source.status === 'alive') ?? groupedSources[0]
   const backHref = `/chronicle/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
 
-  const related = ds.entries
-    .filter((e) => e.id !== entry.id && e.games.some((g) => entry.games.includes(g)))
-    .slice(0, 6)
+  const rails = buildEntryRails(entry, ds)
 
   return (
     <div className="ui-page-in mx-auto max-w-[900px] px-4 pb-8 sm:px-6">
@@ -126,7 +126,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group ui-press flex items-center gap-3 rounded px-2 py-1.5 transition-colors hover:bg-surface"
+                        className="group ui-press flex items-center gap-3 rounded px-2 py-2.5 transition-colors hover:bg-surface sm:py-1.5"
                       >
                         {Row}
                         <span className="ml-auto font-mono text-[10px] text-live opacity-0 transition-opacity group-hover:opacity-100">
@@ -134,7 +134,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                         </span>
                       </a>
                     ) : (
-                      <div className="flex items-center gap-3 px-2 py-1.5">{Row}</div>
+                      <div className="flex items-center gap-3 px-2 py-2.5 sm:py-1.5">{Row}</div>
                     )}
                   </li>
                 )
@@ -158,7 +158,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               const dead = s.status === 'dead'
               const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
-                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2.5 transition-colors duration-200 hover:bg-surface/80">
+                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-3 transition-colors duration-200 hover:bg-surface/80 sm:py-2.5">
                   <span className={`rounded-sm border px-1.5 py-0.5 font-mono text-[10px] ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
                     {i === 0 ? '主链接' : `备选 ${i}`}
                   </span>
@@ -174,7 +174,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`ui-press ml-auto rounded-sm font-mono text-[11px] underline underline-offset-4 ${
+                    className={`ui-press ml-auto rounded-sm px-1 py-2 font-mono text-[11px] underline underline-offset-4 sm:py-0 ${
                       dead ? 'text-faint' : 'text-live'
                     }`}
                   >
@@ -190,32 +190,18 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         </p>
       </section>
 
-      {related.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">同游戏的其他记录</h2>
-          <ul className="space-y-1">
-            {related.map((r) => (
-              <li key={r.id}>
-                <Link href={`/e/${r.id}/`} className="ui-press flex items-baseline gap-3 rounded px-2 py-1.5 transition-colors hover:bg-surface">
-                  <span className="font-mono text-[11px] text-faint tnum">{r.date}</span>
-                  <span className="truncate text-[13px] text-ink">{r.title}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <RelatedRail rails={rails} />
 
       <nav className="mt-12 flex justify-between gap-4 border-t border-line pt-6 font-mono text-[11px]">
         {older ? (
-          <Link href={`/e/${older.id}/`} className="max-w-[45%] truncate text-muted hover:text-ink">
+          <Link href={`/e/${older.id}/`} className="max-w-[45%] truncate py-2 text-muted hover:text-ink sm:py-0">
             ← {older.date} {older.title}
           </Link>
         ) : (
           <span />
         )}
         {newer && (
-          <Link href={`/e/${newer.id}/`} className="max-w-[45%] truncate text-right text-muted hover:text-ink">
+          <Link href={`/e/${newer.id}/`} className="max-w-[45%] truncate py-2 text-right text-muted hover:text-ink sm:py-0">
             {newer.date} {newer.title} →
           </Link>
         )}
