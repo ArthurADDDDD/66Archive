@@ -342,52 +342,40 @@
     title: "Toodee and Topdee"
     platform: douyu
     confidence: high
-    duration_min: 140
+    duration_min: 327
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_70833a21b63349c0a86e15288f3592ba.jpeg?imageslim"
     games: [toodee-and-topdee]
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac30651837 含 P5–P8、ac30651839 含 P9–P11，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "Toodee and Topdee"
+        label: "P5"
         game: toodee-and-topdee
-      - at: "00:46:45"
-        label: "Toodee and Topdee"
+      - at: "00:46:54"
+        label: "P6"
         game: toodee-and-topdee
-      - at: "01:33:33"
-        label: "Toodee and Topdee"
+      - at: "01:33:48"
+        label: "P7"
         game: toodee-and-topdee
-    sources:
-      - url: "https://www.acfun.cn/v/ac30651839"
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2021-08-09-live-02
-    type: live
-    date: "2021-08-09"
-    title: "Toodee and Topdee（中）"
-    platform: douyu
-    confidence: high
-    duration_min: 187
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_42f16e4838e146eda40f6cb93f93fc1d.jpeg?imageslim"
-    games: [toodee-and-topdee]
-    segments:
-      - at: "00:00:00"
-        label: "Toodee and Topdee"
+      - at: "02:20:42"
+        label: "P8"
         game: toodee-and-topdee
-      - at: "00:46:52"
-        label: "Toodee and Topdee"
+      - at: "03:07:36"
+        label: "P9"
         game: toodee-and-topdee
-      - at: "01:33:42"
-        label: "Toodee and Topdee"
+      - at: "03:54:24"
+        label: "P10"
         game: toodee-and-topdee
-      - at: "02:20:29"
-        label: "Toodee and Topdee"
+      - at: "04:41:12"
+        label: "P11"
         game: toodee-and-topdee
     sources:
       - url: "https://www.acfun.cn/v/ac30651837"
         kind: replay
         parts: 4
+        status: alive
+      - url: "https://www.acfun.cn/v/ac30651839"
+        kind: replay
+        parts: 3
         status: alive
     contributed_by: data-agent
 

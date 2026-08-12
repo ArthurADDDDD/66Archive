@@ -357,58 +357,46 @@
     title: "空洞骑士"
     platform: douyu
     confidence: high
-    duration_min: 160
+    duration_min: 364
     cover: "https://tx-free-imgs.acfun.cn/o_1f8a6qr2h1sse3e1ktf1ler8uu0.jpeg?imageslim"
     games: [hollow-knight]
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29795099 含 P6–P10、ac29795203 含 P11–P14，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "空洞骑士"
-        game: hollow-knight
-      - at: "00:40:04"
-        label: "空洞骑士"
-        game: hollow-knight
-      - at: "01:20:09"
-        label: "空洞骑士"
-        game: hollow-knight
-      - at: "02:00:13"
-        label: "空洞骑士"
-        game: hollow-knight
-    sources:
-      - url: "https://www.acfun.cn/v/ac29795203"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2021-06-15-live-02
-    type: live
-    date: "2021-06-15"
-    title: "空洞骑士（中）"
-    platform: douyu
-    confidence: high
-    duration_min: 204
-    cover: "https://tx-free-imgs.acfun.cn/o_1f8a6raol1la1p39kpg68u94q0.jpeg?imageslim"
-    games: [hollow-knight]
-    segments:
-      - at: "00:00:00"
-        label: "空洞骑士"
+        label: "P6"
         game: hollow-knight
       - at: "00:42:00"
-        label: "空洞骑士"
+        label: "P7"
         game: hollow-knight
       - at: "01:24:00"
-        label: "空洞骑士"
+        label: "P8"
         game: hollow-knight
       - at: "02:04:00"
-        label: "空洞骑士"
+        label: "P9"
         game: hollow-knight
       - at: "02:44:00"
-        label: "空洞骑士"
+        label: "P10"
+        game: hollow-knight
+      - at: "03:24:06"
+        label: "P11"
+        game: hollow-knight
+      - at: "04:04:12"
+        label: "P12"
+        game: hollow-knight
+      - at: "04:44:18"
+        label: "P13"
+        game: hollow-knight
+      - at: "05:24:24"
+        label: "P14"
         game: hollow-knight
     sources:
       - url: "https://www.acfun.cn/v/ac29795099"
         kind: replay
         parts: 5
+        status: alive
+      - url: "https://www.acfun.cn/v/ac29795203"
+        kind: replay
+        parts: 4
         status: alive
     contributed_by: data-agent
 
@@ -572,58 +560,46 @@
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 279
+    duration_min: 557
     cover: "https://tx-free-imgs.acfun.cn/o_1f8s6necagi51os71hl72kt1q1f0.jpeg?imageslim"
     games: [naraka-bladepoint]
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29949972 含 P1–P5、ac29950812 含 P6–P10，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "永劫无间"
+        label: "P1"
         game: naraka-bladepoint
-      - at: "00:55:49"
-        label: "永劫无间"
+      - at: "00:55:48"
+        label: "P2"
         game: naraka-bladepoint
-      - at: "01:51:39"
-        label: "永劫无间"
+      - at: "01:51:36"
+        label: "P3"
         game: naraka-bladepoint
-      - at: "02:47:29"
-        label: "永劫无间"
+      - at: "02:47:24"
+        label: "P4"
         game: naraka-bladepoint
-      - at: "03:43:20"
-        label: "永劫无间"
+      - at: "03:43:12"
+        label: "P5"
+        game: naraka-bladepoint
+      - at: "04:39:00"
+        label: "P6"
+        game: naraka-bladepoint
+      - at: "05:34:48"
+        label: "P7"
+        game: naraka-bladepoint
+      - at: "06:30:36"
+        label: "P8"
+        game: naraka-bladepoint
+      - at: "07:26:24"
+        label: "P9"
+        game: naraka-bladepoint
+      - at: "08:22:12"
+        label: "P10"
         game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac29949972"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-06-22-live-02
-    type: live
-    date: "2021-06-22"
-    title: "永劫无间（中）"
-    platform: douyu
-    confidence: high
-    duration_min: 278
-    cover: "https://tx-free-imgs.acfun.cn/o_1f8s6ohej1ka414q63c09ac28l0.jpeg?imageslim"
-    games: [naraka-bladepoint]
-    segments:
-      - at: "00:00:00"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "00:55:50"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "01:51:23"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "02:46:58"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "03:42:32"
-        label: "永劫无间"
-        game: naraka-bladepoint
-    sources:
       - url: "https://www.acfun.cn/v/ac29950812"
         kind: replay
         parts: 5
