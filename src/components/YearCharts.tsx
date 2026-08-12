@@ -44,19 +44,19 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
                   }}
                 />
                 {year === topYear && (
-                  <span className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-ink px-1.5 py-0.5 font-mono text-[8px] font-semibold text-base tnum">
+                  <span className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-ink px-1.5 py-0.5 text-meta font-semibold text-[#12141C] tnum">
                     最多
                   </span>
                 )}
               </span>
-              <span className={`font-mono text-[8px] leading-3 text-faint/70 tnum ${year % 2 ? 'hidden sm:block' : ''}`}>
+              <span className={`font-mono text-meta leading-3 text-faint tnum ${year % 2 ? 'hidden sm:block' : ''}`}>
                 {year}
               </span>
             </Link>
           ))}
         </div>
       </div>
-      <p className="mt-2 font-mono text-[9px] text-faint/60 sm:hidden">← 左右滑动看全部年份</p>
+      <p className="mt-2 text-meta text-faint sm:hidden">← 左右滑动看全部年份</p>
     </div>
   )
 }
@@ -80,7 +80,7 @@ export function EraDots({ rows }: { rows: YearRow[] }) {
                 className="rounded-full transition-transform hover:scale-110"
                 style={{ width: d, height: d, background: actColorForDate(`${year}-06-01`) }}
               />
-              <span className={`font-mono text-[8px] text-faint/60 tnum ${year % 2 ? 'hidden sm:block' : ''}`}>{year}</span>
+              <span className={`font-mono text-meta text-faint tnum ${year % 2 ? 'hidden sm:block' : ''}`}>{year}</span>
             </Link>
           )
         })}

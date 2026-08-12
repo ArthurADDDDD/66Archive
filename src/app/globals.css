@@ -6,6 +6,16 @@
   color-scheme: dark;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft-spring: cubic-bezier(0.22, 1.15, 0.36, 1);
+
+  /* 主体安全边距：手机端左右各 13%，桌面回到原本的 sm:px-6（1.5rem）。
+     导航（header）刻意不使用它——nav 仍然贴近屏幕边缘，触控区不缩水。 */
+  --page-pad: 13%;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --page-pad: 1.5rem;
+  }
 }
 
 html {
@@ -14,14 +24,20 @@ html {
 
 body {
   @apply bg-base text-ink antialiased;
-  /* 极淡的水平扫描线：档案影像的质感，不到看得出网格的程度 */
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.012) 0px,
-    rgba(255, 255, 255, 0.012) 1px,
-    transparent 1px,
-    transparent 3px
-  );
+}
+
+/* 极淡的水平扫描线：档案影像的质感，不到看得出网格的程度。
+   只在桌面开启——1px/3px 的周期落到手机的 DPR 2~3 上会变成摩尔纹，滚动时还会抖。 */
+@media (min-width: 640px) {
+  body {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -128,6 +144,36 @@ body {
 }
 
 @layer utilities {
+  /**
+   * 主体安全边距。同一条渲染路径上只允许出现一层 .px-page——
+   * 百分比 padding 按元素自身宽度算，套两层会复利（13% → 13% + 9.6%）。
+   * 导航 header 不用它，仍是 px-4 sm:px-6。
+   */
+  .px-page {
+    padding-left: var(--page-pad);
+    padding-right: var(--page-pad);
+  }
+
+  /**
+   * 全宽出血：手机端把横滑封面条 / 图墙 / 封面墙放回屏幕边缘。
+   * 用 calc(50% - 50vw) 而不是负百分比 margin——后者按父级内容宽（已经只有 74vw）
+   * 计算，到不了屏幕边。桌面端自动退化为普通块，版式与改动前一致。
+   */
+  @media (max-width: 639px) {
+    .bleed-page {
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    /* 出血容器内部需要起始留白的地方（如横滑条的首尾） */
+    .bleed-inset {
+      padding-left: var(--page-pad);
+      padding-right: var(--page-pad);
+    }
+  }
+
   .ui-page-in {
     animation: ui-page-in 520ms var(--ease-out-expo) both;
   }

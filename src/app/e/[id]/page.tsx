@@ -7,6 +7,7 @@ import { formatDuration, gameColor } from '@/lib/ui'
 import { toSeconds, type Platform } from '@/lib/schema'
 import { buildEntryRails } from '@/lib/relations'
 import { SiteNav } from '@/components/SiteNav'
+import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
 
 export function generateStaticParams() {
@@ -36,17 +37,23 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const rails = buildEntryRails(entry, ds)
 
   return (
-    <div className="ui-page-in mx-auto max-w-[900px] px-4 pb-8 sm:px-6">
-      <header className="flex items-center py-5">
+    // 外层不带 px-page：RelatedRail 自带一层，套两层百分比 padding 会复利
+    // （原来这里就是 px-4 套 RelatedRail 的 px-4，手机上等于 32px 双重内边距）
+    <div className="ui-page-in mx-auto max-w-[900px] pb-8">
+      <MobileQuickNav active="entry" />
+      <BackToTop />
+      <header className="flex items-center px-4 py-5 sm:px-6">
         <SiteNav active="entry" />
       </header>
-      <Link href={backHref} className="ui-press mt-5 inline-block rounded-sm font-mono text-[11px] text-muted underline underline-offset-4 hover:text-live">
-        ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
-      </Link>
+      <div className="mt-5 px-page">
+        <Link href={backHref} className="ui-press inline-block rounded-sm text-meta text-muted tnum underline underline-offset-4 hover:text-live">
+          ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
+        </Link>
+      </div>
 
-      <header className="mt-6 border-b border-line pb-6">
-        <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] tnum">
-          <span className="rounded-sm px-1.5 py-0.5 font-semibold text-base" style={{ background: platform?.color }}>
+      <header className="mt-6 border-b border-line px-page pb-6">
+        <div className="flex flex-wrap items-center gap-2 text-meta tnum">
+          <span className="rounded-sm px-1.5 py-0.5 font-semibold text-[#12141C]" style={{ background: platform?.color }}>
             {platform?.name ?? entry.platform}
           </span>
           <span className="text-muted">{entry.date}</span>
@@ -59,8 +66,8 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             </span>
           )}
         </div>
-        <h1 className="mt-3 text-[22px] font-semibold leading-snug sm:text-[28px]">{entry.title}</h1>
-        {entry.note && <p className="mt-2 text-[12px] text-faint">{entry.note}</p>}
+        <h1 className="mt-3 text-h2 font-semibold">{entry.title}</h1>
+        {entry.note && <p className="mt-2 text-meta text-faint">{entry.note}</p>}
       </header>
 
       {cover && (
@@ -69,15 +76,15 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           src={cover}
           alt={`${entry.title} 封面`}
           referrerPolicy="no-referrer"
-          className="ui-reveal mt-6 aspect-video w-full rounded border border-line bg-raised object-cover"
+          className="ui-reveal mt-6 aspect-video w-full border border-line bg-raised object-cover sm:rounded"
         />
       )}
 
       {/* 分段：这场几点在打什么，点色块直接跳到对应时间 */}
-      <section className="mt-8">
-        <h2 className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">播了什么</h2>
+      <section className="mt-8 px-page">
+        <h2 className="mb-3 text-meta uppercase tracking-[0.16em] text-faint">播了什么</h2>
         {entry.segments.length === 0 ? (
-          <p className="text-[13px] text-muted">
+          <p className="text-body text-muted">
             尚未录入分段信息。
             {compactGameIds.length > 0 && (
               <> 已知涉及：{compactGameIds.map((g) => ds.games.get(g)?.name ?? g).join('、')}。</>
@@ -113,10 +120,10 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                 const name = s.game ? (ds.games.get(s.game)?.name ?? s.game) : s.label
                 const Row = (
                   <>
-                    <span className="font-mono text-[11px] text-faint tnum">{s.at}</span>
+                    <span className="font-mono text-meta text-faint tnum">{s.at}</span>
                     <span className="inline-block h-2.5 w-2.5 shrink-0 rounded-sm" style={{ background: gameColor(s.game ?? null) }} />
-                    <span className="text-[13px] text-ink">{name}</span>
-                    {s.game && <span className="text-[12px] text-faint">{s.label}</span>}
+                    <span className="text-body text-ink">{name}</span>
+                    {s.game && <span className="text-meta text-faint">{s.label}</span>}
                   </>
                 )
                 return (
@@ -129,7 +136,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                         className="group ui-press flex items-center gap-3 rounded px-2 py-2.5 transition-colors hover:bg-surface sm:py-1.5"
                       >
                         {Row}
-                        <span className="ml-auto font-mono text-[10px] text-live opacity-0 transition-opacity group-hover:opacity-100">
+                        <span className="ml-auto text-meta text-live opacity-0 transition-opacity group-hover:opacity-100">
                           跳转 ↗
                         </span>
                       </a>
@@ -145,12 +152,12 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       </section>
 
       {/* 来源：同一场的官方回放与各路录播 */}
-      <section className="mt-10">
-        <h2 className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
+      <section className="mt-10 px-page">
+        <h2 className="mb-3 text-meta uppercase tracking-[0.16em] text-faint tnum">
           来源 · {groupedSources.length}
         </h2>
         {groupedSources.length === 0 ? (
-          <p className="text-[13px] text-muted">还没有可用链接。如果你手上有，欢迎补录。</p>
+          <p className="text-body text-muted">还没有可用链接。如果你手上有，欢迎补录。</p>
         ) : (
           <ul className="divide-y divide-line rounded border border-line">
             {groupedSources.map((s, i) => {
@@ -159,22 +166,22 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
                 <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-3 transition-colors duration-200 hover:bg-surface/80 sm:py-2.5">
-                  <span className={`rounded-sm border px-1.5 py-0.5 font-mono text-[10px] ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
+                  <span className={`shrink-0 rounded-sm border px-1.5 py-0.5 text-meta ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
                     {i === 0 ? '主链接' : `备选 ${i}`}
                   </span>
-                  <span className="font-mono text-[11px] text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
-                  {acc && <span className="text-[12px] text-ink">{acc.name}</span>}
-                  {s.entryTitle !== entry.title && <span className="max-w-full truncate text-[12px] text-faint">{s.entryTitle}</span>}
-                  {s.parts && <span className="font-mono text-[11px] text-faint tnum">{s.parts} P</span>}
-                  <span className={`font-mono text-[11px] ${s.status === 'alive' ? 'text-live/80' : dead ? 'text-today/80' : 'text-faint'}`}>
+                  <span className="text-meta text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
+                  {acc && <span className="text-meta text-ink">{acc.name}</span>}
+                  {s.entryTitle !== entry.title && <span className="max-w-full truncate text-meta text-faint">{s.entryTitle}</span>}
+                  {s.parts && <span className="font-mono text-meta text-faint tnum">{s.parts} P</span>}
+                  <span className={`text-meta ${s.status === 'alive' ? 'text-live' : dead ? 'text-today' : 'text-faint'}`}>
                     {statusLabel}
                   </span>
-                  {s.note && <span className="text-[12px] text-faint">{s.note}</span>}
+                  {s.note && <span className="text-meta text-faint">{s.note}</span>}
                   <a
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`ui-press ml-auto rounded-sm px-1 py-2 font-mono text-[11px] underline underline-offset-4 sm:py-0 ${
+                    className={`ui-press ml-auto rounded-sm px-1 py-2 text-meta underline underline-offset-4 sm:py-0 ${
                       dead ? 'text-faint' : 'text-live'
                     }`}
                   >
@@ -185,14 +192,12 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             })}
           </ul>
         )}
-        <p className="mt-2 font-mono text-[10px] text-faint">
-          本站不存放任何视频文件，所有链接均指向原平台。
-        </p>
+        <p className="mt-2 text-meta text-faint">本站不存放任何视频文件，所有链接均指向原平台。</p>
       </section>
 
       <RelatedRail rails={rails} />
 
-      <nav className="mt-12 flex justify-between gap-4 border-t border-line pt-6 font-mono text-[11px]">
+      <nav className="mt-12 flex justify-between gap-4 border-t border-line px-page pt-6 text-meta tnum">
         {older ? (
           <Link href={`/e/${older.id}/`} className="max-w-[45%] truncate py-2 text-muted hover:text-ink sm:py-0">
             ← {older.date} {older.title}
