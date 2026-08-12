@@ -9,6 +9,13 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 2:44:46）、bobi华（2:44:13）、不懒bot（2:43:55）与 服部平次（2:44:16）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "体验鸣潮3.0版本"
+      - at: "01:00:01"
+        label: "体验鸣潮3.0版本"
+      - at: "02:00:02"
+        label: "体验鸣潮3.0版本"
     sources:
       - url: "https://www.bilibili.com/video/BV1M2iqBVE8s"
         kind: replay
@@ -29,6 +36,11 @@
     games: [black-myth-wukong]
     tags: [弹幕版]
     note: "同一场户外直播（逛黑神话悟空杭州线下店）由 直播回放巴拉蹦吧（弹幕/纯净双版 1:37:49）、bobi华（1:38:12）、服部平次（1:37:44）分别搬运，不懒bot 的投稿自 16:10 起、短 6 分钟（1:31:36），总时长基本吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "到杭州了"
+      - at: "01:00:02"
+        label: "到杭州了"
     sources:
       - url: "https://www.bilibili.com/video/BV1PArTBfEqN"
         kind: replay
@@ -46,9 +58,14 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/6a0743b8b57b71e23fbeda8774a3a9db360cd927.jpg"
     confidence: high
-    games: []
+    games: [taiwu-hui-juan]
     tags: [弹幕版]
     note: "同一场直播（太吾绘卷上海线下试玩会）由 服部平次（1:52:19，10:30 起）、直播回放巴拉蹦吧（弹幕/纯净双版 1:52:55）、bobi华（1:52:30）分别搬运，不懒bot 的投稿自 10:55 起、短 25 分钟（1:27:34），覆盖区间一致，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "太吾绘卷上海线下试玩会"
+      - at: "01:00:00"
+        label: "太吾绘卷上海线下试玩会"
     sources:
       - url: "https://www.bilibili.com/video/BV1XirVB8Ebj"
         kind: replay
@@ -69,6 +86,11 @@
     games: []
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1NBkFB1E3f，1:00:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，1:00:12）分别搬运，总时长吻合，已合并为一天一条。；与 2026-01-15-live-03 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播拉"
+      - at: "01:00:00"
+        label: "开播拉"
     sources:
       - url: "https://www.bilibili.com/video/BV1NBkFB1E3f"
         kind: replay
@@ -107,6 +129,29 @@
       - arknights-endfield
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1c7BfB8EDD，3:07:38）、直播回放巴拉蹦吧（弹幕/纯净双版，3:06:43）、服部平次（BV1AVBfBAE6g，3:07:01）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 3:06:32），总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18:05 聊天部分"
+      - at: "00:30:03"
+        label: "聊天部分"
+      - at: "00:53:33"
+        label: "18:35 明日方舟：终末地"
+      - at: "01:00:04"
+        label: "19:05 明日方舟：终末地"
+      - at: "01:30:05"
+        label: "19:35 明日方舟：终末地"
+      - at: "02:00:06"
+        label: "20:05 明日方舟：终末地"
+      - at: "02:23:19"
+        label: "20:28 卡顿"
+      - at: "02:24:32"
+        label: "20:30 卡顿"
+      - at: "02:25:08"
+        label: "20:32 明日方舟：终末地"
+      - at: "02:55:11"
+        label: "21:02 明日方舟：终末地"
+      - at: "03:06:32"
+        label: "无弹幕"
     sources:
       - url: "https://www.bilibili.com/video/BV1ucBfB3Edd"
         kind: replay
@@ -128,6 +173,11 @@
       - zheshi-xieyinggen
     tags: [弹幕版]
     note: "同一场直播（22:16 开播聊天→玩《这是谐音梗》→23:24 收尾）由 bobi华（1:23:00）、直播回放巴拉蹦吧（弹幕/纯净双版 1:25:47）、服部平次（1:24:12）与 不懒bot（1:25:00）分别搬运，标题各异但总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "娃睡了来唠会"
+      - at: "01:00:01"
+        label: "娃睡了来唠会"
     sources:
       - url: "https://www.bilibili.com/video/BV1RMzXBNEWQ"
         kind: replay
@@ -149,6 +199,13 @@
       - arknights-endfield
     tags: [弹幕版]
     note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 2:10:15）、bobi华（2:09:56）、服部平次（2:09:55）与 不懒bot（2:10:13）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "在终末地里拉电线"
+      - at: "01:00:01"
+        label: "在终末地里拉电线"
+      - at: "02:00:02"
+        label: "在终末地里拉电线"
     sources:
       - url: "https://www.bilibili.com/video/BV1LF61BHERA"
         kind: replay

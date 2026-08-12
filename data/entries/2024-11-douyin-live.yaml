@@ -30,6 +30,33 @@
       - xunlong-jue
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点44分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点44分（带弹幕版）"
+      - at: "02:00:02"
+        label: "12点44分（带弹幕版）"
+      - at: "03:00:03"
+        label: "13点44分（带弹幕版）"
+      - at: "04:00:04"
+        label: "14点44分（带弹幕版）"
+      - at: "05:00:05"
+        label: "15点44分（带弹幕版）"
+      - at: "06:00:05"
+        label: "16点44分（带弹幕版）"
+      - at: "07:00:06"
+        label: "17点44分（带弹幕版）"
+      - at: "08:00:07"
+        label: "18点44分（带弹幕版）"
+      - at: "09:00:08"
+        label: "19点44分（带弹幕版）"
+      - at: "10:00:08"
+        label: "20点44分（带弹幕版）"
+      - at: "11:00:08"
+        label: "21点44分（带弹幕版）"
+      - at: "12:00:09"
+        label: "22点44分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1hLS9YKEmW"
         kind: replay
@@ -50,6 +77,27 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点50分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点50分（带弹幕版）"
+      - at: "02:00:01"
+        label: "12点50分（带弹幕版）"
+      - at: "03:00:02"
+        label: "13点50分（带弹幕版）"
+      - at: "04:00:02"
+        label: "14点50分（带弹幕版）"
+      - at: "05:00:03"
+        label: "15点50分（带弹幕版）"
+      - at: "06:00:04"
+        label: "16点50分（带弹幕版）"
+      - at: "07:00:05"
+        label: "17点50分（带弹幕版）"
+      - at: "08:00:06"
+        label: "18点50分（带弹幕版）"
+      - at: "09:00:06"
+        label: "19点50分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1iHDwYPEvF"
         kind: replay
@@ -83,9 +131,38 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/5acf09d88c2b522abd30a8ff4d95b1386a8da217.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点02分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点02分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点02分（带弹幕版）"
+      - at: "03:00:03"
+        label: "14点02分（带弹幕版）"
+      - at: "04:00:04"
+        label: "15点02分（带弹幕版）"
+      - at: "05:00:04"
+        label: "16点02分（带弹幕版）"
+      - at: "06:00:05"
+        label: "17点02分（带弹幕版）"
+      - at: "07:00:06"
+        label: "18点02分（带弹幕版）"
+      - at: "08:00:06"
+        label: "19点02分（带弹幕版）"
+      - at: "09:00:07"
+        label: "20点02分（带弹幕版）"
+      - at: "10:00:08"
+        label: "21点02分（带弹幕版）"
+      - at: "11:00:09"
+        label: "22点02分（带弹幕版）"
+      - at: "12:00:10"
+        label: "23点02分（带弹幕版）"
+      - at: "13:00:10"
+        label: "00点02分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1vSSkYVEVw"
         kind: replay
@@ -103,9 +180,26 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/3061dfc6e7435f46a6f0e863c0d924e74d26dee4.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点16分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点16分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点16分（带弹幕版）"
+      - at: "03:00:03"
+        label: "14点16分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点16分（带弹幕版）"
+      - at: "05:00:04"
+        label: "16点16分（带弹幕版）"
+      - at: "06:00:04"
+        label: "17点16分（带弹幕版）"
+      - at: "06:35:34"
+        label: "17点52分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1MaDnYgEn2"
         kind: replay
@@ -126,6 +220,27 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点58分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点59分（带弹幕版）"
+      - at: "02:00:01"
+        label: "12点59分（带弹幕版）"
+      - at: "03:00:01"
+        label: "13点58分（带弹幕版）"
+      - at: "04:00:02"
+        label: "14点59分（带弹幕版）"
+      - at: "05:00:03"
+        label: "15点59分（带弹幕版）"
+      - at: "06:00:03"
+        label: "16点59分（带弹幕版）"
+      - at: "07:00:03"
+        label: "17点58分（带弹幕版）"
+      - at: "08:00:04"
+        label: "18点59分（带弹幕版）"
+      - at: "09:00:05"
+        label: "19点59分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV11QDbYtEWV"
         kind: replay
@@ -146,6 +261,27 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点13分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点13分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点13分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点13分（带弹幕版）"
+      - at: "04:00:02"
+        label: "15点13分（带弹幕版）"
+      - at: "05:00:03"
+        label: "16点13分（带弹幕版）"
+      - at: "06:00:04"
+        label: "17点13分（带弹幕版）"
+      - at: "07:00:04"
+        label: "18点14分（带弹幕版）"
+      - at: "08:00:05"
+        label: "19点13分（带弹幕版）"
+      - at: "09:00:05"
+        label: "20点13分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1ZQDuYdEHu"
         kind: replay
@@ -166,6 +302,23 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "13点23分（带弹幕版）"
+      - at: "01:00:01"
+        label: "14点23分（带弹幕版）"
+      - at: "02:00:01"
+        label: "15点23分（带弹幕版）"
+      - at: "03:00:02"
+        label: "16点23分（带弹幕版）"
+      - at: "04:00:03"
+        label: "17点23分（带弹幕版）"
+      - at: "05:00:04"
+        label: "18点23分（带弹幕版）"
+      - at: "06:00:04"
+        label: "19点23分（带弹幕版）"
+      - at: "07:00:05"
+        label: "20点23分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1HVDmYTEGq"
         kind: replay
@@ -186,6 +339,21 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "14点56分（带弹幕版）"
+      - at: "01:00:02"
+        label: "15点56分（带弹幕版）"
+      - at: "02:00:02"
+        label: "16点56分（带弹幕版）"
+      - at: "03:00:02"
+        label: "17点56分（带弹幕版）"
+      - at: "04:00:03"
+        label: "18点56分（带弹幕版）"
+      - at: "05:00:03"
+        label: "19点56分（带弹幕版）"
+      - at: "06:00:03"
+        label: "20点56分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1KwDfY5EUm"
         kind: replay
@@ -206,6 +374,21 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点08分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点08分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点08分（带弹幕版）"
+      - at: "03:00:03"
+        label: "14点08分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点08分（带弹幕版）"
+      - at: "04:36:08"
+        label: "15点46分（带弹幕版）"
+      - at: "05:36:09"
+        label: "16点46分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1qkDqYqE77"
         kind: replay
@@ -226,6 +409,21 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点22分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点22分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点22分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点22分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点22分（带弹幕版）"
+      - at: "05:00:03"
+        label: "16点22分（带弹幕版）"
+      - at: "06:00:04"
+        label: "17点22分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1zgmmYtEzK"
         kind: replay
@@ -246,6 +444,23 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "20点28分（带弹幕版）"
+      - at: "01:00:01"
+        label: "21点28分（带弹幕版）"
+      - at: "02:00:01"
+        label: "22点28分（带弹幕版）"
+      - at: "03:00:03"
+        label: "23点28分（带弹幕版）"
+      - at: "04:00:03"
+        label: "00点28分（带弹幕版）"
+      - at: "05:00:04"
+        label: "01点28分（带弹幕版）"
+      - at: "06:00:05"
+        label: "02点28分（带弹幕版）"
+      - at: "07:00:06"
+        label: "03点28分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1acmWY7EfT"
         kind: replay
@@ -266,6 +481,25 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "14点15分（带弹幕版）"
+      - at: "01:00:01"
+        label: "15点15分（带弹幕版）"
+      - at: "02:00:01"
+        label: "16点15分（带弹幕版）"
+      - at: "03:00:02"
+        label: "17点15分（带弹幕版）"
+      - at: "04:00:03"
+        label: "18点15分（带弹幕版）"
+      - at: "05:00:04"
+        label: "19点15分（带弹幕版）"
+      - at: "06:00:05"
+        label: "20点15分（带弹幕版）"
+      - at: "07:00:05"
+        label: "21点15分（带弹幕版）"
+      - at: "08:00:06"
+        label: "22点15分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1zzm8YyEiu"
         kind: replay
@@ -286,6 +520,25 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点04分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点04分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点04分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点04分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点04分（带弹幕版）"
+      - at: "05:00:04"
+        label: "16点04分（带弹幕版）"
+      - at: "06:00:05"
+        label: "17点04分（带弹幕版）"
+      - at: "07:00:06"
+        label: "18点04分（带弹幕版）"
+      - at: "08:00:06"
+        label: "19点04分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1myUAYnEsF"
         kind: replay
@@ -307,6 +560,19 @@
       - valorant
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "13点53分（带弹幕版）"
+      - at: "01:00:01"
+        label: "14点53分（带弹幕版）"
+      - at: "02:00:02"
+        label: "15点53分（带弹幕版）"
+      - at: "03:00:02"
+        label: "16点53分（带弹幕版）"
+      - at: "04:00:03"
+        label: "17点53分（带弹幕版）"
+      - at: "05:00:03"
+        label: "18点53分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1tJUVY7EZK"
         kind: replay
@@ -328,6 +594,29 @@
       - valorant
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点05分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点05分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点05分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点05分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点05分（带弹幕版）"
+      - at: "05:00:04"
+        label: "16点05分（带弹幕版）"
+      - at: "06:00:05"
+        label: "17点05分（带弹幕版）"
+      - at: "07:00:05"
+        label: "18点05分（带弹幕版）"
+      - at: "08:00:06"
+        label: "19点05分（带弹幕版）"
+      - at: "09:00:06"
+        label: "20点05分（带弹幕版）"
+      - at: "10:00:07"
+        label: "21点05分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1dQmRYkEDg"
         kind: replay
@@ -348,6 +637,29 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点43分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点43分（带弹幕版）"
+      - at: "02:00:02"
+        label: "12点43分（带弹幕版）"
+      - at: "03:00:02"
+        label: "13点43分（带弹幕版）"
+      - at: "04:00:03"
+        label: "14点43分（带弹幕版）"
+      - at: "05:00:04"
+        label: "15点43分（带弹幕版）"
+      - at: "06:00:04"
+        label: "16点43分（带弹幕版）"
+      - at: "07:00:05"
+        label: "17点43分（带弹幕版）"
+      - at: "08:00:05"
+        label: "18点43分（带弹幕版）"
+      - at: "09:00:05"
+        label: "19点43分（带弹幕版）"
+      - at: "10:00:06"
+        label: "20点43分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV18PUzYWEN1"
         kind: replay
@@ -369,6 +681,27 @@
       - valorant
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点54分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点54分（带弹幕版）"
+      - at: "02:00:01"
+        label: "12点54分（带弹幕版）"
+      - at: "03:00:02"
+        label: "13点54分（带弹幕版）"
+      - at: "04:00:02"
+        label: "14点54分（带弹幕版）"
+      - at: "05:00:03"
+        label: "15点54分（带弹幕版）"
+      - at: "06:00:03"
+        label: "16点54分（带弹幕版）"
+      - at: "06:52:38"
+        label: "17点47分（带弹幕版）"
+      - at: "07:52:40"
+        label: "18点47分（带弹幕版）"
+      - at: "08:48:34"
+        label: "19点44分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV19hUZYmEsA"
         kind: replay
@@ -390,6 +723,15 @@
       - valorant
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点00分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点00分（带弹幕版）"
+      - at: "02:00:01"
+        label: "13点00分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点00分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1VTSKYTEcr"
         kind: replay
@@ -410,6 +752,35 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点54分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点54分（带弹幕版）"
+      - at: "02:00:01"
+        label: "12点54分（带弹幕版）"
+      - at: "03:00:02"
+        label: "13点54分（带弹幕版）"
+      - at: "04:00:02"
+        label: "14点54分（带弹幕版）"
+      - at: "05:00:03"
+        label: "15点54分（带弹幕版）"
+      - at: "06:00:03"
+        label: "16点54分（带弹幕版）"
+      - at: "07:00:04"
+        label: "17点54分（带弹幕版）"
+      - at: "08:00:05"
+        label: "18点54分（带弹幕版）"
+      - at: "09:00:06"
+        label: "19点54分（带弹幕版）"
+      - at: "10:00:06"
+        label: "20点54分（带弹幕版）"
+      - at: "11:00:06"
+        label: "21点54分（带弹幕版）"
+      - at: "12:00:06"
+        label: "22点54分（带弹幕版）"
+      - at: "13:00:07"
+        label: "23点54分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1UrU2Y3EKg"
         kind: replay
@@ -430,6 +801,33 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点07分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点07分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点07分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点07分（带弹幕版）"
+      - at: "04:00:03"
+        label: "15点07分（带弹幕版）"
+      - at: "05:00:04"
+        label: "16点09分（带弹幕版）"
+      - at: "05:33:34"
+        label: "16点44分（带弹幕版）"
+      - at: "06:33:35"
+        label: "17点44分（带弹幕版）"
+      - at: "07:33:36"
+        label: "18点44分（带弹幕版）"
+      - at: "08:33:36"
+        label: "19点44分（带弹幕版）"
+      - at: "09:33:37"
+        label: "20点44分（带弹幕版）"
+      - at: "10:33:37"
+        label: "21点44分（带弹幕版）"
+      - at: "11:18:47"
+        label: "22点30分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1r9BvYMENW"
         kind: replay
@@ -450,6 +848,31 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点27分（带弹幕版）"
+      - at: "01:00:01"
+        label: "11点27分（带弹幕版）"
+      - at: "02:00:02"
+        label: "12点27分（带弹幕版）"
+      - at: "03:00:02"
+        label: "13点27分（带弹幕版）"
+      - at: "04:00:03"
+        label: "14点27分（带弹幕版）"
+      - at: "05:00:04"
+        label: "15点27分（带弹幕版）"
+      - at: "05:47:45"
+        label: "16点15分（带弹幕版）"
+      - at: "06:47:46"
+        label: "17点15分（带弹幕版）"
+      - at: "07:47:47"
+        label: "18点15分（带弹幕版）"
+      - at: "08:47:47"
+        label: "19点15分（带弹幕版）"
+      - at: "09:47:48"
+        label: "20点15分（带弹幕版）"
+      - at: "10:47:49"
+        label: "21点15分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1LiBCYQErg"
         kind: replay
@@ -467,9 +890,40 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/590cd43184cb8dda9cfff1ddd02131616e08659b.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点07分（带弹幕版）"
+      - at: "00:03:27"
+        label: "11点20分（带弹幕版）"
+      - at: "00:12:00"
+        label: "11点29分（带弹幕版）"
+      - at: "01:12:01"
+        label: "12点29分（带弹幕版）"
+      - at: "02:12:02"
+        label: "13点29分（带弹幕版）"
+      - at: "03:12:02"
+        label: "14点29分（带弹幕版）"
+      - at: "04:12:02"
+        label: "15点29分（带弹幕版）"
+      - at: "05:12:02"
+        label: "16点29分（带弹幕版）"
+      - at: "05:20:24"
+        label: "16点40分（带弹幕版）"
+      - at: "06:20:25"
+        label: "17点40分（带弹幕版）"
+      - at: "07:20:26"
+        label: "18点40分（带弹幕版）"
+      - at: "08:20:27"
+        label: "19点40分（带弹幕版）"
+      - at: "09:20:28"
+        label: "20点40分（带弹幕版）"
+      - at: "10:20:29"
+        label: "21点40分（带弹幕版）"
+      - at: "11:20:29"
+        label: "22点40分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1VmBsYaEyz"
         kind: replay
@@ -487,9 +941,38 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/debb9abe5098e09b4511f269ac83105a3c185cd5.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点10分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点11分（带弹幕版）"
+      - at: "01:38:11"
+        label: "12点51分（带弹幕版）"
+      - at: "01:42:44"
+        label: "12点57分（带弹幕版）"
+      - at: "02:42:45"
+        label: "13点57分（带弹幕版）"
+      - at: "03:42:46"
+        label: "14点57分（带弹幕版）"
+      - at: "04:42:46"
+        label: "15点57分（带弹幕版）"
+      - at: "04:53:13"
+        label: "16点08分（带弹幕版）"
+      - at: "05:41:34"
+        label: "16点58分（带弹幕版）"
+      - at: "06:41:35"
+        label: "17点58分（带弹幕版）"
+      - at: "07:41:35"
+        label: "18点58分（带弹幕版）"
+      - at: "08:41:36"
+        label: "19点58分（带弹幕版）"
+      - at: "09:41:37"
+        label: "20点58分（带弹幕版）"
+      - at: "10:41:37"
+        label: "21点58分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1pZzwYJEwc"
         kind: replay
@@ -525,6 +1008,15 @@
     confidence: high
     games: []
     note: "同一场直播由 bobi华（BV1ZNzGYiESr，3:28:42）与 怪盗基德KID（BV1ZwzGYqEqA，3:27:53）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "咒1"
+      - at: "01:00:02"
+        label: "咒2"
+      - at: "02:00:01"
+        label: "咒3"
+      - at: "03:00:03"
+        label: "咒4"
     sources:
       - url: "https://www.bilibili.com/video/BV1ZNzGYiESr"
         kind: replay
@@ -545,6 +1037,29 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点02分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点02分（带弹幕版）"
+      - at: "02:00:01"
+        label: "13点02分（带弹幕版）"
+      - at: "03:00:01"
+        label: "14点02分（带弹幕版）"
+      - at: "04:00:02"
+        label: "15点02分（带弹幕版）"
+      - at: "05:00:03"
+        label: "16点02分（带弹幕版）"
+      - at: "06:00:03"
+        label: "17点02分（带弹幕版）"
+      - at: "07:00:04"
+        label: "18点02分（带弹幕版）"
+      - at: "07:46:19"
+        label: "18点49分（带弹幕版）"
+      - at: "07:51:43"
+        label: "18点55分（带弹幕版）"
+      - at: "08:33:18"
+        label: "19点38分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1R2zgYfE9F"
         kind: replay
@@ -582,6 +1097,23 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10点47分（带弹幕版）"
+      - at: "00:42:49"
+        label: "11点30分（带弹幕版）"
+      - at: "01:42:51"
+        label: "12点31分（带弹幕版）"
+      - at: "02:42:51"
+        label: "13点31分（带弹幕版）"
+      - at: "03:42:51"
+        label: "14点31分（带弹幕版）"
+      - at: "03:53:04"
+        label: "14点41分（带弹幕版）"
+      - at: "04:53:05"
+        label: "15点41分（带弹幕版）"
+      - at: "05:53:05"
+        label: "16点41分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1VoBQYgEMa"
         kind: replay
@@ -601,6 +1133,15 @@
     confidence: high
     games: []
     note: "同一场直播由 bobi华（BV1wYzhYFEcs，3:25:38）与 怪盗基德KID（BV1xHzhYqEK7，3:27:20）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "马力欧派对"
+      - at: "01:00:01"
+        label: "派对2"
+      - at: "02:00:02"
+        label: "派对3"
+      - at: "03:00:03"
+        label: "派对4"
     sources:
       - url: "https://www.bilibili.com/video/BV1wYzhYFEcs"
         kind: replay
@@ -618,9 +1159,38 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/68db89892310b5aff297db87f62065de004c4984.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点05分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点05分（带弹幕版）"
+      - at: "02:00:01"
+        label: "13点05分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点05分（带弹幕版）"
+      - at: "04:00:02"
+        label: "15点05分（带弹幕版）"
+      - at: "04:34:30"
+        label: "15点40分（带弹幕版）"
+      - at: "05:34:31"
+        label: "16点40分（带弹幕版）"
+      - at: "06:34:31"
+        label: "17点40分（带弹幕版）"
+      - at: "07:34:32"
+        label: "18点40分（带弹幕版）"
+      - at: "08:34:32"
+        label: "19点40分（带弹幕版）"
+      - at: "09:34:33"
+        label: "20点40分（带弹幕版）"
+      - at: "10:34:34"
+        label: "21点40分（带弹幕版）"
+      - at: "11:34:34"
+        label: "22点40分（带弹幕版）"
+      - at: "12:34:35"
+        label: "23点40分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1yTzFY1Eqc"
         kind: replay
@@ -641,6 +1211,29 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "11点05分（带弹幕版）"
+      - at: "01:00:01"
+        label: "12点05分（带弹幕版）"
+      - at: "02:00:02"
+        label: "13点05分（带弹幕版）"
+      - at: "03:00:02"
+        label: "14点05分（带弹幕版）"
+      - at: "03:28:04"
+        label: "14点33分（带弹幕版）"
+      - at: "04:28:05"
+        label: "15点33分（带弹幕版）"
+      - at: "05:28:05"
+        label: "16点33分（带弹幕版）"
+      - at: "06:28:06"
+        label: "17点33分（带弹幕版）"
+      - at: "07:28:07"
+        label: "18点33分（带弹幕版）"
+      - at: "08:28:08"
+        label: "19点33分（带弹幕版）"
+      - at: "09:28:08"
+        label: "20点33分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1m3zBY4EKZ"
         kind: replay
@@ -658,9 +1251,18 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/37f1d6056f446920681369c570e01e3dcf0389c2.jpg"
     confidence: high
-    games: []
+    games: [valorant]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "16点28分（带弹幕版）"
+      - at: "01:00:01"
+        label: "17点28分（带弹幕版）"
+      - at: "02:00:02"
+        label: "18点28分（带弹幕版）"
+      - at: "03:00:03"
+        label: "19点28分（带弹幕版）"
     sources:
       - url: "https://www.bilibili.com/video/BV1L1zJYHEAE"
         kind: replay

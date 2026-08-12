@@ -1,3 +1,6 @@
+# 视频时期（2010-05 ~ 2015-02，优酷解说）。
+# 空白段说明：2011-01 ~ 2013-08 女流赴台湾交换学习，期间基本停更——2011-01 ~ 2012-04 空白、2012-05/08 短暂回归（安琪拉之歌 Part 3/4 与 hyun310 合作、唤醒盒子4 等 4 条）、2012-09 ~ 2013-08 再空白、2013-09 起恢复更新（风之旅人等）。
+# 2014-12 密集更新后 2015-02 收尾，转战斗鱼直播（见 2016-* douyu-live 条目）。
 - id: 2010-05-09-video-01
   type: video
   date: "2010-05-09"
@@ -6,7 +9,7 @@
   duration_min: 16
   cover: "https://m.ykimg.com/054204085257608A6A0A481CF167D8AD"
   confidence: high
-  games: []
+  games: [azada]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长 976s，上传时间 2010-05-09 17:25 与条目日期吻合，恢复为 alive。"
   sources:
@@ -132,7 +135,7 @@
   duration_min: 21
   confidence: high
   cover: "https://m.ykimg.com/054204085252E8A86A0A4C5B5AB67AE8"
-  games: []
+  games: [aquaria]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTgyMDcxMzU2.html"
@@ -234,7 +237,7 @@
   duration_min: 16
   confidence: high
   cover: "https://m.ykimg.com/05420408525AD15A6A0A4142D71B7052"
-  games: []
+  games: [rhythm-heaven]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTg4ODQxMzcy.html"
@@ -251,7 +254,7 @@
   duration_min: 17
   confidence: high
   cover: "https://m.ykimg.com/05420408525C27E96A0A471F1044D76D"
-  games: []
+  games: [soulcaster]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTg5OTYwNTE2.html"
@@ -267,7 +270,7 @@
   confidence: medium
   duration_min: 18
   cover: "https://m.ykimg.com/054204085324CDD86A0A4C02A4282C24"
-  games: []
+  games: [baby-escape]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -318,7 +321,7 @@
   confidence: medium
   duration_min: 13
   cover: "https://m.ykimg.com/0542040852672C8B6A0A4501777CCDED"
-  games: []
+  games: [the-illusionists-dream]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -352,7 +355,7 @@
   confidence: medium
   duration_min: 31
   cover: "https://m.ykimg.com/05420408523A12786A0A454B5E9C8BC8"
-  games: []
+  games: [alices-death]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -370,7 +373,7 @@
   confidence: medium
   duration_min: 14
   cover: "https://m.ykimg.com/05420408526B6D9A6A0A4C215C541C7A"
-  games: []
+  games: [awakening]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -405,7 +408,7 @@
   confidence: medium
   duration_min: 24
   cover: "https://m.ykimg.com/0542070852DDE3F96A0A4377D0697A51"
-  games: []
+  games: [aquaria]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -423,7 +426,7 @@
   confidence: medium
   duration_min: 18
   cover: "https://m.ykimg.com/0542020852E409FB6A0A3F42B8C4AA39"
-  games: []
+  games: [aquaria]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -440,7 +443,7 @@
   confidence: medium
   duration_min: 20
   cover: "https://m.ykimg.com/0542060852E13A116A0A4504465B2D0C"
-  games: []
+  games: [home-sheep-home]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -458,7 +461,7 @@
   confidence: medium
   duration_min: 24
   cover: "https://m.ykimg.com/0542030852E801C86A0A4C4C3EC80A83"
-  games: []
+  games: [awakening]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -475,7 +478,7 @@
   confidence: medium
   duration_min: 11
   cover: "https://m.ykimg.com/0542030852272C916A0A4329658FC71E"
-  games: []
+  games: [ju-ren-lie-shou]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -493,7 +496,7 @@
   confidence: medium
   duration_min: 28
   cover: "https://m.ykimg.com/05420308525FB49D6A0A4142D39D92AC"
-  games: []
+  games: [journey]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -511,7 +514,7 @@
   confidence: medium
   duration_min: 32
   cover: "https://m.ykimg.com/054204085248F5EA6A0A481CE5DE5FE5"
-  games: []
+  games: [journey]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -545,7 +548,7 @@
   confidence: medium
   duration_min: 20
   cover: "https://m.ykimg.com/05420408526361956A0A4142D39AA711"
-  games: []
+  games: [red-ball]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -562,7 +565,7 @@
   confidence: medium
   duration_min: 24
   cover: "https://m.ykimg.com/054204085273EE196A0A4F52023A5210"
-  games: []
+  games: [enough-plumbers]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -579,7 +582,7 @@
   confidence: medium
   duration_min: 45
   cover: "https://m.ykimg.com/05420508527D4D5B6A0A491BDBF88832"
-  games: []
+  games: [nayas-quest]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -613,7 +616,7 @@
   confidence: medium
   duration_min: 32
   cover: "https://m.ykimg.com/05420808528F63E46A0A41238499D75E"
-  games: []
+  games: [home-sheep-home]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -630,7 +633,7 @@
   confidence: medium
   duration_min: 21
   cover: "https://m.ykimg.com/0542060852998A146A0A451E10F29B89"
-  games: []
+  games: [the-scorpion-box]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -647,7 +650,7 @@
   confidence: medium
   duration_min: 18
   cover: "https://m.ykimg.com/0542040852A5C33B6A0A4C4C3F50B6D3"
-  games: []
+  games: [the-very-organized-thief]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -664,7 +667,7 @@
   confidence: medium
   duration_min: 14
   cover: "https://m.ykimg.com/0542010852AAB6C66A0A4B12515FE88F"
-  games: []
+  games: [persist]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -681,7 +684,7 @@
   confidence: medium
   duration_min: 11
   cover: "https://m.ykimg.com/0542020852B31F8A6A0A4377C71643F8"
-  games: []
+  games: [santa-run]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -698,7 +701,7 @@
   confidence: medium
   duration_min: 11
   cover: "https://m.ykimg.com/0542040852CAD7CD6A0A4E4BC55731B1"
-  games: []
+  games: [the-impossible-quiz]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -715,7 +718,7 @@
   confidence: medium
   duration_min: 24
   cover: "https://m.ykimg.com/0542040852E09EC36A0A424A5D074FF1"
-  games: []
+  games: [famous-painting-parodies]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -732,7 +735,7 @@
   confidence: medium
   duration_min: 10
   cover: "https://m.ykimg.com/05420608530C6E3A6A0A45045BCDA3D8"
-  games: []
+  games: [flappy-bird]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -749,7 +752,7 @@
   confidence: medium
   duration_min: 9
   cover: "https://m.ykimg.com/0542040853D50A746A0A4160A29D64B0"
-  games: []
+  games: [counter-strike-online]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -767,7 +770,7 @@
   confidence: medium
   duration_min: 28
   cover: "https://m.ykimg.com/054204085410016D6A0A4E14251E68DC"
-  games: []
+  games: [aquaria]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -784,7 +787,7 @@
   confidence: medium
   duration_min: 18
   cover: "https://m.ykimg.com/054205085412D19B6A0A433168F9B652"
-  games: []
+  games: [corporate-climber]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -801,7 +804,7 @@
   confidence: medium
   duration_min: 39
   cover: "https://m.ykimg.com/05420408541BB7BD6A0A4F30A3453C3D"
-  games: []
+  games: [phoenitopia]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -819,7 +822,7 @@
   confidence: medium
   duration_min: 12
   cover: "https://m.ykimg.com/0542040854368EA36A0A4F30AA514A7F"
-  games: []
+  games: [plants-vs-zombies]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -838,7 +841,7 @@
   duration_min: 15
   confidence: high
   cover: "https://m.ykimg.com/05420408543FFD046A0A450457A17810"
-  games: []
+  games: [angry-birds]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XODA1MTQyMDE2.html"
@@ -873,7 +876,7 @@
   confidence: medium
   duration_min: 28
   cover: "https://m.ykimg.com/05420101545D8BDA6A0A4962A57A6011"
-  games: []
+  games: [contra]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -891,7 +894,7 @@
   confidence: medium
   duration_min: 43
   cover: "https://m.ykimg.com/05420408546633716A0A4160B12AABB9"
-  games: []
+  games: [teenage-mutant-ninja-turtles]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -909,7 +912,7 @@
   confidence: medium
   duration_min: 39
   cover: "https://m.ykimg.com/0542040854759A596A0A4B045B13207F"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -926,7 +929,7 @@
   confidence: medium
   duration_min: 27
   cover: "https://m.ykimg.com/054201085474D5626A0A4004E3251793"
-  games: []
+  games: [perdition]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -961,7 +964,7 @@
   confidence: medium
   duration_min: 33
   cover: "https://m.ykimg.com/05410408548189436A0A4004DE90F1DC"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -978,7 +981,7 @@
   confidence: medium
   duration_min: 20
   cover: "https://m.ykimg.com/0541050854852E916A0A440930DB5CD5"
-  games: []
+  games: [samansa-yingle]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -997,7 +1000,7 @@
   duration_min: 39
   confidence: high
   cover: "https://m.ykimg.com/0541040854888CB26A0A4004CB08BAD8"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XODQ1Nzc5NjA4.html"
@@ -1014,7 +1017,7 @@
   confidence: medium
   duration_min: 37
   cover: "https://m.ykimg.com/05410408548A93336A0A4746D320DD2A"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -1032,7 +1035,7 @@
   confidence: medium
   duration_min: 28
   cover: "https://m.ykimg.com/0541040854900CA46A0A4004E184338E"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -1050,7 +1053,7 @@
   duration_min: 32
   confidence: high
   cover: "https://m.ykimg.com/05410408548FB5866A0A4B044D358450"
-  games: []
+  games: [mu-complex]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XODQ5NzYyMjMy.html"
@@ -1084,7 +1087,7 @@
   confidence: medium
   duration_min: 62
   cover: "https://m.ykimg.com/05410408549A31326A0A42045ACABE31"
-  games: []
+  games: [child-of-light]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -1119,7 +1122,7 @@
   duration_min: 24
   confidence: high
   cover: "https://m.ykimg.com/0541070854B009696A0A433162EE1BC5"
-  games: []
+  games: [littlebigplanet]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XODcxODczNjI4.html"
@@ -1152,7 +1155,7 @@
   confidence: medium
   duration_min: 16
   cover: "https://m.ykimg.com/0541040854BAEBC06A0A42045B45D7E5"
-  games: []
+  games: [littlebigplanet]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
@@ -1169,7 +1172,7 @@
   confidence: medium
   duration_min: 12
   cover: "https://m.ykimg.com/054102015B16AD64AD86941AC20863D8"
-  games: []
+  games: [donkey-kong-tropical-freeze]
   tags: [视频时代]
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:

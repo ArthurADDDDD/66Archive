@@ -1,45 +1,22 @@
   - id: 2022-03-01-live-01
     type: live
     date: "2022-03-01"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 195
+    duration_min: 585
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a352e974d1c49a18de2511f0d5da23a.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 3 个回放段（P1–P3，同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33847866"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-01-live-02
-    type: live
-    date: "2022-03-01"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 195
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2fc6299765664dccae7a6e9c6ab32943.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33847792"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-01-live-03
-    type: live
-    date: "2022-03-01"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 195
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8f3f29fbf344409591e54def595a5dba.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33847793"
         kind: replay
         parts: 1
@@ -49,61 +26,26 @@
   - id: 2022-03-02-live-01
     type: live
     date: "2022-03-02"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 618
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02d601c45d0d46f28fbce24d19777983.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 4 个回放段（P1–P4，同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33860764"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-02-live-02
-    type: live
-    date: "2022-03-02"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 120
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a6005696bf024875ae73bb6632c012ff.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33861287"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-02-live-03
-    type: live
-    date: "2022-03-02"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 189
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab5a245b4cda443ca8dcc53344a98ff0.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33861382"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-02-live-04
-    type: live
-    date: "2022-03-02"
-    title: "艾尔登法环 P4"
-    platform: douyu
-    confidence: high
-    duration_min: 189
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b82dee5e9c504c9d955eb615c7227f7b.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33861243"
         kind: replay
         parts: 1
@@ -113,61 +55,26 @@
   - id: 2022-03-04-live-01
     type: live
     date: "2022-03-04"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 162
+    duration_min: 648
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2196141b41724f5e841d27126c9e916f.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 4 个回放段（P1–P4，同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33888760"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-04-live-02
-    type: live
-    date: "2022-03-04"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 162
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_311fcc6883f1485a9e36777bd54467eb.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33888712"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-04-live-03
-    type: live
-    date: "2022-03-04"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 162
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71a4c2d8a11b4f6f9f83bdd2fa1a1d39.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33888711"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-04-live-04
-    type: live
-    date: "2022-03-04"
-    title: "艾尔登法环 P4"
-    platform: douyu
-    confidence: high
-    duration_min: 162
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cfa7363d448246f8a29d97a0dea249d9.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33888722"
         kind: replay
         parts: 1
@@ -177,45 +84,22 @@
   - id: 2022-03-05-live-01
     type: live
     date: "2022-03-05"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 162
+    duration_min: 486
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7d46747535d8425e88c318c0bfbd39c5.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 3 个回放段（P1–P3，同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33902778"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-05-live-02
-    type: live
-    date: "2022-03-05"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 162
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_08c64e0a48c64c888c8f2b60b9ad7560.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33902729"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-05-live-03
-    type: live
-    date: "2022-03-05"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 162
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_78588246991c4a6594700e6ab3b692e8.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33902718"
         kind: replay
         parts: 1
@@ -225,29 +109,25 @@
   - id: 2022-03-06-live-01
     type: live
     date: "2022-03-06"
-    title: "艾尔登法环 上"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 237
+    duration_min: 474
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆为 2 个回放段（ac33910899 上、ac33910802 下，同时长、同夜上传），按一天一条原则合并为单条。"
+    segments:
+      - at: "00:00:00"
+        label: "上"
+        game: elden-ring
+      - at: "03:57:06"
+        label: "下"
+        game: elden-ring
     sources:
       - url: "https://www.acfun.cn/v/ac33910899"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-06-live-02
-    type: live
-    date: "2022-03-06"
-    title: "艾尔登法环 下"
-    platform: douyu
-    confidence: high
-    duration_min: 237
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36f3c78ece2346ed9b4b1763bfe4d8f6.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33910802"
         kind: replay
         parts: 1

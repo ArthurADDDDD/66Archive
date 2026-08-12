@@ -111,7 +111,7 @@
     confidence: high
     duration_min: 133
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_585086e62a8341b7b225536daa31eebe.jpeg?imageslim"
-    games: []
+    games: [majsoul]
     segments:
       - at: "00:00:00"
         label: "25-雀魂"
@@ -159,7 +159,7 @@
     confidence: high
     duration_min: 194
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_25d5b5be286b4382ae5a1dabfcecce27.jpeg?imageslim"
-    games: []
+    games: [queshi]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -439,6 +439,31 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2021-11-21-live-01
+    type: live
+    date: "2021-11-21"
+    title: "【心灵砒霜】题不对的时候,答案根本就不重要"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 123
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c459c626737b4c80b1be2991600b623f.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "P4-2021.11.21-心灵砒霜弹幕版"
+      - at: "00:40:54"
+        label: "P5-2021.11.21-心灵砒霜弹幕版"
+      - at: "01:21:54"
+        label: "P6-2021.11.21-心灵砒霜弹幕版"
+    sources:
+      - url: "https://www.acfun.cn/v/ac32434021"
+        kind: replay
+        parts: 3
+        status: alive
+    note: "原误标 2021-01-21；fileName 为 2021.11.21（周日），弹幕版 11.22 上传，归此日；当日网易云第 11.22 期标题回填"
+    contributed_by: data-agent
   - id: 2021-11-27-live-01
     type: live
     date: "2021-11-27"
@@ -447,7 +472,7 @@
     confidence: high
     duration_min: 137
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6e8b67e9ff8d42e094751a2389a5f6b8.jpeg?imageslim"
-    games: []
+    games: [quesheng]
     segments:
       - at: "00:00:00"
         label: "雀圣"
@@ -499,7 +524,7 @@
     confidence: high
     duration_min: 140
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1baee79e8bfe46ea9ec2ea6316eed1d7.jpeg?imageslim"
-    games: []
+    games: [quesheng]
     segments:
       - at: "00:00:00"
         label: "雀圣"
@@ -522,7 +547,7 @@
     confidence: high
     duration_min: 126
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d9e53e7ee3bf468e854933299b2729d4.jpeg?imageslim"
-    games: []
+    games: [quesheng]
     segments:
       - at: "00:00:00"
         label: "雀圣"

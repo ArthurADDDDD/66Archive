@@ -81,6 +81,17 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.4"
+      - at: "01:00:01"
+        label: "鸣潮3.4"
+      - at: "02:00:02"
+        label: "鸣潮3.4"
+      - at: "03:00:03"
+        label: "鸣潮3.4"
+      - at: "04:00:04"
+        label: "鸣潮3.4"
     sources:
       - url: "https://www.bilibili.com/video/BV1ExEG6UETB"
         kind: replay
@@ -102,6 +113,17 @@
       - shengshi-tianxia
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "20-32  盛世天下女帝篇"
+      - at: "01:00:01"
+        label: "21-32  盛世天下女帝篇"
+      - at: "01:26:25"
+        label: "21-59  盛世天下女帝篇"
+      - at: "02:26:27"
+        label: "22-59 盛世天下女帝篇"
+      - at: "03:26:28"
+        label: "23-59 盛世天下女帝篇"
     sources:
       - url: "https://www.bilibili.com/video/BV1sFEm6WEbw"
         kind: replay
@@ -123,6 +145,17 @@
       - shengshi-tianxia
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "盛世天下：女帝篇 20:26"
+      - at: "00:40:01"
+        label: "盛世天下：女帝篇 21:06"
+      - at: "01:12:06"
+        label: "盛世天下：女帝篇 21:39"
+      - at: "01:52:08"
+        label: "盛世天下：女帝篇 22:19"
+      - at: "02:32:07"
+        label: "盛世天下：女帝篇 22:59"
     sources:
       - url: "https://www.bilibili.com/video/BV14gEd6UErd"
         kind: replay
@@ -162,6 +195,15 @@
       - shengshi-tianxia
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "盛世天下女帝篇"
+      - at: "01:00:01"
+        label: "盛世天下女帝篇"
+      - at: "02:00:02"
+        label: "盛世天下女帝篇"
+      - at: "03:00:03"
+        label: "盛世天下女帝篇"
     sources:
       - url: "https://www.bilibili.com/video/BV1k9J56wEVy"
         kind: replay
@@ -183,6 +225,11 @@
       - shengshi-tianxia
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "盛世天下女帝篇"
+      - at: "01:00:01"
+        label: "盛世天下女帝篇"
     sources:
       - url: "https://www.bilibili.com/video/BV18uJp6PEDm"
         kind: replay
@@ -204,6 +251,15 @@
       - shengshi-tianxia
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "盛世天下女帝篇"
+      - at: "01:00:01"
+        label: "盛世天下女帝篇"
+      - at: "02:00:02"
+        label: "盛世天下女帝篇"
+      - at: "03:00:03"
+        label: "盛世天下女帝篇"
     sources:
       - url: "https://www.bilibili.com/video/BV1tBJA6kEm2"
         kind: replay
@@ -225,6 +281,11 @@
       - daodao-wizard
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "叨叨巫师"
+      - at: "01:00:01"
+        label: "叨叨巫师"
     sources:
       - url: "https://www.bilibili.com/video/BV1JajV62EbW"
         kind: replay
@@ -246,6 +307,13 @@
       - meecha-chameleon
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "画画躲猫猫 21:00"
+      - at: "00:40:01"
+        label: "画画躲猫猫 21:40"
+      - at: "01:20:02"
+        label: "画画躲猫猫 22:20"
     sources:
       - url: "https://www.bilibili.com/video/BV1tUja6mEk3"
         kind: replay
@@ -266,6 +334,13 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "这游戏还得看本灵魂画手"
+      - at: "01:00:01"
+        label: "这游戏还得看本灵魂画手"
+      - at: "02:00:02"
+        label: "这游戏还得看本灵魂画手"
     sources:
       - url: "https://www.bilibili.com/video/BV1SHjh6jEvE"
         kind: replay
@@ -287,6 +362,27 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-20-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 14:40"
+      - at: "00:09:12"
+        label: "潜水员戴夫-前期准备"
+      - at: "00:20:13"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "01:00:03"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "01:40:04"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "02:02:53"
+        label: "开播聊天 20:46"
+      - at: "02:14:29"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "03:02:53"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "04:02:54"
+        label: "潜水员戴夫-丛林DLC"
+      - at: "05:02:55"
+        label: "潜水员戴夫-丛林DLC"
     sources:
       - url: "https://www.bilibili.com/video/BV16Wjn6NEa7"
         kind: replay
@@ -308,6 +404,21 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-20-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "潜水员戴夫最新DLC"
+      - at: "01:00:00"
+        label: "潜水员戴夫最新DLC"
+      - at: "02:00:00"
+        label: "潜水员戴夫最新DLC"
+      - at: "02:03:03"
+        label: "潜水员戴夫最新DLC"
+      - at: "03:03:03"
+        label: "潜水员戴夫最新DLC"
+      - at: "04:03:04"
+        label: "潜水员戴夫最新DLC"
+      - at: "05:03:05"
+        label: "潜水员戴夫最新DLC"
     sources:
       - url: "https://www.bilibili.com/video/BV1KGjp6HEWf"
         kind: replay
@@ -329,6 +440,19 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-21-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 21:14"
+      - at: "00:09:14"
+        label: "潜水员戴夫 21:23"
+      - at: "00:40:01"
+        label: "潜水员戴夫 21:54"
+      - at: "01:20:02"
+        label: "潜水员戴夫 22:34"
+      - at: "02:00:03"
+        label: "潜水员戴夫 23:14"
+      - at: "02:40:04"
+        label: "潜水员戴夫 23:54"
     sources:
       - url: "https://www.bilibili.com/video/BV1Dfjb6VEWY"
         kind: replay
@@ -350,6 +474,13 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-21-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "潜水员戴夫最新DLC"
+      - at: "01:00:01"
+        label: "潜水员戴夫最新DLC"
+      - at: "02:00:02"
+        label: "潜水员戴夫最新DLC"
     sources:
       - url: "https://www.bilibili.com/video/BV1qCjb6WErM"
         kind: replay
@@ -372,6 +503,21 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-22-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 14:59"
+      - at: "00:13:53"
+        label: "潜水员戴夫 15:13"
+      - at: "00:40:01"
+        label: "潜水员戴夫 15:39"
+      - at: "01:20:03"
+        label: "潜水员戴夫 16:19"
+      - at: "01:56:06"
+        label: "潜水员戴夫 21:51"
+      - at: "02:36:08"
+        label: "潜水员戴夫 22:31"
+      - at: "03:16:07"
+        label: "潜水员戴夫 23:11"
     sources:
       - url: "https://www.bilibili.com/video/BV1WJ7K6iEXV"
         kind: replay
@@ -394,6 +540,17 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-22-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "潜水员戴夫最新DLC"
+      - at: "01:00:02"
+        label: "潜水员戴夫最新DLC"
+      - at: "01:56:23"
+        label: "潜水员戴夫最新DLC"
+      - at: "02:56:24"
+        label: "潜水员戴夫最新DLC"
+      - at: "03:56:26"
+        label: "潜水员戴夫最新DLC"
     sources:
       - url: "https://www.bilibili.com/video/BV14K7P6iEk4"
         kind: replay
@@ -415,6 +572,15 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-23-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:54"
+      - at: "00:21:11"
+        label: "潜水员戴夫 21:15"
+      - at: "01:00:01"
+        label: "潜水员戴夫 21:54"
+      - at: "01:40:03"
+        label: "潜水员戴夫 22:34"
     sources:
       - url: "https://www.bilibili.com/video/BV1kgjU6mE7x"
         kind: replay
@@ -436,6 +602,11 @@
       - dave-the-diver
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-23-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "女流66_潜水员戴夫最新DLC_2026-06-23_20-53-30_000"
+      - at: "01:00:01"
+        label: "女流66_潜水员戴夫最新DLC_2026-06-22_21-51-55_001"
     sources:
       - url: "https://www.bilibili.com/video/BV12D7L6NEZX"
         kind: replay
@@ -472,6 +643,11 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "双人挑战落霞共誓殊途道，全靠配合"
+      - at: "01:00:00"
+        label: "双人挑战落霞共誓殊途道，全靠配合"
     sources:
       - url: "https://www.bilibili.com/video/BV1qM7j6XEZr"
         kind: replay
@@ -493,6 +669,13 @@
       - xin-qiannv-youhun
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:22"
+      - at: "00:09:33"
+        label: "新倩女幽魂 20:33"
+      - at: "01:00:01"
+        label: "新倩女幽魂 21:22"
     sources:
       - url: "https://www.bilibili.com/video/BV1MU7L6qEPK"
         kind: replay
@@ -514,6 +697,15 @@
       - lord-of-mysteries
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "诡秘之主"
+      - at: "00:16:59"
+        label: "诡秘之主"
+      - at: "01:12:44"
+        label: "诡秘之主"
+      - at: "02:12:44"
+        label: "诡秘之主"
     sources:
       - url: "https://www.bilibili.com/video/BV1voTu66Exs"
         kind: replay
@@ -553,6 +745,15 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:51"
+      - at: "00:29:54"
+        label: "鸣潮3.4下半剧情 21:20"
+      - at: "01:00:01"
+        label: "鸣潮3.4下半剧情 21:51"
+      - at: "02:00:02"
+        label: "鸣潮3.4下半剧情+抽卡提希娅 22:51"
     sources:
       - url: "https://www.bilibili.com/video/BV1GjK96XETc"
         kind: replay
@@ -574,6 +775,17 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.4"
+      - at: "01:00:01"
+        label: "鸣潮3.4"
+      - at: "01:49:42"
+        label: "Switch 2 最新节奏天国来啦！"
+      - at: "02:49:42"
+        label: "Switch 2 最新节奏天国来啦！"
+      - at: "03:49:43"
+        label: "Switch 2 最新节奏天国来啦！"
     sources:
       - url: "https://www.bilibili.com/video/BV1zWT66eEsy"
         kind: replay
@@ -647,6 +859,13 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "AI新内容实时生成中"
+      - at: "01:00:02"
+        label: "AI新内容实时生成中"
+      - at: "01:20:41"
+        label: "鸣潮3.4"
     sources:
       - url: "https://www.bilibili.com/video/BV1QVTq6CEqy"
         kind: replay
