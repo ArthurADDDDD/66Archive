@@ -782,45 +782,33 @@
   - id: 2021-03-26-live-01
     type: live
     date: "2021-03-26"
-    title: "1.怪物猎人 崛起"
+    title: "怪物猎人 崛起"
     platform: douyu
     confidence: high
-    duration_min: 182
+    duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/o_1f1nfqlabulu1v154g4ihlbu0.jpeg?imageslim"
     games: [monster-hunter-rise]
+    note: "ACFun 将同一场直播等长切片拆为 2 个回放视频（ac27236153 含 P1–P5、ac27236154 含 P6–P7），按一天一条原则合并为单条；当日另有独立场次坎公骑冠剑。"
     segments:
       - at: "00:00:00"
-        label: "怪物猎人 崛起"
-      - at: "00:36:29"
-        label: "怪物猎人 崛起"
+        label: "P1-怪物猎人 崛起"
+      - at: "00:36:30"
+        label: "P2-怪物猎人 崛起"
       - at: "01:13:02"
-        label: "怪物猎人 崛起"
+        label: "P3-怪物猎人 崛起"
       - at: "01:49:25"
-        label: "怪物猎人 崛起"
+        label: "P4-怪物猎人 崛起"
       - at: "02:25:50"
-        label: "怪物猎人 崛起"
+        label: "P5-怪物猎人 崛起"
+      - at: "03:02:14"
+        label: "P6-怪物猎人 崛起"
+      - at: "03:38:36"
+        label: "P7-怪物猎人 崛起"
     sources:
       - url: "https://www.acfun.cn/v/ac27236153"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-03-26-live-02
-    type: live
-    date: "2021-03-26"
-    title: "2.怪物猎人 崛起"
-    platform: douyu
-    confidence: high
-    duration_min: 73
-    cover: "https://tx-free-imgs.acfun.cn/o_1f1nggojr1hd6m4vqe81vqi12gq0.jpeg?imageslim"
-    games: [monster-hunter-rise]
-    segments:
-      - at: "00:00:00"
-        label: "怪物猎人 崛起"
-      - at: "00:36:22"
-        label: "怪物猎人 崛起"
-    sources:
       - url: "https://www.acfun.cn/v/ac27236154"
         kind: replay
         parts: 2
