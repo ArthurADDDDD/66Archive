@@ -123,7 +123,7 @@ export function SiteNav({
           id="site-nav-menu"
           role="menu"
           ref={panelRef}
-          className="ui-sheet-in fixed inset-x-0 z-50 border-b border-line bg-base/97 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur sm:hidden"
+          className="ui-sheet-in fixed inset-x-0 z-50 border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
           style={{ top: panelTop }}
         >
           <div className="mx-auto max-w-[1240px] px-4 py-2">

@@ -81,7 +81,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <h1 className="mt-4 max-w-3xl font-display text-[34px] font-bold leading-none tracking-[-0.04em] text-ink sm:text-[56px]">
           {s.name}
         </h1>
-        <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 font-mono text-[11px] text-faint tnum">
+        <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 font-mono text-[11px] text-muted tnum">
           <span className="text-[15px] text-ink">{s.count} 期</span>
           <span>档案确认 · 构建期派生</span>
           <span>
@@ -99,14 +99,14 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             <p className="font-display text-[18px] font-medium leading-relaxed tracking-tight text-ink sm:text-[24px]">
               第一期：「{s.firstTitle}」
             </p>
-            <p className="mt-3 font-mono text-[10px] text-faint/70 tnum">第一期标题，原文照录 · {s.firstDate}</p>
+            <p className="mt-3 font-mono text-[10px] text-muted tnum">第一期标题，原文照录 · {s.firstDate}</p>
           </blockquote>
         </section>
       )}
 
       {/* 活动纹理 */}
       <section className={`mx-auto max-w-[1240px] px-4 pb-12 sm:px-6 sm:pb-16 ${dark ? '' : ''}`}>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint/80">按年活动</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted">按年活动</p>
         {/* 桌面：横向刻度条 + 年份 chip（保持原样） */}
         <div className="mt-4 hidden sm:block">
           <ActivityStrip perYear={s.perYear} color={color} height={36} />
@@ -138,7 +138,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
                       <span className="h-[6px] min-w-0 flex-1 overflow-hidden rounded-full bg-raised">
                         <span className="block h-full rounded-full" style={{ width: `${Math.max(4, (p.count / max) * 100)}%`, background: color }} />
                       </span>
-                      <span className="shrink-0 font-mono text-[11px] text-faint tnum">{p.count} 期</span>
+                      <span className="shrink-0 font-mono text-[11px] text-muted tnum">{p.count} 期</span>
                     </Link>
                   </li>
                 ))}
@@ -151,7 +151,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       {/* 全部期数（档案列表，一条不省） */}
       <section className="mx-auto max-w-[1240px] px-4 pb-16 sm:px-6 sm:pb-24">
         <div className="border-b border-line/60 pb-3">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint/80">Episodes · 全部期数</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted">Episodes · 全部期数</p>
           <h2 className="mt-2 text-[20px] font-semibold tracking-tight text-ink sm:text-[26px]">
             {s.name} · 档案里的 {s.count} 期
           </h2>
@@ -159,14 +159,14 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <div className="mt-3">
           <SeriesEpisodes entries={s.entries} color={color} count={s.count} />
         </div>
-        <p className="mt-4 font-mono text-[10px] leading-5 text-faint/70">
+        <p className="mt-4 font-mono text-[10px] leading-5 text-muted">
           ⓘ 期数由标题 / 栏目 tag 精确匹配派生；series.yaml 中的外部统计口径可能略宽，以档案确认为准。
         </p>
       </section>
 
       <RelatedRail rails={rails} />
 
-      <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-faint sm:flex-row sm:px-6">
+      <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-muted sm:flex-row sm:px-6">
         <span>只索引，不搬运 · 所有播放回到原平台</span>
         <Link href="/contact/" className="ui-press rounded-sm transition-colors hover:text-live">
           资料纠错与联系 →

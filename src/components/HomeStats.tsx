@@ -5,17 +5,20 @@ import { Reveal } from './Reveal'
 /**
  * 第二屏统计：「这一切加起来」。
  * 数字不进第一屏；这里以幕的分布呈现，而不是 Dashboard 指标。
+ * 分布条按互斥口径计数（ACT I <2015 / ACT II 2015-2021 / ACT III ≥2022）——三幕无重叠，相加正好等于全部记录；
+ * 幕头展示的年份是叙事范围（ACT II 与 ACT III 有叙事重叠），分布条计数与叙事年份刻意不同口径。
  */
 export function HomeStats({ data }: { data: HomepageData }) {
-  const actRows = data.acts.filter((a) => a.act.id !== 'interlude')
-  const total = actRows.reduce((sum, a) => sum + a.count, 0) || 1
+  const actRows = data.acts
+  const counts = data.exclusiveCounts.length === actRows.length ? data.exclusiveCounts : actRows.map((a) => a.count)
+  const total = counts.reduce((sum, c) => sum + c, 0) || 1
   const firstYear = 2010
   const latestYear = data.now.year
   const yearsSet = new Set(data.years)
   const gapYears: string[] = []
   for (let y = Number(firstYear); y <= Number(latestYear); y++) {
     const s = String(y)
-    // 幕间本身就是刻意的空白，不算缺口
+    // 停播那两年本身是叙事的一部分，不算缺口
     if (s === '2023' || s === '2024') continue
     if (!yearsSet.has(s)) gapYears.push(s)
   }
@@ -31,29 +34,33 @@ export function HomeStats({ data }: { data: HomepageData }) {
             <Stat value={data.totals.series.toString()} label="系列栏目" />
           </div>
 
-          {/* 三幕分布 */}
+          {/* 三幕分布（互斥口径） */}
           <div className="mt-8 max-w-2xl sm:mt-10">
             <div className="flex h-2 w-full overflow-hidden rounded-full bg-raised">
-              {actRows.map((a) => (
+              {actRows.map((a, i) => (
                 <span
                   key={a.act.id}
                   className="h-full transition-[width] duration-700"
-                  style={{ width: `${(a.count / total) * 100}%`, background: a.act.color, opacity: 0.85 }}
+                  style={{ width: `${(counts[i] / total) * 100}%`, background: a.act.color, opacity: 0.85 }}
                 />
               ))}
             </div>
             <ul className="mt-4 space-y-2">
-              {actRows.map((a) => (
+              {actRows.map((a, i) => (
                 <li key={a.act.id} className="flex items-baseline gap-3 text-[12px]">
                   <span className="h-2 w-2 shrink-0 rounded-sm" style={{ background: a.act.color }} />
                   <span className="w-[92px] shrink-0 font-mono text-[10px] text-faint tnum">{a.act.years}</span>
                   <span className="min-w-0 truncate text-muted">{a.act.label}</span>
-                  <span className="ml-auto font-mono text-[11px] text-faint tnum">{a.count.toLocaleString()} 条</span>
+                  <span className="ml-auto font-mono text-[11px] text-faint tnum">{counts[i].toLocaleString()} 条</span>
                 </li>
               ))}
             </ul>
+            <p className="mt-4 font-mono text-[10px] leading-5 text-faint/70">
+              分布按互斥口径计数：2022 年起的记录计入第三幕（第三幕的叙事从她人生的新一段讲起，与第二幕尾段重叠）。
+              三幕相加，正好等于全部记录。
+            </p>
             {gapYears.length > 0 && (
-              <p className="mt-5 font-mono text-[10px] leading-5 text-faint/70">
+              <p className="mt-2 font-mono text-[10px] leading-5 text-faint/70">
                 {gapYears.join('、')} 年在档案里是留白——缺口不是错误，是还没有被找回来的部分。
               </p>
             )}

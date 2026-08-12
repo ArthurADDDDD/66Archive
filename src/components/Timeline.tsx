@@ -5,6 +5,7 @@ import type { TimelineEntry } from '@/lib/data'
 import { MONTH_CN } from '@/lib/ui'
 import { EntryRow } from './EntryRow'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
+import { SearchField } from './SearchField'
 import { SiteNav } from './SiteNav'
 
 type Era = {
@@ -273,16 +274,16 @@ export function Timeline({
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
           <SiteNav active="chronicle" />
-          <div className="group/search relative order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
-            <input
-              ref={searchRef}
+          <div className="order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
+            <SearchField
               value={filters.q}
-              onChange={(event) => set({ q: event.target.value })}
+              onChange={(v) => set({ q: v })}
               placeholder={`搜索全部 ${entries.length.toLocaleString()} 条记录`}
-              aria-label="搜索全部记录"
-              className="w-full rounded-md border border-line bg-surface py-2.5 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:py-2"
+              ariaLabel="搜索全部记录"
+              kbd="/"
+              inputRef={searchRef}
+              inputClassName="w-full rounded-md border border-line bg-surface py-2.5 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:py-2"
             />
-            <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint transition-[opacity,transform] duration-200 group-focus-within/search:translate-x-1 group-focus-within/search:opacity-0">/</kbd>
           </div>
           <button
             onClick={() => setSheetOpen(true)}
