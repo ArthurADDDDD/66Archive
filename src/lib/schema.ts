@@ -48,6 +48,15 @@ export const Game = z.object({
   name: z.string().min(1),
   aliases: z.array(z.string()).default([]),
   cover: z.string().optional(),
+  /**
+   * 游戏的公开发售日（客观资料，和 name/aliases 同一性质，与她的游玩记录无关）。
+   *
+   * 加这个字段是为了让"她是发售当天就播了，还是六年以后才玩"这一层能算出来
+   * （见 docs/redesign/01-vision.md 第六节）。**可选，且必须逐个核实**：
+   * 没核实的一律留空，前端在缺这个值时不显示该行，不会露馅，也不许拿"合理推测"填。
+   * 同一作品多平台 / 多地区发售日不同时，取全球首发日，并在 note 里写清取的是哪个。
+   */
+  released: dateStr.optional(),
   note: z.string().optional(),
 })
 export type Game = z.infer<typeof Game>

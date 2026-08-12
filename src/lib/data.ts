@@ -92,6 +92,7 @@ export type TimelineEntry = {
   aliveCount: number
   uncheckedCount: number
   deadCount: number
+  seriesId?: string
   seriesName?: string
   /** 分段在时长上的占比，用于卡片上的色带 */
   bands: { game: string | null; name: string; from: number; to: number }[]
@@ -204,6 +205,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       aliveCount: sources.filter((s) => s.status === 'alive').length,
       uncheckedCount: sources.filter((s) => s.status === 'unchecked').length,
       deadCount: sources.filter((s) => s.status === 'dead').length,
+      seriesId: e.series,
       seriesName: e.series ? ds.series.get(e.series)?.name : undefined,
       bands: total ? bands : [],
       demo: e.demo,
