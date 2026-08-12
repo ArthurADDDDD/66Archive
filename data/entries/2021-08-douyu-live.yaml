@@ -284,58 +284,45 @@
   - id: 2021-08-08-live-01
     type: live
     date: "2021-08-08"
-    series: xinling-pishuang
     title: "【心灵砒霜】女生追女生这种事情，大家都没什么经验啊"
+    series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 205
+    duration_min: 332
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_722c79feb8404696912a2f413af7607d.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
     tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
-        label: "砒霜前聊10块钱的弹幕版"
-      - at: "00:26:55"
-        label: "心灵砒霜弹幕版"
-      - at: "01:11:32"
-        label: "心灵砒霜弹幕版"
-      - at: "01:56:10"
-        label: "心灵砒霜弹幕版"
-      - at: "02:40:47"
-        label: "心灵砒霜弹幕版"
+        label: "P1-2021.8.8-砒霜前聊10块钱的弹幕版"
+      - at: "00:26:54"
+        label: "P2-2021.8.8-心灵砒霜弹幕版"
+      - at: "01:11:30"
+        label: "P3-2021.8.8-心灵砒霜弹幕版"
+      - at: "01:56:06"
+        label: "P4-2021.8.8-心灵砒霜弹幕版"
+      - at: "02:40:42"
+        label: "P5-2021.8.8-心灵砒霜弹幕版"
+      - at: "03:25:18"
+        label: "P6-2021.8.8-永劫无间"
+        game: naraka-bladepoint
+      - at: "04:07:24"
+        label: "P7-2021.8.8-永劫无间"
+        game: naraka-bladepoint
+      - at: "04:49:36"
+        label: "P8-2021.8.8-永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30609039"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-08-08-live-02
-    type: live
-    date: "2021-08-08"
-    title: "永劫无间"
-    platform: douyu
-    confidence: high
-    duration_min: 126
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4ec34f314ccc44f68a1d8d9cf711e850.jpeg?imageslim"
-    games: [naraka-bladepoint]
-    segments:
-      - at: "00:00:00"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "00:42:07"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "01:24:16"
-        label: "永劫无间"
-        game: naraka-bladepoint
-    sources:
       - url: "https://www.acfun.cn/v/ac30587140"
         kind: replay
         parts: 3
         status: alive
+    note: "同一场（8.8 周日砒霜场）拆 2 视频：砒霜弹幕版（ac30609039，P1-P5）+ 永劫无间（ac30587140，P6-P8），P 编号连续，按一天一条原则合并"
     contributed_by: data-agent
-
   - id: 2021-08-09-live-01
     type: live
     date: "2021-08-09"
