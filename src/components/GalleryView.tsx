@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import type { GalleryItem } from '@/lib/gallery'
+import { SearchField } from './SearchField'
 
 /**
  * 记忆画廊：图片优先的 masonry，图注全部收进灯箱。
@@ -41,12 +42,12 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
     <>
       {/* 控制行 */}
       <div className="flex flex-wrap items-center gap-3">
-        <input
+        <SearchField
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+          onChange={setQ}
           placeholder={`搜索年份或画面说明 · ${items.length} 张`}
-          aria-label="搜索画面"
-          className="w-full rounded-md border border-line bg-surface px-3 py-2.5 text-[12px] text-ink placeholder:text-faint transition-[border-color,box-shadow,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:max-w-[300px] sm:py-2"
+          ariaLabel="搜索画面"
+          inputClassName="w-full rounded-md border border-line bg-surface px-3 py-2.5 text-[12px] text-ink placeholder:text-faint transition-[border-color,box-shadow,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:max-w-[300px] sm:py-2"
         />
         <div className="flex flex-wrap items-center gap-1.5">
           {years.map((y) => (

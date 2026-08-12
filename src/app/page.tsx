@@ -3,7 +3,6 @@ import { SiteNav } from '@/components/SiteNav'
 import { RotatingAvatar } from '@/components/RotatingAvatar'
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { ActSection } from '@/components/ActSection'
-import { Interlude } from '@/components/Interlude'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
@@ -100,7 +99,7 @@ export default function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
               <a
                 href="#act-i"
-                className="ui-press group rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
+                className="ui-press group hidden items-center rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)] sm:inline-flex"
               >
                 开始 <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
@@ -126,12 +125,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 三幕。幕间本身就是设计。 */}
-      <ActSection act={actI} index={0} />
-      <ActSection act={actII} index={1} />
-      <Interlude count={data.interlude.count} loneEntry={data.interlude.loneEntry} />
-      <ActSection act={actIII} index={2} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+      {/* 三幕 = 首页精简幕（三个问题、三段回答）。幕间不再是独立章节，空白折进了第三幕的文案。 */}
+      <ActSection act={actI} showCount={false} />
+      <ActSection act={actII} showCount={false} />
+      <ActSection act={actIII} showCount={false} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
 
+      {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
       <HighlightStrip beats={data.highlights} />
 
       {/* 记忆：随机一晚 + 今日今夕 */}
