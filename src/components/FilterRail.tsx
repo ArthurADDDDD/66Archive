@@ -45,7 +45,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={t.id}
                 onClick={() => set({ types: toggle(filters.types, t.id) })}
                 aria-pressed={on}
-                className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-1.5 font-mono text-[11px]"
+                className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-2.5 font-mono text-[11px] sm:py-1.5"
                 style={{
                   borderColor: on ? t.color : '#2C3140',
                   color: on ? t.color : '#8B8FA3',
@@ -70,7 +70,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={p}
                 onClick={() => set({ platforms: toggle(filters.platforms, p) })}
                 aria-pressed={on}
-                className="ui-press rounded border px-2 py-1 font-mono text-[11px] tnum"
+                className="ui-press rounded border px-2 py-2 font-mono text-[11px] tnum sm:py-1"
                 style={{
                   borderColor: on ? meta?.color : '#2C3140',
                   color: on ? meta?.color : '#8B8FA3',
@@ -93,7 +93,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 <button
                   onClick={() => set({ games: toggle(filters.games, g.id) })}
                   aria-pressed={on}
-                  className={`ui-press flex w-full items-center gap-2 rounded px-1.5 py-1 text-left text-[12px] ${
+                  className={`ui-press flex w-full items-center gap-2 rounded px-1.5 py-2 text-left text-[12px] sm:py-1 ${
                     on ? 'bg-raised text-ink' : 'text-muted hover:bg-surface hover:text-ink'
                   }`}
                 >
@@ -108,7 +108,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
       </Section>
 
       <Section label="来源">
-        <label className="ui-press flex cursor-pointer items-center gap-2 rounded px-1 py-1 text-[12px] text-muted hover:bg-raised/60 hover:text-ink">
+        <label className="ui-press flex cursor-pointer items-center gap-2 rounded px-1 py-2 text-[12px] text-muted hover:bg-raised/60 hover:text-ink sm:py-1">
           <input
             type="checkbox"
             checked={filters.onlyAlive}

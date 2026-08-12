@@ -165,6 +165,42 @@ body {
     animation: ui-avatar-in 620ms var(--ease-out-expo) both;
   }
 
+  /* 滚动显现：挂载后由 Reveal 组件加在视口下方的元素上 */
+  .ui-reveal-scroll {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 620ms var(--ease-out-expo),
+      transform 620ms var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+
+  .ui-reveal-scroll.ui-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ui-progress-bar {
+    transition: transform 120ms linear;
+  }
+
+  /* NOW 节点：呼吸的小亮点，2.4s 一周期 */
+  @keyframes ui-now-pulse {
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(255, 107, 117, 0.35);
+    }
+    50% {
+      opacity: 0.55;
+      box-shadow: 0 0 0 6px rgba(255, 107, 117, 0);
+    }
+  }
+
+  .ui-now-pulse {
+    animation: ui-now-pulse 2.4s ease-in-out infinite;
+  }
+
   .ui-card {
     transition:
       transform 260ms var(--ease-out-expo),

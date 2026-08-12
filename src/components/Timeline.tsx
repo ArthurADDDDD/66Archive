@@ -3,8 +3,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { MONTH_CN } from '@/lib/ui'
-import { PLATFORM_META } from '@/lib/platforms'
-import type { Platform } from '@/lib/schema'
 import { EntryRow } from './EntryRow'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
 import { SiteNav } from './SiteNav'
@@ -28,10 +26,13 @@ export function Timeline({
   entries,
   isDemo,
   hiddenUnreviewed = 0,
+  extra,
 }: {
   entries: TimelineEntry[]
   isDemo: boolean
   hiddenUnreviewed?: number
+  /** 档案模式头部右侧插槽（编年史模式切换用） */
+  extra?: React.ReactNode
 }) {
   const years = useMemo(
     () => [...new Set(entries.map((entry) => Number(entry.date.slice(0, 4))))].sort((a, b) => b - a),
@@ -54,14 +55,18 @@ export function Timeline({
   )
 
   // 首次进入时恢复分享链接；没有月份参数时停在全年目录。
+  // 静态导出无法在服务端读 searchParams，URL 恢复只能在客户端 effect 里完成，一次性且无外部依赖。
   useEffect(() => {
     const p = new URLSearchParams(window.location.search)
     const requestedYear = Number(p.get('y'))
     const initialYear = years.includes(requestedYear) ? requestedYear : latestYear
     const requestedMonth = p.has('m') ? Number(p.get('m')) : null
     const availableMonths = monthsForYear(initialYear)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveYear(initialYear)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveMonth(requestedMonth !== null && availableMonths.includes(requestedMonth) ? requestedMonth : null)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFilters({
       q: p.get('q') ?? '',
       platforms: p.get('p')?.split(',').filter(Boolean) ?? [],
@@ -275,16 +280,17 @@ export function Timeline({
               onChange={(event) => set({ q: event.target.value })}
               placeholder={`搜索全部 ${entries.length.toLocaleString()} 条记录`}
               aria-label="搜索全部记录"
-              className="w-full rounded-md border border-line bg-surface py-2 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none"
+              className="w-full rounded-md border border-line bg-surface py-2.5 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:py-2"
             />
             <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[10px] text-faint transition-[opacity,transform] duration-200 group-focus-within/search:translate-x-1 group-focus-within/search:opacity-0">/</kbd>
           </div>
           <button
             onClick={() => setSheetOpen(true)}
-            className="ui-press relative shrink-0 rounded-md border border-line bg-surface px-3 py-2 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)]"
+            className="ui-press relative shrink-0 rounded-md border border-line bg-surface px-3 py-2.5 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:py-2"
           >
             筛选{dirtyCount > 0 && <span className="ml-1.5 text-live">{dirtyCount}</span>}
           </button>
+          {extra}
         </div>
       </header>
 
@@ -398,10 +404,10 @@ export function Timeline({
             <div className="flex items-center gap-3 font-mono text-[11px] text-faint tnum">
               <span>{visible.length.toLocaleString()} 条</span>
               {!searching && activeMonth !== null && (
-                <button onClick={() => selectMonth(null)} className="text-live underline underline-offset-4">返回全年目录</button>
+                <button onClick={() => selectMonth(null)} className="py-2 text-live underline underline-offset-4 sm:py-0">返回全年目录</button>
               )}
               {(filters.platforms.length > 0 || filters.types.length > 0 || filters.games.length > 0 || filters.onlyAlive) && (
-                <button onClick={() => set(EMPTY_FILTERS)} className="text-live underline underline-offset-4">清除筛选</button>
+                <button onClick={() => set(EMPTY_FILTERS)} className="py-2 text-live underline underline-offset-4 sm:py-0">清除筛选</button>
               )}
             </div>
           </div>
@@ -453,7 +459,7 @@ export function Timeline({
                 <h3 className="text-[14px] font-medium text-ink">筛选记录</h3>
                 <p className="mt-0.5 font-mono text-[10px] text-faint">搜索词会跨全部年份生效</p>
               </div>
-              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-1 font-mono text-[11px] text-live hover:bg-live/10">完成</button>
+              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 font-mono text-[11px] text-live hover:bg-live/10 sm:py-1">完成</button>
             </div>
             <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>

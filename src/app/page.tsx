@@ -1,91 +1,116 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { RotatingAvatar } from '@/components/RotatingAvatar'
+import { TimelineProgress } from '@/components/TimelineProgress'
+import { ActSection } from '@/components/ActSection'
+import { Interlude } from '@/components/Interlude'
+import { HighlightStrip } from '@/components/HighlightStrip'
+import { HomeStats } from '@/components/HomeStats'
+import { GameCard } from '@/components/GameCard'
+import type { GameCardData } from '@/components/GameShelf'
+import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
 
+/**
+ * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 今日今夕）+ 游戏预告 + 四个房间入口。
+ * 第一屏只有人，没有数字（数字在第二屏「这一切加起来」）；
+ * 一切计数来自 resolveHomepage 的构建期派生，文案不硬编码数字。
+ * 「今日今夕」以构建日期为准（静态站约束），框架为「N 年前的这几天」。
+ */
 export default function HomePage() {
   const ds = getDataset()
-  const timelineEntries = toTimelineEntries(ds)
-  const years = new Set(timelineEntries.map((entry) => entry.date.slice(0, 4))).size
-  const latestYear = timelineEntries[0]?.date.slice(0, 4) ?? new Date().getFullYear().toString()
-  const countBetween = (from: string, to: string) => timelineEntries.filter((entry) => entry.date >= from && entry.date <= to).length
+  const timeline = toTimelineEntries(ds)
+  const data = resolveHomepage(ds, timeline)
 
-  const chapters = [
-    {
-      year: '2010',
-      label: '从视频开始',
-      title: '《迷画之塔》与早期游戏解说',
-      description: '本科期间，她在优酷上传自制游戏视频，逐渐成为广受关注的原创游戏视频作者。',
-      count: countBetween('2010-01-01', '2015-12-31'),
-      color: '#E0A244',
-      href: '/chronicle/?y=2010',
-    },
-    {
-      year: '2016—2023',
-      label: '斗鱼直播时期',
-      title: '直播间 156277 与固定栏目',
-      description: '2015 年转型为主机游戏主播，直播与解说继续围绕优秀、独特的游戏作品展开。',
-      count: countBetween('2016-01-01', '2023-12-31'),
-      color: '#5BC8E8',
-      href: '/chronicle/?y=2023',
-    },
-    {
-      year: '2024.02',
-      label: '过渡记录',
-      title: '空窗期内的一次语音直播',
-      description: '斗鱼停播与下一阶段之间，现有资料中保留的一次独立公开记录。',
-      count: countBetween('2024-02-01', '2024-02-29'),
-      color: '#A78BFA',
-      href: '/chronicle/?y=2024&m=2',
-    },
-    {
-      year: '2024.08—至今',
-      label: '抖音直播时期',
-      title: '新的平台，继续直播',
-      description: '直播记录由多个公开回放与搬运来源共同补齐，仍在持续更新。',
-      count: countBetween('2024-08-01', '9999-12-31'),
-      color: '#FF6B75',
-      href: `/chronicle/?y=${latestYear}`,
-    },
-  ]
+  // 随机记忆池：有封面 / 有游戏 / 有栏目 的条目才配进入（宁缺毋滥）。
+  // 全时间线等距抽样（最多 400 条）——不偏向任何时期，构建期确定，无随机数。
+  const meaningful = timeline.filter((e) => e.cover || e.games.length > 0 || e.seriesName)
+  const step = Math.max(1, Math.ceil(meaningful.length / 400))
+  const memoryPool: MemoryCandidate[] = meaningful
+    .filter((_, i) => i % step === 0)
+    .map((e) => ({ id: e.id, date: e.date, title: e.title }))
+
+  // 今日今夕：构建日 ±3 天里离今天最近的记录
+  const today = new Date()
+  const todayMd = today.getMonth() * 100 + today.getDate()
+  let todayMemory: { entry: (typeof timeline)[number]; yearsAgo: number; distance: number } | null = null
+  for (const e of timeline) {
+    const [y, m, d] = e.date.split('-').map(Number)
+    if (!y || !m || !d) continue
+    const dist = Math.min(Math.abs(m * 100 + d - todayMd), 366 - Math.abs(m * 100 + d - todayMd))
+    if (dist > 3) continue
+    const yearsAgo = today.getFullYear() - y
+    if (!todayMemory || dist < todayMemory.distance || (dist === todayMemory.distance && y > Number(todayMemory.entry.date.slice(0, 4)))) {
+      todayMemory = { entry: e, yearsAgo, distance: dist }
+    }
+  }
+
+  // 游戏预告：有场次的游戏按时长取前 8
+  const ids = [...ds.games.keys(), ...Object.keys(CURATED_GAMES)]
+  const gamePreview: GameCardData[] = ids
+    .map((id) => getGameProfile(ds, timeline, id))
+    .filter((p): p is NonNullable<typeof p> => p !== null && p.sessions > 0)
+    .sort((a, b) => b.totalMinutes - a.totalMinutes)
+    .slice(0, 8)
+    .map((p) => ({
+      id: p.id,
+      name: p.name,
+      cover: p.cover,
+      sessions: p.sessions,
+      totalMinutes: p.totalMinutes,
+      hoursLabel: p.hoursLabel,
+      firstDate: p.firstDate,
+      lastDate: p.lastDate,
+      curated: Boolean(p.curated),
+    }))
+
+  const actI = data.acts.find((a) => a.act.id === 'act-i')!
+  const actII = data.acts.find((a) => a.act.id === 'act-ii')!
+  const actIII = data.acts.find((a) => a.act.id === 'act-iii')!
 
   return (
     <main className="ui-page-in min-h-screen overflow-hidden">
+      <TimelineProgress />
+
       <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="home" />
         <Link href="/chronicle/" className="ui-press hidden rounded-sm font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
-          打开全部 {timelineEntries.length.toLocaleString()} 条记录 →
+          打开全部 {data.totals.entries.toLocaleString()} 条记录 →
         </Link>
       </header>
 
-      <section className="relative mx-auto max-w-[1240px] px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
+      {/* 第一屏：人物，不是数据。数字挪去第二屏（HomeStats）。
+          移动端收进 80svh 左右（内容驱动，min-height 只是下限），保证下一幕露出一角。 */}
+      <section className="relative mx-auto flex min-h-[70vh] min-h-[80svh] w-full max-w-[1240px] flex-col justify-center px-4 pb-10 pt-12 sm:px-6 sm:pb-24 sm:pt-20">
         <div className="pointer-events-none absolute -right-24 -top-40 h-[520px] w-[520px] rounded-full bg-live/10 blur-[100px]" />
         <div className="pointer-events-none absolute -left-44 top-24 h-[460px] w-[460px] rounded-full bg-today/10 blur-[110px]" />
-        <div className="relative grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+        <div className="relative grid w-full gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-12">
           <div className="ui-reveal">
             <div className="inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-live">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-              2010 — 现在
+              2010 — {data.now.year} · 还在继续
             </div>
             <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.28em] text-faint">女流 66 · 石悦</p>
-            <h1 className="mt-3 max-w-3xl text-[44px] font-bold leading-[1.04] tracking-[-0.04em] text-ink sm:text-[68px]">
-              十六年的游戏、直播，
-              <span className="bg-gradient-to-r from-video via-live to-today bg-clip-text text-transparent">重新连成一条路。</span>
-            </h1>
-            <p className="mt-7 max-w-2xl text-[15px] leading-8 text-muted">
-              女流以独立游戏和具有艺术性的作品为主要内容，从优酷时代的原创游戏解说出发，后来转向主机游戏直播。这里整理她公开发表过的视频与直播场次，只建立索引，不搬运视频。
+            <h1 className="mt-3 text-[64px] font-bold leading-[1.0] tracking-[-0.04em] text-ink sm:text-[92px]">女流</h1>
+            <p className="mt-6 max-w-xl text-[15px] leading-8 text-muted">
+              十六年的游戏、直播和那些晚上，<br className="hidden sm:block" />
+              重新连成一条路。
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/chronicle/" className="ui-press group rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(91,200,232,0.22)]">
-                浏览编年史 <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
-              </Link>
-              <a href="#career" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-[13px] text-muted hover:border-muted hover:text-ink">
-                先看生涯总览
+            <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
+              <a
+                href="#act-i"
+                className="ui-press group rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
+              >
+                开始 <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
+              <Link href="/chronicle/" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-[13px] text-muted hover:border-muted hover:text-ink">
+                打开编年史
+              </Link>
             </div>
           </div>
 
-          <div className="ui-reveal ui-delay-1 relative mx-auto aspect-square w-full max-w-[440px]">
+          <div className="ui-reveal ui-delay-1 relative mx-auto aspect-square w-full max-w-[300px] sm:max-w-[440px]">
             <div className="absolute inset-[8%] animate-[spin_35s_linear_infinite] rounded-full border border-dashed border-line" />
             <div className="absolute inset-[22%] animate-[spin_24s_linear_infinite_reverse] rounded-full border border-live/20" />
             <div className="absolute inset-[34%] rounded-full bg-gradient-to-br from-live/25 via-raised to-today/20 shadow-[0_0_90px_rgba(91,200,232,0.16)]" />
@@ -99,48 +124,70 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-
-        <dl className="ui-reveal ui-delay-2 relative mt-16 grid grid-cols-3 gap-3 border-y border-line py-5 sm:max-w-xl">
-          <Stat value={timelineEntries.length.toLocaleString()} label="公开条目" />
-          <Stat value={years.toString()} label="覆盖年份" />
-          <Stat value={ds.series.size.toString()} label="系列栏目" />
-        </dl>
       </section>
 
-      <section id="career" className="relative border-t border-line bg-surface/35 py-20 sm:py-28">
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-today">Career map</p>
-              <h2 className="mt-3 text-[30px] font-semibold tracking-tight sm:text-[42px]">生涯事件时间轴</h2>
-            </div>
-            <p className="max-w-md text-[12px] leading-relaxed text-muted">这是入口级概览；具体到每一年、每个月和每条来源，请进入编年史。</p>
-          </div>
+      {/* 三幕。幕间本身就是设计。 */}
+      <ActSection act={actI} index={0} />
+      <ActSection act={actII} index={1} />
+      <Interlude count={data.interlude.count} loneEntry={data.interlude.loneEntry} />
+      <ActSection act={actIII} index={2} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
 
-          <div className="relative mt-12 grid gap-4 lg:grid-cols-4">
-            <div className="absolute left-0 right-0 top-[31px] hidden h-px bg-gradient-to-r from-video via-live to-today lg:block" />
-            {chapters.map((chapter, index) => (
-              <Link
-                key={chapter.year}
-                href={chapter.href}
-                className="ui-card ui-press group relative rounded-2xl border border-line bg-base/80 p-5 hover:border-muted hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]"
-              >
-                <span className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full border-4 border-base text-[9px] font-bold text-base" style={{ background: chapter.color }}>
-                  {index + 1}
-                </span>
-                <span className="mt-8 block font-mono text-[11px] tnum" style={{ color: chapter.color }}>{chapter.year}</span>
-                <span className="mt-2 block text-[11px] text-faint">{chapter.label}</span>
-                <h3 className="mt-2 text-[17px] font-medium leading-snug text-ink">{chapter.title}</h3>
-                <p className="mt-3 text-[12px] leading-relaxed text-muted">{chapter.description}</p>
-                <span className="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-[10px] text-faint">
-                  {chapter.count.toLocaleString()} 条记录
-                  <span className="transition-transform group-hover:translate-x-1" style={{ color: chapter.color }}>→</span>
-                </span>
-              </Link>
-            ))}
+      <HighlightStrip beats={data.highlights} />
+
+      {/* 记忆：随机一晚 + 今日今夕 */}
+      <section className="border-t border-line bg-surface/15">
+        <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Memory · 记忆盒</p>
+          <h2 className="mt-3 text-[24px] font-semibold tracking-tight text-ink sm:text-[32px]">回到过去，只需要一晚。</h2>
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            <RandomMemory pool={memoryPool} />
+            <TodayInHistory
+              title={todayMemory?.entry.title ?? null}
+              date={todayMemory?.entry.date ?? null}
+              yearsAgo={todayMemory?.yearsAgo ?? null}
+              href={todayMemory ? `/e/${todayMemory.entry.id}/` : null}
+              yearHref={todayMemory ? `/chronicle/?y=${todayMemory.entry.date.slice(0, 4)}` : null}
+            />
           </div>
         </div>
       </section>
+
+      {/* 游戏预告 */}
+      {gamePreview.length > 0 && (
+        <section className="border-t border-line">
+          <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
+            <div className="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-video">Games · 玩过的游戏</p>
+                <h2 className="mt-3 text-[22px] font-semibold tracking-tight text-ink sm:text-[28px]">陪得最久的几款。</h2>
+              </div>
+              <Link href="/games/" className="ui-press rounded-sm font-mono text-[11px] text-live underline underline-offset-4">
+                全部游戏 →
+              </Link>
+            </div>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+              {gamePreview.map((p) => (
+                <GameCard key={p.id} profile={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 四个房间 */}
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Rooms · 四个房间</p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <RoomLink href="/chronicle/" color="#5BC8E8" kicker="Chronicle" title="编年史" body="走过的路，一条一条。故事模式先看，档案模式逐条查。" />
+            <RoomLink href="/series/" color="#A78BFA" kicker="Series" title="节目" body="固定出现过的栏目——心灵砒霜，和更早的连载。" />
+            <RoomLink href="/stats/" color="#E5568A" kicker="Stats" title="数据" body="五个问题，五个答案。数字全部从档案派生。" />
+            <RoomLink href="/gallery/" color="#FF6B75" kicker="Gallery" title="画廊" body="被画下来的几年。水友替每个年份留下的注脚。" />
+          </div>
+        </div>
+      </section>
+
+      <HomeStats data={data} />
 
       <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-faint sm:flex-row sm:px-6">
         <span>只索引，不搬运 · 所有播放回到原平台</span>
@@ -150,11 +197,69 @@ export default function HomePage() {
   )
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
+/** 今日今夕：离今天（±3 天）最近的一条历史记录。构建期派生，静态站约束如实标注。 */
+function TodayInHistory({
+  title,
+  date,
+  yearsAgo,
+  href,
+  yearHref,
+}: {
+  title: string | null
+  date: string | null
+  yearsAgo: number | null
+  href: string | null
+  yearHref: string | null
+}) {
   return (
-    <div>
-      <dt className="font-display text-[22px] font-bold text-ink tnum">{value}</dt>
-      <dd className="mt-1 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">{label}</dd>
+    <div className="flex h-full flex-col rounded-2xl border border-line/80 bg-surface/25 p-6 sm:p-8">
+      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Today in history</p>
+      <h2 className="mt-3 text-[22px] font-semibold tracking-tight text-ink sm:text-[26px]">
+        {title ? (
+          <>
+            这些天的历史上，{yearsAgo === 0 ? '今年' : `${yearsAgo} 年前`}：
+          </>
+        ) : (
+          '这几天，档案里暂时没有记录。'
+        )}
+      </h2>
+      {title && href && (
+        <Link href={href} className="ui-press group mt-5">
+          <div className="rounded-xl border border-line/80 bg-surface/50 p-4 transition-colors hover:border-muted/70">
+            <p className="font-mono text-[10px] text-faint tnum">{date}</p>
+            <p className="mt-1.5 text-[14px] font-medium leading-snug text-ink transition-colors group-hover:text-white">{title}</p>
+            <p className="mt-2 font-mono text-[10px] text-live">打开这一天 →</p>
+          </div>
+        </Link>
+      )}
+      {yearHref && (
+        <p className="mt-4 font-mono text-[10px] text-faint/70">
+          <Link href={yearHref} className="rounded-sm underline underline-offset-4 transition-colors hover:text-live">
+            看那年全部记录 →
+          </Link>
+          <span className="ml-2">ⓘ 以构建日期为准（静态站约束）</span>
+        </p>
+      )}
     </div>
+  )
+}
+
+/** 四个房间的入口瓦片 */
+function RoomLink({ href, color, kicker, title, body }: { href: string; color: string; kicker: string; title: string; body: string }) {
+  return (
+    <Link
+      href={href}
+      className="ui-card ui-press group flex flex-col rounded-2xl border border-line/80 bg-surface/40 p-6 transition-colors hover:border-muted/60"
+    >
+      <p className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.2em]" style={{ color }}>
+        <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: color }} />
+        {kicker}
+      </p>
+      <h3 className="mt-4 text-[20px] font-semibold tracking-tight text-ink transition-colors group-hover:text-white">{title}</h3>
+      <p className="mt-2 text-[13px] leading-6 text-muted">{body}</p>
+      <span className="mt-auto pt-4 font-mono text-[11px] text-faint/60 transition-transform group-hover:translate-x-1" style={{ color }}>
+        进入 →
+      </span>
+    </Link>
   )
 }
