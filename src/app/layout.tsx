@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     icon: '/images/avatars/v1_2015.jpg',
     apple: '/images/avatars/v1_2015.jpg',
   },
+}
+
+/** 手机浏览器的地址栏跟着页面走——否则暗色页面顶上会顶着一条亮色浏览器 chrome。 */
+export const viewport: Viewport = {
+  themeColor: '#12141C',
+  colorScheme: 'dark',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

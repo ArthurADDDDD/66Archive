@@ -33,23 +33,32 @@ export function SearchField({
 }) {
   const [open, setOpen] = useState(false)
   const internalRef = useRef<HTMLInputElement>(null)
+  const rootRef = useRef<HTMLDivElement>(null)
   const inputEl = inputRef ?? internalRef
+  // 手机端展开时把面板挂到 icon 下方、横跨整个视口宽度。
+  // 不能用 absolute right-0 贴着 icon 自己——这个 field 在 header 里并不靠着屏幕右缘
+  // （右边还有筛选、模式切换），面板会整块甩到屏幕左外面去。
+  const [panelTop, setPanelTop] = useState(0)
 
   const expand = () => {
+    const rect = rootRef.current?.getBoundingClientRect()
+    if (rect) setPanelTop(rect.bottom + 8)
     setOpen(true)
     requestAnimationFrame(() => inputEl.current?.focus())
   }
 
   return (
-    <div className={`group/search relative ${iconClassName ?? ''}`}>
-      {/* 移动端：收起的搜索 icon（≥44px 触控） */}
+    <div ref={rootRef} className={`group/search relative ${iconClassName ?? ''}`}>
+      {/* 移动端：常驻搜索 icon（≥44px 触控）。
+          它不会在展开时被替换掉——原本 icon 一展开就换成整条输入框，
+          输入框在 header 这一行里横向溢出、把导航挤走甚至盖住。 */}
       <button
         type="button"
-        onClick={expand}
+        onClick={() => (open ? inputEl.current?.blur() : expand())}
         aria-label={`展开搜索：${ariaLabel}`}
         aria-expanded={open}
-        className={`ui-press flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line/80 bg-surface/70 text-muted transition-colors hover:border-live/60 hover:text-ink sm:hidden ${
-          open ? 'hidden' : ''
+        className={`ui-press flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors sm:hidden ${
+          open ? 'border-live/60 bg-live/10 text-live' : 'border-line/80 bg-surface/70 text-muted hover:border-live/60 hover:text-ink'
         }`}
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="stroke-current">
@@ -58,22 +67,31 @@ export function SearchField({
         </svg>
       </button>
 
-      {/* 输入框：桌面常驻；移动端仅在展开时显示 */}
-      <input
-        ref={inputEl}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        onFocus={() => setOpen(true)}
-        onBlur={() => setOpen(false)}
-        onKeyDown={(e) => {
-          if (e.key === 'Escape') inputEl.current?.blur()
-        }}
-        placeholder={placeholder}
-        aria-label={ariaLabel}
-        className={`${open ? 'block' : 'hidden sm:block'} ${inputClassName}`}
-      />
+      {/* 输入框：桌面常驻、就地渲染；
+          移动端展开时浮在 icon 正下方，绝对定位——不参与 header 那一行的布局，
+          所以既不会挤压导航，也不会横向溢出。 */}
+      <div
+        style={open ? { top: panelTop } : undefined}
+        className={`fixed inset-x-4 z-40 sm:static sm:inset-x-auto sm:top-auto ${
+          open ? 'ui-panel-in block' : 'hidden sm:block'
+        }`}
+      >
+        <input
+          ref={inputEl}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') inputEl.current?.blur()
+          }}
+          placeholder={placeholder}
+          aria-label={ariaLabel}
+          className={inputClassName}
+        />
+      </div>
       {kbd && (
-        <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 font-mono text-[10px] text-faint transition-[opacity,transform] duration-200 group-focus-within/search:translate-x-1 group-focus-within/search:opacity-0 sm:block">
+        <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 font-mono text-meta text-faint transition-[opacity,transform] duration-200 group-focus-within/search:translate-x-1 group-focus-within/search:opacity-0 sm:block">
           {kbd}
         </kbd>
       )}

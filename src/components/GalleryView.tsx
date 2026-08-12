@@ -55,7 +55,7 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
               key={y}
               onClick={() => setYear(year === y ? null : y)}
               aria-pressed={year === y}
-              className={`ui-press rounded-full border px-3 py-2.5 font-mono text-[10px] transition-colors tnum sm:py-1.5 ${
+              className={`ui-press rounded-full border px-3 py-2.5 text-meta transition-colors tnum sm:py-1.5 ${
                 year === y ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 bg-surface/50 text-muted hover:border-muted/60 hover:text-ink'
               }`}
             >
@@ -65,14 +65,14 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
         </div>
         <button
           onClick={randomOpen}
-          className="ui-press ml-auto rounded-full border border-line/80 bg-surface/50 px-4 py-2.5 font-mono text-[10px] text-muted transition-colors hover:border-today/60 hover:text-today sm:py-1.5"
+          className="ui-press ml-auto rounded-full border border-line/80 bg-surface/50 px-4 py-2.5 text-meta text-muted transition-colors hover:border-today/60 hover:text-today sm:py-1.5"
         >
           随便翻一张 ↯
         </button>
       </div>
 
       {q || year ? (
-        <p className="mt-3 font-mono text-[10px] text-faint/80 tnum">
+        <p className="mt-3 text-meta text-faint tnum">
           找到 {visible.length} 张{(q || year) && (
             <button onClick={() => { setQ(''); setYear(null) }} className="ml-2 text-live underline underline-offset-4">
               清除筛选
@@ -81,16 +81,17 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
         </p>
       ) : null}
 
-      {/* masonry：自然比例，低清原样。
-          移动端 390px 用两列（关键图首张横跨两列）；桌面保持 columns-2/3 原样。
-          若两列下人脸 / 文字过小（见验收截图），再退回单列。 */}
-      <div ref={gridRef} className="mt-6 grid grid-cols-2 gap-x-3 sm:block sm:columns-2 sm:gap-4 lg:columns-3">
+      {/* masonry：自然比例，低清原样。桌面保持 columns-2/3。
+          手机端改单列并出血到屏幕边缘——原本的 grid-cols-2 不是 masonry，同一行会按最高的图
+          对齐、矮图下方留大片空洞；加上 13% 安全边距后每列只剩 ~125px，人脸和文字都看不清。
+          画廊是「画面优先」的页面，单列 + 满宽才是它该有的读法。 */}
+      <div ref={gridRef} className="bleed-page mt-6 sm:columns-2 sm:gap-4 lg:columns-3">
         {visible.map((item, index) => (
-          <GalleryCard key={item.id} item={item} onOpen={() => openAt(index)} featured={index === 0 && visible.length >= 4} />
+          <GalleryCard key={item.id} item={item} onOpen={() => openAt(index)} />
         ))}
       </div>
       {visible.length === 0 && (
-        <p className="mt-10 font-mono text-[11px] text-faint">没有找到符合的画面。</p>
+        <p className="mt-10 text-meta text-faint">没有找到符合的画面。</p>
       )}
 
       {/* 灯箱 */}
@@ -108,28 +109,18 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
   )
 }
 
-function GalleryCard({
-  item,
-  onOpen,
-  featured = false,
-}: {
-  item: GalleryItem
-  onOpen: () => void
-  featured?: boolean
-}) {
+function GalleryCard({ item, onOpen }: { item: GalleryItem; onOpen: () => void }) {
   return (
     <button
       onClick={onOpen}
       aria-label={`打开大图：${item.alt}`}
-      className={`ui-press group mb-4 block w-full break-inside-avoid overflow-hidden rounded-xl border border-line/80 bg-raised text-left transition-[border-color] hover:border-muted/70 ${
-        featured ? 'col-span-2 sm:col-span-1' : ''
-      }`}
+      className="ui-press group mb-3 block w-full break-inside-avoid overflow-hidden border-y border-line/80 bg-raised text-left transition-[border-color] hover:border-muted/70 sm:mb-4 sm:rounded-xl sm:border"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={item.src} alt={item.alt} loading="lazy" className="block h-auto w-full" />
       <span className="flex items-baseline justify-between gap-2 border-t border-line/60 bg-surface/60 px-3 py-2">
-        <span className="font-mono text-[9px] text-faint/80 tnum">{item.year}</span>
-        <span className="min-w-0 truncate text-[11px] text-muted transition-colors group-hover:text-ink">{item.alt}</span>
+        <span className="font-mono text-meta text-faint tnum">{item.year}</span>
+        <span className="min-w-0 truncate text-meta text-muted transition-colors group-hover:text-ink">{item.alt}</span>
       </span>
     </button>
   )
@@ -182,15 +173,15 @@ function Lightbox({
         {/* 图注 */}
         <div className="flex w-full shrink-0 flex-col gap-4 border-t border-line/70 p-5 lg:w-[320px] lg:border-l lg:border-t-0 lg:p-6">
           <div className="flex items-baseline justify-between">
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-today">{item.year}</span>
-            <span className="font-mono text-[9px] text-faint tnum">
+            <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{item.year}</span>
+            <span className="font-mono text-meta text-faint tnum">
               {index + 1} / {total}
             </span>
           </div>
-          <h3 className="text-[17px] font-semibold leading-snug tracking-tight text-ink">{item.alt}</h3>
-          <p className="font-mono text-[9px] text-faint tnum">{item.date} · {item.dimensions}</p>
-          {item.caption && <p className="text-[12px] leading-6 text-muted">{item.caption}</p>}
-          <div className="flex flex-wrap gap-2 font-mono text-[9px]">
+          <h3 className="text-h3 font-semibold text-ink">{item.alt}</h3>
+          <p className="font-mono text-meta text-faint tnum">{item.date} · {item.dimensions}</p>
+          {item.caption && <p className="text-body text-muted">{item.caption}</p>}
+          <div className="flex flex-wrap gap-2 text-meta">
             {sourceHref && (
               <a
                 href={sourceHref}
@@ -209,13 +200,13 @@ function Lightbox({
             </Link>
           </div>
           <div className="mt-auto flex items-center justify-between border-t border-line/60 pt-4">
-            <button onClick={onPrev} className="ui-press rounded-sm px-2 py-2 font-mono text-[11px] text-muted transition-colors hover:text-ink sm:py-1.5">
+            <button onClick={onPrev} className="ui-press rounded-sm px-2 py-2 text-meta text-muted transition-colors hover:text-ink sm:py-1.5">
               ← 上一张
             </button>
-            <button ref={closeRef} onClick={onClose} className="ui-press rounded-sm px-2 py-2 font-mono text-[11px] text-muted transition-colors hover:text-ink sm:py-1.5">
+            <button ref={closeRef} onClick={onClose} className="ui-press rounded-sm px-2 py-2 text-meta text-muted transition-colors hover:text-ink sm:py-1.5">
               关闭 · Esc
             </button>
-            <button onClick={onNext} className="ui-press rounded-sm px-2 py-2 font-mono text-[11px] text-muted transition-colors hover:text-ink sm:py-1.5">
+            <button onClick={onNext} className="ui-press rounded-sm px-2 py-2 text-meta text-muted transition-colors hover:text-ink sm:py-1.5">
               下一张 →
             </button>
           </div>

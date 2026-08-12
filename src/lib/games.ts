@@ -15,3 +15,17 @@ export function visibleGameIds(gameIds: string[]): string[] {
     return !hasSpecificChild
   })
 }
+
+/** 游戏瓦片需要的极简载荷（避免把全部场次塞进客户端）。
+ * 原本挂在 GameShelf 组件文件里，但那个组件已无人使用——类型留在这里。 */
+export type GameCardData = {
+  id: string
+  name: string
+  cover: string | null
+  sessions: number
+  totalMinutes: number
+  hoursLabel: string
+  firstDate: string | null
+  lastDate: string | null
+  curated: boolean
+}

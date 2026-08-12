@@ -27,7 +27,7 @@ export function ActivityStrip({
       {years.map((year) => {
         const count = byYear.get(year) ?? 0
         return (
-          <div key={year} className="flex w-[5px] flex-col items-center">
+          <div key={year} className="flex w-[7px] flex-col items-center sm:w-[5px]">
             <div className="flex items-end" style={{ height }}>
               {count > 0 && (
                 <span
@@ -37,7 +37,7 @@ export function ActivityStrip({
                 />
               )}
             </div>
-            <span className="mt-1 font-mono text-[8px] leading-3 text-faint/70 tnum">{year}</span>
+            <span className={`mt-1 font-mono text-meta leading-3 text-faint tnum ${year % 2 ? 'hidden sm:block' : ''}`}>{year}</span>
           </div>
         )
       })}

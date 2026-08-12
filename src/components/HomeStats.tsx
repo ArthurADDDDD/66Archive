@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { HomepageData } from '@/lib/narrative'
+import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
 
 /**
@@ -24,18 +25,20 @@ export function HomeStats({ data }: { data: HomepageData }) {
   }
 
   return (
-    <section className="border-t border-line bg-surface/25 py-14 sm:py-24">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
+    <section className="border-t border-line bg-surface/25 py-12 sm:py-16">
+      <div className="mx-auto max-w-[1240px] px-page">
         <Reveal>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">这一切加起来</p>
-          <div className="mt-6 grid grid-cols-3 gap-4 sm:max-w-xl">
+          <Eyebrow>Totals · 这一切加起来</Eyebrow>
+          {/* 这一节原本只有一行 10px 眉标、没有标题，读下来是全页唯一一个缺层级的地方 */}
+          <h2 className="mt-3 text-h2 font-semibold text-ink">十六年，最后是这些数字。</h2>
+          <dl className="mt-8 grid grid-cols-3 gap-4 sm:max-w-xl">
             <Stat value={data.totals.entries.toLocaleString()} label="公开条目" />
             <Stat value={data.totals.years.toString()} label="覆盖年份" />
             <Stat value={data.totals.series.toString()} label="系列栏目" />
-          </div>
+          </dl>
 
           {/* 三幕分布（互斥口径） */}
-          <div className="mt-8 max-w-2xl sm:mt-10">
+          <div className="mt-8 max-w-2xl">
             <div className="flex h-2 w-full overflow-hidden rounded-full bg-raised">
               {actRows.map((a, i) => (
                 <span
@@ -47,26 +50,26 @@ export function HomeStats({ data }: { data: HomepageData }) {
             </div>
             <ul className="mt-4 space-y-2">
               {actRows.map((a, i) => (
-                <li key={a.act.id} className="flex items-baseline gap-3 text-[12px]">
+                <li key={a.act.id} className="flex items-baseline gap-3 text-meta">
                   <span className="h-2 w-2 shrink-0 rounded-sm" style={{ background: a.act.color }} />
-                  <span className="w-[92px] shrink-0 font-mono text-[10px] text-faint tnum">{a.act.years}</span>
+                  <span className="w-[92px] shrink-0 font-mono text-faint tnum">{a.act.years}</span>
                   <span className="min-w-0 truncate text-muted">{a.act.label}</span>
-                  <span className="ml-auto font-mono text-[11px] text-faint tnum">{counts[i].toLocaleString()} 条</span>
+                  <span className="ml-auto shrink-0 text-faint tnum">{counts[i].toLocaleString()} 条</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 font-mono text-[10px] leading-5 text-faint/70">
+            <p className="mt-4 text-meta text-faint">
               分布按互斥口径计数：2022 年起的记录计入第三幕（第三幕的叙事从她人生的新一段讲起，与第二幕尾段重叠）。
               三幕相加，正好等于全部记录。
             </p>
             {gapYears.length > 0 && (
-              <p className="mt-2 font-mono text-[10px] leading-5 text-faint/70">
+              <p className="mt-2 text-meta text-faint">
                 {gapYears.join('、')} 年在档案里是留白——缺口不是错误，是还没有被找回来的部分。
               </p>
             )}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8">
             <Link
               href="/chronicle/"
               className="ui-press group inline-flex items-center gap-2 rounded-full border border-line bg-base/60 px-5 py-2.5 text-[13px] text-muted transition-colors hover:border-muted hover:text-ink"
@@ -84,8 +87,8 @@ export function HomeStats({ data }: { data: HomepageData }) {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
-      <dt className="font-display text-[26px] font-bold text-ink tnum sm:text-[32px]">{value}</dt>
-      <dd className="mt-1 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">{label}</dd>
+      <dt className="font-display text-h3 font-bold text-ink tnum">{value}</dt>
+      <dd className="mt-1 text-meta uppercase tracking-[0.16em] text-faint">{label}</dd>
     </div>
   )
 }

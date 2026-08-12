@@ -79,7 +79,7 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
               key={s.id}
               onClick={() => setSort(s.id)}
               aria-pressed={sort === s.id}
-              className={`ui-press rounded-full border px-3 py-1.5 font-mono text-[10px] transition-colors ${
+              className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
                 sort === s.id ? 'border-live/60 bg-live/10 text-live' : 'border-line text-muted hover:border-muted hover:text-ink'
               }`}
             >
@@ -89,24 +89,24 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
           <button
             onClick={() => setOnceOnly((v) => !v)}
             aria-pressed={onceOnly}
-            className={`ui-press rounded-full border px-3 py-1.5 font-mono text-[10px] transition-colors ${
+            className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
               onceOnly ? 'border-video/60 bg-video/10 text-video' : 'border-line text-muted hover:border-muted hover:text-ink'
             }`}
           >
             只玩过一次 · {onceCount}
           </button>
         </div>
-        <span className="ml-auto font-mono text-[11px] text-faint tnum">
+        <span className="ml-auto text-meta text-faint tnum">
           {filtered.length} / {games.length}
         </span>
       </div>
 
-      <p className="mt-3 text-[11px] text-faint">{activeSort?.hint}</p>
+      <p className="mt-3 text-meta text-faint">{activeSort?.hint}</p>
 
       {filtered.length === 0 ? (
-        <p className="mt-12 text-[13px] text-muted">没有匹配「{q}」的游戏。</p>
+        <p className="mt-12 text-body text-muted">没有匹配「{q}」的游戏。</p>
       ) : (
-        <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <ul className="bleed-page mt-8 grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 sm:gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {filtered.map((g) => (
             <LibraryTile key={g.id} game={g} />
           ))}
@@ -149,33 +149,43 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
                 }}
               />
               <span
-                className="absolute left-2 top-2 font-mono text-[8px] uppercase tracking-[0.18em]"
+                className="absolute left-2 top-2 font-mono text-meta uppercase tracking-[0.16em] tnum"
                 style={{ color: eraColor }}
               >
                 {g.firstDate ? `${g.firstDate.slice(0, 4)}` : '待补录'}
               </span>
-              <span className="relative max-w-full text-center font-display text-[16px] font-bold leading-tight tracking-tight text-ink/90">
+              <span className="relative max-w-full text-center text-[16px] font-bold leading-tight text-ink/90">
                 {g.name}
               </span>
             </div>
           )}
 
           {g.comebackDays > 0 && (
-            <span className="absolute left-0 top-0 bg-base/85 px-1.5 py-1 font-mono text-[9px] leading-none text-video tnum">
+            <span className="absolute left-0 top-0 bg-base/85 px-1.5 py-1 text-meta leading-none text-video tnum">
               隔了 {g.comebackDays.toLocaleString()} 天又打开
             </span>
           )}
-          <span className="absolute bottom-0 right-0 bg-base/85 px-1.5 py-1 font-mono text-[9px] leading-none text-muted tnum">
+          <span className="absolute bottom-0 right-0 bg-base/85 px-1.5 py-1 text-meta leading-none text-muted tnum">
             {g.sessions} 场
           </span>
         </div>
 
-        <p className="mt-2.5 text-[13px] leading-snug text-ink group-hover:text-live">{g.name}</p>
-        <p className="mt-1 font-mono text-[10px] text-faint tnum">
-          {g.firstDate && <span style={{ color: eraColor }}>{g.firstDate}</span>}
-          {g.lastDate && g.lastDate !== g.firstDate && <> → {g.lastDate}</>}
+        {/* 三行文字改成固定两行槽位：日期缺失时原本整行塌陷、lastDate 与 firstDate 相同时又少一段，
+            同一行的瓦片文字块高度各不相同，读下来是参差的。缺什么就占什么，不塌陷。 */}
+        <p className="mt-2.5 line-clamp-2 min-h-[2.6em] text-[13px] leading-snug text-ink group-hover:text-live">
+          {g.name}
         </p>
-        <p className="font-mono text-[10px] text-faint tnum" title={`${g.totalMinutes.toLocaleString()} 分钟 · ${g.knownDurationCount}/${g.sessions} 场有记录`}>
+        <p className="mt-1 text-meta text-faint tnum">
+          {g.firstDate ? (
+            <span className="font-mono" style={{ color: eraColor }}>
+              {g.firstDate}
+            </span>
+          ) : (
+            <span>日期待补</span>
+          )}
+          {g.lastDate && g.lastDate !== g.firstDate && <span className="font-mono"> → {g.lastDate}</span>}
+        </p>
+        <p className="text-meta text-faint tnum" title={`${g.totalMinutes.toLocaleString()} 分钟 · ${g.knownDurationCount}/${g.sessions} 场有记录`}>
           {g.knownDurationCount === 0
             ? '时长未知'
             : `${g.totalMinutes >= 60 ? `${Math.round(g.totalMinutes / 60)} 小时` : `${g.totalMinutes} 分钟`}${g.knownDurationCount < g.sessions ? '*' : ''}`}

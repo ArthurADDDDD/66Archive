@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
+import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RotatingAvatar } from '@/components/RotatingAvatar'
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { ActSection } from '@/components/ActSection'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
-import type { GameCardData } from '@/components/GameShelf'
+import type { GameCardData } from '@/lib/games'
 import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
+import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
 
@@ -69,30 +71,34 @@ export default function HomePage() {
   const actIII = data.acts.find((a) => a.act.id === 'act-iii')!
 
   return (
-    <main className="ui-page-in min-h-screen overflow-hidden">
+    <main className="ui-page-in min-h-screen overflow-x-clip">
+      <MobileQuickNav active="home" />
+      <BackToTop />
       <TimelineProgress />
 
       <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="home" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta tnum text-live underline-offset-4 hover:underline sm:block">
           打开全部 {data.totals.entries.toLocaleString()} 条记录 →
         </Link>
       </header>
 
       {/* 第一屏：人物，不是数据。数字挪去第二屏（HomeStats）。
           移动端收进 80svh 左右（内容驱动，min-height 只是下限），保证下一幕露出一角。 */}
-      <section className="relative mx-auto flex min-h-[70vh] min-h-[80svh] w-full max-w-[1240px] flex-col justify-center px-4 pb-10 pt-12 sm:px-6 sm:pb-24 sm:pt-20">
-        <div className="pointer-events-none absolute -right-24 -top-40 h-[520px] w-[520px] rounded-full bg-live/10 blur-[100px]" />
-        <div className="pointer-events-none absolute -left-44 top-24 h-[460px] w-[460px] rounded-full bg-today/10 blur-[110px]" />
+      <section className="relative mx-auto flex min-h-[80svh] w-full max-w-[1240px] flex-col justify-center px-page pb-10 pt-12 sm:pb-24 sm:pt-20">
+        {/* 光晕在手机 GPU 上是实打实的合成成本，手机端缩小并降低模糊半径 */}
+        <div className="pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full bg-live/10 blur-[60px] sm:h-[520px] sm:w-[520px] sm:blur-[100px]" />
+        <div className="pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full bg-today/10 blur-[60px] sm:h-[460px] sm:w-[460px] sm:blur-[110px]" />
         <div className="relative grid w-full gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-12">
           <div className="ui-reveal">
-            <div className="inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-live">
+            <div className="inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 text-meta uppercase tracking-[0.16em] text-live tnum">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
               2010 — {data.now.year} · 还在继续
             </div>
-            <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.28em] text-faint">女流 66 · 石悦</p>
-            <h1 className="mt-3 text-[64px] font-bold leading-[1.0] tracking-[-0.04em] text-ink sm:text-[92px]">女流</h1>
-            <p className="mt-6 max-w-xl text-[15px] leading-8 text-muted">
+            <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">女流 66 · 石悦</p>
+            {/* 负字距是给 Archivo 拉丁字调的；「女流」走中文回退字体，收太紧会挤在一起 */}
+            <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">女流</h1>
+            <p className="mt-6 max-w-xl text-body text-muted">
               十六年的游戏、直播和那些晚上，<br className="hidden sm:block" />
               重新连成一条路。
             </p>
@@ -135,10 +141,10 @@ export default function HomePage() {
 
       {/* 记忆：随机一晚 + 今日今夕 */}
       <section className="border-t border-line bg-surface/15">
-        <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Memory · 记忆盒</p>
-          <h2 className="mt-3 text-[24px] font-semibold tracking-tight text-ink sm:text-[32px]">回到过去，只需要一晚。</h2>
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
+          <Eyebrow>Memory · 记忆盒</Eyebrow>
+          <h2 className="mt-3 text-h2 font-semibold text-ink">回到过去，只需要一晚。</h2>
+          <div className="mt-6 grid gap-5 lg:grid-cols-2">
             <RandomMemory pool={memoryPool} />
             <TodayInHistory
               title={todayMemory?.entry.title ?? null}
@@ -154,17 +160,18 @@ export default function HomePage() {
       {/* 游戏预告 */}
       {gamePreview.length > 0 && (
         <section className="border-t border-line">
-          <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
+          <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-video">Games · 玩过的游戏</p>
-                <h2 className="mt-3 text-[22px] font-semibold tracking-tight text-ink sm:text-[28px]">陪得最久的几款。</h2>
+                <Eyebrow color="#E0A244">Games · 玩过的游戏</Eyebrow>
+                <h2 className="mt-3 text-h2 font-semibold text-ink">陪得最久的几款。</h2>
               </div>
-              <Link href="/games/" className="ui-press rounded-sm font-mono text-[11px] text-live underline underline-offset-4">
+              <Link href="/games/" className="ui-press -my-2 rounded-sm py-2 text-meta text-live underline underline-offset-4">
                 全部游戏 →
               </Link>
             </div>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+            {/* 手机端封面墙出血到屏幕边缘——13% 安全边距下两列会缩到 ~137px，读不出封面 */}
+            <div className="bleed-page mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
               {gamePreview.map((p) => (
                 <GameCard key={p.id} profile={p} />
               ))}
@@ -175,8 +182,8 @@ export default function HomePage() {
 
       {/* 四个房间 */}
       <section className="border-t border-line">
-        <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-6 sm:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Rooms · 四个房间</p>
+        <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
+          <Eyebrow>Rooms · 四个房间</Eyebrow>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <RoomLink href="/chronicle/" color="#5BC8E8" kicker="Chronicle" title="编年史" body="走过的路，一条一条。故事模式先看，档案模式逐条查。" />
             <RoomLink href="/series/" color="#A78BFA" kicker="Series" title="节目" body="固定出现过的栏目——心灵砒霜，和更早的连载。" />
@@ -188,10 +195,7 @@ export default function HomePage() {
 
       <HomeStats data={data} />
 
-      <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-faint sm:flex-row sm:px-6">
-        <span>只索引，不搬运 · 所有播放回到原平台</span>
-        <Link href="/contact/" className="ui-press rounded-sm transition-colors hover:text-live">资料纠错与联系 →</Link>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
@@ -212,8 +216,9 @@ function TodayInHistory({
 }) {
   return (
     <div className="flex h-full flex-col rounded-2xl border border-line/80 bg-surface/25 p-6 sm:p-8">
-      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-faint">Today in history</p>
-      <h2 className="mt-3 text-[22px] font-semibold tracking-tight text-ink sm:text-[26px]">
+      <Eyebrow>Today in history</Eyebrow>
+      {/* 卡片内标题：比节标题低一级，不和「回到过去，只需要一晚。」抢主次 */}
+      <h3 className="mt-3 text-h3 font-semibold text-ink">
         {title ? (
           <>
             这些天的历史上，{yearsAgo === 0 ? '今年' : `${yearsAgo} 年前`}：
@@ -221,19 +226,19 @@ function TodayInHistory({
         ) : (
           '这几天，档案里暂时没有记录。'
         )}
-      </h2>
+      </h3>
       {title && href && (
         <Link href={href} className="ui-press group mt-5">
           <div className="rounded-xl border border-line/80 bg-surface/50 p-4 transition-colors hover:border-muted/70">
-            <p className="font-mono text-[10px] text-faint tnum">{date}</p>
-            <p className="mt-1.5 text-[14px] font-medium leading-snug text-ink transition-colors group-hover:text-white">{title}</p>
-            <p className="mt-2 font-mono text-[10px] text-live">打开这一天 →</p>
+            <p className="font-mono text-meta text-faint tnum">{date}</p>
+            <p className="mt-1.5 text-body font-medium leading-snug text-ink transition-colors group-hover:text-white">{title}</p>
+            <p className="mt-2 text-meta text-live">打开这一天 →</p>
           </div>
         </Link>
       )}
       {yearHref && (
-        <p className="mt-4 font-mono text-[10px] text-faint/70">
-          <Link href={yearHref} className="rounded-sm underline underline-offset-4 transition-colors hover:text-live">
+        <p className="mt-4 text-meta text-faint">
+          <Link href={yearHref} className="-my-2 inline-block rounded-sm py-2 underline underline-offset-4 transition-colors hover:text-live">
             看那年全部记录 →
           </Link>
           <span className="ml-2">ⓘ 以构建日期为准（静态站约束）</span>
@@ -250,13 +255,12 @@ function RoomLink({ href, color, kicker, title, body }: { href: string; color: s
       href={href}
       className="ui-card ui-press group flex flex-col rounded-2xl border border-line/80 bg-surface/40 p-6 transition-colors hover:border-muted/60"
     >
-      <p className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.2em]" style={{ color }}>
-        <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: color }} />
+      <Eyebrow color={color} dot>
         {kicker}
-      </p>
-      <h3 className="mt-4 text-[20px] font-semibold tracking-tight text-ink transition-colors group-hover:text-white">{title}</h3>
-      <p className="mt-2 text-[13px] leading-6 text-muted">{body}</p>
-      <span className="mt-auto pt-4 font-mono text-[11px] text-faint/60 transition-transform group-hover:translate-x-1" style={{ color }}>
+      </Eyebrow>
+      <h3 className="mt-4 text-h3 font-semibold text-ink transition-colors group-hover:text-white">{title}</h3>
+      <p className="mt-2 text-body text-muted">{body}</p>
+      <span aria-hidden className="mt-auto pt-4 text-meta transition-transform group-hover:translate-x-1" style={{ color }}>
         进入 →
       </span>
     </Link>
