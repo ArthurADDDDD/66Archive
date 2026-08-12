@@ -88,7 +88,7 @@
     confidence: high
     duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53266cda1f704967af7d99083636acf8.jpeg?imageslim"
-    games: []
+    games: [assassins-creed-mirage]
     sources:
       - url: "https://www.acfun.cn/v/ac42569725"
         kind: replay
@@ -104,7 +104,7 @@
     confidence: high
     duration_min: 149
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fad6c10378b4c7290fb6fee78e85a16.jpeg?imageslim"
-    games: []
+    games: [assassins-creed-mirage]
     sources:
       - url: "https://www.acfun.cn/v/ac42577685"
         kind: replay
@@ -120,7 +120,7 @@
     confidence: high
     duration_min: 180
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3f293307aca941edaaf920da0c2a8d36.jpeg?imageslim"
-    games: []
+    games: [assassins-creed-mirage]
     sources:
       - url: "https://www.acfun.cn/v/ac42579900"
         kind: replay
@@ -136,7 +136,14 @@
     confidence: high
     duration_min: 424
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df82bb2ec09f438c975315f79c8f57ad.jpeg?imageslim"
-    games: []
+    games: [assassins-creed-mirage]
+    segments:
+      - at: "00:00:00"
+        label: "刺客信条 幻景"
+        game: assassins-creed-mirage
+      - at: "03:31:46"
+        label: "刺客信条 幻景"
+        game: assassins-creed-mirage
     sources:
       - url: "https://www.acfun.cn/v/ac42617191"
         kind: replay

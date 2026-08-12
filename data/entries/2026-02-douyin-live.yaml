@@ -31,6 +31,11 @@
       - barber-shop-simulator
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "乱剪一通"
+      - at: "01:50:28"
+        label: "完整录像无弹幕"
     sources:
       - url: "https://www.bilibili.com/video/BV1WyFeznE47"
         kind: replay
@@ -85,8 +90,24 @@
     confidence: high
     games:
       - nioh-3
+      - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播（13:54 仁王3 至 16:03）由 服部平次（2:09:08）与 bobi华（2:08:51）分别搬运，总时长吻合，已合并为一天一条。直播回放巴拉蹦吧的投稿为仁王3+燕云皇宫跨段合集（5:08:16），此处仅对应仁王3 段（2:09:01）。"
+    segments:
+      - at: "00:00:00"
+        label: "仁王3"
+      - at: "01:00:01"
+        label: "仁王3"
+      - at: "02:00:02"
+        label: "仁王3"
+      - at: "02:09:01"
+        label: "更新拉~燕云新地图皇宫"
+      - at: "03:09:02"
+        label: "更新拉~燕云新地图皇宫"
+      - at: "03:30:25"
+        label: "更新拉~燕云新地图皇宫"
+      - at: "04:30:26"
+        label: "更新拉~燕云新地图皇宫"
     sources:
       - url: "https://www.bilibili.com/video/BV1nrFrziEbD"
         kind: replay
@@ -108,6 +129,15 @@
       - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播（18:48 燕云新地图皇宫 至 21:48）由 bobi华（BV1ijFCzhEG5，3:00:17）与 不懒bot（BV1KUF7zCE9H，剪辑 2:59:33，投稿另含完整录像页）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18-48  更新拉~燕云新地图皇宫"
+      - at: "01:00:01"
+        label: "19-48 更新拉~燕云新地图皇宫"
+      - at: "02:00:02"
+        label: "20-48 更新拉~燕云新地图皇宫"
+      - at: "03:00:03"
+        label: "21-48 更新拉~燕云新地图皇宫"
     sources:
       - url: "https://www.bilibili.com/video/BV1ijFCzhEG5"
         kind: replay
@@ -129,6 +159,15 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 3:51:00）与 bobi华（3:51:47）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18-33 体验鸣潮2.2主线剧情"
+      - at: "01:00:01"
+        label: "19-33 体验鸣潮2.2主线剧情"
+      - at: "02:00:02"
+        label: "20-33 体验鸣潮2.2主线剧情"
+      - at: "03:00:03"
+        label: "21-33 体验鸣潮2.2主线剧情"
     sources:
       - url: "https://www.bilibili.com/video/BV1CbFxzbEGP"
         kind: replay
@@ -184,6 +223,13 @@
       - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1BJcgzVEXJ，2:42:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:42:26）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "19-11 燕云中渡桥剧情来了"
+      - at: "01:00:02"
+        label: "20-11 燕云中渡桥剧情来了"
+      - at: "02:00:03"
+        label: "21-11-55 燕云中渡桥剧情来了"
     sources:
       - url: "https://www.bilibili.com/video/BV1BJcgzVEXJ"
         kind: replay
@@ -205,6 +251,13 @@
       - reanimal
     tags: [弹幕版]
     note: "同一场直播（22:13 聊天→《生灵重塑》→次日 00:17 收尾）由 直播回放巴拉蹦吧（弹幕/纯净双版 2:33:39）与 bobi华（2:32:15）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "女流66正在直播"
+      - at: "01:00:01"
+        label: "小小梦魇工作室新游戏《生灵重塑》"
+      - at: "02:00:02"
+        label: "小小梦魇工作室新游戏《生灵重塑》"
     sources:
       - url: "https://www.bilibili.com/video/BV1J3cJz6Ebm"
         kind: replay
@@ -226,6 +279,13 @@
       - reanimal
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "13-35 聊天 &《生灵重塑》"
+      - at: "01:00:02"
+        label: "14-35 《生灵重塑》"
+      - at: "02:00:02"
+        label: "15-35 《生灵重塑》"
     sources:
       - url: "https://www.bilibili.com/video/BV1VdZLBVEcA"
         kind: replay
@@ -247,6 +307,17 @@
       - resident-evil-9
     tags: [弹幕版]
     note: "同一场直播由 直播回放巴拉蹦吧（弹幕/纯净双版 4:04:04）、bobi华（4:04:01）与 服部平次（4:04:13）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "生化危机9最高画质首播"
+      - at: "01:00:02"
+        label: "生化危机9最高画质首播"
+      - at: "02:00:02"
+        label: "生化危机9最高画质首播"
+      - at: "03:00:02"
+        label: "生化危机9最高画质首播"
+      - at: "04:00:04"
+        label: "生化危机9最高画质首播"
     sources:
       - url: "https://www.bilibili.com/video/BV1nxAkzjEx1"
         kind: replay
@@ -268,6 +339,23 @@
       - resident-evil-9
     tags: [弹幕版]
     note: "同一场直播（13:01-16:01 下午段 + 19:38-22:56 晚上段）由 直播回放巴拉蹦吧（弹幕版拆两个投稿 5:29:36+1:31:06、纯净版 7:00:42）、bobi华（中午 3:29:38+晚上 3:31:14 两投稿）与 服部平次（7:00:02）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "生化危机9最高画质首播"
+      - at: "01:00:01"
+        label: "生化危机9最高画质首播"
+      - at: "02:00:03"
+        label: "生化危机9最高画质首播"
+      - at: "03:00:02"
+        label: "生化危机9最高画质首播"
+      - at: "03:29:34"
+        label: "生化危机9最高画质首播"
+      - at: "04:29:36"
+        label: "生化危机9最高画质首播"
+      - at: "05:29:36"
+        label: "生化危机9最高画质首播"
+      - at: "06:29:36"
+        label: "生化危机9最高画质首播"
     sources:
       - url: "https://www.bilibili.com/video/BV1naA2zZESw"
         kind: replay
@@ -289,6 +377,17 @@
       - resident-evil-9
     tags: [弹幕版]
     note: "同一场直播（18:15-23:00）由 直播回放巴拉蹦吧（弹幕版 3:38:43 缺首段、纯净版 4:38:44）、bobi华（4:39:03）与 服部平次（4:38:36）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "生化危机9最高画质首播"
+      - at: "01:00:01"
+        label: "生化危机9最高画质首播"
+      - at: "02:00:01"
+        label: "生化危机9最高画质首播"
+      - at: "03:00:02"
+        label: "生化危机9最高画质首播"
+      - at: "04:00:04"
+        label: "生化危机9最高画质首播"
     sources:
       - url: "https://www.bilibili.com/video/BV14BAaztEUv"
         kind: replay

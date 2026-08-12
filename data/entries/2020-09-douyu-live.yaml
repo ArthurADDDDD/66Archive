@@ -6,7 +6,7 @@
     confidence: high
     duration_min: 234
     cover: "https://tx-free-imgs.acfun.cn/o_1eh7djek4161qm7v3kgf0t1jfe0.jpeg?imageslim"
-    games: [contra]
+    games: [contra, stickman]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -144,7 +144,7 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/o_1ehpgg8pc1n0e1nh86h01c8drct0.jpeg?imageslim"
-    games: [contra]
+    games: [contra, craftopia]
     segments:
       - at: "00:00:00"
         label: "创世理想乡"
@@ -434,7 +434,7 @@
     confidence: high
     duration_min: 309
     cover: "https://tx-free-imgs.acfun.cn/o_1ej9plb241t8upqp182512fb1vd80.jpeg?imageslim"
-    games: [rise-of-kingdoms]
+    games: [rise-of-kingdoms, undermine]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"

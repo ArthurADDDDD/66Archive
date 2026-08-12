@@ -614,31 +614,6 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2021-01-21-live-01
-    type: live
-    date: "2021-01-21"
-    title: "心灵砒霜"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 123
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c459c626737b4c80b1be2991600b623f.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "00:40:56"
-        label: "心灵砒霜弹幕版"
-      - at: "01:21:55"
-        label: "心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac32434021"
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
   - id: 2021-01-21-live-02
     type: live
     date: "2021-01-21"

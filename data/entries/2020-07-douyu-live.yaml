@@ -64,7 +64,7 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/o_1ecal7rek19dj1c4e1i421mc41v0g0.jpeg?imageslim"
-    games: []
+    games: [luoxuan-fengbao]
     segments:
       - at: "00:00:00"
         label: "佩奇又见佩奇"
@@ -133,29 +133,6 @@
       - url: "https://www.acfun.cn/v/ac16704479"
         kind: replay
         parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-07-07-live-02
-    type: live
-    date: "2020-07-07"
-    title: "对马岛之鬼(下部分）"
-    platform: douyu
-    confidence: high
-    duration_min: 170
-    cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
-    games: [ghost-of-tsushima]
-    segments:
-      - at: "00:00:00"
-        label: "对马岛之鬼"
-      - at: "01:00:01"
-        label: "对马岛之鬼"
-      - at: "02:00:04"
-        label: "对马岛之鬼"
-    sources:
-      - url: "https://www.acfun.cn/v/ac16879036"
-        kind: replay
-        parts: 3
         status: alive
     contributed_by: data-agent
 
@@ -268,15 +245,16 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-07-16-live-01
+  - id: 2020-07-17-live-01
     type: live
-    date: "2020-07-16"
+    date: "2020-07-17"
     title: "输掉的佩奇，悲伤的唱"
     platform: douyu
     confidence: high
     duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/o_1edeb9qvije11mgm12do8erse30.jpeg?imageslim"
     games: []
+    note: "原误标 7.16：fileName 日期不可靠（对马岛段曾出现 7.7 的同样错误），上传时间 7.17 20:30/20:42 即直播结束时刻，且 ac 号与紧邻的 ac16879036 仅差 2658（≈3.5h），判定为 7.17 下午场。"
     segments:
       - at: "00:00:00"
         label: "输掉的佩奇，悲伤的唱"
@@ -289,50 +267,70 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-07-17-live-02
+    type: live
+    date: "2020-07-17"
+    title: "对马岛之鬼(下部分)"
+    platform: douyu
+    confidence: high
+    duration_min: 170
+    cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
+    games: [ghost-of-tsushima]
+    note: "原误标 7.07：对马岛 7.18 才发售，7.07 不可能直播；fileName 标 2020.7.7 与 7.18 场 ac16894792 内混入的 P6-2020.7.7 同源（ACFun 录制日期 bug）。上传 7.18 00:15-00:32 即直播结束时刻，判定为 7.17 深夜场（21:45-次日 00:15，P5-P7 为当晚第二段，上部分 P1-P4 无独立回放）。"
+    segments:
+      - at: "00:00:00"
+        label: "对马岛之鬼"
+      - at: "01:00:01"
+        label: "对马岛之鬼"
+      - at: "02:00:04"
+        label: "对马岛之鬼"
+    sources:
+      - url: "https://www.acfun.cn/v/ac16879036"
+        kind: replay
+        parts: 3
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-07-18-live-01
     type: live
     date: "2020-07-18"
     title: "对马岛之鬼"
     platform: douyu
     confidence: high
-    duration_min: 240
+    duration_min: 497
     cover: "https://tx-free-imgs.acfun.cn/o_1edh2sqsa1ef31noo30o1t8dgqm0.jpeg?imageslim"
     games: [ghost-of-tsushima]
+    note: "ACFun 将同一场直播按 60 分钟等长切片拆为 2 个回放视频（ac16894131 含 P1–P4、ac16894792 含 P5–P7，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "Part1"
-      - at: "01:00:01"
-        label: "Part2"
-      - at: "02:00:01"
-        label: "Part3"
-      - at: "03:00:04"
-        label: "Part4"
+        label: "P1"
+        game: ghost-of-tsushima
+      - at: "01:40:00"
+        label: "P2"
+        game: ghost-of-tsushima
+      - at: "03:20:00"
+        label: "P3"
+        game: ghost-of-tsushima
+      - at: "05:00:06"
+        label: "P4"
+        game: ghost-of-tsushima
+      - at: "06:40:12"
+        label: "P5"
+        game: ghost-of-tsushima
+      - at: "07:40:12"
+        label: "P6"
+        game: ghost-of-tsushima
+      - at: "08:40:12"
+        label: "P6"
+        game: ghost-of-tsushima
+      - at: "09:40:12"
+        label: "P7"
+        game: ghost-of-tsushima
     sources:
       - url: "https://www.acfun.cn/v/ac16894131"
         kind: replay
         parts: 4
         status: alive
-    contributed_by: data-agent
-
-  - id: 2020-07-18-live-02
-    type: live
-    date: "2020-07-18"
-    title: "对马岛之鬼(下部分）"
-    platform: douyu
-    confidence: high
-    duration_min: 257
-    cover: "https://tx-free-imgs.acfun.cn/o_1edh2ur331rflv6e5kj2m6nec0.jpeg?imageslim"
-    games: [ghost-of-tsushima]
-    segments:
-      - at: "00:00:00"
-        label: "Part1"
-      - at: "01:00:02"
-        label: "Part2"
-      - at: "02:00:04"
-        label: "Part3"
-      - at: "03:00:06"
-        label: "Part4"
-    sources:
       - url: "https://www.acfun.cn/v/ac16894792"
         kind: replay
         parts: 4

@@ -33,30 +33,26 @@
   - id: 2022-02-06-live-01
     type: live
     date: "2022-02-06"
-    title: "消逝的光芒"
-    platform: douyu
-    confidence: high
-    duration_min: 267
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c1175bfe7a514d6d8f3d746b5536b793.jpeg?imageslim"
-    games: []
-    sources:
-      - url: "https://www.acfun.cn/v/ac33522625"
-        kind: replay
-        parts: 1
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-06-live-02
-    type: live
-    date: "2022-02-06"
     title: "消逝的光芒2"
     platform: douyu
     confidence: high
-    duration_min: 267
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_256c20260fb3491e86d6db6620bab359.jpeg?imageslim"
+    duration_min: 534
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c1175bfe7a514d6d8f3d746b5536b793.jpeg?imageslim"
     games: [dying-light-2]
+    note: "ACFun 将同一场直播拆为 2 个回放段（ac33522632 含 P1、ac33522625 含 P2，P 编号连续、同时长），按一天一条原则合并为单条。"
+    segments:
+      - at: "00:00:00"
+        label: "P1"
+        game: dying-light-2
+      - at: "04:26:36"
+        label: "P2"
+        game: dying-light-2
     sources:
       - url: "https://www.acfun.cn/v/ac33522632"
+        kind: replay
+        parts: 1
+        status: alive
+      - url: "https://www.acfun.cn/v/ac33522625"
         kind: replay
         parts: 1
         status: alive
@@ -134,7 +130,7 @@
     confidence: high
     duration_min: 72
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b8d0d2e39ab147739d986131e861a289.jpeg?imageslim"
-    games: []
+    games: [guijia-yitu-2]
     sources:
       - url: "https://www.acfun.cn/v/ac33678301"
         kind: replay
@@ -257,61 +253,26 @@
   - id: 2022-02-27-live-01
     type: live
     date: "2022-02-27"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 140
+    duration_min: 628
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5c7feb9099d24b63b81e8394ae7e1bbc.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 4 个回放段（P1–P4，同封面、同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33821985"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-27-live-02
-    type: live
-    date: "2022-02-27"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 140
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_34fd79cdd89e491594ea0231cd3523bc.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33821994"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-27-live-03
-    type: live
-    date: "2022-02-27"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 174
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_66bca88cca3d479f906902dbdca5689f.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33822161"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-27-live-04
-    type: live
-    date: "2022-02-27"
-    title: "艾尔登法环 P4"
-    platform: douyu
-    confidence: high
-    duration_min: 174
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9752d03cb8dc4d4390873e540b959745.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33822164"
         kind: replay
         parts: 1
@@ -321,47 +282,25 @@
   - id: 2022-02-28-live-01
     type: live
     date: "2022-02-28"
-    title: "艾尔登法环 P1"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 182
+    duration_min: 546
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_87e581e0aa7945fd87ac662155919069.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆分为 3 个回放段（P1–P3，同封面、同夜上传），按一天一条原则合并为单条。"
     sources:
       - url: "https://www.acfun.cn/v/ac33833148"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-28-live-02
-    type: live
-    date: "2022-02-28"
-    title: "艾尔登法环 P2"
-    platform: douyu
-    confidence: high
-    duration_min: 182
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a07ead3962d64aacad056cfc04d5979a.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33833141"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-02-28-live-03
-    type: live
-    date: "2022-02-28"
-    title: "艾尔登法环 P3"
-    platform: douyu
-    confidence: high
-    duration_min: 182
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_55700ff652ed44e58899e327dea5f96d.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33833386"
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
+

@@ -517,42 +517,34 @@
     title: "永劫无间全明星"
     platform: douyu
     confidence: high
-    duration_min: 247
+    duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_265ab6fa93e84a81af57c30766afc403.jpeg?imageslim"
     games: [naraka-bladepoint]
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac30390163 含 P1–P5、ac30389941 含 P6，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "永劫无间全明星"
+        label: "P1"
         game: naraka-bladepoint
-      - at: "00:44:59"
-        label: "永劫无间全明星"
+      - at: "00:45:00"
+        label: "P2"
         game: naraka-bladepoint
-      - at: "01:35:32"
-        label: "永劫无间全明星"
+      - at: "01:35:36"
+        label: "P3"
         game: naraka-bladepoint
-      - at: "02:26:09"
-        label: "永劫无间全明星"
+      - at: "02:26:12"
+        label: "P4"
         game: naraka-bladepoint
-      - at: "03:16:46"
-        label: "永劫无间全明星"
+      - at: "03:16:48"
+        label: "P5"
+        game: naraka-bladepoint
+      - at: "04:07:24"
+        label: "P6"
         game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30390163"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-07-24-live-02
-    type: live
-    date: "2021-07-24"
-    title: "永劫无间全明星（x）"
-    platform: douyu
-    confidence: high
-    duration_min: 51
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_961806dcb919476c8b64c369b93879bb.jpeg?imageslim"
-    games: [naraka-bladepoint]
-    sources:
       - url: "https://www.acfun.cn/v/ac30389941"
         kind: replay
         parts: 1
@@ -718,7 +710,7 @@
     confidence: high
     duration_min: 242
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dc03889f274042468089e1a08af77dd1.jpeg?imageslim"
-    games: [naraka-bladepoint]
+    games: [naraka-bladepoint, sky-children-of-the-light]
     segments:
       - at: "00:00:00"
         label: "光遇"

@@ -423,7 +423,7 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_17/1510921212.jpg?imageslim"
-    games: [super-mario-odyssey]
+    games: [super-mario-odyssey, getting-over-it]
     segments:
       - at: "00:00:00"
         label: "P1.1-11.17-游戏前聊10块钱的"
@@ -703,6 +703,9 @@
       - url: "https://www.acfun.cn/v/ac4107292"
         kind: replay
         parts: 15
+        status: alive
+      - url: "https://www.bilibili.com/video/BV12Y411F7WZ"
+        kind: replay
         status: alive
     contributed_by: data-agent
 
