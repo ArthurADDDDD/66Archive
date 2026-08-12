@@ -54,7 +54,7 @@ export default function SeriesPage() {
                 心灵砒霜
               </h2>
               <p className="mt-5 max-w-xl text-[13px] leading-7 text-muted">{pishuang.description}</p>
-              <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 font-mono text-[11px] text-faint tnum">
+              <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 font-mono text-[11px] text-muted tnum">
                 <span className="text-[15px] text-ink">{pishuang.count} 期</span>
                 <span>档案确认 · 构建期从数据派生</span>
                 <span>2016.08 — 2023.11</span>
@@ -71,10 +71,10 @@ export default function SeriesPage() {
                   <p className="font-display text-[18px] font-medium leading-relaxed tracking-tight text-ink/90 sm:text-[22px]">
                     第一期是「{pishuang.firstTitle}」。
                   </p>
-                  <p className="mt-3 font-mono text-[10px] leading-5 text-faint/70">第一期标题，原文照录 · {pishuang.firstDate}</p>
+                  <p className="mt-3 font-mono text-[10px] leading-5 text-muted">第一期标题，原文照录 · {pishuang.firstDate}</p>
                 </blockquote>
               )}
-              <p className="max-w-md text-[13px] leading-7 text-faint">
+              <p className="max-w-md text-[13px] leading-7 text-muted">
                 游戏暂停，邮件打开，一个星期日。后来这件事被保存下来 {pishuang.count} 次——有的很长，有的很短，固定地出现在每周日。
               </p>
               <Link
