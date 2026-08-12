@@ -36,7 +36,6 @@
         parts: 11
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-03-live-01
     type: live
     date: "2018-01-03"
@@ -73,7 +72,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-05-live-01
     type: live
     date: "2018-01-05"
@@ -110,7 +108,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-06-live-01
     type: live
     date: "2018-01-06"
@@ -137,7 +134,6 @@
         parts: 5
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-07-live-01
     type: live
     date: "2018-01-07"
@@ -172,7 +168,6 @@
         parts: 8
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-08-live-01
     type: live
     date: "2018-01-08"
@@ -207,7 +202,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-09-live-01
     type: live
     date: "2018-01-09"
@@ -244,7 +238,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-10-live-01
     type: live
     date: "2018-01-10"
@@ -281,7 +274,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-12-live-01
     type: live
     date: "2018-01-12"
@@ -324,7 +316,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-13-live-01
     type: live
     date: "2018-01-13"
@@ -359,7 +350,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-14-live-01
     type: live
     date: "2018-01-14"
@@ -388,30 +378,6 @@
         parts: 5
         status: alive
     contributed_by: data-agent
-
-  - id: 2018-01-15-live-01
-    type: live
-    date: "2018-01-15"
-    title: "Just Shapes & Beats"
-    platform: douyu
-    confidence: high
-    duration_min: 212
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_06_09/1528545956.JPG?imageslim"
-    games: [just-shapes-and-beats]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:09:59"
-        label: "Just Shapes & Beats"
-      - at: "01:51:06"
-        label: "Just Shapes & Beats"
-    sources:
-      - url: "https://www.acfun.cn/v/ac4400022"
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
   - id: 2018-01-15-live-02
     type: live
     date: "2018-01-15"
@@ -442,79 +408,6 @@
         parts: 5
         status: alive
     contributed_by: data-agent
-
-  - id: 2018-01-15-live-03
-    type: live
-    date: "2018-01-15"
-    series: xinling-pishuang
-    title: "心灵砒霜"
-    platform: douyu
-    confidence: high
-    duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "砒霜前聊10块钱的"
-      - at: "00:50:59"
-        label: "心灵砒霜"
-      - at: "01:56:18"
-        label: "心灵砒霜"
-      - at: "03:01:37"
-        label: "心灵砒霜"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10010771"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2018-01-15-live-04
-    type: live
-    date: "2018-01-15"
-    series: xishuo-liaozhai
-    title: "戏说聊斋"
-    platform: douyu
-    confidence: high
-    duration_min: 16
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965702.jpg?imageslim"
-    games: []
-    tags: [戏说聊斋]
-    sources:
-      - url: "https://www.acfun.cn/v/ac4314841"
-        kind: replay
-        parts: 1
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2018-01-15-live-05
-    type: live
-    date: "2018-01-15"
-    title: "疑案追声中元节特别版&牧场物语"
-    platform: douyu
-    confidence: high
-    duration_min: 302
-    cover: "https://tx-free-imgs.acfun.cn/FotWaIDCUkQ0Ia0aLrNzgj6Lc7BT?imageslim"
-    games: [unheard, sos-fomt]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:26:11"
-        label: "疑案追声中元节特别版"
-      - at: "02:00:14"
-        label: "疑案追声中元节特别版"
-      - at: "02:30:14"
-        label: "牧场物语"
-      - at: "04:00:22"
-        label: "牧场物语"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10746697"
-        kind: replay
-        parts: 5
-        status: alive
-    contributed_by: data-agent
-
   - id: 2018-01-16-live-01
     type: live
     date: "2018-01-16"
@@ -553,7 +446,6 @@
         parts: 11
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-17-live-01
     type: live
     date: "2018-01-17"
@@ -581,7 +473,6 @@
         parts: 4
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-17-live-02
     type: live
     date: "2018-01-17"
@@ -616,7 +507,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-19-live-01
     type: live
     date: "2018-01-19"
@@ -653,7 +543,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-20-live-01
     type: live
     date: "2018-01-20"
@@ -690,7 +579,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-01
     type: live
     date: "2018-01-21"
@@ -706,7 +594,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-02
     type: live
     date: "2018-01-21"
@@ -722,7 +609,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-03
     type: live
     date: "2018-01-21"
@@ -758,7 +644,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-04
     type: live
     date: "2018-01-21"
@@ -774,7 +659,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-05
     type: live
     date: "2018-01-21"
@@ -807,7 +691,6 @@
         parts: 8
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-06
     type: live
     date: "2018-01-21"
@@ -823,7 +706,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-07
     type: live
     date: "2018-01-21"
@@ -839,7 +721,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-08
     type: live
     date: "2018-01-21"
@@ -855,7 +736,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-21-live-09
     type: live
     date: "2018-01-21"
@@ -871,7 +751,6 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-22-live-01
     type: live
     date: "2018-01-22"
@@ -908,7 +787,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-24-live-01
     type: live
     date: "2018-01-24"
@@ -959,7 +837,6 @@
         parts: 17
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-24-live-02
     type: live
     date: "2018-01-24"
@@ -990,17 +867,17 @@
         parts: 7
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-24-live-03
     type: live
     date: "2018-01-24"
     title: "相声专场《看病"
+    series: xinling-pishuang
     platform: douyu
     confidence: high
     duration_min: 96
     cover: "https://tx-free-imgs.acfun.cn/content/2018_01_27/1517062109.JPG?imageslim"
     games: []
-    tags: [弹幕版]
+    tags: [弹幕版, 心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "相声专场《看病》- 弹幕版"
@@ -1015,8 +892,11 @@
         kind: replay
         parts: 4
         status: alive
+      - url: "https://www.bilibili.com/video/BV1PW411x7Td"
+        kind: replay
+        status: alive
+    note: "即网易云心灵砒霜第 69 期《石大壮结石历险特别篇》；壮壮《结石记》出处（粉丝剪辑 BV1PW411x7Td，名台词「你永远不知道那天我经历了什么」）"
     contributed_by: data-agent
-
   - id: 2018-01-25-live-01
     type: live
     date: "2018-01-25"
@@ -1039,7 +919,6 @@
         parts: 3
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-26-live-01
     type: live
     date: "2018-01-26"
@@ -1074,7 +953,6 @@
         parts: 9
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-28-live-01
     type: live
     date: "2018-01-28"
@@ -1105,7 +983,6 @@
         parts: 6
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-29-live-01
     type: live
     date: "2018-01-29"
@@ -1130,7 +1007,6 @@
         parts: 4
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-30-live-01
     type: live
     date: "2018-01-30"
@@ -1155,7 +1031,6 @@
         parts: 4
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-30-live-02
     type: live
     date: "2018-01-30"
@@ -1192,7 +1067,6 @@
         parts: 10
         status: alive
     contributed_by: data-agent
-
   - id: 2018-01-31-live-01
     type: live
     date: "2018-01-31"
