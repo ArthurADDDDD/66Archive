@@ -9,7 +9,7 @@ export function RelatedRail({ rails }: { rails: Rail[] }) {
 
   return (
     <section className="border-t border-line py-12 sm:py-20">
-      <div className="mx-auto max-w-[1240px] px-page">
+      <div className="site-container px-page">
         <Eyebrow>Related · 相关的路</Eyebrow>
         <h2 className="mt-2 text-h3 font-semibold text-ink">顺着这条路，还能走到</h2>
         <div className="mt-6 space-y-6">

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StoryYear } from '@/lib/story-years'
 import { Eyebrow, MediaFrame } from './primitives'
@@ -24,15 +25,18 @@ export function StoryTimeline({
   total,
   latestYear,
   onOpenArchive,
+  modeControl,
 }: {
   years: StoryYear[]
   total: number
   latestYear: number
   onOpenArchive: (year: number) => void
+  modeControl?: ReactNode
 }) {
   return (
-    <main className="ui-page-in mx-auto max-w-[1240px] px-page pb-20">
-      <section className="ui-reveal py-8 sm:py-12">
+    <main className="ui-page-in site-container px-page pb-20">
+      {modeControl && <div className="ui-reveal pt-4 sm:hidden">{modeControl}</div>}
+      <section className="ui-reveal pb-8 pt-4 sm:py-12">
         <Eyebrow color="#5BC8E8">Chronicle · 编年史 · 故事模式</Eyebrow>
         <h1 className="mt-4 max-w-2xl text-h1 font-semibold">时间不是一条列表，是一路走过来的。</h1>
         <p className="mt-5 max-w-2xl text-body text-muted">

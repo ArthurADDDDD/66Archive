@@ -100,7 +100,7 @@ export function SearchField({
             }}
             placeholder={mobilePlaceholder ?? '搜索'}
             aria-label={ariaLabel}
-            className="w-full bg-transparent px-2.5 py-2.5 text-[14px] text-ink placeholder:text-faint focus:outline-none"
+            className="w-full bg-transparent px-2.5 py-2.5 text-sm text-ink placeholder:text-faint focus:outline-none"
           />
         </div>
       )}

@@ -1,52 +1,38 @@
 /**
- * 活动纹理：按年的小刻度条。
- * 不是甘特图，是「2016 ━━━ ━━ ━━━━━━」式的质感。
- * 缺年份留空——空缺本身是历史的一部分。
+ * 节目活动摘要。
+ * 所有节目统一为同一种「活跃年份」信息条，不再用迷你柱状图表达时间跨度。
  */
 export function ActivityStrip({
   perYear,
   color = '#8B8FA3',
-  height = 26,
   className = '',
 }: {
   perYear: { year: number; count: number }[]
   color?: string
+  /** 保留旧调用参数兼容；摘要条不再依赖固定高度。 */
   height?: number
   className?: string
+  descriptive?: boolean
 }) {
-  const byYear = new Map(perYear.map((p) => [p.year, p.count]))
-  const years = perYear.length ? range(perYear[0].year, perYear[perYear.length - 1].year) : []
-  const max = Math.max(1, ...perYear.map((p) => p.count))
+  const active = perYear.filter((item) => item.count > 0)
+  const first = active[0]?.year
+  const last = active[active.length - 1]?.year
+  const total = active.reduce((sum, item) => sum + item.count, 0)
+  const years = first == null ? '暂无记录' : first === last ? String(first) : `${first} — ${last}`
 
   return (
     <div
-      className={`flex items-end gap-4 ${className}`}
+      className={`flex min-h-[2.75rem] items-center justify-between gap-4 rounded-lg border border-line/60 bg-base/25 px-[clamp(0.75rem,1vw,1.25rem)] py-2.5 ${className}`}
       role="img"
-      aria-label={`按年活动分布：${perYear.map((p) => `${p.year} 年 ${p.count} 期`).join('，')}`}
+      aria-label={`活跃年份 ${years}${total ? `，共 ${total} 期` : ''}`}
     >
-      {years.map((year) => {
-        const count = byYear.get(year) ?? 0
-        return (
-          <div key={year} className="flex w-[7px] flex-col items-center sm:w-[5px]">
-            <div className="flex items-end" style={{ height }}>
-              {count > 0 && (
-                <span
-                  className="w-[5px] rounded-full"
-                  style={{ height: Math.max(5, Math.round(5 + (count / max) * (height - 5))), background: color }}
-                  title={`${year} 年 ${count} 期`}
-                />
-              )}
-            </div>
-            <span className={`mt-1 font-mono text-meta leading-3 text-faint tnum ${year % 2 ? 'hidden sm:block' : ''}`}>{year}</span>
-          </div>
-        )
-      })}
+      <span className="flex min-w-0 items-center gap-2 text-meta text-muted">
+        <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: color, boxShadow: `0 0 0.625rem ${color}66` }} />
+        活跃年份
+      </span>
+      <span className="min-w-0 text-right font-mono text-meta text-ink tnum">
+        {years}{total > 0 && <> · {total.toLocaleString()} 期</>}
+      </span>
     </div>
   )
-}
-
-function range(a: number, b: number) {
-  const out: number[] = []
-  for (let i = a; i <= b; i++) out.push(i)
-  return out
 }

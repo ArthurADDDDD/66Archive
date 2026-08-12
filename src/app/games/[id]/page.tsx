@@ -62,15 +62,15 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="games" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="games" />
-        <Link href="/games/" className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/games/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           ← 游戏收藏架
         </Link>
       </header>
 
       {/* 第一屏：先问发生过什么，数据在后面 */}
-      <section className="relative mx-auto max-w-[1240px] px-page pb-16 pt-14 sm:pb-24 sm:pt-20">
+      <section className="relative site-container px-page pb-16 pt-14 sm:pb-24 sm:pt-20">
         {sparse ? (
           <SparseHero profile={profile} />
         ) : (
@@ -122,7 +122,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       {/* 第二屏：指标（在问题之后，而非之前）；稀疏游戏跳过 */}
       {!sparse && profile.sessions > 0 && (
         <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
-          <div className="mx-auto max-w-[1240px] px-page">
+          <div className="site-container px-page">
             <p className="text-meta uppercase tracking-[0.16em] text-faint">数字 · 只统计已标记的场次</p>
             <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <Stat value={profile.hoursLabel} label="总时间" />
@@ -154,7 +154,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       {/* 这些晚上：每条都通向编年史条目 */}
       {profile.entries.length > 0 && (
         <section className="border-t border-line py-14 sm:py-20">
-          <div className="mx-auto max-w-[1240px] px-page">
+          <div className="site-container px-page">
             <p className="text-meta uppercase tracking-[0.16em] text-faint">Sessions · 这些晚上</p>
             <h2 className="mt-2 text-h3 font-semibold text-ink">档案里的相关场次</h2>
             <ul className="mt-6 divide-y divide-line/60 border-y border-line/60">
@@ -179,10 +179,10 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
             <div className="mt-8">
               <Link
                 href={ctaHref}
-                className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
+                className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
               >
                 在编年史里查看全部相关记录
-                <span className="font-mono text-[12px] transition-transform group-hover:translate-x-1">→</span>
+                <span className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
           </div>
@@ -227,10 +227,10 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
             src={profile.cover}
             alt={`${profile.name} 封面`}
             referrerPolicy="no-referrer"
-            className="aspect-video w-full max-w-[420px] rounded-xl border border-line/80 bg-raised object-cover"
+            className="aspect-video w-full max-w-[26.25rem] rounded-xl border border-line/80 bg-raised object-cover"
           />
         ) : (
-          <div className="flex aspect-video w-full max-w-[420px] items-center justify-center rounded-xl border border-line/80 bg-raised p-8">
+          <div className="flex aspect-video w-full max-w-[26.25rem] items-center justify-center rounded-xl border border-line/80 bg-raised p-8">
             <span className="text-center text-h3 font-bold text-ink/85">{profile.name}</span>
           </div>
         )}
