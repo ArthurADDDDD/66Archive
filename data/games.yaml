@@ -1,326 +1,5 @@
 # 游戏库。这是关于「游戏」本身的客观资料，与主播的游玩记录无关。
 # 采集 Agent 需要新游戏时，在交付说明里单列，由人类添加到此处。
-  - id: a-little-to-the-left
-    name: A Little to the Left
-    aliases: []
-  - id: ai-escape-room
-    name: AI密室逃脱
-    aliases: []
-  - id: are-you-sleeping
-    name: 睡了吗
-    aliases: []
-  - id: arena-breakout
-    name: 暗区突围
-    aliases:
-      - Arena Breakout
-  - id: arknights-endfield
-    name: 明日方舟：终末地
-    aliases:
-      - 'Arknights: Endfield'
-      - 明日方舟终末地
-  - id: auction-king
-    name: 竞拍之王
-    aliases: []
-  - id: baldurs-gate-3
-    name: 博德之门3
-    aliases: [Baldur's Gate 3, BG3]
-  - id: barber-shop-simulator
-    name: 乱剪一通
-    aliases:
-      - Barber Shop Simulator
-  - id: bento-blocks
-    name: Bento Blocks
-    aliases: []
-  - id: black-myth-wukong
-    name: 黑神话：悟空
-    aliases:
-      - 'Black Myth: Wukong'
-      - 黑神话悟空
-  - id: call-of-duty-black-ops-7
-    name: 使命召唤：黑色行动7
-    aliases:
-      - 'Call of Duty: Black Ops 7'
-      - Black Ops 7
-      - 黑色行动7
-  - id: card-devil
-    name: 卡片魔王
-    aliases: []
-  - id: changan-stone-dance
-    name: 长安石之舞
-    aliases: []
-  - id: clair-obscur-expedition-33
-    name: 33号远征队
-    aliases:
-      - 'Clair Obscur: Expedition 33'
-      - 33号远征
-  - id: crimson-desert
-    name: 红色沙漠
-    aliases:
-      - Crimson Desert
-  - id: daodao-wizard
-    name: 叨叨巫师
-    aliases: []
-  - id: dark-souls-3
-    name: 黑暗之魂3
-    aliases: [Dark Souls III, 魂3]
-  - id: dave-the-diver
-    name: 潜水员戴夫
-    aliases:
-      - Dave the Diver
-  - id: death-stranding-2-on-the-beach
-    name: 死亡搁浅2：冥滩之上
-    aliases:
-      - Death Stranding 2
-      - 死亡搁浅2
-  - id: dig-for-dog
-    name: 掘地求狗
-    aliases: []
-  - id: disco-elysium
-    name: 极乐迪斯科
-    aliases: [Disco Elysium]
-  - id: donkey-kong-bananza
-    name: 咚奇刚：蕉力全开
-    aliases:
-      - Donkey Kong Bananza
-  - id: duckov
-    name: 逃离鸭科夫
-    aliases:
-      - Duckov
-  - id: dune-awakening
-    name: 沙丘：觉醒
-    aliases:
-      - 'Dune: Awakening'
-      - 沙丘觉醒
-  - id: elden-ring
-    name: 艾尔登法环
-    aliases: [Elden Ring, 老头环]
-  - id: elden-ring-nightreign
-    name: 艾尔登法环：黑夜君临
-    aliases:
-      - Elden Ring Nightreign
-      - 老头环黑夜君临
-  - id: farlight-84
-    name: 远光84
-    aliases:
-      - Farlight 84
-  - id: fengbao-pasidui
-    name: 风暴怕死队
-    aliases: []
-  - id: her-trees
-    name: 她的树
-    aliases: []
-  - id: hollow-knight
-    name: 空洞骑士
-    aliases: [Hollow Knight]
-  - id: honor-of-kings-world
-    name: 王者荣耀：世界
-    aliases:
-      - 王者荣耀世界
-  - id: infinity-nikki
-    name: 无限暖暖
-    aliases:
-      - Infinity Nikki
-  - id: into-the-dead
-    name: 勇闯死人谷
-    aliases:
-      - Into the Dead
-  - id: jiangshan-beiwang
-    name: 江山北望
-    aliases: []
-  - id: lifeafter
-    name: 明日之后
-    aliases:
-      - LifeAfter
-  - id: lord-of-mysteries
-    name: 诡秘之主
-    aliases:
-      - Lord of Mysteries
-  - id: maplestory-classic
-    name: 冒险岛怀旧服
-    aliases:
-      - MapleStory Classic
-      - 冒险岛怀旧服二转
-      - 冒险岛怀旧服弓箭手
-      - 冒险岛怀旧服三区绿水灵
-  - id: mecha-break
-    name: 解限机
-    aliases:
-      - Mecha Break
-  - id: mechanical-carnival
-    name: 机械狂欢
-    aliases: []
-  - id: meecha-chameleon
-    name: 画画躲猫猫
-    aliases:
-      - MeeCha Chameleon
-  - id: menghuan-xiyou
-    name: 梦幻西游
-    aliases:
-      - 梦幻西游畅玩服
-  - id: minecraft
-    name: 我的世界
-    aliases: [Minecraft, MC]
-  - id: mingmo-yuanxu
-    name: 明末：渊虚之羽
-    aliases:
-      - 明末
-      - 渊虚之羽
-  - id: monster-hunter-wilds
-    name: 怪物猎人：荒野
-    aliases:
-      - Monster Hunter Wilds
-      - 怪物猎人荒野
-  - id: naraka-bladepoint
-    name: 永劫无间
-    aliases:
-      - 'Naraka: Bladepoint'
-      - 永劫
-  - id: neon-abyss-2
-    name: 霓虹深渊2
-    aliases:
-      - Neon Abyss 2
-  - id: nioh-3
-    name: 仁王3
-    aliases:
-      - Nioh 3
-      - 仁王 3
-  - id: nvdiao
-    name: 女吊
-    aliases: []
-  - id: outer-wilds
-    name: 星际拓荒
-    aliases: [Outer Wilds]
-  - id: path-of-exile-2
-    name: 流放之路2
-    aliases:
-      - Path of Exile 2
-      - POE2
-  - id: phonopolis
-    name: Phonopolis
-    aliases: []
-  - id: portal-2
-    name: 传送门2
-    aliases: [Portal 2]
-  - id: project-007
-    name: 007：初露锋芒
-    aliases:
-      - Project 007
-      - 007初露锋芒
-      - 007 初露锋芒
-      - 007，初露锋芒
-  - id: ragnarok-rebirth
-    name: 仙境传说：重生
-    aliases:
-      - Ragnarok Rebirth
-  - id: reanimal
-    name: 生灵重塑
-    aliases:
-      - REANIMAL
-  - id: red-dead-redemption-2
-    name: 荒野大镖客2
-    aliases: [Red Dead Redemption 2, RDR2, 大表哥2]
-  - id: repair-story
-    name: 维修物语
-    aliases: []
-  - id: resident-evil-4
-    name: 生化危机4
-    aliases: [Resident Evil 4, RE4]
-  - id: resident-evil-9
-    name: 生化危机9
-    aliases:
-      - Resident Evil 9
-      - 生化危机 9
-  - id: rhythm-heaven
-    name: 节奏天国
-    aliases:
-      - Rhythm Heaven
-      - 节奏天国：奇迹之星
-  - id: rock-kingdom-world
-    name: 洛克王国：世界
-    aliases:
-      - 洛克王国世界
-      - 洛克王国
-  - id: rusty-lake
-    name: 绣湖系列
-    aliases:
-      - Rusty Lake
-      - 锈湖系列
-  - id: sea-of-oblivion
-    name: 遗忘之海
-    aliases:
-      - Sea of Oblivion
-  - id: shengshi-tianxia
-    name: 盛世天下：女帝篇
-    aliases:
-      - 盛世天下女帝篇
-      - 盛世天下
-  - id: slay-the-spire-2
-    name: 杀戮尖塔2
-    aliases:
-      - Slay the Spire 2
-      - 杀戮尖塔 2
-  - id: snapshots-game
-    name: Snapshots
-    aliases: []
-  - id: split-fiction
-    name: 双影奇境
-    aliases:
-      - Split Fiction
-      - 双影奇景
-      - 双人成行2
-  - id: stardew-valley
-    name: 星露谷物语
-    aliases: [Stardew Valley]
-  - id: subnautica-2
-    name: Subnautica 2
-    aliases:
-      - Subnautica2
-      - 深海迷航2
-  - id: the-alters
-    name: 多重人生
-    aliases:
-      - The Alters
-  - id: the-precinct
-    name: The Precinct
-    aliases:
-      - 警区
-  - id: the-witcher-3
-    name: 巫师3：狂猎
-    aliases: [The Witcher 3, 猎魔人3]
-  - id: valorant
-    name: 无畏契约
-    aliases:
-      - Valorant
-      - 瓦洛兰特
-      - 瓦
-  - id: where-winds-meet
-    name: 燕云十六声
-    aliases:
-      - Where Winds Meet
-      - 燕云
-  - id: wuthering-waves
-    name: 鸣潮
-    aliases:
-      - Wuthering Waves
-      - 鸣潮3.0
-      - 鸣潮3.1
-      - 鸣潮3.4
-      - 鸣潮3.5
-      - 鸣潮2.7
-      - 鸣潮2.5
-      - 鸣潮2.2
-  - id: wuzhu-xingyuan
-    name: 无主星渊
-    aliases: []
-  - id: xin-qiannv-youhun
-    name: 新倩女幽魂
-    aliases: []
-  - id: xunlong-jue
-    name: 寻龙诀
-    aliases: []
-  - id: zheshi-xieyinggen
-    name: 这是谐音梗
-    aliases: []
   - id: 1-2-switch
     name: 1-2-Switch
     aliases:
@@ -345,6 +24,9 @@
     aliases:
       - A Hat in Time
 
+  - id: a-little-to-the-left
+    name: A Little to the Left
+    aliases: []
   - id: a-perfect-day
     name: 完美的一天
 
@@ -364,6 +46,9 @@
   - id: a-short-hike
     name: A Short Hike
 
+  - id: ai-escape-room
+    name: AI密室逃脱
+    aliases: []
   - id: alan-wake-2
     name: 心灵杀手2
     aliases:
@@ -386,6 +71,11 @@
   - id: among-trees
     name: Among Trees
 
+  - id: among-us
+    name: Among Us
+    note: "2020-12-08 条目标题「谁是内鬼」，按 Among Us 登记；中文俗称关联待上线后用户核实"
+    aliases: [谁是内鬼, AmongUs]
+
   - id: animal-crossing-nh
     name: 集合啦！动物森友会
     aliases:
@@ -393,6 +83,18 @@
       - 集合啦！动物森友会
       - 'Animal Crossing: New Horizons'
 
+  - id: are-you-sleeping
+    name: 睡了吗
+    aliases: []
+  - id: arena-breakout
+    name: 暗区突围
+    aliases:
+      - Arena Breakout
+  - id: arknights-endfield
+    name: 明日方舟：终末地
+    aliases:
+      - 'Arknights: Endfield'
+      - 明日方舟终末地
   - id: armored-core-6
     name: 装甲核心6
     aliases:
@@ -416,6 +118,9 @@
     aliases:
       - Atomic Heart
 
+  - id: auction-king
+    name: 竞拍之王
+    aliases: []
   - id: avengers
     name: Avengers
 
@@ -430,6 +135,14 @@
   - id: back-4-blood
     name: Back 4 Blood
 
+  - id: baldurs-gate-3
+    name: 博德之门3
+    aliases: ['Baldur''s Gate 3', BG3, 博德之门 3, Baldur s Gate 3]
+
+  - id: barber-shop-simulator
+    name: 乱剪一通
+    aliases:
+      - Barber Shop Simulator
   - id: battle-chef-brigade
     name: 战斗厨师旅团
     aliases:
@@ -443,10 +156,18 @@
   - id: bear-and-breakfast
     name: Bear and Breakfast
 
+  - id: bento-blocks
+    name: Bento Blocks
+    aliases: []
   - id: biped
     name: Biped
     aliases: [只只大冒险]
 
+  - id: black-myth-wukong
+    name: 黑神话：悟空
+    aliases:
+      - 'Black Myth: Wukong'
+      - 黑神话悟空
   - id: bloodborne
     name: 血源诅咒
     aliases:
@@ -488,6 +209,15 @@
     aliases:
       - Cadence of Hyrule
 
+  - id: call-of-duty-black-ops-7
+    name: 使命召唤：黑色行动7
+    aliases:
+      - 'Call of Duty: Black Ops 7'
+      - Black Ops 7
+      - 黑色行动7
+  - id: card-devil
+    name: 卡片魔王
+    aliases: []
   - id: castle-crashers
     name: 城堡破坏者
     aliases:
@@ -509,6 +239,9 @@
     aliases:
       - Celeste
 
+  - id: changan-stone-dance
+    name: 长安石之舞
+    aliases: []
   - id: chinese-parents
     name: 中国式家长
     aliases:
@@ -519,6 +252,17 @@
     aliases:
       - 'Chip''n Dale'
 
+  - id: civilization-6
+    name: 文明6
+    aliases:
+      - 文明六
+      - Civilization VI
+
+  - id: clair-obscur-expedition-33
+    name: 33号远征队
+    aliases:
+      - 'Clair Obscur: Expedition 33'
+      - 33号远征
   - id: cloudpunk
     name: 云城朋克
     aliases:
@@ -557,6 +301,10 @@
   - id: creaks
     name: Creaks
 
+  - id: crimson-desert
+    name: 红色沙漠
+    aliases:
+      - Crimson Desert
   - id: crown-trick
     name: 不思议的皇冠
     aliases:
@@ -583,12 +331,24 @@
     aliases:
       - Curious Expedition
 
+  - id: cyberpunk-2077
+    name: 赛博朋克2077
+    aliases:
+      - 赛博朋克
+      - Cyberpunk 2077
+
   - id: danganronpa-1
     name: 弹丸论破：希望的学园和绝望高中生
     aliases:
       - 弹丸论破
       - Danganronpa
 
+  - id: daodao-wizard
+    name: 叨叨巫师
+    aliases: []
+  - id: dark-souls-3
+    name: 黑暗之魂3
+    aliases: [Dark Souls III, 魂3]
   - id: dark-souls-remastered
     name: 黑暗之魂：重制版
     aliases:
@@ -601,6 +361,10 @@
     aliases:
       - 大圣归来
 
+  - id: dave-the-diver
+    name: 潜水员戴夫
+    aliases:
+      - Dave the Diver
   - id: daxia-lizhizhuan
     name: 大侠立志传
 
@@ -624,6 +388,11 @@
     aliases:
       - Death Stranding
 
+  - id: death-stranding-2-on-the-beach
+    name: 死亡搁浅2：冥滩之上
+    aliases:
+      - Death Stranding 2
+      - 死亡搁浅2
   - id: deliver-us-the-moon
     name: 飞向月球
     aliases:
@@ -634,6 +403,12 @@
     aliases:
       - 三角洲
       - Delta Force
+
+  - id: demons-souls
+    name: 恶魔之魂
+    aliases:
+      - 恶魔之魂重制版
+      - Demon's Souls
 
   - id: devil-may-cry-5
     name: 鬼泣5
@@ -648,17 +423,27 @@
       - 暗黑不朽
       - Diablo Immortal
 
+  - id: dig-for-dog
+    name: 掘地求狗
+    aliases: []
   - id: dig-or-die
     name: Dig or Die
 
   - id: dinkum
     name: Dinkum
 
+  - id: disco-elysium
+    name: 极乐迪斯科
+    aliases: [Disco Elysium]
   - id: do-not-feed-the-monkeys
     name: Do Not Feed the Monkeys
 
   - id: dome-keeper
     name: Dome Keeper
+
+  - id: donkey-kong-bananza
+    name: 咚奇刚：蕉力全开
+    aliases: [咚奇刚蕉力全开]
 
   - id: dont-starve
     name: 饥荒
@@ -697,6 +482,15 @@
     aliases:
       - Dredge
 
+  - id: duckov
+    name: 逃离鸭科夫
+    aliases:
+      - Duckov
+  - id: dune-awakening
+    name: 沙丘：觉醒
+    aliases:
+      - 'Dune: Awakening'
+      - 沙丘觉醒
   - id: dying-light-2
     name: 消逝的光芒2
     aliases:
@@ -709,11 +503,25 @@
       - 真三国无双8体验会
       - Dynasty Warriors 9
 
+  - id: dyson-sphere-program
+    name: 戴森球计划
+    aliases:
+      - Dyson Sphere Program
+      - 戴森球
+
   - id: eastward
     name: 风来之国
     aliases:
       - Eastward
 
+  - id: elden-ring
+    name: 艾尔登法环
+    aliases: [Elden Ring, 老头环]
+  - id: elden-ring-nightreign
+    name: 艾尔登法环：黑夜君临
+    aliases:
+      - Elden Ring Nightreign
+      - 老头环黑夜君临
   - id: eldest-souls
     name: 上古之魂
     aliases:
@@ -745,11 +553,19 @@
     aliases:
       - Event[0]
 
+  - id: fall-guys
+    name: 糖豆人
+    aliases: [Fall Guys, 糖豆人终极淘汰赛, FallGuys]
+
   - id: far-lone-sails
     name: 孤帆远航
     aliases:
       - 'FAR: Lone Sails'
 
+  - id: farlight-84
+    name: 远光84
+    aliases:
+      - Farlight 84
   - id: farm-together
     name: Farm Together
 
@@ -762,6 +578,9 @@
       - Farm Simulator 19
       - Farming Simulator 19
 
+  - id: fengbao-pasidui
+    name: 风暴怕死队
+    aliases: []
   - id: final-fantasy-15
     name: 最终幻想15
     aliases:
@@ -810,11 +629,20 @@
     aliases:
       - Forza Horizon 4
 
+  - id: free-basketball
+    name: 自由篮球
+    aliases:
+      - FreeStyle
+
   - id: fresh-start
     name: Fresh Start
 
   - id: gangui-shilu
     name: 港诡实录
+
+  - id: gaodian-zhanji
+    name: 高殿战记
+    aliases: []
 
   - id: genesis-noir
     name: Genesis Noir
@@ -879,6 +707,10 @@
   - id: guigu-bahuang
     name: 鬼谷八荒
 
+  - id: guijia-yitu-2
+    name: 归家异途2
+    aliases: []
+
   - id: gujian-qitan-3
     name: 古剑奇谭三
     aliases:
@@ -933,6 +765,9 @@
     aliases:
       - Hellstuck
 
+  - id: her-trees
+    name: 她的树
+    aliases: []
   - id: hidden-folks
     name: Hidden Folks
 
@@ -954,6 +789,13 @@
     aliases:
       - Hogwarts Legacy
 
+  - id: hollow-knight
+    name: 空洞骑士
+    aliases: [Hollow Knight]
+  - id: honor-of-kings-world
+    name: 王者荣耀：世界
+    aliases:
+      - 王者荣耀世界
   - id: hood-outlaws
     name: 绿林侠盗
     aliases:
@@ -1010,6 +852,10 @@
     aliases:
       - Ice Lakes
 
+  - id: infinity-nikki
+    name: 无限暖暖
+    aliases:
+      - Infinity Nikki
   - id: inmost
     name: Inmost
 
@@ -1021,6 +867,10 @@
   - id: inside-the-backroom
     name: Inside the Backroom
 
+  - id: into-the-dead
+    name: 勇闯死人谷
+    aliases:
+      - Into the Dead
   - id: iris-fall
     name: 彩虹坠入
     aliases:
@@ -1043,6 +893,9 @@
   - id: jiangnan-baijingtu
     name: 江南百景图
 
+  - id: jiangshan-beiwang
+    name: 江山北望
+    aliases: []
   - id: juicy-realm
     name: 恶果之地
     aliases:
@@ -1105,6 +958,12 @@
     aliases:
       - Layers of Fear
 
+  - id: league-of-legends
+    name: 英雄联盟
+    aliases:
+      - LOL
+      - 亚索
+
   - id: lies-of-p
     name: 匹诺曹的谎言
     aliases:
@@ -1116,6 +975,10 @@
     aliases:
       - Life Goes On
 
+  - id: lifeafter
+    name: 明日之后
+    aliases:
+      - LifeAfter
   - id: linelight
     name: Linelight
     aliases:
@@ -1149,6 +1012,10 @@
   - id: longzhong-kui-meng
     name: 笼中窥梦
 
+  - id: lord-of-mysteries
+    name: 诡秘之主
+    aliases:
+      - Lord of Mysteries
   - id: lords-of-the-fallen
     name: 堕落之主
     aliases:
@@ -1198,6 +1065,13 @@
     name: 冒险岛2
     aliases: [MapleStory 2, 冒险岛]
 
+  - id: maplestory-classic
+    name: 冒险岛怀旧服
+    aliases:
+      - MapleStory Classic
+      - 冒险岛怀旧服二转
+      - 冒险岛怀旧服弓箭手
+      - 冒险岛怀旧服三区绿水灵
   - id: mario-kart-8-deluxe
     name: 马里奥赛车8豪华版
     aliases:
@@ -1221,16 +1095,39 @@
   - id: mark-of-the-ninja
     name: Mark of the Ninja
 
+  - id: mecha-break
+    name: 解限机
+    aliases:
+      - Mecha Break
+  - id: mechanical-carnival
+    name: 机械狂欢
+    aliases: []
   - id: medieval-dynasty
     name: 中世纪王朝
     aliases:
       - Medieval Dynasty
 
+  - id: meecha-chameleon
+    name: 画画躲猫猫
+    aliases:
+      - MeeCha Chameleon
   - id: mengdie
     name: 不可思议之梦蝶
     aliases:
       - 梦蝶
 
+  - id: menghuan-xiyou
+    name: 梦幻西游
+    aliases:
+      - 梦幻西游畅玩服
+  - id: minecraft
+    name: 我的世界
+    aliases: [Minecraft, MC]
+  - id: mingmo-yuanxu
+    name: 明末：渊虚之羽
+    aliases:
+      - 明末
+      - 渊虚之羽
   - id: mist-detective
     name: 迷雾侦探
     aliases:
@@ -1260,6 +1157,11 @@
     aliases:
       - Monster Hunter Stories 2
 
+  - id: monster-hunter-wilds
+    name: 怪物猎人：荒野
+    aliases:
+      - Monster Hunter Wilds
+      - 怪物猎人荒野
   - id: monster-hunter-world
     name: 怪物猎人：世界
     aliases: [怪物猎人世界, Monster Hunter World, 怪物猎人狩猎季]
@@ -1291,6 +1193,11 @@
     aliases:
       - My Time at Portia
 
+  - id: naraka-bladepoint
+    name: 永劫无间
+    aliases:
+      - 'Naraka: Bladepoint'
+      - 永劫
   - id: necesse
     name: Necesse
 
@@ -1299,11 +1206,20 @@
     aliases:
       - Neon Abyss
 
+  - id: neon-abyss-2
+    name: 霓虹深渊2
+    aliases:
+      - Neon Abyss 2
   - id: nioh-2
     name: 仁王2
     aliases:
       - Nioh 2
 
+  - id: nioh-3
+    name: 仁王3
+    aliases:
+      - Nioh 3
+      - 仁王 3
   - id: no-mans-sky
     name: 无人深空
     aliases:
@@ -1316,6 +1232,15 @@
     name: 女鬼桥
     aliases:
       - 女鬼桥2
+
+  - id: nvdiao
+    name: 女吊
+    aliases: []
+  - id: nvdihou-gong
+    name: 传闻中的女帝后宫
+    aliases:
+      - 橙光
+    note: "橙光互动作品，2021-01-28/29 分P标题「橙光 传闻中的女帝后宫」"
 
   - id: octopath-traveler
     name: 八方旅人
@@ -1344,6 +1269,9 @@
       - 奥日与萤火意志
       - Ori and the Will of the Wisps
 
+  - id: outer-wilds
+    name: 星际拓荒
+    aliases: [Outer Wilds]
   - id: overcooked
     name: 煮糊了
     aliases:
@@ -1397,6 +1325,11 @@
     aliases:
       - Patapon
 
+  - id: path-of-exile-2
+    name: 流放之路2
+    aliases:
+      - Path of Exile 2
+      - POE2
   - id: payday-3
     name: Payday 3
     aliases: [Payday3]
@@ -1409,6 +1342,9 @@
   - id: phasmophobia
     name: Phasmophobia
 
+  - id: phonopolis
+    name: Phonopolis
+    aliases: []
   - id: pico-park
     name: Pico Park
 
@@ -1434,12 +1370,22 @@
   - id: poly-bridge-2
     name: Poly Bridge 2
 
+  - id: portal-2
+    name: 传送门2
+    aliases: [Portal 2]
   - id: powerwash-simulator
     name: PowerWash Simulator
 
   - id: pro-gymnast
     name: Pro Gymnast
 
+  - id: project-007
+    name: 007：初露锋芒
+    aliases:
+      - Project 007
+      - 007初露锋芒
+      - 007 初露锋芒
+      - 007，初露锋芒
   - id: project-highrise
     name: 大厦管理者
     aliases:
@@ -1458,10 +1404,21 @@
     aliases:
       - Psychonauts 2
 
+  - id: pubg
+    name: 绝地求生
+    aliases:
+      - 吃鸡
+      - PUBG
+      - PlayerUnknown's Battlegrounds
+
   - id: pummel-party
     name: 揍击派对
     aliases:
       - Pummel Party
+
+  - id: puyo-puyo-tetris
+    name: 噗哟噗哟vs俄罗斯方块
+    aliases: [Puyo Puyo Tetris, 俄罗斯方块大战噗呦噗呦]
 
   - id: puyo-puyo-tetris-2
     name: 噗哟噗哟俄罗斯方块2
@@ -1473,12 +1430,24 @@
       - Raft
       - 木筏生存
 
+  - id: ragnarok-rebirth
+    name: 仙境传说：重生
+    aliases:
+      - Ragnarok Rebirth
   - id: rakuen
     name: Rakuen
     aliases: []
 
   - id: ranch-simulator
     name: Ranch Simulator
+
+  - id: reanimal
+    name: 生灵重塑
+    aliases:
+      - REANIMAL
+  - id: red-dead-redemption-2
+    name: 荒野大镖客2
+    aliases: [Red Dead Redemption 2, RDR2, 大表哥2, 荒野大镖客, 荒野大镖客2, '荒野大镖客:救赎2']
 
   - id: reigns
     name: 冰火王权
@@ -1495,6 +1464,9 @@
       - 遗迹灰烬重生
       - 'Remnant: From the Ashes'
 
+  - id: repair-story
+    name: 维修物语
+    aliases: []
   - id: resident-evil-2
     name: 生化危机2
     aliases:
@@ -1505,6 +1477,9 @@
     aliases:
       - Resident Evil 3
 
+  - id: resident-evil-4
+    name: 生化危机4
+    aliases: [Resident Evil 4, RE4]
   - id: resident-evil-8
     name: 生化危机8：村庄
     aliases:
@@ -1512,6 +1487,11 @@
       - 生化危机8村庄
       - Resident Evil Village
 
+  - id: resident-evil-9
+    name: 生化危机9
+    aliases:
+      - Resident Evil 9
+      - 生化危机 9
   - id: retirement-simulator
     name: 退休模拟器
 
@@ -1530,6 +1510,11 @@
     aliases:
       - Rhythm Fighter
 
+  - id: rhythm-heaven
+    name: 节奏天国
+    aliases:
+      - Rhythm Heaven
+      - 节奏天国：奇迹之星
   - id: rhythm-royale
     name: Rhythm Royale
 
@@ -1557,6 +1542,11 @@
     aliases:
       - Road 96
 
+  - id: rock-kingdom-world
+    name: 洛克王国：世界
+    aliases:
+      - 洛克王国世界
+      - 洛克王国
   - id: rubber-bandits
     name: Rubber Bandits
 
@@ -1574,6 +1564,11 @@
     aliases:
       - Rune Factory 5
 
+  - id: rusty-lake
+    name: 绣湖系列
+    aliases:
+      - Rusty Lake
+      - 锈湖系列
   - id: sakuna
     name: 天穗之咲稻姬
     aliases:
@@ -1598,6 +1593,10 @@
   - id: sanfu
     name: 三伏
 
+  - id: sea-of-oblivion
+    name: 遗忘之海
+    aliases:
+      - Sea of Oblivion
   - id: sea-of-thieves
     name: 盗贼之海
     aliases:
@@ -1611,6 +1610,10 @@
       - 只狼：影逝二度
       - Sekiro
 
+  - id: shady-part-of-me
+    name: Shady Part of Me
+    aliases: []
+
   - id: shanhai-lvren
     name: 山海旅人
 
@@ -1619,10 +1622,20 @@
     aliases:
       - 庇护所
 
+  - id: shengshi-tianxia
+    name: 盛世天下：女帝篇
+    aliases:
+      - 盛世天下女帝篇
+      - 盛世天下
   - id: shenmue-3
     name: 莎木3
     aliases:
       - Shenmue III
+
+  - id: shiming-zhanchang
+    name: 使命战场
+    aliases: []
+    note: "2021-01-08 条目标题原文；疑为使命召唤手游/战区，具体版本待上线后用户核实"
 
   - id: ship-of-fools
     name: Ship of Fools
@@ -1645,11 +1658,19 @@
     aliases:
       - Slay the Spire
 
+  - id: slay-the-spire-2
+    name: 杀戮尖塔2
+    aliases:
+      - Slay the Spire 2
+      - 杀戮尖塔 2
   - id: slime-rancher-2
     name: 史莱姆农场2
     aliases:
       - Slime Rancher 2
 
+  - id: snapshots-game
+    name: Snapshots
+    aliases: []
   - id: sos-fomt
     name: 牧场物语：重聚矿石镇
     aliases: [牧场物语重聚矿石镇, 牧场物语矿石镇, 'Story of Seasons: Friends of Mineral Town', 牧场物语]
@@ -1667,6 +1688,12 @@
   - id: spiritfarer
     name: Spiritfarer
 
+  - id: split-fiction
+    name: 双影奇境
+    aliases:
+      - Split Fiction
+      - 双影奇景
+      - 双人成行2
   - id: spy-party
     name: 间谍派对
     aliases:
@@ -1677,6 +1704,9 @@
     aliases:
       - Starbound
 
+  - id: stardew-valley
+    name: 星露谷物语
+    aliases: [Stardew Valley]
   - id: starfield
     name: 星空
     aliases:
@@ -1725,6 +1755,11 @@
     aliases:
       - Subnautica
 
+  - id: subnautica-2
+    name: Subnautica 2
+    aliases:
+      - Subnautica2
+      - 深海迷航2
   - id: sun-haven
     name: Sun Haven
 
@@ -1779,6 +1814,10 @@
   - id: teardown
     name: Teardown
 
+  - id: the-alters
+    name: 多重人生
+    aliases:
+      - The Alters
   - id: the-house-of-da-vinci
     name: The House of Da Vinci
 
@@ -1806,6 +1845,10 @@
   - id: the-past-within
     name: The Past Within
 
+  - id: the-precinct
+    name: The Precinct
+    aliases:
+      - 警区
   - id: the-quarry
     name: 采石场惊魂
     aliases:
@@ -1823,6 +1866,9 @@
   - id: the-wandering-village
     name: The Wandering Village
 
+  - id: the-witcher-3
+    name: 巫师3：狂猎
+    aliases: [The Witcher 3, 猎魔人3]
   - id: the-witness
     name: 见证者
     aliases:
@@ -1944,6 +1990,12 @@
       - 调酒师的生活
       - 调酒师的生活 VA
 
+  - id: valorant
+    name: 无畏契约
+    aliases:
+      - Valorant
+      - 瓦洛兰特
+      - 瓦
   - id: vampire-survivors
     name: 吸血鬼幸存者
     aliases:
@@ -1995,6 +2047,11 @@
   - id: when-the-past-was-around
     name: When the Past was Around
 
+  - id: where-winds-meet
+    name: 燕云十六声
+    aliases:
+      - Where Winds Meet
+      - 燕云
   - id: winkeltje
     name: Winkeltje
 
@@ -2047,8 +2104,26 @@
       - Worms W.M.D
       - 百战天虫
 
+  - id: wuthering-waves
+    name: 鸣潮
+    aliases:
+      - Wuthering Waves
+      - 鸣潮3.0
+      - 鸣潮3.1
+      - 鸣潮3.4
+      - 鸣潮3.5
+      - 鸣潮2.7
+      - 鸣潮2.5
+      - 鸣潮2.2
+  - id: wuzhu-xingyuan
+    name: 无主星渊
+    aliases: []
   - id: xi
     name: 汐
+
+  - id: xianjian-7
+    name: 仙剑奇侠传7
+    aliases: [仙剑7, 仙剑奇侠传七, 仙剑奇侠传7]
 
   - id: xianjian-kezhan-2
     name: 仙剑客栈2
@@ -2056,11 +2131,17 @@
   - id: xiaobai-tu-dianshang
     name: 小白兔电商
 
+  - id: xin-qiannv-youhun
+    name: 新倩女幽魂
+    aliases: []
   - id: xuan-yuan-sword-7
     name: 轩辕剑7
     aliases:
       - 轩辕剑柒
 
+  - id: xunlong-jue
+    name: 寻龙诀
+    aliases: []
   - id: yanhua
     name: 烟火
 
@@ -2082,6 +2163,12 @@
     name: Youtubers Life
     aliases:
       - 模拟人生油管主
+
+  - id: yu-gi-oh-duel-links
+    name: 游戏王：决斗链接
+    aliases:
+      - 游戏王
+      - Yu-Gi-Oh! Duel Links
 
   - id: zelda-botw
     name: 塞尔达传说：旷野之息
@@ -2107,8 +2194,183 @@
   - id: zhanyao-xing
     name: 斩妖行
 
+  - id: zheshi-xieyinggen
+    name: 这是谐音梗
+    aliases: []
+
   - id: zhi-jiayi
     name: 纸嫁衣
 
   - id: zuiqiang-woniu
     name: 最强蜗牛
+
+  - id: bramble-the-mountain-king
+    name: "Bramble: The Mountain King"
+    aliases:
+      - 荆棘山之王
+
+  - id: caihong-shenyuan
+    name: 彩虹深渊
+
+  - id: chixiang
+    name: 吃香
+
+  - id: conquerors-blade
+    name: 战意
+    aliases:
+      - "Conqueror's Blade"
+
+  - id: daochao-jiudian
+    name: 岛潮酒店
+
+  - id: death-cathedral
+    name: 死亡教堂
+
+  - id: diaoyu-tiantang
+    name: 钓鱼天堂
+
+  - id: ditie-fanhua
+    name: 地铁繁花
+
+  - id: feiyue-13haofang
+    name: 飞跃13号房
+
+  - id: gaofu-daluandou
+    name: 高尔夫大乱斗
+
+  - id: guangzhi-chuanshuo
+    name: 光之传说
+
+  - id: huang-laobing
+    name: 黄老饼梦游惊奇
+
+  - id: jiezou-gezi
+    name: 节奏鸽子
+
+  - id: jiyi-bianjing
+    name: 记忆边境
+
+  - id: karmazoo
+    name: 因果动物园
+    aliases:
+      - KarmaZoo
+
+  - id: konglong-huashi-lieren
+    name: 恐龙化石猎人
+
+  - id: linghuo-naoxueyuan
+    name: 灵活脑学院
+
+  - id: luoxuan-fengbao
+    name: 螺旋风暴
+
+  - id: magicraft
+    name: 魔法工艺
+    aliases:
+      - Magicraft
+
+  - id: maolao-shu
+    name: 猫和老鼠
+    aliases:
+      - 猫和老鼠欢乐公测
+
+  - id: maoxian-gongshe
+    name: 冒险公社
+
+  - id: migong-dazhentan
+    name: 迷宫大侦探
+
+  - id: nine-hours-nine-persons-nine-doors
+    name: 9小时9人9之门
+    aliases:
+      - '999: Nine Hours, Nine Persons, Nine Doors'
+
+  - id: quesheng
+    name: 雀圣
+
+  - id: queshi
+    name: 雀士
+
+  - id: rusty-lake
+    name: 锈湖
+    aliases:
+      - Rusty Lake
+      - 生锈小湖
+
+  - id: shendu-buliangtan
+    name: 神都不良探
+
+  - id: sons-of-the-forest
+    name: 森林之子
+    aliases:
+      - Sons of the Forest
+
+  - id: springblades
+    name: Springblades
+
+  - id: stickman
+    name: Stickman
+    aliases:
+      - 火柴人
+
+  - id: streets-of-rage-4
+    name: 怒之铁拳4
+    aliases:
+      - 怒之铁拳
+
+  - id: sumoman
+    name: Sumoman
+    aliases:
+      - 相扑人
+
+  - id: super-dance-wario
+    name: 超级舞动：瓦里奥制造
+    aliases:
+      - 瓦里奥制造
+
+  - id: taoyi-dashi
+    name: 陶艺大师
+
+  - id: the-amazing-frog
+    name: The Amazing Frog?
+
+  - id: tianming-qiyu-guitu
+    name: 天命奇御：归途
+    aliases:
+      - 天命奇御
+
+  - id: wow-classic
+    name: 魔兽世界怀旧服
+    aliases:
+      - 魔兽怀旧服
+
+  - id: xianjian-3d-huhe
+    name: 仙剑奇侠传3D回合
+
+  - id: xiuxian-gushi-lunhui
+    name: 修仙故事：轮回
+    aliases:
+      - 修仙故事
+
+  - id: xueyuan-gouxiangjia
+    name: 学园构想家
+
+  - id: yingzi-gongchang
+    name: 影子工场
+
+  - id: yinmi-de-jiaoluo
+    name: 隐秘的角落
+
+  - id: zhanjiang-duwo
+    name: 战匠杜沃
+
+  - id: zhentan
+    name: 真探
+
+  - id: zhuoyou-monishe
+    name: 桌游模拟器
+    aliases:
+      - Tabletop Simulator
+
+  - id: zuoye-fengle
+    name: 作业疯了
