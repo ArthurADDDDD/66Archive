@@ -45,10 +45,10 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={t.id}
                 onClick={() => set({ types: toggle(filters.types, t.id) })}
                 aria-pressed={on}
-                className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-2.5 font-mono text-[11px] sm:py-1.5"
+                className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-2.5 text-[12px] sm:py-1.5"
                 style={{
                   borderColor: on ? t.color : '#2C3140',
-                  color: on ? t.color : '#8B8FA3',
+                  color: on ? t.color : '#9AA0B4',
                   background: on ? `${t.color}14` : 'transparent',
                 }}
               >
@@ -70,10 +70,10 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 key={p}
                 onClick={() => set({ platforms: toggle(filters.platforms, p) })}
                 aria-pressed={on}
-                className="ui-press rounded border px-2 py-2 font-mono text-[11px] tnum sm:py-1"
+                className="ui-press rounded border px-2 py-2 text-[12px] tnum sm:py-1"
                 style={{
                   borderColor: on ? meta?.color : '#2C3140',
-                  color: on ? meta?.color : '#8B8FA3',
+                  color: on ? meta?.color : '#9AA0B4',
                   background: on ? `${meta?.color}14` : 'transparent',
                 }}
               >
@@ -99,7 +99,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
                 >
                   <span className="inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: gameColor(g.id) }} />
                   <span className="min-w-0 flex-1 truncate">{g.name}</span>
-                  <span className="font-mono text-[10px] text-faint tnum">{g.count}</span>
+                  <span className="font-mono text-meta text-faint tnum">{g.count}</span>
                 </button>
               </li>
             )
@@ -119,7 +119,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
         </label>
       </Section>
 
-      <div className="border-t border-line pt-4 font-mono text-[11px] text-faint tnum">
+      <div className="border-t border-line pt-4 text-[12px] text-faint tnum">
         <div>
           {matched} / {total} 条
         </div>
@@ -136,7 +136,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
 function Section({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4 className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">{label}</h4>
+      <h4 className="mb-2 text-meta uppercase tracking-[0.16em] text-faint">{label}</h4>
       {children}
     </div>
   )

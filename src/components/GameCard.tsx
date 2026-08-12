@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import type { GameCardData } from './GameShelf'
+import type { GameCardData } from '@/lib/games'
 
 /** 封面缺失 / 加载失败时的档案式字排版封面（不是随机彩色渐变）：
  * 时代 accent 只由首次年份决定（视频 #E0A244 / 斗鱼 #5BC8E8 / 抖音 #FF6B75），
@@ -59,16 +59,16 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
               }}
             />
             <span
-              className="absolute left-2.5 top-2 font-mono text-[9px] uppercase tracking-[0.18em]"
+              className="absolute left-2.5 top-2 text-meta uppercase tracking-[0.16em]"
               style={{ color: era.color }}
             >
               {era.label}
             </span>
-            <span className="relative max-w-full text-center font-display text-[19px] font-bold leading-tight tracking-tight text-ink/90">
+            <span className="relative max-w-full text-center text-[17px] font-bold leading-tight text-ink/90">
               {p.name}
             </span>
             {p.firstDate && (
-              <span className="relative mt-2 font-mono text-[10px] text-faint tnum">
+              <span className="relative mt-2 text-meta text-faint tnum">
                 {p.firstDate.slice(0, 4)}
                 {p.sessions > 0 ? ` · ${p.sessions} 场` : ' · 待补录'}
               </span>
@@ -76,8 +76,8 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
           </div>
         )}
         <span className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-base/85 to-transparent" />
-        {coverOk && <span className="absolute bottom-2 left-3 text-[14px] font-medium text-ink">{p.name}</span>}
-        <span className="absolute bottom-2 right-3 font-mono text-[12px] text-faint transition-all group-hover:translate-x-1 group-hover:text-live">
+        {coverOk && <span className="absolute bottom-2 left-3 right-8 truncate text-[13px] font-medium text-ink">{p.name}</span>}
+        <span aria-hidden className="absolute bottom-2 right-3 font-mono text-meta text-faint transition-all group-hover:translate-x-1 group-hover:text-live">
           →
         </span>
 
@@ -93,8 +93,8 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
               ] as const
             ).map(([label, value]) => (
               <div key={label} className="flex items-baseline justify-between gap-3">
-                <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-faint">{label}</span>
-                <span className="font-mono text-[11px] text-ink tnum">{value}</span>
+                <span className="text-meta uppercase tracking-[0.16em] text-faint">{label}</span>
+                <span className="font-mono text-meta text-ink tnum">{value}</span>
               </div>
             ))}
           </div>
@@ -102,11 +102,11 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
       </div>
       <div className="px-3 py-2.5">
         {p.sessions > 0 ? (
-          <p className="font-mono text-[10px] text-faint tnum">
+          <p className="text-meta text-faint tnum">
             {p.sessions} 场 · {p.hoursLabel} · {p.firstDate} 起
           </p>
         ) : (
-          <p className="font-mono text-[10px] text-faint/60">档案中暂无已标记条目 · 待补录</p>
+          <p className="text-meta text-faint">档案中暂无已标记条目 · 待补录</p>
         )}
       </div>
     </Link>

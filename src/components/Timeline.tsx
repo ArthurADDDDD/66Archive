@@ -272,9 +272,11 @@ export function Timeline({
   return (
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 px-4 py-3 sm:flex-nowrap sm:gap-3 sm:px-6">
           <SiteNav active="chronicle" />
-          <div className="order-3 w-full sm:order-none sm:ml-auto sm:max-w-[360px]">
+          {/* 手机端 SearchField 已经塌成一个 44px 圆形图标——原本的 order-3 w-full
+              会让 sticky header 白白多出一整行，行里只有那一个小圆圈。 */}
+          <div className="w-auto sm:ml-auto sm:w-full sm:max-w-[360px]">
             <SearchField
               value={filters.q}
               onChange={(v) => set({ q: v })}
@@ -287,27 +289,25 @@ export function Timeline({
           </div>
           <button
             onClick={() => setSheetOpen(true)}
-            className="ui-press relative shrink-0 rounded-md border border-line bg-surface px-3 py-2.5 font-mono text-[11px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:py-2"
+            className="ui-press relative flex h-11 shrink-0 items-center rounded-md border border-line bg-surface px-3 text-[12px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:h-auto sm:py-2"
           >
-            筛选{dirtyCount > 0 && <span className="ml-1.5 text-live">{dirtyCount}</span>}
+            筛选{dirtyCount > 0 && <span className="ml-1.5 tnum text-live">{dirtyCount}</span>}
           </button>
           {extra}
         </div>
       </header>
 
-      <main className="ui-page-in mx-auto max-w-[1400px] px-4 pb-16 sm:px-6">
+      <main className="ui-page-in mx-auto max-w-[1400px] px-page pb-16">
         <section className="ui-reveal py-8 sm:py-10">
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-live">2010 — {latestYear}</p>
-              <h1 className="mt-2 max-w-2xl text-[27px] font-semibold leading-tight tracking-tight sm:text-[36px]">
-                从记得的内容，找到那段时间。
-              </h1>
-              <p className="mt-3 max-w-xl text-[13px] leading-relaxed text-muted">
+              <p className="text-meta uppercase tracking-[0.16em] text-live tnum">2010 — {latestYear}</p>
+              <h1 className="mt-2 max-w-2xl text-h1 font-semibold">从记得的内容，找到那段时间。</h1>
+              <p className="mt-3 max-w-xl text-body text-muted">
                 每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
               </p>
             </div>
-            <dl className="flex gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-faint tnum">
+            <dl className="flex gap-6 text-meta uppercase tracking-[0.16em] text-faint tnum">
               <Stat label="条目" value={entries.length.toLocaleString()} />
               <Stat label="已录时长" value={`${durationStats.hours.toLocaleString()} 小时`} />
               <Stat label="时长覆盖" value={`${durationStats.coverage}%`} />
@@ -315,12 +315,12 @@ export function Timeline({
           </div>
 
           {isDemo && (
-            <p className="mt-5 rounded border border-video/40 bg-video/5 px-3 py-2 font-mono text-[11px] text-video">
+            <p className="mt-5 rounded border border-video/40 bg-video/5 px-3 py-2 text-meta text-video">
               当前展示演示数据，不是真实记录。
             </p>
           )}
           {hiddenUnreviewed > 0 && (
-            <p className="mt-5 rounded border border-line bg-surface/60 px-3 py-2 font-mono text-[11px] text-faint">
+            <p className="mt-5 rounded border border-line bg-surface/60 px-3 py-2 text-meta text-faint tnum">
               开发版已隐藏 {hiddenUnreviewed.toLocaleString()} 条来源未复查的记录；来源完成复查后会自动显示。
             </p>
           )}
@@ -339,14 +339,14 @@ export function Timeline({
                   key={era.id}
                   onClick={() => selectEra(era)}
                   aria-pressed={active}
-                  className={`ui-card ui-press flex items-center justify-between rounded-lg border px-4 py-3 text-left ${active ? 'bg-raised text-ink shadow-[0_10px_35px_rgba(0,0,0,0.14)]' : 'border-line bg-base/30 text-muted hover:bg-raised/60'}`}
+                  className={`ui-card ui-press flex min-w-0 items-center justify-between rounded-lg border px-4 py-3 text-left ${active ? 'bg-raised text-ink shadow-[0_10px_35px_rgba(0,0,0,0.14)]' : 'border-line bg-base/30 text-muted hover:bg-raised/60'}`}
                   style={{ borderColor: active ? era.color : undefined }}
                 >
                   <span>
                     <span className="block text-[13px] font-medium">{era.label}</span>
-                    <span className="mt-0.5 block font-mono text-[10px] text-faint">{era.detail}</span>
+                    <span className="mt-0.5 block font-mono text-meta text-faint tnum">{era.detail}</span>
                   </span>
-                  <span className="font-mono text-[11px] text-faint tnum">{count.toLocaleString()}</span>
+                  <span className="font-mono text-meta text-faint tnum">{count.toLocaleString()}</span>
                 </button>
               )
             })}
@@ -354,8 +354,8 @@ export function Timeline({
 
           <div className="mt-5 border-t border-line pt-4">
             <div className="mb-2 flex items-center justify-between">
-              <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">年度线索</h2>
-              <span className="font-mono text-[10px] text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选择一年查看月度目录`}</span>
+              <h2 className="text-meta uppercase tracking-[0.16em] text-faint">年度线索</h2>
+              <span className="text-meta text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选择一年查看月度目录`}</span>
             </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
               {activeEraYears.map((year) => {
@@ -370,22 +370,22 @@ export function Timeline({
                       selectYear(year)
                     }}
                     aria-current={active ? 'true' : undefined}
-                    className={`ui-card ui-press min-h-[116px] rounded-lg border p-3 text-left ${active ? 'border-live bg-live/10 shadow-[0_12px_36px_rgba(91,200,232,0.08)]' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
+                    className={`ui-card ui-press min-w-0 min-h-[116px] rounded-lg border p-3 text-left ${active ? 'border-live bg-live/10 shadow-[0_12px_36px_rgba(91,200,232,0.08)]' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
                   >
                     <span className="flex items-baseline justify-between">
                       <span className={`font-display text-[20px] font-bold tnum ${active ? 'text-live' : 'text-ink'}`}>{year}</span>
-                      <span className="font-mono text-[9px] text-faint tnum">{summary?.months.size ?? 0} 个月 · {yearCounts.get(year) ?? 0} 条</span>
+                      <span className="text-meta text-faint tnum">{summary?.months.size ?? 0} 个月 · {yearCounts.get(year) ?? 0} 条</span>
                     </span>
                     {summary && (
-                      <span className="mt-1 block font-mono text-[9px] text-faint tnum">
+                      <span className="mt-1 block text-meta text-faint tnum">
                         {summary.durationCount > 0 ? `已录 ${Math.round(summary.durationMinutes / 60).toLocaleString()} 小时` : '时长待补'}
                       </span>
                     )}
                     <span className="mt-2 block space-y-1">
                       {summary?.titles.slice(0, 2).map((title) => (
-                        <span key={title} className="block truncate text-[11px] leading-snug text-muted">{title}</span>
+                        <span key={title} className="block truncate text-[12px] leading-snug text-muted">{title}</span>
                       ))}
-                      {!summary?.titles.length && <span className="block text-[11px] text-faint">暂无符合条件的内容</span>}
+                      {!summary?.titles.length && <span className="block text-meta text-faint">暂无符合条件的内容</span>}
                     </span>
                   </a>
                 )
@@ -397,12 +397,12 @@ export function Timeline({
         <section className="ui-reveal ui-delay-2 mt-7">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">{searching ? '全库搜索结果' : `${activeEra.label} / ${activeYear}`}</p>
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">{searching ? '全库搜索结果' : `${activeEra.label} / ${activeYear}`}</p>
               <h2 className="mt-1 text-[22px] font-semibold tracking-tight">
                 {searching ? `“${filters.q.trim()}”` : activeMonth === null ? `${activeYear} 全年` : `${activeYear} 年 ${MONTH_CN[activeMonth - 1]}`}
               </h2>
             </div>
-            <div className="flex items-center gap-3 font-mono text-[11px] text-faint tnum">
+            <div className="flex items-center gap-3 text-meta text-faint tnum">
               <span>{visible.length.toLocaleString()} 条</span>
               {!searching && activeMonth !== null && (
                 <button onClick={() => selectMonth(null)} className="py-2 text-live underline underline-offset-4 sm:py-0">返回全年目录</button>
@@ -415,8 +415,8 @@ export function Timeline({
 
           {visible.length === 0 ? (
             <div className="rounded-xl border border-dashed border-line py-20 text-center">
-              <p className="text-[14px] text-muted">这里暂时没有符合条件的条目。</p>
-              <button onClick={() => set(EMPTY_FILTERS)} className="mt-3 font-mono text-[11px] text-live underline underline-offset-4">清除搜索与筛选</button>
+              <p className="text-body text-muted">这里暂时没有符合条件的条目。</p>
+              <button onClick={() => set(EMPTY_FILTERS)} className="mt-3 text-meta text-live underline underline-offset-4">清除搜索与筛选</button>
             </div>
           ) : !searching && activeMonth === null ? (
             <MonthArchive summaries={monthSummaries} onSelect={selectMonth} hrefFor={(month) => hrefFor(activeYear, month)} />
@@ -431,7 +431,7 @@ export function Timeline({
                   return (
                     <div key={entry.id}>
                       {searching && year !== previousYear && (
-                        <h3 className="border-b border-line bg-surface/35 px-3 py-2 font-mono text-[11px] tracking-[0.14em] text-live tnum">
+                        <h3 className="border-b border-line bg-surface/35 px-3 py-2 text-meta tracking-[0.14em] text-live tnum">
                           {year} 年
                         </h3>
                       )}
@@ -444,7 +444,7 @@ export function Timeline({
                   )
                 })}
                 {searching && visible.length > searchLimit && (
-                  <p className="py-6 text-center font-mono text-[11px] text-faint">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
+                  <p className="py-6 text-center text-meta text-faint tnum">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
                 )}
             </div>
           )}
@@ -458,9 +458,9 @@ export function Timeline({
             <div className="mb-5 flex items-center justify-between border-b border-line pb-3">
               <div>
                 <h3 className="text-[14px] font-medium text-ink">筛选记录</h3>
-                <p className="mt-0.5 font-mono text-[10px] text-faint">搜索词会跨全部年份生效</p>
+                <p className="mt-0.5 text-meta text-faint">搜索词会跨全部年份生效</p>
               </div>
-              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 font-mono text-[11px] text-live hover:bg-live/10 sm:py-1">完成</button>
+              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 text-[12px] text-live hover:bg-live/10 sm:py-1">完成</button>
             </div>
             <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>
@@ -481,7 +481,7 @@ function MonthArchive({
 }) {
   return (
     <div>
-      <p className="mb-4 max-w-2xl text-[12px] leading-relaxed text-muted">
+      <p className="mb-4 max-w-2xl text-body text-muted">
         下面是这一年的月度年表。标题均来自现有记录，仅作为寻找内容的线索；点击月份后再展开全部条目。
       </p>
       <div className="ui-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -491,11 +491,11 @@ function MonthArchive({
             <>
               <span className="flex items-baseline justify-between border-b border-line pb-2">
                 <span className="text-[15px] font-medium text-ink">{MONTH_CN[month - 1]}</span>
-                <span className="font-mono text-[10px] text-faint tnum">{summary?.count ?? 0} 条</span>
+                <span className="text-meta text-faint tnum">{summary?.count ?? 0} 条</span>
               </span>
               {summary ? (
                 <span className="mt-3 block space-y-1.5">
-                  <span className="block font-mono text-[9px] text-faint tnum">
+                  <span className="block text-meta text-faint tnum">
                     {summary.durationCount > 0
                       ? `已录 ${Math.round(summary.durationMinutes / 60).toLocaleString()} 小时 · ${summary.durationCount}/${summary.count} 条有时长`
                       : '时长待补'}
@@ -505,7 +505,7 @@ function MonthArchive({
                   ))}
                 </span>
               ) : (
-                <span className="mt-3 block font-mono text-[10px] text-faint">没有记录</span>
+                <span className="mt-3 block text-meta text-faint">没有记录</span>
               )}
             </>
           )
@@ -517,12 +517,12 @@ function MonthArchive({
                 event.preventDefault()
                 onSelect(month)
               }}
-              className="ui-card ui-press min-h-[148px] rounded-xl border border-line bg-surface/45 p-4 text-left hover:border-live/60 hover:bg-raised/70 hover:shadow-[0_14px_40px_rgba(91,200,232,0.08)]"
+              className="ui-card ui-press min-w-0 min-h-[148px] rounded-xl border border-line bg-surface/45 p-4 text-left hover:border-live/60 hover:bg-raised/70 hover:shadow-[0_14px_40px_rgba(91,200,232,0.08)]"
             >
               {content}
             </a>
           ) : (
-            <div key={month} className="min-h-[148px] rounded-xl border border-line bg-surface/25 p-4 opacity-30">
+            <div key={month} className="min-w-0 min-h-[148px] rounded-xl border border-line bg-surface/25 p-4 opacity-30">
               {content}
             </div>
           )

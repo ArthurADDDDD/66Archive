@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
+import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
-import { PageHeader } from '@/components/primitives'
+import { PageHeader, SiteFooter } from '@/components/primitives'
 import { YearBarChart, EraDots } from '@/components/YearCharts'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { actColorForDate } from '@/lib/narrative'
@@ -80,15 +81,17 @@ export default function StatsPage() {
     .sort((a, b) => b.span - a.span || b.count - a.count)
 
   return (
-    <main className="ui-page-in min-h-screen overflow-hidden">
+    <main className="ui-page-in min-h-screen overflow-x-clip">
+      <MobileQuickNav active="stats" />
+      <BackToTop />
       <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="stats" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm font-mono text-[11px] text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block">
           去编年史逐条查看 →
         </Link>
       </header>
 
-      <section className="mx-auto max-w-[1240px] px-4 pb-10 pt-8 sm:px-6 sm:pb-16 sm:pt-14">
+      <section className="mx-auto max-w-[1240px] px-page pb-10 pt-8 sm:pb-16 sm:pt-14">
         <PageHeader
           eyebrow="Stats · 数据里的发现"
           eyebrowColor="#E5568A"
@@ -96,10 +99,10 @@ export default function StatsPage() {
           lede="每一节只回答一个问题。数字全部来自档案本身的逐条记录——先有数据，后有观察。"
           right={
             <details className="group max-w-sm" open={false}>
-              <summary className="ui-press cursor-pointer list-none rounded-sm font-mono text-[10px] uppercase tracking-[0.18em] text-faint transition-colors hover:text-ink">
+              <summary className="ui-press cursor-pointer list-none rounded-sm text-meta uppercase tracking-[0.16em] text-faint transition-colors hover:text-ink">
                 <span className="underline decoration-dotted underline-offset-4">ⓘ 关于这些数据</span>
               </summary>
-              <div className="mt-3 space-y-2 rounded-lg border border-line/80 bg-surface/40 p-4 font-mono text-[10px] leading-5 text-faint">
+              <div className="mt-3 space-y-2 rounded-lg border border-line/80 bg-surface/40 p-4 text-meta text-faint tnum">
                 <p>· 全部数字在构建期从档案逐条派生，不人工填写。</p>
                 <p>· 时长只统计有时长记录的条目；时长缺失的记录不计入小时数。</p>
                 <p>· 游戏场次基于条目 games 字段，目前标记覆盖率约 {coverage}%（补录中），曲线和排名只覆盖已标记部分。</p>
@@ -118,7 +121,7 @@ export default function StatsPage() {
           最多的一年是 {topYear} 年，档案里留下了 {topCount.toLocaleString()} 条记录。
           2011 年是一条横线——那一年档案为空，缺口被如实保留。
         </Observation>
-        <p className="mt-6 font-mono text-[10px] text-faint/70">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
+        <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
       </Section>
 
       {/* 02 哪些游戏陪得最久？ */}
@@ -127,11 +130,11 @@ export default function StatsPage() {
           {longest.map((p, i) => (
             <Link key={p.id} href={`/games/${p.id}/`} className="group block">
               <div className="flex items-baseline justify-between gap-3">
-                <span className="flex items-baseline gap-2 text-[13px] text-muted group-hover:text-ink">
-                  <span className="font-mono text-[9px] text-faint/60 tnum">{String(i + 1).padStart(2, '0')}</span>
+                <span className="flex items-baseline gap-2 text-body text-muted group-hover:text-ink">
+                  <span className="font-mono text-meta text-faint tnum">{String(i + 1).padStart(2, '0')}</span>
                   {p.name}
                 </span>
-                <span className="font-mono text-[10px] text-faint tnum">{p.hoursLabel}</span>
+                <span className="text-meta text-faint tnum">{p.hoursLabel}</span>
               </div>
               <div className="mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
                 <span
@@ -154,11 +157,11 @@ export default function StatsPage() {
           {revisited.map(({ p, years, gaps }) => (
             <Link key={p.id} href={`/games/${p.id}/`} className="group block">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="text-[13px] text-muted group-hover:text-ink">
+                <span className="text-body text-muted group-hover:text-ink">
                   {p.name}
-                  {gaps > 0 && <span className="ml-2 font-mono text-[9px] text-faint/70 tnum">中途断过 {gaps} 次</span>}
+                  {gaps > 0 && <span className="ml-2 text-meta text-faint tnum">中途断过 {gaps} 次</span>}
                 </span>
-                <span className="font-mono text-[10px] text-faint tnum">{years.length} 个年份</span>
+                <span className="text-meta text-faint tnum">{years.length} 个年份</span>
               </div>
               <div className="mt-1.5 flex gap-1">
                 {years.map((y) => (
@@ -187,17 +190,17 @@ export default function StatsPage() {
               href={`/chronicle/?y=${era.from}`}
               className="rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60"
             >
-              <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: era.color }}>
+              <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em]" style={{ color: era.color }}>
                 <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: era.color }} />
                 {era.label}
               </p>
-              <p className="mt-3 font-display text-[26px] font-bold text-ink tnum">{era.count.toLocaleString()}</p>
-              <p className="mt-1 font-mono text-[9px] text-faint">条记录 · {era.hours.toLocaleString()} 小时</p>
+              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{era.count.toLocaleString()}</p>
+              <p className="mt-1 text-meta text-faint tnum">条记录 · {era.hours.toLocaleString()} 小时</p>
             </Link>
           ))}
         </div>
         <div className="mt-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint/80">每一年，一个点</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint">每一年，一个点</p>
           <div className="mt-4">
             <EraDots rows={yearRows} />
           </div>
@@ -213,8 +216,8 @@ export default function StatsPage() {
           {series.slice(0, 6).map((s) => (
             <Link key={s.id} href={`/series/${s.id}/`} className="group block">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="text-[13px] text-muted group-hover:text-ink">{s.name}</span>
-                <span className="font-mono text-[10px] text-faint tnum">
+                <span className="text-body text-muted group-hover:text-ink">{s.name}</span>
+                <span className="text-meta text-faint tnum">
                   {s.count} 期 · 跨 {s.span} 年
                 </span>
               </div>
@@ -229,12 +232,7 @@ export default function StatsPage() {
         </Observation>
       </Section>
 
-      <footer className="mx-auto flex max-w-[1240px] flex-col justify-between gap-4 px-4 py-10 font-mono text-[10px] text-faint sm:flex-row sm:px-6">
-        <span>只索引，不搬运 · 所有播放回到原平台</span>
-        <Link href="/contact/" className="ui-press rounded-sm transition-colors hover:text-live">
-          资料纠错与联系 →
-        </Link>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
@@ -247,14 +245,12 @@ function hoursTop(yearRows: [number, { count: number; minutes: number; known: nu
 function Section({ question, accent, children }: { question: string; accent: string; children: React.ReactNode }) {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-[1240px] px-4 py-12 sm:px-6 sm:py-20">
-        <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-faint">
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: accent }} />
+      <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-20">
+        <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em] text-faint">
+          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
           一个问题
         </p>
-        <h2 className="mt-3 max-w-2xl text-[24px] font-semibold leading-snug tracking-tight text-ink sm:text-[32px]">
-          {question}
-        </h2>
+        <h2 className="mt-3 max-w-2xl text-h2 font-semibold text-ink">{question}</h2>
         <div className="mt-6 max-w-3xl sm:mt-8">{children}</div>
       </div>
     </section>
@@ -263,8 +259,8 @@ function Section({ question, accent, children }: { question: string; accent: str
 
 function Observation({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-6 max-w-2xl border-l-2 border-line pl-4 text-[13px] leading-7 text-muted">
-      <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-faint/70">观察 · </span>
+    <p className="mt-6 max-w-2xl border-l-2 border-line pl-4 text-body text-muted">
+      <span className="text-meta uppercase tracking-[0.16em] text-faint">观察 · </span>
       {children}
     </p>
   )

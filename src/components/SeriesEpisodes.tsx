@@ -69,7 +69,7 @@ export function SeriesEpisodes({
         {sampled ? (
           <>
             <div className="rounded-lg border border-line/80 bg-surface/25 p-3">
-              <p className="flex items-center justify-between gap-2 font-mono text-[10px] text-faint/80">
+              <p className="flex items-center justify-between gap-2 text-meta text-faint">
                 先看几期 · 第一期 / 按时间采样 / 最后一期
                 <span className="tnum">{count} 期</span>
               </p>
@@ -89,7 +89,7 @@ export function SeriesEpisodes({
             </div>
 
             <div className="mt-6 border-b border-line/60">
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint/80">全部节目 · 按年展开</p>
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">全部节目 · 按年展开</p>
               <div className="mt-2">
                 {byYear.map(([year, list]) => {
                   const open = openYear === year
@@ -99,11 +99,11 @@ export function SeriesEpisodes({
                         type="button"
                         onClick={() => setOpenYear(open ? null : year)}
                         aria-expanded={open}
-                        className="ui-press flex min-h-[44px] w-full items-center justify-between gap-3 px-1 py-2 font-mono text-[11px] text-muted transition-colors hover:text-ink"
+                        className="ui-press flex min-h-[44px] w-full items-center justify-between gap-3 px-1 py-2 text-[13px] text-muted transition-colors hover:text-ink"
                       >
                         <span className="flex items-baseline gap-2">
-                          <span className="font-display text-[16px] font-bold text-ink tnum">{year}</span>
-                          <span className="text-faint tnum">{list.length} 期</span>
+                          <span className="font-mono text-[16px] font-bold text-ink tnum">{year}</span>
+                          <span className="text-meta text-faint tnum">{list.length} 期</span>
                         </span>
                         <span
                           aria-hidden
