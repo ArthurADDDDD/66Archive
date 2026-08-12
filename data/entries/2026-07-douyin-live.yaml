@@ -8,6 +8,13 @@
     games:
       - rhythm-heaven
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "10-53  Switch 2 最新节奏天国来啦！"
+      - at: "01:00:01"
+        label: "11-53  Switch 2 最新节奏天国来啦！"
+      - at: "02:00:04"
+        label: "12-54  Switch 2 最新节奏天国来啦！"
     sources:
       - url: "https://www.bilibili.com/video/BV1LdTE6AE63"
         kind: replay
@@ -29,6 +36,15 @@
       - naraka-bladepoint
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "20-24  和炮炮在永劫“经常见”~"
+      - at: "01:00:01"
+        label: "21-24  和炮炮在永劫“经常见”~"
+      - at: "01:43:02"
+        label: "22-07 和炮炮在永劫“经常见”~"
+      - at: "02:43:05"
+        label: "23-08 和炮炮在永劫“经常见”~"
     sources:
       - url: "https://www.bilibili.com/video/BV1aBT76dE9i"
         kind: replay
@@ -50,6 +66,17 @@
       - naraka-bladepoint
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "永劫无间 20:24"
+      - at: "00:40:01"
+        label: "永劫无间 21:04"
+      - at: "01:20:02"
+        label: "永劫无间 21:44"
+      - at: "02:00:03"
+        label: "永劫无间 22:24"
+      - at: "02:40:04"
+        label: "永劫无间 23:04"
     sources:
       - url: "https://www.bilibili.com/video/BV1o8T76cEY2"
         kind: replay
@@ -88,6 +115,13 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "P1 关卡1~关卡3"
+      - at: "01:00:02"
+        label: "P2 关卡3~关卡4"
+      - at: "02:00:03"
+        label: "P3 关卡4"
     sources:
       - url: "https://www.bilibili.com/video/BV1YFTk6ZE9W"
         kind: replay
@@ -109,6 +143,13 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "21-10 节奏天国，点头准备开始啦~"
+      - at: "01:00:03"
+        label: "22-10 节奏天国，点头准备开始啦~"
+      - at: "02:00:04"
+        label: "23-10 节奏天国，点头准备开始啦~"
     sources:
       - url: "https://www.bilibili.com/video/BV1nPMP6vEdc"
         kind: replay
@@ -130,6 +171,17 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:27"
+      - at: "00:15:10"
+        label: "节奏天国 20:42"
+      - at: "00:40:01"
+        label: "节奏天国 21:07"
+      - at: "01:20:02"
+        label: "节奏天国 21:47"
+      - at: "02:00:03"
+        label: "节奏天国 22:27"
     sources:
       - url: "https://www.bilibili.com/video/BV1SATb6EEBN"
         kind: replay
@@ -169,6 +221,15 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "节奏天国，点头准备开始啦~"
+      - at: "01:00:01"
+        label: "节奏天国，点头准备开始啦~"
+      - at: "02:00:02"
+        label: "节奏天国，点头准备开始啦~"
+      - at: "03:00:03"
+        label: "节奏天国，点头准备开始啦~"
     sources:
       - url: "https://www.bilibili.com/video/BV1F1MP6qEPR"
         kind: replay
@@ -188,8 +249,22 @@
     confidence: high
     games:
       - rhythm-heaven
+      - meecha-chameleon
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 21:10"
+      - at: "00:34:36"
+        label: "节奏天国 21:45"
+      - at: "01:00:02"
+        label: "节奏天国 22:10"
+      - at: "01:23:38"
+        label: "画画躲猫猫 22:34"
+      - at: "01:48:13"
+        label: "画画躲猫猫 22:59"
+      - at: "02:28:44"
+        label: "画画躲猫猫 23:39"
     sources:
       - url: "https://www.bilibili.com/video/BV1WzMP6rEXM"
         kind: replay
@@ -210,6 +285,15 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:22"
+      - at: "00:18:21"
+        label: "刺客信条：黑旗 记忆重置 20:40"
+      - at: "01:00:03"
+        label: "刺客信条：黑旗 记忆重置 21:22"
+      - at: "02:00:05"
+        label: "刺客信条：黑旗 记忆重置 22:22"
     sources:
       - url: "https://www.bilibili.com/video/BV1n2TX6TEDC"
         kind: replay
@@ -231,6 +315,13 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "节奏天国，点头！"
+      - at: "01:00:00"
+        label: "节奏天国，点头！"
+      - at: "02:00:01"
+        label: "节奏天国，点头！"
     sources:
       - url: "https://www.bilibili.com/video/BV1a5Ma6aEn3"
         kind: replay
@@ -252,6 +343,17 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 21:20"
+      - at: "00:19:15"
+        label: "节奏天国 21:39"
+      - at: "00:40:01"
+        label: "节奏天国 22:00"
+      - at: "01:20:02"
+        label: "节奏天国 22:40"
+      - at: "02:00:03"
+        label: "节奏天国 23:20"
     sources:
       - url: "https://www.bilibili.com/video/BV1k3Mh6yEbA"
         kind: replay
@@ -291,6 +393,13 @@
       - sea-of-oblivion
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
+      - at: "01:00:01"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
+      - at: "02:00:02"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
     sources:
       - url: "https://www.bilibili.com/video/BV1dnM76cEv5"
         kind: replay
@@ -330,6 +439,13 @@
       - sea-of-oblivion
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
+      - at: "01:00:01"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
+      - at: "02:00:02"
+        label: "遗忘之海公测开门！和女流船长一起上船开荒~"
     sources:
       - url: "https://www.bilibili.com/video/BV1ECNL6oE6h"
         kind: replay
@@ -351,6 +467,15 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "节奏天国今日通关~"
+      - at: "00:46:44"
+        label: "节奏天国今日通关~"
+      - at: "01:46:45"
+        label: "节奏天国今日通关~"
+      - at: "02:46:46"
+        label: "节奏天国今日通关~"
     sources:
       - url: "https://www.bilibili.com/video/BV17DNB6nEL7"
         kind: replay
@@ -372,6 +497,17 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:51"
+      - at: "00:46:48"
+        label: "开播聊天 21:39"
+      - at: "01:18:01"
+        label: "节奏天国 22:10"
+      - at: "01:46:49"
+        label: "节奏天国 22:39"
+      - at: "02:26:50"
+        label: "节奏天国 23:19"
     sources:
       - url: "https://www.bilibili.com/video/BV1tbNB6vEn7"
         kind: replay
@@ -393,6 +529,19 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-16-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天"
+      - at: "00:11:43"
+        label: "看PV部分"
+      - at: "00:31:45"
+        label: "鸣潮3.5（上）主线剧情"
+      - at: "00:43:41"
+        label: "山雨欲来风满楼+秧秧视角"
+      - at: "01:43:41"
+        label: "秧秧视角"
+      - at: "02:43:42"
+        label: "秧秧视角"
     sources:
       - url: "https://www.bilibili.com/video/BV1XkKV6kEbK"
         kind: replay
@@ -414,6 +563,15 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-16-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.5"
+      - at: "00:44:46"
+        label: "鸣潮3.5"
+      - at: "01:44:47"
+        label: "鸣潮3.5"
+      - at: "02:44:48"
+        label: "鸣潮3.5"
     sources:
       - url: "https://www.bilibili.com/video/BV1dJK567E5w"
         kind: replay
@@ -453,6 +611,13 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.5"
+      - at: "01:00:01"
+        label: "鸣潮3.5"
+      - at: "02:00:02"
+        label: "鸣潮3.5"
     sources:
       - url: "https://www.bilibili.com/video/BV1xpKK6VE3o"
         kind: replay
@@ -492,6 +657,17 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-19-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:22"
+      - at: "00:28:39"
+        label: "鸣潮3.5 20:50"
+      - at: "01:00:01"
+        label: "鸣潮3.5 21:22"
+      - at: "01:40:02"
+        label: "鸣潮3.5 22:02"
+      - at: "02:20:03"
+        label: "鸣潮3.5 22:42"
     sources:
       - url: "https://www.bilibili.com/video/BV1McKr6LEeu"
         kind: replay
@@ -513,6 +689,13 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-19-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.5"
+      - at: "01:00:01"
+        label: "鸣潮3.5"
+      - at: "02:00:02"
+        label: "鸣潮3.5"
     sources:
       - url: "https://www.bilibili.com/video/BV1ZJKr6wEko"
         kind: replay
@@ -534,6 +717,13 @@
       - fengbao-pasidui
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "风暴怕死队"
+      - at: "01:00:01"
+        label: "风暴怕死队"
+      - at: "02:00:02"
+        label: "风暴怕死队"
     sources:
       - url: "https://www.bilibili.com/video/BV1Lcg96BEUp"
         kind: replay
@@ -555,6 +745,15 @@
       - fengbao-pasidui
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "风暴怕死队"
+      - at: "01:00:01"
+        label: "风暴怕死队"
+      - at: "02:00:02"
+        label: "风暴怕死队"
+      - at: "03:00:03"
+        label: "风暴怕死队"
     sources:
       - url: "https://www.bilibili.com/video/BV1g13c6DEqU"
         kind: replay

@@ -370,24 +370,33 @@
   - id: 2018-04-15-live-01
     type: live
     date: "2018-04-15"
-    series: xishuo-liaozhai
-    title: "戏说聊斋"
+    title: "【心灵砒霜】论中文语言的博大精深~"
+    series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 93
+    duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_15/1523792304.jpg?imageslim"
     games: []
-    tags: [戏说聊斋, 弹幕版]
-    note: "同一场直播（戏说聊斋第三期）的纯净版（ac4311550）与弹幕版（ac4311943）原本被建模为两条重复条目，已合并。同日另有心灵砒霜条目。"
+    tags: [戏说聊斋, 心灵砒霜]
     segments:
       - at: "00:00:00"
-        label: "女流戏说聊斋第三期"
-      - at: "00:23:19"
-        label: "女流戏说聊斋第三期"
-      - at: "00:46:38"
-        label: "女流戏说聊斋第三期"
-      - at: "01:09:59"
-        label: "女流戏说聊斋第三期"
+        label: "P1-2018.4.15-女流戏说聊斋第三期"
+      - at: "00:23:18"
+        label: "P1-2018.4.15-女流戏说聊斋第三期"
+      - at: "00:46:36"
+        label: "P1-2018.4.15-女流戏说聊斋第三期"
+      - at: "01:09:54"
+        label: "P1-2018.4.15-女流戏说聊斋第三期"
+      - at: "01:33:12"
+        label: "P2-2018.4.15-心灵砒霜-弹幕版"
+      - at: "02:01:18"
+        label: "P2-2018.4.15-心灵砒霜-弹幕版"
+      - at: "02:29:18"
+        label: "P2-2018.4.15-心灵砒霜-弹幕版"
+      - at: "02:57:18"
+        label: "P2-2018.4.15-心灵砒霜-弹幕版"
+      - at: "03:25:12"
+        label: "P2-2018.4.15-心灵砒霜-弹幕版"
     sources:
       - url: "https://www.acfun.cn/v/ac4311550"
         kind: replay
@@ -397,37 +406,12 @@
         kind: replay
         parts: 4
         status: alive
-    contributed_by: data-agent
-
-  - id: 2018-04-15-live-02
-    type: live
-    date: "2018-04-15"
-    series: xinling-pishuang
-    title: "【心灵砒霜】论中文语言的博大精深~"
-    platform: douyu
-    confidence: high
-    duration_min: 140
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523838578.png?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜-弹幕版"
-      - at: "00:27:54"
-        label: "心灵砒霜-弹幕版"
-      - at: "00:55:57"
-        label: "心灵砒霜-弹幕版"
-      - at: "01:23:56"
-        label: "心灵砒霜-弹幕版"
-      - at: "01:51:56"
-        label: "心灵砒霜-弹幕版"
-    sources:
       - url: "https://www.acfun.cn/v/ac4311945"
         kind: replay
         parts: 5
         status: alive
+    note: "同一场（4.15 周日）拆 3 视频：聊斋第三期纯净版（ac4311550，P1）+ 聊斋弹幕版（ac4311943，P1，次日上传）+ 砒霜弹幕版（ac4311945，P2，网易云第 79 期《论中文语言的博大精深~》），P 编号连续，按一天一条原则合并"
     contributed_by: data-agent
-
   - id: 2018-04-16-live-01
     type: live
     date: "2018-04-16"
@@ -436,7 +420,7 @@
     confidence: high
     duration_min: 314
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523888489.JPG?imageslim"
-    games: [maplestory-2]
+    games: [maplestory-2, maplestory]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -506,6 +490,24 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2018-04-17-live-02
+    type: live
+    date: "2018-04-17"
+    series: xishuo-liaozhai
+    title: "戏说聊斋"
+    platform: douyu
+    confidence: high
+    duration_min: 16
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965702.jpg?imageslim"
+    games: []
+    tags: [戏说聊斋]
+    sources:
+      - url: "https://www.acfun.cn/v/ac4314841"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
+    note: "原误标 2018-01-15；fileName/上传/封面均为 2018-04-17（戏说聊斋第四期），归此日"
   - id: 2018-04-20-live-01
     type: live
     date: "2018-04-20"
@@ -594,7 +596,7 @@
     confidence: high
     duration_min: 58
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_22/1524400508.JPG?imageslim"
-    games: [maplestory-2]
+    games: [maplestory-2, maplestory]
     segments:
       - at: "00:00:00"
         label: "冒险岛"

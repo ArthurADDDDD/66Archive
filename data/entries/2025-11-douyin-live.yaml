@@ -14,6 +14,19 @@
       - call-of-duty-black-ops-7
     tags: [弹幕版]
     note: "同一场直播由 服部平次（BV1hDCuBHERK，2:24:42）、bobi华（BV1ZRCMBfEUk，2:23:13）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:24:18）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 18:07"
+      - at: "00:30:01"
+        label: "开播聊天 18:37"
+      - at: "00:45:05"
+        label: "使命召唤 18:52"
+      - at: "01:00:02"
+        label: "使命召唤 19:07"
+      - at: "01:30:03"
+        label: "使命召唤 19:37"
+      - at: "02:00:04"
+        label: "使命召唤 20:07"
     sources:
       - url: "https://www.bilibili.com/video/BV1hDCuBHERK"
         kind: replay
@@ -51,6 +64,13 @@
       - jiangshan-beiwang
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1hMyPBzEVr，2:25:16）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:26:18）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "江山北望：立个称霸的小目标"
+      - at: "01:00:00"
+        label: "江山北望：立个称霸的小目标"
+      - at: "02:00:00"
+        label: "江山北望：立个称霸的小目标"
     sources:
       - url: "https://www.bilibili.com/video/BV15CyPB1E6F"
         kind: replay
@@ -72,6 +92,25 @@
       - jiangshan-beiwang
     tags: [弹幕版]
     note: "同一场直播由 bobi华（3:26:01）、服部平次（弹幕版 3:30:20）、直播回放巴拉蹦吧（弹幕/纯净双版 3:30:55）分别搬运，不懒bot 的投稿为剪辑分 P + 末尾整段完整录像（完整录像 3:30:01），总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18:07 开播聊天"
+      - at: "00:30:03"
+        label: "18:37 开播聊天"
+      - at: "00:55:04"
+        label: "19:02 第三章-试锋刀"
+      - at: "01:00:04"
+        label: "19:08 第三章-试锋刀"
+      - at: "01:30:05"
+        label: "19:38 第三章-试锋刀+第四章-破山缺"
+      - at: "02:00:06"
+        label: "20:08 第四章-破山缺+第五章-问天命"
+      - at: "02:30:07"
+        label: "20:38 第五章-问天命"
+      - at: "03:00:08"
+        label: "21:08 第五章-问天命"
+      - at: "03:31:07"
+        label: "18:08~21:39完整直播录像"
     sources:
       - url: "https://www.bilibili.com/video/BV1eQSEBPEuT"
         kind: replay

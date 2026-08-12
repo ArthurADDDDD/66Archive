@@ -173,7 +173,7 @@
     confidence: high
     duration_min: 79
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_14/1476461134.JPG?imageslim"
-    games: []
+    games: [xianjian-3d-huhe]
     sources:
       - url: "https://www.acfun.cn/v/ac3178955"
         kind: replay
@@ -258,7 +258,7 @@
     confidence: high
     duration_min: 284
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_21/1477060291.JPG?imageslim"
-    games: []
+    games: [rusty-lake]
     segments:
       - at: "00:00:00"
         label: "P1-聊天"
@@ -303,39 +303,27 @@
   - id: 2016-10-24-live-01
     type: live
     date: "2016-10-24"
-    title: "后宫三千人P0P1"
+    title: "后宫三千人"
     platform: douyu
     confidence: high
-    duration_min: 85
+    duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_25/1477363930.JPG?imageslim"
     games: [hougong-sanqianren]
+    note: "ACFun 将同一场直播拆分为 2 个回放视频（ac3204283 含 P0–P1、ac3203589 含 P2–P3，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
         label: "P0-聊天"
-      - at: "00:20:18"
+      - at: "00:20:17"
         label: "P1-后宫三千人"
+      - at: "01:24:55"
+        label: "P2"
+      - at: "02:51:02"
+        label: "P3"
     sources:
       - url: "https://www.acfun.cn/v/ac3204283"
         kind: replay
         parts: 2
         status: alive
-    contributed_by: data-agent
-
-  - id: 2016-10-24-live-02
-    type: live
-    date: "2016-10-24"
-    title: "后宫三千人P2P3"
-    platform: douyu
-    confidence: high
-    duration_min: 171
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_9_24/1477318099.JPG?imageslim"
-    games: [hougong-sanqianren]
-    segments:
-      - at: "00:00:00"
-        label: "P2"
-      - at: "01:26:07"
-        label: "P3"
-    sources:
       - url: "https://www.acfun.cn/v/ac3203589"
         kind: replay
         parts: 2
@@ -382,36 +370,27 @@
   - id: 2016-10-27-live-01
     type: live
     date: "2016-10-27"
-    title: "后宫三千人P1P3P4"
+    title: "后宫三千人"
     platform: douyu
     confidence: high
-    duration_min: 158
+    duration_min: 227
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_27/1477570793.JPG?imageslim"
     games: [hougong-sanqianren]
+    note: "ACFun 将同一场直播拆分为 2 个回放视频（ac3210928 含 P1/P3/P4、ac3211585 含 P2，P 编号连续但上传乱序），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
         label: "P1-10.27-聊天"
       - at: "00:19:58"
+        label: "P2"
+      - at: "01:29:07"
         label: "P3-10.27-后宫三千人"
-      - at: "01:28:56"
+      - at: "02:38:05"
         label: "P4-10.27-后宫三千人"
     sources:
       - url: "https://www.acfun.cn/v/ac3210928"
         kind: replay
         parts: 3
         status: alive
-    contributed_by: data-agent
-
-  - id: 2016-10-27-live-02
-    type: live
-    date: "2016-10-27"
-    title: "后宫三千人P2"
-    platform: douyu
-    confidence: high
-    duration_min: 69
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_9_27/1477597442.JPG?imageslim"
-    games: [hougong-sanqianren]
-    sources:
       - url: "https://www.acfun.cn/v/ac3211585"
         kind: replay
         parts: 1

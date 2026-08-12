@@ -304,7 +304,7 @@
     confidence: high
     duration_min: 118
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_21/1490061685.jpg?imageslim"
-    games: []
+    games: [1-2-switch]
     sources:
       - url: "https://www.acfun.cn/v/ac3561618"
         kind: replay
@@ -337,11 +337,13 @@
     type: live
     date: "2017-03-22"
     title: "砒霜兼索尼2周年户外~"
+    series: xinling-pishuang
     platform: douyu
     confidence: high
     duration_min: 244
     cover: "https://tx-free-imgs.acfun.cn/content/2017_03_22/1490199775.jpg?imageslim"
     games: []
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "砒霜弹幕版"

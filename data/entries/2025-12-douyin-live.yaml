@@ -10,9 +10,30 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/7b56918569e0b3ab88279df821115be24580990e.jpg"
     confidence: high
-    games: [a-little-to-the-left]
+    games: [a-little-to-the-left, delta-force]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "A Little to the Left 19:09"
+      - at: "00:30:01"
+        label: "A Little to the Left 19:39"
+      - at: "01:00:02"
+        label: "A Little to the Left 20:09"
+      - at: "01:30:03"
+        label: "A Little to the Left 20:39"
+      - at: "02:00:04"
+        label: "A Little to the Left & 三角洲行动 21:09"
+      - at: "02:30:05"
+        label: "三角洲行动 21:39"
+      - at: "02:33:01"
+        label: "三角洲行动 21:47"
+      - at: "02:49:53"
+        label: "三角洲行动 22:20"
+      - at: "03:19:54"
+        label: "三角洲行动 22:50"
+      - at: "03:42:28"
+        label: "三角洲行动 23:26"
     sources:
       - url: "https://www.bilibili.com/video/BV1EP2eBrEQZ"
         kind: replay
@@ -33,6 +54,21 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "不是强迫症玩不了的游戏"
+      - at: "01:00:01"
+        label: "不是强迫症玩不了的游戏"
+      - at: "02:00:02"
+        label: "不是强迫症玩不了的游戏"
+      - at: "02:32:38"
+        label: "猛攻？"
+      - at: "02:49:58"
+        label: "猛攻？"
+      - at: "03:43:13"
+        label: "猛攻？"
+      - at: "03:44:07"
+        label: "猛攻？"
     sources:
       - url: "https://www.bilibili.com/video/BV11Y2iBbEgP"
         kind: replay
@@ -103,6 +139,11 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "你我的游戏时光"
+      - at: "01:00:01"
+        label: "你我的游戏时光"
     sources:
       - url: "https://www.bilibili.com/video/BV1M72EB2E4M"
         kind: replay
@@ -142,6 +183,23 @@
       - arknights-endfield
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1Mf2XB2E6c，3:22:26）、服部平次（BV13V2XB7E1H，3:22:18）、不懒bot（BV1Zz2XBbEU2，3:22:41）与 直播回放巴拉蹦吧（弹幕/纯净双版，3:22:56）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18:06 开播聊天"
+      - at: "00:30:01"
+        label: "18:37 开播聊天"
+      - at: "00:41:07"
+        label: "18:48 明日方舟：终末地"
+      - at: "01:00:02"
+        label: "19:06 明日方舟：终末地"
+      - at: "01:30:03"
+        label: "19:37 明日方舟：终末地"
+      - at: "02:00:04"
+        label: "20:06 明日方舟：终末地"
+      - at: "02:30:05"
+        label: "20:37 明日方舟：终末地"
+      - at: "03:00:06"
+        label: "21:06 明日方舟：终末地"
     sources:
       - url: "https://www.bilibili.com/video/BV1Zz2XBbEU2"
         kind: replay
@@ -162,6 +220,13 @@
     games: []
     tags: [弹幕版]
     note: "同一场直播（TGA2025 颁奖典礼）由 不懒bot（剪辑上/下 3:25:42 + 完整 3:25:37）、直播回放巴拉蹦吧（弹幕/纯净双版 3:25:15）、bobi华（3:25:19）与 服部平次（3:25:10）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "TGA2025【上】"
+      - at: "02:00:01"
+        label: "TGA2025【下】已修复"
+      - at: "03:25:42"
+        label: "无弹幕【完整】"
     sources:
       - url: "https://www.bilibili.com/video/BV1wRmjBqEQC"
         kind: replay
@@ -183,6 +248,15 @@
       - rhythm-heaven
     tags: [弹幕版]
     note: "同一场直播（18:15 开播聊天→虚实万象 Pragmata→啵点节奏 Bits & Bops→20:47 收尾）由 服部平次（2:31:44）、bobi华（2:32:22）与 直播回放巴拉蹦吧（弹幕/纯净双版 2:32:44）整场分别搬运，不懒bot 拆为两段投稿（PRAGMATA 段 ~1:10、啵点节奏段 ~1:22，均含剪辑分 P + 完整录像页，合 2:32），各来源总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "19:24 啵点节奏 Bits & Bops"
+      - at: "00:20:12"
+        label: "19:45 啵点节奏 Bits & Bops"
+      - at: "00:50:13"
+        label: "20:15 啵点节奏 Bits & Bops"
+      - at: "01:22:26"
+        label: "完整录像无弹幕"
     sources:
       - url: "https://www.bilibili.com/video/BV1M9qVB5EQz"
         kind: replay
@@ -204,6 +278,17 @@
       - ragnarok-rebirth
     tags: [弹幕版]
     note: "同一场直播由 服部平次（BV1NFBRBxED2，2:17:39）、直播回放巴拉蹦吧（弹幕/纯净双版，2:18:07）与 bobi华（BV1HWBQBGEsN，2:17:19）分别搬运，总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 18:15"
+      - at: "00:30:16"
+        label: "开播聊天&仙境传说：重生 18:45"
+      - at: "01:00:16"
+        label: "仙境传说：重生 19:15"
+      - at: "01:30:16"
+        label: "仙境传说：重生 19:45"
+      - at: "02:00:16"
+        label: "仙境传说：重生 20:15"
     sources:
       - url: "https://www.bilibili.com/video/BV1NFBRBxED2"
         kind: replay
@@ -225,6 +310,27 @@
       - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV11HByB8Evv，4:03:58）、直播回放巴拉蹦吧（弹幕/纯净双版，4:04:17）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 4:03:49），总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18:14 开播聊天+燕云十六声"
+      - at: "00:30:01"
+        label: "18:44 燕云十六声-时装"
+      - at: "01:00:02"
+        label: "19:14 燕云十六声-青羽逐云"
+      - at: "01:30:03"
+        label: "19:44 燕云十六声"
+      - at: "02:00:04"
+        label: "20:14 不见山·金乌衔枝"
+      - at: "02:30:05"
+        label: "20:44 不见山·金乌衔枝"
+      - at: "03:00:06"
+        label: "21:14 不见山·金乌衔枝"
+      - at: "03:30:07"
+        label: "21:44 不见山·金乌衔枝"
+      - at: "04:00:08"
+        label: "22:14 不见山·金乌衔枝"
+      - at: "04:03:49"
+        label: "完整录像无弹幕"
     sources:
       - url: "https://www.bilibili.com/video/BV1ysByBtETs"
         kind: replay
@@ -246,6 +352,23 @@
       - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1tMvkBDE1D，2:43:40）、直播回放巴拉蹦吧（弹幕/纯净双版，2:43:48）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 2:43:04），总时长吻合，已合并为一天一条。"
+    segments:
+      - at: "00:00:00"
+        label: "18:18 开播聊天"
+      - at: "00:30:01"
+        label: "18:48 开播聊天"
+      - at: "00:39:13"
+        label: "18:57 找倪萍老师，做主线"
+      - at: "01:00:02"
+        label: "19:18 不见山·金乌衔枝"
+      - at: "01:30:03"
+        label: "19:48 卷六·奉敕不杀"
+      - at: "02:00:04"
+        label: "20:18 卷六·奉敕不杀"
+      - at: "02:30:05"
+        label: "20:48 燕云十六声"
+      - at: "02:43:04"
+        label: "完整录像无弹幕"
     sources:
       - url: "https://www.bilibili.com/video/BV11dvkBmEsE"
         kind: replay
