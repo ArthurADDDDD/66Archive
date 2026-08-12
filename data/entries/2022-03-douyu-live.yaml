@@ -109,29 +109,25 @@
   - id: 2022-03-06-live-01
     type: live
     date: "2022-03-06"
-    title: "艾尔登法环 上"
+    title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 237
+    duration_min: 474
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
     games: [elden-ring]
+    note: "ACFun 将同一场直播拆为 2 个回放段（ac33910899 上、ac33910802 下，同时长、同夜上传），按一天一条原则合并为单条。"
+    segments:
+      - at: "00:00:00"
+        label: "上"
+        game: elden-ring
+      - at: "03:57:06"
+        label: "下"
+        game: elden-ring
     sources:
       - url: "https://www.acfun.cn/v/ac33910899"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2022-03-06-live-02
-    type: live
-    date: "2022-03-06"
-    title: "艾尔登法环 下"
-    platform: douyu
-    confidence: high
-    duration_min: 237
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_36f3c78ece2346ed9b4b1763bfe4d8f6.jpeg?imageslim"
-    games: [elden-ring]
-    sources:
       - url: "https://www.acfun.cn/v/ac33910802"
         kind: replay
         parts: 1

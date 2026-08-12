@@ -29,45 +29,41 @@
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 178
+    duration_min: 358
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f23b78bddfbb470a9ea0f23a90ae81ce.jpeg?imageslim"
     games: [lost-judgment]
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。"
     segments:
       - at: "00:00:00"
-        label: "审判之逝：湮灭的记忆"
-      - at: "00:44:34"
-        label: "审判之逝：湮灭的记忆"
-      - at: "01:29:09"
-        label: "审判之逝：湮灭的记忆"
-      - at: "02:13:44"
-        label: "审判之逝：湮灭的记忆"
+        label: "P5"
+        game: lost-judgment
+      - at: "00:45:00"
+        label: "P6"
+        game: lost-judgment
+      - at: "01:30:00"
+        label: "P7"
+        game: lost-judgment
+      - at: "02:15:00"
+        label: "P8"
+        game: lost-judgment
+      - at: "02:59:30"
+        label: "P9"
+        game: lost-judgment
+      - at: "03:44:06"
+        label: "P10"
+        game: lost-judgment
+      - at: "04:28:42"
+        label: "P11"
+        game: lost-judgment
+      - at: "05:13:18"
+        label: "P12"
+        game: lost-judgment
     sources:
-      - url: "https://www.acfun.cn/v/ac31326861"
+      - url: "https://www.acfun.cn/v/ac31326394"
         kind: replay
         parts: 4
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-10-02-live-02
-    type: live
-    date: "2021-10-02"
-    title: "审判之逝：湮灭的记忆（中）"
-    platform: douyu
-    confidence: high
-    duration_min: 180
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_324d894db5c34724a633772406111857.jpeg?imageslim"
-    games: [lost-judgment]
-    segments:
-      - at: "00:00:00"
-        label: "审判之逝：湮灭的记忆"
-      - at: "00:45:00"
-        label: "审判之逝：湮灭的记忆"
-      - at: "01:30:00"
-        label: "审判之逝：湮灭的记忆"
-      - at: "02:15:00"
-        label: "审判之逝：湮灭的记忆"
-    sources:
-      - url: "https://www.acfun.cn/v/ac31326394"
+      - url: "https://www.acfun.cn/v/ac31326861"
         kind: replay
         parts: 4
         status: alive
