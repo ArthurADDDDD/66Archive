@@ -71,7 +71,7 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
           placeholder="搜索游戏名或别名…"
           ariaLabel="搜索游戏"
           iconClassName="sm:max-w-xs"
-          inputClassName="w-full max-w-xs rounded-full border border-line bg-surface/70 px-4 py-2 text-[13px] text-ink outline-none transition-colors placeholder:text-faint focus:border-live/60 sm:w-64"
+          inputClassName="w-full max-w-xs rounded-full border border-line bg-surface/70 px-4 py-2 text-control text-ink outline-none transition-colors placeholder:text-faint focus:border-live/60 sm:w-64"
         />
         <div className="flex flex-wrap items-center gap-1.5">
           {SORTS.map((s) => (
@@ -154,7 +154,7 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
               >
                 {g.firstDate ? `${g.firstDate.slice(0, 4)}` : '待补录'}
               </span>
-              <span className="relative max-w-full text-center text-[16px] font-bold leading-tight text-ink/90">
+              <span className="relative max-w-full text-center text-base font-bold leading-tight text-ink/90">
                 {g.name}
               </span>
             </div>
@@ -172,7 +172,7 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
 
         {/* 三行文字改成固定两行槽位：日期缺失时原本整行塌陷、lastDate 与 firstDate 相同时又少一段，
             同一行的瓦片文字块高度各不相同，读下来是参差的。缺什么就占什么，不塌陷。 */}
-        <p className="mt-2.5 line-clamp-2 min-h-[2.6em] text-[13px] leading-snug text-ink group-hover:text-live">
+        <p className="mt-2.5 line-clamp-2 min-h-[2.6em] text-control leading-snug text-ink group-hover:text-live">
           {g.name}
         </p>
         <p className="mt-1 text-meta text-faint tnum">

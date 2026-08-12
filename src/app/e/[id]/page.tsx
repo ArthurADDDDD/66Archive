@@ -39,19 +39,20 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   return (
     // 外层不带 px-page：RelatedRail 自带一层，套两层百分比 padding 会复利
     // （原来这里就是 px-4 套 RelatedRail 的 px-4，手机上等于 32px 双重内边距）
-    <div className="ui-page-in mx-auto max-w-[900px] pb-8">
+    <div className="ui-page-in pb-8">
       <MobileQuickNav active="entry" />
       <BackToTop />
-      <header className="flex items-center px-4 py-5 sm:px-6">
+      <header className="site-header-container flex items-center px-4 py-5 sm:px-6">
         <SiteNav active="entry" />
       </header>
-      <div className="mt-5 px-page">
-        <Link href={backHref} className="ui-press inline-block rounded-sm text-meta text-muted tnum underline underline-offset-4 hover:text-live">
-          ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
-        </Link>
-      </div>
+      <div className="mx-auto max-w-[56.25rem]">
+        <div className="mt-5 px-page">
+          <Link href={backHref} className="ui-press inline-block rounded-sm text-meta text-muted tnum underline underline-offset-4 hover:text-live">
+            ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
+          </Link>
+        </div>
 
-      <header className="mt-6 border-b border-line px-page pb-6">
+        <header className="mt-6 border-b border-line px-page pb-6">
         <div className="flex flex-wrap items-center gap-2 text-meta tnum">
           <span className="rounded-sm px-1.5 py-0.5 font-semibold text-[#12141C]" style={{ background: platform?.color }}>
             {platform?.name ?? entry.platform}
@@ -68,7 +69,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         </div>
         <h1 className="mt-3 text-h2 font-semibold">{entry.title}</h1>
         {entry.note && <p className="mt-2 text-meta text-faint">{entry.note}</p>}
-      </header>
+        </header>
 
       {cover && (
         // eslint-disable-next-line @next/next/no-img-element
@@ -197,7 +198,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
 
       <RelatedRail rails={rails} />
 
-      <nav className="mt-12 flex justify-between gap-4 border-t border-line px-page pt-6 text-meta tnum">
+        <nav className="mt-12 flex justify-between gap-4 border-t border-line px-page pt-6 text-meta tnum">
         {older ? (
           <Link href={`/e/${older.id}/`} className="max-w-[45%] truncate py-2 text-muted hover:text-ink sm:py-0">
             ← {older.date} {older.title}
@@ -210,7 +211,8 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             {newer.date} {newer.title} →
           </Link>
         )}
-      </nav>
+        </nav>
+      </div>
     </div>
   )
 }

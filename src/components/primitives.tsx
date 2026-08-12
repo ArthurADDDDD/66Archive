@@ -16,7 +16,7 @@ import Link from 'next/link'
  */
 
 export function Container({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <div className={`mx-auto w-full max-w-[1240px] px-page ${className}`}>{children}</div>
+  return <div className={`site-container px-page ${className}`}>{children}</div>
 }
 
 /** 眉标：中英混排，所以字距只加在拉丁部分——中文被 tracking 拉散会更难读。 */
@@ -62,19 +62,21 @@ export function PageHeader({
   title,
   lede,
   right,
+  wide = false,
 }: {
   eyebrow: string
   eyebrowColor?: string
   title: React.ReactNode
   lede?: React.ReactNode
   right?: React.ReactNode
+  wide?: boolean
 }) {
   return (
     <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-      <div className="max-w-3xl">
+      <div className={wide ? 'max-w-[min(100%,72rem)]' : 'max-w-3xl'}>
         <Eyebrow color={eyebrowColor}>{eyebrow}</Eyebrow>
-        <h1 className="mt-4 text-h1 font-semibold text-ink">{title}</h1>
-        {lede && <div className="mt-5 max-w-2xl text-body text-muted">{lede}</div>}
+        <h1 className={`mt-4 font-semibold text-ink ${wide ? 'text-[clamp(2.25rem,4.2vw,5rem)] leading-[1.08] tracking-[-0.025em]' : 'text-h1'}`}>{title}</h1>
+        {lede && <div className={`mt-5 text-body text-muted ${wide ? 'max-w-3xl' : 'max-w-2xl'}`}>{lede}</div>}
       </div>
       {right}
     </div>

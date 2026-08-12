@@ -23,7 +23,7 @@ export function RandomMemory({ pool }: { pool: MemoryCandidate[] }) {
       </p>
       <button
         onClick={() => setPick(pool[Math.floor(Math.random() * pool.length)] ?? null)}
-        className="ui-press group mt-5 w-fit rounded-full border border-line bg-surface/60 px-5 py-2.5 text-[12px] text-muted transition-colors hover:border-live/60 hover:text-ink"
+        className="ui-press group mt-5 w-fit rounded-full border border-line bg-surface/60 px-5 py-2.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink"
       >
         回到一个晚上
         <span className="ml-2 inline-block font-mono transition-transform group-hover:translate-y-0.5">↯</span>

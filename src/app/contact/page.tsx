@@ -8,11 +8,11 @@ export default function ContactPage() {
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="contact" />
       <BackToTop />
-      <header className="mx-auto flex max-w-[1100px] items-center px-4 py-5 sm:px-6">
+      <header className="site-header-container flex items-center px-4 py-5 sm:px-6">
         <SiteNav active="contact" />
       </header>
 
-      <section className="relative mx-auto max-w-[1100px] px-page pb-20 pt-16 sm:pt-24">
+      <section className="site-container px-page pb-20 pt-16 sm:pt-24">
         <div className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-today/10 blur-[60px] sm:h-72 sm:w-72 sm:blur-[100px]" />
         <Eyebrow color="#E5568A">Contact &amp; correction</Eyebrow>
         <h1 className="mt-4 max-w-2xl text-h1 font-semibold">让这份索引更准确。</h1>
@@ -57,10 +57,10 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
-          <Link href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-[13px] font-medium text-[#12141C] hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
+          <Link href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-control font-medium text-[#12141C] hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
             前往编年史
           </Link>
-          <Link href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-[13px] text-muted hover:border-muted hover:text-ink">
+          <Link href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-control text-muted hover:border-muted hover:text-ink">
             返回首页
           </Link>
         </div>

@@ -87,7 +87,7 @@ export type Act = {
   id: ActId
   /** 短标签（统计分布条用） */
   label: string
-  /** 展示年份范围（含叙事副标，如 「2010 — 2015 · 在156277以前」） */
+  /** 展示年份范围（含叙事副标，如「2010 — 2015 · 视频时代」） */
   years: string
   /** 数据起止（含），to 为空表示开放结束。首页分布条用 display 范围，计数另走互斥口径。 */
   from: string
@@ -96,7 +96,7 @@ export type Act = {
   kicker: string
   title: string
   body: string[]
-  /** 幕尾字排收束（如 「156277，开门。」 / 「娃睡了来突袭。」） */
+  /** 幕尾字排收束（如「娃睡了来突袭。」） */
   closer?: { line: string; tail?: string }
   /** 这一幕内的时间线（策展，不强行按数据日期重排） */
   beats: Beat[]
@@ -115,24 +115,23 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
   'act-i': {
     id: 'act-i',
     label: '女流',
-    years: '2010 — 2015 · 在156277以前',
+    years: '2010 — 2015 · 视频时代',
     from: '2010-01-01',
     to: '2015-12-31',
     color: '#E0A244', // token: video
     kicker: 'ACT I · 女流',
     title: '女流',
     body: ['一个人，从录视频，走到坐进直播间。'],
-    closer: { line: '156277，开门。' },
   },
   'act-ii': {
     id: 'act-ii',
-    label: '156277',
+    label: '斗鱼156277',
     years: '2015 — 2023 · 大周的那些年',
     from: '2015-01-01',
     to: '2023-11-30',
     color: '#5BC8E8', // token: live
-    kicker: 'ACT II · 156277',
-    title: '156277',
+    kicker: 'ACT II · 斗鱼156277',
+    title: '斗鱼156277',
     body: ['大周的那些年。直播、游戏、弹幕，很多个晚上。'],
     closer: { line: '一个直播间，后来变成了一群人的共同记忆。' },
   },
@@ -145,7 +144,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
     color: '#FF6B75', // token: today
     kicker: 'ACT III · 余生',
     title: '余生请与我一起双人成行',
-    body: ['156277 还没有结束的时候，她人生的下一段已经开始了。'],
+    body: ['斗鱼156277 还没有结束的时候，她人生的下一段已经开始了。'],
     closer: { line: '娃睡了来突袭。', tail: 'TO BE CONTINUED' },
   },
 }
@@ -153,7 +152,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
 /**
  * 首页三幕（精简）。每个锚点对应一处真实 URL（见 .claude/docs/04-首页大事件URL调研.md §7）：
  * 第一次上传→2010-05-08 / 越来越多人→2010-06-30 / 开始直播→2015-01-24；
- * 156277开门→2015-01-24（与 ACT I 收束同一处）/ 大周形成→/games/minecraft/（无封面，type）；
+ * 大周形成→/games/minecraft/（无封面，type）；
  * see you around~→2023-11-30；双人模式→2022-09-09 / 好久不见→2024-08-18 / 娃睡了→2026-08-09；
  * 回冒险岛→/games/maplestory-classic/（无封面，type）。
  * 重要锚点显示「重要」小标；非重要锚点不带任何小标签（用户：手机端 act 小标签太吵，不要「爆款/毕业后/主机区」这类了）。
@@ -194,20 +193,11 @@ export const HOMEPAGE_ACTS: Act[] = [
     ...ACT_META['act-ii'],
     beats: [
       {
-        id: 'door',
-        important: true,
-        date: '2015',
-        size: 'type',
-        title: '156277，开门。',
-        body: '每天打游戏、聊天，慢慢有了一群总会回来的人。',
-        target: { kind: 'entry', id: '2015-01-24-video-01' },
-      },
-      {
         id: 'dazhou-formed',
         important: true,
         date: '2015—16',
         size: 'type',
-        title: '这里有了一个名字。',
+        title: '这里有了一个名字。——大周',
         body: '《大周MC》之后，水友开始叫自己「大周」。',
         target: { kind: 'game', id: 'minecraft' },
       },
@@ -216,7 +206,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         date: '2016 — 2022',
         size: 'montage',
         title: '日子就这么一天天过',
-        body: '一场接一场直播，156277 也慢慢有了自己的样子。',
+        body: '一场接一场直播，斗鱼156277 也慢慢有了自己的样子。',
         chips: ['心灵砒霜', '主机新作', '壮壮', '朋友', '联机', '户外', '黑屏聊天'],
       },
       {
@@ -225,7 +215,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         date: '2023.11',
         size: 'type',
         title: 'see you around~',
-        body: '156277 最后一次亮起。',
+        body: '斗鱼156277 最后一次亮起。',
         target: { kind: 'entry', id: '2023-11-30-live-01' },
       },
     ],
@@ -247,7 +237,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         date: '2024',
         size: 'hero',
         title: '好久不见。',
-        body: '156277 熄灯以后，过了一段时间。新的直播间又亮起来了。',
+        body: '斗鱼156277 熄灯以后，过了一段时间。新的直播间又亮起来了。',
         target: { kind: 'entry', id: '2024-08-18-live-01' },
       },
       {
@@ -342,8 +332,8 @@ export const STORY_ACTS: Act[] = [
         date: '2015.01',
         size: 'hero',
         kicker: '从录像到直播',
-        title: '156277，开门。',
-        body: '2015 年，她开始直播。斗鱼时期的名字已经是女流66，直播间是 156277。以前大家看的是录好的游戏，从这里开始，大家开始一起玩。',
+        title: '斗鱼156277，开门。',
+        body: '2015 年，她开始直播。斗鱼时期的名字已经是女流66，直播间是斗鱼156277。以前大家看的是录好的游戏，从这里开始，大家开始一起玩。',
         target: { kind: 'entry', id: '2015-01-24-video-01' },
       },
       {
@@ -366,7 +356,7 @@ export const STORY_ACTS: Act[] = [
         size: 'type',
         kicker: '大周',
         title: '从这以后，我们叫「大周」。',
-        body: '《Minecraft》里的一个存档国家名——女皇、六泽天、大周——慢慢变成了 156277 整个水友群体的名字。水友还在游戏里给她立过一座小白女皇雕像。',
+        body: '《Minecraft》里的一个存档国家名——女皇、六泽天、大周——慢慢变成了斗鱼156277 整个水友群体的名字。水友还在游戏里给她立过一座小白女皇雕像。',
         target: { kind: 'game', id: 'minecraft' },
       },
       {
@@ -467,7 +457,7 @@ export const STORY_ACTS: Act[] = [
         date: '2019.07',
         size: 'small',
         kicker: '职业高光',
-        title: '156277 去了一趟纳斯达克。',
+        title: '斗鱼156277 去了一趟纳斯达克。',
         body: '前一张还在受苦，下一张突然敲钟。这个反差本身就很女流。',
         target: { kind: 'none' },
       },
@@ -506,7 +496,7 @@ export const STORY_ACTS: Act[] = [
         size: 'type',
         kicker: '最后一次亮起',
         title: 'see you around~',
-        body: '156277 今天没有再亮起来。',
+        body: '斗鱼156277 今天没有再亮起来。',
         target: { kind: 'entry', id: '2023-11-30-live-01' },
         gameWorld: { rel: '+6 DAYS', date: '2023.12.05', text: '《GTA VI》首支预告公开。' },
       },
@@ -774,7 +764,7 @@ export const HIGHLIGHTS: Highlight[] = [
     link: false,
     date: '2019.07',
     kicker: '职业高光',
-    title: '156277 去了一趟纳斯达克。',
+    title: '斗鱼156277 去了一趟纳斯达克。',
     body: '前一张还在受苦，下一张突然敲钟。这个反差本身就很女流。',
     emphasis: '2019',
   },

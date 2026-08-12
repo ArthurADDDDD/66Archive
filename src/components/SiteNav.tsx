@@ -79,9 +79,9 @@ export function SiteNav({
       {!compact && (
         <Link
           href="/"
-          className="ui-press flex h-11 shrink-0 items-center rounded-sm text-[14px] font-semibold tracking-tight text-ink transition-colors hover:text-live"
+          className="ui-press flex h-11 shrink-0 items-center rounded-sm text-sm font-semibold tracking-tight text-ink transition-colors hover:text-live"
         >
-          女流66编年史
+          女流编年史
         </Link>
       )}
 
@@ -114,7 +114,7 @@ export function SiteNav({
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
-        className="ui-press ml-auto flex h-11 shrink-0 items-center gap-2 rounded-full border border-line/80 bg-surface/70 px-3.5 text-[12px] text-muted transition-colors hover:border-muted/70 hover:text-ink sm:hidden"
+        className="ui-press ml-auto flex h-11 shrink-0 items-center gap-2 rounded-full border border-line/80 bg-surface/70 px-3.5 text-meta text-muted transition-colors hover:border-muted/70 hover:text-ink sm:hidden"
       >
         <span className="flex items-center gap-1.5">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-live" />
@@ -135,9 +135,9 @@ export function SiteNav({
           className="ui-sheet-in fixed inset-x-0 z-50 border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
           style={{ top: panelTop }}
         >
-          <div className="mx-auto max-w-[1240px] px-4 py-2">
+          <div className="site-container px-4 py-2">
             <p className="px-3 pt-2 text-meta uppercase tracking-[0.16em] text-faint">
-              女流66编年史 · Menu
+              女流编年史 · Menu
             </p>
             <ul className="mt-1">
               {ITEMS.map((item) => {
@@ -149,7 +149,7 @@ export function SiteNav({
                       role="menuitem"
                       aria-current={selected ? 'page' : undefined}
                       onClick={() => setOpen(false)}
-                      className={`ui-press flex min-h-[44px] items-center gap-3 rounded-md px-3 py-2.5 text-[14px] transition-colors ${
+                      className={`ui-press flex min-h-[2.75rem] items-center gap-3 rounded-md px-3 py-2.5 text-sm transition-colors ${
                         selected ? 'bg-surface/80 text-ink' : 'text-muted hover:bg-surface/50 hover:text-ink'
                       }`}
                     >

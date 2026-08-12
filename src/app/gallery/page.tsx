@@ -18,15 +18,15 @@ export default function GalleryPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="gallery" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="gallery" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           去编年史 →
         </Link>
       </header>
 
       {/* 先说这些画面是什么，再说年份 */}
-      <section className="relative mx-auto max-w-[1240px] px-page pb-12 pt-12 sm:pb-16 sm:pt-16">
+      <section className="site-container px-page pb-12 pt-12 sm:pb-16 sm:pt-16">
         <div className="pointer-events-none absolute -right-20 -top-24 h-[220px] w-[220px] rounded-full bg-today/10 blur-[60px] sm:h-[380px] sm:w-[380px] sm:blur-[110px]" />
         <Eyebrow color="#E5568A" className="ui-reveal relative">Gallery · 记忆盒</Eyebrow>
         <h1 className="ui-reveal relative mt-4 max-w-3xl text-h1 font-semibold">被画下来的几年。</h1>
@@ -39,13 +39,13 @@ export default function GalleryPage() {
         </p>
       </section>
 
-      <section className="relative mx-auto max-w-[1240px] px-page pb-20">
+      <section className="site-container px-page pb-20">
         <GalleryView items={items} />
       </section>
 
       {/* 缺口：诚实保留，指向补录 */}
       <section className="border-t border-line bg-surface/20">
-        <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-20">
+        <div className="site-container px-page py-12 sm:py-20">
           <Eyebrow>Missing chapters</Eyebrow>
           <h2 className="mt-3 max-w-2xl text-h2 font-medium text-ink">还有一些年份，正在等待被找回。</h2>
           <p className="mt-3 max-w-2xl text-body text-muted">

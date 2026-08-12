@@ -5,6 +5,7 @@ import type { TimelineEntry } from '@/lib/data'
 import type { StoryYear } from '@/lib/story-years'
 import { SiteNav } from './SiteNav'
 import { BackToTop } from './ScrollAffordances'
+import { SearchField } from './SearchField'
 import { StoryTimeline } from './StoryTimeline'
 import { Timeline } from './Timeline'
 
@@ -35,6 +36,7 @@ export function ChronicleView({
 }) {
   const [mode, setMode] = useState<'story' | 'archive'>('story')
   const [mounted, setMounted] = useState(false)
+  const [storySearch, setStorySearch] = useState('')
 
   // 深链：URL 带档案参数时直接从档案模式开始（Timeline 自己会恢复 y/q/…）
   // 静态导出无法在服务端读 searchParams，初始模式只能在客户端 effect 里定，一次性且无外部依赖。
@@ -76,20 +78,41 @@ export function ChronicleView({
   return (
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
+        <div className="site-header-container flex flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
           <SiteNav active="chronicle" />
-          <button
-            onClick={() => switchMode('archive')}
-            className="ui-press ml-auto shrink-0 rounded-sm px-1 py-2 text-meta text-live tnum underline-offset-4 hover:underline sm:ml-auto sm:py-0"
-          >
-            搜索全部 {total.toLocaleString()} 条记录 →
-          </button>
-          <ModeToggle mode={mode} onChange={switchMode} />
+          <SearchField
+            value={storySearch}
+            onChange={(value) => {
+              setStorySearch(value)
+              if (!value.trim()) return
+              window.history.replaceState(null, '', `/chronicle/?q=${encodeURIComponent(value)}`)
+              setMode('archive')
+            }}
+            placeholder={`搜索全部 ${total.toLocaleString()} 条记录`}
+            ariaLabel="搜索全部记录"
+            iconClassName="ml-auto sm:hidden"
+            inputClassName="hidden"
+          />
+          <div className="hidden items-center gap-3 sm:flex">
+            <button
+              onClick={() => switchMode('archive')}
+              className="ui-press shrink-0 rounded-sm px-1 py-2 text-meta text-live tnum sm:py-0"
+            >
+              搜索全部 {total.toLocaleString()} 条记录 →
+            </button>
+            <ModeToggle mode={mode} onChange={switchMode} />
+          </div>
         </div>
       </header>
       {/* mounted 后再亮出滚动显现，避免 SSR 闪现 */}
       <div className={mounted ? '' : 'no-reveal'}>
-        <StoryTimeline years={storyYears} total={total} latestYear={latestYear} onOpenArchive={openArchiveYear} />
+        <StoryTimeline
+          years={storyYears}
+          total={total}
+          latestYear={latestYear}
+          onOpenArchive={openArchiveYear}
+          modeControl={<ModeToggle mode={mode} onChange={switchMode} />}
+        />
       </div>
       <BackToTop />
     </>
@@ -99,7 +122,7 @@ export function ChronicleView({
 /** 故事/档案切换：克制文字切换 */
 function ModeToggle({ mode, onChange }: { mode: 'story' | 'archive'; onChange: (m: 'story' | 'archive') => void }) {
   return (
-    <div role="group" aria-label="编年史模式" className="flex shrink-0 items-center gap-1 text-[12px]">
+    <div role="group" aria-label="编年史模式" className="flex shrink-0 items-center gap-1 text-meta">
       <button
         onClick={() => onChange('story')}
         aria-pressed={mode === 'story'}

@@ -25,20 +25,20 @@ export function HomeStats({ data }: { data: HomepageData }) {
   }
 
   return (
-    <section className="border-t border-line bg-surface/25 py-12 sm:py-16">
-      <div className="mx-auto max-w-[1240px] px-page">
+    <section id="home-stats" className="scroll-mt-4 border-t border-line bg-surface/25 py-12 sm:py-16">
+      <div className="home-content-container px-page">
         <Reveal>
           <Eyebrow>Totals · 这一切加起来</Eyebrow>
           {/* 这一节原本只有一行 10px 眉标、没有标题，读下来是全页唯一一个缺层级的地方 */}
           <h2 className="mt-3 text-h2 font-semibold text-ink">十六年，最后是这些数字。</h2>
-          <dl className="mt-8 grid grid-cols-3 gap-4 sm:max-w-xl">
+          <dl className="mt-8 grid grid-cols-3 gap-4 sm:gap-8">
             <Stat value={data.totals.entries.toLocaleString()} label="公开条目" />
             <Stat value={data.totals.years.toString()} label="覆盖年份" />
             <Stat value={data.totals.series.toString()} label="系列栏目" />
           </dl>
 
           {/* 三幕分布（互斥口径） */}
-          <div className="mt-8 max-w-2xl">
+          <div className="mt-8 w-full">
             <div className="flex h-2 w-full overflow-hidden rounded-full bg-raised">
               {actRows.map((a, i) => (
                 <span
@@ -52,13 +52,13 @@ export function HomeStats({ data }: { data: HomepageData }) {
               {actRows.map((a, i) => (
                 <li key={a.act.id} className="flex items-baseline gap-3 text-meta">
                   <span className="h-2 w-2 shrink-0 rounded-sm" style={{ background: a.act.color }} />
-                  <span className="w-[92px] shrink-0 font-mono text-faint tnum">{a.act.years}</span>
+                  <span className="shrink-0 whitespace-nowrap font-mono text-faint tnum">{a.act.years}</span>
                   <span className="min-w-0 truncate text-muted">{a.act.label}</span>
                   <span className="ml-auto shrink-0 text-faint tnum">{counts[i].toLocaleString()} 条</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-meta text-faint">
+            <p className="mt-4 max-w-4xl text-meta text-faint">
               分布按互斥口径计数：2022 年起的记录计入第三幕（第三幕的叙事从她人生的新一段讲起，与第二幕尾段重叠）。
               三幕相加，正好等于全部记录。
             </p>
@@ -72,10 +72,10 @@ export function HomeStats({ data }: { data: HomepageData }) {
           <div className="mt-8">
             <Link
               href="/chronicle/"
-              className="ui-press group inline-flex items-center gap-2 rounded-full border border-line bg-base/60 px-5 py-2.5 text-[13px] text-muted transition-colors hover:border-muted hover:text-ink"
+              className="ui-press group inline-flex items-center gap-2 rounded-full border border-line bg-base/60 px-5 py-2.5 text-control text-muted transition-colors hover:border-muted hover:text-ink"
             >
               打开全部 {data.totals.entries.toLocaleString()} 条记录
-              <span className="font-mono text-[12px] transition-transform group-hover:translate-x-1">→</span>
+              <span className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
         </Reveal>

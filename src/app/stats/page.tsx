@@ -84,19 +84,20 @@ export default function StatsPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="stats" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="stats" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           去编年史逐条查看 →
         </Link>
       </header>
 
-      <section className="mx-auto max-w-[1240px] px-page pb-10 pt-8 sm:pb-16 sm:pt-14">
+      <section className="site-container-wide px-page pb-[clamp(3rem,7vh,7rem)] pt-[clamp(2.5rem,6vh,6rem)]">
         <PageHeader
           eyebrow="Stats · 数据里的发现"
           eyebrowColor="#E5568A"
           title="这些数字背后，是被保存下来的时间。"
           lede="每一节只回答一个问题。数字全部来自档案本身的逐条记录——先有数据，后有观察。"
+          wide
           right={
             <details className="group max-w-sm" open={false}>
               <summary className="ui-press cursor-pointer list-none rounded-sm text-meta uppercase tracking-[0.16em] text-faint transition-colors hover:text-ink">
@@ -245,13 +246,13 @@ function hoursTop(yearRows: [number, { count: number; minutes: number; known: nu
 function Section({ question, accent, children }: { question: string; accent: string; children: React.ReactNode }) {
   return (
     <section className="border-t border-line">
-      <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-20">
+        <div className="site-container-wide px-page py-[clamp(3rem,8vh,7rem)]">
         <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em] text-faint">
           <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
           一个问题
         </p>
-        <h2 className="mt-3 max-w-2xl text-h2 font-semibold text-ink">{question}</h2>
-        <div className="mt-6 max-w-3xl sm:mt-8">{children}</div>
+        <h2 className="mt-3 max-w-[min(100%,72rem)] text-[clamp(2rem,3vw,4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-ink">{question}</h2>
+        <div className="mt-8 w-[min(100%,clamp(58rem,78vw,104rem))] sm:mt-10">{children}</div>
       </div>
     </section>
   )

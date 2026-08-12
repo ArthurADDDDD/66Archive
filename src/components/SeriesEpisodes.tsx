@@ -99,10 +99,10 @@ export function SeriesEpisodes({
                         type="button"
                         onClick={() => setOpenYear(open ? null : year)}
                         aria-expanded={open}
-                        className="ui-press flex min-h-[44px] w-full items-center justify-between gap-3 px-1 py-2 text-[13px] text-muted transition-colors hover:text-ink"
+                        className="ui-press flex min-h-[2.75rem] w-full items-center justify-between gap-3 px-1 py-2 text-control text-muted transition-colors hover:text-ink"
                       >
                         <span className="flex items-baseline gap-2">
-                          <span className="font-mono text-[16px] font-bold text-ink tnum">{year}</span>
+                          <span className="font-mono text-base font-bold text-ink tnum">{year}</span>
                           <span className="text-meta text-faint tnum">{list.length} 期</span>
                         </span>
                         <span

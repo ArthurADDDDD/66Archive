@@ -26,17 +26,17 @@ export default function SeriesPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="series" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="series" />
         <Link
           href="/chronicle/"
-          className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block"
+          className="ui-press hidden rounded-sm text-meta text-live sm:block"
         >
           在编年史搜索全部记录 →
         </Link>
       </header>
 
-      <section className="mx-auto max-w-[1240px] px-page pb-12 pt-10 sm:pb-16 sm:pt-14">
+      <section className="site-container px-page pb-12 pt-10 sm:pb-16 sm:pt-14">
         <PageHeader
           eyebrow="Series · 节目单"
           eyebrowColor="#A78BFA"
@@ -47,7 +47,7 @@ export default function SeriesPage() {
 
       {pishuang && (
         <section className="border-y border-line/70 bg-[#0C0E15]">
-          <div className="mx-auto grid max-w-[1240px] items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
+          <div className="site-container grid items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
             <div>
               <Eyebrow color="#5BC8E8" dot>
                 周日情感电台 · 斗鱼时期 · 心灵砒霜
@@ -61,7 +61,7 @@ export default function SeriesPage() {
                 <span>横跨 8 年</span>
               </div>
               <div className="mt-8">
-                <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} />
+                <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} descriptive />
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function SeriesPage() {
               </p>
               <Link
                 href="/series/xinling-pishuang/"
-                className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-[13px] text-ink transition-colors hover:border-live/60 hover:text-live"
+                className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
               >
                 打开心灵砒霜的全部 {pishuang.count} 期
                 <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
@@ -87,7 +87,7 @@ export default function SeriesPage() {
         </section>
       )}
 
-      <section className="mx-auto max-w-[1240px] px-page py-12 sm:py-20">
+      <section className="site-container px-page py-12 sm:py-20">
         <EraGroup label="视频解说时代" years="2010 — 2015" color={ERA_COLOR.video} series={videoEra} />
         <div className="mt-14" />
         <EraGroup label="斗鱼直播时代" years="2016 — 2023" color={ERA_COLOR.douyu} series={douyuEra} />
@@ -121,13 +121,13 @@ function EraGroup({ label, years, color, series }: { label: string; years: strin
                 <span className="text-h3 font-bold text-ink/85">{s.name}</span>
               </div>
             )}
-            <h3 className="mt-4 text-[16px] font-semibold tracking-tight text-ink">{s.name}</h3>
+            <h3 className="mt-4 text-base font-semibold tracking-tight text-ink">{s.name}</h3>
             <p className="mt-1.5 text-meta text-faint tnum">
               {s.count} 期 · {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
             </p>
             <p className="mt-2.5 line-clamp-2 min-h-[2.8em] text-body text-muted">{s.description}</p>
             <div className="mt-4">
-              <ActivityStrip perYear={s.perYear} color={color} height={22} />
+              <ActivityStrip perYear={s.perYear} color={color} height={26} descriptive />
             </div>
           </Link>
         ))}

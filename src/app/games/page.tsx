@@ -45,14 +45,14 @@ export default function GamesPage() {
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="games" />
       <BackToTop />
-      <header className="ui-slide-down mx-auto flex max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
         <SiteNav active="games" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live tnum underline-offset-4 hover:underline sm:block">
+        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live tnum sm:block">
           打开全部 {timeline.length.toLocaleString()} 条记录 →
         </Link>
       </header>
 
-      <section className="mx-auto max-w-[1400px] px-page pb-8 pt-10 sm:pt-14">
+      <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
         <h1 className="text-h1 font-semibold">她的游戏库</h1>
         <p className="mt-5 max-w-2xl text-body text-muted">
           {played.length} 个游戏，其中 {onceOnly} 个只播过一次。
@@ -71,7 +71,7 @@ export default function GamesPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-page pb-20">
+      <section className="site-container-wide px-page pb-20">
         <GamesLibrary games={library} />
       </section>
 

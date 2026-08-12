@@ -27,15 +27,15 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
   return (
     <div>
       <div ref={scroller} className="overflow-x-auto [scrollbar-width:thin]">
-        <div className="flex h-40 w-max min-w-full items-end gap-[3px] sm:h-48">
+        <div className="flex h-[clamp(12rem,18vw,22rem)] w-max min-w-full items-end gap-[0.1875rem]">
           {rows.map(([year, row]) => (
             <Link
               key={year}
               href={`/chronicle/?y=${year}`}
-              className="group flex min-w-[30px] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
+              className="group flex h-full min-w-[1.875rem] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
               title={`${year} 年 · ${row.count.toLocaleString()} 条`}
             >
-              <span className="relative flex w-full max-w-[26px] flex-1 items-end">
+              <span className="relative flex min-h-0 w-full max-w-[clamp(1.25rem,1.5vw,2rem)] flex-1 items-end">
                 <span
                   className="block w-full rounded-t-sm transition-[opacity,filter] group-hover:brightness-150"
                   style={{

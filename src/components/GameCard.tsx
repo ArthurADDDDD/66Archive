@@ -64,7 +64,7 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
             >
               {era.label}
             </span>
-            <span className="relative max-w-full text-center text-[17px] font-bold leading-tight text-ink/90">
+            <span className="relative max-w-full text-center text-[1.0625rem] font-bold leading-tight text-ink/90">
               {p.name}
             </span>
             {p.firstDate && (
@@ -76,7 +76,7 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
           </div>
         )}
         <span className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-base/85 to-transparent" />
-        {coverOk && <span className="absolute bottom-2 left-3 right-8 truncate text-[13px] font-medium text-ink">{p.name}</span>}
+        {coverOk && <span className="absolute bottom-2 left-3 right-8 truncate text-control font-medium text-ink">{p.name}</span>}
         <span aria-hidden className="absolute bottom-2 right-3 font-mono text-meta text-faint transition-all group-hover:translate-x-1 group-hover:text-live">
           →
         </span>
