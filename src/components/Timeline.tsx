@@ -272,7 +272,7 @@ export function Timeline({
   return (
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-2 px-4 py-3 sm:flex-nowrap sm:gap-3 sm:px-6">
+        <div className="site-header-container flex flex-wrap items-center gap-2 px-4 py-3 sm:flex-nowrap sm:gap-3 sm:px-6">
           <SiteNav active="chronicle" />
           {/* 手机端 SearchField 已经塌成一个 44px 圆形图标——原本的 order-3 w-full
               会让 sticky header 白白多出一整行，行里只有那一个小圆圈。 */}
@@ -284,21 +284,22 @@ export function Timeline({
               ariaLabel="搜索全部记录"
               kbd="/"
               inputRef={searchRef}
-              inputClassName="w-full rounded-md border border-line bg-surface py-2.5 pl-3 pr-9 text-[12px] text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:py-2"
+              inputClassName="w-full rounded-md border border-line bg-surface py-2.5 pl-3 pr-9 text-control text-ink shadow-transparent transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-faint hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:shadow-[0_0_0_3px_rgba(91,200,232,0.1)] focus:outline-none sm:py-2"
             />
           </div>
           <button
             onClick={() => setSheetOpen(true)}
-            className="ui-press relative flex h-11 shrink-0 items-center rounded-md border border-line bg-surface px-3 text-[12px] text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:h-auto sm:py-2"
+            className="ui-press relative flex h-11 shrink-0 items-center rounded-md border border-line bg-surface px-3 text-meta text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:h-auto sm:py-2"
           >
             筛选{dirtyCount > 0 && <span className="ml-1.5 tnum text-live">{dirtyCount}</span>}
           </button>
-          {extra}
+          <div className="hidden sm:block">{extra}</div>
         </div>
       </header>
 
-      <main className="ui-page-in mx-auto max-w-[1400px] px-page pb-16">
-        <section className="ui-reveal py-8 sm:py-10">
+      <main className="ui-page-in site-container-wide px-page pb-16">
+        {extra && <div className="ui-reveal pt-4 sm:hidden">{extra}</div>}
+        <section className="ui-reveal pb-8 pt-4 sm:py-10">
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
               <p className="text-meta uppercase tracking-[0.16em] text-live tnum">2010 — {latestYear}</p>
@@ -343,7 +344,7 @@ export function Timeline({
                   style={{ borderColor: active ? era.color : undefined }}
                 >
                   <span>
-                    <span className="block text-[13px] font-medium">{era.label}</span>
+                    <span className="block text-control font-medium">{era.label}</span>
                     <span className="mt-0.5 block font-mono text-meta text-faint tnum">{era.detail}</span>
                   </span>
                   <span className="font-mono text-meta text-faint tnum">{count.toLocaleString()}</span>
@@ -373,7 +374,7 @@ export function Timeline({
                     className={`ui-card ui-press min-w-0 min-h-[116px] rounded-lg border p-3 text-left ${active ? 'border-live bg-live/10 shadow-[0_12px_36px_rgba(91,200,232,0.08)]' : 'border-line bg-base/40 hover:border-muted hover:bg-raised/50'}`}
                   >
                     <span className="flex items-baseline justify-between">
-                      <span className={`font-display text-[20px] font-bold tnum ${active ? 'text-live' : 'text-ink'}`}>{year}</span>
+                      <span className={`font-display text-xl font-bold tnum ${active ? 'text-live' : 'text-ink'}`}>{year}</span>
                       <span className="text-meta text-faint tnum">{summary?.months.size ?? 0} 个月 · {yearCounts.get(year) ?? 0} 条</span>
                     </span>
                     {summary && (
@@ -383,7 +384,7 @@ export function Timeline({
                     )}
                     <span className="mt-2 block space-y-1">
                       {summary?.titles.slice(0, 2).map((title) => (
-                        <span key={title} className="block truncate text-[12px] leading-snug text-muted">{title}</span>
+                        <span key={title} className="block truncate text-meta leading-snug text-muted">{title}</span>
                       ))}
                       {!summary?.titles.length && <span className="block text-meta text-faint">暂无符合条件的内容</span>}
                     </span>
@@ -398,7 +399,7 @@ export function Timeline({
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
             <div>
               <p className="text-meta uppercase tracking-[0.16em] text-faint">{searching ? '全库搜索结果' : `${activeEra.label} / ${activeYear}`}</p>
-              <h2 className="mt-1 text-[22px] font-semibold tracking-tight">
+              <h2 className="mt-1 text-[1.375rem] font-semibold tracking-tight">
                 {searching ? `“${filters.q.trim()}”` : activeMonth === null ? `${activeYear} 全年` : `${activeYear} 年 ${MONTH_CN[activeMonth - 1]}`}
               </h2>
             </div>
@@ -457,10 +458,10 @@ export function Timeline({
           <div className="ui-sheet-in absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5 shadow-[0_-20px_70px_rgba(0,0,0,0.3)] sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:origin-top-right sm:rounded-xl sm:border sm:shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
             <div className="mb-5 flex items-center justify-between border-b border-line pb-3">
               <div>
-                <h3 className="text-[14px] font-medium text-ink">筛选记录</h3>
+                <h3 className="text-sm font-medium text-ink">筛选记录</h3>
                 <p className="mt-0.5 text-meta text-faint">搜索词会跨全部年份生效</p>
               </div>
-              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 text-[12px] text-live hover:bg-live/10 sm:py-1">完成</button>
+              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 text-meta text-live hover:bg-live/10 sm:py-1">完成</button>
             </div>
             <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>
@@ -490,7 +491,7 @@ function MonthArchive({
           const content = (
             <>
               <span className="flex items-baseline justify-between border-b border-line pb-2">
-                <span className="text-[15px] font-medium text-ink">{MONTH_CN[month - 1]}</span>
+                <span className="text-[0.9375rem] font-medium text-ink">{MONTH_CN[month - 1]}</span>
                 <span className="text-meta text-faint tnum">{summary?.count ?? 0} 条</span>
               </span>
               {summary ? (
@@ -501,7 +502,7 @@ function MonthArchive({
                       : '时长待补'}
                   </span>
                   {summary.titles.map((title) => (
-                    <span key={title} className="block truncate text-[12px] leading-snug text-muted">{title}</span>
+                    <span key={title} className="block truncate text-meta leading-snug text-muted">{title}</span>
                   ))}
                 </span>
               ) : (
@@ -536,7 +537,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div>
       <dt>{label}</dt>
-      <dd className="mt-1 text-[13px] tracking-normal text-ink">{value}</dd>
+      <dd className="mt-1 text-control tracking-normal text-ink">{value}</dd>
     </div>
   )
 }

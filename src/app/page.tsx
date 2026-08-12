@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { RotatingAvatar } from '@/components/RotatingAvatar'
+import { HomeHero } from '@/components/HomeHero'
+import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/components/HomeActRail'
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { ActSection } from '@/components/ActSection'
+import { HomeActStage } from '@/components/HomeActStage'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
@@ -69,79 +71,58 @@ export default function HomePage() {
   const actI = data.acts.find((a) => a.act.id === 'act-i')!
   const actII = data.acts.find((a) => a.act.id === 'act-ii')!
   const actIII = data.acts.find((a) => a.act.id === 'act-iii')!
+  const homeActRail: HomeActRailItem[] = [actI, actII, actIII].map(({ act, beats }) => ({
+    id: act.id,
+    label: act.kicker,
+    years: act.years,
+    color: act.color,
+    beats: beats.map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
+  }))
+  const homeSections: HomeSectionRailItem[] = [
+    { id: 'home-top', label: '首页', meta: 'START', color: '#E6E4EF' },
+    { id: 'home-highlights', label: '一些记得住的时刻', meta: 'HIGHLIGHTS', color: '#5BC8E8' },
+    { id: 'home-memory', label: '回到过去，只需要一晚', meta: 'MEMORY', color: '#A78BFA' },
+    ...(gamePreview.length > 0 ? [{ id: 'home-games', label: '陪得最久的几款', meta: 'GAMES', color: '#E0A244' }] : []),
+    { id: 'home-rooms', label: '四个房间', meta: 'ROOMS', color: '#FF6B75' },
+    { id: 'home-stats', label: '这一切加起来', meta: 'TOTALS', color: '#E5568A' },
+  ]
 
   return (
-    <main className="ui-page-in min-h-screen overflow-x-clip">
+    <>
+      <HomeActRail acts={homeActRail} sections={homeSections} />
+      <main className="ui-page-in flex min-h-screen flex-col overflow-x-clip">
       <MobileQuickNav active="home" />
       <BackToTop />
       <TimelineProgress />
 
-      <header className="ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6">
-        <SiteNav active="home" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta tnum text-live underline-offset-4 hover:underline sm:block">
-          打开全部 {data.totals.entries.toLocaleString()} 条记录 →
-        </Link>
-      </header>
+      <div className="flex flex-col sm:min-h-[100svh]">
+        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+          <SiteNav active="home" />
+          <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta tnum text-live sm:block">
+            打开全部 {data.totals.entries.toLocaleString()} 条记录 →
+          </Link>
+        </header>
 
-      {/* 第一屏：人物，不是数据。数字挪去第二屏（HomeStats）。
-          移动端收进 80svh 左右（内容驱动，min-height 只是下限），保证下一幕露出一角。 */}
-      <section className="relative mx-auto flex min-h-[80svh] w-full max-w-[1240px] flex-col justify-center px-page pb-10 pt-12 sm:pb-24 sm:pt-20">
-        {/* 光晕在手机 GPU 上是实打实的合成成本，手机端缩小并降低模糊半径 */}
-        <div className="pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full bg-live/10 blur-[60px] sm:h-[520px] sm:w-[520px] sm:blur-[100px]" />
-        <div className="pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full bg-today/10 blur-[60px] sm:h-[460px] sm:w-[460px] sm:blur-[110px]" />
-        <div className="relative grid w-full gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-12">
-          <div className="ui-reveal">
-            <div className="inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 text-meta uppercase tracking-[0.16em] text-live tnum">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-              2010 — {data.now.year} · 还在继续
-            </div>
-            <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">女流 66 · 石悦</p>
-            {/* 负字距是给 Archivo 拉丁字调的；「女流」走中文回退字体，收太紧会挤在一起 */}
-            <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">女流</h1>
-            <p className="mt-6 max-w-xl text-body text-muted">
-              十六年的游戏、直播和那些晚上，<br className="hidden sm:block" />
-              重新连成一条路。
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
-              <a
-                href="#act-i"
-                className="ui-press group hidden items-center rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)] sm:inline-flex"
-              >
-                开始 <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
-              </a>
-              <Link href="/chronicle/" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-[13px] text-muted hover:border-muted hover:text-ink">
-                打开编年史
-              </Link>
-            </div>
-          </div>
+        {/* 第一屏：人物，不是数据。PC 端连同导航占满一整个视口，不提前露出 ACT I。 */}
+        <HomeHero nowYear={data.now.year} />
+      </div>
 
-          <div className="ui-reveal ui-delay-1 relative mx-auto aspect-square w-full max-w-[300px] sm:max-w-[440px]">
-            <div className="absolute inset-[8%] animate-[spin_35s_linear_infinite] rounded-full border border-dashed border-line" />
-            <div className="absolute inset-[22%] animate-[spin_24s_linear_infinite_reverse] rounded-full border border-live/20" />
-            <div className="absolute inset-[34%] rounded-full bg-gradient-to-br from-live/25 via-raised to-today/20 shadow-[0_0_90px_rgba(91,200,232,0.16)]" />
-            <div className="absolute inset-0 flex items-center justify-center text-center">
-              <div className="relative h-[38%] w-[38%] overflow-hidden rounded-full border-4 border-base/80 shadow-[0_0_35px_rgba(91,200,232,0.24)] ring-1 ring-live/40">
-                <RotatingAvatar />
-              </div>
-            </div>
-            {[['12%', '48%', '#E0A244'], ['78%', '18%', '#5BC8E8'], ['83%', '72%', '#FF6B75'], ['25%', '82%', '#A78BFA']].map(([left, top, color], index) => (
-              <span key={index} className="absolute h-3 w-3 rounded-full shadow-[0_0_20px_currentColor]" style={{ left, top, color, background: color }} />
-            ))}
-          </div>
+      {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
+      <div id="home-acts" className="scroll-mt-0">
+        <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+        <div className="relative xl:hidden">
+          <ActSection act={actI} showCount={false} sectionId="mobile-act-i" beatAnchorPrefix="mobile-act-i-" />
+          <ActSection act={actII} showCount={false} sectionId="mobile-act-ii" beatAnchorPrefix="mobile-act-ii-" />
+          <ActSection act={actIII} showCount={false} sectionId="mobile-act-iii" beatAnchorPrefix="mobile-act-iii-" now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
         </div>
-      </section>
-
-      {/* 三幕 = 首页精简幕（三个问题、三段回答）。幕间不再是独立章节，空白折进了第三幕的文案。 */}
-      <ActSection act={actI} showCount={false} />
-      <ActSection act={actII} showCount={false} />
-      <ActSection act={actIII} showCount={false} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+      </div>
 
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
       <HighlightStrip beats={data.highlights} />
 
       {/* 记忆：随机一晚 + 今日今夕 */}
-      <section className="border-t border-line bg-surface/15">
-        <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
+      <section id="home-memory" className="scroll-mt-4 border-t border-line bg-surface/15">
+        <div className="home-content-container px-page py-12 sm:py-16">
           <Eyebrow>Memory · 记忆盒</Eyebrow>
           <h2 className="mt-3 text-h2 font-semibold text-ink">回到过去，只需要一晚。</h2>
           <div className="mt-6 grid gap-5 lg:grid-cols-2">
@@ -159,8 +140,8 @@ export default function HomePage() {
 
       {/* 游戏预告 */}
       {gamePreview.length > 0 && (
-        <section className="border-t border-line">
-          <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
+        <section id="home-games" className="scroll-mt-4 border-t border-line">
+          <div className="home-content-container px-page py-12 sm:py-16">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <div>
                 <Eyebrow color="#E0A244">Games · 玩过的游戏</Eyebrow>
@@ -181,8 +162,8 @@ export default function HomePage() {
       )}
 
       {/* 四个房间 */}
-      <section className="border-t border-line">
-        <div className="mx-auto max-w-[1240px] px-page py-12 sm:py-16">
+      <section id="home-rooms" className="scroll-mt-4 border-t border-line">
+        <div className="home-content-container px-page py-12 sm:py-16">
           <Eyebrow>Rooms · 四个房间</Eyebrow>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <RoomLink href="/chronicle/" color="#5BC8E8" kicker="Chronicle" title="编年史" body="走过的路，一条一条。故事模式先看，档案模式逐条查。" />
@@ -195,8 +176,11 @@ export default function HomePage() {
 
       <HomeStats data={data} />
 
-      <SiteFooter />
-    </main>
+      <div className="mt-auto w-full border-t border-line">
+        <SiteFooter />
+      </div>
+      </main>
+    </>
   )
 }
 

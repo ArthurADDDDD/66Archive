@@ -14,7 +14,20 @@
 
 @media (min-width: 640px) {
   :root {
-    --page-pad: 1.5rem;
+    --page-pad: clamp(1.25rem, 1.5vw, 2.5rem);
+  }
+}
+
+/* PC 端由站内彩色章节轴承担位置反馈；隐藏原生滚动条但保留全部滚动能力。 */
+@media (min-width: 1280px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 }
 
@@ -54,6 +67,76 @@ body {
   }
 }
 
+/* 首页首屏鼠标交互：不同深度使用不同幅度，保持克制的空间感。 */
+@media (min-width: 768px) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home-hero {
+    --hero-x: 0;
+    --hero-y: 0;
+    --hero-px: 50vw;
+    --hero-py: 50%;
+  }
+
+  .home-hero__spotlight {
+    background: radial-gradient(circle clamp(18rem, 28vw, 42rem) at var(--hero-px) var(--hero-py), rgba(91, 200, 232, 0.07), transparent 76%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    opacity: 0.72;
+    transition: opacity 300ms ease;
+  }
+
+  .home-hero__copy,
+  .home-hero__orbit,
+  .home-hero__glow,
+  .home-hero__core,
+  .home-hero__avatar,
+  .home-hero__node {
+    will-change: transform;
+  }
+
+  .home-hero__copy {
+    transform: translate3d(calc(var(--hero-x) * -5px), calc(var(--hero-y) * -3px), 0);
+    transition: transform 180ms ease-out;
+  }
+
+  .home-hero__orbit {
+    transform: perspective(900px) rotateX(calc(var(--hero-y) * -3deg)) rotateY(calc(var(--hero-x) * 4deg)) translate3d(calc(var(--hero-x) * 8px), calc(var(--hero-y) * 6px), 0);
+    transition: transform 180ms ease-out;
+  }
+
+  .home-hero__glow--right {
+    transform: translate3d(calc(var(--hero-x) * 18px), calc(var(--hero-y) * 12px), 0);
+  }
+
+  .home-hero__glow--left {
+    transform: translate3d(calc(var(--hero-x) * -12px), calc(var(--hero-y) * -8px), 0);
+  }
+
+  .home-hero__core {
+    transform: translate3d(calc(var(--hero-x) * 6px), calc(var(--hero-y) * 5px), 0) scale(1.02);
+    transition: transform 220ms ease-out, filter 220ms ease-out;
+  }
+
+  .home-hero__avatar {
+    transform: translate3d(calc(var(--hero-x) * 13px), calc(var(--hero-y) * 10px), 24px);
+    transition: transform 180ms ease-out, box-shadow 220ms ease-out;
+  }
+
+  .home-hero__node {
+    transform: translate3d(calc(var(--hero-x) * 8px), calc(var(--hero-y) * 7px), 16px);
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  }
+
+  .home-hero__orbit[data-pressed='true'] .home-hero__avatar {
+    transform: translate3d(calc(var(--hero-x) * 13px), calc(var(--hero-y) * 10px), 24px) scale(0.96);
+    box-shadow: 0 0 55px rgba(91, 200, 232, 0.42);
+  }
+
+  .home-hero__orbit[data-pressed='true'] .home-hero__core {
+    transform: translate3d(calc(var(--hero-x) * 6px), calc(var(--hero-y) * 5px), 0) scale(1.12);
+    filter: saturate(1.35);
+  }
+}
+
 /* 键盘可达性：焦点必须看得见 */
 :focus-visible {
   outline: 2px solid #5bc8e8;
@@ -88,7 +171,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -99,7 +182,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -110,7 +193,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: none;
   }
 }
 
@@ -121,7 +204,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: none;
   }
 }
 
@@ -139,11 +222,64 @@ body {
   to {
     opacity: 1;
     filter: blur(0) saturate(1);
-    transform: scale(1);
+    transform: none;
+  }
+}
+
+@keyframes home-act-stage-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }
 
 @layer utilities {
+  /* 兼顾手机与 4K：字号随视口温和增长，不让中文在超宽屏上缩成细小像素。 */
+  .text-hero {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .text-h1 {
+    font-size: clamp(1.875rem, 3.2vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h2 {
+    font-size: clamp(1.625rem, 2.5vw, 3rem);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h3 {
+    font-size: clamp(1.1875rem, 1.45vw, 1.875rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .text-body {
+    font-size: clamp(0.875rem, 0.46vw, 1.0625rem);
+    line-height: 1.75;
+  }
+
+  .text-meta {
+    font-size: clamp(0.75rem, 0.34vw, 0.875rem);
+    line-height: 1.5;
+  }
+
+  .text-control {
+    font-size: clamp(0.8125rem, 0.4vw, 0.9375rem);
+    line-height: 1.5;
+  }
+
   /**
    * 主体安全边距。同一条渲染路径上只允许出现一层 .px-page——
    * 百分比 padding 按元素自身宽度算，套两层会复利（13% → 13% + 9.6%）。
@@ -152,6 +288,33 @@ body {
   .px-page {
     padding-left: var(--page-pad);
     padding-right: var(--page-pad);
+  }
+
+  /* 全站响应式版心：普通内容与宽内容分档，超宽屏按视口扩展但保留可读上限。 */
+  .site-container,
+  .site-header-container,
+  .home-content-container {
+    width: 100%;
+    max-width: 77.5rem;
+    margin-inline: auto;
+  }
+
+  .site-container-wide {
+    width: 100%;
+    max-width: 87.5rem;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 1536px) {
+    .site-container,
+    .site-header-container,
+    .home-content-container {
+      max-width: min(88vw, 120rem);
+    }
+
+    .site-container-wide {
+      max-width: min(92vw, 132rem);
+    }
   }
 
   /**
@@ -194,6 +357,61 @@ body {
     animation: ui-panel-in 360ms var(--ease-out-expo) both;
   }
 
+  .home-act-stage-enter {
+    animation: home-act-stage-enter 520ms var(--ease-out-expo) both;
+  }
+
+  /* 首页右侧彩色章节刻度：无贯穿竖线，靠章节色与刻度密度表达分段。 */
+  .home-section-rail {
+    opacity: 0.48;
+    transition: opacity 280ms ease;
+    touch-action: none;
+  }
+
+  .home-section-rail:hover,
+  .home-section-rail:focus-visible,
+  .home-section-rail.is-dragging {
+    opacity: 1;
+  }
+
+  .home-section-rail__edge {
+    background: linear-gradient(to left, rgba(255,255,255,0.018), transparent 72%);
+    opacity: 0;
+    transition: opacity 280ms ease;
+  }
+
+  .home-section-rail:hover .home-section-rail__edge,
+  .home-section-rail.is-dragging .home-section-rail__edge {
+    opacity: 1;
+  }
+
+  .home-section-rail__mark {
+    width: clamp(0.55rem, 0.75vw, 0.9rem);
+    height: 0.0625rem;
+    opacity: 0.18;
+    transform-origin: right center;
+    transition: opacity 90ms linear, transform 90ms linear, box-shadow 180ms ease;
+    pointer-events: none;
+  }
+
+  .home-section-rail__mark--act {
+    width: clamp(0.9rem, 1.15vw, 1.35rem);
+    height: 0.125rem;
+  }
+
+  .home-section-rail__mark--section {
+    width: clamp(1.15rem, 1.45vw, 1.75rem);
+    height: 0.1875rem;
+  }
+
+  .home-section-rail__cursor {
+    width: clamp(1.35rem, 1.75vw, 2.1rem);
+    height: 0.2rem;
+    transform: translateY(-50%);
+    transition: top 220ms var(--ease-out-expo), background-color 220ms ease, box-shadow 220ms ease;
+    pointer-events: none;
+  }
+
   .ui-sheet-in {
     transform-origin: bottom center;
     animation: ui-sheet-in 380ms var(--ease-out-expo) both;
@@ -223,7 +441,8 @@ body {
 
   .ui-reveal-scroll.ui-reveal-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    will-change: auto;
   }
 
   .ui-progress-bar {

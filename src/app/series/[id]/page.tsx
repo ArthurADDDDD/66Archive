@@ -69,15 +69,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
     <main className={`ui-page-in min-h-screen overflow-x-clip ${dark ? 'bg-[#0C0E15]' : ''}`}>
       <MobileQuickNav active="series" />
       <BackToTop />
-      <header className={`ui-slide-down relative z-20 mx-auto flex max-w-[1240px] items-center justify-between px-4 py-5 sm:px-6 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
+      <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
         <SiteNav active="series" />
-        <Link href="/series/" className="ui-press hidden rounded-sm text-meta text-live underline-offset-4 hover:underline sm:block">
+        <Link href="/series/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           ← 全部节目
         </Link>
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-[1240px] px-page pb-10 pt-12 sm:pb-14 sm:pt-16">
+      <section className="site-container px-page pb-10 pt-12 sm:pb-14 sm:pt-16">
         <Eyebrow color={color} dot>
           {s.era === 'video' ? '视频解说时代' : '斗鱼直播时代'} · 栏目 / 系列
         </Eyebrow>
@@ -95,7 +95,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
 
       {/* 代表性一句：第一期标题，原文照录 */}
       {s.firstTitle && (
-        <section className="mx-auto max-w-[1240px] px-page pb-10 sm:pb-14">
+        <section className="site-container px-page pb-10 sm:pb-14">
           <blockquote className="max-w-2xl border-l-2 pl-5" style={{ borderColor: color }}>
             <p className="text-h3 font-medium leading-relaxed text-ink">第一期：「{s.firstTitle}」</p>
             <p className="mt-3 text-meta text-muted tnum">第一期标题，原文照录 · {s.firstDate}</p>
@@ -103,12 +103,11 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         </section>
       )}
 
-      {/* 活动纹理 */}
-      <section className="mx-auto max-w-[1240px] px-page pb-12 sm:pb-16">
-        <Eyebrow className="text-muted">按年活动</Eyebrow>
-        {/* 桌面：横向刻度条 + 年份 chip（保持原样） */}
-        <div className="mt-4 hidden sm:block">
-          <ActivityStrip perYear={s.perYear} color={color} height={36} />
+      {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
+      <section className="site-container px-page pb-12 sm:pb-16">
+        <Eyebrow className="text-muted">活跃年份</Eyebrow>
+        <div className="mt-4 max-w-3xl">
+          <ActivityStrip perYear={s.perYear} color={color} />
           <div className="mt-6 flex flex-wrap gap-2">
             {s.perYear.map((p) => (
               <Link
@@ -121,34 +120,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             ))}
           </div>
         </div>
-        {/* 移动端：year / bar / count 纵向排列，不压成不可读的极细刻度 */}
-        <div className="mt-3 sm:hidden">
-          {(() => {
-            const max = Math.max(1, ...s.perYear.map((p) => p.count))
-            return (
-              <ul className="space-y-0.5">
-                {s.perYear.map((p) => (
-                  <li key={p.year}>
-                    <Link
-                      href={`/chronicle/?q=${encodeURIComponent(s.name)}&y=${p.year}`}
-                      className="ui-press flex min-h-[40px] items-center gap-3 rounded px-1 py-1.5 transition-colors hover:bg-surface/40"
-                    >
-                      <span className="w-10 shrink-0 font-mono text-meta text-ink tnum">{p.year}</span>
-                      <span className="h-[6px] min-w-0 flex-1 overflow-hidden rounded-full bg-raised">
-                        <span className="block h-full rounded-full" style={{ width: `${Math.max(4, (p.count / max) * 100)}%`, background: color }} />
-                      </span>
-                      <span className="shrink-0 text-meta text-muted tnum">{p.count} 期</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )
-          })()}
-        </div>
       </section>
 
       {/* 全部期数（档案列表，一条不省） */}
-      <section className="mx-auto max-w-[1240px] px-page pb-16 sm:pb-24">
+      <section className="site-container px-page pb-16 sm:pb-24">
         <div className="border-b border-line/60 pb-3">
           <Eyebrow className="text-muted">Episodes · 全部期数</Eyebrow>
           <h2 className="mt-2 text-h3 font-semibold text-ink">

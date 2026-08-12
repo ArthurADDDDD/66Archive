@@ -7,28 +7,34 @@ import { Reveal } from './Reveal'
  * （故事模式展示档案计数，首页精简幕不展示）。
  * 时间线以卡片流呈现——hero 配图大卡（真实封面）、type 字排大卡（无图，大字排版）、
  * small 小卡（文字+URL）、montage 蒙太奇（真实封面条 + 派生数字，首页 ACT II 专用）。
- * 幕尾可接 closer 字排收束（如 「156277，开门。」 / 「娃睡了来突袭。」TO BE CONTINUED）。
+ * 幕尾可接 closer 字排收束（如「娃睡了来突袭。」TO BE CONTINUED）。
  * 封面缺失时 hero 退化为字排色块（绝不用假图）；数字只来自构建期派生。
  */
 export function ActSection({
   act,
   now,
   showCount = true,
+  homeScreen = false,
+  sectionId,
+  beatAnchorPrefix,
 }: {
   act: ResolvedAct
   now?: { year: string; label: string; count: number }
   showCount?: boolean
+  homeScreen?: boolean
+  sectionId?: string
+  beatAnchorPrefix?: string
 }) {
   const a = act.act
 
   return (
-    <section id={a.id} className="relative border-t border-line py-12 sm:py-16">
+    <section id={sectionId ?? a.id} className={`relative scroll-mt-4 border-t border-line py-12 sm:py-16 ${homeScreen ? 'xl:flex xl:min-h-[100svh] xl:items-center xl:py-20' : ''}`}>
       <span
         aria-hidden
         className="absolute left-[13%] top-0 h-2.5 w-2.5 -translate-y-1/2 rounded-full border-2 border-base sm:left-6"
         style={{ background: a.color, boxShadow: `0 0 16px ${a.color}55` }}
       />
-      <div className="mx-auto max-w-[1240px] px-page">
+      <div className={`home-content-container px-page ${homeScreen ? 'xl:pr-28 2xl:pr-36' : ''}`}>
         <Reveal>
           <header className="max-w-2xl">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -51,7 +57,7 @@ export function ActSection({
 
         <div className="mt-8 sm:mt-10">
           {act.beats.map((beat) => (
-            <BeatRow key={beat.id} beat={beat} color={a.color} />
+            <BeatRow key={beat.id} beat={beat} color={a.color} anchorId={beatAnchorPrefix ? `${beatAnchorPrefix}${beat.id}` : homeScreen ? `home-${a.id}-${beat.id}` : undefined} />
           ))}
         </div>
 
@@ -84,7 +90,7 @@ export function ActSection({
 }
 
 /** 一行词条：卡片主体（可点击）+ 词条下方脚注（不可点击，弱化）。 */
-function BeatRow({ beat, color }: { beat: ResolvedBeat; color: string }) {
+function BeatRow({ beat, color, anchorId }: { beat: ResolvedBeat; color: string; anchorId?: string }) {
   const card = beat.href ? (
     <Link
       href={beat.href}
@@ -101,7 +107,7 @@ function BeatRow({ beat, color }: { beat: ResolvedBeat; color: string }) {
   )
 
   return (
-    <article className="border-t border-line/50 py-6 sm:py-7">
+    <article id={anchorId} data-home-act-event={anchorId ? '' : undefined} className="scroll-mt-6 border-t border-line/50 py-6 sm:py-7">
       {card}
       {beat.gameWorld && <GameWorldFootnote footnote={beat.gameWorld} />}
     </article>
@@ -109,6 +115,8 @@ function BeatRow({ beat, color }: { beat: ResolvedBeat; color: string }) {
 }
 
 function BeatBody({ beat, color }: { beat: ResolvedBeat; color: string }) {
+  // 首页精简幕的「重要」节点优先使用已解析到的真实封面；没有封面时仍按原规格呈现，绝不补假图。
+  if (beat.kicker === '重要' && beat.cover) return <HeroCard beat={beat} color={color} />
   if (beat.size === 'hero') return <HeroCard beat={beat} color={color} />
   if (beat.size === 'type') return <TypeCard beat={beat} color={color} />
   if (beat.size === 'montage') return <MontageBlock beat={beat} color={color} />
@@ -138,7 +146,7 @@ function HeroCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
             className="flex h-full w-full items-center justify-center"
             style={{ background: `linear-gradient(135deg, ${color}22, transparent 60%)` }}
           >
-            <span className="font-mono text-[12px] tracking-widest" style={{ color }}>
+            <span className="font-mono text-meta tracking-widest" style={{ color }}>
               封面待补
             </span>
           </div>
@@ -263,23 +271,21 @@ function MontageBlock({ beat, color }: { beat: ResolvedBeat; color: string }) {
  */
 function SmallRow({ beat, color }: { beat: ResolvedBeat; color: string }) {
   return (
-    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
-      <span className="order-1 shrink-0 font-mono text-meta text-faint tnum sm:order-none sm:w-[76px]">{beat.date}</span>
-      {beat.kicker && (
-        <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color }}>
-          {beat.kicker}
-        </span>
-      )}
-      <span className="order-3 w-full text-body font-medium text-ink underline-offset-4 transition-colors group-hover:text-white group-hover:underline sm:order-none sm:w-auto">
-        {beat.title}
-      </span>
-      {beat.body && <span className="order-4 w-full text-body text-muted sm:order-none sm:w-auto">· {beat.body}</span>}
+    <div className="grid grid-cols-[76px_minmax(0,1fr)_auto] items-baseline gap-x-4 gap-y-1.5">
+      <span className="shrink-0 font-mono text-meta text-faint tnum">{beat.date}</span>
+      <div className="min-w-0">
+        <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
+          <span className="text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
+          {beat.body && <span className="min-w-0 text-body text-muted">· {beat.body}</span>}
+        </div>
+        {beat.kicker && (
+          <span className="mt-1 block text-meta" style={{ color }}>
+            {beat.kicker}
+          </span>
+        )}
+      </div>
       {beat.href && (
-        <span
-          aria-hidden
-          className="order-2 ml-auto shrink-0 text-meta transition-transform group-hover:translate-x-0.5 sm:order-none"
-          style={{ color }}
-        >
+        <span aria-hidden className="shrink-0 text-meta transition-transform group-hover:translate-x-0.5" style={{ color }}>
           →
         </span>
       )}
