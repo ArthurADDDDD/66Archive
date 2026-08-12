@@ -185,7 +185,7 @@ export function EntryRow({
                               aria-pressed={active}
                               onClick={() => setSourceIndex(index)}
                               title={source.entryTitle}
-                              className={`ui-press rounded-md border px-2.5 py-1.5 text-left font-mono text-[10px] transition-colors ${
+                              className={`ui-press rounded-md border px-2.5 py-2.5 text-left font-mono text-[10px] transition-colors sm:py-1.5 ${
                                 active ? 'border-live bg-live/10 text-ink' : 'border-line bg-base/45 text-muted hover:border-muted hover:text-ink'
                               }`}
                             >
@@ -215,7 +215,7 @@ export function EntryRow({
                       {entry.uncheckedCount > 0 && ` · ${entry.uncheckedCount} 个未复查`}
                       {entry.deadCount > 0 && ` · ${entry.deadCount} 个失效`}
                     </span>
-                    <Link href={`/e/${entry.id}/`} className="text-live underline underline-offset-4">完整详情 →</Link>
+                    <Link href={`/e/${entry.id}/`} className="py-2 text-live underline underline-offset-4 sm:py-0">完整详情 →</Link>
                   </div>
                 </div>
               </div>
