@@ -9,6 +9,15 @@
       - slay-the-spire-2
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "杀戮尖塔2"
+      - at: "01:00:01"
+        label: "杀戮尖塔2"
+      - at: "02:00:02"
+        label: "杀戮尖塔2"
+      - at: "03:00:02"
+        label: "杀戮尖塔2"
     sources:
       - url: "https://www.bilibili.com/video/BV1SbSfB3ErN"
         kind: replay
@@ -30,6 +39,23 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-10-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天"
+      - at: "00:08:19"
+        label: "看动画短片《拯救》"
+      - at: "00:17:09"
+        label: "聊松伦“真心推荐”3.1部分"
+      - at: "00:19:56"
+        label: "鸣潮3.1主线剧情"
+      - at: "01:00:01"
+        label: "鸣潮3.1主线剧情"
+      - at: "02:00:02"
+        label: "鸣潮3.1主线剧情"
+      - at: "03:00:04"
+        label: "姐姐已击沉 鸣潮3.1主线剧情"
+      - at: "04:00:05"
+        label: "旅途愉快“这个真心推荐”结尾给松伦点赞"
     sources:
       - url: "https://www.bilibili.com/video/BV1U4QcB5EHJ"
         kind: replay
@@ -51,6 +77,19 @@
       - wuthering-waves
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-10-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "鸣潮3.1"
+      - at: "01:00:01"
+        label: "鸣潮3.1"
+      - at: "02:00:02"
+        label: "鸣潮3.1"
+      - at: "03:00:04"
+        label: "鸣潮3.1"
+      - at: "04:00:05"
+        label: "鸣潮3.1"
+      - at: "05:00:06"
+        label: "鸣潮3.1"
     sources:
       - url: "https://www.bilibili.com/video/BV1tKQwBmEZC"
         kind: replay
@@ -72,6 +111,15 @@
       - rock-kingdom-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "洛克王国：世界~~"
+      - at: "01:00:01"
+        label: "洛克王国：世界~~"
+      - at: "02:00:02"
+        label: "洛克王国：世界~~"
+      - at: "03:00:03"
+        label: "洛克王国：世界~~"
     sources:
       - url: "https://www.bilibili.com/video/BV1W6DkBXECS"
         kind: replay
@@ -93,6 +141,17 @@
       - rock-kingdom-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 19:06"
+      - at: "00:30:52"
+        label: "洛克王国世界 19:37"
+      - at: "01:20:01"
+        label: "洛克王国世界 20:26"
+      - at: "01:40:02"
+        label: "洛克王国世界 20:46"
+      - at: "02:20:03"
+        label: "洛克王国世界 21:26"
     sources:
       - url: "https://www.bilibili.com/video/BV12LDXBSEJM"
         kind: replay
@@ -114,6 +173,13 @@
       - honor-of-kings-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "王者荣耀世界~~"
+      - at: "01:00:01"
+        label: "王者荣耀世界~~"
+      - at: "02:00:02"
+        label: "王者荣耀世界~~"
     sources:
       - url: "https://www.bilibili.com/video/BV1gXQ7BaEJi"
         kind: replay
@@ -152,6 +218,13 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "别笑"
+      - at: "01:00:02"
+        label: "别笑"
+      - at: "02:00:03"
+        label: "别笑"
     sources:
       - url: "https://www.bilibili.com/video/BV1f5daBtEZz"
         kind: replay
@@ -192,6 +265,11 @@
       - honor-of-kings-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-19-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 20:14"
+      - at: "00:20:30"
+        label: "王者荣耀世界 20:35"
     sources:
       - url: "https://www.bilibili.com/video/BV1jtdfBeEok"
         kind: replay
@@ -213,6 +291,11 @@
       - honor-of-kings-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-19-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "王者荣耀：世界第五章"
+      - at: "01:00:02"
+        label: "王者荣耀：世界第五章"
     sources:
       - url: "https://www.bilibili.com/video/BV1wfdfBVECi"
         kind: replay
@@ -233,6 +316,17 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "别怕，躲我身后"
+      - at: "01:00:01"
+        label: "别怕，躲我身后"
+      - at: "02:00:02"
+        label: "别怕，躲我身后"
+      - at: "03:00:03"
+        label: "别怕，躲我身后"
+      - at: "04:00:04"
+        label: "别怕，躲我身后"
     sources:
       - url: "https://www.bilibili.com/video/BV1gPdSBFEUt"
         kind: replay
@@ -254,6 +348,21 @@
       - nvdiao
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天 18:53"
+      - at: "00:14:02"
+        label: "女吊 19:07"
+      - at: "00:59:57"
+        label: "女吊 19:54"
+      - at: "01:59:50"
+        label: "女吊 20:53"
+      - at: "02:39:51"
+        label: "女吊 21:33"
+      - at: "03:19:52"
+        label: "女吊 22:13"
+      - at: "03:55:21"
+        label: "女吊 22:49"
     sources:
       - url: "https://www.bilibili.com/video/BV1BUdUBgE8M"
         kind: replay
@@ -275,6 +384,19 @@
       - honor-of-kings-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "王者荣耀世界~~~"
+      - at: "01:00:01"
+        label: "王者荣耀世界~~~"
+      - at: "02:00:02"
+        label: "王者荣耀世界~~~"
+      - at: "03:00:03"
+        label: "王者荣耀世界~~~"
+      - at: "04:00:04"
+        label: "王者荣耀世界~~~"
+      - at: "05:00:05"
+        label: "王者荣耀世界~~~"
     sources:
       - url: "https://www.bilibili.com/video/BV1kfoWBJERe"
         kind: replay
@@ -313,6 +435,13 @@
     games: []
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "晚上好"
+      - at: "01:00:01"
+        label: "晚上好"
+      - at: "02:00:02"
+        label: "晚上好"
     sources:
       - url: "https://www.bilibili.com/video/BV1K29yBMESK"
         kind: replay
@@ -334,6 +463,13 @@
       - zheshi-xieyinggen
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    segments:
+      - at: "00:00:00"
+        label: "开播聊天，看PV"
+      - at: "00:39:47"
+        label: "这是谐音梗"
+      - at: "00:59:59"
+        label: "这是谐音梗"
     sources:
       - url: "https://www.bilibili.com/video/BV1Rh9yBEEHe"
         kind: replay
@@ -355,6 +491,13 @@
       - card-devil
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-02 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "17-28"
+      - at: "01:00:01"
+        label: "18-28"
+      - at: "02:00:02"
+        label: "19-28"
     sources:
       - url: "https://www.bilibili.com/video/BV1Jd9hB9E19"
         kind: replay
@@ -376,6 +519,11 @@
       - card-devil
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-01 属同场直播的不同录像，前端可作备选源切换"
+    segments:
+      - at: "00:00:00"
+        label: "卡片魔王 17:28"
+      - at: "01:00:01"
+        label: "卡片魔王 18:28"
     sources:
       - url: "https://www.bilibili.com/video/BV13f9eBJEii"
         kind: replay
