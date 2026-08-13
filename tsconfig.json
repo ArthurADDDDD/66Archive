@@ -17,5 +17,9 @@
     "paths": { "@/*": ["./src/*"] }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  // workers/ 跑在 Cloudflare Workers 运行时，用的是 @cloudflare/workers-types
+  // （fetch 的 cf 字段等），和主站的 dom/next 类型环境互斥。它有自己的
+  // workers/img-proxy/tsconfig.json 负责类型检查，这里必须排除，
+  // 否则 next build 会去检查它并因为不认识 cf 字段而直接失败。
+  "exclude": ["node_modules", "workers"]
 }
