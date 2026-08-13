@@ -1,6 +1,15 @@
 name: Check links
 
 on:
+  push:
+    branches:
+      - redesign
+    paths:
+      - 'data/**'
+      - 'scripts/check-links.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/check-links.yml'
   workflow_dispatch:
     inputs:
       host:
@@ -47,8 +56,8 @@ jobs:
 
       - name: Check links without modifying data
         env:
-          CHECK_HOST: ${{ inputs.host }}
-          CHECK_LIMIT: ${{ inputs.limit }}
+          CHECK_HOST: ${{ inputs.host || 'all' }}
+          CHECK_LIMIT: ${{ inputs.limit || '100' }}
         run: |
           args=(--report --output link-report.json --concurrency 6 --timeout-ms 10000)
           if [[ "$CHECK_HOST" != "all" ]]; then
@@ -62,7 +71,7 @@ jobs:
       - name: Upload JSON report
         uses: actions/upload-artifact@v7
         with:
-          name: link-report-${{ inputs.host }}
+          name: link-report-${{ inputs.host || 'all' }}
           path: link-report.json
           if-no-files-found: error
           retention-days: 14
