@@ -98,10 +98,12 @@ export type TimelineEntry = {
   demo?: boolean
 }
 
-export type TimelineSource = Pick<Source, 'url' | 'kind' | 'status'> & {
-  accountName?: string
-  /** 来源原本所属条目的标题，帮助用户区分不同录像版本。 */
-  entryTitle: string
+  export type TimelineSource = Pick<Source, 'url' | 'kind' | 'status' | 'parts' | 'cover'> & {
+    accountName?: string
+    /** 来源原本所属条目的标题，帮助用户区分不同录像版本。 */
+    entryTitle: string
+    /** 仅属于这个来源的分 P 信息；不可在不同来源之间复用。 */
+    partDetails?: Source['part_details']
 }
 
 const SAME_LIVE_NOTE = /与 ([a-z0-9-]+) 属同场直播的不同录像，前端可作备选源切换/g
@@ -158,9 +160,12 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
 
     const sources = group
       .flatMap((item) => item.sources.map((source) => ({
-        url: source.url,
+          url: source.url,
+          cover: source.cover,
         kind: source.kind,
-        status: source.status,
+          status: source.status,
+          parts: source.parts,
+          partDetails: source.part_details,
         accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
         entryTitle: item.title,
       })))

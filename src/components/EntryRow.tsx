@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
+import { InlineTagCalibration } from '@/components/InlineTagCalibration'
 import { useState } from 'react'
-import type { TimelineEntry } from '@/lib/data'
+import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
@@ -29,10 +29,9 @@ export function EntryRow({
   const defaultSourceIndex = Math.max(0, entry.sources.findIndex((source) => source.url === entry.primaryUrl))
   const [sourceIndex, setSourceIndex] = useState(defaultSourceIndex)
   const selectedSource = entry.sources[sourceIndex] ?? entry.sources[0]
-  const destination = selectedSource?.url ?? `/e/${entry.id}/`
-  const cover = proxyImage(entry.cover ?? undefined, 640)
-  const opensSource = Boolean(selectedSource)
+  const selectedCover = proxyImage(selectedSource?.cover ?? selectedSource?.partDetails?.[0]?.cover ?? entry.cover ?? undefined, 640)
   const compactGameIds = new Set(visibleGameIds(entry.games.map((game) => game.id)))
+  const compactGames = entry.games.filter((game) => compactGameIds.has(game.id))
 
   return (
     <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
@@ -103,66 +102,56 @@ export function EntryRow({
           {/* meta 行：手机端只留「平台 · 时长 · 首个游戏」。
               来源数 / 核验状态 / 待考证在手机上会把这一行撑成 2~3 行，且每条数量不同，
               整列行高参差——这些信息一条不少，都在下面展开的卡片里。 */}
-          <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-meta text-faint tnum">
+          <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-meta text-faint tnum">
             <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
             <span className="text-line">·</span>
             <span>{formatDuration(entry.duration_min)}</span>
-            {entry.games.filter((game) => compactGameIds.has(game.id)).slice(0, 2).map((g, i) => (
-              <span key={g.id} className={`flex items-center gap-1 text-muted ${i > 0 ? 'hidden sm:flex' : ''}`}>
-                <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: gameColor(g.id) }} />
-                {g.name}
-              </span>
-            ))}
-            {entry.sourceCount > 1 && <span className="hidden text-muted sm:inline">1 主 + {entry.sourceCount - 1} 备选</span>}
-            {entry.aliveCount > 0 && <span className="hidden text-live sm:inline">已核验</span>}
-            {entry.aliveCount === 0 && entry.uncheckedCount > 0 && <span className="hidden text-faint sm:inline">来源未复查</span>}
+            {compactGames.length > 0 && (
+              <>
+                <span className="text-line">·</span>
+                <span className="flex min-w-0 items-center gap-1.5 text-muted">
+                  {compactGames.slice(0, 2).map((game, index) => (
+                    <span key={game.id} className={`flex min-w-0 items-center gap-1 ${index > 0 ? 'hidden sm:flex' : ''}`}>
+                      {index > 0 && <span className="mr-0.5 text-line">/</span>}
+                      <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: gameColor(game.id) }} />
+                      <span className="truncate">{game.name}</span>
+                    </span>
+                  ))}
+                  {compactGames.length > 2 && <span className="hidden text-faint sm:inline">+{compactGames.length - 2}</span>}
+                </span>
+              </>
+            )}
+            {entry.sourceCount > 0 && (
+              <>
+                <span className="text-line">·</span>
+                <span className="text-muted">
+                  共有{formatSourceCount(entry.sourceCount)}段录像来源
+                  {dead ? <span className="text-today">（已失效）</span>
+                    : entry.aliveCount === entry.sourceCount ? <span className="text-live">（已核验）</span>
+                      : entry.aliveCount > 0 ? <span className="text-live">（部分核验）</span>
+                        : entry.uncheckedCount > 0 ? <span className="text-faint">（未复查）</span> : null}
+                </span>
+              </>
+            )}
             {entry.confidence === 'low' && (
               <span className="rounded-sm border border-line px-1 text-faint">待考证</span>
             )}
-            {dead && <span className="text-today">全部链接已失效</span>}
           </div>
 
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
             <div id={`entry-preview-${entry.id}`} className="ui-panel-in mt-4 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
-              <div className="grid sm:grid-cols-[minmax(220px,36%)_1fr]">
-                <Link
-                  href={destination}
-                  target={opensSource ? '_blank' : undefined}
-                  rel={opensSource ? 'noopener noreferrer' : undefined}
-                  className="group/cover relative aspect-video overflow-hidden bg-raised sm:aspect-auto sm:min-h-[220px]"
-                  aria-label={opensSource ? `打开原平台：${entry.title}` : `查看详情：${entry.title}`}
-                >
-                  {cover ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={cover}
-                      alt=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                      className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]"
-                    />
-                  ) : (
-                    <span className="flex h-full items-center justify-center text-meta text-faint">无封面</span>
-                  )}
-                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover/cover:opacity-80" />
-                  <span className="absolute bottom-3 right-3 rounded-full border border-white/20 bg-black/55 px-2.5 py-1 text-meta text-white backdrop-blur-sm">
-                    {opensSource ? '打开原平台 ↗' : '查看详情 →'}
-                  </span>
-                </Link>
+              <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
+                <EntryCover cover={selectedCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
                 <div className="flex min-w-0 flex-col p-4 sm:p-5">
-                  <p className="text-meta uppercase tracking-[0.16em] text-faint">
-                    {opensSource ? '选择来源，再点击标题或封面打开原平台' : '当前没有外部来源'}
-                  </p>
-                  <Link
-                    href={destination}
-                    target={opensSource ? '_blank' : undefined}
-                    rel={opensSource ? 'noopener noreferrer' : undefined}
-                    className="mt-2 block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live"
-                  >
-                    {selectedSource?.entryTitle ?? entry.title} <span className="font-mono text-meta text-live">{opensSource ? '↗' : '→'}</span>
-                  </Link>
+                  {selectedSource ? (
+                    <a href={selectedSource.url} target="_blank" rel="noopener noreferrer" className="block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live">
+                      {selectedSource.entryTitle} <span className="font-mono text-meta text-live">↗</span>
+                    </a>
+                  ) : (
+                    <h3 className="mt-2 text-h3 font-medium leading-snug text-ink">{entry.title}</h3>
+                  )}
 
                   <div className="mt-2 flex flex-wrap gap-x-2.5 gap-y-1 text-meta text-faint tnum">
                     <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
@@ -170,14 +159,15 @@ export function EntryRow({
                     <span>{formatDuration(entry.duration_min)}</span>
                   </div>
 
-                  <div className="mt-4">
-                    <SegmentBar entry={entry} />
-                  </div>
+                  {entry.bands.some((band) => band.game) && (
+                    <div className="mt-4">
+                      <SegmentBar entry={entry} />
+                    </div>
+                  )}
 
-                  {entry.sources.length > 1 && (
+                  {entry.sources.length > 0 && (
                     <div className="mt-4 border-t border-line pt-4">
-                      <p className="mb-2 text-meta uppercase tracking-[0.16em] text-faint">选择录像来源</p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="grid gap-2 sm:grid-cols-2">
                         {entry.sources.map((source, index) => {
                           const sourcePlatform = detectPlatform(source.url)
                           const sourceMeta = sourcePlatform ? PLATFORM_META[sourcePlatform] : undefined
@@ -186,20 +176,25 @@ export function EntryRow({
                             <button
                               key={source.url}
                               type="button"
-                              aria-pressed={active}
                               onClick={() => setSourceIndex(index)}
-                              title={source.entryTitle}
-                              className={`ui-press rounded-md border px-2.5 py-2.5 text-left text-meta transition-colors sm:py-1.5 ${
-                                active ? 'border-live bg-live/10 text-ink' : 'border-line bg-base/45 text-muted hover:border-muted hover:text-ink'
-                              }`}
+                              aria-pressed={active}
+                              title={`切换到${index === 0 ? '主链接' : `备选 ${index}`}`}
+                              className={`ui-press group/source flex min-h-14 items-center justify-between gap-3 rounded-xl border px-3 py-2.5 text-left text-control transition-colors ${active ? 'border-live/55 bg-live/10 text-ink shadow-[0_8px_24px_rgba(91,200,232,.06)]' : 'border-line bg-base/35 text-muted hover:border-muted hover:text-ink'}`}
                             >
-                              <span style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
-                              <span className="ml-1.5 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
-                              {source.accountName && <span className="ml-1.5 text-faint">{source.accountName}</span>}
+                              <span className="min-w-0">
+                                <span className="font-medium" style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
+                                <span className="ml-2 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
+                                {source.accountName && <span className="ml-2 text-faint">{source.accountName}</span>}
+                                {(source.parts ?? source.partDetails?.length) && <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 font-mono text-meta text-live">{source.parts ?? source.partDetails?.length}P</span>}
+                                <span className="mt-0.5 block truncate text-meta text-faint">{source.entryTitle}</span>
+                              </span>
+                              <span className={`shrink-0 font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>{active ? '当前来源 ✓' : '切换'}</span>
                             </button>
                           )
                         })}
                       </div>
+
+                      <SelectedSourceParts source={selectedSource} />
                     </div>
                   )}
 
@@ -211,16 +206,7 @@ export function EntryRow({
                     </div>
                   )}
 
-                  <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-meta tnum">
-                    <span className="text-faint">
-                      {entry.sourceCount > 1 ? `1 个主链接 · ${entry.sourceCount - 1} 个备选` : `${entry.sourceCount} 个来源`}
-                      {entry.mergedEntryCount > 0 && ` · 已折叠 ${entry.mergedEntryCount} 条同场记录`}
-                      {entry.aliveCount > 0 && ` · ${entry.aliveCount} 个已核验`}
-                      {entry.uncheckedCount > 0 && ` · ${entry.uncheckedCount} 个未复查`}
-                      {entry.deadCount > 0 && ` · ${entry.deadCount} 个失效`}
-                    </span>
-                    <Link href={`/e/${entry.id}/`} className="py-2 text-live underline underline-offset-4 sm:py-0">完整详情 →</Link>
-                  </div>
+                  <InlineTagCalibration entryId={entry.id} games={entry.games} />
                 </div>
               </div>
             </div>
@@ -231,11 +217,125 @@ export function EntryRow({
   )
 }
 
+function SelectedSourceParts({ source }: { source: TimelineSource | undefined }) {
+  if (!source) return null
+  if (!source.partDetails?.length) {
+    return source.parts && source.parts > 1 ? (
+      <p className="mt-3 rounded-lg border border-line bg-base/30 px-3 py-2 text-meta leading-relaxed text-faint">
+        当前来源共 {source.parts}P，具体标题和跳转页尚未核实。
+      </p>
+    ) : null
+  }
+
+  return (
+    <section className="ui-content-swap mt-3 rounded-xl border border-line bg-base/30 p-2.5" aria-label="当前来源的分 P">
+      <div className="flex flex-wrap items-end justify-between gap-2 px-1 pb-2">
+        <div>
+          <p className="text-meta uppercase tracking-[0.16em] text-live">当前来源的分 P</p>
+          <p className="mt-1 text-meta leading-relaxed text-faint">随上方来源切换；点击任意一段直接打开对应页面。</p>
+        </div>
+        <span className="font-mono text-meta text-faint tnum">{source.partDetails.length}P</span>
+      </div>
+      <ol className="grid gap-1.5 lg:grid-cols-2">
+        {source.partDetails.map((part) => {
+          const partCover = proxyImage(part.cover, 180)
+          return (
+            <li key={part.page}>
+              <a href={sourcePartHref(source.url, part.page)} target="_blank" rel="noopener noreferrer" className="ui-press group/part flex min-h-12 items-center gap-2.5 rounded-lg border border-transparent bg-surface/35 p-1.5 transition-colors hover:border-live/35 hover:bg-live/8">
+                <span className="relative h-10 w-[4.5rem] shrink-0 overflow-hidden rounded-md bg-raised">
+                  {partCover ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={partCover} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover transition-transform group-hover/part:scale-105" />
+                  ) : <span className="flex h-full items-center justify-center font-mono text-meta text-faint">P{part.page}</span>}
+                  <span className="absolute left-1 top-1 rounded bg-black/65 px-1 font-mono text-[10px] font-semibold text-white">P{part.page}</span>
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="line-clamp-2 text-meta leading-snug text-muted group-hover/part:text-ink">{part.title}</span>
+                  {part.duration_sec && <span className="mt-0.5 block font-mono text-[10px] text-faint tnum">{formatPartDuration(part.duration_sec)}</span>}
+                </span>
+                <span className="shrink-0 font-mono text-live">↗</span>
+              </a>
+            </li>
+          )
+        })}
+      </ol>
+    </section>
+  )
+}
+
+function sourcePartHref(sourceUrl: string, page: number): string {
+  try {
+    const url = new URL(sourceUrl)
+    url.searchParams.set('p', String(page))
+    return url.toString()
+  } catch {
+    return sourceUrl
+  }
+}
+
+function formatPartDuration(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+  return hours > 0
+    ? `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+    : `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatSourceCount(count: number): string {
+  return ['零', '一', '两', '三', '四', '五', '六', '七', '八', '九', '十'][count] ?? String(count)
+}
+
+function EntryCover({
+  cover,
+  title,
+  destination,
+}: {
+  cover: string | undefined
+  title: string
+  destination?: string
+}) {
+  const content = (
+    <>
+      {cover ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={cover}
+          alt=""
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]"
+        />
+      ) : (
+        <span className="flex h-full items-center justify-center text-meta text-faint">无封面</span>
+      )}
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover/cover:opacity-80" />
+      {destination && (
+        <span className="absolute bottom-3 right-3 rounded-full border border-white/20 bg-black/55 px-2.5 py-1 text-meta text-white backdrop-blur-sm">
+          打开主来源 ↗
+        </span>
+      )}
+    </>
+  )
+
+  // 桌面端使用固定封面视窗：右侧校准区展开/收起时不会再把图片拉长。
+  const className = 'group/cover relative aspect-video overflow-hidden bg-raised sm:h-[clamp(28rem,52vw,42rem)] sm:aspect-auto sm:self-start'
+  if (!destination) return <div className={className}>{content}</div>
+  return (
+    <a href={destination} target="_blank" rel="noopener noreferrer" className={className} aria-label={`打开原平台：${title}`}>
+      {content}
+    </a>
+  )
+}
+
 /** 分段条：这场的时间里，什么时候在打什么 */
 export function SegmentBar({ entry }: { entry: TimelineEntry }) {
   if (!entry.bands.length) {
     return <p className="text-meta text-faint">尚未录入分段信息</p>
   }
+  const isContentTimeline = entry.bands.some((band) => band.game)
+  const fallbackColors = ['#5BC8E8', '#E5568A', '#E0A244', '#9B8AFB', '#72C7A5']
+  const colorFor = (game: string | null, index: number) => game ? gameColor(game) : fallbackColors[index % fallbackColors.length]
   return (
     <div>
       <div className="group/segments flex h-2 w-full overflow-hidden rounded-full bg-raised">
@@ -243,7 +343,7 @@ export function SegmentBar({ entry }: { entry: TimelineEntry }) {
           <span
             key={i}
             className="transition-[filter,opacity] duration-300 group-hover/segments:brightness-125"
-            style={{ width: `${(b.to - b.from) * 100}%`, background: gameColor(b.game), opacity: b.game ? 0.9 : 0.3 }}
+            style={{ width: `${(b.to - b.from) * 100}%`, background: colorFor(b.game, i), opacity: 0.9 }}
             title={b.name}
           />
         ))}
@@ -251,8 +351,10 @@ export function SegmentBar({ entry }: { entry: TimelineEntry }) {
       <ul className="mt-2 space-y-1 text-meta text-muted tnum">
         {entry.bands.map((b, i) => (
           <li key={i} className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: gameColor(b.game) }} />
-            <span className="truncate">{b.name}</span>
+            <span className="inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: colorFor(b.game, i) }} />
+            {!isContentTimeline && <span className="rounded border border-line px-1 font-mono text-[10px] text-live">P{i + 1}</span>}
+            <span className="min-w-0 flex-1 truncate">{b.name}</span>
+            {entry.duration_min && <span className="shrink-0 font-mono text-[10px] text-faint">{formatPartDuration(Math.round(entry.duration_min * 60 * b.from))}</span>}
           </li>
         ))}
       </ul>
