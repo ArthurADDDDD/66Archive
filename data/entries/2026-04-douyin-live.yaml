@@ -384,26 +384,67 @@
       - honor-of-kings-world
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "王者荣耀世界~~~"
-      - at: "01:00:01"
-        label: "王者荣耀世界~~~"
-      - at: "02:00:02"
-        label: "王者荣耀世界~~~"
-      - at: "03:00:03"
-        label: "王者荣耀世界~~~"
-      - at: "04:00:04"
-        label: "王者荣耀世界~~~"
-      - at: "05:00:05"
-        label: "王者荣耀世界~~~"
     sources:
       - url: "https://www.bilibili.com/video/BV1kfoWBJERe"
+        cover: "https://i0.hdslb.com/bfs/archive/a7109853140d6975c7de268f8d9f814a62073a78.jpg"
         kind: replay
         status: alive
+        parts: 6
+        part_details:
+          - page: 1
+            title: "王者荣耀世界~~~_2026-04-22_18_50_48_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00002vbs4wvwznneh23mol49mbv7upb_firsti.jpg"
+          - page: 2
+            title: "王者荣耀世界~~~_2026-04-22_19_50_46_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00002arvx29q2mxbk264cfd3898j1rb_firsti.jpg"
+          - page: 3
+            title: "王者荣耀世界~~~_2026-04-22_20_50_46_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i0.hdslb.com/bfs/storyff/_00000laj17slgr3ar2sp3l52drfo6zb_firsti.jpg"
+          - page: 4
+            title: "王者荣耀世界~~~_2026-04-22_21_50_46_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i1.hdslb.com/bfs/storyff/_000038tkh5kd2mrxi2nah0eogy473ob_firsti.jpg"
+          - page: 5
+            title: "王者荣耀世界~~~_2026-04-22_22_50_47_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00000ky1cxx6rbgod2oy6msg9elbx0b_firsti.jpg"
+          - page: 6
+            title: "王者荣耀世界~~~_2026-04-22_23_50_47_女流66_弹幕版"
+            duration_sec: 3416
+            cover: "https://i1.hdslb.com/bfs/storyff/_000002rpg8j6zin092m9vh06rzsyp9b_firsti.jpg"
       - url: "https://www.bilibili.com/video/BV16MosBVE7W"
+        cover: "https://i1.hdslb.com/bfs/archive/b6775b771737ff74af3b36af9f285e581ade50be.jpg"
         kind: replay
         status: alive
+        parts: 6
+        part_details:
+          - page: 1
+            title: "王者荣耀世界~~~_2026-04-22_18_50_48_女流66"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00002goiw31llxgas1zkqbb46yvnsub_firsti.jpg"
+          - page: 2
+            title: "王者荣耀世界~~~_2026-04-22_19_50_46_女流66"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00001ka49m9ehrghl2nonbfvkrwlpsb_firsti.jpg"
+          - page: 3
+            title: "王者荣耀世界~~~_2026-04-22_20_50_46_女流66"
+            duration_sec: 3601
+            cover: "https://i0.hdslb.com/bfs/storyff/_00000ceexwfva7au12s9bm4j0uzr0ob_firsti.jpg"
+          - page: 4
+            title: "王者荣耀世界~~~_2026-04-22_21_50_46_女流66"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00003le8oniskgp0o2wa4hv1kzgqhub_firsti.jpg"
+          - page: 5
+            title: "王者荣耀世界~~~_2026-04-22_22_50_47_女流66"
+            duration_sec: 3601
+            cover: "https://i1.hdslb.com/bfs/storyff/_00001uonprgpvwbdf2qek45gz940qab_firsti.jpg"
+          - page: 6
+            title: "王者荣耀世界~~~_2026-04-22_23_50_47_女流66"
+            duration_sec: 3416
+            cover: "https://i1.hdslb.com/bfs/storyff/_0000121ex8focyb8b2o7z5g2daspplb_firsti.jpg"
     contributed_by: data-agent
 
     duration_min: 357
