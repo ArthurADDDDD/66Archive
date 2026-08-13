@@ -1,0 +1,6 @@
+name = "chronicle-66-img-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[observability]
+enabled = true
