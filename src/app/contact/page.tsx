@@ -39,6 +39,20 @@ export default function ContactPage() {
             </p>
           </article>
 
+          <Link
+            href="/calibrate/"
+            className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
+          >
+            <span className="text-meta uppercase tracking-[0.16em] text-live">Calibration · 真人校准</span>
+            <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h2 className="text-h3 font-medium">帮忙判断一条内容</h2>
+                <p className="mt-2 max-w-2xl text-body text-muted">从管理员给出的候选标签里点选答案，帮助我们发现标题没有写出来的游戏。无需注册，结果只作为人工复核线索。</p>
+              </div>
+              <span className="text-meta text-live transition-transform group-hover:translate-x-1">开始校准 ↗</span>
+            </div>
+          </Link>
+
           <a
             href="https://github.com/ArthurADDDDD/66archive"
             target="_blank"
