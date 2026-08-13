@@ -4,7 +4,6 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
-.claude/docs/
 .wrangler/
 
 # Secrets and local deployment state
