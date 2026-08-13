@@ -24,7 +24,7 @@ export function SiteNav({
   active,
   compact = false,
 }: {
-  active: 'home' | 'chronicle' | 'games' | 'series' | 'stats' | 'gallery' | 'calibrate' | 'contact' | 'entry'
+  active: 'home' | 'chronicle' | 'games' | 'series' | 'stats' | 'gallery' | 'contact' | 'entry'
   compact?: boolean
 }) {
   const [open, setOpen] = useState(false)
