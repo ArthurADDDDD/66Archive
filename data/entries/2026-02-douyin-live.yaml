@@ -223,20 +223,41 @@
       - where-winds-meet
     tags: [弹幕版]
     note: "同一场直播由 bobi华（BV1BJcgzVEXJ，2:42:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，2:42:26）分别搬运，总时长吻合，已合并为一天一条。"
-    segments:
-      - at: "00:00:00"
-        label: "19-11 燕云中渡桥剧情来了"
-      - at: "01:00:02"
-        label: "20-11 燕云中渡桥剧情来了"
-      - at: "02:00:03"
-        label: "21-11-55 燕云中渡桥剧情来了"
     sources:
       - url: "https://www.bilibili.com/video/BV1BJcgzVEXJ"
         kind: replay
         status: alive
+        parts: 3
+        part_details:
+          - page: 1
+            title: "19-11 燕云中渡桥剧情来了"
+            duration_sec: 3602
+            cover: "https://i1.hdslb.com/bfs/storyff/_00002qyzsh39t17402hwglg8ssu81wb_firsti.jpg"
+          - page: 2
+            title: "20-11 燕云中渡桥剧情来了"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00001obcqnf6mgqew2g3ac2d68208wb_firsti.jpg"
+          - page: 3
+            title: "21-11-55 燕云中渡桥剧情来了"
+            duration_sec: 2518
+            cover: "https://i0.hdslb.com/bfs/storyff/_00002hkh13sl96l2d2pdbsm88rb2asb_firsti.jpg"
       - url: "https://www.bilibili.com/video/BV1V8cgzqEqk"
         kind: replay
         status: alive
+        parts: 3
+        part_details:
+          - page: 1
+            title: "燕云中渡桥剧情来了_2026-02-09_19_11_36_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i0.hdslb.com/bfs/storyff/_000028i5si74vpn622cd77xfd56e6zb_firsti.jpg"
+          - page: 2
+            title: "燕云中渡桥剧情来了_2026-02-09_20_11_35_女流66_弹幕版"
+            duration_sec: 3601
+            cover: "https://i2.hdslb.com/bfs/storyff/_00000jm245uxf0svh2seok35srksj4b_firsti.jpg"
+          - page: 3
+            title: "燕云中渡桥剧情来了_2026-02-09_21_11_34_女流66_弹幕版"
+            duration_sec: 2544
+            cover: "https://i1.hdslb.com/bfs/storyff/_00001jf3u5ub7yq3p2t6mo7c67ar5sb_firsti.jpg"
     contributed_by: data-agent
 
     duration_min: 162
