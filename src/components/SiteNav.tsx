@@ -10,7 +10,6 @@ const ITEMS = [
   { href: '/series/', label: '节目', id: 'series' },
   { href: '/stats/', label: '数据', id: 'stats' },
   { href: '/gallery/', label: '画廊', id: 'gallery' },
-  { href: '/calibrate/', label: '帮忙校准', id: 'calibrate' },
   { href: '/contact/', label: '联系我们', id: 'contact' },
 ] as const
 
