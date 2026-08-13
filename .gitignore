@@ -5,3 +5,13 @@ out/
 next-env.d.ts
 .DS_Store
 .claude/docs/
+.wrangler/
+
+# Secrets and local deployment state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
