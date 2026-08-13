@@ -17,7 +17,7 @@ export default function ContactPage() {
         <Eyebrow color="#E5568A">Contact &amp; correction</Eyebrow>
         <h1 className="mt-4 max-w-2xl text-h1 font-semibold">让这份索引更准确。</h1>
         <p className="mt-6 max-w-2xl text-body text-muted">
-          如果你发现日期、标题、链接或直播内容有误，可以提交线索。公开互动与用户贡献系统尚未上线，目前不会收集手机号、微信或第三方账号信息。
+          如果你发现日期、标题、链接或直播内容有误，可以提交线索。游戏标签校准直接放在编年史条目的展开区域里，无需注册账号。
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -40,16 +40,16 @@ export default function ContactPage() {
           </article>
 
           <Link
-            href="/calibrate/"
+            href="/chronicle/"
             className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
           >
             <span className="text-meta uppercase tracking-[0.16em] text-live">Calibration · 真人校准</span>
             <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
               <div>
-                <h2 className="text-h3 font-medium">帮忙判断一条内容</h2>
-                <p className="mt-2 max-w-2xl text-body text-muted">从管理员给出的候选标签里点选答案，帮助我们发现标题没有写出来的游戏。无需注册，结果只作为人工复核线索。</p>
+                <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
+                <p className="mt-2 max-w-2xl text-body text-muted">前往编年史，展开具体录像；当前识别标签和校准入口会放在一起，先看原视频再判断，不需要脱离上下文。</p>
               </div>
-              <span className="text-meta text-live transition-transform group-hover:translate-x-1">开始校准 ↗</span>
+              <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开编年史 ↗</span>
             </div>
           </Link>
 

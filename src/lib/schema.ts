@@ -64,14 +64,35 @@ export type Series = z.infer<typeof Series>
  * 一个资源源。同一场直播的官方回放与各路网友录播都挂在同一条目下，
  * 不拆成多条——否则时间轴上一场会重复出现四次。
  */
+export const SourcePart = z.object({
+  page: z.number().int().positive(),
+  title: z.string().min(1),
+  duration_sec: z.number().int().positive().optional(),
+  cover: z.string().url().optional(),
+})
+export type SourcePart = z.infer<typeof SourcePart>
+
 export const Source = z.object({
   url: z.string().url(),
+  /** 这个来源自己的投稿封面；不同来源不得借用条目级封面冒充。 */
+  cover: z.string().url().optional(),
   account: idStr.optional(),
   kind: z.enum(['original', 'replay', 'clip', 'reupload']),
   parts: z.number().int().positive().optional(),
+  /** 某一个来源自己的分 P；不同搬运源不可共用同一份分 P 信息。 */
+  part_details: z.array(SourcePart).optional(),
   /** 存活状态由 scripts/check-links 定期回写，采集时留空即可 */
   status: z.enum(['alive', 'dead', 'unchecked']).default('unchecked'),
   note: z.string().optional(),
+}).superRefine((source, ctx) => {
+  if (!source.part_details) return
+  const pages = source.part_details.map((part) => part.page)
+  if (new Set(pages).size !== pages.length) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['part_details'], message: '分 P 页码不能重复' })
+  }
+  if (source.parts !== undefined && source.parts !== source.part_details.length) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['parts'], message: 'parts 必须与 part_details 数量一致' })
+  }
 })
 export type Source = z.infer<typeof Source>
 
