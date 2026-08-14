@@ -12,7 +12,7 @@ import { SearchField } from './SearchField'
  * 几乎全空，这不是缺陷，是这个库该有的样子。默认按「最近玩过」排，往下滚，封面年代跟着
  * 首播年份一起往回退——滚到底就是 2016 年的 A 站录播截图，考古现场。
  *
- * 保留下来的能力：名称/别名搜索 · 四种排序 · 「只玩过一次」筛选 · 计数与提示行。
+ * 保留下来的能力：名称/别名搜索 · 六种排序 · 计数与提示行。
  */
 export type LibraryGame = {
   id: string
@@ -27,26 +27,24 @@ export type LibraryGame = {
   comebackDays: number
 }
 
-type SortKey = 'recent' | 'duration' | 'sessions' | 'first'
+type SortKey = 'recent' | 'duration' | 'sessions' | 'first' | 'oldest' | 'newest'
 
 const SORTS: { id: SortKey; label: string; hint: string }[] = [
   { id: 'recent', label: '最近玩过', hint: '往下滚就是往回走，滚到底是她很久没打开的那些' },
   { id: 'duration', label: '玩得最久', hint: '按已知时长排' },
   { id: 'sessions', label: '播得最多', hint: '按出场场次排' },
   { id: 'first', label: '第一次玩', hint: '按她第一次打开它的日子排，最早的在前' },
+  { id: 'oldest', label: '从旧到新', hint: '按她第一次打开它的日子排，最早的在前' },
+  { id: 'newest', label: '从新到旧', hint: '按她第一次打开它的日子排，最近的在前' },
 ]
 
 export function GamesLibrary({ games }: { games: LibraryGame[] }) {
   const [q, setQ] = useState('')
   const [sort, setSort] = useState<SortKey>('recent')
-  const [onceOnly, setOnceOnly] = useState(false)
-
-  const onceCount = useMemo(() => games.filter((g) => g.sessions === 1).length, [games])
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
     let list = games
-    if (onceOnly) list = list.filter((g) => g.sessions === 1)
     if (needle) {
       list = list.filter(
         (g) => g.name.toLowerCase().includes(needle) || g.aliases.some((a) => a.toLowerCase().includes(needle)),
@@ -55,10 +53,14 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
     const sorted = [...list]
     if (sort === 'duration') sorted.sort((a, b) => b.totalMinutes - a.totalMinutes)
     else if (sort === 'sessions') sorted.sort((a, b) => b.sessions - a.sessions)
-    else if (sort === 'first') sorted.sort((a, b) => (a.firstDate ?? '').localeCompare(b.firstDate ?? ''))
+    else if (sort === 'first' || sort === 'oldest') {
+      sorted.sort((a, b) => (a.firstDate ?? '').localeCompare(b.firstDate ?? ''))
+    } else if (sort === 'newest') {
+      sorted.sort((a, b) => (b.firstDate ?? '').localeCompare(a.firstDate ?? ''))
+    }
     else sorted.sort((a, b) => (b.lastDate ?? '').localeCompare(a.lastDate ?? ''))
     return sorted
-  }, [games, q, sort, onceOnly])
+  }, [games, q, sort])
 
   const activeSort = SORTS.find((s) => s.id === sort)
 
@@ -86,15 +88,6 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
               {s.label}
             </button>
           ))}
-          <button
-            onClick={() => setOnceOnly((v) => !v)}
-            aria-pressed={onceOnly}
-            className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
-              onceOnly ? 'border-video/60 bg-video/10 text-video' : 'border-line text-muted hover:border-muted hover:text-ink'
-            }`}
-          >
-            只玩过一次 · {onceCount}
-          </button>
         </div>
         <span className="ml-auto text-meta text-faint tnum">
           {filtered.length} / {games.length}
@@ -106,7 +99,10 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
       {filtered.length === 0 ? (
         <p className="mt-12 text-body text-muted">没有匹配「{q}」的游戏。</p>
       ) : (
-        <ul className="bleed-page mt-8 grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 sm:gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <ul
+          key={`${sort}:${q.trim().toLowerCase()}`}
+          className="mt-8 grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 sm:gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        >
           {filtered.map((g) => (
             <LibraryTile key={g.id} game={g} />
           ))}

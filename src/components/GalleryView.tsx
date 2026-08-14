@@ -81,11 +81,8 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
         </p>
       ) : null}
 
-      {/* masonry：自然比例，低清原样。桌面保持 columns-2/3。
-          手机端改单列并出血到屏幕边缘——原本的 grid-cols-2 不是 masonry，同一行会按最高的图
-          对齐、矮图下方留大片空洞；加上 13% 安全边距后每列只剩 ~125px，人脸和文字都看不清。
-          画廊是「画面优先」的页面，单列 + 满宽才是它该有的读法。 */}
-      <div ref={gridRef} className="bleed-page mt-6 sm:columns-2 sm:gap-4 lg:columns-3">
+      {/* masonry：自然比例，低清原样。桌面保持 columns-2/3，移动端单列并跟随页面左右安全边距。 */}
+      <div ref={gridRef} className="mt-6 sm:columns-2 sm:gap-4 lg:columns-3">
         {visible.map((item, index) => (
           <GalleryCard key={item.id} item={item} onOpen={() => openAt(index)} />
         ))}

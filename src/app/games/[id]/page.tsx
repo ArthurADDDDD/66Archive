@@ -3,11 +3,11 @@ import { notFound } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
+import { GameSessions } from '@/components/GameSessions'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { actColorForDate, CURATED_GAMES, getGameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
-import { formatDuration } from '@/lib/ui'
 
 /**
  * 游戏详情（Slice B 核心）。
@@ -151,31 +151,11 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
         </section>
       )}
 
-      {/* 这些晚上：每条都通向编年史条目 */}
+      {/* 这些晚上：整行就地展开播放预览，底部 CTA 才负责前往编年史 */}
       {profile.entries.length > 0 && (
         <section className="border-t border-line py-14 sm:py-20">
           <div className="site-container px-page">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">Sessions · 这些晚上</p>
-            <h2 className="mt-2 text-h3 font-semibold text-ink">档案里的相关场次</h2>
-            <ul className="mt-6 divide-y divide-line/60 border-y border-line/60">
-              {profile.entries.map((e) => (
-                <li key={e.id}>
-                  <Link
-                    href={`/e/${e.id}/`}
-                    className="group flex items-baseline gap-3 py-3 transition-colors hover:bg-surface/30"
-                  >
-                    <span className="w-[104px] shrink-0 font-mono text-meta text-faint tnum">{e.date}</span>
-                    <span className="min-w-0 flex-1 truncate text-body text-muted group-hover:text-ink">{e.title}</span>
-                    {e.duration_min != null && (
-                      <span className="shrink-0 text-meta text-faint tnum">{formatDuration(e.duration_min)}</span>
-                    )}
-                    <span aria-hidden className="shrink-0 font-mono text-meta text-faint/70 transition-transform group-hover:translate-x-1 group-hover:text-live">
-                      →
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <GameSessions entries={profile.entries} />
             <div className="mt-8">
               <Link
                 href={ctaHref}
