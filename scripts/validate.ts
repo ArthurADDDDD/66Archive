@@ -61,6 +61,20 @@ const seriesIds = new Set(series.map((s) => s.id))
 const accountIds = new Set(accounts.map((a) => a.id))
 const tagNames = new Set(tags.map((t) => t.name))
 
+// id 重复必须拦：getDataset() 用 new Map(...) 建索引，同 id 的后一条会静默覆盖前一条，
+// 前一条的名称与别名就此消失，页面上不会有任何异常。此前只查了 entries 的 id。
+for (const [label, ids] of [
+  ['games.yaml', games.map((g) => g.id)],
+  ['series.yaml', series.map((s) => s.id)],
+  ['accounts.yaml', accounts.map((a) => a.id)],
+] as const) {
+  const seen = new Set<string>()
+  for (const id of ids) {
+    if (seen.has(id)) errors.push(`${label} → id 重复 "${id}"（后一条会静默覆盖前一条）`)
+    seen.add(id)
+  }
+}
+
 // 词表自身的一致性
 const seenTag = new Set<string>()
 for (const tag of tags) {
