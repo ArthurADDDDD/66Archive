@@ -1,21 +1,3 @@
-  - id: 2026-08-03-live-01
-    type: live
-    date: "2026-08-03"
-    title: "冒险岛"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/a1ff6c8a7bdfccf80834c2ecd0bbda7b699ac59b.jpg"
-    confidence: medium
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-03-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1HhMX63E2f"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 371
   - id: 2026-08-03-live-02
     type: live
     date: "2026-08-03"
@@ -26,7 +8,7 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-03-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-03-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "冒险岛怀旧服"
@@ -49,27 +31,12 @@
       - url: "https://www.bilibili.com/video/BV1FjM966EjU"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 373
-  - id: 2026-08-04-live-02
-    type: live
-    date: "2026-08-04"
-    title: "冒险岛怀旧服"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/2bb09d856cff979cb427764e1d29775a044f32ac.jpg"
-    confidence: medium
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-04-live-03 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1druw6sE4S"
+      - url: "https://www.bilibili.com/video/BV1HhMX63E2f"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 194
+    duration_min: 373
   - id: 2026-08-04-live-03
     type: live
     date: "2026-08-04"
@@ -80,7 +47,7 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-04-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-04-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "冒险岛怀旧服三区绿水灵"
@@ -97,6 +64,9 @@
       - url: "https://www.bilibili.com/video/BV1Gmuw6HEa5"
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1druw6sE4S"
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
     duration_min: 194
@@ -110,26 +80,11 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1jWMk6KESW"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 165
-  - id: 2026-08-05-live-02
-    type: live
-    date: "2026-08-05"
-    title: "冒险岛怀旧服"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/6881ff83b84d53602012a5b7d112806f8c870d53.jpg"
-    confidence: medium
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1EnMk6MENQ"
         kind: replay
         status: alive
@@ -239,32 +194,17 @@
     games:
       - snapshots-game
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1XpuH6uECU"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 110
-  - id: 2026-08-06-live-02
-    type: live
-    date: "2026-08-06"
-    title: "快照 Snapshots"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/7c4e76a291343d70554a18bbb522a8933858b3a0.jpg"
-    confidence: medium
-    games:
-      - snapshots-game
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1aWuH6zEh5"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 109
+    duration_min: 110
   - id: 2026-08-06-live-03
     type: live
     date: "2026-08-06"
@@ -307,24 +247,6 @@
     contributed_by: data-agent
 
     duration_min: 110
-  - id: 2026-08-08-live-01
-    type: live
-    date: "2026-08-08"
-    title: "冒险岛"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/391c97523b01f3b81b18232c58c977f724159cbe.jpg"
-    confidence: medium
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-08-live-03 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1pTu56TE9w"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 162
   - id: 2026-08-08-live-03
     type: live
     date: "2026-08-08"
@@ -335,7 +257,7 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-08-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-08-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "冒险岛怀旧服二转"
@@ -348,6 +270,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV11Lu36PEo3"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1pTu56TE9w"
         kind: replay
         status: alive
     contributed_by: data-agent

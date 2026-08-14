@@ -52,24 +52,6 @@
     contributed_by: data-agent
 
     duration_min: 240
-  - id: 2026-06-08-live-02
-    type: live
-    date: "2026-06-08"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/cef0defce2974dc8c93c51bc96f18cbb16fae84a.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-03 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV17SE365ECu"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 240
   - id: 2026-06-08-live-03
     type: live
     date: "2026-06-08"
@@ -80,7 +62,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "鸣潮3.4"
@@ -97,6 +79,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1xgEG6fEj7"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV17SE365ECu"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -361,7 +346,7 @@
     games:
       - dave-the-diver
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-20-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-20-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 14:40"
@@ -390,36 +375,6 @@
       - url: "https://www.bilibili.com/video/BV1ohjn68E9p"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 318
-  - id: 2026-06-20-live-02
-    type: live
-    date: "2026-06-20"
-    title: "潜水员戴夫最新DLC"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/901b9577f9dd8689413dd66b1a9e36586606019e.jpg"
-    confidence: high
-    games:
-      - dave-the-diver
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-20-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "潜水员戴夫最新DLC"
-      - at: "01:00:00"
-        label: "潜水员戴夫最新DLC"
-      - at: "02:00:00"
-        label: "潜水员戴夫最新DLC"
-      - at: "02:03:03"
-        label: "潜水员戴夫最新DLC"
-      - at: "03:03:03"
-        label: "潜水员戴夫最新DLC"
-      - at: "04:03:04"
-        label: "潜水员戴夫最新DLC"
-      - at: "05:03:05"
-        label: "潜水员戴夫最新DLC"
-    sources:
       - url: "https://www.bilibili.com/video/BV1KGjp6HEWf"
         kind: replay
         status: alive
@@ -428,7 +383,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 319
+    duration_min: 318
   - id: 2026-06-21-live-01
     type: live
     date: "2026-06-21"
@@ -439,7 +394,7 @@
     games:
       - dave-the-diver
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-21-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-21-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 21:14"
@@ -460,28 +415,6 @@
       - url: "https://www.bilibili.com/video/BV1mKj86BEHS"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 171
-  - id: 2026-06-21-live-02
-    type: live
-    date: "2026-06-21"
-    title: "潜水员戴夫最新DLC"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/bb46d6522db192032e2830155aa7fd3672f27b2a.jpg"
-    confidence: high
-    games:
-      - dave-the-diver
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-21-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "潜水员戴夫最新DLC"
-      - at: "01:00:01"
-        label: "潜水员戴夫最新DLC"
-      - at: "02:00:02"
-        label: "潜水员戴夫最新DLC"
-    sources:
       - url: "https://www.bilibili.com/video/BV1qCjb6WErM"
         kind: replay
         status: alive
@@ -490,7 +423,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 172
+    duration_min: 171
   - id: 2026-06-22-live-01
     type: live
     date: "2026-06-22"
@@ -502,7 +435,7 @@
       - dave-the-diver
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-22-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-22-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 14:59"
@@ -525,33 +458,6 @@
       - url: "https://www.bilibili.com/video/BV1m47A6AEYH"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 238
-  - id: 2026-06-22-live-02
-    type: live
-    date: "2026-06-22"
-    title: "潜水员戴夫最新DLC"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/997034f6de01d03dcfba7fcf0d73b4ed1b1cdaa8.jpg"
-    confidence: high
-    games:
-      - dave-the-diver
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-22-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "潜水员戴夫最新DLC"
-      - at: "01:00:02"
-        label: "潜水员戴夫最新DLC"
-      - at: "01:56:23"
-        label: "潜水员戴夫最新DLC"
-      - at: "02:56:24"
-        label: "潜水员戴夫最新DLC"
-      - at: "03:56:26"
-        label: "潜水员戴夫最新DLC"
-    sources:
       - url: "https://www.bilibili.com/video/BV14K7P6iEk4"
         kind: replay
         status: alive
@@ -560,7 +466,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 239
+    duration_min: 238
   - id: 2026-06-23-live-01
     type: live
     date: "2026-06-23"
@@ -571,7 +477,7 @@
     games:
       - dave-the-diver
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-23-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-23-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 20:54"
@@ -588,26 +494,6 @@
       - url: "https://www.bilibili.com/video/BV1pDjU6nEGc"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 116
-  - id: 2026-06-23-live-02
-    type: live
-    date: "2026-06-23"
-    title: "潜水员戴夫最新DLC"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/f789a04273bb8a29c389541bf7e44c2ec810c38e.jpg"
-    confidence: high
-    games:
-      - dave-the-diver
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-23-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "女流66_潜水员戴夫最新DLC_2026-06-23_20-53-30_000"
-      - at: "01:00:01"
-        label: "女流66_潜水员戴夫最新DLC_2026-06-22_21-51-55_001"
-    sources:
       - url: "https://www.bilibili.com/video/BV12D7L6NEZX"
         kind: replay
         status: alive
@@ -616,23 +502,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 120
-  - id: 2026-06-26-live-01
-    type: live
-    date: "2026-06-26"
-    title: "双人挑战落霞共誓殊途道"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/de8ba9c70d3900556e44bcc68ce21b9f8abdbe69.jpg"
-    confidence: medium
-    games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Dk7L66Es9"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 86
+    duration_min: 116
   - id: 2026-06-26-live-02
     type: live
     date: "2026-06-26"
@@ -642,7 +512,7 @@
     confidence: high
     games: []
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "双人挑战落霞共誓殊途道，全靠配合"
@@ -653,6 +523,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1eV7j6JErE"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Dk7L66Es9"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -696,7 +569,7 @@
     games:
       - lord-of-mysteries
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "诡秘之主"
@@ -713,27 +586,12 @@
       - url: "https://www.bilibili.com/video/BV1aKTg6eEb3"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 161
-  - id: 2026-06-28-live-02
-    type: live
-    date: "2026-06-28"
-    title: "诡秘之主测试"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/9e5f4a777ec803caddba17be37fda85327270b2c.jpg"
-    confidence: medium
-    games:
-      - lord-of-mysteries
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-28-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1BXTu65E9F"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 160
+    duration_min: 161
   - id: 2026-06-29-live-01
     type: live
     date: "2026-06-29"
@@ -823,26 +681,11 @@
     games:
       - ai-escape-room
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1FeTc6sEaJ"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 80
-  - id: 2026-06-30-live-02
-    type: live
-    date: "2026-06-30"
-    title: "AI密室逃脱闯关"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/5a518fedb6c235c354d813873db9e8c6ba93c7fe.jpg"
-    confidence: medium
-    games:
-      - ai-escape-room
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1HGTw6tEPQ"
         kind: replay
         status: alive

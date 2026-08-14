@@ -58,22 +58,6 @@
     contributed_by: data-agent
 
     duration_min: 205
-  - id: 2026-05-13-live-01
-    type: live
-    date: "2026-05-13"
-    title: "和战鹰_壮壮_驴酱玩游戏"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/26bd7a75a001007ed611c57084569652cffaab9a.jpg"
-    confidence: medium
-    games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-13-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV16L5m6BEtr"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 148
   - id: 2026-05-13-live-02
     type: live
     date: "2026-05-13"
@@ -83,7 +67,7 @@
     confidence: high
     games: []
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-13-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-13-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "和战鹰，壮壮，驴酱玩游戏"
@@ -96,6 +80,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1E75m6TEMf"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV16L5m6BEtr"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -141,7 +128,7 @@
     games:
       - subnautica-2
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-15-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-15-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "Subnautica2异星水域，队友壮壮yjj"
@@ -158,27 +145,12 @@
       - url: "https://www.bilibili.com/video/BV1tq5i69E8R"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 222
-  - id: 2026-05-15-live-02
-    type: live
-    date: "2026-05-15"
-    title: "Subnautica2：异星水域"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/ec483a703a0a3137b30cc473a5a44c75c34499ed.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-15-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV16V5i6gEd6"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 221
+    duration_min: 222
   - id: 2026-05-15-live-03
     type: live
     date: "2026-05-15"
@@ -207,7 +179,7 @@
     games:
       - subnautica-2
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-16-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-16-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "20-19 Subnautica2异星水域，队友壮壮yjj"
@@ -224,21 +196,6 @@
       - url: "https://www.bilibili.com/video/BV1xtL36mErP"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 222
-  - id: 2026-05-16-live-02
-    type: live
-    date: "2026-05-16"
-    title: "Subnautica2：异星水域"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/f236314bca939ed200c8a1d0a8d7bb9463b9502e.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-16-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1arL56vE6T"
         kind: replay
         status: alive
@@ -272,7 +229,7 @@
     games:
       - subnautica-2
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-17-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-17-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "Subnautica2异星水域，队友壮壮yjj"
@@ -289,27 +246,12 @@
       - url: "https://www.bilibili.com/video/BV1a9Lp6bESE"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 184
-  - id: 2026-05-17-live-02
-    type: live
-    date: "2026-05-17"
-    title: "Subnautica2：异星水域"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/6b6494729536111a3393c2f999734299a3243ff2.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-17-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1WDLH6kEpH"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 183
+    duration_min: 184
   - id: 2026-05-17-live-03
     type: live
     date: "2026-05-17"
@@ -337,32 +279,17 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-19-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-19-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1y6LB6WEGj"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 123
-  - id: 2026-05-19-live-02
-    type: live
-    date: "2026-05-19"
-    title: "鸣潮抽绯雪尤诺莫宁 05.19全程直播录像"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/ab2f95ef73ac8df6c3f626c036d4017ba0016435.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-19-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1Z9LB6yEBb"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 122
+    duration_min: 123
   - id: 2026-05-19-live-03
     type: live
     date: "2026-05-19"
@@ -400,7 +327,7 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-20-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-20-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 13:02"
@@ -419,30 +346,6 @@
       - url: "https://www.bilibili.com/video/BV1y5L26VEgc"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 218
-  - id: 2026-05-20-live-02
-    type: live
-    date: "2026-05-20"
-    title: "等个冒险岛怀旧服开服"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/037d2be91302a5c252d4ff7bc70050d3e4443594.jpg"
-    confidence: high
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-20-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "等个冒险岛怀旧服开服"
-      - at: "01:00:01"
-        label: "等个冒险岛怀旧服开服"
-      - at: "02:00:02"
-        label: "等个冒险岛怀旧服开服"
-      - at: "02:56:43"
-        label: "老漂漂猪的在吗"
-    sources:
       - url: "https://www.bilibili.com/video/BV1yuL262E4e"
         kind: replay
         status: alive
@@ -451,7 +354,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 219
+    duration_min: 218
   - id: 2026-05-21-live-01
     type: live
     date: "2026-05-21"
@@ -462,7 +365,7 @@
     games:
       - phonopolis
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-21-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-21-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 20:40"
@@ -483,30 +386,6 @@
       - url: "https://www.bilibili.com/video/BV1EELh6xExF"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 199
-  - id: 2026-05-21-live-02
-    type: live
-    date: "2026-05-21"
-    title: "机械迷城工作室新作Phonopolis"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/2a0206b769f3adecc4dec3fe8ec57aac8247c90f.jpg"
-    confidence: high
-    games:
-      - phonopolis
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-21-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "20-41 机械迷城工作室新作Phonopolis"
-      - at: "01:00:01"
-        label: "21-41 机械迷城工作室新作Phonopolis"
-      - at: "02:00:02"
-        label: "22-41 机械迷城工作室新作Phonopolis"
-      - at: "03:00:05"
-        label: "23-41 机械迷城工作室新作Phonopolis"
-    sources:
       - url: "https://www.bilibili.com/video/BV1ipLh6XEHE"
         kind: replay
         status: alive
@@ -526,7 +405,7 @@
     games:
       - phonopolis
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-22-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-22-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 21:09"
@@ -539,26 +418,6 @@
       - url: "https://www.bilibili.com/video/BV14YGb64Epd"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 82
-  - id: 2026-05-22-live-02
-    type: live
-    date: "2026-05-22"
-    title: "机械迷城工作室新作Phonopolis"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/14e6ec1ea9e1a57cbb5293af9b661525af218bd8.jpg"
-    confidence: high
-    games:
-      - phonopolis
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-22-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "机械迷城工作室新作Phonopolis"
-      - at: "01:00:01"
-        label: "机械迷城工作室新作Phonopolis"
-    sources:
       - url: "https://www.bilibili.com/video/BV1gNG86vEPz"
         kind: replay
         status: alive
@@ -567,7 +426,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 83
+    duration_min: 82
   - id: 2026-05-23-live-01
     type: live
     date: "2026-05-23"
@@ -701,7 +560,7 @@
     games:
       - project-007
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-29-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-29-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "007 初露锋芒 14:01"
@@ -720,34 +579,6 @@
       - url: "https://www.bilibili.com/video/BV1f6Vh6pEH2"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 278
-  - id: 2026-05-29-live-02
-    type: live
-    date: "2026-05-29"
-    title: "正在玩：007，初露锋芒"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/556276e703295d1c1bb3ef164b4cc3cd666537cd.jpg"
-    confidence: high
-    games:
-      - project-007
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-29-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "正在玩：007，初露锋芒"
-      - at: "01:00:01"
-        label: "正在玩：007，初露锋芒"
-      - at: "01:37:14"
-        label: "正在玩：007，初露锋芒"
-      - at: "02:03:03"
-        label: "正在玩：007，初露锋芒"
-      - at: "03:03:04"
-        label: "正在玩：007，初露锋芒"
-      - at: "04:03:05"
-        label: "正在玩：007，初露锋芒"
-    sources:
       - url: "https://www.bilibili.com/video/BV1Z6Vh6pEpk"
         kind: replay
         status: alive
@@ -756,7 +587,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 279
+    duration_min: 278
   - id: 2026-05-30-live-01
     type: live
     date: "2026-05-30"
@@ -819,7 +650,7 @@
     games:
       - project-007
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-31-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-31-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "007 初露锋芒 16:40"
@@ -838,30 +669,6 @@
       - url: "https://www.bilibili.com/video/BV15yVS6YEwe"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 198
-  - id: 2026-05-31-live-02
-    type: live
-    date: "2026-05-31"
-    title: "正在玩：007，初露锋芒"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/46251f5183d248bb936c5a30ca47cdfd19c4f4e9.jpg"
-    confidence: high
-    games:
-      - project-007
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-31-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "正在玩：007，初露锋芒"
-      - at: "01:00:01"
-        label: "正在玩：007，初露锋芒"
-      - at: "02:00:02"
-        label: "正在玩：007，初露锋芒"
-      - at: "03:00:03"
-        label: "正在玩：007，初露锋芒"
-    sources:
       - url: "https://www.bilibili.com/video/BV1qvVS6zEBM"
         kind: replay
         status: alive
@@ -869,4 +676,5 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+
     duration_min: 198
