@@ -852,6 +852,8 @@ export type ResolvedBeat = {
   external: boolean
   cover: string | null
   emphasis?: string
+  /** 首页高光「默认展开」：只由后台 live 覆盖写入，基线无此概念（缺省即折叠）。 */
+  expanded?: boolean
   gameWorld?: GameWorldFootnote
   tail?: string
   /** 蒙太奇幕的分类 chips */
