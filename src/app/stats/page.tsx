@@ -85,7 +85,7 @@ export default function StatsPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="stats" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="stats" />
         <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           去编年史逐条查看 →
@@ -251,7 +251,7 @@ function Section({ question, accent, children }: { question: string; accent: str
           一个问题
         </p>
         <h2 className="mt-3 max-w-[min(100%,72rem)] text-[clamp(2rem,3vw,4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-ink">{question}</h2>
-        <div className="mt-8 w-[min(100%,clamp(58rem,78vw,104rem))] sm:mt-10">{children}</div>
+        <div className="mt-8 w-full sm:mt-10">{children}</div>
       </div>
     </section>
   )

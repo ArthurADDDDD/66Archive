@@ -199,11 +199,10 @@ export function ArchiveRow({
 
 /** 全站页脚。六个页面原本各写一份同样的 markup，这里收成一处，
  * 顺便把手机端点击热区补到 44px（视觉不变，靠负 margin 抵消）。 */
-export function SiteFooter({ maxWidth = '1240px' }: { maxWidth?: string }) {
+export function SiteFooter() {
   return (
     <footer
-      className="mx-auto flex flex-col justify-between gap-4 px-page py-10 text-meta text-faint sm:flex-row"
-      style={{ maxWidth }}
+      className="site-container flex flex-col justify-between gap-4 px-page py-10 text-meta text-faint sm:flex-row"
     >
       <span>只索引，不搬运 · 所有播放回到原平台</span>
       <Link href="/contact/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">

@@ -69,7 +69,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
     <main className={`ui-page-in min-h-screen overflow-x-clip ${dark ? 'bg-[#0C0E15]' : ''}`}>
       <MobileQuickNav active="series" />
       <BackToTop />
-      <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
+      <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
         <SiteNav active="series" />
         <Link href="/series/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           ← 全部节目

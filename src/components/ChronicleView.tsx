@@ -78,7 +78,7 @@ export function ChronicleView({
   return (
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="site-header-container flex flex-wrap items-center gap-3 px-4 py-3 sm:flex-nowrap sm:px-6">
+        <div className="site-header-container flex flex-wrap items-center gap-3 px-page py-3 sm:flex-nowrap">
           <SiteNav active="chronicle" />
           <SearchField
             value={storySearch}

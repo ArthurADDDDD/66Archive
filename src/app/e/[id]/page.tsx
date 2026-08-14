@@ -42,7 +42,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
     <div className="ui-page-in pb-8">
       <MobileQuickNav active="entry" />
       <BackToTop />
-      <header className="site-header-container flex items-center px-4 py-5 sm:px-6">
+      <header className="site-header-container flex items-center px-page py-5">
         <SiteNav active="entry" />
       </header>
       <div className="mx-auto max-w-[56.25rem]">

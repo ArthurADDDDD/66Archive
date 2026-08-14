@@ -139,7 +139,7 @@ export function SiteNav({
           className="ui-sheet-in fixed inset-x-0 z-50 border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
           style={{ top: panelTop }}
         >
-          <div className="site-container px-4 py-2">
+          <div className="site-container-wide px-page py-2">
             <p className="px-3 pt-2 text-meta uppercase tracking-[0.16em] text-faint">
               女流编年史 · Menu
             </p>

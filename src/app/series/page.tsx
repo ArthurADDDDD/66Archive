@@ -27,7 +27,7 @@ export default function SeriesPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="series" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="series" />
         <Link
           href="/chronicle/"

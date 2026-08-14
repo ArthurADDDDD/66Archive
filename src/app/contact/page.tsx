@@ -8,7 +8,7 @@ export default function ContactPage() {
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="contact" />
       <BackToTop />
-      <header className="site-header-container flex items-center px-4 py-5 sm:px-6">
+      <header className="site-header-container flex items-center px-page py-5">
         <SiteNav active="contact" />
       </header>
 

@@ -19,7 +19,7 @@ export default function GalleryPage() {
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="gallery" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="gallery" />
         <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           去编年史 →

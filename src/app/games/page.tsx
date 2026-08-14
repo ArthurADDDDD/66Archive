@@ -45,7 +45,7 @@ export default function GamesPage() {
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="games" />
       <BackToTop />
-      <header className="ui-slide-down site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="games" />
         <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live tnum sm:block">
           打开全部 {timeline.length.toLocaleString()} 条记录 →
@@ -75,7 +75,7 @@ export default function GamesPage() {
         <GamesLibrary games={library} />
       </section>
 
-      <SiteFooter maxWidth="1400px" />
+      <SiteFooter />
     </main>
   )
 }
