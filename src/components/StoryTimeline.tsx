@@ -4,7 +4,9 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StoryYear } from '@/lib/story-years'
+import { applyLiveStoryYears } from '@/lib/live-content'
 import { Eyebrow, MediaFrame } from './primitives'
+import { useLiveContent } from './LiveContentProvider'
 
 /**
  * 故事模式：纵向编辑时间线（回到「年份脊柱」那一版的样式）。
@@ -21,7 +23,7 @@ import { Eyebrow, MediaFrame } from './primitives'
  * 标题永远从同一条左边线起，不因为前面有没有小标签而左右浮动。
  */
 export function StoryTimeline({
-  years,
+  years: baselineYears,
   total,
   latestYear,
   onOpenArchive,
@@ -33,6 +35,8 @@ export function StoryTimeline({
   onOpenArchive: (year: number) => void
   modeControl?: ReactNode
 }) {
+  const { narrative } = useLiveContent()
+  const years = applyLiveStoryYears(baselineYears, narrative?.storyActs)
   return (
     <main className="ui-page-in site-container px-page pb-20">
       {modeControl && <div className="ui-reveal pt-4 sm:hidden">{modeControl}</div>}

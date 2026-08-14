@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
-import { Eyebrow, MediaFrame, PageHeader, SiteFooter } from '@/components/primitives'
+import { Eyebrow, MediaFrame, SiteFooter } from '@/components/primitives'
+import { LivePageHeader } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeriesList, type SeriesInfo } from '@/lib/series'
 
@@ -37,12 +38,7 @@ export default function SeriesPage() {
       </header>
 
       <section className="site-container px-page pb-12 pt-10 sm:pb-16 sm:pt-14">
-        <PageHeader
-          eyebrow="Series · 节目单"
-          eyebrowColor="#A78BFA"
-          title="固定出现过的节目"
-          lede="从视频解说时代的连载，到斗鱼时代的每周日。这些栏目的名字会在时间线里反复出现——它们是那些年里的固定节目，也是她答应过会来、就一定会来的约定。"
-        />
+        <LivePageHeader pageId="series" eyebrowColor="#A78BFA" />
       </section>
 
       {pishuang && (

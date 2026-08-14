@@ -4,6 +4,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { GalleryView } from '@/components/GalleryView'
 import { getGalleryCollection } from '@/lib/gallery'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
+import { LivePageHeading } from '@/components/LiveSection'
 
 /**
  * 记忆画廊：画面优先的 memory box。
@@ -28,8 +29,7 @@ export default function GalleryPage() {
       {/* 先说这些画面是什么，再说年份 */}
       <section className="site-container px-page pb-12 pt-12 sm:pb-16 sm:pt-16">
         <div className="pointer-events-none absolute -right-20 -top-24 h-[220px] w-[220px] rounded-full bg-today/10 blur-[60px] sm:h-[380px] sm:w-[380px] sm:blur-[110px]" />
-        <Eyebrow color="#E5568A" className="ui-reveal relative">Gallery · 记忆盒</Eyebrow>
-        <h1 className="ui-reveal relative mt-4 max-w-3xl text-h1 font-semibold">被画下来的几年。</h1>
+        <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal relative" />
         <p className="ui-reveal relative mt-5 max-w-2xl text-body text-muted">
           这些画面不是装饰，是水友替每个年份留下来的注脚。
           原图是什么样，这里就是什么样——不修图、不放大、不换背景。

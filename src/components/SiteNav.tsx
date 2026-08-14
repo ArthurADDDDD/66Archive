@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useSiteCopy } from './LiveContentProvider'
 
 const ITEMS = [
   { href: '/', label: '首页', id: 'home' },
@@ -27,6 +28,9 @@ export function SiteNav({
   active: 'home' | 'chronicle' | 'games' | 'series' | 'stats' | 'gallery' | 'contact' | 'entry'
   compact?: boolean
 }) {
+  // 导航显示名可以由后台改（去哪个页面是固定的）。拉不到就用基线里的名字。
+  const copy = useSiteCopy()
+  const items = ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
   const [open, setOpen] = useState(false)
   // 一个页面上可能同时存在两个 SiteNav（页头一个 + 下拉唤起的快捷导航一个），
   // 菜单面板的 id 必须各自唯一，否则 aria-controls 会指向错的那一个。
@@ -36,7 +40,7 @@ export function SiteNav({
   const panelRef = useRef<HTMLDivElement>(null)
   const [panelTop, setPanelTop] = useState(0)
 
-  const current = ITEMS.find((i) => active === i.id || (active === 'entry' && i.id === 'chronicle')) ?? ITEMS[1]
+  const current = items.find((i) => active === i.id || (active === 'entry' && i.id === 'chronicle')) ?? items[1]
 
   // 路由变化时自动收起：无需监听——菜单项点击自带 setOpen(false)，
   // 跨页导航则整个组件卸载重置；usePathname 在这里没有收起的意义。
@@ -90,7 +94,7 @@ export function SiteNav({
         aria-label="主导航"
         className="hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/70 p-1 shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-[border-color,box-shadow] duration-300 hover:border-muted/70 hover:shadow-[0_10px_35px_rgba(0,0,0,0.18)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex"
       >
-        {ITEMS.map((item) => {
+        {items.map((item) => {
           const selected = active === item.id || (active === 'entry' && item.id === 'chronicle')
           return (
             <Link
@@ -140,7 +144,7 @@ export function SiteNav({
               女流编年史 · Menu
             </p>
             <ul className="mt-1">
-              {ITEMS.map((item) => {
+              {items.map((item) => {
                 const selected = active === item.id || (active === 'entry' && item.id === 'chronicle')
                 return (
                   <li key={item.id}>

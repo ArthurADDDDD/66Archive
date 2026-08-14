@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
+import { applyLiveActs } from '@/lib/live-content'
+import { useLiveContent } from './LiveContentProvider'
 
 type StageStep = {
   id: string
@@ -17,12 +19,14 @@ const STEP_DISTANCE_SVH = 46
  * 文档滚动仍是原生滚动，只把纵向距离映射成幕与事件的切换，不劫持滚轮。
  */
 export function HomeActStage({
-  acts,
+  acts: baselineActs,
   now,
 }: {
   acts: ResolvedAct[]
   now: { year: string; label: string; count: number }
 }) {
+  const { narrative } = useLiveContent()
+  const acts = applyLiveActs(baselineActs, narrative?.homeActs, true)
   const rootRef = useRef<HTMLElement>(null)
   const steps = useMemo<StageStep[]>(
     () => acts.flatMap((act, actIndex) => [

@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
-import { PageHeader, SiteFooter } from '@/components/primitives'
+import { SiteFooter } from '@/components/primitives'
+import { LivePageHeader } from '@/components/LiveSection'
 import { YearBarChart, EraDots } from '@/components/YearCharts'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { actColorForDate } from '@/lib/narrative'
@@ -92,11 +93,9 @@ export default function StatsPage() {
       </header>
 
       <section className="site-container-wide px-page pb-[clamp(3rem,7vh,7rem)] pt-[clamp(2.5rem,6vh,6rem)]">
-        <PageHeader
-          eyebrow="Stats · 数据里的发现"
+        <LivePageHeader
+          pageId="stats"
           eyebrowColor="#E5568A"
-          title="这些数字背后，是被保存下来的时间。"
-          lede="每一节只回答一个问题。数字全部来自档案本身的逐条记录——先有数据，后有观察。"
           wide
           right={
             <details className="group max-w-sm" open={false}>
