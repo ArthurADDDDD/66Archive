@@ -154,8 +154,7 @@ export default function HomePage() {
                 全部游戏 →
               </Link>
             </div>
-            {/* 手机端封面墙出血到屏幕边缘——13% 安全边距下两列会缩到 ~137px，读不出封面 */}
-            <div className="bleed-page mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
               {gamePreview.map((p) => (
                 <GameCard key={p.id} profile={p} />
               ))}

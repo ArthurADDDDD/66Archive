@@ -23,7 +23,6 @@ export default function GamesPage() {
     .filter((p): p is NonNullable<typeof p> => p !== null)
 
   const played = profiles.filter((p) => p.sessions > 0)
-  const onceOnly = played.filter((p) => p.sessions === 1).length
   const longest = [...played].sort((a, b) => b.spanDays - a.spanDays)[0]
 
   const library: LibraryGame[] = played.map((p) => ({
@@ -56,7 +55,7 @@ export default function GamesPage() {
       <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
         <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
         <p className="mt-5 max-w-2xl text-body text-muted">
-          {played.length} 个游戏，其中 {onceOnly} 个只播过一次。
+          {played.length} 个游戏。
           <br />
           每个游戏的封面，是她第一次播它那天的直播截图——不是商店页的宣传图。
           {longest?.firstDate && longest?.lastDate && (

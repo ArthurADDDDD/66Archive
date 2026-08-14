@@ -215,10 +215,10 @@ function MontageBlock({ beat, color }: { beat: ResolvedBeat; color: string }) {
         </div>
       )}
 
-      {/* 横滑封面条：手机端出血到屏幕边缘，首尾用 bleed-inset 补回安全距离 */}
+      {/* 横滑封面条：跟随正文容器的左右安全边距，滚动条也只覆盖内容区 */}
       {m && m.samples.length > 0 && (
-        <div className="bleed-page mt-5 overflow-x-auto sm:mx-0">
-          <div className="bleed-inset flex gap-3 pb-1">
+        <div className="mt-5 overflow-x-auto">
+          <div className="flex gap-3 pb-1">
             {m.samples.map((s) => (
               <Link key={s.id} href={`/e/${s.id}/`} className="group w-[168px] shrink-0 sm:w-[196px]">
                 <div className="overflow-hidden rounded-lg border border-line/60 bg-surface/40">
