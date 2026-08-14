@@ -35,7 +35,13 @@ export function EntryRow({
 
   return (
     <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
-      <div className="flex gap-3 py-1.5 sm:gap-4">
+      <div className="py-1.5">
+        <button
+          onClick={onToggle}
+          className="ui-press flex w-full items-start gap-3 rounded-lg py-2 text-left sm:gap-4"
+          aria-expanded={expanded}
+          aria-controls={`entry-preview-${entry.id}`}
+        >
         {/* 日期与开播时间 */}
         <div className="w-11 shrink-0 pt-[3px] text-right font-mono text-meta leading-tight tnum sm:w-14">
           <div className="text-muted">{entry.date.slice(5).replace('-', '/')}</div>
@@ -80,67 +86,64 @@ export function EntryRow({
 
         {/* 内容 */}
         <div className="min-w-0 flex-1 pb-1">
-          <button
-            onClick={onToggle}
-            className="ui-press flex w-full items-start gap-3 rounded-sm text-left"
-            aria-expanded={expanded}
-            aria-controls={`entry-preview-${entry.id}`}
+          {/* 手机端两行不截断——13% 安全边距下 truncate 会把中文标题切得只剩几个字 */}
+          <h3
+            className={`min-w-0 text-body leading-snug transition-colors line-clamp-2 group-hover:text-white sm:line-clamp-none sm:truncate ${
+              dead ? 'text-muted line-through decoration-faint' : 'text-ink'
+            }`}
           >
-            {/* 手机端两行不截断——13% 安全边距下 truncate 会把中文标题切得只剩几个字 */}
-            <h3
-              className={`min-w-0 flex-1 text-body leading-snug transition-colors line-clamp-2 group-hover:text-white sm:line-clamp-none sm:truncate ${
-                dead ? 'text-muted line-through decoration-faint' : 'text-ink'
-              }`}
-            >
-              {entry.title}
-            </h3>
-            <span className={`shrink-0 font-mono text-meta text-faint transition-[transform,color] duration-300 ${expanded ? 'rotate-45 scale-110 text-live' : 'group-hover:text-muted'}`} aria-hidden>
-              +
-            </span>
-          </button>
+            {entry.title}
+          </h3>
 
-          {/* meta 行：手机端只留「平台 · 时长 · 首个游戏」。
-              来源数 / 核验状态 / 待考证在手机上会把这一行撑成 2~3 行，且每条数量不同，
-              整列行高参差——这些信息一条不少，都在下面展开的卡片里。 */}
-          <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-meta text-faint tnum">
-            <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
-            <span className="text-line">·</span>
-            <span>{formatDuration(entry.duration_min)}</span>
+          {/* 三组元信息与标题一起属于整条记录的触发区。 */}
+          <div className="mt-1 space-y-1 text-meta text-faint tnum">
+            {/* 三组元信息各占一行，避免不同标题长度触发 flex 换行后视觉错位。 */}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
+              <span className="text-line">·</span>
+              <span>{formatDuration(entry.duration_min)}</span>
+            </div>
+
             {compactGames.length > 0 && (
-              <>
-                <span className="text-line">·</span>
-                <span className="flex min-w-0 items-center gap-1.5 text-muted">
-                  {compactGames.slice(0, 2).map((game, index) => (
-                    <span key={game.id} className={`flex min-w-0 items-center gap-1 ${index > 0 ? 'hidden sm:flex' : ''}`}>
-                      {index > 0 && <span className="mr-0.5 text-line">/</span>}
-                      <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: gameColor(game.id) }} />
-                      <span className="truncate">{game.name}</span>
-                    </span>
-                  ))}
-                  {compactGames.length > 2 && <span className="hidden text-faint sm:inline">+{compactGames.length - 2}</span>}
-                </span>
-              </>
+              <div className="flex min-w-0 flex-wrap items-center gap-1.5 text-muted">
+                {compactGames.slice(0, 2).map((game, index) => (
+                  <span key={game.id} className={`flex min-w-0 items-center gap-1 ${index > 0 ? 'hidden sm:flex' : ''}`}>
+                    {index > 0 && <span className="mr-0.5 text-line">/</span>}
+                    <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: gameColor(game.id) }} />
+                    <span className="truncate">{game.name}</span>
+                  </span>
+                ))}
+                {compactGames.length > 2 && <span className="hidden text-faint sm:inline">+{compactGames.length - 2}</span>}
+              </div>
             )}
-            {entry.sourceCount > 0 && (
-              <>
-                <span className="text-line">·</span>
-                <span className="text-muted">
-                  共有{formatSourceCount(entry.sourceCount)}段录像来源
-                  {dead ? <span className="text-today">（已失效）</span>
-                    : entry.aliveCount === entry.sourceCount ? <span className="text-live">（已核验）</span>
-                      : entry.aliveCount > 0 ? <span className="text-live">（部分核验）</span>
-                        : entry.uncheckedCount > 0 ? <span className="text-faint">（未复查）</span> : null}
-                </span>
-              </>
-            )}
-            {entry.confidence === 'low' && (
-              <span className="rounded-sm border border-line px-1 text-faint">待考证</span>
+
+            {(entry.sourceCount > 0 || entry.confidence === 'low') && (
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                {entry.sourceCount > 0 && (
+                  <span className="text-muted">
+                    共有{formatSourceCount(entry.sourceCount)}段录像来源
+                    {dead ? <span className="text-today">（已失效）</span>
+                      : entry.aliveCount === entry.sourceCount ? <span className="text-live">（已核验）</span>
+                        : entry.aliveCount > 0 ? <span className="text-live">（部分核验）</span>
+                          : entry.uncheckedCount > 0 ? <span className="text-faint">（未复查）</span> : null}
+                  </span>
+                )}
+                {entry.confidence === 'low' && (
+                  <span className="rounded-sm border border-line px-1 text-faint">待考证</span>
+                )}
+              </div>
             )}
           </div>
+        </div>
+
+        <span className={`shrink-0 pt-0.5 font-mono text-meta text-faint transition-[transform,color] duration-300 ${expanded ? 'rotate-45 scale-110 text-live' : 'group-hover:text-muted'}`} aria-hidden>
+          +
+        </span>
+        </button>
 
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
-            <div id={`entry-preview-${entry.id}`} className="ui-panel-in mt-4 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)]">
+            <div id={`entry-preview-${entry.id}`} className="ui-panel-in ml-[5rem] mt-2 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[6.25rem]">
               <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
                 <EntryCover cover={selectedCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
@@ -211,7 +214,6 @@ export function EntryRow({
               </div>
             </div>
           )}
-        </div>
       </div>
     </article>
   )
@@ -304,7 +306,7 @@ function EntryCover({
           alt=""
           loading="lazy"
           referrerPolicy="no-referrer"
-          className="h-full w-full object-cover transition duration-500 group-hover/cover:scale-[1.025]"
+          className="h-full w-full object-contain transition duration-500 group-hover/cover:scale-[1.025]"
         />
       ) : (
         <span className="flex h-full items-center justify-center text-meta text-faint">无封面</span>
@@ -318,8 +320,9 @@ function EntryCover({
     </>
   )
 
-  // 桌面端使用固定封面视窗：右侧校准区展开/收起时不会再把图片拉长。
-  const className = 'group/cover relative aspect-video overflow-hidden bg-raised sm:h-[clamp(28rem,52vw,42rem)] sm:aspect-auto sm:self-start'
+  // 桌面端只保留横向封面视窗；右侧分 P、标签和校准区决定卡片高度，封面在其中垂直居中。
+  // 不再用固定高视窗，否则横向视频封面会被拉进纵向容器并裁掉主体。
+  const className = 'group/cover relative aspect-video overflow-hidden bg-raised sm:self-center'
   if (!destination) return <div className={className}>{content}</div>
   return (
     <a href={destination} target="_blank" rel="noopener noreferrer" className={className} aria-label={`打开原平台：${title}`}>
