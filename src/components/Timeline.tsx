@@ -272,7 +272,7 @@ export function Timeline({
   return (
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
-        <div className="site-header-container flex flex-wrap items-center gap-2 px-4 py-3 sm:flex-nowrap sm:gap-3 sm:px-6">
+        <div className="site-header-container flex flex-wrap items-center gap-2 px-page py-3 sm:flex-nowrap sm:gap-3">
           <SiteNav active="chronicle" />
           {/* 手机端 SearchField 已经塌成一个 44px 圆形图标——原本的 order-3 w-full
               会让 sticky header 白白多出一整行，行里只有那一个小圆圈。 */}

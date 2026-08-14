@@ -7,15 +7,8 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft-spring: cubic-bezier(0.22, 1.15, 0.36, 1);
 
-  /* 主体安全边距：手机端左右各 13%，桌面回到原本的 sm:px-6（1.5rem）。
-     导航（header）刻意不使用它——nav 仍然贴近屏幕边缘，触控区不缩水。 */
-  --page-pad: 13%;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --page-pad: clamp(1.25rem, 1.5vw, 2.5rem);
-  }
+  /* 全站统一安全边距：移动端保持宽松留白，桌面端也不再退回到过窄的 1.5rem。 */
+  --page-pad: clamp(1rem, 13vw, 5rem);
 }
 
 /* PC 端由站内彩色章节轴承担位置反馈；隐藏原生滚动条但保留全部滚动能力。 */
@@ -283,22 +276,17 @@ body {
   /**
    * 主体安全边距。同一条渲染路径上只允许出现一层 .px-page——
    * 百分比 padding 按元素自身宽度算，套两层会复利（13% → 13% + 9.6%）。
-   * 导航 header 不用它，仍是 px-4 sm:px-6。
+   * 页面头部与正文共用这一层安全边距，保证不同页面的左右边界一致。
    */
   .px-page {
     padding-left: var(--page-pad);
     padding-right: var(--page-pad);
   }
 
-  /* 全站响应式版心：普通内容与宽内容分档，超宽屏按视口扩展但保留可读上限。 */
+  /* 全站响应式版心：所有页面共享同一条外边界，内部内容再用 max-w 控制阅读宽度。 */
   .site-container,
   .site-header-container,
-  .home-content-container {
-    width: 100%;
-    max-width: 77.5rem;
-    margin-inline: auto;
-  }
-
+  .home-content-container,
   .site-container-wide {
     width: 100%;
     max-width: 87.5rem;
@@ -308,10 +296,7 @@ body {
   @media (min-width: 1536px) {
     .site-container,
     .site-header-container,
-    .home-content-container {
-      max-width: min(88vw, 120rem);
-    }
-
+    .home-content-container,
     .site-container-wide {
       max-width: min(92vw, 132rem);
     }

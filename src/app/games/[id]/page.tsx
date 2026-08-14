@@ -62,7 +62,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="games" />
       <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="games" />
         <Link href="/games/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
           ← 游戏收藏架

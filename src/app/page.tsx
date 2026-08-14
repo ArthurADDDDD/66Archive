@@ -97,7 +97,7 @@ export default function HomePage() {
       <TimelineProgress />
 
       <div className="flex flex-col sm:min-h-[100svh]">
-        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-4 py-5 sm:px-6">
+        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="home" />
           <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta tnum text-live sm:block">
             打开全部 {data.totals.entries.toLocaleString()} 条记录 →

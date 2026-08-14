@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import type { GalleryItem } from '@/lib/gallery'
@@ -53,7 +54,11 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
           {years.map((y) => (
             <button
               key={y}
-              onClick={() => setYear(year === y ? null : y)}
+              type="button"
+              onClick={() => {
+                setYear((current) => (current === y ? null : y))
+                setOpen(null)
+              }}
               aria-pressed={year === y}
               className={`ui-press rounded-full border px-3 py-2.5 text-meta transition-colors tnum sm:py-1.5 ${
                 year === y ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 bg-surface/50 text-muted hover:border-muted/60 hover:text-ink'
@@ -64,6 +69,7 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
           ))}
         </div>
         <button
+          type="button"
           onClick={randomOpen}
           className="ui-press ml-auto rounded-full border border-line/80 bg-surface/50 px-4 py-2.5 text-meta text-muted transition-colors hover:border-today/60 hover:text-today sm:py-1.5"
         >
@@ -74,15 +80,15 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
       {q || year ? (
         <p className="mt-3 text-meta text-faint tnum">
           找到 {visible.length} 张{(q || year) && (
-            <button onClick={() => { setQ(''); setYear(null) }} className="ml-2 text-live underline underline-offset-4">
+            <button type="button" onClick={() => { setQ(''); setYear(null); setOpen(null) }} className="ml-2 text-live underline underline-offset-4">
               清除筛选
             </button>
           )}
         </p>
       ) : null}
 
-      {/* masonry：自然比例，低清原样。桌面保持 columns-2/3，移动端单列并跟随页面左右安全边距。 */}
-      <div ref={gridRef} className="mt-6 sm:columns-2 sm:gap-4 lg:columns-3">
+      {/* 统一卡片比例：画廊按视频封面节奏排列，不让原图尺寸把同一行撑成高低错落。 */}
+      <div ref={gridRef} className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((item, index) => (
           <GalleryCard key={item.id} item={item} onOpen={() => openAt(index)} />
         ))}
@@ -93,14 +99,17 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
 
       {/* 灯箱 */}
       {open !== null && visible[open] && (
-        <Lightbox
-          item={visible[open]}
-          index={open}
-          total={visible.length}
-          onClose={() => setOpen(null)}
-          onPrev={() => step(-1)}
-          onNext={() => step(1)}
-        />
+        typeof document !== 'undefined' && createPortal(
+          <Lightbox
+            item={visible[open]}
+            index={open}
+            total={visible.length}
+            onClose={() => setOpen(null)}
+            onPrev={() => step(-1)}
+            onNext={() => step(1)}
+          />,
+          document.body,
+        )
       )}
     </>
   )
@@ -111,11 +120,13 @@ function GalleryCard({ item, onOpen }: { item: GalleryItem; onOpen: () => void }
     <button
       onClick={onOpen}
       aria-label={`打开大图：${item.alt}`}
-      className="ui-press group mb-3 block w-full break-inside-avoid overflow-hidden border-y border-line/80 bg-raised text-left transition-[border-color] hover:border-muted/70 sm:mb-4 sm:rounded-xl sm:border"
+      className="ui-press group block w-full overflow-hidden rounded-xl border border-line/80 bg-raised text-left transition-[border-color] hover:border-muted/70"
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={item.src} alt={item.alt} loading="lazy" className="block h-auto w-full" />
-      <span className="flex items-baseline justify-between gap-2 border-t border-line/60 bg-surface/60 px-3 py-2">
+      <div className="aspect-video overflow-hidden bg-black">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={item.src} alt={item.alt} loading="lazy" className="block h-full w-full object-cover" />
+      </div>
+      <span className="flex min-h-11 items-center justify-between gap-2 border-t border-line/60 bg-surface/60 px-3 py-2">
         <span className="font-mono text-meta text-faint tnum">{item.year}</span>
         <span className="min-w-0 truncate text-meta text-muted transition-colors group-hover:text-ink">{item.alt}</span>
       </span>
@@ -143,8 +154,15 @@ function Lightbox({
 
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null
-    closeRef.current?.focus()
+    const prevScrollY = window.scrollY
+    const prevBodyOverflow = document.body.style.overflow
+    const prevScrollBehavior = document.documentElement.style.scrollBehavior
+    // 先锁住背景滚动，再转移焦点；不要给 body 加 position: fixed，否则会影响灯箱自身的 fixed 定位。
+    // 全局页面使用 smooth 滚动时，焦点切换会把恢复滚动延迟成一段动画，这里只在灯箱生命周期内临时关闭。
+    document.documentElement.style.scrollBehavior = 'auto'
     document.body.style.overflow = 'hidden'
+    closeRef.current?.focus({ preventScroll: true })
+    window.scrollTo(0, prevScrollY)
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
       else if (e.key === 'ArrowLeft') onPrev()
@@ -153,8 +171,10 @@ function Lightbox({
     window.addEventListener('keydown', onKey)
     return () => {
       window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-      prevFocus?.focus()
+      document.body.style.overflow = prevBodyOverflow
+      prevFocus?.focus({ preventScroll: true })
+      window.scrollTo(0, prevScrollY)
+      document.documentElement.style.scrollBehavior = prevScrollBehavior
     }
   }, [onClose, onPrev, onNext])
 
@@ -164,8 +184,24 @@ function Lightbox({
       <div className="ui-backdrop-in relative flex max-h-full w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-[0_40px_120px_rgba(0,0,0,0.6)] lg:flex-row">
         {/* 大图 */}
         <div className="flex min-h-0 flex-1 items-center justify-center bg-raised/60 p-3 sm:p-5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={item.src} alt={item.alt} className="max-h-[52vh] w-auto max-w-full object-contain lg:max-h-[78vh]" />
+          {sourceHref ? (
+            <a
+              href={sourceHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`打开原始视频：${item.alt}`}
+              className="group/media relative flex max-h-full max-w-full cursor-pointer items-center justify-center rounded-lg focus-visible:outline-none"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={item.src} alt={item.alt} className="max-h-[52vh] w-auto max-w-full object-contain lg:max-h-[78vh]" />
+              <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur-sm transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
+                打开原始视频 ↗
+              </span>
+            </a>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={item.src} alt={item.alt} className="max-h-[52vh] w-auto max-w-full object-contain lg:max-h-[78vh]" />
+          )}
         </div>
         {/* 图注 */}
         <div className="flex w-full shrink-0 flex-col gap-4 border-t border-line/70 p-5 lg:w-[320px] lg:border-l lg:border-t-0 lg:p-6">
