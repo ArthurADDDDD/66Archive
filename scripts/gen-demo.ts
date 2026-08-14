@@ -94,7 +94,9 @@ for (let year = 2010; year <= 2026; year++) {
       platform,
       duration_min: duration,
       games,
-      tags: rnd() < 0.25 ? [pick(['杂谈', '联动', '通宵', '首播', '完结'])] : [],
+      // 只能取 data/tags.yaml 已登记的值——演示数据同样要过 validate 的标签检查，
+      // 不能为了造样本往真实词表里塞演示专用标签。
+      tags: rnd() < 0.25 ? [pick(['聊天', '健身', '弹幕版', '多人在线'])] : [],
       confidence: 'low',
       sources,
       segments,

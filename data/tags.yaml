@@ -1,0 +1,82 @@
+# 标签词表（受控）。entries 的 tags 只能使用这里登记过的 name，validate 会拦住未登记值。
+#
+# 为什么要受控：tags 不只是展示用的形容词，其中一部分被代码按「字符串精确等于系列名」
+# 消费——写错一个字，条目会静静地从系列页消失、首页「N 期心灵砒霜」少一，且没有任何报错。
+# 把允许值集中登记，才能让这类耦合是显式的、可查的。
+#
+# group 只影响后台选择器里的分组，不参与任何前台计算。
+# binds_series 必须在 name 与 series.yaml 某个系列同名时填写：这是承重耦合的显式声明，
+# validate 会强制要求（见 scripts/validate.ts）。
+#
+# 新增标签：在此处人工添加一行，与 games.yaml 同样的规矩——采集 Agent 不自行新增，
+# 在交付说明里单列，由人类添加。仅登记而暂时没有条目使用是允许的。
+# 维护：架构角色（2026-08-14 首次建立，初始值全部来自当时 entries 里的实际用法）
+
+# —— 系列 / 栏目：与 series.yaml 同名，前端据此把条目并入系列页并生成「相关栏目」链接 ——
+- name: 心灵砒霜
+  group: series
+  binds_series: xinling-pishuang
+  description: "斗鱼时代的固定栏目。除系列归属外，首页蒙太奇卡的「N 期心灵砒霜」也来自这个标签的计数。"
+
+- name: 戏说聊斋
+  group: series
+  binds_series: xishuo-liaozhai
+  description: "斗鱼时代栏目。"
+
+- name: 吃鸡佳缘
+  group: series
+  binds_series: chiji-jiayuan
+  description: "斗鱼时代栏目。"
+
+- name: 66聊聊
+  group: series
+  binds_series: liuliao66
+  description: "斗鱼时代栏目。"
+
+# —— 时期 ——
+- name: 视频时代
+  group: era
+  description: "2010-05 ~ 2015-02 的优酷解说时期。"
+
+# —— 形式 ——
+- name: 弹幕版
+  group: format
+  description: "来源为带弹幕的搬运版本。"
+
+- name: 语音直播
+  group: format
+  description: "以语音为主、无游戏画面的直播。"
+
+- name: 多人在线
+  group: format
+  description: "多人联机 / 在线合作的内容。"
+
+# —— 内容 ——
+- name: 聊天
+  group: content
+  description: "以聊天为主的场次。"
+
+- name: 健身
+  group: content
+  description: "健身相关内容。"
+
+- name: 系列解说
+  group: content
+  description: "成系列的解说作品（视频时代）。"
+
+- name: 栏目
+  group: content
+  description: "归属某个固定栏目、但该栏目未单独登记为 series 的作品。"
+
+# —— 里程碑：写首页高光时用的人工标记，代码不读取，仅供检索与人工回溯 ——
+- name: 首作
+  group: milestone
+  description: "某一阶段的第一部作品。"
+
+- name: 代表作
+  group: milestone
+  description: "该时期的代表性作品。"
+
+- name: 直播过渡
+  group: milestone
+  description: "从录播视频转向直播的过渡节点。"

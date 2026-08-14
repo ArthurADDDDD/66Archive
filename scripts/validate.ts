@@ -10,6 +10,7 @@ import {
   EntriesFile,
   GamesFile,
   SeriesFile,
+  TagsFile,
   type Entry,
 } from '../src/lib/schema'
 
@@ -53,10 +54,38 @@ function parseOrFail<T>(schema: { parse: (v: unknown) => T }, value: unknown, wh
 const games = parseOrFail(GamesFile, load('games.yaml'), 'games.yaml') ?? []
 const series = parseOrFail(SeriesFile, load('series.yaml'), 'series.yaml') ?? []
 const accounts = parseOrFail(AccountsFile, load('accounts.yaml'), 'accounts.yaml') ?? []
+const tags = parseOrFail(TagsFile, load('tags.yaml'), 'tags.yaml') ?? []
 
 const gameIds = new Set(games.map((g) => g.id))
 const seriesIds = new Set(series.map((s) => s.id))
 const accountIds = new Set(accounts.map((a) => a.id))
+const tagNames = new Set(tags.map((t) => t.name))
+
+// 词表自身的一致性
+const seenTag = new Set<string>()
+for (const tag of tags) {
+  if (seenTag.has(tag.name)) errors.push(`tags.yaml → 标签 "${tag.name}" 重复登记`)
+  seenTag.add(tag.name)
+  if (tag.binds_series && !seriesIds.has(tag.binds_series)) {
+    errors.push(`tags.yaml → 标签 "${tag.name}" 的 binds_series 指向未登记的系列 "${tag.binds_series}"`)
+  }
+}
+
+// 与系列同名的标签是承重耦合（series.ts / relations.ts 按名字精确匹配），必须显式声明。
+// 不声明的话，将来给 series.yaml 加一个恰好与某标签同名的系列，会静默改变前台归类。
+const seriesNameToId = new Map(series.map((s) => [s.name, s.id]))
+for (const tag of tags) {
+  const collidingId = seriesNameToId.get(tag.name)
+  if (collidingId && tag.binds_series !== collidingId) {
+    errors.push(
+      `tags.yaml → 标签 "${tag.name}" 与系列 "${collidingId}" 同名，前端会据此归类，` +
+        `必须写明 binds_series: ${collidingId}`,
+    )
+  }
+  if (tag.binds_series && !collidingId) {
+    errors.push(`tags.yaml → 标签 "${tag.name}" 声明了 binds_series，但没有同名系列，归类不会发生`)
+  }
+}
 
 const entries: Entry[] = []
 const seenId = new Map<string, string>()
@@ -81,6 +110,11 @@ for (const { file, items } of [...loadDir('entries'), ...loadDir('_demo')]) {
         errors.push(`${file} → "${e.id}" 的源引用了未登记的账号 "${s.account}"`)
       }
     }
+    for (const t of e.tags) {
+      if (!tagNames.has(t)) {
+        errors.push(`${file} → "${e.id}" 使用了未登记的标签 "${t}"（需先加进 data/tags.yaml）`)
+      }
+    }
 
     // 数据质量提醒（不阻断合并，但要看得见）
     if (e.sources.length === 0) warnings.push(`"${e.id}" 没有任何来源链接`)
@@ -100,7 +134,11 @@ const demo = entries.filter((e) => e.demo)
 
 console.log('')
 console.log(`  条目 ${real.length} 条（另有演示数据 ${demo.length} 条）`)
-console.log(`  游戏 ${games.length} · 系列 ${series.length} · 账号 ${accounts.length}`)
+console.log(`  游戏 ${games.length} · 系列 ${series.length} · 账号 ${accounts.length} · 标签 ${tags.length}`)
+
+const usedTags = new Set(entries.flatMap((e) => e.tags))
+const unusedTags = tags.filter((t) => !usedTags.has(t.name)).map((t) => t.name)
+if (unusedTags.length) warnings.push(`标签词表里有 ${unusedTags.length} 个暂未被使用：${unusedTags.join('、')}`)
 
 if (warnings.length) {
   console.log(`\n  ⚠ ${warnings.length} 条提醒`)

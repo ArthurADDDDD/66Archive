@@ -61,6 +61,26 @@ export const Series = z.object({
 export type Series = z.infer<typeof Series>
 
 /**
+ * 受控标签。entries 的 tags 只能用这里登记过的 name（validate 强制）。
+ *
+ * 之所以按 name 而不是 id 引用：前端已有多处按标签字符串精确匹配系列名
+ * （series.ts / relations.ts / narrative.ts 的砒霜计数），改成 id 间接层
+ * 需要同时迁移全部消费方，收益不抵风险。name 本身就是稳定标识。
+ */
+export const Tag = z.object({
+  name: z.string().min(1),
+  /** 仅用于后台选择器分组，不参与任何前台计算 */
+  group: z.enum(['series', 'era', 'format', 'content', 'milestone']),
+  description: z.string().optional(),
+  /**
+   * 与 series.yaml 中某个系列同名时必填：前端会据此把带该标签的条目并入系列页。
+   * 这是承重耦合，写出来才能被检查（validate 会强制同名标签声明它）。
+   */
+  binds_series: idStr.optional(),
+})
+export type Tag = z.infer<typeof Tag>
+
+/**
  * 一个资源源。同一场直播的官方回放与各路网友录播都挂在同一条目下，
  * 不拆成多条——否则时间轴上一场会重复出现四次。
  */
@@ -161,4 +181,5 @@ export function toSeconds(tc: string): number {
 export const AccountsFile = z.array(Account)
 export const GamesFile = z.array(Game)
 export const SeriesFile = z.array(Series)
+export const TagsFile = z.array(Tag)
 export const EntriesFile = z.array(Entry)
