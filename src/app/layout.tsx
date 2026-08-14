@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
+import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
 
 const display = Archivo({
   subsets: ['latin'],
@@ -35,7 +36,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN" className={`${display.variable} ${mono.variable}`}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <LiveContentProvider>
+          <LiveDocumentMeta />
+          {children}
+        </LiveContentProvider>
+      </body>
     </html>
   )
 }

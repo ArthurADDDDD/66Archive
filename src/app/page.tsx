@@ -12,6 +12,7 @@ import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
 import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
+import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
 
@@ -121,10 +122,10 @@ export default function HomePage() {
       <HighlightStrip beats={data.highlights} />
 
       {/* 记忆：随机一晚 + 今日今夕 */}
+      <LiveSectionGate sectionId="home-memory">
       <section id="home-memory" className="scroll-mt-4 border-t border-line bg-surface/15">
         <div className="home-content-container px-page py-12 sm:py-16">
-          <Eyebrow>Memory · 记忆盒</Eyebrow>
-          <h2 className="mt-3 text-h2 font-semibold text-ink">回到过去，只需要一晚。</h2>
+          <LiveSectionHeading sectionId="home-memory" />
           <div className="mt-6 grid gap-5 lg:grid-cols-2">
             <RandomMemory pool={memoryPool} />
             <TodayInHistory
@@ -138,14 +139,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      </LiveSectionGate>
+
       {/* 游戏预告 */}
       {gamePreview.length > 0 && (
+        <LiveSectionGate sectionId="home-games">
         <section id="home-games" className="scroll-mt-4 border-t border-line">
           <div className="home-content-container px-page py-12 sm:py-16">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <div>
-                <Eyebrow color="#E0A244">Games · 玩过的游戏</Eyebrow>
-                <h2 className="mt-3 text-h2 font-semibold text-ink">陪得最久的几款。</h2>
+                <LiveSectionHeading sectionId="home-games" eyebrowColor="#E0A244" />
               </div>
               <Link href="/games/" className="ui-press -my-2 rounded-sm py-2 text-meta text-live underline underline-offset-4">
                 全部游戏 →
@@ -159,20 +162,18 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        </LiveSectionGate>
       )}
 
       {/* 四个房间 */}
+      <LiveSectionGate sectionId="home-rooms">
       <section id="home-rooms" className="scroll-mt-4 border-t border-line">
         <div className="home-content-container px-page py-12 sm:py-16">
-          <Eyebrow>Rooms · 四个房间</Eyebrow>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <RoomLink href="/chronicle/" color="#5BC8E8" kicker="Chronicle" title="编年史" body="走过的路，一条一条。故事模式先看，档案模式逐条查。" />
-            <RoomLink href="/series/" color="#A78BFA" kicker="Series" title="节目" body="固定出现过的栏目——心灵砒霜，和更早的连载。" />
-            <RoomLink href="/stats/" color="#E5568A" kicker="Stats" title="数据" body="五个问题，五个答案。数字全部从档案派生。" />
-            <RoomLink href="/gallery/" color="#FF6B75" kicker="Gallery" title="画廊" body="被画下来的几年。水友替每个年份留下的注脚。" />
-          </div>
+          <LiveSectionHeading sectionId="home-rooms" />
+          <LiveRooms />
         </div>
       </section>
+      </LiveSectionGate>
 
       <HomeStats data={data} />
 
@@ -233,20 +234,3 @@ function TodayInHistory({
 }
 
 /** 四个房间的入口瓦片 */
-function RoomLink({ href, color, kicker, title, body }: { href: string; color: string; kicker: string; title: string; body: string }) {
-  return (
-    <Link
-      href={href}
-      className="ui-card ui-press group flex flex-col rounded-2xl border border-line/80 bg-surface/40 p-6 transition-colors hover:border-muted/60"
-    >
-      <Eyebrow color={color} dot>
-        {kicker}
-      </Eyebrow>
-      <h3 className="mt-4 text-h3 font-semibold text-ink transition-colors group-hover:text-white">{title}</h3>
-      <p className="mt-2 text-body text-muted">{body}</p>
-      <span aria-hidden className="mt-auto pt-4 text-meta transition-transform group-hover:translate-x-1" style={{ color }}>
-        进入 →
-      </span>
-    </Link>
-  )
-}

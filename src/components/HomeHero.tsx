@@ -3,8 +3,10 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { RotatingAvatar } from './RotatingAvatar'
+import { useSiteCopy } from './LiveContentProvider'
 
 export function HomeHero({ nowYear }: { nowYear: string }) {
+  const copy = useSiteCopy()
   const rootRef = useRef<HTMLElement>(null)
   const frameRef = useRef<number | null>(null)
   const [pressed, setPressed] = useState(false)
@@ -61,23 +63,27 @@ export function HomeHero({ nowYear }: { nowYear: string }) {
           <div className="home-hero__copy">
           <div className="home-hero__status inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 text-meta uppercase tracking-[0.16em] text-live tnum">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-live" />
-            2010 — {nowYear} · 还在继续
+            2010 — {nowYear}{copy.hero.status ? ` · ${copy.hero.status}` : ''}
           </div>
-          <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">女流 66 · 石悦</p>
-          <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">女流</h1>
+          {copy.hero.eyebrow && <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">{copy.hero.eyebrow}</p>}
+          <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">{copy.hero.title}</h1>
           <p className="mt-6 max-w-xl text-body text-muted">
-            十六年的游戏、直播和那些晚上，<br className="hidden sm:block" />
-            重新连成一条路。
+            {copy.hero.body.map((line, index) => (
+              <span key={index}>
+                {line}
+                {index < copy.hero.body.length - 1 && <br className="hidden sm:block" />}
+              </span>
+            ))}
           </p>
             <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
             <a
               href="#home-acts"
               className="ui-press group hidden items-center rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)] sm:inline-flex"
             >
-              开始 <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
+              {copy.hero.primaryAction} <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
             <Link href="/chronicle/" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink">
-              打开编年史
+              {copy.hero.secondaryAction}
             </Link>
             </div>
           </div>

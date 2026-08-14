@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useLiveContent, useSiteCopy } from './LiveContentProvider'
 
 export type HomeActRailItem = {
   id: string
@@ -30,7 +31,31 @@ type RailMark = {
  * PC 首页右侧章节导航：彩色分段刻度 + Dock 式连续放大 + 拖拽预览。
  * 不画贯穿页面的进度线；每个颜色段本身就是章节边界。
  */
-export function HomeActRail({ acts, sections }: { acts: HomeActRailItem[]; sections: HomeSectionRailItem[] }) {
+export function HomeActRail({ acts: baselineActs, sections: baselineSections }: { acts: HomeActRailItem[]; sections: HomeSectionRailItem[] }) {
+  // 右侧刻度上的幕名、年份、颜色和节点标题都跟着后台走；拉不到就用构建期的值。
+  const { narrative } = useLiveContent()
+  const copy = useSiteCopy()
+  const acts = baselineActs.map((act) => {
+    const live = narrative?.homeActs.find((candidate) => candidate.id === act.id)
+    if (!live) return act
+    const visibleBeats = act.beats
+      .filter((beat) => live.beats.find((candidate) => candidate.id === beat.id)?.visible !== false)
+      .map((beat) => {
+        const override = live.beats.find((candidate) => candidate.id === beat.id)
+        return override ? { ...beat, date: override.date || beat.date, title: override.title || beat.title } : beat
+      })
+    return {
+      ...act,
+      label: live.kicker || live.label || act.label,
+      years: live.years || act.years,
+      color: live.color || act.color,
+      beats: visibleBeats,
+    }
+  }).filter((act) => narrative?.homeActs.find((candidate) => candidate.id === act.id)?.visible !== false)
+  const sections = baselineSections.map((section) => {
+    const block = copy.homeSections.find((candidate) => candidate.id === section.id)
+    return block?.title ? { ...section, label: block.title } : section
+  })
   const railRef = useRef<HTMLDivElement>(null)
   const markRefs = useRef<(HTMLSpanElement | null)[]>([])
   const draggingRef = useRef(false)

@@ -1,6 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
+import { applyLiveAct } from '@/lib/live-content'
 import { Reveal } from './Reveal'
+import { useLiveAct } from './LiveContentProvider'
 
 /**
  * 三幕中的一幕。幕头只给文字（kicker/年份/标题/问题/正文）；showCount 时才显示「N 条记录」
@@ -11,12 +15,13 @@ import { Reveal } from './Reveal'
  * 封面缺失时 hero 退化为字排色块（绝不用假图）；数字只来自构建期派生。
  */
 export function ActSection({
-  act,
+  act: baselineAct,
   now,
   showCount = true,
   homeScreen = false,
   sectionId,
   beatAnchorPrefix,
+  scope = 'homeActs',
 }: {
   act: ResolvedAct
   now?: { year: string; label: string; count: number }
@@ -24,7 +29,11 @@ export function ActSection({
   homeScreen?: boolean
   sectionId?: string
   beatAnchorPrefix?: string
+  /** 读哪一份幕配置：首页三幕与故事模式在后台是分开维护的两份。 */
+  scope?: 'homeActs' | 'storyActs'
 }) {
+  const live = useLiveAct(scope, baselineAct.act.id)
+  const act = applyLiveAct(baselineAct, live, scope === 'homeActs')
   const a = act.act
 
   return (

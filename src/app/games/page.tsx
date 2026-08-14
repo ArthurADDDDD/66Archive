@@ -5,6 +5,7 @@ import { GamesLibrary, type LibraryGame } from '@/components/GamesLibrary'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { CURATED_GAMES, getGameProfile } from '@/lib/narrative'
+import { LivePageHeading } from '@/components/LiveSection'
 
 /**
  * 游戏收藏架（v2 设计）：封面墙 + 「她的游戏库」页头。
@@ -53,7 +54,7 @@ export default function GamesPage() {
       </header>
 
       <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
-        <h1 className="text-h1 font-semibold">她的游戏库</h1>
+        <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
         <p className="mt-5 max-w-2xl text-body text-muted">
           {played.length} 个游戏，其中 {onceOnly} 个只播过一次。
           <br />

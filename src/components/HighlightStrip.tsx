@@ -1,24 +1,29 @@
+'use client'
+
 import Link from 'next/link'
 import { actColor, type ResolvedBeat } from '@/lib/narrative'
+import { applyLiveHighlights } from '@/lib/live-content'
 import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
+import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 
 /**
  * 高光条：17 个「记得住的时刻」。
  * 数字是背景纹理不是指标（emphasis 大字淡色靠右）；
  * 每一条都有真实条目锚点，点击进详情或游戏页——这是跨链的起点。
  */
-export function HighlightStrip({ beats }: { beats: ResolvedBeat[] }) {
+export function HighlightStrip({ beats: baseline }: { beats: ResolvedBeat[] }) {
+  const { narrative } = useLiveContent()
+  const copy = useCopyBlock('homeSections', 'home-highlights')
+  const beats = applyLiveHighlights(baseline, narrative?.highlights)
   if (beats.length === 0) return null
   return (
     <section id="home-highlights" className="scroll-mt-4 border-t border-line py-12 sm:py-16">
       <div className="home-content-container px-page">
         <Reveal>
-          <Eyebrow color="#5BC8E8">Highlights · 高光</Eyebrow>
-          <h2 className="mt-3 max-w-2xl text-h2 font-semibold">一些记得住的时刻。</h2>
-          <p className="mt-3 max-w-xl text-body text-muted">
-            档案里的每一条都能查到。这里只放那些大家会记住的——从第一支视频，到现在。
-          </p>
+          {copy.eyebrow && <Eyebrow color="#5BC8E8">{copy.eyebrow}</Eyebrow>}
+          {copy.title && <h2 className="mt-3 max-w-2xl text-h2 font-semibold">{copy.title}</h2>}
+          {copy.lede && <p className="mt-3 max-w-xl text-body text-muted">{copy.lede}</p>}
         </Reveal>
 
         <div className="mt-8">
