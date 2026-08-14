@@ -124,8 +124,6 @@ function BeatRow({ beat, color, anchorId }: { beat: ResolvedBeat; color: string;
 }
 
 function BeatBody({ beat, color }: { beat: ResolvedBeat; color: string }) {
-  // 首页精简幕的「重要」节点优先使用已解析到的真实封面；没有封面时仍按原规格呈现，绝不补假图。
-  if (beat.kicker === '重要' && beat.cover) return <HeroCard beat={beat} color={color} />
   if (beat.size === 'hero') return <HeroCard beat={beat} color={color} />
   if (beat.size === 'type') return <TypeCard beat={beat} color={color} />
   if (beat.size === 'montage') return <MontageBlock beat={beat} color={color} />
