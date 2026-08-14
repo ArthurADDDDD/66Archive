@@ -60,6 +60,8 @@ export type LiveHighlight = {
   title: string
   body: string
   visible: boolean
+  /** 首页默认展开：true 时这条高光加载后直接展开（用户仍可手动折叠）。 */
+  expanded: boolean
 }
 
 export type LiveNarrative = {
@@ -164,7 +166,7 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
     ? source.highlights
         .map((item): LiveHighlight | null =>
           isRecord(item) && typeof item.id === 'string' && typeof item.title === 'string'
-            ? { id: item.id, kicker: str(item.kicker), title: item.title, body: str(item.body), visible: bool(item.visible, true) }
+            ? { id: item.id, kicker: str(item.kicker), title: item.title, body: str(item.body), visible: bool(item.visible, true), expanded: bool(item.expanded) }
             : null,
         )
         .filter((item): item is LiveHighlight => item !== null)
@@ -374,6 +376,8 @@ export function applyLiveHighlights(beats: ResolvedBeat[], live: LiveHighlight[]
         kicker: override.kicker || undefined,
         title: override.title || beat.title,
         body: override.body || undefined,
+        // 默认展开以后台为准：勾选→加载即展开；未勾选→保持折叠（覆盖基线，基线无此概念）。
+        expanded: override.expanded,
       }
     })
 }

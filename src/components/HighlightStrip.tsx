@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { actColor, type ResolvedBeat } from '@/lib/narrative'
 import { applyLiveHighlights } from '@/lib/live-content'
@@ -38,10 +39,25 @@ export function HighlightStrip({ beats: baseline }: { beats: ResolvedBeat[] }) {
   )
 }
 
-/** 高光行：点击摘要后向下展开封面、描述与详情入口。 */
+/**
+ * 高光行：点击摘要后向下展开封面、描述与详情入口。
+ *
+ * 折叠状态用本地 state 管，而不是直接把 `open` 绑给 `beat.expanded`——
+ * React 的 `<details open>` 是受控属性，live 内容在首屏后异步到达（useLiveContent
+ * 更新）会重渲染整条，直接绑定会把用户刚展开/折叠的行打回原样。
+ *
+ * `null` 哨兵表示「用户还没手动动过」：跟随 `beat.expanded`（live 到达前基线
+ * 为折叠，到达后按后台「默认展开」配置自动展开）；用户点过一次后以用户为准，
+ * 不再被 live 重渲染覆盖。
+ */
 function Row({ beat }: { beat: ResolvedBeat }) {
+  const [open, setOpen] = useState<boolean | null>(null)
   return (
-    <details className="group border-b border-line/60 transition-colors open:bg-surface/20">
+    <details
+      open={open ?? beat.expanded ?? false}
+      onToggle={(event) => setOpen(event.currentTarget.open)}
+      className="group border-b border-line/60 transition-colors open:bg-surface/20"
+    >
       <summary className="ui-press grid cursor-pointer list-none grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 marker:hidden sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:py-5 [&::-webkit-details-marker]:hidden">
         <span className="hidden font-mono text-meta text-faint tnum sm:block">{beat.date}</span>
         <span className="min-w-0">
@@ -68,14 +84,33 @@ function Row({ beat }: { beat: ResolvedBeat }) {
         <span aria-hidden className="hidden sm:block" />
         <div className={`grid max-w-4xl gap-5 ${beat.cover ? 'sm:grid-cols-[minmax(220px,360px)_minmax(0,1fr)]' : ''}`}>
           {beat.cover && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={beat.cover}
-              alt=""
-              loading="lazy"
-              referrerPolicy="no-referrer"
-              className="aspect-video w-full rounded-lg border border-line/70 object-cover object-center"
-            />
+            beat.href ? (
+              <Link
+                href={beat.href}
+                target={beat.external ? '_blank' : undefined}
+                rel={beat.external ? 'noreferrer' : undefined}
+                aria-label={`打开${beat.title}`}
+                className="group/highlight-cover block aspect-video overflow-hidden rounded-lg border border-line/70"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={beat.cover}
+                  alt=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  className="h-full w-full object-cover object-center transition duration-300 group-hover/highlight-cover:scale-[1.025]"
+                />
+              </Link>
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={beat.cover}
+                alt=""
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                className="aspect-video w-full rounded-lg border border-line/70 object-cover object-center"
+              />
+            )
           )}
           <div className="min-w-0 self-center">
             {beat.emphasis && (
