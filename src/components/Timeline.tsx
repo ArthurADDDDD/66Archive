@@ -424,7 +424,7 @@ export function Timeline({
           ) : (
             <div
               key={searching ? 'search-results' : `${activeYear}-${activeMonth}`}
-              className={`ui-content-swap max-w-[1080px] divide-y divide-line/50 ${searching ? '' : 'ui-stagger'}`}
+              className={`ui-content-swap mx-auto max-w-[1080px] divide-y divide-line/50 ${searching ? '' : 'ui-stagger'}`}
             >
                 {rendered.map((entry, index) => {
                   const year = entry.date.slice(0, 4)
