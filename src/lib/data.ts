@@ -11,6 +11,8 @@ import {
   Series,
   SeriesFile,
   Source,
+  Tag,
+  TagsFile,
 } from './schema'
 
 const ROOT = process.cwd()
@@ -38,6 +40,8 @@ export type Dataset = {
   games: Map<string, Game>
   series: Map<string, Series>
   accounts: Map<string, Account>
+  /** 受控标签词表（data/tags.yaml）。按 name 索引——entries 的 tags 存的就是 name。 */
+  tags: Map<string, Tag>
   /** 真实数据为空、正在用演示数据兜底时为 true —— 前端必须显著标注 */
   isDemo: boolean
 }
@@ -58,6 +62,7 @@ export function getDataset(): Dataset {
   const games = GamesFile.parse(readYaml(path.join(DATA, 'games.yaml')))
   const series = SeriesFile.parse(readYaml(path.join(DATA, 'series.yaml')))
   const accounts = AccountsFile.parse(readYaml(path.join(DATA, 'accounts.yaml')))
+  const tags = TagsFile.parse(readYaml(path.join(DATA, 'tags.yaml')))
 
   cache = {
     entries,
@@ -65,6 +70,7 @@ export function getDataset(): Dataset {
     games: new Map(games.map((g) => [g.id, g])),
     series: new Map(series.map((s) => [s.id, s])),
     accounts: new Map(accounts.map((a) => [a.id, a])),
+    tags: new Map(tags.map((t) => [t.name, t])),
   }
   return cache
 }
