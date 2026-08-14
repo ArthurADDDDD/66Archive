@@ -85,7 +85,7 @@
     confidence: high
     games: []
     tags: [弹幕版]
-    note: "同一场直播由 bobi华（BV1NBkFB1E3f，1:00:01）与 直播回放巴拉蹦吧（弹幕/纯净双版，1:00:12）分别搬运，总时长吻合，已合并为一天一条。；与 2026-01-15-live-03 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-01-15-live-03 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播拉"
@@ -98,26 +98,12 @@
       - url: "https://www.bilibili.com/video/BV1p6kFB5EHR"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 60
-  - id: 2026-01-15-live-03
-    type: live
-    date: "2026-01-15"
-    title: "开播聊会"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/66ed456f1d4e0fc05c7739470da6f547cb6f3d19.jpg"
-    confidence: medium
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-01-15-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1EDkFBqEdt"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 55
+    duration_min: 60
   - id: 2026-01-22-live-01
     type: live
     date: "2026-01-22"

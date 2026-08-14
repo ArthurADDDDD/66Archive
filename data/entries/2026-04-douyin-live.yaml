@@ -38,7 +38,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-10-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-10-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天"
@@ -63,34 +63,6 @@
       - url: "https://www.bilibili.com/video/BV1YfQcBpEWq"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 300
-  - id: 2026-04-10-live-02
-    type: live
-    date: "2026-04-10"
-    title: "鸣潮3.1"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/a9f315ce8f59d82cfaa6fea44d0f965ba14944c0.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-10-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "鸣潮3.1"
-      - at: "01:00:01"
-        label: "鸣潮3.1"
-      - at: "02:00:02"
-        label: "鸣潮3.1"
-      - at: "03:00:04"
-        label: "鸣潮3.1"
-      - at: "04:00:05"
-        label: "鸣潮3.1"
-      - at: "05:00:06"
-        label: "鸣潮3.1"
-    sources:
       - url: "https://www.bilibili.com/video/BV1tKQwBmEZC"
         kind: replay
         status: alive
@@ -264,7 +236,7 @@
     games:
       - honor-of-kings-world
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-19-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-19-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 20:14"
@@ -277,26 +249,6 @@
       - url: "https://www.bilibili.com/video/BV1uydfBXEc2"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 93
-  - id: 2026-04-19-live-02
-    type: live
-    date: "2026-04-19"
-    title: "王者荣耀：世界第五章"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/45381d3ed4344a099dfb0e634995cb1e3b2edce1.jpg"
-    confidence: high
-    games:
-      - honor-of-kings-world
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-19-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "王者荣耀：世界第五章"
-      - at: "01:00:02"
-        label: "王者荣耀：世界第五章"
-    sources:
       - url: "https://www.bilibili.com/video/BV1wfdfBVECi"
         kind: replay
         status: alive
@@ -305,7 +257,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 94
+    duration_min: 93
   - id: 2026-04-21-live-01
     type: live
     date: "2026-04-21"
@@ -531,7 +483,7 @@
     games:
       - card-devil
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "17-28"
@@ -546,26 +498,6 @@
       - url: "https://www.bilibili.com/video/BV17f9hBQEZf"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 129
-  - id: 2026-04-30-live-02
-    type: live
-    date: "2026-04-30"
-    title: "卡片魔王：只剩个头！"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/be0edee26a34ba605afc1173015f42ae4d6f514c.jpg"
-    confidence: high
-    games:
-      - card-devil
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-04-30-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "卡片魔王 17:28"
-      - at: "01:00:01"
-        label: "卡片魔王 18:28"
-    sources:
       - url: "https://www.bilibili.com/video/BV13f9eBJEii"
         kind: replay
         status: alive
@@ -573,4 +505,5 @@
         kind: replay
         status: alive
     contributed_by: data-agent
-    duration_min: 128
+
+    duration_min: 129

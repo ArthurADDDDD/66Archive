@@ -528,7 +528,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-16-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-16-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天"
@@ -549,30 +549,6 @@
       - url: "https://www.bilibili.com/video/BV1enK562ESE"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 177
-  - id: 2026-07-16-live-02
-    type: live
-    date: "2026-07-16"
-    title: "鸣潮3.5"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/bbb17224b44e98c4c4ea9de6a180de75195bcc0c.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-16-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "鸣潮3.5"
-      - at: "00:44:46"
-        label: "鸣潮3.5"
-      - at: "01:44:47"
-        label: "鸣潮3.5"
-      - at: "02:44:48"
-        label: "鸣潮3.5"
-    sources:
       - url: "https://www.bilibili.com/video/BV1dJK567E5w"
         kind: replay
         status: alive
@@ -581,7 +557,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 179
+    duration_min: 177
   - id: 2026-07-18-live-01
     type: live
     date: "2026-07-18"
@@ -656,7 +632,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-19-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-19-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 20:22"
@@ -675,28 +651,6 @@
       - url: "https://www.bilibili.com/video/BV1XYKr6pEAa"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 168
-  - id: 2026-07-19-live-02
-    type: live
-    date: "2026-07-19"
-    title: "鸣潮3.5"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/5ccdc9ef0e820367874df09767eda544a42a74b7.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-07-19-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "鸣潮3.5"
-      - at: "01:00:01"
-        label: "鸣潮3.5"
-      - at: "02:00:02"
-        label: "鸣潮3.5"
-    sources:
       - url: "https://www.bilibili.com/video/BV1ZJKr6wEko"
         kind: replay
         status: alive
@@ -705,7 +659,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 170
+    duration_min: 168
   - id: 2026-07-26-live-01
     type: live
     date: "2026-07-26"

@@ -7,48 +7,17 @@
     confidence: medium
     games:
       - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-01-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-01-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1M2gQzuEm8"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 279
-  - id: 2025-07-01-live-02
-    type: live
-    date: "2025-07-01"
-    title: "继续死亡搁浅2最高画质最高难度"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/30c041bc83dcb351d54895884a372a2ee6910e40.jpg"
-    confidence: medium
-    games:
-      - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-01-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1GpgXzyE6o"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 282
-  - id: 2025-07-02-live-01
-    type: live
-    date: "2025-07-02"
-    title: "解限机，我来啦~ 2025/07/02 18时场"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/ee723d7fd7ef7960388556e58b4703f7e16e90ac.jpg"
-    confidence: medium
-    games:
-      - mecha-break
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-02-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1E934zHEUM"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 132
+    duration_min: 279
   - id: 2025-07-02-live-02
     type: live
     date: "2025-07-02"
@@ -59,7 +28,7 @@
     games:
       - mecha-break
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-02-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-02-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_解限机我来啦"
@@ -74,26 +43,12 @@
       - url: "https://www.bilibili.com/video/BV1yJ3tzYESg"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 133
-  - id: 2025-07-03-live-01
-    type: live
-    date: "2025-07-03"
-    title: "解限机，我来啦~ 2025/07/03 18时场"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/0a3ed8c8e83d140bc14f3068da6c2be80f6fc91a.jpg"
-    confidence: medium
-    games:
-      - mecha-break
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-03-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Pa33znENW"
+      - url: "https://www.bilibili.com/video/BV1E934zHEUM"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 232
+    duration_min: 133
   - id: 2025-07-03-live-02
     type: live
     date: "2025-07-03"
@@ -104,7 +59,7 @@
     games:
       - mecha-break
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-03-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-03-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_解限机我来啦"
@@ -121,6 +76,9 @@
       - url: "https://www.bilibili.com/video/BV16d3MzTE6G"
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1Pa33znENW"
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
     duration_min: 235
@@ -134,7 +92,7 @@
     games:
       - menghuan-xiyou
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-04-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-04-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_和炮炮一起体验梦幻西游畅玩服"
@@ -155,43 +113,12 @@
       - url: "https://www.bilibili.com/video/BV1w93JzMEWD"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 304
-  - id: 2025-07-04-live-02
-    type: live
-    date: "2025-07-04"
-    title: "和炮炮一起体验梦幻西游畅玩服 2025/07/04 19时场"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/f5cf6e12386f97e86711597534f79dfe88349162.jpg"
-    confidence: medium
-    games:
-      - menghuan-xiyou
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-04-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1ra3EzYEkP"
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 304
-  - id: 2025-07-05-live-01
-    type: live
-    date: "2025-07-05"
-    title: "死亡搁浅2，今日完结 2025/07/05 18时场"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/00e4f5d31471d44df843e63f6573e8bb0c3418f3.jpg"
-    confidence: medium
-    games:
-      - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-05-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1qU3ozKEFi"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 328
   - id: 2025-07-05-live-02
     type: live
     date: "2025-07-05"
@@ -202,7 +129,7 @@
     games:
       - death-stranding-2-on-the-beach
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-05-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-05-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_死亡搁浅2今日完结"
@@ -221,6 +148,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1Kb3RzGEBb"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1qU3ozKEFi"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -263,7 +193,7 @@
     games:
       - neon-abyss-2
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-16-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-16-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_国产独立游戏霓虹深渊2"
@@ -282,26 +212,12 @@
       - url: "https://www.bilibili.com/video/BV1iWu8zDEN4"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 276
-  - id: 2025-07-16-live-02
-    type: live
-    date: "2025-07-16"
-    title: "国产独立游戏，霓虹深渊2 2025/07/16 18时场"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/2b9feaaf719102b9f48e2eba3a1e851c7629793e.jpg"
-    confidence: medium
-    games:
-      - neon-abyss-2
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-16-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1hVubzzEc3"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 283
+    duration_min: 276
   - id: 2025-07-17-live-01
     type: live
     date: "2025-07-17"
@@ -312,7 +228,7 @@
     games:
       - donkey-kong-bananza
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-17-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-17-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_Switch2新作咚奇刚蕉力全开"
@@ -331,26 +247,12 @@
       - url: "https://www.bilibili.com/video/BV1pRgPztExD"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 247
-  - id: 2025-07-17-live-02
-    type: live
-    date: "2025-07-17"
-    title: "Switch2新作，咚奇刚：蕉力全开 2025/07/17 22时场"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/3890bb2d6e569fb708bdf115942df54746cec5c4.jpg"
-    confidence: medium
-    games:
-      - donkey-kong-bananza
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-17-live-01 属同场直播的不同录像，前端可作备选源切换"
-    sources:
       - url: "https://www.bilibili.com/video/BV1tUgKzgE32"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 254
+    duration_min: 247
   - id: 2025-07-19-live-01
     type: live
     date: "2025-07-19"
@@ -396,23 +298,6 @@
     contributed_by: data-agent
 
     duration_min: 124
-  - id: 2025-07-20-live-01
-    type: live
-    date: "2025-07-20"
-    title: "远光84，我的枪真准 2025/07/20 18时场"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/142cd0b3bd3170e470c745bdafd4ae613080dd55.jpg"
-    confidence: medium
-    games:
-      - farlight-84
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-20-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1qHgezaEFh"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 277
   - id: 2025-07-20-live-02
     type: live
     date: "2025-07-20"
@@ -423,7 +308,7 @@
     games:
       - farlight-84
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-20-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-20-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_远光84我的枪真准"
@@ -442,6 +327,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV184gaznEh1"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1qHgezaEFh"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -542,23 +430,6 @@
     contributed_by: data-agent
 
     duration_min: 87
-  - id: 2025-07-26-live-01
-    type: live
-    date: "2025-07-26"
-    title: "燕云新boss，来挑战 2025/07/26 18时场"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/41ea45479850beb103adc02d164e513b8e2c11dd.jpg"
-    confidence: medium
-    games:
-      - where-winds-meet
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-26-live-02 属同场直播的不同录像，前端可作备选源切换"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1vd8bzYELS"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 192
   - id: 2025-07-26-live-02
     type: live
     date: "2025-07-26"
@@ -569,7 +440,7 @@
     games:
       - where-winds-meet
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-26-live-01 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-26-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "女流66_燕云新boss来挑战"
@@ -584,6 +455,9 @@
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1Ca84z3ENW"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1vd8bzYELS"
         kind: replay
         status: alive
     contributed_by: data-agent

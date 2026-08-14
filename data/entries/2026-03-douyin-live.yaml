@@ -377,7 +377,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-28-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-28-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 19:13"
@@ -396,30 +396,6 @@
       - url: "https://www.bilibili.com/video/BV19VXjBAEnc"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 216
-  - id: 2026-03-28-live-02
-    type: live
-    date: "2026-03-28"
-    title: "鸣潮2.7上"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/27b68f6516b17c1a3867928e3a0c26d00f1b75f2.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-28-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "鸣潮2.7上"
-      - at: "01:00:01"
-        label: "鸣潮2.7上"
-      - at: "02:00:02"
-        label: "鸣潮2.7上"
-      - at: "03:00:04"
-        label: "鸣潮2.7上"
-    sources:
       - url: "https://www.bilibili.com/video/BV1XjXjBcEFW"
         kind: replay
         status: alive
@@ -439,7 +415,7 @@
     games:
       - wuthering-waves
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-29-live-02 属同场直播的不同录像，前端可作备选源切换"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-29-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 19:20"
@@ -460,30 +436,6 @@
       - url: "https://www.bilibili.com/video/BV1bNXQBxEE1"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 221
-  - id: 2026-03-29-live-02
-    type: live
-    date: "2026-03-29"
-    title: "鸣潮2.7"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/56890b6efc7d9932f59a3570cd38575cdc03e0c0.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-03-29-live-01 属同场直播的不同录像，前端可作备选源切换"
-    segments:
-      - at: "00:00:00"
-        label: "鸣潮2.7"
-      - at: "01:00:01"
-        label: "鸣潮2.7"
-      - at: "02:00:02"
-        label: "鸣潮2.7"
-      - at: "03:00:03"
-        label: "鸣潮2.7"
-    sources:
       - url: "https://www.bilibili.com/video/BV1jXXXBGE8i"
         kind: replay
         status: alive
@@ -492,4 +444,4 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 222
+    duration_min: 221
