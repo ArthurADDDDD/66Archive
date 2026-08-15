@@ -86,7 +86,7 @@
     title: "24"
     platform: douyu
     confidence: high
-    duration_min: 135
+    duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d93005f375de4f88a663ad066e5667ec.jpeg?imageslim"
     games: []
     segments:
@@ -96,43 +96,65 @@
         label: "24-METROID DREAD"
       - at: "01:30:03"
         label: "24-METROID DREAD"
+      - at: 02:15:05
+        label: 24-METROID DREAD
+      - at: 03:00:06
+        label: 24-METROID DREAD
+      - at: 03:42:21
+        label: 24-METROID DREAD
     sources:
       - url: "https://www.acfun.cn/v/ac32492104"
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32492108
+        kind: replay
+        parts: 3
+        status: alive
     contributed_by: data-agent
 
+    note: A站上下集补全：ac32492104（24-METROID DREAD 上，P1-P3）+ ac32492108（24-METROID DREAD 下，P4-P6）；时长相加，只计 1 场。
   - id: 2021-11-07-live-02
     type: live
     date: "2021-11-07"
     title: "25"
     platform: douyu
     confidence: high
-    duration_min: 133
+    duration_min: 252
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_585086e62a8341b7b225536daa31eebe.jpeg?imageslim"
     games: [majsoul]
     segments:
-      - at: "00:00:00"
-        label: "25-雀魂"
-      - at: "00:44:27"
-        label: "25-雀魂"
-      - at: "01:28:54"
-        label: "25-雀魂"
+      - at: 00:00:00
+        label: 25-雀魂
+      - at: 00:29:59
+        label: 25-雀魂
+      - at: 01:14:26
+        label: 25-雀魂
+      - at: 01:58:53
+        label: 25-雀魂
+      - at: 02:43:20
+        label: 25-雀魂
+      - at: 03:27:47
+        label: 25-雀魂
     sources:
-      - url: "https://www.acfun.cn/v/ac32549028"
+      - url: https://www.acfun.cn/v/ac32549026
+        kind: replay
+        parts: 3
+        status: alive
+      - url: https://www.acfun.cn/v/ac32549028
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+    note: A站上下集补全：ac32549026（25-雀魂 上，P1-P3）+ ac32549028（25-雀魂 下，P4-P6）；时长相加，只计 1 场。
   - id: 2021-11-07-live-03
     type: live
     date: "2021-11-07"
     title: "26"
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 293
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f115c6c88a87400186f2e5c08b5a6b98.jpeg?imageslim"
     games: []
     segments:
@@ -144,13 +166,24 @@
         label: "26-METROID DREAD"
       - at: "02:03:19"
         label: "26-METROID DREAD"
+      - at: 02:45:37
+        label: 26-METROID DREAD
+      - at: 03:27:54
+        label: 26-METROID DREAD
+      - at: 04:10:14
+        label: 26-METROID DREAD
     sources:
       - url: "https://www.acfun.cn/v/ac32564231"
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32564203
+        kind: replay
+        parts: 3
+        status: alive
     contributed_by: data-agent
 
+    note: A站上下集补全：ac32564231（26-METROID DREAD 上，P1-P4）+ ac32564203（26-METROID DREAD 下，P5-P7）；时长相加，只计 1 场。
   - id: 2021-11-11-live-01
     type: live
     date: "2021-11-11"

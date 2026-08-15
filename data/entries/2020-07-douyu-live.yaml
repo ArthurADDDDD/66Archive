@@ -272,11 +272,10 @@
     date: "2020-07-17"
     title: "对马岛之鬼(下部分)"
     platform: douyu
-    confidence: high
-    duration_min: 170
+    confidence: medium
     cover: "https://tx-free-imgs.acfun.cn/o_1edeiv7uqdkt18v7qb9vm5142e0.jpeg?imageslim"
     games: [ghost-of-tsushima]
-    note: "原误标 7.07：对马岛 7.18 才发售，7.07 不可能直播；fileName 标 2020.7.7 与 7.18 场 ac16894792 内混入的 P6-2020.7.7 同源（ACFun 录制日期 bug）。上传 7.18 00:15-00:32 即直播结束时刻，判定为 7.17 深夜场（21:45-次日 00:15，P5-P7 为当晚第二段，上部分 P1-P4 无独立回放）。"
+    note: "原误标 7.07：对马岛 7.18 才发售，7.07 不可能直播；fileName 标 2020.7.7 与 7.18 场 ac16894792 内混入的 P6-2020.7.7 同源（ACFun 录制日期 bug）。上传 7.18 00:15-00:32 即直播结束时刻，判定为 7.17 深夜场。[incomplete=true; known_parts=P5-P7; missing_parts=P1-P4] 当前录像为下半场，不作为完整直播时长；继续寻找 P1-P4，找到后并入同一场，不新增场次。"
     segments:
       - at: "00:00:00"
         label: "对马岛之鬼"

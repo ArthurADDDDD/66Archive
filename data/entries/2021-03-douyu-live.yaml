@@ -838,7 +838,7 @@
     title: "怪物猎人 弓箭手的修行"
     platform: douyu
     confidence: high
-    duration_min: 172
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/o_1f1ptn5s51v5a1nj0fud1ts4r060.jpeg?imageslim"
     games: [monster-hunter-rise]
     segments:
@@ -852,13 +852,24 @@
         label: "怪物猎人 弓箭手的修行"
       - at: "02:10:48"
         label: "怪物猎人 弓箭手的修行"
+      - at: 02:51:32
+        label: 怪物猎人 弓箭手的修行
+      - at: 03:32:17
+        label: 怪物猎人 弓箭手的修行
+      - at: 04:13:00
+        label: 怪物猎人 弓箭手的修行
     sources:
       - url: "https://www.acfun.cn/v/ac27238768"
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac27238770
+        kind: replay
+        parts: 3
+        status: alive
     contributed_by: data-agent
 
+    note: A站将同一场直播拆为上下两个回放：ac27238768（P1-P5，171.5min）+ ac27238770（P6-P8，122.2min），已合并为一场完整直播，时长相加，只计 1 场。
   - id: 2021-03-28-live-01
     type: live
     date: "2021-03-28"

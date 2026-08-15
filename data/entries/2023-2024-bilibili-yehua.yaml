@@ -1,0 +1,253 @@
+# 2023-10 ~ 2024-03 B 站夜话 / 话疗补档
+# 来源：UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235），合集 season id 1989459。
+# 收录原则：标题内时间连续的上传分段合并为同一场直播；不同日期/明显不同时段分开。
+# 2024-02-29 期已并入 data/entries/2024-02-transition.yaml 的 2024-02-29-live-01，不在此文件重复。
+  - id: 2023-10-05-live-02
+    type: live
+    date: '2023-10-05'
+    title: 夜话（2023-10-05）
+    platform: bilibili
+    confidence: medium
+    duration_min: 168
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 本合集期标题为「女流66夜话[2023-10-05]」。
+    sources:
+      - url: https://www.bilibili.com/video/BV1KC4y1G7To
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2023-10-29-live-02
+    type: live
+    date: '2023-10-29'
+    time: '22:51'
+    title: 夜话（2023-10-29 深夜）
+    platform: bilibili
+    confidence: medium
+    duration_min: 249
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 四段上传时间连续（22:51、23:57、00:59、02:00），按同一场夜话合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1ny4y1A7MG
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV11H4y1r7KE
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1ZM411D7Jb
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1tg4y1o7r1
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2023-11-07-live-01
+    type: live
+    date: '2023-11-07'
+    time: '14:22'
+    title: 话疗（2023-11-07）
+    platform: bilibili
+    confidence: medium
+    duration_min: 588
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 九段上传时间连续（14:22 至 23:57），按同一场话疗合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1G94y137Aq
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1o84y1Q7TX
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1LQ4y187gC
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1PC4y1U7f8
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1M94y137L7
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV16Q4y1n7vv
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1QQ4y1n7v9
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1jN4y1D7Hz
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1Qg4y1X7zR
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2023-11-17-live-03
+    type: live
+    date: '2023-11-17'
+    title: 夜话（2023-11-17）
+    platform: bilibili
+    confidence: medium
+    duration_min: 126
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 两段均标注 2023-11-17，按同一场夜话合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1xG411D7Qy
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1wg4y1X7Px
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2023-12-20-live-01
+    type: live
+    date: '2023-12-20'
+    title: 夜话（2023-12-20 深夜）
+    platform: bilibili
+    confidence: medium
+    duration_min: 363
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 三段覆盖 12-20 19 时、22 时与 12-21 00 时，按同一场深夜夜话合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1N94y1w7sh
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1uj411H7it
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1Rc411y7Y7
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2023-12-21-live-01
+    type: live
+    date: '2023-12-21'
+    title: 夜话（2023-12-21）
+    platform: bilibili
+    confidence: medium
+    duration_min: 193
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 两段分别标注 12-21 18 时、20 时，按同一场夜话合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1X94y1c7Fd
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1bC4y1S7wq
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2024-01-10-live-01
+    type: live
+    date: '2024-01-10'
+    title: 户外直播（2024-01-10）
+    platform: bilibili
+    confidence: medium
+    duration_min: 115
+    games: []
+    tags: []
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 两段均标注 2024-01-10 户外，按同一场户外直播合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1tV41197Fc
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1Rk4y1D7xx
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2024-01-10-live-02
+    type: live
+    date: '2024-01-10'
+    title: 夜话（2024-01-10）
+    platform: bilibili
+    confidence: medium
+    duration_min: 21
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。
+    sources:
+      - url: https://www.bilibili.com/video/BV1iT4y1p7v9
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2024-01-27-live-02
+    type: live
+    date: '2024-01-27'
+    time: '12:29'
+    title: 话疗（2024-01-27）
+    platform: bilibili
+    confidence: medium
+    duration_min: 343
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。 四段上传时间连续（12:29、14:26、15:33、18:06），按同一场话疗合并为一条。
+    sources:
+      - url: https://www.bilibili.com/video/BV1wV411X7wF
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1ob4y1A7v2
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV1up4y1m7DM
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+      - url: https://www.bilibili.com/video/BV13C4y167E2
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent
+  - id: 2024-03-03-live-01
+    type: live
+    date: '2024-03-03'
+    time: 00:38
+    title: 夜话（2024-03-03）
+    platform: bilibili
+    confidence: medium
+    duration_min: 67
+    games: []
+    tags:
+      - 语音直播
+    note: 来源为 UP主「潇灬潇」《女流合集》（https://space.bilibili.com/21968235）中的 B 站直播录像，非官方账号投稿。
+    sources:
+      - url: https://www.bilibili.com/video/BV1uH4y1j7hD
+        kind: replay
+        status: alive
+        account: bili-fan-xiaoxiaoxiao
+    contributed_by: data-agent

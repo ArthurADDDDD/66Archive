@@ -259,36 +259,14 @@
     title: "远光84，战场一切皆有可能 2025/07/19 18时场"
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/a71f0b73c181329d4607be19137f45e66ebd961e.jpg"
-    confidence: medium
+    confidence: high
     games:
       - farlight-84
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；人工复核确认与 2025-07-19-live-02 为同一场直播，已合并为一条。以 BV1MguozLEky（139:34）为主源，较短版本为备用源。"
     sources:
       - url: "https://www.bilibili.com/video/BV1MguozLEky"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 140
-  - id: 2025-07-19-live-02
-    type: live
-    date: "2025-07-19"
-    title: "远光84战场一切皆有可能"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/9561e705e58f8fb4706d480814e90545aa3c9422.jpg"
-    confidence: high
-    games:
-      - farlight-84
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "女流66_远光84战场一切皆有可能"
-      - at: "01:00:01"
-        label: "女流66_远光84战场一切皆有可能"
-      - at: "02:00:02"
-        label: "女流66_远光84战场一切皆有可能"
-    sources:
       - url: "https://www.bilibili.com/video/BV1VdudzREEK"
         kind: replay
         status: alive
@@ -297,7 +275,16 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 124
+    duration_min: 140
+    tags:
+      - 弹幕版
+    segments:
+      - at: "00:00:00"
+        label: "女流66_远光84战场一切皆有可能"
+      - at: "01:00:01"
+        label: "女流66_远光84战场一切皆有可能"
+      - at: "02:00:02"
+        label: "女流66_远光84战场一切皆有可能"
   - id: 2025-07-20-live-02
     type: live
     date: "2025-07-20"

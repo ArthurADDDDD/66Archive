@@ -209,35 +209,22 @@
   - id: 2024-12-21-live-02
     type: live
     date: "2024-12-21"
-    title: "出差回北京了，好久不见"
+    title: "出差回北京了，好久不见 / 前排有手柄，进来坐"
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/0683b798a7309e4ecabcb8c584930f45d714b5cf.jpg"
     confidence: medium
     games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；人工复核确认与 2024-12-21-live-03 (BV1KkktYTEMB，100:03) 为同一场直播，已合并为一条。以 104:17 较长版为主源。"
     sources:
       - url: "https://www.bilibili.com/video/BV1eWktYJE9e"
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1KkktYTEMB
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 104
-  - id: 2024-12-21-live-03
-    type: live
-    date: "2024-12-21"
-    title: "前排有手柄，进来坐"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/3cea5db910f50a2acb7f8a1ae744c2b292578790.jpg"
-    confidence: medium
-    games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1KkktYTEMB"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 100
   - id: 2024-12-22-live-02
     type: live
     date: "2024-12-22"

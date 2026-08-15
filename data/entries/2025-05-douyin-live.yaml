@@ -112,34 +112,17 @@
     contributed_by: data-agent
 
     duration_min: 119
-  - id: 2025-05-14-live-01
-    type: live
-    date: "2025-05-14"
-    title: "The Precinct 警区"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/3cd03318bcb856a734f7852e523deed426dc7bb6.jpg"
-    confidence: medium
-    games:
-      - the-precinct
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1qtEvzdEXV"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 190
   - id: 2025-05-14-live-02
     type: live
     date: "2025-05-14"
-    title: "什么游戏？让咱尝尝咸淡"
+    title: "The Precinct 警区 / 什么游戏？让咱尝尝咸淡"
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/80c966dffb13c00695e1b845e2d75568db106734.jpg"
     confidence: high
-    games: []
+    games:
+      - the-precinct
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-14-live-04 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；人工复核确认与 2025-05-14-live-01 (BV1qtEvzdEXV，190:07) 为同一场直播，已合并为一条。以 190:07 较长版为主源，其余版本为备用源。"
     segments:
       - at: "00:00:00"
         label: "女流66_什么游戏让咱尝尝咸淡"
@@ -160,6 +143,9 @@
       - at: "02:13:42"
         label: "女流66_什么游戏让咱尝尝咸淡"
     sources:
+      - url: https://www.bilibili.com/video/BV1qtEvzdEXV
+        kind: replay
+        status: alive
       - url: "https://www.bilibili.com/video/BV1KhEizCEnQ"
         kind: replay
         status: alive
@@ -171,7 +157,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 187
+    duration_min: 190
   - id: 2025-05-16-live-03
     type: live
     date: "2025-05-16"

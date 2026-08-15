@@ -150,16 +150,21 @@
     title: "Brotato"
     platform: douyu
     confidence: high
-    duration_min: 348
+    duration_min: 708
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c214f6ca436546afa4b098321493cb21.jpeg?imageslim"
     games: [brotato]
     sources:
-      - url: "https://www.acfun.cn/v/ac39170704"
+      - url: https://www.acfun.cn/v/ac39169940
+        kind: replay
+        parts: 1
+        status: alive
+      - url: https://www.acfun.cn/v/ac39170704
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场直播拆为两个回放：ac39169940（P1，360.1min）+ ac39170704（P2，347.9min），已合并为一场完整直播，时长相加，只计 1 场。
   - id: 2022-10-11-live-01
     type: live
     date: "2022-10-11"

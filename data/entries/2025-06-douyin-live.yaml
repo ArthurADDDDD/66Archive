@@ -150,40 +150,27 @@
     contributed_by: data-agent
 
     duration_min: 230
-  - id: 2025-06-10-live-02
-    type: live
-    date: "2025-06-10"
-    title: "无主星渊，和YJJ小叮当组队挑战匹配 2025/06/10 18时场"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/4c93f3c06c942e9d43b8970f01678401c8ba253d.jpg"
-    confidence: medium
-    games:
-      - wuzhu-xingyuan
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；同日另有 6 分钟剪辑片段与本场内容重复，已删除，时长以本场 103 分钟主来源为准。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1jyM3zaEyZ"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 103
   - id: 2025-06-10-live-04
     type: live
     date: "2025-06-10"
-    title: "这是个能发现宝藏游戏的直播间今日体验沙丘觉醒"
+    title: "无主星渊 / 这是个能发现宝藏游戏的直播间今日体验沙丘觉醒"
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/56a97661e36e4a8ddfbd1266fa3ff068078a1848.jpg"
     confidence: high
     games:
       - dune-awakening
+      - wuzhu-xingyuan
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；人工复核确认与 2025-06-10-live-02 为同一场直播（同场先后包含无主星渊、沙丘觉醒），已合并为一条。以 BV1eDM3z4EAa（104:16）为主源。"
     segments:
       - at: "00:00:00"
         label: "女流66_无主星渊和YJJ小叮当组队挑战匹配"
       - at: "01:00:01"
         label: "女流66_无主星渊和YJJ小叮当组队挑战匹配"
     sources:
+      - url: https://www.bilibili.com/video/BV1jyM3zaEyZ
+        kind: replay
+        status: alive
       - url: "https://www.bilibili.com/video/BV1eDM3z4EAa"
         kind: replay
         status: alive
