@@ -20,6 +20,12 @@ export default function StatsPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
+  // —— 00 已收录直播（只统计 type=live；视频投稿不计入直播时长）——
+  const liveTimeline = timeline.filter((e) => e.type === 'live')
+  const liveKnownMinutes = liveTimeline.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
+  const liveKnownHours = Math.round(liveKnownMinutes / 60)
+  const liveDurationCoverage = liveTimeline.length ? Math.round((liveTimeline.filter((e) => e.duration_min).length / liveTimeline.length) * 100) : 0
+
   // —— 01 每一年 ——
   const byYear = new Map<number, { count: number; minutes: number; known: number }>()
   for (const e of timeline) {
@@ -103,8 +109,8 @@ export default function StatsPage() {
                 <span className="underline decoration-dotted underline-offset-4">ⓘ 关于这些数据</span>
               </summary>
               <div className="mt-3 space-y-2 rounded-lg border border-line/80 bg-surface/40 p-4 text-meta text-faint tnum">
-                <p>· 全部数字在构建期从档案逐条派生，不人工填写。</p>
-                <p>· 时长只统计有时长记录的条目；时长缺失的记录不计入小时数。</p>
+                <p>· 已收录直播只统计 type=live 条目；视频投稿时期的时长不混入直播时长。</p>
+                <p>· 时长只统计有时长记录的直播条目；时长缺失或不完整的记录不计入小时数。</p>
                 <p>· 游戏场次基于条目 games 字段，目前标记覆盖率约 {coverage}%（补录中），曲线和排名只覆盖已标记部分。</p>
                 <p>· 同场合并的重复录像已折叠；2011 年档案为空，是真实缺口。</p>
                 <p>· 节目期数按标题 / 栏目 tag 精确匹配派生。</p>
@@ -113,6 +119,30 @@ export default function StatsPage() {
           }
         />
       </section>
+
+      {/* 00 已收录直播与已确认时长 */}
+      <Section question="已收录直播有多少？" accent="#E5568A">
+        <div className="grid gap-3 sm:grid-cols-3">
+          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
+            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveTimeline.length.toLocaleString()}</p>
+            <p className="mt-1 text-meta text-faint tnum">场 · type=live</p>
+          </div>
+          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
+            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
+            <p className="mt-1 text-meta text-faint tnum">小时 · 时长覆盖率 {liveDurationCoverage}%</p>
+          </div>
+          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">实际累计</p>
+            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">10,000+</p>
+            <p className="mt-1 text-meta text-faint tnum">小时 · 外部硬锚点估算</p>
+          </div>
+        </div>
+        <Observation>
+          早期部分直播档案已经遗失，已确认时长仅代表目前可核实的录像记录，不等于实际累计直播总时长。
+        </Observation>
+      </Section>
 
       {/* 01 哪一年留下的记录最多？ */}
       <Section question="哪一年留下的记录最多？" accent="#E0A244">
