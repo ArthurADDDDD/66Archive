@@ -250,13 +250,13 @@ function MontageBlock({ beat, color }: { beat: ResolvedBeat; color: string }) {
           <span className="text-faint/40">·</span>
           <Reveal delay={60}>
             <span>
-              <b className="tnum text-ink">{m.stats.hoursLabel}</b> 小时
+              <b className="tnum text-ink">{m.stats.hoursLabel}</b> 小时直播
             </span>
           </Reveal>
           <span className="text-faint/40">·</span>
           <Reveal delay={120}>
             <span>
-              <b className="tnum text-ink">{m.stats.liveSessions}</b> 场直播
+              <b className="tnum text-ink">{m.stats.liveSessions}</b> 场
             </span>
           </Reveal>
           <span className="text-faint/40">·</span>
