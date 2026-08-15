@@ -799,3 +799,38 @@
         parts: 12
         status: alive
     contributed_by: data-agent
+  - id: 2017-09-12-live-01
+    type: live
+    date: "2017-09-12"
+    title: "牙套妹&渣哥的日常生活"
+    platform: douyu
+    confidence: high
+    duration_min: 146
+    games: []
+    note: "B站「女流录像小屋」《女流-9.12-牙套妹&渣哥的日常生活》，2P全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=1"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2017-09-01-live-01
+    type: live
+    date: "2017-09-01"
+    title: "相扑人Sumoman"
+    platform: douyu
+    confidence: high
+    duration_min: 267
+    games: []
+    note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Cx411t7jD"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

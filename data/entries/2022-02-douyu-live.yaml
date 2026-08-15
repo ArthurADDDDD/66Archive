@@ -30,6 +30,22 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-02-05-live-01
+    type: live
+    date: "2022-02-05"
+    title: "消逝的光芒2"
+    platform: douyu
+    confidence: high
+    duration_min: 266
+    games: [dying-light-2]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1y34y1y7za"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-02-06-live-01
     type: live
     date: "2022-02-06"
@@ -94,6 +110,39 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33549272
+
+  - id: 2022-02-09-live-01
+    type: live
+    date: "2022-02-09"
+    title: "SIFU"
+    platform: douyu
+    confidence: high
+    duration_min: 333
+    games: [sifu]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1JR4y17755"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2022-02-10-live-01
+    type: live
+    date: "2022-02-10"
+    title: "SIFU"
+    platform: douyu
+    confidence: high
+    duration_min: 302
+    games: [sifu]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1hS4y1C7Cy"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-02-11-live-01
     type: live
     date: "2022-02-11"
@@ -108,6 +157,37 @@
         kind: replay
         parts: 1
         status: alive
+    contributed_by: data-agent
+
+  - id: 2022-02-13-live-01
+    type: live
+    date: "2022-02-13"
+    title: "消逝的光芒2"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    games: [dying-light-2]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1CT4y1X7bd"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2022-02-16-live-01
+    type: live
+    date: "2022-02-16"
+    title: "部落幸存者"
+    platform: douyu
+    confidence: high
+    duration_min: 232
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1qS4y1F7L3"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-02-17-live-01
@@ -178,6 +258,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33710398
+
   - id: 2022-02-20-live-01
     type: live
     date: "2022-02-20"
@@ -198,6 +279,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33724764
+
   - id: 2022-02-21-live-01
     type: live
     date: "2022-02-21"
@@ -218,6 +300,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33740743
+
   - id: 2022-02-22-live-01
     type: live
     date: "2022-02-22"
@@ -238,6 +321,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33752405
+
   - id: 2022-02-23-live-01
     type: live
     date: "2022-02-23"
@@ -258,6 +342,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33765609
+
   - id: 2022-02-25-live-01
     type: live
     date: "2022-02-25"
@@ -327,4 +412,3 @@
         parts: 1
         status: alive
     contributed_by: data-agent
-

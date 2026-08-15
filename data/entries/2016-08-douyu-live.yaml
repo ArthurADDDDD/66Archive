@@ -453,3 +453,51 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+
+  - id: 2016-08-04-live-01
+    type: live
+    date: "2016-08-04"
+    title: "逆袭 dayX+3"
+    platform: douyu
+    confidence: high
+    duration_min: 75
+    games: []
+    note: "B站「女流录像小屋」《逆袭 dayX+3》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ys411C7eH"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-08-04-live-02
+    type: live
+    date: "2016-08-04"
+    title: "Replica"
+    platform: douyu
+    confidence: high
+    duration_min: 154
+    games: []
+    note: "B站「女流录像小屋」《Replica》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ys411C7ea"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-08-05-live-01
+    type: live
+    date: "2016-08-05"
+    title: "星界边境(starbound) day4"
+    platform: douyu
+    confidence: high
+    duration_min: 211
+    games: []
+    note: "B站「女流录像小屋」《星界边境(starbound) day4》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Us411C77h"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

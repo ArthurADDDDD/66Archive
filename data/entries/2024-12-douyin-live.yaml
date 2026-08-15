@@ -14,6 +14,7 @@
     contributed_by: data-agent
 
     duration_min: 183
+
   - id: 2024-12-04-live-02
     type: live
     date: "2024-12-04"
@@ -30,6 +31,7 @@
     contributed_by: data-agent
 
     duration_min: 95
+
   - id: 2024-12-06-live-02
     type: live
     date: "2024-12-06"
@@ -46,6 +48,7 @@
     contributed_by: data-agent
 
     duration_min: 180
+
   - id: 2024-12-07-live-01
     type: live
     date: "2024-12-07"
@@ -62,6 +65,7 @@
     contributed_by: data-agent
 
     duration_min: 185
+
   - id: 2024-12-08-live-02
     type: live
     date: "2024-12-08"
@@ -78,6 +82,7 @@
     contributed_by: data-agent
 
     duration_min: 133
+
   - id: 2024-12-09-live-02
     type: live
     date: "2024-12-09"
@@ -94,6 +99,7 @@
     contributed_by: data-agent
 
     duration_min: 134
+
   - id: 2024-12-10-live-02
     type: live
     date: "2024-12-10"
@@ -111,6 +117,7 @@
     contributed_by: data-agent
 
     duration_min: 345
+
   - id: 2024-12-11-live-02
     type: live
     date: "2024-12-11"
@@ -136,6 +143,7 @@
     contributed_by: data-agent
 
     duration_min: 230
+
   - id: 2024-12-12-live-02
     type: live
     date: "2024-12-12"
@@ -153,6 +161,7 @@
     contributed_by: data-agent
 
     duration_min: 143
+
   - id: 2024-12-13-live-01
     type: live
     date: "2024-12-13"
@@ -172,6 +181,7 @@
     contributed_by: data-agent
 
     duration_min: 68
+
   - id: 2024-12-14-live-02
     type: live
     date: "2024-12-14"
@@ -189,6 +199,7 @@
     contributed_by: data-agent
 
     duration_min: 88
+
   - id: 2024-12-15-live-02
     type: live
     date: "2024-12-15"
@@ -206,6 +217,21 @@
     contributed_by: data-agent
 
     duration_min: 271
+
+  - id: 2024-12-16-live-01
+    type: live
+    date: "2024-12-16"
+    title: "直播回放"
+    platform: douyin
+    confidence: medium
+    duration_min: 1282
+    note: "B站「KassyTan」全长录播；标题未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV12hBKY8ELa"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2024-12-21-live-02
     type: live
     date: "2024-12-21"
@@ -225,6 +251,7 @@
     contributed_by: data-agent
 
     duration_min: 104
+
   - id: 2024-12-22-live-02
     type: live
     date: "2024-12-22"
@@ -241,6 +268,7 @@
     contributed_by: data-agent
 
     duration_min: 174
+
   - id: 2024-12-27-live-02
     type: live
     date: "2024-12-27"
@@ -274,6 +302,7 @@
     contributed_by: data-agent
 
     duration_min: 262
+
   - id: 2024-12-28-live-04
     type: live
     date: "2024-12-28"
@@ -310,6 +339,7 @@
     contributed_by: data-agent
 
     duration_min: 310
+
   - id: 2024-12-28-live-05
     type: live
     date: "2024-12-28"
@@ -340,6 +370,7 @@
     contributed_by: data-agent
 
     duration_min: 142
+
   - id: 2024-12-29-live-03
     type: live
     date: "2024-12-29"
@@ -368,6 +399,7 @@
     contributed_by: data-agent
 
     duration_min: 69
+
   - id: 2024-12-30-live-02
     type: live
     date: "2024-12-30"
@@ -403,3 +435,19 @@
     contributed_by: data-agent
 
     duration_min: 335
+
+  - id: 2024-12-31-live-01
+    type: live
+    date: "2024-12-31"
+    title: "今天去开封！好多人呐"
+    platform: douyin
+    confidence: high
+    duration_min: 335
+    games: [where-winds-meet]
+    note: "B站「浮尘呃」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Wu6LYWEhz"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+    contributed_by: data-agent

@@ -573,3 +573,19 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+
+  - id: 2018-06-28-live-01
+    type: live
+    date: "2018-06-28"
+    title: "粉丝节福利大放送"
+    platform: douyu
+    confidence: high
+    duration_min: 223
+    games: []
+    note: "B站「女流录像小屋」《粉丝节福利大放送》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ks41157k6"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

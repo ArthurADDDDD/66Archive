@@ -430,3 +430,131 @@
         parts: 10
         status: alive
     contributed_by: data-agent
+
+  - id: 2018-02-02-live-01
+    type: live
+    date: "2018-02-02"
+    title: "怪物猎人：世界"
+    platform: douyu
+    confidence: high
+    duration_min: 422
+    games: []
+    note: "B站「女流录像小屋」《怪物猎人：世界》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1hW411H7C2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-03-live-01
+    type: live
+    date: "2018-02-03"
+    title: "怪物猎人：世界"
+    platform: douyu
+    confidence: high
+    duration_min: 288
+    games: []
+    note: "B站「女流录像小屋」《怪物猎人：世界》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1rW411H7c8"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-04-live-01
+    type: live
+    date: "2018-02-04"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 436
+    games: []
+    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1HW411J7FE"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-05-live-01
+    type: live
+    date: "2018-02-05"
+    title: "怪物猎人：世界"
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    games: []
+    note: "B站「女流录像小屋」《怪物猎人：世界》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1xW411J7nN"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-06-live-01
+    type: live
+    date: "2018-02-06"
+    title: "汪达与巨像"
+    platform: douyu
+    confidence: high
+    duration_min: 273
+    games: []
+    note: "B站「女流录像小屋」《汪达与巨像》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1QW411J7At"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-07-live-01
+    type: live
+    date: "2018-02-07"
+    title: "汪达与巨像"
+    platform: douyu
+    confidence: high
+    duration_min: 273
+    games: []
+    note: "B站「女流录像小屋」《汪达与巨像》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ZW411J7Pm"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-09-live-01
+    type: live
+    date: "2018-02-09"
+    title: "蜡烛人完整版"
+    platform: douyu
+    confidence: high
+    duration_min: 345
+    games: []
+    note: "B站「女流录像小屋」《蜡烛人完整版》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vW411n74Q"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-02-10-live-01
+    type: live
+    date: "2018-02-10"
+    title: "Slay the Spire 杀戮尖塔"
+    platform: douyu
+    confidence: high
+    duration_min: 272
+    games: []
+    note: "B站「女流录像小屋」《Slay the Spire 杀戮尖塔》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1oW41177nm"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

@@ -942,3 +942,19 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+
+  - id: 2021-01-09-live-01
+    type: live
+    date: "2021-01-09"
+    title: "心灵砒霜&弹幕版"
+    platform: douyu
+    confidence: high
+    duration_min: 486
+    games: []
+    note: "B站「女流录像小屋」《心灵砒霜&弹幕版》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1LL4y1b7fC"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

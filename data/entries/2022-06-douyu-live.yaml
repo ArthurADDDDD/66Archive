@@ -30,6 +30,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-06-03-live-01
+    type: live
+    date: "2022-06-03"
+    title: "各年代老歌榜单盘点"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1s5411Q7MA"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-06-04-live-01
     type: live
     date: "2022-06-04"
@@ -50,6 +65,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35149959
+
   - id: 2022-06-05-live-01
     type: live
     date: "2022-06-05"
@@ -198,6 +214,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-06-16-live-01
+    type: live
+    date: "2022-06-16"
+    title: "一年一次的佩奇演出"
+    platform: douyu
+    confidence: high
+    duration_min: 289
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1r3411M73E"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-06-17-live-01
     type: live
     date: "2022-06-17"
@@ -218,6 +249,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35314221
+
   - id: 2022-06-17-live-02
     type: live
     date: "2022-06-17"
@@ -272,6 +304,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35352578
+
   - id: 2022-06-20-live-01
     type: live
     date: "2022-06-20"
@@ -308,6 +341,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35378832
+
   - id: 2022-06-22-live-01
     type: live
     date: "2022-06-22"
@@ -340,6 +374,22 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-06-23-live-01
+    type: live
+    date: "2022-06-23"
+    title: "Fall Guys"
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    games: [fall-guys]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1p94y117Z5"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-06-26-live-01
     type: live
     date: "2022-06-26"
@@ -362,6 +412,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35447899
+
   - id: 2022-06-27-live-01
     type: live
     date: "2022-06-27"
@@ -398,6 +449,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac35473499
+
   - id: 2022-06-29-live-01
     type: live
     date: "2022-06-29"

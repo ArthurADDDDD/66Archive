@@ -44,6 +44,7 @@
     contributed_by: data-agent
 
     duration_min: 305
+
   - id: 2025-12-04-live-02
     type: live
     date: "2025-12-04"
@@ -79,6 +80,7 @@
     contributed_by: data-agent
 
     duration_min: 254
+
   - id: 2025-12-04-live-04
     type: live
     date: "2025-12-04"
@@ -95,6 +97,7 @@
     contributed_by: data-agent
 
     duration_min: 107
+
   - id: 2025-12-05-live-01
     type: live
     date: "2025-12-05"
@@ -113,6 +116,7 @@
     contributed_by: data-agent
 
     duration_min: 94
+
   - id: 2025-12-05-live-02
     type: live
     date: "2025-12-05"
@@ -138,6 +142,7 @@
     contributed_by: data-agent
 
     duration_min: 108
+
   - id: 2025-12-05-live-03
     type: live
     date: "2025-12-05"
@@ -156,6 +161,7 @@
     contributed_by: data-agent
 
     duration_min: 122
+
   - id: 2025-12-06-live-01
     type: live
     date: "2025-12-06"
@@ -194,6 +200,7 @@
     contributed_by: data-agent
 
     duration_min: 203
+
   - id: 2025-12-12-live-01
     type: live
     date: "2025-12-12"
@@ -221,6 +228,7 @@
     contributed_by: data-agent
 
     duration_min: 411
+
   - id: 2025-12-17-live-01
     type: live
     date: "2025-12-17"
@@ -251,6 +259,23 @@
     contributed_by: data-agent
 
     duration_min: 165
+
+  - id: 2025-12-24-live-01
+    type: live
+    date: "2025-12-24"
+    title: "仙境传说：重生"
+    platform: douyin
+    confidence: medium
+    duration_min: 138
+    games: [ragnarok-rebirth]
+    note: "B站「数码3C小子」全长录播；标题含游戏名和日期。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1viBQBPE7E"
+        kind: replay
+        status: alive
+        account: bili-fan-digital-replay
+    contributed_by: data-agent
+
   - id: 2025-12-25-live-01
     type: live
     date: "2025-12-25"
@@ -283,6 +308,7 @@
     contributed_by: data-agent
 
     duration_min: 138
+
   - id: 2025-12-27-live-01
     type: live
     date: "2025-12-27"
@@ -325,6 +351,7 @@
     contributed_by: data-agent
 
     duration_min: 488
+
   - id: 2025-12-28-live-01
     type: live
     date: "2025-12-28"

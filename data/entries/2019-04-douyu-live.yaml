@@ -549,3 +549,99 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+
+  - id: 2019-04-09-live-01
+    type: live
+    date: "2019-04-09"
+    title: "I Hate This Game"
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    games: []
+    note: "B站「女流录像小屋」《I Hate This Game》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Cb411T7kp"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-10-live-01
+    type: live
+    date: "2019-04-10"
+    title: "VR游戏来一波"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    games: []
+    note: "B站「女流录像小屋」《VR游戏来一波》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Eb411M78s"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-16-live-01
+    type: live
+    date: "2019-04-16"
+    title: "Supraland"
+    platform: douyu
+    confidence: high
+    duration_min: 311
+    games: []
+    note: "B站「女流录像小屋」《Supraland》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13b411574x"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-17-live-01
+    type: live
+    date: "2019-04-17"
+    title: "The Hunter"
+    platform: douyu
+    confidence: high
+    duration_min: 244
+    games: []
+    note: "B站「女流录像小屋」《The Hunter》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kb411573D"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-20-live-01
+    type: live
+    date: "2019-04-20"
+    title: "人类一败涂地&浮岛物语"
+    platform: douyu
+    confidence: high
+    duration_min: 445
+    games: []
+    note: "B站「女流录像小屋」《人类一败涂地&浮岛物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Sb411V7Vr"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-24-live-01
+    type: live
+    date: "2019-04-24"
+    title: "TrainValley2"
+    platform: douyu
+    confidence: high
+    duration_min: 215
+    games: []
+    note: "B站「女流录像小屋」《TrainValley2》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1B441187wr"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

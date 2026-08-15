@@ -226,6 +226,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41825950
+
   - id: 2023-07-13-live-01
     type: live
     date: "2023-07-13"
@@ -262,6 +263,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41839121
+
   - id: 2023-07-15-live-01
     type: live
     date: "2023-07-15"
@@ -282,6 +284,22 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41846279
+
+  - id: 2023-07-16-live-01
+    type: live
+    date: "2023-07-16"
+    title: "Techtonica"
+    platform: douyu
+    confidence: high
+    duration_min: 263
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Jj411o7c1"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2023-07-19-live-01
     type: live
     date: "2023-07-19"
@@ -302,6 +320,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41879205
+
   - id: 2023-07-20-live-01
     type: live
     date: "2023-07-20"
@@ -322,6 +341,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41887438
+
   - id: 2023-07-21-live-01
     type: live
     date: "2023-07-21"
@@ -358,6 +378,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41903537
+
   - id: 2023-07-22-live-02
     type: live
     date: "2023-07-22"
@@ -378,6 +399,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41903706
+
   - id: 2023-07-23-live-01
     type: live
     date: "2023-07-23"
@@ -404,6 +426,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41911155、ac41910829、ac41910826
+
   - id: 2023-07-24-live-01
     type: live
     date: "2023-07-24"
@@ -424,6 +447,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41926846
+
   - id: 2023-07-25-live-01
     type: live
     date: "2023-07-25"

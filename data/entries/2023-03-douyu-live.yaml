@@ -142,6 +142,25 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2023-03-12-live-01
+    type: live
+    date: "2023-03-12"
+    title: "大侠立志传"
+    platform: douyu
+    confidence: high
+    duration_min: 382
+    games: [daxia-lizhizhuan]
+    note: "B站「直播代录luzhiob」全长录播 382min；「女流录像小屋」217min 为同场较短版本，并入同一 source。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1DY411B7Cb"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1hL411y7Cc"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2023-03-15-live-01
     type: live
     date: "2023-03-15"
@@ -162,6 +181,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac40923399
+
   - id: 2023-03-16-live-01
     type: live
     date: "2023-03-16"

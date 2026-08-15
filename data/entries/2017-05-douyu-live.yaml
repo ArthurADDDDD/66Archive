@@ -503,3 +503,35 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+
+  - id: 2017-05-10-live-01
+    type: live
+    date: "2017-05-10"
+    title: "手工猪小拱"
+    platform: douyu
+    confidence: high
+    duration_min: 301
+    games: []
+    note: "B站「女流录像小屋」《手工猪小拱》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Rx411m7ha"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2017-05-12-live-03
+    type: live
+    date: "2017-05-12"
+    title: "艾迪芬奇的记忆（What Remains of Edith Finch）"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    games: []
+    note: "B站「女流录像小屋」《艾迪芬奇的记忆（What Remains of Edith Finch）》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1zx411e7Cm"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

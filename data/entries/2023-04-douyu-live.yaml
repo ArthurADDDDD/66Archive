@@ -78,6 +78,20 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2023-04-07-live-01
+    type: live
+    date: "2023-04-07"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 419
+    note: "B站「直播代录luzhiob」全长录播；标题未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vc411W7ts"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2023-04-08-live-01
     type: live
     date: "2023-04-08"
@@ -123,6 +137,25 @@
       - url: "https://www.acfun.cn/v/ac41105284"
         kind: replay
         parts: 1
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2023-04-11-live-01
+    type: live
+    date: "2023-04-11"
+    title: "只狼"
+    platform: douyu
+    confidence: high
+    duration_min: 528
+    games: [sekiro]
+    note: "B站「女流录像小屋」与「直播代录luzhiob」两个全长录播，时长吻合。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1UL411f7yR"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1CM4y117GF"
+        kind: replay
         status: alive
     contributed_by: data-agent
 

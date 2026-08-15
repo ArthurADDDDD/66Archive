@@ -109,6 +109,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2019-02-13-live-01
+    type: live
+    date: "2019-02-13"
+    title: "勇者斗恶龙"
+    platform: douyu
+    confidence: medium
+    duration_min: 205
+    games: [dragon-quest-builders-2]
+    note: "B站「星星在那远方」全长录播；标题含日期与时间段。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1tb411U7Mt"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2019-02-14-live-01
     type: live
     date: "2019-02-14"
@@ -398,4 +413,36 @@
         kind: replay
         parts: 5
         status: alive
+    contributed_by: data-agent
+
+  - id: 2019-02-12-live-01
+    type: live
+    date: "2019-02-12"
+    title: "勇者斗恶龙创世小玩家2"
+    platform: douyu
+    confidence: high
+    duration_min: 326
+    games: []
+    note: "B站「女流录像小屋」《勇者斗恶龙创世小玩家2》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Fb411U7we"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-02-28-live-01
+    type: live
+    date: "2019-02-28"
+    title: "特技摩托:崛起(Trials Rising)"
+    platform: douyu
+    confidence: high
+    duration_min: 403
+    games: []
+    note: "B站「女流录像小屋」《特技摩托:崛起(Trials Rising)》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1nb411b7kU"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent

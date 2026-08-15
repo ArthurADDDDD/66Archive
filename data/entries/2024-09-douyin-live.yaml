@@ -3,6 +3,56 @@
 # 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
 # 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
 
+  - id: 2024-09-10-live-01
+    type: live
+    date: "2024-09-10"
+    title: "宇宙机器人"
+    platform: douyin
+    confidence: high
+    duration_min: 177
+    note: "B站多个全长录播（bobi华/KassyTan/N瓜冰冰/浮尘呃/无尚大 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Dr4YeMEcd"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+      - url: "https://www.bilibili.com/video/BV1RY4YeCEKx"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1VL4aeMEMg"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Jk4aeUELa"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2024-09-11-live-01
+    type: live
+    date: "2024-09-11"
+    title: "和朋友们 pick park 2"
+    platform: douyin
+    confidence: high
+    duration_min: 180
+    note: "B站多个全长录播（bobi华/浮尘呃/N瓜冰冰/KassyTan/无尚大 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1SZ4rebE9X"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+      - url: "https://www.bilibili.com/video/BV13V4re8E1N"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1H946eVEnG"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1nR46ekEWn"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2024-09-13-live-01
     type: live
     date: "2024-09-13"
@@ -20,6 +70,7 @@
     contributed_by: data-agent
 
     duration_min: 180
+
   - id: 2024-09-26-live-01
     type: live
     date: "2024-09-26"

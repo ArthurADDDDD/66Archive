@@ -21,6 +21,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41503159、ac41503144
+
   - id: 2023-06-02-live-01
     type: live
     date: "2023-06-02"
@@ -44,6 +45,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41510624、ac41510628
+
   - id: 2023-06-05-live-01
     type: live
     date: "2023-06-05"
@@ -64,6 +66,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41538894
+
   - id: 2023-06-06-live-01
     type: live
     date: "2023-06-06"
@@ -84,6 +87,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41543905
+
   - id: 2023-06-07-live-01
     type: live
     date: "2023-06-07"
@@ -97,6 +101,25 @@
       - url: "https://www.acfun.cn/v/ac41554820"
         kind: replay
         parts: 1
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2023-06-08-live-01
+    type: live
+    date: "2023-06-08"
+    title: "Street Fighter"
+    platform: douyu
+    confidence: high
+    duration_min: 351
+    games: [street-fighter-6]
+    note: "B站「女流录像小屋」与「直播代录luzhiob」两个全长录播，时长吻合。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1u14y1Q7DL"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1ph4y1G7E2"
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -120,6 +143,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41564091
+
   - id: 2023-06-10-live-01
     type: live
     date: "2023-06-10"
@@ -156,6 +180,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41585848
+
   - id: 2023-06-12-live-01
     type: live
     date: "2023-06-12"
@@ -208,6 +233,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41601706
+
   - id: 2023-06-16-live-01
     type: live
     date: "2023-06-16"
@@ -343,6 +369,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41670159、ac41670161
+
   - id: 2023-06-24-live-01
     type: live
     date: "2023-06-24"
@@ -363,6 +390,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41681956
+
   - id: 2023-06-25-live-01
     type: live
     date: "2023-06-25"
@@ -383,6 +411,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41682262
+
   - id: 2023-06-26-live-01
     type: live
     date: "2023-06-26"
@@ -419,6 +448,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41698725
+
   - id: 2023-06-29-live-01
     type: live
     date: "2023-06-29"
