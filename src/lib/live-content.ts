@@ -39,6 +39,8 @@ export type LiveBeat = {
   size: 'hero' | 'type' | 'small' | 'montage'
   chips: string[]
   footnote: { text: string; rel: string; date: string }
+  /** 卡片尾标（如 `TO BE CONTINUED...`）；空串表示这张卡不带尾标 */
+  tail: string
 }
 
 export type LiveAct = {
@@ -139,6 +141,7 @@ function parseBeat(value: unknown): LiveBeat | null {
     size: size === 'hero' || size === 'type' || size === 'montage' ? size : 'small',
     chips: strList(value.chips),
     footnote: { text: str(footnote.text), rel: str(footnote.rel), date: str(footnote.date) },
+    tail: str(value.tail),
   }
 }
 
@@ -302,7 +305,7 @@ export async function fetchLiveContent(): Promise<LiveContent> {
  * 一幕的实时覆盖。
  *
  * 只覆盖文案与显示：标题、kicker、引子、短标签、年份副标、主题色、收束语，
- * 以及节点的展示日期、标题、描述、卡片规格、蒙太奇标签、隐线脚注。
+ * 以及节点的展示日期、标题、描述、卡片规格、蒙太奇标签、隐线脚注、卡片尾标。
  * 链接（href/external）、封面、构建期派生的蒙太奇素材与统计数字一律保留基线值
  * ——那些指向史料，不归后台管。
  *
@@ -340,6 +343,8 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
         gameWorld: override.footnote.text
           ? { text: override.footnote.text, rel: override.footnote.rel || undefined, date: override.footnote.date || undefined }
           : undefined,
+        // 后台清空尾标就是要它消失，所以空串覆盖成 undefined，不回退基线。
+        tail: override.tail || undefined,
       }
     })
 
