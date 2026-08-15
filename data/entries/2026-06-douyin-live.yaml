@@ -116,6 +116,20 @@
       - url: "https://www.bilibili.com/video/BV1LEEm63ESk"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1wjEd6yE4t
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: "2026-06-09 20点场"
+            duration_sec: 5401
+          - page: 2
+            title: "2026-06-09 22点场"
+            duration_sec: 5401
+          - page: 3
+            title: "2026-06-09 23点场"
+            duration_sec: 1928
     contributed_by: data-agent
 
     duration_min: 212
@@ -148,6 +162,20 @@
       - url: "https://www.bilibili.com/video/BV16CER6TEnq"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1wjEd6yE4t
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 4
+            title: "2026-06-10 20点场"
+            duration_sec: 4786
+          - page: 5
+            title: "2026-06-10 22点场"
+            duration_sec: 5400
+          - page: 6
+            title: "2026-06-10 23点场"
+            duration_sec: 174
     contributed_by: data-agent
 
     duration_min: 182
@@ -196,6 +224,20 @@
       - url: "https://www.bilibili.com/video/BV1n7J56oELw"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1wjEd6yE4t
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 7
+            title: "2026-06-12 20点场"
+            duration_sec: 5401
+          - page: 8
+            title: "2026-06-12 22点场"
+            duration_sec: 5401
+          - page: 9
+            title: "2026-06-12 23点场"
+            duration_sec: 929
     contributed_by: data-agent
 
     duration_min: 197
@@ -222,6 +264,17 @@
       - url: "https://www.bilibili.com/video/BV1QgJp6YEM7"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1wjEd6yE4t
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 10
+            title: "2026-06-13 20点场"
+            duration_sec: 5401
+          - page: 11
+            title: "2026-06-13 22点场"
+            duration_sec: 1464
     contributed_by: data-agent
 
     duration_min: 115
@@ -252,6 +305,20 @@
       - url: "https://www.bilibili.com/video/BV1gqJA65EZR"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1wjEd6yE4t
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 12
+            title: "2026-06-14 20点场"
+            duration_sec: 5401
+          - page: 13
+            title: "2026-06-14 22点场"
+            duration_sec: 5401
+          - page: 14
+            title: "2026-06-14 23点场"
+            duration_sec: 1399
     contributed_by: data-agent
 
     duration_min: 204
@@ -381,6 +448,26 @@
       - url: "https://www.bilibili.com/video/BV1X6jp6wEvc"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1R9jH6YEfr
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: 2026-06-20 14点场
+            duration_sec: 5401
+          - page: 2
+            title: 2026-06-20 16点场
+            duration_sec: 1933
+          - page: 3
+            title: 2026-06-20 20点场
+            duration_sec: 5401
+          - page: 4
+            title: 2026-06-20 22点场
+            duration_sec: 5401
+          - page: 5
+            title: 2026-06-20 23点场
+            duration_sec: 890
     contributed_by: data-agent
 
     duration_min: 318
@@ -421,6 +508,17 @@
       - url: "https://www.bilibili.com/video/BV1dyjb6XEah"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1R9jH6YEfr
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 6
+            title: "2026-06-21 21点场"
+            duration_sec: 5401
+          - page: 7
+            title: "2026-06-21 22点场"
+            duration_sec: 4844
     contributed_by: data-agent
 
     duration_min: 171
@@ -464,6 +562,20 @@
       - url: "https://www.bilibili.com/video/BV1mA7P6BEDe"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1R9jH6YEfr
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 8
+            title: "2026-06-22 15点场"
+            duration_sec: 6933
+          - page: 9
+            title: "2026-06-22 21点场"
+            duration_sec: 5401
+          - page: 10
+            title: "2026-06-22 23点场"
+            duration_sec: 1850
     contributed_by: data-agent
 
     duration_min: 238
@@ -500,6 +612,14 @@
       - url: "https://www.bilibili.com/video/BV1wujU6JEPe"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1R9jH6YEfr
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 11
+            title: "2026-06-23 完结撒花"
+            duration_sec: 6965
     contributed_by: data-agent
 
     duration_min: 116

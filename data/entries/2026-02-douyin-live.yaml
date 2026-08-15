@@ -368,6 +368,20 @@
       - url: "https://www.bilibili.com/video/BV13DAkzFEP5"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1JYAyzJErV
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: "2026-2-26 19-02 生化危机9最高画质"
+            duration_sec: 5401
+          - page: 2
+            title: "2026-2-26 20-32 生化危机9最高画质"
+            duration_sec: 5400
+          - page: 3
+            title: "2026-2-26 22-02 生化危机9最高画质"
+            duration_sec: 3831
     contributed_by: data-agent
 
     duration_min: 244
@@ -407,6 +421,29 @@
       - url: "https://www.bilibili.com/video/BV1o8ASzdEJ4"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1JYAyzJErV
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 4
+            title: "2026-2-27 13-02 生化危机9最高画质"
+            duration_sec: 5401
+          - page: 5
+            title: "2026-2-27 14-32 生化危机9最高画质"
+            duration_sec: 5400
+          - page: 6
+            title: "2026-2-27 16-02 生化危机9最高画质"
+            duration_sec: 1746
+          - page: 7
+            title: "2026-02-27 19-38 生化危机9最高画质"
+            duration_sec: 5402
+          - page: 8
+            title: "2026-02-27 21-08 生化危机9最高画质"
+            duration_sec: 5399
+          - page: 9
+            title: "2026-02-27 22-38 生化危机9最高画质"
+            duration_sec: 1886
     contributed_by: data-agent
 
     duration_min: 421
@@ -440,5 +477,22 @@
       - url: "https://www.bilibili.com/video/BV1UvAaz8EoC"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1JYAyzJErV
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 10
+            title: "2026-02-28 18-15 生化危机9最高画质"
+            duration_sec: 5402
+          - page: 11
+            title: "2026-02-28 19-45 生化危机9最高画质"
+            duration_sec: 5400
+          - page: 12
+            title: "2026-02-28 21-15 大结局"
+            duration_sec: 5402
+          - page: 13
+            title: "2026-02-28 22-45 剧情花絮"
+            duration_sec: 522
     contributed_by: data-agent
     duration_min: 279
