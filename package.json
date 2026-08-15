@@ -7,7 +7,9 @@
     "build": "npm run validate && next build",
     "start": "next start",
     "lint": "eslint .",
-    "validate": "tsx scripts/validate.ts"
+    "validate": "tsx scripts/validate.ts",
+    "archive:edit": "tsx scripts/archive-edit.ts",
+    "archive:test": "tsx scripts/test-archive-edit.ts"
   },
   "dependencies": {
     "next": "^15.1.6",
