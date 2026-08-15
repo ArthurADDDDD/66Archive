@@ -22,7 +22,8 @@ const REMOTE_UPDATE_COMMAND = '/path/to/deploy-script'
 const LOCAL_BACKUP_ROOT = path.join(os.homedir(), 'Library', 'Application Support', '66Archive', 'backups', 'postgres')
 
 function run(command: string, args: string[], cwd: string, capture = false) {
-  return execFileSync(command, args, { cwd, encoding: 'utf8', stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit' }).trim()
+  const result = execFileSync(command, args, { cwd, encoding: 'utf8', stdio: capture ? ['ignore', 'pipe', 'pipe'] : 'inherit' })
+  return capture ? result.trim() : ''
 }
 
 function git(cwd: string, args: string[], capture = false) {

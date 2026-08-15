@@ -74,7 +74,7 @@ export function gitChangedPaths(root: string) {
   return [
     ...git(['diff', '--name-only', '--no-renames', 'HEAD']),
     ...git(['ls-files', '--others', '--exclude-standard']),
-  ].filter(Boolean)
+  ].filter((value) => value && value !== 'node_modules' && !value.startsWith('node_modules/'))
 }
 
 export function normalizeEvidence(value: string) {
