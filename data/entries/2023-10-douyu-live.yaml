@@ -20,6 +20,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42555173
+
   - id: 2023-10-02-live-01
     type: live
     date: "2023-10-02"
@@ -40,6 +41,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42543992
+
   - id: 2023-10-03-live-01
     type: live
     date: "2023-10-03"
@@ -60,6 +62,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42552663
+
   - id: 2023-10-03-live-02
     type: live
     date: "2023-10-03"
@@ -112,6 +115,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42569724
+
   - id: 2023-10-06-live-01
     type: live
     date: "2023-10-06"
@@ -132,6 +136,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42577684
+
   - id: 2023-10-07-live-01
     type: live
     date: "2023-10-07"
@@ -152,6 +157,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42579899
+
   - id: 2023-10-08-live-01
     type: live
     date: "2023-10-08"
@@ -243,6 +249,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42628951
+
   - id: 2023-10-13-live-01
     type: live
     date: "2023-10-13"
@@ -273,6 +280,21 @@
         kind: replay
         parts: 1
         status: alive
+    contributed_by: data-agent
+
+  - id: 2023-10-15-live-01
+    type: live
+    date: "2023-10-15"
+    title: "重庆开学季"
+    platform: douyu
+    confidence: high
+    duration_min: 266
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Dw411c7fR"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2023-10-17-live-01

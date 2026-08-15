@@ -680,3 +680,19 @@
         status: alive
     contributed_by: data-agent
     note: 补入 A站互补回放：ac31623341
+
+  - id: 2021-10-31-live-01
+    type: live
+    date: "2021-10-31"
+    title: "心灵砒霜&弹幕版"
+    platform: douyu
+    confidence: high
+    duration_min: 527
+    games: []
+    note: "B站「女流录像小屋」《心灵砒霜&弹幕版》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV17q4y1V73d"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

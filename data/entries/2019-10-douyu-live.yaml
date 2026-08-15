@@ -27,6 +27,76 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2019-10-07-live-01
+    type: live
+    date: "2019-10-07"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 242
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13J411c7Q7"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-09-live-01
+    type: live
+    date: "2019-10-09"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 254
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1DE411f7VZ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-10-live-01
+    type: live
+    date: "2019-10-10"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 268
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1pE411o7UJ"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-11-live-01
+    type: live
+    date: "2019-10-11"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 243
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wE411Z75K"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-12-live-01
+    type: live
+    date: "2019-10-12"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 252
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1sE411Z7YA"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2019-10-13-live-01
     type: live
     date: "2019-10-13"
@@ -47,6 +117,20 @@
       - url: "https://www.acfun.cn/v/ac11374339"
         kind: replay
         parts: 2
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-15-live-01
+    type: live
+    date: "2019-10-15"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 281
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1TE411C75c"
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -120,6 +204,20 @@
       - url: "https://www.acfun.cn/v/ac11405767"
         kind: replay
         parts: 6
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-19-live-01
+    type: live
+    date: "2019-10-19"
+    title: "直播录像"
+    platform: douyu
+    confidence: medium
+    duration_min: 431
+    note: "B站「白陆゜」全长录播；标题仅含日期时间，未标注具体内容。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1SE411k7vV"
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -223,4 +321,52 @@
         kind: replay
         parts: 2
         status: alive
+    contributed_by: data-agent
+
+  - id: 2019-10-03-live-01
+    type: live
+    date: "2019-10-03"
+    title: "过山车之星"
+    platform: douyu
+    confidence: high
+    duration_min: 266
+    games: []
+    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15E411D7BD"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-10-25-live-01
+    type: live
+    date: "2019-10-25"
+    title: "牧场物语：重聚矿石镇"
+    platform: douyu
+    confidence: high
+    duration_min: 250
+    games: []
+    note: "B站「女流录像小屋」《牧场物语：重聚矿石镇》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1bE411175p"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-10-31-live-01
+    type: live
+    date: "2019-10-31"
+    title: "路易吉鬼屋3"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    games: []
+    note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1GE41187Lu"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent

@@ -818,3 +818,51 @@
         parts: 8
         status: alive
     contributed_by: data-agent
+
+  - id: 2018-03-06-live-01
+    type: live
+    date: "2018-03-06"
+    title: "弹丸论破：希望的学园和绝望高中生"
+    platform: douyu
+    confidence: high
+    duration_min: 283
+    games: []
+    note: "B站「女流录像小屋」《弹丸论破：希望的学园和绝望高中生》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1WW411W7zN"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-03-19-live-01
+    type: live
+    date: "2018-03-19"
+    title: "超级情圣 SuperSeducer"
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    games: []
+    note: "B站「女流录像小屋」《超级情圣 SuperSeducer》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1fW411u7UA"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2018-03-20-live-01
+    type: live
+    date: "2018-03-20"
+    title: "超级情圣 SuperSeducer & 废都物语"
+    platform: douyu
+    confidence: high
+    duration_min: 239
+    games: []
+    note: "B站「女流录像小屋」《超级情圣 SuperSeducer & 废都物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13W411g7EP"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

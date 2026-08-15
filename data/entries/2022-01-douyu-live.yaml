@@ -31,6 +31,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac32974994
+
   - id: 2022-01-02-live-01
     type: live
     date: "2022-01-02"
@@ -127,6 +128,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33005974
+
   - id: 2022-01-05-live-01
     type: live
     date: "2022-01-05"
@@ -211,6 +213,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33053268
+
   - id: 2022-01-09-live-01
     type: live
     date: "2022-01-09"
@@ -240,6 +243,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33060155
+
   - id: 2022-01-10-live-01
     type: live
     date: "2022-01-10"
@@ -270,6 +274,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33062950
+
   - id: 2022-01-11-live-01
     type: live
     date: "2022-01-11"
@@ -299,6 +304,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33074776
+
   - id: 2022-01-13-live-01
     type: live
     date: "2022-01-13"
@@ -332,6 +338,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33109678
+
   - id: 2022-01-14-live-01
     type: live
     date: "2022-01-14"
@@ -365,6 +372,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33114993
+
   - id: 2022-01-15-live-01
     type: live
     date: "2022-01-15"
@@ -398,6 +406,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33121871
+
   - id: 2022-01-16-live-01
     type: live
     date: "2022-01-16"
@@ -467,6 +476,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33149033
+
   - id: 2022-01-18-live-01
     type: live
     date: "2022-01-18"
@@ -497,6 +507,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33159573
+
   - id: 2022-01-19-live-01
     type: live
     date: "2022-01-19"
@@ -530,6 +541,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33193673
+
   - id: 2022-01-20-live-01
     type: live
     date: "2022-01-20"
@@ -566,6 +578,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33195205
+
   - id: 2022-01-21-live-01
     type: live
     date: "2022-01-21"
@@ -586,6 +599,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33223235
+
   - id: 2022-01-22-live-01
     type: live
     date: "2022-01-22"
@@ -606,6 +620,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33242934
+
   - id: 2022-01-23-live-01
     type: live
     date: "2022-01-23"
@@ -628,6 +643,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33290541
+
   - id: 2022-01-24-live-01
     type: live
     date: "2022-01-24"
@@ -648,6 +664,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33323325
+
   - id: 2022-01-25-live-01
     type: live
     date: "2022-01-25"
@@ -674,6 +691,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac33355820
+
   - id: 2022-01-26-live-01
     type: live
     date: "2022-01-26"
@@ -704,4 +722,53 @@
         kind: replay
         parts: 1
         status: alive
+    contributed_by: data-agent
+
+  - id: 2022-01-28-live-01
+    type: live
+    date: "2022-01-28"
+    title: "宝可梦传说阿尔宙斯"
+    platform: douyu
+    confidence: high
+    duration_min: 286
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1nb4y1E7HB"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2022-01-29-live-01
+    type: live
+    date: "2022-01-29"
+    title: "宝可梦传说阿尔宙斯"
+    platform: douyu
+    confidence: high
+    duration_min: 253
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1644y1p7K7"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2022-01-30-live-01
+    type: live
+    date: "2022-01-30"
+    title: "宝可梦传说阿尔宙斯"
+    platform: douyu
+    confidence: high
+    duration_min: 386
+    note: "B站「女流录像小屋」同日上传（上）40:38 +（下）345:03，按同场上/下分P合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1e5411f7gy"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1Mr4y1h79a"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent

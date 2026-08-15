@@ -272,3 +272,51 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+
+  - id: 2019-11-01-live-01
+    type: live
+    date: "2019-11-01"
+    title: "马力欧与索尼克 AT 2020东京奥运"
+    platform: douyu
+    confidence: high
+    duration_min: 403
+    games: []
+    note: "B站「女流录像小屋」《马力欧与索尼克 AT 2020东京奥运》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV12E411t7Xd"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-11-05-live-01
+    type: live
+    date: "2019-11-05"
+    title: "路易吉鬼屋3"
+    platform: douyu
+    confidence: high
+    duration_min: 227
+    games: []
+    note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1hE411i7FV"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-11-22-live-01
+    type: live
+    date: "2019-11-22"
+    title: "Tangle Tower"
+    platform: douyu
+    confidence: high
+    duration_min: 232
+    games: []
+    note: "B站「女流录像小屋」《Tangle Tower》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1WJ411d7Gt"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

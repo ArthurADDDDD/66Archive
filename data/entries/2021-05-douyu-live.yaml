@@ -87,6 +87,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28479195
+
   - id: 2021-05-03-live-01
     type: live
     date: "2021-05-03"
@@ -122,6 +123,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28482825
+
   - id: 2021-05-04-live-01
     type: live
     date: "2021-05-04"
@@ -208,6 +210,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28520367
+
   - id: 2021-05-07-live-01
     type: live
     date: "2021-05-07"
@@ -241,6 +244,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28543731
+
   - id: 2021-05-08-live-01
     type: live
     date: "2021-05-08"
@@ -274,6 +278,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28560452
+
   - id: 2021-05-09-live-01
     type: live
     date: "2021-05-09"
@@ -307,6 +312,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28591039
+
   - id: 2021-05-10-live-01
     type: live
     date: "2021-05-10"
@@ -363,6 +369,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28686740
+
   - id: 2021-05-13-live-01
     type: live
     date: "2021-05-13"
@@ -392,6 +399,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac28722548
+
   - id: 2021-05-16-live-01
     type: live
     date: "2021-05-16"
@@ -457,6 +465,7 @@
     contributed_by: data-agent
 
     note: A站页面标题写 2021-05-18，但 P1-P7 内部文件名均为 2021.5.17；结合上传时间，实际直播日期按 2021-05-17 处理。A站将同一场拆为上下两个回放：ac28925305（P1-P4，180.0min）+ ac28925578（P5-P7，165.0min），已合并为一场完整直播，时长相加，只计 1 场。
+
   - id: 2021-05-18-live-02
     type: live
     date: "2021-05-18"
@@ -491,6 +500,7 @@
     contributed_by: data-agent
 
     note: A站将同一场直播拆为上下两个回放：ac28949045（P1-P3，159.5min）+ ac28949328（P4-P6，164.3min），已合并为一场完整直播，时长相加，只计 1 场。
+
   - id: 2021-05-19-live-01
     type: live
     date: "2021-05-19"
@@ -547,6 +557,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac29013234
+
   - id: 2021-05-21-live-01
     type: live
     date: "2021-05-21"
@@ -665,6 +676,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac29245796
+
   - id: 2021-05-29-live-01
     type: live
     date: "2021-05-29"
@@ -686,4 +698,38 @@
         kind: replay
         parts: 3
         status: alive
+    contributed_by: data-agent
+
+  - id: 2021-05-31-live-01
+    type: live
+    date: "2021-05-31"
+    title: "永劫无间官方活动（寅子&女流66）"
+    platform: douyu
+    confidence: high
+    duration_min: 175
+    games: [naraka-bladepoint]
+    note: "B站「寅子」「录播员老夏」两个全长录播；标题为永劫无间官方活动/户外出差。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1UB4y1u7yD"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1iK4y1R7hn"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2021-05-26-live-01
+    type: live
+    date: "2021-05-26"
+    title: "雀魂"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    games: []
+    note: "B站「女流录像小屋」《雀魂》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15q4y1j7qB"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent

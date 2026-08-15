@@ -571,3 +571,19 @@
     contributed_by: data-agent
     time: 15:14
     duration_min: 274
+
+  - id: 2020-02-03-live-01
+    type: live
+    date: "2020-02-03"
+    title: "宅就是一种能力"
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    games: []
+    note: "B站「女流录像小屋」《宅就是一种能力》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1J7411p7gQ"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

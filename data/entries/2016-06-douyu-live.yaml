@@ -165,3 +165,227 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+
+  - id: 2016-06-08-live-01
+    type: live
+    date: "2016-06-08"
+    title: "几何冲刺"
+    platform: douyu
+    confidence: high
+    duration_min: 192
+    games: []
+    note: "B站「女流录像小屋」《几何冲刺》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ws411q7Qc"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-09-live-01
+    type: live
+    date: "2016-06-09"
+    title: "模拟人生"
+    platform: douyu
+    confidence: high
+    duration_min: 222
+    games: []
+    note: "B站「女流录像小屋」《模拟人生》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1js411q731"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-09-live-02
+    type: live
+    date: "2016-06-09"
+    title: "几何冲刺-Xstep"
+    platform: douyu
+    confidence: high
+    duration_min: 64
+    games: []
+    note: "B站「女流录像小屋」《几何冲刺-Xstep》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1js411q7JP"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-10-live-01
+    type: live
+    date: "2016-06-10"
+    title: "果壳网吃货饭局女流视角"
+    platform: douyu
+    confidence: high
+    duration_min: 83
+    games: []
+    note: "B站「女流录像小屋」《果壳网吃货饭局女流视角》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1us411q7SZ"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-14-live-01
+    type: live
+    date: "2016-06-14"
+    title: "E3微软发布会"
+    platform: douyu
+    confidence: high
+    duration_min: 99
+    games: []
+    note: "B站「女流录像小屋」《E3微软发布会》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ss411q7NG"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-16-live-01
+    type: live
+    date: "2016-06-16"
+    title: "E3展台"
+    platform: douyu
+    confidence: high
+    duration_min: 76
+    games: []
+    note: "B站「女流录像小屋」《E3展台》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Zs411e7pX"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-21-live-01
+    type: live
+    date: "2016-06-21"
+    title: "LA见闻录"
+    platform: douyu
+    confidence: high
+    duration_min: 163
+    games: []
+    note: "B站「女流录像小屋」《LA见闻录》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ls411v7ey"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-24-live-01
+    type: live
+    date: "2016-06-24"
+    title: "幽灵诡计 day1"
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    games: []
+    note: "B站「女流录像小屋」《幽灵诡计 day1》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ws411v7qK"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-25-live-01
+    type: live
+    date: "2016-06-25"
+    title: "幽灵诡计 day2"
+    platform: douyu
+    confidence: high
+    duration_min: 238
+    games: []
+    note: "B站「女流录像小屋」《幽灵诡计 day2》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Js411v7iY"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-26-live-01
+    type: live
+    date: "2016-06-26"
+    title: "久违的pishuang"
+    platform: douyu
+    confidence: high
+    duration_min: 202
+    games: []
+    note: "B站「女流录像小屋」《久违的pishuang》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1es411v7vv"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-27-live-01
+    type: live
+    date: "2016-06-27"
+    title: "幽灵诡计 day3"
+    platform: douyu
+    confidence: high
+    duration_min: 192
+    games: []
+    note: "B站「女流录像小屋」《幽灵诡计 day3》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vs411v7YW"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-28-live-01
+    type: live
+    date: "2016-06-28"
+    title: "幽灵诡计 day4-完结"
+    platform: douyu
+    confidence: high
+    duration_min: 176
+    games: []
+    note: "B站「女流录像小屋」《幽灵诡计 day4-完结》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1bs411v7Xc"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-29-live-01
+    type: live
+    date: "2016-06-29"
+    title: "MC复兴大周 day1"
+    platform: douyu
+    confidence: high
+    duration_min: 220
+    games: []
+    note: "B站「女流录像小屋」《MC复兴大周 day1》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ys411v77B"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2016-06-30-live-01
+    type: live
+    date: "2016-06-30"
+    title: "MC复兴大周 day2"
+    platform: douyu
+    confidence: high
+    duration_min: 187
+    games: []
+    note: "B站「女流录像小屋」《MC复兴大周 day2》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ms411v7Tz"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

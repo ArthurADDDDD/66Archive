@@ -246,3 +246,51 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+
+  - id: 2019-09-20-live-01
+    type: live
+    date: "2019-09-20"
+    title: "塞尔达传说 织梦岛"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    games: []
+    note: "B站「女流录像小屋」《塞尔达传说 织梦岛》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1aJ411u7Ty"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-09-22-live-01
+    type: live
+    date: "2019-09-22"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 520
+    games: []
+    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13J411M7Jh"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-09-30-live-01
+    type: live
+    date: "2019-09-30"
+    title: "Green Hell"
+    platform: douyu
+    confidence: high
+    duration_min: 386
+    games: []
+    note: "B站「女流录像小屋」《Green Hell》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV12E411X7ZL"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

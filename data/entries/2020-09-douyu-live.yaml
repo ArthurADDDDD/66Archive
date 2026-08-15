@@ -1,3 +1,20 @@
+  - id: 2020-09-01-live-01
+    type: live
+    date: "2020-09-01"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    series: xinling-pishuang
+    tags: [心灵砒霜]
+    note: "B站「女流录像小屋」弹幕版全长录播；标题日期明确。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1s94y1R7D7"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2020-09-02-live-01
     type: live
     date: "2020-09-02"
@@ -22,6 +39,22 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+
+  - id: 2020-09-04-live-01
+    type: live
+    date: '2020-09-04'
+    title: 直播修电脑
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：9.4 直播修电脑。斗鱼回放标题：糖豆人练练个人技
+    sources:
+      - url: https://v.douyu.com/show/EO0XvNRxlxXvDrBd
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:11
+    duration_min: 72
 
   - id: 2020-09-05-live-01
     type: live
@@ -163,6 +196,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-09-11-live-01
+    type: live
+    date: '2020-09-11'
+    title: 直播化妆 / 也不行就一般水平
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV1MV411m7Ly（女流66_2020-09-11 也不行就一般水平）交叉确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1MV411m7Ly
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-09-12-live-01
     type: live
     date: "2020-09-12"
@@ -251,6 +299,21 @@
       - url: "https://www.acfun.cn/v/ac17893978"
         kind: replay
         parts: 5
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-09-15-live-01
+    type: live
+    date: '2020-09-15'
+    title: Pro Gymnast
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1RD4y1d79Z；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1RD4y1d79Z
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -532,48 +595,5 @@
       - url: "https://www.acfun.cn/v/ac18340307"
         kind: replay
         parts: 2
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-09-04-live-01
-    type: live
-    date: '2020-09-04'
-    title: 直播修电脑
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：9.4 直播修电脑。斗鱼回放标题：糖豆人练练个人技
-    sources:
-      - url: https://v.douyu.com/show/EO0XvNRxlxXvDrBd
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:11
-    duration_min: 72
-  - id: 2020-09-11-live-01
-    type: live
-    date: '2020-09-11'
-    title: 直播化妆 / 也不行就一般水平
-    platform: douyu
-    confidence: high
-    duration_min: 226
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV1MV411m7Ly（女流66_2020-09-11 也不行就一般水平）交叉确认补入。
-    sources:
-      - url: https://www.bilibili.com/video/BV1MV411m7Ly
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-09-15-live-01
-    type: live
-    date: '2020-09-15'
-    title: Pro Gymnast
-    platform: douyu
-    confidence: high
-    duration_min: 252
-    games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1RD4y1d79Z；标题与日期经 BiliPlus / Bilibili API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1RD4y1d79Z
-        kind: replay
         status: alive
     contributed_by: data-agent

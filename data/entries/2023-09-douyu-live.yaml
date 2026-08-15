@@ -50,6 +50,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42244840
+
   - id: 2023-09-02-live-01
     type: live
     date: "2023-09-02"
@@ -150,6 +151,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42278013
+
   - id: 2023-09-07-live-01
     type: live
     date: "2023-09-07"
@@ -232,6 +234,22 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2023-09-11-live-01
+    type: live
+    date: "2023-09-11"
+    title: "A Little to the Left & 文字规则怪谈"
+    platform: douyu
+    confidence: high
+    duration_min: 392
+    games: [a-little-to-the-left]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1tF411r7q2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2023-09-12-live-01
     type: live
     date: "2023-09-12"
@@ -252,6 +270,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42339844
+
   - id: 2023-09-12-live-02
     type: live
     date: "2023-09-12"
@@ -288,6 +307,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42361018
+
   - id: 2023-09-14-live-01
     type: live
     date: "2023-09-14"
@@ -340,6 +360,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42370249
+
   - id: 2023-09-17-live-01
     type: live
     date: "2023-09-17"
@@ -360,6 +381,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42398567
+
   - id: 2023-09-18-live-01
     type: live
     date: "2023-09-18"
@@ -383,6 +405,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42399268、ac42399288
+
   - id: 2023-09-19-live-01
     type: live
     date: "2023-09-19"
@@ -406,6 +429,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42409775、ac42410358
+
   - id: 2023-09-21-live-01
     type: live
     date: "2023-09-21"
@@ -442,6 +466,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42436272
+
   - id: 2023-09-23-live-01
     type: live
     date: "2023-09-23"
@@ -462,6 +487,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42455227
+
   - id: 2023-09-24-live-01
     type: live
     date: "2023-09-24"
@@ -482,6 +508,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42465102
+
   - id: 2023-09-26-live-01
     type: live
     date: "2023-09-26"
@@ -502,6 +529,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac42493917
+
   - id: 2023-09-27-live-01
     type: live
     date: "2023-09-27"
@@ -539,15 +567,20 @@
     date: "2023-09-29"
     title: "糖豆人"
     platform: douyu
-    confidence: medium
+    confidence: high
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cf3f218cbd4d4be6bba2b2da8aea90fe.jpeg?imageslim"
     games: [fall-guys]
-    note: "A 站详情页无时长元数据（durationMillis 缺失），时长未知，confidence 降为 medium。"
+    duration_min: 24
+    note: "A 站详情页无时长元数据；B站「女流录像小屋」有独立 24:09 糖豆人录像，按该完整源补入时长。"
     sources:
       - url: "https://www.acfun.cn/v/ac42511931"
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.bilibili.com/video/BV1iV411w7vd"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2023-09-29-live-02
@@ -555,10 +588,11 @@
     date: "2023-09-29"
     title: "跑跑卡丁车"
     platform: douyu
-    confidence: medium
+    confidence: high
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_74aa0e72fee9463ea631d1d1354d0942.jpeg?imageslim"
     games: [kartrider]
-    note: "A 站详情页无时长元数据（durationMillis 缺失），时长未知，confidence 降为 medium。；补入 A站互补回放：ac42511949"
+    duration_min: 191
+    note: "A 站详情页无时长元数据；B站「女流录像小屋」P1+P2 合计 190:49，按该完整源补入时长。"
     sources:
       - url: "https://www.acfun.cn/v/ac42512128"
         kind: replay
@@ -567,6 +601,15 @@
       - url: https://www.acfun.cn/v/ac42511949
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1P94y1Y7Ps"
+        kind: replay
+        parts: 2
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1K84y1S7Np"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2023-09-30-live-01

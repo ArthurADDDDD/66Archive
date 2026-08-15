@@ -562,3 +562,19 @@
         parts: 6
         status: alive
     contributed_by: data-agent
+
+  - id: 2019-06-20-live-01
+    type: live
+    date: "2019-06-20"
+    title: "全面战争模拟器"
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    games: []
+    note: "B站「女流录像小屋」《全面战争模拟器》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1G44113724"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

@@ -208,3 +208,83 @@
         parts: 6
         status: alive
     contributed_by: data-agent
+
+  - id: 2019-08-05-live-01
+    type: live
+    date: "2019-08-05"
+    title: "牧场物语"
+    platform: douyu
+    confidence: high
+    duration_min: 341
+    games: []
+    note: "B站「女流录像小屋」《牧场物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1st411K7KK"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-08-06-live-01
+    type: live
+    date: "2019-08-06"
+    title: "牧场物语"
+    platform: douyu
+    confidence: high
+    duration_min: 305
+    games: []
+    note: "B站「女流录像小屋」《牧场物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ot411K79A"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-08-12-live-01
+    type: live
+    date: "2019-08-12"
+    title: "挑战麦迪时刻"
+    platform: douyu
+    confidence: high
+    duration_min: 88
+    games: []
+    note: "B站「女流录像小屋」《挑战麦迪时刻》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1S4411S7Yg"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-08-20-live-01
+    type: live
+    date: "2019-08-20"
+    title: "牧场物语"
+    platform: douyu
+    confidence: high
+    duration_min: 302
+    games: []
+    note: "B站「女流录像小屋」《牧场物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1J4411d7L7"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-08-27-live-01
+    type: live
+    date: "2019-08-27"
+    title: "Control"
+    platform: douyu
+    confidence: high
+    duration_min: 303
+    games: []
+    note: "B站「女流录像小屋」《Control》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1q4411z7rq"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent

@@ -18,6 +18,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41293741
+
   - id: 2023-05-03-live-01
     type: live
     date: "2023-05-03"
@@ -70,6 +71,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41293802
+
   - id: 2023-05-06-live-01
     type: live
     date: "2023-05-06"
@@ -90,6 +92,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41301023
+
   - id: 2023-05-07-live-01
     type: live
     date: "2023-05-07"
@@ -224,6 +227,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41367556
+
   - id: 2023-05-15-live-01
     type: live
     date: "2023-05-15"
@@ -244,6 +248,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41374319
+
   - id: 2023-05-16-live-01
     type: live
     date: "2023-05-16"
@@ -264,6 +269,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41382280
+
   - id: 2023-05-17-live-01
     type: live
     date: "2023-05-17"
@@ -319,6 +325,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41414292、ac41413746
+
   - id: 2023-05-20-live-01
     type: live
     date: "2023-05-20"
@@ -358,6 +365,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41418402、ac41418400
+
   - id: 2023-05-22-live-01
     type: live
     date: "2023-05-22"
@@ -413,6 +421,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41447376、ac41447722
+
   - id: 2023-05-26-live-01
     type: live
     date: "2023-05-26"
@@ -433,6 +442,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41456450
+
   - id: 2023-05-27-live-01
     type: live
     date: "2023-05-27"
@@ -453,6 +463,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41470741
+
   - id: 2023-05-28-live-01
     type: live
     date: "2023-05-28"
@@ -473,6 +484,22 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41478691
+
+  - id: 2023-05-29-live-01
+    type: live
+    date: "2023-05-29"
+    title: "塞尔达传说"
+    platform: douyu
+    confidence: medium
+    duration_min: 529
+    games: [zelda-totk]
+    note: "B站「直播代录luzhiob」全长录播；标题写“上午十点来塞尔达”。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1r24y1A7m4"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
   - id: 2023-05-30-live-01
     type: live
     date: "2023-05-30"
@@ -496,6 +523,7 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41486827、ac41486819
+
   - id: 2023-05-31-live-01
     type: live
     date: "2023-05-31"

@@ -110,6 +110,22 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-11-16-live-01
+    type: live
+    date: "2022-11-16"
+    title: "战神5"
+    platform: douyu
+    confidence: high
+    duration_min: 441
+    games: [god-of-war-ragnarok]
+    note: "B站「女流录像小屋」全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1624y1y7cs"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2022-11-17-live-01
     type: live
     date: "2022-11-17"

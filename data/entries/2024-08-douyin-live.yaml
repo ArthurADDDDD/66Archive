@@ -18,3 +18,219 @@
         status: alive
     contributed_by: data-agent
     duration_min: 327
+
+  - id: 2024-08-20-live-01
+    type: live
+    date: "2024-08-20"
+    title: "黑神话悟空"
+    platform: douyin
+    confidence: high
+    duration_min: 711
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（N瓜冰冰/浮尘呃/无尚大/KassyTan 等），总时长吻合，合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1uyWxeGEdd"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1SzWHeFEJQ"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1ZnWHeGEhM"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1UxWsevEgn"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2024-08-21-live-01
+    type: live
+    date: "2024-08-21"
+    title: "黑神话悟空"
+    platform: douyin
+    confidence: high
+    duration_min: 542
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（浮尘呃/无尚大/N瓜冰冰/KassyTan 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1UwWGeYE8H"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1zQWbeNEUb"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1dBWTeYE3o"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1GXWaecETr"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2024-08-22-live-01
+    type: live
+    date: "2024-08-22"
+    title: "黑神话悟空"
+    platform: douyin
+    confidence: high
+    duration_min: 516
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（浮尘呃/无尚大/N瓜冰冰/KassyTan 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1UkWGeKErP"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1zyWVe9EH6"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1KaWLe6E73"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1mKW5eBEDW"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2024-08-23-live-01
+    type: live
+    date: "2024-08-23"
+    title: "黑神话悟空"
+    platform: douyin
+    confidence: high
+    duration_min: 693
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（N瓜冰冰/浮尘呃/无尚大/KassyTan/bobi华 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1pGWde1EcH"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1SAWUeBERh"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1hyWUe6E5V"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1EGWQeFEiC"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV13wWUegEs8"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+    contributed_by: data-agent
+
+  - id: 2024-08-24-live-01
+    type: live
+    date: "2024-08-24"
+    title: "黑神话悟空"
+    platform: douyin
+    confidence: high
+    duration_min: 602
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（浮尘呃/无尚大/N瓜冰冰/KassyTan/bobi华 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1H9WdemE2t"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1KbWoe9EPa"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1pYWeeQEbd"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV12mWvecEh8"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1UpWoeoEWq"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+    contributed_by: data-agent
+
+  - id: 2024-08-25-live-01
+    type: live
+    date: "2024-08-25"
+    title: "黑神话悟空 / 连线山西文旅"
+    platform: douyin
+    confidence: high
+    duration_min: 480
+    games: [black-myth-wukong]
+    note: "B站 bobi华 480min 覆盖当日 12 点至晚间完整内容；浮尘呃/无尚大等 403min 为后半段，78min 为前半段，均并入同一场。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1g1Wqe3Et2"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+      - url: "https://www.bilibili.com/video/BV1KdWzeGEmQ"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV18hW6e7EWs"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1NxWCeEEEi"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1zXW6eAEVX"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+    contributed_by: data-agent
+
+  - id: 2024-08-26-live-01
+    type: live
+    date: "2024-08-26"
+    title: "黑神话悟空（白金全收集）"
+    platform: douyin
+    confidence: high
+    duration_min: 510
+    games: [black-myth-wukong]
+    note: "B站多个全长录播（浮尘呃/N瓜冰冰/KassyTan/bobi华/无尚大 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1QgHMe9EQj"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1A8s7eCEek"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV14XspeAEeJ"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1qusHeCEGA"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1Cas7eGExT"
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+    contributed_by: data-agent
+
+  - id: 2024-08-30-live-01
+    type: live
+    date: "2024-08-30"
+    title: "跟大家畅聊"
+    platform: douyin
+    confidence: high
+    duration_min: 105
+    note: "B站多个全长录播（N瓜冰冰/KassyTan/浮尘呃/无尚大 等），合并为一天一条。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1VrHLe2Edy"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1tXHLeuEiD"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1uDHLe6Enf"
+        kind: replay
+        status: alive
+        account: bili-fan-fuchen
+      - url: "https://www.bilibili.com/video/BV1uSHLe3EYR"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
