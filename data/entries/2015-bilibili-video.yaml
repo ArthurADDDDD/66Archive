@@ -1,0 +1,243 @@
+# 2015 年 B 站官方「女流66」投稿补录。
+# 这些条目大多为官方实况/试玩/解说视频，非完整直播回放；使用上传日期作为 video 条目日期。
+# 其中明确标题带「直播录像/生放送」的，同时放入 unresolved catalog 作 live candidate。
+- id: 2015-02-02-video-01
+  type: video
+  date: '2015-02-02'
+  title: "[无剪辑]独立游戏I'm scared实况录像"
+  platform: bilibili
+  confidence: high
+  duration_min: 69
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Gx411A7K6
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-02-02 投稿，时长 68:42，无剪辑实况录像。
+- id: 2015-04-07-video-01
+  type: video
+  date: '2015-04-07'
+  title: "吓得我赶紧退出游戏[Lakeview cabin collections]"
+  platform: bilibili
+  confidence: high
+  duration_min: 12
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Fs411D7Vp
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-04-07 投稿，是当前可证实的 2015-04 公开活动记录之一；但标题未给直播日期，不能直接作为 live entry。
+- id: 2015-06-20-video-01
+  type: video
+  date: '2015-06-20'
+  title: "【女流】辐射：避难所解说，变异巨型大蟑螂乱入"
+  platform: bilibili
+  confidence: high
+  duration_min: 10
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Ds411U73H
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-06-20 投稿。
+- id: 2015-06-20-video-02
+  type: video
+  date: '2015-06-20'
+  title: "【解密佳作】逃脱方块：四季女流直播录像"
+  platform: bilibili
+  confidence: medium
+  duration_min: 55
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Ds411U7gG
+    kind: replay
+    status: alive
+  contributed_by: data-agent
+  note: 标题含「直播录像」，但未给精确直播日期；上传日为 2015-06-20，暂作 video 条目并列入 live candidate，不直接占用直播日。
+- id: 2015-06-26-video-01
+  type: video
+  date: '2015-06-26'
+  title: "【女流】关掉游戏我双眼就瞎了：雷曼传奇音乐关卡一命通关"
+  platform: bilibili
+  confidence: high
+  duration_min: 6
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Ss411U7bd
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-06-26 投稿。
+- id: 2015-07-23-video-01
+  type: video
+  date: '2015-07-23'
+  title: "球球大作战~女流手游试玩"
+  platform: bilibili
+  confidence: high
+  duration_min: 10
+  games: []
+  tags: [视频时代, 多人在线]
+  sources:
+  - url: https://www.bilibili.com/video/BV1bs411S7M4
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-07-23 投稿。
+- id: 2015-08-13-video-01
+  type: video
+  date: '2015-08-13'
+  title: "herstory第一集配音"
+  platform: bilibili
+  confidence: high
+  duration_min: 26
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1as411m7hv
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-08-13 投稿。
+- id: 2015-09-04-video-01
+  type: video
+  date: '2015-09-04'
+  title: "【女流】HER STORY ★她的故事★全剧情流程赏析Part 3"
+  platform: bilibili
+  confidence: high
+  duration_min: 31
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Gs411U7jd
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-09-04 投稿。
+- id: 2015-09-11-video-01
+  type: video
+  date: '2015-09-11'
+  title: "我的老师是只“熊”女流解说"
+  platform: bilibili
+  confidence: high
+  duration_min: 43
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1ks41117Vc
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-09-11 投稿。
+- id: 2015-09-18-video-01
+  type: video
+  date: '2015-09-18'
+  title: "【女流实况】恐怖游戏湖景小屋4章Lakeview Cabin试玩"
+  platform: bilibili
+  confidence: high
+  duration_min: 26
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Ds411175V
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-09-18 投稿。
+- id: 2015-10-09-video-01
+  type: video
+  date: '2015-10-09'
+  title: "【女流实况】逆转裁判：复苏的逆转第一章"
+  platform: bilibili
+  confidence: high
+  duration_min: 45
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1Vs41127ox
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-10-09 投稿。
+- id: 2015-10-17-video-01
+  type: video
+  date: '2015-10-17'
+  title: "【女流实况】你之恋与真实之恋"
+  platform: bilibili
+  confidence: high
+  duration_min: 233
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1xs41127t8
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-10-17 投稿。
+- id: 2015-10-23-video-01
+  type: video
+  date: '2015-10-23'
+  title: "【女流实况】逆转裁判：复苏的逆转第二章P2"
+  platform: bilibili
+  confidence: high
+  duration_min: 62
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1vs41127UG
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-10-23 投稿。
+- id: 2015-10-30-video-01
+  type: video
+  date: '2015-10-30'
+  title: "【女流实况】千万不能看！"
+  platform: bilibili
+  confidence: high
+  duration_min: 13
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1ms41127NH
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-10-30 投稿。
+- id: 2015-11-06-video-01
+  type: video
+  date: '2015-11-06'
+  title: "【女流实况】国王密使第一章P1"
+  platform: bilibili
+  confidence: high
+  duration_min: 24
+  games: []
+  tags: [视频时代, 系列解说]
+  sources:
+  - url: https://www.bilibili.com/video/BV1ws411d7te
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」2015-11-06 投稿。
+- id: 2015-12-29-video-01
+  type: video
+  date: '2015-12-29'
+  title: "【女流直播生放送】Rusty Lake生锈小湖Hotel新章实况录像"
+  platform: bilibili
+  confidence: medium
+  duration_min: 122
+  games: []
+  tags: [视频时代]
+  sources:
+  - url: https://www.bilibili.com/video/BV1As411R7Bg
+    kind: replay
+    status: alive
+  contributed_by: data-agent
+  note: 标题含「直播生放送」，但未写精确直播日期；上传日为 2015-12-29，暂作 video 条目并列入 live candidate，不直接占用直播日。

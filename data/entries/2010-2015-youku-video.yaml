@@ -1111,6 +1111,9 @@
     - url: "https://v.youku.com/v_show/id_XODY1MzI3MjA0.html"
       kind: original
       status: alive
+    - url: "https://www.bilibili.com/video/BV11x411w7a3"
+      kind: original
+      status: alive
   contributed_by: data-agent
 
 - id: 2015-01-09-video-01
@@ -1143,6 +1146,9 @@
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XODcyMzM3MDA0.html"
+      kind: original
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1Xx411w7T2"
       kind: original
       status: alive
   contributed_by: data-agent
