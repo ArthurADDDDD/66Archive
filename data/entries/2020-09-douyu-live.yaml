@@ -549,3 +549,17 @@
     contributed_by: data-agent
     time: 15:11
     duration_min: 72
+  - id: 2020-09-11-live-01
+    type: live
+    date: '2020-09-11'
+    title: 直播化妆 / 也不行就一般水平
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV1MV411m7Ly（女流66_2020-09-11 也不行就一般水平）交叉确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1MV411m7Ly
+        kind: replay
+        status: alive
+    contributed_by: data-agent

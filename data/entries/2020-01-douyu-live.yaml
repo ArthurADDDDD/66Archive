@@ -392,3 +392,17 @@
     contributed_by: data-agent
     time: 23:38
     duration_min: 78
+  - id: 2020-01-21-live-01
+    type: live
+    date: '2020-01-21'
+    title: 回家：宁城吃对夹唱K
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV197411Y7Bz（斗鱼-女流66_2020-01-21 周二见啦）交叉确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV197411Y7Bz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
