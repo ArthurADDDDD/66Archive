@@ -22,7 +22,7 @@
  * 本地联调时前台在 3000、后台在 3100，用这个环境变量指过去；
  * 后台对配置好的来源回 CORS 头，不需要额外的开发代理。
  */
-import type { ResolvedAct, ResolvedBeat } from './narrative'
+import { fillEmphasis, type ResolvedAct, type ResolvedBeat } from './narrative'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
@@ -60,6 +60,10 @@ export type LiveHighlight = {
   title: string
   body: string
   visible: boolean
+  /** 展示日期文本（如 `2016—17`），不是档案日期 */
+  date: string
+  /** 背景纹理文字；可含 `{var}` 占位符，由构建期派生值填充 */
+  emphasis: string
   /** 首页默认展开：true 时这条高光加载后直接展开（用户仍可手动折叠）。 */
   expanded: boolean
 }
@@ -166,7 +170,16 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
     ? source.highlights
         .map((item): LiveHighlight | null =>
           isRecord(item) && typeof item.id === 'string' && typeof item.title === 'string'
-            ? { id: item.id, kicker: str(item.kicker), title: item.title, body: str(item.body), visible: bool(item.visible, true), expanded: bool(item.expanded) }
+            ? {
+                id: item.id,
+                kicker: str(item.kicker),
+                title: item.title,
+                body: str(item.body),
+                visible: bool(item.visible, true),
+                date: str(item.date),
+                emphasis: str(item.emphasis),
+                expanded: bool(item.expanded),
+              }
             : null,
         )
         .filter((item): item is LiveHighlight => item !== null)
@@ -355,7 +368,18 @@ export function applyLiveActs(acts: ResolvedAct[], live: LiveAct[] | undefined, 
 }
 
 /** 高光条的覆盖：顺序、显示、kicker/标题/描述。链接与封面保留基线。 */
-export function applyLiveHighlights(beats: ResolvedBeat[], live: LiveHighlight[] | undefined): ResolvedBeat[] {
+/**
+ * 高光条的覆盖。
+ *
+ * `emphasisVars` 是构建期算出的派生数字（如心灵砒霜期数）。后台写的 emphasis 里可以保留
+ * `{xinlingCount}` 这种占位符，在这里填上——不这样做的话，管理员一改 emphasis 就只能
+ * 手打一个当时的数字，那个数字之后永远不会再更新（narrative.ts：文案禁止硬编码数字）。
+ */
+export function applyLiveHighlights(
+  beats: ResolvedBeat[],
+  live: LiveHighlight[] | undefined,
+  emphasisVars: Record<string, string> = {},
+): ResolvedBeat[] {
   if (!live || live.length === 0) return beats
   const overrides = new Map(live.map((highlight) => [highlight.id, highlight]))
   const ordered: ResolvedBeat[] = []
@@ -376,6 +400,8 @@ export function applyLiveHighlights(beats: ResolvedBeat[], live: LiveHighlight[]
         kicker: override.kicker || undefined,
         title: override.title || beat.title,
         body: override.body || undefined,
+        date: override.date || beat.date,
+        emphasis: override.emphasis ? fillEmphasis(override.emphasis, emphasisVars) : undefined,
         // 默认展开以后台为准：勾选→加载即展开；未勾选→保持折叠（覆盖基线，基线无此概念）。
         expanded: override.expanded,
       }
