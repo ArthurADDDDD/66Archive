@@ -903,6 +903,15 @@ export type HomepageData = {
   years: string[]
   /** 互斥口径计数，与 acts 顺序一致 */
   exclusiveCounts: number[]
+  /**
+   * emphasis 里 `{var}` 占位符的构建期取值。
+   *
+   * 送到浏览器是为了让后台改写 emphasis 时仍能保留占位符：覆盖发生在浏览器里，
+   * 而这些数字只有构建期算得出。不给的话，管理员要么看到字面的 `{xinlingCount}`，
+   * 要么只能手打一个当时的数字——后者会把「文案禁止硬编码数字」这条规矩破掉，
+   * 数据长了之后那个数字就永远停在写下的那一刻。
+   */
+  emphasisVars: Record<string, string>
 }
 
 function countBetween(entries: TimelineEntry[], from: string, to: string): number {
@@ -925,7 +934,7 @@ function exclusiveActCount(timeline: TimelineEntry[], id: ActId): number {
   return timeline.filter((e) => e.date >= '2022-01-01').length
 }
 
-function fillEmphasis(template: string | undefined, vars: Record<string, string>): string | undefined {
+export function fillEmphasis(template: string | undefined, vars: Record<string, string>): string | undefined {
   if (!template) return undefined
   return template.replace(/\{(\w+)\}/g, (_, key) => vars[key] ?? `{${key}}`)
 }
@@ -1070,6 +1079,7 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
   return {
     acts: resolveActs(ds, timeline, HOMEPAGE_ACTS, true),
     highlights,
+    emphasisVars: vars,
     now: {
       year: latestYear,
       label: '还在继续。',

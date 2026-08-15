@@ -13,10 +13,10 @@ import { useCopyBlock, useLiveContent } from './LiveContentProvider'
  * 数字是背景纹理不是指标（emphasis 大字淡色靠右）；
  * 每一条都有真实条目锚点，点击进详情或游戏页——这是跨链的起点。
  */
-export function HighlightStrip({ beats: baseline }: { beats: ResolvedBeat[] }) {
+export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
   const { narrative } = useLiveContent()
   const copy = useCopyBlock('homeSections', 'home-highlights')
-  const beats = applyLiveHighlights(baseline, narrative?.highlights)
+  const beats = applyLiveHighlights(baseline, narrative?.highlights, emphasisVars)
   if (beats.length === 0) return null
   return (
     <section id="home-highlights" className="scroll-mt-4 border-t border-line py-12 sm:py-16">

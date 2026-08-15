@@ -119,7 +119,7 @@ export default function HomePage() {
       </div>
 
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
-      <HighlightStrip beats={data.highlights} />
+      <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} />
 
       {/* 记忆：随机一晚 + 今日今夕 */}
       <LiveSectionGate sectionId="home-memory">
