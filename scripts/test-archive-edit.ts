@@ -41,8 +41,10 @@ try {
 
   const repository = path.join(root, 'repository')
   fs.mkdirSync(path.join(repository, 'data', 'entries'), { recursive: true })
-  fs.writeFileSync(path.join(repository, '.gitignore'), 'node_modules/\n')
+  fs.mkdirSync(path.join(repository, 'node_modules'), { recursive: true })
+  fs.writeFileSync(path.join(repository, '.gitignore'), '.local/\n')
   fs.writeFileSync(path.join(repository, 'data', 'entries', '2026.yaml'), original)
+  fs.writeFileSync(path.join(repository, 'node_modules', 'dependency.js'), '// fixture')
   const git = (args: string[]) => execFileSync('git', args, { cwd: repository, stdio: 'ignore' })
   git(['init'])
   git(['config', 'user.name', 'archive-test'])
