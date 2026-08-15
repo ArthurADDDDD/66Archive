@@ -483,3 +483,108 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+  - id: 2020-05-01-live-01
+    type: live
+    date: '2020-05-01'
+    title: 捣蛋大作战 /Rascal Fight
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.1 游戏：捣蛋大作战 /Rascal Fight。斗鱼回放标题：捣蛋大作战，多人休闲
+    sources:
+      - url: https://v.douyu.com/show/JmbBMkDydROW40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:16
+    duration_min: 199
+  - id: 2020-05-03-live-01
+    type: live
+    date: '2020-05-03'
+    title: 聊天
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.3 聊天。斗鱼回放标题：流浪的人儿想念谁
+    sources:
+      - url: https://v.douyu.com/show/n8GzMXlX3dDM6qyP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:46
+    duration_min: 344
+  - id: 2020-05-05-live-01
+    type: live
+    date: '2020-05-05'
+    title: 转变/ Change
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.5 游戏：转变/ Change。斗鱼回放标题：流浪的人儿想念谁
+    sources:
+      - url: https://v.douyu.com/show/Aox276k3QGxMVz8Z
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:54
+    duration_min: 411
+  - id: 2020-05-06-live-01
+    type: live
+    date: '2020-05-06'
+    title: 冰与火之舞/ A Dance of FireandIce
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277
+    sources:
+      - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:09
+    duration_min: 332
+  - id: 2020-05-13-live-01
+    type: live
+    date: '2020-05-13'
+    title: 冰与火之舞/ A Dance of FireandIce战歌竞技场
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.13 游戏：冰与火之舞/ A Dance of FireandIce战歌竞技场。斗鱼回放标题：冰与火之舞还是。。
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJELZx07Nxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:15
+    duration_min: 256
+  - id: 2020-05-20-live-01
+    type: live
+    date: '2020-05-20'
+    title: 云城朋克/ Cloudpunk
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.20 游戏：云城朋克/ Cloudpunk。斗鱼回放标题：未来世界的司机cloudpunk
+    sources:
+      - url: https://v.douyu.com/show/NbwE7ZGmkQPMn5Zz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:02
+    duration_min: 328
+  - id: 2020-05-23-live-01
+    type: live
+    date: '2020-05-23'
+    title: 步行者/ The Pedestrian
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.23 游戏：步行者/ The Pedestrian。斗鱼回放标题：The Pedestrian动动脑解密啦
+    sources:
+      - url: https://v.douyu.com/show/NbwE7ZGqE10Mn5Zz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:02
+    duration_min: 323
