@@ -4,7 +4,7 @@
     title: "下午茶时间"
     platform: douyu
     confidence: high
-    duration_min: 153
+    duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/o_1f73pprh9duk1pav8hk119s120a0.jpeg?imageslim"
     games: []
     segments:
@@ -19,8 +19,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29390134
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29390134
   - id: 2021-06-02-live-01
     type: live
     date: "2021-06-02"
@@ -115,7 +119,7 @@
     title: "空洞骑士"
     platform: douyu
     confidence: high
-    duration_min: 226
+    duration_min: 402
     cover: "https://tx-free-imgs.acfun.cn/o_1f7ecpgkotru2fqqm711rk1u1b0.jpeg?imageslim"
     games: [hollow-knight]
     segments:
@@ -136,8 +140,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac29458744
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29458744
   - id: 2021-06-06-live-01
     type: live
     date: "2021-06-06"
@@ -209,7 +217,7 @@
     title: "空洞骑士"
     platform: douyu
     confidence: high
-    duration_min: 277
+    duration_min: 331
     cover: "https://tx-free-imgs.acfun.cn/o_1f7oe9t9612ukrijl491ja91s7r0.jpeg?imageslim"
     games: [hollow-knight]
     segments:
@@ -235,15 +243,19 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.acfun.cn/v/ac29623301
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29623301
   - id: 2021-06-10-live-01
     type: live
     date: "2021-06-10"
     title: "空洞骑士"
     platform: douyu
     confidence: high
-    duration_min: 258
+    duration_min: 488
     cover: "https://tx-free-imgs.acfun.cn/o_1f7r2210m6noho316h415u0mmr0.jpeg?imageslim"
     games: [hollow-knight]
     segments:
@@ -267,8 +279,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac29652168
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29652168
   - id: 2021-06-11-live-01
     type: live
     date: "2021-06-11"
@@ -302,7 +318,7 @@
     title: "PowerWash Simulator"
     platform: douyu
     confidence: high
-    duration_min: 167
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/o_1f805n4gdmu65va1vcmsmo1co10.jpeg?imageslim"
     games: [powerwash-simulator]
     segments:
@@ -320,8 +336,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29698234
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29698234
   - id: 2021-06-13-live-01
     type: live
     date: "2021-06-13"
@@ -357,10 +377,10 @@
     title: "空洞骑士"
     platform: douyu
     confidence: high
-    duration_min: 364
+    duration_min: 560
     cover: "https://tx-free-imgs.acfun.cn/o_1f8a6qr2h1sse3e1ktf1ler8uu0.jpeg?imageslim"
     games: [hollow-knight]
-    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29795099 含 P6–P10、ac29795203 含 P11–P14，P 编号连续），按一天一条原则合并为单条。"
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29795099 含 P6–P10、ac29795203 含 P11–P14，P 编号连续），按一天一条原则合并为单条。；补入 A站互补回放：ac29794635"
     segments:
       - at: "00:00:00"
         label: "P6"
@@ -398,6 +418,9 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac29794635
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2021-06-16-live-01
@@ -406,7 +429,7 @@
     title: "周三晚上66"
     platform: douyu
     confidence: high
-    duration_min: 156
+    duration_min: 340
     cover: "https://tx-free-imgs.acfun.cn/o_1f8cqjeta1tk1cpl13od28112570.jpeg?imageslim"
     games: []
     segments:
@@ -421,15 +444,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29822573
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29822573
   - id: 2021-06-17-live-01
     type: live
     date: "2021-06-17"
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 168
+    duration_min: 337
     cover: "https://tx-free-imgs.acfun.cn/o_1f8d4jkpn1l1l104rcr7q25pki0.jpeg?imageslim"
     games: [naraka-bladepoint]
     segments:
@@ -447,15 +474,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29823978
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29823978
   - id: 2021-06-18-live-01
     type: live
     date: "2021-06-18"
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 206
+    duration_min: 377
     cover: "https://tx-free-imgs.acfun.cn/o_1f8gv6qiu103a12unhs7t7i8od0.jpeg?imageslim"
     games: [naraka-bladepoint]
     segments:
@@ -476,8 +507,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac29852646
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29852646
   - id: 2021-06-19-live-01
     type: live
     date: "2021-06-19"
@@ -500,7 +535,7 @@
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 220
+    duration_min: 385
     cover: "https://tx-free-imgs.acfun.cn/o_1f8kpihllqrc1hsm1dnh33edd90.jpeg?imageslim"
     games: [naraka-bladepoint]
     segments:
@@ -521,15 +556,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac29885724
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29885724
   - id: 2021-06-21-live-01
     type: live
     date: "2021-06-21"
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 230
+    duration_min: 284
     cover: "https://tx-free-imgs.acfun.cn/o_1f8ndmjmq14ubp5617gnmr4gfs0.jpeg?imageslim"
     games: [naraka-bladepoint]
     segments:
@@ -552,18 +591,22 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac29909134
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29909134
   - id: 2021-06-22-live-01
     type: live
     date: "2021-06-22"
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 557
+    duration_min: 613
     cover: "https://tx-free-imgs.acfun.cn/o_1f8s6necagi51os71hl72kt1q1f0.jpeg?imageslim"
     games: [naraka-bladepoint]
-    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29949972 含 P1–P5、ac29950812 含 P6–P10，P 编号连续），按一天一条原则合并为单条。"
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac29949972 含 P1–P5、ac29950812 含 P6–P10，P 编号连续），按一天一条原则合并为单条。；补入 A站互补回放：ac29949863"
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -604,6 +647,9 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac29949863
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2021-06-27-live-01
@@ -613,11 +659,11 @@
     title: "【心灵砒霜】亲姐姐喜欢什么,当弟弟的怎么能不知道呢"
     platform: douyu
     confidence: high
-    duration_min: 259
+    duration_min: 342
     cover: "https://tx-free-imgs.acfun.cn/o_1f96kpfnmf1e2jk12314bj1hci0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜, 弹幕版]
-    note: "同一场直播的弹幕版（ac30088639，5P：砒霜前聊×2+心灵砒霜×3）与纯净版（ac30077895，5P：砒霜前聊+心灵砒霜×4）原本被建模为两条重复条目，已合并；主来源为弹幕版。"
+    note: "同一场直播的弹幕版（ac30088639，5P：砒霜前聊×2+心灵砒霜×3）与纯净版（ac30077895，5P：砒霜前聊+心灵砒霜×4）原本被建模为两条重复条目，已合并；主来源为弹幕版。；补入 A站互补回放：ac30088542"
     segments:
       - at: "00:00:00"
         label: "P6.1-2021.6.27-砒霜前聊10块钱的弹幕版"
@@ -637,6 +683,9 @@
       - url: "https://www.acfun.cn/v/ac30077895"
         kind: replay
         parts: 5
+        status: alive
+      - url: https://www.acfun.cn/v/ac30088542
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -673,7 +722,7 @@
     title: "霓虹深渊"
     platform: douyu
     confidence: high
-    duration_min: 168
+    duration_min: 351
     cover: "https://tx-free-imgs.acfun.cn/o_1f9bvr2q9skpe786f7tvs8ud0.jpeg?imageslim"
     games: [neon-abyss]
     segments:
@@ -690,8 +739,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac30100597
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30100597
   - id: 2021-06-30-live-01
     type: live
     date: "2021-06-30"

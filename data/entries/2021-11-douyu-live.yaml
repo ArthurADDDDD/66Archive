@@ -4,7 +4,7 @@
     title: "马里奥派对 超级巨星"
     platform: douyu
     confidence: high
-    duration_min: 181
+    duration_min: 411
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1c5b291c846e4fe3b93e8468021799d0.jpeg?imageslim"
     games: [mario-party-superstars]
     segments:
@@ -21,15 +21,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31664497
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31664497
   - id: 2021-11-03-live-01
     type: live
     date: "2021-11-03"
     title: "House Of Ashes"
     platform: douyu
     confidence: high
-    duration_min: 165
+    duration_min: 330
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2a8d3f7f631a408bb82dc80953bba4e3.jpeg?imageslim"
     games: [house-of-ashes]
     segments:
@@ -50,15 +54,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31695916
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31695916
   - id: 2021-11-05-live-01
     type: live
     date: "2021-11-05"
     title: "Unpacking"
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 295
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_550c826c82284e1ba8957409fd84a0bd.jpeg?imageslim"
     games: [unpacking]
     segments:
@@ -78,8 +86,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31765615
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31765615
   - id: 2021-11-07-live-01
     type: live
     date: "2021-11-07"
@@ -190,7 +202,7 @@
     title: "雀士"
     platform: douyu
     confidence: high
-    duration_min: 194
+    duration_min: 332
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_25d5b5be286b4382ae5a1dabfcecce27.jpeg?imageslim"
     games: [queshi]
     segments:
@@ -209,8 +221,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac32057132
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32057132
   - id: 2021-11-12-live-01
     type: live
     date: "2021-11-12"
@@ -371,7 +387,7 @@
     title: "佩奇一哈哈"
     platform: douyu
     confidence: high
-    duration_min: 172
+    duration_min: 341
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e6a866f28aaa4c7a95f43f655506ac31.jpeg?imageslim"
     games: []
     segments:
@@ -388,8 +404,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32177329
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32177329
   - id: 2021-11-17-live-01
     type: live
     date: "2021-11-17"
@@ -449,7 +469,7 @@
     title: "ALTF4"
     platform: douyu
     confidence: high
-    duration_min: 186
+    duration_min: 383
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd0c6f6d03b043b88abeac232b7acbcb.jpeg?imageslim"
     games: [alt-f4]
     segments:
@@ -470,8 +490,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32400060
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32400060
   - id: 2021-11-21-live-01
     type: live
     date: "2021-11-21"
@@ -479,7 +503,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 123
+    duration_min: 251
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c459c626737b4c80b1be2991600b623f.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -495,7 +519,10 @@
         kind: replay
         parts: 3
         status: alive
-    note: "原误标 2021-01-21；fileName 为 2021.11.21（周日），弹幕版 11.22 上传，归此日；当日网易云第 11.22 期标题回填"
+      - url: https://www.acfun.cn/v/ac32432797
+        kind: replay
+        status: alive
+    note: "原误标 2021-01-21；fileName 为 2021.11.21（周日），弹幕版 11.22 上传，归此日；当日网易云第 11.22 期标题回填；补入 A站互补回放：ac32432797"
     contributed_by: data-agent
   - id: 2021-11-27-live-01
     type: live
@@ -578,7 +605,7 @@
     title: "雀圣"
     platform: douyu
     confidence: high
-    duration_min: 126
+    duration_min: 245
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d9e53e7ee3bf468e854933299b2729d4.jpeg?imageslim"
     games: [quesheng]
     segments:
@@ -593,8 +620,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32598135
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32598135
   - id: 2021-11-31-live-01
     type: live
     date: "2021-11-31"

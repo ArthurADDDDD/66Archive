@@ -220,7 +220,7 @@
     title: "完美的一天"
     platform: douyu
     confidence: high
-    duration_min: 170
+    duration_min: 341
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_35201534710f42939ea649f9690b5811.jpeg?imageslim"
     games: [a-perfect-day]
     sources:
@@ -228,15 +228,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34041428
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34041428
   - id: 2022-03-17-live-01
     type: live
     date: "2022-03-17"
     title: "完美的一天"
     platform: douyu
     confidence: high
-    duration_min: 158
+    duration_min: 316
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fe3616c7e42949509715fdadb3e558dd.jpeg?imageslim"
     games: [a-perfect-day]
     sources:
@@ -244,15 +248,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34056128
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34056128
   - id: 2022-03-18-live-01
     type: live
     date: "2022-03-18"
     title: "完美的一天"
     platform: douyu
     confidence: high
-    duration_min: 152
+    duration_min: 304
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53f8c97b013a47929b372686000b62c8.jpeg?imageslim"
     games: [a-perfect-day]
     sources:
@@ -260,8 +268,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34072304
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34072304
   - id: 2022-03-25-live-01
     type: live
     date: "2022-03-25"
@@ -316,7 +328,7 @@
     title: "星之卡比：探索发现"
     platform: douyu
     confidence: high
-    duration_min: 134
+    duration_min: 268
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3da4453925e94b3188145ef8dc1be801.jpeg?imageslim"
     games: [kirby-star-allies]
     sources:
@@ -324,15 +336,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34201097
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34201097
   - id: 2022-03-29-live-01
     type: live
     date: "2022-03-29"
     title: "星之卡比：探索发现"
     platform: douyu
     confidence: high
-    duration_min: 126
+    duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3346b74627e847819d329275b8cf2858.jpeg?imageslim"
     games: [kirby-star-allies]
     sources:
@@ -340,4 +356,8 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34214607
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 A站互补回放：ac34214607

@@ -907,7 +907,7 @@
     title: "It Takes Two"
     platform: douyu
     confidence: high
-    duration_min: 168
+    duration_min: 344
     cover: "https://tx-free-imgs.acfun.cn/o_1f1v2ui1jfno1n2l3vuqlp1jqm0.jpeg?imageslim"
     games: [it-takes-two]
     segments:
@@ -928,15 +928,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac27288686
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac27288686
   - id: 2021-03-30-live-01
     type: live
     date: "2021-03-30"
     title: "It Takes Two"
     platform: douyu
     confidence: high
-    duration_min: 190
+    duration_min: 382
     cover: "https://tx-free-imgs.acfun.cn/o_1f21m2ms3fudc6b2gl177our60.jpeg?imageslim"
     games: [it-takes-two]
     segments:
@@ -960,4 +964,8 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac27349790
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 A站互补回放：ac27349790

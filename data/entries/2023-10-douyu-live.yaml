@@ -5,7 +5,7 @@
     title: "没有聊天记录之前有多少冤假错案啊"
     platform: douyu
     confidence: high
-    duration_min: 116
+    duration_min: 232
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb8517ed4f9b454f9dadb9ed6ff73323.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -14,15 +14,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42555173
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42555173
   - id: 2023-10-02-live-01
     type: live
     date: "2023-10-02"
     title: "Tricky Towers"
     platform: douyu
     confidence: high
-    duration_min: 203
+    duration_min: 406
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3dee78aed0042158262c6cea4564fbf.jpeg?imageslim"
     games: [tricky-towers]
     sources:
@@ -30,15 +34,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42543992
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42543992
   - id: 2023-10-03-live-01
     type: live
     date: "2023-10-03"
     title: "巴别塔圣歌"
     platform: douyu
     confidence: high
-    duration_min: 181
+    duration_min: 362
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d2f531f22f724654a320949d51890695.jpeg?imageslim"
     games: [babel-song]
     sources:
@@ -46,8 +54,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42552663
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42552663
   - id: 2023-10-03-live-02
     type: live
     date: "2023-10-03"
@@ -86,7 +98,7 @@
     title: "刺客信条 幻景"
     platform: douyu
     confidence: high
-    duration_min: 315
+    duration_min: 395
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53266cda1f704967af7d99083636acf8.jpeg?imageslim"
     games: [assassins-creed-mirage]
     sources:
@@ -94,15 +106,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42569724
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42569724
   - id: 2023-10-06-live-01
     type: live
     date: "2023-10-06"
     title: "刺客信条 幻景"
     platform: douyu
     confidence: high
-    duration_min: 149
+    duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fad6c10378b4c7290fb6fee78e85a16.jpeg?imageslim"
     games: [assassins-creed-mirage]
     sources:
@@ -110,15 +126,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42577684
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42577684
   - id: 2023-10-07-live-01
     type: live
     date: "2023-10-07"
     title: "刺客信条 幻景"
     platform: douyu
     confidence: high
-    duration_min: 180
+    duration_min: 360
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3f293307aca941edaaf920da0c2a8d36.jpeg?imageslim"
     games: [assassins-creed-mirage]
     sources:
@@ -126,8 +146,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42579899
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42579899
   - id: 2023-10-08-live-01
     type: live
     date: "2023-10-08"
@@ -205,7 +229,7 @@
     title: "Headbangers"
     platform: douyu
     confidence: high
-    duration_min: 159
+    duration_min: 318
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1174f130f115423fbdc30cdb331c871f.jpeg?imageslim"
     games: [headbangers]
     sources:
@@ -213,8 +237,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42628951
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42628951
   - id: 2023-10-13-live-01
     type: live
     date: "2023-10-13"

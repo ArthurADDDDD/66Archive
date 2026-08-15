@@ -4,7 +4,7 @@
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 183
+    duration_min: 355
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_95452eff5cc74e17bd63cc97c12e9e53.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -21,18 +21,22 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31325056
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31325056
   - id: 2021-10-02-live-01
     type: live
     date: "2021-10-02"
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 358
+    duration_min: 518
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f23b78bddfbb470a9ea0f23a90ae81ce.jpeg?imageslim"
     games: [lost-judgment]
-    note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。"
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。；补入 A站互补回放：ac31325844"
     segments:
       - at: "00:00:00"
         label: "P5"
@@ -67,6 +71,9 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31325844
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2021-10-03-live-01
@@ -76,7 +83,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 122
+    duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_79f5d7d4506b4f5facd72c636efa727c.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -92,15 +99,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac31328751
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31328751
   - id: 2021-10-04-live-01
     type: live
     date: "2021-10-04"
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 171
+    duration_min: 342
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_530df1d276e14cf0a54bb3a543aa3bef.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -117,15 +128,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31338879
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31338879
   - id: 2021-10-05-live-01
     type: live
     date: "2021-10-05"
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 214
+    duration_min: 428
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03c325ee0e2d4d61bfd64d4d0a1b297a.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -144,15 +159,19 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac31344951
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31344951
   - id: 2021-10-07-live-01
     type: live
     date: "2021-10-07"
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 121
+    duration_min: 250
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c08d59e0f4d647d8af898e6aacdb9bc6.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -167,15 +186,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac31348246
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31348246
   - id: 2021-10-09-live-01
     type: live
     date: "2021-10-09"
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 135
+    duration_min: 305
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3986e20f3bb34115948e4b2fe742c1a8.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -190,8 +213,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac31378828
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31378828
   - id: 2021-10-12-live-01
     type: live
     date: "2021-10-12"
@@ -255,7 +282,7 @@
     title: "Back 4 Blood"
     platform: douyu
     confidence: high
-    duration_min: 203
+    duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1434d4af1de24b0e9aade4d1e4a13609.jpeg?imageslim"
     games: [back-4-blood]
     segments:
@@ -279,8 +306,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac31421510
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31421510
   - id: 2021-10-15-live-01
     type: live
     date: "2021-10-15"
@@ -314,7 +345,7 @@
     title: "仙剑奇侠传七"
     platform: douyu
     confidence: high
-    duration_min: 161
+    duration_min: 283
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b962d7f2546541edabae203fcf4133b0.jpeg?imageslim"
     games: [xianjian-7]
     segments:
@@ -331,8 +362,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31443690
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31443690
   - id: 2021-10-17-live-01
     type: live
     date: "2021-10-17"
@@ -395,7 +430,7 @@
     title: "仙剑奇侠传七"
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 251
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_604eb64bb4ca4744ac9aeccc2d31b386.jpeg?imageslim"
     games: [xianjian-7]
     segments:
@@ -412,15 +447,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31465162
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31465162
   - id: 2021-10-20-live-01
     type: live
     date: "2021-10-20"
     title: "仙剑奇侠传七"
     platform: douyu
     confidence: high
-    duration_min: 217
+    duration_min: 437
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6dd1fdb8af544f31928d89dd77df8ef1.jpeg?imageslim"
     games: [xianjian-7]
     segments:
@@ -439,15 +478,19 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac31488077
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31488077
   - id: 2021-10-21-live-01
     type: live
     date: "2021-10-21"
     title: "影子工场"
     platform: douyu
     confidence: high
-    duration_min: 127
+    duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0f2bfba530404be4a117b4c05cb70327.jpeg?imageslim"
     games: [yingzi-gongchang]
     segments:
@@ -462,8 +505,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac31503303
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31503303
   - id: 2021-10-24-live-01
     type: live
     date: "2021-10-24"
@@ -471,7 +518,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 142
+    duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6776c66a04b94e6abebfdb60033f220b.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -489,15 +536,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31545166
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31545166
   - id: 2021-10-25-live-01
     type: live
     date: "2021-10-25"
     title: "雀魂"
     platform: douyu
     confidence: high
-    duration_min: 184
+    duration_min: 368
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a93c1eb8c4834e8e8112f1d06f6ca4c7.jpeg?imageslim"
     games: [majsoul]
     segments:
@@ -514,8 +565,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31568892
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31568892
   - id: 2021-10-27-live-01
     type: live
     date: "2021-10-27"
@@ -576,7 +631,7 @@
     title: "马里奥派对 超级巨星"
     platform: douyu
     confidence: high
-    duration_min: 130
+    duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2f37feae80e944c5b4958a6908a8a4e5.jpeg?imageslim"
     games: [mario-party-superstars]
     segments:
@@ -591,15 +646,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac31609630
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac31609630
   - id: 2021-10-30-live-01
     type: live
     date: "2021-10-30"
     title: "摄影冒险"
     platform: douyu
     confidence: high
-    duration_min: 156
+    duration_min: 285
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3ad7df75b809433bb0c1424996201995.jpeg?imageslim"
     games: [toem]
     segments:
@@ -616,4 +675,8 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac31623341
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 A站互补回放：ac31623341

@@ -36,7 +36,7 @@
     title: "猛兽派对"
     platform: douyu
     confidence: high
-    duration_min: 152
+    duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7ec4801f98ce46a7bfa58c74a40bc684.jpeg?imageslim"
     games: [party-animals]
     sources:
@@ -44,8 +44,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42244840
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42244840
   - id: 2023-09-02-live-01
     type: live
     date: "2023-09-02"
@@ -132,7 +136,7 @@
     title: "Trine 5"
     platform: douyu
     confidence: high
-    duration_min: 50
+    duration_min: 100
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3cc9b4a5913f48b486fbc3f8edf7eb3d.jpeg?imageslim"
     games: [trine-5]
     sources:
@@ -140,8 +144,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42278013
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42278013
   - id: 2023-09-07-live-01
     type: live
     date: "2023-09-07"
@@ -230,7 +238,7 @@
     title: "光头鉴宝"
     platform: douyu
     confidence: high
-    duration_min: 283
+    duration_min: 344
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4a17b9d7b7354eb3ade55c4922da482d.jpeg?imageslim"
     games: []
     sources:
@@ -238,8 +246,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42339844
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42339844
   - id: 2023-09-12-live-02
     type: live
     date: "2023-09-12"
@@ -262,7 +274,7 @@
     title: "岛潮酒店"
     platform: douyu
     confidence: high
-    duration_min: 157
+    duration_min: 314
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_de0dfe4e35cf471fb9bec8cf82a5a825.jpeg?imageslim"
     games: [daochao-jiudian]
     sources:
@@ -270,8 +282,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42361018
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42361018
   - id: 2023-09-14-live-01
     type: live
     date: "2023-09-14"
@@ -310,7 +326,7 @@
     title: "匹诺曹的谎言"
     platform: douyu
     confidence: high
-    duration_min: 157
+    duration_min: 314
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_85a0836617c14f4cb6974b03ebc43a8c.jpeg?imageslim"
     games: [lies-of-p]
     sources:
@@ -318,15 +334,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42370249
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42370249
   - id: 2023-09-17-live-01
     type: live
     date: "2023-09-17"
     title: "匹诺曹的谎言&猛兽派对"
     platform: douyu
     confidence: high
-    duration_min: 336
+    duration_min: 661
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5306445e583b4fa0b404e3a75f07381a.jpeg?imageslim"
     games: [lies-of-p]
     sources:
@@ -334,15 +354,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42398567
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42398567
   - id: 2023-09-18-live-01
     type: live
     date: "2023-09-18"
     title: "匹诺曹的谎言"
     platform: douyu
     confidence: high
-    duration_min: 194
+    duration_min: 582
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9dea4f21dfa14bbeb7dc5a6ff6f53747.jpeg?imageslim"
     games: [lies-of-p]
     sources:
@@ -350,15 +374,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42399268
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42399288
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42399268、ac42399288
   - id: 2023-09-19-live-01
     type: live
     date: "2023-09-19"
     title: "匹诺曹的谎言"
     platform: douyu
     confidence: high
-    duration_min: 235
+    duration_min: 705
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9851e69f45824f068c1b8a74e2b0d302.jpeg?imageslim"
     games: [lies-of-p]
     sources:
@@ -366,8 +397,15 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42409775
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42410358
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42409775、ac42410358
   - id: 2023-09-21-live-01
     type: live
     date: "2023-09-21"
@@ -390,7 +428,7 @@
     title: "生化危机4"
     platform: douyu
     confidence: high
-    duration_min: 225
+    duration_min: 450
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2db14bd02a0246e08138eb0071747128.jpeg?imageslim"
     games: [resident-evil-4]
     sources:
@@ -398,15 +436,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42436272
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42436272
   - id: 2023-09-23-live-01
     type: live
     date: "2023-09-23"
     title: "Payday 3"
     platform: douyu
     confidence: high
-    duration_min: 171
+    duration_min: 342
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_84030b33361940bc953effeea81683e9.jpeg?imageslim"
     games: [payday-3]
     sources:
@@ -414,15 +456,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42455227
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42455227
   - id: 2023-09-24-live-01
     type: live
     date: "2023-09-24"
     title: "新出道女歌手"
     platform: douyu
     confidence: high
-    duration_min: 204
+    duration_min: 408
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f84820cea42c47a394b20fb85d16bbed.jpeg?imageslim"
     games: []
     sources:
@@ -430,15 +476,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42465102
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42465102
   - id: 2023-09-26-live-01
     type: live
     date: "2023-09-26"
     title: "赛博朋克2077"
     platform: douyu
     confidence: high
-    duration_min: 234
+    duration_min: 468
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_182c0504b4074682a253003e3cae826f.jpeg?imageslim"
     games: [cyberpunk-2077]
     sources:
@@ -446,8 +496,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42493917
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42493917
   - id: 2023-09-27-live-01
     type: live
     date: "2023-09-27"
@@ -504,11 +558,14 @@
     confidence: medium
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_74aa0e72fee9463ea631d1d1354d0942.jpeg?imageslim"
     games: [kartrider]
-    note: "A 站详情页无时长元数据（durationMillis 缺失），时长未知，confidence 降为 medium。"
+    note: "A 站详情页无时长元数据（durationMillis 缺失），时长未知，confidence 降为 medium。；补入 A站互补回放：ac42511949"
     sources:
       - url: "https://www.acfun.cn/v/ac42512128"
         kind: replay
         parts: 1
+        status: alive
+      - url: https://www.acfun.cn/v/ac42511949
+        kind: replay
         status: alive
     contributed_by: data-agent
 

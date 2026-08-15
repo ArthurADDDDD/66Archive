@@ -212,7 +212,7 @@
     title: "糖豆人"
     platform: douyu
     confidence: high
-    duration_min: 241
+    duration_min: 482
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b37128c18d64410781f8fd1d835dbbba.jpeg?imageslim"
     games: [fall-guys]
     sources:
@@ -220,8 +220,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41825950
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41825950
   - id: 2023-07-13-live-01
     type: live
     date: "2023-07-13"
@@ -244,7 +248,7 @@
     title: "六六聊封神"
     platform: douyu
     confidence: high
-    duration_min: 213
+    duration_min: 426
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0ce18fac47fc454d919905317084d6f3.jpeg?imageslim"
     games: []
     sources:
@@ -252,15 +256,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41839121
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41839121
   - id: 2023-07-15-live-01
     type: live
     date: "2023-07-15"
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 144
+    duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8bd6e93f6da74dfd887e57b1c312c884.jpeg?imageslim"
     games: [naraka-bladepoint]
     sources:
@@ -268,15 +276,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41846279
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41846279
   - id: 2023-07-19-live-01
     type: live
     date: "2023-07-19"
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_165e044c69944df4abbb978472ebb749.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -284,15 +296,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41879205
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41879205
   - id: 2023-07-20-live-01
     type: live
     date: "2023-07-20"
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 215
+    duration_min: 430
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_745f63bae1164ddfae5129cc14d57941.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -300,8 +316,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41887438
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41887438
   - id: 2023-07-21-live-01
     type: live
     date: "2023-07-21"
@@ -324,7 +344,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 148
+    duration_min: 296
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0826ce45e6994e9d8e773770445e5748.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -332,15 +352,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41903537
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41903537
   - id: 2023-07-22-live-02
     type: live
     date: "2023-07-22"
     title: "遗迹2"
     platform: douyu
     confidence: high
-    duration_min: 127
+    duration_min: 324
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_33ffc2f023414880911b464ea0ea0e40.jpeg?imageslim"
     games: [remnant-2]
     sources:
@@ -348,15 +372,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41903706
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41903706
   - id: 2023-07-23-live-01
     type: live
     date: "2023-07-23"
     title: "遗迹2"
     platform: douyu
     confidence: high
-    duration_min: 155
+    duration_min: 689
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fb7d565469fa4cdba5b600fec726868b.jpeg?imageslim"
     games: [remnant-2]
     sources:
@@ -364,15 +392,25 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41911155
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac41910829
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac41910826
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41911155、ac41910829、ac41910826
   - id: 2023-07-24-live-01
     type: live
     date: "2023-07-24"
     title: "遗迹2"
     platform: douyu
     confidence: high
-    duration_min: 429
+    duration_min: 731
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_56d277f351604397a887d86af37261ac.jpeg?imageslim"
     games: [remnant-2]
     sources:
@@ -380,8 +418,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41926846
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41926846
   - id: 2023-07-25-live-01
     type: live
     date: "2023-07-25"

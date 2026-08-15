@@ -134,7 +134,7 @@
     title: "Brotato"
     platform: douyu
     confidence: high
-    duration_min: 376
+    duration_min: 856
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f87d0d7b65e24b4ebb7299a80544ad50.jpeg?imageslim"
     games: [brotato]
     sources:
@@ -142,8 +142,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac39146832
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac39146832
   - id: 2022-10-10-live-01
     type: live
     date: "2022-10-10"
@@ -379,7 +383,7 @@
     title: "生化危机8 DLC"
     platform: douyu
     confidence: high
-    duration_min: 225
+    duration_min: 238
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_508e3e612fbb4cf1ad6a6d6c890c2b7f.jpeg?imageslim"
     games: [resident-evil-8]
     sources:
@@ -387,8 +391,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac39500749
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac39500749
   - id: 2022-10-31-live-01
     type: live
     date: "2022-10-31"

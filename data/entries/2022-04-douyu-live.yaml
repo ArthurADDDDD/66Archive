@@ -52,7 +52,7 @@
     title: "Outer Wilds"
     platform: douyu
     confidence: high
-    duration_min: 132
+    duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e0680dc99f624358b6fe44762f56b797.jpeg?imageslim"
     games: [outer-wilds]
     sources:
@@ -60,15 +60,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34317919
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34317919
   - id: 2022-04-06-live-01
     type: live
     date: "2022-04-06"
     title: "Outer Wilds"
     platform: douyu
     confidence: high
-    duration_min: 128
+    duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_26e83ce6ecbc44d7ba0fefe73d6aab69.jpeg?imageslim"
     games: [outer-wilds]
     sources:
@@ -76,15 +80,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34328674
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34328674
   - id: 2022-04-07-live-01
     type: live
     date: "2022-04-07"
     title: "Outer Wilds"
     platform: douyu
     confidence: high
-    duration_min: 119
+    duration_min: 238
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_72753bfa877a46d581575578a234ea75.jpeg?imageslim"
     games: [outer-wilds]
     sources:
@@ -92,8 +100,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34346957
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34346957
   - id: 2022-04-08-live-01
     type: live
     date: "2022-04-08"
@@ -215,7 +227,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 134
+    duration_min: 268
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d1ac7dddda7641f19c2c459cd3207811.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -224,8 +236,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34487655
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34487655
   - id: 2022-04-18-live-01
     type: live
     date: "2022-04-18"
@@ -345,7 +361,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 132
+    duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_04bbc6e07998437380fed0933cf5086f.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -354,8 +370,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34588188
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34588188
   - id: 2022-04-26-live-01
     type: live
     date: "2022-04-26"
