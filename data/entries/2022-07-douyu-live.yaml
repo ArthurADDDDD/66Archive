@@ -53,7 +53,7 @@
     title: "【心灵砒霜】在生活中玩梗,还是需要谨慎一点的."
     platform: douyu
     confidence: high
-    duration_min: 123
+    duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_123acdb958b54a51a16cdc7d93c3d431.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -62,15 +62,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35552495
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35552495
   - id: 2022-07-04-live-01
     type: live
     date: "2022-07-04"
     title: "各年代老歌榜单盘点"
     platform: douyu
     confidence: high
-    duration_min: 135
+    duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bc48d36c17f448749d4fc9d1782be320.jpeg?imageslim"
     games: []
     sources:
@@ -78,8 +82,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35567735
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35567735
   - id: 2022-07-05-live-01
     type: live
     date: "2022-07-05"
@@ -295,7 +303,7 @@
     title: "【心灵砒霜】上一个人给你的经验,不一定适合下一个人"
     platform: douyu
     confidence: high
-    duration_min: 127
+    duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dcc3bdf5342649d8a6e9a8574a290de2.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -304,8 +312,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35787441
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35787441
   - id: 2022-07-18-live-01
     type: live
     date: "2022-07-18"
@@ -376,7 +388,7 @@
     title: "糖豆人"
     platform: douyu
     confidence: high
-    duration_min: 95
+    duration_min: 192
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c99b2a73669f4fda800c1f17822e05d1.jpeg?imageslim"
     games: [fall-guys]
     sources:
@@ -384,8 +396,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35852477
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35852477
   - id: 2022-07-22-live-01
     type: live
     date: "2022-07-22"

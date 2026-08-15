@@ -36,7 +36,7 @@
     title: "女鬼桥"
     platform: douyu
     confidence: high
-    duration_min: 136
+    duration_min: 272
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03ddcedbea5746f2aece62cdb4449097.jpeg?imageslim"
     games: [nugui-qiao]
     sources:
@@ -44,8 +44,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac37198688
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac37198688
   - id: 2022-09-04-live-01
     type: live
     date: "2022-09-04"

@@ -4,7 +4,7 @@
     title: "雀魂麻将"
     platform: douyu
     confidence: high
-    duration_min: 173
+    duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03a05da933a94729a82ce2e19bdc4f02.jpeg?imageslim"
     games: [majsoul]
     segments:
@@ -21,8 +21,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32617169
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32617169
   - id: 2021-12-05-live-01
     type: live
     date: "2021-12-05"
@@ -30,7 +34,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 134
+    duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_980c37a1b7a64876a53d6662890a81ea.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -46,8 +50,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32665719
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32665719
   - id: 2021-12-06-live-01
     type: live
     date: "2021-12-06"
@@ -81,7 +89,7 @@
     title: "Propnight"
     platform: douyu
     confidence: high
-    duration_min: 161
+    duration_min: 250
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_751fc45ad48e40ebaa28f330ae75abc1.jpeg?imageslim"
     games: [propnight]
     segments:
@@ -101,15 +109,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32685626
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32685626
   - id: 2021-12-08-live-01
     type: live
     date: "2021-12-08"
     title: "ICARUS"
     platform: douyu
     confidence: high
-    duration_min: 138
+    duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7dc181262f8542ff8474f69e5451e540.jpeg?imageslim"
     games: [icarus]
     segments:
@@ -127,8 +139,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32698235
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32698235
   - id: 2021-12-09-live-01
     type: live
     date: "2021-12-09"
@@ -237,7 +253,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 130
+    duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9690c4229fda4c7fb64e6d28848e42b2.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -253,8 +269,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32742526
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32742526
   - id: 2021-12-13-live-01
     type: live
     date: "2021-12-13"
@@ -282,7 +302,7 @@
     title: "精神之桥"
     platform: douyu
     confidence: high
-    duration_min: 163
+    duration_min: 385
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7c7e5d7e46d54974aa8a09cdfba4b446.jpeg?imageslim"
     games: []
     segments:
@@ -299,8 +319,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32810669
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32810669
   - id: 2021-12-19-live-01
     type: live
     date: "2021-12-19"
@@ -339,7 +363,7 @@
     title: "密室逃脱模拟器"
     platform: douyu
     confidence: high
-    duration_min: 137
+    duration_min: 299
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0bef5c13011d451cafa0c02aa2f3ff83.jpeg?imageslim"
     games: [escape-simulator]
     segments:
@@ -354,8 +378,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32851205
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32851205
   - id: 2021-12-22-live-01
     type: live
     date: "2021-12-22"
@@ -391,7 +419,7 @@
     title: "密室逃脱模拟器"
     platform: douyu
     confidence: high
-    duration_min: 146
+    duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2b71e421138745fe9d05c9d98226a8de.jpeg?imageslim"
     games: [escape-simulator]
     segments:
@@ -408,8 +436,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32862094
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32862094
   - id: 2021-12-24-live-01
     type: live
     date: "2021-12-24"
@@ -468,7 +500,7 @@
     title: "小白兔电商"
     platform: douyu
     confidence: high
-    duration_min: 128
+    duration_min: 265
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_43bfa6019c6347c48c51f8b983e86d1a.jpeg?imageslim"
     games: [xiaobai-tu-dianshang]
     segments:
@@ -483,8 +515,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac32888076
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32888076
   - id: 2021-12-29-live-01
     type: live
     date: "2021-12-29"
@@ -514,7 +550,7 @@
     title: "血源诅咒"
     platform: douyu
     confidence: high
-    duration_min: 149
+    duration_min: 279
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e2870a77a11042b193dda7c2d199891c.jpeg?imageslim"
     games: [bloodborne]
     segments:
@@ -531,15 +567,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32943431
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac32943431
   - id: 2021-12-31-live-01
     type: live
     date: "2021-12-31"
     title: "血源诅咒"
     platform: douyu
     confidence: high
-    duration_min: 136
+    duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_865e8c163cde45d7a3b5489e28cdfefa.jpeg?imageslim"
     games: [bloodborne]
     segments:
@@ -556,4 +596,8 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac32970212
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 A站互补回放：ac32970212

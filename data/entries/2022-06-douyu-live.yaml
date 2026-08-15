@@ -36,7 +36,7 @@
     title: "钓鱼天堂"
     platform: douyu
     confidence: high
-    duration_min: 159
+    duration_min: 314
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_934b8af646a5428e815858858b7409b3.jpeg?imageslim"
     games: [diaoyu-tiantang]
     sources:
@@ -44,8 +44,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35149959
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35149959
   - id: 2022-06-05-live-01
     type: live
     date: "2022-06-05"
@@ -200,7 +204,7 @@
     title: "一年一次的佩奇演出"
     platform: douyu
     confidence: high
-    duration_min: 145
+    duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a3f15059ab4f45b4b03112b6b4d5c11f.jpeg?imageslim"
     games: []
     sources:
@@ -208,8 +212,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35314221
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35314221
   - id: 2022-06-17-live-02
     type: live
     date: "2022-06-17"
@@ -249,7 +257,7 @@
     title: "【心灵砒霜】据我所知百度网盘是不能随便借人的"
     platform: douyu
     confidence: high
-    duration_min: 132
+    duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c3dbab47ab91420393dd8b425e661278.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -258,8 +266,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35352578
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35352578
   - id: 2022-06-20-live-01
     type: live
     date: "2022-06-20"
@@ -282,7 +294,7 @@
     title: "暖雪"
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_005a7a86af00413caa7f23204005dbd9.jpeg?imageslim"
     games: [warm-snow]
     sources:
@@ -290,8 +302,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35378832
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35378832
   - id: 2022-06-22-live-01
     type: live
     date: "2022-06-22"
@@ -331,7 +347,7 @@
     title: "【心灵砒霜】你是不是难过时才会想起我"
     platform: douyu
     confidence: high
-    duration_min: 136
+    duration_min: 272
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a46285121c5f473ab2fbb6912eef283c.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -340,8 +356,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35447899
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35447899
   - id: 2022-06-27-live-01
     type: live
     date: "2022-06-27"
@@ -364,7 +384,7 @@
     title: "RAFT"
     platform: douyu
     confidence: high
-    duration_min: 135
+    duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_62d1d9a581394f60b66a82757627d699.jpeg?imageslim"
     games: [raft]
     sources:
@@ -372,8 +392,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35473499
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35473499
   - id: 2022-06-29-live-01
     type: live
     date: "2022-06-29"

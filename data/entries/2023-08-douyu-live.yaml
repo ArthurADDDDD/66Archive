@@ -36,7 +36,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6d6562a7c1d748d799fb49307c80781b.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -44,15 +44,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42001797
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42001797
   - id: 2023-08-04-live-01
     type: live
     date: "2023-08-04"
     title: "Baldur s Gate 3"
     platform: douyu
     confidence: high
-    duration_min: 265
+    duration_min: 550
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e9c8615444e14ae1bf6684852413f0bf.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -60,15 +64,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42013309
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42012985
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42013309、ac42012985
   - id: 2023-08-05-live-01
     type: live
     date: "2023-08-05"
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 187
+    duration_min: 561
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_33a7cf6156f4411084e3f02fe55806ba.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -76,15 +87,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42020775
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42021079
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42020775、ac42021079
   - id: 2023-08-06-live-01
     type: live
     date: "2023-08-06"
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 191
+    duration_min: 573
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a16b9574cec941859a0196993155adf2.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -92,15 +110,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42033084
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42033087
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42033084、ac42033087
   - id: 2023-08-07-live-01
     type: live
     date: "2023-08-07"
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 258
+    duration_min: 516
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3301ca5aa2e84aafa15dae1a7423a9e9.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -108,8 +133,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42038615
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42038615
   - id: 2023-08-08-live-01
     type: live
     date: "2023-08-08"
@@ -132,7 +161,7 @@
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 233
+    duration_min: 466
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_29d8628f40aa4b668db7fc64b9ca5872.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -140,15 +169,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42052361
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42052361
   - id: 2023-08-10-live-01
     type: live
     date: "2023-08-10"
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 179
+    duration_min: 358
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c29a6a0eb0ed473881d7b43403c9e2c3.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -156,8 +189,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42058484
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42058484
   - id: 2023-08-11-live-01
     type: live
     date: "2023-08-11"
@@ -180,7 +217,7 @@
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 139
+    duration_min: 349
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71ad8a6629464e36ab2788582ccadda8.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -188,8 +225,15 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42091047
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42091505
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42091047、ac42091505
   - id: 2023-08-13-live-02
     type: live
     date: "2023-08-13"
@@ -212,7 +256,7 @@
     title: "博德之门 3"
     platform: douyu
     confidence: high
-    duration_min: 223
+    duration_min: 669
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_54157b0cc4844515a633480fa84d8203.jpeg?imageslim"
     games: [baldurs-gate-3]
     sources:
@@ -220,8 +264,15 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42098531
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42099065
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42098531、ac42099065
   - id: 2023-08-15-live-01
     type: live
     date: "2023-08-15"
@@ -388,7 +439,7 @@
     title: "AltF4"
     platform: douyu
     confidence: high
-    duration_min: 212
+    duration_min: 636
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_49ab329ebcf94923904016b9352cd554.jpeg?imageslim"
     games: [alt-f4]
     sources:
@@ -396,8 +447,15 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42146491
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42146493
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42146491、ac42146493
   - id: 2023-08-29-live-01
     type: live
     date: "2023-08-29"
@@ -420,7 +478,7 @@
     title: "装甲核心6境界天火"
     platform: douyu
     confidence: high
-    duration_min: 240
+    duration_min: 744
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c305d6f12d164582ae8ed869ea7830f0.jpeg?imageslim"
     games: [armored-core-6]
     sources:
@@ -428,8 +486,15 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42228469
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42228725
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac42228469、ac42228725
   - id: 2023-08-31-live-01
     type: live
     date: "2023-08-31"

@@ -34,7 +34,7 @@
     title: "永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 121
+    duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d23a25e5c53a43da9e54b2f66e7645e4.jpeg?imageslim"
     games: [naraka-bladepoint]
     segments:
@@ -51,8 +51,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac30494795
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30494795
   - id: 2021-08-03-live-01
     type: live
     date: "2021-08-03"
@@ -154,7 +158,7 @@
     title: "上古之魂"
     platform: douyu
     confidence: high
-    duration_min: 186
+    duration_min: 395
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_da8537bdb69645cc9bd0156ae5fd43d6.jpeg?imageslim"
     games: [eldest-souls]
     segments:
@@ -171,8 +175,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac30538572
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30538572
   - id: 2021-08-06-live-01
     type: live
     date: "2021-08-06"
@@ -329,10 +337,10 @@
     title: "Toodee and Topdee"
     platform: douyu
     confidence: high
-    duration_min: 327
+    duration_min: 514
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_70833a21b63349c0a86e15288f3592ba.jpeg?imageslim"
     games: [toodee-and-topdee]
-    note: "ACFun 将同一场直播拆为 2 个回放视频（ac30651837 含 P5–P8、ac30651839 含 P9–P11，P 编号连续），按一天一条原则合并为单条。"
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac30651837 含 P5–P8、ac30651839 含 P9–P11，P 编号连续），按一天一条原则合并为单条。；补入 A站互补回放：ac30651240"
     segments:
       - at: "00:00:00"
         label: "P5"
@@ -363,6 +371,9 @@
       - url: "https://www.acfun.cn/v/ac30651839"
         kind: replay
         parts: 3
+        status: alive
+      - url: https://www.acfun.cn/v/ac30651240
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -428,7 +439,7 @@
     title: "九十六号公路"
     platform: douyu
     confidence: high
-    duration_min: 158
+    duration_min: 299
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629390230872.jpeg?imageslim"
     games: [road-96]
     segments:
@@ -445,15 +456,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac30730723
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30730723
   - id: 2021-08-18-live-01
     type: live
     date: "2021-08-18"
     title: "GRIME"
     platform: douyu
     confidence: high
-    duration_min: 176
+    duration_min: 302
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629469555268.jpeg?imageslim"
     games: [grime]
     segments:
@@ -474,8 +489,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac30756962
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30756962
   - id: 2021-08-18-live-02
     type: live
     date: "2021-08-18"
@@ -541,7 +560,7 @@
     title: "GRIME"
     platform: douyu
     confidence: high
-    duration_min: 178
+    duration_min: 313
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629561730487.jpeg?imageslim"
     games: [grime]
     segments:
@@ -561,8 +580,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac30769302
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30769302
   - id: 2021-08-22-live-01
     type: live
     date: "2021-08-22"
@@ -596,7 +619,7 @@
     title: "桌游模拟《截码战"
     platform: douyu
     confidence: high
-    duration_min: 204
+    duration_min: 381
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629905773812.jpeg?imageslim"
     games: []
     segments:
@@ -615,8 +638,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac30836302
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30836302
   - id: 2021-08-25-live-01
     type: live
     date: "2021-08-25"
@@ -651,7 +678,7 @@
     title: "对马岛之魂"
     platform: douyu
     confidence: high
-    duration_min: 169
+    duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630079560640.jpeg?imageslim"
     games: [ghost-of-tsushima]
     segments:
@@ -670,15 +697,19 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac30875724
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30875724
   - id: 2021-08-27-live-01
     type: live
     date: "2021-08-27"
     title: "对马岛之魂"
     platform: douyu
     confidence: high
-    duration_min: 213
+    duration_min: 426
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630166334554.jpeg?imageslim"
     games: [ghost-of-tsushima]
     segments:
@@ -697,8 +728,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac30887602
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac30887602
   - id: 2021-08-28-live-01
     type: live
     date: "2021-08-28"

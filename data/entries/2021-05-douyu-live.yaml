@@ -65,7 +65,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 130
+    duration_min: 291
     cover: "https://tx-free-imgs.acfun.cn/o_1f4rshbf1b0eod91rp11skr1lor0.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -81,15 +81,19 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac28479195
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28479195
   - id: 2021-05-03-live-01
     type: live
     date: "2021-05-03"
     title: "世界游戏大全51"
     platform: douyu
     confidence: high
-    duration_min: 182
+    duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/o_1f4s3mmup1ned1ns11et4pkl1p120.jpeg?imageslim"
     games: [world-games-51]
     segments:
@@ -112,8 +116,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.acfun.cn/v/ac28482825
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28482825
   - id: 2021-05-04-live-01
     type: live
     date: "2021-05-04"
@@ -177,7 +185,7 @@
     title: "神奇男孩 爱莎在怪物世界"
     platform: douyu
     confidence: high
-    duration_min: 151
+    duration_min: 272
     cover: "https://tx-free-imgs.acfun.cn/o_1f50v580u1mm71dtpi2h1egecr10.jpeg?imageslim"
     games: [wonder-boy-asha, wonder-boy]
     segments:
@@ -194,15 +202,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28520367
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28520367
   - id: 2021-05-07-live-01
     type: live
     date: "2021-05-07"
     title: "生化危机8：村庄"
     platform: douyu
     confidence: high
-    duration_min: 160
+    duration_min: 298
     cover: "https://tx-free-imgs.acfun.cn/o_1f53h924h6v9166dnv88j1hoj0.jpeg?imageslim"
     games: [resident-evil-8]
     segments:
@@ -223,15 +235,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28543731
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28543731
   - id: 2021-05-08-live-01
     type: live
     date: "2021-05-08"
     title: "生化危机8：村庄"
     platform: douyu
     confidence: high
-    duration_min: 167
+    duration_min: 329
     cover: "https://tx-free-imgs.acfun.cn/o_1f561sq7r1f061k0vrhv1est320.jpeg?imageslim"
     games: [resident-evil-8]
     segments:
@@ -252,15 +268,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28560452
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28560452
   - id: 2021-05-09-live-01
     type: live
     date: "2021-05-09"
     title: "生化危机8：村庄"
     platform: douyu
     confidence: high
-    duration_min: 162
+    duration_min: 342
     cover: "https://tx-free-imgs.acfun.cn/o_1f58r67si187p152q1l787fh3es0.jpeg?imageslim"
     games: [resident-evil-8]
     segments:
@@ -281,8 +301,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28591039
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28591039
   - id: 2021-05-10-live-01
     type: live
     date: "2021-05-10"
@@ -316,7 +340,7 @@
     title: "绿林侠盗"
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 327
     cover: "https://tx-free-imgs.acfun.cn/o_1f5gd8g4m1qg8lq9qok1qk91eam0.jpeg?imageslim"
     games: [hood-outlaws]
     segments:
@@ -333,15 +357,19 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28686740
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28686740
   - id: 2021-05-13-live-01
     type: live
     date: "2021-05-13"
     title: "怪物男孩"
     platform: douyu
     confidence: high
-    duration_min: 144
+    duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/o_1f5ivhkrv6ei16qkc3bm5eq7p0.jpeg?imageslim"
     games: [monster-boy]
     segments:
@@ -358,8 +386,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.acfun.cn/v/ac28722548
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac28722548
   - id: 2021-05-16-live-01
     type: live
     date: "2021-05-16"
@@ -494,7 +526,7 @@
     title: "深海迷航"
     platform: douyu
     confidence: high
-    duration_min: 164
+    duration_min: 343
     cover: "https://tx-free-imgs.acfun.cn/o_1f652ec61unu1nmjpsl5mvrab0.jpeg?imageslim"
     games: [subnautica]
     segments:
@@ -509,8 +541,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29013234
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29013234
   - id: 2021-05-21-live-01
     type: live
     date: "2021-05-21"
@@ -608,7 +644,7 @@
     title: "幸运房东"
     platform: douyu
     confidence: high
-    duration_min: 150
+    duration_min: 325
     cover: "https://tx-free-imgs.acfun.cn/o_1f6pj0bht5qr1chihnp1tn710im0.jpeg?imageslim"
     games: [luck-be-a-landlord]
     segments:
@@ -623,8 +659,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac29245796
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac29245796
   - id: 2021-05-29-live-01
     type: live
     date: "2021-05-29"

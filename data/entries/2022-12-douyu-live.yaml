@@ -87,7 +87,7 @@
     title: "【心灵砒霜】埋了吧"
     platform: douyu
     confidence: high
-    duration_min: 132
+    duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02a7c4cd2e7f4b71aa2e1b4be6952d53.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -96,8 +96,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac40137241
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac40137241
   - id: 2022-12-13-live-01
     type: live
     date: "2022-12-13"
@@ -120,7 +124,7 @@
     title: "黑羊"
     platform: douyu
     confidence: high
-    duration_min: 360
+    duration_min: 659
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_37a8a0d5d0184388b3e083a798a058f2.jpeg?imageslim"
     games: [heiyang]
     sources:
@@ -128,8 +132,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac40182200
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac40182200
   - id: 2022-12-17-live-01
     type: live
     date: "2022-12-17"
@@ -264,7 +272,7 @@
     title: "深海迷航"
     platform: douyu
     confidence: high
-    duration_min: 146
+    duration_min: 292
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0e87dcf9830f411e933c14e7ecbc3819.jpeg?imageslim"
     games: [subnautica]
     sources:
@@ -272,8 +280,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac40262596
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac40262596
   - id: 2022-12-26-live-01
     type: live
     date: "2022-12-26"

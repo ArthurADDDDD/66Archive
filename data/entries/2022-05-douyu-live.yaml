@@ -5,7 +5,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 332
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_62f95444e8f14abc9297951b3195b32a.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -14,8 +14,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34688766
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34688766
   - id: 2022-05-02-live-01
     type: live
     date: "2022-05-02"
@@ -234,7 +238,7 @@
     title: "Ranch Simulator"
     platform: douyu
     confidence: high
-    duration_min: 240
+    duration_min: 463
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_41ec2e8b56d6420db6d26797ba279661.jpeg?imageslim"
     games: [ranch-simulator]
     sources:
@@ -242,8 +246,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34903711
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34903711
   - id: 2022-05-17-live-01
     type: live
     date: "2022-05-17"
@@ -315,7 +323,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 127
+    duration_min: 254
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_67bf986119bc413b8f2cff59cb9b11e4.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -324,8 +332,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac34987962
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac34987962
   - id: 2022-05-23-live-01
     type: live
     date: "2022-05-23"
@@ -445,7 +457,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 140
+    duration_min: 280
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1ab631be59b54bf5a053ef1a74b24807.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -454,15 +466,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35076171
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35076171
   - id: 2022-05-30-live-01
     type: live
     date: "2022-05-30"
     title: "各年代老歌榜单盘点"
     platform: douyu
     confidence: high
-    duration_min: 124
+    duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_099e0e9d25b74d549474dfc50c298521.jpeg?imageslim"
     games: []
     sources:
@@ -470,8 +486,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac35091622
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac35091622
   - id: 2022-05-31-live-01
     type: live
     date: "2022-05-31"

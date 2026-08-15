@@ -80,7 +80,7 @@
     title: "消逝的光芒2"
     platform: douyu
     confidence: high
-    duration_min: 223
+    duration_min: 446
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1e136f4f1144423a90ce88485b9836db.jpeg?imageslim"
     games: [dying-light-2]
     sources:
@@ -88,8 +88,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33549272
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33549272
   - id: 2022-02-11-live-01
     type: live
     date: "2022-02-11"
@@ -160,7 +164,7 @@
     title: "地平线：西部禁域"
     platform: douyu
     confidence: high
-    duration_min: 109
+    duration_min: 218
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f5ef8ec42fb34347ba68826ab5d839e9.jpeg?imageslim"
     games: [horizon-forbidden-west]
     sources:
@@ -168,15 +172,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33710398
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33710398
   - id: 2022-02-20-live-01
     type: live
     date: "2022-02-20"
     title: "地平线：西部禁域"
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1257ee1331bc4894aadeb963504a5841.jpeg?imageslim"
     games: [horizon-forbidden-west]
     sources:
@@ -184,15 +192,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33724764
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33724764
   - id: 2022-02-21-live-01
     type: live
     date: "2022-02-21"
     title: "地平线：西部禁域"
     platform: douyu
     confidence: high
-    duration_min: 135
+    duration_min: 270
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2ddf464d759c4215a871095144f605a6.jpeg?imageslim"
     games: [horizon-forbidden-west]
     sources:
@@ -200,15 +212,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33740743
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33740743
   - id: 2022-02-22-live-01
     type: live
     date: "2022-02-22"
     title: "地平线：西部禁域"
     platform: douyu
     confidence: high
-    duration_min: 143
+    duration_min: 286
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b88dd34c664b4b328e61de6c51bc187c.jpeg?imageslim"
     games: [horizon-forbidden-west]
     sources:
@@ -216,15 +232,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33752405
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33752405
   - id: 2022-02-23-live-01
     type: live
     date: "2022-02-23"
     title: "地平线：西部禁域"
     platform: douyu
     confidence: high
-    duration_min: 144
+    duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4c2bfb49021a4bcea3314443fb20101b.jpeg?imageslim"
     games: [horizon-forbidden-west]
     sources:
@@ -232,8 +252,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac33765609
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac33765609
   - id: 2022-02-25-live-01
     type: live
     date: "2022-02-25"

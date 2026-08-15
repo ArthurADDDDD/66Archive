@@ -4,7 +4,7 @@
     title: "塞尔达传说"
     platform: douyu
     confidence: high
-    duration_min: 209
+    duration_min: 627
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a3fe571efb84eb99dc9cd33109d3c9e.jpeg?imageslim"
     games: [zelda-totk]
     sources:
@@ -12,15 +12,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41503159
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac41503144
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41503159、ac41503144
   - id: 2023-06-02-live-01
     type: live
     date: "2023-06-02"
     title: "塞尔达传说"
     platform: douyu
     confidence: high
-    duration_min: 179
+    duration_min: 537
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cd27af57cccc4219b79629f8ec6190ad.jpeg?imageslim"
     games: [zelda-totk]
     sources:
@@ -28,15 +35,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41510624
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac41510628
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41510624、ac41510628
   - id: 2023-06-05-live-01
     type: live
     date: "2023-06-05"
     title: "Only UP"
     platform: douyu
     confidence: high
-    duration_min: 140
+    duration_min: 280
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_613616cf0bfd4b13b09ca3ddd7a0defc.jpeg?imageslim"
     games: [only-up]
     sources:
@@ -44,15 +58,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41538894
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41538894
   - id: 2023-06-06-live-01
     type: live
     date: "2023-06-06"
     title: "Only UP"
     platform: douyu
     confidence: high
-    duration_min: 172
+    duration_min: 344
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e9e3b9dbbf1e4b3b931c2892d2f7f52b.jpeg?imageslim"
     games: [only-up]
     sources:
@@ -60,8 +78,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41543905
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41543905
   - id: 2023-06-07-live-01
     type: live
     date: "2023-06-07"
@@ -84,7 +106,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 170
+    duration_min: 340
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e919b3e1c463487aaebf355850630063.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -92,8 +114,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41564091
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41564091
   - id: 2023-06-10-live-01
     type: live
     date: "2023-06-10"
@@ -116,7 +142,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 176
+    duration_min: 352
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a7065055a4ce4f1ea4edcd7bcbc0170b.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -124,8 +150,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41585848
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41585848
   - id: 2023-06-12-live-01
     type: live
     date: "2023-06-12"
@@ -164,7 +194,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 144
+    duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_370bdd132b0944c6b3bee571f4cbd0f6.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -172,8 +202,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41601706
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41601706
   - id: 2023-06-16-live-01
     type: live
     date: "2023-06-16"
@@ -292,7 +326,7 @@
     title: "最终幻想XVI"
     platform: douyu
     confidence: high
-    duration_min: 52
+    duration_min: 348
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4bd9ee2677324ac7b817fae10c9e93a4.jpeg?imageslim"
     games: [final-fantasy-16]
     sources:
@@ -300,15 +334,22 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41670159
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac41670161
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41670159、ac41670161
   - id: 2023-06-24-live-01
     type: live
     date: "2023-06-24"
     title: "最终幻想XVI"
     platform: douyu
     confidence: high
-    duration_min: 178
+    duration_min: 356
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a7338df33a6c42a0baba9611ad00624a.png?imageslim"
     games: [final-fantasy-16]
     sources:
@@ -316,15 +357,19 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41681956
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41681956
   - id: 2023-06-25-live-01
     type: live
     date: "2023-06-25"
     title: "最终幻想XVI"
     platform: douyu
     confidence: high
-    duration_min: 166
+    duration_min: 332
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7895340503794a6bad7b026a7c1af034.jpeg?imageslim"
     games: [final-fantasy-16]
     sources:
@@ -332,8 +377,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41682262
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41682262
   - id: 2023-06-26-live-01
     type: live
     date: "2023-06-26"
@@ -356,7 +405,7 @@
     title: "最终幻想XVI"
     platform: douyu
     confidence: high
-    duration_min: 218
+    duration_min: 436
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6056bca321cc44bd92e03c0f7325e1a0.jpeg?imageslim"
     games: [final-fantasy-16]
     sources:
@@ -364,8 +413,12 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41698725
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 A站互补回放：ac41698725
   - id: 2023-06-29-live-01
     type: live
     date: "2023-06-29"
@@ -388,7 +441,7 @@
     title: "Street Fighter"
     platform: douyu
     confidence: high
-    duration_min: 193
+    duration_min: 284
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_15c91d03f82c48b1b0f9aaa9e873415f.jpeg?imageslim"
     games: [street-fighter-6]
     sources:
@@ -396,4 +449,8 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac41724195
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 A站互补回放：ac41724195
