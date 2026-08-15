@@ -414,3 +414,17 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+  - id: 2020-01-13-live-01
+    type: live
+    date: '2020-01-13'
+    title: K起来 / 唱歌
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1gJ411J7h3（女流-2020.1.13-K起来）确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1gJ411J7h3
+        kind: replay
+        status: alive
+    contributed_by: data-agent

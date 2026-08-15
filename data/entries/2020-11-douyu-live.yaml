@@ -729,3 +729,17 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+  - id: 2020-11-17-live-01
+    type: live
+    date: '2020-11-17'
+    title: 天穗之咲稻姬
+    platform: douyu
+    confidence: high
+    duration_min: 285
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1My4y167Rv（女流-2020.11.17-天穗之咲稻姬）确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1My4y167Rv
+        kind: replay
+        status: alive
+    contributed_by: data-agent
