@@ -75,8 +75,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.bilibili.com/video/BV1iK41157nG
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1iK41157nG
   - id: 2020-05-09-live-01
     type: live
     date: "2020-05-09"
@@ -399,8 +403,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.bilibili.com/video/BV16z411v7qp
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV16z411v7qp
   - id: 2020-05-28-live-01
     type: live
     date: "2020-05-28"
@@ -482,7 +490,11 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1gT4y1g7DC
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: 补入 B 站「秘密录像屋」BV1gT4y1g7DC
   - id: 2020-05-01-live-01
     type: live
     date: '2020-05-01'
@@ -535,9 +547,12 @@
     platform: douyu
     confidence: high
     games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277；补入 B 站「秘密录像屋」BV1fK4y1b7dd
     sources:
       - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1fK4y1b7dd
         kind: replay
         status: alive
     contributed_by: data-agent

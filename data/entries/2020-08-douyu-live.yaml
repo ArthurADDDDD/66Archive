@@ -225,8 +225,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.bilibili.com/video/BV1wt4y1Q7Yx
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1wt4y1Q7Yx
   - id: 2020-08-10-live-01
     type: live
     date: "2020-08-10"
@@ -546,8 +550,12 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.bilibili.com/video/BV1AT4y1L7sr
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1AT4y1L7sr
   - id: 2020-08-25-live-01
     type: live
     date: "2020-08-25"
@@ -580,8 +588,12 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.bilibili.com/video/BV1zT4y1w76T
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1zT4y1w76T
   - id: 2020-08-26-live-01
     type: live
     date: "2020-08-26"
@@ -684,8 +696,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1tK4y1e7Jy
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1tK4y1e7Jy
   - id: 2020-08-31-live-01
     type: live
     date: "2020-08-31"
@@ -755,9 +771,12 @@
     platform: douyu
     confidence: high
     games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game；补入 B 站「秘密录像屋」BV1aC4y1t7yx
     sources:
       - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1aC4y1t7yx
         kind: replay
         status: alive
     contributed_by: data-agent
