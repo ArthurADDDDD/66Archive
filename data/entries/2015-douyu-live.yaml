@@ -704,3 +704,54 @@
     status: alive
   contributed_by: data-agent
   note: AcFun「斗鱼录像厅」《【单机游戏】斗鱼年度催泪大戏--有缘必相会-女流视角》，发布于 2015-07-23，时长约 1:28:36。
+- id: 2015-01-21-live-01
+  type: live
+  date: '2015-01-21'
+  title: 重启之后还是一条好汉
+  platform: douyu
+  confidence: high
+  duration_min: 34
+  games: []
+  tags:
+  - 直播过渡
+  sources:
+  - url: https://www.bilibili.com/video/BV1Px411A7NG
+    kind: replay
+    status: alive
+  - url: https://v.youku.com/v_show/id_XODc4ODk2NTY4.html
+    kind: original
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」《[1.21直播录像]重启之后还是一条好汉》，标题直接标注直播日期 2015-01-21；另有优酷同日录像存档（video-era-milestones 已收录）。
+- id: 2015-01-29-live-01
+  type: live
+  date: '2015-01-29'
+  title: 重温变态人生的大冒险，卒
+  platform: douyu
+  confidence: high
+  duration_min: 20
+  games: []
+  tags:
+  - 直播过渡
+  sources:
+  - url: https://www.bilibili.com/video/BV1Gx411A7NC
+    kind: replay
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」《[1.29直播录像]重温变态人生的大冒险,卒》，标题直接标注直播日期 2015-01-29。
+- id: 2015-02-28-live-01
+  type: live
+  date: '2015-02-28'
+  title: 女流直播做饭
+  platform: douyu
+  confidence: high
+  duration_min: 22
+  games: []
+  tags:
+  - 聊天
+  sources:
+  - url: https://www.bilibili.com/video/BV1ox411A7mz
+    kind: replay
+    status: alive
+  contributed_by: data-agent
+  note: B站官方「女流66」《女流直播做饭[2015.2.28]》，标题直接标注直播日期；时长 21:55，为可确认的 2015-02 额外直播日。
