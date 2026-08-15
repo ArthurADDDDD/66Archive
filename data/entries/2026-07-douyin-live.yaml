@@ -129,6 +129,17 @@
       - url: "https://www.bilibili.com/video/BV1r1Tr6MEHe"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV12ST767EgS
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: "Day1-2026-07-02 10点场"
+            duration_sec: 6724
+          - page: 2
+            title: "Day1-2026-07-02 12点场"
+            duration_sec: 559
     contributed_by: data-agent
 
     duration_min: 130
@@ -189,6 +200,17 @@
       - url: "https://www.bilibili.com/video/BV19XTx67EAJ"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV12ST767EgS
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 3
+            title: "Day2-2026-07-03 20点场"
+            duration_sec: 7200
+          - page: 4
+            title: "Day2-2026-07-03 22点场"
+            duration_sec: 2505
     contributed_by: data-agent
 
     duration_min: 162
@@ -272,6 +294,14 @@
       - url: "https://www.bilibili.com/video/BV1xiMP6CE43"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV12ST767EgS
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 5
+            title: "Day3-2026-07-04 21点场"
+            duration_sec: 2721
     contributed_by: data-agent
 
     duration_min: 180
@@ -361,6 +391,17 @@
       - url: "https://www.bilibili.com/video/BV1giMh6bE52"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV12ST767EgS
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 6
+            title: "Day4-2026-07-07 21点场"
+            duration_sec: 7200
+          - page: 7
+            title: "Day4-2026-07-07 23点场"
+            duration_sec: 1461
     contributed_by: data-agent
 
     duration_min: 145
@@ -515,6 +556,17 @@
       - url: "https://www.bilibili.com/video/BV1XcNz6CEgx"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV12ST767EgS
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 8
+            title: "Day5-2026-07-15 21点场"
+            duration_sec: 7201
+          - page: 9
+            title: "Day5-2026-07-15 23点场"
+            duration_sec: 171
     contributed_by: data-agent
 
     duration_min: 170

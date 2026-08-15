@@ -148,6 +148,17 @@
       - url: "https://www.bilibili.com/video/BV16V5i6gEd6"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1QiLG6cErz
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: "5月15日 20:00场次"
+            duration_sec: 6054
+          - page: 2
+            title: "5月15日 22:00场次"
+            duration_sec: 6058
     contributed_by: data-agent
 
     duration_min: 222
@@ -199,6 +210,20 @@
       - url: "https://www.bilibili.com/video/BV1arL56vE6T"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1QiLG6cErz
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 3
+            title: "5月16日 20:00场次"
+            duration_sec: 5401
+          - page: 4
+            title: "5月16日 22:00场次"
+            duration_sec: 5401
+          - page: 5
+            title: "5月16日 23:00场次"
+            duration_sec: 2407
     contributed_by: data-agent
 
     duration_min: 222
@@ -249,6 +274,20 @@
       - url: "https://www.bilibili.com/video/BV1WDLH6kEpH"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1QiLG6cErz
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 6
+            title: "5月17日 20:00场次"
+            duration_sec: 5401
+          - page: 7
+            title: "5月17日 22:00场次"
+            duration_sec: 5400
+          - page: 8
+            title: "5月17日 23:00场次"
+            duration_sec: 213
     contributed_by: data-agent
 
     duration_min: 184

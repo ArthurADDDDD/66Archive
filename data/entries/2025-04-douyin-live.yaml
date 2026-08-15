@@ -221,6 +221,26 @@
       - url: "https://www.bilibili.com/video/BV1zqLVzbEop"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 1
+            title: "4.24日 18点场"
+            duration_sec: 2456
+          - page: 2
+            title: "4.24日 19点场"
+            duration_sec: 3601
+          - page: 3
+            title: "4.24日 20点场"
+            duration_sec: 3601
+          - page: 4
+            title: "4.24日 21点场"
+            duration_sec: 3601
+          - page: 5
+            title: "4.24日 22点场"
+            duration_sec: 2560
     contributed_by: data-agent
 
     duration_min: 283
@@ -256,6 +276,20 @@
       - url: "https://www.bilibili.com/video/BV1pNLHzWEzD"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 6
+            title: "4.25日 18点场"
+            duration_sec: 5834
+          - page: 7
+            title: "4.25日 19点场"
+            duration_sec: 3601
+          - page: 8
+            title: "4.25日 20点场"
+            duration_sec: 5211
     contributed_by: data-agent
 
     duration_min: 266
@@ -291,6 +325,20 @@
       - url: "https://www.bilibili.com/video/BV1b7LozwELF"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 9
+            title: "4.26日 18点场"
+            duration_sec: 5720
+          - page: 10
+            title: "4.26日 19点场"
+            duration_sec: 3601
+          - page: 11
+            title: "4.26日 20点场"
+            duration_sec: 4775
     contributed_by: data-agent
 
     duration_min: 277
@@ -326,6 +374,23 @@
       - url: "https://www.bilibili.com/video/BV14ULqzuEBW"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 12
+            title: "4.27日 18点场"
+            duration_sec: 4501
+          - page: 13
+            title: "4.27日 19点场"
+            duration_sec: 3602
+          - page: 14
+            title: "4.27日 20点场"
+            duration_sec: 3599
+          - page: 15
+            title: "4.27日 21点场"
+            duration_sec: 2539
     contributed_by: data-agent
 
     duration_min: 251
@@ -365,6 +430,20 @@
       - url: "https://www.bilibili.com/video/BV1W9LUzvEn8"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 16
+            title: "4.28日 18点场"
+            duration_sec: 6158
+          - page: 17
+            title: "4.28日 19点场"
+            duration_sec: 3600
+          - page: 18
+            title: "4.28日 20点场"
+            duration_sec: 4220
     contributed_by: data-agent
 
     duration_min: 250
@@ -400,6 +479,23 @@
       - url: "https://www.bilibili.com/video/BV1JQG2z7EUc"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 19
+            title: "4.29日 18点场"
+            duration_sec: 3602
+          - page: 20
+            title: "4.29日 19点场"
+            duration_sec: 3601
+          - page: 21
+            title: "4.29日 20点场"
+            duration_sec: 3601
+          - page: 22
+            title: "4.29日 21点场"
+            duration_sec: 4557
     contributed_by: data-agent
 
     duration_min: 256
@@ -433,5 +529,22 @@
       - url: "https://www.bilibili.com/video/BV1oNGbzREgs"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1E4LEzrEx3
+        kind: replay
+        status: alive
+        account: bilibili-official
+        part_details:
+          - page: 23
+            title: "4.30日 18点场"
+            duration_sec: 798
+          - page: 24
+            title: "4.30日 19点场"
+            duration_sec: 3593
+          - page: 25
+            title: "4.30日 20点场"
+            duration_sec: 3601
+          - page: 26
+            title: "4.30日 21点场"
+            duration_sec: 3922
     contributed_by: data-agent
     duration_min: 208
