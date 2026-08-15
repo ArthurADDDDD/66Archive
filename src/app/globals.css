@@ -478,6 +478,18 @@ body {
   .ui-stagger > :nth-child(5) { animation-delay: 120ms; }
   .ui-stagger > :nth-child(6) { animation-delay: 150ms; }
   .ui-stagger > :nth-child(n + 7) { animation-delay: 180ms; }
+
+  @keyframes auto-scroll-text {
+    0%,
+    14% { transform: translateX(0); }
+    86%,
+    100% { transform: translateX(calc(-50% - clamp(0.75rem, 1.5vw, 1.5rem))); }
+  }
+
+  .auto-scroll-text__track {
+    animation: auto-scroll-text var(--auto-scroll-duration, 14s) linear infinite;
+    will-change: transform;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {

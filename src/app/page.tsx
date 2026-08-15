@@ -225,7 +225,6 @@ function TodayInHistory({
           <Link href={yearHref} className="-my-2 inline-block rounded-sm py-2 underline underline-offset-4 transition-colors hover:text-live">
             看那年全部记录 →
           </Link>
-          <span className="ml-2">ⓘ 以构建日期为准（静态站约束）</span>
         </p>
       )}
     </div>

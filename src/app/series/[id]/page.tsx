@@ -84,7 +84,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <h1 className="mt-4 max-w-3xl text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
         <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
           <span className="text-body text-ink">{s.count} 期</span>
-          <span>档案确认 · 构建期派生</span>
           <span>
             {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
           </span>
@@ -98,15 +97,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <section className="site-container px-page pb-10 sm:pb-14">
           <blockquote className="max-w-2xl border-l-2 pl-5" style={{ borderColor: color }}>
             <p className="text-h3 font-medium leading-relaxed text-ink">第一期：「{s.firstTitle}」</p>
-            <p className="mt-3 text-meta text-muted tnum">第一期标题，原文照录 · {s.firstDate}</p>
+            <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
           </blockquote>
         </section>
       )}
 
       {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
-      <section className="site-container px-page pb-12 sm:pb-16">
+      <section className="site-container px-page pb-10 sm:pb-14">
         <Eyebrow className="text-muted">活跃年份</Eyebrow>
-        <div className="mt-4 max-w-3xl">
+        <div className="mt-4 w-full">
           <ActivityStrip perYear={s.perYear} color={color} />
           <div className="mt-6 flex flex-wrap gap-2">
             {s.perYear.map((p) => (
@@ -133,9 +132,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <div className="mt-3">
           <SeriesEpisodes entries={s.entries} color={color} count={s.count} />
         </div>
-        <p className="mt-4 text-meta text-muted">
-          ⓘ 期数由标题 / 栏目 tag 精确匹配派生；series.yaml 中的外部统计口径可能略宽，以档案确认为准。
-        </p>
       </section>
 
       <RelatedRail rails={rails} />

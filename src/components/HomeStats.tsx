@@ -58,10 +58,6 @@ export function HomeStats({ data }: { data: HomepageData }) {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 max-w-4xl text-meta text-faint">
-              分布按互斥口径计数：2022 年起的记录计入第三幕（第三幕的叙事从她人生的新一段讲起，与第二幕尾段重叠）。
-              三幕相加，正好等于全部记录。
-            </p>
             {gapYears.length > 0 && (
               <p className="mt-2 text-meta text-faint">
                 {gapYears.join('、')} 年在档案里是留白——缺口不是错误，是还没有被找回来的部分。

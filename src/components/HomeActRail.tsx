@@ -60,6 +60,8 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
   const markRefs = useRef<(HTMLSpanElement | null)[]>([])
   const draggingRef = useRef(false)
   const hoverFrameRef = useRef<number | null>(null)
+  const hoverPctRef = useRef<number | null>(null)
+  const activeIdRef = useRef(sections[0]?.id ?? 'home-top')
   const [activeId, setActiveId] = useState(sections[0]?.id ?? 'home-top')
   const [hoverPct, setHoverPct] = useState<number | null>(null)
   const [dragPct, setDragPct] = useState<number | null>(null)
@@ -102,8 +104,12 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
   ], [acts, sections])
 
   useEffect(() => {
-    let frame = 0
-    const update = () => {
+    const setActive = (id: string) => {
+      if (activeIdRef.current === id) return
+      activeIdRef.current = id
+      setActiveId(id)
+    }
+    const initialActive = () => {
       const focusY = window.innerHeight * 0.46
       let current = marks[0]?.id ?? ''
       for (const mark of marks) {
@@ -112,19 +118,21 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
         if (element.getBoundingClientRect().top <= focusY) current = mark.id
         else break
       }
-      setActiveId(current)
+      setActive(current)
     }
-    const schedule = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(update)
+    const knownIds = new Set(marks.map((mark) => mark.id))
+    const observer = new IntersectionObserver((observations) => {
+      for (const observation of observations) {
+        if (observation.isIntersecting && knownIds.has(observation.target.id)) setActive(observation.target.id)
+      }
+    }, { rootMargin: '-45% 0px -49% 0px', threshold: 0 })
+    for (const mark of marks) {
+      const target = document.getElementById(mark.id)
+      if (target) observer.observe(target)
     }
-    update()
-    window.addEventListener('scroll', schedule, { passive: true })
-    window.addEventListener('resize', schedule, { passive: true })
+    initialActive()
     return () => {
-      window.removeEventListener('scroll', schedule)
-      window.removeEventListener('resize', schedule)
-      cancelAnimationFrame(frame)
+      observer.disconnect()
     }
   }, [marks])
 
@@ -171,7 +179,13 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
 
   const scheduleHover = useCallback((pct: number | null) => {
     if (hoverFrameRef.current !== null) cancelAnimationFrame(hoverFrameRef.current)
-    hoverFrameRef.current = requestAnimationFrame(() => setHoverPct(pct))
+    hoverFrameRef.current = requestAnimationFrame(() => {
+      // Dock 效果无需在每一个子像素移动时触发 React 重绘；保留约一个刻度的十分之一精度。
+      if (pct === null || hoverPctRef.current === null || Math.abs(hoverPctRef.current - pct) >= 0.003) {
+        hoverPctRef.current = pct
+        setHoverPct(pct)
+      }
+    })
   }, [])
 
   const jumpToIndex = useCallback((index: number) => {

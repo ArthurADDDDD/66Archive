@@ -38,9 +38,6 @@ export default function GamesPage() {
     comebackDays: p.comebackDays,
   }))
 
-  const withGames = timeline.filter((e) => e.games.length > 0).length
-  const coverage = timeline.length ? Math.round((withGames / timeline.length) * 100) : 0
-
   return (
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="games" />
@@ -56,18 +53,12 @@ export default function GamesPage() {
         <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
         <p className="mt-5 max-w-2xl text-body text-muted">
           {played.length} 个游戏。
-          <br />
-          每个游戏的封面，是她第一次播它那天的直播截图——不是商店页的宣传图。
           {longest?.firstDate && longest?.lastDate && (
             <>
-              {' '}
-              跨得最长的一个是《{longest.name}》，从 {longest.firstDate} 到 {longest.lastDate}，
+              {' '}跨得最长的是《{longest.name}》，从 {longest.firstDate} 到 {longest.lastDate}，
               {longest.spanDays.toLocaleString()} 天。
             </>
           )}
-        </p>
-        <p className="mt-3 text-meta text-faint tnum">
-          ⓘ 条目的游戏字段仍在补录中（目前标记率约 {coverage}%）；这里只收录已标记的场次，补录后会自动出现。
         </p>
       </section>
 

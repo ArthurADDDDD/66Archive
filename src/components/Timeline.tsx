@@ -26,7 +26,6 @@ const ERAS: Era[] = [
 export function Timeline({
   entries,
   isDemo,
-  hiddenUnreviewed = 0,
   extra,
 }: {
   entries: TimelineEntry[]
@@ -318,11 +317,6 @@ export function Timeline({
           {isDemo && (
             <p className="mt-5 rounded border border-video/40 bg-video/5 px-3 py-2 text-meta text-video">
               当前展示演示数据，不是真实记录。
-            </p>
-          )}
-          {hiddenUnreviewed > 0 && (
-            <p className="mt-5 rounded border border-line bg-surface/60 px-3 py-2 text-meta text-faint tnum">
-              开发版已隐藏 {hiddenUnreviewed.toLocaleString()} 条来源未复查的记录；来源完成复查后会自动显示。
             </p>
           )}
         </section>

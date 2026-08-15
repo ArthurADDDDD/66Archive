@@ -1,8 +1,9 @@
 'use client'
 
 import { InlineTagCalibration } from '@/components/InlineTagCalibration'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
+import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { visibleGameIds } from '@/lib/games'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
@@ -17,10 +18,13 @@ export function EntryRow({
   entry,
   expanded,
   onToggle,
+  showFullDate = false,
 }: {
   entry: TimelineEntry
   expanded: boolean
   onToggle: () => void
+  /** 跨年份浏览时保留完整日期；单一时期的列表可保持紧凑的月/日显示。 */
+  showFullDate?: boolean
 }) {
   const isLive = entry.type === 'live'
   const platform = PLATFORM_META[entry.platform as Platform]
@@ -30,21 +34,35 @@ export function EntryRow({
   const [sourceIndex, setSourceIndex] = useState(defaultSourceIndex)
   const selectedSource = entry.sources[sourceIndex] ?? entry.sources[0]
   const selectedCover = proxyImage(selectedSource?.cover ?? selectedSource?.partDetails?.[0]?.cover ?? entry.cover ?? undefined, 640)
+  const [sourceFallbackCover, setSourceFallbackCover] = useState<{ url: string; cover: string | null } | null>(null)
+  const selectedSourceUrl = selectedSource?.url
+  useEffect(() => {
+    if (selectedCover || !selectedSourceUrl) return
+    let cancelled = false
+    getBilibiliVideoMeta(selectedSourceUrl).then((meta) => {
+      if (!cancelled) setSourceFallbackCover({ url: selectedSourceUrl, cover: meta?.cover ?? null })
+    })
+    return () => { cancelled = true }
+  }, [selectedCover, selectedSourceUrl])
+  const displayCover = selectedCover ?? (sourceFallbackCover?.url === selectedSourceUrl ? sourceFallbackCover.cover : null)
   const compactGameIds = new Set(visibleGameIds(entry.games.map((game) => game.id)))
   const compactGames = entry.games.filter((game) => compactGameIds.has(game.id))
+  const dateClass = showFullDate
+    ? 'w-[clamp(4.75rem,7vw,7rem)]'
+    : 'w-[clamp(2.75rem,4vw,4rem)] sm:w-[clamp(3.5rem,5vw,5rem)]'
 
   return (
-    <article className={`group relative rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25' : 'hover:bg-surface/10'}`}>
-      <div className="py-1.5">
+    <article id={`entry-${entry.id}`} className={`group relative scroll-mt-24 rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25 p-[clamp(0.75rem,1.25vw,1.75rem)]' : 'hover:bg-surface/10'}`}>
+      <div className="py-[clamp(0.375rem,0.55vw,0.75rem)]">
         <button
           onClick={onToggle}
-          className="ui-press flex w-full items-start gap-3 rounded-lg py-2 text-left sm:gap-4"
+          className="ui-press flex w-full items-start gap-3 rounded-lg py-[clamp(0.5rem,0.7vw,0.875rem)] text-left sm:gap-4"
           aria-expanded={expanded}
           aria-controls={`entry-preview-${entry.id}`}
         >
         {/* 日期与开播时间 */}
-        <div className="w-11 shrink-0 pt-[3px] text-right font-mono text-meta leading-tight tnum sm:w-14">
-          <div className="text-muted">{entry.date.slice(5).replace('-', '/')}</div>
+        <div className={`${dateClass} shrink-0 pt-[3px] text-right font-mono text-meta leading-tight tnum`}>
+          <div className="text-muted">{showFullDate ? entry.date : entry.date.slice(5).replace('-', '/')}</div>
           {entry.time && <div className="text-faint">{entry.time}</div>}
         </div>
 
@@ -117,22 +135,6 @@ export function EntryRow({
               </div>
             )}
 
-            {(entry.sourceCount > 0 || entry.confidence === 'low') && (
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                {entry.sourceCount > 0 && (
-                  <span className="text-muted">
-                    共有{formatSourceCount(entry.sourceCount)}段录像来源
-                    {dead ? <span className="text-today">（已失效）</span>
-                      : entry.aliveCount === entry.sourceCount ? <span className="text-live">（已核验）</span>
-                        : entry.aliveCount > 0 ? <span className="text-live">（部分核验）</span>
-                          : entry.uncheckedCount > 0 ? <span className="text-faint">（未复查）</span> : null}
-                  </span>
-                )}
-                {entry.confidence === 'low' && (
-                  <span className="rounded-sm border border-line px-1 text-faint">待考证</span>
-                )}
-              </div>
-            )}
           </div>
         </div>
 
@@ -143,11 +145,11 @@ export function EntryRow({
 
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
-            <div id={`entry-preview-${entry.id}`} className="ui-panel-in ml-[5rem] mt-2 overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[6.25rem]">
+            <div id={`entry-preview-${entry.id}`} className="ui-panel-in ml-[clamp(4.5rem,8vw,7rem)] mt-[clamp(0.5rem,0.8vw,1rem)] overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[clamp(6rem,9vw,8rem)]">
               <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
-                <EntryCover cover={selectedCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
+                <EntryCover cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
-                <div className="flex min-w-0 flex-col p-4 sm:p-5">
+                <div className="flex min-w-0 flex-col p-[clamp(1.25rem,1.65vw,2.75rem)]">
                   {selectedSource ? (
                     <a href={selectedSource.url} target="_blank" rel="noopener noreferrer" className="block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live">
                       {selectedSource.entryTitle} <span className="font-mono text-meta text-live">↗</span>
@@ -282,10 +284,6 @@ function formatPartDuration(totalSeconds: number): string {
   return hours > 0
     ? `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
     : `${minutes}:${String(seconds).padStart(2, '0')}`
-}
-
-function formatSourceCount(count: number): string {
-  return ['零', '一', '两', '三', '四', '五', '六', '七', '八', '九', '十'][count] ?? String(count)
 }
 
 function EntryCover({
