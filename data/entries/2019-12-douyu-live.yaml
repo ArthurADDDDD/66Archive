@@ -207,8 +207,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1HJ411t7br
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1HJ411t7br
   - id: 2019-12-20-live-01
     type: live
     date: "2019-12-20"
@@ -275,7 +279,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 222
+    duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/o_1dsn04c1bm4lksq1htc1kic1kr10.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -295,8 +299,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1hJ411s7hF
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1hJ411s7hF
   - id: 2019-12-23-live-01
     type: live
     date: "2019-12-23"
@@ -367,5 +375,47 @@
       - url: "https://www.acfun.cn/v/ac12201808"
         kind: replay
         parts: 4
+        status: alive
+    contributed_by: data-agent
+  - id: 2019-12-02-live-01
+    type: live
+    date: '2019-12-02'
+    title: 放着我来吧
+    platform: douyu
+    confidence: high
+    duration_min: 182
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1SJ411q7HK
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+  - id: 2019-12-16-live-01
+    type: live
+    date: '2019-12-16'
+    title: Jump King
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1bJ41167SL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+  - id: 2019-12-25-live-01
+    type: live
+    date: '2019-12-25'
+    title: 天儿挺冷
+    platform: douyu
+    confidence: high
+    duration_min: 167
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1mJ411W7my；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1mJ411W7my
+        kind: replay
         status: alive
     contributed_by: data-agent

@@ -54,8 +54,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.bilibili.com/video/BV19K411n7SA
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV19K411n7SA
   - id: 2020-07-03-live-01
     type: live
     date: "2020-07-03"
@@ -214,8 +218,12 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.bilibili.com/video/BV1ok4y1q77x
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1ok4y1q77x
   - id: 2020-07-14-live-01
     type: live
     date: "2020-07-14"
@@ -440,8 +448,12 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.bilibili.com/video/BV1nK411J7Lf
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1nK411J7Lf
   - id: 2020-07-24-live-01
     type: live
     date: "2020-07-24"

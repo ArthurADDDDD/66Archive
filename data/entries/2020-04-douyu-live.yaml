@@ -4,7 +4,7 @@
     title: "踩高跷stilt fella"
     platform: douyu
     confidence: high
-    duration_min: 207
+    duration_min: 336
     cover: "https://tx-free-imgs.acfun.cn/o_1e4r5o8jf1rqh1flgvbkr1e1kra0.jpeg?imageslim"
     games: [stilt-fella]
     segments:
@@ -23,8 +23,12 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1pz411b7DE
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1pz411b7DE
   - id: 2020-04-02-live-01
     type: live
     date: "2020-04-02"
@@ -81,8 +85,12 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.bilibili.com/video/BV1qC4y14786
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
+    note: 补入 B 站「秘密录像屋」BV1qC4y14786
   - id: 2020-04-07-live-01
     type: live
     date: "2020-04-07"
