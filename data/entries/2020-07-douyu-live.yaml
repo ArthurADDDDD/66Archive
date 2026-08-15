@@ -253,16 +253,16 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-07-17-live-01
+  - id: 2020-07-16-live-01
     type: live
-    date: "2020-07-17"
+    date: "2020-07-16"
     title: "输掉的佩奇，悲伤的唱"
     platform: douyu
     confidence: high
     duration_min: 288
     cover: "https://tx-free-imgs.acfun.cn/o_1edeb9qvije11mgm12do8erse30.jpeg?imageslim"
     games: []
-    note: "原误标 7.16：fileName 日期不可靠（对马岛段曾出现 7.7 的同样错误），上传时间 7.17 20:30/20:42 即直播结束时刻，且 ac 号与紧邻的 ac16879036 仅差 2658（≈3.5h），判定为 7.17 下午场。"
+    note: "原曾按上传时间误移到 7.17；女流吧《2020年直播记录》7.16 记为「唱歌」，AcFun 文件名亦为 2020.7.16，故恢复为 7.16。"
     segments:
       - at: "00:00:00"
         label: "输掉的佩奇，悲伤的唱"
