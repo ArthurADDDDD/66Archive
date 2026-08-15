@@ -550,3 +550,123 @@
         parts: 6
         status: alive
     contributed_by: data-agent
+  - id: 2020-03-01-live-01
+    type: live
+    date: '2020-03-01'
+    title: 陶艺大师
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.1 游戏：陶艺大师。斗鱼回放标题：玩土是从小就会玩土
+    sources:
+      - url: https://v.douyu.com/show/Kp1QM8216QVvk4bj
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:03
+    duration_min: 388
+  - id: 2020-03-09-live-01
+    type: live
+    date: '2020-03-09'
+    title: 剧本杀
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.9 游戏：剧本杀。斗鱼回放标题：今天看看谁是凶手
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx29RBZ7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:08
+    duration_min: 239
+  - id: 2020-03-15-live-01
+    type: live
+    date: '2020-03-15'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.15 游戏：仁王2。斗鱼回放标题：仁王2试试水
+    sources:
+      - url: https://v.douyu.com/show/Qyz171mKe2D7BJj9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:51
+    duration_min: 329
+  - id: 2020-03-17-live-01
+    type: live
+    date: '2020-03-17'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.17 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/NVm0WKn2a18MJeBP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:57
+    duration_min: 349
+  - id: 2020-03-19-live-01
+    type: live
+    date: '2020-03-19'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.19 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJEPaGm7Nxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:26
+    duration_min: 502
+  - id: 2020-03-20-live-01
+    type: live
+    date: '2020-03-20'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.20 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/85BAvqxpEB1WG4Lm
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:51
+    duration_min: 324
+  - id: 2020-03-30-live-01
+    type: live
+    date: '2020-03-30'
+    title: 踩高跷/ Stilt Fella
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.30 游戏：踩高跷/ Stilt Fella。斗鱼回放标题：踩高跷stilt fella~~
+    sources:
+      - url: https://v.douyu.com/show/XqeO74ePYL2MxywG
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:12
+    duration_min: 293
+  - id: 2020-03-31-live-01
+    type: live
+    date: '2020-03-31'
+    title: 踩高跷/ Stilt Fella
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.31 游戏：踩高跷/ Stilt Fella。斗鱼回放标题：踩高跷stilt fella~~
+    sources:
+      - url: https://v.douyu.com/show/ZB5Kv95RJXbva93x
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:05
+    duration_min: 296

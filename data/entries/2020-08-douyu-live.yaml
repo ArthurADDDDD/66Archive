@@ -733,3 +733,33 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+  - id: 2020-08-08-live-01
+    type: live
+    date: '2020-08-08'
+    title: 纸片马里奥：折纸国王
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.8 游戏：纸片马里奥：折纸国王。斗鱼回放标题：纸片马里奥全收集
+    sources:
+      - url: https://v.douyu.com/show/8KxjMdo9onQ7VLwb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:03
+    duration_min: 268
+  - id: 2020-08-19-live-01
+    type: live
+    date: '2020-08-19'
+    title: 这里没有游戏:错误维度/ There Is No Game:Wrong Dimension
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:04
+    duration_min: 287

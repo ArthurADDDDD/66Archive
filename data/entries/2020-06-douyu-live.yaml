@@ -456,3 +456,78 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+  - id: 2020-06-02-live-01
+    type: live
+    date: '2020-06-02'
+    title: 搭桥poly bridge 2（15:07场）
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：搭桥poly bridge 2
+    sources:
+      - url: https://v.douyu.com/show/ERALvENpXLA71Vw0
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:07
+    duration_min: 228
+  - id: 2020-06-02-live-02
+    type: live
+    date: '2020-06-02'
+    title: 《硬核机甲》训练营~~（20:01场）
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：《硬核机甲》训练营~~
+    sources:
+      - url: https://v.douyu.com/show/0zZVvPRJDaqMO4E2
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 20:01
+    duration_min: 103
+  - id: 2020-06-06-live-01
+    type: live
+    date: '2020-06-06'
+    title: 活动
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:09
+    duration_min: 120
+  - id: 2020-06-09-live-01
+    type: live
+    date: '2020-06-09'
+    title: 看视频聊天
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.9 看视频聊天。斗鱼回放标题：怒之铁拳6之铁拳
+    sources:
+      - url: https://v.douyu.com/show/worZv05Vn197JBk3
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:16
+    duration_min: 222
+  - id: 2020-06-19-live-01
+    type: live
+    date: '2020-06-19'
+    title: '最后生还者：第二部/ The Last of Us: Part II'
+    platform: douyu
+    confidence: high
+    games: []
+    note: '按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.19 最后生还者：第二部/ The Last of Us: Part II。斗鱼回放标题：最后生还者part2难度3飒一飒'
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx2D1Xl7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 11:51
+    duration_min: 458

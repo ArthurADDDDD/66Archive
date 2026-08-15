@@ -344,3 +344,93 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+  - id: 2020-04-09-live-01
+    type: live
+    date: '2020-04-09'
+    title: 逆转裁判2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.9 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
+    sources:
+      - url: https://v.douyu.com/show/2V0JMVJ2QV5MRY5k
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:05
+    duration_min: 276
+  - id: 2020-04-11-live-01
+    type: live
+    date: '2020-04-11'
+    title: 逆转裁判2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.11 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
+    sources:
+      - url: https://v.douyu.com/show/a4Jj7l2K03rWDk01
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:07
+    duration_min: 534
+  - id: 2020-04-16-live-01
+    type: live
+    date: '2020-04-16'
+    title: 逆转裁判3
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.16 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
+    sources:
+      - url: https://v.douyu.com/show/r90XWgXbmaQvgk25
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:06
+    duration_min: 251
+  - id: 2020-04-17-live-01
+    type: live
+    date: '2020-04-17'
+    title: 逆转裁判3
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.17 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
+    sources:
+      - url: https://v.douyu.com/show/8KxjMdJD2eovVLwb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:43
+    duration_min: 254
+  - id: 2020-04-28-live-01
+    type: live
+    date: '2020-04-28'
+    title: 聊天
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.28 聊天。斗鱼回放标题：动动手指头~~
+    sources:
+      - url: https://v.douyu.com/show/GnzXvbYy4alW462l
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:36
+    duration_min: 270
+  - id: 2020-04-30-live-01
+    type: live
+    date: '2020-04-30'
+    title: 生锈小湖：轮回的房间/ Rusty Lake：Samsara Room
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.30 游戏：生锈小湖：轮回的房间/ Rusty Lake：Samsara Room。斗鱼回放标题：samsara room锈湖新作
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx2yDoX7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:26
+    duration_min: 174
