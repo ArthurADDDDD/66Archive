@@ -42,6 +42,9 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.bilibili.com/video/BV1Tt411M7Mj
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2019-08-07-live-01
@@ -73,6 +76,9 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1gt411N7Rx
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2019-08-15-live-01
@@ -100,6 +106,9 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1K4411S7tp
+        kind: replay
+        status: alive
     contributed_by: data-agent
     note: "原误标 2018-01-15；fileName 全为 2019.8.15（中元节，疑案追声 2019-03-29 才发售），上传 8.16，归此日"
   - id: 2019-08-18-live-01
@@ -122,6 +131,9 @@
       - url: "https://www.acfun.cn/v/ac10777155"
         kind: replay
         parts: 2
+        status: alive
+      - url: https://www.bilibili.com/video/BV1W4411o7R3
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -152,6 +164,9 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.bilibili.com/video/BV1T4411k7hq
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2019-08-25-live-01
@@ -174,6 +189,9 @@
       - url: "https://www.acfun.cn/v/ac10814645"
         kind: replay
         parts: 2
+        status: alive
+      - url: https://www.bilibili.com/video/BV1M441167b5
+        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -206,6 +224,9 @@
       - url: "https://www.acfun.cn/v/ac10841151"
         kind: replay
         parts: 6
+        status: alive
+      - url: https://www.bilibili.com/video/BV1i4411274R
+        kind: replay
         status: alive
     contributed_by: data-agent
 
