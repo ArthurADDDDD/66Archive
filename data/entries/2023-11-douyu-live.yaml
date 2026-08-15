@@ -380,7 +380,8 @@
     duration_min: 522
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_beb55720d157431fb169d84695a54ff2.jpeg?imageslim"
     games: []
-    tags: [66聊聊]
+    tags:
+      - 聊天
     sources:
       - url: "https://www.acfun.cn/v/ac43118934"
         kind: replay
