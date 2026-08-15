@@ -389,52 +389,76 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2021-05-18-live-01
+  - id: 2021-05-17-live-01
     type: live
-    date: "2021-05-18"
+    date: "2021-05-17"
     title: "无尽旅途"
     platform: douyu
     confidence: high
-    duration_min: 165
+    duration_min: 345
     cover: "https://tx-free-imgs.acfun.cn/o_1f5ug1of2nce1mupita12f76t10.jpeg?imageslim"
     games: []
     segments:
-      - at: "00:00:00"
-        label: "无尽旅途"
-      - at: "00:55:00"
-        label: "无尽旅途"
-      - at: "01:50:01"
-        label: "无尽旅途"
+      - at: 00:00:00
+        label: 游戏前聊10块钱的
+      - at: 00:15:50
+        label: 无尽旅途
+      - at: 01:10:00
+        label: 无尽旅途
+      - at: 02:05:01
+        label: 无尽旅途
+      - at: 03:00:01
+        label: 无尽旅途
+      - at: 03:55:02
+        label: 无尽旅途
+      - at: 04:50:03
+        label: 无尽旅途
     sources:
-      - url: "https://www.acfun.cn/v/ac28925578"
+      - url: https://www.acfun.cn/v/ac28925305
+        kind: replay
+        parts: 4
+        status: alive
+      - url: https://www.acfun.cn/v/ac28925578
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+    note: A站页面标题写 2021-05-18，但 P1-P7 内部文件名均为 2021.5.17；结合上传时间，实际直播日期按 2021-05-17 处理。A站将同一场拆为上下两个回放：ac28925305（P1-P4，180.0min）+ ac28925578（P5-P7，165.0min），已合并为一场完整直播，时长相加，只计 1 场。
   - id: 2021-05-18-live-02
     type: live
     date: "2021-05-18"
     title: "深海迷航"
     platform: douyu
     confidence: high
-    duration_min: 164
+    duration_min: 324
     cover: "https://tx-free-imgs.acfun.cn/o_1f5vqu25n18ua1g0g1h971gmk16210.jpeg?imageslim"
     games: [subnautica]
     segments:
-      - at: "00:00:00"
-        label: "深海迷航"
-      - at: "00:54:46"
-        label: "深海迷航"
-      - at: "01:49:34"
-        label: "深海迷航"
+      - at: 00:00:00
+        label: 深海迷航
+      - at: 00:49:59
+        label: 深海迷航
+      - at: 01:44:44
+        label: 深海迷航
+      - at: 02:39:29
+        label: 深海迷航
+      - at: 03:34:16
+        label: 深海迷航
+      - at: 04:29:04
+        label: 深海迷航
     sources:
-      - url: "https://www.acfun.cn/v/ac28949328"
+      - url: https://www.acfun.cn/v/ac28949045
+        kind: replay
+        parts: 3
+        status: alive
+      - url: https://www.acfun.cn/v/ac28949328
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场直播拆为上下两个回放：ac28949045（P1-P3，159.5min）+ ac28949328（P4-P6，164.3min），已合并为一场完整直播，时长相加，只计 1 场。
   - id: 2021-05-19-live-01
     type: live
     date: "2021-05-19"
