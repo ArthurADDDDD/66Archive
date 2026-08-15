@@ -152,10 +152,9 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         )}
       </section>
 
-      {/* 来源：同一场的官方回放与各路录播 */}
       <section className="mt-10 px-page">
         <h2 className="mb-3 text-meta uppercase tracking-[0.16em] text-faint tnum">
-          来源 · {groupedSources.length}
+          观看链接
         </h2>
         {groupedSources.length === 0 ? (
           <p className="text-body text-muted">还没有可用链接。如果你手上有，欢迎补录。</p>
@@ -164,7 +163,6 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             {groupedSources.map((s, i) => {
               const acc = s.account ? ds.accounts.get(s.account) : undefined
               const dead = s.status === 'dead'
-              const statusLabel = s.status === 'alive' ? '已核验可打开' : dead ? '已失效' : '未复查'
               return (
                 <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-3 transition-colors duration-200 hover:bg-surface/80 sm:py-2.5">
                   <span className={`shrink-0 rounded-sm border px-1.5 py-0.5 text-meta ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
@@ -174,10 +172,6 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                   {acc && <span className="text-meta text-ink">{acc.name}</span>}
                   {s.entryTitle !== entry.title && <span className="max-w-full truncate text-meta text-faint">{s.entryTitle}</span>}
                   {s.parts && <span className="font-mono text-meta text-faint tnum">{s.parts} P</span>}
-                  <span className={`text-meta ${s.status === 'alive' ? 'text-live' : dead ? 'text-today' : 'text-faint'}`}>
-                    {statusLabel}
-                  </span>
-                  {s.note && <span className="text-meta text-faint">{s.note}</span>}
                   <a
                     href={s.url}
                     target="_blank"
@@ -193,7 +187,6 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             })}
           </ul>
         )}
-        <p className="mt-2 text-meta text-faint">本站不存放任何视频文件，所有链接均指向原平台。</p>
       </section>
 
       <RelatedRail rails={rails} />

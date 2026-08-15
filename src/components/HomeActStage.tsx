@@ -40,10 +40,15 @@ export function HomeActStage({
     [acts],
   )
   const [activeIndex, setActiveIndex] = useState(0)
+  const activeIndexRef = useRef(0)
 
   useEffect(() => {
-    let frame = 0
-    const update = () => {
+    const setActive = (index: number) => {
+      if (activeIndexRef.current === index) return
+      activeIndexRef.current = index
+      setActiveIndex(index)
+    }
+    const initialActive = () => {
       const focusY = window.innerHeight * 0.46
       let current = 0
       for (let index = 0; index < steps.length; index += 1) {
@@ -52,19 +57,23 @@ export function HomeActStage({
         if (marker.getBoundingClientRect().top <= focusY) current = index
         else break
       }
-      setActiveIndex(current)
+      setActive(current)
     }
-    const schedule = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(update)
+    const indexById = new Map(steps.map((step, index) => [step.id, index]))
+    const observer = new IntersectionObserver((observations) => {
+      for (const observation of observations) {
+        if (!observation.isIntersecting) continue
+        const index = indexById.get(observation.target.id)
+        if (index !== undefined) setActive(index)
+      }
+    }, { rootMargin: '-45% 0px -49% 0px', threshold: 0 })
+    for (const step of steps) {
+      const marker = document.getElementById(step.id)
+      if (marker) observer.observe(marker)
     }
-    update()
-    window.addEventListener('scroll', schedule, { passive: true })
-    window.addEventListener('resize', schedule, { passive: true })
+    initialActive()
     return () => {
-      window.removeEventListener('scroll', schedule)
-      window.removeEventListener('resize', schedule)
-      cancelAnimationFrame(frame)
+      observer.disconnect()
     }
   }, [steps])
 

@@ -51,8 +51,6 @@ export default function StatsPage() {
   const profiles = ids
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null)
-  const withGames = timeline.filter((e) => e.games.length > 0).length
-  const coverage = timeline.length ? Math.round((withGames / timeline.length) * 100) : 0
   const longest = [...profiles]
     .sort((a, b) => b.totalMinutes - a.totalMinutes)
     .slice(0, 8)
@@ -103,20 +101,6 @@ export default function StatsPage() {
           pageId="stats"
           eyebrowColor="#E5568A"
           wide
-          right={
-            <details className="group max-w-sm" open={false}>
-              <summary className="ui-press cursor-pointer list-none rounded-sm text-meta uppercase tracking-[0.16em] text-faint transition-colors hover:text-ink">
-                <span className="underline decoration-dotted underline-offset-4">ⓘ 关于这些数据</span>
-              </summary>
-              <div className="mt-3 space-y-2 rounded-lg border border-line/80 bg-surface/40 p-4 text-meta text-faint tnum">
-                <p>· 已收录直播只统计 type=live 条目；视频投稿时期的时长不混入直播时长。</p>
-                <p>· 时长只统计有时长记录的直播条目；时长缺失或不完整的记录不计入小时数。</p>
-                <p>· 游戏场次基于条目 games 字段，目前标记覆盖率约 {coverage}%（补录中），曲线和排名只覆盖已标记部分。</p>
-                <p>· 同场合并的重复录像已折叠；2011 年档案为空，是真实缺口。</p>
-                <p>· 节目期数按标题 / 栏目 tag 精确匹配派生。</p>
-              </div>
-            </details>
-          }
         />
       </section>
 
@@ -177,7 +161,6 @@ export default function StatsPage() {
         </div>
         <Observation>
           陪伴最久的游戏是「{longest[0]?.name}」，已录 {longest[0]?.hoursLabel}。
-          游戏字段仍在补录中（覆盖率约 {coverage}%）——这份排名会随补录变化，也会越来越全。
         </Observation>
       </Section>
 

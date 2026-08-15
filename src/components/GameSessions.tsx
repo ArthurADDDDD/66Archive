@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryRow } from './EntryRow'
+import { EntryTimeline } from './EntryTimeline'
 
 /**
  * 游戏详情页的相关场次：整行就地展开播放预览，不把点击行为变成详情页跳转。
  * 默认全部打开，让多日期、多视频的关系一次呈现；点击整行仍可单独收起或展开。
  */
-export function GameSessions({ entries }: { entries: TimelineEntry[] }) {
+export function GameSessions({ entries, color = '#E0A244' }: { entries: TimelineEntry[]; color?: string }) {
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set(entries.map((entry) => entry.id)))
   const allExpanded = expanded.size === entries.length
   const expandAll = () => setExpanded(new Set(entries.map((entry) => entry.id)))
@@ -37,23 +38,48 @@ export function GameSessions({ entries }: { entries: TimelineEntry[] }) {
         </div>
       </div>
 
-      <div className="mt-6 w-full divide-y divide-line/50 border-y border-line/60">
-        {entries.map((entry) => (
-          <EntryRow
-            key={entry.id}
-            entry={entry}
-            expanded={expanded.has(entry.id)}
-            onToggle={() => {
-              setExpanded((current) => {
-                const next = new Set(current)
-                if (next.has(entry.id)) next.delete(entry.id)
-                else next.add(entry.id)
-                return next
-              })
-            }}
+      {entries.length > 10 ? (
+        <div className="mt-6 w-full">
+          <EntryTimeline
+            entries={entries}
+            color={color}
+            renderEntry={(entry) => (
+              <EntryRow
+                entry={entry}
+                expanded={expanded.has(entry.id)}
+                showFullDate
+                onToggle={() => {
+                  setExpanded((current) => {
+                    const next = new Set(current)
+                    if (next.has(entry.id)) next.delete(entry.id)
+                    else next.add(entry.id)
+                    return next
+                  })
+                }}
+              />
+            )}
           />
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="mt-6 w-full divide-y divide-line/50 border-y border-line/60">
+          {entries.map((entry) => (
+            <EntryRow
+              key={entry.id}
+              entry={entry}
+              expanded={expanded.has(entry.id)}
+              showFullDate
+              onToggle={() => {
+                setExpanded((current) => {
+                  const next = new Set(current)
+                  if (next.has(entry.id)) next.delete(entry.id)
+                  else next.add(entry.id)
+                  return next
+                })
+              }}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }

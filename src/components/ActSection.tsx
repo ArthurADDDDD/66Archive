@@ -5,6 +5,7 @@ import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveAct } from '@/lib/live-content'
 import { Reveal } from './Reveal'
 import { useLiveAct } from './LiveContentProvider'
+import { MontageVideoList } from './MontageVideoList'
 
 /**
  * 三幕中的一幕。幕头只给文字（kicker/年份/标题/问题/正文）；showCount 时才显示「N 条记录」
@@ -126,7 +127,7 @@ function BeatRow({ beat, color, anchorId }: { beat: ResolvedBeat; color: string;
 function BeatBody({ beat, color }: { beat: ResolvedBeat; color: string }) {
   if (beat.size === 'hero') return <HeroCard beat={beat} color={color} />
   if (beat.size === 'type') return <TypeCard beat={beat} color={color} />
-  if (beat.size === 'montage') return <MontageBlock beat={beat} color={color} />
+  if (beat.size === 'montage') return <MontageVideoList beat={beat} color={color} />
   return <SmallRow beat={beat} color={color} />
 }
 
@@ -190,81 +191,6 @@ function TypeCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
       {beat.body && <p className="mt-2 max-w-2xl text-body text-muted">{beat.body}</p>}
       {beat.emphasis && <EmphasisTag text={beat.emphasis} color={color} />}
       {beat.tail && <p className="mt-5 font-mono text-meta tracking-[0.3em] text-faint">{beat.tail}</p>}
-    </div>
-  )
-}
-
-/** 蒙太奇（首页 ACT II）：日期 · 标题 · 引子 → 分类 chips → 真实封面横条 → 派生统计闪现 */
-function MontageBlock({ beat, color }: { beat: ResolvedBeat; color: string }) {
-  const m = beat.montage
-  return (
-    <div>
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <span className="font-mono text-meta text-faint tnum">{beat.date}</span>
-      </div>
-      <h3 className="mt-3 text-h3 font-bold text-ink">{beat.title}</h3>
-      {beat.body && <p className="mt-2 max-w-2xl text-body text-muted">{beat.body}</p>}
-
-      {beat.chips && beat.chips.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {beat.chips.map((chip) => (
-            <span key={chip} className="rounded-full border border-line/70 px-3 py-1 text-meta text-muted">
-              {chip}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* 横滑封面条：跟随正文容器的左右安全边距，滚动条也只覆盖内容区 */}
-      {m && m.samples.length > 0 && (
-        <div className="mt-5 overflow-x-auto">
-          <div className="flex gap-3 pb-1">
-            {m.samples.map((s) => (
-              <Link key={s.id} href={`/e/${s.id}/`} className="group w-[168px] shrink-0 sm:w-[196px]">
-                <div className="overflow-hidden rounded-lg border border-line/60 bg-surface/40">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.cover}
-                    alt={s.title}
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                    className="aspect-video w-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-                  />
-                </div>
-                <span className="mt-1.5 block truncate text-meta text-faint tnum">
-                  {s.date} · {s.title}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {m && (
-        <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-2 text-body text-muted">
-          <Reveal delay={0}>
-            <span>
-              <b className="tnum text-ink">{m.stats.xinling}</b> 期心灵砒霜
-            </span>
-          </Reveal>
-          <span className="text-faint/40">·</span>
-          <Reveal delay={60}>
-            <span>
-              <b className="tnum text-ink">{m.stats.hoursLabel}</b> 小时直播
-            </span>
-          </Reveal>
-          <span className="text-faint/40">·</span>
-          <Reveal delay={120}>
-            <span>
-              <b className="tnum text-ink">{m.stats.liveSessions}</b> 场
-            </span>
-          </Reveal>
-          <span className="text-faint/40">·</span>
-          <Reveal delay={180}>
-            <span style={{ color }}>大周</span>
-          </Reveal>
-        </div>
-      )}
     </div>
   )
 }

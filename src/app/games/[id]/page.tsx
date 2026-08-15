@@ -87,11 +87,6 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
                     : `档案里还没有标记过《${profile.name}》的场次。`}
                 </p>
               )}
-              {profile.sessions === 0 && (
-                <p className="mt-4 text-meta text-faint">
-                  ⓘ 游戏字段仍在补录中；也可以去编年史直接搜「{profile.name}」。
-                </p>
-              )}
               {profile.curated?.note && (
                 <p className="mt-4 text-meta text-faint">ⓘ {profile.curated.note}</p>
               )}
@@ -123,7 +118,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       {!sparse && profile.sessions > 0 && (
         <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
           <div className="site-container px-page">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">数字 · 只统计已标记的场次</p>
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">一起走过的时间</p>
             <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <Stat value={profile.hoursLabel} label="总时间" />
               <Stat value={profile.sessions.toLocaleString()} label="场次" />
@@ -155,7 +150,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       {profile.entries.length > 0 && (
         <section className="border-t border-line py-14 sm:py-20">
           <div className="site-container px-page">
-            <GameSessions entries={profile.entries} />
+            <GameSessions entries={profile.entries} color="#E0A244" />
             <div className="mt-8">
               <Link
                 href={ctaHref}
@@ -233,11 +228,6 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
         )}
       </div>
 
-      {!hasEntry && (
-        <p className="mt-4 text-meta text-faint">
-          ⓘ 游戏字段仍在补录中；也可以去编年史直接搜「{profile.name}」。
-        </p>
-      )}
       {profile.curated?.note && (
         <p className="mt-4 text-meta text-faint">ⓘ {profile.curated.note}</p>
       )}

@@ -6,6 +6,9 @@ import { Eyebrow, MediaFrame, SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeriesList, type SeriesInfo } from '@/lib/series'
+import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
+import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
+import { SeriesMontage, type SeriesMontageSample } from '@/components/SeriesMontage'
 
 const ERA_COLOR: Record<'video' | 'douyu', string> = { video: '#E0A244', douyu: '#5BC8E8' }
 
@@ -14,11 +17,15 @@ const ERA_COLOR: Record<'video' | 'douyu', string> = { video: '#E0A244', douyu: 
  * 心灵砒霜（期数最多、横跨整个斗鱼时代）单独以大块深色展示——
  * 夜 / 邮件 / 电台 / 周日 / 长期陪伴的气质靠深色 + 字排 + 留白完成，不画收音机。
  */
-export default function SeriesPage() {
+export default async function SeriesPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
   const series = buildSeriesList(ds, timeline)
   const pishuang = series.find((s) => s.id === 'xinling-pishuang')
+  const pishuangMontage = pishuang ? await buildPishuangMontage(pishuang) : []
+  const pishuangFirstBiliSource = pishuang?.entries[0]?.sources.find((source) => source.url.includes('bilibili.com/video/'))?.url
+  const pishuangFirstBiliMeta = await getBilibiliVideoMetaAtBuild(pishuangFirstBiliSource)
+  const pishuangFallbackCover = pishuangFirstBiliMeta?.cover ?? pishuang?.entries.find((entry) => entry.cover)?.cover
   const rest = series.filter((s) => s.id !== 'xinling-pishuang')
   const videoEra = rest.filter((s) => s.era === 'video')
   const douyuEra = rest.filter((s) => s.era === 'douyu')
@@ -44,7 +51,7 @@ export default function SeriesPage() {
       {pishuang && (
         <section className="border-y border-line/70 bg-[#0C0E15]">
           <div className="site-container grid items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
-            <div>
+            <div className="min-w-0">
               <Eyebrow color="#5BC8E8" dot>
                 周日情感电台 · 斗鱼时期 · 心灵砒霜
               </Eyebrow>
@@ -52,22 +59,32 @@ export default function SeriesPage() {
               <p className="mt-5 max-w-xl text-body text-muted">{pishuang.description}</p>
               <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
                 <span className="text-body text-ink">{pishuang.count} 期</span>
-                <span>档案确认 · 构建期从数据派生</span>
-                <span>2016.08 — 2023.11</span>
-                <span>横跨 8 年</span>
+                <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
+                <span>横跨 {Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1} 年</span>
               </div>
               <div className="mt-8">
                 <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} descriptive />
               </div>
+              {pishuangMontage.length > 0 && (
+                <div className="mt-8 border-t border-line/50 pt-6">
+                  <SeriesMontage samples={pishuangMontage} />
+                </div>
+              )}
             </div>
 
-            <div className="flex flex-col gap-8 lg:pt-10">
+            <div className="min-w-0 flex flex-col gap-8 lg:pt-10">
               {pishuang.firstTitle && (
                 <blockquote className="border-l-2 border-line/60 pl-5">
                   <p className="text-h3 font-medium leading-relaxed text-ink/90">第一期是「{pishuang.firstTitle}」。</p>
-                  <p className="mt-3 text-meta text-muted tnum">第一期标题，原文照录 · {pishuang.firstDate}</p>
+                  <p className="mt-3 text-meta text-muted tnum">{pishuang.firstDate}</p>
                 </blockquote>
               )}
+              <BilibiliCoverFrame
+                sourceUrl={pishuangFirstBiliSource}
+                fallbackSrc={pishuangFallbackCover}
+                alt={pishuang.firstTitle ?? pishuang.name}
+                className="w-full"
+              />
               <p className="max-w-md text-body text-muted">
                 游戏暂停，邮件打开，一个星期日。后来这件事被保存下来 {pishuang.count} 次——有的很长，有的很短，固定地出现在每周日。
               </p>
@@ -92,6 +109,22 @@ export default function SeriesPage() {
       <SiteFooter />
     </main>
   )
+}
+
+async function buildPishuangMontage(series: SeriesInfo): Promise<SeriesMontageSample[]> {
+  const seenBvid = new Set<string>()
+  const samples: SeriesMontageSample[] = []
+  for (const entry of series.entries) {
+    const source = entry.sources.find((candidate) => candidate.url.includes('bilibili.com/video/'))
+    const bvid = source?.url.match(/\/video\/(BV[\w-]+)/i)?.[1]
+    if (!source || !bvid || seenBvid.has(bvid)) continue
+    seenBvid.add(bvid)
+    samples.push({ id: entry.id, date: entry.date, title: entry.title, sourceUrl: source.url, cover: entry.cover, views: null })
+  }
+  return Promise.all(samples.map(async (sample) => {
+    const meta = await getBilibiliVideoMetaAtBuild(sample.sourceUrl)
+    return { ...sample, cover: meta?.cover ?? sample.cover, views: meta?.views ?? null }
+  }))
 }
 
 function EraGroup({ label, years, color, series }: { label: string; years: string; color: string; series: SeriesInfo[] }) {
