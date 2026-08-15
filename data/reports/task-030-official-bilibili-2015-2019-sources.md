@@ -43,3 +43,13 @@ I'm scared、Lakeview Cabin Collections、辐射避难所、逃脱方块四季�
 ## 校验
 
 `npm run validate` 通过。
+
+## 执行结束状态
+
+- 总条目：2685（另有演示 212）
+- live：2591（新增 3 个 2015 live 日）
+- 重点年份：
+  - 2015：43 live / 43 unique days / 115.8h
+  - 2016：212 live / 191 unique days / 616.4h
+  - 2017：285 live / 254 unique days / 959.0h
+  - 2019：239 live / 221 unique days / 950.7h
