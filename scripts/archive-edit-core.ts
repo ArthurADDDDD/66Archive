@@ -159,10 +159,10 @@ export function commitMessage(entryId: string, evidence: string, changeId: strin
   ].join('\n')
 }
 
-export function backupsToPrune(names: string[], keep = 7) {
+export function backupsToPrune(names: string[], keep = 7, pattern = /^archive-\d{8}T\d{6}Z\.dump$/) {
   if (!Number.isInteger(keep) || keep < 1) throw new Error('备份保留数量必须是正整数')
   return names
-    .filter((value) => /^archive-\d{8}T\d{6}Z\.dump$/.test(value))
+    .filter((value) => pattern.test(value))
     .sort()
     .reverse()
     .slice(keep)

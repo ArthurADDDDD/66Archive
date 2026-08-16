@@ -1,0 +1,7 @@
+{
+  "sshHost": "example-host",
+  "remoteUpdateCommand": "/path/to/deploy-script",
+  "localBackupRoot": "/path/to/backups",
+  "remoteBackupPattern": "^/path/to/backups/archive-\\d{8}T\\d{6}Z\\.dump$",
+  "backupFilePattern": "^archive-\\d{8}T\\d{6}Z\\.dump$"
+}
