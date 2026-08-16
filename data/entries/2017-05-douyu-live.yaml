@@ -4,6 +4,7 @@
     title: "大周，还好么"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_03/1493813209.JPG?imageslim"
     games: []
@@ -94,6 +95,7 @@
     title: "小小噩梦"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_07/1494127121.JPG?imageslim"
     games: [little-nightmares]
@@ -173,6 +175,7 @@
     title: "艾迪芬奇的记忆（What Remains of Edith Finch）"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 186
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_12/1494605139.JPG?imageslim"
     games: [what-remains-of-edith-finch]
@@ -190,6 +193,10 @@
         kind: replay
         parts: 4
         status: alive
+      - url: "https://www.bilibili.com/video/BV1zx411e7Cm"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-05-13-live-01
@@ -198,6 +205,7 @@
     title: "final station"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 220
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_13/1494685331.jpg?imageslim"
     games: [final-station]
@@ -246,6 +254,7 @@
     title: "final station"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494898197.jpg?imageslim"
     games: [final-station]
@@ -271,6 +280,7 @@
     title: "final station"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 187
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494934403.JPG?imageslim"
     games: [final-station]
@@ -296,6 +306,7 @@
     title: "死亡细胞(Dead Cells）"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_17/1495033834.JPG?imageslim"
     games: [dead-cells]
@@ -321,6 +332,7 @@
     title: "死亡细胞(Dead Cells）"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 212
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_19/1495195678.jpg?imageslim"
     games: [dead-cells]
@@ -346,6 +358,7 @@
     title: "核聚变2017电游嘉年华"
     platform: douyu
     confidence: high
+    tags: []
     duration_min: 84
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_20/1495287191.jpg?imageslim"
     games: []
@@ -515,22 +528,6 @@
     note: "B站「女流录像小屋」《手工猪小拱》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Rx411m7ha"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2017-05-12-live-03
-    type: live
-    date: "2017-05-12"
-    title: "艾迪芬奇的记忆（What Remains of Edith Finch）"
-    platform: douyu
-    confidence: high
-    duration_min: 186
-    games: []
-    note: "B站「女流录像小屋」《艾迪芬奇的记忆（What Remains of Edith Finch）》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1zx411e7Cm"
         kind: replay
         status: alive
         account: bili-fan-record-house
