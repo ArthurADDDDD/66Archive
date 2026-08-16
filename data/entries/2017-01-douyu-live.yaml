@@ -4,6 +4,7 @@
     title: "英雄联盟之我家又爆炸啦！~"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_01/1483278784.jpg?imageslim"
     games: [league-of-legends]
@@ -25,6 +26,30 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://www.youtube.com/watch?v=2qmw0idtQUo
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=NmVVDSsWhsY
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=b3VvIWxhWzA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=bBXknYfHH18
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=tw4V5Rn3e0Y
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=yuY8Ej1dFOw
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-02-live-01
@@ -37,7 +62,7 @@
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483451376.jpg?imageslim"
     games: []
-    tags: [心灵砒霜]
+    tags: [心灵砒霜, 需代理]
     segments:
       - at: "00:00:00"
         label: "P1-1.2-心灵砒霜-弹幕版"
@@ -50,6 +75,14 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=3TQsPO3md68
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=epmp9mguSaw
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-03-live-01
@@ -58,6 +91,7 @@
     title: "盛世天下·媚娘篇"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 193
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483455126.JPG?imageslim"
     games: [shengshi-tianxia]
@@ -76,6 +110,18 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=B7jOT_JJU9M
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=JPqp8Dx5Ufs
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=_29pyzNH88Y
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-04-live-01
@@ -84,6 +130,7 @@
     title: "盛世天下·媚娘篇"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 224
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_04/1483531948.JPG?imageslim"
     games: [shengshi-tianxia]
@@ -101,6 +148,18 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=0bB-ji-VSMI
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=C1TQAggXyH0
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=a1MWSvEKSNo
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-07-live-01
@@ -109,6 +168,7 @@
     title: "英雄联盟"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 227
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_07/1483797274.JPG?imageslim"
     games: [league-of-legends]
@@ -132,6 +192,26 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.youtube.com/watch?v=4oGrp8OLFLA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=PJYISI3UT3Y
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=jhsZEUjA3Iw
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=smGdTFGmEv4
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=yGFw4r8DV9k
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-10-live-01
@@ -143,7 +223,7 @@
     duration_min: 98
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_10/1484052496.JPG?imageslim"
     games: []
-    tags: [聊天]
+    tags: [聊天, 需代理]
     segments:
       - at: "00:00:00"
         label: "P1-炒饭聊天"
@@ -154,6 +234,22 @@
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.youtube.com/watch?v=MLSZ05YCW5s
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=_IH90hOALJo
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=nuXHGoOtPvA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=xoBfU9dFgvU
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-10-live-02
@@ -185,6 +281,7 @@
     title: "快快好起来啊"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 228
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_11/1484144133.JPG?imageslim"
     games: []
@@ -200,6 +297,18 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=3Mo_61tT_-A
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=BGAuWmwfH_c
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=mK4K503G4x4
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-12-live-01
@@ -208,6 +317,7 @@
     title: "英雄联盟"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 80
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_12/1484228962.jpg?imageslim"
     games: [league-of-legends]
@@ -222,6 +332,22 @@
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.youtube.com/watch?v=8w91fMoHhuE
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=JIpUHADlmKg
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=XaBLuUmfiJY
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=sFVPm0aObKc
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-12-live-02
@@ -303,7 +429,7 @@
     duration_min: 151
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484617930.jpg?imageslim"
     games: []
-    tags: [心灵砒霜]
+    tags: [心灵砒霜, 需代理]
     segments:
       - at: "00:00:00"
         label: "P1-1.15-心灵砒霜-弹幕版"
@@ -316,6 +442,22 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=GAZjxDdUBuQ
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=fKWBKfaHIaU
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=pFJXE-ozOGg
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=xi_UraHOWFY
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-16-live-01
@@ -324,6 +466,7 @@
     title: "Move or Die"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 125
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_16/1484562894.JPG?imageslim"
     games: [move-or-die]
@@ -339,6 +482,10 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=CDYZEduG9nM
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-17-live-01
@@ -347,6 +494,7 @@
     title: "战斗方块剧场"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 179
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484651137.JPG?imageslim"
     games: [battleblock-theater]
@@ -364,6 +512,22 @@
         kind: replay
         parts: 4
         status: alive
+      - url: https://www.youtube.com/watch?v=GI06SrmoIf0
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=RWi-XuQGOMg
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=RbeC8nufhXI
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=kXxgKob3EV8
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-18-live-01
@@ -393,6 +557,7 @@
     title: "王权"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 185
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760538.jpg?imageslim"
     games: [reigns]
@@ -406,6 +571,22 @@
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.youtube.com/watch?v=Dxb-kVIs7JA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=WV24yHwaF8I
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=ft01qt8SouI
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=tvKwnIWOra0
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-20-live-01
@@ -414,6 +595,7 @@
     title: "两周年彩排"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 217
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1484988007.png?imageslim"
     games: []
@@ -429,6 +611,18 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.youtube.com/watch?v=BPOH-6ACkD0
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=fDmYnK4mogA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=o1z98vFjBFo
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-21-live-01
@@ -457,7 +651,7 @@
     duration_min: 77
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_24/1485261172.jpg?imageslim"
     games: []
-    tags: [心灵砒霜]
+    tags: [心灵砒霜, 需代理]
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -468,6 +662,18 @@
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.youtube.com/watch?v=GsyEQ3mV9VA
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=HezOvwRHGes
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=oQMXYqG-9bM
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-25-live-01
@@ -534,6 +740,7 @@
     title: "我画你猜"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_27/1485533743.png?imageslim"
     games: []
@@ -542,6 +749,10 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.youtube.com/watch?v=ZQYITAUNq1w
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-01-29-live-01
@@ -550,6 +761,7 @@
     title: "82年的雪碧会上头"
     platform: douyu
     confidence: high
+    tags: [需代理]
     duration_min: 32
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_29/1485689598.jpg?imageslim"
     games: []
@@ -563,4 +775,36 @@
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.youtube.com/watch?v=GARrT6XBAIE
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: https://www.youtube.com/watch?v=Q0Z-GXaxAGw
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+    contributed_by: data-agent
+  - id: 2017-01-14-live-01
+    type: live
+    date: "2017-01-14"
+    title: "返校"
+    platform: douyu
+    confidence: high
+    duration_min: 237
+    games: []
+    tags: [需代理]
+    note: "来自 YouTube「66女流」频道备份，标题明确标注 1 14；P1-P3 合为同一场。"
+    sources:
+      - url: "https://www.youtube.com/watch?v=835uuLYZDVU"
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: "https://www.youtube.com/watch?v=zxvS3aphocY"
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
+      - url: "https://www.youtube.com/watch?v=J2hEGoVQoow"
+        kind: replay
+        status: alive
+        account: youtube-fan-66nvliu
     contributed_by: data-agent

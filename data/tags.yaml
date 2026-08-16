@@ -50,6 +50,10 @@
   group: format
   description: "以语音为主、无游戏画面的直播。"
 
+- name: 需代理
+  group: format
+  description: "来源为 YouTube 等境外平台，国内网络可能无法直接播放，需要代理或镜像。"
+
 - name: 多人在线
   group: format
   description: "多人联机 / 在线合作的内容。"
