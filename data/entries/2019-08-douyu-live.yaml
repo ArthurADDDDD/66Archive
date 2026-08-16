@@ -309,3 +309,22 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+  - id: 2019-08-13-live-01
+    type: live
+    date: "2019-08-13"
+    title: "斗鱼天下第一斗歌大赛（女流视角）"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    games: []
+    tags: [聊天]
+    note: "来源为「列支敦士登驻通辽大使」女流视角 5P（约 3:05:53）及「秘密录像屋」多视角备份（含导师女流视角 P5）。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1S4411S7ix"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1K4411D7QE"
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent

@@ -350,3 +350,18 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+  - id: 2019-11-08-live-01
+    type: live
+    date: "2019-11-08"
+    title: "失落城堡"
+    platform: douyu
+    confidence: high
+    duration_min: 211
+    games: []
+    tags: []
+    note: "来源为「没被处理过」《失落城堡.女流.2019.11.8》，标题含日期，2P 全长约 3:30:33。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kE411Y7Eg"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
