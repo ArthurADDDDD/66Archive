@@ -16,7 +16,7 @@ import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
   const { narrative } = useLiveContent()
   const copy = useCopyBlock('homeSections', 'home-highlights')
-  const beats = applyLiveHighlights(baseline, narrative?.highlights, emphasisVars)
+  const beats = applyLiveHighlights(baseline, narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
   if (beats.length === 0) return null
   return (
     <section id="home-highlights" className="scroll-mt-4 border-t border-line py-12 sm:py-16">

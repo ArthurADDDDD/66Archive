@@ -36,7 +36,7 @@ export function StoryTimeline({
   modeControl?: ReactNode
 }) {
   const { narrative } = useLiveContent()
-  const years = applyLiveStoryYears(baselineYears, narrative?.storyActs)
+  const years = applyLiveStoryYears(baselineYears, narrative?.storyActs, narrative?.deletedIds ?? [])
   return (
     <main className="ui-page-in site-container px-page pb-20">
       {modeControl && <div className="ui-reveal pt-4 sm:hidden">{modeControl}</div>}

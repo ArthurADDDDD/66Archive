@@ -4,7 +4,7 @@ import Link from 'next/link'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveAct } from '@/lib/live-content'
 import { Reveal } from './Reveal'
-import { useLiveAct } from './LiveContentProvider'
+import { useLiveAct, useLiveContent } from './LiveContentProvider'
 import { MontageVideoList } from './MontageVideoList'
 
 /**
@@ -23,6 +23,7 @@ export function ActSection({
   sectionId,
   beatAnchorPrefix,
   scope = 'homeActs',
+  liveApplied = false,
 }: {
   act: ResolvedAct
   now?: { year: string; label: string; count: number }
@@ -32,9 +33,12 @@ export function ActSection({
   beatAnchorPrefix?: string
   /** 读哪一份幕配置：首页三幕与故事模式在后台是分开维护的两份。 */
   scope?: 'homeActs' | 'storyActs'
+  /** 由父级已经调用过 applyLiveActs，不要再重复套用 live 覆盖。 */
+  liveApplied?: boolean
 }) {
   const live = useLiveAct(scope, baselineAct.act.id)
-  const act = applyLiveAct(baselineAct, live, scope === 'homeActs')
+  const { narrative } = useLiveContent()
+  const act = liveApplied ? baselineAct : applyLiveAct(baselineAct, live, scope === 'homeActs', narrative?.deletedIds ?? [])
   const a = act.act
 
   return (

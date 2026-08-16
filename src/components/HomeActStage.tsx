@@ -26,7 +26,7 @@ export function HomeActStage({
   now: { year: string; label: string; count: number }
 }) {
   const { narrative } = useLiveContent()
-  const acts = applyLiveActs(baselineActs, narrative?.homeActs, true)
+  const acts = applyLiveActs(baselineActs, narrative?.homeActs, true, narrative?.deletedIds ?? [])
   const rootRef = useRef<HTMLElement>(null)
   const steps = useMemo<StageStep[]>(
     () => acts.flatMap((act, actIndex) => [
