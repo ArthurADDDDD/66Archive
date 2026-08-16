@@ -29,12 +29,48 @@
       - at: "03:54:34"
         label: "P2.8-12.2-Ice Lakes 冰湖"
     sources:
+      - url: https://www.bilibili.com/video/BV1FW411Y7gu
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4114988"
         kind: replay
         parts: 10
         status: alive
     contributed_by: data-agent
 
+  - id: 2017-12-03-live-01
+    type: live
+    date: "2017-12-03"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 177
+    series: xinling-pishuang
+    tags: [心灵砒霜]
+    note: "B站「女流录像小屋」普通版与弹幕版为同一场，合并为一天一条；弹幕版较长作为主时长。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1uW411Y7yP?p=1"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1uW411Y7yP?p=2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=1"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=3"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2017-12-04-live-01
     type: live
     date: "2017-12-04"
@@ -111,6 +147,10 @@
       - at: "05:20:56"
         label: "P13-12.5-肯·福莱特的《圣殿春秋》之死灰复燃"
     sources:
+      - url: https://www.bilibili.com/video/BV1bW411Y7Em
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4120105"
         kind: replay
         parts: 13
@@ -151,6 +191,10 @@
       - at: "04:04:32"
         label: "P2.8-12.6-【吃鸡佳缘】第一期弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1MW411h7Xy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4125032"
         kind: replay
         parts: 10
@@ -198,6 +242,10 @@
       - at: "05:15:43"
         label: "P4.3-12.8-绝地求生"
     sources:
+      - url: https://www.bilibili.com/video/BV1xW411h7Zg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4126689"
         kind: replay
         parts: 13
@@ -243,6 +291,10 @@
       - at: "05:21:37"
         label: "P3.10-12.9-谋杀之谜"
     sources:
+      - url: https://www.bilibili.com/video/BV14W411h7xX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4128003"
         kind: replay
         parts: 14
@@ -284,6 +336,10 @@
       - at: "03:53:39"
         label: "P3.6-12.10-心灵砒霜-透明弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1zW411h7ro
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4129454"
         kind: replay
         parts: 11
@@ -317,6 +373,10 @@
       - at: "03:05:45"
         label: "P8-12.11-我是大老板"
     sources:
+      - url: https://www.bilibili.com/video/BV12W411h7bC
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4131089"
         kind: replay
         parts: 8
@@ -344,6 +404,10 @@
       - at: "01:42:44"
         label: "P5-K歌不停歇-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1QW411h7bw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4134496"
         kind: replay
         parts: 5
@@ -408,6 +472,10 @@
       - at: "02:20:37"
         label: "P6-12.15-GOROGOA 画中世界"
     sources:
+      - url: https://www.bilibili.com/video/BV15W411a7nZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4139436"
         kind: replay
         parts: 6
@@ -438,6 +506,10 @@
       - at: "01:31:32"
         label: "P5-12.15-【吃鸡佳缘】第二期 弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1zW411b7fS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4140602"
         kind: replay
         parts: 5
@@ -489,6 +561,10 @@
       - at: "06:18:37"
         label: "P2.12-12.16-《去月球》续作《寻找天堂"
     sources:
+      - url: https://www.bilibili.com/video/BV1CW411b7et
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4140972"
         kind: replay
         parts: 15
@@ -505,6 +581,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_18/1513560700.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1TW41187Rd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4142321"
         kind: replay
         parts: 1
@@ -546,6 +626,10 @@
       - at: "04:33:14"
         label: "P2.10-12.18-Death Coming 死神来了"
     sources:
+      - url: https://www.bilibili.com/video/BV1PW41187Ff
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4144095"
         kind: replay
         parts: 12
@@ -581,6 +665,10 @@
       - at: "03:43:38"
         label: "P9-12.20-MONOPOLY PLUS 大富翁"
     sources:
+      - url: https://www.bilibili.com/video/BV1WW41187xY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4148109"
         kind: replay
         parts: 9
@@ -655,6 +743,10 @@
       - at: "03:54:25"
         label: "P9-12.23-【吃鸡佳缘】第三期-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1JW411t7B2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4154223"
         kind: replay
         parts: 9
@@ -690,6 +782,10 @@
       - at: "03:02:16"
         label: "P2.8-12.24-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1iW411t7Xy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4154898"
         kind: replay
         parts: 8
@@ -735,6 +831,10 @@
         label: "P10-12.25-大周MC圣诞专场"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1YW411t7JW
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4156666"
         kind: replay
         parts: 9
@@ -768,6 +868,10 @@
       - at: "02:49:56"
         label: "P2.6-12.26-青蛙爆破者(Kero Blaster)"
     sources:
+      - url: https://www.bilibili.com/video/BV1kW411t7y8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4158411"
         kind: replay
         parts: 8
@@ -799,6 +903,10 @@
       - at: "02:37:11"
         label: "P7-12.27-青蛙爆破者"
     sources:
+      - url: https://www.bilibili.com/video/BV1QW411t7A7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4160261"
         kind: replay
         parts: 7
@@ -840,6 +948,10 @@
       - at: "04:35:34"
         label: "P12-12.29-欢迎关注颜值主播6酱"
     sources:
+      - url: https://www.bilibili.com/video/BV1GW411b7d5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4164567"
         kind: replay
         parts: 12
@@ -873,6 +985,10 @@
       - at: "02:55:55"
         label: "P7-12.30-【吃鸡佳缘】第四期-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1BW411b7pP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4166010"
         kind: replay
         parts: 7
@@ -882,68 +998,118 @@
   - id: 2017-12-31-live-01
     type: live
     date: "2017-12-31"
-    title: "【心灵砒霜】2017感谢有你"
-    series: xinling-pishuang
+    title: "大周脚展"
     platform: douyu
     confidence: high
-    duration_min: 241
+    duration_min: 103
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_31/1514725419.png?imageslim"
     games: []
-    tags: [心灵砒霜]
+    tags:
+      - 弹幕版
     segments:
-      - at: "00:00:00"
-        label: "P1.1-12.31-隔着屏幕闻到一股脚臭味"
-      - at: "00:25:45"
-        label: "P1.2-12.31-隔着屏幕闻到一股脚臭味"
-      - at: "00:51:32"
-        label: "P1.3-12.31-隔着屏幕闻到一股脚臭味"
-      - at: "01:17:18"
-        label: "P1.4-12.31-隔着屏幕闻到一股脚臭味"
-      - at: "01:43:04"
-        label: "P2.1-12.31-心灵砒霜"
-      - at: "02:10:38"
-        label: "P2.2-12.31-心灵砒霜"
-      - at: "02:38:12"
-        label: "P2.3-12.31-心灵砒霜"
-      - at: "03:05:47"
-        label: "P2.4-12.31-心灵砒霜"
-      - at: "03:33:22"
-        label: "P2.5-12.31-心灵砒霜"
+      - at: 00:00:00
+        label: P1.1-12.31-隔着屏幕闻到一股脚臭味
+      - at: 00:25:45
+        label: P1.2-12.31-隔着屏幕闻到一股脚臭味
+      - at: 00:51:32
+        label: P1.3-12.31-隔着屏幕闻到一股脚臭味
+      - at: 01:17:18
+        label: P1.4-12.31-隔着屏幕闻到一股脚臭味
     sources:
-      - url: "https://www.acfun.cn/v/ac4166820"
+      - url: https://www.bilibili.com/video/BV11W411q7ZT
         kind: replay
-        parts: 9
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac4167402
+        kind: replay
+        parts: 4
+        status: alive
+      - url: https://www.acfun.cn/v/ac4166820
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: P1.1-12.31-隔着屏幕闻到一股脚臭味
+            duration_sec: 1545
+          - page: 2
+            title: P1.2-12.31-隔着屏幕闻到一股脚臭味
+            duration_sec: 1547
+          - page: 3
+            title: P1.3-12.31-隔着屏幕闻到一股脚臭味
+            duration_sec: 1546
+          - page: 4
+            title: P1.4-12.31-隔着屏幕闻到一股脚臭味
+            duration_sec: 1546
     contributed_by: data-agent
-  - id: 2017-12-03-live-01
+    note: 人工复核：原误按 2018-12-31 处理，实为 2017-12-31 大周脚展直播。同日另有心灵砒霜直播与新年寄语视频。
+  - id: 2017-12-31-live-02
     type: live
-    date: "2017-12-03"
-    title: "心灵砒霜"
+    date: '2017-12-31'
+    title: 心灵砒霜
     platform: douyu
     confidence: high
-    duration_min: 177
+    duration_min: 138
+    games: []
+    tags:
+      - 心灵砒霜
     series: xinling-pishuang
-    tags: [心灵砒霜]
-    note: "B站「女流录像小屋」普通版与弹幕版为同一场，合并为一天一条；弹幕版较长作为主时长。"
+    cover: https://tx-free-imgs.acfun.cn/content/2018_01_01/1514781835.png?imageslim
+    segments:
+      - at: 00:00:00
+        label: P2.1-12.31-心灵砒霜
+      - at: 00:27:34
+        label: P2.2-12.31-心灵砒霜
+      - at: 00:55:08
+        label: P2.3-12.31-心灵砒霜
+      - at: 01:22:43
+        label: P2.4-12.31-心灵砒霜
+      - at: 01:50:18
+        label: P2.5-12.31-心灵砒霜
     sources:
-      - url: "https://www.bilibili.com/video/BV1uW411Y7yP?p=1"
+      - url: https://www.bilibili.com/video/BV12W411q7tg
         kind: replay
         status: alive
         account: bili-fan-record-house
-      - url: "https://www.bilibili.com/video/BV1uW411Y7yP?p=2"
+      - url: https://www.acfun.cn/v/ac4167351
+        kind: replay
+        parts: 5
+        status: alive
+      - url: https://www.acfun.cn/v/ac4166820
         kind: replay
         status: alive
-        account: bili-fan-record-house
-      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=1"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=2"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.bilibili.com/video/BV1cW411Y7kV?p=3"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
+        part_details:
+          - page: 5
+            title: P2.1-12.31-心灵砒霜
+            duration_sec: 1654
+          - page: 6
+            title: P2.2-12.31-心灵砒霜
+            duration_sec: 1654
+          - page: 7
+            title: P2.3-12.31-心灵砒霜
+            duration_sec: 1655
+          - page: 8
+            title: P2.4-12.31-心灵砒霜
+            duration_sec: 1655
+          - page: 9
+            title: P2.5-12.31-心灵砒霜
+            duration_sec: 1655
     contributed_by: data-agent
+    note: 人工复核：原误按 2018-12-31 处理，实为 2017-12-31 心灵砒霜直播；与同日大周脚展为两次记录。
+  - id: 2017-12-31-video-01
+    type: video
+    date: '2017-12-31'
+    title: 2017感谢有你（新年寄语）
+    platform: douyu
+    confidence: high
+    duration_min: 33
+    games: []
+    sources:
+      - url: https://www.bilibili.com/video/BV11W411q7oA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac4167422
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 人工复核：非直播，为 2017-12-31 发布的新年寄语视频，单独成条，不与同日直播合并。

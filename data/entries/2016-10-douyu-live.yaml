@@ -15,6 +15,10 @@
       - at: "02:10:57"
         label: "P3-10.3-弟弟出现"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ls411b7dG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3154320"
         kind: replay
         parts: 3
@@ -40,6 +44,10 @@
       - at: "02:29:08"
         label: "P4-10.4-煮糊了(overcooked)"
     sources:
+      - url: https://www.bilibili.com/video/BV1js411b7NA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3154403"
         kind: replay
         parts: 4
@@ -63,6 +71,10 @@
       - at: "02:35:26"
         label: "P3-10.5-煮糊了(overcooked)"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ss411x7QW
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3157494"
         kind: replay
         parts: 3
@@ -88,6 +100,10 @@
       - at: "02:40:53"
         label: "P1-10.6-煮糊了(overcooked)"
     sources:
+      - url: https://www.bilibili.com/video/BV11s411x7Vq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3158187"
         kind: replay
         parts: 4
@@ -113,6 +129,10 @@
       - at: "02:45:23"
         label: "P1-10.7-这个嗡不是白嗡的"
     sources:
+      - url: https://www.bilibili.com/video/BV1Fs41147fM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3160298"
         kind: replay
         parts: 4
@@ -138,6 +158,10 @@
       - at: "02:15:47"
         label: "P3-10.9-心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1Zs411x7EM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3164916"
         kind: replay
         parts: 3
@@ -159,6 +183,10 @@
       - at: "00:09:41"
         label: "P2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ws41147uB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3175879"
         kind: replay
         parts: 2
@@ -175,6 +203,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_14/1476461134.JPG?imageslim"
     games: [xianjian-3d-huhe]
     sources:
+      - url: https://www.bilibili.com/video/BV1Es41147sd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3178955"
         kind: replay
         parts: 1
@@ -200,6 +232,10 @@
       - at: "02:07:32"
         label: "P3"
     sources:
+      - url: https://www.bilibili.com/video/BV1bs41147Gi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3183453"
         kind: replay
         parts: 3
@@ -227,14 +263,18 @@
       - at: "02:38:33"
         label: "P5"
     sources:
+      - url: https://www.bilibili.com/video/BV1Xs41147Jb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3193762"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
-  - id: 2016-10-20-live-02
-    type: live
+  - id: 2016-10-20-video-01
+    type: video
     date: "2016-10-20"
     title: "聊天"
     platform: douyu
@@ -244,12 +284,17 @@
     games: []
     tags: [聊天]
     sources:
+      - url: https://www.bilibili.com/video/BV1Xs411478M
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3193768"
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
 
+    note: 按人工规则：单P短录像，先按切片处理，不计入直播场次。
   - id: 2016-10-21-live-01
     type: live
     date: "2016-10-21"
@@ -269,6 +314,10 @@
       - at: "03:12:28"
         label: "P4-生锈小湖"
     sources:
+      - url: https://www.bilibili.com/video/BV11s41147Yi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3196655"
         kind: replay
         parts: 4
@@ -294,6 +343,10 @@
       - at: "01:46:36"
         label: "P3-心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1ds41147wj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3200852"
         kind: replay
         parts: 3
@@ -345,6 +398,10 @@
       - at: "00:28:17"
         label: "P2-微博峰会"
     sources:
+      - url: https://www.bilibili.com/video/BV1as411s7qB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3205854"
         kind: replay
         parts: 2
@@ -361,6 +418,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_9_27/1477530672.png?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1xs411s7a7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3209456"
         kind: replay
         parts: 1
@@ -416,6 +477,10 @@
       - at: "02:24:15"
         label: "P4-后宫三千人"
     sources:
+      - url: https://www.bilibili.com/video/BV1Cs411s75q
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3214138"
         kind: replay
         parts: 4
@@ -441,6 +506,10 @@
       - at: "00:26:31"
         label: "P3-10.30-心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1Us411s7C6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3219712"
         kind: replay
         parts: 3

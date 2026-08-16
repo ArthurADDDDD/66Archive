@@ -17,6 +17,10 @@
       - at: "02:15:29"
         label: "马里奥派对 超级巨星"
     sources:
+      - url: https://www.bilibili.com/video/BV1n44y1i7xA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac31665346"
         kind: replay
         parts: 4
@@ -50,6 +54,10 @@
         label: "House Of Ashes"
         game: house-of-ashes
     sources:
+      - url: https://www.bilibili.com/video/BV1hT4y1d7NS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac31696915"
         kind: replay
         parts: 4
@@ -82,6 +90,10 @@
         label: "Unpacking"
         game: unpacking
     sources:
+      - url: https://www.bilibili.com/video/BV1KQ4y1D7ex
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac31765818"
         kind: replay
         parts: 4
@@ -92,110 +104,22 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac31765615
-  - id: 2021-11-07-live-01
+  - id: 2021-11-10-live-01
     type: live
-    date: "2021-11-07"
-    title: "24"
+    date: "2021-11-10"
+    title: "我回来啦"
     platform: douyu
     confidence: high
-    duration_min: 265
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d93005f375de4f88a663ad066e5667ec.jpeg?imageslim"
+    duration_min: 440
     games: []
-    segments:
-      - at: "00:00:00"
-        label: "24-METROID DREAD"
-      - at: "00:45:01"
-        label: "24-METROID DREAD"
-      - at: "01:30:03"
-        label: "24-METROID DREAD"
-      - at: 02:15:05
-        label: 24-METROID DREAD
-      - at: 03:00:06
-        label: 24-METROID DREAD
-      - at: 03:42:21
-        label: 24-METROID DREAD
+    note: "B站「女流录像小屋」《我回来啦》，全长录播。"
     sources:
-      - url: "https://www.acfun.cn/v/ac32492104"
+      - url: "https://www.bilibili.com/video/BV1Fr4y1y7uY"
         kind: replay
-        parts: 3
         status: alive
-      - url: https://www.acfun.cn/v/ac32492108
-        kind: replay
-        parts: 3
-        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
-    note: A站上下集补全：ac32492104（24-METROID DREAD 上，P1-P3）+ ac32492108（24-METROID DREAD 下，P4-P6）；时长相加，只计 1 场。
-  - id: 2021-11-07-live-02
-    type: live
-    date: "2021-11-07"
-    title: "25"
-    platform: douyu
-    confidence: high
-    duration_min: 252
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_585086e62a8341b7b225536daa31eebe.jpeg?imageslim"
-    games: [majsoul]
-    segments:
-      - at: 00:00:00
-        label: 25-雀魂
-      - at: 00:29:59
-        label: 25-雀魂
-      - at: 01:14:26
-        label: 25-雀魂
-      - at: 01:58:53
-        label: 25-雀魂
-      - at: 02:43:20
-        label: 25-雀魂
-      - at: 03:27:47
-        label: 25-雀魂
-    sources:
-      - url: https://www.acfun.cn/v/ac32549026
-        kind: replay
-        parts: 3
-        status: alive
-      - url: https://www.acfun.cn/v/ac32549028
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
-    note: A站上下集补全：ac32549026（25-雀魂 上，P1-P3）+ ac32549028（25-雀魂 下，P4-P6）；时长相加，只计 1 场。
-  - id: 2021-11-07-live-03
-    type: live
-    date: "2021-11-07"
-    title: "26"
-    platform: douyu
-    confidence: high
-    duration_min: 293
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f115c6c88a87400186f2e5c08b5a6b98.jpeg?imageslim"
-    games: []
-    segments:
-      - at: "00:00:00"
-        label: "26-游戏前聊10块钱的"
-      - at: "00:40:29"
-        label: "26-游戏前聊10块钱的"
-      - at: "01:21:00"
-        label: "26-METROID DREAD"
-      - at: "02:03:19"
-        label: "26-METROID DREAD"
-      - at: 02:45:37
-        label: 26-METROID DREAD
-      - at: 03:27:54
-        label: 26-METROID DREAD
-      - at: 04:10:14
-        label: 26-METROID DREAD
-    sources:
-      - url: "https://www.acfun.cn/v/ac32564231"
-        kind: replay
-        parts: 4
-        status: alive
-      - url: https://www.acfun.cn/v/ac32564203
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
-    note: A站上下集补全：ac32564231（26-METROID DREAD 上，P1-P4）+ ac32564203（26-METROID DREAD 下，P5-P7）；时长相加，只计 1 场。
   - id: 2021-11-11-live-01
     type: live
     date: "2021-11-11"
@@ -217,6 +141,10 @@
       - at: "02:28:03"
         label: "雀士"
     sources:
+      - url: https://www.bilibili.com/video/BV1pq4y1u7QS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32057095"
         kind: replay
         parts: 5
@@ -230,12 +158,14 @@
   - id: 2021-11-12-live-01
     type: live
     date: "2021-11-12"
-    title: "Phasmophobia"
+    title: "Phasmophobia / 黑魂4荒野之息"
     platform: douyu
     confidence: high
-    duration_min: 233
+    duration_min: 419
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_38311f1dc57f4888a3e54e97ec0f1560.jpeg?imageslim"
-    games: [phasmophobia]
+    games:
+      - phasmophobia
+      - zelda-botw
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -254,38 +184,26 @@
       - at: "03:15:10"
         label: "Phasmophobia"
         game: phasmophobia
+      - at: "03:53:00"
+        label: "黑魂4荒野之息"
+      - at: "04:39:30"
+        label: "黑魂4荒野之息"
+      - at: "05:26:00"
+        label: "黑魂4荒野之息"
+      - at: "06:12:30"
+        label: "黑魂4荒野之息"
     sources:
       - url: "https://www.acfun.cn/v/ac32072563"
         kind: replay
         parts: 6
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-11-12-live-02
-    type: live
-    date: "2021-11-12"
-    title: "黑魂4荒野之息"
-    platform: douyu
-    confidence: high
-    duration_min: 186
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6b04c7e518e6431aa1b135d5070b7ee2.jpeg?imageslim"
-    games: [zelda-botw]
-    segments:
-      - at: "00:00:00"
-        label: "黑魂4荒野之息"
-      - at: "00:46:30"
-        label: "黑魂4荒野之息"
-      - at: "01:33:00"
-        label: "黑魂4荒野之息"
-      - at: "02:19:30"
-        label: "黑魂4荒野之息"
-    sources:
       - url: "https://www.acfun.cn/v/ac32072712"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P10 拆为两个投稿，合并为一场。
   - id: 2021-11-13-live-01
     type: live
     date: "2021-11-13"
@@ -314,6 +232,10 @@
         label: "Elden Ring"
         game: elden-ring
     sources:
+      - url: https://www.bilibili.com/video/BV1a341187UD
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32081571"
         kind: replay
         parts: 6
@@ -323,32 +245,53 @@
   - id: 2021-11-14-live-01
     type: live
     date: "2021-11-14"
-    title: "Elden Ring"
+    title: "心灵砒霜 / Elden Ring 网络测试"
     platform: douyu
     confidence: high
-    duration_min: 186
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c19bfd4b5e6b4f20a848d9626063d90d.jpeg?imageslim"
-    games: [elden-ring]
+    duration_min: 419
+    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_057c335a283a489ba46aa5c4300085d5.jpeg?imageslim"
+    games:
+      - elden-ring
     segments:
       - at: "00:00:00"
-        label: "Elden Ring"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:24:29"
+        label: "砒霜前聊10块钱的弹幕版"
+      - at: "00:49:03"
+        label: "心灵砒霜弹幕版"
+      - at: "01:34:55"
+        label: "心灵砒霜弹幕版"
+      - at: "02:20:48"
+        label: "心灵砒霜弹幕版"
+      - at: "03:06:40"
+        label: "心灵砒霜弹幕版"
+      - at: "03:53:00"
+        label: "Elden Ring Network Test"
         game: elden-ring
-      - at: "00:46:34"
-        label: "Elden Ring"
+      - at: "04:39:34"
+        label: "Elden Ring Network Test"
         game: elden-ring
-      - at: "01:33:08"
-        label: "Elden Ring"
+      - at: "05:26:08"
+        label: "Elden Ring Network Test"
         game: elden-ring
-      - at: "02:19:42"
-        label: "Elden Ring"
+      - at: "06:12:42"
+        label: "Elden Ring Network Test"
         game: elden-ring
     sources:
+      - url: "https://www.acfun.cn/v/ac32128863"
+        kind: replay
+        parts: 6
+        status: alive
       - url: "https://www.acfun.cn/v/ac32127983"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+    series: xinling-pishuang
+    tags:
+      - 心灵砒霜
+    note: 两份搬运稿分别按节目拆分投稿；依据女流周日 15:00–19:00 的常规《心灵砒霜》时段、2021-11-14 Elden Ring 网络测试北京时间 19:00–22:00 的官方固定窗口，以及两录像 233+186=419min 几乎完整覆盖 15:00–22:00，判断为同一连续直播。无原始开关播日志，故该合并属于高置信度时间线推断。
   - id: 2021-11-15-live-01
     type: live
     date: "2021-11-15"
@@ -375,6 +318,10 @@
         label: "Elden Ring"
         game: elden-ring
     sources:
+      - url: https://www.bilibili.com/video/BV1PP4y1L7JU
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32173345"
         kind: replay
         parts: 5
@@ -400,6 +347,10 @@
       - at: "02:09:59"
         label: "佩奇一哈哈"
     sources:
+      - url: https://www.bilibili.com/video/BV1QS4y197M6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32243778"
         kind: replay
         parts: 4
@@ -410,41 +361,17 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac32177329
-  - id: 2021-11-17-live-01
-    type: live
-    date: "2021-11-17"
-    title: "ALTF4"
-    platform: douyu
-    confidence: high
-    duration_min: 125
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2e03c5b3871a4918b0467f9512a3977d.jpeg?imageslim"
-    games: [alt-f4]
-    segments:
-      - at: "00:00:00"
-        label: "ALTF4"
-        game: alt-f4
-      - at: "00:41:37"
-        label: "ALTF4"
-        game: alt-f4
-      - at: "01:23:14"
-        label: "ALTF4"
-        game: alt-f4
-    sources:
-      - url: "https://www.acfun.cn/v/ac32260925"
-        kind: replay
-        parts: 3
-        status: alive
-    contributed_by: data-agent
-
   - id: 2021-11-17-live-02
     type: live
     date: "2021-11-17"
-    title: "笼中窥梦"
+    title: "笼中窥梦 / ALTF4"
     platform: douyu
     confidence: high
-    duration_min: 227
+    duration_min: 352
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c722b2e8e5cc43378978b41719ed3529.png?imageslim"
-    games: [longzhong-kui-meng]
+    games:
+      - longzhong-kui-meng
+      - alt-f4
     segments:
       - at: "00:00:00"
         label: "笼中窥梦"
@@ -456,13 +383,27 @@
         label: "笼中窥梦"
       - at: "03:01:55"
         label: "笼中窥梦"
+      - at: "03:47:00"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "04:28:37"
+        label: "ALTF4"
+        game: alt-f4
+      - at: "05:10:14"
+        label: "ALTF4"
+        game: alt-f4
     sources:
       - url: "https://www.acfun.cn/v/ac32260283"
         kind: replay
         parts: 5
         status: alive
+      - url: "https://www.acfun.cn/v/ac32260925"
+        kind: replay
+        parts: 3
+        status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P8 拆为两个投稿，合并为一场。
   - id: 2021-11-18-live-01
     type: live
     date: "2021-11-18"
@@ -523,6 +464,74 @@
         kind: replay
         status: alive
     note: "原误标 2021-01-21；fileName 为 2021.11.21（周日），弹幕版 11.22 上传，归此日；当日网易云第 11.22 期标题回填；补入 A站互补回放：ac32432797"
+    contributed_by: data-agent
+  - id: 2021-11-24-live-01
+    type: live
+    date: "2021-11-24"
+    title: "雀魂&METROID DREAD"
+    platform: douyu
+    confidence: high
+    duration_min: 375
+    games: []
+    note: "B站「女流录像小屋」《雀魂&METROID DREAD》，全长录播。 人工复核：A站“2021.11.7-24”为日期解析错误，应归 2021-11-24；A站 24-METROID DREAD 上/下及 24-雀魂稿并入本条作为备份。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1C3411t7F8"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac32492104
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac32492108
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac32490500
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2021-11-25-live-01
+    type: live
+    date: "2021-11-25"
+    title: "雀魂"
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    games: []
+    note: "B站「女流录像小屋」《雀魂》，全长录播。 人工确认：A站标题“2021.11.7-25”日期解析错误，实际为 2021-11-25；A站上/下稿并入本条作为备份。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1sM4y1P7Vd"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac32549026
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac32549028
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2021-11-26-live-01
+    type: live
+    date: "2021-11-26"
+    title: "METROID DREAD"
+    platform: douyu
+    confidence: high
+    duration_min: 292
+    games: []
+    note: "B站「女流录像小屋」《METROID DREAD》，全长录播。 人工确认：A站标题“2021.11.7-26”日期解析错误，实际为 2021-11-26；A站上/下稿并入本条作为备份。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ar4y1Q79H"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac32564231
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac32564203
+        kind: replay
+        status: alive
     contributed_by: data-agent
   - id: 2021-11-27-live-01
     type: live
@@ -626,93 +635,3 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac32598135
-  - id: 2021-11-31-live-01
-    type: live
-    date: "2021-11-31"
-    title: "心灵砒霜"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 142
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb6e4c5448e2459e81854753c1ddca2f.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "砒霜前聊10块钱的弹幕版"
-      - at: "00:25:04"
-        label: "心灵砒霜弹幕版"
-      - at: "01:00:00"
-        label: "P8.3-2021.10.31-心灵砒霜弹幕版"
-      - at: "01:40:44"
-        label: "P8.4-2021.10.31-心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac31636579"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2021-11-10-live-01
-    type: live
-    date: "2021-11-10"
-    title: "我回来啦"
-    platform: douyu
-    confidence: high
-    duration_min: 440
-    games: []
-    note: "B站「女流录像小屋」《我回来啦》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Fr4y1y7uY"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2021-11-24-live-01
-    type: live
-    date: "2021-11-24"
-    title: "雀魂&METROID DREAD"
-    platform: douyu
-    confidence: high
-    duration_min: 375
-    games: []
-    note: "B站「女流录像小屋」《雀魂&METROID DREAD》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1C3411t7F8"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2021-11-25-live-01
-    type: live
-    date: "2021-11-25"
-    title: "雀魂"
-    platform: douyu
-    confidence: high
-    duration_min: 252
-    games: []
-    note: "B站「女流录像小屋」《雀魂》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1sM4y1P7Vd"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2021-11-26-live-01
-    type: live
-    date: "2021-11-26"
-    title: "METROID DREAD"
-    platform: douyu
-    confidence: high
-    duration_min: 292
-    games: []
-    note: "B站「女流录像小屋」《METROID DREAD》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1ar4y1Q79H"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent

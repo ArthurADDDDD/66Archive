@@ -20,6 +20,7 @@
       - url: "https://www.bilibili.com/video/BV1M2iqBVE8s"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1griqB2EhQ"
         kind: replay
         status: alive
@@ -45,6 +46,7 @@
       - url: "https://www.bilibili.com/video/BV1PArTBfEqN"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV132rKB6EEP"
         kind: replay
         status: alive
@@ -70,6 +72,7 @@
       - url: "https://www.bilibili.com/video/BV1XirVB8Ebj"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1QqrVBfEpM"
         kind: replay
         status: alive
@@ -95,6 +98,7 @@
       - url: "https://www.bilibili.com/video/BV1NBkFB1E3f"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1p6kFB5EHR"
         kind: replay
         status: alive
@@ -114,7 +118,7 @@
     games:
       - arknights-endfield
     tags: [弹幕版]
-    note: "同一场直播由 bobi华（BV1c7BfB8EDD，3:07:38）、直播回放巴拉蹦吧（弹幕/纯净双版，3:06:43）、服部平次（BV1AVBfBAE6g，3:07:01）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 3:06:32），总时长吻合，已合并为一天一条。"
+    note: "同一场直播由 bobi华（BV1c7BfB8EDD，3:07:38）、直播回放巴拉蹦吧（弹幕/纯净双版，3:06:43）、服部平次（BV1AVBfBAE6g，3:07:01）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 3:06:32），总时长吻合，已合并为一天一条。 不懒bot源“剪辑分P+无弹幕页”为同场两版，只按完整一场计时。"
     segments:
       - at: "00:00:00"
         label: "18:05 聊天部分"
@@ -142,12 +146,13 @@
       - url: "https://www.bilibili.com/video/BV1ucBfB3Edd"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1c7BfB8EDD"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 329
+    duration_min: 188
   - id: 2026-01-28-live-01
     type: live
     date: "2026-01-28"
@@ -168,6 +173,7 @@
       - url: "https://www.bilibili.com/video/BV1RMzXBNEWQ"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1DLzXB8E24"
         kind: replay
         status: alive
@@ -196,6 +202,7 @@
       - url: "https://www.bilibili.com/video/BV1LF61BHERA"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1oo6yBWEgu"
         kind: replay
         status: alive

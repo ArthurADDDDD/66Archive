@@ -1,3 +1,19 @@
+  - id: 2017-11-03-live-01
+    type: live
+    date: "2017-11-03"
+    title: "小猫钓鱼&用游戏感受夏普电视的魅力"
+    platform: douyu
+    confidence: high
+    duration_min: 216
+    games: []
+    note: "B站「女流录像小屋」《小猫钓鱼&用游戏感受夏普电视的魅力》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kx411E78T"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2017-11-04-live-01
     type: live
     date: "2017-11-04"
@@ -33,6 +49,10 @@
       - at: "04:29:06"
         label: "P2.10-11.4-小猫钓鱼"
     sources:
+      - url: https://www.bilibili.com/video/BV1Hx411j7U8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4066447"
         kind: replay
         parts: 12
@@ -60,6 +80,10 @@
       - at: "01:39:22"
         label: "P5-11.5-Castle Crusher 城堡毁灭者"
     sources:
+      - url: https://www.bilibili.com/video/BV1Yx411j7Qz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4067788"
         kind: replay
         parts: 5
@@ -97,6 +121,10 @@
       - at: "03:09:23"
         label: "P9-11.5-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1bx411j7Gx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4069473"
         kind: replay
         parts: 9
@@ -134,6 +162,10 @@
       - at: "03:36:11"
         label: "P10-11.6-66约冷冷双排吃鸡"
     sources:
+      - url: https://www.bilibili.com/video/BV1hx411j7sj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4069742"
         kind: replay
         parts: 10
@@ -177,6 +209,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2017-11-08-live-01
+    type: live
+    date: "2017-11-08"
+    title: "超级马里奥-奥德赛"
+    platform: douyu
+    confidence: high
+    duration_min: 144
+    games: []
+    note: "B站「女流录像小屋」《超级马里奥-奥德赛》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ux411j7Uc"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2017-11-10-live-01
     type: live
     date: "2017-11-10"
@@ -210,6 +257,10 @@
       - at: "03:49:54"
         label: "P11-11.10-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1ux41177ak
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4078341"
         kind: replay
         parts: 11
@@ -249,6 +300,10 @@
       - at: "04:36:41"
         label: "P3.9-11.11-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV17x41177tn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4079503"
         kind: replay
         parts: 11
@@ -290,6 +345,10 @@
       - at: "03:49:25"
         label: "P2.9-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Dx41157yN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4080881"
         kind: replay
         parts: 11
@@ -327,6 +386,10 @@
       - at: "04:00:50"
         label: "P10-11.13-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1ox41157vK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4082621"
         kind: replay
         parts: 10
@@ -409,6 +472,10 @@
       - at: "04:16:43"
         label: "P12-11.15-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1sx411L7ut
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4086833"
         kind: replay
         parts: 12
@@ -446,6 +513,10 @@
       - at: "03:30:21"
         label: "P3.6-11.17-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1yx411L7F4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4091308"
         kind: replay
         parts: 10
@@ -495,6 +566,10 @@
       - at: "05:58:50"
         label: "P16-11.18-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1dx411L7BN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4093091"
         kind: replay
         parts: 16
@@ -530,6 +605,10 @@
       - at: "03:08:15"
         label: "P8-11.19-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1fx411L7J1
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4094419"
         kind: replay
         parts: 8
@@ -575,6 +654,10 @@
       - at: "04:55:13"
         label: "P2.11-11.21-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1kx411V7yN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4098179"
         kind: replay
         parts: 14
@@ -620,6 +703,10 @@
       - at: "05:23:27"
         label: "P3.11-11.22-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1zx411V7UA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4100187"
         kind: replay
         parts: 14
@@ -653,6 +740,10 @@
       - at: "02:34:08"
         label: "P2.6-11.23-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1mx411V7P6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4102271"
         kind: replay
         parts: 8
@@ -700,6 +791,10 @@
       - at: "06:20:58"
         label: "P2.12-11.24-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1Zx411V7Gx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4107292"
         kind: replay
         parts: 15
@@ -744,6 +839,10 @@
       - at: "04:54:37"
         label: "P2.9-11.25-超级马里奥-奥德赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1Mx411572G
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4107286"
         kind: replay
         parts: 12
@@ -783,40 +882,12 @@
       - at: "03:29:30"
         label: "P2.8-11.26-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1nx41157kQ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4107290"
         kind: replay
         parts: 10
         status: alive
-    contributed_by: data-agent
-
-  - id: 2017-11-03-live-01
-    type: live
-    date: "2017-11-03"
-    title: "小猫钓鱼&用游戏感受夏普电视的魅力"
-    platform: douyu
-    confidence: high
-    duration_min: 216
-    games: []
-    note: "B站「女流录像小屋」《小猫钓鱼&用游戏感受夏普电视的魅力》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1kx411E78T"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2017-11-08-live-01
-    type: live
-    date: "2017-11-08"
-    title: "超级马里奥-奥德赛"
-    platform: douyu
-    confidence: high
-    duration_min: 144
-    games: []
-    note: "B站「女流录像小屋」《超级马里奥-奥德赛》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Ux411j7Uc"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

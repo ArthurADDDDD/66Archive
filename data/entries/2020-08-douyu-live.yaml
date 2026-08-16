@@ -26,6 +26,10 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV1uh411Z7Sw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17171064"
         kind: replay
         parts: 6
@@ -55,6 +59,10 @@
       - at: "02:14:20"
         label: "逛吃逛吃"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ck4y117oM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17291974"
         kind: replay
         parts: 6
@@ -83,6 +91,10 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV1LD4y1U7hz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17227286"
         kind: replay
         parts: 4
@@ -113,6 +125,10 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV17t4y1D7cW
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17227141"
         kind: replay
         parts: 5
@@ -142,6 +158,10 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV1Mf4y1d7dh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17243005"
         kind: replay
         parts: 4
@@ -165,6 +185,10 @@
       - at: "02:38:40"
         label: "66来聊聊"
     sources:
+      - url: https://www.bilibili.com/video/BV1Pv411i7JV
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17260074"
         kind: replay
         parts: 3
@@ -194,12 +218,31 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV1f54y1m7Zq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17293939"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-08-08-live-01
+    type: live
+    date: '2020-08-08'
+    title: 纸片马里奥：折纸国王
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.8 游戏：纸片马里奥：折纸国王。斗鱼回放标题：纸片马里奥全收集
+    sources:
+      - url: https://v.douyu.com/show/8KxjMdo9onQ7VLwb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:03
+    duration_min: 268
   - id: 2020-08-09-live-01
     type: live
     date: "2020-08-09"
@@ -221,6 +264,10 @@
       - at: "03:03:39"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Hp4y1v7UC
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17325712"
         kind: replay
         parts: 4
@@ -257,6 +304,10 @@
         label: "Fall Guys"
         game: fall-guys
     sources:
+      - url: https://www.bilibili.com/video/BV1iK4y1v7AT
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17326766"
         kind: replay
         parts: 5
@@ -286,6 +337,10 @@
       - at: "02:55:44"
         label: "Grounded"
     sources:
+      - url: https://www.bilibili.com/video/BV1qt4y1D7YP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17343071"
         kind: replay
         parts: 5
@@ -311,6 +366,10 @@
       - at: "03:35:10"
         label: "Thereis no game"
     sources:
+      - url: https://www.bilibili.com/video/BV1La4y177ak
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17497100"
         kind: replay
         parts: 4
@@ -342,6 +401,10 @@
         label: "Fall Guys"
         game: fall-guys
     sources:
+      - url: https://www.bilibili.com/video/BV1J64y1c7JZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17360848"
         kind: replay
         parts: 5
@@ -371,6 +434,10 @@
         label: "Avengers"
         game: avengers
     sources:
+      - url: https://www.bilibili.com/video/BV1Rh411d7bk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17437382"
         kind: replay
         parts: 4
@@ -400,12 +467,34 @@
       - at: "03:06:29"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Xf4y197Hr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17455160"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-08-19-live-01
+    type: live
+    date: '2020-08-19'
+    title: 这里没有游戏:错误维度/ There Is No Game:Wrong Dimension
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game；补入 B 站「秘密录像屋」BV1aC4y1t7yx
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1aC4y1t7yx
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:04
+    duration_min: 287
   - id: 2020-08-20-live-01
     type: live
     date: "2020-08-20"
@@ -428,6 +517,10 @@
         label: "Spiritfarer"
         game: spiritfarer
     sources:
+      - url: https://www.bilibili.com/video/BV1Jz4y1f7dK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17528113"
         kind: replay
         parts: 4
@@ -457,6 +550,10 @@
         label: "帕斯卡契约"
         game: pascals-wager
     sources:
+      - url: https://www.bilibili.com/video/BV1dC4y1t7BS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17528771"
         kind: replay
         parts: 4
@@ -485,6 +582,10 @@
         label: "Spiritfarer"
         game: spiritfarer
     sources:
+      - url: https://www.bilibili.com/video/BV1DD4y127Vb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17546172"
         kind: replay
         parts: 4
@@ -512,6 +613,10 @@
       - at: "02:41:56"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1y54y1e7Pm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17579755"
         kind: replay
         parts: 4
@@ -546,6 +651,10 @@
         label: "Spiritfarer"
         game: spiritfarer
     sources:
+      - url: https://www.bilibili.com/video/BV1g5411h7in
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17580808"
         kind: replay
         parts: 6
@@ -584,6 +693,10 @@
         label: "Spiritfarer"
         game: spiritfarer
     sources:
+      - url: https://www.bilibili.com/video/BV1KA411H7LM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17597578"
         kind: replay
         parts: 6
@@ -619,6 +732,10 @@
         label: "Spiritfarer"
         game: spiritfarer
     sources:
+      - url: https://www.bilibili.com/video/BV1VZ4y1T7YZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17614575"
         kind: replay
         parts: 5
@@ -635,6 +752,10 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1egnvil0sfdm141iql7a7r1asi0.jpeg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1Di4y1M74V
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17630928"
         kind: replay
         parts: 1
@@ -663,6 +784,10 @@
         label: "Inmost"
         game: inmost
     sources:
+      - url: https://www.bilibili.com/video/BV1MK4y1e7Hs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17669805"
         kind: replay
         parts: 4
@@ -692,6 +817,10 @@
       - at: "03:19:22"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Af4y1X7Jh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17701108"
         kind: replay
         parts: 5
@@ -718,6 +847,10 @@
         label: "Fall Guys"
         game: fall-guys
     sources:
+      - url: https://www.bilibili.com/video/BV1Dp4y1Y7Yx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17727788"
         kind: replay
         parts: 2
@@ -744,41 +877,12 @@
         label: "高殿战记"
         game: gaodian-zhanji
     sources:
+      - url: https://www.bilibili.com/video/BV1AZ4y1T7hs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17701429"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
-  - id: 2020-08-08-live-01
-    type: live
-    date: '2020-08-08'
-    title: 纸片马里奥：折纸国王
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.8 游戏：纸片马里奥：折纸国王。斗鱼回放标题：纸片马里奥全收集
-    sources:
-      - url: https://v.douyu.com/show/8KxjMdo9onQ7VLwb
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:03
-    duration_min: 268
-  - id: 2020-08-19-live-01
-    type: live
-    date: '2020-08-19'
-    title: 这里没有游戏:错误维度/ There Is No Game:Wrong Dimension
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game；补入 B 站「秘密录像屋」BV1aC4y1t7yx
-    sources:
-      - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
-        kind: replay
-        status: alive
-      - url: https://www.bilibili.com/video/BV1aC4y1t7yx
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:04
-    duration_min: 287

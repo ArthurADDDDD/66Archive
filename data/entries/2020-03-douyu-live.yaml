@@ -1,3 +1,18 @@
+  - id: 2020-03-01-live-01
+    type: live
+    date: '2020-03-01'
+    title: 陶艺大师
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.1 游戏：陶艺大师。斗鱼回放标题：玩土是从小就会玩土
+    sources:
+      - url: https://v.douyu.com/show/Kp1QM8216QVvk4bj
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:03
+    duration_min: 388
   - id: 2020-03-02-live-01
     type: live
     date: "2020-03-02"
@@ -21,6 +36,10 @@
       - at: "04:30:51"
         label: "陶艺大师"
     sources:
+      - url: https://www.bilibili.com/video/BV1xE41177w5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13362785"
         kind: replay
         parts: 6
@@ -48,6 +67,10 @@
       - at: "03:59:01"
         label: "P8-2020-03-04-月影之塔"
     sources:
+      - url: https://www.bilibili.com/video/BV1NE411s7BL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13514908"
         kind: replay
         parts: 5
@@ -77,6 +100,10 @@
       - at: "05:08:23"
         label: "吟诵者"
     sources:
+      - url: https://www.bilibili.com/video/BV1kE411p7yM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13533751"
         kind: replay
         parts: 6
@@ -106,12 +133,31 @@
       - at: "04:55:21"
         label: "吟诵者"
     sources:
+      - url: https://www.bilibili.com/video/BV1KE411u7Tz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13576435"
         kind: replay
         parts: 6
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-03-09-live-01
+    type: live
+    date: '2020-03-09'
+    title: 剧本杀
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.9 游戏：剧本杀。斗鱼回放标题：今天看看谁是凶手
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx29RBZ7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:08
+    duration_min: 239
   - id: 2020-03-10-live-01
     type: live
     date: "2020-03-10"
@@ -131,6 +177,10 @@
       - at: "02:07:43"
         label: "吟诵者"
     sources:
+      - url: https://www.bilibili.com/video/BV1JE411K7ZD
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13619965"
         kind: replay
         parts: 4
@@ -199,6 +249,10 @@
         label: "奥日2"
         game: ori-2
     sources:
+      - url: https://www.bilibili.com/video/BV1JE411V7UE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13809459"
         kind: replay
         parts: 6
@@ -231,6 +285,10 @@
         label: "仁王2"
         game: nioh-2
     sources:
+      - url: https://www.bilibili.com/video/BV1rE41137T9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13850617"
         kind: replay
         parts: 5
@@ -263,12 +321,31 @@
         label: "仁王2"
         game: nioh-2
     sources:
+      - url: https://www.bilibili.com/video/BV1S7411f7z4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13873032"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-03-15-live-01
+    type: live
+    date: '2020-03-15'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.15 游戏：仁王2。斗鱼回放标题：仁王2试试水
+    sources:
+      - url: https://v.douyu.com/show/Qyz171mKe2D7BJj9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:51
+    duration_min: 329
   - id: 2020-03-16-live-01
     type: live
     date: "2020-03-16"
@@ -301,6 +378,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-03-17-live-01
+    type: live
+    date: '2020-03-17'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.17 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/NVm0WKn2a18MJeBP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:57
+    duration_min: 349
   - id: 2020-03-18-live-01
     type: live
     date: "2020-03-18"
@@ -324,12 +416,46 @@
         label: "仁王2"
         game: nioh-2
     sources:
+      - url: https://www.bilibili.com/video/BV1JE411N7Pf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac13969834"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-03-19-live-01
+    type: live
+    date: '2020-03-19'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.19 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJEPaGm7Nxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:26
+    duration_min: 502
+  - id: 2020-03-20-live-01
+    type: live
+    date: '2020-03-20'
+    title: 仁王2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.20 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
+    sources:
+      - url: https://v.douyu.com/show/85BAvqxpEB1WG4Lm
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:51
+    duration_min: 324
   - id: 2020-03-21-live-01
     type: live
     date: "2020-03-21"
@@ -353,6 +479,10 @@
         label: "仁王2"
         game: nioh-2
     sources:
+      - url: https://www.bilibili.com/video/BV14E411c78T
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14087923"
         kind: replay
         parts: 4
@@ -382,6 +512,10 @@
       - at: "03:14:16"
         label: "集合啦！动物森友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1n7411U7YX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14112830"
         kind: replay
         parts: 6
@@ -411,6 +545,10 @@
       - at: "03:10:15"
         label: "集合啦！动物森友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1Y7411y7yJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14141028"
         kind: replay
         parts: 6
@@ -432,6 +570,10 @@
       - at: "00:39:21"
         label: "集合啦！动物森友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1u7411C7gy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14247807"
         kind: replay
         parts: 2
@@ -459,6 +601,10 @@
       - at: "02:35:27"
         label: "集合啦！动物森友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1bz411h795
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14250412"
         kind: replay
         parts: 5
@@ -486,6 +632,10 @@
       - at: "02:32:07"
         label: "集合啦！动物森友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ep4y117Lo
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14278877"
         kind: replay
         parts: 5
@@ -513,6 +663,10 @@
       - at: "02:39:09"
         label: "只只大冒险"
     sources:
+      - url: https://www.bilibili.com/video/BV1Az411b7da
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14279131"
         kind: replay
         parts: 5
@@ -545,101 +699,15 @@
         label: "踩高跷stilt fella"
         game: stilt-fella
     sources:
+      - url: https://www.bilibili.com/video/BV1vK41177Fa
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14355451"
         kind: replay
         parts: 6
         status: alive
     contributed_by: data-agent
-  - id: 2020-03-01-live-01
-    type: live
-    date: '2020-03-01'
-    title: 陶艺大师
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.1 游戏：陶艺大师。斗鱼回放标题：玩土是从小就会玩土
-    sources:
-      - url: https://v.douyu.com/show/Kp1QM8216QVvk4bj
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:03
-    duration_min: 388
-  - id: 2020-03-09-live-01
-    type: live
-    date: '2020-03-09'
-    title: 剧本杀
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.9 游戏：剧本杀。斗鱼回放标题：今天看看谁是凶手
-    sources:
-      - url: https://v.douyu.com/show/qJgOWx29RBZ7kVzL
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:08
-    duration_min: 239
-  - id: 2020-03-15-live-01
-    type: live
-    date: '2020-03-15'
-    title: 仁王2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.15 游戏：仁王2。斗鱼回放标题：仁王2试试水
-    sources:
-      - url: https://v.douyu.com/show/Qyz171mKe2D7BJj9
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:51
-    duration_min: 329
-  - id: 2020-03-17-live-01
-    type: live
-    date: '2020-03-17'
-    title: 仁王2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.17 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
-    sources:
-      - url: https://v.douyu.com/show/NVm0WKn2a18MJeBP
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:57
-    duration_min: 349
-  - id: 2020-03-19-live-01
-    type: live
-    date: '2020-03-19'
-    title: 仁王2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.19 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
-    sources:
-      - url: https://v.douyu.com/show/a2JEMJEPaGm7Nxml
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:26
-    duration_min: 502
-  - id: 2020-03-20-live-01
-    type: live
-    date: '2020-03-20'
-    title: 仁王2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.20 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
-    sources:
-      - url: https://v.douyu.com/show/85BAvqxpEB1WG4Lm
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:51
-    duration_min: 324
   - id: 2020-03-30-live-01
     type: live
     date: '2020-03-30'

@@ -1,33 +1,3 @@
-  - id: 2026-05-01-live-01
-    type: live
-    date: "2026-05-01"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/14568b3f163d0ac184ffb883e8cec874b7ce3a98.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "愿系铃中，昨夜群星"
-      - at: "01:00:01"
-        label: "昨夜群星（启动隧者穿越隧门）"
-      - at: "02:00:02"
-        label: "昨夜群星（阿列夫一机甲战斗）"
-      - at: "03:00:03"
-        label: "昨夜群星（阿列夫一机甲战斗）下回见"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1tSRuBGEvX"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV14DRuBrEXK"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 205
   - id: 2026-05-01-live-02
     type: live
     date: "2026-05-01"
@@ -37,8 +7,9 @@
     confidence: high
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场直播两个标题搬运，合并。"
     segments:
       - at: "00:00:00"
         label: "鸣潮3.3"
@@ -52,7 +23,14 @@
       - url: "https://www.bilibili.com/video/BV1tmRuBCE1Z"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV119RuBzEdw"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1tSRuBGEvX"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV14DRuBrEXK"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -65,9 +43,11 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/7ace9ef36f8ba02b1befaa2ddd2e095afcede381.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-13-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    games:
+      - dig-for-dog
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-13-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “掘地求狗”为同场内容标题，合并。"
     segments:
       - at: "00:00:00"
         label: "和战鹰，壮壮，驴酱玩游戏"
@@ -79,36 +59,13 @@
       - url: "https://www.bilibili.com/video/BV17n5m6NEY7"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1E75m6TEMf"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV16L5m6BEtr"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 149
-  - id: 2026-05-13-live-03
-    type: live
-    date: "2026-05-13"
-    title: "掘地求狗"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/2b6fcc03d80a7487b02af6e8a80963e2ee83fb86.jpg"
-    confidence: high
-    games:
-      - dig-for-dog
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "开播聊天 20:24"
-      - at: "00:30:43"
-        label: "掘地求狗 20:55"
-      - at: "01:00:01"
-        label: "掘地求狗 21:24"
-      - at: "01:40:02"
-        label: "掘地求狗 22:04"
-    sources:
       - url: "https://www.bilibili.com/video/BV1xN5m6LEHi"
         kind: replay
         status: alive
@@ -127,8 +84,9 @@
     confidence: high
     games:
       - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-15-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-15-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “深海迷航2：异星水域”与“Subnautica2”为同场，合并。"
     segments:
       - at: "00:00:00"
         label: "Subnautica2异星水域，队友壮壮yjj"
@@ -142,6 +100,7 @@
       - url: "https://www.bilibili.com/video/BV1465i6QEZE"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1tq5i69E8R"
         kind: replay
         status: alive
@@ -159,27 +118,12 @@
           - page: 2
             title: "5月15日 22:00场次"
             duration_sec: 6058
-    contributed_by: data-agent
-
-    duration_min: 222
-  - id: 2026-05-15-live-03
-    type: live
-    date: "2026-05-15"
-    title: "深海迷航2：异星水域"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/7bd0b8c2b97de97bf4a716bcffbc87b65f45d8c9.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
       - url: "https://www.bilibili.com/video/BV1he5i6dE87"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 221
+    duration_min: 222
   - id: 2026-05-16-live-01
     type: live
     date: "2026-05-16"
@@ -189,8 +133,9 @@
     confidence: high
     games:
       - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-16-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-16-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “深海迷航2：异星水域”与“Subnautica2”为同场，合并。"
     segments:
       - at: "00:00:00"
         label: "20-19 Subnautica2异星水域，队友壮壮yjj"
@@ -204,6 +149,7 @@
       - url: "https://www.bilibili.com/video/BV1AYL365EQ3"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1xtL36mErP"
         kind: replay
         status: alive
@@ -224,26 +170,12 @@
           - page: 5
             title: "5月16日 23:00场次"
             duration_sec: 2407
-    contributed_by: data-agent
-
-    duration_min: 222
-  - id: 2026-05-16-live-03
-    type: live
-    date: "2026-05-16"
-    title: "深海迷航2：异星水域"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/8c7057c075bcfc3bd4fd5594340d4ff37d6b6b83.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
       - url: "https://www.bilibili.com/video/BV12MLG6JEez"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 217
+    duration_min: 222
   - id: 2026-05-17-live-01
     type: live
     date: "2026-05-17"
@@ -253,8 +185,9 @@
     confidence: high
     games:
       - subnautica-2
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-17-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-17-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “深海迷航2：异星水域”与“Subnautica2”为同场，合并。"
     segments:
       - at: "00:00:00"
         label: "Subnautica2异星水域，队友壮壮yjj"
@@ -268,6 +201,7 @@
       - url: "https://www.bilibili.com/video/BV1ZCLp6KEHc"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1a9Lp6bESE"
         kind: replay
         status: alive
@@ -288,26 +222,12 @@
           - page: 8
             title: "5月17日 23:00场次"
             duration_sec: 213
-    contributed_by: data-agent
-
-    duration_min: 184
-  - id: 2026-05-17-live-03
-    type: live
-    date: "2026-05-17"
-    title: "深海迷航2：异星水域"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/dce458a7e07fa75c69a45fed89bcf90fd35faa7c.jpg"
-    confidence: medium
-    games:
-      - subnautica-2
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
       - url: "https://www.bilibili.com/video/BV1XGLp64EZ2"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 181
+    duration_min: 184
   - id: 2026-05-19-live-01
     type: live
     date: "2026-05-19"
@@ -317,36 +237,17 @@
     confidence: medium
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-19-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-05-19-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “突袭”为平台标题，与本条鸣潮抽卡同场，合并；以较长源 124min 计。"
     sources:
       - url: "https://www.bilibili.com/video/BV1y6LB6WEGj"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Z9LB6yEBb"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 123
-  - id: 2026-05-19-live-03
-    type: live
-    date: "2026-05-19"
-    title: "突袭"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/799523ff7ec1abc53d962aee8d046dd4f9dd622f.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "突袭"
-      - at: "01:00:01"
-        label: "突袭"
-      - at: "02:00:03"
-        label: "突袭"
-    sources:
       - url: "https://www.bilibili.com/video/BV1FmLB6SEp7"
         kind: replay
         status: alive
@@ -356,6 +257,13 @@
     contributed_by: data-agent
 
     duration_min: 124
+    segments:
+      - at: "00:00:00"
+        label: "突袭"
+      - at: "01:00:01"
+        label: "突袭"
+      - at: "02:00:03"
+        label: "突袭"
   - id: 2026-05-20-live-01
     type: live
     date: "2026-05-20"
@@ -382,6 +290,7 @@
       - url: "https://www.bilibili.com/video/BV1y5L26VEFM"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1y5L26VEgc"
         kind: replay
         status: alive
@@ -422,6 +331,7 @@
       - url: "https://www.bilibili.com/video/BV1QaLh61EKU"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1EELh6xExF"
         kind: replay
         status: alive
@@ -454,6 +364,7 @@
       - url: "https://www.bilibili.com/video/BV14YGb64ELS"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV14YGb64Epd"
         kind: replay
         status: alive
@@ -466,35 +377,6 @@
     contributed_by: data-agent
 
     duration_min: 82
-  - id: 2026-05-23-live-01
-    type: live
-    date: "2026-05-23"
-    title: "听说是娅娅"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/6128e388941031e11b51175b78345150dcaf99ee.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "听说是娅娅"
-      - at: "01:00:01"
-        label: "听说是娅娅"
-      - at: "02:00:02"
-        label: "听说是娅娅"
-      - at: "03:00:03"
-        label: "听说是娅娅"
-    sources:
-      - url: "https://www.bilibili.com/video/BV12bG66ZEQj"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1aiGq64EAh"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 197
   - id: 2026-05-23-live-02
     type: live
     date: "2026-05-23"
@@ -504,8 +386,9 @@
     confidence: high
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “听说是娅娅”为平台标题，与本条鸣潮同场，合并；以较长源 197min 计。"
     segments:
       - at: "00:00:00"
         label: "开播聊天+看诡秘之主PV 20:48"
@@ -521,12 +404,19 @@
       - url: "https://www.bilibili.com/video/BV1wZGq6GEtz"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1cfGq6rEZo"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV12bG66ZEQj"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1aiGq64EAh"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 195
+    duration_min: 197
   - id: 2026-05-27-live-01
     type: live
     date: "2026-05-27"
@@ -555,6 +445,7 @@
       - url: "https://www.bilibili.com/video/BV1m7G16rEsm"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1mzGy6qEmy"
         kind: replay
         status: alive
@@ -583,6 +474,7 @@
       - url: "https://www.bilibili.com/video/BV1jXVW6wErB"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1pBVW6rEQJ"
         kind: replay
         status: alive
@@ -615,6 +507,7 @@
       - url: "https://www.bilibili.com/video/BV15MVh6LExD"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1f6Vh6pEH2"
         kind: replay
         status: alive
@@ -636,8 +529,9 @@
     confidence: high
     games:
       - project-007
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 72min 源为 15:40 起同场后段，合并。"
     segments:
       - at: "00:00:00"
         label: "2026-05-30 14-55-18-318 正在玩：007，初露锋芒"
@@ -647,29 +541,10 @@
       - url: "https://www.bilibili.com/video/BV1ccVG6MEQr"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1CZV36gEJg"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 118
-  - id: 2026-05-30-live-02
-    type: live
-    date: "2026-05-30"
-    title: "正在玩：007，初露锋芒"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/e1c2e09cf534d204899d681b26f772a7657c4a76.jpg"
-    confidence: high
-    games:
-      - project-007
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "正在玩：007，初露锋芒"
-      - at: "00:37:35"
-        label: "正在玩：007，初露锋芒"
-    sources:
       - url: "https://www.bilibili.com/video/BV1KSV361Ezj"
         kind: replay
         status: alive
@@ -678,7 +553,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 72
+    duration_min: 118
   - id: 2026-05-31-live-01
     type: live
     date: "2026-05-31"
@@ -705,6 +580,7 @@
       - url: "https://www.bilibili.com/video/BV19HVU6bEkq"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV15yVS6YEwe"
         kind: replay
         status: alive

@@ -15,15 +15,31 @@
       - at: "00:39:09"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1JJ411z7HY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11814290"
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1JJ411z7HY
-        kind: replay
-        status: alive
     contributed_by: data-agent
 
+  - id: 2019-12-02-live-01
+    type: live
+    date: '2019-12-02'
+    title: 放着我来吧
+    platform: douyu
+    confidence: high
+    duration_min: 182
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1SJ411q7HK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-12-03-live-01
     type: live
     date: "2019-12-03"
@@ -39,12 +55,13 @@
       - at: "00:54:59"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV16J411q7GJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11823157"
         kind: replay
         parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV16J411q7GJ
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -69,12 +86,13 @@
       - at: "03:12:32"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1yJ411v7zb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11889199"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV1yJ411v7zb
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -95,12 +113,13 @@
       - at: "02:29:45"
         label: "佩奇的唱歌歌友会"
     sources:
+      - url: https://www.bilibili.com/video/BV1rJ411y7ts
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11901272"
         kind: replay
         parts: 3
-        status: alive
-      - url: https://www.bilibili.com/video/BV1rJ411y7ts
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -161,12 +180,13 @@
         label: "Raft姐弟大海漂流记"
         game: raft
     sources:
+      - url: https://www.bilibili.com/video/BV1CJ411C74Z
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11936638"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1CJ411C74Z
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -187,15 +207,31 @@
       - at: "02:07:21"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1TJ41167Ev
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12027566"
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1TJ41167Ev
-        kind: replay
-        status: alive
     contributed_by: data-agent
 
+  - id: 2019-12-16-live-01
+    type: live
+    date: '2019-12-16'
+    title: Jump King
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1bJ41167SL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-12-18-live-01
     type: live
     date: "2019-12-18"
@@ -221,14 +257,15 @@
         label: "Raft"
         game: raft
     sources:
+      - url: https://www.bilibili.com/video/BV17J411t7C2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12045067"
         kind: replay
         parts: 5
         status: alive
       - url: https://www.bilibili.com/video/BV1HJ411t7br
-        kind: replay
-        status: alive
-      - url: https://www.bilibili.com/video/BV17J411t7C2
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -257,12 +294,13 @@
         label: "Ashen"
         game: ashen
     sources:
+      - url: https://www.bilibili.com/video/BV1WJ41147ne
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12115123"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1WJ41147ne
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -290,12 +328,13 @@
         label: "Ashen"
         game: ashen
     sources:
+      - url: https://www.bilibili.com/video/BV14J41147wq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12117242"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV14J41147wq
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -322,14 +361,15 @@
       - at: "02:50:59"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV16J411s7qn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12126748"
         kind: replay
         parts: 5
         status: alive
       - url: https://www.bilibili.com/video/BV1hJ411s7hF
-        kind: replay
-        status: alive
-      - url: https://www.bilibili.com/video/BV16J411s7qn
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -358,6 +398,21 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2019-12-25-live-01
+    type: live
+    date: '2019-12-25'
+    title: 天儿挺冷
+    platform: douyu
+    confidence: high
+    duration_min: 167
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1mJ411W7my；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1mJ411W7my
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-12-27-live-01
     type: live
     date: "2019-12-27"
@@ -375,12 +430,13 @@
       - at: "02:00:06"
         label: "Part3"
     sources:
+      - url: https://www.bilibili.com/video/BV15J411e7FA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12167053"
         kind: replay
         parts: 3
-        status: alive
-      - url: https://www.bilibili.com/video/BV15J411e7FA
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -405,53 +461,12 @@
       - at: "02:57:48"
         label: "心灵砒霜"
     sources:
-      - url: "https://www.acfun.cn/v/ac12201808"
-        kind: replay
-        parts: 4
-        status: alive
       - url: https://www.bilibili.com/video/BV1QJ411871c
         kind: replay
         status: alive
-    contributed_by: data-agent
-  - id: 2019-12-02-live-01
-    type: live
-    date: '2019-12-02'
-    title: 放着我来吧
-    platform: douyu
-    confidence: high
-    duration_min: 182
-    games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1SJ411q7HK
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12201808"
         kind: replay
-        status: alive
-    contributed_by: data-agent
-  - id: 2019-12-16-live-01
-    type: live
-    date: '2019-12-16'
-    title: Jump King
-    platform: douyu
-    confidence: high
-    duration_min: 233
-    games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1bJ41167SL
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-  - id: 2019-12-25-live-01
-    type: live
-    date: '2019-12-25'
-    title: 天儿挺冷
-    platform: douyu
-    confidence: high
-    duration_min: 167
-    games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1mJ411W7my；标题与日期经 BiliPlus / Bilibili API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1mJ411W7my
-        kind: replay
+        parts: 4
         status: alive
     contributed_by: data-agent

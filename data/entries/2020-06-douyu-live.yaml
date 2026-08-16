@@ -24,12 +24,46 @@
         label: "Poly Bridge 2"
         game: poly-bridge-2
     sources:
+      - url: https://www.bilibili.com/video/BV1QV411C72G
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15959411"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-06-02-live-01
+    type: live
+    date: '2020-06-02'
+    title: 搭桥poly bridge 2（15:07场）
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：搭桥poly bridge 2
+    sources:
+      - url: https://v.douyu.com/show/ERALvENpXLA71Vw0
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:07
+    duration_min: 228
+  - id: 2020-06-02-live-02
+    type: live
+    date: '2020-06-02'
+    title: 《硬核机甲》训练营~~（20:01场）
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：《硬核机甲》训练营~~
+    sources:
+      - url: https://v.douyu.com/show/0zZVvPRJDaqMO4E2
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 20:01
+    duration_min: 103
   - id: 2020-06-03-live-01
     type: live
     date: "2020-06-03"
@@ -46,6 +80,10 @@
         label: "Poly Bridge 2"
         game: poly-bridge-2
     sources:
+      - url: https://www.bilibili.com/video/BV19K4y1t7br
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15979907"
         kind: replay
         parts: 2
@@ -80,8 +118,27 @@
         kind: replay
         parts: 5
         status: alive
+      - url: https://www.bilibili.com/video/BV1az4y197rv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2020-06-06-live-01
+    type: live
+    date: '2020-06-06'
+    title: 活动
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:09
+    duration_min: 120
   - id: 2020-06-07-live-01
     type: live
     date: "2020-06-07"
@@ -105,6 +162,10 @@
       - at: "03:15:06"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1ZK4y1x7JF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16077154"
         kind: replay
         parts: 5
@@ -132,12 +193,31 @@
       - at: "03:17:44"
         label: "怒之铁拳"
     sources:
+      - url: https://www.bilibili.com/video/BV1QA411q7qv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16079680"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-06-09-live-01
+    type: live
+    date: '2020-06-09'
+    title: 看视频聊天
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.9 看视频聊天。斗鱼回放标题：怒之铁拳6之铁拳
+    sources:
+      - url: https://v.douyu.com/show/worZv05Vn197JBk3
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:16
+    duration_min: 222
   - id: 2020-06-12-live-01
     type: live
     date: "2020-06-12"
@@ -161,6 +241,10 @@
         label: "荒野乱斗"
         game: brawl-stars
     sources:
+      - url: https://www.bilibili.com/video/BV1kt4y1X7wQ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16155971"
         kind: replay
         parts: 4
@@ -194,6 +278,10 @@
         label: "P6- 2020.06.13-梦幻西游三维版 家园"
         game: menghuan-xiyou
     sources:
+      - url: https://www.bilibili.com/video/BV18Z4y1H7AG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16174797"
         kind: replay
         parts: 6
@@ -223,6 +311,10 @@
       - at: "03:22:22"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1yf4y1y7Lu
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16213808"
         kind: replay
         parts: 5
@@ -248,12 +340,31 @@
       - at: "03:00:24"
         label: "佩奇不来66来"
     sources:
+      - url: https://www.bilibili.com/video/BV1i54y1B7K2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16230754"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-06-19-live-01
+    type: live
+    date: '2020-06-19'
+    title: '最后生还者：第二部/ The Last of Us: Part II'
+    platform: douyu
+    confidence: high
+    games: []
+    note: '按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.19 最后生还者：第二部/ The Last of Us: Part II。斗鱼回放标题：最后生还者part2难度3飒一飒'
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx2D1Xl7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 11:51
+    duration_min: 458
   - id: 2020-06-20-live-01
     type: live
     date: "2020-06-20"
@@ -271,6 +382,10 @@
         label: "最后生还者2"
         game: the-last-of-us-2
     sources:
+      - url: https://www.bilibili.com/video/BV1ef4y1y7P1
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16304104"
         kind: replay
         parts: 2
@@ -303,6 +418,10 @@
         label: "最后生还者2"
         game: the-last-of-us-2
     sources:
+      - url: https://www.bilibili.com/video/BV1fC4y1a79T
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16319443"
         kind: replay
         parts: 5
@@ -334,6 +453,10 @@
         label: "最强蜗牛"
         game: zuiqiang-woniu
     sources:
+      - url: https://www.bilibili.com/video/BV1pZ4y1H7gt
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16355924"
         kind: replay
         parts: 5
@@ -365,6 +488,10 @@
         label: "Among Trees"
         game: among-trees
     sources:
+      - url: https://www.bilibili.com/video/BV1Qg4y1v7x3
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16382093"
         kind: replay
         parts: 5
@@ -394,6 +521,10 @@
         label: "盗贼之海"
         game: sea-of-thieves
     sources:
+      - url: https://www.bilibili.com/video/BV1Ui4y1G7K4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16474608"
         kind: replay
         parts: 4
@@ -422,6 +553,10 @@
         label: "盗贼之海"
         game: sea-of-thieves
     sources:
+      - url: https://www.bilibili.com/video/BV18D4y1Q7tK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16490061"
         kind: replay
         parts: 4
@@ -451,83 +586,12 @@
       - at: "03:07:42"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1ik4y1q7jL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16509817"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
-  - id: 2020-06-02-live-01
-    type: live
-    date: '2020-06-02'
-    title: 搭桥poly bridge 2（15:07场）
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：搭桥poly bridge 2
-    sources:
-      - url: https://v.douyu.com/show/ERALvENpXLA71Vw0
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:07
-    duration_min: 228
-  - id: 2020-06-02-live-02
-    type: live
-    date: '2020-06-02'
-    title: 《硬核机甲》训练营~~（20:01场）
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.2 游戏：桥梁建造师 2/ Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：《硬核机甲》训练营~~
-    sources:
-      - url: https://v.douyu.com/show/0zZVvPRJDaqMO4E2
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 20:01
-    duration_min: 103
-  - id: 2020-06-06-live-01
-    type: live
-    date: '2020-06-06'
-    title: 活动
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六
-    sources:
-      - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:09
-    duration_min: 120
-  - id: 2020-06-09-live-01
-    type: live
-    date: '2020-06-09'
-    title: 看视频聊天
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.9 看视频聊天。斗鱼回放标题：怒之铁拳6之铁拳
-    sources:
-      - url: https://v.douyu.com/show/worZv05Vn197JBk3
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:16
-    duration_min: 222
-  - id: 2020-06-19-live-01
-    type: live
-    date: '2020-06-19'
-    title: '最后生还者：第二部/ The Last of Us: Part II'
-    platform: douyu
-    confidence: high
-    games: []
-    note: '按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.19 最后生还者：第二部/ The Last of Us: Part II。斗鱼回放标题：最后生还者part2难度3飒一飒'
-    sources:
-      - url: https://v.douyu.com/show/qJgOWx2D1Xl7kVzL
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 11:51
-    duration_min: 458

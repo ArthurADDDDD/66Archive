@@ -19,6 +19,10 @@
       - at: "02:45:36"
         label: "游戏前KK歌"
     sources:
+      - url: https://www.bilibili.com/video/BV17K411L716
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14407628"
         kind: replay
         parts: 5
@@ -81,6 +85,10 @@
       - at: "03:33:29"
         label: "巨著"
     sources:
+      - url: https://www.bilibili.com/video/BV1Jg4y1a7iY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14460973"
         kind: replay
         parts: 6
@@ -110,6 +118,10 @@
       - at: "02:53:04"
         label: "半衰期 Alyx"
     sources:
+      - url: https://www.bilibili.com/video/BV1Pi4y187Br
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14530449"
         kind: replay
         parts: 4
@@ -135,12 +147,31 @@
       - at: "03:21:56"
         label: "逆转裁判"
     sources:
+      - url: https://www.bilibili.com/video/BV135411t7Ae
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14556632"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-04-09-live-01
+    type: live
+    date: '2020-04-09'
+    title: 逆转裁判2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.9 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
+    sources:
+      - url: https://v.douyu.com/show/2V0JMVJ2QV5MRY5k
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:05
+    duration_min: 276
   - id: 2020-04-10-live-01
     type: live
     date: "2020-04-10"
@@ -160,12 +191,31 @@
       - at: "03:09:52"
         label: "逆转裁判 异议"
     sources:
+      - url: https://www.bilibili.com/video/BV1Re411x76T
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14625206"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-04-11-live-01
+    type: live
+    date: '2020-04-11'
+    title: 逆转裁判2
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.11 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
+    sources:
+      - url: https://v.douyu.com/show/a4Jj7l2K03rWDk01
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:07
+    duration_min: 534
   - id: 2020-04-12-live-01
     type: live
     date: "2020-04-12"
@@ -215,6 +265,10 @@
         label: "逆转裁判3，异议！"
         game: gyakuten-saiban-3
     sources:
+      - url: https://www.bilibili.com/video/BV1Kp4y1y7ma
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14739585"
         kind: replay
         parts: 4
@@ -238,150 +292,16 @@
       - at: "02:00:06"
         label: "佩奇又来了！！！"
     sources:
+      - url: https://www.bilibili.com/video/BV1Vg4y1z7kj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac14767644"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-04-18-live-01
-    type: live
-    date: "2020-04-18"
-    title: "逆转裁判3，异议"
-    platform: douyu
-    confidence: high
-    duration_min: 260
-    cover: "https://tx-free-imgs.acfun.cn/o_1e66sobgo1f4a33p1c591tvt16db0.jpeg?imageslim"
-    games: [gyakuten-saiban-3]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:20:14"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-      - at: "01:40:08"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-      - at: "03:00:01"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-    sources:
-      - url: "https://www.acfun.cn/v/ac14883639"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-04-19-live-01
-    type: live
-    date: "2020-04-19"
-    title: "逆转裁判3，异议"
-    platform: douyu
-    confidence: high
-    duration_min: 293
-    cover: "https://tx-free-imgs.acfun.cn/o_1e69gcas216501ndr12me1d9b17m50.jpeg?imageslim"
-    games: [gyakuten-saiban-3]
-    segments:
-      - at: "00:00:00"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-      - at: "01:13:11"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-      - at: "02:26:23"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-      - at: "03:39:35"
-        label: "逆转裁判3，异议！"
-        game: gyakuten-saiban-3
-    sources:
-      - url: "https://www.acfun.cn/v/ac14908138"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-04-27-live-01
-    type: live
-    date: "2020-04-27"
-    title: "宝石商人桌游局"
-    platform: douyu
-    confidence: high
-    duration_min: 262
-    cover: "https://tx-free-imgs.acfun.cn/o_1e6u3rif21q371rhs1tk61h8m1fmg0.jpeg?imageslim"
-    games: []
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "01:01:13"
-        label: "宝石商人桌游局"
-      - at: "01:51:29"
-        label: "宝石商人桌游局"
-      - at: "02:41:46"
-        label: "宝石商人桌游局"
-      - at: "03:32:01"
-        label: "宝石商人桌游局"
-    sources:
-      - url: "https://www.acfun.cn/v/ac15184212"
-        kind: replay
-        parts: 5
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-04-29-live-01
-    type: live
-    date: "2020-04-29"
-    title: "胡闹搬家"
-    platform: douyu
-    confidence: high
-    duration_min: 210
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7386vnlauqqtc1ujj7d86q10.jpeg?imageslim"
-    games: [moving-out]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:56:35"
-        label: "DNF"
-      - at: "01:24:21"
-        label: "胡闹搬家"
-      - at: "02:27:04"
-        label: "胡闹搬家"
-    sources:
-      - url: "https://www.acfun.cn/v/ac15228923"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-04-09-live-01
-    type: live
-    date: '2020-04-09'
-    title: 逆转裁判2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.9 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
-    sources:
-      - url: https://v.douyu.com/show/2V0JMVJ2QV5MRY5k
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:05
-    duration_min: 276
-  - id: 2020-04-11-live-01
-    type: live
-    date: '2020-04-11'
-    title: 逆转裁判2
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.11 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
-    sources:
-      - url: https://v.douyu.com/show/a4Jj7l2K03rWDk01
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:07
-    duration_min: 534
   - id: 2020-04-16-live-01
     type: live
     date: '2020-04-16'
@@ -412,6 +332,102 @@
     contributed_by: data-agent
     time: 15:43
     duration_min: 254
+  - id: 2020-04-18-live-01
+    type: live
+    date: "2020-04-18"
+    title: "逆转裁判3，异议"
+    platform: douyu
+    confidence: high
+    duration_min: 260
+    cover: "https://tx-free-imgs.acfun.cn/o_1e66sobgo1f4a33p1c591tvt16db0.jpeg?imageslim"
+    games: [gyakuten-saiban-3]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:20:14"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+      - at: "01:40:08"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+      - at: "03:00:01"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+    sources:
+      - url: https://www.bilibili.com/video/BV1q54y197wv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac14883639"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-04-19-live-01
+    type: live
+    date: "2020-04-19"
+    title: "逆转裁判3，异议"
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    cover: "https://tx-free-imgs.acfun.cn/o_1e69gcas216501ndr12me1d9b17m50.jpeg?imageslim"
+    games: [gyakuten-saiban-3]
+    segments:
+      - at: "00:00:00"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+      - at: "01:13:11"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+      - at: "02:26:23"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+      - at: "03:39:35"
+        label: "逆转裁判3，异议！"
+        game: gyakuten-saiban-3
+    sources:
+      - url: https://www.bilibili.com/video/BV1LQ4y1T7Qv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac14908138"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-04-27-live-01
+    type: live
+    date: "2020-04-27"
+    title: "宝石商人桌游局"
+    platform: douyu
+    confidence: high
+    duration_min: 262
+    cover: "https://tx-free-imgs.acfun.cn/o_1e6u3rif21q371rhs1tk61h8m1fmg0.jpeg?imageslim"
+    games: []
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "01:01:13"
+        label: "宝石商人桌游局"
+      - at: "01:51:29"
+        label: "宝石商人桌游局"
+      - at: "02:41:46"
+        label: "宝石商人桌游局"
+      - at: "03:32:01"
+        label: "宝石商人桌游局"
+    sources:
+      - url: https://www.bilibili.com/video/BV1KV411d7NS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac15184212"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-04-28-live-01
     type: live
     date: '2020-04-28'
@@ -427,6 +443,34 @@
     contributed_by: data-agent
     time: 15:36
     duration_min: 270
+  - id: 2020-04-29-live-01
+    type: live
+    date: "2020-04-29"
+    title: "胡闹搬家"
+    platform: douyu
+    confidence: high
+    duration_min: 210
+    cover: "https://tx-free-imgs.acfun.cn/o_1e7386vnlauqqtc1ujj7d86q10.jpeg?imageslim"
+    games: [moving-out]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:56:35"
+        label: "DNF"
+      - at: "01:24:21"
+        label: "胡闹搬家"
+      - at: "02:27:04"
+        label: "胡闹搬家"
+    sources:
+      - url: https://www.bilibili.com/video/BV1dp4y1X73z
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac15228923"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
   - id: 2020-04-30-live-01
     type: live
     date: '2020-04-30'

@@ -22,6 +22,7 @@
       - url: "https://www.bilibili.com/video/BV1SbSfB3ErN"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV19WSfByErh"
         kind: replay
         status: alive
@@ -61,6 +62,7 @@
       - url: "https://www.bilibili.com/video/BV1U4QcB5EHJ"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1YfQcBpEWq"
         kind: replay
         status: alive
@@ -98,6 +100,7 @@
       - url: "https://www.bilibili.com/video/BV1W6DkBXECS"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1szDkBWEgJ"
         kind: replay
         status: alive
@@ -131,6 +134,7 @@
       - url: "https://www.bilibili.com/video/BV12LDXBSEJM"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1WAD9BmEEc"
         kind: replay
         status: alive
@@ -160,6 +164,7 @@
       - url: "https://www.bilibili.com/video/BV1gXQ7BaEJi"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1NAQEBREPB"
         kind: replay
         status: alive
@@ -167,18 +172,30 @@
 
     duration_min: 123
 
-  - id: 2026-04-16-live-01
+  - id: 2026-04-16-live-03
     type: live
     date: "2026-04-16"
-    title: "Bento Blocks"
+    title: "竞拍之王"
     platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/a3a387c2c4c77d5340865b2fc66a80ad440a02cb.jpg"
-    confidence: medium
+    cover: "https://i2.hdslb.com/bfs/archive/fc294fa3c1baed3467e494336a096652a353ee91.jpg"
+    confidence: high
     games:
+      - auction-king
       - bento-blocks
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “别笑”为平台标题，与本条竞拍之王/便当积木同场，合并。 live-01 与 live-03 均为 04-16 21:08 同场（竞拍之王→Bento Blocks），合并。"
     sources:
+      - url: "https://www.bilibili.com/video/BV1nrdqBLEQX"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1f5daBtEZz"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1fGdaBfEeN"
+        kind: replay
+        status: alive
       - url: "https://www.bilibili.com/video/BV1VsdaBQEmX"
         kind: replay
         status: alive
@@ -186,16 +203,6 @@
 
     duration_min: 132
 
-  - id: 2026-04-16-live-02
-    type: live
-    date: "2026-04-16"
-    title: "别笑"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/01c40f7c3839862b4247ffd52649600ffb8a1d26.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     segments:
       - at: "00:00:00"
         label: "别笑"
@@ -203,37 +210,6 @@
         label: "别笑"
       - at: "02:00:03"
         label: "别笑"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1f5daBtEZz"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1fGdaBfEeN"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 132
-
-  - id: 2026-04-16-live-03
-    type: live
-    date: "2026-04-16"
-    title: "竞拍之王"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/fc294fa3c1baed3467e494336a096652a353ee91.jpg"
-    confidence: medium
-    games:
-      - auction-king
-      - bento-blocks
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1nrdqBLEQX"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 131
-
   - id: 2026-04-19-live-01
     type: live
     date: "2026-04-19"
@@ -254,6 +230,7 @@
       - url: "https://www.bilibili.com/video/BV1jtdfBeEok"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1uydfBXEc2"
         kind: replay
         status: alive
@@ -274,9 +251,11 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/531e672529b160c6213ce89f85b549709acdb273.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    games:
+      - nvdiao
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “女吊”与“别怕，躲我身后”同场；完整源内含女主/男主双视角两版，只按一版 247min 计时。"
     segments:
       - at: "00:00:00"
         label: "别怕，躲我身后"
@@ -292,40 +271,10 @@
       - url: "https://www.bilibili.com/video/BV1gPdSBFEUt"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1m3dSBWEKm"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 247
-
-  - id: 2026-04-21-live-02
-    type: live
-    date: "2026-04-21"
-    title: "女吊"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/6de5f16cf77097337f4ed393cdc21a4b892ee881.jpg"
-    confidence: high
-    games:
-      - nvdiao
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "开播聊天 18:53"
-      - at: "00:14:02"
-        label: "女吊 19:07"
-      - at: "00:59:57"
-        label: "女吊 19:54"
-      - at: "01:59:50"
-        label: "女吊 20:53"
-      - at: "02:39:51"
-        label: "女吊 21:33"
-      - at: "03:19:52"
-        label: "女吊 22:13"
-      - at: "03:55:21"
-        label: "女吊 22:49"
-    sources:
       - url: "https://www.bilibili.com/video/BV1BUdUBgE8M"
         kind: replay
         status: alive
@@ -334,7 +283,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 478
+    duration_min: 247
 
   - id: 2026-04-22-live-01
     type: live
@@ -397,6 +346,7 @@
             title: "王者荣耀世界~~~_2026-04-22_23_50_47_女流66_弹幕版"
             duration_sec: 3416
             cover: "https://i1.hdslb.com/bfs/storyff/_000002rpg8j6zin092m9vh06rzsyp9b_firsti.jpg"
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV16MosBVE7W"
         cover: "https://i1.hdslb.com/bfs/archive/b6775b771737ff74af3b36af9f285e581ade50be.jpg"
         kind: replay
@@ -446,37 +396,10 @@
       - url: "https://www.bilibili.com/video/BV1Mqo4BwE3j"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 205
-
-  - id: 2026-04-28-live-01
-    type: live
-    date: "2026-04-28"
-    title: "晚上好"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/5310232afd79f4fce7648aa6f222dd958a22c12b.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "晚上好"
-      - at: "01:00:01"
-        label: "晚上好"
-      - at: "02:00:02"
-        label: "晚上好"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1K29yBMESK"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV14c9kBcEpX"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 121
 
   - id: 2026-04-28-live-02
     type: live
@@ -487,8 +410,9 @@
     confidence: high
     games:
       - zheshi-xieyinggen
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “晚上好”为平台标题，与本条这是谐音梗同场，合并。"
     segments:
       - at: "00:00:00"
         label: "开播聊天，看PV"
@@ -500,12 +424,19 @@
       - url: "https://www.bilibili.com/video/BV1Rh9yBEEHe"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1rj9yBZEVz"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1K29yBMESK"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV14c9kBcEpX"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 120
+    duration_min: 121
 
   - id: 2026-04-30-live-01
     type: live
@@ -529,6 +460,7 @@
       - url: "https://www.bilibili.com/video/BV1Jd9hB9E19"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV17f9hBQEZf"
         kind: replay
         status: alive

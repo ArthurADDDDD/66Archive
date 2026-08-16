@@ -1,3 +1,19 @@
+  - id: 2019-10-03-live-01
+    type: live
+    date: "2019-10-03"
+    title: "过山车之星"
+    platform: douyu
+    confidence: high
+    duration_min: 266
+    games: []
+    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15E411D7BD"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2019-10-06-live-01
     type: live
     date: "2019-10-06"
@@ -21,12 +37,13 @@
       - at: "04:00:07"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV12J411F7By
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11303068"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV12J411F7By
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -42,6 +59,7 @@
       - url: "https://www.bilibili.com/video/BV13J411c7Q7"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-09-live-01
@@ -56,6 +74,7 @@
       - url: "https://www.bilibili.com/video/BV1DE411f7VZ"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-10-live-01
@@ -70,6 +89,7 @@
       - url: "https://www.bilibili.com/video/BV1pE411o7UJ"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-11-live-01
@@ -84,6 +104,7 @@
       - url: "https://www.bilibili.com/video/BV1wE411Z75K"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-12-live-01
@@ -98,6 +119,7 @@
       - url: "https://www.bilibili.com/video/BV1sE411Z7YA"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-13-live-01
@@ -117,12 +139,13 @@
       - at: "02:13:06"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1vE411d7zd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11374339"
         kind: replay
         parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1vE411d7zd
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -138,6 +161,7 @@
       - url: "https://www.bilibili.com/video/BV1TE411C75c"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-16-live-01
@@ -150,12 +174,13 @@
     cover: "https://tx-free-imgs.acfun.cn/Fmiqi8cYo-4Ue25czSXYLHwd1Xmp?imageslim"
     games: [dashen-guilai]
     sources:
+      - url: https://www.bilibili.com/video/BV1CE411C7eh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11387366"
         kind: replay
         parts: 1
-        status: alive
-      - url: https://www.bilibili.com/video/BV1CE411C7eh
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -180,12 +205,13 @@
       - at: "04:02:21"
         label: "牧场物语：重聚矿石镇"
     sources:
+      - url: https://www.bilibili.com/video/BV1XE411r745
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11396528"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1XE411r745
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -213,12 +239,13 @@
       - at: "02:53:29"
         label: "牧场物语：重聚矿石镇"
     sources:
+      - url: https://www.bilibili.com/video/BV1uE411k7gR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11405767"
         kind: replay
         parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1uE411k7gR
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -234,6 +261,7 @@
       - url: "https://www.bilibili.com/video/BV1SE411k7vV"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-20-live-01
@@ -257,12 +285,13 @@
       - at: "05:14:42"
         label: "牧场物语：重聚矿石镇"
     sources:
+      - url: https://www.bilibili.com/video/BV1NE411r7CE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11429287"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1NE411r7CE
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -287,12 +316,13 @@
       - at: "04:59:55"
         label: "牧场物语：重聚矿石镇"
     sources:
+      - url: https://www.bilibili.com/video/BV1rE41127q4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11442746"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1rE41127q4
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -315,13 +345,30 @@
       - at: "02:51:49"
         label: "牧场物语：重聚矿石镇"
     sources:
+      - url: https://www.bilibili.com/video/BV1aE411y7MH
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11458641"
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.bilibili.com/video/BV1aE411y7MH
+    contributed_by: data-agent
+
+  - id: 2019-10-25-live-01
+    type: live
+    date: "2019-10-25"
+    title: "牧场物语：重聚矿石镇"
+    platform: douyu
+    confidence: high
+    duration_min: 250
+    games: []
+    note: "B站「女流录像小屋」《牧场物语：重聚矿石镇》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1bE411175p"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-27-live-01
@@ -341,45 +388,14 @@
       - at: "02:07:18"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1nE411Y7os
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11498226"
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1nE411Y7os
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-10-03-live-01
-    type: live
-    date: "2019-10-03"
-    title: "过山车之星"
-    platform: douyu
-    confidence: high
-    duration_min: 266
-    games: []
-    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV15E411D7BD"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-10-25-live-01
-    type: live
-    date: "2019-10-25"
-    title: "牧场物语：重聚矿石镇"
-    platform: douyu
-    confidence: high
-    duration_min: 250
-    games: []
-    note: "B站「女流录像小屋」《牧场物语：重聚矿石镇》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1bE411175p"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-10-31-live-01

@@ -1,3 +1,19 @@
+  - id: 2018-09-04-live-01
+    type: live
+    date: "2018-09-04"
+    title: "过山车之星"
+    platform: douyu
+    confidence: high
+    duration_min: 273
+    games: []
+    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1tW411Z7Bk"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2018-09-05-live-01
     type: live
     date: "2018-09-05"
@@ -15,6 +31,10 @@
       - at: "02:58:12"
         label: "Two Point Hospital"
     sources:
+      - url: https://www.bilibili.com/video/BV1mW411Z7Uc
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4567379"
         kind: replay
         parts: 3
@@ -63,6 +83,10 @@
       - at: "04:00:02"
         label: "Part4"
     sources:
+      - url: https://www.bilibili.com/video/BV1RW411d7rf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4572853"
         kind: replay
         parts: 4
@@ -113,6 +137,10 @@
       - at: "02:58:22"
         label: "过山车之星"
     sources:
+      - url: https://www.bilibili.com/video/BV1tW411C7TF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4578858"
         kind: replay
         parts: 3
@@ -136,6 +164,10 @@
       - at: "02:57:15"
         label: "极限巅峰(Steep)"
     sources:
+      - url: https://www.bilibili.com/video/BV19W411C76c
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4580885"
         kind: replay
         parts: 3
@@ -163,6 +195,10 @@
       - at: "03:03:25"
         label: "Strange Brigade"
     sources:
+      - url: https://www.bilibili.com/video/BV1cW411y7zV
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4583069"
         kind: replay
         parts: 5
@@ -192,6 +228,10 @@
       - at: "04:11:48"
         label: "Strange Brigade"
     sources:
+      - url: https://www.bilibili.com/video/BV19W411r79a
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4585388"
         kind: replay
         parts: 6
@@ -213,6 +253,10 @@
       - at: "00:47:40"
         label: "Strange Brigade"
     sources:
+      - url: https://www.bilibili.com/video/BV1gW411k7r1
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4586843"
         kind: replay
         parts: 2
@@ -238,6 +282,10 @@
       - at: "02:10:38"
         label: "心灵砒霜-心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1eW411k7Dp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4588929"
         kind: replay
         parts: 3
@@ -261,6 +309,10 @@
       - at: "02:03:42"
         label: "39天到火星"
     sources:
+      - url: https://www.bilibili.com/video/BV12W411k7Ec
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4590602"
         kind: replay
         parts: 3
@@ -277,6 +329,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538181206.jpg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1sW411S7VZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4612888"
         kind: replay
         parts: 1
@@ -299,6 +355,10 @@
         label: "Rusty Lake Paradox（《锈湖》新作《悖论》）"
         game: rusty-lake
     sources:
+      - url: https://www.bilibili.com/video/BV1jW411r7Hx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4599258"
         kind: replay
         parts: 2
@@ -320,6 +380,10 @@
       - at: "01:13:39"
         label: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
     sources:
+      - url: https://www.bilibili.com/video/BV1uW411z7aE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4601198"
         kind: replay
         parts: 2
@@ -345,12 +409,31 @@
       - at: "01:25:54"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1YW411z7E7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4603370"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+  - id: 2018-09-24-live-01
+    type: live
+    date: "2018-09-24"
+    title: "回老家过中秋"
+    platform: douyu
+    confidence: high
+    duration_min: 178
+    games: []
+    note: "B站「女流录像小屋」《回老家过中秋》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1cW411676b"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2018-09-26-live-01
     type: live
     date: "2018-09-26"
@@ -366,6 +449,10 @@
       - at: "00:16:45"
         label: "终极钓鱼模拟器(Ultimate Fishing Simulator)"
     sources:
+      - url: https://www.bilibili.com/video/BV1aW411U74i
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4608456"
         kind: replay
         parts: 2
@@ -387,6 +474,10 @@
       - at: "00:18:47"
         label: "恐龙公园Parkasaurus"
     sources:
+      - url: https://www.bilibili.com/video/BV1SW411U7Jg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4610364"
         kind: replay
         parts: 2
@@ -408,6 +499,10 @@
       - at: "00:19:10"
         label: "中国式家长"
     sources:
+      - url: https://www.bilibili.com/video/BV1uW411S7S4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4612623"
         kind: replay
         parts: 2
@@ -429,6 +524,10 @@
       - at: "00:45:35"
         label: "中国式家长"
     sources:
+      - url: https://www.bilibili.com/video/BV1BW411S7bc
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4614712"
         kind: replay
         parts: 2
@@ -454,40 +553,12 @@
       - at: "01:13:40"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1GW411m7oz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4617033"
         kind: replay
         parts: 3
         status: alive
-    contributed_by: data-agent
-
-  - id: 2018-09-04-live-01
-    type: live
-    date: "2018-09-04"
-    title: "过山车之星"
-    platform: douyu
-    confidence: high
-    duration_min: 273
-    games: []
-    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1tW411Z7Bk"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2018-09-24-live-01
-    type: live
-    date: "2018-09-24"
-    title: "回老家过中秋"
-    platform: douyu
-    confidence: high
-    duration_min: 178
-    games: []
-    note: "B站「女流录像小屋」《回老家过中秋》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1cW411676b"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

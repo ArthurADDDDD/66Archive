@@ -11,6 +11,7 @@
       - url: "https://www.bilibili.com/video/BV17PrLYDED1"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV14brLYeESk"
         kind: replay
         status: alive
@@ -38,6 +39,7 @@
       - url: "https://www.bilibili.com/video/BV1bfreYdE3B"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV14TrvYnEvN"
         kind: replay
         status: alive
@@ -47,22 +49,6 @@
     contributed_by: data-agent
 
     duration_min: 205
-  - id: 2025-01-09-live-01
-    type: live
-    date: "2025-01-09"
-    title: "突袭式直播间，刷到就是缘 2025/01/09 10时场"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/f7634deda43a60fe80b39bfc7103f33e399391da.jpg"
-    confidence: medium
-    games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1DCrzY3E15"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 119
   - id: 2025-01-09-live-02
     type: live
     date: "2025-01-09"
@@ -71,8 +57,9 @@
     cover: "https://i2.hdslb.com/bfs/archive/5f006fa89f4ec6c8e0dffbb62ccc1338eb291b6b.jpg"
     confidence: high
     games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 安乐冈花火w 的 10时场版本（119min）与本条为同一场，本条纯净版 149min 为主源，合并。"
     segments:
       - at: "00:00:00"
         label: "女流66_突袭式直播间刷到就是缘"
@@ -82,7 +69,11 @@
       - url: "https://www.bilibili.com/video/BV1NdrzYPEaH"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1zgr6YXEQh"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1DCrzY3E15"
         kind: replay
         status: alive
     contributed_by: data-agent

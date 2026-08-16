@@ -1,3 +1,19 @@
+  - id: 2019-11-01-live-01
+    type: live
+    date: "2019-11-01"
+    title: "马力欧与索尼克 AT 2020东京奥运"
+    platform: douyu
+    confidence: high
+    duration_min: 403
+    games: []
+    note: "B站「女流录像小屋」《马力欧与索尼克 AT 2020东京奥运》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV12E411t7Xd"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
   - id: 2019-11-03-live-01
     type: live
     date: "2019-11-03"
@@ -23,36 +39,34 @@
       - at: "04:00:05"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1qE411q7fU
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11553091"
         kind: replay
         parts: 6
         status: alive
-      - url: https://www.bilibili.com/video/BV1qE411q7fU
+      - url: https://www.acfun.cn/v/ac11561209
         kind: replay
         status: alive
     contributed_by: data-agent
 
-  - id: 2019-11-04-live-01
+    note: A站弹幕版按次日 11.4 命名，实为 11.3 心灵砒霜同一场（跨零点），合并。
+  - id: 2019-11-05-live-01
     type: live
-    date: "2019-11-04"
-    title: "【心灵砒霜】谁还不希望自己孩子是个富二代呢"
-    series: xinling-pishuang
+    date: "2019-11-05"
+    title: "路易吉鬼屋3"
     platform: douyu
     confidence: high
-    duration_min: 268
-    cover: "https://tx-free-imgs.acfun.cn/FkPzhTUZa28qvmkNJMI9nXaHsFF9?imageslim"
+    duration_min: 227
     games: []
-    tags: [心灵砒霜, 弹幕版]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "02:14:07"
-        label: "心灵砒霜弹幕版"
+    note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
     sources:
-      - url: "https://www.acfun.cn/v/ac11561209"
+      - url: "https://www.bilibili.com/video/BV1hE411i7FV"
         kind: replay
-        parts: 2
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-11-07-live-01
@@ -70,15 +84,32 @@
       - at: "00:50:59"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1PE411e7Gv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11629299"
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1PE411e7Gv
-        kind: replay
-        status: alive
     contributed_by: data-agent
 
+  - id: 2019-11-08-live-01
+    type: live
+    date: "2019-11-08"
+    title: "失落城堡"
+    platform: douyu
+    confidence: high
+    duration_min: 211
+    games: []
+    tags: []
+    note: "来源为「没被处理过」《失落城堡.女流.2019.11.8》，标题含日期，2P 全长约 3:30:33。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kE411Y7Eg"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-11-09-live-01
     type: live
     date: "2019-11-09"
@@ -102,12 +133,13 @@
       - at: "04:00:07"
         label: "Part6"
     sources:
+      - url: https://www.bilibili.com/video/BV1kE411v7Uc
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11618768"
         kind: replay
         parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1kE411v7Uc
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -123,12 +155,13 @@
     games: []
     tags: [心灵砒霜]
     sources:
+      - url: https://www.bilibili.com/video/BV1mE411Y7Rk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11629445"
         kind: replay
         parts: 1
-        status: alive
-      - url: https://www.bilibili.com/video/BV1mE411Y7Rk
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -155,12 +188,13 @@
       - at: "04:00:03"
         label: "Part6"
     sources:
+      - url: https://www.bilibili.com/video/BV11J411S7Yu
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11651121"
         kind: replay
         parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV11J411S7Yu
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -181,12 +215,13 @@
       - at: "02:07:02"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1RJ41127Hy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11689940"
         kind: replay
         parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1RJ41127Hy
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -205,15 +240,31 @@
       - at: "00:46:59"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1uJ41127q4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11707262"
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1uJ41127q4
-        kind: replay
-        status: alive
     contributed_by: data-agent
 
+  - id: 2019-11-22-live-01
+    type: live
+    date: "2019-11-22"
+    title: "Tangle Tower"
+    platform: douyu
+    confidence: high
+    duration_min: 232
+    games: []
+    note: "B站「女流录像小屋」《Tangle Tower》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1WJ411d7Gt"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-11-24-live-01
     type: live
     date: "2019-11-24"
@@ -229,12 +280,13 @@
       - at: "01:36:38"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1AJ411R7fz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11740245"
         kind: replay
         parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1AJ411R7fz
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -260,12 +312,13 @@
         label: "Tangle Tower"
         game: tangle-tower
     sources:
+      - url: https://www.bilibili.com/video/BV1nJ411Q77f
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11780573"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV1nJ411Q77f
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -299,69 +352,6 @@
         parts: 5
         status: alive
       - url: https://www.bilibili.com/video/BV1YJ411Q7ZQ
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-11-01-live-01
-    type: live
-    date: "2019-11-01"
-    title: "马力欧与索尼克 AT 2020东京奥运"
-    platform: douyu
-    confidence: high
-    duration_min: 403
-    games: []
-    note: "B站「女流录像小屋」《马力欧与索尼克 AT 2020东京奥运》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV12E411t7Xd"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-11-05-live-01
-    type: live
-    date: "2019-11-05"
-    title: "路易吉鬼屋3"
-    platform: douyu
-    confidence: high
-    duration_min: 227
-    games: []
-    note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1hE411i7FV"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-11-22-live-01
-    type: live
-    date: "2019-11-22"
-    title: "Tangle Tower"
-    platform: douyu
-    confidence: high
-    duration_min: 232
-    games: []
-    note: "B站「女流录像小屋」《Tangle Tower》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1WJ411d7Gt"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-  - id: 2019-11-08-live-01
-    type: live
-    date: "2019-11-08"
-    title: "失落城堡"
-    platform: douyu
-    confidence: high
-    duration_min: 211
-    games: []
-    tags: []
-    note: "来源为「没被处理过」《失落城堡.女流.2019.11.8》，标题含日期，2P 全长约 3:30:33。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1kE411Y7Eg"
         kind: replay
         status: alive
     contributed_by: data-agent

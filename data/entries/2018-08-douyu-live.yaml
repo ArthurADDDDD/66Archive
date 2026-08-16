@@ -15,6 +15,10 @@
       - at: "00:53:43"
         label: "playstation发布会"
     sources:
+      - url: https://www.bilibili.com/video/BV1gs41137Hv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4498195"
         kind: replay
         parts: 3
@@ -38,6 +42,10 @@
       - at: "02:32:38"
         label: "P3-2018-8-6-无人深空"
     sources:
+      - url: https://www.bilibili.com/video/BV13s411g75L
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4505280"
         kind: replay
         parts: 3
@@ -61,6 +69,10 @@
       - at: "02:03:23"
         label: "Overcooked 2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Js411M7bm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4509318"
         kind: replay
         parts: 3
@@ -86,12 +98,31 @@
       - at: "02:49:02"
         label: "One Hand Clapping"
     sources:
+      - url: https://www.bilibili.com/video/BV1Rs411M7bS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4511477"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2018-08-11-live-01
+    type: live
+    date: "2018-08-11"
+    title: "怪物猎人：世界"
+    platform: douyu
+    confidence: high
+    duration_min: 146
+    games: []
+    note: "B站「女流录像小屋」《怪物猎人：世界》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ns411T7aG"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2018-08-12-live-01
     type: live
     date: "2018-08-12"
@@ -115,6 +146,10 @@
       - at: "02:58:38"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Es411T7m8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4520222"
         kind: replay
         parts: 5
@@ -141,6 +176,10 @@
         label: "大周MC第四目：第四天之建设城市"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1gs411M71x
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4521994"
         kind: replay
         parts: 3
@@ -167,6 +206,10 @@
         label: "大周MC第四目：第五天之MC水上乐园"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1GW411R7EL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4524053"
         kind: replay
         parts: 3
@@ -183,12 +226,48 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_15/1534343303.jpg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV15W411R7mz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4524101"
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
 
+  - id: 2018-08-17-live-01
+    type: live
+    date: "2018-08-17"
+    title: "大周MC第四目：第六天之七夕建筑大赛&无人深空"
+    platform: douyu
+    confidence: high
+    duration_min: 340
+    cover: "https://tx-free-imgs.acfun.cn/content/2018_08_17/1534514774.jpg?imageslim"
+    games:
+      - minecraft
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:00"
+        label: "P2.1-2018.8.17- 大周MC第四目：第六天之七夕建筑大赛"
+        game: minecraft
+      - at: "02:00:00"
+        label: "P2.2-2018.8.17- 大周MC第四目：第六天之七夕建筑大赛"
+        game: minecraft
+      - at: "04:04:19"
+        label: "无人深空"
+    sources:
+      - url: https://www.bilibili.com/video/BV1hW411X7dk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac4528865"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+    note: 原按 A站页面标题误标 2018-01-17；分P名/上传日/封面均为 2018-08-17，且“七夕建筑大赛”对应七夕，移回该日。 人工确认：B站同源标题也误写 2018.1.17；实为同一场，entry 继续使用已校正的 2018-08-17。
   - id: 2018-08-18-live-01
     type: live
     date: "2018-08-18"
@@ -207,6 +286,10 @@
       - at: "02:11:40"
         label: "Part3"
     sources:
+      - url: https://www.bilibili.com/video/BV1DW411X7GD
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4530216"
         kind: replay
         parts: 3
@@ -234,6 +317,10 @@
       - at: "02:39:15"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1xW411973U
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4531874"
         kind: replay
         parts: 4
@@ -257,6 +344,10 @@
       - at: "01:00:00"
         label: "星界边境(Starbound)"
     sources:
+      - url: https://www.bilibili.com/video/BV1kW41197rs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4533725"
         kind: replay
         parts: 3
@@ -305,6 +396,10 @@
       - at: "02:31:01"
         label: "过山车之星"
     sources:
+      - url: https://www.bilibili.com/video/BV1RW411Q7Lv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4538344"
         kind: replay
         parts: 3
@@ -321,6 +416,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_24/1535110561.JPG?imageslim"
     games: [minecraft]
     sources:
+      - url: https://www.bilibili.com/video/BV15W411D7L5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4542816"
         kind: replay
         parts: 1
@@ -342,6 +441,10 @@
       - at: "00:16:21"
         label: "流星蝴蝶剑"
     sources:
+      - url: https://www.bilibili.com/video/BV15W411D7ga
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4542811"
         kind: replay
         parts: 2
@@ -366,6 +469,10 @@
         label: "大周MC第四目：最终回"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1hW411D7qV
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4544463"
         kind: replay
         parts: 2
@@ -391,6 +498,10 @@
       - at: "01:59:38"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1TW411Q7rb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4546325"
         kind: replay
         parts: 3
@@ -407,24 +518,12 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2018_08_27/1535369077.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1Ws411F7VM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4548052"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2018-08-11-live-01
-    type: live
-    date: "2018-08-11"
-    title: "怪物猎人：世界"
-    platform: douyu
-    confidence: high
-    duration_min: 146
-    games: []
-    note: "B站「女流录像小屋」《怪物猎人：世界》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Ns411T7aG"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

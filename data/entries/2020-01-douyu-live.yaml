@@ -8,6 +8,10 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1dtf8e5e1vnu16g9119i1h81uik0.jpeg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV18J411b7op
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12216546"
         kind: replay
         parts: 1
@@ -74,6 +78,10 @@
         label: "莎木3"
         game: shenmue-3
     sources:
+      - url: https://www.bilibili.com/video/BV1uJ411j726
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12228063"
         kind: replay
         parts: 5
@@ -109,117 +117,16 @@
         label: "莎木3"
         game: shenmue-3
     sources:
+      - url: https://www.bilibili.com/video/BV1XJ411j7Vn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12235973"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-01-05-live-01
-    type: live
-    date: "2020-01-05"
-    title: "【心灵砒霜】并不是只有深夜才是属于自己的时间,其实清晨也是"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/o_1dttjfvju160g1nbp18221rt1pgn0.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "Part1"
-      - at: "00:43:54"
-        label: "Part2"
-    sources:
-      - url: "https://www.acfun.cn/v/ac12260389"
-        kind: replay
-        parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1zJ411L7EN
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    note: 补入 B 站「秘密录像屋」BV1zJ411L7EN
-  - id: 2020-01-12-live-01
-    type: live
-    date: "2020-01-12"
-    title: "【心灵砒霜】科学不在乎你认为,所以当你认为的时候就不科学了"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 253
-    cover: "https://tx-free-imgs.acfun.cn/o_1duflv6b11e2o1vf71ndn1esg10lr0.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "01:03:17"
-        label: "心灵砒霜弹幕版"
-      - at: "02:06:38"
-        label: "心灵砒霜弹幕版"
-      - at: "03:09:56"
-        label: "心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac12384734"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-01-16-live-01
-    type: live
-    date: "2020-01-16"
-    title: "时光之帽"
-    platform: douyu
-    confidence: high
-    duration_min: 281
-    cover: "https://tx-free-imgs.acfun.cn/o_1dupsbhob1gb41sob1dfup3uim70.jpeg?imageslim"
-    games: [a-hat-in-time]
-    segments:
-      - at: "00:00:00"
-        label: "Part1"
-      - at: "01:10:20"
-        label: "P2-2020-01-16-时光之帽"
-      - at: "02:20:42"
-        label: "P3-2020-01-16-时光之帽"
-      - at: "03:31:04"
-        label: "P4-2020-01-16-时光之帽"
-    sources:
-      - url: "https://www.acfun.cn/v/ac12451122"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-01-19-live-01
-    type: live
-    date: "2020-01-19"
-    title: "【心灵砒霜】借钱千万要谨慎呐,开口要债比表白还难"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 255
-    cover: "https://tx-free-imgs.acfun.cn/o_1dv5b012d1vjq1u7vr0a184e1l600.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "01:03:51"
-        label: "心灵砒霜弹幕版"
-      - at: "02:07:44"
-        label: "心灵砒霜弹幕版"
-      - at: "03:11:35"
-        label: "心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac12570465"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
   - id: 2020-01-04-live-01
     type: live
     date: '2020-01-04'
@@ -250,6 +157,37 @@
     contributed_by: data-agent
     time: 16:00
     duration_min: 84
+  - id: 2020-01-05-live-01
+    type: live
+    date: "2020-01-05"
+    title: "【心灵砒霜】并不是只有深夜才是属于自己的时间,其实清晨也是"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    cover: "https://tx-free-imgs.acfun.cn/o_1dttjfvju160g1nbp18221rt1pgn0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "00:43:54"
+        label: "Part2"
+    sources:
+      - url: https://www.bilibili.com/video/BV1oJ411L7VX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12260389"
+        kind: replay
+        parts: 2
+        status: alive
+      - url: https://www.bilibili.com/video/BV1zJ411L7EN
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+
+    note: 补入 B 站「秘密录像屋」BV1zJ411L7EN
   - id: 2020-01-06-live-01
     type: live
     date: '2020-01-06'
@@ -340,6 +278,52 @@
     contributed_by: data-agent
     time: 15:12
     duration_min: 295
+  - id: 2020-01-12-live-01
+    type: live
+    date: "2020-01-12"
+    title: "【心灵砒霜】科学不在乎你认为,所以当你认为的时候就不科学了"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 253
+    cover: "https://tx-free-imgs.acfun.cn/o_1duflv6b11e2o1vf71ndn1esg10lr0.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:03:17"
+        label: "心灵砒霜弹幕版"
+      - at: "02:06:38"
+        label: "心灵砒霜弹幕版"
+      - at: "03:09:56"
+        label: "心灵砒霜弹幕版"
+    sources:
+      - url: https://www.bilibili.com/video/BV1hJ411n7Ti
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12384734"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-01-13-live-01
+    type: live
+    date: '2020-01-13'
+    title: K起来 / 唱歌
+    platform: douyu
+    confidence: high
+    duration_min: 259
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1gJ411J7h3（女流-2020.1.13-K起来）确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1gJ411J7h3
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2020-01-14-live-01
     type: live
     date: '2020-01-14'
@@ -355,6 +339,35 @@
     contributed_by: data-agent
     time: 15:10
     duration_min: 258
+  - id: 2020-01-16-live-01
+    type: live
+    date: "2020-01-16"
+    title: "时光之帽"
+    platform: douyu
+    confidence: high
+    duration_min: 281
+    cover: "https://tx-free-imgs.acfun.cn/o_1dupsbhob1gb41sob1dfup3uim70.jpeg?imageslim"
+    games: [a-hat-in-time]
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:10:20"
+        label: "P2-2020-01-16-时光之帽"
+      - at: "02:20:42"
+        label: "P3-2020-01-16-时光之帽"
+      - at: "03:31:04"
+        label: "P4-2020-01-16-时光之帽"
+    sources:
+      - url: https://www.bilibili.com/video/BV1CJ411E7Nz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12451122"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-01-17-live-01
     type: live
     date: '2020-01-17'
@@ -385,6 +398,51 @@
     contributed_by: data-agent
     time: 15:04
     duration_min: 162
+  - id: 2020-01-19-live-01
+    type: live
+    date: "2020-01-19"
+    title: "【心灵砒霜】借钱千万要谨慎呐,开口要债比表白还难"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    cover: "https://tx-free-imgs.acfun.cn/o_1dv5b012d1vjq1u7vr0a184e1l600.jpeg?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "01:03:51"
+        label: "心灵砒霜弹幕版"
+      - at: "02:07:44"
+        label: "心灵砒霜弹幕版"
+      - at: "03:11:35"
+        label: "心灵砒霜弹幕版"
+    sources:
+      - url: https://www.bilibili.com/video/BV1n7411v7rm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12570465"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+  - id: 2020-01-21-live-01
+    type: live
+    date: '2020-01-21'
+    title: 回家：宁城吃对夹唱K
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV197411Y7Bz（斗鱼-女流66_2020-01-21 周二见啦）交叉确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV197411Y7Bz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2020-01-24-live-01
     type: live
     date: '2020-01-24'
@@ -400,31 +458,3 @@
     contributed_by: data-agent
     time: 23:38
     duration_min: 78
-  - id: 2020-01-21-live-01
-    type: live
-    date: '2020-01-21'
-    title: 回家：宁城吃对夹唱K
-    platform: douyu
-    confidence: high
-    duration_min: 293
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站账号已注销的「秘密录像屋」BV197411Y7Bz（斗鱼-女流66_2020-01-21 周二见啦）交叉确认补入。
-    sources:
-      - url: https://www.bilibili.com/video/BV197411Y7Bz
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-01-13-live-01
-    type: live
-    date: '2020-01-13'
-    title: K起来 / 唱歌
-    platform: douyu
-    confidence: high
-    duration_min: 259
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1gJ411J7h3（女流-2020.1.13-K起来）确认补入。
-    sources:
-      - url: https://www.bilibili.com/video/BV1gJ411J7h3
-        kind: replay
-        status: alive
-    contributed_by: data-agent
