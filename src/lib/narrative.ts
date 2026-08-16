@@ -611,7 +611,7 @@ export type Highlight = {
   act: ActId
   /** 锚点条目；缺失时该高光静默降级 */
   entryId?: string
-  /** 链接目标覆盖（默认 /e/{entryId}/；几何冲刺 → /games/geometry-dash/） */
+  /** 链接目标覆盖；有锚点条目时优先用该条目原平台播放 URL，站外切片可直接写外链 */
   href?: string
   /** 纯文案高光：不渲染链接（纳斯达克档案里没有对应条目，不为做链接而做链接） */
   link?: false
@@ -671,7 +671,6 @@ export const HIGHLIGHTS: Highlight[] = [
     id: 'geometry-dash',
     act: 'act-ii',
     entryId: '2016-06-04-live-01',
-    href: '/games/geometry-dash/',
     date: '2016.06',
     kicker: '执念',
     title: '几何冲刺',
@@ -742,7 +741,6 @@ export const HIGHLIGHTS: Highlight[] = [
     id: 'celeste',
     act: 'act-ii',
     entryId: '2018-03-14-live-02',
-    href: '/games/celeste/',
     date: '2018',
     kicker: '受苦记录',
     title: '《Celeste》：鬼知道我死了多少次',
@@ -1061,6 +1059,10 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
       if (process.env.NODE_ENV !== 'production') console.warn(`[narrative] 高光 ${h.id} 锚点条目缺失: ${h.entryId}`)
       return []
     }
+    const href = h.link === false
+      ? null
+      : entry?.primaryUrl ?? h.href ?? (entry ? `/e/${entry.id}/` : '/chronicle/')
+    const external = href ? href.startsWith('http') || href.startsWith('//') : false
     return [
       {
         id: h.id,
@@ -1070,8 +1072,8 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
         kicker: h.kicker,
         title: h.title,
         body: h.body,
-        href: h.link === false ? null : h.href ?? (entry ? `/e/${entry.id}/` : '/chronicle/'),
-        external: !!h.href?.startsWith('http'),
+        href,
+        external,
         cover: h.cover ?? (entry?.cover ? proxyImage(entry.cover, 640) : null),
         emphasis: fillEmphasis(h.emphasis, vars),
       },
