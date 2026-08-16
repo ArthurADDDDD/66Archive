@@ -324,3 +324,129 @@
         status: alive
     contributed_by: data-agent
     duration_min: 120
+  - id: 2026-08-11-live-01
+    type: live
+    date: '2026-08-11'
+    time: 21:45
+    title: 点关注解锁游戏
+    platform: douyin
+    confidence: high
+    duration_min: 131
+    games: []
+    tags:
+      - 弹幕版
+    sources:
+      - url: https://www.bilibili.com/video/BV1NWuB6CEit
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1HYuB6qEXm
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1SAur69Esk
+        kind: replay
+        status: alive
+        account: bili-fan-kid-replay
+    segments:
+      - at: 00:00:00
+        label: 点关注解锁游戏
+      - at: 01:00:01
+        label: 点关注解锁游戏
+      - at: 02:00:01
+        label: 点关注解锁游戏
+    contributed_by: data-agent
+    note: B站搬运（女流66 抖音直播回放）。主源为直播回放巴拉蹦吧弹幕/纯净双版 131:25，怪盗基德KID 130:53。
+  - id: 2026-08-13-live-01
+    type: live
+    date: '2026-08-13'
+    time: 20:34
+    title: 锈湖新作！ / 锈湖：湖之仆从
+    platform: douyin
+    confidence: high
+    duration_min: 218
+    games:
+      - rusty-lake
+    tags:
+      - 弹幕版
+    sources:
+      - url: https://www.bilibili.com/video/BV1AXgs6gEqs
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1Tmgs6CECX
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1y8gW6KEXd
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+      - url: https://www.bilibili.com/video/BV1Bsgs6bEYu
+        kind: replay
+        status: alive
+        account: bili-fan-heiji
+      - url: https://www.bilibili.com/video/BV1rngs6wE3j
+        kind: replay
+        status: alive
+        account: bili-fan-bulanbot
+    segments:
+      - at: 00:00:00
+        label: 锈湖：湖之仆从
+        game: rusty-lake
+      - at: 01:00:01
+        label: 锈湖：湖之仆从
+        game: rusty-lake
+      - at: 02:00:02
+        label: 锈湖：湖之仆从
+        game: rusty-lake
+      - at: 03:00:03
+        label: 锈湖：湖之仆从
+        game: rusty-lake
+    contributed_by: data-agent
+    note: B站搬运（女流66 抖音直播回放）。不懒bot 217:58 为最完整源；弹幕/纯净双版 216:57。
+  - id: 2026-08-15-live-01
+    type: live
+    date: '2026-08-15'
+    time: 20:45
+    title: 锈湖新作！ / 冒险岛怀旧服
+    platform: douyin
+    confidence: high
+    duration_min: 186
+    games:
+      - rusty-lake
+      - maplestory-classic
+    tags:
+      - 弹幕版
+    sources:
+      - url: https://www.bilibili.com/video/BV16kbC6eEuu
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1iXbC6oEos
+        kind: replay
+        status: alive
+        account: bili-fan-clean-replay
+      - url: https://www.bilibili.com/video/BV1efbC6XEFf
+        kind: replay
+        status: alive
+        account: bili-fan-bobi-replay
+      - url: https://www.bilibili.com/video/BV1RdbC6RE6P
+        kind: replay
+        status: alive
+        account: bili-fan-heiji
+    segments:
+      - at: 00:00:00
+        label: 锈湖：湖之仆从
+        game: rusty-lake
+      - at: 01:00:01
+        label: 锈湖：湖之仆从 / 冒险岛怀旧服
+        game: rusty-lake
+      - at: 02:00:02
+        label: 冒险岛怀旧服
+        game: maplestory-classic
+      - at: 03:00:03
+        label: 冒险岛怀旧服
+        game: maplestory-classic
+    contributed_by: data-agent
+    note: B站搬运（女流66 抖音直播回放）。服部平次/直播回放巴拉蹦吧/bobi华完整源约 185:24-185:56。怪盗基德KID 137:04 与不懒bot 88:37 为该场部分切片，未作为主时长。
