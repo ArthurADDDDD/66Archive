@@ -1,6 +1,9 @@
 # AGENTS.md — 所有 Agent 的起手规则
 
-本项目由多个 Agent（Claude / Codex / DeepSeek 等）协作。**动手前先读这份文件，再读 `AGENTS.md` 中你本次要扮演的角色的条目。**
+> ## PUBLIC REPOSITORY SECURITY BOUNDARY
+> 本仓库是完全公开仓。任何 Agent 禁止提交 credential、生产服务器地址、SSH 配置、真实部署命令、服务器目录、数据库连接/备份信息、私有仓具体名称与内部结构。生产环境相关配置只能通过 gitignored local configuration 注入。
+
+本项目由多个 Agent（Claude / Codex / DeepSeek 等）协作。**动手前先读这份文件。**
 
 **角色是分配给任务的功能位，不是绑定给某个模型品牌的身份证。** 下表的角色名不等于"只能是某个模型"——人类直接指派时同样可以换人接手，照样按这个角色的可写路径与约束干活。唯一要求：**每次会话开工前声明这次你扮演哪个角色**，一次会话/一次 PR 只履行一个角色，不要一边写前端一边顺手改数据。
 
@@ -9,17 +12,17 @@
 **本文件与这套角色体系覆盖的是这个仓库（公开前台）。** 本项目存在独立私有管理组件（名称与内部结构不公开），其角色边界只在私域内生效，和本文件的可写路径互不覆盖——两边都不能越界改对方仓库。
 
 ## 项目是什么
-女流66 的作品编年史网站：只索引、不搬运。收录 2010 年至今在优酷 / 哔哩哔哩 / YouTube / 斗鱼 / 抖音 的视频与直播场次，做成带 hover 预览的时间轴。详见 `README.md`。
+女流66 的作品编年史网站：只索引、不搬运。收录 2010 年至今在优酷 / 哔哩哔哩 / YouTube / 斗鱼 / 抖音 的视频与直播场次，做成带 hover 预览的时间轴。详见 [README.md](README.md)。
 
 ## 三条硬约束
 1. **服务器上不存放任何视频文件**，只存元数据与外链。
 2. **不编造数据**。日期、链接、标题、时长——没核实的一律留空或标 `confidence: low`，禁止用"合理推测"填充。
-3. **Schema（`src/lib/schema.ts`）只由当前扮演"架构/契约"角色的 Agent 修改**。其他角色要加字段，走 `.claude/docs/rfc/` 流程。
+3. **Schema（`src/lib/schema.ts`）只由当前扮演"架构/契约"角色的 Agent 修改**。其他角色要加字段，走 RFC 流程。
 
 ## 角色与可写路径
 | 角色 | 常见执行者 | 可写 | 禁止 |
 |---|---|---|---|
-| 架构/契约 | Claude | `src/lib/schema.ts`、`.claude/docs/**` | 前端展示层代码（归"前端"角色） |
+| 架构/契约 | Claude | `src/lib/schema.ts`、`AGENTS.md`、`CLAUDE.md` | 前端展示层代码（归"前端"角色） |
 | 前端 | Codex | `src/app/**` `src/components/**` `src/lib/**`（除 `schema.ts`） | 批量写 `data/**`、改 Schema |
 | 数据采集 | DeepSeek | `data/**` | `src/**` `scripts/**` 配置 |
 | 工具/自动化 | Codex | `scripts/**` `.github/**` | UI 组件、Schema |

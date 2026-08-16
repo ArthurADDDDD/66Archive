@@ -6,6 +6,11 @@ next-env.d.ts
 .DS_Store
 .wrangler/
 
+# Local-only agent/runtime state
+.claude/
+.local/
+*.local
+
 # Secrets and local deployment state
 .env
 .env.*
