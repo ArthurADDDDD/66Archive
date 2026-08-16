@@ -352,3 +352,18 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+  - id: 2019-07-09-live-01
+    type: live
+    date: "2019-07-09"
+    title: "第二季天下第一斗歌大会 7.09 女流66组"
+    platform: douyu
+    confidence: high
+    duration_min: 89
+    games: []
+    tags: [聊天]
+    note: "来源为「比赛帮电竞小报」《第二季天下第一斗歌大会7.09 女流66组》，标题含日期与女流组，时长 88:52。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1vt41137Jc"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
