@@ -185,7 +185,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         size: 'small',
         title: '开始直播',
         body: '从录好的视频，到真正坐进直播间。「女流」也慢慢变成后来大家熟悉的「女流66」。',
-        target: { kind: 'entry', id: '2015-01-24-video-01' },
+        target: { kind: 'entry', id: '2015-01-21-live-01' },
       },
     ],
   },
@@ -334,7 +334,7 @@ export const STORY_ACTS: Act[] = [
         kicker: '从录像到直播',
         title: '斗鱼156277，开门。',
         body: '2015 年，她开始直播。斗鱼时期的名字已经是女流66，直播间是斗鱼156277。以前大家看的是录好的游戏，从这里开始，大家开始一起玩。',
-        target: { kind: 'entry', id: '2015-01-24-video-01' },
+        target: { kind: 'entry', id: '2015-01-21-live-01' },
       },
       {
         id: 'names',
@@ -660,7 +660,7 @@ export const HIGHLIGHTS: Highlight[] = [
   {
     id: 'video-to-live',
     act: 'act-i',
-    entryId: '2015-01-24-video-01',
+    entryId: '2015-01-21-live-01',
     date: '2015.01',
     kicker: '转身',
     title: '从录像，到直播',
