@@ -1,57 +1,3 @@
-  - id: 2026-06-04-live-01
-    type: live
-    date: "2026-06-04"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/13b853d0336fe43f18fc82cbe4e964e06c5a4c62.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1m3EA6KEZr"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 293
-  - id: 2026-06-06-live-01
-    type: live
-    date: "2026-06-06"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/8d433328df82c846a5da9774ef225baf9375f6d7.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1foE469Ega"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 210
-  - id: 2026-06-08-live-01
-    type: live
-    date: "2026-06-08"
-    title: "鸣潮×赛博朋克：边缘行者 3.4联动剧情「边缘幻梦」06.08全程直播录像"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/e546168ca2cc33789a9c934d12143578931b9da5.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1oXE363EGa"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 240
   - id: 2026-06-08-live-03
     type: live
     date: "2026-06-08"
@@ -61,8 +7,9 @@
     confidence: high
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-08-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 同场不同标题搬运，合并。"
     segments:
       - at: "00:00:00"
         label: "鸣潮3.4"
@@ -78,10 +25,14 @@
       - url: "https://www.bilibili.com/video/BV1ExEG6UETB"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1xgEG6fEj7"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV17SE365ECu"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1oXE363EGa"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -113,6 +64,7 @@
       - url: "https://www.bilibili.com/video/BV1sFEm6WEbw"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1LEEm63ESk"
         kind: replay
         status: alive
@@ -159,6 +111,7 @@
       - url: "https://www.bilibili.com/video/BV14gEd6UErd"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV16CER6TEnq"
         kind: replay
         status: alive
@@ -179,24 +132,6 @@
     contributed_by: data-agent
 
     duration_min: 182
-  - id: 2026-06-10-live-02
-    type: live
-    date: "2026-06-10"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/0bac03efde01a4b5bf0e2e69cdcccc3070cc13ac.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1LDER6aEDj"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 356
   - id: 2026-06-12-live-01
     type: live
     date: "2026-06-12"
@@ -221,6 +156,7 @@
       - url: "https://www.bilibili.com/video/BV1k9J56wEVy"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1n7J56oELw"
         kind: replay
         status: alive
@@ -261,6 +197,7 @@
       - url: "https://www.bilibili.com/video/BV18uJp6PEDm"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1QgJp6YEM7"
         kind: replay
         status: alive
@@ -302,6 +239,7 @@
       - url: "https://www.bilibili.com/video/BV1tBJA6kEm2"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1gqJA65EZR"
         kind: replay
         status: alive
@@ -342,6 +280,7 @@
       - url: "https://www.bilibili.com/video/BV1JajV62EbW"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1ZejV65EdK"
         kind: replay
         status: alive
@@ -357,8 +296,9 @@
     confidence: high
     games:
       - meecha-chameleon
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “这游戏还得看本灵魂画手”为平台标题，与本条画画躲猫猫同场，合并。"
     segments:
       - at: "00:00:00"
         label: "画画躲猫猫 21:00"
@@ -370,30 +310,10 @@
       - url: "https://www.bilibili.com/video/BV1tUja6mEk3"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV15vja64ECt"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 130
-  - id: 2026-06-18-live-02
-    type: live
-    date: "2026-06-18"
-    title: "这游戏还得看本灵魂画手"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/16a9bad7ab1adc0138472d3e4530e7ae07ba433f.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "这游戏还得看本灵魂画手"
-      - at: "01:00:01"
-        label: "这游戏还得看本灵魂画手"
-      - at: "02:00:02"
-        label: "这游戏还得看本灵魂画手"
-    sources:
       - url: "https://www.bilibili.com/video/BV1SHjh6jEvE"
         kind: replay
         status: alive
@@ -439,6 +359,7 @@
       - url: "https://www.bilibili.com/video/BV16Wjn6NEa7"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1ohjn68E9p"
         kind: replay
         status: alive
@@ -499,6 +420,7 @@
       - url: "https://www.bilibili.com/video/BV1Dfjb6VEWY"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1mKj86BEHS"
         kind: replay
         status: alive
@@ -553,6 +475,7 @@
       - url: "https://www.bilibili.com/video/BV1WJ7K6iEXV"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1m47A6AEYH"
         kind: replay
         status: alive
@@ -603,6 +526,7 @@
       - url: "https://www.bilibili.com/video/BV1kgjU6mE7x"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1pDjU6nEGc"
         kind: replay
         status: alive
@@ -630,9 +554,11 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/f3774857c6d1ad04af1e8820393c944f4fedb126.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    games:
+      - xin-qiannv-youhun
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-26-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “新倩女幽魂”为同场内容标题，合并。"
     segments:
       - at: "00:00:00"
         label: "双人挑战落霞共誓殊途道，全靠配合"
@@ -642,34 +568,13 @@
       - url: "https://www.bilibili.com/video/BV1qM7j6XEZr"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1eV7j6JErE"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1Dk7L66Es9"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 87
-  - id: 2026-06-26-live-03
-    type: live
-    date: "2026-06-26"
-    title: "新倩女幽魂"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/03e588bd8a9d93be984757d1d8a55060777937aa.jpg"
-    confidence: high
-    games:
-      - xin-qiannv-youhun
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "开播聊天 20:22"
-      - at: "00:09:33"
-        label: "新倩女幽魂 20:33"
-      - at: "01:00:01"
-        label: "新倩女幽魂 21:22"
-    sources:
       - url: "https://www.bilibili.com/video/BV1MU7L6qEPK"
         kind: replay
         status: alive
@@ -678,7 +583,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 86
+    duration_min: 87
   - id: 2026-06-28-live-01
     type: live
     date: "2026-06-28"
@@ -703,6 +608,7 @@
       - url: "https://www.bilibili.com/video/BV1voTu66Exs"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1aKTg6eEb3"
         kind: replay
         status: alive
@@ -712,36 +618,6 @@
     contributed_by: data-agent
 
     duration_min: 161
-  - id: 2026-06-29-live-01
-    type: live
-    date: "2026-06-29"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/99ae62b5cbbbebf97bcfef41725ce38ac46eb234.jpg"
-    confidence: high
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "开播聊天 20:51"
-      - at: "00:29:54"
-        label: "鸣潮3.4下半剧情 21:20"
-      - at: "01:00:01"
-        label: "鸣潮3.4下半剧情 21:51"
-      - at: "02:00:02"
-        label: "鸣潮3.4下半剧情+抽卡提希娅 22:51"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1GjK96XETc"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1X8KD6jEDt"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 169
   - id: 2026-06-29-live-02
     type: live
     date: "2026-06-29"
@@ -751,90 +627,83 @@
     confidence: high
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 三个条目均为 06-29 20:50 鸣潮3.4下半同场；原 live-02 的巴拉蹦吧弹幕源还混有 07-02 节奏天国分P，07-02 部分已归 07-02 条目，本条按 06-29 完整源 170min 计时。"
     segments:
-      - at: "00:00:00"
-        label: "鸣潮3.4"
-      - at: "01:00:01"
-        label: "鸣潮3.4"
-      - at: "01:49:42"
-        label: "Switch 2 最新节奏天国来啦！"
-      - at: "02:49:42"
-        label: "Switch 2 最新节奏天国来啦！"
-      - at: "03:49:43"
-        label: "Switch 2 最新节奏天国来啦！"
+      - at: 00:00:00
+        label: 开播聊天 20:51
+      - at: 00:29:54
+        label: 鸣潮3.4下半剧情 21:20
+      - at: 01:00:01
+        label: 鸣潮3.4下半剧情 21:51
+      - at: 02:00:02
+        label: 鸣潮3.4下半剧情+抽卡提希娅 22:51
     sources:
       - url: "https://www.bilibili.com/video/BV1zWT66eEsy"
         kind: replay
         status: alive
+        part_details:
+          - page: 1
+            title: 2026-06-29 21:50 P1
+            duration_sec: 3601
+          - page: 2
+            title: 2026-06-29 22:50 P2
+            duration_sec: 2981
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1e4KD6EEsi"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 240
-  - id: 2026-06-29-live-03
-    type: live
-    date: "2026-06-29"
-    title: "鸣潮3.4 下"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/58498c23114607314bdbed79351e9923854bc18c.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
+      - url: "https://www.bilibili.com/video/BV1GjK96XETc"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1X8KD6jEDt"
+        kind: replay
+        status: alive
       - url: "https://www.bilibili.com/video/BV1ahKD61Emr"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 169
+    duration_min: 170
   - id: 2026-06-30-live-01
     type: live
     date: "2026-06-30"
     title: "AI密室逃脱互动闯关"
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/b8d110875f96cb8b3480d94a2fd2c7b93a14bbae.jpg"
-    confidence: medium
+    confidence: high
     games:
       - ai-escape-room
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-06-30-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “AI新内容实时生成中”为平台标题，与本条 AI密室逃脱同场；其弹幕源混有 06-29 鸣潮分P，不计入本条时长。"
     sources:
       - url: "https://www.bilibili.com/video/BV1FeTc6sEaJ"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1HGTw6tEPQ"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 80
-  - id: 2026-06-30-live-03
-    type: live
-    date: "2026-06-30"
-    title: "AI新内容实时生成中"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/3fe9dbd35dfeef4fc8b2ba2be4f46f5d258763ec.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "AI新内容实时生成中"
-      - at: "01:00:02"
-        label: "AI新内容实时生成中"
-      - at: "01:20:41"
-        label: "鸣潮3.4"
-    sources:
       - url: "https://www.bilibili.com/video/BV1QVTq6CEqy"
         kind: replay
         status: alive
+        part_details:
+          - page: 1
+            title: 2026-06-30 21:39 P1
+            duration_sec: 3602
+          - page: 2
+            title: 2026-06-30 22:39 P2
+            duration_sec: 1239
       - url: "https://www.bilibili.com/video/BV1nGTw6tEYT"
         kind: replay
         status: alive
     contributed_by: data-agent
-    duration_min: 141
+
+    duration_min: 81
+    segments:
+      - at: 00:00:00
+        label: AI密室逃脱互动闯关
+      - at: 01:00:02
+        label: AI密室逃脱互动闯关

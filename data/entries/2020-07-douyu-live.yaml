@@ -21,6 +21,10 @@
         label: "盗贼之海"
         game: sea-of-thieves
     sources:
+      - url: https://www.bilibili.com/video/BV1Qg4y1v7h2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16594590"
         kind: replay
         parts: 4
@@ -50,6 +54,10 @@
         label: "盗贼之海"
         game: sea-of-thieves
     sources:
+      - url: https://www.bilibili.com/video/BV1dK411n73X
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16594526"
         kind: replay
         parts: 4
@@ -77,6 +85,10 @@
       - at: "02:49:28"
         label: "螺旋风暴"
     sources:
+      - url: https://www.bilibili.com/video/BV1vt4y197DH
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16611265"
         kind: replay
         parts: 3
@@ -106,6 +118,10 @@
         label: "江南百景图"
         game: jiangnan-baijingtu
     sources:
+      - url: https://www.bilibili.com/video/BV14T4y177qe
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16657662"
         kind: replay
         parts: 4
@@ -134,6 +150,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1Gi4y137WJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16704479"
         kind: replay
         parts: 4
@@ -160,6 +180,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1Hk4y1B7qg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16719249"
         kind: replay
         parts: 3
@@ -188,6 +212,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1fT4y177PM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16746931"
         kind: replay
         parts: 4
@@ -214,6 +242,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1iz411v7hw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16747453"
         kind: replay
         parts: 3
@@ -247,12 +279,31 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1La4y1a7TA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16830939"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-07-15-live-01
+    type: live
+    date: '2020-07-15'
+    title: 世界游戏大全51款
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.15 游戏：世界游戏大全51款。斗鱼回放标题：今天就是要玩转！
+    sources:
+      - url: https://v.douyu.com/show/r90XWgrwbLNMgk25
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:04
+    duration_min: 295
   - id: 2020-07-16-live-01
     type: live
     date: "2020-07-16"
@@ -334,6 +385,10 @@
         label: "P7"
         game: ghost-of-tsushima
     sources:
+      - url: https://www.bilibili.com/video/BV1tt4y1X7bH
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16894131"
         kind: replay
         parts: 4
@@ -365,6 +420,10 @@
       - at: "05:00:19"
         label: "对马岛之鬼"
     sources:
+      - url: https://www.bilibili.com/video/BV1WT4y1j7HL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16909140"
         kind: replay
         parts: 5
@@ -392,6 +451,10 @@
       - at: "04:59:02"
         label: "对马岛之鬼"
     sources:
+      - url: https://www.bilibili.com/video/BV13f4y1d7n5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16923130"
         kind: replay
         parts: 5
@@ -419,6 +482,10 @@
       - at: "05:17:02"
         label: "对马岛之鬼"
     sources:
+      - url: https://www.bilibili.com/video/BV1hK411J7AK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16938446"
         kind: replay
         parts: 5
@@ -444,6 +511,10 @@
       - at: "03:18:22"
         label: "对马岛之鬼"
     sources:
+      - url: https://www.bilibili.com/video/BV1hK411J7fr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac16975617"
         kind: replay
         parts: 4
@@ -473,6 +544,10 @@
       - at: "02:55:32"
         label: "对马岛之鬼"
     sources:
+      - url: https://www.bilibili.com/video/BV1tZ4y1T79C
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17006418"
         kind: replay
         parts: 4
@@ -499,6 +574,10 @@
       - at: "03:33:27"
         label: "Superliminal"
     sources:
+      - url: https://www.bilibili.com/video/BV1ep4y1i7xx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17023955"
         kind: replay
         parts: 4
@@ -522,6 +601,10 @@
       - at: "02:30:16"
         label: "怒海余生"
     sources:
+      - url: https://www.bilibili.com/video/BV1mT4y1j751
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17055755"
         kind: replay
         parts: 3
@@ -550,26 +633,15 @@
         label: "纸片马里奥"
         game: paper-mario
     sources:
+      - url: https://www.bilibili.com/video/BV1q64y1F7QX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac17057112"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
-  - id: 2020-07-15-live-01
-    type: live
-    date: '2020-07-15'
-    title: 世界游戏大全51款
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.15 游戏：世界游戏大全51款。斗鱼回放标题：今天就是要玩转！
-    sources:
-      - url: https://v.douyu.com/show/r90XWgrwbLNMgk25
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:04
-    duration_min: 295
   - id: 2020-07-28-live-01
     type: live
     date: '2020-07-28'

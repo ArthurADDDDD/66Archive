@@ -17,6 +17,10 @@
       - at: "01:43:45"
         label: "节奏医生"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ky4y1a7Nb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26103734"
         kind: replay
         parts: 4
@@ -40,6 +44,10 @@
       - at: "01:19:03"
         label: "鬼谷八荒"
     sources:
+      - url: https://www.bilibili.com/video/BV1NK4y1D7hG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26178904"
         kind: replay
         parts: 3
@@ -74,6 +82,10 @@
         label: "ALTF4"
         game: alt-f4
     sources:
+      - url: https://www.bilibili.com/video/BV1w5411K7Dd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26236002"
         kind: replay
         parts: 6
@@ -106,6 +118,10 @@
         label: "ALTF4"
         game: alt-f4
     sources:
+      - url: https://www.bilibili.com/video/BV1Br4y1A7TS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26297737"
         kind: replay
         parts: 5
@@ -127,6 +143,10 @@
       - at: "00:40:40"
         label: "节奏医生"
     sources:
+      - url: https://www.bilibili.com/video/BV1T5411K7Ak
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26348917"
         kind: replay
         parts: 2
@@ -209,6 +229,10 @@
       - at: "03:43:36"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1jy4y1E7wz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26408836"
         kind: replay
         parts: 6
@@ -236,6 +260,10 @@
       - at: "02:20:47"
         label: "大富翁10"
     sources:
+      - url: https://www.bilibili.com/video/BV14y4y187SX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26425905"
         kind: replay
         parts: 5
@@ -245,12 +273,14 @@
   - id: 2021-03-09-live-01
     type: live
     date: "2021-03-09"
-    title: "Tiny Lands"
+    title: "Tiny Lands / 节奏医生"
     platform: douyu
     confidence: high
-    duration_min: 127
+    duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/o_1f0beihd5ljquee11k51sk21t1b0.jpeg?imageslim"
-    games: [tiny-lands]
+    games:
+      - tiny-lands
+      - rhythm-doctor
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -263,36 +293,24 @@
       - at: "01:31:08"
         label: "Tiny Lands"
         game: tiny-lands
+      - at: "02:07:00"
+        label: "节奏医生"
+      - at: "02:44:38"
+        label: "节奏医生"
+      - at: "03:22:18"
+        label: "节奏医生"
     sources:
       - url: "https://www.acfun.cn/v/ac26476396"
         kind: replay
         parts: 4
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-03-09-live-02
-    type: live
-    date: "2021-03-09"
-    title: "节奏医生"
-    platform: douyu
-    confidence: high
-    duration_min: 113
-    cover: "https://tx-free-imgs.acfun.cn/o_1f0bej1u91q1b62c10utp06156a0.jpeg?imageslim"
-    games: [rhythm-doctor]
-    segments:
-      - at: "00:00:00"
-        label: "节奏医生"
-      - at: "00:37:38"
-        label: "节奏医生"
-      - at: "01:15:18"
-        label: "节奏医生"
-    sources:
       - url: "https://www.acfun.cn/v/ac26478113"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P7 拆为两个投稿，合并为一场。
   - id: 2021-03-11-live-01
     type: live
     date: "2021-03-11"
@@ -308,6 +326,10 @@
       - at: "00:42:08"
         label: "阿尔芭与野生动物的故事"
     sources:
+      - url: https://www.bilibili.com/video/BV1Zv411h7Am
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26630182"
         kind: replay
         parts: 2
@@ -317,12 +339,15 @@
   - id: 2021-03-12-live-01
     type: live
     date: "2021-03-12"
-    title: "CSGO"
+    title: "CSGO / 魔兽争霸RPG"
     platform: douyu
     confidence: high
-    duration_min: 178
+    duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/o_1f0j6nk1apvh1ptm1k3optp1muu0.jpeg?imageslim"
-    games: [csgo, counter-strike-2]
+    games:
+      - csgo
+      - counter-strike-2
+      - warcraft-3
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -338,36 +363,24 @@
       - at: "02:17:17"
         label: "CSGO"
         game: csgo
+      - at: "02:58:00"
+        label: "魔兽争霸rpg"
+        game: warcraft-3
+      - at: "03:36:39"
+        label: "魔兽争霸rpg"
+        game: warcraft-3
     sources:
       - url: "https://www.acfun.cn/v/ac26691826"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-03-12-live-02
-    type: live
-    date: "2021-03-12"
-    title: "魔兽争霸rpg"
-    platform: douyu
-    confidence: high
-    duration_min: 77
-    cover: "https://tx-free-imgs.acfun.cn/o_1f0j70utj153fknfoqs1gh3th90.jpeg?imageslim"
-    games: [warcraft-3]
-    segments:
-      - at: "00:00:00"
-        label: "魔兽争霸rpg"
-        game: warcraft-3
-      - at: "00:38:39"
-        label: "魔兽争霸rpg"
-        game: warcraft-3
-    sources:
       - url: "https://www.acfun.cn/v/ac26693309"
         kind: replay
         parts: 2
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P7 拆为两个投稿，合并为一场。
   - id: 2021-03-13-live-01
     type: live
     date: "2021-03-13"
@@ -383,6 +396,10 @@
       - at: "00:33:48"
         label: "雀魂"
     sources:
+      - url: https://www.bilibili.com/video/BV1c64y1D7As
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26761234"
         kind: replay
         parts: 2
@@ -414,6 +431,10 @@
       - at: "03:28:57"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV11i4y1K7Lt
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26869011"
         kind: replay
         parts: 6
@@ -445,6 +466,10 @@
         label: "Hades"
         game: hades
     sources:
+      - url: https://www.bilibili.com/video/BV1uf4y1x71a
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26873129"
         kind: replay
         parts: 5
@@ -471,6 +496,10 @@
         label: "Hades"
         game: hades
     sources:
+      - url: https://www.bilibili.com/video/BV1op4y1h7GK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26910411"
         kind: replay
         parts: 3
@@ -494,6 +523,10 @@
         label: "Hades"
         game: hades
     sources:
+      - url: https://www.bilibili.com/video/BV1ip4y1h74k
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26950397"
         kind: replay
         parts: 2
@@ -503,12 +536,14 @@
   - id: 2021-03-18-live-01
     type: live
     date: "2021-03-18"
-    title: "Hades"
+    title: "Hades / The Room4"
     platform: douyu
     confidence: high
-    duration_min: 208
+    duration_min: 243
     cover: "https://tx-free-imgs.acfun.cn/o_1f12m04ci303ff71771frfsmt0.jpeg?imageslim"
-    games: [hades]
+    games:
+      - hades
+      - the-room-4
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -528,28 +563,21 @@
         label: "Hades"
         game: hades
     sources:
+      - url: https://www.bilibili.com/video/BV13N411X7YQ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26979859"
         kind: replay
         parts: 6
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-03-18-live-02
-    type: live
-    date: "2021-03-18"
-    title: "The Room4"
-    platform: douyu
-    confidence: high
-    duration_min: 35
-    cover: "https://tx-free-imgs.acfun.cn/o_1f1568jji8pj16ju44t1a5n1d2b0.jpeg?imageslim"
-    games: [the-room-4]
-    sources:
       - url: "https://www.acfun.cn/v/ac27004130"
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P7 拆为两个投稿，合并为一场。
   - id: 2021-03-19-live-01
     type: live
     date: "2021-03-19"
@@ -573,6 +601,10 @@
       - at: "02:45:28"
         label: "The Room4"
     sources:
+      - url: https://www.bilibili.com/video/BV1ii4y1K74w
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27004224"
         kind: replay
         parts: 6
@@ -685,6 +717,10 @@
       - at: "00:41:57"
         label: "末日准备狂"
     sources:
+      - url: https://www.bilibili.com/video/BV1nZ4y1w7BA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27085144"
         kind: replay
         parts: 2
@@ -716,6 +752,10 @@
         label: "Puyo Puyo Tetris 2"
         game: puyo-puyo-tetris-2
     sources:
+      - url: https://www.bilibili.com/video/BV18i4y1P7z7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27146913"
         kind: replay
         parts: 5
@@ -859,6 +899,10 @@
       - at: 04:13:00
         label: 怪物猎人 弓箭手的修行
     sources:
+      - url: https://www.bilibili.com/video/BV1Gh411D7HN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27238768"
         kind: replay
         parts: 5
@@ -895,6 +939,10 @@
       - at: "03:30:32"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1sX4y1G7V3
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27281328"
         kind: replay
         parts: 6
@@ -924,6 +972,10 @@
         label: "It Takes Two"
         game: it-takes-two
     sources:
+      - url: https://www.bilibili.com/video/BV1Qh411S7uV
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27288688"
         kind: replay
         parts: 4
@@ -960,6 +1012,10 @@
         label: "It Takes Two"
         game: it-takes-two
     sources:
+      - url: https://www.bilibili.com/video/BV13K4y1S74t
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac27349793"
         kind: replay
         parts: 5

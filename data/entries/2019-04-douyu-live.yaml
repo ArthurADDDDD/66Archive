@@ -13,6 +13,10 @@
       - at: "00:17:59"
         label: "新浪游戏年度盛典"
     sources:
+      - url: https://www.bilibili.com/video/BV1Rb411p7Gq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10071047"
         kind: replay
         parts: 2
@@ -29,6 +33,10 @@
     cover: "https://tx-free-imgs.acfun.cn/FqnkO3ajNFtE9319lapywLxoTqIN?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1Gb411W7ax
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10075064"
         kind: replay
         parts: 1
@@ -56,6 +64,10 @@
       - at: "03:24:45"
         label: "P52019.04.05-雨中暴毙2"
     sources:
+      - url: https://www.bilibili.com/video/BV1wb41137YB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10082659"
         kind: replay
         parts: 5
@@ -84,6 +96,10 @@
       - at: "03:29:13"
         label: "P3.3-2019.4.6-雨中暴毙2"
     sources:
+      - url: https://www.bilibili.com/video/BV1mb411M7pU
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10086101"
         kind: replay
         parts: 5
@@ -109,10 +125,46 @@
       - at: "02:22:59"
         label: "Part3"
     sources:
+      - url: https://www.bilibili.com/video/BV1hb411u7Sp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10093198"
         kind: replay
         parts: 3
         status: alive
+    contributed_by: data-agent
+
+  - id: 2019-04-09-live-01
+    type: live
+    date: "2019-04-09"
+    title: "I Hate This Game"
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    games: []
+    note: "B站「女流录像小屋」《I Hate This Game》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Cb411T7kp"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-10-live-01
+    type: live
+    date: "2019-04-10"
+    title: "VR游戏来一波"
+    platform: douyu
+    confidence: high
+    duration_min: 247
+    games: []
+    note: "B站「女流录像小屋」《VR游戏来一波》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Eb411M78s"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-04-12-live-01
@@ -136,6 +188,10 @@
       - at: "03:38:11"
         label: "Part5"
     sources:
+      - url: https://www.bilibili.com/video/BV1Bb411K7Eb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10110418"
         kind: replay
         parts: 5
@@ -161,6 +217,10 @@
       - at: "03:09:15"
         label: "Part4"
     sources:
+      - url: https://www.bilibili.com/video/BV1Mb411T7kd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10113845"
         kind: replay
         parts: 4
@@ -192,10 +252,46 @@
       - at: "03:48:17"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV19b411L7RX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10117506"
         kind: replay
         parts: 6
         status: alive
+    contributed_by: data-agent
+
+  - id: 2019-04-16-live-01
+    type: live
+    date: "2019-04-16"
+    title: "Supraland"
+    platform: douyu
+    confidence: high
+    duration_min: 311
+    games: []
+    note: "B站「女流录像小屋」《Supraland》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13b411574x"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-04-17-live-01
+    type: live
+    date: "2019-04-17"
+    title: "The Hunter"
+    platform: douyu
+    confidence: high
+    duration_min: 244
+    games: []
+    note: "B站「女流录像小屋」《The Hunter》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1kb411573D"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-04-19-live-01
@@ -219,10 +315,30 @@
       - at: "03:51:21"
         label: "浮岛物语"
     sources:
+      - url: https://www.bilibili.com/video/BV1wb411V7C5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10137206"
         kind: replay
         parts: 5
         status: alive
+    contributed_by: data-agent
+
+  - id: 2019-04-20-live-01
+    type: live
+    date: "2019-04-20"
+    title: "人类一败涂地&浮岛物语"
+    platform: douyu
+    confidence: high
+    duration_min: 445
+    games: []
+    note: "B站「女流录像小屋」《人类一败涂地&浮岛物语》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Sb411V7Vr"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-04-21-live-01
@@ -248,6 +364,10 @@
       - at: "03:33:37"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1xb41137Dz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10143087"
         kind: replay
         parts: 5
@@ -294,6 +414,10 @@
       - at: "04:31:26"
         label: "浮岛物语"
     sources:
+      - url: https://www.bilibili.com/video/BV1Vb411G7jv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10149668"
         kind: replay
         parts: 6
@@ -323,23 +447,6 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2019-04-23-live-02
-    series: xishuo-fengshen
-    type: live
-    date: "2019-04-23"
-    title: "戏说封神第2期"
-    platform: douyu
-    confidence: high
-    duration_min: 53
-    cover: "https://tx-free-imgs.acfun.cn/Fga6Gd-kEfdFjAvHDaUepgEqFLMc?imageslim"
-    games: []
-    sources:
-      - url: "https://www.acfun.cn/v/ac10157993"
-        kind: replay
-        parts: 1
-        status: alive
-    contributed_by: data-agent
-
   - id: 2019-04-23-live-03
     type: live
     date: "2019-04-23"
@@ -365,12 +472,49 @@
       - at: "05:38:43"
         label: "武士零"
     sources:
+      - url: https://www.bilibili.com/video/BV1tb411G7AG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10151288"
         kind: replay
         parts: 7
         status: alive
     contributed_by: data-agent
 
+  - id: 2019-04-23-video-01
+    series: xishuo-fengshen
+    type: video
+    date: "2019-04-23"
+    title: "戏说封神第2期"
+    platform: douyu
+    confidence: high
+    duration_min: 53
+    cover: "https://tx-free-imgs.acfun.cn/Fga6Gd-kEfdFjAvHDaUepgEqFLMc?imageslim"
+    games: []
+    sources:
+      - url: "https://www.acfun.cn/v/ac10157993"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
+
+    note: 按人工规则：单P短录像，先按切片处理，不计入直播场次；与武士零开场封神段的关系待点片确认。
+  - id: 2019-04-24-live-01
+    type: live
+    date: "2019-04-24"
+    title: "TrainValley2"
+    platform: douyu
+    confidence: high
+    duration_min: 215
+    games: []
+    note: "B站「女流录像小屋」《TrainValley2》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1B441187wr"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2019-04-26-live-01
     type: live
     date: "2019-04-26"
@@ -394,6 +538,10 @@
       - at: "04:00:06"
         label: "Hardware Engineers"
     sources:
+      - url: https://www.bilibili.com/video/BV1B4411h77p
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10161622"
         kind: replay
         parts: 6
@@ -462,6 +610,10 @@
       - at: "00:49:59"
         label: "电影之前把神先封了"
     sources:
+      - url: https://www.bilibili.com/video/BV1H4411b7Va
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10164722"
         kind: replay
         parts: 2
@@ -485,6 +637,10 @@
       - at: "01:56:43"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1Q4411b7NF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10171020"
         kind: replay
         parts: 2
@@ -510,6 +666,10 @@
         label: "P3-2019-4-29-Biped"
         game: biped
     sources:
+      - url: https://www.bilibili.com/video/BV1k441147xe
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10170959"
         kind: replay
         parts: 3
@@ -527,6 +687,10 @@
     cover: "https://tx-free-imgs.acfun.cn/FszFaa4IXhc1Apt4QtQLEUfoX8ct?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1k441147HA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10170970"
         kind: replay
         parts: 1
@@ -544,104 +708,12 @@
     cover: "https://tx-free-imgs.acfun.cn/FuPYZZBKG4fHmqsVWstNbyEPe0es?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV134411t71r
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10174460"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2019-04-09-live-01
-    type: live
-    date: "2019-04-09"
-    title: "I Hate This Game"
-    platform: douyu
-    confidence: high
-    duration_min: 254
-    games: []
-    note: "B站「女流录像小屋」《I Hate This Game》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Cb411T7kp"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-04-10-live-01
-    type: live
-    date: "2019-04-10"
-    title: "VR游戏来一波"
-    platform: douyu
-    confidence: high
-    duration_min: 247
-    games: []
-    note: "B站「女流录像小屋」《VR游戏来一波》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Eb411M78s"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-04-16-live-01
-    type: live
-    date: "2019-04-16"
-    title: "Supraland"
-    platform: douyu
-    confidence: high
-    duration_min: 311
-    games: []
-    note: "B站「女流录像小屋」《Supraland》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV13b411574x"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-04-17-live-01
-    type: live
-    date: "2019-04-17"
-    title: "The Hunter"
-    platform: douyu
-    confidence: high
-    duration_min: 244
-    games: []
-    note: "B站「女流录像小屋」《The Hunter》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1kb411573D"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-04-20-live-01
-    type: live
-    date: "2019-04-20"
-    title: "人类一败涂地&浮岛物语"
-    platform: douyu
-    confidence: high
-    duration_min: 445
-    games: []
-    note: "B站「女流录像小屋」《人类一败涂地&浮岛物语》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Sb411V7Vr"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-04-24-live-01
-    type: live
-    date: "2019-04-24"
-    title: "TrainValley2"
-    platform: douyu
-    confidence: high
-    duration_min: 215
-    games: []
-    note: "B站「女流录像小屋」《TrainValley2》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1B441187wr"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

@@ -23,6 +23,7 @@
       - url: "https://www.bilibili.com/video/BV1ET7rzrEke"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1QJ7rzaEoJ"
         kind: replay
         status: alive
@@ -57,6 +58,7 @@
       - url: "https://www.bilibili.com/video/BV1pz7Dz6EVb"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1om7DzPEC7"
         kind: replay
         status: alive
@@ -80,6 +82,7 @@
       - url: "https://www.bilibili.com/video/BV1eLTuzUE6b"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 228
@@ -108,6 +111,7 @@
       - url: "https://www.bilibili.com/video/BV1dv7hzrEcp"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1T97hzbEaw"
         kind: replay
         status: alive
@@ -141,6 +145,7 @@
       - url: "https://www.bilibili.com/video/BV1QqTMzyE86"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1XeTMz2Ehw"
         kind: replay
         status: alive
@@ -171,6 +176,7 @@
       - url: https://www.bilibili.com/video/BV1jyM3zaEyZ
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1eDM3z4EAa"
         kind: replay
         status: alive
@@ -202,6 +208,7 @@
       - url: "https://www.bilibili.com/video/BV1ckMBzmEDM"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1fmMBzVE8Y"
         kind: replay
         status: alive
@@ -233,6 +240,7 @@
       - url: "https://www.bilibili.com/video/BV1vTMmzaEW2"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1qKMmzAE4w"
         kind: replay
         status: alive
@@ -264,6 +272,7 @@
       - url: "https://www.bilibili.com/video/BV12gMtzZEKk"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1a6MtzMEGP"
         kind: replay
         status: alive
@@ -292,6 +301,7 @@
       - url: "https://www.bilibili.com/video/BV153NbzTEar"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1xhNbzpE4X"
         kind: replay
         status: alive
@@ -335,6 +345,7 @@
       - url: "https://www.bilibili.com/video/BV1zvN1z9Esj"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1RAN1z2Emh"
         kind: replay
         status: alive
@@ -368,6 +379,7 @@
       - url: "https://www.bilibili.com/video/BV193KWz9EcF"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1z1NQz3EzN"
         kind: replay
         status: alive
@@ -403,6 +415,7 @@
       - url: "https://www.bilibili.com/video/BV1mrKazKESp"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1ZpKazEEPs"
         kind: replay
         status: alive
@@ -421,11 +434,50 @@
     confidence: medium
     games:
       - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 直播回放巴拉蹦吧的弹幕/纯净合集源含 11时场与 19时场两场，已按分P分别挂到两条场次，不重复计时。"
     sources:
       - url: "https://www.bilibili.com/video/BV14CK3zLE6y"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1aYKuzVEMs
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 2025-06-24 11时场 P1
+            duration_sec: 3601
+          - page: 2
+            title: 2025-06-24 12时场 P2
+            duration_sec: 3601
+          - page: 3
+            title: 2025-06-24 13时场 P3
+            duration_sec: 3601
+          - page: 4
+            title: 2025-06-24 14时场 P4
+            duration_sec: 3601
+          - page: 5
+            title: 2025-06-24 15时场 P5
+            duration_sec: 2455
+      - url: https://www.bilibili.com/video/BV1vWKuzJELx
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 2025-06-24 11时场 P1
+            duration_sec: 3601
+          - page: 2
+            title: 2025-06-24 12时场 P2
+            duration_sec: 3601
+          - page: 3
+            title: 2025-06-24 13时场 P3
+            duration_sec: 3601
+          - page: 4
+            title: 2025-06-24 14时场 P4
+            duration_sec: 3601
+          - page: 5
+            title: 2025-06-24 15时场 P5
+            duration_sec: 2455
     contributed_by: data-agent
 
     duration_min: 279
@@ -438,52 +490,41 @@
     confidence: medium
     games:
       - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 直播回放巴拉蹦吧的弹幕/纯净合集源含 11时场与 19时场两场，已按分P分别挂到两条场次，不重复计时。"
     sources:
       - url: "https://www.bilibili.com/video/BV1wqKGzMEP9"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1aYKuzVEMs
+        kind: replay
+        status: alive
+        part_details:
+          - page: 6
+            title: 2025-06-24 19时场 P6
+            duration_sec: 3601
+          - page: 7
+            title: 2025-06-24 20时场 P7
+            duration_sec: 3601
+          - page: 8
+            title: 2025-06-24 21时场 P8
+            duration_sec: 269
+      - url: https://www.bilibili.com/video/BV1vWKuzJELx
+        kind: replay
+        status: alive
+        part_details:
+          - page: 6
+            title: 2025-06-24 19时场 P6
+            duration_sec: 3601
+          - page: 7
+            title: 2025-06-24 20时场 P7
+            duration_sec: 3601
+          - page: 8
+            title: 2025-06-24 21时场 P8
+            duration_sec: 269
     contributed_by: data-agent
 
     duration_min: 123
-  - id: 2025-06-24-live-03
-    type: live
-    date: "2025-06-24"
-    title: "新作一起玩死亡搁浅2"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/85c0b862486598a8feaab888fd42738474252186.jpg"
-    confidence: high
-    games:
-      - death-stranding-2-on-the-beach
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "01:00:01"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "02:00:02"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "03:00:03"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "04:00:04"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "04:40:59"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "05:41:00"
-        label: "女流66_新作一起玩死亡搁浅2"
-      - at: "06:41:01"
-        label: "女流66_新作一起玩死亡搁浅2"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1aYKuzVEMs"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1vWKuzJELx"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 406
   - id: 2025-06-25-live-02
     type: live
     date: "2025-06-25"
@@ -510,6 +551,7 @@
       - url: "https://www.bilibili.com/video/BV1nVKnzdEv5"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1xFKnzvEmZ"
         kind: replay
         status: alive
@@ -519,61 +561,127 @@
     contributed_by: data-agent
 
     duration_min: 301
-  - id: 2025-06-26-live-01
-    type: live
-    date: "2025-06-26"
-    title: "新作一起玩：死亡搁浅2最高难度 2025/06/26 12时场"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/a1a18555021e13f49c03514f51a2540af8e8958e.jpg"
-    confidence: medium
-    games:
-      - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1wRKozeEUd"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 303
   - id: 2025-06-26-live-02
     type: live
     date: "2025-06-26"
-    title: "新作一起玩死亡搁浅2最高难度"
+    title: "新作一起玩死亡搁浅2最高难度（12时场）"
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/4e79e23f293fe81159fb8dafa93cde9371c45546.jpg"
     confidence: high
     games:
       - death-stranding-2-on-the-beach
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "与晚间 20:01 异人之下二测为同日两次开播，已拆为两条；本条只计 12:47-17:52 死亡搁浅2（完整合集 P1-P6 305min）。"
     segments:
-      - at: "00:00:00"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "01:00:01"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "02:00:02"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "03:00:03"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "04:00:04"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "05:00:05"
-        label: "女流66_新作一起玩死亡搁浅2最高难度"
-      - at: "05:04:44"
-        label: "女流66_异人之下二测我来体验体验"
-      - at: "06:04:45"
-        label: "女流66_异人之下二测我来体验体验"
+      - at: 00:00:00
+        label: 死亡搁浅2
+      - at: 01:00:01
+        label: 死亡搁浅2
+      - at: 02:00:02
+        label: 死亡搁浅2
+      - at: 03:00:03
+        label: 死亡搁浅2
+      - at: 04:00:04
+        label: 死亡搁浅2
+      - at: 05:00:05
+        label: 死亡搁浅2
     sources:
       - url: "https://www.bilibili.com/video/BV1NSKRzFEK9"
         kind: replay
         status: alive
+        part_details:
+          - page: 1
+            title: 2025-06-26 12:47 P1
+            duration_sec: 3601
+          - page: 2
+            title: 2025-06-26 13:47 P2
+            duration_sec: 3601
+          - page: 3
+            title: 2025-06-26 14:47 P3
+            duration_sec: 3601
+          - page: 4
+            title: 2025-06-26 15:47 P4
+            duration_sec: 3601
+          - page: 5
+            title: 2025-06-26 16:47 P5
+            duration_sec: 3601
+          - page: 6
+            title: 2025-06-26 17:47 P6
+            duration_sec: 279
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1hvKRzzEPJ"
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 2025-06-26 12:47 P1
+            duration_sec: 3601
+          - page: 2
+            title: 2025-06-26 13:47 P2
+            duration_sec: 3601
+          - page: 3
+            title: 2025-06-26 14:47 P3
+            duration_sec: 3601
+          - page: 4
+            title: 2025-06-26 15:47 P4
+            duration_sec: 3601
+          - page: 5
+            title: 2025-06-26 16:47 P5
+            duration_sec: 3601
+          - page: 6
+            title: 2025-06-26 17:47 P6
+            duration_sec: 279
+      - url: "https://www.bilibili.com/video/BV1wRKozeEUd"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 422
+    duration_min: 305
+    time: 12:47
+  - id: 2025-06-26-live-03
+    type: live
+    date: '2025-06-26'
+    time: 20:01
+    title: 异人之下二测我来体验体验（晚间场）
+    platform: douyin
+    confidence: high
+    games: []
+    tags:
+      - 弹幕版
+    cover: "https://i1.hdslb.com/bfs/archive/4e79e23f293fe81159fb8dafa93cde9371c45546.jpg"
+    duration_min: 117
+    sources:
+      - url: https://www.bilibili.com/video/BV1NSKRzFEK9
+        kind: replay
+        status: alive
+        part_details:
+          - page: 7
+            title: 2025-06-26 20:01 P7
+            duration_sec: 3601
+          - page: 8
+            title: 2025-06-26 21:01 P8
+            duration_sec: 3405
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1hvKRzzEPJ
+        kind: replay
+        status: alive
+        part_details:
+          - page: 7
+            title: 2025-06-26 20:01 P7
+            duration_sec: 3601
+          - page: 8
+            title: 2025-06-26 21:01 P8
+            duration_sec: 3405
+      - url: https://www.bilibili.com/video/BV1veKfzdEXV
+        kind: replay
+    segments:
+      - at: 00:00:00
+        label: 异人之下二测
+      - at: 01:00:01
+        label: 异人之下二测
+    contributed_by: data-agent
+    note: 同日 12:47 死亡搁浅2 为第一次开播（见 2025-06-26-live-02）；本条为 20:01 第二次开播，bobi华晚间源 116:06，按 117min 计。
   - id: 2025-06-27-live-02
     type: live
     date: "2025-06-27"
@@ -584,7 +692,7 @@
     games:
       - death-stranding-2-on-the-beach
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；同日 217 分钟的搬运版本为本场子集，已删除，时长以本场 298 分钟主来源为准。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；同日 217 分钟的搬运版本为本场子集，已删除，时长以本场 298 分钟主来源为准。 主源 BV1hbKrzKEX3 分P名均为 06-27；原误挂的 06-28 弹幕源 BV1vVKUz8En8 已移至 06-28 条目。"
     segments:
       - at: "00:00:00"
         label: "女流66_死亡搁浅2最高画质最高难度"
@@ -597,15 +705,13 @@
       - at: "04:00:01"
         label: "女流66_死亡搁浅2最高画质最高难度"
     sources:
-      - url: "https://www.bilibili.com/video/BV1vVKUz8En8"
-        kind: replay
-        status: alive
       - url: "https://www.bilibili.com/video/BV1hbKrzKEX3"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
-    duration_min: 298
+    duration_min: 277
   - id: 2025-06-28-live-02
     type: live
     date: "2025-06-28"
@@ -616,7 +722,7 @@
     games:
       - death-stranding-2-on-the-beach
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-06-28-live-01 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 补入 06-28 弹幕版源（原误挂在 06-27）。"
     segments:
       - at: "00:00:00"
         label: "女流66_继续死亡搁浅2最高画质最高难度"
@@ -631,13 +737,14 @@
       - at: "04:06:44"
         label: "女流66_继续死亡搁浅2最高画质最高难度"
     sources:
-      - url: "https://www.bilibili.com/video/BV1megXzKErG"
-        kind: replay
-        status: alive
       - url: "https://www.bilibili.com/video/BV18yKmznEaM"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1AAgRzKEsi"
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1vVKUz8En8
         kind: replay
         status: alive
     contributed_by: data-agent

@@ -77,6 +77,10 @@
       - at: "01:16:12"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1C54y1j7Gd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28479093"
         kind: replay
         parts: 3
@@ -113,6 +117,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1ao4y127XA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28482826"
         kind: replay
         parts: 5
@@ -130,9 +138,11 @@
     title: "世界游戏大全51&超级马里欧派对"
     platform: douyu
     confidence: high
-    duration_min: 130
+    duration_min: 278
     cover: "https://tx-free-imgs.acfun.cn/o_1f4s3v4l3tkdgpb19uq1a001ac80.jpeg?imageslim"
-    games: [world-games-51, super-mario-party]
+    games:
+      - world-games-51
+      - super-mario-party
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -145,42 +155,34 @@
       - at: "01:40:12"
         label: "世界游戏大全51"
         game: world-games-51
+      - at: "02:10:00"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "02:46:47"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "03:23:39"
+        label: "超级马里欧派对"
+        game: super-mario-party
+      - at: "04:00:29"
+        label: "超级马里欧派对"
+        game: super-mario-party
     sources:
+      - url: https://www.bilibili.com/video/BV1yV41177ye
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28481259"
         kind: replay
         parts: 4
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-05-04-live-02
-    type: live
-    date: "2021-05-04"
-    title: "超级马里欧派对"
-    platform: douyu
-    confidence: high
-    duration_min: 147
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4s41k5n1nreddg3qotm1om60.jpeg?imageslim"
-    games: [super-mario-party]
-    segments:
-      - at: "00:00:00"
-        label: "超级马里欧派对"
-        game: super-mario-party
-      - at: "00:36:47"
-        label: "超级马里欧派对"
-        game: super-mario-party
-      - at: "01:13:39"
-        label: "超级马里欧派对"
-        game: super-mario-party
-      - at: "01:50:29"
-        label: "超级马里欧派对"
-        game: super-mario-party
-    sources:
       - url: "https://www.acfun.cn/v/ac28481360"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P8 拆为两个投稿，合并为一场。
   - id: 2021-05-06-live-01
     type: live
     date: "2021-05-06"
@@ -200,6 +202,10 @@
       - at: "01:50:22"
         label: "神奇男孩 爱莎在怪物世界"
     sources:
+      - url: https://www.bilibili.com/video/BV1KK4y1d7Dz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28520506"
         kind: replay
         parts: 4
@@ -234,6 +240,10 @@
         label: "生化危机8：村庄"
         game: resident-evil-8
     sources:
+      - url: https://www.bilibili.com/video/BV13U4y1t7dL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28543727"
         kind: replay
         parts: 4
@@ -268,6 +278,10 @@
         label: "生化危机8：村庄"
         game: resident-evil-8
     sources:
+      - url: https://www.bilibili.com/video/BV1X64y117Dm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28560944"
         kind: replay
         parts: 4
@@ -302,6 +316,10 @@
         label: "生化危机8：村庄"
         game: resident-evil-8
     sources:
+      - url: https://www.bilibili.com/video/BV1uv41157wi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28591116"
         kind: replay
         parts: 4
@@ -334,6 +352,10 @@
       - at: "02:38:40"
         label: "出门前佩奇会儿"
     sources:
+      - url: https://www.bilibili.com/video/BV1D44y167Ye
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28613597"
         kind: replay
         parts: 5
@@ -359,6 +381,10 @@
       - at: "02:04:08"
         label: "绿林侠盗"
     sources:
+      - url: https://www.bilibili.com/video/BV1Q54y157zp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28687173"
         kind: replay
         parts: 4
@@ -389,6 +415,10 @@
       - at: "01:47:43"
         label: "怪物男孩"
     sources:
+      - url: https://www.bilibili.com/video/BV1v5411376Y
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28722583"
         kind: replay
         parts: 4
@@ -423,6 +453,10 @@
       - at: "03:20:21"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1rA411G7S6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28886182"
         kind: replay
         parts: 5
@@ -489,6 +523,10 @@
       - at: 04:29:04
         label: 深海迷航
     sources:
+      - url: https://www.bilibili.com/video/BV1aV411j7oj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: https://www.acfun.cn/v/ac28949045
         kind: replay
         parts: 3
@@ -524,6 +562,10 @@
       - at: "03:32:51"
         label: "深海迷航"
     sources:
+      - url: https://www.bilibili.com/video/BV1h54y1L7dB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28979818"
         kind: replay
         parts: 6
@@ -547,6 +589,10 @@
       - at: "01:49:11"
         label: "深海迷航"
     sources:
+      - url: https://www.bilibili.com/video/BV1i44y1r7xf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29013227"
         kind: replay
         parts: 3
@@ -581,6 +627,10 @@
       - at: "03:36:09"
         label: "深海迷航"
     sources:
+      - url: https://www.bilibili.com/video/BV1vf4y1Y7bR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29053665"
         kind: replay
         parts: 6
@@ -610,6 +660,10 @@
       - at: "03:40:18"
         label: "深海迷航"
     sources:
+      - url: https://www.bilibili.com/video/BV1pf4y1h73f
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29116535"
         kind: replay
         parts: 6
@@ -643,12 +697,31 @@
       - at: "03:15:39"
         label: "饭前K两首"
     sources:
+      - url: https://www.bilibili.com/video/BV1uK4y1R7zL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29144375"
         kind: replay
         parts: 6
         status: alive
     contributed_by: data-agent
 
+  - id: 2021-05-26-live-01
+    type: live
+    date: "2021-05-26"
+    title: "雀魂"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    games: []
+    note: "B站「女流录像小屋」《雀魂》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV15q4y1j7qB"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2021-05-28-live-01
     type: live
     date: "2021-05-28"
@@ -666,6 +739,10 @@
       - at: "01:40:06"
         label: "幸运房东"
     sources:
+      - url: https://www.bilibili.com/video/BV1pK4y1V7vM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29245667"
         kind: replay
         parts: 3
@@ -694,42 +771,12 @@
       - at: "04:57:56"
         label: "逛吃逛吃"
     sources:
+      - url: https://www.bilibili.com/video/BV1TQ4y1d7JG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac29294635"
         kind: replay
         parts: 3
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-05-31-live-01
-    type: live
-    date: "2021-05-31"
-    title: "永劫无间官方活动（寅子&女流66）"
-    platform: douyu
-    confidence: high
-    duration_min: 175
-    games: [naraka-bladepoint]
-    note: "B站「寅子」「录播员老夏」两个全长录播；标题为永劫无间官方活动/户外出差。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1UB4y1u7yD"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1iK4y1R7hn"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2021-05-26-live-01
-    type: live
-    date: "2021-05-26"
-    title: "雀魂"
-    platform: douyu
-    confidence: high
-    duration_min: 233
-    games: []
-    note: "B站「女流录像小屋」《雀魂》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV15q4y1j7qB"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

@@ -38,195 +38,13 @@
       - at: "02:36:08"
         label: "心灵砒霜"
     sources:
-      - url: "https://www.acfun.cn/v/ac10678520"
-        kind: replay
-        parts: 3
-        status: alive
       - url: https://www.bilibili.com/video/BV1Tt411M7Mj
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-  - id: 2019-08-07-live-01
-    type: live
-    date: "2019-08-07"
-    title: "Jump King"
-    platform: douyu
-    confidence: high
-    duration_min: 294
-    cover: "https://tx-free-imgs.acfun.cn/Fpy-AL_4ADt7Q6N8QZz20MzXDrh_?imageslim"
-    games: [jump-king]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:43:50"
-        label: "Jump King"
-        game: jump-king
-      - at: "02:00:02"
-        label: "Jump King"
-        game: jump-king
-      - at: "03:00:02"
-        label: "Jump King"
-        game: jump-king
-      - at: "04:00:03"
-        label: "Jump King"
-        game: jump-king
-    sources:
-      - url: "https://www.acfun.cn/v/ac10678313"
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10678520"
         kind: replay
-        parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1gt411N7Rx
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-08-15-live-01
-    type: live
-    date: "2019-08-15"
-    title: "疑案追声中元节特别版&牧场物语"
-    platform: douyu
-    confidence: high
-    duration_min: 302
-    cover: "https://tx-free-imgs.acfun.cn/FotWaIDCUkQ0Ia0aLrNzgj6Lc7BT?imageslim"
-    games: [unheard, sos-fomt]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:26:11"
-        label: "疑案追声中元节特别版"
-      - at: "02:00:14"
-        label: "疑案追声中元节特别版"
-      - at: "02:30:14"
-        label: "牧场物语"
-      - at: "04:00:22"
-        label: "牧场物语"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10746697"
-        kind: replay
-        parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1K4411S7tp
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    note: "原误标 2018-01-15；fileName 全为 2019.8.15（中元节，疑案追声 2019-03-29 才发售），上传 8.16，归此日"
-  - id: 2019-08-18-live-01
-    type: live
-    date: "2019-08-18"
-    title: "【心灵砒霜】下吧长痘了怎么办,留个胡子遮住就好了"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 300
-    cover: "https://tx-free-imgs.acfun.cn/FpYom1943gI990yVBkgBWcRi1PdN?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "02:30:04"
-        label: "心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10777155"
-        kind: replay
-        parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1W4411o7R3
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-08-23-live-01
-    type: live
-    date: "2019-08-23"
-    title: "遗迹灰烬重生"
-    platform: douyu
-    confidence: high
-    duration_min: 283
-    cover: "https://tx-free-imgs.acfun.cn/FrwCZ-8zW9yWqhXaw_iHQbyuGE-T?imageslim"
-    games: [remnant-from-the-ashes]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:18:00"
-        label: "遗迹灰烬重生"
-      - at: "01:09:01"
-        label: "遗迹灰烬重生"
-      - at: "02:00:02"
-        label: "遗迹灰烬重生"
-      - at: "03:00:03"
-        label: "遗迹灰烬重生"
-      - at: "04:00:05"
-        label: "遗迹灰烬重生"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10803804"
-        kind: replay
-        parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1T4411k7hq
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-08-25-live-01
-    type: live
-    date: "2019-08-25"
-    title: "【心灵砒霜】找一本好书,精读,宁缺毋滥"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/FopRRtHn3JpFZqRNGwnRRSuvo2P6?imageslim"
-    games: []
-    tags: [心灵砒霜]
-    segments:
-      - at: "00:00:00"
-        label: "心灵砒霜弹幕版"
-      - at: "02:03:01"
-        label: "心灵砒霜弹幕版"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10814645"
-        kind: replay
-        parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV1M441167b5
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-08-30-live-01
-    type: live
-    date: "2019-08-30"
-    title: "Heave Ho&死神对决"
-    platform: douyu
-    confidence: high
-    duration_min: 319
-    cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
-    games: [heave-ho]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:43:50"
-        label: "Heave Ho"
-        game: heave-ho
-      - at: "01:45:55"
-        label: "Heave Ho"
-        game: heave-ho
-      - at: "02:48:00"
-        label: "Heave Ho"
-        game: heave-ho
-      - at: "03:50:04"
-        label: "死神对决"
-      - at: "04:34:20"
-        label: "死神对决"
-    sources:
-      - url: "https://www.acfun.cn/v/ac10841151"
-        kind: replay
-        parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1i4411274R
-        kind: replay
+        parts: 3
         status: alive
     contributed_by: data-agent
 
@@ -262,6 +80,41 @@
         account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-08-07-live-01
+    type: live
+    date: "2019-08-07"
+    title: "Jump King"
+    platform: douyu
+    confidence: high
+    duration_min: 294
+    cover: "https://tx-free-imgs.acfun.cn/Fpy-AL_4ADt7Q6N8QZz20MzXDrh_?imageslim"
+    games: [jump-king]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:50"
+        label: "Jump King"
+        game: jump-king
+      - at: "02:00:02"
+        label: "Jump King"
+        game: jump-king
+      - at: "03:00:02"
+        label: "Jump King"
+        game: jump-king
+      - at: "04:00:03"
+        label: "Jump King"
+        game: jump-king
+    sources:
+      - url: https://www.bilibili.com/video/BV1gt411N7Rx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10678313"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
+
   - id: 2019-08-12-live-01
     type: live
     date: "2019-08-12"
@@ -276,6 +129,84 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-08-13-live-01
+    type: live
+    date: "2019-08-13"
+    title: "斗鱼天下第一斗歌大赛（女流视角）"
+    platform: douyu
+    confidence: high
+    duration_min: 186
+    games: []
+    tags: [聊天]
+    note: "来源为「列支敦士登驻通辽大使」女流视角 5P（约 3:05:53）及「秘密录像屋」多视角备份（含导师女流视角 P5）。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1S4411S7ix"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1K4411D7QE"
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent
+  - id: 2019-08-15-live-01
+    type: live
+    date: "2019-08-15"
+    title: "疑案追声中元节特别版&牧场物语"
+    platform: douyu
+    confidence: high
+    duration_min: 302
+    cover: "https://tx-free-imgs.acfun.cn/FotWaIDCUkQ0Ia0aLrNzgj6Lc7BT?imageslim"
+    games: [unheard, sos-fomt]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:11"
+        label: "疑案追声中元节特别版"
+      - at: "02:00:14"
+        label: "疑案追声中元节特别版"
+      - at: "02:30:14"
+        label: "牧场物语"
+      - at: "04:00:22"
+        label: "牧场物语"
+    sources:
+      - url: https://www.bilibili.com/video/BV1K4411S7tp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10746697"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
+    note: "原误标 2018-01-15；fileName 全为 2019.8.15（中元节，疑案追声 2019-03-29 才发售），上传 8.16，归此日"
+  - id: 2019-08-18-live-01
+    type: live
+    date: "2019-08-18"
+    title: "【心灵砒霜】下吧长痘了怎么办,留个胡子遮住就好了"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    cover: "https://tx-free-imgs.acfun.cn/FpYom1943gI990yVBkgBWcRi1PdN?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "02:30:04"
+        label: "心灵砒霜弹幕版"
+    sources:
+      - url: https://www.bilibili.com/video/BV1W4411o7R3
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10777155"
+        kind: replay
+        parts: 2
+        status: alive
     contributed_by: data-agent
 
   - id: 2019-08-20-live-01
@@ -294,6 +225,66 @@
         account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-08-23-live-01
+    type: live
+    date: "2019-08-23"
+    title: "遗迹灰烬重生"
+    platform: douyu
+    confidence: high
+    duration_min: 283
+    cover: "https://tx-free-imgs.acfun.cn/FrwCZ-8zW9yWqhXaw_iHQbyuGE-T?imageslim"
+    games: [remnant-from-the-ashes]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:18:00"
+        label: "遗迹灰烬重生"
+      - at: "01:09:01"
+        label: "遗迹灰烬重生"
+      - at: "02:00:02"
+        label: "遗迹灰烬重生"
+      - at: "03:00:03"
+        label: "遗迹灰烬重生"
+      - at: "04:00:05"
+        label: "遗迹灰烬重生"
+    sources:
+      - url: https://www.bilibili.com/video/BV1T4411k7hq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10803804"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2019-08-25-live-01
+    type: live
+    date: "2019-08-25"
+    title: "【心灵砒霜】找一本好书,精读,宁缺毋滥"
+    series: xinling-pishuang
+    platform: douyu
+    confidence: high
+    duration_min: 246
+    cover: "https://tx-free-imgs.acfun.cn/FopRRtHn3JpFZqRNGwnRRSuvo2P6?imageslim"
+    games: []
+    tags: [心灵砒霜]
+    segments:
+      - at: "00:00:00"
+        label: "心灵砒霜弹幕版"
+      - at: "02:03:01"
+        label: "心灵砒霜弹幕版"
+    sources:
+      - url: https://www.bilibili.com/video/BV1M441167b5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10814645"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
+
   - id: 2019-08-27-live-01
     type: live
     date: "2019-08-27"
@@ -309,22 +300,38 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
-  - id: 2019-08-13-live-01
+  - id: 2019-08-30-live-01
     type: live
-    date: "2019-08-13"
-    title: "斗鱼天下第一斗歌大赛（女流视角）"
+    date: "2019-08-30"
+    title: "Heave Ho&死神对决"
     platform: douyu
     confidence: high
-    duration_min: 186
-    games: []
-    tags: [聊天]
-    note: "来源为「列支敦士登驻通辽大使」女流视角 5P（约 3:05:53）及「秘密录像屋」多视角备份（含导师女流视角 P5）。"
+    duration_min: 319
+    cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
+    games: [heave-ho]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:43:50"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "01:45:55"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "02:48:00"
+        label: "Heave Ho"
+        game: heave-ho
+      - at: "03:50:04"
+        label: "死神对决"
+      - at: "04:34:20"
+        label: "死神对决"
     sources:
-      - url: "https://www.bilibili.com/video/BV1S4411S7ix"
+      - url: https://www.bilibili.com/video/BV1i4411274R
         kind: replay
         status: alive
-      - url: "https://www.bilibili.com/video/BV1K4411D7QE"
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac10841151"
         kind: replay
+        parts: 6
         status: alive
-        account: bili-fan-secret-house
     contributed_by: data-agent

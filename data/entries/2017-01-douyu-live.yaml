@@ -22,6 +22,10 @@
       - at: "03:05:06"
         label: "P6-第六局"
     sources:
+      - url: https://www.bilibili.com/video/BV1js411Y7w6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3373572"
         kind: replay
         parts: 6
@@ -47,6 +51,10 @@
       - at: "02:26:48"
         label: "P3-1.2-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV14s411Y7GT
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3378069"
         kind: replay
         parts: 3
@@ -74,6 +82,10 @@
         label: "P3-1.3-盛世天下·媚娘篇"
         game: shengshi-tianxia
     sources:
+      - url: https://www.bilibili.com/video/BV1xs411Y79Y
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3378212"
         kind: replay
         parts: 3
@@ -100,6 +112,10 @@
         label: "P3-1.4-盛世天下·媚娘篇"
         game: shengshi-tianxia
     sources:
+      - url: https://www.bilibili.com/video/BV1ns411Y7KA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3380641"
         kind: replay
         parts: 3
@@ -132,6 +148,10 @@
         label: "P5-1.7-英雄联盟-第五局"
         game: league-of-legends
     sources:
+      - url: https://www.bilibili.com/video/BV1ws411h78F
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3388459"
         kind: replay
         parts: 5
@@ -154,6 +174,10 @@
       - at: "00:20:43"
         label: "P2-炒饭聊天"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ls411h7BJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3395388"
         kind: replay
         parts: 2
@@ -177,6 +201,10 @@
         label: "P2-1.10-黑魂3-2周目前准备"
         game: dark-souls-3
     sources:
+      - url: https://www.bilibili.com/video/BV1js411h7Kx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3395343"
         kind: replay
         parts: 2
@@ -201,6 +229,10 @@
       - at: "02:31:58"
         label: "P3"
     sources:
+      - url: https://www.bilibili.com/video/BV1gs411h7yr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3398386"
         kind: replay
         parts: 3
@@ -224,6 +256,10 @@
         label: "P2-聊天+英雄联盟"
         game: league-of-legends
     sources:
+      - url: https://www.bilibili.com/video/BV14s411h7ue
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3400771"
         kind: replay
         parts: 2
@@ -247,6 +283,10 @@
         label: "P2-1.12-黑暗之魂3-2周目-day1"
         game: dark-souls-3
     sources:
+      - url: https://www.bilibili.com/video/BV1xs411h7X9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3400881"
         kind: replay
         parts: 2
@@ -274,31 +314,13 @@
         kind: replay
         parts: 3
         status: alive
-    contributed_by: data-agent
-
-  - id: 2017-01-13-live-02
-    type: live
-    date: "2017-01-13"
-    title: "年会"
-    platform: douyu
-    confidence: high
-    duration_min: 118
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_14/1484389612.JPG?imageslim"
-    games: []
-    segments:
-      - at: "00:00:00"
-        label: "P1"
-      - at: "00:23:59"
-        label: "P2-A"
-      - at: "01:11:07"
-        label: "P2-B"
-    sources:
       - url: "https://www.acfun.cn/v/ac3405022"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+    note: ac3405022「年会-part1」为同一场A站年会的分Part投稿，与全长源重复，合并；目录中另有 ac3404474 part2，本次未新增。
   - id: 2017-01-15-live-01
     type: live
     date: "2017-01-15"
@@ -318,6 +340,10 @@
       - at: "02:30:42"
         label: "P3-1.15-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1bx411j7Gx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3410716"
         kind: replay
         parts: 3
@@ -342,6 +368,10 @@
       - at: "01:14:54"
         label: "P3-1.16-Move or Die"
     sources:
+      - url: https://www.bilibili.com/video/BV11s411h7Q9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3409502"
         kind: replay
         parts: 3
@@ -368,6 +398,10 @@
       - at: "02:35:33"
         label: "P4-1.17-战斗方块剧场"
     sources:
+      - url: https://www.bilibili.com/video/BV19s411h7PT
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3412287"
         kind: replay
         parts: 4
@@ -377,46 +411,40 @@
   - id: 2017-01-18-live-01
     type: live
     date: "2017-01-18"
-    title: "几何冲刺"
+    title: "几何冲刺 / 王权"
     platform: douyu
     confidence: high
-    duration_min: 72
+    duration_min: 256
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760345.JPG?imageslim"
-    games: [geometry-dash]
+    games:
+      - geometry-dash
+      - reigns
     segments:
       - at: "00:00:00"
         label: "P1-聊天"
       - at: "00:23:33"
         label: "P2-几何冲刺"
+      - at: "01:12:00"
+        label: "P3-1.18-王权"
+      - at: "02:42:05"
+        label: "P4-1.18-王权"
     sources:
       - url: "https://www.acfun.cn/v/ac3415692"
         kind: replay
         parts: 2
         status: alive
-    contributed_by: data-agent
-
-  - id: 2017-01-18-live-02
-    type: live
-    date: "2017-01-18"
-    title: "王权"
-    platform: douyu
-    confidence: high
-    tags: []
-    duration_min: 185
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760538.jpg?imageslim"
-    games: [reigns]
-    segments:
-      - at: "00:00:00"
-        label: "P3-1.18-王权"
-      - at: "01:30:05"
-        label: "P4-1.18-王权"
-    sources:
       - url: "https://www.acfun.cn/v/ac3415701"
         kind: replay
         parts: 2
         status: alive
+      - url: https://www.bilibili.com/video/BV1Ss411h7Un
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
+    tags:
+    note: A站将同一场按 P1-P4 拆为两个投稿，合并为一场。
   - id: 2017-01-20-live-01
     type: live
     date: "2017-01-20"
@@ -435,6 +463,10 @@
       - at: "02:38:45"
         label: "P3-1.20-两周年彩排？！-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1is411b7LA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3422132"
         kind: replay
         parts: 3
@@ -474,6 +506,10 @@
       - at: "00:00:07"
         label: "P2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Rs411b7sn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3429201"
         kind: replay
         parts: 2
@@ -495,6 +531,10 @@
       - at: "00:13:38"
         label: "P2-案发现场？"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ds411b7Sy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3431422"
         kind: replay
         parts: 2
@@ -516,6 +556,10 @@
       - at: "01:59:45"
         label: "P1"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ks411875B
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3432913"
         kind: replay
         parts: 2
@@ -532,6 +576,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_26/1485423075.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1Ps411872T
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3432740"
         kind: replay
         parts: 1
@@ -549,6 +597,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_27/1485533743.png?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV13s41187DY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3435002"
         kind: replay
         parts: 1
@@ -571,6 +623,10 @@
       - at: "00:32:00"
         label: "P2"
     sources:
+      - url: https://www.bilibili.com/video/BV13s41187js
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3437161"
         kind: replay
         parts: 2

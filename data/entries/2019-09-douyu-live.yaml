@@ -21,12 +21,13 @@
         label: "双人配合Heave Ho"
         game: heave-ho
     sources:
+      - url: https://www.bilibili.com/video/BV1T441127f2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10863183"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV1T441127f2
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -49,12 +50,13 @@
       - at: "02:56:49"
         label: "大雄好久不见"
     sources:
+      - url: https://www.bilibili.com/video/BV1r4411y74c
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10875058"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV1r4411y74c
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -75,12 +77,13 @@
       - at: "02:01:26"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV12J411N768
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10905302"
         kind: replay
         parts: 2
-        status: alive
-      - url: https://www.bilibili.com/video/BV12J411N768
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -103,6 +106,10 @@
       - at: "03:11:28"
         label: "Part4"
     sources:
+      - url: https://www.bilibili.com/video/BV1JJ411P7pn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10917297"
         kind: replay
         parts: 4
@@ -132,12 +139,13 @@
       - at: "04:00:15"
         label: "怪物猎人：世界 冰原"
     sources:
+      - url: https://www.bilibili.com/video/BV1sJ411A7eJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10954601"
         kind: replay
         parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1sJ411A7eJ
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -148,7 +156,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 469
+    duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/Fl3qakjaWiqM4PP2LPJ0X0TuthTP?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -164,13 +172,47 @@
       - at: "03:54:31"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV19J411c7Mb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10968579"
         kind: replay
         parts: 5
         status: alive
-      - url: https://www.bilibili.com/video/BV19J411c7Mb
+    contributed_by: data-agent
+
+    note: A站/B站源均含纯净+弹幕双版，只按一版计时。
+  - id: 2019-09-20-live-01
+    type: live
+    date: "2019-09-20"
+    title: "塞尔达传说 织梦岛"
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    games: []
+    note: "B站「女流录像小屋」《塞尔达传说 织梦岛》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1aJ411u7Ty"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2019-09-22-live-01
+    type: live
+    date: "2019-09-22"
+    title: "心灵砒霜"
+    platform: douyu
+    confidence: high
+    duration_min: 260
+    games: []
+    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。 B站源含纯净+弹幕双版，只按一版计时。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV13J411M7Jh"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-09-23-live-01
@@ -194,12 +236,13 @@
       - at: "04:00:11"
         label: "塞尔达传说 织梦岛"
     sources:
+      - url: https://www.bilibili.com/video/BV1oJ411M7bm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11164528"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1oJ411M7bm
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -228,12 +271,13 @@
         label: "P5-2019.09.25-A Short Hike"
         game: a-short-hike
     sources:
+      - url: https://www.bilibili.com/video/BV1cJ411T7jG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11171141"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1cJ411T7jG
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -262,45 +306,14 @@
         label: "Green Hell"
         game: green-hell
     sources:
+      - url: https://www.bilibili.com/video/BV1gE411R78H
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11258173"
         kind: replay
         parts: 5
         status: alive
-      - url: https://www.bilibili.com/video/BV1gE411R78H
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2019-09-20-live-01
-    type: live
-    date: "2019-09-20"
-    title: "塞尔达传说 织梦岛"
-    platform: douyu
-    confidence: high
-    duration_min: 240
-    games: []
-    note: "B站「女流录像小屋」《塞尔达传说 织梦岛》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1aJ411u7Ty"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2019-09-22-live-01
-    type: live
-    date: "2019-09-22"
-    title: "心灵砒霜"
-    platform: douyu
-    confidence: high
-    duration_min: 520
-    games: []
-    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV13J411M7Jh"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2019-09-30-live-01

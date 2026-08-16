@@ -3,58 +3,19 @@
 # 搬运号：直播回放巴拉蹦吧 / 怪盗基德KID / bobi华 / 服部平次 / 不懒bot / 安乐冈花火w 等；confidence 多来源 high 单来源 medium
 # 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
 
-  - id: 2025-12-04-live-01
-    type: live
-    date: "2025-12-04"
-    title: "A Little to the Left"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/7b56918569e0b3ab88279df821115be24580990e.jpg"
-    confidence: high
-    games: [a-little-to-the-left, delta-force]
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "A Little to the Left 19:09"
-      - at: "00:30:01"
-        label: "A Little to the Left 19:39"
-      - at: "01:00:02"
-        label: "A Little to the Left 20:09"
-      - at: "01:30:03"
-        label: "A Little to the Left 20:39"
-      - at: "02:00:04"
-        label: "A Little to the Left & 三角洲行动 21:09"
-      - at: "02:30:05"
-        label: "三角洲行动 21:39"
-      - at: "02:33:01"
-        label: "三角洲行动 21:47"
-      - at: "02:49:53"
-        label: "三角洲行动 22:20"
-      - at: "03:19:54"
-        label: "三角洲行动 22:50"
-      - at: "03:42:28"
-        label: "三角洲行动 23:26"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1EP2eBrEQZ"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1wR2YBmEdb"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 305
-
   - id: 2025-12-04-live-02
     type: live
     date: "2025-12-04"
-    title: "不是强迫症玩不了的游戏"
+    title: "不是强迫症玩不了的游戏 / A Little to the Left & 三角洲行动"
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/847fee795d9ffaee3170b43761222a5f3736de21.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；同日 223 分钟的搬运版本与本场内容重叠，已删除，时长以本场 254 分钟主来源为准。"
+    games:
+      - a-little-to-the-left
+      - delta-force
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；同日 223 分钟的搬运版本与本场内容重叠，已删除，时长以本场 254 分钟主来源为准。 live-01 与 live-02 均为 12-04 19:10 同一场（A Little to the Left 后接三角洲/猛攻），合并；不懒bot 源内“剪辑+完整录像页”为同一场两版，不重复计时。"
     segments:
       - at: "00:00:00"
         label: "不是强迫症玩不了的游戏"
@@ -74,59 +35,33 @@
       - url: "https://www.bilibili.com/video/BV11Y2iBbEgP"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV17K2eBgEsz"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1EP2eBrEQZ"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1wR2YBmEdb"
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 254
 
-  - id: 2025-12-04-live-04
-    type: live
-    date: "2025-12-04"
-    title: "你我的游戏时光"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/7ec63fedfa595b8b86fa60cc957b207441351d08.jpg"
-    confidence: medium
-    games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Ev2jB4EPg"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 107
-
-  - id: 2025-12-05-live-01
-    type: live
-    date: "2025-12-05"
-    title: "A Little to the Left"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/b93d94cb48cd319846dbc71dfdf836f57c241237.jpg"
-    confidence: medium
-    games:
-      - a-little-to-the-left
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1xr27B3Exk"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 94
-
   - id: 2025-12-05-live-02
     type: live
     date: "2025-12-05"
-    title: "你我的游戏时光"
+    title: "你我的游戏时光 / A Little to the Left & 逃离鸭科夫"
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/098c8b5e88a79ff371980bec911e40a87d24df95.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    games:
+      - a-little-to-the-left
+      - duckov
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 B站源标题写 12-04，分P名均为 2025-12-05 20:14，与 12-05 本条为同一场，移回。 同日 20:15 起同一直播：先 A Little to the Left，后 逃离鸭科夫；live-01/live-03 为分段搬运，本条为整场源，合并为一场。"
     segments:
       - at: "00:00:00"
         label: "你我的游戏时光"
@@ -136,31 +71,22 @@
       - url: "https://www.bilibili.com/video/BV1M72EB2E4M"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Rr2EBFEoH"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 108
-
-  - id: 2025-12-05-live-03
-    type: live
-    date: "2025-12-05"
-    title: "逃离鸭科夫"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/307b3b1cd45fc7147efa8dc75f7e5ed81acad0a4.jpg"
-    confidence: medium
-    games:
-      - duckov
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
+      - url: https://www.bilibili.com/video/BV1Ev2jB4EPg
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1xr27B3Exk"
+        kind: replay
+        status: alive
       - url: "https://www.bilibili.com/video/BV1CP27BiEdS"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 122
+    duration_min: 108
 
   - id: 2025-12-06-live-01
     type: live
@@ -194,6 +120,7 @@
       - url: "https://www.bilibili.com/video/BV1Zz2XBbEU2"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1fi2XBhEeL"
         kind: replay
         status: alive
@@ -210,7 +137,7 @@
     confidence: high
     games: []
     tags: [弹幕版]
-    note: "同一场直播（TGA2025 颁奖典礼）由 不懒bot（剪辑上/下 3:25:42 + 完整 3:25:37）、直播回放巴拉蹦吧（弹幕/纯净双版 3:25:15）、bobi华（3:25:19）与 服部平次（3:25:10）分别搬运，总时长吻合，已合并为一天一条。"
+    note: "同一场直播（TGA2025 颁奖典礼）由 不懒bot（剪辑上/下 3:25:42 + 完整 3:25:37）、直播回放巴拉蹦吧（弹幕/纯净双版 3:25:15）、bobi华（3:25:19）与 服部平次（3:25:10）分别搬运，总时长吻合，已合并为一天一条。 不懒bot源“剪辑上/下+完整”为同场两版，只按一版计时。"
     segments:
       - at: "00:00:00"
         label: "TGA2025【上】"
@@ -222,12 +149,13 @@
       - url: "https://www.bilibili.com/video/BV1wRmjBqEQC"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV19tm5BjEHj"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 411
+    duration_min: 205
 
   - id: 2025-12-17-live-01
     type: live
@@ -239,7 +167,7 @@
     games:
       - rhythm-heaven
     tags: [弹幕版]
-    note: "同一场直播（18:15 开播聊天→虚实万象 Pragmata→啵点节奏 Bits & Bops→20:47 收尾）由 服部平次（2:31:44）、bobi华（2:32:22）与 直播回放巴拉蹦吧（弹幕/纯净双版 2:32:44）整场分别搬运，不懒bot 拆为两段投稿（PRAGMATA 段 ~1:10、啵点节奏段 ~1:22，均含剪辑分 P + 完整录像页，合 2:32），各来源总时长吻合，已合并为一天一条。"
+    note: "同一场直播（18:15 开播聊天→虚实万象 Pragmata→啵点节奏 Bits & Bops→20:47 收尾）由 服部平次（2:31:44）、bobi华（2:32:22）与 直播回放巴拉蹦吧（弹幕/纯净双版 2:32:44）整场分别搬运，不懒bot 拆为两段投稿（PRAGMATA 段 ~1:10、啵点节奏段 ~1:22，均含剪辑分 P + 完整录像页，合 2:32），各来源总时长吻合，已合并为一天一条。 不懒bot源“啵点节奏剪辑+完整页”为同场片段两版；整场以 2:32:44 主源计时。"
     segments:
       - at: "00:00:00"
         label: "19:24 啵点节奏 Bits & Bops"
@@ -253,12 +181,13 @@
       - url: "https://www.bilibili.com/video/BV1M9qVB5EQz"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1cgq5BYE79"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 165
+    duration_min: 153
 
   - id: 2025-12-24-live-01
     type: live
@@ -302,6 +231,7 @@
       - url: "https://www.bilibili.com/video/BV1NFBRBxED2"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV13yBQBZEP8"
         kind: replay
         status: alive
@@ -319,7 +249,7 @@
     games:
       - where-winds-meet
     tags: [弹幕版]
-    note: "同一场直播由 bobi华（BV11HByB8Evv，4:03:58）、直播回放巴拉蹦吧（弹幕/纯净双版，4:04:17）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 4:03:49），总时长吻合，已合并为一天一条。"
+    note: "同一场直播由 bobi华（BV11HByB8Evv，4:03:58）、直播回放巴拉蹦吧（弹幕/纯净双版，4:04:17）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 4:03:49），总时长吻合，已合并为一天一条。 不懒bot源“剪辑分P+完整页”为同场两版，只按一版计时。"
     segments:
       - at: "00:00:00"
         label: "18:14 开播聊天+燕云十六声"
@@ -345,12 +275,13 @@
       - url: "https://www.bilibili.com/video/BV1ysByBtETs"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV11HByB8Evv"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 488
+    duration_min: 244
 
   - id: 2025-12-28-live-01
     type: live
@@ -362,7 +293,7 @@
     games:
       - where-winds-meet
     tags: [弹幕版]
-    note: "同一场直播由 bobi华（BV1tMvkBDE1D，2:43:40）、直播回放巴拉蹦吧（弹幕/纯净双版，2:43:48）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 2:43:04），总时长吻合，已合并为一天一条。"
+    note: "同一场直播由 bobi华（BV1tMvkBDE1D，2:43:40）、直播回放巴拉蹦吧（弹幕/纯净双版，2:43:48）分别搬运，不懒bot 的投稿为剪辑分 P + 完整录像页（剪辑 2:43:04），总时长吻合，已合并为一天一条。 不懒bot源“剪辑分P+完整页”为同场两版，只按一版计时。"
     segments:
       - at: "00:00:00"
         label: "18:18 开播聊天"
@@ -384,8 +315,9 @@
       - url: "https://www.bilibili.com/video/BV11dvkBmEsE"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1tMvkBDE1D"
         kind: replay
         status: alive
     contributed_by: data-agent
-    duration_min: 326
+    duration_min: 164

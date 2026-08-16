@@ -28,6 +28,7 @@
       - url: "https://www.bilibili.com/video/BV17JM96BERD"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1FjM966EjU"
         kind: replay
         status: alive
@@ -61,6 +62,7 @@
       - url: "https://www.bilibili.com/video/BV1ZBuw64Egw"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Gmuw6HEa5"
         kind: replay
         status: alive
@@ -80,78 +82,44 @@
     games:
       - maplestory-classic
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-05-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 同日 20:02 晚间场为第二次开播（见 live-05）；本条只计 14:34 场。"
     sources:
       - url: "https://www.bilibili.com/video/BV1jWMk6KESW"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1EnMk6MENQ"
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1jnMk6MEi1
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 8月5日 14点场 P1
+            duration_sec: 3601
+          - page: 2
+            title: 8月5日 15点场 P2
+            duration_sec: 3601
+          - page: 3
+            title: 8月5日 16点场 P3
+            duration_sec: 2718
+      - url: https://www.bilibili.com/video/BV1ASMk6EE2z
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 8月5日 14点场 P1
+            duration_sec: 3601
+          - page: 2
+            title: 8月5日 15点场 P2
+            duration_sec: 3601
+          - page: 3
+            title: 8月5日 16点场 P3
+            duration_sec: 2718
     contributed_by: data-agent
 
     duration_min: 165
-  - id: 2026-08-05-live-03
-    type: live
-    date: "2026-08-05"
-    title: "冒险岛怀旧服弓箭手"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/40fc09036468e8312cca03b8fc88d3531ef1c0a2.jpg"
-    confidence: high
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "冒险岛怀旧服弓箭手"
-      - at: "01:00:01"
-        label: "冒险岛怀旧服弓箭手"
-      - at: "02:00:02"
-        label: "冒险岛怀旧服弓箭手"
-      - at: "02:45:20"
-        label: "我的智力没有问题"
-      - at: "03:45:21"
-        label: "我的智力没有问题"
-      - at: "04:45:22"
-        label: "我的智力没有问题"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1jnMk6MEi1"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1ASMk6EE2z"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 297
-  - id: 2026-08-05-live-04
-    type: live
-    date: "2026-08-05"
-    title: "我的智力没有问题"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/d81b2f521725df71c240da3b27640cf35494a50b.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "20-03-05-298 我的智力没有问题"
-      - at: "01:00:01"
-        label: "21-03-06-856 我的智力没有问题"
-      - at: "02:00:02"
-        label: "22-03-06-816 我的智力没有问题"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1D1M26qEF4"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1YdMC6PEjg"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 131
   - id: 2026-08-05-live-05
     type: live
     date: "2026-08-05"
@@ -161,8 +129,9 @@
     confidence: high
     games:
       - mechanical-carnival
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同日 14:34 场为第一次开播（见 live-01）；本条只计 20:02 晚间场。 “我的智力没有问题”为平台标题，与本条机械狂欢同场，合并。"
     segments:
       - at: "00:00:00"
         label: "机械狂欢 20:03"
@@ -178,75 +147,82 @@
       - url: "https://www.bilibili.com/video/BV1soM26FEuS"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1uAMy6bEn7"
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1jnMk6MEi1
+        kind: replay
+        status: alive
+        part_details:
+          - page: 4
+            title: 8月5日 20点场 P4
+            duration_sec: 3601
+          - page: 5
+            title: 8月5日 21点场 P5
+            duration_sec: 3601
+          - page: 6
+            title: 8月5日 22点场 P6
+            duration_sec: 702
+      - url: https://www.bilibili.com/video/BV1ASMk6EE2z
+        kind: replay
+        status: alive
+        part_details:
+          - page: 4
+            title: 8月5日 20点场 P4
+            duration_sec: 3601
+          - page: 5
+            title: 8月5日 21点场 P5
+            duration_sec: 3601
+          - page: 6
+            title: 8月5日 22点场 P6
+            duration_sec: 702
+      - url: "https://www.bilibili.com/video/BV1D1M26qEF4"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1YdMC6PEjg"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 130
+    duration_min: 131
   - id: 2026-08-06-live-01
     type: live
     date: "2026-08-06"
     title: "Snapshots"
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/2f9d1949bb27b0896f507c6fe01f08bf7c7863c7.jpg"
-    confidence: medium
+    confidence: high
     games:
       - snapshots-game
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2026-08-06-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 “我的脑子应该没有问题”为平台标题，与本条 Snapshots 同场，合并。 B站源标题日期写 08-07，分P名均为 08-06 21:06，归入 08-06 本条。"
     sources:
       - url: "https://www.bilibili.com/video/BV1XpuH6uECU"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1aWuH6zEh5"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 110
-  - id: 2026-08-06-live-03
-    type: live
-    date: "2026-08-06"
-    title: "我的脑子应该没有问题"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/49645e7bbe406808fd8bf140b82e19a415eb656f.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "我的脑子应该没有问题"
-      - at: "01:00:01"
-        label: "我的脑子应该没有问题"
-    sources:
       - url: "https://www.bilibili.com/video/BV1eZuH6LEZj"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1Ywup6kEqN"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 111
-  - id: 2026-08-07-live-01
-    type: live
-    date: "2026-08-07"
-    title: "我的脑子应该没有问题"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/9b155b03fb5394237c7c3b159523b2d04ee80ce9.jpg"
-    confidence: medium
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1wwuH69EBB"
+      - url: https://www.bilibili.com/video/BV1wwuH69EBB
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 110
+    segments:
+      - at: "00:00:00"
+        label: "我的脑子应该没有问题"
+      - at: "01:00:01"
+        label: "我的脑子应该没有问题"
   - id: 2026-08-08-live-03
     type: live
     date: "2026-08-08"
@@ -269,6 +245,7 @@
       - url: "https://www.bilibili.com/video/BV1rWu36ZELV"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV11Lu36PEo3"
         kind: replay
         status: alive
@@ -278,31 +255,6 @@
     contributed_by: data-agent
 
     duration_min: 163
-  - id: 2026-08-09-live-01
-    type: live
-    date: "2026-08-09"
-    title: "娃睡了来突袭"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/f67adcb28d61c7ca90d697814727ac359384bbbf.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "娃睡了来突袭"
-      - at: "01:00:00"
-        label: "娃睡了来突袭"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1ueuU62EQx"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1hiuU6LEJV"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 89
   - id: 2026-08-09-live-02
     type: live
     date: "2026-08-09"
@@ -312,8 +264,9 @@
     confidence: high
     games:
       - repair-story
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “娃睡了来突袭”为平台标题，与本条维修物语同场，合并。 B站源标题日期写 08-10，分P名均为 08-09 22:29，归入 08-09 本条。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 22:29"
@@ -325,42 +278,17 @@
       - url: "https://www.bilibili.com/video/BV1wBuQ6rEfg"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1NUuU6TET9"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 89
-  - id: 2026-08-10-live-01
-    type: live
-    date: "2026-08-10"
-    title: "冒险岛怀旧服"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/2c38df4ed9fed7b466cf8f2552cd205f0528e71f.jpg"
-    confidence: medium
-    games:
-      - maplestory-classic
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1yHuo6oEyb"
+      - url: "https://www.bilibili.com/video/BV1ueuU62EQx"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 81
-  - id: 2026-08-10-live-02
-    type: live
-    date: "2026-08-10"
-    title: "娃睡了来突袭"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/b0c5a45764dbd52c6ec2b3c785bba79e4bb3abf5.jpg"
-    confidence: medium
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1JFuQ6qEtQ"
+      - url: "https://www.bilibili.com/video/BV1hiuU6LEJV"
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1JFuQ6qEtQ
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -373,9 +301,11 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/48a3d379a656883b9486e47a194d18f4789a7484.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    games:
+      - maplestory-classic
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 冒险岛段（81min）为本条 22:04 场前段，合并为一场。"
     segments:
       - at: "00:00:00"
         label: "点关注解锁游戏"
@@ -385,7 +315,11 @@
       - url: "https://www.bilibili.com/video/BV1m7uo68Ejy"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1gQuo6TE5V"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1yHuo6oEyb"
         kind: replay
         status: alive
     contributed_by: data-agent

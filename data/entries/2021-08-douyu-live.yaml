@@ -18,6 +18,10 @@
       - at: "01:07:20"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1b64y1B7B9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30494403"
         kind: replay
         parts: 3
@@ -47,6 +51,10 @@
         label: "永劫无间"
         game: naraka-bladepoint
     sources:
+      - url: https://www.bilibili.com/video/BV1Y64y1B7HB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30494793"
         kind: replay
         parts: 3
@@ -83,6 +91,10 @@
         label: "永劫无间"
         game: naraka-bladepoint
     sources:
+      - url: https://www.bilibili.com/video/BV1v64y1B7ac
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30508330"
         kind: replay
         parts: 5
@@ -171,6 +183,10 @@
       - at: "02:19:27"
         label: "上古之魂"
     sources:
+      - url: https://www.bilibili.com/video/BV1Jy4y1L7qs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30538781"
         kind: replay
         parts: 4
@@ -184,12 +200,14 @@
   - id: 2021-08-06-live-01
     type: live
     date: "2021-08-06"
-    title: "上古之魂"
+    title: "上古之魂&永劫无间"
     platform: douyu
     confidence: high
-    duration_min: 234
+    duration_min: 460
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92b437d132e941f7b92185ba7d1db7ca.jpeg?imageslim"
-    games: [eldest-souls]
+    games:
+      - eldest-souls
+      - naraka-bladepoint
     segments:
       - at: "00:00:00"
         label: "上古之魂"
@@ -201,76 +219,42 @@
         label: "上古之魂"
       - at: "03:07:21"
         label: "上古之魂"
+      - at: "03:54:00"
+        label: "上古之魂"
+      - at: "04:40:46"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "05:25:31"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "06:10:16"
+        label: "永劫无间"
+        game: naraka-bladepoint
+      - at: "06:55:00"
+        label: "永劫无间"
+        game: naraka-bladepoint
     sources:
       - url: "https://www.acfun.cn/v/ac30552665"
         kind: replay
         parts: 5
         status: alive
-    contributed_by: data-agent
-
-  - id: 2021-08-06-live-02
-    type: live
-    date: "2021-08-06"
-    title: "上古之魂&永劫无间"
-    platform: douyu
-    confidence: high
-    duration_min: 226
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c6dd4c5f3f447efb7452b66e63aa6d8.jpeg?imageslim"
-    games: [naraka-bladepoint]
-    segments:
-      - at: "00:00:00"
-        label: "上古之魂"
-      - at: "00:46:46"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "01:31:31"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "02:16:16"
-        label: "永劫无间"
-        game: naraka-bladepoint
-      - at: "03:01:00"
-        label: "永劫无间"
-        game: naraka-bladepoint
-    sources:
       - url: "https://www.acfun.cn/v/ac30552893"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
-  - id: 2021-08-07-live-01
-    type: live
-    date: "2021-08-07"
-    title: "明日之后"
-    platform: douyu
-    confidence: high
-    duration_min: 77
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b3b21c8332084ffa885d647d2ea60057.jpeg?imageslim"
-    games: [lifeafter]
-    segments:
-      - at: "00:00:00"
-        label: "明日之后"
-        game: lifeafter
-      - at: "00:38:26"
-        label: "明日之后"
-        game: lifeafter
-    sources:
-      - url: "https://www.acfun.cn/v/ac30566377"
-        kind: replay
-        parts: 2
-        status: alive
-    contributed_by: data-agent
-
+    note: A站将同一场按 P1-P10 拆为两个投稿，合并为一场。
   - id: 2021-08-07-live-02
     type: live
     date: "2021-08-07"
-    title: "游戏之前有佩奇"
+    title: "游戏之前有佩奇 / 明日之后"
     platform: douyu
     confidence: high
-    duration_min: 225
+    duration_min: 302
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c5d4321c2f44327b597097c6d1df298.jpeg?imageslim"
-    games: []
+    games:
+      - lifeafter
     segments:
       - at: "00:00:00"
         label: "游戏之前有佩奇"
@@ -282,13 +266,24 @@
         label: "游戏之前有佩奇"
       - at: "03:00:08"
         label: "游戏之前有佩奇"
+      - at: "03:45:00"
+        label: "明日之后"
+        game: lifeafter
+      - at: "04:23:26"
+        label: "明日之后"
+        game: lifeafter
     sources:
       - url: "https://www.acfun.cn/v/ac30566750"
         kind: replay
         parts: 5
         status: alive
+      - url: "https://www.acfun.cn/v/ac30566377"
+        kind: replay
+        parts: 2
+        status: alive
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P7 拆为两个投稿，合并为一场。
   - id: 2021-08-08-live-01
     type: live
     date: "2021-08-08"
@@ -398,6 +393,10 @@
       - at: "02:33:24"
         label: "黑暗侦探"
     sources:
+      - url: https://www.bilibili.com/video/BV1vy4y1L754
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30624156"
         kind: replay
         parts: 5
@@ -427,6 +426,10 @@
       - at: "02:26:04"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV15Q4y1m7zR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30704016"
         kind: replay
         parts: 5
@@ -452,6 +455,10 @@
       - at: "01:50:37"
         label: "九十六号公路"
     sources:
+      - url: https://www.bilibili.com/video/BV1bq4y1M77U
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30743712"
         kind: replay
         parts: 4
@@ -548,6 +555,10 @@
         label: "GRIME"
         game: grime
     sources:
+      - url: https://www.bilibili.com/video/BV1DL411t7qL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30768142"
         kind: replay
         parts: 6
@@ -576,6 +587,10 @@
         label: "GRIME"
         game: grime
     sources:
+      - url: https://www.bilibili.com/video/BV1g3411B7C7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30769978"
         kind: replay
         parts: 4
@@ -607,6 +622,10 @@
       - at: "02:54:16"
         label: "桌游模拟《截码战》"
     sources:
+      - url: https://www.bilibili.com/video/BV1SL4y1a7w9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30816729"
         kind: replay
         parts: 5
@@ -634,6 +653,10 @@
       - at: "02:40:04"
         label: "桌游模拟《截码战》"
     sources:
+      - url: https://www.bilibili.com/video/BV1Kh411q7SU
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30836162"
         kind: replay
         parts: 5
@@ -666,6 +689,10 @@
         label: "花之灵（Hoa）"
         game: hoa
     sources:
+      - url: https://www.bilibili.com/video/BV1LQ4y117Wq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30852788"
         kind: replay
         parts: 4
@@ -693,6 +720,10 @@
       - at: "02:09:25"
         label: "对马岛之魂"
     sources:
+      - url: https://www.bilibili.com/video/BV1eq4y1U76x
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30875727"
         kind: replay
         parts: 5
@@ -724,6 +755,10 @@
       - at: "02:50:30"
         label: "对马岛之魂"
     sources:
+      - url: https://www.bilibili.com/video/BV1Qf4y1N7Km
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30887698"
         kind: replay
         parts: 5
@@ -754,6 +789,10 @@
         label: "Fling to the Finish"
         game: fling-to-the-finish
     sources:
+      - url: https://www.bilibili.com/video/BV1TA411w7GF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30896471"
         kind: replay
         parts: 3
@@ -782,6 +821,10 @@
       - at: "01:31:07"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1iQ4y1h7Wo
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30913125"
         kind: replay
         parts: 4

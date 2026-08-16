@@ -1,3 +1,18 @@
+  - id: 2017-09-01-live-01
+    type: live
+    date: "2017-09-01"
+    title: "相扑人Sumoman"
+    platform: douyu
+    confidence: high
+    duration_min: 267
+    games: []
+    note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Cx411t7jD"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2017-09-02-live-01
     type: live
     date: "2017-09-02"
@@ -31,6 +46,10 @@
       - at: "03:42:21"
         label: "P7-9.2-啪嗒砰"
     sources:
+      - url: https://www.bilibili.com/video/BV1Xx411t7hZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3955661"
         kind: replay
         parts: 11
@@ -58,6 +77,10 @@
       - at: "01:50:56"
         label: "P5-9.4-地平线零之曙光体验会（PS4国际影院派对"
     sources:
+      - url: https://www.bilibili.com/video/BV1ex411x7Hi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3959411"
         kind: replay
         parts: 5
@@ -97,6 +120,10 @@
       - at: "04:11:40"
         label: "P7-9.6-啪嗒砰"
     sources:
+      - url: https://www.bilibili.com/video/BV1fx411x7Sq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3963530"
         kind: replay
         parts: 11
@@ -130,6 +157,10 @@
       - at: "03:30:04"
         label: "P8-9.7-绝地求生"
     sources:
+      - url: https://www.bilibili.com/video/BV1ux41147Mo
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3965707"
         kind: replay
         parts: 8
@@ -167,6 +198,10 @@
       - at: "03:58:09"
         label: "P10-9.8-啪嗒砰"
     sources:
+      - url: https://www.bilibili.com/video/BV1hx41147Mk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3967886"
         kind: replay
         parts: 10
@@ -277,6 +312,30 @@
         kind: replay
         parts: 10
         status: alive
+      - url: https://www.bilibili.com/video/BV1Sx41147EX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+
+  - id: 2017-09-12-live-01
+    type: live
+    date: "2017-09-12"
+    title: "牙套妹&渣哥的日常生活"
+    platform: douyu
+    confidence: high
+    duration_min: 146
+    games: []
+    note: "B站「女流录像小屋」《女流-9.12-牙套妹&渣哥的日常生活》，2P全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=1"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=2"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-09-13-live-01
@@ -312,6 +371,10 @@
       - at: "03:38:01"
         label: "P11-9.13-马里奥疯兔"
     sources:
+      - url: https://www.bilibili.com/video/BV1Gx411s7UG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3976769"
         kind: replay
         parts: 11
@@ -335,6 +398,10 @@
       - at: "00:53:14"
         label: "P3-9.14-广州一日吃"
     sources:
+      - url: https://www.bilibili.com/video/BV1nx411s7zC
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3979127"
         kind: replay
         parts: 3
@@ -370,6 +437,10 @@
         label: "P6-女流-9.15-《我的世界》手游上线"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1ix411s7Fk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3981639"
         kind: replay
         parts: 6
@@ -403,6 +474,10 @@
       - at: "03:09:27"
         label: "P8"
     sources:
+      - url: https://www.bilibili.com/video/BV1yx411s7EL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3982859"
         kind: replay
         parts: 8
@@ -442,6 +517,10 @@
       - at: "03:37:14"
         label: "P2.8-9.17-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Xx411s7zX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3986027"
         kind: replay
         parts: 10
@@ -475,6 +554,10 @@
       - at: "04:18:23"
         label: "P2.6-9.18-CookServeDelicious"
     sources:
+      - url: https://www.bilibili.com/video/BV1wx411x7WK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3985929"
         kind: replay
         parts: 8
@@ -512,6 +595,10 @@
       - at: "03:48:38"
         label: "P2.8-9.19-CookServeDelicious"
     sources:
+      - url: https://www.bilibili.com/video/BV1Jx411x7gL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3987863"
         kind: replay
         parts: 10
@@ -539,6 +626,10 @@
       - at: "01:41:52"
         label: "P5-9.20-欧洲卡车模拟2_2.[SplitIt]"
     sources:
+      - url: https://www.bilibili.com/video/BV1Lx411x7bS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3989684"
         kind: replay
         parts: 5
@@ -582,6 +673,10 @@
       - at: "04:18:54"
         label: "P2.6-9.21-第二代Mazda CX-5上市直播"
     sources:
+      - url: https://www.bilibili.com/video/BV1sx411x7hH
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3991814"
         kind: replay
         parts: 13
@@ -611,6 +706,10 @@
       - at: "02:13:40"
         label: "P2-9.22-欧洲卡车模拟2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Yx411G76a
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3994050"
         kind: replay
         parts: 6
@@ -650,6 +749,10 @@
       - at: "04:09:02"
         label: "P2.8-9.23-欧洲卡车模拟2"
     sources:
+      - url: https://www.bilibili.com/video/BV1hx411G7BB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3995750"
         kind: replay
         parts: 11
@@ -689,6 +792,10 @@
       - at: "02:09:04"
         label: "P2.8-9.25-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Bx411G7hP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3998899"
         kind: replay
         parts: 10
@@ -718,6 +825,10 @@
       - at: "02:21:36"
         label: "P6-9.27-欧洲卡车模拟2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Px411V7wG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4002694"
         kind: replay
         parts: 6
@@ -753,6 +864,10 @@
       - at: "03:11:10"
         label: "P9-9.28-姐弟双排吃鸡"
     sources:
+      - url: https://www.bilibili.com/video/BV1jx411V7S8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4008312"
         kind: replay
         parts: 9
@@ -794,43 +909,12 @@
       - at: "04:18:30"
         label: "P12-9.30-茶杯头cuphead"
     sources:
+      - url: https://www.bilibili.com/video/BV1Jx411V7mh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4008554"
         kind: replay
         parts: 12
         status: alive
-    contributed_by: data-agent
-  - id: 2017-09-12-live-01
-    type: live
-    date: "2017-09-12"
-    title: "牙套妹&渣哥的日常生活"
-    platform: douyu
-    confidence: high
-    duration_min: 146
-    games: []
-    note: "B站「女流录像小屋」《女流-9.12-牙套妹&渣哥的日常生活》，2P全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=1"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.bilibili.com/video/BV1jx411s7rM?p=2"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2017-09-01-live-01
-    type: live
-    date: "2017-09-01"
-    title: "相扑人Sumoman"
-    platform: douyu
-    confidence: high
-    duration_min: 267
-    games: []
-    note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Cx411t7jD"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

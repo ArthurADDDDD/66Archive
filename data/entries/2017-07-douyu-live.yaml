@@ -13,6 +13,10 @@
       - at: "00:51:54"
         label: "P2-7.1-唱歌"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ux411B7Yg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3824379"
         kind: replay
         parts: 2
@@ -36,6 +40,10 @@
         label: "P2-空洞骑士"
         game: hollow-knight
     sources:
+      - url: https://www.bilibili.com/video/BV1yx411B7cA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3824362"
         kind: replay
         parts: 2
@@ -61,6 +69,10 @@
       - at: "02:51:36"
         label: "P4-7.4-ibb & obb"
     sources:
+      - url: https://www.bilibili.com/video/BV1cx411z73M
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3831751"
         kind: replay
         parts: 4
@@ -86,6 +98,10 @@
       - at: "02:04:55"
         label: "P4-7.6-Move or Die"
     sources:
+      - url: https://www.bilibili.com/video/BV1nx411z7Jh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3840960"
         kind: replay
         parts: 4
@@ -111,6 +127,10 @@
       - at: "02:46:43"
         label: "P4-7.7-小小噩梦DLC"
     sources:
+      - url: https://www.bilibili.com/video/BV18x411z7vz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3839485"
         kind: replay
         parts: 4
@@ -134,6 +154,10 @@
       - at: "02:37:42"
         label: "P3-7.8-今天聊60块钱的"
     sources:
+      - url: https://www.bilibili.com/video/BV1rx411z7w6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3841142"
         kind: replay
         parts: 3
@@ -162,6 +186,10 @@
       - at: "02:53:29"
         label: "P4-7.9-心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ux411z7he
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3842844"
         kind: replay
         parts: 4
@@ -187,6 +215,10 @@
       - at: "01:01:47"
         label: "P2-7.10-组装小书架"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ex411q77P
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3845192"
         kind: replay
         parts: 2
@@ -212,10 +244,30 @@
       - at: "02:33:36"
         label: "P4-7.11-和泡泡一起玩守望先锋"
     sources:
+      - url: https://www.bilibili.com/video/BV1tx411q7A7
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3848060"
         kind: replay
         parts: 4
         status: alive
+    contributed_by: data-agent
+
+  - id: 2017-07-12-live-01
+    type: live
+    date: "2017-07-12"
+    title: "创世战车"
+    platform: douyu
+    confidence: high
+    duration_min: 114
+    games: []
+    note: "B站「女流录像小屋」《创世战车》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Bx411q7iU"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-07-15-live-01
@@ -233,6 +285,10 @@
       - at: "00:12:57"
         label: "P2-7.15-设备调试，直播随缘"
     sources:
+      - url: https://www.bilibili.com/video/BV1ux411B7N8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3857560"
         kind: replay
         parts: 2
@@ -278,6 +334,10 @@
       - at: "03:08:38"
         label: "P3.3.4-7.16-泡泡来做客，六酱掌勺"
     sources:
+      - url: https://www.bilibili.com/video/BV1ex411B7oE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3860856"
         kind: replay
         parts: 14
@@ -327,6 +387,10 @@
       - at: "03:18:29"
         label: "P15-7.17-心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1cx411i7Ae
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3862468"
         kind: replay
         parts: 15
@@ -379,12 +443,31 @@
         label: "P12-7.18-我的世界"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1Nx411i72N
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3863109"
         kind: replay
         parts: 12
         status: alive
     contributed_by: data-agent
 
+  - id: 2017-07-19-live-01
+    type: live
+    date: "2017-07-19"
+    title: "我的世界"
+    platform: douyu
+    confidence: high
+    duration_min: 115
+    games: []
+    note: "B站「女流录像小屋」《我的世界》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Nx411i7oX"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2017-07-21-live-01
     type: live
     date: "2017-07-21"
@@ -456,6 +539,10 @@
         label: "P20-7.21-我的世界"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV14x411i7mz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3870123"
         kind: replay
         parts: 20
@@ -521,6 +608,10 @@
         label: "P16-7.22-我的世界"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1zx411i77x
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3871741"
         kind: replay
         parts: 16
@@ -558,6 +649,10 @@
       - at: "01:55:36"
         label: "P10-7.23-你说我猜"
     sources:
+      - url: https://www.bilibili.com/video/BV1fx411i7fq
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3875204"
         kind: replay
         parts: 10
@@ -648,6 +743,10 @@
       - at: "01:08:50"
         label: "P7-7.26-PlayStation 中国发布会"
     sources:
+      - url: https://www.bilibili.com/video/BV1ux411W7Y9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3880329"
         kind: replay
         parts: 7
@@ -675,6 +774,10 @@
       - at: "00:49:10"
         label: "P5-7.28-与武人叔畅聊主机游戏的那些事儿"
     sources:
+      - url: https://www.bilibili.com/video/BV1Wx411W7nv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3884995"
         kind: replay
         parts: 5
@@ -700,6 +803,10 @@
       - at: "00:38:57"
         label: "P4-7.28-首次直播试玩真三国无双8"
     sources:
+      - url: https://www.bilibili.com/video/BV1Wx411W7pP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3884994"
         kind: replay
         parts: 4
@@ -747,36 +854,4 @@
         kind: replay
         parts: 13
         status: alive
-    contributed_by: data-agent
-
-  - id: 2017-07-12-live-01
-    type: live
-    date: "2017-07-12"
-    title: "创世战车"
-    platform: douyu
-    confidence: high
-    duration_min: 114
-    games: []
-    note: "B站「女流录像小屋」《创世战车》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Bx411q7iU"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
-
-  - id: 2017-07-19-live-01
-    type: live
-    date: "2017-07-19"
-    title: "我的世界"
-    platform: douyu
-    confidence: high
-    duration_min: 115
-    games: []
-    note: "B站「女流录像小屋」《我的世界》，全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Nx411i7oX"
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent

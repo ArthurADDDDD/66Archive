@@ -7,17 +7,21 @@
     confidence: medium
     games:
       - death-stranding-2-on-the-beach
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-01-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-07-01-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 补入 07-01 弹幕版源（标题日期误写 06-28，分P名均为 07-01）。 巴拉蹦吧弹幕/纯净双版为 281:48，较主源多约 3 分钟，按完整度较高源计时。"
     sources:
       - url: "https://www.bilibili.com/video/BV1M2gQzuEm8"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1GpgXzyE6o"
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1megXzKErG
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 279
+    duration_min: 282
   - id: 2025-07-02-live-02
     type: live
     date: "2025-07-02"
@@ -40,6 +44,7 @@
       - url: "https://www.bilibili.com/video/BV19F3tzjEhN"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1yJ3tzYESg"
         kind: replay
         status: alive
@@ -73,6 +78,7 @@
       - url: "https://www.bilibili.com/video/BV1bv3MzDEEh"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV16d3MzTE6G"
         kind: replay
         status: alive
@@ -110,6 +116,7 @@
       - url: "https://www.bilibili.com/video/BV1Kk3Jz1EVE"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1w93JzMEWD"
         kind: replay
         status: alive
@@ -147,6 +154,7 @@
       - url: "https://www.bilibili.com/video/BV1183Rz6Es4"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Kb3RzGEBb"
         kind: replay
         status: alive
@@ -177,6 +185,7 @@
       - url: "https://www.bilibili.com/video/BV11dupz1EpK"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1wVunzqExr"
         kind: replay
         status: alive
@@ -209,6 +218,7 @@
       - url: "https://www.bilibili.com/video/BV1vxu8zJEKC"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1iWu8zDEN4"
         kind: replay
         status: alive
@@ -244,6 +254,7 @@
       - url: "https://www.bilibili.com/video/BV1jxgPzEEKV"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1pRgPztExD"
         kind: replay
         status: alive
@@ -267,6 +278,7 @@
       - url: "https://www.bilibili.com/video/BV1MguozLEky"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1VdudzREEK"
         kind: replay
         status: alive
@@ -313,6 +325,7 @@
       - url: "https://www.bilibili.com/video/BV1sqgazCE1V"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV184gaznEh1"
         kind: replay
         status: alive
@@ -325,45 +338,62 @@
   - id: 2025-07-24-live-01
     type: live
     date: "2025-07-24"
-    title: "女流66正在直播明末渊虚之羽"
+    title: "明末：渊虚之羽（18时场）"
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/8e5e4e75e09bf1476b403183ab0d680b2683ba5e.jpg"
     confidence: high
     games:
       - mingmo-yuanxu
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 原按整日合集 493min 重复计入 10时场；合集分P含 10时场、18时场两段，本条只保留 18时场（P7-P10，181min）。10时场见 live-02，21时场见 live-03。"
     segments:
-      - at: "00:00:00"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "01:00:01"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "02:00:02"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "03:00:03"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "04:00:04"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "05:00:05"
-        label: "女流66_女流66正在直播明末渊虚之羽"
-      - at: "05:11:47"
-        label: "女流66_正在直播明末渊虚之羽"
-      - at: "06:11:48"
-        label: "女流66_正在直播明末渊虚之羽"
-      - at: "06:40:13"
-        label: "女流66_正在直播明末渊虚之羽"
-      - at: "07:12:44"
-        label: "女流66_正在直播明末渊虚之羽"
+      - at: 00:00:00
+        label: 明末：渊虚之羽
+      - at: 01:00:01
+        label: 明末：渊虚之羽
+      - at: 01:28:26
+        label: 明末：渊虚之羽
+      - at: 02:00:57
+        label: 明末：渊虚之羽
+      - at: 03:00:58
+        label: 明末：渊虚之羽
     sources:
       - url: "https://www.bilibili.com/video/BV1mu8TzsEnX"
         kind: replay
         status: alive
+        part_details:
+          - page: 7
+            title: 7月24日 18点场 P7
+            duration_sec: 3601
+          - page: 8
+            title: 7月24日 19点场 P8
+            duration_sec: 1705
+          - page: 9
+            title: 7月24日 19点32场 P9
+            duration_sec: 1951
+          - page: 10
+            title: 7月24日 20点05场 P10
+            duration_sec: 3601
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV18w8TzFEV1"
         kind: replay
         status: alive
+        part_details:
+          - page: 7
+            title: 7月24日 18点场 P7
+            duration_sec: 3601
+          - page: 8
+            title: 7月24日 19点场 P8
+            duration_sec: 1705
+          - page: 9
+            title: 7月24日 19点32场 P9
+            duration_sec: 1951
+          - page: 10
+            title: 7月24日 20点05场 P10
+            duration_sec: 3601
     contributed_by: data-agent
 
-    duration_min: 493
+    duration_min: 181
   - id: 2025-07-24-live-02
     type: live
     date: "2025-07-24"
@@ -373,7 +403,7 @@
     confidence: high
     games:
       - mingmo-yuanxu
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场 10时场另有整日合集源（已按分P拆至 live-01/live-02），不重复计时。"
     segments:
       - at: "00:00:00"
         label: "女流662025-07-24T10_00_19"
@@ -385,6 +415,7 @@
       - url: "https://www.bilibili.com/video/BV1wk8MzQEiK"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Li8uzyEeS"
         kind: replay
         status: alive
@@ -401,7 +432,7 @@
     games:
       - mingmo-yuanxu
     tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 本日 21时场为独立开播，与 10时场、18时场分属三场。"
     segments:
       - at: "00:00:00"
         label: "女流66_正在直播明末渊虚之羽"
@@ -411,6 +442,7 @@
       - url: "https://www.bilibili.com/video/BV1rkb1zpEFy"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1kzb1zsENU"
         kind: replay
         status: alive
@@ -441,6 +473,7 @@
       - url: "https://www.bilibili.com/video/BV1N388zpEUp"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Ca84z3ENW"
         kind: replay
         status: alive
@@ -450,17 +483,31 @@
     contributed_by: data-agent
 
     duration_min: 190
-  - id: 2025-07-27-live-01
+  - id: 2025-07-27-live-02
     type: live
     date: "2025-07-27"
-    title: "姐弟之战机甲之战解限机"
+    title: "解限机"
     platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/0b02c3da863b1d4bad567f005ba5691f20e78310.jpg"
+    cover: "https://i0.hdslb.com/bfs/archive/3376725ff4f8383c469ee7d38eb086f307b3d8aa.jpg"
     confidence: high
     games:
       - mecha-break
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场直播两个标题搬运（19:26 主源 217min 与 19:34 源 208min），合并，时长以较长主源计。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1wQ8GzwEJe"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1VN8pzVERW"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1LZ8JzgEHq"
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    duration_min: 217
+    tags:
+      - 弹幕版
     segments:
       - at: "00:00:00"
         label: "女流66_姐弟之战机甲之战解限机"
@@ -472,29 +519,3 @@
         label: "女流66_姐弟之战机甲之战解限机"
       - at: "03:08:23"
         label: "女流66_姐弟之战机甲之战解限机"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1VN8pzVERW"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1LZ8JzgEHq"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 208
-  - id: 2025-07-27-live-02
-    type: live
-    date: "2025-07-27"
-    title: "解限机"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/3376725ff4f8383c469ee7d38eb086f307b3d8aa.jpg"
-    confidence: medium
-    games:
-      - mecha-break
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1wQ8GzwEJe"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    duration_min: 217

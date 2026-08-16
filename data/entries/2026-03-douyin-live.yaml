@@ -7,8 +7,9 @@
     confidence: high
     games:
       - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场不同标题搬运，合并。"
     segments:
       - at: "00:00:00"
         label: "18-45 体验鸣潮2.5剧情"
@@ -22,48 +23,16 @@
       - url: "https://www.bilibili.com/video/BV1VHNgz2Ej5"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1VHNgz2EVL"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 217
-  - id: 2026-03-08-live-02
-    type: live
-    date: "2026-03-08"
-    title: "鸣潮"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/7ae9a0a8d950cddd6c2fa00351a246de4a45d157.jpg"
-    confidence: medium
-    games:
-      - wuthering-waves
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
       - url: "https://www.bilibili.com/video/BV1bSNuzBEnw"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 216
-  - id: 2026-03-13-live-01
-    type: live
-    date: "2026-03-13"
-    title: "燕云十六声"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/b2a47ecf2cfeacb7b13c7cefcce569ca186bb3f4.jpg"
-    confidence: medium
-    games:
-      - where-winds-meet
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1JUcSzoExW"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 228
+    duration_min: 217
   - id: 2026-03-13-live-02
     type: live
     date: "2026-03-13"
@@ -73,8 +42,9 @@
     confidence: high
     games:
       - where-winds-meet
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场不同标题搬运，合并。"
     segments:
       - at: "00:00:00"
         label: "燕云皇宫更新啦"
@@ -88,30 +58,16 @@
       - url: "https://www.bilibili.com/video/BV1w6cSzAE8A"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1jRcSzXE13"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1JUcSzoExW"
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 229
-  - id: 2026-03-14-live-01
-    type: live
-    date: "2026-03-14"
-    title: "燕云十六声"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/2377a793506a98cabfc18f5aa6a399fe595acf21.jpg"
-    confidence: medium
-    games:
-      - where-winds-meet
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1N2wtzkEvU"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 202
   - id: 2026-03-14-live-02
     type: live
     date: "2026-03-14"
@@ -121,8 +77,9 @@
     confidence: high
     games:
       - where-winds-meet
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同场不同标题搬运，合并。"
     segments:
       - at: "00:00:00"
         label: "18-49燕云皇宫更新啦"
@@ -136,7 +93,11 @@
       - url: "https://www.bilibili.com/video/BV1xwwtzkEzv"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1GYwtzHEPd"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1N2wtzkEvU"
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -149,9 +110,11 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/c5fe547dcf1395e033011881c6d890183128b0c1.jpg"
     confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    games:
+      - zheshi-xieyinggen
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “别笑”为平台标题，“这是谐音梗”为同场内容标题，合并。"
     segments:
       - at: "00:00:00"
         label: "别笑"
@@ -161,29 +124,10 @@
       - url: "https://www.bilibili.com/video/BV1PFw2zoEE1"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1pyw2zdEPH"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 80
-  - id: 2026-03-16-live-02
-    type: live
-    date: "2026-03-16"
-    title: "这是谐音梗"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/94522d72430fc151c03aaced5e781390d0a7b7f4.jpg"
-    confidence: high
-    games:
-      - zheshi-xieyinggen
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "开播聊天 21:25"
-      - at: "00:47:22"
-        label: "这是谐音梗"
-    sources:
       - url: "https://www.bilibili.com/video/BV1MXw1zaEGm"
         kind: replay
         status: alive
@@ -192,7 +136,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 79
+    duration_min: 80
   - id: 2026-03-19-live-01
     type: live
     date: "2026-03-19"
@@ -215,6 +159,7 @@
       - url: "https://www.bilibili.com/video/BV1PSAVzMEfC"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1DvAVz2Eaf"
         kind: replay
         status: alive
@@ -245,37 +190,13 @@
       - url: "https://www.bilibili.com/video/BV1vfAnz5EdL"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1VkAJzTEDJ"
         kind: replay
         status: alive
     contributed_by: data-agent
 
     duration_min: 221
-  - id: 2026-03-21-live-01
-    type: live
-    date: "2026-03-21"
-    title: "多久没这么用过脑子了"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/d54407a9a2eb752d19fec1c8d31e77f13f28c1bc.jpg"
-    confidence: high
-    games: []
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "多久没这么用过脑子了"
-      - at: "01:00:01"
-        label: "多久没这么用过脑子了"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1FfAwzaEqD"
-        kind: replay
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1oAAAzZE9Q"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 119
   - id: 2026-03-21-live-02
     type: live
     date: "2026-03-21"
@@ -285,8 +206,9 @@
     confidence: high
     games:
       - her-trees
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 “多久没这么用过脑子了”为同场平台标题；不懒bot源内剪辑+无弹幕页为同场两版，不重复计时，按一版 119min 计。"
     segments:
       - at: "00:00:00"
         label: "开播聊天 21:33"
@@ -298,29 +220,19 @@
       - url: "https://www.bilibili.com/video/BV1QcAKzoETe"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1fcAAzFEsz"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 222
-  - id: 2026-03-27-live-01
-    type: live
-    date: "2026-03-27"
-    title: "她的树"
-    platform: douyin
-    cover: "https://i0.hdslb.com/bfs/archive/14b8d1b2fcb6e434e917d40dbc269bd88594ddb4.jpg"
-    confidence: medium
-    games:
-      - her-trees
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1CEXMBoEGH"
+      - url: "https://www.bilibili.com/video/BV1FfAwzaEqD"
+        kind: replay
+        status: alive
+      - url: "https://www.bilibili.com/video/BV1oAAAzZE9Q"
         kind: replay
         status: alive
     contributed_by: data-agent
 
-    duration_min: 215
+    duration_min: 119
   - id: 2026-03-27-live-02
     type: live
     date: "2026-03-27"
@@ -330,37 +242,14 @@
     confidence: medium
     games:
       - her-trees
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    tags:
+      - 弹幕版
+    note: "人工复核：服部平次弹幕版为主源；直播回放巴拉蹦吧纯净版为备用源；原“睡了吗”与“她的树：迷梦”为同一场直播，合并为一条。"
     sources:
       - url: "https://www.bilibili.com/video/BV1RVXTB3EJq"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 139
-  - id: 2026-03-27-live-03
-    type: live
-    date: "2026-03-27"
-    title: "睡了吗"
-    platform: douyin
-    cover: "https://i2.hdslb.com/bfs/archive/c4734f902bdb0f78d3f6a3f39828b19275ab70c4.jpg"
-    confidence: high
-    games:
-      - are-you-sleeping
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    segments:
-      - at: "00:00:00"
-        label: "21-01 聊天"
-      - at: "01:00:01"
-        label: "22-00 睡了吗"
-      - at: "02:00:03"
-        label: "23-00 睡了吗"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1yiXTBxE5Q"
-        kind: replay
-        status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV18NXMBqEmr"
         kind: replay
         status: alive
@@ -393,6 +282,7 @@
       - url: "https://www.bilibili.com/video/BV1mCXLBXEwF"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV19VXjBAEnc"
         kind: replay
         status: alive
@@ -433,6 +323,7 @@
       - url: "https://www.bilibili.com/video/BV1B1XDBuEX3"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1bNXQBxEE1"
         kind: replay
         status: alive

@@ -31,6 +31,7 @@
       - url: "https://www.bilibili.com/video/BV1hDCuBHERK"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1kbCCBeEuw"
         kind: replay
         status: alive
@@ -50,6 +51,7 @@
       - url: "https://www.bilibili.com/video/BV1q8ypBTE2h"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 107
@@ -75,6 +77,7 @@
       - url: "https://www.bilibili.com/video/BV15CyPB1E6F"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1jQycBkEVs"
         kind: replay
         status: alive
@@ -91,7 +94,7 @@
     games:
       - jiangshan-beiwang
     tags: [弹幕版]
-    note: "同一场直播由 bobi华（3:26:01）、服部平次（弹幕版 3:30:20）、直播回放巴拉蹦吧（弹幕/纯净双版 3:30:55）分别搬运，不懒bot 的投稿为剪辑分 P + 末尾整段完整录像（完整录像 3:30:01），总时长吻合，已合并为一天一条。"
+    note: "同一场直播由 bobi华（3:26:01）、服部平次（弹幕版 3:30:20）、直播回放巴拉蹦吧（弹幕/纯净双版 3:30:55）分别搬运，不懒bot 的投稿为剪辑分 P + 末尾整段完整录像（完整录像 3:30:01），总时长吻合，已合并为一天一条。 不懒bot源“剪辑分P+完整录像页”为同场两版，只按一版计时。"
     segments:
       - at: "00:00:00"
         label: "18:07 开播聊天"
@@ -115,8 +118,9 @@
       - url: "https://www.bilibili.com/video/BV1eQSEBPEuT"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1yhSnBxEkx"
         kind: replay
         status: alive
     contributed_by: data-agent
-    duration_min: 421
+    duration_min: 211

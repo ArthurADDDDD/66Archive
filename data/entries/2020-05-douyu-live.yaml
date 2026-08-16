@@ -1,3 +1,33 @@
+  - id: 2020-05-01-live-01
+    type: live
+    date: '2020-05-01'
+    title: 捣蛋大作战 /Rascal Fight
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.1 游戏：捣蛋大作战 /Rascal Fight。斗鱼回放标题：捣蛋大作战，多人休闲
+    sources:
+      - url: https://v.douyu.com/show/JmbBMkDydROW40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:16
+    duration_min: 199
+  - id: 2020-05-03-live-01
+    type: live
+    date: '2020-05-03'
+    title: 聊天
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.3 聊天。斗鱼回放标题：流浪的人儿想念谁
+    sources:
+      - url: https://v.douyu.com/show/n8GzMXlX3dDM6qyP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:46
+    duration_min: 344
   - id: 2020-05-04-live-01
     type: live
     date: "2020-05-04"
@@ -21,12 +51,49 @@
       - at: "04:35:09"
         label: "恶果之地"
     sources:
+      - url: https://www.bilibili.com/video/BV1ZC4y1W7h6
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15347812"
         kind: replay
         parts: 6
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-05-05-live-01
+    type: live
+    date: '2020-05-05'
+    title: 转变/ Change
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.5 游戏：转变/ Change。斗鱼回放标题：流浪的人儿想念谁
+    sources:
+      - url: https://v.douyu.com/show/Aox276k3QGxMVz8Z
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 13:54
+    duration_min: 411
+  - id: 2020-05-06-live-01
+    type: live
+    date: '2020-05-06'
+    title: 冰与火之舞/ A Dance of FireandIce
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277；补入 B 站「秘密录像屋」BV1fK4y1b7dd
+    sources:
+      - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
+        kind: replay
+        status: alive
+      - url: https://www.bilibili.com/video/BV1fK4y1b7dd
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:09
+    duration_min: 332
   - id: 2020-05-07-live-01
     type: live
     date: "2020-05-07"
@@ -46,6 +113,10 @@
       - at: "02:34:38"
         label: "周四休息，佩奇上"
     sources:
+      - url: https://www.bilibili.com/video/BV16t4y1y7He
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15404822"
         kind: replay
         parts: 4
@@ -71,6 +142,10 @@
       - at: "03:21:34"
         label: "十年"
     sources:
+      - url: https://www.bilibili.com/video/BV17z411q7w8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15435107"
         kind: replay
         parts: 4
@@ -152,6 +227,10 @@
       - at: "03:56:35"
         label: "冰与火之舞"
     sources:
+      - url: https://www.bilibili.com/video/BV1mz4y1R7pL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15470460"
         kind: replay
         parts: 5
@@ -179,6 +258,10 @@
       - at: "03:26:11"
         label: "冰与火之舞"
     sources:
+      - url: https://www.bilibili.com/video/BV1TK4y1t7qx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15496084"
         kind: replay
         parts: 5
@@ -204,12 +287,31 @@
       - at: "03:13:50"
         label: "活着真好，美梦成真"
     sources:
+      - url: https://www.bilibili.com/video/BV19K4y147LN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15495211"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-05-13-live-01
+    type: live
+    date: '2020-05-13'
+    title: 冰与火之舞/ A Dance of FireandIce战歌竞技场
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.13 游戏：冰与火之舞/ A Dance of FireandIce战歌竞技场。斗鱼回放标题：冰与火之舞还是。。
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJELZx07Nxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:15
+    duration_min: 256
   - id: 2020-05-15-live-01
     type: live
     date: "2020-05-15"
@@ -235,6 +337,10 @@
         label: "Hydroneer"
         game: hydroneer
     sources:
+      - url: https://www.bilibili.com/video/BV1jZ4y1p77Z
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15555303"
         kind: replay
         parts: 5
@@ -265,6 +371,10 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.bilibili.com/video/BV1ZA411i7ZL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2020-05-17-live-01
@@ -290,6 +400,10 @@
       - at: "03:39:06"
         label: "久违的心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1RV411k7ro
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15617457"
         kind: replay
         parts: 5
@@ -319,12 +433,31 @@
       - at: "04:00:38"
         label: "云城朋克"
     sources:
+      - url: https://www.bilibili.com/video/BV19a4y1i7Tm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15658758"
         kind: replay
         parts: 6
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-05-20-live-01
+    type: live
+    date: '2020-05-20'
+    title: 云城朋克/ Cloudpunk
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.20 游戏：云城朋克/ Cloudpunk。斗鱼回放标题：未来世界的司机cloudpunk
+    sources:
+      - url: https://v.douyu.com/show/NbwE7ZGmkQPMn5Zz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:02
+    duration_min: 328
   - id: 2020-05-21-live-01
     type: live
     date: "2020-05-21"
@@ -344,6 +477,10 @@
       - at: "02:36:50"
         label: "女流网课时间，敲黑板，认真听"
     sources:
+      - url: https://www.bilibili.com/video/BV1mz411v7Mj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15681795"
         kind: replay
         parts: 4
@@ -372,12 +509,31 @@
         label: "Tsioque"
         game: tsioque
     sources:
+      - url: https://www.bilibili.com/video/BV1XQ4y1A7cf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15703417"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-05-23-live-01
+    type: live
+    date: '2020-05-23'
+    title: 步行者/ The Pedestrian
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.23 游戏：步行者/ The Pedestrian。斗鱼回放标题：The Pedestrian动动脑解密啦
+    sources:
+      - url: https://v.douyu.com/show/NbwE7ZGqE10Mn5Zz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:02
+    duration_min: 323
   - id: 2020-05-24-live-01
     type: live
     date: "2020-05-24"
@@ -399,6 +555,10 @@
       - at: "03:04:31"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1gz4y197tK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15758557"
         kind: replay
         parts: 4
@@ -428,6 +588,10 @@
       - at: "02:49:23"
         label: "节奏快打"
     sources:
+      - url: https://www.bilibili.com/video/BV1xC4y1p72h
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15833367"
         kind: replay
         parts: 4
@@ -457,6 +621,10 @@
         label: "P4--2020.5.30-Poly Bridge"
         game: poly-bridge
     sources:
+      - url: https://www.bilibili.com/video/BV1X54y1D7NF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15895043"
         kind: replay
         parts: 4
@@ -486,6 +654,10 @@
       - at: "03:36:44"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1CT4y1E7Ls
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15918867"
         kind: replay
         parts: 5
@@ -495,111 +667,3 @@
         status: alive
     contributed_by: data-agent
     note: 补入 B 站「秘密录像屋」BV1gT4y1g7DC
-  - id: 2020-05-01-live-01
-    type: live
-    date: '2020-05-01'
-    title: 捣蛋大作战 /Rascal Fight
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.1 游戏：捣蛋大作战 /Rascal Fight。斗鱼回放标题：捣蛋大作战，多人休闲
-    sources:
-      - url: https://v.douyu.com/show/JmbBMkDydROW40XA
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:16
-    duration_min: 199
-  - id: 2020-05-03-live-01
-    type: live
-    date: '2020-05-03'
-    title: 聊天
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.3 聊天。斗鱼回放标题：流浪的人儿想念谁
-    sources:
-      - url: https://v.douyu.com/show/n8GzMXlX3dDM6qyP
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:46
-    duration_min: 344
-  - id: 2020-05-05-live-01
-    type: live
-    date: '2020-05-05'
-    title: 转变/ Change
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.5 游戏：转变/ Change。斗鱼回放标题：流浪的人儿想念谁
-    sources:
-      - url: https://v.douyu.com/show/Aox276k3QGxMVz8Z
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 13:54
-    duration_min: 411
-  - id: 2020-05-06-live-01
-    type: live
-    date: '2020-05-06'
-    title: 冰与火之舞/ A Dance of FireandIce
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277；补入 B 站「秘密录像屋」BV1fK4y1b7dd
-    sources:
-      - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
-        kind: replay
-        status: alive
-      - url: https://www.bilibili.com/video/BV1fK4y1b7dd
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:09
-    duration_min: 332
-  - id: 2020-05-13-live-01
-    type: live
-    date: '2020-05-13'
-    title: 冰与火之舞/ A Dance of FireandIce战歌竞技场
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.13 游戏：冰与火之舞/ A Dance of FireandIce战歌竞技场。斗鱼回放标题：冰与火之舞还是。。
-    sources:
-      - url: https://v.douyu.com/show/a2JEMJELZx07Nxml
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:15
-    duration_min: 256
-  - id: 2020-05-20-live-01
-    type: live
-    date: '2020-05-20'
-    title: 云城朋克/ Cloudpunk
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.20 游戏：云城朋克/ Cloudpunk。斗鱼回放标题：未来世界的司机cloudpunk
-    sources:
-      - url: https://v.douyu.com/show/NbwE7ZGmkQPMn5Zz
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:02
-    duration_min: 328
-  - id: 2020-05-23-live-01
-    type: live
-    date: '2020-05-23'
-    title: 步行者/ The Pedestrian
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.23 游戏：步行者/ The Pedestrian。斗鱼回放标题：The Pedestrian动动脑解密啦
-    sources:
-      - url: https://v.douyu.com/show/NbwE7ZGqE10Mn5Zz
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:02
-    duration_min: 323

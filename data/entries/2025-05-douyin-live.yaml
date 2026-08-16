@@ -23,6 +23,7 @@
       - url: "https://www.bilibili.com/video/BV1G4VnzYESi"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Y4VnzaEaF"
         kind: replay
         status: alive
@@ -32,24 +33,6 @@
     contributed_by: data-agent
 
     duration_min: 129
-  - id: 2025-05-06-live-01
-    type: live
-    date: "2025-05-06"
-    title: "兔子先生的魔术秀"
-    platform: douyin
-    cover: "https://i1.hdslb.com/bfs/archive/2c9f8daa16fc5310489d509eb4a57d3833ace7e0.jpg"
-    confidence: medium
-    games:
-      - rusty-lake
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1XqVmzzEe8"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-
-    duration_min: 160
   - id: 2025-05-06-live-03
     type: live
     date: "2025-05-06"
@@ -59,8 +42,9 @@
     confidence: high
     games:
       - rusty-lake
-    tags: [弹幕版]
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-06-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    tags:
+      - 弹幕版
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-05-06-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 《兔子先生的魔术秀》即绣湖十周年新作，同场不同标题搬运，合并；以 18:02 起完整源 160min 计时。"
     segments:
       - at: "00:00:00"
         label: "女流66_绣湖最新作独立游戏动动脑快坐"
@@ -72,15 +56,19 @@
       - url: "https://www.bilibili.com/video/BV1cEVmzXEPC"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1fHVmzSEYR"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV1kdVpznEkP"
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1XqVmzzEe8"
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
-    duration_min: 155
+    duration_min: 160
   - id: 2025-05-09-live-03
     type: live
     date: "2025-05-09"
@@ -103,6 +91,7 @@
       - url: "https://www.bilibili.com/video/BV1Ja55zZE5Y"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1AN5LzKEef"
         kind: replay
         status: alive
@@ -146,6 +135,7 @@
       - url: https://www.bilibili.com/video/BV1qtEvzdEXV
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1KhEizCEnQ"
         kind: replay
         status: alive
@@ -182,6 +172,7 @@
       - url: "https://www.bilibili.com/video/BV1xiE4zEET4"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1c2E4zrEPL"
         kind: replay
         status: alive
@@ -214,6 +205,7 @@
       - url: "https://www.bilibili.com/video/BV17eJwzqESe"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1VhJNzKEXG"
         kind: replay
         status: alive
@@ -244,6 +236,7 @@
       - url: "https://www.bilibili.com/video/BV18tJHzGEE5"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1W6JHzPEUj"
         kind: replay
         status: alive
@@ -268,6 +261,7 @@
       - url: "https://www.bilibili.com/video/BV1dXjGzpEWw"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1AzjGzAEM3"
         kind: replay
         status: alive
@@ -301,6 +295,7 @@
       - url: "https://www.bilibili.com/video/BV1kyj2zoE3q"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1XAjmzCEc3"
         kind: replay
         status: alive
@@ -339,6 +334,7 @@
       - url: "https://www.bilibili.com/video/BV1Du7WzLEiC"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1RF7WzHEdu"
         kind: replay
         status: alive
@@ -377,6 +373,7 @@
       - url: "https://www.bilibili.com/video/BV1u67PzWE3y"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1KC7PzHEsq"
         kind: replay
         status: alive

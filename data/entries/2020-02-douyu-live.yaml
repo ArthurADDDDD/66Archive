@@ -1,3 +1,18 @@
+  - id: 2020-02-03-live-01
+    type: live
+    date: "2020-02-03"
+    title: "宅就是一种能力"
+    platform: douyu
+    confidence: high
+    duration_min: 226
+    games: []
+    note: "B站「女流录像小屋」《宅就是一种能力》，全长录播。"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1J7411p7gQ"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2020-02-04-live-01
     type: live
     date: "2020-02-04"
@@ -27,6 +42,10 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV1o7411H7Fy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12711755"
         kind: replay
         parts: 6
@@ -52,12 +71,31 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV197411h7TE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12723574"
         kind: replay
         parts: 3
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-02-06-live-01
+    type: live
+    date: '2020-02-06'
+    title: 符文工房4
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.6 游戏：符文工房4。斗鱼回放标题：午后的美好种地时光
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYkdx5Lv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:15
+    duration_min: 374
   - id: 2020-02-07-live-01
     type: live
     date: "2020-02-07"
@@ -86,6 +124,10 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV15741187RL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12749038"
         kind: replay
         parts: 6
@@ -118,12 +160,61 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV1S7411t7Qc
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12792434"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-02-09-live-01
+    type: live
+    date: '2020-02-09'
+    title: 符文工房4
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.9 游戏：符文工房4。斗鱼回放标题：周日也要种地哦
+    sources:
+      - url: https://v.douyu.com/show/8pa9v5jlLNa7VrqA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:09
+    duration_min: 370
+  - id: 2020-02-10-live-01
+    type: live
+    date: '2020-02-10'
+    title: 符文工房4
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.10 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
+    sources:
+      - url: https://v.douyu.com/show/2V0JMVJd98bMRY5k
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:19
+    duration_min: 360
+  - id: 2020-02-11-live-01
+    type: live
+    date: '2020-02-11'
+    title: 符文工房4
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.11 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
+    sources:
+      - url: https://v.douyu.com/show/DO84vrJEYZNvedGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:15
+    duration_min: 410
   - id: 2020-02-12-live-01
     type: live
     date: "2020-02-12"
@@ -172,12 +263,31 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV117411g7hw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12914023"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-02-14-live-01
+    type: live
+    date: '2020-02-14'
+    title: 雀魂
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.14 游戏：雀魂。斗鱼回放标题：大能这一天忙忙活活
+    sources:
+      - url: https://v.douyu.com/show/DO84vrJEeowvedGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 12:25
+    duration_min: 342
   - id: 2020-02-15-live-01
     type: live
     date: "2020-02-15"
@@ -206,311 +316,6 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-02-19-live-01
-    type: live
-    date: "2020-02-19"
-    title: "符文工坊4模拟经营"
-    platform: douyu
-    confidence: high
-    duration_min: 332
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1euoo961nl6uaarfl6kd17950.jpeg?imageslim"
-    games: [rune-factory-4]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:25:44"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "01:10:03"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "02:15:32"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "03:21:06"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "04:26:35"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-    sources:
-      - url: "https://www.acfun.cn/v/ac12997193"
-        kind: replay
-        parts: 6
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-20-live-01
-    type: live
-    date: "2020-02-20"
-    title: "符文工坊4模拟经营"
-    platform: douyu
-    confidence: high
-    duration_min: 347
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1hio14f1hrufg51c55sih7hj0.jpeg?imageslim"
-    games: [rune-factory-4]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:59:49"
-        label: "游戏前聊10块钱的"
-      - at: "01:59:44"
-        label: "游戏前聊10块钱的"
-      - at: "02:59:36"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "03:55:17"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "04:50:54"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-    sources:
-      - url: "https://www.acfun.cn/v/ac13017787"
-        kind: replay
-        parts: 6
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-21-live-01
-    type: live
-    date: "2020-02-21"
-    title: "符文工坊4模拟经营"
-    platform: douyu
-    confidence: high
-    duration_min: 314
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1mnpknk14jb119j101bf5rilb0.jpeg?imageslim"
-    games: [rune-factory-4]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:53:32"
-        label: "游戏前聊10块钱的"
-      - at: "01:47:07"
-        label: "游戏前聊10块钱的"
-      - at: "02:40:40"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "03:31:47"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "04:22:52"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-    sources:
-      - url: "https://www.acfun.cn/v/ac13046953"
-        kind: replay
-        parts: 6
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-23-live-01
-    type: live
-    date: "2020-02-23"
-    title: "符文工坊4模拟经营"
-    platform: douyu
-    confidence: high
-    duration_min: 337
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1p930u11qk3lie9mqmm7o1r0.jpeg?imageslim"
-    games: [rune-factory-4]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:58:31"
-        label: "游戏前聊10块钱的"
-      - at: "01:57:03"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "02:52:06"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "03:47:10"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-      - at: "04:42:14"
-        label: "符文工坊4模拟经营"
-        game: rune-factory-4
-    sources:
-      - url: "https://www.acfun.cn/v/ac13135544"
-        kind: replay
-        parts: 6
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-24-live-01
-    type: live
-    date: "2020-02-24"
-    title: "疫情防控知识问答"
-    platform: douyu
-    confidence: high
-    duration_min: 104
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1roapmm3m11pnlmdj1tqet7a0.jpeg?imageslim"
-    games: []
-    segments:
-      - at: "00:00:00"
-        label: "疫情防控知识问答"
-      - at: "00:52:04"
-        label: "疫情防控知识问答"
-    sources:
-      - url: "https://www.acfun.cn/v/ac13171321"
-        kind: replay
-        parts: 2
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-25-live-01
-    type: live
-    date: "2020-02-25"
-    title: "聊一百块钱的"
-    platform: douyu
-    confidence: high
-    duration_min: 210
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1udi89v1p4vqmh1v3919g4ti0.jpeg?imageslim"
-    games: []
-    segments:
-      - at: "00:00:00"
-        label: "Part1"
-      - at: "01:00:01"
-        label: "Part2"
-      - at: "02:00:06"
-        label: "Part3"
-      - at: "02:44:57"
-        label: "Part4"
-    sources:
-      - url: "https://www.acfun.cn/v/ac13207490"
-        kind: replay
-        parts: 4
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-28-live-01
-    type: live
-    date: "2020-02-28"
-    title: "雀魂"
-    platform: douyu
-    confidence: high
-    duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/o_1e2640u8f12jibdapgl6huia20.jpeg?imageslim"
-    games: [majsoul]
-    segments:
-      - at: "00:00:00"
-        label: "游戏前聊10块钱的"
-      - at: "00:26:51"
-        label: "雀魂"
-      - at: "01:31:59"
-        label: "雀魂"
-      - at: "02:37:04"
-        label: "雀魂"
-      - at: "03:42:08"
-        label: "雀魂"
-    sources:
-      - url: "https://www.acfun.cn/v/ac13298989"
-        kind: replay
-        parts: 5
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2020-02-29-live-01
-    type: live
-    date: "2020-02-29"
-    title: "雀魂"
-    platform: douyu
-    confidence: high
-    duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/o_1e28mdfj317ev1efo4141d9p050.jpeg?imageslim"
-    games: [majsoul]
-    segments:
-      - at: "00:00:00"
-        label: "雀魂"
-      - at: "00:57:23"
-        label: "雀魂"
-      - at: "01:54:52"
-        label: "雀魂"
-      - at: "02:52:23"
-        label: "雀魂"
-      - at: "03:49:52"
-        label: "雀魂"
-    sources:
-      - url: "https://www.acfun.cn/v/ac13328079"
-        kind: replay
-        parts: 5
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-02-06-live-01
-    type: live
-    date: '2020-02-06'
-    title: 符文工房4
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.6 游戏：符文工房4。斗鱼回放标题：午后的美好种地时光
-    sources:
-      - url: https://v.douyu.com/show/0Q8mMYkdx5Lv49Ad
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:15
-    duration_min: 374
-  - id: 2020-02-09-live-01
-    type: live
-    date: '2020-02-09'
-    title: 符文工房4
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.9 游戏：符文工房4。斗鱼回放标题：周日也要种地哦
-    sources:
-      - url: https://v.douyu.com/show/8pa9v5jlLNa7VrqA
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:09
-    duration_min: 370
-  - id: 2020-02-10-live-01
-    type: live
-    date: '2020-02-10'
-    title: 符文工房4
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.10 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
-    sources:
-      - url: https://v.douyu.com/show/2V0JMVJd98bMRY5k
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:19
-    duration_min: 360
-  - id: 2020-02-11-live-01
-    type: live
-    date: '2020-02-11'
-    title: 符文工房4
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.11 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
-    sources:
-      - url: https://v.douyu.com/show/DO84vrJEYZNvedGr
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:15
-    duration_min: 410
-  - id: 2020-02-14-live-01
-    type: live
-    date: '2020-02-14'
-    title: 雀魂
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.14 游戏：雀魂。斗鱼回放标题：大能这一天忙忙活活
-    sources:
-      - url: https://v.douyu.com/show/DO84vrJEeowvedGr
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 12:25
-    duration_min: 342
   - id: 2020-02-16-live-01
     type: live
     date: '2020-02-16'
@@ -556,6 +361,116 @@
     contributed_by: data-agent
     time: 12:32
     duration_min: 265
+  - id: 2020-02-19-live-01
+    type: live
+    date: "2020-02-19"
+    title: "符文工坊4模拟经营"
+    platform: douyu
+    confidence: high
+    duration_min: 332
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1euoo961nl6uaarfl6kd17950.jpeg?imageslim"
+    games: [rune-factory-4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:25:44"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "01:10:03"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "02:15:32"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "03:21:06"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "04:26:35"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+    sources:
+      - url: https://www.bilibili.com/video/BV197411c7Hf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12997193"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-20-live-01
+    type: live
+    date: "2020-02-20"
+    title: "符文工坊4模拟经营"
+    platform: douyu
+    confidence: high
+    duration_min: 347
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1hio14f1hrufg51c55sih7hj0.jpeg?imageslim"
+    games: [rune-factory-4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:59:49"
+        label: "游戏前聊10块钱的"
+      - at: "01:59:44"
+        label: "游戏前聊10块钱的"
+      - at: "02:59:36"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "03:55:17"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "04:50:54"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+    sources:
+      - url: https://www.bilibili.com/video/BV1K7411w7RL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13017787"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-21-live-01
+    type: live
+    date: "2020-02-21"
+    title: "符文工坊4模拟经营"
+    platform: douyu
+    confidence: high
+    duration_min: 314
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1mnpknk14jb119j101bf5rilb0.jpeg?imageslim"
+    games: [rune-factory-4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:53:32"
+        label: "游戏前聊10块钱的"
+      - at: "01:47:07"
+        label: "游戏前聊10块钱的"
+      - at: "02:40:40"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "03:31:47"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "04:22:52"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+    sources:
+      - url: https://www.bilibili.com/video/BV1Tj411f7qu
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13046953"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-02-22-live-01
     type: live
     date: '2020-02-22'
@@ -572,18 +487,155 @@
     time: 15:14
     duration_min: 274
 
-  - id: 2020-02-03-live-01
+  - id: 2020-02-23-live-01
     type: live
-    date: "2020-02-03"
-    title: "宅就是一种能力"
+    date: "2020-02-23"
+    title: "符文工坊4模拟经营"
     platform: douyu
     confidence: high
-    duration_min: 226
-    games: []
-    note: "B站「女流录像小屋」《宅就是一种能力》，全长录播。"
+    duration_min: 337
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1p930u11qk3lie9mqmm7o1r0.jpeg?imageslim"
+    games: [rune-factory-4]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:58:31"
+        label: "游戏前聊10块钱的"
+      - at: "01:57:03"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "02:52:06"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "03:47:10"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
+      - at: "04:42:14"
+        label: "符文工坊4模拟经营"
+        game: rune-factory-4
     sources:
-      - url: "https://www.bilibili.com/video/BV1J7411p7gQ"
+      - url: https://www.bilibili.com/video/BV1i7411M7ZD
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13135544"
+        kind: replay
+        parts: 6
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-24-live-01
+    type: live
+    date: "2020-02-24"
+    title: "疫情防控知识问答"
+    platform: douyu
+    confidence: high
+    duration_min: 104
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1roapmm3m11pnlmdj1tqet7a0.jpeg?imageslim"
+    games: []
+    segments:
+      - at: "00:00:00"
+        label: "疫情防控知识问答"
+      - at: "00:52:04"
+        label: "疫情防控知识问答"
+    sources:
+      - url: https://www.bilibili.com/video/BV1m7411u7rz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13171321"
+        kind: replay
+        parts: 2
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-25-live-01
+    type: live
+    date: "2020-02-25"
+    title: "聊一百块钱的"
+    platform: douyu
+    confidence: high
+    duration_min: 210
+    cover: "https://tx-free-imgs.acfun.cn/o_1e1udi89v1p4vqmh1v3919g4ti0.jpeg?imageslim"
+    games: []
+    segments:
+      - at: "00:00:00"
+        label: "Part1"
+      - at: "01:00:01"
+        label: "Part2"
+      - at: "02:00:06"
+        label: "Part3"
+      - at: "02:44:57"
+        label: "Part4"
+    sources:
+      - url: https://www.bilibili.com/video/BV187411M7dg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13207490"
+        kind: replay
+        parts: 4
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-28-live-01
+    type: live
+    date: "2020-02-28"
+    title: "雀魂"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/o_1e2640u8f12jibdapgl6huia20.jpeg?imageslim"
+    games: [majsoul]
+    segments:
+      - at: "00:00:00"
+        label: "游戏前聊10块钱的"
+      - at: "00:26:51"
+        label: "雀魂"
+      - at: "01:31:59"
+        label: "雀魂"
+      - at: "02:37:04"
+        label: "雀魂"
+      - at: "03:42:08"
+        label: "雀魂"
+    sources:
+      - url: https://www.bilibili.com/video/BV16E411H7UR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13298989"
+        kind: replay
+        parts: 5
+        status: alive
+    contributed_by: data-agent
+
+  - id: 2020-02-29-live-01
+    type: live
+    date: "2020-02-29"
+    title: "雀魂"
+    platform: douyu
+    confidence: high
+    duration_min: 287
+    cover: "https://tx-free-imgs.acfun.cn/o_1e28mdfj317ev1efo4141d9p050.jpeg?imageslim"
+    games: [majsoul]
+    segments:
+      - at: "00:00:00"
+        label: "雀魂"
+      - at: "00:57:23"
+        label: "雀魂"
+      - at: "01:54:52"
+        label: "雀魂"
+      - at: "02:52:23"
+        label: "雀魂"
+      - at: "03:49:52"
+        label: "雀魂"
+    sources:
+      - url: https://www.bilibili.com/video/BV1JE411n7Lj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac13328079"
+        kind: replay
+        parts: 5
+        status: alive
     contributed_by: data-agent

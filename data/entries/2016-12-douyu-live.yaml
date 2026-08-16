@@ -8,6 +8,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_03/1480766379.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1hs411Y7Vz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3302357"
         kind: replay
         parts: 1
@@ -33,6 +37,10 @@
       - at: "02:13:27"
         label: "P3-12.4-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Bs411Y7by
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3305136"
         kind: replay
         parts: 3
@@ -61,6 +69,10 @@
       - at: "03:56:08"
         label: "P5-12.5-最终幻想15"
     sources:
+      - url: https://www.bilibili.com/video/BV1ks411Y7vi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3307418"
         kind: replay
         parts: 5
@@ -77,6 +89,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_07/1481111488.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1Us411Y7wv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3312290"
         kind: replay
         parts: 1
@@ -105,6 +121,10 @@
       - at: "04:02:40"
         label: "P5-最后的守护者"
     sources:
+      - url: https://www.bilibili.com/video/BV1Us411Y7uP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3312391"
         kind: replay
         parts: 5
@@ -132,6 +152,10 @@
       - at: "03:35:18"
         label: "P5-最后的守护者"
     sources:
+      - url: https://www.bilibili.com/video/BV1As411e7ZC
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3315291"
         kind: replay
         parts: 5
@@ -157,6 +181,10 @@
       - at: "02:38:49"
         label: "P4-12.9-最后的守护者"
     sources:
+      - url: https://www.bilibili.com/video/BV1fs411Y7q8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3317908"
         kind: replay
         parts: 4
@@ -179,6 +207,10 @@
       - at: "01:01:05"
         label: "P2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Vs411e7iN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3320202"
         kind: replay
         parts: 2
@@ -203,6 +235,10 @@
       - at: "01:56:18"
         label: "P3-12.10-煮糊了(overcooked)"
     sources:
+      - url: https://www.bilibili.com/video/BV1Vs411e7vf
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3320199"
         kind: replay
         parts: 3
@@ -226,25 +262,13 @@
       - at: "01:39:30"
         label: "P2-12.11-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Gs411e7bh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3324519"
         kind: replay
         parts: 2
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2016-12-12-live-01
-    type: live
-    date: "2016-12-12"
-    title: "手机直播"
-    platform: douyu
-    confidence: high
-    duration_min: 89
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481553716.JPG?imageslim"
-    games: []
-    sources:
-      - url: "https://www.acfun.cn/v/ac3324711"
-        kind: replay
-        parts: 1
         status: alive
     contributed_by: data-agent
 
@@ -268,12 +292,37 @@
       - at: "03:35:20"
         label: "P4-12.12-零号事件(event[0])"
     sources:
+      - url: https://www.bilibili.com/video/BV1Gs411e7Md
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3324703"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2016-12-12-video-01
+    type: video
+    date: "2016-12-12"
+    title: "手机直播"
+    platform: douyu
+    confidence: high
+    duration_min: 89
+    cover: "https://tx-free-imgs.acfun.cn/content/2016_11_12/1481553716.JPG?imageslim"
+    games: []
+    sources:
+      - url: https://www.bilibili.com/video/BV1Gs411e7LY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac3324711"
+        kind: replay
+        parts: 1
+        status: alive
+    contributed_by: data-agent
+
+    note: 按人工规则：单P短录像，先按切片处理，不计入直播场次。
   - id: 2016-12-14-live-01
     type: live
     date: "2016-12-14"
@@ -289,6 +338,10 @@
       - at: "01:06:23"
         label: "P2-12.14-出门溜达溜达憋坏啦"
     sources:
+      - url: https://www.bilibili.com/video/BV1ns411e7VL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3329447"
         kind: replay
         parts: 2
@@ -306,6 +359,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_16/1481880815.jpg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1qs411e7Q8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3334394"
         kind: replay
         parts: 1
@@ -328,6 +385,10 @@
       - at: "01:30:31"
         label: "P2-12.17-健身"
     sources:
+      - url: https://www.bilibili.com/video/BV11s411e7yk
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3337282"
         kind: replay
         parts: 2
@@ -349,6 +410,10 @@
       - at: "00:51:23"
         label: "P2-12.17-战斗方块剧场"
     sources:
+      - url: https://www.bilibili.com/video/BV11s411e7yi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3337283"
         kind: replay
         parts: 2
@@ -374,6 +439,10 @@
       - at: "02:13:02"
         label: "P3-12.19-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1js411a7CZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3343783"
         kind: replay
         parts: 3
@@ -402,6 +471,10 @@
       - at: "03:44:33"
         label: "P5-聊天"
     sources:
+      - url: https://www.bilibili.com/video/BV13s411a71N
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3347021"
         kind: replay
         parts: 5
@@ -427,6 +500,10 @@
       - at: "03:07:33"
         label: "P4-12.23-猫头鹰男孩(Owlboy)"
     sources:
+      - url: https://www.bilibili.com/video/BV1ns411a73R
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3352127"
         kind: replay
         parts: 4
@@ -453,6 +530,10 @@
         label: "P3-11.24-MC建筑大赛"
         game: minecraft
     sources:
+      - url: https://www.bilibili.com/video/BV1qs411a7Mt
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3354442"
         kind: replay
         parts: 3
@@ -470,6 +551,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_25/1482669733.JPG?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1as411a74T
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3356095"
         kind: replay
         parts: 1
@@ -495,6 +580,10 @@
       - at: "02:10:29"
         label: "P3-12.25-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV11s411a7do
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3358586"
         kind: replay
         parts: 3
@@ -519,31 +608,11 @@
       - at: "02:16:03"
         label: "P3-12.27-猫头鹰男孩(Owlboy"
     sources:
-      - url: "https://www.acfun.cn/v/ac3361334"
+      - url: https://www.bilibili.com/video/BV1rs411a7NU
         kind: replay
-        parts: 3
         status: alive
-    contributed_by: data-agent
-
-  - id: 2016-12-28-live-01
-    type: live
-    date: "2016-12-28"
-    title: "健身"
-    platform: douyu
-    confidence: high
-    duration_min: 126
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482944709.JPG?imageslim"
-    games: []
-    tags: [健身]
-    segments:
-      - at: "00:00:00"
-        label: "P4-12.28-健身"
-      - at: "00:52:42"
-        label: "P5-12.28-健身"
-      - at: "01:56:59"
-        label: "P6-12.28-健身"
-    sources:
-      - url: "https://www.acfun.cn/v/ac3364670"
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac3361334"
         kind: replay
         parts: 3
         status: alive
@@ -552,13 +621,15 @@
   - id: 2016-12-28-live-02
     type: live
     date: "2016-12-28"
-    title: "猫头鹰男孩(Owlboy)"
+    title: "猫头鹰男孩 / 健身"
     platform: douyu
     confidence: high
-    tags: []
-    duration_min: 107
+    tags:
+      - 健身
+    duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/content/2016_11_28/1482943599.JPG?imageslim"
-    games: [owlboy]
+    games:
+      - owlboy
     segments:
       - at: "00:00:00"
         label: "P1-12.28-聊天-猫头鹰男孩(Owlboy)"
@@ -566,13 +637,28 @@
         label: "P2-12.28-猫头鹰男孩(Owlboy)"
       - at: "01:47:23"
         label: "P3-12.28-猫头鹰男孩(Owlboy)"
+      - at: "01:47:24"
+        label: "P4-12.28-健身"
+      - at: "02:39:42"
+        label: "P5-12.28-健身"
+      - at: "03:43:59"
+        label: "P6-12.28-健身"
     sources:
       - url: "https://www.acfun.cn/v/ac3364645"
         kind: replay
         parts: 3
         status: alive
+      - url: "https://www.acfun.cn/v/ac3364670"
+        kind: replay
+        parts: 3
+        status: alive
+      - url: https://www.bilibili.com/video/BV1ds411a7bi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
+    note: A站将同一场按 P1-P6 拆为两个投稿，合并为一场。
   - id: 2016-12-30-live-01
     type: live
     date: "2016-12-30"
@@ -593,6 +679,10 @@
       - at: "01:11:57"
         label: "P3-12.30-猫头鹰男孩(Owlboy)"
     sources:
+      - url: https://www.bilibili.com/video/BV1As411Y7ZF
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3369385"
         kind: replay
         parts: 4
@@ -615,6 +705,10 @@
       - at: "00:50:23"
         label: "P2-12.31-聊天"
     sources:
+      - url: https://www.bilibili.com/video/BV1Fs411Y7Ge
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3371728"
         kind: replay
         parts: 2

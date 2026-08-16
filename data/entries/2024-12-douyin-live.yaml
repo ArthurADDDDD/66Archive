@@ -11,6 +11,7 @@
       - url: "https://www.bilibili.com/video/BV1y5zmYjEpr"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 183
@@ -28,6 +29,7 @@
       - url: "https://www.bilibili.com/video/BV199iUYoEVp"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 95
@@ -45,6 +47,7 @@
       - url: "https://www.bilibili.com/video/BV136iBYoESP"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 180
@@ -62,6 +65,7 @@
       - url: "https://www.bilibili.com/video/BV14YqVYEE2x"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 185
@@ -79,6 +83,7 @@
       - url: "https://www.bilibili.com/video/BV1zHqHYZExY"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 133
@@ -96,6 +101,7 @@
       - url: "https://www.bilibili.com/video/BV1J5qKYEEBF"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 134
@@ -114,6 +120,29 @@
       - url: "https://www.bilibili.com/video/BV1ErqrY2EDG"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 1
+            title: 2024-12-10 16:37
+            duration_sec: 3603
+          - page: 2
+            title: 2024-12-10 17:37
+            duration_sec: 3602
+          - page: 3
+            title: 2024-12-10 18:37
+            duration_sec: 3601
+          - page: 4
+            title: 2024-12-10 19:37
+            duration_sec: 3601
+          - page: 5
+            title: 2024-12-10 20:37
+            duration_sec: 3601
+          - page: 6
+            title: 2024-12-10 21:37
+            duration_sec: 2029
     contributed_by: data-agent
 
     duration_min: 345
@@ -121,29 +150,98 @@
   - id: 2024-12-11-live-02
     type: live
     date: "2024-12-11"
-    title: "黑神话悟空大更新！进来下饭"
+    title: "黑神话悟空大更新！进来下饭（午间场）"
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/e937e111332aa00a3e3219dd71ca7348f180c549.jpg"
     confidence: high
     games:
       - black-myth-wukong
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 同日 20:09 另有晚间场，见 2024-12-11-live-03；本条只计午间场。"
     segments:
-      - at: "00:00:00"
-        label: "女流66-2024年12月11日20点02分"
-      - at: "01:00:02"
-        label: "女流66-2024年12月11日21点02分"
+      - at: 00:00:00
+        label: 女流66-2024年12月11日12点09分
+      - at: 01:00:02
+        label: 女流66-2024年12月11日13点09分
+      - at: 02:00:02
+        label: 女流66-2024年12月11日14点09分
+      - at: 03:00:02
+        label: 女流66-2024年12月11日15点09分
     sources:
-      - url: "https://www.bilibili.com/video/BV1qJqQYrEgX"
-        kind: replay
-        status: alive
       - url: "https://www.bilibili.com/video/BV1WkqmYgEZu"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 7
+            title: 2024-12-11 12:13
+            duration_sec: 3604
+          - page: 8
+            title: 2024-12-11 13:13
+            duration_sec: 3602
+          - page: 9
+            title: 2024-12-11 14:13
+            duration_sec: 3602
+          - page: 10
+            title: 2024-12-11 15:13
+            duration_sec: 2762
     contributed_by: data-agent
 
     duration_min: 230
 
+  - id: 2024-12-11-live-03
+    type: live
+    date: '2024-12-11'
+    time: 20:09
+    title: 黑神话悟空大更新！进来下饭（晚间场）
+    platform: douyin
+    confidence: high
+    games:
+      - black-myth-wukong
+    tags:
+      - 弹幕版
+    cover: https://i1.hdslb.com/bfs/archive/e937e111332aa00a3e3219dd71ca7348f180c549.jpg
+    duration_min: 240
+    sources:
+      - url: https://www.bilibili.com/video/BV1qJqQYrEgX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 11
+            title: 2024-12-11 20:09
+            duration_sec: 3604
+          - page: 12
+            title: 2024-12-11 21:09
+            duration_sec: 181
+          - page: 13
+            title: 2024-12-11 21:13
+            duration_sec: 3604
+          - page: 14
+            title: 2024-12-11 22:13
+            duration_sec: 3603
+          - page: 15
+            title: 2024-12-11 23:13
+            duration_sec: 2803
+          - page: 16
+            title: 2024-12-12 00:00
+            duration_sec: 633
+    segments:
+      - at: 00:00:00
+        label: 女流66-2024年12月11日20点09分
+      - at: 01:00:04
+        label: 女流66-2024年12月11日21点09分
+      - at: 02:00:04
+        label: 女流66-2024年12月11日22点13分
+      - at: 03:00:03
+        label: 女流66-2024年12月11日23点13分
+    contributed_by: data-agent
+    note: 由 KassyTan 多日合集 12-11 晚间分P（20:09-00:11，240min）与浮尘呃前段源合并；原合集曾整体误记为 2024-12-16 一条，已拆回真实直播日。
   - id: 2024-12-12-live-02
     type: live
     date: "2024-12-12"
@@ -153,14 +251,28 @@
     confidence: medium
     games:
       - black-myth-wukong
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 KassyTan 多日合集 12-12 分P比原主源多约 4 分钟，按完整度较高源计时。"
     sources:
       - url: "https://www.bilibili.com/video/BV1WGqYYeEr1"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 17
+            title: 2024-12-12 18:11
+            duration_sec: 3603
+          - page: 18
+            title: 2024-12-12 19:11
+            duration_sec: 3602
+          - page: 19
+            title: 2024-12-12 20:11
+            duration_sec: 947
     contributed_by: data-agent
 
-    duration_min: 143
+    duration_min: 146
 
   - id: 2024-12-13-live-01
     type: live
@@ -170,11 +282,12 @@
     cover: "https://i1.hdslb.com/bfs/archive/f31f6be81c661729d7e3ea6b934038a56f8c0c3d.jpg"
     confidence: medium
     games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2024-12-13-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2024-12-13-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 KassyTan 多日合集在 12-13 仅有 41s 碎片，未作为场次或时长计入。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Kwq6YsEeN"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1oRqiYaEbr"
         kind: replay
         status: alive
@@ -196,6 +309,17 @@
       - url: "https://www.bilibili.com/video/BV1hdBLYNEaW"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 21
+            title: 2024-12-14 18:04
+            duration_sec: 3604
+          - page: 22
+            title: 2024-12-14 19:04
+            duration_sec: 1661
     contributed_by: data-agent
 
     duration_min: 88
@@ -214,23 +338,29 @@
       - url: "https://www.bilibili.com/video/BV1M4qoYGERR"
         kind: replay
         status: alive
+        account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV12hBKY8ELa
+        kind: replay
+        status: alive
+        part_details:
+          - page: 23
+            title: 2024-12-15 18:08
+            duration_sec: 3602
+          - page: 24
+            title: 2024-12-15 19:08
+            duration_sec: 3603
+          - page: 25
+            title: 2024-12-15 20:08
+            duration_sec: 3602
+          - page: 26
+            title: 2024-12-15 21:08
+            duration_sec: 3601
+          - page: 27
+            title: 2024-12-15 22:08
+            duration_sec: 1034
     contributed_by: data-agent
 
     duration_min: 271
-
-  - id: 2024-12-16-live-01
-    type: live
-    date: "2024-12-16"
-    title: "直播回放"
-    platform: douyin
-    confidence: medium
-    duration_min: 1282
-    note: "B站「KassyTan」全长录播；标题未标注具体内容。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV12hBKY8ELa"
-        kind: replay
-        status: alive
-    contributed_by: data-agent
 
   - id: 2024-12-21-live-02
     type: live
@@ -245,6 +375,7 @@
       - url: "https://www.bilibili.com/video/BV1eWktYJE9e"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1KkktYTEMB
         kind: replay
         status: alive
@@ -265,6 +396,7 @@
       - url: "https://www.bilibili.com/video/BV1iaCKYtEPz"
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
     duration_min: 174
@@ -296,6 +428,7 @@
       - url: "https://www.bilibili.com/video/BV1VfCEYtEc6"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1xmCsYFEif"
         kind: replay
         status: alive
@@ -330,6 +463,7 @@
       - url: "https://www.bilibili.com/video/BV1cmC8YvETv"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1NBC8YrE6H"
         kind: replay
         status: alive
@@ -361,6 +495,7 @@
       - url: "https://www.bilibili.com/video/BV1qv6WYBEJq"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1ZSC8YAE8P"
         kind: replay
         status: alive
@@ -390,6 +525,7 @@
       - url: "https://www.bilibili.com/video/BV1e368YEEJu"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1nr68YZE2t"
         kind: replay
         status: alive
@@ -408,7 +544,7 @@
     cover: "https://i1.hdslb.com/bfs/archive/013efe81702de538ecbc4d0de268a79b48509957.jpg"
     confidence: high
     games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2024-12-30-live-03 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2024-12-30-live-03 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 B站浮尘呃源投稿标题写 12-31，但分P文件名与内容为 12-30 19:05 场（跨零点至 12-31），按开播日并入本条，不另计 12-31。"
     segments:
       - at: "00:00:00"
         label: "女流66-2024年12月30日19点05分"
@@ -426,28 +562,16 @@
       - url: "https://www.bilibili.com/video/BV1sK6LYxEhY"
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://www.bilibili.com/video/BV1Py6VYQEfV"
         kind: replay
         status: alive
       - url: "https://www.bilibili.com/video/BV15x6LYkEEW"
         kind: replay
         status: alive
-    contributed_by: data-agent
-
-    duration_min: 335
-
-  - id: 2024-12-31-live-01
-    type: live
-    date: "2024-12-31"
-    title: "今天去开封！好多人呐"
-    platform: douyin
-    confidence: high
-    duration_min: 335
-    games: [where-winds-meet]
-    note: "B站「浮尘呃」全长录播。"
-    sources:
-      - url: "https://www.bilibili.com/video/BV1Wu6LYWEhz"
+      - url: https://www.bilibili.com/video/BV1Wu6LYWEhz
         kind: replay
         status: alive
-        account: bili-fan-fuchen
     contributed_by: data-agent
+
+    duration_min: 335

@@ -21,6 +21,10 @@
       - at: "03:22:10"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Dy4y1r7Zj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19288524"
         kind: replay
         parts: 5
@@ -83,6 +87,10 @@
         label: "皮克敏3"
         game: pikmin-3
     sources:
+      - url: https://www.bilibili.com/video/BV1tr4y1F75w
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19318278"
         kind: replay
         parts: 5
@@ -113,6 +121,10 @@
       - at: "03:19:07"
         label: "游戏完佩奇一下"
     sources:
+      - url: https://www.bilibili.com/video/BV16r4y1w7Yu
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19341793"
         kind: replay
         parts: 5
@@ -142,6 +154,10 @@
         label: "只狼"
         game: sekiro
     sources:
+      - url: https://www.bilibili.com/video/BV1Sy4y1B77H
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19427375"
         kind: replay
         parts: 4
@@ -171,6 +187,10 @@
       - at: "04:00:02"
         label: "腾讯科学WE大会"
     sources:
+      - url: https://www.bilibili.com/video/BV1Lf4y1q7NY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19456271"
         kind: replay
         parts: 6
@@ -200,6 +220,10 @@
       - at: "03:12:44"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1wT4y1c7AV
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19507225"
         kind: replay
         parts: 5
@@ -226,6 +250,10 @@
         label: "Teardown"
         game: teardown
     sources:
+      - url: https://www.bilibili.com/video/BV12p4y1k7rm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19510643"
         kind: replay
         parts: 3
@@ -257,6 +285,10 @@
         label: "Teardown"
         game: teardown
     sources:
+      - url: https://www.bilibili.com/video/BV1op4y1k7rN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19541827"
         kind: replay
         parts: 5
@@ -282,6 +314,10 @@
       - at: "03:40:43"
         label: "Part4"
     sources:
+      - url: https://www.bilibili.com/video/BV1AK4y1E7Nr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19571771"
         kind: replay
         parts: 4
@@ -307,6 +343,10 @@
       - at: "02:48:07"
         label: "天穗之咲稻姬"
     sources:
+      - url: https://www.bilibili.com/video/BV1ua4y1x7T5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19601862"
         kind: replay
         parts: 4
@@ -338,6 +378,10 @@
       - at: "04:17:08"
         label: "天穗之咲稻姬"
     sources:
+      - url: https://www.bilibili.com/video/BV1hZ4y137DC
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19650558"
         kind: replay
         parts: 7
@@ -369,6 +413,10 @@
         label: "明日之后"
         game: lifeafter
     sources:
+      - url: https://www.bilibili.com/video/BV13V411a78z
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19695177"
         kind: replay
         parts: 6
@@ -396,6 +444,10 @@
       - at: "02:39:03"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1ip4y167tP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19751235"
         kind: replay
         parts: 4
@@ -423,12 +475,31 @@
       - at: "03:23:50"
         label: "天穗之咲稻姬"
     sources:
+      - url: https://www.bilibili.com/video/BV1xy4y167GB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19753727"
         kind: replay
         parts: 5
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-11-17-live-01
+    type: live
+    date: '2020-11-17'
+    title: 天穗之咲稻姬
+    platform: douyu
+    confidence: high
+    duration_min: 285
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1My4y167Rv（女流-2020.11.17-天穗之咲稻姬）确认补入。
+    sources:
+      - url: https://www.bilibili.com/video/BV1My4y167Rv
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2020-11-18-live-01
     type: live
     date: "2020-11-18"
@@ -448,12 +519,31 @@
       - at: "03:11:55"
         label: "天穗之咲稻姬"
     sources:
+      - url: https://www.bilibili.com/video/BV1r5411V75Q
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19812004"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-11-19-live-01
+    type: live
+    date: '2020-11-19'
+    title: 天穗之咲稻姬/ Sakuna Of Rice and Ruin
+    platform: douyu
+    confidence: high
+    games: []
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：11.19 游戏：天穗之咲稻姬/ Sakuna Of Rice and Ruin。斗鱼回放标题：种地种地66种地
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QG6XlgWJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    time: 15:04
+    duration_min: 345
   - id: 2020-11-20-live-01
     type: live
     date: "2020-11-20"
@@ -477,6 +567,10 @@
         label: "恶魔之魂"
         game: demons-souls
     sources:
+      - url: https://www.bilibili.com/video/BV1Bz4y1y7XJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19894789"
         kind: replay
         parts: 4
@@ -505,6 +599,10 @@
         label: "恶魔之魂"
         game: demons-souls
     sources:
+      - url: https://www.bilibili.com/video/BV1Np4y1r7n1
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac19935556"
         kind: replay
         parts: 4
@@ -534,6 +632,10 @@
       - at: "03:39:23"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1qa4y1p7hb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20002665"
         kind: replay
         parts: 5
@@ -563,6 +665,10 @@
         label: "恶魔之魂"
         game: demons-souls
     sources:
+      - url: https://www.bilibili.com/video/BV16i4y1V7eR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20004769"
         kind: replay
         parts: 4
@@ -591,12 +697,31 @@
         label: "恶魔之魂"
         game: demons-souls
     sources:
+      - url: https://www.bilibili.com/video/BV1Mv411b76N
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20056799"
         kind: replay
         parts: 4
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-11-25-live-01
+    type: live
+    date: '2020-11-25'
+    title: 恶魔之魂
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    games: []
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1Mv411b76N；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    sources:
+      - url: https://www.bilibili.com/video/BV1Mv411b76N
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
   - id: 2020-11-27-live-01
     type: live
     date: "2020-11-27"
@@ -618,6 +743,10 @@
       - at: "02:12:32"
         label: "暗影国度-助唱艾泽拉斯"
     sources:
+      - url: https://www.bilibili.com/video/BV1fA411x7jx
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20120091"
         kind: replay
         parts: 5
@@ -650,6 +779,10 @@
         label: "恶魔之魂"
         game: demons-souls
     sources:
+      - url: https://www.bilibili.com/video/BV1Xt4y1a7rr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20147922"
         kind: replay
         parts: 5
@@ -679,6 +812,10 @@
       - at: "03:02:29"
         label: "心灵砒霜弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1u54y167mA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20203920"
         kind: replay
         parts: 5
@@ -695,51 +832,12 @@
     cover: "https://tx-free-imgs.acfun.cn/o_1eof1077f1vup1rrt199j4evote0.jpeg?imageslim"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV1hp4y1r7RQ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac20235350"
         kind: replay
         parts: 1
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-11-19-live-01
-    type: live
-    date: '2020-11-19'
-    title: 天穗之咲稻姬/ Sakuna Of Rice and Ruin
-    platform: douyu
-    confidence: high
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：11.19 游戏：天穗之咲稻姬/ Sakuna Of Rice and Ruin。斗鱼回放标题：种地种地66种地
-    sources:
-      - url: https://v.douyu.com/show/1LDR7QG6XlgWJzx8
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    time: 15:04
-    duration_min: 345
-  - id: 2020-11-25-live-01
-    type: live
-    date: '2020-11-25'
-    title: 恶魔之魂
-    platform: douyu
-    confidence: high
-    duration_min: 235
-    games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1Mv411b76N；标题与日期经 BiliPlus / Bilibili API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1Mv411b76N
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-  - id: 2020-11-17-live-01
-    type: live
-    date: '2020-11-17'
-    title: 天穗之咲稻姬
-    platform: douyu
-    confidence: high
-    duration_min: 285
-    games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1My4y167Rv（女流-2020.11.17-天穗之咲稻姬）确认补入。
-    sources:
-      - url: https://www.bilibili.com/video/BV1My4y167Rv
-        kind: replay
         status: alive
     contributed_by: data-agent

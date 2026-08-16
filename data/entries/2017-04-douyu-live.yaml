@@ -20,6 +20,10 @@
       - at: "03:20:05"
         label: "P5-4.1-剪剪世界"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ex411Q78X
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3593776"
         kind: replay
         parts: 5
@@ -42,6 +46,10 @@
       - at: "00:51:23"
         label: "P3-4.2-12switch"
     sources:
+      - url: https://www.bilibili.com/video/BV1jx411Q7c2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3595208"
         kind: replay
         parts: 2
@@ -58,6 +66,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491140793.jpg?imageslim"
     games: [puyo-puyo-tetris]
     sources:
+      - url: https://www.bilibili.com/video/BV1jx411Q7wL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3595184"
         kind: replay
         parts: 1
@@ -79,6 +91,10 @@
       - at: "01:07:05"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Lx411Q7DX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3595183"
         kind: replay
         parts: 2
@@ -107,6 +123,10 @@
       - at: "04:44:35"
         label: "P5-4.3-塞尔达传说"
     sources:
+      - url: https://www.bilibili.com/video/BV14x411Q7YG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3597706"
         kind: replay
         parts: 5
@@ -116,57 +136,41 @@
   - id: 2017-04-04-live-01
     type: live
     date: "2017-04-04"
-    title: "12switch"
+    title: "12switch / 超级炸弹人R / 塞尔达传说"
     platform: douyu
     confidence: high
-    duration_min: 40
+    duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394664.JPG?imageslim"
-    games: [1-2-switch]
+    games:
+      - 1-2-switch
+      - super-bomberman-r
+      - zelda-botw
     sources:
       - url: "https://www.acfun.cn/v/ac3601502"
         kind: replay
         parts: 1
         status: alive
-    contributed_by: data-agent
-
-  - id: 2017-04-04-live-02
-    type: live
-    date: "2017-04-04"
-    title: "塞尔达传说"
-    platform: douyu
-    confidence: high
-    tags: []
-    duration_min: 143
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394788.jpg?imageslim"
-    games: [zelda-botw]
-    segments:
-      - at: "00:00:00"
-        label: "P3-4.4-塞尔达传说"
-      - at: "01:11:41"
-        label: "P4-4.4-塞尔达传说"
-    sources:
-      - url: "https://www.acfun.cn/v/ac3601510"
-        kind: replay
-        parts: 2
-        status: alive
-    contributed_by: data-agent
-
-  - id: 2017-04-04-live-03
-    type: live
-    date: "2017-04-04"
-    title: "超级炸弹人R"
-    platform: douyu
-    confidence: high
-    duration_min: 106
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394731.JPG?imageslim"
-    games: [super-bomberman-r]
-    sources:
       - url: "https://www.acfun.cn/v/ac3601511"
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac3601510"
+        kind: replay
+        parts: 2
+        status: alive
+      - url: https://www.bilibili.com/video/BV1Ux411Q7Cd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
 
+    tags:
+    segments:
+      - at: "02:26:00"
+        label: "P3-4.4-塞尔达传说"
+      - at: "03:37:41"
+        label: "P4-4.4-塞尔达传说"
+    note: A站将同一场按 P1-P4 拆为三个投稿，合并为一场。
   - id: 2017-04-05-live-01
     type: live
     date: "2017-04-05"
@@ -187,6 +191,10 @@
       - at: "03:25:57"
         label: "P4-4.5-塞尔达传说"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ux411Q7NS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3601688"
         kind: replay
         parts: 4
@@ -203,6 +211,10 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_04_09/1491744393.JPG?imageslim"
     games: [maplestory-2]
     sources:
+      - url: https://www.bilibili.com/video/BV1Bx411S7PP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3611999"
         kind: replay
         parts: 1
@@ -226,6 +238,10 @@
       - at: "01:32:24"
         label: "P2-4.6-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ax411X7ux
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3607602"
         kind: replay
         parts: 2
@@ -252,6 +268,10 @@
       - at: "02:55:19"
         label: "P4-4.10-塞尔达传说荒野之息"
     sources:
+      - url: https://www.bilibili.com/video/BV1Sx411S7jB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3617769"
         kind: replay
         parts: 4
@@ -278,6 +298,10 @@
       - at: "03:01:29"
         label: "P4-4.11-塞尔达传说荒野之息"
     sources:
+      - url: https://www.bilibili.com/video/BV12x411S7PZ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3620435"
         kind: replay
         parts: 4
@@ -304,6 +328,10 @@
       - at: "02:46:09"
         label: "P4-4.12-血源诅咒"
     sources:
+      - url: https://www.bilibili.com/video/BV1Qx411S725
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3623220"
         kind: replay
         parts: 4
@@ -336,6 +364,10 @@
         label: "P5-4.14-盛世天下之女帝篇"
         game: shengshi-tianxia
     sources:
+      - url: https://www.bilibili.com/video/BV1Px411D7jR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3627063"
         kind: replay
         parts: 5
@@ -369,6 +401,10 @@
       - at: "05:02:50"
         label: "P5-4.15-狼人杀"
     sources:
+      - url: https://www.bilibili.com/video/BV1Hx411D7Ee
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3629867"
         kind: replay
         parts: 6
@@ -392,6 +428,10 @@
       - at: "01:22:38"
         label: "P2-4.16-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1vx411D7SP
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3638083"
         kind: replay
         parts: 2
@@ -416,6 +456,10 @@
         label: "P5-4.16-盛世天下"
         game: shengshi-tianxia
     sources:
+      - url: https://www.bilibili.com/video/BV1px411D7ZW
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3632501"
         kind: replay
         parts: 2
@@ -445,6 +489,10 @@
         label: "P4-4.17-星露谷物语"
         game: stardew-valley
     sources:
+      - url: https://www.bilibili.com/video/BV1sx411D7xg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3633932"
         kind: replay
         parts: 4
@@ -471,6 +519,10 @@
       - at: "02:29:49"
         label: "P4-4.18-神奇男孩3-龙之陷阱"
     sources:
+      - url: https://www.bilibili.com/video/BV1vx411D7pr
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3638192"
         kind: replay
         parts: 4
@@ -497,6 +549,10 @@
       - at: "03:30:16"
         label: "P4-4.19-神奇男孩3-龙之陷阱"
     sources:
+      - url: https://www.bilibili.com/video/BV1gx411U7WW
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3640849"
         kind: replay
         parts: 4
@@ -519,6 +575,10 @@
       - at: "01:51:17"
         label: "Part2"
     sources:
+      - url: https://www.bilibili.com/video/BV1jx411U75b
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3643728"
         kind: replay
         parts: 2
@@ -537,6 +597,10 @@
     games: []
     tags: [心灵砒霜, 弹幕版]
     sources:
+      - url: https://www.bilibili.com/video/BV1sx411U7DR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3648161"
         kind: replay
         parts: 1
@@ -559,6 +623,10 @@
       - at: "00:47:21"
         label: "Part1"
     sources:
+      - url: https://www.bilibili.com/video/BV1ax411U7w4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3650804"
         kind: replay
         parts: 2
