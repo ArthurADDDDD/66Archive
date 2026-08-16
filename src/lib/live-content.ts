@@ -10,8 +10,8 @@
  * 2. **失败就回退基线**。请求失败、超时、返回结构不对，一律当作「没有覆盖」，
  *    页面继续用 `narrative.ts` / `site-copy.ts` 里的内置基线渲染。后台短暂不可用
  *    绝不能让整站空白。
- * 3. **只认稳定 ID**。覆盖按 id 匹配；库里没有的 id 用基线，基线里没有的 id 忽略
- *    ——日期、链接、封面这些只有基线里有，凭空多出来的节点渲染不出完整卡片。
+ * 3. **只认稳定 ID**。覆盖按 id 匹配；库里没有的 id 用基线，基线里没有的 `custom-*`
+ *    按纯文案节点渲染，其余未知 id 忽略——日期、链接、封面这些只有基线里有。
  *
  * 站点是静态导出的，所以这些请求发生在浏览器里、首屏渲染之后。服务端渲染出来的
  * 永远是基线，覆盖是随后打上去的——这也是「后台不可用时页面照常」的实现方式。
@@ -22,7 +22,7 @@
  * 本地联调时前台在 3000、后台在 3100，用这个环境变量指过去；
  * 后台对配置好的来源回 CORS 头，不需要额外的开发代理。
  */
-import { fillEmphasis, type ResolvedAct, type ResolvedBeat } from './narrative'
+import { fillEmphasis, type ActId, type ResolvedAct, type ResolvedBeat } from './narrative'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
@@ -74,6 +74,7 @@ export type LiveNarrative = {
   homeActs: LiveAct[]
   highlights: LiveHighlight[]
   storyActs: LiveAct[]
+  deletedIds: string[]
 }
 
 export type LiveCopyBlock = { id: string; eyebrow: string; title: string; lede: string }
@@ -187,8 +188,9 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
         )
         .filter((item): item is LiveHighlight => item !== null)
     : []
-  const narrative = { homeActs: acts(source.homeActs), highlights, storyActs: acts(source.storyActs) }
-  const empty = narrative.homeActs.length === 0 && narrative.highlights.length === 0 && narrative.storyActs.length === 0
+  const deletedIds = strList(source.deletedIds)
+  const narrative = { homeActs: acts(source.homeActs), highlights, storyActs: acts(source.storyActs), deletedIds }
+  const empty = narrative.homeActs.length === 0 && narrative.highlights.length === 0 && narrative.storyActs.length === 0 && narrative.deletedIds.length === 0
   return empty ? null : narrative
 }
 
@@ -301,6 +303,77 @@ export async function fetchLiveContent(): Promise<LiveContent> {
 // 把后台当前值打到构建期解析好的基线对象上。纯函数，不碰 React，
 // 服务端与客户端都能调用。
 
+
+const isCustomId = (id: string): boolean => id.startsWith('custom-')
+
+/** 构造一个后台新增的纯文案节点（无档案链接、无封面、无构建期蒙太奇素材）。 */
+function resolveCustomBeat(live: LiveBeat, actId: ActId, home: boolean): ResolvedBeat {
+  if (live.size === 'montage' && process.env.NODE_ENV !== 'production') {
+    console.warn(`[live-content] custom beat ${live.id} 使用 montage，没有构建期素材，已按 type 降级渲染`)
+  }
+  return {
+    id: live.id,
+    act: actId,
+    date: live.date,
+    // 后台自定义 montage 没有构建期素材，统一按 type 字排大卡渲染。
+    size: live.size === 'montage' ? 'type' : live.size,
+    kicker: home ? (live.important ? '重要' : undefined) : live.kicker || undefined,
+    title: live.title,
+    body: live.body || undefined,
+    href: null,
+    external: false,
+    cover: null,
+    chips: live.chips.length > 0 ? live.chips : undefined,
+    gameWorld: live.footnote.text
+      ? { text: live.footnote.text, rel: live.footnote.rel || undefined, date: live.footnote.date || undefined }
+      : undefined,
+    tail: live.tail || undefined,
+  }
+}
+
+/** 构造一个后台新增的首页幕（无基线档案元数据，count 为 0）。 */
+function resolveCustomAct(live: LiveAct, home: boolean, deletedIds: string[] = []): ResolvedAct {
+  const actId = live.id as ActId
+  const deleted = new Set(deletedIds)
+  return {
+    act: {
+      id: actId,
+      kicker: live.kicker,
+      title: live.title,
+      body: live.body,
+      label: live.label,
+      years: live.years,
+      color: live.color,
+      closer: live.closer.line ? { line: live.closer.line, tail: live.closer.tail || undefined } : undefined,
+      from: '',
+      to: '',
+      beats: [],
+    },
+    count: 0,
+    beats: live.beats
+      .filter((beat) => !deleted.has(beat.id) && beat.visible !== false)
+      .map((beat) => resolveCustomBeat(beat, actId, home)),
+  }
+}
+
+/** 构造一个后台新增的高光（无档案链接、无封面，固定 small 卡）。 */
+function resolveCustomHighlight(live: LiveHighlight, emphasisVars: Record<string, string>): ResolvedBeat {
+  return {
+    id: live.id,
+    act: '' as ActId,
+    date: live.date,
+    size: 'small',
+    kicker: live.kicker || undefined,
+    title: live.title,
+    body: live.body || undefined,
+    href: null,
+    external: false,
+    cover: null,
+    emphasis: live.emphasis ? fillEmphasis(live.emphasis, emphasisVars) : undefined,
+    expanded: live.expanded,
+  }
+}
+
 /**
  * 一幕的实时覆盖。
  *
@@ -313,25 +386,39 @@ export async function fetchLiveContent(): Promise<LiveContent> {
  * 不是节点自己的 kicker，这是公开仓 resolveActs 的既定行为，覆盖时必须跟着走，
  * 否则后台勾了「重要」首页却不显示。
  */
-export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false): ResolvedAct {
-  if (!live || !live.visible) return live && !live.visible ? { ...act, beats: [] } : act
+export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false, deletedIds: string[] = []): ResolvedAct {
+  const deleted = new Set(deletedIds ?? [])
+
+  if (deleted.has(act.act.id)) return { ...act, beats: [] }
+
+  if (!live || !live.visible) {
+    if (live && !live.visible) return { ...act, beats: [] }
+    if (deleted.size === 0) return act
+    return { ...act, beats: act.beats.filter((beat) => !deleted.has(beat.id) && !deleted.has(beat.act)) }
+  }
 
   const liveBeats = new Map(live.beats.map((beat) => [beat.id, beat]))
   // 顺序以后台为准；后台没有的节点（公开仓新加、库里还没同步）接在后面，不丢卡。
   const ordered: ResolvedBeat[] = []
   for (const liveBeat of live.beats) {
+    if (deleted.has(liveBeat.id)) continue
     const baseline = act.beats.find((beat) => beat.id === liveBeat.id)
-    if (baseline) ordered.push(baseline)
+    if (baseline) {
+      ordered.push(baseline)
+    } else if (isCustomId(liveBeat.id)) {
+      ordered.push(resolveCustomBeat(liveBeat, act.act.id, home))
+    }
   }
   for (const beat of act.beats) {
-    if (!liveBeats.has(beat.id)) ordered.push(beat)
+    if (!liveBeats.has(beat.id) && !deleted.has(beat.id) && !deleted.has(beat.act)) ordered.push(beat)
   }
 
   const beats = ordered
-    .filter((beat) => liveBeats.get(beat.id)?.visible !== false)
+    .filter((beat) => !deleted.has(beat.id) && !deleted.has(beat.act) && liveBeats.get(beat.id)?.visible !== false)
     .map((beat): ResolvedBeat => {
       const override = liveBeats.get(beat.id)
       if (!override) return beat
+      if (isCustomId(beat.id)) return resolveCustomBeat(override, act.act.id, home)
       return {
         ...beat,
         date: override.date || beat.date,
@@ -364,15 +451,37 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
   }
 }
 
-/** 一整组幕的覆盖，按 id 匹配；后台没有的幕保持基线。 */
-export function applyLiveActs(acts: ResolvedAct[], live: LiveAct[] | undefined, home = false): ResolvedAct[] {
-  if (!live || live.length === 0) return acts
-  return acts
-    .filter((act) => live.find((candidate) => candidate.id === act.act.id)?.visible !== false)
-    .map((act) => applyLiveAct(act, live.find((candidate) => candidate.id === act.act.id) ?? null, home))
+/**
+ * 一整组幕的覆盖，按 id 匹配；后台没有的幕保持基线。
+ * 会追加后台新增的 `custom-*` 幕，并统一过滤删除墓碑。
+ */
+export function applyLiveActs(
+  acts: ResolvedAct[],
+  live: LiveAct[] | undefined,
+  home = false,
+  deletedIds: string[] = [],
+): ResolvedAct[] {
+  const deleted = new Set(deletedIds ?? [])
+  const liveActs = live ?? []
+  const baselineIds = new Set<string>(acts.map((act) => act.act.id))
+
+  const baselineActs = acts
+    .filter((act) => !deleted.has(act.act.id) && liveActs.find((candidate) => candidate.id === act.act.id)?.visible !== false)
+    .map((act) => applyLiveAct(act, liveActs.find((candidate) => candidate.id === act.act.id) ?? null, home, deletedIds))
+
+  const customActs = liveActs
+    .filter(
+      (act) =>
+        isCustomId(act.id) &&
+        !baselineIds.has(act.id) &&
+        !deleted.has(act.id) &&
+        act.visible !== false,
+    )
+    .map((act) => resolveCustomAct(act, home, deletedIds))
+
+  return [...baselineActs, ...customActs]
 }
 
-/** 高光条的覆盖：顺序、显示、kicker/标题/描述。链接与封面保留基线。 */
 /**
  * 高光条的覆盖。
  *
@@ -384,22 +493,33 @@ export function applyLiveHighlights(
   beats: ResolvedBeat[],
   live: LiveHighlight[] | undefined,
   emphasisVars: Record<string, string> = {},
+  deletedIds: string[] = [],
 ): ResolvedBeat[] {
-  if (!live || live.length === 0) return beats
-  const overrides = new Map(live.map((highlight) => [highlight.id, highlight]))
+  const deleted = new Set(deletedIds ?? [])
+  const liveHighlights = live ?? []
+  if (liveHighlights.length === 0 && deleted.size === 0) return beats
+
+  const overrides = new Map(liveHighlights.map((highlight) => [highlight.id, highlight]))
   const ordered: ResolvedBeat[] = []
-  for (const highlight of live) {
+  for (const highlight of liveHighlights) {
+    if (deleted.has(highlight.id)) continue
     const baseline = beats.find((beat) => beat.id === highlight.id)
-    if (baseline) ordered.push(baseline)
+    if (baseline) {
+      ordered.push(baseline)
+    } else if (isCustomId(highlight.id)) {
+      ordered.push(resolveCustomHighlight(highlight, emphasisVars))
+    }
   }
   for (const beat of beats) {
-    if (!overrides.has(beat.id)) ordered.push(beat)
+    if (!overrides.has(beat.id) && !deleted.has(beat.id)) ordered.push(beat)
   }
+
   return ordered
-    .filter((beat) => overrides.get(beat.id)?.visible !== false)
+    .filter((beat) => !deleted.has(beat.id) && overrides.get(beat.id)?.visible !== false)
     .map((beat) => {
       const override = overrides.get(beat.id)
       if (!override) return beat
+      if (isCustomId(beat.id)) return resolveCustomHighlight(override, emphasisVars)
       return {
         ...beat,
         kicker: override.kicker || undefined,
@@ -426,13 +546,25 @@ export function applyLiveHighlights(
 export function applyLiveStoryYears<T extends { hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
   years: T[],
   liveActs: LiveAct[] | undefined,
+  deletedIds: string[] = [],
 ): T[] {
-  if (!liveActs || liveActs.length === 0) return years
+  const deleted = new Set(deletedIds ?? [])
+  const liveActList = liveActs ?? []
+  if (liveActList.length === 0 && deleted.size === 0) return years
+
   const overrides = new Map<string, LiveBeat>()
   const order = new Map<string, number>()
   let position = 0
-  for (const act of liveActs) {
+  for (const act of liveActList) {
+    if (deleted.has(act.id)) continue
     for (const beat of act.beats) {
+      if (deleted.has(beat.id)) continue
+      if (isCustomId(beat.id)) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn(`[live-content] 故事模式不支持 custom beat 归年，已忽略 ${beat.id}`)
+        }
+        continue
+      }
       overrides.set(beat.id, beat)
       order.set(beat.id, position)
       position += 1
@@ -450,7 +582,8 @@ export function applyLiveStoryYears<T extends { hero: ResolvedBeat | null; secon
       body: override.body || undefined,
     }
   }
-  const visible = (beat: ResolvedBeat) => overrides.get(beat.id)?.visible !== false
+  const visible = (beat: ResolvedBeat) =>
+    !deleted.has(beat.id) && !deleted.has(beat.act) && overrides.get(beat.id)?.visible !== false
 
   return years.map((year) => {
     const kept = [...(year.hero ? [year.hero] : []), ...year.secondary].filter(visible)

@@ -4,7 +4,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { HomeHero } from '@/components/HomeHero'
 import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/components/HomeActRail'
 import { TimelineProgress } from '@/components/TimelineProgress'
-import { ActSection } from '@/components/ActSection'
+import { HomeActSections } from '@/components/HomeActSections'
 import { HomeActStage } from '@/components/HomeActStage'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { HomeStats } from '@/components/HomeStats'
@@ -111,11 +111,7 @@ export default function HomePage() {
       {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
       <div id="home-acts" className="scroll-mt-0">
         <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
-        <div className="relative xl:hidden">
-          <ActSection act={actI} showCount={false} sectionId="mobile-act-i" beatAnchorPrefix="mobile-act-i-" />
-          <ActSection act={actII} showCount={false} sectionId="mobile-act-ii" beatAnchorPrefix="mobile-act-ii-" />
-          <ActSection act={actIII} showCount={false} sectionId="mobile-act-iii" beatAnchorPrefix="mobile-act-iii-" now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
-        </div>
+        <HomeActSections acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
       </div>
 
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}

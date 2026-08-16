@@ -35,23 +35,59 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
   // 右侧刻度上的幕名、年份、颜色和节点标题都跟着后台走；拉不到就用构建期的值。
   const { narrative } = useLiveContent()
   const copy = useSiteCopy()
-  const acts = baselineActs.map((act) => {
-    const live = narrative?.homeActs.find((candidate) => candidate.id === act.id)
-    if (!live) return act
-    const visibleBeats = act.beats
-      .filter((beat) => live.beats.find((candidate) => candidate.id === beat.id)?.visible !== false)
-      .map((beat) => {
-        const override = live.beats.find((candidate) => candidate.id === beat.id)
-        return override ? { ...beat, date: override.date || beat.date, title: override.title || beat.title } : beat
+  const acts = useMemo(() => {
+    const deletedIds = narrative?.deletedIds ?? []
+    const deleted = new Set(deletedIds)
+    const baselineActsFiltered = baselineActs
+      .filter((act) => !deleted.has(act.id) && narrative?.homeActs.find((candidate) => candidate.id === act.id)?.visible !== false)
+      .map((act) => {
+        const live = narrative?.homeActs.find((candidate) => candidate.id === act.id)
+        if (!live) return act
+        const visibleBeats = [
+          ...live.beats
+            .filter(
+              (beat) =>
+                !deleted.has(beat.id) &&
+                beat.visible !== false &&
+                (act.beats.some((baseline) => baseline.id === beat.id) || beat.id.startsWith('custom-')),
+            )
+            .map((beat) => {
+              const baseline = act.beats.find((candidate) => candidate.id === beat.id)
+              return baseline
+                ? { ...baseline, date: beat.date || baseline.date, title: beat.title || baseline.title }
+                : { id: beat.id, date: beat.date, title: beat.title }
+            }),
+          ...act.beats
+            .filter((beat) => !live.beats.some((candidate) => candidate.id === beat.id) && !deleted.has(beat.id))
+            .map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
+        ]
+        return {
+          ...act,
+          label: live.kicker || live.label || act.label,
+          years: live.years || act.years,
+          color: live.color || act.color,
+          beats: visibleBeats,
+        }
       })
-    return {
-      ...act,
-      label: live.kicker || live.label || act.label,
-      years: live.years || act.years,
-      color: live.color || act.color,
-      beats: visibleBeats,
-    }
-  }).filter((act) => narrative?.homeActs.find((candidate) => candidate.id === act.id)?.visible !== false)
+    const customActs = (narrative?.homeActs ?? [])
+      .filter(
+        (live) =>
+          live.id.startsWith('custom-') &&
+          !baselineActs.some((act) => act.id === live.id) &&
+          !deleted.has(live.id) &&
+          live.visible !== false,
+      )
+      .map((live) => ({
+        id: live.id,
+        label: live.kicker || live.label || live.title,
+        years: live.years,
+        color: live.color || '#5A5F73',
+        beats: live.beats
+          .filter((beat) => !deleted.has(beat.id) && beat.visible !== false)
+          .map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
+      }))
+    return [...baselineActsFiltered, ...customActs]
+  }, [baselineActs, narrative])
   const sections = baselineSections.map((section) => {
     const block = copy.homeSections.find((candidate) => candidate.id === section.id)
     return block?.title ? { ...section, label: block.title } : section
