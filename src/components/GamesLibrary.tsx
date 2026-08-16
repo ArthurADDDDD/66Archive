@@ -35,7 +35,7 @@ const SORTS: { id: SortKey; label: string; hint: string }[] = [
   { id: 'sessions', label: '播得最多', hint: '按出场场次排' },
   { id: 'first', label: '第一次玩', hint: '按她第一次打开它的日子排，最早的在前' },
   { id: 'oldest', label: '从旧到新', hint: '按她第一次打开它的日子排，最早的在前' },
-  { id: 'newest', label: '从新到旧', hint: '按她第一次打开它的日子排，最近的在前' },
+  { id: 'newest', label: '从新到旧', hint: '按她最近一次玩的日期排，最近的在前' },
 ]
 
 export function GamesLibrary({ games }: { games: LibraryGame[] }) {
@@ -56,7 +56,7 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
     else if (sort === 'first' || sort === 'oldest') {
       sorted.sort((a, b) => (a.firstDate ?? '').localeCompare(b.firstDate ?? ''))
     } else if (sort === 'newest') {
-      sorted.sort((a, b) => (b.firstDate ?? '').localeCompare(a.firstDate ?? ''))
+      sorted.sort((a, b) => (b.lastDate ?? '').localeCompare(a.lastDate ?? ''))
     }
     else sorted.sort((a, b) => (b.lastDate ?? '').localeCompare(a.lastDate ?? ''))
     return sorted
