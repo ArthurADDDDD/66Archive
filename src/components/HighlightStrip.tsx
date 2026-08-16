@@ -11,7 +11,7 @@ import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 /**
  * 高光条：17 个「记得住的时刻」。
  * 数字是背景纹理不是指标（emphasis 大字淡色靠右）；
- * 每一条都有真实条目锚点，点击进详情或游戏页——这是跨链的起点。
+ * 每一条都指向真实播放/原平台 URL——展开后点击图片或标题直接跳转，不再进详情页。
  */
 export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
   const { narrative } = useLiveContent()
@@ -40,11 +40,12 @@ export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: Resol
 }
 
 /**
- * 高光行：点击摘要后向下展开封面、描述与详情入口。
+ * 高光行：折叠时标题作为展开入口；展开后图片和标题直接指向原平台播放 URL，
+ * 不再进入“查看完整详情”页。
  *
  * 折叠状态用本地 state 管，而不是直接把 `open` 绑给 `beat.expanded`——
- * React 的 `<details open>` 是受控属性，live 内容在首屏后异步到达（useLiveContent
- * 更新）会重渲染整条，直接绑定会把用户刚展开/折叠的行打回原样。
+ * live 内容在首屏后异步到达（useLiveContent 更新）会重渲染整条，
+ * 直接绑定会把用户刚展开/折叠的行打回原样。
  *
  * `null` 哨兵表示「用户还没手动动过」：跟随 `beat.expanded`（live 到达前基线
  * 为折叠，到达后按后台「默认展开」配置自动展开）；用户点过一次后以用户为准，
@@ -52,15 +53,15 @@ export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: Resol
  */
 function Row({ beat }: { beat: ResolvedBeat }) {
   const [open, setOpen] = useState<boolean | null>(null)
+  const isOpen = open ?? beat.expanded ?? false
+  const toggle = () => setOpen(!isOpen)
+
   return (
-    <details
-      open={open ?? beat.expanded ?? false}
-      onToggle={(event) => setOpen(event.currentTarget.open)}
-      className="group border-b border-line/60 transition-colors open:bg-surface/20"
-    >
-      <summary className="ui-press grid cursor-pointer list-none grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 marker:hidden sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:py-5 [&::-webkit-details-marker]:hidden">
+    <div className={`group border-b border-line/60 transition-colors ${isOpen ? 'bg-surface/20' : ''}`}>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:py-5">
         <span className="hidden font-mono text-meta text-faint tnum sm:block">{beat.date}</span>
-        <span className="min-w-0">
+
+        <div className="min-w-0">
           <span
             className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
             style={{ color: actColor(beat.act) }}
@@ -68,70 +69,95 @@ function Row({ beat }: { beat: ResolvedBeat }) {
             <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
             {beat.kicker}
           </span>
-          <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
-            {beat.title}
-          </span>
-        </span>
-        <span
-          aria-hidden
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line font-mono text-base text-faint transition-[transform,color,border-color] group-open:rotate-45 group-hover:border-muted group-hover:text-ink"
-        >
-          +
-        </span>
-      </summary>
+          {isOpen && beat.href ? (
+            <Link
+              href={beat.href}
+              target={beat.external ? '_blank' : undefined}
+              rel={beat.external ? 'noreferrer' : undefined}
+              className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white hover:text-live"
+            >
+              {beat.title}
+              {beat.external && <span className="ml-1 font-mono text-meta text-live">↗</span>}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={toggle}
+              aria-expanded={isOpen}
+              aria-controls={`highlight-panel-${beat.id}`}
+              className="ui-press mt-1 block cursor-pointer text-left text-h3 font-medium text-ink transition-colors group-hover:text-white"
+            >
+              {beat.title}
+            </button>
+          )}
+        </div>
 
-      <div className="grid gap-5 pb-6 pl-0 sm:grid-cols-[120px_minmax(0,1fr)] sm:pb-8">
-        <span aria-hidden className="hidden sm:block" />
-        <div className={`grid max-w-4xl gap-5 ${beat.cover ? 'sm:grid-cols-[minmax(220px,360px)_minmax(0,1fr)]' : ''}`}>
-          {beat.cover && (
-            beat.href ? (
-              <Link
-                href={beat.href}
-                target={beat.external ? '_blank' : undefined}
-                rel={beat.external ? 'noreferrer' : undefined}
-                aria-label={`打开${beat.title}`}
-                className="group/highlight-cover block aspect-video overflow-hidden rounded-lg border border-line/70"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
+        <button
+          type="button"
+          onClick={toggle}
+          aria-expanded={isOpen}
+          aria-controls={`highlight-panel-${beat.id}`}
+          aria-label={isOpen ? '收起' : '展开'}
+          className="ui-press flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-line font-mono text-base text-faint transition-[transform,color,border-color] hover:border-muted hover:text-ink"
+        >
+          <span aria-hidden className={`transition-transform ${isOpen ? 'rotate-45' : ''}`}>+</span>
+        </button>
+      </div>
+
+      {isOpen && (
+        <div id={`highlight-panel-${beat.id}`} className="grid gap-5 pb-6 pl-0 sm:grid-cols-[120px_minmax(0,1fr)] sm:pb-8">
+          <span aria-hidden className="hidden sm:block" />
+          <div className={`grid max-w-4xl gap-5 ${beat.cover ? 'sm:grid-cols-[minmax(220px,360px)_minmax(0,1fr)]' : ''}`}>
+            {beat.cover && (
+              beat.href ? (
+                <Link
+                  href={beat.href}
+                  target={beat.external ? '_blank' : undefined}
+                  rel={beat.external ? 'noreferrer' : undefined}
+                  aria-label={`播放：${beat.title}`}
+                  className="group/highlight-cover block aspect-video overflow-hidden rounded-lg border border-line/70"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={beat.cover}
+                    alt=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    className="h-full w-full object-cover object-center transition duration-300 group-hover/highlight-cover:scale-[1.025]"
+                  />
+                </Link>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={beat.cover}
                   alt=""
                   loading="lazy"
                   referrerPolicy="no-referrer"
-                  className="h-full w-full object-cover object-center transition duration-300 group-hover/highlight-cover:scale-[1.025]"
+                  className="aspect-video w-full rounded-lg border border-line/70 object-cover object-center"
                 />
-              </Link>
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={beat.cover}
-                alt=""
-                loading="lazy"
-                referrerPolicy="no-referrer"
-                className="aspect-video w-full rounded-lg border border-line/70 object-cover object-center"
-              />
-            )
-          )}
-          <div className="min-w-0 self-center">
-            {beat.emphasis && (
-              <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
-                {beat.emphasis}
-              </p>
+              )
             )}
-            {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} max-w-2xl text-body text-muted`}>{beat.body}</p>}
-            {beat.href && (
-              <Link
-                href={beat.href}
-                target={beat.external ? '_blank' : undefined}
-                rel={beat.external ? 'noreferrer' : undefined}
-                className="ui-press mt-5 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-meta text-live transition-colors hover:border-muted"
-              >
-                查看完整详情 <span aria-hidden>→</span>
-              </Link>
-            )}
+            <div className="min-w-0 self-center">
+              {beat.emphasis && (
+                <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
+                  {beat.emphasis}
+                </p>
+              )}
+              {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} max-w-2xl text-body text-muted`}>{beat.body}</p>}
+              {beat.href && (
+                <Link
+                  href={beat.href}
+                  target={beat.external ? '_blank' : undefined}
+                  rel={beat.external ? 'noreferrer' : undefined}
+                  className="ui-press mt-5 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-meta text-live transition-colors hover:border-muted"
+                >
+                  打开播放 <span aria-hidden>↗</span>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </details>
+      )}
+    </div>
   )
 }
