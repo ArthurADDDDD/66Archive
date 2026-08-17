@@ -127,7 +127,7 @@
     title: "游戏前聊10块钱的"
     platform: douyu
     confidence: high
-    duration_min: 90
+    duration_min: 336
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_91686a655f43419f835e1bff774949d8.jpeg?imageslim"
     games: []
     tags: [聊天]
@@ -530,7 +530,7 @@
     title: "一方灵田"
     platform: douyu
     confidence: high
-    duration_min: 128
+    duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7619a81ecca465d8e81a0a0d8b67fd4.jpeg?imageslim"
     games: [yifang-lingtian]
     sources:
@@ -583,3 +583,29 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2022-04-03-live-01
+    type: live
+    date: '2022-04-03'
+    title: 【2022-04-03 17点场】女流66：今日目标，深巨星内部
+    platform: douyu
+    confidence: high
+    duration_min: 156
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYGk3aNv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-04-16-live-01
+    type: live
+    date: '2022-04-16'
+    title: 【2022-04-16 15点场】女流66：156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 90
+    sources:
+      - url: https://v.douyu.com/show/2V0JMVxbZD4vRY5k
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

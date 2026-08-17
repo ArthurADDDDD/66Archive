@@ -64,7 +64,7 @@
     title: "Bear and Breakfast"
     platform: douyu
     confidence: high
-    duration_min: 376
+    duration_min: 408
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_8fd7834039504dafa39499f7f3590022.jpeg?imageslim"
     games: [bear-and-breakfast]
     sources:
@@ -502,3 +502,16 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2022-08-27-live-01
+    type: live
+    date: '2022-08-27'
+    title: 【2022-08-27 17点场】女流66：【女流】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 119
+    sources:
+      - url: https://v.douyu.com/show/X3JzMakPGzVvPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

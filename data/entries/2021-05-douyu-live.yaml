@@ -498,7 +498,8 @@
         status: alive
     contributed_by: data-agent
 
-    note: A站页面标题写 2021-05-18，但 P1-P7 内部文件名均为 2021.5.17；结合上传时间，实际直播日期按 2021-05-17 处理。A站将同一场拆为上下两个回放：ac28925305（P1-P4，180.0min）+ ac28925578（P5-P7，165.0min），已合并为一场完整直播，时长相加，只计 1 场。
+    note: A站页面标题写 2021-05-18，但 P1-P7 内部文件名均为 2021.5.17；结合上传时间，实际直播日期按 2021-05-17 处理。A站将同一场拆为上下两个回放：ac28925305（P1-P4，180.0min）+
+      ac28925578（P5-P7，165.0min），已合并为一场完整直播，时长相加，只计 1 场。
 
   - id: 2021-05-18-live-02
     type: live
@@ -537,7 +538,8 @@
         status: alive
     contributed_by: data-agent
 
-    note: A站将同一场直播拆为上下两个回放：ac28949045（P1-P3，159.5min）+ ac28949328（P4-P6，164.3min），已合并为一场完整直播，时长相加，只计 1 场。
+    note: A站将同一场直播拆为上下两个回放：ac28949045（P1-P3，159.5min）+ ac28949328（P4-P6，164.3min），已合并为一场完整直播，时长相加，只计
+      1 场。
 
   - id: 2021-05-19-live-01
     type: live
@@ -780,3 +782,16 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+  - id: 2021-05-05-live-01
+    type: live
+    date: '2021-05-05'
+    title: 【2021-05-05 15点场】女流66：五一派对游戏周假期快乐
+    platform: douyu
+    confidence: high
+    duration_min: 308
+    sources:
+      - url: https://v.douyu.com/show/85BAvqRp2qw7G4Lm
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

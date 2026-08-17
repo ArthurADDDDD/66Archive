@@ -75,7 +75,7 @@
     title: "没有信号，主要靠听"
     platform: douyu
     confidence: high
-    duration_min: 102
+    duration_min: 200
     cover: "https://tx-free-imgs.acfun.cn/FqFJWHKUuxkPIOEJgZhDj4L0x8Xt?imageslim"
     games: []
     segments:
@@ -100,7 +100,7 @@
     title: "失落城堡"
     platform: douyu
     confidence: high
-    duration_min: 211
+    duration_min: 339
     games: []
     tags: []
     note: "来源为「没被处理过」《失落城堡.女流.2019.11.8》，标题含日期，2P 全长约 3:30:33。"
@@ -231,7 +231,7 @@
     title: "We werehere together"
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 281
     cover: "https://tx-free-imgs.acfun.cn/FuUZvyu-So25vcFkV96pf5WXB0ht?imageslim"
     games: [we-were-here-together]
     segments:
@@ -355,3 +355,107 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+  - id: 2019-11-04-live-01
+    type: live
+    date: '2019-11-04'
+    title: 【女流直播】 路易基鬼屋3 P1 2019.11.4
+    platform: douyu
+    confidence: high
+    duration_min: 250
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYk1KDkv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-06-live-01
+    type: live
+    date: '2019-11-06'
+    title: 【女流直播】路易吉鬼屋 P1 2019.11.6
+    platform: douyu
+    confidence: high
+    duration_min: 296
+    sources:
+      - url: https://v.douyu.com/show/NVm0WKnxrxPMJeBP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-11-live-01
+    type: live
+    date: '2019-11-11'
+    title: 【女流直播】 死亡搁浅 P1 2019.11.11
+    platform: douyu
+    confidence: high
+    duration_min: 261
+    sources:
+      - url: https://v.douyu.com/show/6Aw87Oaq6jgWYGkg
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-12-live-01
+    type: live
+    date: '2019-11-12'
+    title: 【女流直播】 死亡搁浅 P1 2019.11.12
+    platform: douyu
+    confidence: high
+    duration_min: 302
+    sources:
+      - url: https://v.douyu.com/show/ZB5Kv95bB0Kva93x
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-15-live-01
+    type: live
+    date: '2019-11-15'
+    title: 【女流直播】 死亡搁浅 P1 2019.11.15
+    platform: douyu
+    confidence: high
+    duration_min: 339
+    sources:
+      - url: https://v.douyu.com/show/ZB5Kv95bJAjva93x
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-19-live-01
+    type: live
+    date: '2019-11-19'
+    title: 【女流直播】 死亡搁浅 P1 2019.11.19
+    platform: douyu
+    confidence: high
+    duration_min: 470
+    sources:
+      - url: https://v.douyu.com/show/qJgOWx2P9Kr7kVzL
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-21-live-01
+    type: live
+    date: '2019-11-21'
+    title: 【女流直播】We were here together P1
+    platform: douyu
+    confidence: high
+    duration_min: 295
+    sources:
+      - url: https://v.douyu.com/show/n8GzMXl0J6DM6qyP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-11-30-live-01
+    type: live
+    date: '2019-11-30'
+    title: 【女流直播】Concrete Genie P1 11.30
+    platform: douyu
+    confidence: high
+    duration_min: 291
+    sources:
+      - url: https://v.douyu.com/show/n8GzMXlzOqbM6qyP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

@@ -462,7 +462,7 @@
     title: "马里奥3d世界+狂怒世界"
     platform: douyu
     confidence: high
-    duration_min: 190
+    duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/o_1euo5rgr516lf80avmsdv91kab0.jpeg?imageslim"
     games: [super-mario-3d-world]
     segments:
@@ -718,3 +718,16 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+  - id: 2021-02-20-live-01
+    type: live
+    date: '2021-02-20'
+    title: 【女流直播】 P1 2021.2.20 鬼谷八荒
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/Qyz171gzVxBWBJj9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

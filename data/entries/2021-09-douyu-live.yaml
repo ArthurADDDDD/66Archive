@@ -511,3 +511,68 @@
         status: alive
     contributed_by: data-agent
     note: 补入 A站互补回放：ac31284134
+  - id: 2021-09-15-live-01
+    type: live
+    date: '2021-09-15'
+    title: 【2021-09-15 15点场】女流66：哈哈哈哈哈哈哈哈 156277
+    platform: douyu
+    confidence: high
+    duration_min: 258
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYKoLmNv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-09-21-live-01
+    type: live
+    date: '2021-09-21'
+    title: 【2021-09-21 15点场】女流66：周一全体双倍亲密度
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/yVY8WwPm9n8vLOz9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-09-24-live-01
+    type: live
+    date: '2021-09-24'
+    title: 【2021-09-24 14点场】女流66：出差参加活动最近随缘见
+    platform: douyu
+    confidence: high
+    duration_min: 145
+    sources:
+      - url: https://v.douyu.com/show/Kg1VWRb1mDPWGbNA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-09-26-live-01
+    type: live
+    date: '2021-09-26'
+    title: 【2021-09-26 14点场】女流66：出差参加活动最近随缘见
+    platform: douyu
+    confidence: high
+    duration_min: 238
+    sources:
+      - url: https://v.douyu.com/show/brN0MmmLQn5MpyxA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-09-27-live-01
+    type: live
+    date: '2021-09-27'
+    title: 【2021-09-27 14点场】女流66：出差参加活动最近随缘见
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/yVY8WwPLNg8vLOz9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

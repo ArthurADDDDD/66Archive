@@ -116,7 +116,7 @@
     title: "血源诅咒"
     platform: douyu
     confidence: high
-    duration_min: 183
+    duration_min: 264
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92fa0397adbe4077bec0ae012651e846.jpeg?imageslim"
     games: [bloodborne]
     segments:
@@ -151,7 +151,7 @@
     title: "血源诅咒"
     platform: douyu
     confidence: high
-    duration_min: 89
+    duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_401b1dc906f446719be504f091e5a4db.jpeg?imageslim"
     games: [bloodborne]
     segments:
@@ -178,7 +178,7 @@
     title: "血源诅咒"
     platform: douyu
     confidence: high
-    duration_min: 144
+    duration_min: 320
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_43e026807f95407cafbf2a8fda5a116c.jpeg?imageslim"
     games: [bloodborne]
     segments:
@@ -274,7 +274,8 @@
         status: alive
     contributed_by: data-agent
 
-    note: 补入 A站互补回放：ac33060155 B站女流录像小屋源标题年份误写 2021，分P名与上传日均对应 2022.1.9；源内纯净+弹幕双版共 486min，直播时长只计一版。
+    note: 补入 A站互补回放：ac33060155 B站女流录像小屋源标题年份误写 2021，分P名与上传日均对应 2022.1.9；源内纯净+弹幕双版共
+      486min，直播时长只计一版。
 
   - id: 2022-01-10-live-01
     type: live
@@ -708,7 +709,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 270
+    duration_min: 380
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dceab6e88ece4623a3676108b97c50c4.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -859,3 +860,16 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+  - id: 2022-01-07-live-01
+    type: live
+    date: '2022-01-07'
+    title: 【2022-01-07 11点场】女流66：【女流】周五中午12点来血源
+    platform: douyu
+    confidence: high
+    duration_min: 412
+    sources:
+      - url: https://v.douyu.com/show/DO84vrr13dkvedGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

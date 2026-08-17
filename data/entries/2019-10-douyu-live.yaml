@@ -301,7 +301,7 @@
     title: "牧场物语：重聚矿石镇"
     platform: douyu
     confidence: high
-    duration_min: 380
+    duration_min: 460
     cover: "https://tx-free-imgs.acfun.cn/FvSh36M62gCpFJM_isTwBM8zk_tl?imageslim"
     games: [sos-fomt]
     segments:
@@ -413,3 +413,55 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+  - id: 2019-10-01-live-01
+    type: live
+    date: '2019-10-01'
+    title: 【女流直播】Green Hell P1 2019.10.1
+    platform: douyu
+    confidence: high
+    duration_min: 293
+    sources:
+      - url: https://v.douyu.com/show/X3JzMaJ1mylWPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-10-04-live-01
+    type: live
+    date: '2019-10-04'
+    title: 【女流直播】 过山车之星 P1 2019.10.4
+    platform: douyu
+    confidence: high
+    duration_min: 270
+    sources:
+      - url: https://v.douyu.com/show/a2JEMJ5R9027Nxml
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-10-22-live-01
+    type: live
+    date: '2019-10-22'
+    title: 【女流直播】 牧场物语：重聚矿石镇P1 2019.10.22
+    platform: douyu
+    confidence: high
+    duration_min: 417
+    sources:
+      - url: https://v.douyu.com/show/DrwnvzbAZ2lvPNaX
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-10-26-live-01
+    type: live
+    date: '2019-10-26'
+    title: 【女流直播】 牧场物语 重聚矿石镇 P1 19.10.26
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QND5XVMJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

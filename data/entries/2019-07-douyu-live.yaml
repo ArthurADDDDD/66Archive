@@ -272,7 +272,7 @@
     title: "2020东京奥运，66号选手请准备"
     platform: douyu
     confidence: high
-    duration_min: 306
+    duration_min: 360
     cover: "https://tx-free-imgs.acfun.cn/FnFzpE0uRE9vtvNgW9zFKRcwbSyQ?imageslim"
     games: []
     segments:
@@ -381,3 +381,42 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+  - id: 2019-07-23-live-01
+    type: live
+    date: '2019-07-23'
+    title: 【女流直播】 地痞街区 P1 2019.7.23
+    platform: douyu
+    confidence: high
+    duration_min: 325
+    sources:
+      - url: https://v.douyu.com/show/JmbBMkG3N6KM40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-07-24-live-01
+    type: live
+    date: '2019-07-24'
+    title: 【女流直播】《2020东京奥运》 P1 2019.7.24
+    platform: douyu
+    confidence: high
+    duration_min: 388
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QDkYy8vJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-07-27-live-01
+    type: live
+    date: '2019-07-27'
+    title: 【女流直播】 月圆之夜  P1 2019.7.27
+    platform: douyu
+    confidence: high
+    duration_min: 377
+    sources:
+      - url: https://v.douyu.com/show/mPyq7okmyE571gLY
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

@@ -70,7 +70,7 @@
     title: "灵活脑学院"
     platform: douyu
     confidence: high
-    duration_min: 190
+    duration_min: 280
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_563bff57d68c4611a2aff5e733372187.jpeg?imageslim"
     games: [linghuo-naoxueyuan]
     segments:
@@ -305,7 +305,7 @@
     title: "精神之桥"
     platform: douyu
     confidence: high
-    duration_min: 94
+    duration_min: 349
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_28db289bf74548faa7d5f746d74d1c62.jpeg?imageslim"
     games: []
     segments:
@@ -364,7 +364,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 170
+    duration_min: 356
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5e8e4fd9578a43a1b9d003a4e86bac78.jpeg?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -661,3 +661,42 @@
         status: alive
     contributed_by: data-agent
     note: 补入 A站互补回放：ac32970212
+  - id: 2021-12-04-live-01
+    type: live
+    date: '2021-12-04'
+    title: 【2021-12-04 15点场】女流66：【女流】156277直播间~~
+    platform: douyu
+    confidence: high
+    duration_min: 322
+    sources:
+      - url: https://v.douyu.com/show/DO84vrrKEDOvedGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-12-16-live-01
+    type: live
+    date: '2021-12-16'
+    title: 【2021-12-16 15点场】女流66：【女流】周四不休继续Kena
+    platform: douyu
+    confidence: high
+    duration_min: 328
+    sources:
+      - url: https://v.douyu.com/show/brN0Mmb5B4kWpyxA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-12-18-live-01
+    type: live
+    date: '2021-12-18'
+    title: 【2021-12-18 17点场】女流66：【女流】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 236
+    sources:
+      - url: https://v.douyu.com/show/Kp1QM8al41JWk4bj
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

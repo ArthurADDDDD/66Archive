@@ -284,7 +284,8 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
-    note: "同一场（3.10 周日）拆 2 视频：鬼泣5 纯净版（ac5011369，P1）+ 砒霜弹幕版（ac5012009，P2.1-P2.2，次日渲染上传），P 编号连续，按一天一条原则合并"
+    note: "同一场（3.10 周日）拆 2 视频：鬼泣5 纯净版（ac5011369，P1）+ 砒霜弹幕版（ac5012009，P2.1-P2.2，次日渲染上传），P
+      编号连续，按一天一条原则合并"
     contributed_by: data-agent
   - id: 2019-03-12-live-01
     type: live
@@ -626,7 +627,7 @@
     title: "只狼"
     platform: douyu
     confidence: high
-    duration_min: 240
+    duration_min: 444
     cover: "https://tx-free-imgs.acfun.cn/FpgwWD3tQq8j91n0fMWcSh3ApBZs?imageslim"
     games: [sekiro]
     segments:

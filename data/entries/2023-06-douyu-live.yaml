@@ -552,3 +552,16 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     note: 补入 A站互补回放：ac41724195
+  - id: 2023-06-28-live-01
+    type: live
+    date: '2023-06-28'
+    title: 【2023-06-28 13点场】女流66：最终幻想16今日大结局
+    platform: douyu
+    confidence: high
+    duration_min: 455
+    sources:
+      - url: https://v.douyu.com/show/ZB5Kv9YreDZva93x
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

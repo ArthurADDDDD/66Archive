@@ -566,3 +566,16 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+  - id: 2018-10-21-live-01
+    type: live
+    date: '2018-10-21'
+    title: 【女流直播】心灵砒霜  P1 2018.10.21
+    platform: douyu
+    confidence: high
+    duration_min: 175
+    sources:
+      - url: https://v.douyu.com/show/NVm0WKpQE2PvJeBP
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

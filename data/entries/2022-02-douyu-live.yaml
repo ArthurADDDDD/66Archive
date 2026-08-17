@@ -44,7 +44,7 @@
     title: "消逝的光芒2"
     platform: douyu
     confidence: high
-    duration_min: 266
+    duration_min: 402
     games: [dying-light-2]
     note: "B站「女流录像小屋」全长录播。"
     sources:
@@ -92,7 +92,7 @@
     title: "消逝的光芒2"
     platform: douyu
     confidence: high
-    duration_min: 250
+    duration_min: 501
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2fc87bb42a0448f8ba177b3e134636c8.jpeg?imageslim"
     games: [dying-light-2]
     sources:
@@ -169,7 +169,7 @@
     title: "SIFU"
     platform: douyu
     confidence: high
-    duration_min: 125
+    duration_min: 177
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c3f107a486c0492b9b3a91c382770f64.jpeg?imageslim"
     games: [sifu]
     sources:
@@ -405,7 +405,7 @@
     title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 169
+    duration_min: 678
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_15d940e7baa44efbbff6f7bcc2e57d1c.jpeg?imageslim"
     games: [elden-ring]
     sources:
@@ -480,3 +480,29 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+  - id: 2022-02-14-live-01
+    type: live
+    date: '2022-02-14'
+    title: 【2022-02-14 15点场】女流66：怀旧MD经典【龙之弹珠台】
+    platform: douyu
+    confidence: high
+    duration_min: 245
+    sources:
+      - url: https://v.douyu.com/show/kDe0W2aegZXMA4Bz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-02-26-live-01
+    type: live
+    date: '2022-02-26'
+    title: 【2022-02-26 10点场】女流66：【女流】艾尔登法环Day2一起来吧
+    platform: douyu
+    confidence: high
+    duration_min: 586
+    sources:
+      - url: https://v.douyu.com/show/Kg1VWRxnVpP7GbNA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

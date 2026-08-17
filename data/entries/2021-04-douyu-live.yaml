@@ -723,7 +723,8 @@
         status: alive
     contributed_by: data-agent
 
-    note: A站页面标题将同一场误写成 4.19，且分P拆为 ac28284810(P1-P5) 与 ac28284808(P6-P7)；内部文件名均为 2021.4.26，合并为一场，不另计 4.19。
+    note: A站页面标题将同一场误写成 4.19，且分P拆为 ac28284810(P1-P5) 与 ac28284808(P6-P7)；内部文件名均为 2021.4.26，合并为一场，不另计
+      4.19。
   - id: 2021-04-27-live-01
     type: live
     date: "2021-04-27"
@@ -774,5 +775,8 @@
       - url: "https://www.acfun.cn/v/ac28399662"
         kind: replay
         parts: 1
+        status: alive
+      - url: https://v.douyu.com/show/ERALvEazp5xv1Vw0
+        kind: replay
         status: alive
     contributed_by: data-agent

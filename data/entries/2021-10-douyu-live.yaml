@@ -4,7 +4,7 @@
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 355
+    duration_min: 488
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_95452eff5cc74e17bd63cc97c12e9e53.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -40,7 +40,8 @@
     duration_min: 518
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f23b78bddfbb470a9ea0f23a90ae81ce.jpeg?imageslim"
     games: [lost-judgment]
-    note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。；补入 A站互补回放：ac31325844"
+    note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。；补入
+      A站互补回放：ac31325844"
     segments:
       - at: "00:00:00"
         label: "P5"
@@ -119,7 +120,7 @@
     title: "审判之逝：湮灭的记忆"
     platform: douyu
     confidence: high
-    duration_min: 342
+    duration_min: 416
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_530df1d276e14cf0a54bb3a543aa3bef.jpeg?imageslim"
     games: [lost-judgment]
     segments:
@@ -354,7 +355,7 @@
     title: "仙剑奇侠传七"
     platform: douyu
     confidence: high
-    duration_min: 204
+    duration_min: 345
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e7c296af83d64f96ae93f58fe6e0d9d8.jpeg?imageslim"
     games: [xianjian-7]
     segments:
@@ -761,7 +762,8 @@
     confidence: high
     duration_min: 264
     games: []
-    note: "B站「女流录像小屋」《心灵砒霜&弹幕版》，全长录播。 B站源含纯净版 P1-P7 与弹幕版 P8.1-P8.7，同一场直播只按一版计时；A站 ac31636579 分P名实为 2021.10.31（页面标题误写 11.31），并入本条。"
+    note: "B站「女流录像小屋」《心灵砒霜&弹幕版》，全长录播。 B站源含纯净版 P1-P7 与弹幕版 P8.1-P8.7，同一场直播只按一版计时；A站
+      ac31636579 分P名实为 2021.10.31（页面标题误写 11.31），并入本条。"
     sources:
       - url: "https://www.bilibili.com/video/BV17q4y1V73d"
         kind: replay
@@ -777,3 +779,68 @@
     series: xinling-pishuang
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb6e4c5448e2459e81854753c1ddca2f.jpeg?imageslim"
     segments: []
+  - id: 2021-10-06-live-01
+    type: live
+    date: '2021-10-06'
+    title: 【2021-10-06 15点场】女流66：审判之逝继续探索
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/Bjq4MeZed8JW5Ea8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-10-19-live-01
+    type: live
+    date: '2021-10-19'
+    title: 【2021-10-19 14点场】女流66：【女流】仙剑7玩玩看
+    platform: douyu
+    confidence: high
+    duration_min: 400
+    sources:
+      - url: https://v.douyu.com/show/jwzOvpQyoQQ7ZVRm
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-10-22-live-02
+    type: live
+    date: '2021-10-22'
+    title: 【2021-10-22 15点场】女流66：【女流】正在直播
+    platform: douyu
+    confidence: high
+    duration_min: 343
+    sources:
+      - url: https://v.douyu.com/show/XqeO74gqLBXvxywG
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-10-23-live-01
+    type: live
+    date: '2021-10-23'
+    title: 【2021-10-23 15点场】女流66：【女流】周六双倍已开启
+    platform: douyu
+    confidence: high
+    duration_min: 580
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYKLk8mv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2021-10-28-live-01
+    type: live
+    date: '2021-10-28'
+    title: 【2021-10-28 13点场】女流66：【女流】瓦西子赤木都给我来
+    platform: douyu
+    confidence: high
+    duration_min: 521
+    sources:
+      - url: https://v.douyu.com/show/ERALvE9dZ2xv1Vw0
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
