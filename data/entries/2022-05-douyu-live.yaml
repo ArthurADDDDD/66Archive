@@ -63,7 +63,7 @@
     title: "蜡笔小新 我与博士的暑假"
     platform: douyu
     confidence: high
-    duration_min: 126
+    duration_min: 438
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_aae1bee14df941509d6e5dc0608a2c58.jpeg?imageslim"
     games: [crayon-shinchan-summer]
     sources:
@@ -388,7 +388,7 @@
     title: "图游天下"
     platform: douyu
     confidence: high
-    duration_min: 173
+    duration_min: 293
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d932b29ff3f84f8dbd458ce19e297d15.jpeg?imageslim"
     games: []
     sources:
@@ -624,3 +624,16 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2022-05-12-live-01
+    type: live
+    date: '2022-05-12'
+    title: 【2022-05-12 15点场】女流66：今天继续呜呜呜
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    sources:
+      - url: https://v.douyu.com/show/Yo4evyKDONxM8L62
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

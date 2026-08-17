@@ -492,7 +492,7 @@
     title: "RAFT"
     platform: douyu
     confidence: high
-    duration_min: 270
+    duration_min: 329
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_62d1d9a581394f60b66a82757627d699.jpeg?imageslim"
     games: [raft]
     sources:
@@ -566,3 +566,42 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2022-06-16-live-01
+    type: live
+    date: '2022-06-16'
+    title: 【2022-06-16 15点场】女流66：【今日双倍】一年一次的佩奇演出
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/X3JzMakExdYvPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-06-24-live-01
+    type: live
+    date: '2022-06-24'
+    title: 【2022-06-24 15点场】女流66：【今日双倍】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 300
+    sources:
+      - url: https://v.douyu.com/show/1LDR7QlQwKrvJzx8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-06-25-live-01
+    type: live
+    date: '2022-06-25'
+    title: 【2022-06-25 15点场】女流66：【今日双倍】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    sources:
+      - url: https://v.douyu.com/show/JmbBMklJQO9W40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

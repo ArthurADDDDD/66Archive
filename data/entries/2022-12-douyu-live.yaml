@@ -256,7 +256,7 @@
     title: "深海迷航"
     platform: douyu
     confidence: high
-    duration_min: 183
+    duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9b4e8971c3ff47a684d762788849531f.jpeg?imageslim"
     games: [subnautica]
     sources:
@@ -352,7 +352,7 @@
     title: "深海迷航"
     platform: douyu
     confidence: high
-    duration_min: 238
+    duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_45411f359adf4af3aeee425517291259.jpeg?imageslim"
     games: [subnautica]
     sources:
@@ -405,3 +405,55 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2022-12-05-live-01
+    type: live
+    date: '2022-12-05'
+    title: 【2022-12-05 15点场】女流66：据说是谜题多多的狐尔达
+    platform: douyu
+    confidence: high
+    duration_min: 264
+    sources:
+      - url: https://v.douyu.com/show/85BAvqKK6lBMG4Lm
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-12-12-live-01
+    type: live
+    date: '2022-12-12'
+    title: 【2022-12-12 15点场】女流66：【今日双倍】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/Qyz171Zlgo5MBJj9
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-12-19-live-01
+    type: live
+    date: '2022-12-19'
+    title: 【2022-12-19 15点场】女流66：【今日双倍】QTE到底
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/EO0XvN3xONa7DrBd
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-12-29-live-01
+    type: live
+    date: '2022-12-29'
+    title: 【2022-12-29 15点场】女流66：烧脑解谜TIME~达芬奇3
+    platform: douyu
+    confidence: high
+    duration_min: 161
+    sources:
+      - url: https://v.douyu.com/show/0zZVvP9wPJ27O4E2
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

@@ -4,7 +4,7 @@
     title: "霓虹深渊"
     platform: douyu
     confidence: high
-    duration_min: 226
+    duration_min: 395
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_758136616e90484f97e72187f8418bd8.jpeg?imageslim"
     games: [neon-abyss]
     segments:
@@ -560,7 +560,7 @@
     title: "怪物猎人物语2破灭之翼"
     platform: douyu
     confidence: high
-    duration_min: 65
+    duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4f6421c3ef944874b22816f40ff561d6.jpeg?imageslim"
     games: [monster-hunter-stories-2]
     sources:
@@ -951,3 +951,16 @@
         status: alive
     contributed_by: data-agent
     note: 补入 A站互补回放：ac30463981
+  - id: 2021-07-15-live-01
+    type: live
+    date: '2021-07-15'
+    title: 【女流直播】 P1 2021.7.15 怪物猎人物语2破灭之翼
+    platform: douyu
+    confidence: high
+    duration_min: 324
+    sources:
+      - url: https://v.douyu.com/show/kDe0W2QRKGXMA4Bz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

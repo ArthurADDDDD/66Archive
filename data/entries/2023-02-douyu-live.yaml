@@ -393,3 +393,16 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2023-02-14-live-01
+    type: live
+    date: '2023-02-14'
+    title: 【2023-02-14 15点场】女流66：【女流】女魔头已成型
+    platform: douyu
+    confidence: high
+    duration_min: 315
+    sources:
+      - url: https://v.douyu.com/show/0zZVvP9jQnE7O4E2
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

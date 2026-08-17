@@ -30,7 +30,7 @@
     title: "真探"
     platform: douyu
     confidence: high
-    duration_min: 188
+    duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e392a744ba5046dda8e4a3f5b6614507.jpeg?imageslim"
     games: [zhentan]
     sources:
@@ -230,7 +230,7 @@
     title: "跑跑卡丁车：漂移"
     platform: douyu
     confidence: high
-    duration_min: 158
+    duration_min: 278
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_57d260c7868049f8b075ca7d9884ed5c.jpeg?imageslim"
     games: [kartrider]
     sources:
@@ -326,7 +326,7 @@
     title: "Hi"
     platform: douyu
     confidence: high
-    duration_min: 284
+    duration_min: 404
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_502bd70b0028486fa2e7907e9e31a97f.jpeg?imageslim"
     games: []
     sources:
@@ -339,3 +339,68 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2023-01-01-live-02
+    type: live
+    date: '2023-01-01'
+    title: 【2023-01-01 01点场】女流66：跨个年156277
+    platform: douyu
+    confidence: high
+    duration_min: 44
+    sources:
+      - url: https://v.douyu.com/show/DrwnvzZXOemvPNaX
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-01-07-live-01
+    type: live
+    date: '2023-01-07'
+    title: 【2023-01-07 15点场】女流66：156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/DrwnvzZRVJVvPNaX
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-01-08-live-01
+    type: live
+    date: '2023-01-08'
+    title: 【2023-01-08 15点场】女流66：【钻粉2.5倍】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/DO84vrKaPLG7edGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-01-16-live-01
+    type: live
+    date: '2023-01-16'
+    title: 【2023-01-16 15点场】女流66：【女流】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 256
+    sources:
+      - url: https://v.douyu.com/show/6Aw87OObrdm7YGkg
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-01-24-live-01
+    type: live
+    date: '2023-01-24'
+    title: 【2023-01-24 17点场】女流66：【钻粉2.5倍】新年快乐
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/GnzXvb9qOGzW462l
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

@@ -154,7 +154,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/FrDzeYDUWhMCRfuack3lkv65wSJx?imageslim"
     games: []
     tags: [心灵砒霜]
@@ -657,3 +657,16 @@
         parts: 6
         status: alive
     contributed_by: data-agent
+  - id: 2019-06-14-live-01
+    type: live
+    date: '2019-06-14'
+    title: 【女流直播】 E3游戏展现场 P4 2019.6.14
+    platform: douyu
+    confidence: high
+    duration_min: 32
+    sources:
+      - url: https://v.douyu.com/show/8pa9v5OKmLqMVrqA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

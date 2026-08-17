@@ -128,7 +128,7 @@
     title: "艾尔登法环"
     platform: douyu
     confidence: high
-    duration_min: 474
+    duration_min: 590
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆为 2 个回放段（ac33910899 上、ac33910802 下，同时长、同夜上传），按一天一条原则合并为单条。"
@@ -429,3 +429,29 @@
         status: alive
     contributed_by: data-agent
     note: 补入 A站互补回放：ac34214607
+  - id: 2022-03-03-live-01
+    type: live
+    date: '2022-03-03'
+    title: 【2022-03-03 10点场】女流66：【女流】艾尔登法环Day7一起来吧
+    platform: douyu
+    confidence: high
+    duration_min: 602
+    sources:
+      - url: https://v.douyu.com/show/8KxjMd9RbwnWVLwb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2022-03-07-live-01
+    type: live
+    date: '2022-03-07'
+    title: 【2022-03-07 12点场】女流66：【女流】今天下午来，吃个午饭
+    platform: douyu
+    confidence: high
+    duration_min: 401
+    sources:
+      - url: https://v.douyu.com/show/X3JzMaVXKq1WPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

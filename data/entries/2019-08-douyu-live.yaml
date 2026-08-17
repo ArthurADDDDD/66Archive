@@ -137,7 +137,7 @@
     title: "斗鱼天下第一斗歌大赛（女流视角）"
     platform: douyu
     confidence: high
-    duration_min: 186
+    duration_min: 385
     games: []
     tags: [聊天]
     note: "来源为「列支敦士登驻通辽大使」女流视角 5P（约 3:05:53）及「秘密录像屋」多视角备份（含导师女流视角 P5）。"
@@ -335,3 +335,146 @@
         parts: 6
         status: alive
     contributed_by: data-agent
+  - id: 2019-08-01-live-01
+    type: live
+    date: '2019-08-01'
+    title: 【女流直播】2019PS中国线上发布会 P12019.8.1
+    platform: douyu
+    confidence: high
+    duration_min: 152
+    sources:
+      - url: https://v.douyu.com/show/X3JzMaJyY0lWPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-08-live-01
+    type: live
+    date: '2019-08-08'
+    title: 【女流直播】 女流带你走进敦煌 P1 2019.8.8
+    platform: douyu
+    confidence: high
+    duration_min: 61
+    sources:
+      - url: https://v.douyu.com/show/X3JzMaJobkAWPQro
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-11-live-01
+    type: live
+    date: '2019-08-11'
+    title: 【女流直播】 斗鱼超级火箭计划 P1 2019.8.11
+    platform: douyu
+    confidence: high
+    duration_min: 17
+    sources:
+      - url: https://v.douyu.com/show/XqeO74p1Bne7xywG
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-14-live-01
+    type: live
+    date: '2019-08-14'
+    title: 【女流直播】牧场物语 P1 2019.8.14
+    platform: douyu
+    confidence: high
+    duration_min: 296
+    sources:
+      - url: https://v.douyu.com/show/8pa9v5OdZYpMVrqA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-16-live-01
+    type: live
+    date: '2019-08-16'
+    title: jump king见证奇迹 2019-08-16 15点场
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/3rob7jDB0KjWgkZl
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-17-live-01
+    type: live
+    date: '2019-08-17'
+    title: 【女流直播】牧场物语 P1 2019.8.17
+    platform: douyu
+    confidence: high
+    duration_min: 412
+    sources:
+      - url: https://v.douyu.com/show/aRbBv3pdrmy76PYV
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-19-live-01
+    type: live
+    date: '2019-08-19'
+    title: 【女流直播】 牧场物语 P1 2019.8.19
+    platform: douyu
+    confidence: high
+    duration_min: 334
+    sources:
+      - url: https://v.douyu.com/show/Bjq4MewRQekv5Ea8
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-21-live-01
+    type: live
+    date: '2019-08-21'
+    title: 【女流直播】 遗迹灰烬重生 P1 2019.8.21
+    platform: douyu
+    confidence: high
+    duration_min: 231
+    sources:
+      - url: https://v.douyu.com/show/6Aw87OpA28DMYGkg
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-24-live-01
+    type: live
+    date: '2019-08-24'
+    title: 【女流直播】 遗迹灰烬重生 P1 2019.8.24
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    sources:
+      - url: https://v.douyu.com/show/JmbBMkGQw8yM40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-26-live-01
+    type: live
+    date: '2019-08-26'
+    title: 【女流直播】 控制control P1 2019.8.26
+    platform: douyu
+    confidence: high
+    duration_min: 168
+    sources:
+      - url: https://v.douyu.com/show/Kg1VWRGgLOrvGbNA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-08-29-live-01
+    type: live
+    date: '2019-08-29'
+    title: 【女流直播】 境界灵压对决试玩 P1 2019.8.29
+    platform: douyu
+    confidence: high
+    duration_min: 319
+    sources:
+      - url: https://v.douyu.com/show/worZv0pGZjlvJBk3
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

@@ -33,7 +33,8 @@
     confidence: high
     duration_min: 182
     games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili
+      API 双重确认。
     sources:
       - url: https://www.bilibili.com/video/BV1SJ411q7HK
         kind: replay
@@ -225,7 +226,8 @@
     confidence: high
     duration_min: 233
     games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili
+      API 双重确认。
     sources:
       - url: https://www.bilibili.com/video/BV1bJ41167SL
         kind: replay
@@ -406,7 +408,8 @@
     confidence: high
     duration_min: 167
     games: []
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1mJ411W7my；标题与日期经 BiliPlus / Bilibili API 双重确认。
+    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1mJ411W7my；标题与日期经 BiliPlus / Bilibili
+      API 双重确认。
     sources:
       - url: https://www.bilibili.com/video/BV1mJ411W7my
         kind: replay
@@ -470,3 +473,68 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+  - id: 2019-12-06-live-01
+    type: live
+    date: '2019-12-06'
+    title: 【女流直播】 莫塔之子  P1 2019.12.6
+    platform: douyu
+    confidence: high
+    duration_min: 252
+    sources:
+      - url: https://v.douyu.com/show/8pa9v5jodOa7VrqA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-12-11-live-01
+    type: live
+    date: '2019-12-11'
+    title: 【女流直播】 RAFT船长漂流记 P1 2019.12.11
+    platform: douyu
+    confidence: high
+    duration_min: 254
+    sources:
+      - url: https://v.douyu.com/show/3rob7j2Ow317gkZl
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-12-17-live-01
+    type: live
+    date: '2019-12-17'
+    title: 【女流直播】 Jump King P1 2019.12.17
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/6Aw87Oa8zrxWYGkg
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-12-24-live-01
+    type: live
+    date: '2019-12-24'
+    title: 【女流直播】Ashen P1 2019.12.24
+    platform: douyu
+    confidence: high
+    duration_min: 278
+    sources:
+      - url: https://v.douyu.com/show/Aox276kYw88MVz8Z
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2019-12-28-live-01
+    type: live
+    date: '2019-12-28'
+    title: 矿工生存之道 2019-12-28 15点场
+    platform: douyu
+    confidence: high
+    duration_min: 234
+    sources:
+      - url: https://v.douyu.com/show/0Q8mMYkxP5Jv49Ad
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

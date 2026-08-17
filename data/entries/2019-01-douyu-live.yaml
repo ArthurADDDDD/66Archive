@@ -749,3 +749,16 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+  - id: 2019-01-30-live-01
+    type: live
+    date: '2019-01-30'
+    title: 【女流直播】 勇者斗恶龙创世小玩家 P12019.1.30
+    platform: douyu
+    confidence: high
+    duration_min: 225
+    sources:
+      - url: https://v.douyu.com/show/8KxjMd88OPYMVLwb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入

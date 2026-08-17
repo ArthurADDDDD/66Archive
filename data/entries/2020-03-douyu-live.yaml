@@ -141,6 +141,9 @@
         kind: replay
         parts: 6
         status: alive
+      - url: https://v.douyu.com/show/ZB5Kv95nrbmva93x
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2020-03-09-live-01
@@ -193,7 +196,7 @@
     title: "奥日2"
     platform: douyu
     confidence: high
-    duration_min: 194
+    duration_min: 357
     cover: "https://tx-free-imgs.acfun.cn/o_1e37imoujp1t9h1m861prkpp90.jpeg?imageslim"
     games: [ori-2]
     segments:
@@ -226,7 +229,7 @@
     title: "奥日2"
     platform: douyu
     confidence: high
-    duration_min: 231
+    duration_min: 448
     cover: "https://tx-free-imgs.acfun.cn/o_1e3a9bicivlauics81oo0m5v0.jpeg?imageslim"
     games: [ori-2]
     segments:
@@ -265,7 +268,7 @@
     title: "奥日2&仁王2"
     platform: douyu
     confidence: high
-    duration_min: 157
+    duration_min: 374
     cover: "https://tx-free-imgs.acfun.cn/o_1e3cntd7b1ph2cstm3r1m3j15c70.jpeg?imageslim"
     games: [nioh-2, ori-2]
     segments:
@@ -301,7 +304,7 @@
     title: "仁王2"
     platform: douyu
     confidence: high
-    duration_min: 224
+    duration_min: 370
     cover: "https://tx-free-imgs.acfun.cn/o_1e3fb7k8hr093mu1agc1cnf1na60.jpeg?imageslim"
     games: [nioh-2]
     segments:
@@ -352,7 +355,7 @@
     title: "仁王2"
     platform: douyu
     confidence: high
-    duration_min: 218
+    duration_min: 437
     cover: "https://tx-free-imgs.acfun.cn/o_1e3ki8n0m16kn14k91b8posc110j0.jpeg?imageslim"
     games: [nioh-2]
     segments:
@@ -399,7 +402,7 @@
     title: "仁王2"
     platform: douyu
     confidence: high
-    duration_min: 172
+    duration_min: 387
     cover: "https://tx-free-imgs.acfun.cn/o_1e3plsts5dbc17m8rpih3i1r5v0.jpeg?imageslim"
     games: [nioh-2]
     segments:
@@ -462,7 +465,7 @@
     title: "仁王2"
     platform: douyu
     confidence: high
-    duration_min: 162
+    duration_min: 457
     cover: "https://tx-free-imgs.acfun.cn/o_1e41dg7p0182s15el1ahqjol1p5e0.jpeg?imageslim"
     games: [nioh-2]
     segments:
@@ -648,7 +651,7 @@
     title: "只只大冒险"
     platform: douyu
     confidence: high
-    duration_min: 198
+    duration_min: 237
     cover: "https://tx-free-imgs.acfun.cn/o_1e4e91mhq164c1k5814hk46m6dm0.jpeg?imageslim"
     games: [biped]
     segments:
@@ -679,7 +682,7 @@
     title: "踩高跷stilt fella"
     platform: douyu
     confidence: high
-    duration_min: 218
+    duration_min: 291
     cover: "https://tx-free-imgs.acfun.cn/o_1e4m13hi51qh88rehqnd7k1th50.jpeg?imageslim"
     games: [stilt-fella]
     segments:
@@ -715,7 +718,8 @@
     platform: douyu
     confidence: high
     games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.30 游戏：踩高跷/ Stilt Fella。斗鱼回放标题：踩高跷stilt fella~~
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.30 游戏：踩高跷/ Stilt
+      Fella。斗鱼回放标题：踩高跷stilt fella~~
     sources:
       - url: https://v.douyu.com/show/XqeO74ePYL2MxywG
         kind: replay
@@ -730,7 +734,8 @@
     platform: douyu
     confidence: high
     games: []
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.31 游戏：踩高跷/ Stilt Fella。斗鱼回放标题：踩高跷stilt fella~~
+    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.31 游戏：踩高跷/ Stilt
+      Fella。斗鱼回放标题：踩高跷stilt fella~~
     sources:
       - url: https://v.douyu.com/show/ZB5Kv95RJXbva93x
         kind: replay

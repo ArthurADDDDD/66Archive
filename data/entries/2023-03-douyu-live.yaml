@@ -265,7 +265,7 @@
     title: "英雄联盟"
     platform: douyu
     confidence: high
-    duration_min: 138
+    duration_min: 308
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_15151795730842eca7731402a3be08c3.jpeg?imageslim"
     games: [league-of-legends]
     sources:
@@ -416,3 +416,81 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+  - id: 2023-03-01-live-01
+    type: live
+    date: '2023-03-01'
+    title: 【2023-03-01 15点场】女流66：3月份的新66
+    platform: douyu
+    confidence: high
+    duration_min: 321
+    sources:
+      - url: https://v.douyu.com/show/jNBdvnrApARvE2yw
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-03-07-live-01
+    type: live
+    date: '2023-03-07'
+    title: 【2023-03-07 15点场】女流66：都让开，老六来了
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/DO84vrKwYYQ7edGr
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-03-14-live-01
+    type: live
+    date: '2023-03-14'
+    title: 【2023-03-14 13点场】女流66：156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    sources:
+      - url: https://v.douyu.com/show/yVmjvBbwgJdvqkNb
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-03-19-live-01
+    type: live
+    date: '2023-03-19'
+    title: 【钻粉2.5倍】陪你下午茶 2023-03-19 17点场
+    platform: douyu
+    confidence: high
+    duration_min: 111
+    sources:
+      - url: https://v.douyu.com/show/JmbBMk91XNNv40XA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-03-21-live-01
+    type: live
+    date: '2023-03-21'
+    title: 【2023-03-21 12点场】女流66：【女流】156277直播间
+    platform: douyu
+    confidence: high
+    duration_min: 401
+    sources:
+      - url: https://v.douyu.com/show/4xq3WDpZYylWLGNz
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
+  - id: 2023-03-28-live-01
+    type: live
+    date: '2023-03-28'
+    title: 【2023-03-28 13点场】女流66：晚8点看wegame发布
+    platform: douyu
+    confidence: high
+    duration_min: 240
+    sources:
+      - url: https://v.douyu.com/show/6Aw87OOLyA07YGkg
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: 斗鱼官方直播回看补入
