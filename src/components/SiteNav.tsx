@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useId, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { useSiteCopy } from './LiveContentProvider'
 
@@ -39,6 +40,13 @@ export function SiteNav({
   const buttonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const [panelTop, setPanelTop] = useState(0)
+  // 面板要挂到 body 上（见下方注释），SSR 阶段没有 document，先不渲染。
+  const [portalReady, setPortalReady] = useState(false)
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setPortalReady(true)
+  }, [])
 
   const current = items.find((i) => active === i.id || (active === 'entry' && i.id === 'chronicle')) ?? items[1]
 
@@ -65,7 +73,9 @@ export function SiteNav({
       }
     }
     const onPointerDown = (e: MouseEvent | TouchEvent) => {
-      if (!rootRef.current?.contains(e.target as Node)) setOpen(false)
+      const target = e.target as Node
+      if (rootRef.current?.contains(target) || panelRef.current?.contains(target)) return
+      setOpen(false)
     }
     document.addEventListener('keydown', onKey)
     document.addEventListener('mousedown', onPointerDown)
@@ -130,13 +140,18 @@ export function SiteNav({
         <span className="sr-only">{open ? '收起菜单' : '展开菜单'}</span>
       </button>
 
-      {/* 移动端 dropdown：整宽面板，挂在 header 之下 */}
-      {open && (
+      {/*
+        移动端 dropdown：整宽面板，挂在 header 之下。
+        必须 portal 到 body——面板虽然是 fixed z-50，但它的父级 header 是 sticky z-30，
+        z-index 只在那个层叠上下文内部有效，于是回到顶部按钮 / 下拉快捷导航（都是 z-40）
+        和顶部阅读进度条（z-50）会盖在展开的菜单上面。挂到 body 之后 z-[60] 才是全局生效的。
+      */}
+      {open && portalReady && createPortal(
         <div
           id={menuId}
           role="menu"
           ref={panelRef}
-          className="ui-sheet-in fixed inset-x-0 z-50 border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
+          className="ui-sheet-in fixed inset-x-0 z-[60] border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
           style={{ top: panelTop }}
         >
           <div className="site-container-wide px-page py-2">
@@ -172,7 +187,8 @@ export function SiteNav({
               Esc 关闭 · 触控目标 ≥44px
             </p>
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </div>
   )
