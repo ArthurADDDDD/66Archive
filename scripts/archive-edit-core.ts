@@ -78,7 +78,7 @@ export function assertOnlyTargetEntryChanged(beforeFile: string, afterFile: stri
 }
 
 /**
- * 新增条目的守卫（RFC 004 §11.4）。
+ * 新增条目的守卫。
  *
  * 与 `assertOnlyTargetEntryChanged` 是**对偶**关系，不是它的放宽版：那道守卫要求
  * id 集合不变、恰好一条内容变化；这道要求 id 集合恰好多出目标那一个、
@@ -157,15 +157,6 @@ export function commitMessage(entryId: string, evidence: string, changeId: strin
     `Archive-Change-ID: ${changeId}`,
     `Archive-Evidence: ${normalizeEvidence(evidence)}`,
   ].join('\n')
-}
-
-export function backupsToPrune(names: string[], keep = 7, pattern = /^archive-\d{8}T\d{6}Z\.dump$/) {
-  if (!Number.isInteger(keep) || keep < 1) throw new Error('备份保留数量必须是正整数')
-  return names
-    .filter((value) => pattern.test(value))
-    .sort()
-    .reverse()
-    .slice(keep)
 }
 
 /** Parse a small shell-like editor command, then execute it without a shell. */
