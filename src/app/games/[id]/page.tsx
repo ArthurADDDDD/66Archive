@@ -77,11 +77,11 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
             <div>
               <p className="text-meta uppercase tracking-[0.16em] text-video">{profile.name} · 游戏收藏架</p>
-              <h1 className="mt-4 max-w-2xl text-h1 font-semibold">这款游戏和女流之间，发生过什么？</h1>
+              <h1 className="measure-hero mt-4 text-h1 font-semibold">这款游戏和女流之间，发生过什么？</h1>
               {profile.oneLiner ? (
-                <p className="mt-5 max-w-xl text-body text-muted">{profile.oneLiner}</p>
+                <p className="measure-body mt-5 text-body text-muted">{profile.oneLiner}</p>
               ) : (
-                <p className="mt-5 max-w-xl text-body text-muted">
+                <p className="measure-body mt-5 text-body text-muted">
                   {profile.sessions > 0
                     ? `从 ${profile.firstDate} 到 ${profile.lastDate}，档案里记下了 ${profile.sessions} 场，加起来 ${profile.hoursLabel}。`
                     : `档案里还没有标记过《${profile.name}》的场次。`}
@@ -184,7 +184,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGameProfile>> }) {
   const hasEntry = profile.sessions > 0
   return (
-    <div className="max-w-3xl">
+    <div className="measure-hero">
       <p className="text-meta uppercase tracking-[0.16em] text-video">{profile.name} · 游戏收藏架</p>
       <h1 className="mt-3 text-h1 font-semibold text-ink">{profile.name}</h1>
       <p className="mt-3 text-body text-muted">

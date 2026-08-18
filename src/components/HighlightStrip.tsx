@@ -23,8 +23,8 @@ export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: Resol
       <div className="home-content-container px-page">
         <Reveal>
           {copy.eyebrow && <Eyebrow color="#5BC8E8">{copy.eyebrow}</Eyebrow>}
-          {copy.title && <h2 className="mt-3 max-w-2xl text-h2 font-semibold">{copy.title}</h2>}
-          {copy.lede && <p className="mt-3 max-w-xl text-body text-muted">{copy.lede}</p>}
+          {copy.title && <h2 className="measure-hero mt-3 text-h2 font-semibold">{copy.title}</h2>}
+          {copy.lede && <p className="measure-body mt-3 text-body text-muted">{copy.lede}</p>}
         </Reveal>
 
         <div className="mt-8">
@@ -107,7 +107,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
       {isOpen && (
         <div id={`highlight-panel-${beat.id}`} className="grid gap-5 pb-6 pl-0 sm:grid-cols-[120px_minmax(0,1fr)] sm:pb-8">
           <span aria-hidden className="hidden sm:block" />
-          <div className={`grid max-w-4xl gap-5 ${beat.cover ? 'sm:grid-cols-[minmax(220px,360px)_minmax(0,1fr)]' : ''}`}>
+          <div className={`measure-hero grid gap-5 ${beat.cover ? 'sm:grid-cols-[minmax(220px,360px)_minmax(0,1fr)]' : ''}`}>
             {beat.cover && (
               beat.href ? (
                 <Link
@@ -143,7 +143,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   {beat.emphasis}
                 </p>
               )}
-              {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} max-w-2xl text-body text-muted`}>{beat.body}</p>}
+              {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
               {beat.href && (
                 <Link
                   href={beat.href}

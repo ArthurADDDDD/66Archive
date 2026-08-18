@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveActs } from '@/lib/live-content'
 import { useLiveContent } from './LiveContentProvider'
@@ -41,41 +41,72 @@ export function HomeActStage({
   )
   const [activeIndex, setActiveIndex] = useState(0)
   const activeIndexRef = useRef(0)
+  const stickyRef = useRef<HTMLDivElement>(null)
+  // 程序化跳转期间的锁：平滑滚动会连续经过中间几步，
+  // 不锁住的话内容会被一路重挂载（入场动画每次从 opacity:0 重来，看上去就是空白闪屏）。
+  const lockRef = useRef<{ y: number; until: number } | null>(null)
 
+  const setActive = useCallback((index: number) => {
+    if (activeIndexRef.current === index) return
+    activeIndexRef.current = index
+    setActiveIndex(index)
+  }, [])
+
+  /** 舞台的滚动几何：sticky 可推进的总距离 / 每一步的距离。 */
+  const readMetrics = useCallback(() => {
+    const root = rootRef.current
+    const sticky = stickyRef.current
+    if (!root || !sticky) return null
+    const travel = root.offsetHeight - sticky.offsetHeight
+    const span = steps.length > 1 ? travel / (steps.length - 1) : 0
+    return { top: root.getBoundingClientRect().top + window.scrollY, span }
+  }, [steps.length])
+
+  // 位置直接由滚动距离算出：每一步固定 STEP_DISTANCE_SVH，
+  // 一次滚动跨过多少距离就前进多少步，不会漏也不会一次跳两层。
+  // （旧实现用 IntersectionObserver 观察 6vh 宽的判定带，一次滚轮 ~100px、
+  //   步距 46vh，标记点常常整帧掠过判定带不被上报，于是卡一层、再跳两层。）
   useEffect(() => {
-    const setActive = (index: number) => {
-      if (activeIndexRef.current === index) return
-      activeIndexRef.current = index
-      setActiveIndex(index)
+    const root = rootRef.current
+    const sticky = stickyRef.current
+    if (!root || !sticky) return
+
+    let raf = 0
+    let span = 0
+    const measure = () => {
+      const travel = root.offsetHeight - sticky.offsetHeight
+      span = steps.length > 1 ? travel / (steps.length - 1) : 0
     }
-    const initialActive = () => {
-      const focusY = window.innerHeight * 0.46
-      let current = 0
-      for (let index = 0; index < steps.length; index += 1) {
-        const marker = document.getElementById(steps[index].id)
-        if (!marker) continue
-        if (marker.getBoundingClientRect().top <= focusY) current = index
-        else break
+    const sync = () => {
+      if (span <= 0) return
+      const lock = lockRef.current
+      if (lock) {
+        if (Math.abs(window.scrollY - lock.y) > 2 && performance.now() < lock.until) return
+        lockRef.current = null
       }
-      setActive(current)
+      const offset = -root.getBoundingClientRect().top
+      const index = Math.round(offset / span)
+      setActive(Math.max(0, Math.min(steps.length - 1, index)))
     }
-    const indexById = new Map(steps.map((step, index) => [step.id, index]))
-    const observer = new IntersectionObserver((observations) => {
-      for (const observation of observations) {
-        if (!observation.isIntersecting) continue
-        const index = indexById.get(observation.target.id)
-        if (index !== undefined) setActive(index)
-      }
-    }, { rootMargin: '-45% 0px -49% 0px', threshold: 0 })
-    for (const step of steps) {
-      const marker = document.getElementById(step.id)
-      if (marker) observer.observe(marker)
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(sync)
     }
-    initialActive()
+    const onResize = () => {
+      measure()
+      onScroll()
+    }
+
+    measure()
+    sync()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onResize)
     return () => {
-      observer.disconnect()
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onResize)
+      cancelAnimationFrame(raf)
     }
-  }, [steps])
+  }, [setActive, steps.length])
 
   const step = steps[activeIndex] ?? steps[0]
   const resolved = acts[step?.actIndex ?? 0]
@@ -84,26 +115,46 @@ export function HomeActStage({
     ? Math.max(0, Math.min(1, ((step?.beatIndex ?? -1) + 1) / (resolved.beats.length + 1)))
     : 0
 
-  function jumpBy(delta: number) {
-    const target = steps[Math.max(0, Math.min(steps.length - 1, activeIndex + delta))]
-    if (!target) return
-    document.getElementById(target.id)?.scrollIntoView({
+  /** 跳到第 index 步：直接滚到该步对应的精确滚动位置，不依赖锚点的 scrollIntoView。 */
+  const jumpTo = useCallback((index: number) => {
+    const metrics = readMetrics()
+    if (!metrics || metrics.span <= 0) return
+    const bounded = Math.max(0, Math.min(steps.length - 1, index))
+    const y = Math.round(metrics.top + bounded * metrics.span)
+    setActive(bounded)
+    lockRef.current = { y, until: performance.now() + 1200 }
+    window.scrollTo({
+      top: y,
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-      block: 'start',
     })
-  }
+  }, [readMetrics, setActive, steps.length])
 
   if (!resolved) return null
   const act = resolved.act
+
+  /**
+   * 左右方向键翻页——只在焦点已经落在这一幕舞台内部时生效（靠事件冒泡到 section，
+   * 不在 window 上监听），不会和页面其他地方的左右键用途打架。
+   */
+  function handleKeyDown(event: React.KeyboardEvent<HTMLElement>) {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault()
+      jumpTo(activeIndex + 1)
+    } else if (event.key === 'ArrowLeft') {
+      event.preventDefault()
+      jumpTo(activeIndex - 1)
+    }
+  }
 
   return (
     <section
       ref={rootRef}
       aria-label="三幕故事"
+      onKeyDown={handleKeyDown}
       className="relative hidden border-t border-line xl:block"
       style={{ height: `calc(100svh + ${(steps.length - 1) * STEP_DISTANCE_SVH}svh)` }}
     >
-      <div className="sticky top-0 h-[100svh] overflow-hidden bg-base">
+      <div ref={stickyRef} className="sticky top-0 h-[100svh] overflow-hidden bg-base">
         <div
           aria-hidden
           className="absolute inset-0 opacity-70 transition-colors duration-700"
@@ -119,7 +170,7 @@ export function HomeActStage({
             <h2 className="mt-3 text-[clamp(2.75rem,4.6vw,6.5rem)] font-black leading-[0.95] tracking-[-0.04em] text-ink">
               {act.title}
             </h2>
-            <div className="mt-6 max-w-xl space-y-2">
+            <div className="measure-body mt-6 space-y-2">
               {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
             </div>
             <div className="mt-9 flex items-center gap-4">
@@ -139,8 +190,8 @@ export function HomeActStage({
               ) : (
                 <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
                   <p className="font-mono text-meta uppercase tracking-[0.2em]" style={{ color: act.color }}>Scroll to explore</p>
-                  <p className="mt-5 max-w-2xl text-h2 font-semibold text-ink">这一幕，从 {resolved.beats[0]?.date ?? act.years} 开始。</p>
-                  <p className="mt-4 max-w-xl text-body text-muted">继续滚动查看这一阶段的年份与大事件，或使用右侧时间轴快速抵达。</p>
+                  <p className="measure-hero mt-5 text-h2 font-semibold text-ink">这一幕，从 {resolved.beats[0]?.date ?? act.years} 开始。</p>
+                  <p className="measure-body mt-4 text-body text-muted">继续滚动查看这一阶段的年份与大事件，或使用右侧时间轴快速抵达。</p>
                 </div>
               )}
             </div>
@@ -148,9 +199,9 @@ export function HomeActStage({
         </div>
 
         <div className="absolute bottom-[clamp(1.5rem,3vh,3rem)] left-1/2 flex -translate-x-1/2 items-center gap-3">
-          <button type="button" onClick={() => jumpBy(-1)} disabled={activeIndex === 0} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="上一个节点">←</button>
+          <button type="button" onClick={() => jumpTo(activeIndex - 1)} disabled={activeIndex === 0} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="上一个节点">←</button>
           <span className="font-mono text-meta text-faint tnum">SCROLL · {activeIndex + 1}/{steps.length}</span>
-          <button type="button" onClick={() => jumpBy(1)} disabled={activeIndex === steps.length - 1} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="下一个节点">→</button>
+          <button type="button" onClick={() => jumpTo(activeIndex + 1)} disabled={activeIndex === steps.length - 1} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="下一个节点">→</button>
         </div>
 
         {step?.actIndex === acts.length - 1 && step.beatIndex === resolved.beats.length - 1 && (
@@ -202,7 +253,7 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
           {beat.kicker && <span className="rounded-full border border-current/30 px-2 py-0.5" style={{ color }}>{beat.kicker}</span>}
         </div>
         <h3 className="mt-3 text-h2 font-bold text-ink">{beat.title}</h3>
-        {beat.body && <p className="mt-3 max-w-3xl text-body text-muted">{beat.body}</p>}
+        {beat.body && <p className="measure-body mt-3 text-body text-muted">{beat.body}</p>}
         {beat.emphasis && <p className="mt-4 font-mono text-control tracking-[0.12em]" style={{ color }}>{beat.emphasis}</p>}
       </div>
     </article>

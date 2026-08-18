@@ -50,7 +50,7 @@ export function ActSection({
       />
       <div className={`home-content-container px-page ${homeScreen ? 'xl:pr-28 2xl:pr-36' : ''}`}>
         <Reveal>
-          <header className="max-w-2xl">
+          <header className="measure-hero">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
               <p className="text-meta uppercase tracking-[0.16em]" style={{ color: a.color }}>
                 {a.kicker}
@@ -58,7 +58,7 @@ export function ActSection({
               <p className="font-mono text-meta text-faint tnum">{a.years}</p>
             </div>
             <h2 className="mt-3 text-h2 font-bold text-ink">{a.title}</h2>
-            <div className="mt-4 max-w-xl space-y-2.5">
+            <div className="measure-body mt-4 space-y-2.5">
               {a.body.map((line, i) => (
                 <p key={i} className="text-body text-muted">
                   {line}
@@ -169,7 +169,7 @@ function HeroCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
         </span>
       </div>
       <h3 className="mt-4 text-h3 font-bold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
-      {beat.body && <p className="mt-2 max-w-2xl text-body text-muted">{beat.body}</p>}
+      {beat.body && <p className="measure-body mt-2 text-body text-muted">{beat.body}</p>}
       {beat.emphasis && <EmphasisTag text={beat.emphasis} color={color} />}
     </div>
   )
@@ -192,7 +192,7 @@ function TypeCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
       <h3 className="mt-3 text-h3 font-black leading-[1.05] text-ink transition-colors group-hover:text-white">
         {beat.title}
       </h3>
-      {beat.body && <p className="mt-2 max-w-2xl text-body text-muted">{beat.body}</p>}
+      {beat.body && <p className="measure-body mt-2 text-body text-muted">{beat.body}</p>}
       {beat.emphasis && <EmphasisTag text={beat.emphasis} color={color} />}
       {beat.tail && <p className="mt-5 font-mono text-meta tracking-[0.3em] text-faint">{beat.tail}</p>}
     </div>

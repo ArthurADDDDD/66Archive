@@ -67,7 +67,7 @@ export function HomeHero({ nowYear }: { nowYear: string }) {
           </div>
           {copy.hero.eyebrow && <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">{copy.hero.eyebrow}</p>}
           <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">{copy.hero.title}</h1>
-          <p className="mt-6 max-w-xl text-body text-muted">
+          <p className="measure-body mt-6 text-body text-muted">
             {copy.hero.body.map((line, index) => (
               <span key={index}>
                 {line}

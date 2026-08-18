@@ -51,7 +51,7 @@ export default function GamesPage() {
 
       <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
         <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
-        <p className="mt-5 max-w-2xl text-body text-muted">
+        <p className="measure-body mt-5 text-body text-muted">
           {played.length} 个游戏。
           {longest?.firstDate && longest?.lastDate && (
             <>

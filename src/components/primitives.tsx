@@ -73,10 +73,10 @@ export function PageHeader({
 }) {
   return (
     <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-      <div className={wide ? 'max-w-[min(100%,72rem)]' : 'max-w-3xl'}>
+      <div className="measure-hero">
         <Eyebrow color={eyebrowColor}>{eyebrow}</Eyebrow>
         <h1 className={`mt-4 font-semibold text-ink ${wide ? 'text-[clamp(2.25rem,4.2vw,5rem)] leading-[1.08] tracking-[-0.025em]' : 'text-h1'}`}>{title}</h1>
-        {lede && <div className={`mt-5 text-body text-muted ${wide ? 'max-w-3xl' : 'max-w-2xl'}`}>{lede}</div>}
+        {lede && <div className="measure-body mt-5 text-body text-muted">{lede}</div>}
       </div>
       {right}
     </div>
@@ -101,7 +101,7 @@ export function SectionHeading({
     <div className={className}>
       {eyebrow && <Eyebrow color={eyebrowColor}>{eyebrow}</Eyebrow>}
       <h2 className="mt-3 text-h2 font-semibold text-ink">{title}</h2>
-      {body && <div className="mt-3 max-w-2xl text-body text-muted">{body}</div>}
+      {body && <div className="measure-body mt-3 text-body text-muted">{body}</div>}
     </div>
   )
 }
