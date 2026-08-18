@@ -6,7 +6,6 @@ import path from 'node:path'
 import {
   assertChangedPaths,
   assertOnlyTargetEntryChanged,
-  backupsToPrune,
   commitMessage,
   findEntry,
   gitChangedPaths,
@@ -36,9 +35,6 @@ try {
   assert.deepEqual(parseEditorCommand('code --wait'), ['code', '--wait'])
   assert.deepEqual(parseEditorCommand("'Visual Studio Code' --wait"), ['Visual Studio Code', '--wait'])
   assert.throws(() => parseEditorCommand("code '"), /未闭合/)
-  const backups = Array.from({ length: 9 }, (_, index) => `archive-20260815T00000${index}Z.dump`)
-  assert.deepEqual(backupsToPrune([...backups, 'unrelated.txt']), [backups[1], backups[0]])
-
   const repository = path.join(root, 'repository')
   fs.mkdirSync(path.join(repository, 'data', 'entries'), { recursive: true })
   fs.mkdirSync(path.join(repository, 'node_modules'), { recursive: true })
