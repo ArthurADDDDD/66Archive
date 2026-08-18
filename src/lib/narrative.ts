@@ -79,6 +79,8 @@ export type Beat = {
   gameWorld?: GameWorldFootnote
   /** 卡片尾部小标签（如 TO BE CONTINUED...） */
   tail?: string
+  /** 封面覆盖：默认取锚点条目封面；个别外部事件可直接给图床 URL */
+  cover?: string
   /** 蒙太奇幕：分类 chips（如 心灵砒霜 / 主机新作 / 壮壮 …） */
   chips?: string[]
 }
@@ -455,11 +457,12 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'nasdaq',
         date: '2019.07',
-        size: 'small',
+        size: 'type',
         kicker: '职业高光',
         title: '斗鱼156277 去了一趟纳斯达克。',
         body: '前一张还在受苦，下一张突然敲钟。这个反差本身就很女流。',
-        target: { kind: 'none' },
+        cover: 'https://pics3.baidu.com/feed/95eef01f3a292df50265fa3d970d7b6534a87331.png@f_auto?token=1a85aaece0bd0eeba03e388010f0bb3c&s=F78069A54CCC84DC50706D92030000C3',
+        target: { kind: 'href', href: 'http://hb.china.com.cn/2019-07/18/content_40831784.htm' },
       },
       {
         id: 'jump-king',
@@ -1033,7 +1036,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       body: b.body,
       href,
       external,
-      cover,
+      cover: b.cover ? proxyImage(b.cover, b.size === 'hero' ? 900 : 640) : cover,
       emphasis: fillEmphasis(b.emphasis, vars),
       gameWorld: b.gameWorld,
       tail: b.tail,
