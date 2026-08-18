@@ -211,9 +211,10 @@ function HeroRow({ beat, accent }: { beat: ResolvedBeat; accent: string }) {
       <span className="order-3 w-full text-body font-medium text-ink transition-colors group-hover:text-white sm:order-none sm:w-auto sm:flex-1">
         {beat.title}
       </span>
-      {/* 眉标跟在标题后面：标题长短不一，标签放前面会让每一行的标题起点参差。 */}
+      {/* 眉标跟在标题后面：标题长短不一，标签放前面会让每一行的标题起点参差。
+          手机端窄，标题本来就独占一行，眉标回到日期那一行，不额外多占一行高度。 */}
       {beat.kicker && (
-        <span className="order-4 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
+        <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
           {beat.kicker}
         </span>
       )}
@@ -258,7 +259,7 @@ function SecondaryList({
               {beat.title}
             </span>
             {beat.kicker && (
-              <span className="order-4 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
+              <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
                 {beat.kicker}
               </span>
             )}

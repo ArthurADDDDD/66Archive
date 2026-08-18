@@ -373,17 +373,18 @@ export function Timeline({
               {/* 面包屑（含故事/档案切换）与年份跨度同属一行眉标，两种模式落在同一个位置。 */}
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 {extra}
-                {extra && <span aria-hidden className="text-meta text-faint/50">·</span>}
-                <p className="text-meta uppercase tracking-[0.16em] text-live tnum">2010 — {latestYear}</p>
+                {/* 分隔点只在同一行时才有意义；手机端年份跨度换到下一行，点跟着一起收起来。 */}
+                {extra && <span aria-hidden className="hidden text-meta text-faint/50 sm:inline">·</span>}
+                <p className="w-full text-meta uppercase tracking-[0.16em] text-live tnum sm:w-auto">2010 — {latestYear}</p>
               </div>
               <h1 className="measure-hero mt-2 text-h1 font-semibold">从记得的内容，找到那段时间。</h1>
               <p className="measure-body mt-3 text-body text-muted">
                 每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
               </p>
             </div>
-            <dl className="flex gap-6 text-meta uppercase tracking-[0.16em] text-faint tnum">
+            <dl className="grid grid-cols-3 gap-x-3 text-meta uppercase tracking-[0.16em] text-faint tnum sm:flex sm:gap-6">
               <Stat label="条目" value={entries.length.toLocaleString()} />
-              <Stat label="已录时长" value={`${durationStats.hours.toLocaleString()} 小时`} />
+              <Stat label="已录时长" value={durationStats.hours.toLocaleString()} unit="小时" />
               <Stat label="时长覆盖" value={`${durationStats.coverage}%`} />
             </dl>
           </div>
@@ -726,12 +727,18 @@ function MonthArchive({
   )
 }
 
-/** 页头三个总量：数值是主角，标签退成眉标——和数据页 / 首页的 Stat 同一套读法。 */
-function Stat({ label, value }: { label: string; value: string }) {
+/**
+ * 页头三个总量：数值是主角，标签退成眉标——和数据页 / 首页的 Stat 同一套读法。
+ * 单位（小时）单独拆出来：跟数值挤在同一串字符里，手机端 305px 的三栏会把「10,842 小时」折成两行。
+ */
+function Stat({ label, value, unit }: { label: string; value: string; unit?: string }) {
   return (
-    <div>
+    <div className="min-w-0">
       <dt className="text-meta uppercase tracking-[0.16em] text-faint">{label}</dt>
-      <dd className="mt-1.5 font-mono text-[1.375rem] font-bold tracking-normal text-ink tnum">{value}</dd>
+      <dd className="mt-1.5 whitespace-nowrap font-mono text-[1.0625rem] font-bold tracking-normal text-ink tnum sm:text-[1.375rem]">
+        {value}
+        {unit && <span className="ml-1 font-sans text-meta font-normal text-faint">{unit}</span>}
+      </dd>
     </div>
   )
 }
