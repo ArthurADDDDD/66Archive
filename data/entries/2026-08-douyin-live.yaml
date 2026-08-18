@@ -450,3 +450,18 @@
         game: maplestory-classic
     contributed_by: data-agent
     note: B站搬运（女流66 抖音直播回放）。服部平次/直播回放巴拉蹦吧/bobi华完整源约 185:24-185:56。怪盗基德KID 137:04 与不懒bot 88:37 为该场部分切片，未作为主时长。
+
+  - id: 2026-08-18-live-01
+    type: live
+    date: "2026-08-18"
+    title: "一起see《影之刃零》State of Play"
+    platform: douyin
+    duration_min: 40
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/7649ce4007af0bdbf49906ff4862e01415a7ce67.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV18Abk6GE6L"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 d22a663a-e296-49a7-bd07-0a040ec91fea）。"
+    contributed_by: collection-review
