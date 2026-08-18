@@ -1,6 +1,7 @@
 # 2015-2016 早期斗鱼直播补档
 # 来源：B站「女流录像小屋」/「影忆丶Yi」过往精彩录像补投系列。
   - id: 2015-01-21-live-01
+    cover: https://i1.hdslb.com/bfs/archive/248bb3891c9e01cd46b9e6e3dd8531192731ee46.jpg
     type: live
     date: '2015-01-21'
     title: 重启之后还是一条好汉
@@ -12,6 +13,7 @@
       - 直播过渡
     sources:
       - url: https://www.bilibili.com/video/BV1Px411A7NG
+        cover: https://i1.hdslb.com/bfs/archive/248bb3891c9e01cd46b9e6e3dd8531192731ee46.jpg
         kind: replay
         status: alive
         account: bili-fan-record-house
