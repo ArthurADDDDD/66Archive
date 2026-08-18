@@ -69,7 +69,12 @@ export function ChronicleView({
   if (mode === 'archive') {
     return (
       <>
-        <Timeline entries={entries} isDemo={isDemo} hiddenUnreviewed={hiddenUnreviewed} extra={<ModeToggle mode={mode} onChange={switchMode} />} />
+        <Timeline
+          entries={entries}
+          isDemo={isDemo}
+          hiddenUnreviewed={hiddenUnreviewed}
+          extra={<ChronicleBreadcrumb mode={mode} onChange={switchMode} />}
+        />
         <BackToTop />
       </>
     )
@@ -93,15 +98,13 @@ export function ChronicleView({
             iconClassName="ml-auto sm:hidden"
             inputClassName="hidden"
           />
-          <div className="hidden items-center gap-3 sm:flex">
-            <button
-              onClick={() => switchMode('archive')}
-              className="ui-press shrink-0 rounded-sm px-1 py-2 text-meta text-live tnum sm:py-0"
-            >
-              搜索全部 {total.toLocaleString()} 条记录 →
-            </button>
-            <ModeToggle mode={mode} onChange={switchMode} />
-          </div>
+          {/* 和游戏 / 节目 / 数据各页一致：这条入口固定贴在页头最右端。 */}
+          <button
+            onClick={() => switchMode('archive')}
+            className="ui-press ml-auto hidden shrink-0 rounded-sm text-meta text-live tnum sm:block"
+          >
+            搜索全部 {total.toLocaleString()} 条记录 →
+          </button>
         </div>
       </header>
       {/* mounted 后再亮出滚动显现，避免 SSR 闪现 */}
@@ -111,7 +114,7 @@ export function ChronicleView({
           total={total}
           latestYear={latestYear}
           onOpenArchive={openArchiveYear}
-          modeControl={<ModeToggle mode={mode} onChange={switchMode} />}
+          eyebrow={<ChronicleBreadcrumb mode={mode} onChange={switchMode} />}
         />
       </div>
       <BackToTop />
@@ -119,29 +122,35 @@ export function ChronicleView({
   )
 }
 
-/** 故事/档案切换：克制文字切换 */
-function ModeToggle({ mode, onChange }: { mode: 'story' | 'archive'; onChange: (m: 'story' | 'archive') => void }) {
+/**
+ * 面包屑即模式切换：Chronicle · 编年史 · 故事模式 / 档案模式。
+ * 切换本来就是「我现在在看哪一种编年史」，放在面包屑的最后一级比塞进页头更说得通，
+ * 页头因此只剩导航与搜索入口，和其他页面对齐。
+ */
+function ChronicleBreadcrumb({ mode, onChange }: { mode: 'story' | 'archive'; onChange: (m: 'story' | 'archive') => void }) {
+  const item = (value: 'story' | 'archive', label: string) => (
+    <button
+      onClick={() => onChange(value)}
+      aria-current={mode === value ? 'page' : undefined}
+      className={`ui-press rounded-sm transition-colors ${
+        mode === value ? 'text-ink' : 'text-live hover:text-ink'
+      }`}
+    >
+      {label}
+    </button>
+  )
+
   return (
-    <div role="group" aria-label="编年史模式" className="flex shrink-0 items-center gap-1 text-meta">
-      <button
-        onClick={() => onChange('story')}
-        aria-pressed={mode === 'story'}
-        className={`ui-press rounded-sm px-1 py-2 transition-colors sm:py-0.5 ${
-          mode === 'story' ? 'text-ink underline underline-offset-4' : 'text-faint hover:text-muted'
-        }`}
-      >
-        故事
-      </button>
-      <span aria-hidden className="text-faint/40">/</span>
-      <button
-        onClick={() => onChange('archive')}
-        aria-pressed={mode === 'archive'}
-        className={`ui-press rounded-sm px-1 py-2 transition-colors sm:py-0.5 ${
-          mode === 'archive' ? 'text-ink underline underline-offset-4' : 'text-faint hover:text-muted'
-        }`}
-      >
-        档案
-      </button>
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live">
+      <span>Chronicle</span>
+      <span aria-hidden className="text-faint/50">·</span>
+      <span>编年史</span>
+      <span aria-hidden className="text-faint/50">·</span>
+      <span role="group" aria-label="编年史模式" className="flex items-center gap-1.5">
+        {item('story', '故事模式')}
+        <span aria-hidden className="text-faint/40">/</span>
+        {item('archive', '档案模式')}
+      </span>
     </div>
   )
 }

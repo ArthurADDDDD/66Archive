@@ -28,6 +28,7 @@ function toggle(list: string[], v: string) {
 }
 
 export function FilterRail({ filters, set, platformCounts, gameCounts, total, matched }: Props) {
+  const gamePeak = Math.max(1, ...gameCounts.map((game) => game.count))
   const dirty =
     filters.q || filters.platforms.length || filters.types.length || filters.games.length || filters.onlyAlive
 
@@ -85,21 +86,29 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
       </Section>
 
       <Section label={`游戏 · ${gameCounts.length}`}>
+        {/* 这份列表动辄几百行，只靠灰字排下去读不出轻重：
+            每行垫一条按场次归一化的底纹，量级本身成为可以扫视的形状。 */}
         <ul className="max-h-64 space-y-px overflow-y-auto pr-1">
           {gameCounts.map((g) => {
             const on = filters.games.includes(g.id)
+            const share = Math.round((g.count / gamePeak) * 100)
             return (
               <li key={g.id}>
                 <button
                   onClick={() => set({ games: toggle(filters.games, g.id) })}
                   aria-pressed={on}
-                  className={`ui-press flex w-full items-center gap-2 rounded px-1.5 py-2 text-left text-meta sm:py-1 ${
+                  className={`ui-press relative flex w-full items-center gap-2 overflow-hidden rounded px-1.5 py-2 text-left text-meta sm:py-1 ${
                     on ? 'bg-raised text-ink' : 'text-muted hover:bg-surface hover:text-ink'
                   }`}
                 >
-                  <span className="inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: gameColor(g.id) }} />
-                  <span className="min-w-0 flex-1 truncate">{g.name}</span>
-                  <span className="font-mono text-meta text-faint tnum">{g.count}</span>
+                  <span
+                    aria-hidden
+                    className="absolute inset-y-0 left-0"
+                    style={{ width: `${share}%`, background: gameColor(g.id), opacity: on ? 0.22 : 0.12 }}
+                  />
+                  <span className="relative inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: gameColor(g.id) }} />
+                  <span className="relative min-w-0 flex-1 truncate">{g.name}</span>
+                  <span className="relative font-mono text-meta tabular-nums text-ink">{g.count}</span>
                 </button>
               </li>
             )
@@ -121,7 +130,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
 
       <div className="border-t border-line pt-4 text-meta text-faint tnum">
         <div>
-          {matched} / {total} 条
+          <span className="font-mono text-[0.9375rem] font-semibold text-ink">{matched.toLocaleString()}</span> / {total.toLocaleString()} 条
         </div>
         {dirty && (
           <button onClick={() => set(EMPTY_FILTERS)} className="ui-press mt-2 rounded-sm text-live underline underline-offset-4">

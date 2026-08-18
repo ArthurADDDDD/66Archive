@@ -272,7 +272,7 @@ function Section({ question, accent, children }: { question: string; accent: str
 
 function Observation({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mt-6 max-w-2xl border-l-2 border-line pl-4 text-body text-muted">
+    <p className="measure-body mt-6 border-l-2 border-line pl-4 text-body text-muted">
       <span className="text-meta uppercase tracking-[0.16em] text-faint">观察 · </span>
       {children}
     </p>

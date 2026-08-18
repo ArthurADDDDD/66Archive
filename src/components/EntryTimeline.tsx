@@ -11,11 +11,13 @@ type MonthGroup = {
   month: number
   count: number
   firstEntryId: string
+  firstEntryTitle: string
 }
 
 /**
  * 首页式的条目时间线：目录本身保持原来的横向条目布局，时间索引独立贴在右侧。
- * 鼠标在时间轴上移动时快速预览对应年月；点击后锁定当前年月，再点别处切换。
+ * 悬停只是看：显示该年月的标签，页面不动；点击（或按住拖动）才真正跳过去。
+ * 标签不常驻——指针离开时间轴就收起，游标位置继续跟随当前阅读位置。
  */
 export function EntryTimeline({
   entries,
@@ -32,7 +34,7 @@ export function EntryTimeline({
   const activeIndexRef = useRef(0)
   const [activeIndex, setActiveIndex] = useState(0)
   const [hoverIndex, setHoverIndex] = useState<number | null>(null)
-  const [lockedIndex, setLockedIndex] = useState<number | null>(null)
+  const draggingRef = useRef(false)
   const [portalReady, setPortalReady] = useState(false)
 
   useEffect(() => {
@@ -45,12 +47,14 @@ export function EntryTimeline({
     window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
   ), [])
 
-  const jumpToIndex = useCallback((index: number, behavior: ScrollBehavior = scrollBehavior(), commit = false) => {
+  const jumpToIndex = useCallback((index: number, behavior: ScrollBehavior = scrollBehavior()) => {
     const group = groups[Math.max(0, Math.min(groups.length - 1, index))]
     if (!group) return
+    const bounded = Math.max(0, Math.min(groups.length - 1, index))
+    activeIndexRef.current = bounded
+    setActiveIndex(bounded)
     document.getElementById(`entry-${group.firstEntryId}`)?.scrollIntoView({ behavior, block: 'start' })
-    // 悬停只是预览，不能在高频 pointermove 中反复改 URL / 创建历史状态。
-    if (commit) window.history.replaceState(null, '', `#entry-${group.firstEntryId}`)
+    window.history.replaceState(null, '', `#entry-${group.firstEntryId}`)
   }, [groups, scrollBehavior])
 
   const getIndex = useCallback((clientY: number) => {
@@ -97,19 +101,15 @@ export function EntryTimeline({
     }
   }, [groups])
 
-  const moveWithPointer = useCallback((clientY: number) => {
-    if (lockedIndex !== null) return
-    const index = getIndex(clientY)
-    if (index === null) return
-    if (hoverIndexRef.current === index) return
-    hoverIndexRef.current = index
-    setHoverIndex(index)
-    jumpToIndex(index)
-  }, [getIndex, jumpToIndex, lockedIndex])
-
+  // 悬停只更新标签，不动页面：滚动条式的「预读」，不是自动跳转。
   const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'touch') return
-    moveWithPointer(event.clientY)
+    const index = getIndex(event.clientY)
+    if (index === null || hoverIndexRef.current === index) return
+    hoverIndexRef.current = index
+    setHoverIndex(index)
+    // 按住不放时可以继续拖着找位置，松开前一直跟着走。
+    if (draggingRef.current) jumpToIndex(index, 'auto')
   }
 
   const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
@@ -117,10 +117,10 @@ export function EntryTimeline({
     event.preventDefault()
     const index = getIndex(event.clientY)
     if (index === null) return
+    draggingRef.current = true
     hoverIndexRef.current = index
     setHoverIndex(index)
-    setLockedIndex(index)
-    jumpToIndex(index, 'auto', true)
+    jumpToIndex(index, 'auto')
   }
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -131,14 +131,14 @@ export function EntryTimeline({
     if (event.key === 'End') nextIndex = groups.length - 1
     if (nextIndex === null) return
     event.preventDefault()
-    const bounded = Math.max(0, Math.min(groups.length - 1, nextIndex))
-    setLockedIndex(bounded)
-    jumpToIndex(bounded, 'auto', true)
+    jumpToIndex(nextIndex, 'auto')
   }
 
-  const previewIndex = hoverIndex ?? lockedIndex ?? activeIndex
-  const previewGroup = groups[previewIndex]
-  const visibleIndex = lockedIndex ?? activeIndex
+  // 标签只在指针停在时间轴上时出现；平时右侧只留刻度与游标。
+  const previewIndex = hoverIndex ?? activeIndex
+  const previewGroup = hoverIndex === null ? null : groups[hoverIndex]
+  const visibleIndex = activeIndex
+  const currentGroup = groups[previewIndex]
 
   if (groups.length === 0) return <div className="w-full divide-y divide-line/50 border-y border-line/60" />
 
@@ -146,17 +146,19 @@ export function EntryTimeline({
     <aside className="pointer-events-none fixed inset-y-0 right-0 z-30 hidden xl:flex xl:items-center" aria-label="条目年月时间轴">
         <div
           ref={railRef}
-          className="home-section-rail pointer-events-auto relative h-[clamp(26rem,72vh,54rem)] w-[clamp(5rem,6vw,7rem)] cursor-crosshair select-none"
+          className="home-section-rail pointer-events-auto relative h-[clamp(26rem,72vh,54rem)] w-[clamp(5rem,6vw,7rem)] cursor-pointer select-none"
           role="slider"
           tabIndex={0}
           aria-label="按年月查找条目"
           aria-valuemin={1}
           aria-valuemax={groups.length}
           aria-valuenow={visibleIndex + 1}
-          aria-valuetext={`${previewGroup?.year} 年 ${MONTH_CN[(previewGroup?.month ?? 1) - 1]}，${previewGroup?.count} 条`}
+          aria-valuetext={`${currentGroup?.year} 年 ${MONTH_CN[(currentGroup?.month ?? 1) - 1]}，${currentGroup?.count} 条`}
           onPointerMove={handlePointerMove}
           onPointerDown={handlePointerDown}
+          onPointerUp={() => { draggingRef.current = false }}
           onPointerLeave={() => {
+            draggingRef.current = false
             if (hoverIndexRef.current !== null) setHoverIndex(null)
             hoverIndexRef.current = null
           }}
@@ -197,9 +199,9 @@ export function EntryTimeline({
               className="pointer-events-none absolute right-[calc(100%-0.4rem)] w-max max-w-[clamp(14rem,24vw,22rem)] -translate-y-1/2 rounded-xl border border-line/80 bg-surface/95 px-[clamp(0.75rem,1.2vw,1rem)] py-[clamp(0.625rem,1vw,0.875rem)] text-left shadow-[0_1rem_3rem_rgba(0,0,0,0.34)] backdrop-blur-xl"
               style={{ top: `${groups.length > 1 ? (previewIndex / (groups.length - 1)) * 100 : 0}%` }}
             >
-              <span className="block font-mono text-meta tnum" style={{ color }}>{previewGroup.year} · {MONTH_CN[previewGroup.month - 1]}</span>
-              <span className="mt-0.5 block text-control leading-snug text-ink">{previewGroup.count} 条记录</span>
-              <span className="mt-1 block text-meta text-faint">{lockedIndex === null ? '悬停快速定位 · 点击锁定' : '已锁定 · 点击其他位置切换'}</span>
+              <span className="block font-mono text-meta tnum" style={{ color }}>{previewGroup.year}</span>
+              <span className="mt-0.5 block line-clamp-2 text-control leading-snug text-ink">{previewGroup.firstEntryTitle}</span>
+              <span className="mt-1 block font-mono text-meta text-faint tnum">{MONTH_CN[previewGroup.month - 1]} · {previewGroup.count} 条记录</span>
             </span>
           )}
         </div>
@@ -234,6 +236,7 @@ function groupByMonth(entries: TimelineEntry[]): MonthGroup[] {
       month: Number(entry.date.slice(5, 7)),
       count: 1,
       firstEntryId: entry.id,
+      firstEntryTitle: entry.title,
     })
   }
   return [...grouped.values()]

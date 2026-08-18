@@ -56,7 +56,7 @@ export default async function SeriesPage() {
                 周日情感电台 · 斗鱼时期 · 心灵砒霜
               </Eyebrow>
               <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
-              <p className="mt-5 max-w-xl text-body text-muted">{pishuang.description}</p>
+              <p className="measure-body mt-5 text-body text-muted">{pishuang.description}</p>
               <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
                 <span className="text-body text-ink">{pishuang.count} 期</span>
                 <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
@@ -85,7 +85,7 @@ export default async function SeriesPage() {
                 alt={pishuang.firstTitle ?? pishuang.name}
                 className="w-full"
               />
-              <p className="max-w-md text-body text-muted">
+              <p className="measure-body text-body text-muted">
                 游戏暂停，邮件打开，一个星期日。后来这件事被保存下来 {pishuang.count} 次——有的很长，有的很短，固定地出现在每周日。
               </p>
               <Link
@@ -152,7 +152,7 @@ function EraGroup({ label, years, color, series }: { label: string; years: strin
             )}
             <h3 className="mt-4 text-base font-semibold tracking-tight text-ink">{s.name}</h3>
             <p className="mt-1.5 text-meta text-faint tnum">
-              {s.count} 期 · {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
+              <span className="font-mono text-[0.9375rem] font-semibold text-ink">{s.count}</span> 期 · {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
             </p>
             <p className="mt-2.5 line-clamp-2 min-h-[2.8em] text-body text-muted">{s.description}</p>
             <div className="mt-4">

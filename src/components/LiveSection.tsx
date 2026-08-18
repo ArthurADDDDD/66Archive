@@ -31,7 +31,7 @@ export function LiveSectionHeading({
     <>
       {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
       {block.title && <h2 className={titleClassName}>{block.title}</h2>}
-      {block.lede && <p className="mt-3 max-w-xl text-body text-muted">{block.lede}</p>}
+      {block.lede && <p className="measure-body mt-3 text-body text-muted">{block.lede}</p>}
     </>
   )
 }
@@ -56,7 +56,7 @@ export function LivePageHeader({
 export function LivePageHeading({
   pageId,
   eyebrowColor,
-  titleClassName = 'mt-4 max-w-3xl text-h1 font-semibold',
+  titleClassName = 'measure-hero mt-4 text-h1 font-semibold',
   className,
 }: {
   pageId: string
@@ -69,7 +69,7 @@ export function LivePageHeading({
     <div className={className}>
       {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
       {block.title && <h1 className={titleClassName}>{block.title}</h1>}
-      {block.lede && <p className="mt-5 max-w-2xl text-body text-muted">{block.lede}</p>}
+      {block.lede && <p className="measure-body mt-5 text-body text-muted">{block.lede}</p>}
     </div>
   )
 }

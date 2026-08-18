@@ -30,7 +30,7 @@ export default function GalleryPage() {
       <section className="site-container px-page pb-12 pt-12 sm:pb-16 sm:pt-16">
         <div className="pointer-events-none absolute -right-20 -top-24 h-[220px] w-[220px] rounded-full bg-today/10 blur-[60px] sm:h-[380px] sm:w-[380px] sm:blur-[110px]" />
         <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal relative" />
-        <p className="ui-reveal relative mt-5 max-w-2xl text-body text-muted">
+        <p className="ui-reveal measure-body relative mt-5 text-body text-muted">
           这些画面不是装饰，是水友替每个年份留下来的注脚。
           原图是什么样，这里就是什么样——不修图、不放大、不换背景。
         </p>
@@ -47,8 +47,8 @@ export default function GalleryPage() {
       <section className="border-t border-line bg-surface/20">
         <div className="site-container px-page py-12 sm:py-20">
           <Eyebrow>Missing chapters</Eyebrow>
-          <h2 className="mt-3 max-w-2xl text-h2 font-medium text-ink">还有一些年份，正在等待被找回。</h2>
-          <p className="mt-3 max-w-2xl text-body text-muted">
+          <h2 className="measure-hero mt-3 text-h2 font-medium text-ink">还有一些年份，正在等待被找回。</h2>
+          <p className="measure-body mt-3 text-body text-muted">
             缺口不是空白页，而是下一次补录的方向。以下年份目前没有找到可公开核验的独立画面；如果你手上有原图、视频或帖子线索，欢迎从这里补上。
           </p>
           <div className="mt-5 flex flex-wrap gap-2">

@@ -27,23 +27,23 @@ export function StoryTimeline({
   total,
   latestYear,
   onOpenArchive,
-  modeControl,
+  eyebrow,
 }: {
   years: StoryYear[]
   total: number
   latestYear: number
   onOpenArchive: (year: number) => void
-  modeControl?: ReactNode
+  /** 面包屑（含故事/档案切换）。缺省时退回静态眉标。 */
+  eyebrow?: ReactNode
 }) {
   const { narrative } = useLiveContent()
   const years = applyLiveStoryYears(baselineYears, narrative?.storyActs, narrative?.deletedIds ?? [])
   return (
     <main className="ui-page-in site-container px-page pb-20">
-      {modeControl && <div className="ui-reveal pt-4 sm:hidden">{modeControl}</div>}
       <section className="ui-reveal pb-8 pt-4 sm:py-12">
-        <Eyebrow color="#5BC8E8">Chronicle · 编年史 · 故事模式</Eyebrow>
-        <h1 className="mt-4 max-w-2xl text-h1 font-semibold">时间不是一条列表，是一路走过来的。</h1>
-        <p className="mt-5 max-w-2xl text-body text-muted">
+        {eyebrow ?? <Eyebrow color="#5BC8E8">Chronicle · 编年史 · 故事模式</Eyebrow>}
+        <h1 className="measure-hero mt-4 text-h1 font-semibold">时间不是一条列表，是一路走过来的。</h1>
+        <p className="measure-body mt-5 text-body text-muted">
           故事模式只放那些值得停下看的晚上。共 {total.toLocaleString()} 条记录里的全部内容，在档案模式里可以逐条查到——包括这里没出现的每一次。
         </p>
       </section>
@@ -142,7 +142,7 @@ function SparseNote({ year, accent }: { year: StoryYear; accent: string }) {
   if (year.isEmpty) {
     return (
       <div className="border-l-2 border-line/50 py-1.5 pl-4">
-        <p className="max-w-md text-body text-muted">
+        <p className="measure-body text-body text-muted">
           档案里没有 {year.year} 年的记录。缺口被如实保留——它也是这段历史的一部分。
         </p>
       </div>
@@ -176,7 +176,7 @@ function HeroEvent({ beat, accent }: { beat: ResolvedBeat; accent: string }) {
       <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start">
         <div className="min-w-0 flex-1">
           <h3 className="text-h3 font-semibold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
-          {beat.body && <p className="mt-2 max-w-lg text-body text-muted">{beat.body}</p>}
+          {beat.body && <p className="measure-body mt-2 text-body text-muted">{beat.body}</p>}
           {beat.emphasis && (
             <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
               {beat.emphasis}
@@ -208,14 +208,15 @@ function HeroRow({ beat, accent }: { beat: ResolvedBeat; accent: string }) {
     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
       <span aria-hidden className="mt-1.5 h-2 w-2 shrink-0 rounded-full sm:mt-0" style={{ background: accent }} />
       <span className="order-1 font-mono text-meta text-faint tnum sm:order-none">{beat.date}</span>
-      {beat.kicker && (
-        <span className="order-1 text-meta sm:order-none" style={{ color: accent }}>
-          {beat.kicker}
-        </span>
-      )}
       <span className="order-3 w-full text-body font-medium text-ink transition-colors group-hover:text-white sm:order-none sm:w-auto sm:flex-1">
         {beat.title}
       </span>
+      {/* 眉标跟在标题后面：标题长短不一，标签放前面会让每一行的标题起点参差。 */}
+      {beat.kicker && (
+        <span className="order-4 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
+          {beat.kicker}
+        </span>
+      )}
       <span aria-hidden className="order-2 ml-auto shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:order-none" style={{ color: accent }}>
         →
       </span>
@@ -253,14 +254,14 @@ function SecondaryList({
         const inner = (
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <span className="order-1 shrink-0 font-mono text-meta text-faint tnum sm:order-none sm:w-[72px]">{beat.date}</span>
-            {beat.kicker && (
-              <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
-                {beat.kicker}
-              </span>
-            )}
             <span className="order-3 w-full min-w-0 text-body text-muted group-hover:text-ink sm:order-none sm:w-auto sm:flex-1 sm:truncate">
               {beat.title}
             </span>
+            {beat.kicker && (
+              <span className="order-4 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
+                {beat.kicker}
+              </span>
+            )}
             <span
               aria-hidden
               className="order-2 ml-auto shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:order-none sm:ml-0"

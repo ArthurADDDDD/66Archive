@@ -81,7 +81,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <Eyebrow color={color} dot>
           {s.era === 'video' ? '视频解说时代' : '斗鱼直播时代'} · 栏目 / 系列
         </Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
+        <h1 className="measure-hero mt-4 text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
         <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
           <span className="text-body text-ink">{s.count} 期</span>
           <span>
@@ -89,13 +89,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
           </span>
           {longest?.duration_min && <span>最长一期 {formatDuration(longest.duration_min)}</span>}
         </div>
-        <p className="mt-6 max-w-2xl text-body text-muted">{s.description}</p>
+        <p className="measure-body mt-6 text-body text-muted">{s.description}</p>
       </section>
 
       {/* 代表性一句：第一期标题，原文照录 */}
       {s.firstTitle && (
         <section className="site-container px-page pb-10 sm:pb-14">
-          <blockquote className="max-w-2xl border-l-2 pl-5" style={{ borderColor: color }}>
+          <blockquote className="measure-body border-l-2 pl-5" style={{ borderColor: color }}>
             <p className="text-h3 font-medium leading-relaxed text-ink">第一期：「{s.firstTitle}」</p>
             <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
           </blockquote>

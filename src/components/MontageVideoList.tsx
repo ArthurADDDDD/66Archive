@@ -44,7 +44,7 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
         <span className="font-mono text-meta text-faint tnum">{beat.date}</span>
       </div>
       <h3 className="mt-3 text-h3 font-bold text-ink">{beat.title}</h3>
-      {beat.body && <p className="mt-2 max-w-2xl text-body text-muted">{beat.body}</p>}
+      {beat.body && <p className="measure-body mt-2 text-body text-muted">{beat.body}</p>}
 
       {beat.chips && beat.chips.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">

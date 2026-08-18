@@ -130,11 +130,17 @@ body {
   }
 }
 
-/* 键盘可达性：焦点必须看得见 */
+/**
+ * 键盘可达性：焦点必须看得见，但不要长得像浏览器默认的那种蓝色方框描边。
+ * 用 outline 兜底可达性（永远存在、屏幕阅读器与强制颜色模式都认得），
+ * 视觉上用 box-shadow 叠两层近白柔光做真正看到的效果——outline 本身透明，
+ * 贴着元素自身的圆角走，不会在圆角按钮外面画一个生硬的直角框。
+ * 档案模式里那些自带颜色的选中态（时期色描边 + 阴影）是内容本身的状态，不是这套规则，不受影响。
+ */
 :focus-visible {
-  outline: 2px solid #5bc8e8;
+  outline: 2px solid transparent;
   outline-offset: 2px;
-  border-radius: 2px;
+  box-shadow: 0 0 0 1.5px rgba(230, 228, 239, 0.65), 0 0 0 5px rgba(230, 228, 239, 0.14);
 }
 
 ::-webkit-scrollbar {
@@ -271,6 +277,27 @@ body {
   .text-control {
     font-size: clamp(0.8125rem, 0.4vw, 0.9375rem);
     line-height: 1.5;
+  }
+
+  /**
+   * 阅读宽度（measure）。此前正文/标题散落着 max-w-md/lg/xl/2xl/3xl——
+   * 这些是写死的 rem：版心已经跟着视口长大了，段落却还停在同一个像素位置换行，
+   * 于是宽屏上出现「离右边界还很远就折行」的观感。
+   *
+   * 三档统一写成同一个式子：不小于一个下限（手机上等于整宽）、
+   * 中间按容器百分比长大（跟着版心走）、到上限为止（不让行长失控到读不下去）。
+   * 用哪一档只看内容角色，不看当前页面有多宽。
+   */
+  .measure-hero {
+    max-width: min(100%, max(28rem, 88%), 84rem);
+  }
+
+  .measure-body {
+    max-width: min(100%, max(30rem, 78%), 70rem);
+  }
+
+  .measure-note {
+    max-width: min(100%, max(24rem, 62%), 52rem);
   }
 
   /**
