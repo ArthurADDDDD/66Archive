@@ -48,13 +48,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const rails = [
     {
       title: '档案检索',
-      items: [{ label: `搜索「${s.name}」的全部记录`, href: `/chronicle/?q=${encodeURIComponent(s.name)}` }],
+      items: [{ label: `搜索「${s.name}」的全部记录`, href: `/archive/?q=${encodeURIComponent(s.name)}` }],
     },
     {
-      title: '同期编年史',
+      title: '同期录播',
       items: [
-        { label: `${s.firstDate.slice(0, 4)} 年`, href: `/chronicle/?y=${s.firstDate.slice(0, 4)}` },
-        { label: `${s.lastDate.slice(0, 4)} 年`, href: `/chronicle/?y=${s.lastDate.slice(0, 4)}` },
+        { label: `${s.firstDate.slice(0, 4)} 年`, href: `/archive/?y=${s.firstDate.slice(0, 4)}` },
+        { label: `${s.lastDate.slice(0, 4)} 年`, href: `/archive/?y=${s.lastDate.slice(0, 4)}` },
       ],
     },
   ]
@@ -111,7 +111,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             {s.perYear.map((p) => (
               <Link
                 key={p.year}
-                href={`/chronicle/?q=${encodeURIComponent(s.name)}&y=${p.year}`}
+                href={`/archive/?q=${encodeURIComponent(s.name)}&y=${p.year}`}
                 className="ui-press rounded-full border border-line/80 bg-surface/50 px-3 py-1.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink tnum"
               >
                 {p.year} 年 · {p.count} 期

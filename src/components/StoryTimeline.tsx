@@ -40,10 +40,10 @@ export function StoryTimeline({
   return (
     <main className="ui-page-in site-container px-page pb-20">
       <section className="ui-reveal pb-8 pt-4 sm:py-12">
-        {eyebrow ?? <Eyebrow color="#5BC8E8">Chronicle · 编年史 · 故事模式</Eyebrow>}
+        {eyebrow ?? <Eyebrow color="#5BC8E8">Chronicle · 编年史</Eyebrow>}
         <h1 className="measure-hero mt-4 text-h1 font-semibold">时间不是一条列表，是一路走过来的。</h1>
         <p className="measure-body mt-5 text-body text-muted">
-          这里把视频、直播和能确认的重要节点串在一起。想找具体某一天，再去档案里翻。
+          这里把视频、直播和能确认的重要节点串在一起。想找具体某一天，再去录播室里翻。
         </p>
       </section>
 
@@ -56,7 +56,11 @@ export function StoryTimeline({
       </div>
 
       <p className="mt-8 text-meta text-faint">
-        想找具体日期、游戏或来源，可以去档案模式。
+        想找具体日期、游戏或来源，可以去{' '}
+        <Link href="/archive/" className="text-live underline underline-offset-4 hover:text-ink">
+          录播室
+        </Link>
+        。
       </p>
     </main>
   )
@@ -153,11 +157,11 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
       <p className="text-meta text-faint tnum">
         这一年留下了 {section.archiveCount.toLocaleString()} 条记录。
         <Link
-          href={`/chronicle/?y=${section.year}`}
+          href={`/archive/?y=${section.year}`}
           className="ml-2 inline-block underline underline-offset-4 transition-opacity hover:opacity-80"
           style={{ color: accent }}
         >
-          去档案看看 →
+          去录播室看看 →
         </Link>
       </p>
     </div>

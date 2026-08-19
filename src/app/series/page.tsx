@@ -37,10 +37,10 @@ export default async function SeriesPage() {
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="series" />
         <Link
-          href="/chronicle/"
+          href="/archive/"
           className="ui-press hidden rounded-sm text-meta text-live sm:block"
         >
-          在编年史搜索全部记录 →
+          在录播室搜索全部记录 →
         </Link>
       </header>
 

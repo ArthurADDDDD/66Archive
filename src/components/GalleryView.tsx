@@ -226,7 +226,7 @@ function Lightbox({
               </a>
             )}
             <Link
-              href={`/chronicle/?y=${item.year}`}
+              href={`/archive/?y=${item.year}`}
               className="ui-press rounded-sm border border-line px-2 py-1 text-muted transition-colors hover:border-live/60 hover:text-live"
             >
               {item.year} 年编年史 →
