@@ -465,3 +465,18 @@
         status: alive
     note: "自动采集候选经人工审批新建（组 d22a663a-e296-49a7-bd07-0a040ec91fea）。"
     contributed_by: collection-review
+
+  - id: 2026-08-18-live-02
+    type: live
+    date: "2026-08-18"
+    title: "整理的是思绪 不是物品"
+    platform: douyin
+    duration_min: 180
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/c7919b2893e265f729177db8a9c56605606f3b8b.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1D58364E1P"
+        kind: replay
+        status: alive
+    note: "第二场判定：晚上开播 自动采集候选经人工审批新建（组 50c5c859-d2f4-4540-b252-5abc55e6ee41）。"
+    contributed_by: collection-review
