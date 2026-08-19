@@ -86,7 +86,7 @@ export default async function SeriesPage() {
                 className="w-full"
               />
               <p className="measure-body text-body text-muted">
-                游戏暂停，邮件打开，一个星期日。后来这件事被保存下来 {pishuang.count} 次——有的很长，有的很短，固定地出现在每周日。
+                游戏暂停，邮件打开，一个星期日。后来，它陆续留下了 {pishuang.count} 期——有的很长，有的很短，很多个星期日，直播间都会等到这档节目。
               </p>
               <Link
                 href="/series/xinling-pishuang/"

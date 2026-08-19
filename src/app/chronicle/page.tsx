@@ -1,6 +1,6 @@
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { resolveStoryActs } from '@/lib/narrative'
-import { buildStoryYears } from '@/lib/story-years'
+import { buildStorySections } from '@/lib/story-years'
 import { ChronicleView } from '@/components/ChronicleView'
 
 /**
@@ -18,12 +18,12 @@ export default function ChroniclePage() {
       : allEntries
 
   const storyActs = resolveStoryActs(ds, visibleEntries)
-  const storyYears = buildStoryYears(storyActs, visibleEntries)
+  const storySections = buildStorySections(storyActs, visibleEntries)
   const latestYear = Number(visibleEntries[0]?.date.slice(0, 4)) || new Date().getFullYear()
 
   return (
     <ChronicleView
-      storyYears={storyYears}
+      storySections={storySections}
       total={visibleEntries.length}
       latestYear={latestYear}
       entries={visibleEntries}

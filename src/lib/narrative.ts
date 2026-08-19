@@ -63,8 +63,22 @@ export type Beat = {
   id: string
   /** 所属幕；缺省时从所在 Act 继承（首页精简幕省略即可） */
   act?: ActId
-  /** 展示日期（自由文本，如 2010.05.08 / 2015—16） */
+  /** 展示日期（自由文本，如 2010.05.08 / 2015—16）——只负责给人看，不负责定位年份 */
   date: string
+  /**
+   * 故事模式里这张卡归到哪一年。
+   *
+   * 以前是从 date 里抓第一个四位数字，于是「2013—14 · 毕业以后」被归到 2013、
+   * 「~2016—17」被归到 2016——展示日期同时承担了数据定位，写得越像人话就越容易错位。
+   * 现在定位只看这个字段；date 想怎么写都行。首页幕不参与归年，可以省略。
+   */
+  storyYear?: number
+  /**
+   * 跨年份节点的结束年份（如 2007—2009 清华本科阶段）。
+   * 声明之后，storyYear..storyEndYear 之间「自己没有故事节点」的年份会并进这一段，
+   * 不再各自留下一个空段落。
+   */
+  storyEndYear?: number
   size: BeatSize
   title: string
   /** 一句话引子 / 介绍 */
@@ -286,6 +300,29 @@ export const HOMEPAGE_ACTS: Act[] = [
  * 规格沿用：hero 配图大卡 / type 字排大卡 / small 小卡。
  * 大周MC 与 回冒险岛 无带封面条目（绝不用假图）→ 字排大卡。见 .claude/docs/04-首页大事件URL调研.md §7/§8。
  */
+/**
+ * 编年史故事模式。
+ *
+ * 这一版把产品定义写清楚了：
+ * - **档案模式**记录「我们保存了什么」——某一天留下了哪些录像、来自哪个来源。
+ * - **故事模式**记录「我们知道她走过什么」——把视频、直播，和可以可靠确认的人生节点
+ *   串起来。所以这里允许出现档案里没有对应录像的节点（高考、升学、交换、毕业、婚育），
+ *   但**绝不为了故事好看去伪造 archive entry**：没有录像就用外部来源，没有来源就不写。
+ *
+ * 归年只看 `storyYear`，不再从 `date` 里抓四位数字（见 Beat.storyYear 注释）。
+ *
+ * 2006—2014 前史的事实来源（2026-08-19 复核）：
+ * - 百度百科「石悦」词条：2006 原始分 702.5 内蒙古理科第一 → 清华大学建筑学院建筑系；
+ *   2011-06 清华本科综合论文训练；2011 推免入北京大学深圳研究生院城市规划与设计学院；
+ *   2012 研二初期因学业繁忙停更近一年；2013-02 赴台湾交通大学建筑研究所交换一学期；
+ *   2014-07-02 获城市规划与设计硕士学位，毕业后入职完美世界媒体中心；
+ *   2015-01-21 在斗鱼开设房间；2015-07-05 起每周日直播《心灵砒霜》。
+ * - 中文维基百科「女流」词条：台湾新竹国立交通大学交换、2014 完美世界（编导 / 主持）。
+ * - 《环球人物》2017-03 专访（本人口述）：2010 年借麦克风录第一个视频；
+ *   「2015 年 1 月，石悦在直播平台斗鱼做了第一次游戏直播」；
+ *   2017-02-21 法斯宾德走进她的直播间接受采访。
+ * 站内档案交叉印证：2015-01-21 / 2015-01-22 两条早期直播录像；2015-07-05 起心灵砒霜连续期数。
+ */
 export const STORY_ACTS: Act[] = [
   {
     ...ACT_META['act-i'],
@@ -293,26 +330,41 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'mainstream-2006',
         date: '2006',
+        storyYear: 2006,
         size: 'small',
-        kicker: '公众视野之前',
-        title: '那时候，她还只是石悦。',
-        body: '内蒙古理科高考状元。媒体最初认识她，是因为“石悦 / 状元”这个名字。',
+        kicker: '第一次被媒体认识',
+        title: '那时候，大家认识的是石悦。',
+        body: '这一年，她以 702.5 分成为内蒙古理科高考第一名，九月进入清华大学建筑学院。「女流」还没有出现。',
         target: { kind: 'href', href: 'https://news.cctv.com/education/20060627/105243.shtml' },
-        gameWorld: { text: '“再黑能有石悦黑”是多年后老采访被水友重新考古才形成的梗，不是 2006 年当时就有的说法。2007 年中国教育在线还有一篇本人采访，作为史料补充，不单独成卡。' },
+      },
+      {
+        // 跨年段：2007—2009 三年在档案里没有任何录像，但这三年不是「不知道」，
+        // 只是没有可写成单独事件的公开记录。合成一段，避免连着三个空年份。
+        id: 'tsinghua-arch',
+        date: '2007 — 2009',
+        storyYear: 2007,
+        storyEndYear: 2009,
+        size: 'small',
+        kicker: '本科',
+        title: '清华建筑学院',
+        body: '建筑学本科的中间几年。关于这几年的公开记录不多，能确认的是：上课、画图、做模型，游戏也一直在她的生活里。',
+        target: { kind: 'none' },
       },
       {
         id: 'first-video',
         date: '2010.05.08',
+        storyYear: 2010,
         size: 'hero',
         kicker: '一切从这里开始',
         title: '女流，上传了第一个游戏视频。',
-        body: '她最开始想叫「女流之辈」，已经被人注册；后来「女流」也撞了重名。2010 年 5 月 8 日，她以「女流」的名字上传了第一支游戏解说。',
+        body: '清华建筑学院本科期间，她借来麦克风，上传了自己的第一支游戏解说——《小型单机游戏之迷画之塔》。最初想叫「女流之辈」，名字已经被注册，于是用了「女流」。从这里开始，互联网上多了一个叫女流的人。',
         target: { kind: 'entry', id: '2010-05-08-video-01' },
         gameWorld: { rel: '+10 DAYS', date: '2010.05.18', text: '《荒野大镖客：救赎》十天后发售。' },
       },
       {
         id: 'binge-game',
         date: '2010.06',
+        storyYear: 2010,
         size: 'small',
         kicker: '爆款',
         title: '《变态人生大冒险》',
@@ -321,18 +373,51 @@ export const STORY_ACTS: Act[] = [
         gameWorld: { date: '2011.11', text: '《上古卷轴 V：天际》发售。' },
       },
       {
-        id: 'graduation',
-        date: '2013—14',
+        id: 'pku-2011',
+        date: '2011',
+        storyYear: 2011,
         size: 'small',
-        kicker: '毕业后',
-        title: '毕业以后，还是没离开游戏。',
-        body: '读完建筑与城市规划，最后还是进了游戏行业。2014 年前后，她曾在完美世界从事游戏节目相关工作。',
+        kicker: '升学',
+        title: '从清华到北大。',
+        body: '五年的建筑学本科结束，她以推免生身份进入北京大学深圳研究生院，读城市规划与设计。',
         target: { kind: 'none' },
-        gameWorld: { date: '2013.09.17', text: '《GTA V》刚刚发售。' },
+      },
+      {
+        id: 'pause-2012',
+        date: '2012',
+        storyYear: 2012,
+        size: 'small',
+        kicker: '暂停',
+        title: '暂停键',
+        body: '研究生阶段的学业占去了更多时间，一直在更新的游戏视频，停了将近一年。',
+        target: { kind: 'none' },
+        gameWorld: { date: '2012.10', text: '这一年十月，她拿到了国家奖学金。' },
+      },
+      {
+        id: 'taiwan-2013',
+        date: '2013.02',
+        storyYear: 2013,
+        size: 'small',
+        kicker: '交换',
+        title: '去台湾交换的那一学期。',
+        body: '研究生阶段，她前往台湾交通大学建筑研究所交换一学期。停了一段时间之后，「女流」也重新开始更新。',
+        target: { kind: 'none' },
+        gameWorld: { date: '2013.09.17', text: '《GTA V》发售。' },
+      },
+      {
+        id: 'graduation',
+        date: '2014.07',
+        storyYear: 2014,
+        size: 'small',
+        kicker: '毕业',
+        title: '把游戏变成工作。',
+        body: '她获得北京大学城市规划与设计专业硕士学位。毕业之后没有走向建筑与规划，而是进了游戏行业——入职完美世界媒体中心，参与游戏节目的编导与主持。',
+        target: { kind: 'none' },
       },
       {
         id: 'journey',
         date: '2015',
+        storyYear: 2015,
         size: 'small',
         kicker: '主机区',
         title: '《风之旅人》「你还记得这场吗？」',
@@ -342,19 +427,25 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'door-156277',
         date: '2015.01',
+        storyYear: 2015,
         size: 'hero',
         kicker: '从录像到直播',
         title: '斗鱼156277，开门。',
-        body: '2015 年，她开始直播。斗鱼时期的名字已经是女流66，直播间是斗鱼156277。以前大家看的是录好的游戏，从这里开始，大家开始一起玩。',
+        body: '2015 年初，她开始在斗鱼直播，房间号 156277。以前大家看到的是录好的游戏，从这里开始，越来越多的时间变成了大家一起经历的直播。',
+        // 现存证据指向 2015 年 1 月，但不是同一件事：1/21 是目前可确认的最早直播录像
+        // （B 站官方「[1.21直播录像]」，百度百科与 nvliu.me 也记这一天开设房间）；
+        // 1/22 的 AcFun 录像标题写「斗鱼首秀」；1/24 是 1/21 那场优酷版本的上传日。
+        // 三种口径不能压成一个「唯一首播日」，所以主卡只写到月。
         target: { kind: 'entry', id: '2015-01-21-live-01' },
       },
       {
         id: 'names',
         date: '2015',
+        storyYear: 2015,
         size: 'small',
         kicker: '名字',
-        title: '女流 → 女流66 → 66 → 流酱 → 流流',
-        body: '用户名历史。老一点的水友会叫她流酱。「流流」也可以算一个，不强行考据诞生日。',
+        title: '她有很多名字。',
+        body: '视频时期是「女流」，直播以后更多人认识「女流66」。水友也会叫她 66、流酱、流流。',
         target: { kind: 'none' },
       },
     ],
@@ -363,8 +454,20 @@ export const STORY_ACTS: Act[] = [
     ...ACT_META['act-ii'],
     beats: [
       {
+        id: 'xinling-first',
+        date: '2015.07.05',
+        storyYear: 2015,
+        size: 'hero',
+        kicker: '一个星期日',
+        title: '心灵砒霜开始了。',
+        body: '游戏暂停，邮件打开，一个星期日。本来想聊鸡汤，最后聊成了砒霜。后来，这档节目陪着直播间走了很多年。',
+        emphasis: '{xinlingCount} 期被保存下来',
+        target: { kind: 'entry', id: '2015-07-05-live-01', href: '/series/xinling-pishuang/' },
+      },
+      {
         id: 'dazhou-mc',
         date: '2015—16',
+        storyYear: 2016,
         size: 'type',
         kicker: '大周',
         title: '从这以后，我们叫「大周」。',
@@ -372,27 +475,32 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'game', id: 'minecraft' },
       },
       {
+        // 不再叫「第一期」：站内 2015-07-05 起已有连续期数（见 xinling-first）。
+        // 这一场是目前保存得最完整的早期一期，按代表录像处理。
         id: 'xinling-pishuang',
-        date: '2016.08',
-        size: 'hero',
-        kicker: '一个星期日',
-        title: '心灵砒霜 · 第一期',
-        body: '游戏暂停。邮件打开。一个星期日。本来想聊鸡汤，最后聊成了砒霜。',
-        emphasis: '{xinlingCount} 个被保存下来的晚上',
+        date: '2016.08.07',
+        storyYear: 2016,
+        size: 'small',
+        kicker: '心灵砒霜',
+        title: '完整保存下来的一期。',
+        body: '2016 年 8 月 7 日那期的完整录音留了下来，是早期心灵砒霜里保存得最完整的一场之一。',
         target: { kind: 'entry', id: '2016-08-07-live-01', href: '/series/xinling-pishuang/' },
       },
       {
         id: 'mainstream-2016-cctv',
         date: '2016.09',
+        storyYear: 2016,
         size: 'small',
         kicker: '从直播间走上 CCTV',
         title: '《加油！向未来》',
-        body: '出现在央视时，她的身份已经是游戏主播女流。镜头里的她，不再只是当年的“状元石悦”。',
+        body: '十年前，媒体报道的是高考状元石悦；这一次出现在央视镜头里，她的身份已经是游戏主播女流。',
         target: { kind: 'href', href: 'https://tv.cctv.com/2021/07/19/VIDEnPEGm2dUqZmKLYnp3Rsv210719.shtml' },
       },
       {
         id: 'yuanweiji',
-        date: '~2016—17',
+        // 年份以后台策展为准（管理员另有依据），归年跟着走，避免卡片位置与日期打架。
+        date: '~2022',
+        storyYear: 2022,
         size: 'small',
         kicker: '砒霜名场面',
         title: '原味鸡',
@@ -401,7 +509,8 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'dalishi',
-        date: '~2016—17',
+        date: '~2021',
+        storyYear: 2021,
         size: 'small',
         kicker: '砒霜名场面',
         title: '大力士',
@@ -411,6 +520,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'three-books',
         date: '2017',
+        storyYear: 2017,
         size: 'type',
         kicker: '大周经典考古',
         title: '三本书 × 4000',
@@ -420,42 +530,49 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'mainstream-2017-outbreak',
         date: '2017.02',
+        storyYear: 2017,
         size: 'type',
-        kicker: '出圈',
-        title: '主流社会突然知道了女流。',
-        body: '“内蒙古状元 + 清华本科 + 北大硕士 + 游戏主播”被集中报道。央视网、澎湃、中国青年网等都在说这件事。',
+        kicker: '2017 · 她后来这样形容',
+        title: '「主流社会突然知道了这件事。」',
+        body: '高考状元、清华本科、北大硕士和游戏主播这几个标签，被一轮集中报道重新放到了一起。央视网、澎湃、中国青年网等都在说这件事。',
         target: { kind: 'href', href: 'https://news.cctv.com/2017/02/07/ARTIPmCjwvnHQdN3922VgI2S170207.shtml' },
       },
       {
         id: 'mainstream-2017-paper',
         date: '2017.02.12',
+        storyYear: 2017,
         size: 'small',
         kicker: '本人视频专访',
         title: '澎湃新闻专访石悦',
-        body: '视频里她亲自聊父亲、聊游戏、聊职业选择。在这一轮突如其来的公众讨论里，她开始自己解释“石悦”和“女流”为什么从来不是两个矛盾的身份。',
+        body: '视频里她自己聊父亲、聊游戏、聊职业选择，也第一次正面解释：「石悦」和「女流」从来不是两个矛盾的身份。',
         target: { kind: 'href', href: 'https://www.thepaper.cn/newsDetail_forward_1616878' },
+      },
+      {
+        id: 'mainstream-2017-fassbender',
+        date: '2017.02.21',
+        storyYear: 2017,
+        size: 'small',
+        kicker: '直播间来了个演员',
+        title: '法斯宾德走进了直播间。',
+        body: '《刺客信条》来华宣传时，迈克尔·法斯宾德第一次走进直播间，接受她的采访。那天直播间涌进了几十万人。',
+        // 《环球人物》那篇专访里直接写了这件事（「他第一次『走进』直播间，接受了中国当红
+        // 游戏主播『女流』的采访」），所以两张卡共用同一来源不是偷懒复用——它就是这件事的出处。
+        target: { kind: 'href', href: 'https://paper.people.com.cn/hqrw/html/2017-03/01/content_1761506.htm' },
       },
       {
         id: 'mainstream-2017-hqrw',
         date: '2017.03',
+        storyYear: 2017,
         size: 'type',
         kicker: '她自己讲自己的故事',
         title: '《环球人物》专访',
-        body: '早期生涯非常重要的一手资料：2010 年开始做视频、职业选择、直播经历，都是她自己在采访里讲的。',
-        target: { kind: 'href', href: 'https://paper.people.com.cn/hqrw/html/2017-03/01/content_1761506.htm' },
-      },
-      {
-        id: 'mainstream-2017-fassbender',
-        date: '2017',
-        size: 'small',
-        kicker: '旁支',
-        title: '采访迈克尔·法斯宾德',
-        body: '游戏主播去采访电影演员，本身就是“出圈”后的一个小注脚。',
+        body: '这一次，她从自己的角度讲起了做视频、职业选择，以及后来为什么坐进直播间。',
         target: { kind: 'href', href: 'https://paper.people.com.cn/hqrw/html/2017-03/01/content_1761506.htm' },
       },
       {
         id: 'shishizi',
         date: '2017—18',
+        storyYear: 2018,
         size: 'type',
         kicker: '坐镇大周',
         title: '女流的职业规划出现了一些偏差。',
@@ -466,6 +583,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'darksouls-3',
         date: '2016',
+        storyYear: 2016,
         size: 'small',
         kicker: '☠ 受苦记录 #01',
         title: '黑暗之魂3',
@@ -475,6 +593,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'getting-over-it',
         date: '2017',
+        storyYear: 2017,
         size: 'small',
         kicker: '☠ 受苦记录 #02',
         title: '抡大锤',
@@ -484,6 +603,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'zhushi-ji',
         date: '2018.01',
+        storyYear: 2018,
         size: 'small',
         kicker: '大周年度连续剧',
         title: '壮王爷《结石记》',
@@ -493,16 +613,18 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'mainstream-2018-cyol',
         date: '2018.08',
+        storyYear: 2018,
         size: 'small',
-        kicker: '十年后的石悦',
-        title: '十年前搜索“石悦”，看到的是高考状元；十年后搜索，看到的是女流66。',
-        body: '中国青年报再次采访。主流媒体对她的称呼，从“状元石悦”变成了“主播女流”。',
+        kicker: '媒体回访',
+        title: '多年以后，再搜索「石悦」。',
+        body: '中国青年报再次采访。媒体眼里的她，已经从当年的高考状元，变成了游戏主播女流66。',
         target: { kind: 'href', href: 'http://media.people.com.cn/n1/2018/0828/c40606-30254502.html' },
       },
-      // 甘蔗精（ganzhe-jing）已撤下：用户要等找到正确素材再放。
+      // 甘蔗精（ganzhe-jing）已撤下：等找到正确素材再放。
       {
         id: 'celeste',
         date: '2018',
+        storyYear: 2018,
         size: 'small',
         kicker: '☠ 受苦记录 #03',
         title: 'Celeste',
@@ -512,6 +634,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'sekiro',
         date: '2019',
+        storyYear: 2019,
         size: 'small',
         kicker: '☠ 受苦记录 #04',
         title: '只狼',
@@ -521,16 +644,18 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'nasdaq',
         date: '2019.07',
+        storyYear: 2019,
         size: 'type',
         kicker: '职业高光',
         title: '斗鱼156277 去了一趟纳斯达克。',
-        body: '前一张还在受苦，下一张突然敲钟。这个反差本身就很女流。',
+        body: '前些日子还在直播间里打游戏，转眼跟着斗鱼去了纳斯达克敲钟。',
         cover: 'https://pics3.baidu.com/feed/95eef01f3a292df50265fa3d970d7b6534a87331.png@f_auto?token=1a85aaece0bd0eeba03e388010f0bb3c&s=F78069A54CCC84DC50706D92030000C3',
         target: { kind: 'href', href: 'http://hb.china.com.cn/2019-07/18/content_40831784.htm' },
       },
       {
         id: 'jump-king',
         date: '2019',
+        storyYear: 2019,
         size: 'small',
         kicker: '☠ 受苦记录 #05',
         title: 'Jump King',
@@ -539,31 +664,36 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'kemu-2',
-        date: '2020.06.13',
+        date: '2020.06',
+        storyYear: 2020,
         size: 'type',
         kicker: '大周史超长 Boss 战',
         title: '科目二，通过！！！',
-        body: '多年连续剧，大周史的主线 Boss。失败、再考、失败、继续考，这一天终于打完了。',
+        body: '多年连续剧，大周史的主线 Boss。失败、再考、失败、继续考，这一次终于打完了。第二天的心灵砒霜标题是：每天醒来都要确认下是不是真的过了科目二。',
         emphasis: 'ACHIEVEMENT UNLOCKED',
+        // 站内没有「通过当天」的录像；能直接佐证的是第二天那场心灵砒霜的标题，
+        // 所以正文明说这是第二天的节目，不让访客点进去发现日期对不上。
         target: { kind: 'entry', id: '2020-06-14-live-01' },
         gameWorld: { rel: '-2 DAYS', date: '2020.06.11', text: '大家第一次看见 PS5。' },
       },
       {
         id: 'number-723',
         date: '2021.07.23',
+        storyYear: 2021,
         size: 'small',
         kicker: '跨直播间历史遗迹',
         title: '723',
-        body: '有些比赛打完就忘了。有些会被水友念几年。女流 × 寅子，《永劫无间》。',
+        body: '有些比赛打完就忘了，有些会被水友念好几年。女流 × 寅子，永劫无间全明星那几场。',
         target: { kind: 'entry', id: '2021-07-23-live-01' },
       },
       {
         id: 'see-you-around',
-        date: '2023.11',
+        date: '2023.11.30',
+        storyYear: 2023,
         size: 'type',
         kicker: '最后一次亮起',
         title: 'see you around~',
-        body: '斗鱼156277 今天没有再亮起来。',
+        body: '2023 年 11 月 30 日，斗鱼156277 最后一次开播。',
         target: { kind: 'entry', id: '2023-11-30-live-01' },
         gameWorld: { rel: '+6 DAYS', date: '2023.12.05', text: '《GTA VI》首支预告公开。' },
       },
@@ -575,6 +705,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'double-mode',
         date: '2022.09.09',
+        storyYear: 2022,
         size: 'small',
         kicker: '女流 × YJJ',
         title: '双人模式开启。',
@@ -585,6 +716,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'back-again',
         date: '2024.08.18',
+        storyYear: 2024,
         size: 'hero',
         kicker: '第三幕',
         title: '好久不见。',
@@ -595,6 +727,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'black-myth-era',
         date: '2024.12',
+        storyYear: 2024,
         size: 'small',
         kicker: '重新开始',
         title: '黑神话时期',
@@ -604,24 +737,25 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'expedition-33',
         date: '2025.04.24',
+        storyYear: 2025,
         size: 'small',
         kicker: 'GAME WORLD',
         title: '《光与影：33号远征队》发售。',
-        body: '纯游戏史背景，就一小条——已经走到这个年代了。',
         target: { kind: 'none' },
       },
       {
         id: 'cuiwa-youguo',
         date: '2025.08',
+        storyYear: 2025,
         size: 'small',
         kicker: '有宝宝了',
         title: '催娃有果。',
-        body: '用她自己的语气，就这一句。',
         target: { kind: 'none' },
       },
       {
         id: 'duoduo-lail',
         date: '2025.09',
+        storyYear: 2025,
         size: 'small',
         kicker: '朵朵',
         title: '朵朵来了。',
@@ -631,6 +765,7 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'postpartum',
         date: '2025.11',
+        storyYear: 2025,
         size: 'small',
         kicker: '回来了',
         title: '产后首播',
@@ -640,15 +775,17 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'feeding-milk',
         date: '2026.03.02',
+        storyYear: 2026,
         size: 'small',
         kicker: '很普通的一天',
         title: '我去喂个奶。',
-        body: '直播《生化危机9》，朵朵哭了。暂停游戏去喂孩子，大约五分钟，回来继续玩。直播间近两万观众还在。',
+        body: '直播《生化危机9》，朵朵哭了。她暂停游戏去喂孩子，回来以后继续玩。',
         target: { kind: 'game', id: 'resident-evil-9' },
       },
       {
         id: 'maplestory-memory',
         date: '2026.05',
+        storyYear: 2026,
         size: 'small',
         kicker: '伏笔',
         title: '小时候的《冒险岛》',
@@ -660,13 +797,13 @@ export const STORY_ACTS: Act[] = [
       {
         id: 'back-maple',
         date: '2026.08',
+        storyYear: 2026,
         size: 'type',
         kicker: '现在',
         title: '姐弟俩，又回冒险岛了。',
-        body: '小时候一起玩过。这么多年过去，又一起上线。不过现在，姐姐得等娃睡了。',
+        body: '小时候一起玩过的游戏，这么多年以后，又一起上线。不过现在，姐姐得等娃睡了。',
         tail: 'TO BE CONTINUED...',
         target: { kind: 'game', id: 'maplestory-classic' },
-        gameWorld: { date: '2026', text: '游戏行业自己也开始流行怀旧服。' },
       },
     ],
   },
@@ -711,7 +848,7 @@ export const HIGHLIGHTS: Highlight[] = [
     date: '2010.05.08',
     kicker: '第一支视频',
     title: '迷画之塔',
-    body: '大三那年上传的小游戏解说。一切从这里开始。',
+    body: '清华建筑学院本科期间上传的小游戏解说。一切从这里开始。',
     emphasis: '首作 · 13 分钟',
   },
   {
@@ -766,12 +903,14 @@ export const HIGHLIGHTS: Highlight[] = [
   {
     id: 'xinling-pishuang',
     act: 'act-ii',
-    entryId: '2016-08-07-live-01',
-    date: '2016.08.07',
+    // 站内最早的一期是 2015-07-05（百度百科亦记 2015-07-05 起每周日直播），
+    // 2016-08-07 只是保存得最完整的早期一期，不是第一期。
+    entryId: '2015-07-05-live-01',
+    date: '2015.07.05',
     kicker: '一个星期日',
-    title: '心灵砒霜 · 第一期',
+    title: '心灵砒霜开始了。',
     body: '游戏暂停。邮件打开。一个星期日。',
-    emphasis: '{xinlingCount} 个被保存下来的晚上',
+    emphasis: '{xinlingCount} 期被保存下来',
   },
   {
     id: 'three-books',
@@ -830,17 +969,17 @@ export const HIGHLIGHTS: Highlight[] = [
     date: '2019.07',
     kicker: '职业高光',
     title: '斗鱼156277 去了一趟纳斯达克。',
-    body: '前一张还在受苦，下一张突然敲钟。这个反差本身就很女流。',
+    body: '前些日子还在直播间里打游戏，转眼跟着斗鱼去了纳斯达克敲钟。',
     emphasis: '2019',
   },
   {
     id: 'kemu-2',
     act: 'act-ii',
     entryId: '2020-06-14-live-01',
-    date: '2020.06.13',
+    date: '2020.06',
     kicker: '大周史主线 Boss',
     title: '科目二，通过！！！',
-    body: '多年连续剧，大周史的主线 Boss。失败、再考、失败、继续考，这一天终于打完了。',
+    body: '多年连续剧，大周史的主线 Boss。第二天的心灵砒霜标题是：每天醒来都要确认下是不是真的过了科目二。',
     emphasis: '2020',
   },
   {
@@ -907,6 +1046,9 @@ export type ResolvedBeat = {
   id: string
   act: ActId
   date: string
+  /** 故事模式归年（来自基线策展；后台实时文案不覆盖它，所以位置不会被改乱） */
+  storyYear?: number
+  storyEndYear?: number
   size: BeatSize
   kicker?: string
   title: string
@@ -1053,6 +1195,8 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
         id: b.id,
         act: actId,
         date: b.date,
+        storyYear: b.storyYear,
+        storyEndYear: b.storyEndYear,
         size: 'montage',
         kicker: b.kicker,
         title: b.title,
@@ -1093,6 +1237,8 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       id: b.id,
       act: actId,
       date: b.date,
+      storyYear: b.storyYear,
+      storyEndYear: b.storyEndYear,
       size: b.size,
       // 首页精简幕：重要锚点显示「重要」，非重要不带任何小标签（用户明确要求）。
       kicker: home ? (b.important ? '重要' : undefined) : b.kicker,

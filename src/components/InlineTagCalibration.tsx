@@ -110,14 +110,14 @@ export function InlineTagCalibration({
     <section className="mt-4 border-t border-line pt-4" aria-label="标签校准">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">当前识别标签</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint">这场标的游戏</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {games.length > 0 ? games.map((game) => (
               <span key={game.id} className="inline-flex min-h-8 items-center gap-2 rounded-full border border-line bg-base/45 px-3 text-control text-muted">
                 <span className="h-2 w-2 rounded-sm" style={{ background: gameColor(game.id) }} />
                 {game.name}
               </span>
-            )) : <span className="text-control text-faint">暂未识别出游戏</span>}
+            )) : <span className="text-control text-faint">这场还没有标游戏</span>}
           </div>
         </div>
         <button
@@ -126,17 +126,17 @@ export function InlineTagCalibration({
           aria-expanded={open}
           className="ui-press min-h-10 rounded-full border border-live/35 bg-live/8 px-4 text-control text-live hover:bg-live/14"
         >
-          {open ? '收起校准' : '标签不对？帮我校准'}
+          {open ? '收起' : '标错了？帮忙改一下'}
         </button>
       </div>
 
       <p className="mt-3 text-meta leading-relaxed text-faint">
-        指引：先打开上方录像确认内容；标签不符合时，在这里选择实际出现的游戏。拿不准可以选“无法判断”。
+        打开上面的录像看一眼，如果标错了，在这里选实际玩的游戏。拿不准可以选「无法判断」。
       </p>
 
       {open && (
         <div className="ui-panel-in mt-4 rounded-xl border border-line bg-base/40 p-4">
-          {loading && <p className="text-control text-muted">正在载入这条记录的候选标签…</p>}
+          {loading && <p className="text-control text-muted">正在载入…</p>}
           {!loading && error && <p role="status" className="text-control leading-relaxed text-muted">{error}</p>}
           {!loading && detail && (
             <>

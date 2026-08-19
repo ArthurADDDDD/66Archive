@@ -154,7 +154,7 @@ export function SiteNav({
           className="ui-sheet-in fixed inset-x-0 z-[60] border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
           style={{ top: panelTop }}
         >
-          <div className="site-container-wide px-page py-2">
+          <div className="site-container-wide px-page pb-4 pt-2">
             <p className="px-3 pt-2 text-meta uppercase tracking-[0.16em] text-faint">
               女流编年史 · Menu
             </p>
@@ -183,9 +183,6 @@ export function SiteNav({
                 )
               })}
             </ul>
-            <p className="border-t border-line/50 px-3 py-2.5 text-meta text-faint">
-              Esc 关闭 · 触控目标 ≥44px
-            </p>
           </div>
         </div>,
         document.body,

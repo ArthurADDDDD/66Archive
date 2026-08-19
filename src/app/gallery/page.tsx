@@ -49,7 +49,7 @@ export default function GalleryPage() {
           <Eyebrow>Missing chapters</Eyebrow>
           <h2 className="measure-hero mt-3 text-h2 font-medium text-ink">还有一些年份，正在等待被找回。</h2>
           <p className="measure-body mt-3 text-body text-muted">
-            缺口不是空白页，而是下一次补录的方向。以下年份目前没有找到可公开核验的独立画面；如果你手上有原图、视频或帖子线索，欢迎从这里补上。
+            这些年份暂时还没找到能确认来源的画面。如果你手上有原图、视频或者帖子，欢迎补一条线索。
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {gaps.map((gap) => (
