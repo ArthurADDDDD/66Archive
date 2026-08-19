@@ -51,8 +51,8 @@ function formatHoursTag(minutes: number): string {
 }
 
 const ERAS: Era[] = [
-  { id: 'video', label: '视频时期', detail: '2010—2015', from: 2010, to: 2015, color: '#E0A244' },
-  { id: 'douyu', label: '斗鱼时期', detail: '2016—2023', from: 2016, to: 2023, color: '#5BC8E8' },
+  { id: 'video', label: '视频时期', detail: '2010—2014', from: 2010, to: 2014, color: '#E0A244' },
+  { id: 'douyu', label: '斗鱼时期', detail: '2015—2023', from: 2015, to: 2023, color: '#5BC8E8' },
   { id: 'douyin', label: '抖音时期', detail: '2024—至今', from: 2024, to: 9999, color: '#FF6B75' },
 ]
 
@@ -217,7 +217,6 @@ export function Timeline({
     for (const entry of entries) counts.set(entry.platform, (counts.get(entry.platform) ?? 0) + 1)
     return [...counts.entries()].sort((a, b) => b[1] - a[1])
   }, [entries])
-
   const gameCounts = useMemo(() => {
     const counts = new Map<string, { id: string; name: string; count: number }>()
     for (const entry of entries) {
