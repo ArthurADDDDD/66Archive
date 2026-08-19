@@ -314,7 +314,7 @@ export const HOMEPAGE_ACTS: Act[] = [
  * 2006—2014 前史的事实来源（2026-08-19 复核）：
  * - 百度百科「石悦」词条：2006 原始分 702.5 内蒙古理科第一 → 清华大学建筑学院建筑系；
  *   2011-06 清华本科综合论文训练；2011 推免入北京大学深圳研究生院城市规划与设计学院；
- *   2012 研二初期因学业繁忙停更近一年；2013-02 赴台湾交通大学建筑研究所交换一学期；
+ *   2013-02 赴台湾交通大学建筑研究所交换一学期；
  *   2014-07-02 获城市规划与设计硕士学位，毕业后入职完美世界媒体中心；
  *   2015-01-21 在斗鱼开设房间；2015-07-05 起每周日直播《心灵砒霜》。
  * - 中文维基百科「女流」词条：台湾新竹国立交通大学交换、2014 完美世界（编导 / 主持）。
@@ -322,6 +322,11 @@ export const HOMEPAGE_ACTS: Act[] = [
  *   「2015 年 1 月，石悦在直播平台斗鱼做了第一次游戏直播」；
  *   2017-02-21 法斯宾德走进她的直播间接受采访。
  * 站内档案交叉印证：2015-01-21 / 2015-01-22 两条早期直播录像；2015-07-05 起心灵砒霜连续期数。
+ *
+ * 视频时代（2010—2014）策展修订（2026-08-19）：档案里的实际投稿密度证明她没有真的
+ * 「消失几年后转做直播」——2012 年 5 月 / 8 月、2013 年 8 月起、2014 年全年都有确认投稿。
+ * 读研 / 交换 / 毕业只是更新节奏变慢的生活背景，不能替代这几年的内容节点，也不能被
+ * 笼统地当作停更的唯一原因（各年具体停更原因不全部可考，不做过度归因）。
  */
 export const STORY_ACTS: Act[] = [
   {
@@ -379,7 +384,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '升学',
         title: '从清华到北大。',
-        body: '五年的建筑学本科结束，她以推免生身份进入北京大学深圳研究生院，读城市规划与设计。',
+        body: '五年的建筑学本科结束，她以推免生身份进入北京大学深圳研究生院，读城市规划与设计。这一年的视频记录目前很少——不是「女流」停下了，只是还没有找到更多确认的投稿。',
         target: { kind: 'none' },
       },
       {
@@ -387,11 +392,31 @@ export const STORY_ACTS: Act[] = [
         date: '2012',
         storyYear: 2012,
         size: 'small',
-        kicker: '暂停',
-        title: '暂停键',
-        body: '研究生阶段的学业占去了更多时间，一直在更新的游戏视频，停了将近一年。',
+        kicker: '读研',
+        title: '更新慢了下来。',
+        body: '读研以后，做视频的时间明显少了。更新间隔越来越长，但「女流」并没有完全停下来。',
         target: { kind: 'none' },
         gameWorld: { date: '2012.10', text: '这一年十月，她拿到了国家奖学金。' },
+      },
+      {
+        id: 'anqila-part3-4-2012',
+        date: '2012.05',
+        storyYear: 2012,
+        size: 'small',
+        kicker: '回来填坑',
+        title: '又回来填《安琪拉之歌》的坑。',
+        body: '两年前开的坑，到了研究生阶段还在继续填。',
+        target: { kind: 'entry', id: '2012-05-20-video-01' },
+      },
+      {
+        id: 'huanxing-hezi4-2012',
+        date: '2012.08',
+        storyYear: 2012,
+        size: 'small',
+        kicker: '偶尔更新',
+        title: '《唤醒盒子4》',
+        body: '更新已经变得很慢，但偶尔还是会有一支新视频冒出来。',
+        target: { kind: 'entry', id: '2012-08-26-video-01' },
       },
       {
         id: 'taiwan-2013',
@@ -400,9 +425,29 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '交换',
         title: '去台湾交换的那一学期。',
-        body: '研究生阶段，她前往台湾交通大学建筑研究所交换一学期。停了一段时间之后，「女流」也重新开始更新。',
+        body: '研究生阶段，她前往台湾交通大学建筑研究所交换一学期。',
         target: { kind: 'none' },
         gameWorld: { date: '2013.09.17', text: '《GTA V》发售。' },
+      },
+      {
+        id: 'video-return-2013',
+        date: '2013.08',
+        storyYear: 2013,
+        size: 'small',
+        kicker: '重新更新',
+        title: '回来了。',
+        body: '2013 年 8 月，停了一段时间以后，女流重新开始上传视频。',
+        target: { kind: 'entry', id: '2013-08-29-video-01' },
+      },
+      {
+        id: 'journey-video-2013',
+        date: '2013.09',
+        storyYear: 2013,
+        size: 'small',
+        kicker: '代表作',
+        title: '《风之旅人》',
+        body: '恢复更新以后，她用三期视频走完了《风之旅人》。',
+        target: { kind: 'series', id: 'journey-playthrough' },
       },
       {
         id: 'graduation',
@@ -411,18 +456,38 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '毕业',
         title: '把游戏变成工作。',
-        body: '她获得北京大学城市规划与设计专业硕士学位。毕业之后没有走向建筑与规划，而是进了游戏行业——入职完美世界媒体中心，参与游戏节目的编导与主持。',
+        body: '她获得北京大学城市规划与设计专业硕士学位。毕业之后没有走向建筑与规划，而是进了游戏行业——入职完美世界媒体中心，参与游戏节目的编导与主持。视频没有因此停下。',
         target: { kind: 'none' },
+      },
+      {
+        id: 'anqila-part5-2014',
+        date: '2014.09',
+        storyYear: 2014,
+        size: 'small',
+        kicker: '填坑',
+        title: '《安琪拉之歌》，终于填到 Part 5。',
+        body: '2010 年开的坑，2012 年补过 Part 3、4，2014 年工作以后，Part 5 还是来了。',
+        target: { kind: 'entry', id: '2014-09-10-video-01' },
+      },
+      {
+        id: 'child-of-light-2014',
+        date: '2014.11 — 12',
+        storyYear: 2014,
+        size: 'small',
+        kicker: '系列解说',
+        title: '《光之子》',
+        body: '2014 年最后一个多月，她连续更新了整套《光之子》。工作以后，视频还在继续。',
+        target: { kind: 'series', id: 'child-of-light' },
       },
       {
         id: 'journey',
         date: '2015',
         storyYear: 2015,
         size: 'small',
-        kicker: '主机区',
+        kicker: '直播',
         title: '《风之旅人》「你还记得这场吗？」',
         body: '和小桀在随机匹配里反复错过，最后终于一起走完。不是什么事业大事，但特别有当年主机区的味道。',
-        target: { kind: 'series', id: 'journey-playthrough' },
+        target: { kind: 'entry', id: '2015-02-04-live-01' },
       },
       {
         id: 'door-156277',
