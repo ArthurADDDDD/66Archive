@@ -497,9 +497,10 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'href', href: 'https://tv.cctv.com/2021/07/19/VIDEnPEGm2dUqZmKLYnp3Rsv210719.shtml' },
       },
       {
+        // 原「~2016—17」是误判：B 站官方号（女流66）自己发布，用 bilibili API 核实
+        // pubdate=2022-01-05，不是第三方多年后的考古重剪，日期按发布时间即代表切片本身的年份。
         id: 'yuanweiji',
-        // 年份以后台策展为准（管理员另有依据），归年跟着走，避免卡片位置与日期打架。
-        date: '~2022',
+        date: '2022.01',
         storyYear: 2022,
         size: 'small',
         kicker: '砒霜名场面',
@@ -508,8 +509,9 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1vu411U7MZ' },
       },
       {
+        // 同上：B 站官方号自己发布，核实 pubdate=2021-12-24。
         id: 'dalishi',
-        date: '~2021',
+        date: '2021.12',
         storyYear: 2021,
         size: 'small',
         kicker: '砒霜名场面',
@@ -601,8 +603,10 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'game', id: 'getting-over-it' },
       },
       {
+        // 第三方剪辑号「bc狼」的相声改编版，bilibili API 核实 pubdate=2018-03-01；
+        // 原始事件更早，但没有比这更可靠的锚点，日期只写到月、不假装知道具体哪天。
         id: 'zhushi-ji',
-        date: '2018.01',
+        date: '2018.03',
         storyYear: 2018,
         size: 'small',
         kicker: '大周年度连续剧',
@@ -882,20 +886,22 @@ export const HIGHLIGHTS: Highlight[] = [
     emphasis: '{geometryHours} 个小时',
   },
   {
+    // bilibili API 核实 pubdate=2022-01-05（官方号自己发布，非多年后考古重剪）。
     id: 'yuanweiji',
     act: 'act-ii',
     href: 'https://www.bilibili.com/video/BV1vu411U7MZ',
-    date: '2016—17',
+    date: '2022.01',
     kicker: '砒霜名场面',
     title: '原味鸡',
     body: '「什么原味鸡？」',
     emphasis: '草。',
   },
   {
+    // bilibili API 核实 pubdate=2021-12-24（官方号自己发布）。
     id: 'dalishi',
     act: 'act-ii',
     href: 'https://www.bilibili.com/video/BV1xP4y1J7LB',
-    date: '2016—17',
+    date: '2021.12',
     kicker: '砒霜名场面',
     title: '大力士来啦',
     body: '一个脑子已经处理不了了。',
@@ -923,10 +929,11 @@ export const HIGHLIGHTS: Highlight[] = [
     emphasis: '×4000',
   },
   {
+    // bilibili API 核实 pubdate=2018-03-01（第三方剪辑号），只写到月。
     id: 'zhushi-ji',
     act: 'act-ii',
     href: 'https://www.bilibili.com/video/BV1PW411x7Td',
-    date: '2018.01',
+    date: '2018.03',
     kicker: '大周年度连续剧',
     title: '壮王爷《结石记》',
     body: '一个本来很普通的「弟弟去医院」，迅速变成大周连续剧。',
