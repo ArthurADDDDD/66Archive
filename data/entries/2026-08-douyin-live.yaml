@@ -475,9 +475,14 @@
     confidence: medium
     cover: "http://i0.hdslb.com/bfs/archive/c7919b2893e265f729177db8a9c56605606f3b8b.jpg"
     sources:
+      - url: "https://www.bilibili.com/video/BV1re836CEKH/?spm_id_from=333.1007.top_right_bar_window_history.content.click"
+        kind: replay
+        status: unchecked
+        parts: 5
       - url: "https://www.bilibili.com/video/BV1D58364E1P"
         kind: replay
         status: alive
+        parts: 4
     note: "第二场判定：晚上开播 自动采集候选经人工审批新建（组 50c5c859-d2f4-4540-b252-5abc55e6ee41）。"
     contributed_by: collection-review
     games: [supermarket-chaos]
