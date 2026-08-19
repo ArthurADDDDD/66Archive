@@ -20,7 +20,7 @@ export default function StatsPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
-  // —— 00 已收录直播（只统计 type=live；视频投稿不计入直播时长）——
+  // —— 00 已收录直播（只统计直播条目；视频投稿不计入直播时长）——
   const liveTimeline = timeline.filter((e) => e.type === 'live')
   const liveKnownMinutes = liveTimeline.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   const liveKnownHours = Math.round(liveKnownMinutes / 60)
@@ -110,21 +110,22 @@ export default function StatsPage() {
           <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
             <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
             <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveTimeline.length.toLocaleString()}</p>
-            <p className="mt-1 text-meta text-faint tnum">场 · type=live</p>
+            <p className="mt-1 text-meta text-faint tnum">场直播</p>
           </div>
           <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
             <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
             <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
-            <p className="mt-1 text-meta text-faint tnum">小时 · 时长覆盖率 {liveDurationCoverage}%</p>
+            <p className="mt-1 text-meta text-faint tnum">小时 · {liveDurationCoverage}% 的直播已有可核对时长</p>
           </div>
           <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">实际累计</p>
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">实际直播时长</p>
             <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">10,000+</p>
-            <p className="mt-1 text-meta text-faint tnum">小时 · 外部硬锚点估算</p>
+            <p className="mt-1 text-meta text-faint tnum">小时 · 至少</p>
           </div>
         </div>
         <Observation>
-          早期部分直播档案已经遗失，已确认时长仅代表目前可核实的录像记录，不等于实际累计直播总时长。
+          早期有一部分直播录像已经找不到了，所以「已确认时长」只代表目前能核对到的那些，不等于她实际播了多久。
+          一万小时这个数，来自公开采访与平台年度统计等资料，是一个保守的下限。
         </Observation>
       </Section>
 
@@ -132,8 +133,8 @@ export default function StatsPage() {
       <Section question="哪一年留下的记录最多？" accent="#E0A244">
         <YearBarChart rows={yearRows} topYear={topYear} />
         <Observation>
-          最多的一年是 {topYear} 年，档案里留下了 {topCount.toLocaleString()} 条记录。
-          2011 年是一条横线——那一年档案为空，缺口被如实保留。
+          最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
+          2011 年是一条横线——那一年目前没有保存下来的站内录像。
         </Observation>
         <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
       </Section>
@@ -190,7 +191,7 @@ export default function StatsPage() {
           ))}
         </div>
         <Observation>
-          反复回来的游戏，断档后还会续上——上面的彩点就是它出现过的每个年份。
+          有些游戏隔了几年，还是会重新打开。
         </Observation>
       </Section>
 
@@ -219,7 +220,7 @@ export default function StatsPage() {
           </div>
         </div>
         <Observation>
-          视频时期靠录像，斗鱼时期靠直播。2023 年底到 2024 年 8 月之间档案近乎空白——那是幕间，被原样保留。
+          视频时期靠录像，斗鱼时期靠直播。2023 年 11 月斗鱼停播以后，到 2024 年 8 月重新开播之间，直播记录自然出现了一段空档。
         </Observation>
       </Section>
 

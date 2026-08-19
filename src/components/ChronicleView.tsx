@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
-import type { StoryYear } from '@/lib/story-years'
+import type { StorySection } from '@/lib/story-years'
 import { SiteNav } from './SiteNav'
 import { BackToTop } from './ScrollAffordances'
 import { SearchField } from './SearchField'
@@ -20,14 +20,14 @@ import { Timeline } from './Timeline'
 const ARCHIVE_PARAMS = ['y', 'm', 'q', 'p', 't', 'g', 'alive'] as const
 
 export function ChronicleView({
-  storyYears,
+  storySections,
   total,
   latestYear,
   entries,
   isDemo,
   hiddenUnreviewed = 0,
 }: {
-  storyYears: StoryYear[]
+  storySections: StorySection[]
   total: number
   latestYear: number
   entries: TimelineEntry[]
@@ -110,8 +110,7 @@ export function ChronicleView({
       {/* mounted 后再亮出滚动显现，避免 SSR 闪现 */}
       <div className={mounted ? '' : 'no-reveal'}>
         <StoryTimeline
-          years={storyYears}
-          total={total}
+          sections={storySections}
           latestYear={latestYear}
           onOpenArchive={openArchiveYear}
           eyebrow={<ChronicleBreadcrumb mode={mode} onChange={switchMode} />}

@@ -73,7 +73,7 @@ export const SITE_COPY: SiteCopy = {
       id: 'home-highlights',
       eyebrow: 'Highlights · 高光',
       title: '一些记得住的时刻。',
-      lede: '档案里的每一条都能查到。这里只放那些大家会记住的——从第一支视频，到现在。',
+      lede: '这里不求全，只放一些一提起来就能想起的时刻。',
     },
     { id: 'home-memory', eyebrow: 'Memory · 记忆盒', title: '回到过去，只需要一晚。', lede: '' },
     { id: 'home-games', eyebrow: 'Games · 玩过的游戏', title: '陪得最久的几款。', lede: '' },
@@ -82,7 +82,7 @@ export const SITE_COPY: SiteCopy = {
   rooms: [
     { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条。故事模式先看，档案模式逐条查。' },
     { id: 'series', kicker: 'Series', title: '节目', body: '固定出现过的栏目——心灵砒霜，和更早的连载。' },
-    { id: 'stats', kicker: 'Stats', title: '数据', body: '五个问题，五个答案。数字全部从档案派生。' },
+    { id: 'stats', kicker: 'Stats', title: '数据', body: '把这些年放到一起，看看数字会说什么。' },
     { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '被画下来的几年。水友替每个年份留下的注脚。' },
   ],
   pages: [
@@ -96,7 +96,7 @@ export const SITE_COPY: SiteCopy = {
       id: 'stats',
       eyebrow: 'Stats · 数据里的发现',
       title: '这些数字背后，是被保存下来的时间。',
-      lede: '每一节只回答一个问题。数字全部来自档案本身的逐条记录——先有数据，后有观察。',
+      lede: '这些数字都来自目前保存下来的记录。先看看发生了什么，再看看它们连起来是什么样。',
     },
     { id: 'gallery', eyebrow: 'Gallery · 记忆盒', title: '被画下来的几年。', lede: '' },
     { id: 'games', eyebrow: '', title: '她的游戏库', lede: '' },

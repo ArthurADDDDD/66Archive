@@ -431,7 +431,7 @@ export function Timeline({
           <div className="mt-5 border-t border-line pt-4">
             <div className="mb-2 flex items-center justify-between">
               <h2 className="text-meta uppercase tracking-[0.16em] text-faint">年度线索</h2>
-              <span className="text-meta text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选择一年查看月度目录`}</span>
+              <span className="text-meta text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选一年看看`}</span>
             </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
               {activeEraYears.map((year) => {
@@ -642,7 +642,7 @@ function MonthArchive({
   return (
     <div>
       <p className="measure-body mb-4 text-body text-muted">
-        下面是这一年的月度年表。标题均来自现有记录，仅作为寻找内容的线索；点击月份后再展开全部条目。
+        选一个月，看看那段时间都在播什么。
       </p>
       <div className="ui-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => {

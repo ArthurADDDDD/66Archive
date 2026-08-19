@@ -32,15 +32,11 @@ function collectSources() {
     .map(([id, count]) => ({ account: ds.accounts.get(id)!, count }))
     .filter((row) => Boolean(row.account))
     .sort((a, b) => b.count - a.count || a.account.name.localeCompare(b.account.name))
-  const creditedIds = new Set(credited.map((row) => row.account.id))
-  const pendingCount = [...ds.accounts.values()].filter(
-    (account) => account.role !== 'official' && !creditedIds.has(account.id),
-  ).length
-  return { credited, pendingCount }
+  return { credited }
 }
 
 export default function ContactPage() {
-  const { credited, pendingCount } = collectSources()
+  const { credited } = collectSources()
   return (
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="contact" />
@@ -70,9 +66,9 @@ export default function ContactPage() {
 
           <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 hover:border-today/40">
             <span className="text-meta uppercase tracking-[0.16em] text-today">联系渠道</span>
-            <h2 className="mt-3 text-h3 font-medium">上线前暂未开放</h2>
+            <h2 className="mt-3 text-h3 font-medium">目前可以从 GitHub 联系</h2>
             <p className="mt-4 text-body text-muted">
-              正式渠道会在互动审核机制确定后公布。当前页面先用于明确站点结构，避免展示未经确认的联系方式。
+              发现错漏、想补档或者提供来源，都可以从下面的项目仓库找到我。
             </p>
           </article>
 
@@ -80,11 +76,11 @@ export default function ContactPage() {
             href="/chronicle/"
             className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
           >
-            <span className="text-meta uppercase tracking-[0.16em] text-live">Calibration · 真人校准</span>
+            <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
             <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
               <div>
                 <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
-                <p className="measure-body mt-2 text-body text-muted">前往编年史，展开具体录像；当前识别标签和校准入口会放在一起，先看原视频再判断，不需要脱离上下文。</p>
+                <p className="measure-body mt-2 text-body text-muted">打开对应录像，看过原片以后，再帮忙补标签或者纠错。</p>
               </div>
               <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开编年史 ↗</span>
             </div>
@@ -126,7 +122,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <p className="mt-6 border-t border-line/70 pt-4 text-meta text-faint">
-                想一起补数据或校对，从上面的 GitHub 仓库联系我（暂未开放太多编辑权限）。
+                想一起补档或校对，可以从上面的 GitHub 仓库找到我。
               </p>
             </div>
 
@@ -156,8 +152,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <p className="mt-5 border-t border-line/70 pt-4 text-meta text-faint">
-                另有 {pendingCount} 个已登记的搬运 / 切片账号还没有条目引用到，核对完会陆续出现在这里。
-                名单与场次由数据自动统计——漏了谁，说明是索引还没做到，欢迎来纠正。
+                名单会随着补档继续增加。如果漏了谁，欢迎告诉我。
               </p>
             </div>
           </div>
