@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { Timeline } from '@/components/Timeline'
 import { BackToTop } from '@/components/ScrollAffordances'
@@ -29,17 +28,13 @@ export default function ArchivePage() {
   )
 }
 
-/** 面包屑：Chronicle · 录播室，带一条回编年史的入口——两个页面靠链接互通，不是模式切换。 */
+/** 录播室页头只保留当前页面标识；年份范围和跨页跳转在这里都属于重复信息。 */
 function ArchiveBreadcrumb() {
   return (
-    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live">
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live [&~p]:hidden [&~span]:hidden">
       <span>Chronicle</span>
       <span aria-hidden className="text-faint/50">·</span>
       <span>录播室</span>
-      <span aria-hidden className="text-faint/40">/</span>
-      <Link href="/chronicle/" className="ui-press rounded-sm text-live transition-colors hover:text-ink">
-        看编年史 →
-      </Link>
     </div>
   )
 }
