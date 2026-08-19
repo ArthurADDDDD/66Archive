@@ -31,7 +31,7 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
           {rows.map(([year, row]) => (
             <Link
               key={year}
-              href={`/chronicle/?y=${year}`}
+              href={`/archive/?y=${year}`}
               className="group flex h-full min-w-[1.875rem] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
               title={`${year} 年 · ${row.count.toLocaleString()} 条`}
             >
@@ -72,7 +72,7 @@ export function EraDots({ rows }: { rows: YearRow[] }) {
           return (
             <Link
               key={year}
-              href={`/chronicle/?y=${year}`}
+              href={`/archive/?y=${year}`}
               className="flex min-w-[24px] flex-col items-center gap-1.5"
               title={`${year} 年 · ${row.count.toLocaleString()} 条`}
             >

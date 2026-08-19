@@ -91,8 +91,8 @@ export default function StatsPage() {
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="stats" />
-        <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
-          去编年史逐条查看 →
+        <Link href="/archive/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
+          去录播室逐条查看 →
         </Link>
       </header>
 
@@ -201,7 +201,7 @@ export default function StatsPage() {
           {eras.map((era) => (
             <Link
               key={era.id}
-              href={`/chronicle/?y=${era.from}`}
+              href={`/archive/?y=${era.from}`}
               className="rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60"
             >
               <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em]" style={{ color: era.color }}>

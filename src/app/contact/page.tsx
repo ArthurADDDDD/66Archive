@@ -73,7 +73,7 @@ export default function ContactPage() {
           </article>
 
           <Link
-            href="/chronicle/"
+            href="/archive/"
             className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
           >
             <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
                 <p className="measure-body mt-2 text-body text-muted">打开对应录像，看过原片以后，再帮忙补标签或者纠错。</p>
               </div>
-              <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开编年史 ↗</span>
+              <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开录播室 ↗</span>
             </div>
           </Link>
 

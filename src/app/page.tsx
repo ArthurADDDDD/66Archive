@@ -99,7 +99,7 @@ export default function HomePage() {
       <div className="flex flex-col sm:min-h-[100svh]">
         <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="home" />
-          <Link href="/chronicle/" className="ui-press hidden rounded-sm text-meta tnum text-live sm:block">
+          <Link href="/archive/" className="ui-press hidden rounded-sm text-meta tnum text-live sm:block">
             打开全部 {data.totals.entries.toLocaleString()} 条记录 →
           </Link>
         </header>
@@ -129,7 +129,7 @@ export default function HomePage() {
               date={todayMemory?.entry.date ?? null}
               yearsAgo={todayMemory?.yearsAgo ?? null}
               href={todayMemory ? `/e/${todayMemory.entry.id}/` : null}
-              yearHref={todayMemory ? `/chronicle/?y=${todayMemory.entry.date.slice(0, 4)}` : null}
+              yearHref={todayMemory ? `/archive/?y=${todayMemory.entry.date.slice(0, 4)}` : null}
             />
           </div>
         </div>

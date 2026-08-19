@@ -54,6 +54,7 @@ export const SITE_COPY: SiteCopy = {
   nav: [
     { id: 'home', label: '首页' },
     { id: 'chronicle', label: '编年史' },
+    { id: 'archive', label: '录播室' },
     { id: 'games', label: '游戏' },
     { id: 'series', label: '节目' },
     { id: 'stats', label: '数据' },
@@ -80,7 +81,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'home-rooms', eyebrow: 'Rooms · 四个房间', title: '', lede: '' },
   ],
   rooms: [
-    { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条。故事模式先看，档案模式逐条查。' },
+    { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条地看下去。逐条查记录，去录播室。' },
     { id: 'series', kicker: 'Series', title: '节目', body: '固定出现过的栏目——心灵砒霜，和更早的连载。' },
     { id: 'stats', kicker: 'Stats', title: '数据', body: '把这些年放到一起，看看数字会说什么。' },
     { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '被画下来的几年。水友替每个年份留下的注脚。' },

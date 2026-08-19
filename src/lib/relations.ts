@@ -26,7 +26,7 @@ export function buildGameRails(profile: GameProfile, ds: Dataset): RelationRail[
   // 同年编年史
   const yearItems = [...years]
     .sort()
-    .map((y) => ({ label: `${y} 年`, href: `/chronicle/?y=${y}` }))
+    .map((y) => ({ label: `${y} 年`, href: `/archive/?y=${y}` }))
   if (yearItems.length) rails.push({ title: '同年编年史', items: yearItems.slice(0, 4) })
 
   // 相关栏目：tags 与已登记 series 名称的交集
@@ -41,7 +41,7 @@ export function buildGameRails(profile: GameProfile, ds: Dataset): RelationRail[
   const tagItems = [...tagCounts.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3)
-    .map(([tag, n]) => ({ label: tag, href: `/chronicle/?q=${encodeURIComponent(tag)}`, hint: `${n} 场` }))
+    .map(([tag, n]) => ({ label: tag, href: `/archive/?q=${encodeURIComponent(tag)}`, hint: `${n} 场` }))
   if (tagItems.length) rails.push({ title: '相关栏目', items: tagItems })
 
   // 同年画廊（素材报告中与这些年份重合的照片）
@@ -78,14 +78,14 @@ export function buildEntryRails(entry: Entry, ds: Dataset): RelationRail[] {
   const seriesNames = new Set([...ds.series.values()].map((s) => s.name))
   const tagItems = [...new Set(entry.tags.filter((t) => seriesNames.has(t)))]
     .slice(0, 3)
-    .map((t) => ({ label: t, href: `/chronicle/?q=${encodeURIComponent(t)}`, hint: '在编年史里搜索' }))
+    .map((t) => ({ label: t, href: `/archive/?q=${encodeURIComponent(t)}`, hint: '在录播室里搜索' }))
   if (tagItems.length) rails.push({ title: '相关栏目', items: tagItems })
 
   rails.push({
     title: '同期编年史',
     items: [
-      { label: `${year} 年`, href: `/chronicle/?y=${year}` },
-      { label: `${year} 年 ${month} 月`, href: `/chronicle/?y=${year}&m=${month}` },
+      { label: `${year} 年`, href: `/archive/?y=${year}` },
+      { label: `${year} 年 ${month} 月`, href: `/archive/?y=${year}&m=${month}` },
     ],
   })
 

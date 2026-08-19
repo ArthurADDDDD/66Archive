@@ -52,8 +52,8 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   const maxYearCount = Math.max(1, ...yearRows.map(([, r]) => r.count))
 
   const ctaHref = profile.curated
-    ? `/chronicle/?q=${encodeURIComponent(profile.name)}`
-    : `/chronicle/?g=${profile.id}`
+    ? `/archive/?q=${encodeURIComponent(profile.name)}`
+    : `/archive/?g=${profile.id}`
 
   // 稀疏游戏（场次 <= 1）：紧凑 hero——只留下一个晚上，不硬凑 4 个指标和年份分布。
   const sparse = profile.sessions <= 1

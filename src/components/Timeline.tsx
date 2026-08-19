@@ -64,7 +64,7 @@ export function Timeline({
   entries: TimelineEntry[]
   isDemo: boolean
   hiddenUnreviewed?: number
-  /** 档案模式头部右侧插槽（编年史模式切换用） */
+  /** 录播室页头右侧插槽（面包屑 / 回编年史入口） */
   extra?: React.ReactNode
 }) {
   const years = useMemo(
@@ -134,7 +134,7 @@ export function Timeline({
     if (filters.games.length) p.set('g', filters.games.join(','))
     if (filters.onlyAlive) p.set('alive', '1')
     const qs = p.toString()
-    return `/chronicle/${qs ? `?${qs}` : ''}`
+    return `/archive/${qs ? `?${qs}` : ''}`
   }, [filters, latestYear])
 
   const set = useCallback((patch: Partial<Filters>) => {
@@ -343,7 +343,7 @@ export function Timeline({
     <>
       <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
         <div className="site-header-container flex flex-wrap items-center gap-2 px-page py-3 sm:flex-nowrap sm:gap-3">
-          <SiteNav active="chronicle" />
+          <SiteNav active="archive" />
           {/* 手机端 SearchField 已经塌成一个 44px 圆形图标——原本的 order-3 w-full
               会让 sticky header 白白多出一整行，行里只有那一个小圆圈。 */}
           <div className="w-auto sm:ml-auto sm:w-full sm:max-w-[360px]">
@@ -370,7 +370,7 @@ export function Timeline({
         <section className="ui-reveal pb-8 pt-4 sm:py-10">
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
-              {/* 面包屑（含故事/档案切换）与年份跨度同属一行眉标，两种模式落在同一个位置。 */}
+              {/* 面包屑（含回编年史入口）与年份跨度同属一行眉标。 */}
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 {extra}
                 {/* 分隔点只在同一行时才有意义；手机端年份跨度换到下一行，点跟着一起收起来。 */}

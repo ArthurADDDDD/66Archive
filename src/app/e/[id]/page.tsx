@@ -32,7 +32,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const totalSec = (entry.duration_min ?? 0) * 60
   const cover = proxyImage(entry.cover, 720)
   const primary = groupedSources.find((source) => source.status === 'alive') ?? groupedSources[0]
-  const backHref = `/chronicle/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
+  const backHref = `/archive/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
 
   const rails = buildEntryRails(entry, ds)
 

@@ -67,7 +67,7 @@ export function HomeStats({ data }: { data: HomepageData }) {
 
           <div className="mt-8">
             <Link
-              href="/chronicle/"
+              href="/archive/"
               className="ui-press group inline-flex items-center gap-2 rounded-full border border-line bg-base/60 px-5 py-2.5 text-control text-muted transition-colors hover:border-muted hover:text-ink"
             >
               打开全部 {data.totals.entries.toLocaleString()} 条记录

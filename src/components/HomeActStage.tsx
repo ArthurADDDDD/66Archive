@@ -205,7 +205,7 @@ export function HomeActStage({
         </div>
 
         {step?.actIndex === acts.length - 1 && step.beatIndex === resolved.beats.length - 1 && (
-          <Link href="/chronicle/" className="ui-press absolute bottom-[clamp(1.5rem,3vh,3rem)] right-[clamp(8rem,10vw,12rem)] rounded-full border border-line bg-surface/70 px-5 py-2 text-meta text-ink">
+          <Link href="/archive/" className="ui-press absolute bottom-[clamp(1.5rem,3vh,3rem)] right-[clamp(8rem,10vw,12rem)] rounded-full border border-line bg-surface/70 px-5 py-2 text-meta text-ink">
             {now.year}，{now.label} · {now.count.toLocaleString()} 条 →
           </Link>
         )}
