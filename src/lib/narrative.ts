@@ -777,8 +777,10 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'entry', id: '2025-11-14-live-01' },
       },
       {
+        // 原「2026.03.02」查无此日：站内《生化危机9》只有 02-26/27/28 三场直播，
+        // 没有 03-02。具体是哪一天无法从现有记录确认，日期只写到月。
         id: 'feeding-milk',
-        date: '2026.03.02',
+        date: '2026.02',
         storyYear: 2026,
         size: 'small',
         kicker: '很普通的一天',
