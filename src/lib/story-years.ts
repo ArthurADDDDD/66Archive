@@ -116,7 +116,13 @@ export function buildStorySections(acts: ResolvedAct[], timeline: TimelineEntry[
       durationCount += stats.durationCount
     }
 
-    const ranked = [...beats].sort((a, b) => (SIZE_RANK[a.size] ?? 9) - (SIZE_RANK[b.size] ?? 9))
+    // 同尺寸打平时，锚在真实档案（entry/game）上的节点排到纯外链切片前面——
+    // 后者常常是后补的梗/名场面，事件本身的权重不该被它抢走「这一年的主卡」位置。
+    const ranked = [...beats].sort((a, b) => {
+      const rank = (SIZE_RANK[a.size] ?? 9) - (SIZE_RANK[b.size] ?? 9)
+      if (rank !== 0) return rank
+      return Number(a.external) - Number(b.external)
+    })
     const hero = ranked[0] ?? null
     const secondary = beats.filter((beat) => beat !== hero)
     const hasStory = hero !== null
