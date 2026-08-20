@@ -19,8 +19,8 @@ for (const target of targets) {
     hasTouch: target.isMobile ?? false,
   })
   const page = await context.newPage()
-  await page.goto(target.url, { waitUntil: 'networkidle', timeout: 60000 })
-  await page.waitForTimeout(5000)
+  await page.goto(target.url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+  await page.waitForTimeout(8000)
   await page.screenshot({ path: `screenshots/${target.name}.png`, fullPage: false })
   await context.close()
 }
