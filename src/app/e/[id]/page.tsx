@@ -9,6 +9,7 @@ import { buildEntryRails } from '@/lib/relations'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
+import { PresenceIndicator } from '@/components/PresenceIndicator'
 
 export function generateStaticParams() {
   return getDataset().entries.map((e) => ({ id: e.id }))
@@ -61,6 +62,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           {entry.time && <span className="text-faint">{entry.time} 开播</span>}
           <span className="text-faint">·</span>
           <span className="text-muted">{formatDuration(entry.duration_min)}</span>
+          <PresenceIndicator pageKey={`entry:${entry.id}`} mode="page" />
           {entry.confidence !== 'high' && (
             <span className="rounded-sm border border-line px-1.5 text-faint">
               {entry.confidence === 'low' ? '待考证' : '部分待核实'}
