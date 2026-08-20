@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { EXTRA_HIGHLIGHTS } from '@/lib/highlight-extras'
 import { actColor, type ResolvedBeat } from '@/lib/narrative'
 import { applyLiveHighlights } from '@/lib/live-content'
 import { Eyebrow } from './primitives'
@@ -9,55 +10,9 @@ import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 
 /**
- * 三个补充梗先作为前端策展基线并入现有高光，再交给 live-content 做覆盖/删除。
- * 这样后台已有的默认展开、文案覆盖和 deletedIds 行为仍然有效。
- *
- * B 站两个链接使用官方支持的 p + t（秒）参数直接空降；
- * AcFun 没有找到可验证的公开跳秒参数，因此只保留原视频链接，把时间点明确写在卡片里，避免造一个“看起来能跳”的假链接。
+ * 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。
+ * 补充条目的字段本身统一来自 highlight-extras.ts；后台快照导入也读同一份源。
  */
-const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
-  {
-    id: 'dont-like-nvliu',
-    act: 'act-ii',
-    date: '2015',
-    size: 'type',
-    kicker: '砒霜名场面',
-    title: '我就是不喜欢那个女流！',
-    body: '「我就是不喜欢那个女流！」',
-    href: 'https://www.bilibili.com/video/BV1bx411j7Gx?p=2&t=1907',
-    external: true,
-    cover: null,
-    emphasis: 'P2 · 31:47',
-  },
-  {
-    id: 'douyu-gandie',
-    act: 'act-ii',
-    date: '2021.09.21',
-    size: 'type',
-    kicker: '查房名场面',
-    title: '斗鱼干爹',
-    body: '「斗鱼干爹，定不负你。」',
-    href: 'https://www.bilibili.com/video/BV1fk4y1k7uN?p=2&t=3122',
-    external: true,
-    cover: null,
-    emphasis: 'P2 · 52:02',
-  },
-  {
-    id: 'nature-gift',
-    act: 'act-ii',
-    date: '2022',
-    size: 'type',
-    kicker: '砒霜名场面',
-    title: '感谢大自然的馈赠',
-    body: '「感谢大自然的馈赠。」',
-    href: 'https://m.acfun.cn/v/?ac=35552495',
-    external: true,
-    cover: null,
-    emphasis: '01:22:48',
-  },
-]
-
-/** 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。 */
 function withExtraHighlights(baseline: ResolvedBeat[]): ResolvedBeat[] {
   const insertAfter = new Map<string, ResolvedBeat[]>([
     ['xinling-pishuang', [EXTRA_HIGHLIGHTS[0]]],
