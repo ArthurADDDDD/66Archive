@@ -30,7 +30,7 @@ function collectSources() {
   }
   const credited = [...counts.entries()]
     .map(([id, count]) => ({ account: ds.accounts.get(id)!, count }))
-    .filter((row) => Boolean(row.account))
+    .filter((row) => Boolean(row.account) && row.account.platform !== 'youtube')
     .sort((a, b) => b.count - a.count || a.account.name.localeCompare(b.account.name))
   return { credited }
 }
