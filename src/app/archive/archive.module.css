@@ -1,0 +1,10 @@
+/*
+ * 手机端展开档案卡不再沿用桌面时间轴的左缩进。
+ * 旧样式在 <640px 仍保留至少 4.5rem 的 margin-left，Pixel 10 Pro 这类窄屏上
+ * 会把详情卡压成一条很窄的列，看起来像正文被裁切。
+ */
+@media (max-width: 639px) {
+  .archivePage :global([id^='entry-preview-']) {
+    margin-left: 0 !important;
+  }
+}
