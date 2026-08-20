@@ -1,0 +1,30 @@
+name: Capture live presence screenshots
+
+on:
+  push:
+    branches:
+      - feat/presence-indicator-v2
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture live site
+        run: node .github/scripts/capture-live-presence.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-presence-screenshots
+          path: screenshots/*.png
+          if-no-files-found: error
