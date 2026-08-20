@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
+import { PresenceIndicator } from './PresenceIndicator'
 import { RotatingAvatar } from './RotatingAvatar'
 import { useSiteCopy } from './LiveContentProvider'
 
@@ -86,6 +87,7 @@ export function HomeHero({ nowYear }: { nowYear: string }) {
               {copy.hero.secondaryAction}
             </Link>
             </div>
+            <PresenceIndicator pageKey="home" mode="global" className="mt-4" />
           </div>
         </div>
 
