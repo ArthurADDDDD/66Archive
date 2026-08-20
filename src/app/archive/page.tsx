@@ -1,6 +1,7 @@
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { Timeline } from '@/components/Timeline'
 import { BackToTop } from '@/components/ScrollAffordances'
+import styles from './archive.module.css'
 
 /**
  * 录播室：档案模式。完整 Timeline，能力一条不丢，搜索/筛选/年份/来源全部保留。
@@ -16,7 +17,7 @@ export default function ArchivePage() {
       : allEntries
 
   return (
-    <>
+    <div className={styles.archivePage}>
       <Timeline
         entries={visibleEntries}
         isDemo={ds.isDemo}
@@ -24,7 +25,7 @@ export default function ArchivePage() {
         extra={<ArchiveBreadcrumb />}
       />
       <BackToTop />
-    </>
+    </div>
   )
 }
 
