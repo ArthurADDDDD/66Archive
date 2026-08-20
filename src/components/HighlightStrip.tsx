@@ -9,14 +9,79 @@ import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 
 /**
- * 高光条：17 个「记得住的时刻」。
+ * 三个补充梗先作为前端策展基线并入现有高光，再交给 live-content 做覆盖/删除。
+ * 这样后台已有的默认展开、文案覆盖和 deletedIds 行为仍然有效。
+ *
+ * B 站两个链接使用官方支持的 p + t（秒）参数直接空降；
+ * AcFun 没有找到可验证的公开跳秒参数，因此只保留原视频链接，把时间点明确写在卡片里，避免造一个“看起来能跳”的假链接。
+ */
+const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
+  {
+    id: 'dont-like-nvliu',
+    act: 'act-ii',
+    date: '2015',
+    size: 'type',
+    kicker: '砒霜名场面',
+    title: '我就是不喜欢那个女流！',
+    body: '「我就是不喜欢那个女流！」',
+    href: 'https://www.bilibili.com/video/BV1bx411j7Gx?p=2&t=1907',
+    external: true,
+    cover: null,
+    emphasis: 'P2 · 31:47',
+  },
+  {
+    id: 'douyu-gandie',
+    act: 'act-ii',
+    date: '2021.09.21',
+    size: 'type',
+    kicker: '查房名场面',
+    title: '斗鱼干爹',
+    body: '「斗鱼干爹，定不负你。」',
+    href: 'https://www.bilibili.com/video/BV1fk4y1k7uN?p=2&t=3122',
+    external: true,
+    cover: null,
+    emphasis: 'P2 · 52:02',
+  },
+  {
+    id: 'nature-gift',
+    act: 'act-ii',
+    date: '2022',
+    size: 'type',
+    kicker: '砒霜名场面',
+    title: '感谢大自然的馈赠',
+    body: '「感谢大自然的馈赠。」',
+    href: 'https://m.acfun.cn/v/?ac=35552495',
+    external: true,
+    cover: null,
+    emphasis: '01:22:48',
+  },
+]
+
+/** 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。 */
+function withExtraHighlights(baseline: ResolvedBeat[]): ResolvedBeat[] {
+  const insertAfter = new Map<string, ResolvedBeat[]>([
+    ['xinling-pishuang', [EXTRA_HIGHLIGHTS[0]]],
+    ['number-723', [EXTRA_HIGHLIGHTS[1]]],
+    ['dalishi', [EXTRA_HIGHLIGHTS[2]]],
+  ])
+  const inserted = new Set<string>()
+  const merged = baseline.flatMap((beat) => {
+    const extras = insertAfter.get(beat.id) ?? []
+    extras.forEach((extra) => inserted.add(extra.id))
+    return [beat, ...extras]
+  })
+  return [...merged, ...EXTRA_HIGHLIGHTS.filter((extra) => !inserted.has(extra.id))]
+}
+
+/**
+ * 高光条：20 个「记得住的时刻」。
  * 数字是背景纹理不是指标（emphasis 大字淡色靠右）；
  * 每一条都指向真实播放/原平台 URL——展开后点击图片或标题直接跳转，不再进详情页。
  */
 export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
   const { narrative } = useLiveContent()
   const copy = useCopyBlock('homeSections', 'home-highlights')
-  const beats = applyLiveHighlights(baseline, narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
+  const beats = applyLiveHighlights(withExtraHighlights(baseline), narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
   if (beats.length === 0) return null
   return (
     <section id="home-highlights" className="scroll-mt-4 border-t border-line py-12 sm:py-16">
