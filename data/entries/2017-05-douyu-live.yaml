@@ -4,7 +4,6 @@
     title: "大周，还好么"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_03/1493813209.JPG?imageslim"
     games: []
@@ -24,10 +23,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=Wbm1MsHzipM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-03-live-01
@@ -115,7 +110,6 @@
     title: "小小噩梦"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_07/1494127121.JPG?imageslim"
     games: [little-nightmares]
@@ -137,22 +131,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=RNnnIzYXQ_s
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=HkfziCuevHA
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=hu1t6XJvLeY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=C6nN-BWk9vo
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-07-live-01
@@ -165,7 +143,7 @@
     duration_min: 185
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_09/1494341460.jpg?imageslim"
     games: []
-    tags: [心灵砒霜, 需代理]
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "P1-5.7-心灵砒霜-弹幕版"
@@ -182,14 +160,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=IFcwN9Oqnig
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=cCfMPFEKmRU
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-09-live-01
@@ -247,7 +217,6 @@
     title: "艾迪芬奇的记忆（What Remains of Edith Finch）"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 186
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_12/1494605139.JPG?imageslim"
     games: [what-remains-of-edith-finch]
@@ -269,22 +238,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=WXlw0Ct_YYk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=GzRciaVGtq4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=WKqbbO8sz1I
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=uc-dQbZs-ZY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-13-live-01
@@ -293,7 +246,6 @@
     title: "final station"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 220
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_13/1494685331.jpg?imageslim"
     games: [final-station]
@@ -315,22 +267,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=G-wVcblsJhQ
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=5upOdL___Ss
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=5je4GEww_Bc
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=i99S2iuXr_o
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-14-live-01
@@ -343,7 +279,7 @@
     duration_min: 151
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494898408.jpg?imageslim"
     games: []
-    tags: [心灵砒霜, 需代理]
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "P1-5.14-心灵砒霜-弹幕版"
@@ -358,18 +294,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.youtube.com/watch?v=NwzpLpME7D4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=GzEID1KW7gM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=EzyaeqaZGmY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-15-live-01
@@ -378,7 +302,6 @@
     title: "final station"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 190
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494898197.jpg?imageslim"
     games: [final-station]
@@ -400,22 +323,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=jvS32dNj9qk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=HNF34k69szk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=Xr0gEQdXdc4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=hzM_WLdBWWY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-16-live-01
@@ -424,7 +331,6 @@
     title: "final station"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 187
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_16/1494934403.JPG?imageslim"
     games: [final-station]
@@ -446,22 +352,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=7C31E3g2xuI
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=saE0BXUoKoI
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=ZBsN9LPcBHQ
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=iLNdtpEN5Wc
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-17-live-01
@@ -470,7 +360,6 @@
     title: "死亡细胞(Dead Cells）"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_17/1495033834.JPG?imageslim"
     games: [dead-cells]
@@ -492,22 +381,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=2iBLCHDIYbY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=IxJEu7RlqMk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=D7vlZNE1AL4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=zpGlsEqlYMY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-19-live-01
@@ -516,7 +389,6 @@
     title: "死亡细胞(Dead Cells）"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 212
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_19/1495195678.jpg?imageslim"
     games: [dead-cells]
@@ -538,18 +410,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=fTL4SK8yA3o
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=whGlIDMWLdw
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=4OLZvzkAwso
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-20-live-01
@@ -558,7 +418,6 @@
     title: "核聚变2017电游嘉年华"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 84
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_20/1495287191.jpg?imageslim"
     games: []
@@ -578,18 +437,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=S-FPFFuNzr0
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=efDfXZhpahU
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=q602FioXbIk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-05-21-live-01

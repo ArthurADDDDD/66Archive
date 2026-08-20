@@ -24,7 +24,6 @@
     title: "大明塔"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 168
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_05/1486286530.JPG?imageslim"
     games: []
@@ -38,10 +37,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.youtube.com/watch?v=QBzf8X23vtE
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
       - url: https://www.bilibili.com/video/BV1sx41117xf
         kind: replay
         status: alive
@@ -79,7 +74,6 @@
     title: "小猫钓鱼(Cat Goes Fishing)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_08/1486560350.jpg?imageslim"
     games: [cat-goes-fishing]
@@ -101,30 +95,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=4DrJUTuDdgY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=Ss3jpEGS-Yw
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=WZOKyiXzOg0
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=__xfkD7kVss
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=hov_PSfXf_Y
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=xBMka2VTAks
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-08-live-02
@@ -159,7 +129,6 @@
     title: "小猫钓鱼(Cat Goes Fishing)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_09/1486649481.jpg?imageslim"
     games: [cat-goes-fishing]
@@ -179,26 +148,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=LrJzNNBU6Aw
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=SZUgNG4yr34
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=Z3dzvRDTGx0
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=m_qRvGcUl_o
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=sl6bxO0uRYU
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-09-live-02
@@ -234,7 +183,6 @@
     title: "小猫钓鱼(Cat Goes Fishing)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_10/1486729429.JPG?imageslim"
     games: [cat-goes-fishing]
@@ -258,26 +206,6 @@
         kind: replay
         parts: 5
         status: alive
-      - url: https://www.youtube.com/watch?v=59y3kglR6g8
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=9txTrvifvEg
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=AuS5c8lcupg
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=ChIu9ezCT88
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=IXYVKz0SHtE
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-11-live-01
@@ -286,7 +214,6 @@
     title: "小猫钓鱼(Cat Goes Fishing)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 175
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_11/1486814339.JPG?imageslim"
     games: [cat-goes-fishing]
@@ -304,14 +231,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.youtube.com/watch?v=0pHrC8hrTK0
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=WDBwrdpe3uY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-13-live-01
@@ -320,7 +239,6 @@
     title: "科目2练习day"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 122
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_13/1486960533.jpg?imageslim"
     games: []
@@ -333,10 +251,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.youtube.com/watch?v=czk3AKYGE_c
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-14-live-01
@@ -345,7 +259,6 @@
     title: "科目2练习day"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 349
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_14/1487048767.jpg?imageslim"
     games: []
@@ -367,14 +280,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=UO4JoKFef3E
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=zEVdZMUOU_k
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-16-live-01
@@ -383,7 +288,6 @@
     title: "几何冲刺(Geometry Dash)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 438
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_16/1487260389.jpg?imageslim"
     games: [geometry-dash]
@@ -407,26 +311,6 @@
         kind: replay
         parts: 5
         status: alive
-      - url: https://www.youtube.com/watch?v=1xHwpeHPt3U
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=A4UhdxMJCSw
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=CjvnVVblyUo
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=ix_mKh9bQzM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=uepix4A_gwY
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-17-live-01
@@ -435,7 +319,6 @@
     title: "没错还是几何冲刺(Geometry Dash)"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 201
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_17/1487327336.jpg?imageslim"
     games: [geometry-dash]
@@ -455,18 +338,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=2AjiJCFFGTk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=KT6lnRYtf3I
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=NIQxDvLL0qA
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-18-live-01
@@ -475,7 +346,6 @@
     title: "Kalimba 和 The Vanishing of Ethan Carter"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_18/1487420938.jpg?imageslim"
     games: [ethan-carter, kalimba]
@@ -495,18 +365,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=8X9aJuZJ-C4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=bFM6YYeBwBM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=or2kpc3jCoI
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-20-live-01
@@ -519,7 +377,7 @@
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487683480.jpg?imageslim"
     games: []
-    tags: [心灵砒霜, 需代理]
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -536,22 +394,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=6fq4UXmOI1Q
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=RJ6ZArs00sM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=bT6SGwxoMXE
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=f7ftC5gtPQ4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-21-live-01
@@ -560,7 +402,6 @@
     title: "上高铁前在猴山"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 167
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_21/1487668039.JPG?imageslim"
     games: []
@@ -582,22 +423,6 @@
         kind: replay
         parts: 4
         status: alive
-      - url: https://www.youtube.com/watch?v=5qD833mcBdo
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=LQW1n66qQIM
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=W0vkV6110e4
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=dc23PCVqWhg
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-22-live-01
@@ -606,7 +431,6 @@
     title: "短暂的2月啊"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 57
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_22/1487756408.JPG?imageslim"
     games: []
@@ -619,10 +443,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.youtube.com/watch?v=hLaF0WIXzN0
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
 
   - id: 2017-02-23-live-01
@@ -631,7 +451,6 @@
     title: "做头发"
     platform: douyu
     confidence: high
-    tags: [需代理]
     duration_min: 199
     cover: "https://tx-free-imgs.acfun.cn/content/2017_02_23/1487854241.JPG?imageslim"
     games: []
@@ -651,18 +470,6 @@
         kind: replay
         parts: 3
         status: alive
-      - url: https://www.youtube.com/watch?v=EVfN1Ccl4JQ
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=R1Z6qJjilro
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
-      - url: https://www.youtube.com/watch?v=W7uYSkaresk
-        kind: replay
-        status: alive
-        account: youtube-fan-66nvliu
     contributed_by: data-agent
   - id: 2017-02-28-live-01
     type: live
