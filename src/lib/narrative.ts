@@ -1,5 +1,6 @@
 import type { Dataset, TimelineEntry } from './data'
 import { proxyImage } from './platforms'
+import { isXinlingPishuangEntry } from './series'
 import { formatDuration } from './ui'
 
 /**
@@ -1222,7 +1223,7 @@ export function fillEmphasis(template: string | undefined, vars: Record<string, 
 
 /** 高光 / 时间线的强调数字派生变量（全部来自数据） */
 function emphasisVars(timeline: TimelineEntry[]): Record<string, string> {
-  const xinlingCount = timeline.filter((e) => e.tags.includes('心灵砒霜')).length
+  const xinlingCount = timeline.filter(isXinlingPishuangEntry).length
   const wukongCount = timeline.filter((e) => e.games.some((g) => g.id === 'black-myth-wukong')).length
   const geometryMinutes = timeline.filter((e) => e.title.includes('几何冲刺')).reduce((s, e) => s + (e.duration_min ?? 0), 0)
   return {
@@ -1244,15 +1245,14 @@ function buildMontage(timeline: TimelineEntry[]): ResolvedBeat['montage'] {
     .slice(0, 15)
     .map((e) => ({ id: e.id, date: e.date, title: e.title, cover: e.cover ? proxyImage(e.cover, 480) : null }))
     .filter((s): s is MontageSample => s.cover !== null)
-  // 首页只展示对外口径：实际累计直播时长按外部硬锚点（2017《环球人物》2000+h、
-  // 2020 斗鱼年度 1350h、2022「8 年近万小时」）取保守值 10,000+；场次同理只写 2,300+。
-  // 精确的「已收录 / 已确认」数字在统计页展示，不在这里混用。
+  const liveEntries = timeline.filter((e) => e.type === 'live')
+  const liveKnownMinutes = liveEntries.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   return {
     samples,
     stats: {
-      xinling: timeline.filter((e) => e.tags.includes('心灵砒霜')).length.toLocaleString(),
-      hoursLabel: '10,000+',
-      liveSessions: '2,300+',
+      xinling: timeline.filter(isXinlingPishuangEntry).length.toLocaleString(),
+      hoursLabel: liveKnownMinutes ? Math.round(liveKnownMinutes / 60).toLocaleString() : '—',
+      liveSessions: liveEntries.length.toLocaleString(),
     },
   }
 }

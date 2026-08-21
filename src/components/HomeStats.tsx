@@ -30,7 +30,7 @@ export function HomeStats({ data }: { data: HomepageData }) {
         <Reveal>
           <Eyebrow>Totals · 这一切加起来</Eyebrow>
           {/* 这一节原本只有一行 10px 眉标、没有标题，读下来是全页唯一一个缺层级的地方 */}
-          <h2 className="mt-3 text-h2 font-semibold text-ink">十六年，最后是这些数字。</h2>
+          <h2 className="mt-3 text-h2 font-semibold text-ink">{data.totals.years} 年，最后是这些数字。</h2>
           <dl className="mt-8 grid grid-cols-3 gap-4 sm:gap-8">
             <Stat value={data.totals.entries.toLocaleString()} label="公开条目" />
             <Stat value={data.totals.years.toString()} label="覆盖年份" />

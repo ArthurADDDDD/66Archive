@@ -89,13 +89,13 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
         <span className="text-faint/40">·</span>
         <Reveal delay={60}>
           <span>
-            <b className="tnum text-ink">{montage.stats.hoursLabel}</b> 小时直播
+            <b className="tnum text-ink">{montage.stats.hoursLabel}</b> 小时已确认时长
           </span>
         </Reveal>
         <span className="text-faint/40">·</span>
         <Reveal delay={120}>
           <span>
-            <b className="tnum text-ink">{montage.stats.liveSessions}</b> 场
+            <b className="tnum text-ink">{montage.stats.liveSessions}</b> 场已收录直播
           </span>
         </Reveal>
         <span className="text-faint/40">·</span>

@@ -105,7 +105,7 @@ export default function HomePage() {
         </header>
 
         {/* 第一屏：人物，不是数据。PC 端连同导航占满一整个视口，不提前露出 ACT I。 */}
-        <HomeHero nowYear={data.now.year} />
+        <HomeHero nowYear={data.now.year} historyYears={data.totals.years} />
       </div>
 
       {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}

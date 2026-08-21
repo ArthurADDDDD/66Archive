@@ -6,8 +6,11 @@ import { PresenceIndicator } from './PresenceIndicator'
 import { RotatingAvatar } from './RotatingAvatar'
 import { useSiteCopy } from './LiveContentProvider'
 
-export function HomeHero({ nowYear }: { nowYear: string }) {
+export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYears: number }) {
   const copy = useSiteCopy()
+  const heroBody = copy.hero.body.map((line) =>
+    line.replace('{archiveYears}', historyYears.toString()).replace(/^十六年/, `${historyYears}年`),
+  )
   const rootRef = useRef<HTMLElement>(null)
   const frameRef = useRef<number | null>(null)
   const [pressed, setPressed] = useState(false)
@@ -69,7 +72,7 @@ export function HomeHero({ nowYear }: { nowYear: string }) {
           {copy.hero.eyebrow && <p className="mt-7 text-meta uppercase tracking-[0.22em] text-faint">{copy.hero.eyebrow}</p>}
           <h1 className="mt-3 text-hero font-bold tracking-[-0.01em] text-ink">{copy.hero.title}</h1>
           <p className="measure-body mt-6 text-body text-muted">
-            {copy.hero.body.map((line, index) => (
+            {heroBody.map((line, index) => (
               <span key={index}>
                 {line}
                 {index < copy.hero.body.length - 1 && <br className="hidden sm:block" />}

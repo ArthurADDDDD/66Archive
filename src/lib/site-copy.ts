@@ -65,7 +65,7 @@ export const SITE_COPY: SiteCopy = {
     status: '还在继续',
     eyebrow: '女流 66 · 石悦',
     title: '女流',
-    body: ['十六年的游戏、直播和那些晚上，', '重新连成一条路。'],
+    body: ['{archiveYears}年的游戏、直播和那些晚上，', '重新连成一条路。'],
     primaryAction: '开始',
     secondaryAction: '打开编年史',
   },

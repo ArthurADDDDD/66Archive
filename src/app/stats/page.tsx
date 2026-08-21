@@ -25,6 +25,8 @@ export default function StatsPage() {
   const liveKnownMinutes = liveTimeline.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   const liveKnownHours = Math.round(liveKnownMinutes / 60)
   const liveDurationCoverage = liveTimeline.length ? Math.round((liveTimeline.filter((e) => e.duration_min).length / liveTimeline.length) * 100) : 0
+  const publicHoursFloor = 10_000
+  const publicHoursLowerBound = Math.max(publicHoursFloor, liveKnownHours)
 
   // —— 01 每一年 ——
   const byYear = new Map<number, { count: number; minutes: number; known: number }>()
@@ -39,6 +41,13 @@ export default function StatsPage() {
     byYear.set(y, row)
   }
   const yearRows = [...byYear.entries()].sort((a, b) => a[0] - b[0])
+  const observedYears = new Set(yearRows.map(([year]) => year))
+  const firstArchiveYear = yearRows[0]?.[0] ?? new Date().getFullYear()
+  const lastArchiveYear = yearRows[yearRows.length - 1]?.[0] ?? firstArchiveYear
+  const emptyYears: number[] = []
+  for (let year = firstArchiveYear; year <= lastArchiveYear; year++) {
+    if (!observedYears.has(year)) emptyYears.push(year)
+  }
   let topYear = yearRows[0]?.[0] ?? 0
   let topCount = 0
   for (const [y, r] of yearRows) if (r.count > topCount) {
@@ -84,6 +93,8 @@ export default function StatsPage() {
   const series = buildSeriesList(ds, timeline)
     .map((s) => ({ ...s, span: s.count > 1 ? Number(s.lastDate.slice(0, 4)) - Number(s.firstDate.slice(0, 4)) + 1 : 1 }))
     .sort((a, b) => b.span - a.span || b.count - a.count)
+  const longestSeries = series[0]
+  const pishuangSeries = series.find((s) => s.id === 'xinling-pishuang')
 
   return (
     <main className="ui-page-in min-h-screen overflow-x-clip">
@@ -118,14 +129,14 @@ export default function StatsPage() {
             <p className="mt-1 text-meta text-faint tnum">小时 · {liveDurationCoverage}% 的直播已有可核对时长</p>
           </div>
           <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">实际直播时长</p>
-            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">10,000+</p>
-            <p className="mt-1 text-meta text-faint tnum">小时 · 至少</p>
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">公开口径累计时长</p>
+            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{publicHoursLowerBound.toLocaleString()}+</p>
+            <p className="mt-1 text-meta text-faint tnum">小时 · 下限</p>
           </div>
         </div>
         <Observation>
           早期有一部分直播录像已经找不到了，所以「已确认时长」只代表目前能核对到的那些，不等于她实际播了多久。
-          一万小时这个数，来自公开采访与平台年度统计等资料，是一个保守的下限。
+          {`公开采访与平台年度统计等资料给出的累计时长下限为 ${publicHoursFloor.toLocaleString()} 小时；若站内已确认时长超过这一数值，卡片会随档案更新。`}
         </Observation>
       </Section>
 
@@ -134,7 +145,9 @@ export default function StatsPage() {
         <YearBarChart rows={yearRows} topYear={topYear} />
         <Observation>
           最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
-          2011 年是一条横线——那一年目前没有保存下来的站内录像。
+          {emptyYears.length > 0
+            ? ` ${emptyYears.join('、')} 年目前没有保存下来的站内录像。`
+            : ' 档案覆盖到的每一年都至少留下了一条记录。'}
         </Observation>
         <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
       </Section>
@@ -242,7 +255,7 @@ export default function StatsPage() {
           ))}
         </div>
         <Observation>
-          「心灵砒霜」横跨了整整 8 年——固定出现在每周日，是档案里坚持最久的节目。
+          「{pishuangSeries?.name ?? longestSeries?.name ?? '心灵砒霜'}」横跨了 {pishuangSeries?.span ?? longestSeries?.span ?? 0} 年——固定出现在每周日，是档案里坚持最久的节目。
         </Observation>
       </Section>
 
