@@ -4,9 +4,11 @@ import Link from 'next/link'
 import type { ResolvedBeat } from '@/lib/narrative'
 import { Reveal } from './Reveal'
 
+const PUBLIC_LIVE_HOURS_FLOOR = 10_000
+
 /**
  * 首页 ACT II 的蒙太奇视频条。
- * 只消费构建期从真实时间线采样出的封面与统计，不创建新的数据口径。
+ * 站内已确认时长 / 场次来自当前时间线；10,000+ 小时是公开采访与平台年度统计形成的保守累计下限。
  */
 export function MontageVideoList({ beat, color, compact = false }: { beat: ResolvedBeat; color: string; compact?: boolean }) {
   const montage = beat.montage
@@ -89,17 +91,23 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
         <span className="text-faint/40">·</span>
         <Reveal delay={60}>
           <span>
-            <b className="tnum text-ink">{montage.stats.hoursLabel}</b> 小时已确认时长
+            <b className="tnum text-ink">{PUBLIC_LIVE_HOURS_FLOOR.toLocaleString()}+</b> 小时公开累计下限
           </span>
         </Reveal>
         <span className="text-faint/40">·</span>
         <Reveal delay={120}>
           <span>
-            <b className="tnum text-ink">{montage.stats.liveSessions}</b> 场已收录直播
+            <b className="tnum text-ink">{montage.stats.hoursLabel}</b> 小时档案已确认
           </span>
         </Reveal>
         <span className="text-faint/40">·</span>
         <Reveal delay={180}>
+          <span>
+            <b className="tnum text-ink">{montage.stats.liveSessions}</b> 场档案已收录
+          </span>
+        </Reveal>
+        <span className="text-faint/40">·</span>
+        <Reveal delay={240}>
           <span style={{ color }}>大周</span>
         </Reveal>
       </div>
