@@ -486,3 +486,18 @@
     note: "第二场判定：晚上开播 自动采集候选经人工审批新建（组 50c5c859-d2f4-4540-b252-5abc55e6ee41）。"
     contributed_by: collection-review
     games: [supermarket-chaos]
+
+  - id: 2026-08-20-live-01
+    type: live
+    date: "2026-08-20"
+    title: "一起看黑神话钟馗新视频"
+    platform: douyin
+    duration_min: 71
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/e3ca324b6498a9656b820be61cad625ddeb50f58.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Jf8c62Eyb"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 9bed278d-20bd-4d14-a8f2-7a8ae54ec8c0）。"
+    contributed_by: collection-review
