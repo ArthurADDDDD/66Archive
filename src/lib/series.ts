@@ -9,7 +9,7 @@ import { proxyImage } from './platforms'
  * - 心灵砒霜补充：标题含「砒霜」的条目也计入（2017-03-22 砒霜兼索尼2周年户外、2018-02-25 狗年第一碗砒霜）
  *   ——这两条未带 tag 但标题可确证，data-agent 的 series.yaml 计数口径同样含标题匹配。
  * 数字全部构建期派生；页面上「档案确认」数字以这里派生为准。
- * 心灵砒霜的展示文案也跟随当前档案的期数与首末日期，避免沿用过期的历史统计或缺口判断。
+ * 心灵砒霜的展示文案跟随当前档案的期数与首末日期，但不把“已收录”自动表述成“完整收录”。
  */
 
 export type SeriesInfo = {
@@ -86,5 +86,5 @@ function getDisplayDescription(id: string, fallback: string, entries: TimelineEn
 
   const firstDate = entries[0].date
   const lastDate = entries[entries.length - 1].date
-  return `斗鱼期固定栏目（周日情感电台），目前档案已完整收录 ${entries.length} 期，${firstDate} ~ ${lastDate}，为条目数最多的栏目。参考来源 nvliu.me 记该栏目于 ${firstDate} 开播。`
+  return `斗鱼期固定栏目（周日情感电台），目前档案已收录 ${entries.length} 期，${firstDate} ~ ${lastDate}，为条目数最多的栏目。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。`
 }
