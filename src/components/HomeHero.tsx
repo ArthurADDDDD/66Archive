@@ -54,7 +54,7 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
     <section
       id="home-top"
       ref={rootRef}
-      className="home-hero relative home-content-container flex min-h-[80svh] w-full scroll-mt-4 flex-col justify-center px-page pb-10 pt-12 sm:min-h-0 sm:flex-1 sm:pb-24 sm:pt-20"
+      className="home-hero relative home-content-container flex min-h-[80svh] w-full scroll-mt-4 flex-col justify-center px-page pb-10 pt-12 sm:pb-16 sm:pt-16 lg:min-h-0 lg:flex-1 lg:pb-24 lg:pt-20"
       onPointerMove={updatePointer}
       onPointerLeave={resetPointer}
     >
@@ -62,7 +62,7 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
       <div className="home-hero__glow home-hero__glow--right pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full bg-live/10 blur-[60px] sm:h-[520px] sm:w-[520px] sm:blur-[100px]" />
       <div className="home-hero__glow home-hero__glow--left pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full bg-today/10 blur-[60px] sm:h-[460px] sm:w-[460px] sm:blur-[110px]" />
 
-      <div className="relative grid w-full gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-12">
+      <div className="relative grid w-full gap-10 lg:max-w-4xl lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-8 xl:max-w-none xl:gap-12">
         <div className="ui-reveal">
           <div className="home-hero__copy">
           <div className="home-hero__status inline-flex items-center gap-2 rounded-full border border-live/30 bg-live/5 px-3 py-1.5 text-meta uppercase tracking-[0.16em] text-live tnum">
