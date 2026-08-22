@@ -60,8 +60,10 @@ body {
   }
 }
 
-/* 首页首屏鼠标交互：不同深度使用不同幅度，保持克制的空间感。 */
-@media (min-width: 768px) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+/* 首页首屏鼠标交互：不同深度使用不同幅度，保持克制的空间感。
+   必须同时判 hover:hover——iPad Safari 即使纯触屏也会报 pointer:fine，
+   只用 pointer:fine 会在 iPad 上放出一个永远不跟手、固定在屏幕中央的光斑。 */
+@media (min-width: 768px) and (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference) {
   .home-hero {
     --hero-x: 0;
     --hero-y: 0;
