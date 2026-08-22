@@ -78,14 +78,35 @@ export default function StatsPage() {
     .slice(0, 6)
 
   // —— 04 时代 ——
+  // 2015 是视频投稿与斗鱼直播重叠的过渡年，时代统计按条目类型/平台分，不再按年份硬切。
   const eras = [
-    { id: 'video', label: '视频时期', years: '2010 — 2015', color: '#E0A244', from: 2010, to: 2015 },
-    { id: 'douyu', label: '斗鱼时期', years: '2016 — 2023', color: '#5BC8E8', from: 2016, to: 2023 },
-    { id: 'douyin', label: '抖音时期', years: '2024 — 至今', color: '#FF6B75', from: 2024, to: 9999 },
+    {
+      id: 'video',
+      label: '视频时期',
+      years: '2010 — 2015',
+      color: '#E0A244',
+      from: 2010,
+      entries: timeline.filter((e) => e.type === 'video'),
+    },
+    {
+      id: 'douyu',
+      label: '斗鱼时期',
+      years: '2015 — 2023',
+      color: '#5BC8E8',
+      from: 2015,
+      entries: timeline.filter((e) => e.type === 'live' && e.platform === 'douyu'),
+    },
+    {
+      id: 'douyin',
+      label: '抖音时期',
+      years: '2024 — 至今',
+      color: '#FF6B75',
+      from: 2024,
+      entries: timeline.filter((e) => e.type === 'live' && e.platform === 'douyin'),
+    },
   ].map((era) => {
-    const rows = yearRows.filter(([y]) => y >= era.from && y <= era.to)
-    const count = rows.reduce((s, [, r]) => s + r.count, 0)
-    const minutes = rows.reduce((s, [, r]) => s + r.minutes, 0)
+    const count = era.entries.length
+    const minutes = era.entries.reduce((sum, entry) => sum + (entry.duration_min ?? 0), 0)
     return { ...era, count, hours: Math.round(minutes / 60) }
   })
 
