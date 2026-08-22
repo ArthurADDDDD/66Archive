@@ -60,7 +60,7 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
     >
       <div className="home-hero__spotlight pointer-events-none absolute -bottom-[24svh] -top-[24svh] left-1/2 hidden w-screen -translate-x-1/2 sm:block" />
 
-      {/* 桌面端保持原始 blur 柔光；只有无 hover 的触屏设备（iPad/手机这类）使用渐变兜底，
+      {/* 桌面和手机保持原始 blur 柔光；仅无 hover 的粗指针平板宽度使用渐变兜底，
           避免 iPad Safari 把大尺寸 filter: blur() 合成层裁成明显的矩形色块。 */}
       <div className="home-hero__glow home-hero__glow--right pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full bg-live/10 blur-[60px] sm:h-[520px] sm:w-[520px] sm:blur-[100px]" />
       <div className="home-hero__glow home-hero__glow--left pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full bg-today/10 blur-[60px] sm:h-[460px] sm:w-[460px] sm:blur-[110px]" />
@@ -132,7 +132,7 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
       </div>
 
       <style jsx>{`
-        @media (hover: none) {
+        @media (hover: none) and (pointer: coarse) and (min-width: 768px) and (max-width: 1366px) {
           .home-hero__glow--right {
             background: radial-gradient(
               circle at 50% 50%,
