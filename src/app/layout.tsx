@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
+import { BgmPlayer } from '@/components/BgmPlayer'
 
 const display = Archivo({
   subsets: ['latin'],
@@ -40,6 +41,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LiveContentProvider>
           <LiveDocumentMeta />
           {children}
+          {/* 背景音乐：挂在 layout 上，站内跳页时不会断掉重来 */}
+          <BgmPlayer />
         </LiveContentProvider>
       </body>
     </html>
