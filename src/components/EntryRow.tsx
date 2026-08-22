@@ -145,7 +145,7 @@ export function EntryRow({
 
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
-            <div id={`entry-preview-${entry.id}`} className="ui-panel-in ml-[clamp(4.5rem,8vw,7rem)] mt-[clamp(0.5rem,0.8vw,1rem)] overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[clamp(6rem,9vw,8rem)]">
+            <div id={`entry-preview-${entry.id}`} className="ui-panel-in mt-[clamp(0.5rem,0.8vw,1rem)] overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[clamp(4.5rem,8vw,7rem)] lg:ml-[clamp(6rem,9vw,8rem)]">
               <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
                 <EntryCover cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
