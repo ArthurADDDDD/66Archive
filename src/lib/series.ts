@@ -76,7 +76,8 @@ export function buildSeries(
     perYear,
     firstTitle: entries[0]?.title ?? null,
     cover: entries[0]?.cover ? proxyImage(entries[0].cover, 640) : null,
-    era: entries[0] ? (Number(entries[0].date.slice(0, 4)) <= 2015 ? 'video' : 'douyu') : 'douyu',
+    // 2015 是视频与直播的重叠过渡年，不能再按年份切时代；按条目类型判断。
+    era: entries[0]?.type === 'video' ? 'video' : 'douyu',
     games,
   }
 }
