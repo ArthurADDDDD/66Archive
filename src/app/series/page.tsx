@@ -103,7 +103,7 @@ export default async function SeriesPage() {
       <section className="site-container px-page py-12 sm:py-20">
         <EraGroup label="视频解说时代" years="2010 — 2015" color={ERA_COLOR.video} series={videoEra} />
         <div className="mt-14" />
-        <EraGroup label="斗鱼直播时代" years="2016 — 2023" color={ERA_COLOR.douyu} series={douyuEra} />
+        <EraGroup label="斗鱼直播时代" years="2015 — 2023" color={ERA_COLOR.douyu} series={douyuEra} />
       </section>
 
       <SiteFooter />
