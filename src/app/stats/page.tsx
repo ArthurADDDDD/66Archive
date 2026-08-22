@@ -102,7 +102,7 @@ export default function StatsPage() {
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="stats" />
-        <Link href="/archive/" className="ui-press hidden rounded-sm text-meta text-live sm:block">
+        <Link href="/archive/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
           去录播室逐条查看 →
         </Link>
       </header>
