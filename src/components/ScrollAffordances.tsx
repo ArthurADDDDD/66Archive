@@ -21,8 +21,9 @@ function useScrollState() {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    let raf = 0
+    let ticking = false
     const update = () => {
+      ticking = false
       const y = window.scrollY
       // 5px 死区：手指微抖或回弹不该让导航条闪来闪去
       const delta = y - lastY.current
@@ -34,9 +35,13 @@ function useScrollState() {
         setState((prev) => (prev.y === y && prev.vh === vh ? prev : { ...prev, y, vh }))
       }
     }
+    // 「取消上一个 rAF 再排新的」在快速滚动时会被连续的 scroll 事件反复打断，
+    // 导致 update 只在手指停下那一刻才跑一次——方向判断变成看那一瞬间的抖动，
+    // 而不是整个滚动过程。改成「已经排了就不再抢」，保证每帧都真正采样一次。
     const onScroll = () => {
-      cancelAnimationFrame(raf)
-      raf = requestAnimationFrame(update)
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(update)
     }
     lastY.current = window.scrollY
     update()
@@ -45,7 +50,6 @@ function useScrollState() {
     return () => {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
-      cancelAnimationFrame(raf)
     }
   }, [])
 
