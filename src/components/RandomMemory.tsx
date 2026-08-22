@@ -14,7 +14,7 @@ export function RandomMemory({ pool }: { pool: MemoryCandidate[] }) {
   const [pick, setPick] = useState<MemoryCandidate | null>(null)
 
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-dashed border-line bg-surface/25 p-6 sm:p-8">
+    <div className="flex flex-col rounded-2xl border border-dashed border-line bg-surface/25 p-6 sm:p-8 lg:min-h-[var(--memory-card-h)]">
       <Eyebrow>Random · 随机记忆</Eyebrow>
       {/* 卡片内标题降到 h3——和「回到过去，只需要一晚。」这个节标题差一级 */}
       <h3 className="mt-3 text-h3 font-semibold text-ink">随便回到一个晚上。</h3>

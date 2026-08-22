@@ -11,16 +11,17 @@ import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
 import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
+import { TodayInHistoryList, type TodayHistoryRow } from '@/components/TodayInHistoryList'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
 
 /**
- * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 今日今夕）+ 游戏预告 + 四个房间入口。
+ * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 历史上的今天）+ 游戏预告 + 四个房间入口。
  * 第一屏只有人，没有数字（数字在第二屏「这一切加起来」）；
  * 一切计数来自 resolveHomepage 的构建期派生，文案不硬编码数字。
- * 「今日今夕」以构建日期为准（静态站约束），框架为「N 年前的这几天」。
+ * 「历史上的今天」以构建日期为准（静态站约束），同月同日、一年一条。
  */
 export default function HomePage() {
   const ds = getDataset()
@@ -35,19 +36,47 @@ export default function HomePage() {
     .filter((_, i) => i % step === 0)
     .map((e) => ({ id: e.id, date: e.date, title: e.title }))
 
-  // 今日今夕：构建日 ±3 天里离今天最近的记录
+  // 历史上的今天：与构建日「同月同日」的记录，一年一条，从最早的一年数到去年。
+  // 不做 ±N 天的模糊匹配——那一年的这天没有录像，就该留个空，空也是记录。
   const today = new Date()
-  const todayMd = today.getMonth() * 100 + today.getDate()
-  let todayMemory: { entry: (typeof timeline)[number]; yearsAgo: number; distance: number } | null = null
+  const todayMd = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
+  const currentYear = today.getFullYear()
+
+  const sameDay = new Map<number, (typeof timeline)[number][]>()
   for (const e of timeline) {
-    const [y, m, d] = e.date.split('-').map(Number)
-    if (!y || !m || !d) continue
-    const dist = Math.min(Math.abs(m * 100 + d - todayMd), 366 - Math.abs(m * 100 + d - todayMd))
-    if (dist > 3) continue
-    const yearsAgo = today.getFullYear() - y
-    if (!todayMemory || dist < todayMemory.distance || (dist === todayMemory.distance && y > Number(todayMemory.entry.date.slice(0, 4)))) {
-      todayMemory = { entry: e, yearsAgo, distance: dist }
-    }
+    if (e.date.slice(5) !== todayMd) continue
+    const y = Number(e.date.slice(0, 4))
+    // 今年不算——「历史上的今天」看的是过去
+    if (!y || y >= currentYear) continue
+    sameDay.set(y, [...(sameDay.get(y) ?? []), e])
+  }
+
+  const firstYear = timeline.reduce((min, e) => {
+    const y = Number(e.date.slice(0, 4))
+    return y && y < min ? y : min
+  }, currentYear)
+
+  const todayRows: TodayHistoryRow[] = []
+  for (let year = firstYear; year < currentYear; year += 1) {
+    const found = sameDay.get(year) ?? []
+    // 同一天有多条时，优先挑有画面/有游戏的那条，再按开播时间取最早的
+    const picked = [...found].sort((a, b) => {
+      const rich = (e: (typeof timeline)[number]) => (e.cover || e.games.length > 0 ? 0 : 1)
+      return rich(a) - rich(b) || (a.time ?? '').localeCompare(b.time ?? '')
+    })[0]
+    todayRows.push({
+      year,
+      yearsAgo: currentYear - year,
+      item: picked
+        ? {
+            id: picked.id,
+            date: picked.date,
+            title: picked.title,
+            games: picked.games.map((g) => g.name),
+            extra: found.length - 1,
+          }
+        : null,
+    })
   }
 
   // 游戏预告：有场次的游戏按时长取前 8
@@ -117,20 +146,14 @@ export default function HomePage() {
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
       <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} />
 
-      {/* 记忆：随机一晚 + 今日今夕 */}
+      {/* 记忆：随机一晚 + 历史上的今天 */}
       <LiveSectionGate sectionId="home-memory">
       <section id="home-memory" className="scroll-mt-4 border-t border-line bg-surface/15">
         <div className="home-content-container px-page py-12 sm:py-16">
           <LiveSectionHeading sectionId="home-memory" />
-          <div className="mt-6 grid gap-5 lg:grid-cols-2">
+          <div className="memory-cards mt-6 grid items-start gap-5 lg:grid-cols-2">
             <RandomMemory pool={memoryPool} />
-            <TodayInHistory
-              title={todayMemory?.entry.title ?? null}
-              date={todayMemory?.entry.date ?? null}
-              yearsAgo={todayMemory?.yearsAgo ?? null}
-              href={todayMemory ? `/e/${todayMemory.entry.id}/` : null}
-              yearHref={todayMemory ? `/archive/?y=${todayMemory.entry.date.slice(0, 4)}` : null}
-            />
+            <TodayInHistory rows={todayRows} />
           </div>
         </div>
       </section>
@@ -180,49 +203,18 @@ export default function HomePage() {
   )
 }
 
-/** 今日今夕：离今天（±3 天）最近的一条历史记录。构建期派生，静态站约束如实标注。 */
-function TodayInHistory({
-  title,
-  date,
-  yearsAgo,
-  href,
-  yearHref,
-}: {
-  title: string | null
-  date: string | null
-  yearsAgo: number | null
-  href: string | null
-  yearHref: string | null
-}) {
+/** 历史上的今天：同月同日、一年一条，构建期派生（静态站以构建日为「今天」）。 */
+function TodayInHistory({ rows }: { rows: TodayHistoryRow[] }) {
+  // 标题说清楚这一天最早能回到哪一年——比「N 年前」更有信息量，也随日期自己变。
+  const earliest = rows.find((r) => r.item)?.year ?? null
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-line/80 bg-surface/25 p-6 sm:p-8">
+    <div className="flex flex-col rounded-2xl border border-line/80 bg-surface/25 p-6 sm:p-8 lg:min-h-[var(--memory-card-h)]">
       <Eyebrow>Today in history</Eyebrow>
       {/* 卡片内标题：比节标题低一级，不和「回到过去，只需要一晚。」抢主次 */}
       <h3 className="mt-3 text-h3 font-semibold text-ink">
-        {title ? (
-          <>
-            这些天的历史上，{yearsAgo === 0 ? '今年' : `${yearsAgo} 年前`}：
-          </>
-        ) : (
-          '这几天，档案里暂时没有记录。'
-        )}
+        {earliest ? <>这一天，最早能回到 {earliest} 年。</> : '这一天，档案里暂时没有记录。'}
       </h3>
-      {title && href && (
-        <Link href={href} className="ui-press group mt-5">
-          <div className="rounded-xl border border-line/80 bg-surface/50 p-4 transition-colors hover:border-muted/70">
-            <p className="font-mono text-meta text-faint tnum">{date}</p>
-            <p className="mt-1.5 text-body font-medium leading-snug text-ink transition-colors group-hover:text-white">{title}</p>
-            <p className="mt-2 text-meta text-live">打开这一天 →</p>
-          </div>
-        </Link>
-      )}
-      {yearHref && (
-        <p className="mt-4 text-meta text-faint">
-          <Link href={yearHref} className="-my-2 inline-block rounded-sm py-2 underline underline-offset-4 transition-colors hover:text-live">
-            看那年全部记录 →
-          </Link>
-        </p>
-      )}
+      <TodayInHistoryList rows={rows} />
     </div>
   )
 }
