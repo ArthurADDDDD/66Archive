@@ -59,8 +59,20 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
       onPointerLeave={resetPointer}
     >
       <div className="home-hero__spotlight pointer-events-none absolute -bottom-[24svh] -top-[24svh] left-1/2 hidden w-screen -translate-x-1/2 sm:block" />
-      <div className="home-hero__glow home-hero__glow--right pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full bg-live/10 blur-[60px] sm:h-[520px] sm:w-[520px] sm:blur-[100px]" />
-      <div className="home-hero__glow home-hero__glow--left pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full bg-today/10 blur-[60px] sm:h-[460px] sm:w-[460px] sm:blur-[110px]" />
+      {/* iPad Safari 会把大尺寸 filter: blur() 合成层裁在元素矩形边界上，形成截图里那条竖直色块断层。
+          这里改用自身已经渐隐到透明的 radial-gradient，不再依赖 blur，视觉仍是柔光但没有可被裁切的滤镜边界。 */}
+      <div
+        className="home-hero__glow home-hero__glow--right pointer-events-none absolute -right-24 -top-40 h-[280px] w-[280px] rounded-full sm:h-[520px] sm:w-[520px]"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(91, 200, 232, 0.11) 0%, rgba(91, 200, 232, 0.07) 34%, rgba(91, 200, 232, 0.028) 56%, rgba(91, 200, 232, 0) 78%)',
+        }}
+      />
+      <div
+        className="home-hero__glow home-hero__glow--left pointer-events-none absolute -left-44 top-24 h-[240px] w-[240px] rounded-full sm:h-[460px] sm:w-[460px]"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(229, 86, 138, 0.10) 0%, rgba(229, 86, 138, 0.058) 36%, rgba(229, 86, 138, 0.022) 58%, rgba(229, 86, 138, 0) 80%)',
+        }}
+      />
 
       <div className="relative grid w-full gap-10 lg:max-w-4xl lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:gap-8 xl:max-w-none xl:gap-12">
         <div className="ui-reveal">
