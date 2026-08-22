@@ -14,9 +14,9 @@ import { SiteNav } from './SiteNav'
  * reduced-motion 下不挂滚动监听，保持静态、永不弹出。
  */
 
-/** 共用：滚动位置 + 方向。rAF 节流，passive 监听。 */
+/** 共用：滚动位置 + 方向 + 视口高度。rAF 节流，passive 监听。 */
 function useScrollState() {
-  const [state, setState] = useState({ y: 0, up: false })
+  const [state, setState] = useState({ y: 0, up: false, vh: 0 })
   const lastY = useRef(0)
 
   useEffect(() => {
@@ -26,11 +26,12 @@ function useScrollState() {
       const y = window.scrollY
       // 5px 死区：手指微抖或回弹不该让导航条闪来闪去
       const delta = y - lastY.current
+      const vh = window.innerHeight
       if (Math.abs(delta) > 5) {
-        setState({ y, up: delta < 0 })
+        setState({ y, up: delta < 0, vh })
         lastY.current = y
       } else {
-        setState((prev) => (prev.y === y ? prev : { ...prev, y }))
+        setState((prev) => (prev.y === y && prev.vh === vh ? prev : { ...prev, y, vh }))
       }
     }
     const onScroll = () => {
@@ -40,8 +41,10 @@ function useScrollState() {
     lastY.current = window.scrollY
     update()
     window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll, { passive: true })
     return () => {
       window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
       cancelAnimationFrame(raf)
     }
   }, [])
@@ -75,10 +78,14 @@ export function MobileQuickNav({ active }: { active: React.ComponentProps<typeof
   )
 }
 
-/** 回到顶部：滚过一屏才淡入，右下角小圆钮。 */
+/**
+ * 回到顶部：右下角小圆钮，和手机端快捷导航同一套出场规则——
+ * 离开第一屏之后，**往上滚**才淡入；继续往下读就自己收起来，不挡内容。
+ * （此前是「滚过 900px 就一直挂着」，读长页面时它一路杵在那儿。）
+ */
 export function BackToTop() {
-  const { y } = useScrollState()
-  const shown = y > 900
+  const { y, up, vh } = useScrollState()
+  const shown = vh > 0 && y > vh && up
 
   return (
     <button
