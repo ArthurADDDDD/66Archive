@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { SiteNav } from './SiteNav'
 
 /**
@@ -83,15 +84,22 @@ export function MobileQuickNav({ active }: { active: React.ComponentProps<typeof
 }
 
 /**
- * 回到顶部：右下角小圆钮，和手机端快捷导航同一套出场规则——
- * 离开第一屏之后，**往上滚**才淡入；继续往下读就自己收起来，不挡内容。
- * （此前是「滚过 900px 就一直挂着」，读长页面时它一路杵在那儿。）
+ * 回到顶部：右下角小圆钮。
+ * 离开第一屏后，向上滚才出现；继续向下浏览时保持隐藏。
+ * 挂到 body，避免页面入场动画的 transform 把 fixed 限制在 main 内，
+ * 导致按钮看起来只出现在文档最底部。
  */
 export function BackToTop() {
   const { y, up, vh } = useScrollState()
+  const [mounted, setMounted] = useState(false)
   const shown = vh > 0 && y > vh && up
 
-  return (
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setMounted(true))
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
+  const button = (
     <button
       type="button"
       tabIndex={shown ? 0 : -1}
@@ -111,4 +119,6 @@ export function BackToTop() {
       </svg>
     </button>
   )
+
+  return mounted ? createPortal(button, document.body) : null
 }
