@@ -77,41 +77,52 @@ function Row({ beat }: { beat: ResolvedBeat }) {
   const toggle = () => setOpen(!isOpen)
 
   return (
-    <div className={`group border-b border-line/60 transition-colors ${isOpen ? 'bg-surface/20' : ''}`}>
+    <div className="group border-b border-line/60 transition-colors">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:py-5">
         <span className="hidden font-mono text-meta text-faint tnum sm:block">{beat.date}</span>
 
-        <div className="min-w-0">
-          <span
-            className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
-            style={{ color: actColor(beat.act) }}
+        {/* 折叠时整列负责展开；展开后整列直达播放，右侧按钮保持独立语义。 */}
+        {isOpen && beat.href ? (
+          <Link
+            href={beat.href}
+            target={beat.external ? '_blank' : undefined}
+            rel={beat.external ? 'noreferrer' : undefined}
+            className="ui-press min-w-0 rounded-lg py-1 text-left transition-colors group-hover:text-white hover:text-live"
           >
-            <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
-            {beat.kicker}
-          </span>
-          {isOpen && beat.href ? (
-            <Link
-              href={beat.href}
-              target={beat.external ? '_blank' : undefined}
-              rel={beat.external ? 'noreferrer' : undefined}
-              className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white hover:text-live"
+            <span
+              className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
+              style={{ color: actColor(beat.act) }}
             >
+              <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
+              {beat.kicker}
+            </span>
+            <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
               {beat.title}
               {beat.external && <span className="ml-1 font-mono text-meta text-live">↗</span>}
-            </Link>
-          ) : (
-            <button
-              type="button"
-              onClick={toggle}
-              aria-expanded={isOpen}
-              aria-controls={`highlight-panel-${beat.id}`}
-              className="ui-press mt-1 block cursor-pointer text-left text-h3 font-medium text-ink transition-colors group-hover:text-white"
+            </span>
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={toggle}
+            aria-expanded={isOpen}
+            aria-controls={`highlight-panel-${beat.id}`}
+            className="ui-press min-w-0 rounded-lg py-1 text-left transition-colors group-hover:text-white"
+          >
+            <span
+              className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
+              style={{ color: actColor(beat.act) }}
             >
+              <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
+              {beat.kicker}
+            </span>
+            <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
               {beat.title}
-            </button>
-          )}
-        </div>
+            </span>
+          </button>
+        )}
 
+        {/* 右侧图标保留为独立触控目标；中间整列也可展开或直达播放。 */}
         <button
           type="button"
           onClick={toggle}
