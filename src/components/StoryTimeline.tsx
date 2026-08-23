@@ -247,7 +247,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
   )
 }
 
-/** Secondary 行：手机端日期与标题分两行（标题起点固定），桌面端单行截断。 */
+/** Secondary 行：日期不折行；tag 收到标题下方，避免被推到宽屏最右侧。 */
 function SecondaryList({
   beats,
   accent,
@@ -263,19 +263,22 @@ function SecondaryList({
     <ul className={`space-y-0.5 border-l border-line/50 pl-4 ${className}`}>
       {beats.map((beat) => {
         const inner = (
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <span className="order-1 shrink-0 font-mono text-meta text-faint tnum sm:order-none sm:w-[72px]">{beat.date}</span>
-            <span className="order-3 w-full min-w-0 text-body text-muted group-hover:text-ink sm:order-none sm:w-auto sm:flex-1 sm:truncate">
-              {beat.title}
-            </span>
-            {beat.kicker && (
-              <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
-                {beat.kicker}
-              </span>
-            )}
+          <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+            <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{beat.date}</span>
+            <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
+              <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
+              {beat.kicker && (
+                <span
+                  className="mt-1.5 inline-flex rounded-full border border-line/70 bg-surface/50 px-2.5 py-0.5 text-[11px] leading-5 tracking-[0.08em]"
+                  style={{ color: accent }}
+                >
+                  {beat.kicker}
+                </span>
+              )}
+            </div>
             <span
               aria-hidden
-              className="order-2 ml-auto shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:order-none sm:ml-0"
+              className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3"
               style={{ color: accent }}
             >
               →
