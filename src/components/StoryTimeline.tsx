@@ -243,32 +243,35 @@ function MemoryTag({ children, accent }: { children: ReactNode; accent: string }
   )
 }
 
-/** Type B：紧凑 Hero 行——日期与标题对齐，tag 和 secondary 一样收在标题下方。 */
+/**
+ * Type B：紧凑主行。
+ * 与 secondary 共用同一条左边线和列宽；无链接节点是阶段说明，不显示箭头或点击暗示。
+ */
 function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
   const displayDate = chronicleDate(beat.date)
   const body = (
     <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
-      <div className="col-start-1 row-start-1 flex min-h-6 items-center gap-3">
-        <span aria-hidden className="h-2 w-2 shrink-0 rounded-full" style={{ background: accent }} />
-        {!hideDate && <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
-      </div>
+      {!hideDate && <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
       <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
         <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
         {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+        {!beat.href && beat.body && <p className="mt-2 text-body leading-relaxed text-muted">{beat.body}</p>}
       </div>
-      <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
-        →
-      </span>
+      {beat.href && (
+        <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
+          →
+        </span>
+      )}
     </div>
   )
 
-  if (!beat.href) return <div className="px-1 py-1.5">{body}</div>
+  if (!beat.href) return <div className="border-l border-line/50 py-2 pl-5">{body}</div>
   return (
     <Link
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
-      className="group block rounded px-1 py-1.5 transition-colors hover:bg-surface/50"
+      className="group block rounded border-l border-line/50 py-1.5 pl-5 transition-colors hover:bg-surface/50"
     >
       {body}
     </Link>
