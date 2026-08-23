@@ -203,22 +203,22 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
         {beat.kicker && <span>· {beat.kicker}</span>}
       </div>
-      <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start">
-        <div className="min-w-0 flex-1">
-          <h3 className="text-h3 font-semibold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
-          {beat.body && <p className="measure-body mt-2 text-body text-muted">{beat.body}</p>}
-          {beat.emphasis && (
-            <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
-              {beat.emphasis}
-            </p>
-          )}
-        </div>
-        {beat.cover && (
-          <MediaFrame src={beat.cover} alt={beat.title} className="h-40 w-full shrink-0 sm:h-32 sm:w-56 lg:w-64">
+      {beat.cover && (
+        <div className="mt-4 max-w-[960px]">
+          <MediaFrame src={beat.cover} alt={beat.title} className="aspect-video w-full">
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {displayDate}
             </span>
           </MediaFrame>
+        </div>
+      )}
+      <div className="mt-4 min-w-0">
+        <h3 className="text-h3 font-semibold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
+        {beat.body && <p className="mt-2 text-body text-muted">{beat.body}</p>}
+        {beat.emphasis && (
+          <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
+            {beat.emphasis}
+          </p>
         )}
       </div>
     </>
