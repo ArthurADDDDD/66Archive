@@ -79,7 +79,7 @@ const KIND_PRESENTATION: Record<
  * Chronicle 只展示最早的年月：精确到日和结束月份仍留在 Archive。
  * 例如 `2014.11 — 12` 只显示 `2014.11`，不让日期列混用多种精度。
  */
-function chronicleDate(value: string): string {
+export function chronicleDate(value: string): string {
   let date = value.trim().replace(/^[~～]\s*/, '')
 
   date = date.replace(/^(\d{4})\.(\d{2})\.\d{2}$/, '$1.$2')
@@ -102,6 +102,7 @@ function StorySectionBlock({
 
   return (
     <section
+      id={`story-year-${section.year}`}
       className={`relative grid grid-cols-1 gap-3 border-b border-line/50 lg:grid-cols-[150px_1fr] lg:gap-12 ${p.sectionPad}`}
       aria-label={`${section.label} 年`}
     >
@@ -136,7 +137,7 @@ function StorySectionBlock({
           <>
             <div className="space-y-7">
               {section.featured.map((beat, index) => (
-                <div key={beat.id} className={index > 0 ? 'border-t border-line/50 pt-7' : ''}>
+                <div id={`story-beat-${beat.id}`} key={beat.id} className={`scroll-mt-24 ${index > 0 ? 'border-t border-line/50 pt-7' : ''}`}>
                   <HeroEvent beat={beat} accent={accent} hideDate={chronicleDate(beat.date) === section.label} />
                 </div>
               ))}
@@ -146,7 +147,11 @@ function StorySectionBlock({
           </>
         ) : (
           <>
-            {section.hero && <HeroRow beat={section.hero} accent={accent} hideDate={chronicleDate(section.hero.date) === section.label} />}
+            {section.hero && (
+              <div id={`story-beat-${section.hero.id}`} className="scroll-mt-24">
+                <HeroRow beat={section.hero} accent={accent} hideDate={chronicleDate(section.hero.date) === section.label} />
+              </div>
+            )}
             {section.secondary.length > 0 && <SecondaryList beats={section.secondary} accent={accent} className="mt-2.5" rowPad={p.rowPad} />}
             <OpenArchiveButton section={section} accent={accent} onOpenArchive={onOpenArchive} className="mt-3" />
           </>
@@ -340,7 +345,7 @@ function SecondaryList({
       {beats.map((beat) => {
         if (!beat.href) {
           return (
-            <li key={beat.id}>
+            <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
               <StageNote beat={beat} className={`px-1 ${rowPad}`} />
             </li>
           )
@@ -364,7 +369,7 @@ function SecondaryList({
           </div>
         )
         return (
-          <li key={beat.id}>
+          <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
             <Link
               href={beat.href}
               target={beat.external ? '_blank' : undefined}

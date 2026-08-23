@@ -568,15 +568,17 @@ export function applyLiveHighlights(
 /**
  * 故事模式时间轴的覆盖。
  *
- * 故事模式的年份归位（哪一年放哪几条）是构建期按策展日期算好的，这里不重算——
- * 只对已经归位的节点打文案覆盖、按后台顺序重排、隐藏被关掉的节点。
+ * 公仓基线节点的年份归位是构建期按策展日期算好的；后台新增的 custom 节点则按
+ * 严格的 YYYY.MM 展示日期动态归入现有年份段。正文与右侧时间轴共用这份结果，
+ * 不需要为新节点再维护第二份时间轴清单。
+ * 已归位的节点会在这里打文案覆盖、按后台顺序重排、隐藏被关掉的节点。
  * featured 身份由公开仓基线决定；后台可以改顺序和显隐，但不会把多张关键记忆重新压成单张。
  * 全部 featured 被隐藏时由该年第一条 secondary 顶上，不让整年塌成空行。
  *
- * 注意：改后台里的「展示日期」不会把节点挪到另一年——年份分组是构建期的结果，
- * 跨年移动需要重新构建公开仓。日常改文案不受影响。
+ * 注意：公仓已有节点的核实年月仍以公仓为准，后台旧日期不会把它挪年；只有 custom
+ * 节点使用后台 YYYY.MM 归位。这样既避免旧稿覆盖已核实史料，也允许后台继续增补内容。
  */
-export function applyLiveStoryYears<T extends { featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
+export function applyLiveStoryYears<T extends { year: number; featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
   years: T[],
   liveActs: LiveAct[] | undefined,
   deletedIds: string[] = [],
@@ -587,15 +589,28 @@ export function applyLiveStoryYears<T extends { featured?: ResolvedBeat[]; hero:
 
   const overrides = new Map<string, LiveBeat>()
   const order = new Map<string, number>()
+  const customByYear = new Map<number, ResolvedBeat[]>()
   let position = 0
   for (const act of liveActList) {
     if (deleted.has(act.id)) continue
     for (const beat of act.beats) {
       if (deleted.has(beat.id)) continue
       if (isCustomId(beat.id)) {
-        if (process.env.NODE_ENV !== 'production') {
-          console.warn(`[live-content] 故事模式不支持 custom beat 归年，已忽略 ${beat.id}`)
+        if (beat.visible === false) continue
+        const match = beat.date.match(/^(\d{4})\.(0[1-9]|1[0-2])$/)
+        if (!match) {
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn(`[live-content] 故事模式 custom beat 的日期必须是 YYYY.MM，已忽略 ${beat.id}`)
+          }
+          continue
         }
+        const storyYear = Number(match[1])
+        const resolved = { ...resolveCustomBeat(beat, act.id as ActId, false), storyYear }
+        const custom = customByYear.get(storyYear)
+        if (custom) custom.push(resolved)
+        else customByYear.set(storyYear, [resolved])
+        order.set(beat.id, position)
+        position += 1
         continue
       }
       overrides.set(beat.id, beat)
@@ -622,8 +637,12 @@ export function applyLiveStoryYears<T extends { featured?: ResolvedBeat[]; hero:
 
   return years.map((year) => {
     const baselineFeatured = year.featured?.length ? year.featured : year.hero ? [year.hero] : []
-    const featuredIds = new Set(baselineFeatured.map((beat) => beat.id))
-    const source = [...baselineFeatured, ...year.secondary].filter(
+    const custom = customByYear.get(year.year) ?? []
+    const featuredIds = new Set([
+      ...baselineFeatured.map((beat) => beat.id),
+      ...custom.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
+    ])
+    const source = [...baselineFeatured, ...year.secondary, ...custom].filter(
       (beat, index, list) => list.findIndex((item) => item.id === beat.id) === index,
     )
     const kept = source.filter(visible)

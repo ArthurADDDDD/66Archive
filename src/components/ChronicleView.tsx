@@ -7,6 +7,7 @@ import { SiteNav } from './SiteNav'
 import { BackToTop } from './ScrollAffordances'
 import { SearchField } from './SearchField'
 import { StoryTimeline } from './StoryTimeline'
+import { ChronicleRail } from './ChronicleRail'
 
 /**
  * 编年史：故事模式。年份脊柱时间线，条目仍由 STORY_ACTS 策展。
@@ -73,6 +74,7 @@ export function ChronicleView({
           eyebrow={<ChronicleBreadcrumb />}
         />
       </div>
+      <ChronicleRail sections={storySections} />
       <BackToTop />
     </>
   )
