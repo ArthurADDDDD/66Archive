@@ -10,11 +10,12 @@ import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
 import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
 import { SeriesMontage, type SeriesMontageSample } from '@/components/SeriesMontage'
 
-const ERA_COLOR: Record<'video' | 'douyu', string> = { video: '#E0A244', douyu: '#5BC8E8' }
+const SERIES_COLOR = { longRunning: '#A78BFA', themed: '#5BC8E8', video: '#E0A244' } as const
 
 /**
- * 节目单：固定出现过的栏目 / 系列。
- * 心灵砒霜（期数最多、横跨整个斗鱼时代）单独以大块深色展示——
+ * 节目单：按内容形态区分长期直播节目、主题栏目和视频系列。
+ * 心灵砒霜（期数最多、横跨整个斗鱼时代）单独以大块深色展示；
+ * 一起 See 作为跨平台延续的长期节目重点展示。
  * 夜 / 邮件 / 电台 / 周日 / 长期陪伴的气质靠深色 + 字排 + 留白完成，不画收音机。
  */
 export default async function SeriesPage() {
@@ -26,9 +27,9 @@ export default async function SeriesPage() {
   const pishuangFirstBiliSource = pishuang?.entries[0]?.sources.find((source) => source.url.includes('bilibili.com/video/'))?.url
   const pishuangFirstBiliMeta = await getBilibiliVideoMetaAtBuild(pishuangFirstBiliSource)
   const pishuangFallbackCover = pishuangFirstBiliMeta?.cover ?? pishuang?.entries.find((entry) => entry.cover)?.cover
-  const rest = series.filter((s) => s.id !== 'xinling-pishuang')
-  const videoEra = rest.filter((s) => s.era === 'video')
-  const douyuEra = rest.filter((s) => s.era === 'douyu')
+  const togetherSee = series.find((s) => s.id === 'together-see')
+  const themed = series.filter((s) => s.category === 'themed')
+  const videoSeries = series.filter((s) => s.category === 'video')
 
   return (
     <main className="ui-page-in min-h-screen overflow-x-clip">
@@ -101,9 +102,21 @@ export default async function SeriesPage() {
       )}
 
       <section className="site-container px-page py-12 sm:py-20">
-        <EraGroup label="视频解说时代" years="2010 — 2015" color={ERA_COLOR.video} series={videoEra} />
+        {togetherSee && <TogetherSeeFeature series={togetherSee} />}
+        <div className="mt-16" />
+        <SeriesGroup
+          label="主题栏目"
+          description="围绕一个故事、玩法或共同主题，在一段时间里连续出现。"
+          color={SERIES_COLOR.themed}
+          series={themed}
+        />
         <div className="mt-14" />
-        <EraGroup label="斗鱼直播时代" years="2015 — 2023" color={ERA_COLOR.douyu} series={douyuEra} />
+        <SeriesGroup
+          label="视频系列"
+          description="直播之前留下的连载解说与完整流程。"
+          color={SERIES_COLOR.video}
+          series={videoSeries}
+        />
       </section>
 
       <SiteFooter />
@@ -127,7 +140,62 @@ async function buildPishuangMontage(series: SeriesInfo): Promise<SeriesMontageSa
   }))
 }
 
-function EraGroup({ label, years, color, series }: { label: string; years: string; color: string; series: SeriesInfo[] }) {
+function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
+  const featureCover = [...series.entries]
+    .reverse()
+    .find((entry) => entry.cover && /一起看|发布会|直面会|颁奖|榜单/.test(entry.title))?.cover ?? series.cover
+
+  return (
+    <div>
+      <div className="flex items-baseline justify-between border-b border-line/60 pb-3">
+        <Eyebrow color={SERIES_COLOR.longRunning} dot>长期直播节目</Eyebrow>
+        <span className="font-mono text-meta text-faint tnum">2018 — 至今</span>
+      </div>
+      <Link
+        href={`/series/${series.id}/`}
+        className="ui-press group mt-6 grid overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
+      >
+        <div className="min-w-0 p-6 sm:p-8 lg:p-10">
+          <Eyebrow color={SERIES_COLOR.longRunning}>Together See · 一起看</Eyebrow>
+          <h2 className="mt-4 text-h2 font-semibold tracking-tight text-ink">一起 See</h2>
+          <p className="measure-body mt-4 text-body text-muted">{series.description}</p>
+          <div className="mt-6 flex flex-wrap items-baseline gap-x-5 gap-y-2 text-meta text-muted tnum">
+            <span className="text-body text-ink">{series.count} 场</span>
+            <span>{formatMonth(series.firstDate)} — {formatMonth(series.lastDate)}</span>
+          </div>
+          <div className="mt-6 max-w-2xl">
+            <ActivityStrip perYear={series.perYear} color={SERIES_COLOR.longRunning} unit="场" descriptive />
+          </div>
+          <span className="mt-6 inline-flex items-center gap-2 text-control text-[#C4B5FD]">
+            查看已确认的一起 See 记录
+            <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
+          </span>
+        </div>
+        <div className="border-t border-line/60 p-5 sm:p-6 lg:border-l lg:border-t-0 lg:p-8">
+          <MediaFrame
+            src={featureCover}
+            alt={series.name}
+            fallback={<span className="text-h3 font-semibold text-ink/75">一起 See</span>}
+            className="h-full min-h-48 w-full"
+          />
+        </div>
+      </Link>
+    </div>
+  )
+}
+
+function SeriesGroup({
+  label,
+  description,
+  color,
+  series,
+}: {
+  label: string
+  description: string
+  color: string
+  series: SeriesInfo[]
+}) {
+  const years = seriesYearRange(series)
   return (
     <div>
       <div className="flex items-baseline justify-between border-b border-line/60 pb-3">
@@ -136,6 +204,7 @@ function EraGroup({ label, years, color, series }: { label: string; years: strin
         </Eyebrow>
         <span className="font-mono text-meta text-faint tnum">{years}</span>
       </div>
+      <p className="measure-body mt-4 text-body text-muted">{description}</p>
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {series.map((s) => (
           <Link
@@ -163,4 +232,17 @@ function EraGroup({ label, years, color, series }: { label: string; years: strin
       </div>
     </div>
   )
+}
+
+function seriesYearRange(series: SeriesInfo[]): string {
+  const years = series.flatMap((item) => [Number(item.firstDate.slice(0, 4)), Number(item.lastDate.slice(0, 4))])
+  const valid = years.filter(Number.isFinite)
+  if (valid.length === 0) return '暂无记录'
+  const first = Math.min(...valid)
+  const last = Math.max(...valid)
+  return first === last ? String(first) : `${first} — ${last}`
+}
+
+function formatMonth(date: string): string {
+  return date ? `${date.slice(0, 4)}.${date.slice(5, 7)}` : '待确认'
 }

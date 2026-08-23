@@ -82,16 +82,16 @@ export const SITE_COPY: SiteCopy = {
   ],
   rooms: [
     { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条地看下去。逐条查记录，去录播室。' },
-    { id: 'series', kicker: 'Series', title: '节目', body: '固定出现过的栏目——心灵砒霜，和更早的连载。' },
+    { id: 'series', kicker: 'Series', title: '节目', body: '从心灵砒霜、一起 See，到更早的视频连载。' },
     { id: 'stats', kicker: 'Stats', title: '数据', body: '把这些年放到一起，看看数字会说什么。' },
     { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '画廊还在收集中。周年图片、粉丝作品和老截图，欢迎补一条线索。' },
   ],
   pages: [
     {
       id: 'series',
-      eyebrow: 'Series · 节目单',
-      title: '固定出现过的节目',
-      lede: '从视频解说时代的连载，到斗鱼时代的每周日。这些栏目的名字会在时间线里反复出现——它们是那些年里的固定节目，也是她答应过会来、就一定会来的约定。',
+      eyebrow: 'Series · 节目',
+      title: '反复出现，也各有自己的名字。',
+      lede: '有些是持续多年的直播节目，有些是一段时期里的主题栏目，也有更早的视频连载。它们留下的不只是期数，还有每个时期固定会等到的内容。',
     },
     {
       id: 'stats',
