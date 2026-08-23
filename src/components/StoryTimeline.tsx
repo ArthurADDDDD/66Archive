@@ -16,7 +16,7 @@ import { useLiveContent } from './LiveContentProvider'
  * 不再把「站内没有录像」写成「这一年是空白」。
  *
  * 分三种视觉层级制造滚动节奏：
- *   highlight：完整 Hero（封面 / 一句话 / Secondary）。
+ *   highlight：一张或多张完整 featured memory（封面 / 一句话 / Secondary）。
  *   normal：紧凑 Hero 行。
  *   sparse：这一段没有可讲的节点，只留一句实话。
  *
@@ -121,7 +121,13 @@ function StorySectionBlock({
           <SparseNote section={section} accent={accent} />
         ) : section.kind === 'highlight' ? (
           <>
-            {section.hero && <HeroEvent beat={section.hero} accent={accent} hideDate={section.hero.date === section.label} />}
+            <div className="space-y-7">
+              {section.featured.map((beat, index) => (
+                <div key={beat.id} className={index > 0 ? 'border-t border-line/50 pt-7' : ''}>
+                  <HeroEvent beat={beat} accent={accent} hideDate={beat.date === section.label} />
+                </div>
+              ))}
+            </div>
             {section.secondary.length > 0 && <SecondaryList beats={section.secondary} accent={accent} className="mt-4" rowPad={p.rowPad} />}
             <OpenArchiveButton section={section} accent={accent} onOpenArchive={onOpenArchive} className="mt-5" />
           </>
@@ -188,7 +194,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
           )}
         </div>
         {beat.cover && (
-          <MediaFrame src={beat.cover} alt={beat.title} className="h-32 w-full shrink-0 sm:h-24 sm:w-44">
+          <MediaFrame src={beat.cover} alt={beat.title} className="h-40 w-full shrink-0 sm:h-32 sm:w-56 lg:w-64">
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {beat.date}
             </span>

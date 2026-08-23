@@ -37,6 +37,9 @@ export type StorySection = {
   archiveEmpty: boolean
   /** 这一段有已确认的故事节点（可能来自档案之外的公开资料） */
   hasStory: boolean
+  /** 默认展开、带真实画面的关键记忆；同一年允许多张。 */
+  featured: ResolvedBeat[]
+  /** 首张 featured 的兼容别名，供旧调用方与实时覆盖平滑迁移。 */
   hero: ResolvedBeat | null
   secondary: ResolvedBeat[]
   accent: string
@@ -123,8 +126,11 @@ export function buildStorySections(acts: ResolvedAct[], timeline: TimelineEntry[
       if (rank !== 0) return rank
       return Number(a.external) - Number(b.external)
     })
-    const hero = ranked[0] ?? null
-    const secondary = beats.filter((beat) => beat !== hero)
+    const declaredFeatured = ranked.filter((beat) => beat.size === 'hero')
+    const featured = declaredFeatured.length > 0 ? declaredFeatured : ranked.slice(0, 1)
+    const featuredIds = new Set(featured.map((beat) => beat.id))
+    const hero = featured[0] ?? null
+    const secondary = beats.filter((beat) => !featuredIds.has(beat.id))
     const hasStory = hero !== null
 
     const kind: StorySectionKind =
@@ -140,6 +146,7 @@ export function buildStorySections(acts: ResolvedAct[], timeline: TimelineEntry[
       durationCount,
       archiveEmpty: archiveCount === 0,
       hasStory,
+      featured,
       hero,
       secondary,
       accent: archiveCount || hasStory ? actColorForDate(`${year}-06-01`) : '#7C8296',

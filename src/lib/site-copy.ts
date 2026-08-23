@@ -84,7 +84,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条地看下去。逐条查记录，去录播室。' },
     { id: 'series', kicker: 'Series', title: '节目', body: '固定出现过的栏目——心灵砒霜，和更早的连载。' },
     { id: 'stats', kicker: 'Stats', title: '数据', body: '把这些年放到一起，看看数字会说什么。' },
-    { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '被画下来的几年。水友替每个年份留下的注脚。' },
+    { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '画廊还在收集中。周年图片、粉丝作品和老截图，欢迎补一条线索。' },
   ],
   pages: [
     {
@@ -99,7 +99,7 @@ export const SITE_COPY: SiteCopy = {
       title: '这些数字背后，是被保存下来的时间。',
       lede: '这些数字都来自目前保存下来的记录。先看看发生了什么，再看看它们连起来是什么样。',
     },
-    { id: 'gallery', eyebrow: 'Gallery · 记忆盒', title: '被画下来的几年。', lede: '' },
+    { id: 'gallery', eyebrow: 'Gallery · 资料征集', title: '画廊还在收集中。', lede: '' },
     { id: 'games', eyebrow: '', title: '她的游戏库', lede: '' },
   ],
 }
