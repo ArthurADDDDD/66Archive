@@ -75,6 +75,10 @@
   group: content
   description: "归属某个固定栏目、但该栏目未单独登记为 series 的作品。"
 
+- name: 一起See
+  group: content
+  description: "直播中陪观众一起观看视频、节目、发布会、PV、预告等内容的环节。"
+
 # —— 里程碑：写首页高光时用的人工标记，代码不读取，仅供检索与人工回溯 ——
 - name: 首作
   group: milestone
