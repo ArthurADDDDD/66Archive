@@ -209,6 +209,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
       <div className="mt-4 min-w-0">
         <h3 className="text-h3 font-semibold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
         {beat.body && <p className="mt-2 text-body text-muted">{beat.body}</p>}
+        {beat.activity && <ActivityTimeline activity={beat.activity} accent={accent} />}
         {beat.emphasis && (
           <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
             {beat.emphasis}
@@ -223,6 +224,41 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
     <Link href={beat.href} target={beat.external ? '_blank' : undefined} rel={beat.external ? 'noreferrer' : undefined} className="group block">
       {body}
     </Link>
+  )
+}
+
+function ActivityTimeline({ activity, accent }: { activity: NonNullable<ResolvedBeat['activity']>; accent: string }) {
+  const max = Math.max(...activity.points.map((point) => point.count), 1)
+
+  return (
+    <div className="mt-5 max-w-[680px] rounded-xl border border-line/70 bg-surface/30 px-4 pb-3 pt-3.5 sm:px-5">
+      <div className="flex items-baseline justify-between gap-4">
+        <p className="text-meta font-medium text-ink/90">{activity.label}</p>
+        <p className="text-[11px] text-faint">按当前档案收录期数</p>
+      </div>
+      <div className="mt-3 overflow-x-auto pb-1">
+        <div
+          className="relative grid min-w-[520px] items-end gap-2 pt-5"
+          style={{ gridTemplateColumns: `repeat(${activity.points.length}, minmax(42px, 1fr))` }}
+          role="img"
+          aria-label={`${activity.label}：${activity.points.map((point) => `${point.year} 年 ${point.count} ${activity.unit}`).join('，')}`}
+        >
+          <span aria-hidden className="absolute inset-x-0 bottom-[25px] h-px bg-line" />
+          {activity.points.map((point) => (
+            <div key={point.year} className="relative z-10 flex flex-col items-center">
+              <span className="font-mono text-[10px] text-faint tnum">{point.count}</span>
+              <span
+                aria-hidden
+                className="mt-1 w-2 rounded-full opacity-85"
+                style={{ height: `${12 + Math.round((point.count / max) * 42)}px`, background: accent }}
+              />
+              <span aria-hidden className="mt-1.5 h-2 w-2 rounded-full border-2 border-base" style={{ background: accent }} />
+              <span className="mt-1 font-mono text-[10px] text-faint tnum">{point.year}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
