@@ -204,7 +204,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         {beat.kicker && <span>· {beat.kicker}</span>}
       </div>
       {beat.cover && (
-        <div className="mt-4 max-w-[960px]">
+        <div className="mt-4 max-w-[680px]">
           <MediaFrame src={beat.cover} alt={beat.title} className="aspect-video w-full">
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {displayDate}
