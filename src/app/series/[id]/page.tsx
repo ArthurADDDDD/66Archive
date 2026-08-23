@@ -35,7 +35,9 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const timeline = toTimelineEntries(ds)
   const s = buildSeries(ds, timeline, id, def.name, def.description ?? '')
   const isPishuang = id === 'xinling-pishuang'
-  const color = s.era === 'video' ? '#E0A244' : '#5BC8E8'
+  const isTogetherSee = id === 'together-see'
+  const unit = id === 'together-see' ? '场' : '期'
+  const color = s.category === 'video' ? '#E0A244' : s.category === 'themed' ? '#5BC8E8' : '#A78BFA'
   const dark = isPishuang
 
   // 相关：档案检索 + 同年编年史 + 相关游戏（视频时代 games 未登记，留空即跳过）
@@ -58,7 +60,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       ],
     },
   ]
-  if (gameRails.length) rails.push({ title: '节目里的游戏', items: gameRails })
+  if (gameRails.length && !isTogetherSee) rails.push({ title: '节目里的游戏', items: gameRails })
 
   const longest = s.entries.reduce<(typeof s.entries)[number] | null>(
     (acc, e) => (e.duration_min && (acc === null || e.duration_min > (acc.duration_min ?? 0)) ? e : acc),
@@ -79,15 +81,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       {/* Hero */}
       <section className="site-container px-page pb-10 pt-12 sm:pb-14 sm:pt-16">
         <Eyebrow color={color} dot>
-          {s.era === 'video' ? '视频解说时代' : '斗鱼直播时代'} · 栏目 / 系列
+          {s.category === 'video' ? '视频系列' : s.category === 'themed' ? '主题栏目' : '长期直播节目'}
         </Eyebrow>
         <h1 className="measure-hero mt-4 text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
         <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
-          <span className="text-body text-ink">{s.count} 期</span>
+          <span className="text-body text-ink">{s.count} {unit}</span>
           <span>
             {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
           </span>
-          {longest?.duration_min && <span>最长一期 {formatDuration(longest.duration_min)}</span>}
+          {!isTogetherSee && longest?.duration_min && <span>最长一{unit} {formatDuration(longest.duration_min)}</span>}
         </div>
         <p className="measure-body mt-6 text-body text-muted">{s.description}</p>
       </section>
@@ -96,7 +98,9 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       {s.firstTitle && (
         <section className="site-container px-page pb-10 sm:pb-14">
           <blockquote className="measure-body border-l-2 pl-5" style={{ borderColor: color }}>
-            <p className="text-h3 font-medium leading-relaxed text-ink">第一期：「{s.firstTitle}」</p>
+            <p className="text-h3 font-medium leading-relaxed text-ink">
+              {isTogetherSee ? '目前最早确认的一场' : `第一${unit}`}：「{s.firstTitle}」
+            </p>
             <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
           </blockquote>
         </section>
@@ -106,7 +110,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       <section className="site-container px-page pb-10 sm:pb-14">
         <Eyebrow className="text-muted">活跃年份</Eyebrow>
         <div className="mt-4 w-full">
-          <ActivityStrip perYear={s.perYear} color={color} />
+          <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
           <div className="mt-6 flex flex-wrap gap-2">
             {s.perYear.map((p) => (
               <Link
@@ -114,7 +118,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
                 href={`/archive/?q=${encodeURIComponent(s.name)}&y=${p.year}`}
                 className="ui-press rounded-full border border-line/80 bg-surface/50 px-3 py-1.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink tnum"
               >
-                {p.year} 年 · {p.count} 期
+                {p.year} 年 · {p.count} {unit}
               </Link>
             ))}
           </div>
@@ -124,13 +128,18 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       {/* 全部期数（档案列表，一条不省） */}
       <section className="site-container px-page pb-16 sm:pb-24">
         <div className="border-b border-line/60 pb-3">
-          <Eyebrow className="text-muted">Episodes · 全部期数</Eyebrow>
+          <Eyebrow className="text-muted">Episodes · 全部记录</Eyebrow>
           <h2 className="mt-2 text-h3 font-semibold text-ink">
-            {s.name} · 档案里的 {s.count} 期
+            {s.name} · 档案里的 {s.count} {unit}
           </h2>
         </div>
         <div className="mt-3">
-          <SeriesEpisodes entries={s.entries} color={color} count={s.count} />
+          {isTogetherSee && (
+            <p className="mb-4 max-w-3xl text-meta leading-relaxed text-faint">
+              这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。
+            </p>
+          )}
+          <SeriesEpisodes entries={s.entries} color={color} count={s.count} unit={unit} />
         </div>
       </section>
 

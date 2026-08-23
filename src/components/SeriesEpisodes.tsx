@@ -14,10 +14,12 @@ export function SeriesEpisodes({
   entries,
   color,
   count,
+  unit = '期',
 }: {
   entries: TimelineEntry[]
   color: string
   count: number
+  unit?: string
 }) {
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
   const allExpanded = entries.length > 0 && expanded.size === entries.length
@@ -28,8 +30,8 @@ export function SeriesEpisodes({
     <div>
       <div className="flex flex-wrap items-end justify-between gap-3">
         <p className="text-meta text-faint">
-          点击期数展开原平台来源、分段和标签信息
-          <span className="ml-2 tnum">· {count} 期</span>
+          {unit === '场' ? '点击记录' : '点击期数'}展开原平台来源、分段和标签信息
+          <span className="ml-2 tnum">· {count} {unit}</span>
         </p>
         <button
           type="button"

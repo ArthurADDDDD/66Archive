@@ -5,7 +5,7 @@ import { proxyImage } from './platforms'
  * 栏目 / 系列数据层。
  * 匹配规则（只做精确匹配，不猜标题）：
  * - 视频时代：entry.series === id（series 字段只存在于视频时代）
- * - 斗鱼时代：tags 精确等于系列名（心灵砒霜 / 戏说聊斋 / 吃鸡佳缘 / 66聊聊）
+ * - 直播节目：tags 精确等于系列名（心灵砒霜 / 一起See / 戏说聊斋 / 吃鸡佳缘）
  * - 心灵砒霜补充：标题含「砒霜」的条目也计入（2017-03-22 砒霜兼索尼2周年户外、2018-02-25 狗年第一碗砒霜）
  *   ——这两条未带 tag 但标题可确证，data-agent 的 series.yaml 计数口径同样含标题匹配。
  * 数字全部构建期派生；页面上「档案确认」数字以这里派生为准。
@@ -25,8 +25,8 @@ export type SeriesInfo = {
   /** 第一期标题：作为「代表性一句」使用，不编造 */
   firstTitle: string | null
   cover: string | null
-  /** 栏目归属时代 */
-  era: 'video' | 'douyu'
+  /** 节目页的内容形态；不按平台时代硬切，长期节目可以跨平台延续。 */
+  category: 'long-running' | 'themed' | 'video'
   games: string[]
 }
 
@@ -76,16 +76,27 @@ export function buildSeries(
     perYear,
     firstTitle: entries[0]?.title ?? null,
     cover: entries[0]?.cover ? proxyImage(entries[0].cover, 640) : null,
-    // 2015 是视频与直播的重叠过渡年，不能再按年份切时代；按条目类型判断。
-    era: entries[0]?.type === 'video' ? 'video' : 'douyu',
+    category: getSeriesCategory(id, entries[0]?.type),
     games,
   }
 }
 
 function getDisplayDescription(id: string, fallback: string, entries: TimelineEntry[]): string {
-  if (id !== 'xinling-pishuang' || entries.length === 0) return fallback
+  if (entries.length === 0) return fallback
 
   const firstDate = entries[0].date
   const lastDate = entries[entries.length - 1].date
-  return `斗鱼期固定栏目（周日情感电台），目前档案已收录 ${entries.length} 期，${firstDate} ~ ${lastDate}，为条目数最多的栏目。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。`
+  if (id === 'xinling-pishuang') {
+    return `斗鱼期固定栏目（周日情感电台），目前档案已收录 ${entries.length} 期，${firstDate} ~ ${lastDate}，为条目数最多的栏目。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。`
+  }
+  if (id === 'together-see') {
+    return `直播中与观众一起观看视频、节目、发布会、PV 和预告的长期节目。目前档案已确认 ${entries.length} 场，${firstDate} ~ ${lastDate}；它从斗鱼延续到抖音，新的确认记录会自动加入这里。`
+  }
+  return fallback
+}
+
+function getSeriesCategory(id: string, firstType?: TimelineEntry['type']): SeriesInfo['category'] {
+  if (id === 'xinling-pishuang' || id === 'together-see') return 'long-running'
+  if (id === 'xishuo-fengshen' || id === 'xishuo-liaozhai' || id === 'chiji-jiayuan') return 'themed'
+  return firstType === 'video' ? 'video' : 'themed'
 }
