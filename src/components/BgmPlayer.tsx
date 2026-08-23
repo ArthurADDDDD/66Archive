@@ -12,7 +12,7 @@ import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/
  * 3. **关了就别再响**：用户手动关掉后写进 localStorage，之后翻页刷新都不再自动响。
  *
  * 浏览器不允许「带声音的自动播放」——首次进站的自动播放大概率被拦，
- * 因此拦下后挂一次性手势监听，用户第一次点/按/触屏时补上。
+ * 因此先挂手势监听再尝试播放，用户第一次点/按/触屏时无缝补上。
  */
 export function BgmPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -23,8 +23,6 @@ export function BgmPlayer() {
   const revealTimerRef = useRef<number | null>(null)
   /** 用户意愿：音乐「应该」是开着的吗（和实际有没有在响分开） */
   const wantsRef = useRef(false)
-  /** 因为切走而暂停的——回来时才需要自动续上 */
-  const pausedByAwayRef = useRef(false)
   const fadeRef = useRef<number | null>(null)
   /** 这次换曲是用户点「下一首」换的——换完要立刻接着放 */
   const skipRef = useRef(false)
@@ -56,6 +54,8 @@ export function BgmPlayer() {
   const tryPlay = useCallback(async () => {
     const el = audioRef.current
     if (!el) return false
+    if (document.hidden) return false
+    if (!el.paused) return true
     try {
       el.volume = 0
       await el.play()
@@ -66,7 +66,8 @@ export function BgmPlayer() {
     }
   }, [fadeIn])
 
-  // 挑曲子 + 首次尝试自动播放
+  // 客户端决定曲目与用户意愿。真正的播放放到 track 挂载后的 effect，
+  // 确保调用 play() 时 <audio> 已经存在。
   useEffect(() => {
     let off = false
     try {
@@ -81,29 +82,32 @@ export function BgmPlayer() {
     if (off) return
 
     wantsRef.current = true
-    let disposed = false
-    const gestures = ['pointerdown', 'keydown', 'touchend'] as const
-    const onGesture = () => {
-      if (disposed) return
-      void tryPlay().then((ok) => {
-        if (ok) gestures.forEach((g) => window.removeEventListener(g, onGesture))
-      })
+  }, [])
+
+  // 先监听手势、再尝试自动播放：既不漏掉首屏的快速点击，也让 iOS 的
+  // play() 直接发生在手势调用栈里。播放器自己的按钮由 click handler 处理，
+  // 否则 pointerdown 播放成功后，紧接着的 click 会误把音乐再次关掉。
+  useEffect(() => {
+    if (!track || !wantsRef.current) return
+
+    // pointerdown 在部分 Chromium 环境里早于 user activation 生效；click 是
+    // 必要的第二道保障。touchend 则覆盖旧版 iOS Safari 的触摸激活时机。
+    const gestures = ['pointerdown', 'click', 'keydown', 'touchend'] as const
+    const onGesture = (event: Event) => {
+      const el = audioRef.current
+      if (!wantsRef.current || !el?.paused || document.hidden) return
+      const target = event.target
+      if (target instanceof Element && target.closest('[data-bgm-control]')) return
+      void tryPlay()
     }
 
-    // 等一帧再试，避免和首屏渲染抢主线程
-    const timer = window.setTimeout(() => {
-      void tryPlay().then((ok) => {
-        // 被自动播放策略拦下：等用户第一次点击/按键/触屏
-        if (!ok && !disposed) gestures.forEach((g) => window.addEventListener(g, onGesture, { passive: true }))
-      })
-    }, 60)
+    gestures.forEach((eventName) => document.addEventListener(eventName, onGesture, { capture: true, passive: true }))
+    void tryPlay()
 
     return () => {
-      disposed = true
-      window.clearTimeout(timer)
-      window.setTimeout(() => gestures.forEach((g) => window.removeEventListener(g, onGesture)), 0)
+      gestures.forEach((eventName) => document.removeEventListener(eventName, onGesture, true))
     }
-  }, [tryPlay])
+  }, [track, tryPlay])
 
   // 离开这个界面就停：切标签页 / 切窗口 / 锁屏
   useEffect(() => {
@@ -112,12 +116,10 @@ export function BgmPlayer() {
 
     const leave = () => {
       if (el.paused) return
-      pausedByAwayRef.current = true
       el.pause()
     }
     const back = () => {
-      if (!pausedByAwayRef.current || !wantsRef.current) return
-      pausedByAwayRef.current = false
+      if (!wantsRef.current || document.hidden || !el.paused) return
       void tryPlay()
     }
 
@@ -126,11 +128,13 @@ export function BgmPlayer() {
     window.addEventListener('blur', leave)
     window.addEventListener('focus', back)
     window.addEventListener('pagehide', leave)
+    window.addEventListener('pageshow', back)
     return () => {
       document.removeEventListener('visibilitychange', onVisibility)
       window.removeEventListener('blur', leave)
       window.removeEventListener('focus', back)
       window.removeEventListener('pagehide', leave)
+      window.removeEventListener('pageshow', back)
     }
   }, [track, tryPlay])
 
@@ -164,7 +168,6 @@ export function BgmPlayer() {
     if (!track) return
     skipRef.current = true
     wantsRef.current = true
-    pausedByAwayRef.current = false
     try {
       window.localStorage.removeItem(BGM_OFF_KEY)
     } catch {
@@ -178,7 +181,6 @@ export function BgmPlayer() {
     if (!el) return
     if (el.paused) {
       wantsRef.current = true
-      pausedByAwayRef.current = false
       try {
         window.localStorage.removeItem(BGM_OFF_KEY)
       } catch {
@@ -187,7 +189,6 @@ export function BgmPlayer() {
       void tryPlay()
     } else {
       wantsRef.current = false
-      pausedByAwayRef.current = false
       el.pause()
       try {
         window.localStorage.setItem(BGM_OFF_KEY, '1')
@@ -206,6 +207,7 @@ export function BgmPlayer() {
         ref={audioRef}
         loop
         preload="none"
+        playsInline
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
       >
@@ -216,6 +218,7 @@ export function BgmPlayer() {
       <div className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/80 bg-surface/80 backdrop-blur sm:bottom-8 sm:left-8">
         <button
           type="button"
+          data-bgm-control
           onClick={() => {
             revealForTouch()
             toggle()
@@ -245,6 +248,7 @@ export function BgmPlayer() {
           <span aria-hidden="true" className="h-4 w-px shrink-0 bg-line/80" />
           <button
             type="button"
+            data-bgm-control
             onClick={() => {
               revealForTouch()
               skip()
