@@ -232,24 +232,31 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   )
 }
 
-/** Type B：紧凑 Hero 行——日期 + 眉标一行，标题另起一行，起点固定。 */
+function MemoryTag({ children, accent }: { children: ReactNode; accent: string }) {
+  return (
+    <span
+      className="mt-1.5 inline-flex rounded-full border border-line/70 bg-surface/50 px-2.5 py-0.5 text-[11px] leading-5 tracking-[0.08em]"
+      style={{ color: accent }}
+    >
+      {children}
+    </span>
+  )
+}
+
+/** Type B：紧凑 Hero 行——日期与标题对齐，tag 和 secondary 一样收在标题下方。 */
 function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
   const displayDate = chronicleDate(beat.date)
   const body = (
-    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <span aria-hidden className="mt-1.5 h-2 w-2 shrink-0 rounded-full sm:mt-0" style={{ background: accent }} />
-      {!hideDate && <span className="order-1 font-mono text-meta text-faint tnum sm:order-none">{displayDate}</span>}
-      <span className="order-3 w-full text-body font-medium text-ink transition-colors group-hover:text-white sm:order-none sm:w-auto sm:flex-1">
-        {beat.title}
-      </span>
-      {/* 眉标跟在标题后面：标题长短不一，标签放前面会让每一行的标题起点参差。
-          手机端窄，标题本来就独占一行，眉标回到日期那一行，不额外多占一行高度。 */}
-      {beat.kicker && (
-        <span className="order-1 shrink-0 text-meta sm:order-none" style={{ color: accent }}>
-          {beat.kicker}
-        </span>
-      )}
-      <span aria-hidden className="order-2 ml-auto shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:order-none" style={{ color: accent }}>
+    <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+      <div className="col-start-1 row-start-1 flex min-h-6 items-center gap-3">
+        <span aria-hidden className="h-2 w-2 shrink-0 rounded-full" style={{ background: accent }} />
+        {!hideDate && <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
+      </div>
+      <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
+        <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
+        {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+      </div>
+      <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
         →
       </span>
     </div>
@@ -289,14 +296,7 @@ function SecondaryList({
             <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
             <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
               <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
-              {beat.kicker && (
-                <span
-                  className="mt-1.5 inline-flex rounded-full border border-line/70 bg-surface/50 px-2.5 py-0.5 text-[11px] leading-5 tracking-[0.08em]"
-                  style={{ color: accent }}
-                >
-                  {beat.kicker}
-                </span>
-              )}
+              {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
             </div>
             <span
               aria-hidden

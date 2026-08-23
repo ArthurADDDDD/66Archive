@@ -357,7 +357,9 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'none' },
       },
       {
-        id: 'first-video',
+        // 后台旧内容把早期 `first-video` 标成删除；这里用新的策展 stable id 恢复这张主卡，
+        // 史料锚点仍是同一条 2010-05-08 Archive 记录，不复制或改写数据。
+        id: 'first-video-chronicle',
         date: '2010.05.08',
         storyYear: 2010,
         size: 'hero',
