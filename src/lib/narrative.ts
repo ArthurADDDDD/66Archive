@@ -1025,16 +1025,6 @@ export const STORY_ACTS: Act[] = [
         gameWorld: { rel: '+2 DAYS', date: '2024.08.20', text: '八十一难开始，《黑神话：悟空》发售。' },
       },
       {
-        id: 'anniversary-2024-no-formal-event',
-        date: '2024.01',
-        storyYear: 2024,
-        size: 'small',
-        kicker: '周年记录',
-        title: '这一年没有正式周年直播。',
-        body: '截至目前能核实的公开记录里，没有找到正式的直播九周年活动；八月的抖音复播才是这一年真正改变时间线的节点。',
-        target: { kind: 'none' },
-      },
-      {
         id: 'black-myth-era',
         date: '2024.12',
         storyYear: 2024,
@@ -1043,16 +1033,6 @@ export const STORY_ACTS: Act[] = [
         title: '黑神话时期',
         body: '重新开始的第一个冬天，她还在打游戏。',
         target: { kind: 'entry', id: '2024-12-10-live-02' },
-      },
-      {
-        id: 'anniversary-2025-no-formal-event',
-        date: '2025.01',
-        storyYear: 2025,
-        size: 'small',
-        kicker: '直播十年',
-        title: '十年到了，但没有一场正式的十周年庆典。',
-        body: '截至目前能核实的公开记录里，没有找到正式十周年活动。她本人谈到「直播十年」的回望可以记录，但不能把回望写成一场并不存在的庆典。',
-        target: { kind: 'none' },
       },
       {
         id: 'cuiwa-youguo',
