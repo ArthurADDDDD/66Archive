@@ -364,6 +364,18 @@ body {
     max-width: min(100%, max(24rem, 62%), 52rem);
   }
 
+  /* Chronicle still had fixed 680/860px measures after the global 4K pass.
+     Keep normal desktop proportions, but let media and linked rows grow with wide screens. */
+  .chronicle-media-measure {
+    width: 100%;
+    max-width: min(100%, clamp(42.5rem, 52vw, 68rem));
+  }
+
+  .chronicle-row-measure {
+    width: 100%;
+    max-width: min(100%, clamp(53.75rem, 64vw, 74rem));
+  }
+
   /**
    * 主体安全边距。同一条渲染路径上只允许出现一层 .px-page——
    * 百分比 padding 按元素自身宽度算，套两层会复利（13% → 13% + 9.6%）。
