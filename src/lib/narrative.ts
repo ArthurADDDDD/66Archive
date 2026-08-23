@@ -98,6 +98,8 @@ export type Beat = {
   cover?: string
   /** 蒙太奇幕：分类 chips（如 心灵砒霜 / 主机新作 / 壮壮 …） */
   chips?: string[]
+  /** 需要从档案实时派生活跃年份图的栏目；不在文案里手写期数。 */
+  activitySeries?: 'xinling-pishuang'
 }
 
 export type Act = {
@@ -503,7 +505,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '名字',
         title: '她有很多名字。',
-        body: '视频时期是「女流」，直播以后更多人认识「女流66」。水友也会叫她 66、流酱、流流。',
+        body: '从视频时期的「女流」，到直播间里的「女流66」；66、流酱、流流，也都是水友在这些年里留下的称呼。',
         target: { kind: 'none' },
       },
     ],
@@ -520,6 +522,7 @@ export const STORY_ACTS: Act[] = [
         title: '心灵砒霜开始了。',
         body: '游戏暂停，邮件打开，一个星期日。本来想聊鸡汤，最后聊成了砒霜。后来，这档节目陪着直播间走了很多年。',
         emphasis: '{xinlingCount} 期被保存下来',
+        activitySeries: 'xinling-pishuang',
         target: { kind: 'entry', id: '2015-07-05-live-01', href: '/series/xinling-pishuang/' },
       },
       {
@@ -1365,6 +1368,14 @@ export type ResolvedBeat = {
   chips?: string[]
   /** 蒙太奇幕的构建期素材（首页 ACT II 专用） */
   montage?: { samples: MontageSample[]; stats: MontageStats }
+  /** 栏目在当前档案中的逐年收录量；只用于展示活跃纹理，不声称是完整播出统计。 */
+  activity?: YearActivity
+}
+
+export type YearActivity = {
+  label: string
+  unit: string
+  points: { year: number; count: number }[]
 }
 
 export type MontageSample = {
@@ -1453,6 +1464,20 @@ function emphasisVars(timeline: TimelineEntry[]): Record<string, string> {
     geometryHours: Math.round(geometryMinutes / 60).toString(),
     xinlingCount: xinlingCount.toLocaleString(),
     wukongCount: wukongCount.toString(),
+  }
+}
+
+/** 心灵砒霜活跃纹理：跟随当前档案自动增减，不把逐年期数写死在策展文案里。 */
+function buildXinlingActivity(timeline: TimelineEntry[]): YearActivity {
+  const counts = new Map<number, number>()
+  for (const entry of timeline.filter(isXinlingPishuangEntry)) {
+    const year = Number(entry.date.slice(0, 4))
+    if (year) counts.set(year, (counts.get(year) ?? 0) + 1)
+  }
+  return {
+    label: '心灵砒霜 · 活跃年份',
+    unit: '期',
+    points: [...counts].map(([year, count]) => ({ year, count })).sort((a, b) => a.year - b.year),
   }
 }
 
@@ -1545,6 +1570,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       external,
       cover: b.cover ? proxyImage(b.cover, b.size === 'hero' ? 900 : 640) : cover,
       emphasis: fillEmphasis(b.emphasis, vars),
+      activity: b.activitySeries === 'xinling-pishuang' ? buildXinlingActivity(timeline) : undefined,
       gameWorld: b.gameWorld,
       tail: b.tail,
     }
