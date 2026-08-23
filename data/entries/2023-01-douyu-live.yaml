@@ -24,6 +24,24 @@
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac40339694
+  - id: 2023-01-02-live-01
+    type: live
+    date: "2023-01-02"
+    title: "一起看《大时代》"
+    platform: douyu
+    confidence: high
+    games: []
+    tags: [一起See]
+    segments:
+      - at: "00:00:00"
+        label: "一起See · 《大时代》"
+    sources:
+      - url: https://www.bilibili.com/video/BV1EP4y1i7iG
+        kind: replay
+        status: alive
+    note: "B站完整一起看《大时代》录像；原标题明确标注「直播录像 20230102」，据此确定直播日期。"
+    contributed_by: data-agent
+
   - id: 2023-01-03-live-01
     type: live
     date: "2023-01-03"
@@ -329,6 +347,7 @@
     duration_min: 404
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_502bd70b0028486fa2e7907e9e31a97f.jpeg?imageslim"
     games: []
+    tags: [一起See]
     sources:
       - url: https://www.bilibili.com/video/BV11T411y7qh
         kind: replay
