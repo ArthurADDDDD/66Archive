@@ -335,7 +335,7 @@ export const STORY_ACTS: Act[] = [
     beats: [
       {
         id: 'mainstream-2006',
-        date: '2006',
+        date: '2006.06',
         storyYear: 2006,
         size: 'small',
         kicker: '第一次被媒体认识',
@@ -347,7 +347,7 @@ export const STORY_ACTS: Act[] = [
         // 跨年段：2007—2009 三年在档案里没有任何录像，但这三年不是「不知道」，
         // 只是没有可写成单独事件的公开记录。合成一段，避免连着三个空年份。
         id: 'tsinghua-arch',
-        date: '2007 — 2009',
+        date: '2007.01',
         storyYear: 2007,
         storyEndYear: 2009,
         size: 'small',
@@ -382,7 +382,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'pku-2011',
-        date: '2011',
+        date: '2011.09',
         storyYear: 2011,
         size: 'small',
         kicker: '升学',
@@ -392,7 +392,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'pause-2012',
-        date: '2012',
+        date: '2012.05',
         storyYear: 2012,
         size: 'small',
         kicker: '读研',
@@ -474,7 +474,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'child-of-light-2014',
-        date: '2014.11 — 12',
+        date: '2014.11',
         storyYear: 2014,
         size: 'small',
         kicker: '系列解说',
@@ -498,7 +498,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'names',
-        date: '2015',
+        date: '2015.01',
         storyYear: 2015,
         size: 'small',
         kicker: '名字',
@@ -524,12 +524,12 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'dazhou-mc',
-        date: '2015—16',
-        storyYear: 2016,
+        date: '2017.07',
+        storyYear: 2017,
         size: 'type',
         kicker: '大周',
-        title: '从这以后，我们叫「大周」。',
-        body: '《Minecraft》里的一个存档国家名——女皇、六泽天、大周——慢慢变成了斗鱼156277 整个水友群体的名字。水友还在游戏里给她立过一座小白女皇雕像。',
+        title: '到这时，大家已经叫「大周」。',
+        body: '目前保存下来的《大周 MC》记录从 2017 年 7 月开始。《Minecraft》里的国家名——女皇、六泽天、大周——已经变成斗鱼156277 水友群体共同使用的名字。',
         target: { kind: 'game', id: 'minecraft' },
       },
       {
@@ -556,12 +556,12 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'anniversary-2016-empress',
-        date: '2016',
+        date: '2016.08',
         storyYear: 2016,
         size: 'small',
         kicker: '水友作品',
         title: '《一代女皇六则天》',
-        target: { kind: 'href', href: 'https://www.bilibili.com/video/BV14x411H75G' },
+        target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1vs411C7w2' },
       },
       {
         id: 'birthday-2016-fanwork',
@@ -619,7 +619,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'three-books',
-        date: '2017',
+        date: '2017.11',
         storyYear: 2017,
         size: 'type',
         kicker: '大周经典考古',
@@ -711,7 +711,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'shishizi',
-        date: '2017—18',
+        date: '2018.03',
         storyYear: 2018,
         size: 'type',
         kicker: '坐镇大周',
@@ -753,7 +753,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'carnival-2018',
-        date: '2018',
+        date: '2018.05',
         storyYear: 2018,
         size: 'hero',
         kicker: '嘉年华',
@@ -775,7 +775,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'darksouls-3',
-        date: '2016',
+        date: '2016.04',
         storyYear: 2016,
         size: 'small',
         kicker: '☠ 受苦记录 #01',
@@ -785,7 +785,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'getting-over-it',
-        date: '2017',
+        date: '2017.11',
         storyYear: 2017,
         size: 'small',
         kicker: '☠ 受苦记录 #02',
@@ -818,7 +818,7 @@ export const STORY_ACTS: Act[] = [
       // 甘蔗精（ganzhe-jing）已撤下：等找到正确素材再放。
       {
         id: 'celeste',
-        date: '2018',
+        date: '2018.03',
         storyYear: 2018,
         size: 'small',
         kicker: '☠ 受苦记录 #03',
@@ -828,7 +828,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'sekiro',
-        date: '2019',
+        date: '2019.03',
         storyYear: 2019,
         size: 'small',
         kicker: '☠ 受苦记录 #04',
@@ -870,7 +870,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'jump-king',
-        date: '2019',
+        date: '2019.08',
         storyYear: 2019,
         size: 'small',
         kicker: '☠ 受苦记录 #05',

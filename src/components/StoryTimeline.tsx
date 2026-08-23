@@ -76,20 +76,14 @@ const KIND_PRESENTATION: Record<
 }
 
 /**
- * Chronicle 只展示到月：精确到日的事实仍留在 Archive，不让日期列混用三种精度。
- * 旧 live override 里的 `~2022` / `2017—18` 也在展示层收敛，不改后台原值。
+ * Chronicle 只展示最早的年月：精确到日和结束月份仍留在 Archive。
+ * 例如 `2014.11 — 12` 只显示 `2014.11`，不让日期列混用多种精度。
  */
 function chronicleDate(value: string): string {
   let date = value.trim().replace(/^[~～]\s*/, '')
 
   date = date.replace(/^(\d{4})\.(\d{2})\.\d{2}$/, '$1.$2')
-  date = date.replace(/^(\d{4})\.(\d{2})\s*[—–-]\s*(\d{1,2})$/, (_match, year, fromMonth, toMonth) =>
-    `${year}.${fromMonth} — ${year}.${String(toMonth).padStart(2, '0')}`,
-  )
-  date = date.replace(/^(\d{4})\s*[—–-]\s*(\d{2})$/, (_match, fromYear, shortYear) =>
-    `${fromYear} — ${fromYear.slice(0, 2)}${shortYear}`,
-  )
-  date = date.replace(/^(\d{4})\s*[—–-]\s*(\d{4})$/, '$1 — $2')
+  date = date.replace(/^(\d{4})\.(\d{2})\s*[—–-].*$/, '$1.$2')
 
   return date
 }
