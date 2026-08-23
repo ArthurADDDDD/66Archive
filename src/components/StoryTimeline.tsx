@@ -238,10 +238,29 @@ function MemoryTag({ children, accent }: { children: ReactNode; accent: string }
 }
 
 /**
+ * 没有来源链接的节点不是「档案卡」，而是一句补足时间线的阶段说明。
+ * 只保留年月和说明正文，不显示标题、tag 或箭头，避免制造可以点击的暗示。
+ */
+function StageNote({ beat, className = '' }: { beat: ResolvedBeat; className?: string }) {
+  const text = beat.body?.trim() || beat.title
+
+  return (
+    <div className={`grid max-w-[860px] grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)] ${className}`}>
+      <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{chronicleDate(beat.date)}</span>
+      <p className="text-body leading-relaxed text-muted">{text}</p>
+    </div>
+  )
+}
+
+/**
  * Type B：紧凑主行。
- * 与 secondary 共用同一条左边线和列宽；无链接节点是阶段说明，不显示箭头或点击暗示。
+ * 与 secondary 共用同一条左边线和列宽；无链接节点交给 StageNote 显示。
  */
 function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  if (!beat.href) {
+    return <StageNote beat={beat} className="border-l border-line/50 py-2 pl-5" />
+  }
+
   const displayDate = chronicleDate(beat.date)
   const body = (
     <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
@@ -249,17 +268,13 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
         <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
         {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
-        {!beat.href && beat.body && <p className="mt-2 text-body leading-relaxed text-muted">{beat.body}</p>}
       </div>
-      {beat.href && (
-        <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
-          →
-        </span>
-      )}
+      <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
+        →
+      </span>
     </div>
   )
 
-  if (!beat.href) return <div className="border-l border-line/50 py-2 pl-5">{body}</div>
   return (
     <Link
       href={beat.href}
@@ -287,6 +302,14 @@ function SecondaryList({
   return (
     <ul className={`space-y-0.5 border-l border-line/50 pl-4 ${className}`}>
       {beats.map((beat) => {
+        if (!beat.href) {
+          return (
+            <li key={beat.id}>
+              <StageNote beat={beat} className={`px-1 ${rowPad}`} />
+            </li>
+          )
+        }
+
         const displayDate = chronicleDate(beat.date)
         const inner = (
           <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
@@ -306,18 +329,14 @@ function SecondaryList({
         )
         return (
           <li key={beat.id}>
-            {beat.href ? (
-              <Link
-                href={beat.href}
-                target={beat.external ? '_blank' : undefined}
-                rel={beat.external ? 'noreferrer' : undefined}
-                className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
-              >
-                {inner}
-              </Link>
-            ) : (
-              <div className={`px-1 ${rowPad}`}>{inner}</div>
-            )}
+            <Link
+              href={beat.href}
+              target={beat.external ? '_blank' : undefined}
+              rel={beat.external ? 'noreferrer' : undefined}
+              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
+            >
+              {inner}
+            </Link>
           </li>
         )
       })}
