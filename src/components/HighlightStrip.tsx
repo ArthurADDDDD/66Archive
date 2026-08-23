@@ -81,48 +81,27 @@ function Row({ beat }: { beat: ResolvedBeat }) {
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:py-5">
         <span className="hidden font-mono text-meta text-faint tnum sm:block">{beat.date}</span>
 
-        {/* 折叠时整列负责展开；展开后整列直达播放，右侧按钮保持独立语义。 */}
-        {isOpen && beat.href ? (
-          <Link
-            href={beat.href}
-            target={beat.external ? '_blank' : undefined}
-            rel={beat.external ? 'noreferrer' : undefined}
-            className="ui-press min-w-0 rounded-lg py-1 text-left transition-colors group-hover:text-white hover:text-live"
+        {/* 标题整行始终只控制开合；播放入口只放在下方展开内容里。 */}
+        <button
+          type="button"
+          onClick={toggle}
+          aria-expanded={isOpen}
+          aria-controls={`highlight-panel-${beat.id}`}
+          className="ui-press min-w-0 rounded-lg py-1 text-left transition-colors group-hover:text-white"
+        >
+          <span
+            className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
+            style={{ color: actColor(beat.act) }}
           >
-            <span
-              className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
-              style={{ color: actColor(beat.act) }}
-            >
-              <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
-              {beat.kicker}
-            </span>
-            <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
-              {beat.title}
-              {beat.external && <span className="ml-1 font-mono text-meta text-live">↗</span>}
-            </span>
-          </Link>
-        ) : (
-          <button
-            type="button"
-            onClick={toggle}
-            aria-expanded={isOpen}
-            aria-controls={`highlight-panel-${beat.id}`}
-            className="ui-press min-w-0 rounded-lg py-1 text-left transition-colors group-hover:text-white"
-          >
-            <span
-              className="flex flex-wrap items-baseline gap-x-2 text-meta uppercase tracking-[0.16em]"
-              style={{ color: actColor(beat.act) }}
-            >
-              <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
-              {beat.kicker}
-            </span>
-            <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
-              {beat.title}
-            </span>
-          </button>
-        )}
+            <span className="font-mono normal-case tracking-normal text-faint tnum sm:hidden">{beat.date}</span>
+            {beat.kicker}
+          </span>
+          <span className="mt-1 block text-h3 font-medium text-ink transition-colors group-hover:text-white">
+            {beat.title}
+          </span>
+        </button>
 
-        {/* 右侧图标保留为独立触控目标；中间整列也可展开或直达播放。 */}
+        {/* 右侧图标保留为独立开合触控目标。 */}
         <button
           type="button"
           onClick={toggle}
@@ -169,12 +148,31 @@ function Row({ beat }: { beat: ResolvedBeat }) {
               )
             )}
             <div className="min-w-0 self-center">
-              {beat.emphasis && (
-                <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
-                  {beat.emphasis}
-                </p>
+              {beat.href ? (
+                <Link
+                  href={beat.href}
+                  target={beat.external ? '_blank' : undefined}
+                  rel={beat.external ? 'noreferrer' : undefined}
+                  aria-label={`播放：${beat.title}`}
+                  className="ui-press -m-2 block rounded-lg p-2 text-left transition-colors hover:text-live"
+                >
+                  {beat.emphasis && (
+                    <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
+                      {beat.emphasis}
+                    </p>
+                  )}
+                  {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
+                </Link>
+              ) : (
+                <>
+                  {beat.emphasis && (
+                    <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
+                      {beat.emphasis}
+                    </p>
+                  )}
+                  {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
+                </>
               )}
-              {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
               {beat.href && (
                 <Link
                   href={beat.href}
