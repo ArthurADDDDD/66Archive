@@ -75,6 +75,25 @@ const KIND_PRESENTATION: Record<
   sparse: { sectionPad: 'py-4 sm:py-5', yearSize: 'text-[21px] sm:text-[24px]', yearTone: 'text-faint', countGap: 'mt-1', rowPad: 'py-1' },
 }
 
+/**
+ * Chronicle 只展示到月：精确到日的事实仍留在 Archive，不让日期列混用三种精度。
+ * 旧 live override 里的 `~2022` / `2017—18` 也在展示层收敛，不改后台原值。
+ */
+function chronicleDate(value: string): string {
+  let date = value.trim().replace(/^[~～]\s*/, '')
+
+  date = date.replace(/^(\d{4})\.(\d{2})\.\d{2}$/, '$1.$2')
+  date = date.replace(/^(\d{4})\.(\d{2})\s*[—–-]\s*(\d{1,2})$/, (_match, year, fromMonth, toMonth) =>
+    `${year}.${fromMonth} — ${year}.${String(toMonth).padStart(2, '0')}`,
+  )
+  date = date.replace(/^(\d{4})\s*[—–-]\s*(\d{2})$/, (_match, fromYear, shortYear) =>
+    `${fromYear} — ${fromYear.slice(0, 2)}${shortYear}`,
+  )
+  date = date.replace(/^(\d{4})\s*[—–-]\s*(\d{4})$/, '$1 — $2')
+
+  return date
+}
+
 function StorySectionBlock({
   section,
   latestYear,
@@ -124,7 +143,7 @@ function StorySectionBlock({
             <div className="space-y-7">
               {section.featured.map((beat, index) => (
                 <div key={beat.id} className={index > 0 ? 'border-t border-line/50 pt-7' : ''}>
-                  <HeroEvent beat={beat} accent={accent} hideDate={beat.date === section.label} />
+                  <HeroEvent beat={beat} accent={accent} hideDate={chronicleDate(beat.date) === section.label} />
                 </div>
               ))}
             </div>
@@ -133,7 +152,7 @@ function StorySectionBlock({
           </>
         ) : (
           <>
-            {section.hero && <HeroRow beat={section.hero} accent={accent} hideDate={section.hero.date === section.label} />}
+            {section.hero && <HeroRow beat={section.hero} accent={accent} hideDate={chronicleDate(section.hero.date) === section.label} />}
             {section.secondary.length > 0 && <SecondaryList beats={section.secondary} accent={accent} className="mt-2.5" rowPad={p.rowPad} />}
             <OpenArchiveButton section={section} accent={accent} onOpenArchive={onOpenArchive} className="mt-3" />
           </>
@@ -176,11 +195,12 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
 
 /** Type A：完整 Hero。没有真实封面就不放图，也不留同尺寸占位。 */
 function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  const displayDate = chronicleDate(beat.date)
   const body = (
     <>
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
         <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
-        {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{beat.date}</span>}
+        {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
         {beat.kicker && <span>· {beat.kicker}</span>}
       </div>
       <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start">
@@ -196,7 +216,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         {beat.cover && (
           <MediaFrame src={beat.cover} alt={beat.title} className="h-40 w-full shrink-0 sm:h-32 sm:w-56 lg:w-64">
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
-              {beat.date}
+              {displayDate}
             </span>
           </MediaFrame>
         )}
@@ -214,10 +234,11 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
 
 /** Type B：紧凑 Hero 行——日期 + 眉标一行，标题另起一行，起点固定。 */
 function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  const displayDate = chronicleDate(beat.date)
   const body = (
     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
       <span aria-hidden className="mt-1.5 h-2 w-2 shrink-0 rounded-full sm:mt-0" style={{ background: accent }} />
-      {!hideDate && <span className="order-1 font-mono text-meta text-faint tnum sm:order-none">{beat.date}</span>}
+      {!hideDate && <span className="order-1 font-mono text-meta text-faint tnum sm:order-none">{displayDate}</span>}
       <span className="order-3 w-full text-body font-medium text-ink transition-colors group-hover:text-white sm:order-none sm:w-auto sm:flex-1">
         {beat.title}
       </span>
@@ -262,9 +283,10 @@ function SecondaryList({
   return (
     <ul className={`space-y-0.5 border-l border-line/50 pl-4 ${className}`}>
       {beats.map((beat) => {
+        const displayDate = chronicleDate(beat.date)
         const inner = (
           <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
-            <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{beat.date}</span>
+            <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
             <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
               <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
               {beat.kicker && (
