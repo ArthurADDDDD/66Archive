@@ -609,7 +609,9 @@ export function applyLiveStoryYears<T extends { featured?: ResolvedBeat[]; hero:
     if (!override) return beat
     return {
       ...beat,
-      date: override.date || beat.date,
+      // Chronicle 日期属于史料定位：统一由公仓核实并按 YYYY.MM 展示。
+      // 后台旧稿里残留的 `~2022` / `2017—18` 不能再把已核实月份盖回去。
+      date: beat.date,
       kicker: override.kicker || undefined,
       title: override.title || beat.title,
       body: override.body || undefined,
