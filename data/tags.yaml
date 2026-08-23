@@ -31,11 +31,6 @@
   binds_series: chiji-jiayuan
   description: "斗鱼时代栏目。"
 
-- name: 66聊聊
-  group: series
-  binds_series: liuliao66
-  description: "斗鱼时代栏目。"
-
 # —— 时期 ——
 - name: 视频时代
   group: era
@@ -76,8 +71,9 @@
   description: "归属某个固定栏目、但该栏目未单独登记为 series 的作品。"
 
 - name: 一起See
-  group: content
-  description: "直播中陪观众一起观看视频、节目、发布会、PV、预告等内容的环节。"
+  group: series
+  binds_series: together-see
+  description: "直播中陪观众一起观看视频、节目、发布会、PV、预告等内容的长期节目。"
 
 # —— 里程碑：写首页高光时用的人工标记，代码不读取，仅供检索与人工回溯 ——
 - name: 首作

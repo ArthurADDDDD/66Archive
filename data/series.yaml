@@ -26,19 +26,19 @@
   name: 小游戏也可以很暴力
   description: "系列弹：第一弹、第二弹，2010-05-10 同日连发。"
 
-# —— 斗鱼时期栏目（2015-02 ~ 2023-12）——
+# —— 直播节目 / 主题栏目 ——
 - id: xinling-pishuang
   name: 心灵砒霜
   description: "斗鱼期固定栏目（周日情感电台）。当前档案已补入 2015-07-05 等 2015 年早期记录；期数与首末日期由前端按 entries 动态派生。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。"
+- id: together-see
+  name: 一起See
+  description: "直播中与观众一起观看视频、节目、发布会、PV、预告等内容的长期节目；期数与首末日期由前端按 entries 动态派生。"
 - id: xishuo-fengshen
   name: 戏说封神
-  description: "封神演义故事解说栏目，已收录 19 期，2019-04-21 ~ 2019-05-26。"
+  description: "封神演义故事解说栏目，已收录 19 期，2019-04-21 ~ 2019-07-07。"
 - id: xishuo-liaozhai
   name: 戏说聊斋
-  description: "聊斋故事解说栏目，已收录 10 期，2018-03-25 ~ 2018-07-01。"
+  description: "聊斋故事解说栏目，已收录 11 期，2018-03-25 ~ 2018-07-01。"
 - id: chiji-jiayuan
   name: 吃鸡佳缘
   description: "吃鸡（PUBG）主题栏目，已收录 4 期，2017-12-06 ~ 2017-12-30。"
-- id: liuliao66
-  name: 66聊聊
-  description: "斗鱼末期栏目，已收录 1 期（2023-11-30，斗鱼停播前最后一场）。"
