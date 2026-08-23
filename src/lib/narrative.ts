@@ -903,7 +903,7 @@ export const STORY_ACTS: Act[] = [
         kicker: '直播五周年',
         title: '女流与 YJJ 一起看五周年祝福。',
         body: '周年祝福被放回直播间里一起看；画面里不只留下作品，也留下了当时坐在身边的人。',
-        cover: '/gallery/anniv_10_5th_2020.jpg',
+        cover: '/gallery/anniv_10_5th_2020.jpg?v=20260823',
         target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1sq4y1L7sa' },
       },
       {
