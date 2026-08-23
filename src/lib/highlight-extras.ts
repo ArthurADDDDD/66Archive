@@ -23,6 +23,7 @@ export const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
     external: true,
     cover: null,
     emphasis: 'P2 · 31:47',
+    category: 'xinling-pishuang',
   },
   {
     id: 'douyu-gandie',
@@ -36,6 +37,7 @@ export const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
     external: true,
     cover: null,
     emphasis: 'P2 · 52:02',
+    category: 'daily-meme',
   },
   {
     id: 'nature-gift',
@@ -49,5 +51,6 @@ export const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
     external: true,
     cover: null,
     emphasis: '01:22:48',
+    category: 'xinling-pishuang',
   },
 ]

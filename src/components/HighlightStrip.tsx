@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { EXTRA_HIGHLIGHTS } from '@/lib/highlight-extras'
-import { actColor, type ResolvedBeat } from '@/lib/narrative'
+import { actColor, MEME_CATEGORIES, type MemeCategory, type ResolvedBeat } from '@/lib/narrative'
 import { applyLiveHighlights } from '@/lib/live-content'
 import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
@@ -29,15 +29,18 @@ function withExtraHighlights(baseline: ResolvedBeat[]): ResolvedBeat[] {
 }
 
 /**
- * 高光条：20 个「记得住的时刻」。
- * 数字是背景纹理不是指标（emphasis 大字淡色靠右）；
- * 每一条都指向真实播放/原平台 URL——展开后点击图片或标题直接跳转，不再进详情页。
+ * 首页「直播间梗」：仍复用原 Highlight 的卡片、展开与播放入口，
+ * 只在外层增加固定五分类。没有 category 的旧 Highlight 保留在数据里，
+ * 但不被重新塞进任何一个分类。
  */
 export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
   const { narrative } = useLiveContent()
   const copy = useCopyBlock('homeSections', 'home-highlights')
   const beats = applyLiveHighlights(withExtraHighlights(baseline), narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
-  if (beats.length === 0) return null
+  const [activeCategory, setActiveCategory] = useState<MemeCategory>(MEME_CATEGORIES[0].id)
+  const active = MEME_CATEGORIES.find((category) => category.id === activeCategory) ?? MEME_CATEGORIES[0]
+  const activeBeats = beats.filter((beat) => beat.category === active.id)
+  if (!MEME_CATEGORIES.some((category) => beats.some((beat) => beat.category === category.id))) return null
   return (
     <section id="home-highlights" className="scroll-mt-4 border-t border-line py-12 sm:py-16">
       <div className="home-content-container px-page">
@@ -48,7 +51,31 @@ export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: Resol
         </Reveal>
 
         <div className="mt-8">
-          {beats.map((beat, i) => (
+          <div className="flex flex-wrap gap-2" role="tablist" aria-label="直播间梗分类">
+            {MEME_CATEGORIES.map((category) => {
+              const selected = category.id === active.id
+              return (
+                <button
+                  key={category.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={selected}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:px-4 ${selected ? 'border-live/55 bg-live/10 text-ink' : 'border-line text-muted hover:border-muted hover:text-ink'}`}
+                >
+                  {category.label}
+                </button>
+              )
+            })}
+          </div>
+          <div className="mt-5 border-l border-line/70 pl-4 sm:pl-5" role="tabpanel" aria-label={active.label}>
+            <p className="text-control font-medium text-ink">{active.label}</p>
+            <p className="mt-1 measure-body text-meta leading-relaxed text-faint">{active.description}</p>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          {activeBeats.map((beat, i) => (
             <Reveal key={beat.id} delay={i < 4 ? i * 40 : 0}>
               <Row beat={beat} />
             </Reveal>

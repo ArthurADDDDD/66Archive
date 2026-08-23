@@ -72,9 +72,9 @@ export const SITE_COPY: SiteCopy = {
   homeSections: [
     {
       id: 'home-highlights',
-      eyebrow: 'Highlights · 高光',
-      title: '一些记得住的时刻。',
-      lede: '这里不求全，只放一些一提起来就能想起的时刻。',
+      eyebrow: '直播间梗 · Live Memes',
+      title: '一提起来，就知道在说什么。',
+      lede: '那些从直播间里留下来、也一直被大家记得的名字、台词和名场面。',
     },
     { id: 'home-memory', eyebrow: 'Memory · 记忆盒', title: '回到过去，只需要一晚。', lede: '' },
     { id: 'home-games', eyebrow: 'Games · 玩过的游戏', title: '陪得最久的几款。', lede: '' },

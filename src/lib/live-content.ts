@@ -24,7 +24,7 @@
  * 生产环境前台与接口同域时留空即可；本地联调可通过 `NEXT_PUBLIC_CONTENT_ORIGIN`
  * 指向本地服务。内容服务对配置好的来源回 CORS 头，不需要额外的开发代理。
  */
-import { fillEmphasis, type ActId, type ResolvedAct, type ResolvedBeat } from './narrative'
+import { fillEmphasis, type ActId, type MemeCategory, type ResolvedAct, type ResolvedBeat } from './narrative'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
@@ -85,6 +85,8 @@ export type LiveHighlight = {
   emphasis: string
   /** 首页默认展开：true 时这条高光加载后直接展开（用户仍可手动折叠）。 */
   expanded: boolean
+  /** 未提供表示旧版内容服务；null 表示这条保留数据不进入直播间梗。 */
+  category?: MemeCategory | null
 }
 
 export type LiveNarrative = {
@@ -200,6 +202,11 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
                 date: str(item.date),
                 emphasis: str(item.emphasis),
                 expanded: bool(item.expanded),
+                category: item.category === null
+                  ? null
+                  : item.category === 'dazhou-mc' || item.category === 'xinling-pishuang' || item.category === 'peiqi' || item.category === 'daily-meme' || item.category === 'game-meme'
+                    ? item.category
+                    : undefined,
               }
             : null,
         )
@@ -403,6 +410,7 @@ function resolveCustomHighlight(live: LiveHighlight, emphasisVars: Record<string
     cover: null,
     emphasis: live.emphasis ? fillEmphasis(live.emphasis, emphasisVars) : undefined,
     expanded: live.expanded,
+    category: live.category ?? null,
   }
 }
 
@@ -561,6 +569,7 @@ export function applyLiveHighlights(
         emphasis: override.emphasis ? fillEmphasis(override.emphasis, emphasisVars) : undefined,
         // 默认展开以后台为准：勾选→加载即展开；未勾选→保持折叠（覆盖基线，基线无此概念）。
         expanded: override.expanded,
+        category: override.category === undefined ? beat.category : override.category,
       }
     })
 }

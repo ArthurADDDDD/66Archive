@@ -42,6 +42,17 @@ export function actColorForDate(date: string): string {
 /** 时间线卡片规格：hero=配图大卡 / type=字排大卡 / small=小卡 / montage=蒙太奇（首页 ACT II 专用） */
 export type BeatSize = 'hero' | 'type' | 'small' | 'montage'
 
+/** 首页「直播间梗」的固定一级分类。没有分类的保留 Highlight 不在新版模块展示。 */
+export const MEME_CATEGORIES = [
+  { id: 'dazhou-mc', label: '大周MC', description: '女流和水友在《我的世界》中共同留下的“大周”故事与直播间记忆。' },
+  { id: 'xinling-pishuang', label: '心灵砒霜', description: '从水友故事和聊天里长出来的一系列经典人物、台词与名场面。' },
+  { id: 'peiqi', label: '佩奇', description: '女流唱歌、Rap、Dance 等表演留下来的直播间梗与名场面。' },
+  { id: 'daily-meme', label: '日常梗', description: '游戏和固定节目之外，在长期直播与生活中留下来的经典梗。' },
+  { id: 'game-meme', label: '游戏梗', description: '从游戏操作、受苦和节目效果里留下来的经典梗。' },
+] as const
+
+export type MemeCategory = (typeof MEME_CATEGORIES)[number]['id']
+
 /** 卡片点击去向。kind:'none' 为纯文案卡（无链接，不造假链接）。 */
 export type BeatTarget =
   | { kind: 'entry'; id: string; href?: string }
@@ -1125,6 +1136,8 @@ export type Highlight = {
   body: string
   /** 背景纹理数字；含 {var} 占位符时在构建期用派生值填充 */
   emphasis?: string
+  /** null 表示保留旧数据，但不进入首页「直播间梗」分组。 */
+  category: MemeCategory | null
 }
 
 /**
@@ -1148,6 +1161,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '迷画之塔',
     body: '清华建筑学院本科期间上传的小游戏解说。一切从这里开始。',
     emphasis: '首作 · 13 分钟',
+    category: null,
   },
   {
     id: 'binge-game',
@@ -1158,6 +1172,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '变态人生大冒险',
     body: '第一次，有非常多人听见了她。',
     emphasis: '210 万+ 播放',
+    category: null,
   },
   {
     id: 'video-to-live',
@@ -1168,6 +1183,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '从录像，到直播',
     body: '以前，大家看到的是已经录好的游戏。从这里开始，大家开始一起玩。',
     emphasis: '2015-01-21 首播',
+    category: null,
   },
   {
     id: 'geometry-dash',
@@ -1178,6 +1194,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '几何冲刺',
     body: '那些反复重来的晚上，加起来十多个小时。',
     emphasis: '{geometryHours} 个小时',
+    category: null,
   },
   {
     // bilibili API 核实 pubdate=2022-01-05（官方号自己发布，非多年后考古重剪）。
@@ -1189,6 +1206,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '原味鸡',
     body: '「什么原味鸡？」',
     emphasis: '草。',
+    category: 'xinling-pishuang',
   },
   {
     // bilibili API 核实 pubdate=2021-12-24（官方号自己发布）。
@@ -1199,6 +1217,7 @@ export const HIGHLIGHTS: Highlight[] = [
     kicker: '砒霜名场面',
     title: '大力士来啦',
     body: '一个脑子已经处理不了了。',
+    category: 'xinling-pishuang',
   },
   {
     id: 'xinling-pishuang',
@@ -1211,6 +1230,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '心灵砒霜开始了。',
     body: '游戏暂停。邮件打开。一个星期日。',
     emphasis: '{xinlingCount} 期被保存下来',
+    category: null,
   },
   {
     id: 'three-books',
@@ -1221,6 +1241,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '大周导师三本书',
     body: '「老师有什么书推荐吗？」——《百年孤独》《城市发展史》《美国大城市的死与生》。同一条推荐短信，被重复发送了大量次数。',
     emphasis: '×4000',
+    category: 'xinling-pishuang',
   },
   {
     // bilibili API 核实 pubdate=2018-03-01（第三方剪辑号），只写到月。
@@ -1232,6 +1253,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '壮王爷《结石记》',
     body: '一个本来很普通的「弟弟去医院」，迅速变成大周连续剧。',
     emphasis: '2018',
+    category: 'daily-meme',
   },
   {
     id: 'ganzhe-jing',
@@ -1243,6 +1265,7 @@ export const HIGHLIGHTS: Highlight[] = [
     body: '「为什么叫甘蔗精？」——因为她吃了根甘蔗。这个称号一叫就是很多年。',
     emphasis: '一根甘蔗',
     cover: '/images/highlights/ganzhe-jing.jpg',
+    category: 'daily-meme',
   },
   {
     id: 'celeste',
@@ -1252,6 +1275,7 @@ export const HIGHLIGHTS: Highlight[] = [
     kicker: '受苦记录',
     title: '《Celeste》：鬼知道我死了多少次',
     body: '变态游戏，毁我青春。',
+    category: null,
   },
   {
     id: 'ps4',
@@ -1262,6 +1286,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '5 亿台纪念限定 PS4 Pro 开箱',
     body: 'PlayStation 全球第 5 亿台纪念机型的开箱之夜。',
     emphasis: '2018',
+    category: null,
   },
   {
     id: 'nasdaq',
@@ -1272,6 +1297,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '斗鱼156277 去了一趟纳斯达克。',
     body: '前些日子还在直播间里打游戏，转眼跟着斗鱼去了纳斯达克敲钟。',
     emphasis: '2019',
+    category: null,
   },
   {
     id: 'kemu-2',
@@ -1282,6 +1308,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '科目二，通过！！！',
     body: '多年连续剧，大周史的主线 Boss。第二天的心灵砒霜标题是：每天醒来都要确认下是不是真的过了科目二。',
     emphasis: '2020',
+    category: 'daily-meme',
   },
   {
     id: 'number-723',
@@ -1292,6 +1319,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '723事件',
     body: '有些比赛打完就忘了。有些会被水友念几年。女流 × 寅子，《永劫无间》。',
     emphasis: '2021',
+    category: 'daily-meme',
   },
   {
     id: 'back-again',
@@ -1302,6 +1330,7 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '又见面了。',
     body: '停播八个多月后，她回来了。',
     emphasis: '2024-08-18',
+    category: null,
   },
   {
     id: 'douyin-winter',
@@ -1312,6 +1341,70 @@ export const HIGHLIGHTS: Highlight[] = [
     title: '黑神话：悟空 · 大更新',
     body: '重新开始的第一个冬天，她还在打游戏。',
     emphasis: '{wukongCount} 场 · 十二月',
+    category: null,
+  },
+  {
+    id: 'meme-dazhou',
+    act: 'act-ii',
+    href: '/games/minecraft/',
+    date: '2017.07',
+    kicker: '大周MC',
+    title: '大周',
+    body: '从《我的世界》里长出来的共同故事，后来也成了直播间一直在用的名字。',
+    category: 'dazhou-mc',
+  },
+  {
+    id: 'meme-pig-brain-overload',
+    act: 'act-ii',
+    href: 'https://www.bilibili.com/video/BV1xP4y1J7LB',
+    date: '2021.12.24',
+    kicker: '心灵砒霜',
+    title: '猪脑过载',
+    body: '和《大力士来啦》一起被保存下来的心灵砒霜经典标题。',
+    category: 'xinling-pishuang',
+  },
+  {
+    id: 'meme-peiqi',
+    act: 'act-ii',
+    entryId: '2019-12-09-live-01',
+    date: '2019.12.09',
+    kicker: '佩奇',
+    title: '佩奇',
+    body: '唱歌歌友会里留下来的直播间经典称呼。',
+    category: 'peiqi',
+  },
+  {
+    id: 'meme-66rap',
+    act: 'act-ii',
+    href: 'https://www.bilibili.com/video/BV19W411u7A9/',
+    cover: 'https://i0.hdslb.com/bfs/archive/b33af1f769f8db801c16931c807a3e2873909a9e.jpg',
+    date: '2018.03.20',
+    kicker: '佩奇',
+    title: '66rap',
+    body: '女流的 Rap 名场面。',
+    category: 'peiqi',
+  },
+  {
+    id: 'meme-66dance',
+    act: 'act-ii',
+    href: 'https://www.bilibili.com/video/BV1o4411M7Sw/',
+    cover: 'https://i2.hdslb.com/bfs/archive/cfcfd24df6c992c6dd7bd404d893aff47d0b53c1.jpg',
+    date: '2019.06.06',
+    kicker: '佩奇',
+    title: '66dance',
+    body: '女流跳舞的代表名场面：《泉水叮咚》。',
+    category: 'peiqi',
+  },
+  {
+    id: 'meme-hammer',
+    act: 'act-ii',
+    href: 'https://www.bilibili.com/video/BV1yg41167yr/',
+    cover: 'https://i0.hdslb.com/bfs/archive/f52fb461ea561ee63e0822c9e59c321ab177faf3.jpg',
+    date: '2022.08.17',
+    kicker: '游戏梗',
+    title: '抡大锤',
+    body: '《谁不爱看锤呢》留下的受苦名场面。',
+    category: 'game-meme',
   },
 ]
 
@@ -1362,6 +1455,8 @@ export type ResolvedBeat = {
   emphasis?: string
   /** 首页高光「默认展开」：只由后台 live 覆盖写入，基线无此概念（缺省即折叠）。 */
   expanded?: boolean
+  /** 首页「直播间梗」分类；null 表示不进入该模块。 */
+  category?: MemeCategory | null
   gameWorld?: GameWorldFootnote
   tail?: string
   /** 蒙太奇幕的分类 chips */
@@ -1612,6 +1707,7 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
         external,
         cover: h.cover ?? (entry?.cover ? proxyImage(entry.cover, 640) : null),
         emphasis: fillEmphasis(h.emphasis, vars),
+        category: h.category,
       },
     ]
   })
