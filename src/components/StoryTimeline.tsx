@@ -203,7 +203,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         {beat.kicker && <span>· {beat.kicker}</span>}
       </div>
       {beat.cover && (
-        <div className="mt-4 max-w-[680px]">
+        <div className="mt-4 chronicle-media-measure">
           <MediaFrame src={beat.cover} alt={beat.title} className="aspect-video w-full">
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {displayDate}
@@ -236,7 +236,7 @@ function ActivityTimeline({ activity, accent }: { activity: NonNullable<Resolved
   const max = Math.max(...activity.points.map((point) => point.count), 1)
 
   return (
-    <div className="mt-5 max-w-[680px] rounded-xl border border-line/70 bg-surface/30 px-4 pb-3 pt-3.5 sm:px-5">
+    <div className="mt-5 chronicle-media-measure rounded-xl border border-line/70 bg-surface/30 px-4 pb-3 pt-3.5 sm:px-5">
       <div className="flex items-baseline justify-between gap-4">
         <p className="text-meta font-medium text-ink/90">{activity.label}</p>
         <p className="text-[11px] text-faint">按当前档案收录期数</p>
@@ -286,7 +286,7 @@ function StageNote({ beat, className = '' }: { beat: ResolvedBeat; className?: s
   const text = beat.body?.trim() || beat.title
 
   return (
-    <div className={`grid max-w-[860px] grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)] ${className}`}>
+    <div className={`grid chronicle-row-measure grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)] ${className}`}>
       <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{chronicleDate(beat.date)}</span>
       <p className="text-body leading-relaxed text-muted">{text}</p>
     </div>
@@ -304,7 +304,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
 
   const displayDate = chronicleDate(beat.date)
   const body = (
-    <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+    <div className="grid chronicle-row-measure grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
       {!hideDate && <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
       <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
         <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
@@ -353,7 +353,7 @@ function SecondaryList({
 
         const displayDate = chronicleDate(beat.date)
         const inner = (
-          <div className="grid max-w-[860px] grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+          <div className="grid chronicle-row-measure grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
             <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
             <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
               <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
