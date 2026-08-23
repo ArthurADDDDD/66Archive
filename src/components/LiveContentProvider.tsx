@@ -7,6 +7,7 @@ import {
   type LiveContent,
   type LiveCopyBlock,
   type LiveEditorialSection,
+  type LiveNarrative,
   type LiveSiteCopy,
 } from '@/lib/live-content'
 import { SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
@@ -21,15 +22,37 @@ import { SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
  * 服务端渲染基线 + 客户端打覆盖，正好也是接口挂掉时页面照常的实现方式。
  */
 
-const LiveContentContext = createContext<LiveContent>({ narrative: null, copy: null, editorial: null })
+const EMPTY_CONTENT: LiveContent = { narrative: null, copy: null, editorial: null }
 
-export function LiveContentProvider({ children }: { children: React.ReactNode }) {
-  const [content, setContent] = useState<LiveContent>({ narrative: null, copy: null, editorial: null })
+const LiveContentContext = createContext<LiveContent>(EMPTY_CONTENT)
+
+/**
+ * `initial` 是构建期烤进来的后台文案（见 `lib/baked-content.ts`）。
+ * 它让 SSG 出来的 HTML 直接就是后台文案：静态导出时客户端组件同样会被
+ * 服务端渲染一遍，这里带着内容渲染，读 context 的组件在那一遍就把覆盖应用上了。
+ * 没有 `initial`（本地 dev、烤入被关掉）时退回空值，行为与从前一致。
+ */
+export function LiveContentProvider({
+  children,
+  initial,
+}: {
+  children: React.ReactNode
+  initial?: LiveContent
+}) {
+  const [content, setContent] = useState<LiveContent>(initial ?? EMPTY_CONTENT)
 
   useEffect(() => {
     let active = true
     void fetchLiveContent().then((live) => {
-      if (active) setContent(live)
+      if (!active) return
+      // 逐份回退，不能直接 setContent(live)：实时请求失败时那一份是 null，
+      // 整份覆盖会把烤进来的内容清掉，页面反而退回公仓基线——
+      // 那正是烤入要解决的问题，写成整份覆盖等于白做。
+      setContent((prev) => ({
+        narrative: live.narrative ?? prev.narrative,
+        copy: live.copy ?? prev.copy,
+        editorial: live.editorial ?? prev.editorial,
+      }))
     })
     return () => {
       active = false
@@ -41,6 +64,31 @@ export function LiveContentProvider({ children }: { children: React.ReactNode })
 
 export function useLiveContent(): LiveContent {
   return useContext(LiveContentContext)
+}
+
+/**
+ * 把构建期烤入的 narrative 补进上下文，只包在真正渲染叙事内容的页面外面。
+ *
+ * 为什么不直接放进根 layout 的 `initial`：narrative 约 28KB，是三份内容里最大的一份，
+ * 而站内两千多个条目页根本不读它。整份放进根 layout 会让每个页面的 RSC 载荷都背上它
+ * ——实测 `out/` 从 231M 涨到 610M、条目页 HTML 几乎翻倍。
+ *
+ * 实时内容到达后 `parent.narrative` 就不再是 null，这里自动让位给它，
+ * 所以不会盖住后台的最新改动。
+ */
+export function LiveNarrativeSeed({
+  narrative,
+  children,
+}: {
+  narrative: LiveNarrative | null
+  children: React.ReactNode
+}) {
+  const parent = useLiveContent()
+  const value = useMemo(
+    () => (parent.narrative ? parent : { ...parent, narrative }),
+    [parent, narrative],
+  )
+  return <LiveContentContext.Provider value={value}>{children}</LiveContentContext.Provider>
 }
 
 /** 当前生效的站点文案：后台有就用后台的，没有就用公开仓基线。 */

@@ -7,6 +7,8 @@ import { TimelineProgress } from '@/components/TimelineProgress'
 import { HomeActSections } from '@/components/HomeActSections'
 import { HomeActStage } from '@/components/HomeActStage'
 import { HighlightStrip } from '@/components/HighlightStrip'
+import { LiveNarrativeSeed } from '@/components/LiveContentProvider'
+import { fetchBakedContent } from '@/lib/baked-content'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
@@ -23,7 +25,10 @@ import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
  * 一切计数来自 resolveHomepage 的构建期派生，文案不硬编码数字。
  * 「历史上的今天」以构建日期为准（静态站约束），同月同日、一年一条。
  */
-export default function HomePage() {
+export default async function HomePage() {
+  // 首页是站内唯一渲染叙事内容（幕 / 高光）的页面，所以只有它需要烤入 narrative。
+  // 其余页面由根 layout 烤入的站点文案与板块编排即可，详见 lib/baked-content.ts。
+  const { narrative: bakedNarrative } = await fetchBakedContent()
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
   const data = resolveHomepage(ds, timeline)
@@ -118,7 +123,7 @@ export default function HomePage() {
   ]
 
   return (
-    <>
+    <LiveNarrativeSeed narrative={bakedNarrative}>
       <HomeActRail acts={homeActRail} sections={homeSections} />
       <main className="ui-page-in flex min-h-screen flex-col overflow-x-clip">
       <MobileQuickNav active="home" />
@@ -199,7 +204,7 @@ export default function HomePage() {
         <SiteFooter />
       </div>
       </main>
-    </>
+    </LiveNarrativeSeed>
   )
 }
 
