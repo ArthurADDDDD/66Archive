@@ -2,17 +2,52 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { buildSourceGroups, getDataset } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
-import { PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, withTimestamp } from '@/lib/platforms'
-import { formatDuration, gameColor } from '@/lib/ui'
+import { PLATFORM_META } from '@/lib/platforms'
+import { formatClock, formatDuration, gameColor } from '@/lib/ui'
+import { actColorForDate } from '@/lib/narrative'
 import { toSeconds, type Platform } from '@/lib/schema'
 import { buildEntryRails } from '@/lib/relations'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
 import { PresenceIndicator } from '@/components/PresenceIndicator'
+import { Eyebrow, SiteFooter } from '@/components/primitives'
+import { EntryWatch, type WatchSegment, type WatchSource } from '@/components/EntryWatch'
+
+/**
+ * 一条记录的详情页。
+ *
+ * 结构 = 这是哪一场（Hero，纯文字）→ 在哪儿看 + 这场里在打什么（观看台）→ 前后两场 → 相关的路。
+ * 封面不再是 Hero 里一张静态图——它挂在观看台的来源面板顶部，跟着选中的来源换，
+ * 点它就是打开那个来源，而不是一张只能看的装饰图。
+ * 三个端的差别只在观看台那一段：
+ * - 手机：单列，先来源+封面后时间轴（先决定去哪儿看，再挑时间点）；封面和其余内容
+ *   共用同一层 px-page 安全边距，不再出血到屏幕边缘。
+ * - 平板（md+）/桌面（lg+）：来源面板（含封面）吸附在右侧，时间轴在左，
+ *   20 段的长列表也不用滚回去换来源。
+ *
+ * 页面外壳与 /series/[id]、/games/[id] 对齐（site-container + px-page + SiteFooter），
+ * 不再用写死的 max-w 把正文钉在 740px、让顶栏和内容差出 190px 的左边界。
+ */
+
+export const dynamicParams = false
+
+/** 无游戏分段的备用配色：只为在色带上彼此分得开，与 gameColor 的语义无关。 */
+const SEGMENT_FALLBACK = ['#5BC8E8', '#E5568A', '#E0A244', '#9B8AFB', '#72C7A5']
 
 export function generateStaticParams() {
   return getDataset().entries.map((e) => ({ id: e.id }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const entry = getDataset().entries.find((e) => e.id === id)
+  return {
+    title: entry ? `${entry.date} ${entry.title} · 女流编年史` : '记录 · 女流66编年史',
+    description: entry
+      ? `${entry.date}${entry.time ? ` ${entry.time}` : ''} · ${formatDuration(entry.duration_min)} · 只索引，不搬运。`
+      : undefined,
+  }
 }
 
 export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -22,192 +57,222 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   if (idx === -1) notFound()
 
   const entry = ds.entries[idx]
-  const compactGameIds = visibleGameIds(entry.games)
-  const sourceGroup = buildSourceGroups(ds.entries).get(entry.id) ?? [entry]
-  const groupedSources = sourceGroup
-    .flatMap((item) => item.sources.map((source) => ({ ...source, entryTitle: item.title })))
-    .filter((source, index, all) => all.findIndex((candidate) => candidate.url === source.url) === index)
+  const platform = PLATFORM_META[entry.platform as Platform]
+  const accent = actColorForDate(entry.date)
+  const totalSec = (entry.duration_min ?? 0) * 60
   const newer = ds.entries[idx - 1]
   const older = ds.entries[idx + 1]
-  const platform = PLATFORM_META[entry.platform as Platform]
-  const totalSec = (entry.duration_min ?? 0) * 60
-  const cover = proxyImage(entry.cover, 720)
-  const primary = groupedSources.find((source) => source.status === 'alive') ?? groupedSources[0]
-  const backHref = `/archive/?y=${entry.date.slice(0, 4)}&m=${Number(entry.date.slice(5, 7))}`
 
+  const year = entry.date.slice(0, 4)
+  const month = Number(entry.date.slice(5, 7))
+  const backHref = `/archive/?y=${year}&m=${month}`
+  const backLabel = `回到 ${year} 年 ${month} 月`
+
+  // 同场的不同录像被数据审校标成一组；来源合并去重后一起展示，条目不重复出现。
+  const sourceGroup = buildSourceGroups(ds.entries).get(entry.id) ?? [entry]
+  const sources: WatchSource[] = sourceGroup
+    .flatMap((item) =>
+      item.sources.map((source) => ({
+        url: source.url,
+        cover: source.cover,
+        kind: source.kind,
+        status: source.status,
+        parts: source.parts,
+        partDetails: source.part_details,
+        accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
+        entryTitle: item.title,
+      })),
+    )
+    .filter((source, index, all) => all.findIndex((candidate) => candidate.url === source.url) === index)
+
+  // 整场都没标游戏时（分段其实是录像的分 P / 章节），灰色会把色带糊成一条——
+  // 这时按序号发一组可区分的颜色，只为分得开，不代表任何游戏。
+  const isGameTimeline = entry.segments.some((s) => s.game)
+  const segments: WatchSegment[] = entry.segments.map((s, i) => {
+    const from = toSeconds(s.at)
+    const next = entry.segments[i + 1]
+    const to = next ? toSeconds(next.at) : totalSec || from
+    return {
+      at: s.at,
+      atSec: from,
+      endSec: to,
+      name: s.game ? (ds.games.get(s.game)?.name ?? s.game) : s.label,
+      label: s.label,
+      gameId: s.game ?? null,
+      color: s.game ? gameColor(s.game) : isGameTimeline ? gameColor(null) : SEGMENT_FALLBACK[i % SEGMENT_FALLBACK.length],
+      dim: isGameTimeline && !s.game,
+      from: totalSec ? from / totalSec : i / entry.segments.length,
+      to: totalSec ? Math.min(to / totalSec, 1) : (i + 1) / entry.segments.length,
+    }
+  })
+
+  const games = visibleGameIds(entry.games).map((g) => ({ id: g, name: ds.games.get(g)?.name ?? g, known: ds.games.has(g) }))
+  const seriesDef = entry.series ? ds.series.get(entry.series) : undefined
   const rails = buildEntryRails(entry, ds)
 
   return (
-    // 外层不带 px-page：RelatedRail 自带一层，套两层百分比 padding 会复利
-    // （原来这里就是 px-4 套 RelatedRail 的 px-4，手机上等于 32px 双重内边距）
-    <div className="ui-page-in pb-8">
+    <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="entry" />
       <BackToTop />
-      <header className="site-header-container flex items-center px-page py-5">
+      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="entry" />
+        <Link href={backHref} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+          ← {backLabel}
+        </Link>
       </header>
-      <div className="mx-auto max-w-[56.25rem]">
-        <div className="mt-5 px-page">
-          <Link href={backHref} className="ui-press inline-block rounded-sm text-meta text-muted tnum underline underline-offset-4 hover:text-live">
-            ← 回到 {entry.date.slice(0, 7).replace('-', ' 年 ')} 月
-          </Link>
-        </div>
 
-        <header className="mt-6 border-b border-line px-page pb-6">
-        <div className="flex flex-wrap items-center gap-2 text-meta tnum">
-          <span className="rounded-sm px-1.5 py-0.5 font-semibold text-[#12141C]" style={{ background: platform?.color }}>
-            {platform?.name ?? entry.platform}
-          </span>
-          <span className="text-muted">{entry.date}</span>
-          {entry.time && <span className="text-faint">{entry.time} 开播</span>}
-          <span className="text-faint">·</span>
-          <span className="text-muted">{formatDuration(entry.duration_min)}</span>
-          <PresenceIndicator pageKey={`entry:${entry.id}`} mode="page" />
-          {entry.confidence !== 'high' && (
-            <span className="rounded-sm border border-line px-1.5 text-faint">
-              {entry.confidence === 'low' ? '待考证' : '部分待核实'}
-            </span>
-          )}
-        </div>
-        <h1 className="mt-3 text-h2 font-semibold">{entry.title}</h1>
-        {entry.note && <p className="mt-2 text-meta text-faint">{entry.note}</p>}
-        </header>
+      {/* 这是哪一场 */}
+      <section className="site-container px-page pb-10 pt-6 sm:pb-14 sm:pt-10">
+        <Link
+          href={backHref}
+          className="ui-press -my-2 inline-block rounded-sm py-2 text-meta text-muted underline underline-offset-4 transition-colors hover:text-live tnum lg:hidden"
+        >
+          ← {backLabel}
+        </Link>
 
-      {cover && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={cover}
-          alt={`${entry.title} 封面`}
-          referrerPolicy="no-referrer"
-          className="ui-reveal mt-6 aspect-video w-full border border-line bg-raised object-cover sm:rounded"
-        />
-      )}
+        <div className="mt-4 lg:mt-0">
+          <div className="min-w-0">
+            <Eyebrow color={accent} dot>
+              {platform?.name ?? entry.platform} · {entry.type === 'live' ? '直播录像' : '视频'}
+            </Eyebrow>
+            <h1 className="measure-hero mt-4 text-h1 font-semibold text-ink">{entry.title}</h1>
 
-      {/* 分段：这场几点在打什么，点色块直接跳到对应时间 */}
-      <section className="mt-8 px-page">
-        <h2 className="mb-3 text-meta uppercase tracking-[0.16em] text-faint">播了什么</h2>
-        {entry.segments.length === 0 ? (
-          <p className="text-body text-muted">
-            尚未录入分段信息。
-            {compactGameIds.length > 0 && (
-              <> 已知涉及：{compactGameIds.map((g) => ds.games.get(g)?.name ?? g).join('、')}。</>
-            )}
-          </p>
-        ) : (
-          <>
-            <div className="group/segments flex h-3 w-full overflow-hidden rounded-full bg-raised">
-              {totalSec > 0 && toSeconds(entry.segments[0].at) > 0 && (
-                <span
-                  style={{ width: `${(toSeconds(entry.segments[0].at) / totalSec) * 100}%` }}
-                  className="bg-line"
-                  title="开播前 / 未分段"
-                />
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-meta text-muted tnum">
+              <span className="font-mono text-ink">{entry.date}</span>
+              {entry.time && <span>{entry.time} 开播</span>}
+              {entry.confidence !== 'high' && (
+                <span className="rounded-sm border border-line px-1.5 py-0.5 text-faint">
+                  {entry.confidence === 'low' ? '待考证' : '部分待核实'}
+                </span>
               )}
-              {entry.segments.map((s, i) => {
-                const from = toSeconds(s.at)
-                const to = i + 1 < entry.segments.length ? toSeconds(entry.segments[i + 1].at) : totalSec || from
-                const width = totalSec ? ((to - from) / totalSec) * 100 : 100 / entry.segments.length
-                return (
-                  <span
-                    key={i}
-                    style={{ width: `${width}%`, background: gameColor(s.game ?? null), opacity: s.game ? 0.9 : 0.3 }}
-                    className="transition-[filter,opacity] duration-300 group-hover/segments:brightness-125"
-                    title={`${s.at} ${s.label}`}
-                  />
-                )
-              })}
+              <PresenceIndicator pageKey={`entry:${entry.id}`} mode="page" />
             </div>
-            <ol className="mt-4 space-y-1">
-              {entry.segments.map((s, i) => {
-                const href = primary ? withTimestamp(primary.url, toSeconds(s.at)) : null
-                const name = s.game ? (ds.games.get(s.game)?.name ?? s.game) : s.label
-                const Row = (
-                  <>
-                    <span className="font-mono text-meta text-faint tnum">{s.at}</span>
-                    <span className="inline-block h-2.5 w-2.5 shrink-0 rounded-sm" style={{ background: gameColor(s.game ?? null) }} />
-                    <span className="text-body text-ink">{name}</span>
-                    {s.game && <span className="text-meta text-faint">{s.label}</span>}
-                  </>
-                )
-                return (
-                  <li key={i}>
-                    {href ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group ui-press flex items-center gap-3 rounded px-2 py-2.5 transition-colors hover:bg-surface sm:py-1.5"
-                      >
-                        {Row}
-                        <span className="ml-auto text-meta text-live opacity-0 transition-opacity group-hover:opacity-100">
-                          跳转 ↗
-                        </span>
-                      </a>
-                    ) : (
-                      <div className="flex items-center gap-3 px-2 py-2.5 sm:py-1.5">{Row}</div>
-                    )}
-                  </li>
-                )
-              })}
-            </ol>
-          </>
-        )}
+
+            {/* 关键数字：这一屏最该被一眼抓到的三件事 */}
+            <dl className="mt-6 grid max-w-md grid-cols-3 gap-4 border-y border-line/60 py-4">
+              <Fact
+                value={formatClock(entry.duration_min)}
+                label={entry.duration_min ? '时长 时:分' : '时长未知'}
+                accent={entry.duration_min ? accent : undefined}
+              />
+              <Fact value={String(entry.segments.length)} label="分段" />
+              <Fact value={String(sources.length)} label="来源" />
+            </dl>
+
+            {(games.length > 0 || seriesDef || entry.tags.length > 0) && (
+              <div className="mt-5 flex flex-wrap gap-2">
+                {games.map((g) =>
+                  g.known ? (
+                    <Chip key={g.id} href={`/games/${g.id}/`} color={gameColor(g.id)}>
+                      {g.name}
+                    </Chip>
+                  ) : (
+                    <Chip key={g.id} color={gameColor(g.id)}>
+                      {g.name}
+                    </Chip>
+                  ),
+                )}
+                {seriesDef && <Chip href={`/series/${seriesDef.id}/`}>{seriesDef.name}</Chip>}
+                {entry.tags.map((tag) => (
+                  <Chip key={tag} href={`/archive/?q=${encodeURIComponent(tag)}`}>
+                    {tag}
+                  </Chip>
+                ))}
+              </div>
+            )}
+
+            {entry.note && <p className="measure-note mt-5 text-meta leading-relaxed text-faint">{entry.note}</p>}
+            {sourceGroup.length > 1 && (
+              <p className="measure-note mt-2 text-meta leading-relaxed text-faint">
+                档案里另有 {sourceGroup.length - 1} 条被标为同场的录像，它们的链接已并入下面的来源列表。
+              </p>
+            )}
+          </div>
+        </div>
       </section>
 
-      <section className="mt-10 px-page">
-        <h2 className="mb-3 text-meta uppercase tracking-[0.16em] text-faint tnum">
-          观看链接
-        </h2>
-        {groupedSources.length === 0 ? (
-          <p className="text-body text-muted">还没有可用链接。如果你手上有，欢迎补录。</p>
-        ) : (
-          <ul className="divide-y divide-line rounded border border-line">
-            {groupedSources.map((s, i) => {
-              const acc = s.account ? ds.accounts.get(s.account) : undefined
-              const dead = s.status === 'dead'
-              return (
-                <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-3 transition-colors duration-200 hover:bg-surface/80 sm:py-2.5">
-                  <span className={`shrink-0 rounded-sm border px-1.5 py-0.5 text-meta ${i === 0 ? 'border-live/50 text-live' : 'border-line text-muted'}`}>
-                    {i === 0 ? '主链接' : `备选 ${i}`}
-                  </span>
-                  <span className="text-meta text-muted">{SOURCE_KIND_LABEL[s.kind] ?? s.kind}</span>
-                  {acc && <span className="text-meta text-ink">{acc.name}</span>}
-                  {s.entryTitle !== entry.title && <span className="max-w-full truncate text-meta text-faint">{s.entryTitle}</span>}
-                  {s.parts && <span className="font-mono text-meta text-faint tnum">{s.parts} P</span>}
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`ui-press ml-auto rounded-sm px-1 py-2 text-meta underline underline-offset-4 sm:py-0 ${
-                      dead ? 'text-faint' : 'text-live'
-                    }`}
-                  >
-                    打开 ↗
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
-        )}
+      {/* 在哪儿看 + 这场里在打什么 */}
+      <section className="border-y border-line bg-surface/20 py-12 sm:py-16">
+        <div className="site-container px-page">
+          <EntryWatch
+            sources={sources}
+            segments={segments}
+            totalSec={totalSec}
+            accent={accent}
+            gameNames={games.map((g) => g.name)}
+            entryCover={entry.cover ?? null}
+            entryTitle={entry.title}
+          />
+        </div>
       </section>
+
+      {/* 前后两场 */}
+      <nav aria-label="相邻记录" className="site-container grid gap-3 px-page py-10 sm:grid-cols-2 sm:py-14">
+        <NeighborLink entry={older} direction="prev" />
+        <NeighborLink entry={newer} direction="next" />
+      </nav>
 
       <RelatedRail rails={rails} />
 
-        <nav className="mt-12 flex justify-between gap-4 border-t border-line px-page pt-6 text-meta tnum">
-        {older ? (
-          <Link href={`/e/${older.id}/`} className="max-w-[45%] truncate py-2 text-muted hover:text-ink sm:py-0">
-            ← {older.date} {older.title}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {newer && (
-          <Link href={`/e/${newer.id}/`} className="max-w-[45%] truncate py-2 text-right text-muted hover:text-ink sm:py-0">
-            {newer.date} {newer.title} →
-          </Link>
-        )}
-        </nav>
-      </div>
+      <SiteFooter />
+    </main>
+  )
+}
+
+function Fact({ value, label, accent }: { value: string; label: string; accent?: string }) {
+  return (
+    <div>
+      <dt className={`font-mono text-h3 font-bold tnum ${accent ? '' : 'text-ink'}`} style={accent ? { color: accent } : undefined}>
+        {value}
+      </dt>
+      <dd className="mt-1 text-meta uppercase tracking-[0.16em] text-faint">{label}</dd>
     </div>
+  )
+}
+
+function Chip({ href, color, children }: { href?: string; color?: string; children: React.ReactNode }) {
+  const inner = (
+    <>
+      {color && <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: color }} />}
+      {children}
+      {href && (
+        <span aria-hidden className="font-mono text-meta text-faint/70 transition-transform group-hover:translate-x-0.5">
+          →
+        </span>
+      )}
+    </>
+  )
+  const shell =
+    'inline-flex min-h-[2.25rem] items-center gap-2 rounded-full border border-line bg-surface/50 px-3 py-1.5 text-meta text-muted'
+  if (!href) return <span className={shell}>{inner}</span>
+  return (
+    <Link href={href} className={`ui-press group ${shell} transition-colors hover:border-muted hover:text-ink`}>
+      {inner}
+    </Link>
+  )
+}
+
+/** 前后两场：整块可点（原来只有一行会被 truncate 到 45% 的窄链接）。 */
+function NeighborLink({
+  entry,
+  direction,
+}: {
+  entry: { id: string; date: string; title: string } | undefined
+  direction: 'prev' | 'next'
+}) {
+  if (!entry) return <span aria-hidden className="hidden sm:block" />
+  const isPrev = direction === 'prev'
+  return (
+    <Link
+      href={`/e/${entry.id}/`}
+      className={`ui-press group flex min-h-[4rem] flex-col justify-center rounded-xl border border-line bg-surface/30 px-4 py-3 transition-colors hover:border-muted hover:bg-surface/60 ${
+        isPrev ? '' : 'sm:items-end sm:text-right'
+      }`}
+    >
+      <span className="text-meta text-faint">{isPrev ? '← 更早一场' : '更晚一场 →'}</span>
+      <span className="mt-1 line-clamp-2 text-body text-muted transition-colors group-hover:text-ink">
+        <span className="font-mono text-meta text-faint tnum">{entry.date}</span> {entry.title}
+      </span>
+    </Link>
   )
 }

@@ -27,20 +27,6 @@ export function detectPlatform(url: string): Platform | null {
 }
 
 /**
- * 给外链加上时间戳，让分段可以直接跳到对应位置。
- * 各平台参数不同，未知平台原样返回。
- */
-export function withTimestamp(url: string, seconds: number): string {
-  const platform = detectPlatform(url)
-  if (!platform || seconds <= 0) return url
-  const u = new URL(url)
-  if (platform === 'bilibili') u.searchParams.set('t', String(seconds))
-  else if (platform === 'youtube') u.searchParams.set('t', `${seconds}s`)
-  else return url
-  return u.toString()
-}
-
-/**
  * 封面可选走部署方图片代理；B 站封面在未配置时使用公开的缩略图代理，
  * 以绕开图床对本地站点来源的防盗链。其他来源继续直接使用原图。
  */
