@@ -10,6 +10,9 @@
  * 2. **失败就回退基线**。请求失败、超时、返回结构不对，一律当作「没有覆盖」，
  *    页面继续用 `narrative.ts` / `site-copy.ts` 里的内置基线渲染。内容服务不可用
  *    绝不能让整站空白。
+ *    但「瞬时失败」不该等同于「没有覆盖」：节流与短暂的上游波动会退避重试几次
+ *    （见 `fetchJson`）。不重试的话，一次偶发失败就表现为「后台改好的文案自己
+ *    变回了旧版」——页面没坏，却让人以为改不动了，比整块空白更难排查。
  * 3. **只认稳定 ID**。覆盖按 id 匹配；内容服务里没有的 id 用基线，基线里没有的 `custom-*`
  *    按纯文案节点渲染，其余未知 id 忽略——日期、链接、封面这些只有基线里有。
  *
@@ -26,6 +29,21 @@ import { fillEmphasis, type ActId, type ResolvedAct, type ResolvedBeat } from '.
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
 const REQUEST_TIMEOUT_MS = 4000
+
+/**
+ * 值得重试的状态码。429 是网关节流：首页每次加载都会并发拉三份内容，
+ * 连续刷新很容易撞上按 IP 的配额。5xx 是上游短暂不可用。两者都是瞬时状态，
+ * 隔一下再试通常就拿到了。4xx（除 429）是「确实没有」，重试没有意义。
+ */
+const RETRYABLE_STATUS = new Set([429, 500, 502, 503, 504])
+
+/** 重试次数，不含首次。 */
+const RETRY_LIMIT = 2
+
+/** 退避基数；实际间隔是 base × 2^n 再乘一个 1~2 的随机系数。 */
+const RETRY_BASE_DELAY_MS = 400
+
+const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms))
 
 export type LiveBeat = {
   id: string
@@ -268,20 +286,35 @@ export function parseEditorial(payload: unknown): LiveEditorial | null {
   return { sections }
 }
 
-async function fetchJson(path: string): Promise<unknown | null> {
+type Attempt = { ok: true; data: unknown } | { ok: false; retryable: boolean }
+
+async function fetchJsonOnce(path: string): Promise<Attempt> {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
   try {
-    const controller = new AbortController()
-    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
-    try {
-      const response = await fetch(`${CONTENT_ORIGIN}${path}`, { cache: 'no-store', signal: controller.signal })
-      if (!response.ok) return null
-      return await response.json()
-    } finally {
-      clearTimeout(timer)
-    }
+    const response = await fetch(`${CONTENT_ORIGIN}${path}`, { cache: 'no-store', signal: controller.signal })
+    if (!response.ok) return { ok: false, retryable: RETRYABLE_STATUS.has(response.status) }
+    return { ok: true, data: await response.json() }
   } catch {
-    // 网络错误、超时、CORS、JSON 解析失败——对前台来说都是同一件事：没有覆盖。
-    return null
+    // 网络错误、超时、CORS、响应被截断——都可能是瞬时的，值得再试。
+    return { ok: false, retryable: true }
+  } finally {
+    clearTimeout(timer)
+  }
+}
+
+/**
+ * 拉一份内容，瞬时失败退避重试；重试用尽仍失败就回退基线（返回 null）。
+ *
+ * 间隔带随机抖动：三份内容是并发拉的，同时失败时若按固定间隔一起重试，
+ * 等于把刚才打爆配额的那一拨突发原样再发一遍。
+ */
+async function fetchJson(path: string): Promise<unknown | null> {
+  for (let attempt = 0; ; attempt += 1) {
+    const result = await fetchJsonOnce(path)
+    if (result.ok) return result.data
+    if (!result.retryable || attempt >= RETRY_LIMIT) return null
+    await sleep(RETRY_BASE_DELAY_MS * 2 ** attempt * (1 + Math.random()))
   }
 }
 
