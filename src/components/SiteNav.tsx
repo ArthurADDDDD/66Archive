@@ -94,6 +94,8 @@ export function SiteNav({
       {!compact && (
         <Link
           href="/"
+          data-analytics-event="nav.click"
+          data-analytics-target="home"
           className="ui-press flex h-11 shrink-0 items-center rounded-sm text-sm font-semibold tracking-tight text-ink transition-colors hover:text-live"
         >
           女流编年史
@@ -111,6 +113,8 @@ export function SiteNav({
             <Link
               key={item.id}
               href={item.href}
+              data-analytics-event="nav.click"
+              data-analytics-target={item.id}
               aria-current={selected ? 'page' : undefined}
               className={`ui-press shrink-0 whitespace-nowrap rounded-full px-2.5 py-1.5 text-meta sm:px-3 ${selected ? 'bg-ink text-[#12141C] shadow-[0_4px_14px_rgba(230,228,239,0.12)]' : 'text-muted hover:bg-raised hover:text-ink'
                 }`}
@@ -166,6 +170,8 @@ export function SiteNav({
                   <li key={item.id}>
                     <Link
                       href={item.href}
+                      data-analytics-event="nav.click"
+                      data-analytics-target={item.id}
                       role="menuitem"
                       aria-current={selected ? 'page' : undefined}
                       onClick={() => setOpen(false)}

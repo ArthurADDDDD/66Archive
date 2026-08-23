@@ -74,6 +74,8 @@ export function SearchField({
       {/* 桌面：常驻输入框，样式与旧版一致，与移动端弹层完全独立 */}
       <input
         ref={desktopRef}
+        data-analytics-event="search.use"
+        data-analytics-trigger="change"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={(e) => {
@@ -92,6 +94,8 @@ export function SearchField({
         >
           <input
             ref={mobileRef}
+            data-analytics-event="search.use"
+            data-analytics-trigger="change"
             value={value}
             onChange={(e) => onChange(e.target.value)}
             onBlur={() => setOpen(false)}

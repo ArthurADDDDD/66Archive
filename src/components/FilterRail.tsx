@@ -44,6 +44,8 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
             return (
               <button
                 key={t.id}
+                data-analytics-event="filter.use"
+                data-analytics-target="type"
                 onClick={() => set({ types: toggle(filters.types, t.id) })}
                 aria-pressed={on}
                 className="ui-press flex flex-1 items-center justify-center gap-1.5 rounded border py-2.5 text-meta sm:py-1.5"
@@ -69,6 +71,8 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
             return (
               <button
                 key={p}
+                data-analytics-event="filter.use"
+                data-analytics-target="platform"
                 onClick={() => set({ platforms: toggle(filters.platforms, p) })}
                 aria-pressed={on}
                 className="ui-press rounded border px-2 py-2 text-meta tnum sm:py-1"
@@ -95,6 +99,8 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
             return (
               <li key={g.id}>
                 <button
+                  data-analytics-event="filter.use"
+                  data-analytics-target="game"
                   onClick={() => set({ games: toggle(filters.games, g.id) })}
                   aria-pressed={on}
                   className={`ui-press relative flex w-full items-center gap-2 overflow-hidden rounded px-1.5 py-2 text-left text-meta sm:py-1 ${
@@ -120,6 +126,8 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
         <label className="ui-press flex cursor-pointer items-center gap-2 rounded px-1 py-2 text-meta text-muted hover:bg-raised/60 hover:text-ink sm:py-1">
           <input
             type="checkbox"
+            data-analytics-event="filter.use"
+            data-analytics-target="confidence"
             checked={filters.onlyAlive}
             onChange={(e) => set({ onlyAlive: e.target.checked })}
             className="h-3.5 w-3.5 accent-live"

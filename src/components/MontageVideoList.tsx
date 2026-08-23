@@ -19,7 +19,13 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
       <div className="min-w-0 max-w-full overflow-x-auto" aria-label="蒙太奇视频列表">
           <div className="flex w-max min-w-full gap-3 pb-1">
           {montage.samples.map((sample) => (
-            <Link key={sample.id} href={`/e/${sample.id}/`} className="group w-[168px] shrink-0 sm:w-[196px]">
+            <Link
+              key={sample.id}
+              href={`/e/${sample.id}/`}
+              data-analytics-event="content.open"
+              data-analytics-target={`entry:${sample.id}`}
+              className="group w-[168px] shrink-0 sm:w-[196px]"
+            >
               <div className="overflow-hidden rounded-lg border border-line/60 bg-surface/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -62,7 +68,13 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
         <div className="mt-5 overflow-x-auto">
           <div className="flex gap-3 pb-1">
             {montage.samples.map((sample) => (
-              <Link key={sample.id} href={`/e/${sample.id}/`} className="group w-[168px] shrink-0 sm:w-[196px]">
+              <Link
+                key={sample.id}
+                href={`/e/${sample.id}/`}
+                data-analytics-event="content.open"
+                data-analytics-target={`entry:${sample.id}`}
+                className="group w-[168px] shrink-0 sm:w-[196px]"
+              >
                 <div className="overflow-hidden rounded-lg border border-line/60 bg-surface/40">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img

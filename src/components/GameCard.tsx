@@ -31,6 +31,8 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
   return (
     <Link
       href={`/games/${p.id}/`}
+      data-analytics-event="content.open"
+      data-analytics-target={`game:${p.id}`}
       className="ui-card ui-press group relative block overflow-hidden rounded-xl border border-line bg-surface/40 transition-colors hover:border-muted hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]"
     >
       <div className="relative aspect-video overflow-hidden bg-raised">
