@@ -570,12 +570,13 @@ export function applyLiveHighlights(
  *
  * 故事模式的年份归位（哪一年放哪几条）是构建期按策展日期算好的，这里不重算——
  * 只对已经归位的节点打文案覆盖、按后台顺序重排、隐藏被关掉的节点。
- * hero 被隐藏时由该年第一条 secondary 顶上，不让整年塌成空行。
+ * featured 身份由公开仓基线决定；后台可以改顺序和显隐，但不会把多张关键记忆重新压成单张。
+ * 全部 featured 被隐藏时由该年第一条 secondary 顶上，不让整年塌成空行。
  *
  * 注意：改后台里的「展示日期」不会把节点挪到另一年——年份分组是构建期的结果，
  * 跨年移动需要重新构建公开仓。日常改文案不受影响。
  */
-export function applyLiveStoryYears<T extends { hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
+export function applyLiveStoryYears<T extends { featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
   years: T[],
   liveActs: LiveAct[] | undefined,
   deletedIds: string[] = [],
@@ -618,9 +619,18 @@ export function applyLiveStoryYears<T extends { hero: ResolvedBeat | null; secon
     !deleted.has(beat.id) && !deleted.has(beat.act) && overrides.get(beat.id)?.visible !== false
 
   return years.map((year) => {
-    const kept = [...(year.hero ? [year.hero] : []), ...year.secondary].filter(visible)
+    const baselineFeatured = year.featured?.length ? year.featured : year.hero ? [year.hero] : []
+    const featuredIds = new Set(baselineFeatured.map((beat) => beat.id))
+    const source = [...baselineFeatured, ...year.secondary].filter(
+      (beat, index, list) => list.findIndex((item) => item.id === beat.id) === index,
+    )
+    const kept = source.filter(visible)
     kept.sort((a, b) => (order.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (order.get(b.id) ?? Number.MAX_SAFE_INTEGER))
-    const [hero, ...secondary] = kept.map(applyBeat)
-    return { ...year, hero: hero ?? null, secondary }
+    const resolved = kept.map(applyBeat)
+    let featured = resolved.filter((beat) => featuredIds.has(beat.id))
+    if (featured.length === 0 && resolved[0]) featured = [resolved[0]]
+    const visibleFeaturedIds = new Set(featured.map((beat) => beat.id))
+    const secondary = resolved.filter((beat) => !visibleFeaturedIds.has(beat.id))
+    return { ...year, featured, hero: featured[0] ?? null, secondary }
   })
 }

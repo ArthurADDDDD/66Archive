@@ -1,20 +1,14 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { GalleryView } from '@/components/GalleryView'
-import { getGalleryCollection } from '@/lib/gallery'
-import { Eyebrow, SiteFooter } from '@/components/primitives'
+import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 
 /**
- * 记忆画廊：画面优先的 memory box。
- * 图片是主体，图注收进灯箱；顶部一句话说明这些画面是什么，数字只做脚注。
- * 低清图原样展示（不做超分修复）；缺口以「Missing chapters」诚实保留并指向补录入口。
+ * Gallery 暂时作为档案征集页公开保留。
+ * GalleryView、gallery.ts、gallery-assets.yaml 与现有图片都不动；资料收齐后只需把旧视图接回这里。
  */
 export default function GalleryPage() {
-  const { items, gaps } = getGalleryCollection()
-  const years = new Set(items.map((i) => i.year))
-
   return (
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="gallery" />
@@ -26,40 +20,22 @@ export default function GalleryPage() {
         </Link>
       </header>
 
-      {/* 先说这些画面是什么，再说年份 */}
-      <section className="site-container px-page pb-12 pt-12 sm:pb-16 sm:pt-16">
+      <section className="site-container px-page pb-24 pt-12 sm:pb-32 sm:pt-20">
         <div className="pointer-events-none absolute -right-20 -top-24 h-[220px] w-[220px] rounded-full bg-today/10 blur-[60px] sm:h-[380px] sm:w-[380px] sm:blur-[110px]" />
-        <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal relative" />
-        <p className="ui-reveal measure-body relative mt-5 text-body text-muted">
-          这些画面不是装饰，是水友替每个年份留下来的注脚。
-          原图是什么样，这里就是什么样——不修图、不放大、不换背景。
-        </p>
-        <p className="ui-reveal relative mt-4 text-meta text-faint tnum">
-          {items.length} 张已收录 · {years.size} 个年份 · 点开任意一张看大图与来源
-        </p>
-      </section>
-
-      <section className="site-container px-page pb-20">
-        <GalleryView items={items} />
-      </section>
-
-      {/* 缺口：诚实保留，指向补录 */}
-      <section className="border-t border-line bg-surface/20">
-        <div className="site-container px-page py-12 sm:py-20">
-          <Eyebrow>Missing chapters</Eyebrow>
-          <h2 className="measure-hero mt-3 text-h2 font-medium text-ink">还有一些年份，正在等待被找回。</h2>
-          <p className="measure-body mt-3 text-body text-muted">
-            这些年份暂时还没找到能确认来源的画面。如果你手上有原图、视频或者帖子，欢迎补一条线索。
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {gaps.map((gap) => (
-              <span key={gap.years ?? gap.item} className="rounded-full border border-line px-3 py-1.5 text-meta text-faint tnum">
-                {gap.years ?? gap.item}
-              </span>
-            ))}
+        <div className="relative max-w-[760px]">
+          <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal" />
+          <div className="ui-reveal mt-8 space-y-5 text-body leading-relaxed text-muted sm:text-[18px]">
+            <p>这些年留下过很多周年贺图、生日作品、水友创作和直播间里的纪念画面。</p>
+            <p>其中一些如今只剩预览图、转发记录，或者已经失效的原始链接。</p>
+            <p>与其先用不完整的素材把这里填满，我更希望等它们被确认、找到原图，再好好放进来。</p>
+            <p>如果你手里还保存着这些年的周年图片、各部祝福、生日作品、老截图，或者知道它们最早的出处，欢迎把线索发给我。</p>
           </div>
-          <Link href="/contact/" className="ui-press mt-6 inline-block rounded-sm text-meta text-live underline underline-offset-4">
-            提供画作线索 →
+          <p className="ui-reveal mt-8 border-l-2 border-today/70 py-1 pl-5 text-body font-medium text-ink">
+            如果能同时提供年份、作者、原图或原始链接，会特别有帮助。
+          </p>
+          <p className="ui-reveal mt-8 text-body text-muted">每补回来一份，这里就更接近当年的样子。</p>
+          <Link href="/contact/" className="ui-press ui-reveal mt-8 inline-block rounded-sm text-body font-medium text-today underline decoration-today/50 underline-offset-8 hover:text-ink">
+            提供线索 →
           </Link>
         </div>
       </section>
