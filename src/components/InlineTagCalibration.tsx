@@ -122,6 +122,7 @@ export function InlineTagCalibration({
         </div>
         <button
           type="button"
+          data-analytics-event="calibration.open"
           onClick={revealVoting}
           aria-expanded={open}
           className="ui-press min-h-10 rounded-full border border-live/35 bg-live/8 px-4 text-control text-live hover:bg-live/14"
@@ -176,7 +177,13 @@ export function InlineTagCalibration({
               {message && <p role="status" className="mt-3 text-control text-live">{message}</p>}
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
                 <p className="text-meta text-faint">无需注册；结果只作为人工复核线索。</p>
-                <button type="button" onClick={sendVote} disabled={!canSubmit} className="ui-press min-h-10 rounded-full bg-ink px-5 text-control font-semibold text-base disabled:cursor-not-allowed disabled:opacity-35">
+                <button
+                  type="button"
+                  data-analytics-event="calibration.submit"
+                  onClick={sendVote}
+                  disabled={!canSubmit}
+                  className="ui-press min-h-10 rounded-full bg-ink px-5 text-control font-semibold text-base disabled:cursor-not-allowed disabled:opacity-35"
+                >
                   {submitting ? '提交中…' : detail.viewer.hasVoted ? '更新判断' : '提交判断'}
                 </button>
               </div>

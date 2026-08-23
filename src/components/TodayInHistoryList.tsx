@@ -44,6 +44,8 @@ export function TodayInHistoryList({ rows }: { rows: TodayHistoryRow[] }) {
               <>
                 <Link
                   href={`/e/${row.item.id}/`}
+                  data-analytics-event="content.open"
+                  data-analytics-target={`entry:${row.item.id}`}
                   className="ui-press min-w-0 rounded-sm text-meta leading-relaxed text-ink/80 transition-colors hover:text-live"
                 >
                   {row.item.title}

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
+import { trackSiteEvent } from '@/lib/site-analytics'
 
 /**
  * 站内背景音乐。三条硬规则：
@@ -180,6 +181,7 @@ export function BgmPlayer() {
     const el = audioRef.current
     if (!el) return
     if (el.paused) {
+      trackSiteEvent('media.play', 'audio')
       wantsRef.current = true
       try {
         window.localStorage.removeItem(BGM_OFF_KEY)
@@ -188,6 +190,7 @@ export function BgmPlayer() {
       }
       void tryPlay()
     } else {
+      trackSiteEvent('media.pause', 'audio')
       wantsRef.current = false
       el.pause()
       try {

@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { actColorForDate } from '@/lib/narrative'
+import { trackSiteEvent } from '@/lib/site-analytics'
 import { SearchField } from './SearchField'
 
 /**
@@ -41,6 +42,7 @@ const SORTS: { id: SortKey; label: string; hint: string }[] = [
 export function GamesLibrary({ games }: { games: LibraryGame[] }) {
   const [q, setQ] = useState('')
   const [sort, setSort] = useState<SortKey>('recent')
+  const reportedZero = useRef(false)
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
@@ -62,6 +64,12 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
     return sorted
   }, [games, q, sort])
 
+  useEffect(() => {
+    const isZeroSearch = q.trim().length > 0 && filtered.length === 0
+    if (isZeroSearch && !reportedZero.current) trackSiteEvent('search.zero')
+    reportedZero.current = isZeroSearch
+  }, [filtered.length, q])
+
   const activeSort = SORTS.find((s) => s.id === sort)
 
   return (
@@ -79,6 +87,8 @@ export function GamesLibrary({ games }: { games: LibraryGame[] }) {
           {SORTS.map((s) => (
             <button
               key={s.id}
+              data-analytics-event="filter.use"
+              data-analytics-target="sort"
               onClick={() => setSort(s.id)}
               aria-pressed={sort === s.id}
               className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
@@ -118,7 +128,12 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
 
   return (
     <li>
-      <Link href={`/games/${g.id}/`} className="ui-press group block">
+      <Link
+        href={`/games/${g.id}/`}
+        data-analytics-event="content.open"
+        data-analytics-target={`game:${g.id}`}
+        className="ui-press group block"
+      >
         <div className="relative aspect-video overflow-hidden bg-raised">
           {g.face ? (
             // eslint-disable-next-line @next/next/no-img-element

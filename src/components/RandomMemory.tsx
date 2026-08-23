@@ -22,6 +22,7 @@ export function RandomMemory({ pool }: { pool: MemoryCandidate[] }) {
         档案里有 {pool.length} 个「值得回去」的晚上——有画面、有游戏、有栏目。抽一个，回去看看那天发生了什么。
       </p>
       <button
+        data-analytics-event="random.refresh"
         onClick={() => setPick(pool[Math.floor(Math.random() * pool.length)] ?? null)}
         className="ui-press group mt-5 w-fit rounded-full border border-line bg-surface/60 px-5 py-2.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink"
       >
@@ -30,7 +31,12 @@ export function RandomMemory({ pool }: { pool: MemoryCandidate[] }) {
       </button>
 
       {pick && (
-        <Link href={`/e/${pick.id}/`} className="ui-press group mt-auto pt-8">
+        <Link
+          href={`/e/${pick.id}/`}
+          data-analytics-event="content.open"
+          data-analytics-target={`entry:${pick.id}`}
+          className="ui-press group mt-auto pt-8"
+        >
           <div className="rounded-xl border border-line/80 bg-surface/50 p-4 transition-colors hover:border-muted/70">
             <p className="font-mono text-meta text-faint tnum">{pick.date}</p>
             <p className="mt-1.5 text-body font-medium leading-snug text-ink transition-colors group-hover:text-white">

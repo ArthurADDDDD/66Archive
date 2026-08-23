@@ -8,6 +8,7 @@ import { visibleGameIds } from '@/lib/games'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
+import { analyticsSourceTarget } from '@/lib/site-analytics'
 
 /**
  * 时间轴上的一行。
@@ -55,6 +56,8 @@ export function EntryRow({
     <article id={`entry-${entry.id}`} className={`group relative scroll-mt-24 rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25 p-[clamp(0.75rem,1.25vw,1.75rem)]' : 'hover:bg-surface/10'}`}>
       <div className="py-[clamp(0.375rem,0.55vw,0.75rem)]">
         <button
+          data-analytics-event="content.open"
+          data-analytics-target={`entry:${entry.id}`}
           onClick={onToggle}
           className="ui-press flex w-full items-start gap-3 rounded-lg py-[clamp(0.5rem,0.7vw,0.875rem)] text-left sm:gap-4"
           aria-expanded={expanded}
@@ -151,7 +154,14 @@ export function EntryRow({
 
                 <div className="flex min-w-0 flex-col p-[clamp(1.25rem,1.65vw,2.75rem)]">
                   {selectedSource ? (
-                    <a href={selectedSource.url} target="_blank" rel="noopener noreferrer" className="block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live">
+                    <a
+                      href={selectedSource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-analytics-event="source.open"
+                      data-analytics-target={analyticsSourceTarget(detectPlatform(selectedSource.url))}
+                      className="block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live"
+                    >
                       {selectedSource.entryTitle} <span className="font-mono text-meta text-live">↗</span>
                     </a>
                   ) : (
@@ -245,7 +255,14 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
           const partCover = proxyImage(part.cover, 180)
           return (
             <li key={part.page}>
-              <a href={sourcePartHref(source.url, part.page)} target="_blank" rel="noopener noreferrer" className="ui-press group/part flex min-h-12 items-center gap-2.5 rounded-lg border border-transparent bg-surface/35 p-1.5 transition-colors hover:border-live/35 hover:bg-live/8">
+              <a
+                href={sourcePartHref(source.url, part.page)}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-analytics-event="source.open"
+                data-analytics-target={analyticsSourceTarget(detectPlatform(source.url))}
+                className="ui-press group/part flex min-h-12 items-center gap-2.5 rounded-lg border border-transparent bg-surface/35 p-1.5 transition-colors hover:border-live/35 hover:bg-live/8"
+              >
                 <span className="relative h-10 w-[4.5rem] shrink-0 overflow-hidden rounded-md bg-raised">
                   {partCover ? (
                     // eslint-disable-next-line @next/next/no-img-element

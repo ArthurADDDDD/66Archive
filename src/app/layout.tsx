@@ -3,6 +3,7 @@ import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
 import { BgmPlayer } from '@/components/BgmPlayer'
+import { SiteAnalytics } from '@/components/SiteAnalytics'
 import { fetchBakedShell } from '@/lib/baked-content'
 
 const display = Archivo({
@@ -53,6 +54,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="font-sans">
         <LiveContentProvider initial={baked}>
           <LiveDocumentMeta />
+          <SiteAnalytics />
           {children}
           {/* 背景音乐：挂在 layout 上，站内跳页时不会断掉重来 */}
           <BgmPlayer />

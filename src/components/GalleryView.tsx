@@ -5,6 +5,8 @@ import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import type { GalleryItem } from '@/lib/gallery'
+import { analyticsSourceTarget, trackSiteEvent } from '@/lib/site-analytics'
+import { detectPlatform } from '@/lib/platforms'
 import { SearchField } from './SearchField'
 
 /**
@@ -17,6 +19,7 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
   const [year, setYear] = useState<string | null>(null)
   const [open, setOpen] = useState<number | null>(null)
   const gridRef = useRef<HTMLDivElement>(null)
+  const reportedZero = useRef(false)
 
   const years = useMemo(() => [...new Set(items.map((i) => i.year))].sort(), [items])
 
@@ -28,6 +31,12 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
       return `${i.alt} ${i.caption} ${i.year} ${i.date}`.toLowerCase().includes(needle)
     })
   }, [items, q, year])
+
+  useEffect(() => {
+    const isZeroSearch = q.trim().length > 0 && visible.length === 0
+    if (isZeroSearch && !reportedZero.current) trackSiteEvent('search.zero')
+    reportedZero.current = isZeroSearch
+  }, [q, visible.length])
 
   const openAt = (index: number) => setOpen(index)
   const step = (delta: number) => {
@@ -55,6 +64,8 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
             <button
               key={y}
               type="button"
+              data-analytics-event="filter.use"
+              data-analytics-target="year"
               onClick={() => {
                 setYear((current) => (current === y ? null : y))
                 setOpen(null)
@@ -70,6 +81,7 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
         </div>
         <button
           type="button"
+          data-analytics-event="random.refresh"
           onClick={randomOpen}
           className="ui-press ml-auto rounded-full border border-line/80 bg-surface/50 px-4 py-2.5 text-meta text-muted transition-colors hover:border-today/60 hover:text-today sm:py-1.5"
         >
@@ -118,6 +130,8 @@ export function GalleryView({ items }: { items: GalleryItem[] }) {
 function GalleryCard({ item, onOpen }: { item: GalleryItem; onOpen: () => void }) {
   return (
     <button
+      data-analytics-event="gallery.open"
+      data-analytics-target={`gallery:${item.id}`}
       onClick={onOpen}
       aria-label={`打开大图：${item.alt}`}
       className="ui-press group block w-full overflow-hidden rounded-xl border border-line/80 bg-raised text-left transition-[border-color] hover:border-muted/70"
@@ -220,6 +234,8 @@ function Lightbox({
                 href={sourceHref}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-event="source.open"
+                data-analytics-target={analyticsSourceTarget(detectPlatform(sourceHref))}
                 className="ui-press rounded-sm border border-line px-2 py-1 text-muted transition-colors hover:border-live/60 hover:text-live"
               >
                 原始来源 ↗
@@ -227,6 +243,8 @@ function Lightbox({
             )}
             <Link
               href={`/archive/?y=${item.year}`}
+              data-analytics-event="nav.click"
+              data-analytics-target="archive"
               className="ui-press rounded-sm border border-line px-2 py-1 text-muted transition-colors hover:border-live/60 hover:text-live"
             >
               {item.year} 年编年史 →

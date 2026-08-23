@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage } from '@/lib/platforms'
+import { analyticsSourceTarget } from '@/lib/site-analytics'
 
 /**
  * 一场记录的「观看台」。
@@ -277,6 +278,8 @@ export function EntryWatch({
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-event="source.open"
+                data-analytics-target={analyticsSourceTarget(sourcePlatform)}
                 className="ui-press flex min-h-[3rem] w-full max-w-sm items-center justify-center gap-2 rounded-full px-5 text-control font-semibold text-[#12141C] lg:max-w-none"
                 style={{ background: source.status === 'dead' ? '#7C8296' : accent }}
               >
@@ -414,6 +417,8 @@ function EntryCover({
       href={source.url}
       target="_blank"
       rel="noopener noreferrer"
+      data-analytics-event="source.open"
+      data-analytics-target={analyticsSourceTarget(detectPlatform(source.url))}
       aria-label={`打开 ${entryTitle} 的来源`}
       className="ui-press group/cover relative block aspect-video w-full overflow-hidden rounded-xl border border-line bg-raised"
     >
@@ -447,6 +452,8 @@ function SourceParts({ source }: { source: WatchSource }) {
                 href={partHref(source.url, part.page)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-event="source.open"
+                data-analytics-target={analyticsSourceTarget(detectPlatform(source.url))}
                 className="ui-press group/part flex min-h-[3rem] items-center gap-2.5 rounded-lg border border-transparent bg-base/30 p-1.5 transition-colors hover:border-live/35 hover:bg-live/10"
               >
                 <span className="relative h-10 w-[4.5rem] shrink-0 overflow-hidden rounded-md bg-raised">
