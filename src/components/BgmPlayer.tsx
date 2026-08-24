@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
+import { BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
 import { trackSiteEvent } from '@/lib/site-analytics'
 
 /**
@@ -10,7 +10,8 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  * 1. **离开就停**：切标签页、切到别的应用、锁屏——一律暂停，回来再续上。
  *    这是个视频索引站，用户点开外站视频后老标签页不该还在自己哼。
  * 2. **不主动花流量**：`preload="none"`，没真正开始播就一个字节都不下载。
- * 3. **关了就别再响**：用户手动关掉后写进 localStorage，之后翻页刷新都不再自动响。
+ * 3. **关了就别再响，但只管这一次**：手动关掉后，站内翻页不会再自己响起来；
+ *    刷新即重来——「关掉」是当下这次浏览的决定，不该被记成永久设置。
  *
  * 浏览器不允许「带声音的自动播放」——首次进站的自动播放大概率被拦，
  * 因此先挂手势监听再尝试播放，用户第一次点/按/触屏时无缝补上。
@@ -70,18 +71,11 @@ export function BgmPlayer() {
   // 客户端决定曲目与用户意愿。真正的播放放到 track 挂载后的 effect，
   // 确保调用 play() 时 <audio> 已经存在。
   useEffect(() => {
-    let off = false
-    try {
-      off = window.localStorage.getItem(BGM_OFF_KEY) === '1'
-    } catch {
-      off = false
-    }
     const picked = pickTrack()
     // 曲目只能在客户端定（localStorage 在 SSR 读不到），一次性
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTrack(picked)
-    if (off) return
-
+    // 每次新的页面加载都从「想放」开始：关掉只在本次浏览内有效（见文件头规则 3）。
     wantsRef.current = true
   }, [])
 
@@ -169,11 +163,6 @@ export function BgmPlayer() {
     if (!track) return
     skipRef.current = true
     wantsRef.current = true
-    try {
-      window.localStorage.removeItem(BGM_OFF_KEY)
-    } catch {
-      // 记不住不影响这次切歌
-    }
     setTrack(nextTrack(track.id))
   }
 
@@ -183,21 +172,11 @@ export function BgmPlayer() {
     if (el.paused) {
       trackSiteEvent('media.play', 'audio')
       wantsRef.current = true
-      try {
-        window.localStorage.removeItem(BGM_OFF_KEY)
-      } catch {
-        // 存不下不影响这一次播放
-      }
       void tryPlay()
     } else {
       trackSiteEvent('media.pause', 'audio')
       wantsRef.current = false
       el.pause()
-      try {
-        window.localStorage.setItem(BGM_OFF_KEY, '1')
-      } catch {
-        // 同上：这一次先停下，记不住就下次再说
-      }
     }
   }
 

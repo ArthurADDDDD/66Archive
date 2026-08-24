@@ -23,9 +23,6 @@ export const BGM_TRACKS: BgmTrack[] = [
 export const BGM_VISITED_KEY = 'chronicle-66-bgm-visited'
 /** 上一次放的是哪一首——用来避免刷新后又抽到同一首 */
 export const BGM_LAST_KEY = 'chronicle-66-bgm-last'
-/** 用户主动关掉的记忆：关了就别在下一页又自己响起来 */
-export const BGM_OFF_KEY = 'chronicle-66-bgm-off'
-
 /** 背景音就该是背景：压低音量，别盖过用户自己在放的东西 */
 export const BGM_VOLUME = 0.32
 
