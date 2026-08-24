@@ -15,13 +15,21 @@ import { MemeMontage } from './MemeMontage'
  * 补充条目的字段本身统一来自 highlight-extras.ts；后台快照导入也读同一份源。
  */
 function withExtraHighlights(baseline: ResolvedBeat[]): ResolvedBeat[] {
+  // 「抡大锤」是 2017-11-14 的 Getting Over It 游戏梗；点击应直接进入这场直播详情，
+  // 不再先跳游戏聚合页。「大摆锤」则是 2022 的独立日常梗，由 EXTRA_HIGHLIGHTS 单独恢复。
+  const normalizedBaseline = baseline.map((beat) =>
+    beat.id === 'meme-hammer'
+      ? { ...beat, href: '/e/2017-11-14-live-01/', external: false }
+      : beat,
+  )
   const insertAfter = new Map<string, ResolvedBeat[]>([
     ['xinling-pishuang', [EXTRA_HIGHLIGHTS[0]]],
     ['number-723', [EXTRA_HIGHLIGHTS[1]]],
     ['dalishi', [EXTRA_HIGHLIGHTS[2]]],
+    ['meme-66dance', [EXTRA_HIGHLIGHTS[3]]],
   ])
   const inserted = new Set<string>()
-  const merged = baseline.flatMap((beat) => {
+  const merged = normalizedBaseline.flatMap((beat) => {
     const extras = insertAfter.get(beat.id) ?? []
     extras.forEach((extra) => inserted.add(extra.id))
     return [beat, ...extras]
