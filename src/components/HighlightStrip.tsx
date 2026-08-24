@@ -130,6 +130,8 @@ function Row({ beat }: { beat: ResolvedBeat }) {
   const [open, setOpen] = useState<boolean | null>(null)
   const isOpen = open ?? beat.expanded ?? false
   const toggle = () => setOpen(!isOpen)
+  // 有封面时 emphasis 是图片旁的二级标题；无封面时行首标题已足够，不再重复一层文字。
+  const showEmphasis = Boolean(beat.cover && beat.emphasis)
 
   return (
     <div className="group border-b border-line/60 transition-colors">
@@ -211,21 +213,21 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   aria-label={`播放：${beat.title}`}
                   className="ui-press -m-2 block rounded-lg p-2 text-left transition-colors hover:text-live"
                 >
-                  {beat.emphasis && (
+                  {showEmphasis && (
                     <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
                       {beat.emphasis}
                     </p>
                   )}
-                  {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
+                  {beat.body && <p className={`${showEmphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
                 </Link>
               ) : (
                 <>
-                  {beat.emphasis && (
+                  {showEmphasis && (
                     <p className="font-display text-h3 font-bold leading-tight" style={{ color: actColor(beat.act) }}>
                       {beat.emphasis}
                     </p>
                   )}
-                  {beat.body && <p className={`${beat.emphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
+                  {beat.body && <p className={`${showEmphasis ? 'mt-3' : ''} measure-body text-body text-muted`}>{beat.body}</p>}
                 </>
               )}
               {beat.href && (

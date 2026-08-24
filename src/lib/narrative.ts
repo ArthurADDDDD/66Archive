@@ -1457,6 +1457,8 @@ export type ResolvedBeat = {
   /** 外链（B 站切片）→ 新开标签页 */
   external: boolean
   cover: string | null
+  /** 锚点档案的已确认时长；只在有真实条目来源时提供。 */
+  durationMinutes?: number
   coverAspect?: 'video'
   emphasis?: string
   /** 首页高光「默认展开」：只由后台 live 覆盖写入，基线无此概念（缺省即折叠）。 */
@@ -1665,6 +1667,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
     let href: string | null = null
     let external = false
     let cover: string | null = null
+    let durationMinutes: number | undefined
     const t = b.target
 
     if (t?.kind === 'entry') {
@@ -1675,6 +1678,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       }
       href = t.href ?? `/e/${entry.id}/`
       if (entry.cover) cover = proxyImage(entry.cover, b.size === 'hero' ? 900 : 640)
+      durationMinutes = entry.duration_min ?? undefined
     } else if (t?.kind === 'game') {
       href = `/games/${t.id}/`
       const coverEntry = timeline.find((e) => e.games.some((g) => g.id === t.id) && e.cover)
@@ -1701,6 +1705,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       external,
       cover: b.cover ? proxyImage(b.cover, b.size === 'hero' ? 900 : 640) : cover,
       coverAspect: b.coverAspect,
+      durationMinutes,
       emphasis: fillEmphasis(b.emphasis, vars),
       activity: b.activitySeries === 'xinling-pishuang' ? buildXinlingActivity(timeline) : undefined,
       gameWorld: b.gameWorld,

@@ -15,7 +15,7 @@ type StageStep = {
 }
 
 const STEP_DISTANCE_SVH = 32
-const WHEEL_STEP_THRESHOLD = 8
+const WHEEL_STEP_THRESHOLD = 1
 const WHEEL_GESTURE_PAUSE_MS = 180
 const WHEEL_MOMENTUM_LOCK_MS = 240
 
@@ -149,12 +149,10 @@ export function HomeActStage({
   }, [])
 
   /**
-   * Windows 单格滚轮通常一次给出较大的 delta；触控板则连续给出小 delta 并带惯性尾巴。
-   * 累计到很短的阈值即翻一页，随后吞掉同一手势的惯性，保证一个手势只切一张卡。
+   * 第一笔有效纵向输入就翻一页，随后吞掉同一手势的惯性，保证一个手势只切一张卡。
+   * 在捕获阶段监听，覆盖右侧轨道、底部按钮等固定浮层，不让触控板手势漏掉。
    */
   useEffect(() => {
-    const root = rootRef.current
-    if (!root) return
     const onWheel = (event: WheelEvent) => {
       if (!isStageActive() || event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY) || event.deltaY === 0) {
         wheelRef.current.total = 0
@@ -197,8 +195,8 @@ export function HomeActStage({
       jumpTo(current + direction)
     }
 
-    root.addEventListener('wheel', onWheel, { passive: false })
-    return () => root.removeEventListener('wheel', onWheel)
+    window.addEventListener('wheel', onWheel, { passive: false, capture: true })
+    return () => window.removeEventListener('wheel', onWheel, { capture: true })
   }, [isStageActive, jumpTo, steps.length])
 
   /** 左右键不要求先聚焦舞台；只要桌面 ACT 正在视口中就能翻页。 */
