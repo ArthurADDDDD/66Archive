@@ -41,6 +41,39 @@ let queue: QueuedEvent[] = []
 let flushTimer: number | null = null
 let lastPageViewPath: string | null = null
 
+/**
+ * 自己人不算数：站长/开发者天天在线上调试，这些访问会把「访问与点击」刷成噪音。
+ *
+ * 打开 `?analytics=off` 任意一页，这台浏览器从此不再上报（记在 localStorage，
+ * 刷新和翻页都保持——这是**长期偏好**，不是会话状态，所以不跟着刷新清空）。
+ * 想恢复统计就打开 `?analytics=on`。
+ *
+ * 注意这是**客户端**的静音：它只让这台浏览器不再发请求。真正按来源过滤
+ * （比如按 IP 剔除）必须在收数据的后端做——这个公开仓里没有那一端，
+ * 也不该出现任何 IP、主机名或服务器路径。
+ */
+const OPT_OUT_KEY = 'chronicle-66-analytics-off'
+let optedOut: boolean | null = null
+
+function isOptedOut(): boolean {
+  if (optedOut !== null) return optedOut
+  try {
+    const flag = new URLSearchParams(window.location.search).get('analytics')
+    if (flag === 'off') window.localStorage.setItem(OPT_OUT_KEY, '1')
+    else if (flag === 'on') window.localStorage.removeItem(OPT_OUT_KEY)
+    optedOut = window.localStorage.getItem(OPT_OUT_KEY) === '1'
+  } catch {
+    // 隐私模式下读不到 localStorage：当作没选择过，照常统计
+    optedOut = false
+  }
+  return optedOut
+}
+
+/** 这台浏览器当前是否被排除在统计之外（给调试时自查用） */
+export function siteAnalyticsOptedOut(): boolean {
+  return typeof window === 'undefined' ? false : isOptedOut()
+}
+
 function validPublicId(value: string): boolean {
   return /^[a-z0-9][a-z0-9_-]{0,119}$/.test(value)
 }
@@ -90,6 +123,10 @@ function deliver(events: QueuedEvent[]) {
 
 export function flushSiteAnalytics() {
   if (typeof window === 'undefined' || queue.length === 0) return
+  if (isOptedOut()) {
+    queue = []
+    return
+  }
   if (flushTimer !== null) {
     window.clearTimeout(flushTimer)
     flushTimer = null
@@ -98,7 +135,7 @@ export function flushSiteAnalytics() {
 }
 
 export function trackSiteEvent(name: SiteAnalyticsEventName, target?: string) {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined' || isOptedOut()) return
   const route = analyticsRoute(window.location.pathname)
   if (!route) return
   queue.push({ name, route, ...(target ? { target } : {}), viewport: viewportClass() })
