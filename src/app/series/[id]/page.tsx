@@ -5,7 +5,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
 import { RelatedRail } from '@/components/RelatedRail'
 import { SeriesEpisodes } from '@/components/SeriesEpisodes'
-import { SeriesFilterProvider, SeriesYearChips } from '@/components/SeriesFilters'
+import { EntryFilterProvider, YearChips } from '@/components/EntryFilters'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeries } from '@/lib/series'
@@ -108,13 +108,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
       )}
 
       {/* 年份筛选与正倒序共享一份内存状态，横跨下面两个区块 */}
-      <SeriesFilterProvider>
+      <EntryFilterProvider anchorId="series-episodes" defaultOrder="asc">
         {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
         <section className="site-container px-page pb-10 sm:pb-14">
           <Eyebrow className="text-muted">活跃年份</Eyebrow>
           <div className="mt-4 w-full">
             <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
-            <SeriesYearChips perYear={s.perYear} color={color} unit={unit} />
+            <YearChips perYear={s.perYear} color={color} unit={unit} />
           </div>
         </section>
 
@@ -135,7 +135,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             <SeriesEpisodes entries={s.entries} color={color} count={s.count} unit={unit} />
           </div>
         </section>
-      </SeriesFilterProvider>
+      </EntryFilterProvider>
 
       <RelatedRail rails={rails} />
 

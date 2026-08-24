@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryRow } from './EntryRow'
 import { EntryTimeline } from './EntryTimeline'
-import { useSeriesFilter } from './SeriesFilters'
+import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 
 /**
  * 节目全部期数。
@@ -26,14 +26,11 @@ export function SeriesEpisodes({
   count: number
   unit?: string
 }) {
-  const { year, setYear, order, setOrder } = useSeriesFilter()
+  const { year, order } = useEntryFilter()
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
-  const visible = useMemo(() => {
-    const filtered = year === null ? entries : entries.filter((entry) => Number(entry.date.slice(0, 4)) === year)
-    // 原数组是构建期排好的升序，别就地反转
-    return order === 'asc' ? filtered : [...filtered].reverse()
-  }, [entries, year, order])
+  // buildSeries 交出来的是升序（第一期在前）
+  const visible = useMemo(() => applyEntryFilter(entries, year, order, 'asc'), [entries, year, order])
 
   const allExpanded = visible.length > 0 && visible.every((entry) => expanded.has(entry.id))
   const expandAll = () => setExpanded(new Set(visible.map((entry) => entry.id)))
@@ -66,28 +63,8 @@ export function SeriesEpisodes({
           )}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {year !== null && (
-            <button
-              type="button"
-              onClick={() => setYear(null)}
-              className="ui-press rounded-full border border-line px-4 py-2 text-meta text-muted transition-colors hover:border-muted hover:text-ink sm:px-3 sm:py-1.5"
-            >
-              清除年份
-            </button>
-          )}
-          {/* 一个按钮在两种顺序之间来回切，标签写的是「点了会变成什么」 */}
-          <button
-            type="button"
-            onClick={() => setOrder(order === 'asc' ? 'desc' : 'asc')}
-            title={order === 'asc' ? '当前：最早在前' : '当前：最新在前'}
-            className="ui-press flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-meta text-muted transition-colors hover:border-muted hover:text-ink sm:px-3 sm:py-1.5"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="stroke-current">
-              <path d="M7 4v16M7 20l-3.5-4M7 20l3.5-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M14 7h7M14 12h5M14 17h3" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            {order === 'asc' ? '最早在前' : '最新在前'}
-          </button>
+          <ClearYearButton />
+          <OrderToggle />
           <button
             type="button"
             onClick={allExpanded ? collapseAll : expandAll}
