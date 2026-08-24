@@ -1403,12 +1403,11 @@ export const HIGHLIGHTS: Highlight[] = [
   {
     id: 'meme-hammer',
     act: 'act-ii',
-    href: 'https://www.bilibili.com/video/BV1yg41167yr/',
-    cover: 'https://i0.hdslb.com/bfs/archive/f52fb461ea561ee63e0822c9e59c321ab177faf3.jpg',
-    date: '2022.08.17',
+    href: '/games/getting-over-it/',
+    date: '2017.11.14',
     kicker: '游戏梗',
     title: '抡大锤',
-    body: '《谁不爱看锤呢》留下的受苦名场面。',
+    body: '《和班尼特福迪一起攻克难关》的经典受苦。',
     category: 'game-meme',
   },
 ]
