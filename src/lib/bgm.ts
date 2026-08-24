@@ -23,8 +23,11 @@ export const BGM_TRACKS: BgmTrack[] = [
 export const BGM_VISITED_KEY = 'chronicle-66-bgm-visited'
 /** 上一次放的是哪一首——用来避免刷新后又抽到同一首 */
 export const BGM_LAST_KEY = 'chronicle-66-bgm-last'
-/** 背景音就该是背景：压低音量，别盖过用户自己在放的东西 */
-export const BGM_VOLUME = 0.32
+/**
+ * 背景音就该是背景：压低音量，别盖过用户自己在放的东西。
+ * 0.6 是「听得见但不吓人」的位置——自动播放不给用户预警，满音量炸出来最劝退。
+ */
+export const BGM_VOLUME = 0.6
 
 /**
  * 本次页面加载已经定下的曲子。React 严格模式会把副作用跑两遍，

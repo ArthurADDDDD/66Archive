@@ -115,7 +115,7 @@ export default async function HomePage() {
   }))
   const homeSections: HomeSectionRailItem[] = [
     { id: 'home-top', label: '首页', meta: 'START', color: '#E6E4EF' },
-    { id: 'home-highlights', label: '一些记得住的时刻', meta: 'HIGHLIGHTS', color: '#5BC8E8' },
+    { id: 'home-highlights', label: '一些记得住的时刻', meta: 'LIVE MEMES', color: '#5BC8E8' },
     { id: 'home-memory', label: '回到过去，只需要一晚', meta: 'MEMORY', color: '#A78BFA' },
     ...(gamePreview.length > 0 ? [{ id: 'home-games', label: '陪得最久的几款', meta: 'GAMES', color: '#E0A244' }] : []),
     { id: 'home-rooms', label: '四个房间', meta: 'ROOMS', color: '#FF6B75' },
