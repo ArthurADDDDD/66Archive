@@ -53,4 +53,17 @@ export const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
     emphasis: '01:22:48',
     category: 'xinling-pishuang',
   },
+  {
+    id: 'dabaichui',
+    act: 'act-ii',
+    date: '2022.08.17',
+    size: 'type',
+    kicker: '日常梗',
+    title: '大摆锤',
+    body: '《谁不爱看锤呢》留下的大摆锤名场面。',
+    href: 'https://www.bilibili.com/video/BV1yg41167yr/',
+    external: true,
+    cover: 'https://i0.hdslb.com/bfs/archive/f52fb461ea561ee63e0822c9e59c321ab177faf3.jpg',
+    category: 'daily-meme',
+  },
 ]
