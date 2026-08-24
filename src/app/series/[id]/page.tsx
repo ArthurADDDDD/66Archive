@@ -55,10 +55,11 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
     },
     {
       title: '同期录播',
-      items: [
-        { label: `${s.firstDate.slice(0, 4)} 年`, href: `/archive/?y=${s.firstDate.slice(0, 4)}` },
-        { label: `${s.lastDate.slice(0, 4)} 年`, href: `/archive/?y=${s.lastDate.slice(0, 4)}` },
-      ],
+      // 一年内播完的节目（戏说封神、吃鸡佳缘…）首末同年，去重后只留一条，
+      // 否则并排出现两个一模一样的「2019 年」
+      items: [...new Set([s.firstDate.slice(0, 4), s.lastDate.slice(0, 4)])]
+        .filter(Boolean)
+        .map((year) => ({ label: `${year} 年`, href: `/archive/?y=${year}` })),
     },
   ]
   if (gameRails.length && !isTogetherSee) rails.push({ title: '节目里的游戏', items: gameRails })
