@@ -51,7 +51,7 @@ export type LiveBeat = {
   title: string
   body: string
   visible: boolean
-  expanded: boolean
+  expanded?: boolean
   date: string
   important: boolean
   size: 'hero' | 'type' | 'small' | 'montage'
@@ -159,7 +159,7 @@ function parseBeat(value: unknown): LiveBeat | null {
     title: value.title,
     body: str(value.body),
     visible: bool(value.visible, true),
-    expanded: bool(value.expanded, true),
+    expanded: typeof value.expanded === 'boolean' ? value.expanded : undefined,
     date: str(value.date),
     important: bool(value.important),
     size: size === 'hero' || size === 'type' || size === 'montage' ? size : 'small',
