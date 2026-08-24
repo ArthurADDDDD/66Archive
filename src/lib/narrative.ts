@@ -106,6 +106,8 @@ export type Beat = {
   tail?: string
   /** 封面覆盖：默认取锚点条目封面；个别外部事件可直接给图床 URL */
   cover?: string
+  /** 指定封面展示比例；仅用于明确需要横幅呈现的策展图片。 */
+  coverAspect?: 'video'
   /** 蒙太奇幕：分类 chips（如 心灵砒霜 / 主机新作 / 壮壮 …） */
   chips?: string[]
   /** 需要从档案实时派生活跃年份图的栏目；不在文案里手写期数。 */
@@ -151,6 +153,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
     kicker: 'ACT I · 女流',
     title: '女流',
     body: ['一个人，从录视频，走到坐进直播间。'],
+    closer: { line: '从一个人的录制，走进一群人的直播间。' },
   },
   'act-ii': {
     id: 'act-ii',
@@ -182,7 +185,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
  * 首页三幕（精简）。每个锚点对应一处真实 URL（见 .claude/docs/04-首页大事件URL调研.md §7）：
  * 第一次上传→2010-05-08 / 越来越多人→2010-06-30 / 开始直播→2015-01-24；
  * 大周形成→/games/minecraft/（无封面，type）；
- * see you around~→2023-11-30；双人模式→2022-09-09 / 好久不见→2024-08-18 / 娃睡了→2026-08-09；
+ * see you around~→2023-11-30；双人模式→2022-09-09 / 抖音复播→2024-08-18 / 娃睡了→2026-08-09；
  * 回冒险岛→/games/maplestory-classic/（无封面，type）。
  * 重要锚点显示「重要」小标；非重要锚点不带任何小标签（用户：手机端 act 小标签太吵，不要「爆款/毕业后/主机区」这类了）。
  */
@@ -263,10 +266,11 @@ export const HOMEPAGE_ACTS: Act[] = [
       },
       {
         id: 'back-again',
-        date: '2024',
+        important: true,
+        date: '2024.08.18',
         size: 'hero',
-        title: '好久不见。',
-        body: '斗鱼156277 熄灯以后，过了一段时间。新的直播间又亮起来了。',
+        title: '时隔 {douyinReturnDays} 天，66 又回来了。',
+        body: '斗鱼156277 最后一次亮起后，女流66 在抖音重新开播。',
         target: { kind: 'entry', id: '2024-08-18-live-01' },
       },
       {
@@ -284,6 +288,8 @@ export const HOMEPAGE_ACTS: Act[] = [
         size: 'type',
         title: '朵朵来了。',
         body: '66姐有了一个新的身份：朵朵妈。',
+        cover: '/images/home/duoduo.jpg',
+        coverAspect: 'video',
         target: { kind: 'none' },
       },
       {
@@ -1451,6 +1457,7 @@ export type ResolvedBeat = {
   /** 外链（B 站切片）→ 新开标签页 */
   external: boolean
   cover: string | null
+  coverAspect?: 'video'
   emphasis?: string
   /** 首页高光「默认展开」：只由后台 live 覆盖写入，基线无此概念（缺省即折叠）。 */
   expanded?: boolean
@@ -1559,10 +1566,13 @@ function emphasisVars(timeline: TimelineEntry[]): Record<string, string> {
   const xinlingCount = timeline.filter(isXinlingPishuangEntry).length
   const wukongCount = timeline.filter((e) => e.games.some((g) => g.id === 'black-myth-wukong')).length
   const geometryMinutes = timeline.filter((e) => e.title.includes('几何冲刺')).reduce((s, e) => s + (e.duration_min ?? 0), 0)
+  const finalDouyuLive = timeline.find((e) => e.id === '2023-11-30-live-01')
+  const douyinReturn = timeline.find((e) => e.id === '2024-08-18-live-01')
   return {
     geometryHours: Math.round(geometryMinutes / 60).toString(),
     xinlingCount: xinlingCount.toLocaleString(),
     wukongCount: wukongCount.toString(),
+    douyinReturnDays: finalDouyuLive && douyinReturn ? daysBetween(finalDouyuLive.date, douyinReturn.date).toString() : '—',
   }
 }
 
@@ -1685,11 +1695,12 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       size: b.size,
       // 首页精简幕：重要锚点显示「重要」，非重要不带任何小标签（用户明确要求）。
       kicker: home ? (b.important ? '重要' : undefined) : b.kicker,
-      title: b.title,
+      title: fillEmphasis(b.title, vars) ?? b.title,
       body: b.body,
       href,
       external,
       cover: b.cover ? proxyImage(b.cover, b.size === 'hero' ? 900 : 640) : cover,
+      coverAspect: b.coverAspect,
       emphasis: fillEmphasis(b.emphasis, vars),
       activity: b.activitySeries === 'xinling-pishuang' ? buildXinlingActivity(timeline) : undefined,
       gameWorld: b.gameWorld,

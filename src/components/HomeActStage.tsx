@@ -10,13 +10,18 @@ type StageStep = {
   id: string
   actIndex: number
   beatIndex: number | null
+  /** 幕尾收束：和事件卡一样占据桌面舞台的一步。 */
+  closer?: boolean
 }
 
-const STEP_DISTANCE_SVH = 46
+const STEP_DISTANCE_SVH = 32
+const WHEEL_STEP_THRESHOLD = 8
+const WHEEL_GESTURE_PAUSE_MS = 180
+const WHEEL_MOMENTUM_LOCK_MS = 240
 
 /**
  * PC 首页三幕共用一个 100svh 的 sticky 舞台。
- * 文档滚动仍是原生滚动，只把纵向距离映射成幕与事件的切换，不劫持滚轮。
+ * 舞台内把一次明确的滚轮 / 触控板手势映射为一页；到达首尾后恢复原生滚动离开舞台。
  */
 export function HomeActStage({
   acts: baselineActs,
@@ -36,6 +41,7 @@ export function HomeActStage({
         actIndex,
         beatIndex,
       })),
+      ...(act.act.closer ? [{ id: `home-${act.act.id}-closer`, actIndex, beatIndex: null, closer: true }] : []),
     ]),
     [acts],
   )
@@ -45,6 +51,7 @@ export function HomeActStage({
   // 程序化跳转期间的锁：平滑滚动会连续经过中间几步，
   // 不锁住的话内容会被一路重挂载（入场动画每次从 opacity:0 重来，看上去就是空白闪屏）。
   const lockRef = useRef<{ y: number; until: number } | null>(null)
+  const wheelRef = useRef({ total: 0, direction: 0, lastAt: 0, lockUntil: 0 })
 
   const setActive = useCallback((index: number) => {
     if (activeIndexRef.current === index) return
@@ -64,8 +71,8 @@ export function HomeActStage({
 
   // 位置直接由滚动距离算出：每一步固定 STEP_DISTANCE_SVH，
   // 一次滚动跨过多少距离就前进多少步，不会漏也不会一次跳两层。
-  // （旧实现用 IntersectionObserver 观察 6vh 宽的判定带，一次滚轮 ~100px、
-  //   步距 46vh，标记点常常整帧掠过判定带不被上报，于是卡一层、再跳两层。）
+  // （旧实现用 IntersectionObserver 观察 6vh 宽的判定带，标记点常常整帧掠过
+  //   判定带不被上报，于是卡一层、再跳两层。）
   useEffect(() => {
     const root = rootRef.current
     const sticky = stickyRef.current
@@ -111,8 +118,11 @@ export function HomeActStage({
   const step = steps[activeIndex] ?? steps[0]
   const resolved = acts[step?.actIndex ?? 0]
   const beat = step?.beatIndex == null ? null : resolved?.beats[step.beatIndex] ?? null
+  const closer = step?.closer ? resolved?.act.closer : undefined
+  const stepPosition = step?.closer ? resolved?.beats.length ?? 0 : step?.beatIndex ?? -1
+  const stepCount = resolved ? resolved.beats.length + (resolved.act.closer ? 1 : 0) : 0
   const actProgress = resolved
-    ? Math.max(0, Math.min(1, ((step?.beatIndex ?? -1) + 1) / (resolved.beats.length + 1)))
+    ? Math.max(0, Math.min(1, (stepPosition + 1) / (stepCount + 1)))
     : 0
 
   /** 跳到第 index 步：直接滚到该步对应的精确滚动位置，不依赖锚点的 scrollIntoView。 */
@@ -129,28 +139,92 @@ export function HomeActStage({
     })
   }, [readMetrics, setActive, steps.length])
 
-  if (!resolved) return null
-  const act = resolved.act
+  /** 舞台完整占据视口时才接管翻页；离开舞台后恢复普通页面行为。 */
+  const isStageActive = useCallback(() => {
+    const root = rootRef.current
+    const sticky = stickyRef.current
+    if (!root || !sticky) return false
+    const rect = root.getBoundingClientRect()
+    return rect.top <= 1 && rect.bottom >= sticky.offsetHeight - 1
+  }, [])
 
   /**
-   * 左右方向键翻页——只在焦点已经落在这一幕舞台内部时生效（靠事件冒泡到 section，
-   * 不在 window 上监听），不会和页面其他地方的左右键用途打架。
+   * Windows 单格滚轮通常一次给出较大的 delta；触控板则连续给出小 delta 并带惯性尾巴。
+   * 累计到很短的阈值即翻一页，随后吞掉同一手势的惯性，保证一个手势只切一张卡。
    */
-  function handleKeyDown(event: React.KeyboardEvent<HTMLElement>) {
-    if (event.key === 'ArrowRight') {
+  useEffect(() => {
+    const root = rootRef.current
+    if (!root) return
+    const onWheel = (event: WheelEvent) => {
+      if (!isStageActive() || event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY) || event.deltaY === 0) {
+        wheelRef.current.total = 0
+        return
+      }
+
+      const now = performance.now()
+      const state = wheelRef.current
+      const direction = event.deltaY > 0 ? 1 : -1
+
+      // 翻页后的惯性事件继续延长锁；用户停手后，下一次新手势才允许再翻一页。
+      if (now < state.lockUntil) {
+        event.preventDefault()
+        state.lockUntil = now + WHEEL_MOMENTUM_LOCK_MS
+        return
+      }
+
+      const current = activeIndexRef.current
+      const leavingStage = (direction < 0 && current === 0) || (direction > 0 && current === steps.length - 1)
+      if (leavingStage) {
+        state.total = 0
+        state.direction = 0
+        return
+      }
+
       event.preventDefault()
-      jumpTo(activeIndex + 1)
-    } else if (event.key === 'ArrowLeft') {
-      event.preventDefault()
-      jumpTo(activeIndex - 1)
+      if (now - state.lastAt > WHEEL_GESTURE_PAUSE_MS || state.direction !== direction) state.total = 0
+      state.direction = direction
+      state.lastAt = now
+      const deltaUnit = event.deltaMode === WheelEvent.DOM_DELTA_LINE
+        ? 16
+        : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+          ? window.innerHeight
+          : 1
+      state.total += Math.abs(event.deltaY) * deltaUnit
+      if (state.total < WHEEL_STEP_THRESHOLD) return
+
+      state.total = 0
+      state.lockUntil = now + WHEEL_MOMENTUM_LOCK_MS
+      jumpTo(current + direction)
     }
-  }
+
+    root.addEventListener('wheel', onWheel, { passive: false })
+    return () => root.removeEventListener('wheel', onWheel)
+  }, [isStageActive, jumpTo, steps.length])
+
+  /** 左右键不要求先聚焦舞台；只要桌面 ACT 正在视口中就能翻页。 */
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (!isStageActive() || event.altKey || event.ctrlKey || event.metaKey) return
+      if (event.repeat) return
+      const target = event.target as HTMLElement | null
+      if (target?.isContentEditable || target?.matches('input, textarea, select')) return
+      const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0
+      if (!direction) return
+      event.preventDefault()
+      jumpTo(activeIndexRef.current + direction)
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isStageActive, jumpTo])
+
+  if (!resolved) return null
+  const act = resolved.act
 
   return (
     <section
       ref={rootRef}
       aria-label="三幕故事"
-      onKeyDown={handleKeyDown}
       className="relative hidden border-t border-line xl:block"
       style={{ height: `calc(100svh + ${(steps.length - 1) * STEP_DISTANCE_SVH}svh)` }}
     >
@@ -175,7 +249,7 @@ export function HomeActStage({
             </div>
             <div className="mt-9 flex items-center gap-4">
               <span className="font-mono text-meta text-faint tnum">
-                {String((step?.beatIndex ?? -1) + 2).padStart(2, '0')} / {String(resolved.beats.length + 1).padStart(2, '0')}
+                {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
               </span>
               <span className="relative h-px flex-1 overflow-hidden bg-line/70">
                 <span className="absolute inset-y-0 left-0 origin-left bg-current transition-transform duration-500" style={{ color: act.color, transform: `scaleX(${actProgress})` }} />
@@ -187,11 +261,11 @@ export function HomeActStage({
             <div key={step?.id} className="home-act-stage-enter">
               {beat ? (
                 <StageBeat beat={beat} color={act.color} />
+              ) : closer ? (
+                <StageCloser line={closer.line} />
               ) : (
                 <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
-                  <p className="font-mono text-meta uppercase tracking-[0.2em]" style={{ color: act.color }}>Scroll to explore</p>
                   <p className="measure-hero mt-5 text-h2 font-semibold text-ink">这一幕，从 {resolved.beats[0]?.date ?? act.years} 开始。</p>
-                  <p className="measure-body mt-4 text-body text-muted">继续滚动查看这一阶段的年份与大事件，或使用右侧时间轴快速抵达。</p>
                 </div>
               )}
             </div>
@@ -204,7 +278,7 @@ export function HomeActStage({
           <button type="button" onClick={() => jumpTo(activeIndex + 1)} disabled={activeIndex === steps.length - 1} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="下一个节点">→</button>
         </div>
 
-        {step?.actIndex === acts.length - 1 && step.beatIndex === resolved.beats.length - 1 && (
+        {step?.actIndex === acts.length - 1 && (step.closer || (!resolved.act.closer && step.beatIndex === resolved.beats.length - 1)) && (
           <Link href="/archive/" className="ui-press absolute bottom-[clamp(1.5rem,3vh,3rem)] right-[clamp(8rem,10vw,12rem)] rounded-full border border-line bg-surface/70 px-5 py-2 text-meta text-ink">
             {now.year}，{now.label} · {now.count.toLocaleString()} 条 →
           </Link>
@@ -226,10 +300,19 @@ export function HomeActStage({
   )
 }
 
+/** 幕尾与幕首共用同一张纯文字页版式：一句收束，不额外加标签或尾标。 */
+function StageCloser({ line }: { line: string }) {
+  return (
+    <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
+      <h3 className="measure-hero text-h2 font-semibold text-ink">{line}</h3>
+    </div>
+  )
+}
+
 function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
   const body = (
     <article className="grid min-h-[54svh] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[clamp(1rem,1.5vw,1.75rem)] border border-line/80 bg-surface/35 shadow-[0_2rem_7rem_rgba(0,0,0,0.22)]">
-      <div className="relative min-h-0 overflow-hidden">
+      <div className={`relative min-h-0 overflow-hidden ${beat.coverAspect === 'video' ? 'aspect-video shrink-0' : ''}`}>
         {beat.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={beat.cover} alt="" className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-[1.025] group-hover:opacity-100" referrerPolicy="no-referrer" />
