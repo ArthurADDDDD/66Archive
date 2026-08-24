@@ -4,7 +4,17 @@ import { Eyebrow } from './primitives'
 
 /** 关系网络：一组可点击的出口，让详情页通向编年史 / 栏目 / 画廊。 */
 export function RelatedRail({ rails }: { rails: Rail[] }) {
-  const present = rails.filter((r) => r.items.length > 0)
+  // 同一条 rail 里出现两个 href+label 都一样的出口，对读者是重复的按钮，
+  // 对 React 是重复的 key。各处调用方各自去重容易漏，这里统一兜一层。
+  const present = rails
+    .map((rail) => ({
+      ...rail,
+      items: rail.items.filter(
+        (item, index, list) =>
+          list.findIndex((other) => other.href === item.href && other.label === item.label) === index,
+      ),
+    }))
+    .filter((r) => r.items.length > 0)
   if (present.length === 0) return null
 
   return (
