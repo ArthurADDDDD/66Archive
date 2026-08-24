@@ -4,7 +4,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { GamesLibrary, type LibraryGame } from '@/components/GamesLibrary'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
-import { CURATED_GAMES, getGameProfile } from '@/lib/narrative'
+import { allGameIds, getGameProfile } from '@/lib/narrative'
 import { LivePageHeading } from '@/components/LiveSection'
 
 /**
@@ -17,8 +17,7 @@ export default function GamesPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
-  const ids = [...ds.games.keys(), ...Object.keys(CURATED_GAMES)]
-  const profiles = ids
+  const profiles = allGameIds(ds)
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null)
 

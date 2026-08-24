@@ -7,7 +7,7 @@ import { GameSessions } from '@/components/GameSessions'
 import { EntryFilterProvider, YearBars } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
-import { actColorForDate, CURATED_GAMES, getGameProfile } from '@/lib/narrative'
+import { actColorForDate, allGameIds, getGameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
 
 /**
@@ -20,7 +20,7 @@ export const dynamicParams = false
 
 export function generateStaticParams() {
   const ds = getDataset()
-  return [...ds.games.keys(), ...Object.keys(CURATED_GAMES)].map((id) => ({ id }))
+  return allGameIds(ds).map((id) => ({ id }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
