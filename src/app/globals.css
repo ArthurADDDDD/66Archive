@@ -33,8 +33,16 @@ body {
 }
 
 /* 极淡的水平扫描线：档案影像的质感，不到看得出网格的程度。
-   只在桌面开启——1px/3px 的周期落到手机的 DPR 2~3 上会变成摩尔纹，滚动时还会抖。 */
-@media (min-width: 640px) {
+   只在桌面开启——1px 的线在手机上又细又密，滚动时还会抖。
+
+   而且只在整数 dppx 下开启。1px 的线必须正好落在整数个设备像素上才画得准：
+   4K + 150% 缩放（dppx = 1.5）这类非整数缩放下，浏览器只能把它重采样成
+   「一行 1 设备像素、下一行 2 设备像素」，于是「几乎看不见」被放大成一条条
+   明显的横纹；页面刚加载、正文和封面还没填满时整屏都是空背景，最显眼，
+   等内容铺上来又「自己好了」。画不准就不画，比画出一层网格好。 */
+@media (min-width: 640px) and (resolution: 1dppx),
+  (min-width: 640px) and (resolution: 2dppx),
+  (min-width: 640px) and (resolution: 3dppx) {
   body {
     background-image: repeating-linear-gradient(
       to bottom,
