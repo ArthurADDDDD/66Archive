@@ -51,6 +51,7 @@ export type LiveBeat = {
   title: string
   body: string
   visible: boolean
+  expanded: boolean
   date: string
   important: boolean
   size: 'hero' | 'type' | 'small' | 'montage'
@@ -156,6 +157,7 @@ function parseBeat(value: unknown): LiveBeat | null {
     title: value.title,
     body: str(value.body),
     visible: bool(value.visible, true),
+    expanded: bool(value.expanded, true),
     date: str(value.date),
     important: bool(value.important),
     size: size === 'hero' || size === 'type' || size === 'montage' ? size : 'small',
@@ -361,6 +363,7 @@ function resolveCustomBeat(live: LiveBeat, actId: ActId, home: boolean): Resolve
     kicker: home ? (live.important ? '重要' : undefined) : live.kicker || undefined,
     title: live.title,
     body: live.body || undefined,
+    expanded: live.expanded,
     href: null,
     external: false,
     cover: null,
@@ -469,6 +472,7 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
           ? beat.title
           : override.title || beat.title,
         body: override.body || undefined,
+        expanded: override.expanded,
         kicker: home ? (override.important ? '重要' : undefined) : override.kicker || undefined,
         size: override.size,
         chips: override.chips.length > 0 ? override.chips : undefined,
@@ -655,6 +659,7 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
       kicker: override.kicker || undefined,
       title: override.title || beat.title,
       body: override.body || undefined,
+      expanded: override.expanded,
     }
   }
   const visible = (beat: ResolvedBeat) =>
