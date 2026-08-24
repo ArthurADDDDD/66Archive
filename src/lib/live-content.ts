@@ -80,6 +80,8 @@ export type LiveHighlight = {
   title: string
   body: string
   visible: boolean
+  /** 首页梗指南独立跳转；空串时沿用基线策展链接。 */
+  link: string
   /** 展示日期文本（如 `2016—17`），不是档案日期 */
   date: string
   /** 背景纹理文字；可含 `{var}` 占位符，由构建期派生值填充 */
@@ -201,6 +203,7 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
                 title: item.title,
                 body: str(item.body),
                 visible: bool(item.visible, true),
+                link: str(item.link),
                 date: str(item.date),
                 emphasis: str(item.emphasis),
                 expanded: bool(item.expanded),
@@ -410,8 +413,8 @@ function resolveCustomHighlight(live: LiveHighlight, emphasisVars: Record<string
     kicker: live.kicker || undefined,
     title: live.title,
     body: live.body || undefined,
-    href: null,
-    external: false,
+    href: live.link || null,
+    external: /^https?:\/\//.test(live.link),
     cover: null,
     emphasis: live.emphasis ? fillEmphasis(live.emphasis, emphasisVars) : undefined,
     expanded: live.expanded,
@@ -580,6 +583,7 @@ export function applyLiveHighlights(
           : override.kicker || undefined,
         title: override.title || beat.title,
         body: override.body || undefined,
+        href: override.link || beat.href,
         date: override.date || beat.date,
         emphasis: override.emphasis ? fillEmphasis(override.emphasis, emphasisVars) : undefined,
         // 默认展开以后台为准：勾选→加载即展开；未勾选→保持折叠（覆盖基线，基线无此概念）。
