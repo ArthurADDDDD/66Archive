@@ -349,9 +349,9 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
 
   const displayDate = chronicleDate(beat.date)
   const body = (
-    <div className="grid chronicle-row-measure grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+    <div className="grid chronicle-row-linked grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
       {!hideDate && <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
-      <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
+      <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
         <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
         {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
       </div>
@@ -366,7 +366,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
-      className="group block rounded border-l border-line/50 py-1.5 pl-5 transition-colors hover:bg-surface/50"
+      className="group block rounded border-l border-line/50 py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50"
     >
       {body}
     </Link>
@@ -398,9 +398,9 @@ function SecondaryList({
 
         const displayDate = chronicleDate(beat.date)
         const inner = (
-          <div className="grid chronicle-row-measure grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
+          <div className="grid chronicle-row-linked grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
             <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
-            <div className="col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
+            <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
               <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
               {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
             </div>

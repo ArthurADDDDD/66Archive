@@ -108,7 +108,7 @@ export function BackToTop() {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
         window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
       }}
-      className={`ui-press fixed bottom-5 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line/80 bg-surface/80 text-muted backdrop-blur transition-[opacity,transform,color,border-color] duration-300 hover:border-live/60 hover:text-ink sm:bottom-8 sm:right-[var(--page-gutter)] ${
+      className={`ui-press fixed bottom-5 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line/80 bg-surface/80 text-muted backdrop-blur transition-[opacity,transform,color,border-color] duration-300 hover:border-live/60 hover:text-ink sm:bottom-8 sm:right-8 ${
         shown ? 'translate-y-0 opacity-70 hover:opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
       }`}
     >
