@@ -464,7 +464,10 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
       return {
         ...beat,
         date: override.date || beat.date,
-        title: override.title || beat.title,
+        // 公仓旧基线的「好久不见。」升级为复播节点；保留管理员写过的其他自定义标题。
+        title: beat.id === 'back-again' && override.title === '好久不见。'
+          ? beat.title
+          : override.title || beat.title,
         body: override.body || undefined,
         kicker: home ? (override.important ? '重要' : undefined) : override.kicker || undefined,
         size: override.size,
@@ -487,7 +490,10 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
       label: live.label || act.act.label,
       years: live.years || act.act.years,
       color: live.color || act.act.color,
-      closer: live.closer.line ? { line: live.closer.line, tail: live.closer.tail || undefined } : undefined,
+      // 固定三幕始终保留一页尾声；旧内容快照里空的 closer 回退到公开基线。
+      closer: live.closer.line
+        ? { line: live.closer.line, tail: live.closer.tail || undefined }
+        : act.act.closer,
     },
     beats,
   }
