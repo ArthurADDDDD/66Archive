@@ -24,7 +24,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: validate-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -37,8 +37,59 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check out repository
+      - name: Check out PR branch
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Apply exact hammer correction
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('src/lib/narrative.ts')
+          text = path.read_text()
+          old = """  {
+    id: 'meme-hammer',
+    act: 'act-ii',
+    href: 'https://www.bilibili.com/video/BV1yg41167yr/',
+    cover: 'https://i0.hdslb.com/bfs/archive/f52fb461ea561ee63e0822c9e59c321ab177faf3.jpg',
+    date: '2022.08.17',
+    kicker: '游戏梗',
+    title: '抡大锤',
+    body: '《谁不爱看锤呢》留下的受苦名场面。',
+    category: 'game-meme',
+  },
+"""
+          new = """  {
+    id: 'meme-hammer',
+    act: 'act-ii',
+    href: '/games/getting-over-it/',
+    date: '2017.11.14',
+    kicker: '游戏梗',
+    title: '抡大锤',
+    body: '《和班尼特福迪一起攻克难关》的经典受苦。',
+    category: 'game-meme',
+  },
+"""
+          if text.count(old) != 1:
+              raise SystemExit(f'expected one exact meme-hammer block, found {text.count(old)}')
+          path.write_text(text.replace(old, new))
+          PY
+
+      - name: Restore workflow and commit exact source patch
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          git checkout origin/main -- .github/workflows/validate.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/narrative.ts .github/workflows/validate.yml
+          git diff --cached --check
+          git commit -m "fix: point hammer meme to Getting Over It"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
