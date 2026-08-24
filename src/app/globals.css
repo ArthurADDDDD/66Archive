@@ -9,20 +9,6 @@
 
   /* 全站统一安全边距：移动端保持宽松留白，桌面端也不再退回到过窄的 1.5rem。 */
   --page-pad: clamp(1rem, 13vw, 5rem);
-  /* 版心最大宽度，和 .site-container 系列保持一致（1536px 以上见下方覆盖）。 */
-  --page-max: 87.5rem;
-  /*
-   * 屏幕边缘到正文左右边界的实际距离 = 版心居中留出的空白 + 版心内的安全边距。
-   * 悬浮控件（背景音乐、回到顶部）用它对齐正文边界；
-   * 写死 px 的话，4K 上版心被居中推进去几百像素，按钮还贴在屏幕角上，明显错位。
-   */
-  --page-gutter: max(var(--page-pad), calc((100vw - var(--page-max)) / 2 + var(--page-pad)));
-}
-
-@media (min-width: 1536px) {
-  :root {
-    --page-max: min(92vw, 132rem);
-  }
 }
 
 /* PC 端由站内彩色章节轴承担位置反馈；隐藏原生滚动条但保留全部滚动能力。 */
@@ -388,6 +374,21 @@ body {
   .chronicle-row-measure {
     width: 100%;
     max-width: min(100%, clamp(53.75rem, 64vw, 74rem));
+  }
+
+  /**
+   * 带链接的紧凑行：整行铺满正文宽度，行尾的 → 因此落在右侧安全边距上。
+   * 之前和纯文字行共用 74rem 的阅读宽度上限，4K 上正文两侧还剩几百像素，
+   * 箭头就停在半空中，看着像没对齐版心。
+   * 文字列另外收窄，行长度仍受控，不会被宽屏拉成一整条。
+   */
+  .chronicle-row-linked {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chronicle-row-linked__text {
+    max-width: min(100%, clamp(30rem, 50vw, 65rem));
   }
 
   /**
