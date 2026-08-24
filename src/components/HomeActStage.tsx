@@ -15,9 +15,23 @@ type StageStep = {
 }
 
 const STEP_DISTANCE_SVH = 32
-const WHEEL_STEP_THRESHOLD = 1
-const WHEEL_GESTURE_PAUSE_MS = 180
-const WHEEL_MOMENTUM_LOCK_MS = 240
+/** 自己驱动的翻页动画时长；结束时间可预测，不像 scroll-behavior:smooth 那样不可知。 */
+const STEP_SCROLL_MS = 420
+/** 动画落位后的短冷却，避免最后一帧的滚动事件立刻触发下一页。 */
+const STEP_COOLDOWN_MS = 90
+/** 两次滚轮事件间隔超过它就算新手势：新手势第一笔输入立刻翻一页。 */
+const WHEEL_GESTURE_GAP_MS = 140
+/** 同一手势里想再翻一页，需要继续滚出的额外距离（滤掉触控板惯性尾巴）。 */
+const WHEEL_REPEAT_DELTA = 90
+/** 判定舞台是否满屏时的容差，避免亚像素误差让接管时断时续。 */
+const STAGE_EDGE_TOLERANCE = 4
+
+/** 把不同 deltaMode 的滚轮事件折算成像素。 */
+function wheelPixels(event: WheelEvent) {
+  if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) return Math.abs(event.deltaY) * 16
+  if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE) return Math.abs(event.deltaY) * window.innerHeight
+  return Math.abs(event.deltaY)
+}
 
 /**
  * PC 首页三幕共用一个 100svh 的 sticky 舞台。
@@ -48,10 +62,14 @@ export function HomeActStage({
   const [activeIndex, setActiveIndex] = useState(0)
   const activeIndexRef = useRef(0)
   const stickyRef = useRef<HTMLDivElement>(null)
-  // 程序化跳转期间的锁：平滑滚动会连续经过中间几步，
-  // 不锁住的话内容会被一路重挂载（入场动画每次从 opacity:0 重来，看上去就是空白闪屏）。
-  const lockRef = useRef<{ y: number; until: number } | null>(null)
-  const wheelRef = useRef({ total: 0, direction: 0, lastAt: 0, lockUntil: 0 })
+  // 翻页动画自己跑 rAF：知道什么时候开始、什么时候结束，
+  // 动画期间滚动位置由我们写入，不再反过来推导状态（否则中间步会被一路重挂载而闪屏）。
+  const animRef = useRef<{ raf: number } | null>(null)
+  // 冷却截止时间。只在发起翻页时写一次，不会被后续滚轮事件不断延长
+  // ——旧实现每来一个惯性事件就把锁往后推 240ms，连续滚鼠标滚轮时锁永远不过期，
+  //   于是「狂滚也不翻页，停手才翻一页」。
+  const gateUntilRef = useRef(0)
+  const wheelRef = useRef({ accum: 0, peak: 0, direction: 0, lastAt: 0, stepped: false })
 
   const setActive = useCallback((index: number) => {
     if (activeIndexRef.current === index) return
@@ -86,11 +104,8 @@ export function HomeActStage({
     }
     const sync = () => {
       if (span <= 0) return
-      const lock = lockRef.current
-      if (lock) {
-        if (Math.abs(window.scrollY - lock.y) > 2 && performance.now() < lock.until) return
-        lockRef.current = null
-      }
+      // 动画期间的滚动是我们自己写的，交给动画收尾时统一定位。
+      if (animRef.current) return
       const offset = -root.getBoundingClientRect().top
       const index = Math.round(offset / span)
       setActive(Math.max(0, Math.min(steps.length - 1, index)))
@@ -125,19 +140,56 @@ export function HomeActStage({
     ? Math.max(0, Math.min(1, (stepPosition + 1) / (stepCount + 1)))
     : 0
 
-  /** 跳到第 index 步：直接滚到该步对应的精确滚动位置，不依赖锚点的 scrollIntoView。 */
+  const stopAnimation = useCallback(() => {
+    const anim = animRef.current
+    if (!anim) return
+    cancelAnimationFrame(anim.raf)
+    animRef.current = null
+  }, [])
+
+  useEffect(() => stopAnimation, [stopAnimation])
+
+  /**
+   * 跳到第 index 步：滚到该步对应的精确位置。
+   * 动画由自己的 rAF 驱动，落位时间确定，冷却窗口也就确定；
+   * 状态在发起时立刻更新，滚动结束后再按真实位置对一次账，两边不会各说各话。
+   */
   const jumpTo = useCallback((index: number) => {
     const metrics = readMetrics()
     if (!metrics || metrics.span <= 0) return
     const bounded = Math.max(0, Math.min(steps.length - 1, index))
-    const y = Math.round(metrics.top + bounded * metrics.span)
+    const to = Math.round(metrics.top + bounded * metrics.span)
+    const from = window.scrollY
     setActive(bounded)
-    lockRef.current = { y, until: performance.now() + 1200 }
-    window.scrollTo({
-      top: y,
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-    })
-  }, [readMetrics, setActive, steps.length])
+    stopAnimation()
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const distance = to - from
+    // 全站 html 上有 scroll-behavior:smooth，逐帧写位置必须显式 instant，
+    // 否则每一帧都会被浏览器再包一层平滑动画，自己的动画永远追不上目标。
+    const setScroll = (y: number) => window.scrollTo({ top: y, behavior: 'instant' as ScrollBehavior })
+
+    if (reduceMotion || Math.abs(distance) < 2) {
+      setScroll(to)
+      gateUntilRef.current = performance.now() + STEP_COOLDOWN_MS
+      return
+    }
+
+    const start = performance.now()
+    gateUntilRef.current = start + STEP_SCROLL_MS + STEP_COOLDOWN_MS
+    const tick = (frameAt: number) => {
+      const progress = Math.min(1, (frameAt - start) / STEP_SCROLL_MS)
+      const eased = 1 - (1 - progress) ** 3
+      setScroll(Math.round(from + distance * eased))
+      if (progress < 1) {
+        animRef.current = { raf: requestAnimationFrame(tick) }
+        return
+      }
+      animRef.current = null
+      gateUntilRef.current = performance.now() + STEP_COOLDOWN_MS
+    }
+    animRef.current = { raf: requestAnimationFrame(tick) }
+  }, [readMetrics, setActive, stopAnimation, steps.length])
 
   /** 舞台完整占据视口时才接管翻页；离开舞台后恢复普通页面行为。 */
   const isStageActive = useCallback(() => {
@@ -145,67 +197,69 @@ export function HomeActStage({
     const sticky = stickyRef.current
     if (!root || !sticky) return false
     const rect = root.getBoundingClientRect()
-    return rect.top <= 1 && rect.bottom >= sticky.offsetHeight - 1
+    return rect.top <= STAGE_EDGE_TOLERANCE && rect.bottom >= sticky.offsetHeight - STAGE_EDGE_TOLERANCE
   }, [])
 
   /**
-   * 第一笔有效纵向输入就翻一页，随后吞掉同一手势的惯性，保证一个手势只切一张卡。
-   * 在捕获阶段监听，覆盖右侧轨道、底部按钮等固定浮层，不让触控板手势漏掉。
+   * 一个手势 = 一页。新手势的第一笔纵向输入立刻翻页；
+   * 翻页动画期间的输入一律吞掉（不延长冷却），动画一结束就能接受下一次滚动。
+   * 在捕获阶段监听，覆盖右侧轨道、底部按钮等固定浮层，不让手势漏掉。
    */
   useEffect(() => {
     const onWheel = (event: WheelEvent) => {
-      if (!isStageActive() || event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY) || event.deltaY === 0) {
-        wheelRef.current.total = 0
+      const state = wheelRef.current
+      if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY) || event.deltaY === 0) return
+      if (!isStageActive()) {
+        state.accum = 0
+        state.peak = 0
+        state.stepped = false
+        state.lastAt = performance.now()
         return
       }
 
       const now = performance.now()
-      const state = wheelRef.current
       const direction = event.deltaY > 0 ? 1 : -1
-
-      // 翻页后的惯性事件继续延长锁；用户停手后，下一次新手势才允许再翻一页。
-      if (now < state.lockUntil) {
-        event.preventDefault()
-        state.lockUntil = now + WHEEL_MOMENTUM_LOCK_MS
-        return
+      const magnitude = wheelPixels(event)
+      if (now - state.lastAt > WHEEL_GESTURE_GAP_MS || state.direction !== direction) {
+        state.accum = 0
+        state.peak = 0
+        state.stepped = false
       }
+      state.lastAt = now
+      state.direction = direction
+      state.accum += magnitude
+      state.peak = Math.max(state.peak, magnitude)
 
+      // 已经在首/尾还继续往外滚：交还给原生滚动，正常离开舞台。
       const current = activeIndexRef.current
-      const leavingStage = (direction < 0 && current === 0) || (direction > 0 && current === steps.length - 1)
-      if (leavingStage) {
-        state.total = 0
-        state.direction = 0
+      if ((direction < 0 && current === 0) || (direction > 0 && current === steps.length - 1)) {
+        stopAnimation()
         return
       }
 
       event.preventDefault()
-      if (now - state.lastAt > WHEEL_GESTURE_PAUSE_MS || state.direction !== direction) state.total = 0
-      state.direction = direction
-      state.lastAt = now
-      const deltaUnit = event.deltaMode === WheelEvent.DOM_DELTA_LINE
-        ? 16
-        : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
-          ? window.innerHeight
-          : 1
-      state.total += Math.abs(event.deltaY) * deltaUnit
-      if (state.total < WHEEL_STEP_THRESHOLD) return
+      if (now < gateUntilRef.current) return
+      // 同一手势内要再翻一页，必须是「还在用力滚」而不是触控板的惯性尾巴：
+      // 惯性的 delta 逐帧衰减，真滚轮的每一格幅度基本不变。
+      if (state.stepped && (state.accum < WHEEL_REPEAT_DELTA || magnitude < state.peak * 0.6)) return
 
-      state.total = 0
-      state.lockUntil = now + WHEEL_MOMENTUM_LOCK_MS
+      state.accum = 0
+      state.stepped = true
       jumpTo(current + direction)
     }
 
     window.addEventListener('wheel', onWheel, { passive: false, capture: true })
     return () => window.removeEventListener('wheel', onWheel, { capture: true })
-  }, [isStageActive, jumpTo, steps.length])
+  }, [isStageActive, jumpTo, stopAnimation, steps.length])
 
   /** 左右键不要求先聚焦舞台；只要桌面 ACT 正在视口中就能翻页。 */
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (!isStageActive() || event.altKey || event.ctrlKey || event.metaKey) return
-      if (event.repeat) return
-      const target = event.target as HTMLElement | null
-      if (target?.isContentEditable || target?.matches('input, textarea, select')) return
+      // 按住不放时按动画节奏连续翻；单次按键永远即时响应（可以连点快速翻多页）。
+      if (event.repeat && performance.now() < gateUntilRef.current) return
+      const target = event.target
+      if (target instanceof HTMLElement && (target.isContentEditable || target.matches('input, textarea, select'))) return
       const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0
       if (!direction) return
       event.preventDefault()

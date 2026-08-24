@@ -218,7 +218,7 @@ export function BgmPlayer() {
         <source src={track.m4a} type="audio/mp4; codecs=mp4a.40.2" />
       </audio>
 
-      <div className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/80 bg-surface/80 backdrop-blur sm:bottom-8 sm:left-8">
+      <div className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/80 bg-surface/80 backdrop-blur sm:bottom-8 sm:left-[var(--page-gutter)]">
         <button
           type="button"
           data-bgm-control
