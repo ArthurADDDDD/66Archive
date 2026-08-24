@@ -204,9 +204,11 @@ export function parseNarrative(payload: unknown): LiveNarrative | null {
                 expanded: bool(item.expanded),
                 category: item.category === null
                   ? null
-                  : item.category === 'dazhou-mc' || item.category === 'xinling-pishuang' || item.category === 'peiqi' || item.category === 'daily-meme' || item.category === 'game-meme'
-                    ? item.category
-                    : undefined,
+                  : item.category === 'dazhou-mc'
+                    ? 'game-meme'
+                    : item.category === 'xinling-pishuang' || item.category === 'peiqi' || item.category === 'daily-meme' || item.category === 'game-meme'
+                      ? item.category
+                      : undefined,
               }
             : null,
         )
@@ -562,7 +564,10 @@ export function applyLiveHighlights(
       if (isCustomId(beat.id)) return resolveCustomHighlight(override, emphasisVars)
       return {
         ...beat,
-        kicker: override.kicker || undefined,
+        // 大周已并入「游戏梗」；兼容内容服务里尚未改写的旧标签，同时仍允许管理员写新文案。
+        kicker: beat.id === 'meme-dazhou' && override.kicker === '大周MC'
+          ? '大周 · 我的世界'
+          : override.kicker || undefined,
         title: override.title || beat.title,
         body: override.body || undefined,
         date: override.date || beat.date,

@@ -149,7 +149,7 @@ export default async function HomePage() {
       </div>
 
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
-      <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} />
+      <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} memeMontages={data.memeMontages} />
 
       {/* 记忆：随机一晚 + 历史上的今天 */}
       <LiveSectionGate sectionId="home-memory">

@@ -3,11 +3,12 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { EXTRA_HIGHLIGHTS } from '@/lib/highlight-extras'
-import { actColor, MEME_CATEGORIES, type MemeCategory, type ResolvedBeat } from '@/lib/narrative'
+import { actColor, MEME_CATEGORIES, type HomepageData, type MemeCategory, type ResolvedBeat } from '@/lib/narrative'
 import { applyLiveHighlights } from '@/lib/live-content'
 import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
+import { MemeMontage } from './MemeMontage'
 
 /**
  * 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。
@@ -30,10 +31,18 @@ function withExtraHighlights(baseline: ResolvedBeat[]): ResolvedBeat[] {
 
 /**
  * 首页「直播间梗」：仍复用原 Highlight 的卡片、展开与播放入口，
- * 只在外层增加固定五分类。没有 category 的旧 Highlight 保留在数据里，
+ * 只在外层增加固定四分类。没有 category 的旧 Highlight 保留在数据里，
  * 但不被重新塞进任何一个分类。
  */
-export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: ResolvedBeat[]; emphasisVars: Record<string, string> }) {
+export function HighlightStrip({
+  beats: baseline,
+  emphasisVars,
+  memeMontages,
+}: {
+  beats: ResolvedBeat[]
+  emphasisVars: Record<string, string>
+  memeMontages: HomepageData['memeMontages']
+}) {
   const { narrative } = useLiveContent()
   const copy = useCopyBlock('homeSections', 'home-highlights')
   const beats = applyLiveHighlights(withExtraHighlights(baseline), narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
@@ -72,6 +81,25 @@ export function HighlightStrip({ beats: baseline, emphasisVars }: { beats: Resol
             <p className="text-control font-medium text-ink">{active.label}</p>
             <p className="mt-1 measure-body text-meta leading-relaxed text-faint">{active.description}</p>
           </div>
+
+          {active.id === 'xinling-pishuang' && (
+            <MemeMontage
+              title="那些星期日，心灵砒霜准时开场"
+              description="从早期节目到后来留下的名场面，沿着档案里的真实录像往回看。"
+              href="/series/xinling-pishuang/"
+              linkLabel="查看心灵砒霜系列"
+              samples={memeMontages.xinlingPishuang}
+            />
+          )}
+          {active.id === 'game-meme' && (
+            <MemeMontage
+              title="《我的世界》里的大周记忆"
+              description="大周从这里长出来。看看这个系列里保存下来的直播与视频。"
+              href="/games/minecraft/"
+              linkLabel="进入我的世界系列"
+              samples={memeMontages.minecraft}
+            />
+          )}
         </div>
 
         <div className="mt-5">
