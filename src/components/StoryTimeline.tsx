@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
@@ -195,7 +195,31 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
 
 /** Type A：完整 Hero。没有真实封面就不放图，也不留同尺寸占位。 */
 function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  // null 表示用户尚未手动切换：实时后台值到达时仍可接管默认状态。
+  const [manualOpen, setManualOpen] = useState<boolean | null>(null)
+  const isOpen = manualOpen ?? beat.expanded !== false
   const displayDate = chronicleDate(beat.date)
+
+  if (!isOpen) {
+    return (
+      <button
+        type="button"
+        onClick={() => setManualOpen(true)}
+        aria-expanded={false}
+        className="group flex w-full items-start justify-between gap-4 rounded-card border border-line/70 bg-surface/25 px-4 py-3 text-left transition-colors hover:border-live/40 hover:bg-surface/50"
+      >
+        <span className="min-w-0">
+          <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
+            {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
+            {beat.kicker && <span>· {beat.kicker}</span>}
+          </span>
+          <span className="mt-1 block text-body font-semibold text-ink">{beat.title}</span>
+        </span>
+        <span className="shrink-0 font-mono text-meta text-faint group-hover:text-live">展开 ↓</span>
+      </button>
+    )
+  }
+
   const body = (
     <>
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
@@ -230,11 +254,26 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
     </>
   )
 
-  if (!beat.href) return <div>{body}</div>
-  return (
+  const content = !beat.href ? <div>{body}</div> : (
     <Link href={beat.href} target={beat.external ? '_blank' : undefined} rel={beat.external ? 'noreferrer' : undefined} className="group block">
       {body}
     </Link>
+  )
+
+  return (
+    <div>
+      <div className="mb-2 flex justify-end">
+        <button
+          type="button"
+          onClick={() => setManualOpen(false)}
+          aria-expanded
+          className="font-mono text-meta text-faint transition-colors hover:text-live"
+        >
+          收起 ↑
+        </button>
+      </div>
+      {content}
+    </div>
   )
 }
 
