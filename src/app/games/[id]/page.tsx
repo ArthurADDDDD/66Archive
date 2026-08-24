@@ -4,6 +4,7 @@ import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
 import { GameSessions } from '@/components/GameSessions'
+import { EntryFilterProvider, YearBars } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { actColorForDate, CURATED_GAMES, getGameProfile } from '@/lib/narrative'
@@ -48,8 +49,15 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       yearCounts.set(y, { count: 1, anchorDate: e.date })
     }
   }
-  const yearRows = [...yearCounts.entries()].sort()
-  const maxYearCount = Math.max(1, ...yearRows.map(([, r]) => r.count))
+  const sortedYears = [...yearCounts.entries()].sort()
+  const maxYearCount = Math.max(1, ...sortedYears.map(([, r]) => r.count))
+  // 条形图整行就是筛选按钮，颜色仍按该年最后一场的时期色走
+  const yearRows = sortedYears.map(([year, row]) => ({
+    year: Number(year),
+    count: row.count,
+    pct: (row.count / maxYearCount) * 100,
+    color: actColorForDate(row.anchorDate),
+  }))
 
   const ctaHref = profile.curated
     ? `/archive/?q=${encodeURIComponent(profile.name)}`
@@ -114,55 +122,45 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
         )}
       </section>
 
-      {/* 第二屏：指标（在问题之后，而非之前）；稀疏游戏跳过 */}
-      {!sparse && profile.sessions > 0 && (
-        <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
-          <div className="site-container px-page">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">一起走过的时间</p>
-            <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              <Stat value={profile.hoursLabel} label="总时间" />
-              <Stat value={profile.sessions.toLocaleString()} label="场次" />
-              <Stat value={profile.firstDate ?? '—'} label="首次" />
-              <Stat value={profile.lastDate ?? '—'} label="最后" />
-            </dl>
-            <div className="mt-10 max-w-xl">
-              <p className="text-meta uppercase tracking-[0.16em] text-faint">年份分布</p>
-              <div className="mt-3 space-y-2">
-                {yearRows.map(([year, row]) => (
-                  <div key={year} className="flex items-center gap-3">
-                    <span className="w-10 shrink-0 font-mono text-meta text-faint tnum">{year}</span>
-                    <div className="h-2 flex-1 overflow-hidden rounded-full bg-raised">
-                      <span
-                        className="block h-full rounded-full"
-                        style={{ width: `${(row.count / maxYearCount) * 100}%`, background: actColorForDate(row.anchorDate) }}
-                      />
-                    </div>
-                    <span className="w-10 shrink-0 text-right text-meta text-faint tnum">{row.count} 场</span>
-                  </div>
-                ))}
+      {/* 年份分布点一下就筛下面的场次列表——两块隔着服务端渲染的内容，用 context 串 */}
+      <EntryFilterProvider anchorId="game-sessions" defaultOrder="desc">
+        {/* 第二屏：指标（在问题之后，而非之前）；稀疏游戏跳过 */}
+        {!sparse && profile.sessions > 0 && (
+          <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
+            <div className="site-container px-page">
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">一起走过的时间</p>
+              <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                <Stat value={profile.hoursLabel} label="总时间" />
+                <Stat value={profile.sessions.toLocaleString()} label="场次" />
+                <Stat value={profile.firstDate ?? '—'} label="首次" />
+                <Stat value={profile.lastDate ?? '—'} label="最后" />
+              </dl>
+              <div className="mt-10 max-w-xl">
+                <p className="text-meta uppercase tracking-[0.16em] text-faint">年份分布 · 点某一年只看那一年</p>
+                <YearBars rows={yearRows} />
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {/* 这些晚上：整行就地展开播放预览，底部 CTA 才负责前往编年史 */}
-      {profile.entries.length > 0 && (
-        <section className="border-t border-line py-14 sm:py-20">
-          <div className="site-container px-page">
-            <GameSessions entries={profile.entries} color="#E0A244" />
-            <div className="mt-8">
-              <Link
-                href={ctaHref}
-                className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
-              >
-                在编年史里查看全部相关记录
-                <span className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
-              </Link>
+        {/* 这些晚上：整行就地展开播放预览，底部 CTA 才负责前往编年史 */}
+        {profile.entries.length > 0 && (
+          <section id="game-sessions" className="scroll-mt-6 border-t border-line py-14 sm:py-20">
+            <div className="site-container px-page">
+              <GameSessions entries={profile.entries} color="#E0A244" />
+              <div className="mt-8">
+                <Link
+                  href={ctaHref}
+                  className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
+                >
+                  在编年史里查看全部相关记录
+                  <span className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
+      </EntryFilterProvider>
 
       <RelatedRail rails={rails} />
 
