@@ -9,7 +9,7 @@ import { getDataset, toTimelineEntries } from '@/lib/data'
 import { actColorForDate } from '@/lib/narrative'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
-import { CURATED_GAMES } from '@/lib/narrative'
+import { allGameIds } from '@/lib/narrative'
 
 /**
  * 数据里的发现：每一节只回答一个问题。
@@ -56,8 +56,7 @@ export default function StatsPage() {
   }
 
   // —— 02 / 03 游戏 ——
-  const ids = [...ds.games.keys(), ...Object.keys(CURATED_GAMES)]
-  const profiles = ids
+  const profiles = allGameIds(ds)
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null)
   const longest = [...profiles]

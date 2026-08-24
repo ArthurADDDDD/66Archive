@@ -1809,6 +1809,18 @@ export type GameProfile = {
   oneLiner: string | null
 }
 
+/**
+ * 已登记（games.yaml）+ 策展（CURATED_GAMES）的全部游戏 id，**去重**。
+ *
+ * 两份名单会重叠——`geometry-dash` 就是两边都有：games.yaml 里登记过，
+ * 同时又在策展名单里补了标题匹配规则。直接把两份拼起来会让同一个游戏出现两次：
+ * 收藏架里渲染两张一模一样的卡（React duplicate key），
+ * 「N 个游戏」多算一个，排行榜里也会并列两条。
+ */
+export function allGameIds(ds: Dataset): string[] {
+  return [...new Set([...ds.games.keys(), ...Object.keys(CURATED_GAMES)])]
+}
+
 export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: string): GameProfile | null {
   const registered = ds.games.get(gameId)
   const curated = CURATED_GAMES[gameId]

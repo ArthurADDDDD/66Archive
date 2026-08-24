@@ -17,7 +17,7 @@ import { TodayInHistoryList, type TodayHistoryRow } from '@/components/TodayInHi
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
-import { CURATED_GAMES, getGameProfile, resolveHomepage } from '@/lib/narrative'
+import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
 
 /**
  * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 历史上的今天）+ 游戏预告 + 四个房间入口。
@@ -85,8 +85,7 @@ export default async function HomePage() {
   }
 
   // 游戏预告：有场次的游戏按时长取前 8
-  const ids = [...ds.games.keys(), ...Object.keys(CURATED_GAMES)]
-  const gamePreview: GameCardData[] = ids
+  const gamePreview: GameCardData[] = allGameIds(ds)
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null && p.sessions > 0)
     .sort((a, b) => b.totalMinutes - a.totalMinutes)
