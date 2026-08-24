@@ -501,3 +501,18 @@
         status: alive
     note: "自动采集候选经人工审批新建（组 9bed278d-20bd-4d14-a8f2-7a8ae54ec8c0）。"
     contributed_by: collection-review
+
+  - id: 2026-08-23-live-01
+    type: live
+    date: "2026-08-23"
+    title: "诡秘之主 公测"
+    platform: douyin
+    duration_min: 152
+    confidence: medium
+    cover: "http://i1.hdslb.com/bfs/archive/b8c8eabe160ef21997dbb52b8a8953a01e6bb49a.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ZL8h6tEWR"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 0147360e-8b5b-4333-afa9-eb01cea44816）。"
+    contributed_by: collection-review
