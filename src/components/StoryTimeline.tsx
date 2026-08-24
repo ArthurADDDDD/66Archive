@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
+import { formatDuration } from '@/lib/ui'
 import { Eyebrow, MediaFrame } from './primitives'
 import { useLiveContent } from './LiveContentProvider'
 
@@ -208,6 +209,11 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {displayDate}
             </span>
+            {beat.durationMinutes && (
+              <span className="absolute bottom-2 right-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
+                {formatDuration(beat.durationMinutes)}
+              </span>
+            )}
           </MediaFrame>
         </div>
       )}
