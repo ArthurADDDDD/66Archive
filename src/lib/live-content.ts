@@ -588,16 +588,21 @@ export function applyLiveHighlights(
 /**
  * 故事模式时间轴的覆盖。
  *
- * 公仓基线节点的年份归位是构建期按策展日期算好的；后台新增的 custom 节点则按
- * 严格的 YYYY.MM 展示日期动态归入现有年份段。正文与右侧时间轴共用这份结果，
- * 不需要为新节点再维护第二份时间轴清单。
+ * 公仓基线节点和后台新增的 custom 节点，都按后台填写的展示日期动态归入年份段。
+ * 这是故事页的策展展示位置，不会修改 archive entry 的史料日期；正文与右侧时间轴
+ * 共用这份结果，不需要为新节点再维护第二份时间轴清单。
  * 已归位的节点会在这里打文案覆盖、按后台顺序重排、隐藏被关掉的节点。
  * featured 身份由公开仓基线决定；后台可以改顺序和显隐，但不会把多张关键记忆重新压成单张。
  * 全部 featured 被隐藏时由该年第一条 secondary 顶上，不让整年塌成空行。
  *
- * 注意：公仓已有节点的核实年月仍以公仓为准，后台旧日期不会把它挪年；只有 custom
- * 节点使用后台 YYYY.MM 归位。这样既避免旧稿覆盖已核实史料，也允许后台继续增补内容。
+ * 展示顺序以后台为准：跨年份移动时先按展示日期换到相应年份段，同年内再按后台列表
+ * 的顺序排列。无效日期不会猜测，保留公开基线的归位。
  */
+function storyYearFromDisplayDate(value: string): number | null {
+  const match = value.trim().match(/^(\d{4})(?:[.-](?:0[1-9]|1[0-2]))?(?:[.-]\d{1,2})?$/)
+  return match ? Number(match[1]) : null
+}
+
 export function applyLiveStoryYears<T extends { year: number; featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
   years: T[],
   liveActs: LiveAct[] | undefined,
@@ -644,9 +649,9 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     if (!override) return beat
     return {
       ...beat,
-      // Chronicle 日期属于史料定位：统一由公仓核实并按 YYYY.MM 展示。
-      // 后台旧稿里残留的 `~2022` / `2017—18` 不能再把已核实月份盖回去。
-      date: beat.date,
+      // 「展示日期」只管故事页编排；archive entry 的日期仍是数据层的唯一史料。
+      date: override.date || beat.date,
+      storyYear: storyYearFromDisplayDate(override.date) ?? beat.storyYear,
       kicker: override.kicker || undefined,
       title: override.title || beat.title,
       body: override.body || undefined,
@@ -655,16 +660,35 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
   const visible = (beat: ResolvedBeat) =>
     !deleted.has(beat.id) && !deleted.has(beat.act) && overrides.get(beat.id)?.visible !== false
 
+  // 基线节点也可能被后台改到另一年。先从原年份拿走，再插进展示日期指定的年份；
+  // 这只影响故事页面编排，不会改动公开档案条目。
+  const knownYears = new Set(years.map((year) => year.year))
+  const movedIds = new Set<string>()
+  const movedByYear = new Map<number, ResolvedBeat[]>()
+  for (const year of years) {
+    const source = [...(year.featured?.length ? year.featured : year.hero ? [year.hero] : []), ...year.secondary]
+    for (const beat of source) {
+      const targetYear = storyYearFromDisplayDate(overrides.get(beat.id)?.date ?? '')
+      if (targetYear === null || targetYear === year.year || !knownYears.has(targetYear)) continue
+      movedIds.add(beat.id)
+      const moved = movedByYear.get(targetYear)
+      if (moved) moved.push(beat)
+      else movedByYear.set(targetYear, [beat])
+    }
+  }
+
   return years.map((year) => {
     const baselineFeatured = year.featured?.length ? year.featured : year.hero ? [year.hero] : []
     const custom = customByYear.get(year.year) ?? []
+    const moved = movedByYear.get(year.year) ?? []
     const featuredIds = new Set([
       ...baselineFeatured.map((beat) => beat.id),
+      ...moved.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
       ...custom.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
     ])
-    const source = [...baselineFeatured, ...year.secondary, ...custom].filter(
-      (beat, index, list) => list.findIndex((item) => item.id === beat.id) === index,
-    )
+    const source = [...baselineFeatured, ...year.secondary, ...moved, ...custom]
+      .filter((beat) => !movedIds.has(beat.id) || moved.some((item) => item.id === beat.id))
+      .filter((beat, index, list) => list.findIndex((item) => item.id === beat.id) === index)
     const kept = source.filter(visible)
     kept.sort((a, b) => (order.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (order.get(b.id) ?? Number.MAX_SAFE_INTEGER))
     const resolved = kept.map(applyBeat)
