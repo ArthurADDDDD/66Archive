@@ -44,11 +44,10 @@ export type BeatSize = 'hero' | 'type' | 'small' | 'montage'
 
 /** 首页「直播间梗」的固定一级分类。没有分类的保留 Highlight 不在新版模块展示。 */
 export const MEME_CATEGORIES = [
-  { id: 'dazhou-mc', label: '大周MC', description: '女流和水友在《我的世界》中共同留下的“大周”故事与直播间记忆。' },
-  { id: 'xinling-pishuang', label: '心灵砒霜', description: '从水友故事和聊天里长出来的一系列经典人物、台词与名场面。' },
-  { id: 'peiqi', label: '佩奇', description: '女流唱歌、Rap、Dance 等表演留下来的直播间梗与名场面。' },
   { id: 'daily-meme', label: '日常梗', description: '游戏和固定节目之外，在长期直播与生活中留下来的经典梗。' },
+  { id: 'xinling-pishuang', label: '心灵砒霜', description: '从水友故事和聊天里长出来的一系列经典人物、台词与名场面。' },
   { id: 'game-meme', label: '游戏梗', description: '从游戏操作、受苦和节目效果里留下来的经典梗。' },
+  { id: 'peiqi', label: '佩奇', description: '女流唱歌、Rap、Dance 等表演留下来的直播间梗与名场面。' },
 ] as const
 
 export type MemeCategory = (typeof MEME_CATEGORIES)[number]['id']
@@ -1348,10 +1347,10 @@ export const HIGHLIGHTS: Highlight[] = [
     act: 'act-ii',
     href: '/games/minecraft/',
     date: '2017.07',
-    kicker: '大周MC',
+    kicker: '大周 · 我的世界',
     title: '大周',
     body: '从《我的世界》里长出来的共同故事，后来也成了直播间一直在用的名字。',
-    category: 'dazhou-mc',
+    category: 'game-meme',
   },
   {
     id: 'meme-pig-brain-overload',
@@ -1523,6 +1522,11 @@ export type HomepageData = {
    * 数据长了之后那个数字就永远停在写下的那一刻。
    */
   emphasisVars: Record<string, string>
+  /** 首页直播间梗的栏目蒙太奇；只从已收录且有真实封面的条目派生。 */
+  memeMontages: {
+    xinlingPishuang: MontageSample[]
+    minecraft: MontageSample[]
+  }
 }
 
 function countBetween(entries: TimelineEntry[], from: string, to: string): number {
@@ -1598,6 +1602,28 @@ function buildMontage(timeline: TimelineEntry[]): ResolvedBeat['montage'] {
       liveSessions: liveEntries.length.toLocaleString(),
     },
   }
+}
+
+/** 等距保留一个栏目横跨不同年份的真实封面，避免列表只挤在最近一年。 */
+function buildMemeMontage(entries: TimelineEntry[], limit = 10): MontageSample[] {
+  const covered = entries
+    .filter((entry) => entry.cover)
+    .sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id))
+  if (covered.length === 0) return []
+  const indexes = covered.length <= limit
+    ? covered.map((_, index) => index)
+    : Array.from({ length: limit }, (_, index) => Math.round(index * (covered.length - 1) / (limit - 1)))
+  return [...new Set(indexes)].flatMap((index) => {
+    const entry = covered[index]
+    const cover = proxyImage(entry.cover ?? undefined, 480)
+    if (!cover) return []
+    return [{
+      id: entry.id,
+      date: entry.date,
+      title: entry.title,
+      cover,
+    }]
+  })
 }
 
 /** 解析一幕里的所有 beat；home=true 时按「重要」口径接管 kicker（非重要锚点不带小标签）。 */
@@ -1716,6 +1742,10 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
     acts: resolveActs(ds, timeline, HOMEPAGE_ACTS, true),
     highlights,
     emphasisVars: vars,
+    memeMontages: {
+      xinlingPishuang: buildMemeMontage(timeline.filter(isXinlingPishuangEntry)),
+      minecraft: buildMemeMontage(timeline.filter((entry) => entry.games.some((game) => game.id === 'minecraft'))),
+    },
     now: {
       year: latestYear,
       label: '还在继续。',
