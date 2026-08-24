@@ -87,20 +87,40 @@ export function BgmPlayer() {
 
     // pointerdown 在部分 Chromium 环境里早于 user activation 生效；click 是
     // 必要的第二道保障。touchend 则覆盖旧版 iOS Safari 的触摸激活时机。
-    const gestures = ['pointerdown', 'click', 'keydown', 'touchend'] as const
+    //
+    // wheel / scroll 排在后面是**重试**，不是激活：按 HTML 规范，滚动不算
+    // 「activation triggering input event」，浏览器不会因为你滚了两下就放行带声音的
+    // 自动播放。但重试本身有价值——首屏点击有可能发生在 <audio> 还没挂上的瞬间，
+    // 那次激活已经拿到、play() 却还没人调用，滚动就是最早补上的那一下。
+    const gestures = ['pointerdown', 'pointerup', 'mouseup', 'click', 'keydown', 'touchend', 'wheel', 'scroll'] as const
+    // 滚动一秒能来几十个事件，被拦下时别每帧都发一次 play()
+    let lastAttempt = 0
     const onGesture = (event: Event) => {
       const el = audioRef.current
       if (!wantsRef.current || !el?.paused || document.hidden) return
       const target = event.target
       if (target instanceof Element && target.closest('[data-bgm-control]')) return
+      const now = Date.now()
+      if (now - lastAttempt < 350) return
+      lastAttempt = now
       void tryPlay()
     }
 
     gestures.forEach((eventName) => document.addEventListener(eventName, onGesture, { capture: true, passive: true }))
     void tryPlay()
 
+    // 浏览器已经放行自动播放时（Chrome 的 media engagement 够高，或用户给了站点权限），
+    // 第一次尝试仍可能撞上首屏的图片/字体抢带宽。头几秒补几次，被拦下的情况白花几微秒而已。
+    const retries = [500, 1500, 3000].map((delay) =>
+      window.setTimeout(() => {
+        if (!wantsRef.current || !audioRef.current?.paused || document.hidden) return
+        void tryPlay()
+      }, delay),
+    )
+
     return () => {
       gestures.forEach((eventName) => document.removeEventListener(eventName, onGesture, true))
+      retries.forEach((id) => window.clearTimeout(id))
     }
   }, [track, tryPlay])
 

@@ -5,6 +5,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
 import { RelatedRail } from '@/components/RelatedRail'
 import { SeriesEpisodes } from '@/components/SeriesEpisodes'
+import { SeriesFilterProvider, SeriesYearChips } from '@/components/SeriesFilters'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeries } from '@/lib/series'
@@ -106,42 +107,35 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         </section>
       )}
 
-      {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
-      <section className="site-container px-page pb-10 sm:pb-14">
-        <Eyebrow className="text-muted">活跃年份</Eyebrow>
-        <div className="mt-4 w-full">
-          <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
-          <div className="mt-6 flex flex-wrap gap-2">
-            {s.perYear.map((p) => (
-              <Link
-                key={p.year}
-                href={`/archive/?q=${encodeURIComponent(s.name)}&y=${p.year}`}
-                className="ui-press rounded-full border border-line/80 bg-surface/50 px-3 py-1.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink tnum"
-              >
-                {p.year} 年 · {p.count} {unit}
-              </Link>
-            ))}
+      {/* 年份筛选与正倒序共享一份内存状态，横跨下面两个区块 */}
+      <SeriesFilterProvider>
+        {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
+        <section className="site-container px-page pb-10 sm:pb-14">
+          <Eyebrow className="text-muted">活跃年份</Eyebrow>
+          <div className="mt-4 w-full">
+            <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
+            <SeriesYearChips perYear={s.perYear} color={color} unit={unit} />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 全部期数（档案列表，一条不省） */}
-      <section className="site-container px-page pb-16 sm:pb-24">
-        <div className="border-b border-line/60 pb-3">
-          <Eyebrow className="text-muted">Episodes · 全部记录</Eyebrow>
-          <h2 className="mt-2 text-h3 font-semibold text-ink">
-            {s.name} · 档案里的 {s.count} {unit}
-          </h2>
-        </div>
-        <div className="mt-3">
-          {isTogetherSee && (
-            <p className="mb-4 max-w-3xl text-meta leading-relaxed text-faint">
-              这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。
-            </p>
-          )}
-          <SeriesEpisodes entries={s.entries} color={color} count={s.count} unit={unit} />
-        </div>
-      </section>
+        {/* 全部期数（档案列表，一条不省） */}
+        <section id="series-episodes" className="scroll-mt-6 site-container px-page pb-16 sm:pb-24">
+          <div className="border-b border-line/60 pb-3">
+            <Eyebrow className="text-muted">Episodes · 全部记录</Eyebrow>
+            <h2 className="mt-2 text-h3 font-semibold text-ink">
+              {s.name} · 档案里的 {s.count} {unit}
+            </h2>
+          </div>
+          <div className="mt-3">
+            {isTogetherSee && (
+              <p className="mb-4 max-w-3xl text-meta leading-relaxed text-faint">
+                这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。
+              </p>
+            )}
+            <SeriesEpisodes entries={s.entries} color={color} count={s.count} unit={unit} />
+          </div>
+        </section>
+      </SeriesFilterProvider>
 
       <RelatedRail rails={rails} />
 
