@@ -46,6 +46,59 @@ const RETRY_BASE_DELAY_MS = 400
 
 const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms))
 
+/**
+ * 首屏预取的落点。
+ *
+ * 覆盖是在 `LiveContentProvider` 的 effect 里发起的，也就是必须等整个 React
+ * 运行时下载、解析、水合完才轮到它。实测线上首页：水合结束在 ~400ms，三份内容
+ * 到齐在 ~590ms——这 590ms 里页面画的是构建期烤入的旧文案，用户看到的
+ * 「刷新时短暂回滚」就是这一段。
+ *
+ * 请求本身并不依赖 React：URL 是固定的，也不需要任何页面状态。所以真正该做的是
+ * 让它在 HTML 解析阶段就发出去，和 JS 下载并行，而不是排在 JS 后面。
+ * `layout.tsx` 的 `<head>` 内联脚本负责发起，结果挂在这个全局上，这里取走。
+ *
+ * 取不到就照常走 `fetchJsonOnce`——脚本没跑、被 CSP 拦掉、或者这是 dev 环境，
+ * 行为都和从前完全一致。这一层是纯粹的提速，不是新的依赖。
+ */
+type ContentBoot = Record<string, Promise<unknown> | undefined>
+
+/** 超时哨兵。用 Symbol 而不是 null，才能和「脚本确实拿到了 null」区分开。 */
+const BOOT_TIMED_OUT = Symbol('boot-timeout')
+
+/**
+ * 取走某个路径的预取结果，并从全局上摘掉。
+ *
+ * **只认一次**是关键：`fetchJson` 失败后会重试，而一个已经 settle 的 promise
+ * 每次 await 都返回同一个结果。不摘掉的话，一次预取失败会让三次重试全部空转。
+ */
+function takeBooted(path: string): Promise<unknown> | null {
+  if (typeof window === 'undefined') return null
+  const boot = (window as { __i6i6ContentBoot?: ContentBoot }).__i6i6ContentBoot
+  const pending = boot?.[path]
+  if (!pending) return null
+  delete boot[path]
+  return pending
+}
+
+/**
+ * 预取结果，带上和普通请求一样的超时上限。
+ *
+ * 内联脚本里的 fetch 没有 AbortController——那点代码要尽可能短，而且它发出去的
+ * 时候页面还没有任何超时策略可言。所以超时在这里补：预取挂住时不能连累整条链路，
+ * 到点就放弃它、退回正常的请求加重试。
+ */
+async function bootedJson(path: string): Promise<unknown | null> {
+  const booted = takeBooted(path)
+  if (!booted) return null
+  const settled = await Promise.race([
+    booted.catch(() => null),
+    sleep(REQUEST_TIMEOUT_MS).then(() => BOOT_TIMED_OUT),
+  ])
+  if (settled === BOOT_TIMED_OUT) return null
+  return settled ?? null
+}
+
 export type LiveBeat = {
   id: string
   kicker: string
@@ -331,6 +384,10 @@ async function fetchJsonOnce(path: string): Promise<Attempt> {
  * 等于把刚才打爆配额的那一拨突发原样再发一遍。
  */
 async function fetchJson(path: string): Promise<unknown | null> {
+  // 先看首屏预取有没有现成的。有就直接用，省掉一整趟往返。
+  const booted = await bootedJson(path)
+  if (booted !== null) return booted
+
   for (let attempt = 0; ; attempt += 1) {
     const result = await fetchJsonOnce(path)
     if (result.ok) return result.data
