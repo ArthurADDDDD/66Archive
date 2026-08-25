@@ -196,6 +196,10 @@ export function HomeActStage({
     const root = rootRef.current
     const sticky = stickyRef.current
     if (!root || !sticky) return false
+    // xl 以下桌面舞台会被 CSS 隐藏，但组件和 window wheel 监听仍然挂载。
+    // display:none 的 root / sticky 尺寸都是 0；若继续走边界判断，0 会被
+    // 误认为完整覆盖视口，导致隐藏舞台吞掉移动版页面的全部滚轮输入。
+    if (root.offsetHeight <= 0 || sticky.offsetHeight <= 0) return false
     const rect = root.getBoundingClientRect()
     return rect.top <= STAGE_EDGE_TOLERANCE && rect.bottom >= sticky.offsetHeight - STAGE_EDGE_TOLERANCE
   }, [])
