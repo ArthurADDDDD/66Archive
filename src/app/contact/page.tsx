@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
+import { CorrectionForm } from '@/components/CorrectionForm'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { Eyebrow } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
@@ -70,6 +71,15 @@ export default function ContactPage() {
             <p className="mt-4 text-body text-muted">
               发现错漏、想补档或者提供来源，都可以从下面的项目仓库找到我。
             </p>
+          </article>
+
+          <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 sm:col-span-2">
+            <span className="text-meta uppercase tracking-[0.16em] text-live">提交线索</span>
+            <h2 className="mt-3 text-h3 font-medium">直接在这里告诉我</h2>
+            <p className="measure-body mt-2 text-body text-muted">
+              不用注册，也不用去 GitHub 开 issue。写清楚是哪条记录、哪里不对就行。
+            </p>
+            <CorrectionForm />
           </article>
 
           <Link
