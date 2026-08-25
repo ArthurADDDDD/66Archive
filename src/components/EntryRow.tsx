@@ -194,7 +194,7 @@ export function EntryRow({
                               onClick={() => setSourceIndex(index)}
                               aria-pressed={active}
                               title={`切换到${index === 0 ? '主链接' : `备选 ${index}`}`}
-                              className={`ui-press group/source flex min-h-14 items-center justify-between gap-3 rounded-xl border px-3 py-2.5 text-left text-control transition-colors ${active ? 'border-live/55 bg-live/10 text-ink shadow-[0_8px_24px_rgba(91,200,232,.06)]' : 'border-line bg-base/35 text-muted hover:border-muted hover:text-ink'}`}
+                              className={`ui-press group/source flex min-h-14 min-w-0 w-full items-center justify-between gap-3 overflow-hidden rounded-xl border px-3 py-2.5 text-left text-control transition-colors ${active ? 'border-live/55 bg-live/10 text-ink shadow-[0_8px_24px_rgba(91,200,232,.06)]' : 'border-line bg-base/35 text-muted hover:border-muted hover:text-ink'}`}
                             >
                               <span className="min-w-0">
                                 <span className="font-medium" style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
@@ -203,7 +203,7 @@ export function EntryRow({
                                 {(source.parts ?? source.partDetails?.length) && <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 font-mono text-meta text-live">{source.parts ?? source.partDetails?.length}P</span>}
                                 <span className="mt-0.5 block truncate text-meta text-faint">{source.entryTitle}</span>
                               </span>
-                              <span className={`shrink-0 font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>{active ? '当前来源 ✓' : '切换'}</span>
+                              <span className={`shrink-0 whitespace-nowrap font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>{active ? '当前来源 ✓' : '切换'}</span>
                             </button>
                           )
                         })}

@@ -112,8 +112,11 @@ async function loadBakedContent(): Promise<LiveContent> {
   const missing = (Object.keys(baked) as (keyof LiveContent)[]).filter((key) => baked[key] === null)
   if (missing.length > 0) {
     const detail = `${origin} 的 ${missing.join(' / ')} 没能烤入`
-    if (process.env.CONTENT_BAKE_REQUIRED === '1') {
-      throw new Error(`[baked-content] ${detail}；CONTENT_BAKE_REQUIRED=1，中止构建。`)
+    // 生产发布不能拿几个月前的源码基线覆盖已经发布的当前内容。接口短暂异常时
+    // 中止这次静态构建，线上继续保留上一份成功烤入的发布版本；显式 off 仍可供
+    // 完全离线的本地构建使用。
+    if (process.env.NODE_ENV === 'production' || process.env.CONTENT_BAKE_REQUIRED === '1') {
+      throw new Error(`[baked-content] ${detail}；为保留上一份成功发布的内容，中止构建。`)
     }
     console.warn(`[baked-content] ${detail}，这部分退回公仓基线（站点仍可用，仅失去烤入带来的改善）。`)
   } else {
@@ -148,7 +151,7 @@ export function fetchBakedContent(): Promise<LiveContent> {
  * 实测：整份烤进根 layout 会让 `out/` 从 231M 涨到 610M（+164%）、条目页 HTML
  * 从 40KB 涨到 78KB（几乎翻倍）。按需分层之后条目页只多约 6KB。
  *
- * 需要 narrative 的页面（目前只有首页）自己用 `LiveNarrativeSeed` 补上。
+ * 需要 narrative 的页面（首页与编年史）自己用 `LiveNarrativeSeed` 补上。
  */
 export async function fetchBakedShell(): Promise<LiveContent> {
   const { copy, editorial } = await fetchBakedContent()

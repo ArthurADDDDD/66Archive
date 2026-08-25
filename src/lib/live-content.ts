@@ -14,7 +14,7 @@
  *    （见 `fetchJson`）。不重试的话，一次偶发失败就表现为「后台改好的文案自己
  *    变回了旧版」——页面没坏，却让人以为改不动了，比整块空白更难排查。
  * 3. **只认稳定 ID**。覆盖按 id 匹配；内容服务里没有的 id 用基线，基线里没有的 `custom-*`
- *    按纯文案节点渲染，其余未知 id 忽略——日期、链接、封面这些只有基线里有。
+ *    按纯文案节点渲染，其余未知 id 忽略。故事卡可携带经过内容服务校验的档案锚点覆盖。
  *
  * 站点是静态导出的，所以这些请求发生在浏览器里、首屏渲染之后。服务端渲染出来的
  * 永远是基线，覆盖是随后打上去的——这也是「内容服务不可用时页面照常」的实现方式。
@@ -25,6 +25,7 @@
  * 指向本地服务。内容服务对配置好的来源回 CORS 头，不需要额外的开发代理。
  */
 import { fillEmphasis, type ActId, type MemeCategory, type ResolvedAct, type ResolvedBeat } from './narrative'
+import { proxyImage } from './platforms'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
@@ -59,6 +60,10 @@ export type LiveBeat = {
   footnote: { text: string; rel: string; date: string }
   /** 卡片尾标（如 `TO BE CONTINUED...`）；空串表示这张卡不带尾标 */
   tail: string
+  /** 故事卡当前锚定的档案条目；缺省表示沿用构建期基线。 */
+  entryId?: string
+  /** 内容接口按当前档案快照解析出的封面，只与 entryId 一起使用。 */
+  entryCover?: string
 }
 
 export type LiveAct = {
@@ -166,6 +171,8 @@ function parseBeat(value: unknown): LiveBeat | null {
     chips: strList(value.chips),
     footnote: { text: str(footnote.text), rel: str(footnote.rel), date: str(footnote.date) },
     tail: str(value.tail),
+    entryId: typeof value.entryId === 'string' ? value.entryId : undefined,
+    entryCover: typeof value.entryCover === 'string' ? value.entryCover : undefined,
   }
 }
 
@@ -655,6 +662,8 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
   const applyBeat = (beat: ResolvedBeat): ResolvedBeat => {
     const override = overrides.get(beat.id)
     if (!override) return beat
+    const anchorChanged = override.entryId !== undefined
+    const entryId = override.entryId ?? ''
     return {
       ...beat,
       // 「展示日期」只管故事页编排；archive entry 的日期仍是数据层的唯一史料。
@@ -664,6 +673,11 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
       title: override.title || beat.title,
       body: override.body || undefined,
       expanded: override.expanded,
+      ...(anchorChanged ? {
+        href: entryId ? `/e/${entryId}/` : null,
+        external: false,
+        cover: entryId ? proxyImage(override.entryCover, beat.size === 'hero' ? 900 : 640) : null,
+      } : {}),
     }
   }
   const visible = (beat: ResolvedBeat) =>
