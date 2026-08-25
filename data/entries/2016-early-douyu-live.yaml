@@ -77,11 +77,7 @@
     duration_min: 97
     games: []
     sources:
-      - url: https://www.bilibili.com/video/BV1ZN411o7VN?p=4
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: https://www.bilibili.com/video/BV1Rx411S7Ta
+      - url: "https://www.bilibili.com/video/BV1Rx411S7Ta"
         kind: replay
         status: alive
     contributed_by: data-agent

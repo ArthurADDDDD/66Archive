@@ -473,10 +473,14 @@
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1485008911.JPG?imageslim"
     games: []
     sources:
+      - url: "https://www.acfun.cn/v/ac3422592"
+        kind: replay
+        status: unchecked
+        parts: 1
       - url: "https://www.acfun.cn/v/ac3422739"
         kind: replay
-        parts: 1
         status: alive
+        parts: 1
     contributed_by: data-agent
 
   - id: 2017-01-22-live-01
