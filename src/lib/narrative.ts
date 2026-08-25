@@ -298,7 +298,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         size: 'small',
         title: '娃睡了来突袭。',
         body: '带娃、直播、继续玩游戏。',
-        target: { kind: 'entry', id: '2026-08-09-live-01' },
+        target: { kind: 'entry', id: '2026-08-09-live-02' },
       },
       {
         id: 'back-maple',
