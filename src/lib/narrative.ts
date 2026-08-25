@@ -1053,7 +1053,7 @@ export const STORY_ACTS: Act[] = [
         kicker: '重新开始',
         title: '黑神话时期',
         body: '重新开始的第一个冬天，她还在打游戏。',
-        target: { kind: 'entry', id: '2024-12-10-live-02' },
+        target: { kind: 'entry', id: '2024-08-20-live-01' },
       },
       {
         id: 'cuiwa-youguo',
