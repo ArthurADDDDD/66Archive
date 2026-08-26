@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
-import { CorrectionForm } from '@/components/CorrectionForm'
+import { SubmissionForm } from '@/components/SubmissionForm'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { Eyebrow } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
@@ -79,7 +79,18 @@ export default function ContactPage() {
             <p className="measure-body mt-2 text-body text-muted">
               不用注册，也不用去 GitHub 开 issue。写清楚是哪条记录、哪里不对就行。
             </p>
-            <CorrectionForm />
+            <SubmissionForm
+              kind="correction"
+              className="mt-4"
+              nameLabel="怎么称呼你"
+              namePlaceholder="留个 ID 就行，方便我知道是谁发现的"
+              bodyLabel="发现了什么问题"
+              bodyPlaceholder="哪条记录、哪个字段不对、正确的应该是什么。有链接可以一起贴上来。"
+              successMessage="收到，谢谢。我会逐条看过再决定怎么改。"
+              disabledMessage="提交功能暂未开放。你仍然可以从下面的项目仓库找到我。"
+              submitLabel="提交"
+              againLabel="再提交一条"
+            />
           </article>
 
           <Link
