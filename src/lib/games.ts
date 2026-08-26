@@ -4,6 +4,7 @@
  */
 const SPECIFIC_GAME_PARENTS: Record<string, string> = {
   'elden-ring-nightreign': 'elden-ring',
+  'maplestory-classic': 'maplestory',
 }
 
 export function visibleGameIds(gameIds: string[]): string[] {

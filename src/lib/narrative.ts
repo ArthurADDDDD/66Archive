@@ -186,7 +186,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
  * 第一次上传→2010-05-08 / 越来越多人→2010-06-30 / 开始直播→2015-01-24；
  * 大周形成→/games/minecraft/（无封面，type）；
  * see you around~→2023-11-30；双人模式→2022-09-09 / 抖音复播→2024-08-18 / 娃睡了→2026-08-09；
- * 回冒险岛→/games/maplestory-classic/（无封面，type）。
+ * 回冒险岛→/games/maplestory/。
  * 重要锚点显示「重要」小标；非重要锚点不带任何小标签（用户：手机端 act 小标签太吵，不要「爆款/毕业后/主机区」这类了）。
  */
 export const HOMEPAGE_ACTS: Act[] = [
@@ -307,7 +307,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         size: 'type',
         title: '姐弟俩，又回冒险岛了。',
         body: '小时候和壮壮一起玩过的游戏，这么多年以后，又一起上线了。',
-        target: { kind: 'game', id: 'maplestory-classic' },
+        target: { kind: 'game', id: 'maplestory' },
       },
     ],
   },
@@ -1117,7 +1117,7 @@ export const STORY_ACTS: Act[] = [
         title: '姐弟俩，又回冒险岛了。',
         body: '小时候一起玩过的游戏，这么多年以后，又一起上线。不过现在，姐姐得等娃睡了。',
         tail: 'TO BE CONTINUED...',
-        target: { kind: 'game', id: 'maplestory-classic' },
+        target: { kind: 'game', id: 'maplestory' },
       },
     ],
   },
@@ -1433,6 +1433,25 @@ export const CURATED_GAMES: Record<string, CuratedGame> = {
     oneLiner: '从 2016 到 2017，几个晚上，加起来 {hours} 个小时。',
     entryTitlePattern: /几何冲刺/,
     note: '《几何冲刺》尚未登记入 data/games.yaml（待数据角色补录）；本站以标题匹配归档相关场次。',
+  },
+}
+
+type GameHeroStory = {
+  oneLiner: string
+  cover: string
+  href: string
+  linkLabel: string
+  coverAlt: string
+}
+
+/** 已登记游戏的详情页叙事。只写有一手公开素材可核验的个案，不参与标题猜测。 */
+const GAME_HERO_STORIES: Record<string, GameHeroStory> = {
+  maplestory: {
+    oneLiner: '学生时代，女流和弟弟一起玩《冒险岛》。她专心在屏幕里冒险，弟弟则在一旁替她留意父母有没有回来。多年以后再讲起，游戏里的地图、角色和怪物，早已和那段姐弟相伴的日子连在了一起。本站目前可追溯到的录像始于 2018 年；下面的场次和时长，只是现存录像留下的部分，并不代表她玩过这款游戏的全部时间。',
+    cover: 'https://i0.hdslb.com/bfs/archive/a3e7cfad71f08d02284065cc808ae004bf2bb858.jpg',
+    href: 'https://www.bilibili.com/video/BV1254y1A7qs',
+    linkLabel: '观看《女流回忆冒险岛》',
+    coverAlt: '《【女流】回忆冒险岛online》视频封面',
   },
 }
 
@@ -1807,6 +1826,10 @@ export type GameProfile = {
   spanDays: number
   /** 策展一句话（{hours} 已填充）；注册游戏为 null，页面上用数据行替代 */
   oneLiner: string | null
+  /** 有一手素材支持的详情页主图跳转；普通游戏为空。 */
+  heroHref: string | null
+  heroLinkLabel: string | null
+  heroCoverAlt: string | null
 }
 
 /**
@@ -1835,9 +1858,9 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
   const totalMinutes = matches.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   const latestCover = matches.find((e) => e.cover)?.cover ?? null
   const name = curated?.name ?? registered?.name ?? gameId
-  const oneLiner = curated
-    ? curated.oneLiner.replace('{hours}', Math.round(totalMinutes / 60).toString())
-    : null
+  const heroStory = GAME_HERO_STORIES[gameId]
+  const oneLiner = heroStory?.oneLiner
+    ?? (curated ? curated.oneLiner.replace('{hours}', Math.round(totalMinutes / 60).toString()) : null)
 
   // timeline 降序：第一个是最近一次，最后一个是首次
   const first = matches.length ? matches[matches.length - 1] : null
@@ -1864,10 +1887,15 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     totalMinutes,
     knownDurationCount: matches.filter((e) => typeof e.duration_min === 'number').length,
     hoursLabel: formatDuration(totalMinutes),
-    cover: latestCover ? proxyImage(latestCover ?? undefined, 900) : null,
+    cover: heroStory?.cover
+      ? proxyImage(heroStory.cover, 900)
+      : latestCover ? proxyImage(latestCover, 900) : null,
     face: firstCover ? proxyImage(firstCover ?? undefined, 480) : null,
     comebackDays,
     spanDays: first && last ? daysBetween(first.date, last.date) : 0,
     oneLiner,
+    heroHref: heroStory?.href ?? null,
+    heroLinkLabel: heroStory?.linkLabel ?? null,
+    heroCoverAlt: heroStory?.coverAlt ?? null,
   }
 }
