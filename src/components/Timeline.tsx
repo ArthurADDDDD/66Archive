@@ -103,6 +103,7 @@ export function Timeline({
   const [sheetOpen, setSheetOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
+  const monthArchiveRef = useRef<HTMLElement>(null)
 
   const monthsForYear = useCallback(
     (year: number) =>
@@ -174,6 +175,15 @@ export function Timeline({
     setFilters(nextFilters)
     setExpanded(new Set())
     writeUrl(nextFilters, year, null)
+    // 手机端年度卡与月份索引相隔较远：选完年份后直接把月份送到视线里。
+    if (window.matchMedia('(max-width: 639px)').matches) {
+      requestAnimationFrame(() => {
+        monthArchiveRef.current?.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start',
+        })
+      })
+    }
   }, [filters, writeUrl])
 
   const selectMonth = useCallback((month: number | null) => {
@@ -505,7 +515,7 @@ export function Timeline({
           </div>
         </section>
 
-        <section className="ui-reveal ui-delay-2 mt-7">
+        <section ref={monthArchiveRef} className="ui-reveal ui-delay-2 mt-7 scroll-mt-24">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
             <div>
               <p className="text-meta uppercase tracking-[0.16em] tnum" style={{ color: activeEra.color }}>
@@ -665,7 +675,7 @@ function MonthArchive({
       <p className="measure-body mb-4 text-body text-muted">
         选一个月，看看那段时间都在播什么。
       </p>
-      <div className="ui-stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="ui-stagger grid grid-cols-3 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
         {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => {
           const summary = summaries.get(month)
           if (!summary) {
@@ -673,10 +683,10 @@ function MonthArchive({
             return (
               <div
                 key={month}
-                className="flex min-h-[148px] min-w-0 flex-col rounded-xl border border-dashed border-line/60 p-4"
+                className="flex min-h-[82px] min-w-0 flex-col rounded-lg border border-dashed border-line/60 p-3 sm:min-h-[148px] sm:rounded-xl sm:p-4"
               >
                 <span className="text-[0.9375rem] font-medium text-faint">{MONTH_CN[month - 1]}</span>
-                <span className="mt-3 block text-meta text-faint/70">没有记录</span>
+                <span className="mt-2 block text-meta text-faint/70 sm:mt-3">无记录</span>
               </div>
             )
           }
@@ -693,12 +703,12 @@ function MonthArchive({
                 // 再点一次当前月份＝收起，回到只有年表的状态。
                 onSelect(isSelected ? null : month)
               }}
-              className={`ui-card ui-press flex min-h-[148px] min-w-0 flex-col rounded-xl border p-4 text-left transition-colors ${
+              className={`ui-card ui-press flex min-h-[82px] min-w-0 flex-col rounded-lg border p-3 text-left transition-colors sm:min-h-[148px] sm:rounded-xl sm:p-4 ${
                 isSelected ? 'bg-raised/70' : 'border-line bg-surface/45 hover:border-muted hover:bg-raised/70'
               }`}
               style={isSelected ? { borderColor: color, boxShadow: `0 12px 36px ${color}14` } : undefined}
             >
-              <span className="flex items-baseline justify-between gap-2 pb-2">
+              <span className="flex flex-col items-start gap-1 pb-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-2">
                 <span className="text-[0.9375rem] font-medium text-ink" style={isSelected ? { color } : undefined}>{MONTH_CN[month - 1]}</span>
                 {/* 条数是这一格唯一要被一眼读到的数据：等宽大字，最高的那个月直接染成时期色。 */}
                 <span className="shrink-0 text-meta text-faint tnum">
@@ -720,7 +730,7 @@ function MonthArchive({
                   <span className="h-full w-full" />
                 )}
               </span>
-              <span className="mt-3 block space-y-1.5">
+              <span className="mt-3 hidden space-y-1.5 sm:block">
                 <span className="block text-meta text-faint tnum">
                   {summary.durationCount > 0 ? (
                     <>

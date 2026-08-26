@@ -213,7 +213,7 @@ function SeriesGroup({
             className="ui-press group flex flex-col rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60 hover:bg-surface"
           >
             {s.cover ? (
-              <MediaFrame src={s.cover} alt={s.name} className="h-28 w-full" />
+              <MediaFrame src={s.cover} alt={s.name} aspect="aspect-video" className="w-full" />
             ) : (
               <div className="flex h-16 w-full items-center">
                 <span className="text-h3 font-bold text-ink/85">{s.name}</span>
