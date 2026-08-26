@@ -387,7 +387,7 @@
     platform: douyu
     confidence: high
     duration_min: 237
-    games: []
+    games: [winkeltje]
     note: "B站「女流录像小屋」《Winkeltje》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1d4411a7Jm"
@@ -442,7 +442,7 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/Fo-AOx7YNdyrGPdgk7kRqsSgHUFW?imageslim"
-    games: []
+    games: [league-of-legends]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -601,7 +601,7 @@
     platform: douyu
     confidence: high
     duration_min: 229
-    games: []
+    games: [a-plague-tale-innocence]
     note: "B站「女流录像小屋」《瘟疫传说》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1N441177tc"

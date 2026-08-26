@@ -124,6 +124,7 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+    tags: [户外]
 
   - id: 2019-02-12-live-01
     type: live
@@ -132,7 +133,7 @@
     platform: douyu
     confidence: high
     duration_min: 326
-    games: []
+    games: [dragon-quest-builders-2]
     note: "B站「女流录像小屋」《勇者斗恶龙创世小玩家2》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Fb411U7we"
@@ -495,7 +496,7 @@
     platform: douyu
     confidence: high
     duration_min: 403
-    games: []
+    games: [trials-rising]
     note: "B站「女流录像小屋」《特技摩托:崛起(Trials Rising)》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1nb411b7kU"

@@ -55,7 +55,7 @@
     platform: douyu
     confidence: high
     duration_min: 341
-    games: []
+    games: [sos-fomt]
     note: "B站「女流录像小屋」《牧场物语》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1st411K7KK"
@@ -71,7 +71,7 @@
     platform: douyu
     confidence: high
     duration_min: 305
-    games: []
+    games: [sos-fomt]
     note: "B站「女流录像小屋」《牧场物语》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1ot411K79A"
@@ -216,7 +216,7 @@
     platform: douyu
     confidence: high
     duration_min: 302
-    games: []
+    games: [sos-fomt]
     note: "B站「女流录像小屋」《牧场物语》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1J4411d7L7"
@@ -292,7 +292,7 @@
     platform: douyu
     confidence: high
     duration_min: 303
-    games: []
+    games: [control-game]
     note: "B站「女流录像小屋」《Control》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1q4411z7rq"
@@ -387,6 +387,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]
   - id: 2019-08-16-live-01
     type: live
     date: '2019-08-16'
@@ -400,6 +401,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [jump-king]
   - id: 2019-08-17-live-01
     type: live
     date: '2019-08-17'
@@ -413,6 +415,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]
   - id: 2019-08-19-live-01
     type: live
     date: '2019-08-19'
@@ -426,6 +429,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]
   - id: 2019-08-21-live-01
     type: live
     date: '2019-08-21'
@@ -439,6 +443,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [remnant-from-the-ashes]
   - id: 2019-08-24-live-01
     type: live
     date: '2019-08-24'
@@ -452,6 +457,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [remnant-from-the-ashes]
   - id: 2019-08-26-live-01
     type: live
     date: '2019-08-26'
@@ -465,6 +471,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [control-game]
   - id: 2019-08-29-live-01
     type: live
     date: '2019-08-29'
@@ -478,3 +485,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [bleach-soul-resonance]

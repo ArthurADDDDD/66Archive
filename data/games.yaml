@@ -9,10 +9,16 @@
   - id: 10-minutes-till-dawn
     name: 10 Minutes Till Dawn
 
+  - id: 3rd-eye
+    name: 3rd eye
+
   - id: 7-billion-humans
     name: 程序员升职记
     aliases:
       - 7 Billion Humans
+
+  - id: a-bird-story
+    name: 鸟的故事
 
   - id: a-dance-of-fire-and-ice
     name: 冰与火之舞
@@ -23,6 +29,9 @@
     name: 时光之帽
     aliases:
       - A Hat in Time
+
+  - id: a-knights-quest
+    name: 骑士之旅
 
   - id: a-little-to-the-left
     name: A Little to the Left
@@ -2408,6 +2417,12 @@
     aliases:
       - Aquaria
 
+  - id: assassins-creed-black-flag
+    name: 刺客信条4：黑旗
+
+  - id: astro-bot
+    name: 宇宙机器人
+
   - id: awakening
     name: 唤醒盒子
     aliases:
@@ -2421,18 +2436,57 @@
   - id: baby-escape
     name: 小婴儿逃脱
 
+  - id: battlefield-2042
+    name: 战地2042
+
+  - id: battlefield-6
+    name: 战地风云6
+
+  - id: beyond-two-souls
+    name: 超凡双生
+
   - id: biantai-rensheng
     name: 变态人生大冒险
+
+  - id: bleach-soul-resonance
+    name: 境界：灵压对决
+
+  - id: brain-school
+    name: 灵活脑学校
+
+  - id: brain-training-switch
+    name: 脑锻炼
+
+  - id: candleman
+    name: 蜡烛人
 
   - id: chai
     name: 拆！
     aliases:
       - 拆系列
 
+  - id: change-homeless
+    name: 转变
+
+  - id: changmeng
+    name: 长梦
+
   - id: child-of-light
     name: 光之子
     aliases:
       - "Child of Light"
+
+  - id: children-of-morta
+    name: 莫塔守山人
+
+  - id: codenames
+    name: 截码战
+
+  - id: concrete-genie
+    name: 壁中精灵
+
+  - id: control-game
+    name: 控制
 
   - id: corporate-climber
     name: Corporate Climber
@@ -2443,29 +2497,131 @@
       - CSonline
       - CSOL
 
+  - id: crossout
+    name: 创世战车
+
+  - id: cube-escape-seasons
+    name: 逃脱方块：四季
+
+  - id: dark-detective
+    name: 黑暗侦探
+
+  - id: dear-fresh-meat
+    name: 亲爱的小鲜肉
+
+  - id: diablo-2
+    name: 暗黑破坏神2
+
   - id: donkey-kong-tropical-freeze
     name: 大金刚热带雨林
     aliases:
       - "Donkey Kong Country: Tropical Freeze"
+
+  - id: dragon-pinball
+    name: 龙之弹珠台
+
+  - id: dragon-quest-builders
+    name: 勇者斗恶龙：创世小玩家
+
+  - id: dragonheir-silent-gods
+    name: 龙息：神寂
 
   - id: drawn-the-painted-tower
     name: 迷画之塔
     aliases:
       - Drawn
 
+  - id: driving-test-sim
+    name: 东方驾考模拟器
+
+  - id: earthworms
+    name: Earthworms
+
+  - id: eleven-table-tennis
+    name: VR乒乓
+
+  - id: endless-journey
+    name: 无尽旅途
+
   - id: enough-plumbers
     name: Enough Plumbers
+
+  - id: fallout-shelter
+    name: 辐射：避难所
 
   - id: famous-painting-parodies
     name: Famous Painting Parodies
 
+  - id: fitness-lab-switch
+    name: 体能实验室
+
   - id: flappy-bird
     name: Flappy Bird
+
+  - id: game-of-fate
+    name: 命运游戏：逆时寻凶
+
+  - id: gem-merchant
+    name: 宝石商人桌游局
+
+  - id: ghost-trick
+    name: 幽灵诡计
+
+  - id: guess-my-drawing
+    name: 你画我猜
+
+  - id: hand-simulator
+    name: Hand Simulator
+
+  - id: hand-simulator-survival
+    name: 手模拟器：生存
+
+  - id: hatsune-miku-ft
+    name: 初音未来：歌姬计划 F
+
+  - id: her-story
+    name: 她的故事
+
+  - id: hero-killer
+    name: 英雄杀手
+
+  - id: hi-fi-rush
+    name: Hi-Fi RUSH
+
+  - id: holy-book-story
+    name: 圣书物语
 
   - id: home-sheep-home
     name: 小羊回家
     aliases:
       - "Home Sheep Home"
+
+  - id: houniao
+    name: 候鸟
+
+  - id: house-of-legacy
+    name: 家族崛起
+
+  - id: i-hate-this-game
+    name: I Hate This Game
+
+  - id: im-scared
+    name: I'm Scared
+
+  - id: im-the-boss
+    name: 我是大老板
+
+  - id: imprisoned-palm
+    name: 被囚禁的掌心
+
+  - id: incantation-game
+    name: 咒
+
+  - id: inside-my-radio
+    name: 我的电台
+
+  - id: jianjian-shijie
+    name: 剪剪世界
 
   - id: journey
     name: 风之旅人
@@ -2477,10 +2633,37 @@
     aliases:
       - 巨人猎手
 
+  - id: kena-bridge-of-spirits
+    name: 柯娜：精神之桥
+
+  - id: kings-quest-2015
+    name: 国王密使
+
+  - id: lakeview-cabin
+    name: 湖景小屋
+
+  - id: liars-bar
+    name: 骗子酒馆
+
+  - id: life-is-strange
+    name: 奇异人生
+
   - id: littlebigplanet
     name: 小小大星球
     aliases:
       - LittleBigPlanet
+
+  - id: lockdown-protocol
+    name: LOCKDOWN Protocol
+
+  - id: lost-castle
+    name: 失落城堡
+
+  - id: luigis-mansion-3
+    name: 路易吉洋楼3
+
+  - id: luma-island
+    name: Luma Island
 
   - id: mu-complex
     name: Mu Complex
@@ -2550,16 +2733,202 @@
     aliases:
       - MapleStory
 
+  - id: mario-party
+    name: 马力欧派对
+
+  - id: mario-sonic-tokyo-2020
+    name: 马力欧与索尼克 2020东京奥运
+
+  - id: matrix-zero-day-crisis
+    name: 矩阵：零日危机
+
+  - id: meituan
+    name: 美团
+
+  - id: metroid-dread
+    name: 密特罗德：生存恐惧
+
+  - id: mizi-no
+    name: Mizi NO!
+
+  - id: my-teacher-is-a-bear
+    name: 我的老师是只“熊”
+
+  - id: never-look-at-it
+    name: 千万不能看！
+
+  - id: new-super-mario-bros-wii
+    name: 新超级马力欧兄弟 Wii
+
+  - id: night-of-the-full-moon
+    name: 月圆之夜
+
+  - id: nintendo-labo
+    name: 任天堂 Labo
+
+  - id: nixizhixingtu-shanyao
+    name: 逆袭之星途闪耀
+
+  - id: once-human
+    name: 七日世界
+
+  - id: once-upon-a-time-game
+    name: Once Upon A Time
+
+  - id: oneway-game
+    name: OneWay
+
+  - id: out-of-bounds
+    name: 界外狂潮
+
+  - id: perverted-life-adventure
+    name: 变态人生的大冒险
+
+  - id: pico-park-2
+    name: PICO PARK 2
+
+  - id: planet-zoo
+    name: 动物园之星
+
+  - id: pokemon-legends-arceus
+    name: 宝可梦传说：阿尔宙斯
+
+  - id: portal-knights
+    name: 传送门骑士
+
+  - id: qiuqiu-dazuozhan
+    name: 球球大作战
+
+  - id: rascal-fight
+    name: 捣蛋大作战
+
+  - id: rayman-legends
+    name: 雷曼传奇
+
+  - id: reading-people-trilogy
+    name: 察言观色三部曲
+
+  - id: replica-game
+    name: Replica
+
+  - id: retro-minigame-collection
+    name: 怀旧小游戏合集
+
   - id: ring-fit-adventure
     name: 健身环大冒险
     aliases:
       - Ring Fit Adventure
 
+  - id: rogue-hero
+    name: 痞子英雄
+
+  - id: ruina
+    name: 废都物语
+
+  - id: sedap
+    name: SEDAP！亚洲料理冒险
+
+  - id: seeing-stars
+    name: 往左一点：看星星
+
+  - id: shadow-of-the-colossus
+    name: 汪达与巨像
+
+  - id: shawarma-legend
+    name: 沙威玛传奇
+
+  - id: stabbed-by-god
+    name: 我被男神捅死了
+
+  - id: stranded-deep
+    name: 怒海求生
+
+  - id: streets-of-rogue
+    name: 地痞街区
+
+  - id: super-seducer
+    name: 超级情圣
+
   - id: supermarket-chaos
     name: 混乱超市
+
+  - id: techtonica
+    name: Techtonica
+
+  - id: the-pedestrian
+    name: 步行者
+
+  - id: the-room
+    name: 未上锁的房间
+
+  - id: the-sims
+    name: 模拟人生
+
+  - id: the-stretchers
+    name: 担架拍档
+
+  - id: the-visitor-game
+    name: 来访者
+
+  - id: thehunter
+    name: 猎人
+
+  - id: tianlong-babu-mobile
+    name: 天龙八部手游
+
+  - id: tianshenzhen
+    name: 天神镇
+
+  - id: tiny-rogues
+    name: Tiny Rogues
+
+  - id: to-the-moon
+    name: 去月球
+
+  - id: tokyo-2020-olympics
+    name: 2020东京奥运
 
   - id: tracks
     name: Tracks
     aliases:
       - 轨道模型游戏
       - The Train Set Game
+
+  - id: train-valley-2
+    name: 火车山谷2
+
+  - id: tribe-primitive-builder
+    name: 部落幸存者
+
+  - id: trine-4
+    name: 三位一体4：梦魇王子
+
+  - id: true-or-false-game
+    name: True or False
+
+  - id: twin-tales
+    name: 双子传说
+
+  - id: undertale
+    name: 传说之下
+
+  - id: unravel
+    name: 毛线小精灵
+
+  - id: winnie-the-pooh-adventure
+    name: 小熊维尼·噗历险记
+
+  - id: world-of-warcraft
+    name: 魔兽世界
+
+  - id: yinsongzhe
+    name: 吟诵者
+
+  - id: yiren-zhixia
+    name: 异人之下
+
+  - id: yongwang-zhiqian
+    name: 勇网直前
+
+  - id: your-love-and-real-love
+    name: 你之恋与真实之恋

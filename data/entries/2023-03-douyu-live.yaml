@@ -416,6 +416,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    tags: [一起See]
   - id: 2023-03-01-live-01
     type: live
     date: '2023-03-01'
@@ -429,6 +430,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [聊天]
   - id: 2023-03-07-live-01
     type: live
     date: '2023-03-07'
@@ -442,6 +444,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [聊天]
   - id: 2023-03-14-live-01
     type: live
     date: '2023-03-14'
@@ -455,6 +458,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [resident-evil-4]
   - id: 2023-03-19-live-01
     type: live
     date: '2023-03-19'
@@ -481,6 +485,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [resident-evil-3]
   - id: 2023-03-28-live-01
     type: live
     date: '2023-03-28'
@@ -494,3 +499,5 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See, 聊天]
+    games: [majsoul]

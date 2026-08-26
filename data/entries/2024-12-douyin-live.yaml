@@ -5,7 +5,7 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/2a8e2fb9089deeac2ce413ecdef3a23cdd2ca330.jpg"
     confidence: medium
-    games: []
+    games: [liars-bar]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1y5zmYjEpr"
@@ -23,7 +23,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2c6fc1c77b24db689e4580f5d38425821700a725.jpg"
     confidence: medium
-    games: []
+    games: [meituan]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV199iUYoEVp"
@@ -33,6 +33,7 @@
     contributed_by: data-agent
 
     duration_min: 95
+    tags: [聊天]
 
   - id: 2024-12-06-live-02
     type: live
@@ -41,7 +42,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/d23e867cb153f8e5799cd81d7529c416f084ca76.jpg"
     confidence: medium
-    games: []
+    games: [meituan, out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV136iBYoESP"
@@ -59,7 +60,7 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/aebf265c83250dc23d4e7b8e18eb5159aeecbbc0.jpg"
     confidence: medium
-    games: []
+    games: [out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV14YqVYEE2x"
@@ -77,7 +78,7 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/00f548d68678161b72a70dfcdfded53724b9eedb.jpg"
     confidence: medium
-    games: []
+    games: [out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1zHqHYZExY"
@@ -95,7 +96,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2962e40acc0d1afc2b2b7d4cce40be7efc78e800.jpg"
     confidence: medium
-    games: []
+    games: [meituan, out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1J5qKYEEBF"
@@ -383,6 +384,7 @@
     contributed_by: data-agent
 
     duration_min: 104
+    tags: [聊天, 户外]
 
   - id: 2024-12-22-live-02
     type: live
@@ -391,7 +393,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/2a4fe8d47043fcb670ab82084b309ff9019e6180.jpg"
     confidence: medium
-    games: []
+    games: [meituan, mizi-no]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1iaCKYtEPz"
@@ -544,7 +546,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/013efe81702de538ecbc4d0de268a79b48509957.jpg"
     confidence: high
-    games: []
+    games: [where-winds-meet]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2024-12-30-live-03 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。 B站浮尘呃源投稿标题写 12-31，但分P文件名与内容为 12-30 19:05 场（跨零点至 12-31），按开播日并入本条，不另计 12-31。"
     segments:
       - at: "00:00:00"

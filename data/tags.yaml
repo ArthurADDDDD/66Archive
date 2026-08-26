@@ -86,3 +86,11 @@
 - name: 佩奇
   group: content
   description: "粉丝剪辑/家庭相关内容"
+
+- name: 户外
+  group: content
+  description: "在直播间外的实地活动 / 户外场次。"
+
+- name: 唱歌
+  group: content
+  description: "以唱歌为主的场次。"

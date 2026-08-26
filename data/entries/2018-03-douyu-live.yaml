@@ -149,7 +149,7 @@
     platform: douyu
     confidence: high
     duration_min: 283
-    games: []
+    games: [danganronpa-1]
     note: "B站「女流录像小屋」《弹丸论破：希望的学园和绝望高中生》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1WW411W7zN"
@@ -520,7 +520,7 @@
     platform: douyu
     confidence: high
     duration_min: 274
-    games: []
+    games: [super-seducer]
     note: "B站「女流录像小屋」《超级情圣 SuperSeducer》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1fW411u7UA"
@@ -536,7 +536,7 @@
     platform: douyu
     confidence: high
     duration_min: 239
-    games: []
+    games: [super-seducer, ruina]
     note: "B站「女流录像小屋」《超级情圣 SuperSeducer & 废都物语》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV13W411g7EP"
@@ -794,7 +794,7 @@
     confidence: high
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_27/1522150181.JPG?imageslim"
-    games: []
+    games: [keep-talking-and-nobody-explodes]
     segments:
       - at: "00:00:00"
         label: "P1.1-2018.3.27-游戏前聊10块钱的"

@@ -471,7 +471,7 @@
     confidence: high
     duration_min: 345
     cover: "https://tx-free-imgs.acfun.cn/o_1f5ug1of2nce1mupita12f76t10.jpeg?imageslim"
-    games: []
+    games: [endless-journey]
     segments:
       - at: 00:00:00
         label: 游戏前聊10块钱的
@@ -716,7 +716,7 @@
     platform: douyu
     confidence: high
     duration_min: 233
-    games: []
+    games: [majsoul]
     note: "B站「女流录像小屋」《雀魂》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV15q4y1j7qB"
@@ -795,3 +795,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [world-games-51]

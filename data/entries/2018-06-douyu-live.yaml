@@ -432,6 +432,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2018-06-22-live-01
     type: live
@@ -441,7 +442,7 @@
     confidence: high
     duration_min: 184
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_22/1529664317.JPG?imageslim"
-    games: []
+    games: [hand-simulator]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"

@@ -6,7 +6,7 @@
     confidence: high
     duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03397b91d4e545f0968a04ba6e1badaa.jpeg?imageslim"
-    games: []
+    games: [overwatch]
     sources:
       - url: "https://www.acfun.cn/v/ac41293737"
         kind: replay
@@ -27,7 +27,7 @@
     confidence: high
     duration_min: 291
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_98fb829abad443ffb889e5983f5338b4.jpeg?imageslim"
-    games: []
+    games: [bramble-mountain-king, bramble-the-mountain-king]
     sources:
       - url: https://www.bilibili.com/video/BV1so4y1x7rQ
         kind: replay
@@ -47,7 +47,7 @@
     confidence: high
     duration_min: 305
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_05495e9546174203ace7bd78417c65fe.jpeg?imageslim"
-    games: []
+    games: [houniao]
     sources:
       - url: https://www.bilibili.com/video/BV1zc411N7ws
         kind: replay
@@ -67,7 +67,7 @@
     confidence: high
     duration_min: 290
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bdc0d0a02adb44bfa211d8a1dc7dd473.jpeg?imageslim"
-    games: []
+    games: [houniao]
     sources:
       - url: "https://www.acfun.cn/v/ac41293800"
         kind: replay
@@ -182,6 +182,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2023-05-11-live-01
     type: live

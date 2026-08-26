@@ -492,7 +492,7 @@
     platform: douyu
     confidence: high
     duration_min: 285
-    games: []
+    games: [sakuna]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与 B 站「女流录像小屋」BV1My4y167Rv（女流-2020.11.17-天穗之咲稻姬）确认补入。
     sources:
       - url: https://www.bilibili.com/video/BV1My4y167Rv
@@ -535,7 +535,7 @@
     title: 天穗之咲稻姬/ Sakuna Of Rice and Ruin
     platform: douyu
     confidence: high
-    games: []
+    games: [sakuna]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：11.19 游戏：天穗之咲稻姬/
       Sakuna Of Rice and Ruin。斗鱼回放标题：种地种地66种地
     sources:
@@ -715,7 +715,7 @@
     platform: douyu
     confidence: high
     duration_min: 235
-    games: []
+    games: [demons-souls]
     note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1Mv411b76N；标题与日期经 BiliPlus / Bilibili
       API 双重确认。
     sources:

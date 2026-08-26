@@ -10,7 +10,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/707a4acd5ac5452cf999bff0c01126c56060cc6b.jpg"
     confidence: medium
-    games: []
+    games: [shawarma-legend]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1xuSRYFEMY"
@@ -27,7 +27,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/539b1066920829d9bdf4d8149f32d05f526ef464.jpg"
     confidence: medium
-    games: []
+    games: [game-of-fate]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1eySBYcEGZ"
@@ -44,7 +44,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/ed34821c12e183a2ea941ac8cab7472b76ee1e26.jpg"
     confidence: medium
-    games: []
+    games: [luma-island]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1rHzPYQEQa"
@@ -61,7 +61,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/f472654e065e97cfc5a86b059be4589eedbec4b6.jpg"
     confidence: high
-    games: []
+    games: [incantation-game]
     note: "同一场直播由 bobi华（BV1ZNzGYiESr，3:28:42）与 怪盗基德KID（BV1ZwzGYqEqA，3:27:53）分别搬运，总时长吻合，已合并为一天一条。"
     tags: [一起See]
     segments:
@@ -109,7 +109,7 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/ca00a9a6d410223e6119e23943276793ff719c82.jpg"
     confidence: high
-    games: []
+    games: [mario-party]
     note: "同一场直播由 bobi华（BV1wYzhYFEcs，3:25:38）与 怪盗基德KID（BV1xHzhYqEK7，3:27:20）分别搬运，总时长吻合，已合并为一天一条。"
     segments:
       - at: "00:00:00"

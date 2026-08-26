@@ -622,7 +622,7 @@
     confidence: high
     duration_min: 189
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_303ed5e670c7402196a4f0540cd1a79d.jpeg?imageslim"
-    games: []
+    games: [naraka-bladepoint]
     segments:
       - at: "00:00:00"
         label: "全明星娱乐赛"
@@ -926,7 +926,7 @@
     confidence: high
     duration_min: 314
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_096135c4082c487ead4cce4c47eb6ea5.jpeg?imageslim"
-    games: []
+    games: [oneway-game]
     segments:
       - at: "00:00:00"
         label: "OneWay"
@@ -965,3 +965,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-stories-2]

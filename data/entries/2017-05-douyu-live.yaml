@@ -33,7 +33,7 @@
     confidence: high
     duration_min: 191
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_04/1493900141.JPG?imageslim"
-    games: []
+    games: [guess-my-drawing]
     segments:
       - at: "00:00:00"
         label: "P1-5.3-你写我猜"
@@ -74,6 +74,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    tags: [聊天, 户外]
 
   - id: 2017-05-05-live-01
     type: live
@@ -170,7 +171,7 @@
     confidence: high
     duration_min: 339
     cover: "https://tx-free-imgs.acfun.cn/content/2017_05_10/1494429609.JPG?imageslim"
-    games: []
+    games: [xi]
     segments:
       - at: "00:00:00"
         label: "P1-5.9-被套路办卡"
@@ -603,3 +604,4 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+    tags: [户外]

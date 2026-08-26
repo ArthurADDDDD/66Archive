@@ -239,6 +239,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2023-11-21-live-01
     type: live
@@ -358,7 +359,7 @@
     confidence: high
     duration_min: 589
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e5eeffd59f9d44e5853db8454d1d54b6.jpeg?imageslim"
-    games: []
+    games: [hero-killer]
     sources:
       - url: https://www.bilibili.com/video/BV1x94y1n7Vr
         kind: replay
@@ -394,7 +395,7 @@
     confidence: high
     duration_min: 308
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_093ba1f7feac45bfb9b0bd459b2ff16f.jpeg?imageslim"
-    games: []
+    games: [hero-killer]
     sources:
       - url: "https://www.acfun.cn/v/ac43111506"
         kind: replay

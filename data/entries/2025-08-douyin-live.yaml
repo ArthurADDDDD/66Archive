@@ -5,7 +5,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/069a4a619d211e7259acfc9a5e78d90d8292a435.jpg"
     confidence: high
-    games: []
+    games: [matrix-zero-day-crisis]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-08-02-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
@@ -34,7 +34,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/e90fb2640db9d474446ad4ec233ad4cd7e5ffe6a.jpg"
     confidence: medium
-    games: []
+    games: [battlefield-6]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV15htBz9Eia"
@@ -69,7 +69,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/a1653093878606710a732b7cee9f51664e2d936c.jpg"
     confidence: medium
-    games: []
+    games: [seeing-stars]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1dEbKzvEvc"
@@ -78,3 +78,4 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     duration_min: 263
+    tags: [一起See]

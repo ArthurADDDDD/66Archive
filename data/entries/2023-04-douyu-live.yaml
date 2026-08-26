@@ -112,6 +112,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [sekiro]
 
   - id: 2023-04-08-live-01
     type: live
@@ -438,7 +439,7 @@
     confidence: high
     duration_min: 220
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_01e9c4d14adc4c0a8278b040a9b2aaf2.jpeg?imageslim"
-    games: []
+    games: [changmeng]
     sources:
       - url: "https://www.acfun.cn/v/ac41245018"
         kind: replay

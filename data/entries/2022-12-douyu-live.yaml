@@ -418,6 +418,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [tunic]
   - id: 2022-12-12-live-01
     type: live
     date: '2022-12-12'
@@ -431,6 +432,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [tiny-rogues]
   - id: 2022-12-19-live-01
     type: live
     date: '2022-12-19'
@@ -444,6 +446,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See]
   - id: 2022-12-29-live-01
     type: live
     date: '2022-12-29'
@@ -457,3 +460,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [the-house-of-da-vinci-3]

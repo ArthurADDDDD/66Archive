@@ -39,7 +39,7 @@
     confidence: high
     duration_min: 271
     cover: "https://tx-free-imgs.acfun.cn/Fm-XuMcIx2-OtxYkREQNIKi7ddTS?imageslim"
-    games: []
+    games: [sos-fomt]
     segments:
       - at: "00:00:00"
         label: "大雄好久不见"
@@ -190,7 +190,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    games: []
+    games: [zelda-links-awakening]
     note: "B站「女流录像小屋」《塞尔达传说 织梦岛》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1aJ411u7Ty"
@@ -323,7 +323,7 @@
     platform: douyu
     confidence: high
     duration_min: 386
-    games: []
+    games: [green-hell]
     note: "B站「女流录像小屋」《Green Hell》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV12E411X7ZL"
@@ -344,6 +344,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]
   - id: 2019-09-06-live-01
     type: live
     date: '2019-09-06'
@@ -357,6 +358,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [world-of-warcraft]
   - id: 2019-09-11-live-01
     type: live
     date: '2019-09-11'
@@ -370,6 +372,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-world]
   - id: 2019-09-12-live-01
     type: live
     date: '2019-09-12'
@@ -383,6 +386,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-world]
   - id: 2019-09-13-live-01
     type: live
     date: '2019-09-13'
@@ -396,6 +400,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-world]
   - id: 2019-09-16-live-01
     type: live
     date: '2019-09-16'
@@ -409,6 +414,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-world]
   - id: 2019-09-17-live-01
     type: live
     date: '2019-09-17'
@@ -422,6 +428,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [monster-hunter-world]
   - id: 2019-09-18-live-01
     type: live
     date: '2019-09-18'
@@ -435,6 +442,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [imprisoned-palm]
   - id: 2019-09-21-live-01
     type: live
     date: '2019-09-21'
@@ -448,6 +456,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [zelda-links-awakening]
   - id: 2019-09-24-live-01
     type: live
     date: '2019-09-24'
@@ -461,6 +470,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [zelda-links-awakening]
   - id: 2019-09-27-live-01
     type: live
     date: '2019-09-27'
@@ -474,6 +484,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [a-short-hike]
   - id: 2019-09-29-live-01
     type: live
     date: '2019-09-29'
@@ -487,3 +498,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [green-hell]

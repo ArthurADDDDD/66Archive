@@ -26,7 +26,7 @@
     confidence: high
     duration_min: 93
     cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783240.jpg?imageslim"
-    games: []
+    games: [nixizhixingtu-shanyao]
     sources:
       - url: https://www.bilibili.com/video/BV1rs411i7rV
         kind: replay
@@ -66,7 +66,7 @@
     confidence: high
     duration_min: 58
     cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464870856.jpg?imageslim"
-    games: []
+    games: [once-upon-a-time-game]
     sources:
       - url: https://www.bilibili.com/video/BV1ys411i75i
         kind: replay
@@ -86,7 +86,7 @@
     confidence: high
     duration_min: 122
     cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464868220.jpg?imageslim"
-    games: []
+    games: [stranded-deep]
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -197,6 +197,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    tags: [心灵砒霜]
 
   - id: 2016-06-08-live-01
     type: live
@@ -205,7 +206,7 @@
     platform: douyu
     confidence: high
     duration_min: 192
-    games: []
+    games: [geometry-dash]
     note: "B站「女流录像小屋」《几何冲刺》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1ws411q7Qc"
@@ -221,7 +222,7 @@
     platform: douyu
     confidence: high
     duration_min: 222
-    games: []
+    games: [the-sims]
     note: "B站「女流录像小屋」《模拟人生》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1js411q731"
@@ -237,7 +238,7 @@
     platform: douyu
     confidence: high
     duration_min: 64
-    games: []
+    games: [geometry-dash]
     note: "B站「女流录像小屋」《几何冲刺-Xstep》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1js411q7JP"
@@ -317,7 +318,7 @@
     platform: douyu
     confidence: high
     duration_min: 256
-    games: []
+    games: [ghost-trick]
     note: "B站「女流录像小屋」《幽灵诡计 day1》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Ws411v7qK"
@@ -333,7 +334,7 @@
     platform: douyu
     confidence: high
     duration_min: 238
-    games: []
+    games: [ghost-trick]
     note: "B站「女流录像小屋」《幽灵诡计 day2》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Js411v7iY"
@@ -365,7 +366,7 @@
     platform: douyu
     confidence: high
     duration_min: 192
-    games: []
+    games: [ghost-trick]
     note: "B站「女流录像小屋」《幽灵诡计 day3》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1vs411v7YW"
@@ -381,7 +382,7 @@
     platform: douyu
     confidence: high
     duration_min: 176
-    games: []
+    games: [ghost-trick]
     note: "B站「女流录像小屋」《幽灵诡计 day4-完结》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1bs411v7Xc"
@@ -397,7 +398,7 @@
     platform: douyu
     confidence: high
     duration_min: 220
-    games: []
+    games: [minecraft]
     note: "B站「女流录像小屋」《MC复兴大周 day1》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Ys411v77B"
@@ -413,7 +414,7 @@
     platform: douyu
     confidence: high
     duration_min: 187
-    games: []
+    games: [minecraft]
     note: "B站「女流录像小屋」《MC复兴大周 day2》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1ms411v7Tz"

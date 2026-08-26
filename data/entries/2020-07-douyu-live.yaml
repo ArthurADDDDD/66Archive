@@ -295,7 +295,7 @@
     title: 世界游戏大全51款
     platform: douyu
     confidence: high
-    games: []
+    games: [world-games-51]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.15 游戏：世界游戏大全51款。斗鱼回放标题：今天就是要玩转！
     sources:
       - url: https://v.douyu.com/show/r90XWgrwbLNMgk25
@@ -596,7 +596,7 @@
     confidence: high
     duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/o_1ee84sphqnnh1q816k51amehu90.jpeg?imageslim"
-    games: []
+    games: [stranded-deep]
     segments:
       - at: "00:00:00"
         label: "怒海余生"
@@ -652,7 +652,7 @@
     title: 纸片马里奥：折纸国王龙之谷2
     platform: douyu
     confidence: high
-    games: []
+    games: [paper-mario]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.28 游戏：纸片马里奥：折纸国王龙之谷2。斗鱼回放标题：纸片马里奥玩一下
     sources:
       - url: https://v.douyu.com/show/a2JEMJjxwYoMNxml
