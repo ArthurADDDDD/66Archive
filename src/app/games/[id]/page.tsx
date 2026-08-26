@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
@@ -25,12 +25,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), id)
+  const profileId = id === 'maplestory-classic' ? 'maplestory' : id
+  const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), profileId)
   return { title: profile ? `${profile.name} · 游戏收藏架` : '游戏 · 女流66编年史' }
 }
 
 export default async function GamePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
+  if (id === 'maplestory-classic') permanentRedirect('/games/maplestory/')
+
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
   const profile = getGameProfile(ds, timeline, id)
@@ -100,24 +103,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
               )}
             </div>
 
-            <div className="relative aspect-video overflow-hidden rounded-xl border border-line/80 bg-surface/40">
-              {profile.cover ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={profile.cover} alt="" referrerPolicy="no-referrer" className="h-full w-full object-cover" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/15 via-raised to-live/10 p-8">
-                  <span className="text-center text-h2 font-bold text-ink/85">
-                    {profile.name}
-                  </span>
-                </div>
-              )}
-              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base/45 via-transparent to-transparent" />
-              {profile.entries.length > 0 && (
-                <span className="absolute bottom-3 left-3 rounded-sm bg-base/70 px-2 py-1 text-meta text-ink/90 tnum backdrop-blur-sm">
-                  {profile.sessions} 场 · {profile.hoursLabel}
-                </span>
-              )}
-            </div>
+            <HeroMedia profile={profile} />
           </div>
         )}
       </section>
@@ -166,6 +152,53 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
 
       <SiteFooter />
     </main>
+  )
+}
+
+function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGameProfile>> }) {
+  const media = (
+    <>
+      {profile.cover ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={profile.cover}
+          alt={profile.heroCoverAlt ?? `${profile.name} 封面`}
+          referrerPolicy="no-referrer"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/15 via-raised to-live/10 p-8">
+          <span className="text-center text-h2 font-bold text-ink/85">{profile.name}</span>
+        </div>
+      )}
+      <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base/55 via-transparent to-transparent" />
+      {profile.entries.length > 0 && (
+        <span className="absolute bottom-3 left-3 hidden rounded-sm bg-base/70 px-2 py-1 text-meta text-ink/90 tnum backdrop-blur-sm sm:inline-flex">
+          {profile.sessions} 场 · {profile.hoursLabel}
+        </span>
+      )}
+      {profile.heroLinkLabel && (
+        <span className="absolute bottom-3 right-3 rounded-sm bg-base/70 px-2 py-1 text-meta text-live backdrop-blur-sm">
+          <span className="sm:hidden">观看切片 ↗</span>
+          <span className="hidden sm:inline">{profile.heroLinkLabel} ↗</span>
+        </span>
+      )}
+    </>
+  )
+
+  const className = 'group relative block aspect-video overflow-hidden rounded-xl border border-line/80 bg-surface/40'
+  return profile.heroHref ? (
+    <a
+      href={profile.heroHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={profile.heroLinkLabel ?? `观看${profile.name}相关视频`}
+      className={`${className} ui-press focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-live`}
+    >
+      {media}
+    </a>
+  ) : (
+    <div className={className}>{media}</div>
   )
 }
 
