@@ -559,7 +559,12 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
       title: live.title || act.act.title,
       body: live.body.length > 0 ? live.body : act.act.body,
       label: live.label || act.act.label,
-      years: live.years || act.act.years,
+      // 旧内容快照把斗鱼时期笼统写成「2015 — 2023」；首播已有
+      // 2015-01-21 的可核验记录，不能让这条遗留值覆盖较精确的公开基线。
+      // 管理端填写任何其他文案时仍照常优先使用。
+      years: act.act.id === 'act-ii' && live.years === '2015 — 2023 · 大周的那些年'
+        ? act.act.years
+        : live.years || act.act.years,
       color: live.color || act.act.color,
       // 固定三幕始终保留一页尾声；旧内容快照里空的 closer 回退到公开基线。
       closer: live.closer.line

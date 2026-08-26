@@ -153,7 +153,7 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
       </div>
       <Link
         href={`/series/${series.id}/`}
-        className="ui-press group mt-6 grid overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
+        className="ui-press group mt-6 grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
       >
         <div className="min-w-0 p-6 sm:p-8 lg:p-10">
           <Eyebrow color={SERIES_COLOR.longRunning}>Together See · 一起看</Eyebrow>
@@ -171,7 +171,7 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
             <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
           </span>
         </div>
-        <div className="border-t border-line/60 p-5 sm:p-6 lg:border-l lg:border-t-0 lg:p-8">
+        <div className="min-w-0 border-t border-line/60 p-5 sm:p-6 lg:border-l lg:border-t-0 lg:p-8">
           <MediaFrame
             src={featureCover}
             alt={series.name}
@@ -205,7 +205,7 @@ function SeriesGroup({
         <span className="font-mono text-meta text-faint tnum">{years}</span>
       </div>
       <p className="measure-body mt-4 text-body text-muted">{description}</p>
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {series.map((s) => (
           <Link
             key={s.id}
