@@ -9,7 +9,7 @@ import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 import { MemeMontage } from './MemeMontage'
-import { MemeSubmissionEntry } from './MemeSubmissionEntry'
+import { MemeSubmissionButton, MemeSubmissionPanel } from './MemeSubmissionEntry'
 
 /**
  * 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。
@@ -56,6 +56,7 @@ export function HighlightStrip({
   const copy = useCopyBlock('homeSections', 'home-highlights')
   const beats = applyLiveHighlights(withExtraHighlights(baseline), narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
   const [activeCategory, setActiveCategory] = useState<MemeCategory>(MEME_CATEGORIES[0].id)
+  const [submissionOpen, setSubmissionOpen] = useState(false)
   const active = MEME_CATEGORIES.find((category) => category.id === activeCategory) ?? MEME_CATEGORIES[0]
   const activeBeats = beats.filter((beat) => beat.category === active.id)
   if (!MEME_CATEGORIES.some((category) => beats.some((beat) => beat.category === category.id))) return null
@@ -86,13 +87,15 @@ export function HighlightStrip({
                   </button>
                 )
               })}
-              <MemeSubmissionEntry />
+              <MemeSubmissionButton open={submissionOpen} onToggle={() => setSubmissionOpen((value) => !value)} />
             </div>
           </div>
           <div className="mt-5 border-l border-line/70 pl-4 sm:pl-5" role="tabpanel" aria-label={active.label}>
             <p className="text-control font-medium text-ink">{active.label}</p>
             <p className="mt-1 measure-body text-meta leading-relaxed text-faint">{active.description}</p>
           </div>
+
+          {submissionOpen && <MemeSubmissionPanel />}
 
           {active.id === 'xinling-pishuang' && (
             <MemeMontage
