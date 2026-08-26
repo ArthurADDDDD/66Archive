@@ -200,6 +200,8 @@
 
   - id: bramble-mountain-king
     name: 'Bramble: The Mountain King'
+    aliases:
+      - 荆棘山之王
 
   - id: brawl-stars
     name: 荒野乱斗
@@ -819,6 +821,11 @@
     aliases:
       - 'Hood: Outlaws & Legends'
 
+  - id: hoshi-saga
+    name: 星探
+    aliases:
+      - Hoshi Saga
+
   - id: horizon-forbidden-west
     name: 地平线：西部禁域
     aliases:
@@ -1086,7 +1093,13 @@
 
   - id: maplestory-2
     name: 冒险岛2
-    aliases: [MapleStory 2, 冒险岛]
+    aliases: [MapleStory 2]
+
+  - id: maplestory-m
+    name: 冒险岛：枫之传说
+    aliases:
+      - MapleStory M
+      - 冒险岛 枫之传说
 
   - id: maplestory-classic
     name: 冒险岛怀旧服
@@ -2239,11 +2252,6 @@
   - id: zuiqiang-woniu
     name: 最强蜗牛
 
-  - id: bramble-the-mountain-king
-    name: "Bramble: The Mountain King"
-    aliases:
-      - 荆棘山之王
-
   - id: caihong-shenyuan
     name: 彩虹深渊
 
@@ -2415,7 +2423,6 @@
     name: 反恐精英2
     aliases:
       - CS2
-      - CSGO
       - Counter-Strike 2
 
   - id: taiwu-hui-juan
@@ -2479,6 +2486,8 @@
 
   - id: biantai-rensheng
     name: 变态人生大冒险
+    aliases:
+      - 变态人生的大冒险
 
   - id: bleach-soul-resonance
     name: 境界：灵压对决
@@ -2857,6 +2866,7 @@
     aliases:
       - MapleStory
       - 冒险岛国服
+    note: "父级游戏条目：统计同时覆盖原版《冒险岛》与《冒险岛怀旧服》。在《【女流】回忆冒险岛online》（BV1254y1A7qs）里，她谈起学生时代与弟弟一起玩《冒险岛》的往事：弟弟替她留意父母回来没有，游戏也因此和那段姐弟相伴的日子连在了一起。本站现存录像只能说明可回看的部分，不能代表她与这款游戏的全部时间；具体起始年份与历史累计时长尚无可靠公开记录，不作推算。"
 
   - id: mario-party
     name: 马力欧派对
@@ -2932,9 +2942,6 @@
     name: 请出示证件
     aliases:
       - Papers, Please
-
-  - id: perverted-life-adventure
-    name: 变态人生的大冒险
 
   - id: pico-park-2
     name: PICO PARK 2

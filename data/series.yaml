@@ -18,7 +18,8 @@
   description: "《风之旅人》（Journey）全流程赏析 3 期，2013-09-13 ~ 2013-09-30（2013 下半年恢复更新后的代表作）。"
 - id: xingtan-guide
   name: 星探系列攻略
-  description: "《星探》（Hoshi Saga）系列攻略，2010-05-11 一日连发 3 期（系列 1/2/5）。"
+  game: hoshi-saga
+  description: "《星探》（Hoshi Saga）系列攻略，共 5 期：2010-05-11 发布系列 1/2/5，2010-05-12 发布系列 3/4。"
 - id: huanxing-hezi
   name: 唤醒盒子
   description: "《唤醒盒子》系列试玩，2 期：唤醒盒子2（2010-10-05）、唤醒盒子4（2012-08-26）。"
@@ -27,6 +28,12 @@
   description: "系列弹：第一弹、第二弹，2010-05-10 同日连发。"
 
 # —— 直播节目 / 主题栏目 ——
+- id: night-talk
+  name: 聊天
+  description: "夜话、话聊及其他以聊天为主的直播场次；期数与首末日期由前端按「聊天」tag 动态派生。"
+- id: outdoor-live
+  name: 户外
+  description: "直播间外的实地活动与户外直播；期数与首末日期由前端按「户外」tag 动态派生。"
 - id: xinling-pishuang
   name: 心灵砒霜
   description: "斗鱼期固定栏目（周日情感电台）。当前档案已补入 2015-07-05 等 2015 年早期记录；期数与首末日期由前端按 entries 动态派生。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。"
