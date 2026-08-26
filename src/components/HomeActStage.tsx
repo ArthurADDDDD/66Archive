@@ -321,7 +321,7 @@ export function HomeActStage({
                 <StageCloser line={closer.line} />
               ) : (
                 <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
-                  <p className="measure-hero mt-5 text-h2 font-semibold text-ink">这一幕，从 {resolved.beats[0]?.date ?? act.years} 开始。</p>
+                  <p className="measure-hero mt-5 text-h2 font-semibold text-ink">这一幕，从 {formatActStart(act.from)} 开始。</p>
                 </div>
               )}
             </div>
@@ -354,6 +354,12 @@ export function HomeActStage({
       </div>
     </section>
   )
+}
+
+function formatActStart(date: string): string {
+  const match = date.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+  if (!match) return date
+  return `${match[1]} 年 ${Number(match[2])} 月 ${Number(match[3])} 日`
 }
 
 /** 幕尾与幕首共用同一张纯文字页版式：一句收束，不额外加标签或尾标。 */
