@@ -4,11 +4,9 @@ import { useState } from 'react'
 import { SubmissionForm } from './SubmissionForm'
 
 /**
- * 「直播间梗」区域的投稿入口：一个圆形 + 图标，点开才展开表单。
- *
- * 视觉上复用这一屏里已有的展开/收起图标语言（见 Row 组件里同款的圆形按钮），
- * 而不是另造一个「投稿」按钮——同一屏里两种「点开一个东西」的控件长得不一样，
- * 会让人误以为是两种不同的操作。
+ * 「直播间梗」区域的投稿入口，和分类 tab 放在一起，带「补充+」文字，
+ * 点开才展开表单。放在最右边独立区域时容易被当成无关的装饰图标，
+ * 所以挪进 tab 行、并加上文字说明这是干什么用的。
  */
 export function MemeSubmissionEntry() {
   const [open, setOpen] = useState(false)
@@ -21,9 +19,10 @@ export function MemeSubmissionEntry() {
         aria-controls="meme-submission-panel"
         aria-label={open ? '收起投稿' : '投稿一个梗'}
         title={open ? '收起投稿' : '投稿一个梗'}
-        className="ui-press flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-line font-mono text-base text-faint transition-[transform,color,border-color] hover:border-live/45 hover:text-ink"
+        className="ui-press flex shrink-0 cursor-pointer items-center gap-1.5 rounded-full border border-line px-3 py-2 text-meta text-faint transition-colors hover:border-live/45 hover:text-ink"
       >
-        <span aria-hidden className={`transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
+        <span>补充</span>
+        <span aria-hidden className={`font-mono transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
 
       {open && (

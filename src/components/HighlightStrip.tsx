@@ -69,8 +69,8 @@ export function HighlightStrip({
         </Reveal>
 
         <div className="mt-8">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div className="flex flex-wrap gap-2" role="tablist" aria-label="直播间梗分类">
+          <div className="flex flex-wrap items-start gap-3">
+            <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="直播间梗分类">
               {MEME_CATEGORIES.map((category) => {
                 const selected = category.id === active.id
                 return (
@@ -86,8 +86,8 @@ export function HighlightStrip({
                   </button>
                 )
               })}
+              <MemeSubmissionEntry />
             </div>
-            <MemeSubmissionEntry />
           </div>
           <div className="mt-5 border-l border-line/70 pl-4 sm:pl-5" role="tabpanel" aria-label={active.label}>
             <p className="text-control font-medium text-ink">{active.label}</p>
