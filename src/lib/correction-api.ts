@@ -66,9 +66,11 @@ export async function fetchCorrectionConfig(): Promise<CorrectionConfig> {
   }
 }
 
+/** 'meme' 走同一个接口、同一套限流与净化——服务端按 kind 区分归属队列。 */
 export async function submitCorrection(input: {
   reporterName: string
   body: string
+  kind?: 'correction' | 'meme'
   turnstileToken: string
 }): Promise<void> {
   await requestJson('/api/correction', { method: 'POST', body: JSON.stringify(input) })

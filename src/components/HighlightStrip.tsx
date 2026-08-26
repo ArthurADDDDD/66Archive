@@ -9,6 +9,7 @@ import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
 import { MemeMontage } from './MemeMontage'
+import { MemeSubmissionEntry } from './MemeSubmissionEntry'
 
 /**
  * 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。
@@ -68,22 +69,25 @@ export function HighlightStrip({
         </Reveal>
 
         <div className="mt-8">
-          <div className="flex flex-wrap gap-2" role="tablist" aria-label="直播间梗分类">
-            {MEME_CATEGORIES.map((category) => {
-              const selected = category.id === active.id
-              return (
-                <button
-                  key={category.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={selected}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:px-4 ${selected ? 'border-live/55 bg-live/10 text-ink' : 'border-line text-muted hover:border-muted hover:text-ink'}`}
-                >
-                  {category.label}
-                </button>
-              )
-            })}
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="flex flex-wrap gap-2" role="tablist" aria-label="直播间梗分类">
+              {MEME_CATEGORIES.map((category) => {
+                const selected = category.id === active.id
+                return (
+                  <button
+                    key={category.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={selected}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:px-4 ${selected ? 'border-live/55 bg-live/10 text-ink' : 'border-line text-muted hover:border-muted hover:text-ink'}`}
+                  >
+                    {category.label}
+                  </button>
+                )
+              })}
+            </div>
+            <MemeSubmissionEntry />
           </div>
           <div className="mt-5 border-l border-line/70 pl-4 sm:pl-5" role="tabpanel" aria-label={active.label}>
             <p className="text-control font-medium text-ink">{active.label}</p>
