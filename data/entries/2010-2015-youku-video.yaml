@@ -67,7 +67,7 @@
   duration_min: 14
   confidence: high
   cover: "https://m.ykimg.com/054204085253DB206A0A4E5F7544BF48"
-  games: []
+  games: [hoshi-saga]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcyMTI2MDU2.html"
@@ -85,7 +85,7 @@
   duration_min: 14
   confidence: high
   cover: "https://m.ykimg.com/0542040852586FA46A0A487F19892BE5"
-  games: []
+  games: [hoshi-saga]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcyMTU5NzYw.html"
@@ -103,10 +103,48 @@
   duration_min: 9
   confidence: high
   cover: "https://m.ykimg.com/054204085256F30F6A0A4A3DECEF5185"
-  games: []
+  games: [hoshi-saga]
   tags: [视频时代]
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcyMTY2MTky.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
+- id: 2010-05-12-video-01
+  type: video
+  date: "2010-05-12"
+  time: "11:01"
+  title: "【星探】系列3攻略视频"
+  platform: youku
+  series: xingtan-guide
+  duration_min: 11
+  confidence: high
+  cover: "https://m.ykimg.com/05420408524E5FCB6A0A3F5BB78A4BC2"
+  games: [hoshi-saga]
+  tags: [视频时代]
+  note: "优酷详情页元数据复核（2026-08-26）：标题、videoId、上线时间 2010-05-12 11:01:43、时长 11:17 与封面均明确，补回此前漏收的《星探》系列第 3 期。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTcyMzA2NTY4.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
+- id: 2010-05-12-video-02
+  type: video
+  date: "2010-05-12"
+  time: "12:43"
+  title: "【星探】系列4攻略视频"
+  platform: youku
+  series: xingtan-guide
+  duration_min: 10
+  confidence: high
+  cover: "https://m.ykimg.com/054204085258CAB36A0A3F409CE83617"
+  games: [hoshi-saga]
+  tags: [视频时代]
+  note: "优酷详情页元数据复核（2026-08-26）：标题、videoId、上线时间 2010-05-12 12:43:04、时长 9:38 与封面均明确，补回此前漏收的《星探》系列第 4 期。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTcyMzIzNDQ0.html"
       kind: original
       status: alive
   contributed_by: data-agent

@@ -353,7 +353,8 @@
     title: 聊天
     platform: douyu
     confidence: high
-    games: [rune-factory-4]
+    games: []
+    tags: [聊天]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.18 聊天。斗鱼回放标题：大能这一天忙忙活活
     sources:
       - url: https://v.douyu.com/show/X3JzMaGNNOLvPQro
@@ -559,6 +560,7 @@
     duration_min: 210
     cover: "https://tx-free-imgs.acfun.cn/o_1e1udi89v1p4vqmh1v3919g4ti0.jpeg?imageslim"
     games: []
+    tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "Part1"

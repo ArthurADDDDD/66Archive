@@ -51,8 +51,9 @@
 
 # —— 内容 ——
 - name: 聊天
-  group: content
-  description: "以聊天为主的场次。"
+  group: series
+  description: "夜话、话聊及其他以聊天为主的场次。"
+  binds_series: night-talk
 
 - name: 健身
   group: content
@@ -88,8 +89,9 @@
   description: "粉丝剪辑/家庭相关内容"
 
 - name: 户外
-  group: content
+  group: series
   description: "在直播间外的实地活动 / 户外场次。"
+  binds_series: outdoor-live
 
 - name: 唱歌
   group: content
