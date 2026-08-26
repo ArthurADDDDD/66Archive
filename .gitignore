@@ -19,3 +19,16 @@ next-env.d.ts
 *.key
 *.p12
 *.pfx
+
+# 批量校准工具（scripts/calibrate/）本身是可复用的，进版本库；
+# 但每次批次产出的人工判定结果、机器初判、编译计划都是那一批的工作产物，
+# 落盘后即失效，不进版本库——否则下次复用时会和上一批的真实状态打架。
+scripts/calibrate/decisions.json
+scripts/calibrate/decisions-backups/
+scripts/calibrate/suggestions.json
+scripts/calibrate/judgments.json
+scripts/calibrate/resolved-suggestions.json
+scripts/calibrate/note-mapping.json
+scripts/calibrate/plan.json
+scripts/calibrate/pishuang-suspects.json
+scripts/calibrate/resolve-round2.py

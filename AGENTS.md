@@ -87,6 +87,13 @@ curl -s https://i6i6.space/api/content/narrative | grep -o '你刚改的那句�
 
 ⚠️ **稳定 id 是后台与前台之间唯一的对齐键。** 改 `narrative.ts` / `site-copy.ts` 里的文案可以，**改 id 会让后台的覆盖失配**——后台照样保存成功，前台却永远显示基线，且不报任何错。
 
+## 需要人工批量核对一大批条目时
+
+不要靠机器判读直接批量写 `data/**`——机器初判会错，错判一旦顺手确认掉就进了档案，
+比不判更贵。有一个可复用的本地工具专门干这件事：`scripts/calibrate/`
+（机器初判 → 人工逐条网页确认 → 编译成计划 → 走暂存/落盘）。用法见
+[scripts/calibrate/README.md](scripts/calibrate/README.md)。
+
 ## 会话起手式
 1. 声明你的角色与本次任务范围
 2. 声明产出物（具体到文件路径）
