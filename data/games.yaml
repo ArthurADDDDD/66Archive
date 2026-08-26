@@ -11,6 +11,8 @@
 
   - id: 3rd-eye
     name: 3rd eye
+    aliases:
+      - 东方Project同人
 
   - id: 7-billion-humans
     name: 程序员升职记
@@ -19,6 +21,8 @@
 
   - id: a-bird-story
     name: 鸟的故事
+    aliases:
+      - A Bird Story
 
   - id: a-dance-of-fire-and-ice
     name: 冰与火之舞
@@ -32,6 +36,8 @@
 
   - id: a-knights-quest
     name: 骑士之旅
+    aliases:
+      - A Knight's Quest
 
   - id: a-little-to-the-left
     name: A Little to the Left
@@ -99,6 +105,7 @@
     name: 暗区突围
     aliases:
       - Arena Breakout
+      - 暗区突围无限
   - id: arknights-endfield
     name: 明日方舟：终末地
     aliases:
@@ -601,6 +608,7 @@
     aliases:
       - FF16
       - Final Fantasy XVI
+      - 最终幻想16
 
   - id: final-station
     name: Final Station
@@ -797,6 +805,7 @@
     name: 霍格沃茨之遗
     aliases:
       - Hogwarts Legacy
+      - 霍格沃茨遗产
 
   - id: hollow-knight
     name: 空洞骑士
@@ -1176,6 +1185,7 @@
     aliases:
       - Monster Hunter Wilds
       - 怪物猎人荒野
+      - MONSTER HUNTER WILDS
   - id: monster-hunter-world
     name: 怪物猎人：世界
     aliases: [怪物猎人世界, Monster Hunter World, 怪物猎人狩猎季]
@@ -1454,6 +1464,8 @@
 
   - id: ranch-simulator
     name: Ranch Simulator
+    aliases:
+      - 牧场模拟器
 
   - id: reanimal
     name: 生灵重塑
@@ -1529,6 +1541,8 @@
     aliases:
       - Rhythm Heaven
       - 节奏天国：奇迹之星
+      - 节奏天国：大家的节奏天国
+      - Rhythm Heaven Fever
   - id: rhythm-royale
     name: Rhythm Royale
 
@@ -1572,6 +1586,8 @@
     aliases:
       - 符文工坊4模拟经营
       - Rune Factory 4
+      - 符文工房4
+      - 符文工房
 
   - id: rune-factory-5
     name: 符文工厂5
@@ -1842,6 +1858,8 @@
 
   - id: the-house-of-da-vinci-3
     name: The House of Da Vinci 3
+    aliases:
+      - 达芬奇密室3
 
   - id: the-last-guardian
     name: 最后的守护者
@@ -2068,6 +2086,7 @@
     aliases:
       - Where Winds Meet
       - 燕云
+      - 燕云十六声手机端
   - id: winkeltje
     name: Winkeltje
 
@@ -2419,9 +2438,15 @@
 
   - id: assassins-creed-black-flag
     name: 刺客信条4：黑旗
+    aliases:
+      - "Assassin's Creed IV: Black Flag"
+      - 刺客信条：黑旗 记忆重置
 
   - id: astro-bot
     name: 宇宙机器人
+    aliases:
+      - Astro Bot
+      - ASTRO BOT
 
   - id: awakening
     name: 唤醒盒子
@@ -2438,27 +2463,43 @@
 
   - id: battlefield-2042
     name: 战地2042
+    aliases:
+      - Battlefield 2042
+      - BF2042
 
   - id: battlefield-6
     name: 战地风云6
+    aliases:
+      - Battlefield 6
 
   - id: beyond-two-souls
     name: 超凡双生
+    aliases:
+      - "Beyond: Two Souls"
 
   - id: biantai-rensheng
     name: 变态人生大冒险
 
   - id: bleach-soul-resonance
     name: 境界：灵压对决
+    aliases:
+      - BLEACH Soul Resonance
 
   - id: brain-school
     name: 灵活脑学校
+    aliases:
+      - Big Brain Academy
 
   - id: brain-training-switch
     name: 脑锻炼
+    aliases:
+      - Brain Training
+      - 脑年龄测试
 
   - id: candleman
     name: 蜡烛人
+    aliases:
+      - Candleman
 
   - id: chai
     name: 拆！
@@ -2467,6 +2508,8 @@
 
   - id: change-homeless
     name: 转变
+    aliases:
+      - Change
 
   - id: changmeng
     name: 长梦
@@ -2478,15 +2521,24 @@
 
   - id: children-of-morta
     name: 莫塔守山人
+    aliases:
+      - Children of Morta
 
   - id: codenames
     name: 截码战
+    aliases:
+      - Codenames
+      - 代号
 
   - id: concrete-genie
     name: 壁中精灵
+    aliases:
+      - Concrete Genie
 
   - id: control-game
     name: 控制
+    aliases:
+      - Control
 
   - id: corporate-climber
     name: Corporate Climber
@@ -2499,9 +2551,13 @@
 
   - id: crossout
     name: 创世战车
+    aliases:
+      - Crossout
 
   - id: cube-escape-seasons
     name: 逃脱方块：四季
+    aliases:
+      - "Cube Escape: Seasons"
 
   - id: dark-detective
     name: 黑暗侦探
@@ -2511,9 +2567,16 @@
 
   - id: detention
     name: 返校
+    aliases:
+      - Detention
 
   - id: diablo-2
     name: 暗黑破坏神2
+    aliases:
+      - Diablo II
+      - Diablo 2
+      - 黑暗破坏神II
+      - 暗黑2
 
   - id: donkey-kong-tropical-freeze
     name: 大金刚热带雨林
@@ -2525,9 +2588,14 @@
 
   - id: dragon-quest-builders
     name: 勇者斗恶龙：创世小玩家
+    aliases:
+      - Dragon Quest Builders
 
   - id: dragonheir-silent-gods
     name: 龙息：神寂
+    aliases:
+      - "Dragonheir: Silent Gods"
+      - 龙息神寂
 
   - id: drawn-the-painted-tower
     name: 迷画之塔
@@ -2542,6 +2610,8 @@
 
   - id: eleven-table-tennis
     name: VR乒乓
+    aliases:
+      - Eleven Table Tennis
 
   - id: endless-journey
     name: 无尽旅途
@@ -2551,6 +2621,8 @@
 
   - id: fallout-shelter
     name: 辐射：避难所
+    aliases:
+      - Fallout Shelter
 
   - id: famous-painting-parodies
     name: Famous Painting Parodies
@@ -2563,33 +2635,52 @@
 
   - id: game-of-fate
     name: 命运游戏：逆时寻凶
+    aliases:
+      - "Game of Fate: Chasing Through Time"
 
   - id: gem-merchant
     name: 宝石商人桌游局
 
   - id: ghost-trick
     name: 幽灵诡计
+    aliases:
+      - Ghost Trick
 
   - id: guess-my-drawing
     name: 你画我猜
+    aliases:
+      - 我画你猜
+      - 你写我猜
+      - 你说我猜
 
   - id: hand-simulator
     name: Hand Simulator
 
   - id: hand-simulator-survival
     name: 手模拟器：生存
+    aliases:
+      - "Hand Simulator: Survival"
 
   - id: hatsune-miku-ft
     name: 初音未来：歌姬计划 F
+    aliases:
+      - 初音未来FT
+      - "Hatsune Miku: Project DIVA F"
+      - 初音未来 Project DIVA
 
   - id: her-story
     name: 她的故事
+    aliases:
+      - Her Story
 
   - id: hero-killer
     name: 英雄杀手
 
   - id: hi-fi-rush
     name: Hi-Fi RUSH
+    aliases:
+      - Hi Fi Rush
+      - 嘻哈冲刺
 
   - id: holy-book-story
     name: 圣书物语
@@ -2604,6 +2695,8 @@
 
   - id: house-of-legacy
     name: 家族崛起
+    aliases:
+      - House of Legacy
 
   - id: i-hate-this-game
     name: I Hate This Game
@@ -2619,9 +2712,13 @@
 
   - id: incantation-game
     name: 咒
+    aliases:
+      - Incantation
 
   - id: inside-my-radio
     name: 我的电台
+    aliases:
+      - Inside My Radio
 
   - id: jianjian-shijie
     name: 剪剪世界
@@ -2638,21 +2735,36 @@
 
   - id: kena-bridge-of-spirits
     name: 柯娜：精神之桥
+    aliases:
+      - "Kena: Bridge of Spirits"
+      - KENA
+      - 精神之桥
 
   - id: kings-quest-2015
     name: 国王密使
+    aliases:
+      - King's Quest
 
   - id: lakeview-cabin
     name: 湖景小屋
+    aliases:
+      - Lakeview Cabin Collection
 
   - id: liars-bar
     name: 骗子酒馆
+    aliases:
+      - Liar's Bar
+      - Liars Bar
 
   - id: life-is-strange
     name: 奇异人生
+    aliases:
+      - Life is Strange
 
   - id: lisa-the-joyful
     name: "LISA: The Joyful"
+    aliases:
+      - LISA
 
   - id: littlebigplanet
     name: 小小大星球
@@ -2664,12 +2776,18 @@
 
   - id: lost-castle
     name: 失落城堡
+    aliases:
+      - Lost Castle
 
   - id: luigis-mansion-3
     name: 路易吉洋楼3
+    aliases:
+      - Luigi's Mansion 3
 
   - id: luma-island
     name: Luma Island
+    aliases:
+      - 卢玛岛
 
   - id: mu-complex
     name: Mu Complex
@@ -2738,9 +2856,13 @@
     name: 冒险岛
     aliases:
       - MapleStory
+      - 冒险岛国服
 
   - id: mario-party
     name: 马力欧派对
+    aliases:
+      - Mario Party
+      - 马里奥派对
 
   - id: mario-sonic-tokyo-2020
     name: 马力欧与索尼克 2020东京奥运
@@ -2750,9 +2872,16 @@
 
   - id: meituan
     name: 美团
+    aliases:
+      - 美团app
+      - 美团外卖
 
   - id: metroid-dread
     name: 密特罗德：生存恐惧
+    aliases:
+      - Metroid Dread
+      - 银河战士：生存恐惧
+      - 梅特罗德：生存恐惧
 
   - id: mizi-no
     name: Mizi NO!
@@ -2765,18 +2894,28 @@
 
   - id: new-super-mario-bros-wii
     name: 新超级马力欧兄弟 Wii
+    aliases:
+      - New Super Mario Bros. Wii
 
   - id: night-of-the-full-moon
     name: 月圆之夜
+    aliases:
+      - Night of the Full Moon
 
   - id: nintendo-labo
     name: 任天堂 Labo
+    aliases:
+      - Nintendo Labo
 
   - id: nixizhixingtu-shanyao
     name: 逆袭之星途闪耀
+    aliases:
+      - 逆袭
 
   - id: once-human
     name: 七日世界
+    aliases:
+      - Once Human
 
   - id: once-upon-a-time-game
     name: Once Upon A Time
@@ -2786,33 +2925,50 @@
 
   - id: out-of-bounds
     name: 界外狂潮
+    aliases:
+      - Out of Bounds
 
   - id: papers-please
     name: 请出示证件
+    aliases:
+      - Papers, Please
 
   - id: perverted-life-adventure
     name: 变态人生的大冒险
 
   - id: pico-park-2
     name: PICO PARK 2
+    aliases:
+      - PicoPark 2
+      - 皮克帕克2
 
   - id: planet-zoo
     name: 动物园之星
+    aliases:
+      - Planet Zoo
 
   - id: pokemon-legends-arceus
     name: 宝可梦传说：阿尔宙斯
+    aliases:
+      - "Pokemon Legends: Arceus"
 
   - id: portal-knights
     name: 传送门骑士
+    aliases:
+      - Portal Knights
 
   - id: qiuqiu-dazuozhan
     name: 球球大作战
 
   - id: rascal-fight
     name: 捣蛋大作战
+    aliases:
+      - Rascal Fight
 
   - id: rayman-legends
     name: 雷曼传奇
+    aliases:
+      - Rayman Legends
 
   - id: reading-people-trilogy
     name: 察言观色三部曲
@@ -2822,6 +2978,8 @@
 
   - id: retro-minigame-collection
     name: 怀旧小游戏合集
+    aliases:
+      - 约战对战平台怀旧小游戏
 
   - id: ring-fit-adventure
     name: 健身环大冒险
@@ -2833,30 +2991,49 @@
 
   - id: ruina
     name: 废都物语
+    aliases:
+      - Ruina
 
   - id: sedap
     name: SEDAP！亚洲料理冒险
+    aliases:
+      - SEDAP! A Culinary Adventure
+      - SEDAP
 
   - id: seeing-stars
     name: 往左一点：看星星
+    aliases:
+      - Seeing Stars
+      - 往左一点
 
   - id: shadow-of-the-colossus
     name: 汪达与巨像
+    aliases:
+      - Shadow of the Colossus
 
   - id: shawarma-legend
     name: 沙威玛传奇
+    aliases:
+      - Shawarma Legend
 
   - id: stabbed-by-god
     name: 我被男神捅死了
 
   - id: stranded-deep
     name: 怒海求生
+    aliases:
+      - Stranded Deep
+      - 怒海余生
 
   - id: streets-of-rogue
     name: 地痞街区
+    aliases:
+      - Streets of Rogue
 
   - id: super-seducer
     name: 超级情圣
+    aliases:
+      - Super Seducer
 
   - id: supermarket-chaos
     name: 混乱超市
@@ -2866,36 +3043,52 @@
 
   - id: the-pedestrian
     name: 步行者
+    aliases:
+      - The Pedestrian
 
   - id: the-room
     name: 未上锁的房间
+    aliases:
+      - The Room
 
   - id: the-sims
     name: 模拟人生
+    aliases:
+      - The Sims
 
   - id: the-stretchers
     name: 担架拍档
+    aliases:
+      - The Stretchers
 
   - id: the-visitor-game
     name: 来访者
 
   - id: thehunter
     name: 猎人
+    aliases:
+      - theHunter
 
   - id: tianlong-babu-mobile
     name: 天龙八部手游
 
   - id: tianshenzhen
     name: 天神镇
+    aliases:
+      - 天神镇物语
 
   - id: tiny-rogues
     name: Tiny Rogues
 
   - id: to-the-moon
     name: 去月球
+    aliases:
+      - To the Moon
 
   - id: tokyo-2020-olympics
     name: 2020东京奥运
+    aliases:
+      - Tokyo 2020 Olympics
 
   - id: tracks
     name: Tracks
@@ -2905,12 +3098,20 @@
 
   - id: train-valley-2
     name: 火车山谷2
+    aliases:
+      - Train Valley 2
 
   - id: tribe-primitive-builder
     name: 部落幸存者
+    aliases:
+      - "Tribe: Primitive Builder"
 
   - id: trine-4
     name: 三位一体4：梦魇王子
+    aliases:
+      - "Trine 4: The Nightmare Prince"
+      - Trine 4
+      - 三位一体4
 
   - id: true-or-false-game
     name: True or False
@@ -2920,18 +3121,31 @@
 
   - id: undertale
     name: 传说之下
+    aliases:
+      - Undertale
 
   - id: unravel
     name: 毛线小精灵
+    aliases:
+      - Unravel
 
   - id: winnie-the-pooh-adventure
     name: 小熊维尼·噗历险记
+    aliases:
+      - 小熊维尼
+      - Winnie the Pooh
 
   - id: world-of-warcraft
     name: 魔兽世界
+    aliases:
+      - World of Warcraft
+      - WoW
+      - 魔兽
 
   - id: yinsongzhe
     name: 吟诵者
+    aliases:
+      - Wandersong（推测）
 
   - id: yiren-zhixia
     name: 异人之下
