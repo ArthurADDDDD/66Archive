@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { ActivityStrip } from '@/components/ActivityStrip'
 import { SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
-import { YearBarChart, EraDots } from '@/components/YearCharts'
+import { YearBarChart } from '@/components/YearCharts'
+import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
 import { getDataset, toTimelineEntries } from '@/lib/data'
-import { actColorForDate } from '@/lib/narrative'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
 import { allGameIds } from '@/lib/narrative'
@@ -16,6 +15,9 @@ import { allGameIds } from '@/lib/narrative'
  * 数据 → 观察 → 记忆：数字先行，观察一句话，最后都通向编年史 / 游戏 / 节目。
  * 图表只有纯 CSS 的条 / 点 / 时间线，不引入任何图表依赖。
  */
+/** 「哪些节目坚持得最久」这一节数据意义不大，先隐藏不删——想恢复直接改回 true。 */
+const SHOW_LONGEST_RUNNING_SERIES = false
+
 export default function StatsPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
@@ -106,8 +108,27 @@ export default function StatsPage() {
   ].map((era) => {
     const count = era.entries.length
     const minutes = era.entries.reduce((sum, entry) => sum + (entry.duration_min ?? 0), 0)
-    return { ...era, count, hours: Math.round(minutes / 60) }
+    const perYear = new Map<number, number>()
+    for (const entry of era.entries) {
+      const y = Number(entry.date.slice(0, 4))
+      perYear.set(y, (perYear.get(y) ?? 0) + 1)
+    }
+    return { ...era, count, hours: Math.round(minutes / 60), perYear }
   })
+
+  // 每一年一根柱子，柱子内部按时期分段——时代更替是这一节唯一要说清的事。
+  const eraColumns = []
+  for (let year = firstArchiveYear; year <= lastArchiveYear; year++) {
+    eraColumns.push({
+      year,
+      segments: eras.map((era) => ({
+        id: era.id,
+        label: era.label,
+        color: era.color,
+        count: era.perYear.get(year) ?? 0,
+      })),
+    })
+  }
 
   // —— 05 节目 ——
   const series = buildSeriesList(ds, timeline)
@@ -199,32 +220,44 @@ export default function StatsPage() {
       </Section>
 
       {/* 03 哪些游戏反复回来？ */}
-      <Section question="哪些游戏，隔了几年还会回来？" accent="#5BC8E8">
-        <div className="space-y-4">
+      <Section
+        question="哪些游戏，隔了几年还会回来？"
+        accent="#5BC8E8"
+        legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
+      >
+        <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
+        <div className="divide-y divide-line/60 border-y border-line/60">
           {revisited.map(({ p, years, gaps }) => (
-            <Link key={p.id} href={`/games/${p.id}/`} className="group block">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="text-body text-muted group-hover:text-ink">
-                  {p.name}
-                  {gaps > 0 && <span className="ml-2 text-meta text-faint tnum">中途断过 {gaps} 次</span>}
+            <Link key={p.id} href={`/games/${p.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span className="text-body font-medium text-ink">{p.name}</span>
+                <span className="text-meta text-faint tnum">
+                  <span className="font-mono text-control font-semibold text-ink">{years.length}</span> 个年份里打过
+                  {gaps > 0 && <> · 中途断过 {gaps} 次</>}
                 </span>
-                <span className="text-meta text-faint tnum">{years.length} 个年份</span>
               </div>
-              <div className="mt-1.5 flex gap-1">
-                {years.map((y) => (
-                  <span
-                    key={y}
-                    className="h-[5px] w-[5px] rounded-full"
-                    style={{ background: actColorForDate(`${y}-06-01`) }}
-                    title={`${y} 年`}
-                  />
-                ))}
+              <div className="mt-2">
+                <YearLane
+                  from={firstArchiveYear}
+                  to={lastArchiveYear}
+                  perYear={p.entries.reduce<{ year: number; count: number }[]>((acc, entry) => {
+                    const y = Number(entry.date.slice(0, 4))
+                    const row = acc.find((item) => item.year === y)
+                    if (row) row.count += 1
+                    else acc.push({ year: y, count: 1 })
+                    return acc
+                  }, [])}
+                  color="#5BC8E8"
+                  unit="场"
+                  compact
+                  showAxis={false}
+                />
               </div>
             </Link>
           ))}
         </div>
         <Observation>
-          有些游戏隔了几年，还是会重新打开。
+          有些游戏隔了几年，还是会重新打开：「{revisited[0]?.p.name}」在 {revisited[0]?.years.length} 个不同年份里都出现过。
         </Observation>
       </Section>
 
@@ -246,10 +279,20 @@ export default function StatsPage() {
             </Link>
           ))}
         </div>
-        <div className="mt-10">
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">每一年，一个点</p>
-          <div className="mt-4">
-            <EraDots rows={yearRows} />
+        <div className="mt-6 rounded-xl border border-line/80 bg-surface/40 p-[clamp(0.875rem,1.2vw,1.25rem)]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+            <p className="text-body font-medium text-ink">一年一根柱子，颜色就是当时的主场</p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              {eras.map((era) => (
+                <span key={era.id} className="flex items-center gap-2 text-meta text-faint">
+                  <span aria-hidden className="h-2.5 w-2.5 rounded-[0.1875rem]" style={{ background: era.color }} />
+                  {era.label}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="mt-[clamp(0.875rem,1.4vw,1.25rem)]">
+            <EraFlow rows={eraColumns} />
           </div>
         </div>
         <Observation>
@@ -257,19 +300,33 @@ export default function StatsPage() {
         </Observation>
       </Section>
 
-      {/* 05 哪些节目坚持得最久？ */}
-      <Section question="哪些节目坚持得最久？" accent="#A78BFA">
-        <div className="space-y-5">
+      {/* 05 哪些节目坚持得最久？——隐藏中，见 SHOW_LONGEST_RUNNING_SERIES */}
+      {SHOW_LONGEST_RUNNING_SERIES && (
+      <Section
+        question="哪些节目坚持得最久？"
+        accent="#A78BFA"
+        legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 柱子越高，这一年更新得越多`}
+      >
+        <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
+        <div className="divide-y divide-line/60 border-y border-line/60">
           {series.slice(0, 6).map((s) => (
-            <Link key={s.id} href={`/series/${s.id}/`} className="group block">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="text-body text-muted group-hover:text-ink">{s.name}</span>
+            <Link key={s.id} href={`/series/${s.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span className="text-body font-medium text-ink">{s.name}</span>
                 <span className="text-meta text-faint tnum">
-                  {s.count} 期 · 跨 {s.span} 年
+                  <span className="font-mono text-control font-semibold text-ink">{s.count}</span> 期 · 从 {s.firstDate.slice(0, 4)} 播到 {s.lastDate.slice(0, 4)}
                 </span>
               </div>
               <div className="mt-2">
-                <ActivityStrip perYear={s.perYear} color="#A78BFA" height={20} />
+                <YearLane
+                  from={firstArchiveYear}
+                  to={lastArchiveYear}
+                  perYear={s.perYear}
+                  color="#A78BFA"
+                  unit="期"
+                  compact
+                  showAxis={false}
+                />
               </div>
             </Link>
           ))}
@@ -278,6 +335,7 @@ export default function StatsPage() {
           「{pishuangSeries?.name ?? longestSeries?.name ?? '心灵砒霜'}」横跨了 {pishuangSeries?.span ?? longestSeries?.span ?? 0} 年——固定出现在每周日，是档案里坚持最久的节目。
         </Observation>
       </Section>
+      )}
 
       <SiteFooter />
     </main>
@@ -289,7 +347,18 @@ function hoursTop(yearRows: [number, { count: number; minutes: number; known: nu
   return top.minutes ? Math.round(top.minutes / 60).toLocaleString() : '—'
 }
 
-function Section({ question, accent, children }: { question: string; accent: string; children: React.ReactNode }) {
+function Section({
+  question,
+  accent,
+  legend,
+  children,
+}: {
+  question: string
+  accent: string
+  /** 图形的读法：这一节的图怎么看，一句话写在标题下面 */
+  legend?: string
+  children: React.ReactNode
+}) {
   return (
     <section className="border-t border-line">
         <div className="site-container-wide px-page py-[clamp(3rem,8vh,7rem)]">
@@ -298,7 +367,8 @@ function Section({ question, accent, children }: { question: string; accent: str
           一个问题
         </p>
         <h2 className="mt-3 max-w-[min(100%,72rem)] text-[clamp(2rem,3vw,4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-ink">{question}</h2>
-        <div className="mt-8 w-full sm:mt-10">{children}</div>
+        {legend && <p className="measure-body mt-3 text-meta text-muted">{legend}</p>}
+        <div className="mt-6 w-full">{children}</div>
       </div>
     </section>
   )
