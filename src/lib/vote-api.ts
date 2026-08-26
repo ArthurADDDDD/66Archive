@@ -56,6 +56,41 @@ export async function listVoteTasks(): Promise<VoteTaskSummary[]> {
   return result.tasks
 }
 
+/**
+ * 按记录 id 直接取投票详情。服务端没有任务就地建一个，所以**每条记录都能投**。
+ *
+ * 替代了原来的「拉全部开放任务再在里面找」：开放投票之后那是一次几千条的响应，
+ * 只为了用其中一条。
+ */
+export function getVoteTaskByEntry(entryId: string): Promise<VoteTaskDetail> {
+  return request(`/api/vote/entry/${encodeURIComponent(entryId)}`)
+}
+
+export type VoteGame = { id: string; name: string; aliases: string[] }
+
+let gamesCache: Promise<VoteGame[]> | null = null
+
+/**
+ * 可选游戏词库，整页共用一份。
+ *
+ * 不从构建期烤入的数据里读：服务端认的是数据库快照，两份在「公开仓加了新游戏
+ * 但快照还没导入」的窗口期会不一致，用户会遇到「选得中、提交不了」。
+ *
+ * 失败时把缓存清掉，让下一次打开重新试——否则一次网络抖动会让搜索框
+ * 在整个会话里永久空着。
+ */
+export function listVoteGames(): Promise<VoteGame[]> {
+  if (!gamesCache) {
+    gamesCache = request<{ games: VoteGame[] }>('/api/vote/games')
+      .then((result) => result.games)
+      .catch((error) => {
+        gamesCache = null
+        throw error
+      })
+  }
+  return gamesCache
+}
+
 export function getVoteTask(taskId: string): Promise<VoteTaskDetail> {
   return request(`/api/vote/tasks/${encodeURIComponent(taskId)}`)
 }
