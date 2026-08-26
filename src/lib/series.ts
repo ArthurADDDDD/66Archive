@@ -64,10 +64,13 @@ export function buildSeries(
   const perYear = [...perYearMap.entries()].map(([year, count]) => ({ year, count }))
 
   const games = [...new Set(entries.flatMap((e) => e.games.map((g) => g.name)))]
+  const representativeCoverId = id === 'night-talk' ? '2016-10-20-video-01' : null
+  const coverEntry = (representativeCoverId ? entries.find((entry) => entry.id === representativeCoverId) : null)
+    ?? entries.find((entry) => entry.cover)
 
   return {
     id,
-    name,
+    name: getDisplayName(id, name),
     description: getDisplayDescription(id, description, entries),
     entries,
     count: entries.length,
@@ -75,10 +78,16 @@ export function buildSeries(
     lastDate: entries[entries.length - 1]?.date ?? '',
     perYear,
     firstTitle: entries[0]?.title ?? null,
-    cover: entries[0]?.cover ? proxyImage(entries[0].cover, 640) : null,
+    cover: coverEntry?.cover ? proxyImage(coverEntry.cover, 960) : null,
     category: getSeriesCategory(id, entries[0]?.type),
     games,
   }
+}
+
+function getDisplayName(id: string, fallback: string): string {
+  if (id === 'night-talk') return '夜话 / 聊天'
+  if (id === 'outdoor-live') return '户外直播'
+  return fallback
 }
 
 function getDisplayDescription(id: string, fallback: string, entries: TimelineEntry[]): string {
