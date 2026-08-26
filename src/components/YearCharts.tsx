@@ -7,7 +7,7 @@ import { actColorForDate } from '@/lib/narrative'
 type YearRow = [number, { count: number; minutes: number; known: number }]
 
 /**
- * 数据页的两个按年图表。
+ * 数据页的按年柱状图。
  * 移动端改成局部横向滚动（overflow-x-auto）：不会被祖先 overflow-hidden 裁掉，
  * 初始停在最右——最高年份与「最多」徽标直接可见，不用滑回去年。
  * 桌面保持原样（内容放得下，滚动容器退化为普通行）。
@@ -57,34 +57,6 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
         </div>
       </div>
       <p className="mt-2 text-meta text-faint sm:hidden">← 左右滑动看全部年份</p>
-    </div>
-  )
-}
-
-/** 04 每一年，一个点 */
-export function EraDots({ rows }: { rows: YearRow[] }) {
-  const max = Math.max(1, ...rows.map(([, r]) => r.count))
-  return (
-    <div className="overflow-x-auto [scrollbar-width:thin]">
-      <div className="flex w-max min-w-full items-end gap-1.5">
-        {rows.map(([year, row]) => {
-          const d = Math.max(6, Math.min(26, 6 + (row.count / max) * 20))
-          return (
-            <Link
-              key={year}
-              href={`/archive/?y=${year}`}
-              className="flex min-w-[24px] flex-col items-center gap-1.5"
-              title={`${year} 年 · ${row.count.toLocaleString()} 条`}
-            >
-              <span
-                className="rounded-full transition-transform hover:scale-110"
-                style={{ width: d, height: d, background: actColorForDate(`${year}-06-01`) }}
-              />
-              <span className={`font-mono text-meta text-faint tnum ${year % 2 ? 'hidden sm:block' : ''}`}>{year}</span>
-            </Link>
-          )
-        })}
-      </div>
     </div>
   )
 }
