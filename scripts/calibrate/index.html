@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>游戏标签校准</title>
+<style>
+  :root {
+    --bg: #10131a; --panel: #171b24; --panel-2: #1e232e; --line: #2b3240;
+    --ink: #e8eaf0; --muted: #98a1b3; --faint: #6b7488;
+    --live: #5bc8e8; --ok: #58c98b; --warn: #e0a244; --no: #e0607a; --video: #b98cf0;
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+    overflow: hidden;
+  }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+
+  .app { display: grid; grid-template-columns: 340px minmax(0,1fr); height: 100vh; }
+
+  /* ---------- 左栏 ---------- */
+  .side { border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; background: var(--panel); }
+  .side-head { padding: 12px 14px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+  .progress-line { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .progress-line b { font-family: var(--mono); font-size: 19px; font-weight: 600; }
+  .progress-line span { font-size: 12px; color: var(--muted); }
+  .bar { height: 5px; background: var(--panel-2); border-radius: 3px; overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: var(--ok); transition: width .2s; }
+  .side input[type=search], .side select {
+    width: 100%; background: var(--bg); border: 1px solid var(--line);
+    border-radius: 7px; padding: 7px 9px; font-size: 13px;
+  }
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .list { overflow-y: auto; flex: 1; min-height: 0; }
+  .row {
+    display: grid; grid-template-columns: 16px minmax(0,1fr); gap: 8px; align-items: start;
+    padding: 8px 12px; border-bottom: 1px solid var(--line); cursor: pointer;
+  }
+  .row:hover { background: var(--panel-2); }
+  .row.sel { background: #22304a; }
+  .row .dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; background: var(--faint); }
+  .row.d-game .dot { background: var(--ok); }
+  .row.d-nongame .dot { background: var(--faint); opacity: .5; }
+  .row.d-skip .dot { background: var(--warn); }
+  .row .t { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .m { font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .row.done .t { color: var(--muted); }
+
+  /* ---------- 右栏 ---------- */
+  .main { overflow-y: auto; padding: 20px 26px 80px; min-height: 0; }
+  .crumb { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+  h1 { font-size: 22px; margin: 6px 0 2px; line-height: 1.3; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
+  .chip { border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; background: var(--panel); }
+  .chip.live { color: var(--live); border-color: #2b4c5a; }
+  .chip.video { color: var(--video); border-color: #45376a; }
+
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 11px; padding: 14px 16px; margin-top: 16px; }
+  .card h2 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin: 0 0 10px; font-weight: 600; }
+
+  .sugg { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .sugg .val { font-size: 16px; font-weight: 600; }
+  .sugg .why { font-size: 12.5px; color: var(--muted); }
+  .verdict-tag { font-size: 11px; padding: 2px 8px; border-radius: 5px; background: var(--panel-2); color: var(--muted); }
+
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn {
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
+    border-radius: 8px; padding: 8px 14px; font-size: 13.5px;
+  }
+  .btn:hover { border-color: var(--muted); }
+  .btn.ok { border-color: #2f6b4c; background: #17321f; color: #9fe3bd; }
+  .btn.ok:hover { border-color: var(--ok); }
+  .btn.no { border-color: #6b2f3d; background: #2f171d; color: #f0a8b8; }
+  .btn.no:hover { border-color: var(--no); }
+  .btn.warn { border-color: #6b552f; background: #2f2717; color: #eccf9a; }
+  .btn kbd {
+    font-family: var(--mono); font-size: 10.5px; background: rgba(255,255,255,.09);
+    border-radius: 3px; padding: 1px 4px; margin-left: 6px;
+  }
+
+  .picked { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 7px; font-size: 13px;
+    background: #17321f; border: 1px solid #2f6b4c; color: #9fe3bd;
+    border-radius: 7px; padding: 4px 6px 4px 10px;
+  }
+  .pill.new { background: #2f2717; border-color: #6b552f; color: #eccf9a; }
+  .pill button { background: none; border: none; color: inherit; font-size: 15px; line-height: 1; opacity: .65; padding: 0 2px; }
+  .pill button:hover { opacity: 1; }
+  .pill .gid { font-family: var(--mono); font-size: 10.5px; opacity: .6; }
+
+  .search-wrap { position: relative; }
+  .search-wrap input { width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; }
+  .results { margin-top: 8px; max-height: 260px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; display: none; }
+  .results.on { display: block; }
+  .res {
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    padding: 7px 11px; border-bottom: 1px solid var(--line); cursor: pointer;
+  }
+  .res:last-child { border-bottom: none; }
+  .res:hover, .res.cur { background: var(--panel-2); }
+  .res .nm { font-size: 13.5px; }
+  .res .al { font-size: 11.5px; color: var(--faint); }
+  .res .gid { font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .res a { color: var(--live); font-size: 11.5px; text-decoration: none; }
+  .res a:hover { text-decoration: underline; }
+  .new-hint { padding: 8px 11px; font-size: 12.5px; color: var(--warn); border-top: 1px solid var(--line); }
+
+  .srcs { display: flex; flex-direction: column; gap: 5px; }
+  .srcs a { color: var(--live); font-size: 12.5px; text-decoration: none; word-break: break-all; }
+  .srcs a:hover { text-decoration: underline; }
+  .srcs .k { font-family: var(--mono); font-size: 10.5px; color: var(--faint); margin-right: 6px; }
+
+  textarea.note { width: 100%; min-height: 54px; resize: vertical; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
+
+  .seg-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg-toggle button { background: var(--panel-2); border: none; border-right: 1px solid var(--line); padding: 7px 14px; font-size: 13px; color: var(--muted); }
+  .seg-toggle button:last-child { border-right: none; }
+  .seg-toggle button[aria-pressed=true] { background: #22304a; color: var(--ink); font-weight: 500; }
+
+  .savebar {
+    position: sticky; bottom: 0; margin: 18px -26px -80px; padding: 12px 26px;
+    background: linear-gradient(transparent, var(--bg) 22%); display: flex; gap: 10px; align-items: center;
+  }
+  .saved { font-size: 12.5px; color: var(--ok); }
+  .empty { padding: 60px 20px; text-align: center; color: var(--faint); }
+  .kbd-help { font-size: 11.5px; color: var(--faint); margin-left: auto; font-family: var(--mono); }
+  .seglabels { font-size: 12px; color: var(--muted); }
+
+  .steps { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .steps button { flex: 1; background: var(--panel-2); border: none; border-right: 1px solid var(--line); padding: 8px 6px; font-size: 12.5px; color: var(--muted); }
+  .steps button:last-child { border-right: none; }
+  .steps button[aria-pressed=true] { background: #22304a; color: var(--ink); font-weight: 600; }
+
+  .flags { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .flag {
+    display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px;
+    background: #2f2717; border: 1px solid #6b552f; color: #eccf9a;
+    border-radius: 8px; padding: 8px 11px;
+  }
+  .flag b { color: var(--warn); }
+  .era { font-size: 12px; color: var(--faint); }
+  .era.video { color: var(--video); }
+  .row .flagdot { color: var(--warn); font-size: 11px; }
+  .big-choice { display: flex; gap: 10px; flex-wrap: wrap; }
+  .big-choice .btn { padding: 14px 20px; font-size: 15px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-head">
+      <div class="progress-line">
+        <b id="pgN">0</b>
+        <span id="pgT">/ 0 已判定</span>
+      </div>
+      <div class="bar"><i id="pgBar" style="width:0"></i></div>
+      <input type="search" id="q" placeholder="搜标题 / id / 年份…">
+      <div class="steps" id="steps">
+        <button type="button" data-step="1" aria-pressed="true">第一步 · 核对归类</button>
+        <button type="button" data-step="2" aria-pressed="false">第二步 · 补游戏</button>
+      </div>
+      <div class="filters">
+        <select id="fVerdict">
+          <option value="">我的分类：全部</option>
+          <option value="vocab-hit">词库已命中</option>
+          <option value="game-sure">新游戏·基本确定</option>
+          <option value="game-guess">疑似游戏</option>
+          <option value="unclear">看不出</option>
+          <option value="nongame">我判为非游戏</option>
+          <option value="__none">（无建议）</option>
+        </select>
+        <select id="fState">
+          <option value="todo">待处理</option>
+          <option value="">全部</option>
+          <option value="done">已判定</option>
+        </select>
+      </div>
+      <select id="fFlag">
+        <option value="">全部条目</option>
+        <option value="1">只看「我可能判错了」</option>
+        <option value="era">只看 2015 年前（视频时代）</option>
+        <option value="pishuang">只看心灵砒霜疑似漏标</option>
+      </select>
+    </div>
+    <div class="list" id="list"></div>
+  </aside>
+
+  <main class="main" id="main"><div class="empty">载入中…</div></main>
+</div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s)
+let ENTRIES = [], GAMES = [], DEC = {}, curId = null, resIdx = -1, STEP = 1
+
+const norm = s => String(s || '').toLowerCase().replace(/[\s,._:\-()（）【】\[\]、《》"'!！?？~～]/g, '')
+const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))
+
+const VERDICT_LABEL = {
+  'vocab-hit': '词库命中', 'game-sure': '基本确定', 'game-guess': '疑似',
+  'unclear': '看不出', 'nongame': '非游戏',
+}
+
+async function boot() {
+  const r = await fetch('/api/data')
+  const d = await r.json()
+  ENTRIES = d.entries; GAMES = d.games; DEC = d.decisions || {}
+  renderList()
+  const first = visible()[0]
+  if (first) select(first.id); else $('#main').innerHTML = '<div class="empty">没有条目。</div>'
+}
+
+function decOf(id) { return DEC[id] || null }
+function isDone(id) { return Boolean(DEC[id]) }
+
+function visible() {
+  const q = norm($('#q').value)
+  const fv = $('#fVerdict').value
+  const fs = $('#fState').value
+  const ff = $('#fFlag').value
+  return ENTRIES.filter(e => {
+    const d = decOf(e.id)
+    // 第二步只处理「第一步已经确认是游戏、但还没填游戏名」的条目。
+    if (STEP === 2) {
+      if (!d || d.kind !== 'game') return false
+      const resolved = (d.games && d.games.length) || d.noSpecificGame
+      if (fs === 'todo' && resolved) return false
+      if (fs === 'done' && !resolved) return false
+    } else {
+      if (fs === 'todo' && isDone(e.id)) return false
+      if (fs === 'done' && !isDone(e.id)) return false
+    }
+    if (ff === '1' && !(e.flags && e.flags.length)) return false
+    if (ff === 'era' && !(e.era && e.era.key === 'video')) return false
+    if (ff === 'pishuang' && !(e.flags && e.flags.some(f => f.startsWith('⛩')))) return false
+    if (fv) {
+      const v = e.suggestion ? e.suggestion.verdict : '__none'
+      if (fv !== v) return false
+    }
+    if (q && !norm(e.title + e.id + e.date).includes(q)) return false
+    return true
+  })
+}
+
+function renderList() {
+  const list = visible()
+  const total = ENTRIES.length, done = ENTRIES.filter(e => isDone(e.id)).length
+  $('#pgN').textContent = done
+  $('#pgT').textContent = '/ ' + total + ' 已判定'
+  $('#pgBar').style.width = (total ? done / total * 100 : 0) + '%'
+
+  $('#list').innerHTML = list.map(e => {
+    const d = decOf(e.id)
+    let cls = ''
+    if (d) cls = d.kind === 'game' ? 'done d-game' : d.kind === 'nongame' ? 'done d-nongame' : 'done d-skip'
+    const sug = e.suggestion ? VERDICT_LABEL[e.suggestion.verdict] || '' : ''
+    const warn = e.flags && e.flags.length ? ' <span class="flagdot">⚑</span>' : ''
+    return `<div class="row ${cls} ${e.id === curId ? 'sel' : ''}" data-id="${esc(e.id)}">
+      <div class="dot"></div>
+      <div><div class="t">${esc(e.title || '（无标题）')}${warn}</div>
+      <div class="m">${esc(e.date)} · ${esc(e.type)} · ${esc(sug)}</div></div>
+    </div>`
+  }).join('') || '<div class="empty">这个筛选下没有条目。</div>'
+
+  for (const el of document.querySelectorAll('.row')) {
+    el.addEventListener('click', () => select(el.dataset.id))
+  }
+}
+
+function select(id) {
+  curId = id
+  renderList()
+  const el = document.querySelector('.row.sel')
+  if (el) el.scrollIntoView({ block: 'nearest' })
+  renderMain()
+}
+
+function renderMain() {
+  const e = ENTRIES.find(x => x.id === curId)
+  if (!e) return
+  const d = decOf(e.id) || {}
+  // 优先级：已存的决定 > 词库直接命中的标题 > 我解析出的具体游戏（resolvedGames，可以否）。
+  // 只有 d.games 是空、且用户没点过「标题已说明」时，才用后两者当默认值——
+  // 这只是摆在框里等确认，还没真的存下去，S 才会真正保存。
+  const hasSavedGames = d.games && d.games.length
+  const picked = hasSavedGames
+    ? d.games
+    : (e.suggestion && e.suggestion.verdict === 'vocab-hit'
+        ? (e.vocabHits || []).map(h => ({ id: h.id, name: h.name }))
+        : (!d.noSpecificGame && e.resolvedGames ? e.resolvedGames.map(g => ({ ...g })) : []))
+  const type = d.type || e.type
+
+  $('#main').innerHTML = `
+    <div class="crumb">${esc(e.id)} · ${esc(e.file)}</div>
+    <h1>${esc(e.title || '（无标题）')}</h1>
+    <div class="meta">
+      <span class="chip">${esc(e.date)}${e.time ? ' ' + esc(e.time) : ''}</span>
+      <span class="era ${e.era ? esc(e.era.key) : ''}">${e.era ? esc(e.era.label) : ''}</span>
+      <span class="chip ${type === 'live' ? 'live' : 'video'}" id="typeChip">${esc(type)}</span>
+      <span class="chip">${esc(e.platform)}</span>
+      ${e.durationMin ? `<span class="chip">${e.durationMin} 分钟</span>` : ''}
+      ${e.confidence ? `<span class="chip">${esc(e.confidence)}</span>` : ''}
+      ${(e.tags || []).map(t => `<span class="chip">${esc(t)}</span>`).join('')}
+    </div>
+    ${e.flags && e.flags.length ? `<div class="flags">${e.flags.map(f => `<div class="flag"><b>⚑</b><span>${esc(f)}</span></div>`).join('')}</div>` : ''}
+    ${e.note ? `<div class="card"><h2>档案备注</h2><div class="seglabels">${esc(e.note)}</div></div>` : ''}
+
+    ${e.suggestion ? `<div class="card"><h2>我的判读（可以否）</h2>
+      <div class="sugg">
+        <span class="verdict-tag">${esc(VERDICT_LABEL[e.suggestion.verdict] || e.suggestion.verdict)}</span>
+        <span class="val">${esc(e.suggestion.game || (e.suggestion.verdict === 'nongame' ? '不是玩游戏' : '—'))}</span>
+        ${e.suggestion.note ? `<span class="why">${esc(e.suggestion.note)}</span>` : ''}
+      </div></div>` : ''}
+    ${STEP === 2 && d.noSpecificGame ? `<div class="card" style="border-color:#6b552f"><h2>已处理</h2>
+      <div class="seglabels">标记为「标题已说明，不填具体游戏」——不会再出现在待处理里。</div></div>` : ''}
+
+    <div class="card">
+      <h2>类型（live / video 搞错了在这里改）</h2>
+      <div class="seg-toggle" id="typeToggle">
+        <button type="button" data-type="live" aria-pressed="${type === 'live'}">直播 live</button>
+        <button type="button" data-type="video" aria-pressed="${type === 'video'}">视频 video</button>
+      </div>
+    </div>
+
+    <div class="card" id="gameCard" style="${STEP === 1 ? 'display:none' : ''}">
+      <h2>这场玩的游戏</h2>
+      ${!hasSavedGames && !d.noSpecificGame && e.resolvedGames ? `<div class="seglabels" style="margin-bottom:8px;color:var(--warn)">下面是我解析出来的默认填充，还没保存——对的话直接按 S，不对就改掉再存。</div>` : ''}
+      <div class="picked" id="picked"></div>
+      <div class="search-wrap">
+        <input type="text" id="gs" placeholder="搜游戏名 / 别名 / id —— 词库里没有的，直接回车登记为新游戏">
+        <div class="results" id="results"></div>
+      </div>
+    </div>
+
+    ${e.sources && e.sources.length ? `<div class="card"><h2>去看原片</h2><div class="srcs">
+      ${e.sources.map(s => `<div><span class="k">${esc(s.kind || '')}${s.status ? '·' + esc(s.status) : ''}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url)}</a></div>`).join('')}
+    </div></div>` : ''}
+
+    ${e.segments && e.segments.length ? `<div class="card"><h2>分段标题</h2><div class="seglabels">${e.segments.map(esc).join(' · ')}</div></div>` : ''}
+
+    <div class="card">
+      <h2>备注（给我看的，可留空）</h2>
+      <textarea class="note" id="note" placeholder="比如：这场其实是某某游戏的联动，或者前半段在玩后半段在聊天">${esc(d.note || '')}</textarea>
+    </div>
+
+    <div class="savebar">
+      ${STEP === 1
+        ? `<div class="big-choice">
+             <button class="btn ok" id="bSave">是在玩游戏<kbd>S</kbd></button>
+             <button class="btn no" id="bNon">不是玩游戏<kbd>N</kbd></button>
+             <button class="btn warn" id="bSkip">拿不准<kbd>K</kbd></button>
+           </div>`
+        : `<button class="btn ok" id="bSave">保存游戏并下一条<kbd>S</kbd></button>
+           <button class="btn warn" id="bNoSpecific">标题已说明，不填具体游戏<kbd>T</kbd></button>
+           <button class="btn no" id="bNon">其实不是游戏<kbd>N</kbd></button>
+           <button class="btn warn" id="bSkip">拿不准<kbd>K</kbd></button>`}
+      <button class="btn" id="bClear">清除判定</button>
+      <span class="saved" id="savedMsg"></span>
+      <span class="kbd-help">J/K 上下 · S 是${STEP === 2 ? ' · T 标题已说明' : ''} · N 否 · / 搜游戏</span>
+    </div>
+  `
+
+  state.picked = picked.slice()
+  state.type = type
+  renderPicked()
+  wireMain()
+}
+
+const state = { picked: [], type: '' }
+
+function renderPicked() {
+  $('#picked').innerHTML = state.picked.length
+    ? state.picked.map((g, i) => `<span class="pill ${g.isNew ? 'new' : ''}">${esc(g.name)}${g.id ? `<span class="gid">${esc(g.id)}</span>` : '<span class="gid">新增</span>'}<button data-i="${i}" title="移除">×</button></span>`).join('')
+    : '<span style="color:var(--faint);font-size:13px">还没选 —— 搜索并回车即可</span>'
+  for (const b of document.querySelectorAll('#picked button')) {
+    b.addEventListener('click', () => { state.picked.splice(Number(b.dataset.i), 1); renderPicked() })
+  }
+}
+
+function searchGames(kw) {
+  const n = norm(kw)
+  if (!n) return []
+  const out = []
+  for (const g of GAMES) {
+    const hays = [g.name, g.id, ...g.aliases]
+    let score = -1
+    for (const h of hays) {
+      const nh = norm(h)
+      if (nh.startsWith(n)) { score = 2; break }
+      if (nh.includes(n)) score = Math.max(score, 1)
+    }
+    if (score > 0) out.push({ g, score })
+  }
+  return out.sort((a, b) => b.score - a.score || a.g.name.localeCompare(b.g.name, 'zh')).slice(0, 20).map(x => x.g)
+}
+
+function renderResults(kw) {
+  const box = $('#results')
+  const list = searchGames(kw)
+  resIdx = -1
+  if (!kw.trim()) { box.classList.remove('on'); box.innerHTML = ''; return }
+  box.classList.add('on')
+  box.innerHTML = list.map((g, i) => `<div class="res" data-i="${i}">
+      <div><div class="nm">${esc(g.name)}</div>${g.aliases.length ? `<div class="al">${esc(g.aliases.join(' · '))}</div>` : ''}</div>
+      <div style="text-align:right"><div class="gid">${esc(g.id)}</div><a href="https://i6i6.space/games/${encodeURIComponent(g.id)}/" target="_blank" rel="noopener">看词条 ↗</a></div>
+    </div>`).join('')
+    + `<div class="new-hint">词库里没有？直接按 <b>回车</b> 把「${esc(kw.trim())}」登记为新游戏</div>`
+  box._list = list
+  for (const el of box.querySelectorAll('.res')) {
+    el.addEventListener('click', () => pick(list[Number(el.dataset.i)]))
+  }
+}
+
+function pick(g) {
+  if (!g) return
+  if (!state.picked.some(p => p.id === g.id)) state.picked.push({ id: g.id, name: g.name })
+  $('#gs').value = ''
+  renderResults('')
+  renderPicked()
+}
+
+function pickNew(name) {
+  const n = name.trim()
+  if (!n) return
+  if (!state.picked.some(p => !p.id && p.name === n)) state.picked.push({ name: n, isNew: true })
+  $('#gs').value = ''
+  renderResults('')
+  renderPicked()
+}
+
+async function save(kind, opts) {
+  const e = ENTRIES.find(x => x.id === curId)
+  if (!e) return
+  const prev = decOf(e.id)
+  // 第一步只定「是不是游戏」，不能把第二步已经填好的游戏名清掉。
+  const keptGames = STEP === 1 && prev && prev.games ? prev.games : state.picked
+  const noSpecific = Boolean(opts && opts.noSpecificGame)
+  const payload = {
+    id: e.id,
+    kind,                                   // game | nongame | skip
+    games: kind === 'game' && !noSpecific ? keptGames : [],
+    // 视频时代很多是小游戏合集/没写清楚具体是哪款——标题本身已经是描述，
+    // 不必为了「填一个游戏」硬造一个词库条目。这个标记让它跟「还没做」区分开：
+    // todo 筛选看的是这个字段，不是 games.length（那个永远是 0）。
+    ...(noSpecific ? { noSpecificGame: true } : {}),
+    type: state.type !== e.type ? state.type : null,  // 只在改过时记录
+    originalType: e.type,
+    note: $('#note') ? $('#note').value.trim() : '',
+    title: e.title,
+    date: e.date,
+  }
+  const r = await fetch('/api/decision', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload),
+  })
+  if (!r.ok) { $('#savedMsg').textContent = '保存失败！'; return }
+  DEC[e.id] = payload
+  $('#savedMsg').textContent = '已保存'
+  next()
+}
+
+async function clearDecision() {
+  const e = ENTRIES.find(x => x.id === curId)
+  if (!e) return
+  await fetch('/api/decision', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: e.id, __delete: true }),
+  })
+  delete DEC[e.id]
+  renderList(); renderMain()
+}
+
+function step(delta) {
+  const list = visible()
+  if (!list.length) return
+  const i = list.findIndex(x => x.id === curId)
+  const nx = list[Math.min(Math.max((i < 0 ? 0 : i) + delta, 0), list.length - 1)]
+  if (nx) select(nx.id)
+}
+
+function next() {
+  const list = visible()
+  const i = list.findIndex(x => x.id === curId)
+  // 「待处理」筛选下保存后当前条会从列表消失，原位就是下一条。
+  const nx = list[i] && list[i].id !== curId ? list[i] : list[i + 1] || list[i] || list[0]
+  renderList()
+  if (nx && nx.id !== curId) select(nx.id)
+  else if (list.length) select(list[Math.min(i < 0 ? 0 : i, list.length - 1)].id)
+  else { renderList(); $('#main').innerHTML = '<div class="empty">这一批都处理完了 🎉 换个筛选继续。</div>' }
+}
+
+function wireMain() {
+  $('#bSave').addEventListener('click', () => save('game'))
+  $('#bNoSpecific') && $('#bNoSpecific').addEventListener('click', () => save('game', { noSpecificGame: true }))
+  $('#bNon').addEventListener('click', () => save('nongame'))
+  $('#bSkip').addEventListener('click', () => save('skip'))
+  $('#bClear').addEventListener('click', clearDecision)
+
+  for (const b of document.querySelectorAll('#typeToggle button')) {
+    b.addEventListener('click', () => {
+      state.type = b.dataset.type
+      for (const x of document.querySelectorAll('#typeToggle button')) x.setAttribute('aria-pressed', String(x === b))
+      $('#typeChip').textContent = state.type
+      $('#typeChip').className = 'chip ' + (state.type === 'live' ? 'live' : 'video')
+    })
+  }
+
+  const gs = $('#gs')
+  gs.addEventListener('input', () => renderResults(gs.value))
+  gs.addEventListener('keydown', ev => {
+    const box = $('#results'); const list = (box && box._list) || []
+    if (ev.key === 'ArrowDown') { ev.preventDefault(); resIdx = Math.min(resIdx + 1, list.length - 1); markCur() }
+    else if (ev.key === 'ArrowUp') { ev.preventDefault(); resIdx = Math.max(resIdx - 1, -1); markCur() }
+    else if (ev.key === 'Enter') {
+      ev.preventDefault()
+      if (resIdx >= 0 && list[resIdx]) pick(list[resIdx])
+      else if (list.length === 1) pick(list[0])
+      else pickNew(gs.value)
+    } else if (ev.key === 'Escape') { gs.value = ''; renderResults('') }
+  })
+  function markCur() {
+    document.querySelectorAll('.res').forEach((el, i) => el.classList.toggle('cur', i === resIdx))
+    const cur = document.querySelector('.res.cur'); if (cur) cur.scrollIntoView({ block: 'nearest' })
+  }
+}
+
+document.addEventListener('keydown', ev => {
+  const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
+  if (typing) return
+  if (ev.key === 'j') { ev.preventDefault(); step(1) }
+  else if (ev.key === 'k') { ev.preventDefault(); step(-1) }
+  else if (ev.key === 's') { ev.preventDefault(); save('game') }
+  else if (ev.key === 't' && STEP === 2) { ev.preventDefault(); save('game', { noSpecificGame: true }) }
+  else if (ev.key === 'n') { ev.preventDefault(); save('nongame') }
+  else if (ev.key === '/') { ev.preventDefault(); const g = $('#gs'); if (g) g.focus() }
+})
+
+for (const b of document.querySelectorAll('#steps button')) {
+  b.addEventListener('click', () => {
+    STEP = Number(b.dataset.step)
+    for (const x of document.querySelectorAll('#steps button')) x.setAttribute('aria-pressed', String(x === b))
+    renderList()
+    const first = visible()[0]
+    if (first) select(first.id)
+    else $('#main').innerHTML = '<div class="empty">这一批是空的。第二步只列出第一步确认为游戏的条目。</div>'
+  })
+}
+$('#fFlag').addEventListener('change', renderList)
+$('#q').addEventListener('input', renderList)
+$('#fVerdict').addEventListener('change', renderList)
+$('#fState').addEventListener('change', renderList)
+
+/**
+ * 定期从服务端拉一次最新判断，合并进本地 DEC，只刷新左栏的进度/圆点/计数——
+ * 不 touch 正中间正在编辑的这条，否则另一台设备存了别的条目，会把你手上
+ * 没保存的输入框内容跟着重渲染掉。
+ *
+ * 存在的理由：开了局域网访问之后，Mac 和 PC 各自内存里的 DEC 只在页面刚打开时
+ * 是准的，之后谁在另一台设备上存了新判断，这边看不到，进度条会一直显得落后。
+ */
+async function pollDecisions() {
+  try {
+    const r = await fetch('/api/decisions')
+    if (!r.ok) return
+    const { decisions } = await r.json()
+    DEC = decisions || {}
+    renderList()
+  } catch {
+    // 断网/服务端重启中，安静地跳过这一轮，下次再试。
+  }
+}
+setInterval(pollDecisions, 12_000)
+document.addEventListener('visibilitychange', () => { if (!document.hidden) pollDecisions() })
+
+boot()
+</script>
+</body>
+</html>
