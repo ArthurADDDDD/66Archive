@@ -274,7 +274,7 @@
     confidence: high
     duration_min: 360
     cover: "https://tx-free-imgs.acfun.cn/FnFzpE0uRE9vtvNgW9zFKRcwbSyQ?imageslim"
-    games: []
+    games: [tokyo-2020-olympics]
     segments:
       - at: "00:00:00"
         label: "2020东京奥运，66号选手请准备"
@@ -394,6 +394,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [streets-of-rogue]
   - id: 2019-07-24-live-01
     type: live
     date: '2019-07-24'
@@ -407,6 +408,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [tokyo-2020-olympics]
   - id: 2019-07-27-live-01
     type: live
     date: '2019-07-27'
@@ -420,3 +422,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [night-of-the-full-moon]

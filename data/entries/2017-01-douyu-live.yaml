@@ -322,7 +322,7 @@
     platform: douyu
     confidence: high
     duration_min: 237
-    games: []
+    games: [detention]
     tags: [需代理]
     note: "来自 YouTube「66女流」频道备份，标题明确标注 1 14；P1-P3 合为同一场。"
     sources:
@@ -558,6 +558,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    tags: [聊天, 户外]
 
   - id: 2017-01-26-live-01
     type: live
@@ -592,7 +593,7 @@
     confidence: high
     duration_min: 45
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_26/1485423075.JPG?imageslim"
-    games: []
+    games: [winnie-the-pooh-adventure]
     sources:
       - url: https://www.bilibili.com/video/BV1Ps411872T
         kind: replay
@@ -612,7 +613,7 @@
     confidence: high
     duration_min: 195
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_27/1485533743.png?imageslim"
-    games: []
+    games: [guess-my-drawing]
     sources:
       - url: https://www.bilibili.com/video/BV13s41187DY
         kind: replay
@@ -648,3 +649,4 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    tags: [聊天, 户外]

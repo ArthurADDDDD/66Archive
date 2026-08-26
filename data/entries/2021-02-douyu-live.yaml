@@ -260,6 +260,7 @@
         parts: 3
         status: alive
     contributed_by: data-agent
+    tags: [户外]
 
   - id: 2021-02-11-live-01
     type: live
@@ -624,7 +625,7 @@
     confidence: high
     duration_min: 181
     cover: "https://tx-free-imgs.acfun.cn/o_1eva6iuiu85c4vm9ip1tig1m970.jpeg?imageslim"
-    games: []
+    games: [rogue-hero]
     segments:
       - at: "00:00:00"
         label: "痞子英雄"
@@ -732,3 +733,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [guigu-bahuang]

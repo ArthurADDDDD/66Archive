@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 267
-    games: []
+    games: [sumoman]
     note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Cx411t7jD"
@@ -337,6 +337,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2017-09-13-live-01
     type: live

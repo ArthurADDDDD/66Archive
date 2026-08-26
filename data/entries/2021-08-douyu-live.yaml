@@ -382,7 +382,7 @@
     confidence: high
     duration_min: 236
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_23e2098a78044eab910dd26dbf9d7510.jpeg?imageslim"
-    games: []
+    games: [dark-detective]
     segments:
       - at: "00:00:00"
         label: "黑暗侦探"
@@ -611,7 +611,7 @@
     confidence: high
     duration_min: 379
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629821195875.jpeg?imageslim"
-    games: []
+    games: [codenames]
     segments:
       - at: "00:00:00"
         label: "桌游模拟《截码战》"
@@ -642,7 +642,7 @@
     confidence: high
     duration_min: 381
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629905773812.jpeg?imageslim"
-    games: []
+    games: [codenames]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -870,6 +870,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [menghuan-xiyou]
   - id: 2021-08-15-live-01
     type: live
     date: '2021-08-15'
@@ -883,6 +884,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [心灵砒霜]
   - id: 2021-08-21-live-01
     type: live
     date: '2021-08-21'
@@ -896,6 +898,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [diablo-2]
   - id: 2021-08-24-live-01
     type: live
     date: '2021-08-24'
@@ -909,6 +912,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [the-room]
   - id: 2021-08-31-live-01
     type: live
     date: '2021-08-31'
@@ -922,3 +926,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [naraka-bladepoint]

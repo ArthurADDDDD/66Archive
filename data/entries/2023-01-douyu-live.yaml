@@ -326,7 +326,7 @@
     confidence: high
     duration_min: 296
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b03ae6152c73481ab92999b00097a173.jpeg?imageslim"
-    games: []
+    games: [hi-fi-rush]
     sources:
       - url: https://www.bilibili.com/video/BV1x24y1z7r6
         kind: replay
@@ -346,7 +346,7 @@
     confidence: high
     duration_min: 404
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_502bd70b0028486fa2e7907e9e31a97f.jpeg?imageslim"
-    games: []
+    games: [hi-fi-rush]
     tags: [一起See]
     sources:
       - url: https://www.bilibili.com/video/BV11T411y7qh
@@ -371,6 +371,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See, 聊天]
   - id: 2023-01-07-live-01
     type: live
     date: '2023-01-07'
@@ -384,6 +385,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [the-long-dark]
   - id: 2023-01-08-live-01
     type: live
     date: '2023-01-08'
@@ -397,6 +399,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See, 聊天]
   - id: 2023-01-16-live-01
     type: live
     date: '2023-01-16'
@@ -410,6 +413,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See, 聊天]
   - id: 2023-01-24-live-01
     type: live
     date: '2023-01-24'
@@ -423,3 +427,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [maplestory]

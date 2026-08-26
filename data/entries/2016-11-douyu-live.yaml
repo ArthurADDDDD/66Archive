@@ -64,7 +64,7 @@
     confidence: high
     duration_min: 248
     cover: "https://tx-free-imgs.acfun.cn/content/2016_10_08/1478612034.JPG?imageslim"
-    games: []
+    games: [inside-my-radio]
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -196,6 +196,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    tags: [心灵砒霜]
 
   - id: 2016-11-14-live-01
     type: live
@@ -216,6 +217,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    tags: [心灵砒霜]
 
   - id: 2016-11-15-live-01
     type: live

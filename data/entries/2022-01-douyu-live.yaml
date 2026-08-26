@@ -320,7 +320,7 @@
     confidence: high
     duration_min: 257
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_22afcbddf11e4a2d8f3cab124cbaef9c.jpeg?imageslim"
-    games: []
+    games: [yongwang-zhiqian]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -826,6 +826,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [pokemon-legends-arceus]
 
   - id: 2022-01-29-live-01
     type: live
@@ -841,6 +842,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [pokemon-legends-arceus]
 
   - id: 2022-01-30-live-01
     type: live
@@ -860,6 +862,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [pokemon-legends-arceus]
   - id: 2022-01-07-live-01
     type: live
     date: '2022-01-07'
@@ -873,3 +876,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [bloodborne]

@@ -792,6 +792,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [lost-judgment]
   - id: 2021-10-19-live-01
     type: live
     date: '2021-10-19'
@@ -805,6 +806,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [xianjian-7]
   - id: 2021-10-22-live-02
     type: live
     date: '2021-10-22'
@@ -818,6 +820,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [一起See, 聊天]
   - id: 2021-10-23-live-01
     type: live
     date: '2021-10-23'
@@ -831,6 +834,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [majsoul]
   - id: 2021-10-28-live-01
     type: live
     date: '2021-10-28'
@@ -844,3 +848,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [majsoul]

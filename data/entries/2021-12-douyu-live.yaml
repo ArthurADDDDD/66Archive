@@ -307,7 +307,7 @@
     confidence: high
     duration_min: 349
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_28db289bf74548faa7d5f746d74d1c62.jpeg?imageslim"
-    games: []
+    games: [kena-bridge-of-spirits]
     segments:
       - at: "00:00:00"
         label: "精神之桥"
@@ -332,7 +332,7 @@
     confidence: high
     duration_min: 385
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7c7e5d7e46d54974aa8a09cdfba4b446.jpeg?imageslim"
-    games: []
+    games: [kena-bridge-of-spirits]
     segments:
       - at: "00:00:00"
         label: "精神之桥"
@@ -675,6 +675,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [brain-school]
   - id: 2021-12-16-live-01
     type: live
     date: '2021-12-16'
@@ -688,6 +689,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [kena-bridge-of-spirits]
   - id: 2021-12-18-live-01
     type: live
     date: '2021-12-18'
@@ -701,3 +703,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    tags: [聊天]

@@ -18,6 +18,7 @@
     contributed_by: data-agent
 
     duration_min: 123
+    tags: [聊天]
   - id: 2025-01-08-live-03
     type: live
     date: "2025-01-08"
@@ -26,7 +27,7 @@
     cover: "https://i1.hdslb.com/bfs/archive/62446308dbc8f6534bf8a27149f3b4cc7c6401ad.jpg"
     confidence: high
     games: []
-    tags: [弹幕版]
+    tags: [一起See, 聊天]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；与 2025-01-08-live-02 为同一场直播的不同搬运版本，总时长吻合，已合并为一天一条（时长以主来源为准）。"
     segments:
       - at: "00:00:00"
@@ -56,7 +57,7 @@
     platform: douyin
     cover: "https://i2.hdslb.com/bfs/archive/5f006fa89f4ec6c8e0dffbb62ccc1338eb291b6b.jpg"
     confidence: high
-    games: []
+    games: [where-winds-meet]
     tags:
       - 弹幕版
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿 安乐冈花火w 的 10时场版本（119min）与本条为同一场，本条纯净版 149min 为主源，合并。"

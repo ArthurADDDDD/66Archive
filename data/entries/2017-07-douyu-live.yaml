@@ -261,7 +261,7 @@
     platform: douyu
     confidence: high
     duration_min: 114
-    games: []
+    games: [crossout]
     note: "B站「女流录像小屋」《创世战车》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Bx411q7iU"
@@ -460,7 +460,7 @@
     platform: douyu
     confidence: high
     duration_min: 115
-    games: []
+    games: [minecraft]
     note: "B站「女流录像小屋」《我的世界》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Nx411i7oX"
@@ -626,7 +626,7 @@
     confidence: high
     duration_min: 129
     cover: "https://tx-free-imgs.acfun.cn/content/2017_07_24/1500896497.JPG?imageslim"
-    games: []
+    games: [guess-my-drawing]
     segments:
       - at: "00:00:00"
         label: "P1-7.23-你说我猜"

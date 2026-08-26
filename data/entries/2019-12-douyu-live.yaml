@@ -32,7 +32,7 @@
     platform: douyu
     confidence: high
     duration_min: 182
-    games: []
+    games: [the-stretchers]
     note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1SJ411q7HK；标题与日期经 BiliPlus / Bilibili
       API 双重确认。
     sources:
@@ -225,7 +225,7 @@
     platform: douyu
     confidence: high
     duration_min: 233
-    games: []
+    games: [jump-king]
     note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1bJ41167SL；标题与日期经 BiliPlus / Bilibili
       API 双重确认。
     sources:
@@ -424,7 +424,7 @@
     confidence: high
     duration_min: 196
     cover: "https://tx-free-imgs.acfun.cn/o_1dt3sumk61olj14821h98ki1126i0.jpeg?imageslim"
-    games: []
+    games: [brain-training-switch]
     segments:
       - at: "00:00:00"
         label: "Part1"
@@ -486,6 +486,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [children-of-morta]
   - id: 2019-12-11-live-01
     type: live
     date: '2019-12-11'
@@ -499,6 +500,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [raft]
   - id: 2019-12-17-live-01
     type: live
     date: '2019-12-17'
@@ -512,6 +514,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [jump-king]
   - id: 2019-12-24-live-01
     type: live
     date: '2019-12-24'
@@ -525,6 +528,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [ashen]
   - id: 2019-12-28-live-01
     type: live
     date: '2019-12-28'
@@ -538,3 +542,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [warcraft-3]

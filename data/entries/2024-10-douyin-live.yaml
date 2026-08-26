@@ -5,7 +5,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/dc7919abaa98f376c604c74707821a7f248a6523.jpg"
     confidence: medium
-    games: []
+    games: [lockdown-protocol]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1owxveUEfa"
@@ -22,7 +22,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2c031905fd651a4a2a23943cbef8dabb4028a4d9.jpg"
     confidence: medium
-    games: []
+    games: [pico-park-2]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1H74gexEVY"
@@ -39,7 +39,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/0d5b49ef915f7897a82600e06293525e25723cd9.jpg"
     confidence: medium
-    games: []
+    games: [rhythm-heaven, once-human]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1kMxRejE36"
@@ -73,7 +73,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/834c5c7a36011e2af8f3d1cefcdb34ea356908d5.jpg"
     confidence: medium
-    games: []
+    games: [ranch-simulator]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1k619Y5EW1"
@@ -154,6 +154,7 @@
     contributed_by: data-agent
 
     duration_min: 87
+    tags: [聊天]
   - id: 2024-10-29-live-02
     type: live
     date: "2024-10-29"
@@ -161,7 +162,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/34a33c7a6fe2590d9011978e08c402ff4140e0b3.jpg"
     confidence: medium
-    games: []
+    games: [monster-hunter-wilds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1HQS8YWEih"
@@ -178,7 +179,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/7151c17276cd6ef25b3b72093fab20d36fffd7e7.jpg"
     confidence: medium
-    games: []
+    games: [shawarma-legend]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1LaS3YsEtr"
@@ -195,7 +196,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/1c47b6cff883106ca7fe93b0f4689bb6b72ba62b.jpg"
     confidence: medium
-    games: []
+    games: [shawarma-legend]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1bESJYKEoV"

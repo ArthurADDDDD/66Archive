@@ -474,7 +474,7 @@
     platform: douyu
     confidence: high
     duration_min: 375
-    games: []
+    games: [majsoul]
     note: "B站「女流录像小屋」《雀魂&METROID DREAD》，全长录播。 人工复核：A站“2021.11.7-24”为日期解析错误，应归 2021-11-24；A站
       24-METROID DREAD 上/下及 24-雀魂稿并入本条作为备份。"
     sources:
@@ -500,7 +500,7 @@
     platform: douyu
     confidence: high
     duration_min: 252
-    games: []
+    games: [majsoul]
     note: "B站「女流录像小屋」《雀魂》，全长录播。 人工确认：A站标题“2021.11.7-25”日期解析错误，实际为 2021-11-25；A站上/下稿并入本条作为备份。"
     sources:
       - url: "https://www.bilibili.com/video/BV1sM4y1P7Vd"
@@ -522,7 +522,7 @@
     platform: douyu
     confidence: high
     duration_min: 292
-    games: []
+    games: [metroid-dread]
     note: "B站「女流录像小屋」《METROID DREAD》，全长录播。 人工确认：A站标题“2021.11.7-26”日期解析错误，实际为 2021-11-26；A站上/下稿并入本条作为备份。"
     sources:
       - url: "https://www.bilibili.com/video/BV1ar4y1Q79H"
@@ -651,6 +651,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [raft]
   - id: 2021-11-19-live-01
     type: live
     date: '2021-11-19'
@@ -664,6 +665,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [battlefield-2042]
   - id: 2021-11-23-live-01
     type: live
     date: '2021-11-23'
@@ -677,6 +679,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [metroid-dread]
   - id: 2021-11-30-live-01
     type: live
     date: '2021-11-30'
@@ -690,3 +693,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [majsoul]

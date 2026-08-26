@@ -213,6 +213,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [tribe-primitive-builder]
 
   - id: 2022-02-17-live-01
     type: live
@@ -493,6 +494,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [dragon-pinball]
   - id: 2022-02-26-live-01
     type: live
     date: '2022-02-26'
@@ -506,3 +508,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [elden-ring]

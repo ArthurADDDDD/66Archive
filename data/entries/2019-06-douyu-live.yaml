@@ -374,7 +374,7 @@
     platform: douyu
     confidence: high
     duration_min: 300
-    games: []
+    games: [totally-accurate-battle-simulator]
     note: "B站「女流录像小屋」《全面战争模拟器》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1G44113724"
@@ -390,7 +390,7 @@
     confidence: high
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/Fo34AXf1pYvZiDxwSlAqMGeRrMnm?imageslim"
-    games: []
+    games: [driving-test-sim]
     tags: [聊天]
     note: "当日直播全程为直播前聊天环节（4P 全聊天，无主游戏内容），标题如实反映，非错标。"
     segments:
@@ -500,7 +500,7 @@
     confidence: high
     duration_min: 274
     cover: "https://tx-free-imgs.acfun.cn/FugN2tfn_qcsJPlWavLU_EsE1DEK?imageslim"
-    games: []
+    games: [holy-book-story]
     segments:
       - at: "00:00:00"
         label: "游戏前K会儿歌"

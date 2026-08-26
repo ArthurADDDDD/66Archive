@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 403
-    games: []
+    games: [mario-sonic-tokyo-2020]
     note: "B站「女流录像小屋」《马力欧与索尼克 AT 2020东京奥运》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV12E411t7Xd"
@@ -60,7 +60,7 @@
     platform: douyu
     confidence: high
     duration_min: 227
-    games: []
+    games: [luigis-mansion-3]
     note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1hE411i7FV"
@@ -101,7 +101,7 @@
     platform: douyu
     confidence: high
     duration_min: 339
-    games: []
+    games: [lost-castle]
     tags: []
     note: "来源为「没被处理过」《失落城堡.女流.2019.11.8》，标题含日期，2P 全长约 3:30:33。"
     sources:
@@ -257,7 +257,7 @@
     platform: douyu
     confidence: high
     duration_min: 232
-    games: []
+    games: [overwatch, tangle-tower]
     note: "B站「女流录像小屋」《Tangle Tower》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1WJ411d7Gt"
@@ -368,6 +368,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [luigis-mansion-3]
   - id: 2019-11-06-live-01
     type: live
     date: '2019-11-06'
@@ -381,6 +382,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [luigis-mansion-3]
   - id: 2019-11-11-live-01
     type: live
     date: '2019-11-11'
@@ -394,6 +396,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [death-stranding]
   - id: 2019-11-12-live-01
     type: live
     date: '2019-11-12'
@@ -407,6 +410,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [death-stranding]
   - id: 2019-11-15-live-01
     type: live
     date: '2019-11-15'
@@ -420,6 +424,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [death-stranding]
   - id: 2019-11-19-live-01
     type: live
     date: '2019-11-19'
@@ -433,6 +438,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [death-stranding]
   - id: 2019-11-21-live-01
     type: live
     date: '2019-11-21'
@@ -446,6 +452,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [we-were-here-together]
   - id: 2019-11-30-live-01
     type: live
     date: '2019-11-30'
@@ -459,3 +466,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [concrete-genie]

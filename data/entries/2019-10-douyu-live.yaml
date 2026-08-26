@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 266
-    games: []
+    games: [planet-coaster]
     note: "B站「女流录像小屋」《过山车之星》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV15E411D7BD"
@@ -61,6 +61,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [planet-zoo]
 
   - id: 2019-10-09-live-01
     type: live
@@ -76,6 +77,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [trine-4]
 
   - id: 2019-10-10-live-01
     type: live
@@ -91,6 +93,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [trine-4]
 
   - id: 2019-10-11-live-01
     type: live
@@ -106,6 +109,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [trine-4]
 
   - id: 2019-10-12-live-01
     type: live
@@ -121,6 +125,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [3rd-eye]
 
   - id: 2019-10-13-live-01
     type: live
@@ -163,6 +168,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [a-knights-quest]
 
   - id: 2019-10-16-live-01
     type: live
@@ -263,6 +269,7 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+    games: [sos-fomt]
 
   - id: 2019-10-20-live-01
     type: live
@@ -362,7 +369,7 @@
     platform: douyu
     confidence: high
     duration_min: 250
-    games: []
+    games: [sos-fomt]
     note: "B站「女流录像小屋」《牧场物语：重聚矿石镇》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1bE411175p"
@@ -405,7 +412,7 @@
     platform: douyu
     confidence: high
     duration_min: 262
-    games: []
+    games: [luigis-mansion-3]
     note: "B站「女流录像小屋」《路易吉鬼屋3》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1GE41187Lu"
@@ -426,6 +433,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [green-hell]
   - id: 2019-10-04-live-01
     type: live
     date: '2019-10-04'
@@ -439,6 +447,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [planet-coaster]
   - id: 2019-10-22-live-01
     type: live
     date: '2019-10-22'
@@ -452,6 +461,7 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]
   - id: 2019-10-26-live-01
     type: live
     date: '2019-10-26'
@@ -465,3 +475,4 @@
         status: alive
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
+    games: [sos-fomt]

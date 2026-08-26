@@ -28,6 +28,7 @@
         parts: 5
         status: alive
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2021-04-07-live-01
     type: live
@@ -692,7 +693,7 @@
     confidence: high
     duration_min: 233
     cover: "https://tx-free-imgs.acfun.cn/o_1f4787lbs1elcfmouj0163s9os0.jpeg?imageslim"
-    games: []
+    games: [tianshenzhen]
     segments:
       - at: 00:00:00
         label: 游戏前聊10块钱的

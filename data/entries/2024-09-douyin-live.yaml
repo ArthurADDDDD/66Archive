@@ -27,6 +27,7 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+    games: [astro-bot]
 
   - id: 2024-09-11-live-01
     type: live
@@ -52,6 +53,7 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+    games: [pico-park-2]
 
   - id: 2024-09-13-live-01
     type: live
@@ -60,7 +62,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/5b51559d1e65473738b100f5eff32c1fcc43f0b1.jpg"
     confidence: medium
-    games: []
+    games: [astro-bot]
     tags: [弹幕版]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
@@ -89,3 +91,4 @@
     contributed_by: data-agent
 
     duration_min: 237
+    tags: [户外]

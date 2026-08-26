@@ -163,7 +163,7 @@
     title: 逆转裁判2
     platform: douyu
     confidence: high
-    games: []
+    games: [gyakuten-saiban-1, gyakuten-saiban-2]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.9 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
     tags: [一起See]
     sources:
@@ -208,7 +208,7 @@
     title: 逆转裁判2
     platform: douyu
     confidence: high
-    games: []
+    games: [gyakuten-saiban-1, gyakuten-saiban-2]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.11 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
     sources:
       - url: https://v.douyu.com/show/a4Jj7l2K03rWDk01
@@ -309,7 +309,7 @@
     title: 逆转裁判3
     platform: douyu
     confidence: high
-    games: []
+    games: [gyakuten-saiban-1, gyakuten-saiban-3]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.16 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
     sources:
       - url: https://v.douyu.com/show/r90XWgXbmaQvgk25
@@ -324,7 +324,7 @@
     title: 逆转裁判3
     platform: douyu
     confidence: high
-    games: []
+    games: [gyakuten-saiban-1, gyakuten-saiban-3]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.17 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
     sources:
       - url: https://v.douyu.com/show/8KxjMdJD2eovVLwb
@@ -406,7 +406,7 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/o_1e6u3rif21q371rhs1tk61h8m1fmg0.jpeg?imageslim"
-    games: []
+    games: [gem-merchant]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -444,6 +444,7 @@
     contributed_by: data-agent
     time: 15:36
     duration_min: 270
+    tags: [聊天]
   - id: 2020-04-29-live-01
     type: live
     date: "2020-04-29"
@@ -478,7 +479,7 @@
     title: 生锈小湖：轮回的房间/ Rusty Lake：Samsara Room
     platform: douyu
     confidence: high
-    games: []
+    games: [rusty-lake]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.30 游戏：生锈小湖：轮回的房间/ Rusty Lake：Samsara Room。斗鱼回放标题：samsara room锈湖新作
     sources:
       - url: https://v.douyu.com/show/qJgOWx2yDoX7kVzL

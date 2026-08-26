@@ -4,7 +4,7 @@
     title: 捣蛋大作战 /Rascal Fight
     platform: douyu
     confidence: high
-    games: []
+    games: [rascal-fight]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.1 游戏：捣蛋大作战 /Rascal Fight。斗鱼回放标题：捣蛋大作战，多人休闲
     sources:
       - url: https://v.douyu.com/show/JmbBMkDydROW40XA
@@ -28,6 +28,7 @@
     contributed_by: data-agent
     time: 13:46
     duration_min: 344
+    tags: [聊天]
   - id: 2020-05-04-live-01
     type: live
     date: "2020-05-04"
@@ -67,7 +68,7 @@
     title: 转变/ Change
     platform: douyu
     confidence: high
-    games: []
+    games: [change-homeless]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.5 游戏：转变/ Change。斗鱼回放标题：流浪的人儿想念谁
     sources:
       - url: https://v.douyu.com/show/Aox276k3QGxMVz8Z
@@ -82,7 +83,7 @@
     title: 冰与火之舞/ A Dance of FireandIce
     platform: douyu
     confidence: high
-    games: []
+    games: [a-dance-of-fire-and-ice]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277；补入 B 站「秘密录像屋」BV1fK4y1b7dd
     sources:
       - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
@@ -156,6 +157,7 @@
     contributed_by: data-agent
 
     note: 补入 B 站「秘密录像屋」BV1iK41157nG
+    tags: [聊天]
   - id: 2020-05-09-live-01
     type: live
     date: "2020-05-09"
@@ -296,6 +298,7 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+    tags: [聊天]
 
   - id: 2020-05-13-live-01
     type: live
@@ -303,7 +306,7 @@
     title: 冰与火之舞/ A Dance of FireandIce战歌竞技场
     platform: douyu
     confidence: high
-    games: []
+    games: [a-dance-of-fire-and-ice]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.13 游戏：冰与火之舞/ A Dance of FireandIce战歌竞技场。斗鱼回放标题：冰与火之舞还是。。
     sources:
       - url: https://v.douyu.com/show/a2JEMJELZx07Nxml
@@ -449,7 +452,7 @@
     title: 云城朋克/ Cloudpunk
     platform: douyu
     confidence: high
-    games: []
+    games: [cloudpunk]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.20 游戏：云城朋克/ Cloudpunk。斗鱼回放标题：未来世界的司机cloudpunk
     sources:
       - url: https://v.douyu.com/show/NbwE7ZGmkQPMn5Zz
@@ -525,7 +528,7 @@
     title: 步行者/ The Pedestrian
     platform: douyu
     confidence: high
-    games: []
+    games: [the-pedestrian]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.23 游戏：步行者/ The Pedestrian。斗鱼回放标题：The Pedestrian动动脑解密啦
     sources:
       - url: https://v.douyu.com/show/NbwE7ZGqE10Mn5Zz
