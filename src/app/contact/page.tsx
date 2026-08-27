@@ -3,8 +3,6 @@ import { SiteNav } from '@/components/SiteNav'
 import { SubmissionForm } from '@/components/SubmissionForm'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { Eyebrow } from '@/components/primitives'
-import { CoverageGaps } from '@/components/CoverageMap'
-import { buildCoverage } from '@/lib/coverage'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
 
@@ -40,7 +38,6 @@ function collectSources() {
 
 export default function ContactPage() {
   const { credited } = collectSources()
-  const coverage = buildCoverage(toTimelineEntries(getDataset()))
   return (
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="contact" />
@@ -180,16 +177,6 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-        </section>
-
-        <section aria-label="档案缺口" className="mt-16 border-t border-line pt-10">
-          <Eyebrow color="#5BC8E8">Gaps · 还差哪些素材</Eyebrow>
-          <h2 className="measure-hero mt-3 text-h2 font-semibold">这份档案还有空白，缺口都在下面这张图里。</h2>
-          <p className="measure-body mt-4 text-body text-muted">
-            空格不代表那个月没播，只代表<strong className="font-medium text-ink">档案里还没有找到任何录像</strong>。
-            如果你手上有对应时间的录播、切片或者原视频链接，用上面的表单告诉我，这张图就会少一块空白。
-          </p>
-          <CoverageGaps coverage={coverage} />
         </section>
 
         <div className="mt-12 flex flex-wrap gap-3">
