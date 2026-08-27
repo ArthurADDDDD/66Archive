@@ -133,6 +133,15 @@ const accounts = await loadYamlMap('data/accounts.yaml')
 const tagVocab = new Set([...(await loadYamlMap('data/tags.yaml', 'name')).keys()])
 
 /**
+ * 标签建议（propose-tags.mjs 产出，可能不存在）。
+ * 只是摆在页面上等人确认或否掉，服务端不因为它改变任何判定。
+ */
+const tagProposalsPath = path.join(HERE, 'tag-proposals.json')
+const tagProposals = existsSync(tagProposalsPath)
+  ? JSON.parse(await readFile(tagProposalsPath, 'utf8'))
+  : {}
+
+/**
  * 机器自检。**只指出可疑，不下结论**——每一条都要人来定。
  * 目的是排序：把最可能有错的排在前面，置信度高又没有任何疑点的可以快速扫过去。
  *
@@ -271,6 +280,7 @@ for (const e of entries) {
   e.seriesName = e.series ? (seriesMap.get(e.series)?.name || e.series) : null
   e.accountNames = [...new Set(e.sources.map((s) => s.account).filter(Boolean))]
     .map((id) => accounts.get(id)?.name || id)
+  if (tagProposals[e.id]) e.proposal = tagProposals[e.id]
 }
 
 /**
@@ -295,6 +305,11 @@ const stats = {
 console.log(`档案条目 ${stats.total} 条`)
 console.log(`  机器自检：${stats.high} 条有「几乎一定要改」的疑点，${stats.medium} 条值得看一眼，${stats.clean} 条没查出问题`)
 console.log(`  置信度分布：${Object.entries(stats.byConfidence).map(([k, v]) => `${k} ${v}`).join(' · ')}`)
+const proposalCount = entries.filter((e) => e.proposal).length
+if (proposalCount) {
+  const guess = entries.filter((e) => e.proposal && e.proposal.confidence === 'guess').length
+  console.log(`  标签建议：${proposalCount} 条（其中 ${guess} 条是靠标题猜的，必须逐条确认）`)
+}
 
 const server = createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`)

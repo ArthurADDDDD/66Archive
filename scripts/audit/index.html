@@ -152,6 +152,20 @@
   .sweep-row .acts button.y { color: #9fe3bd; } .sweep-row .acts button.y:hover { border-color: var(--ok); background: #17321f; }
   .sweep-row .acts button.n { color: #f0a8b8; } .sweep-row .acts button.n:hover { border-color: var(--no); background: #2f171d; }
   .sweep-row .acts button.o { color: var(--muted); } .sweep-row .acts button.o:hover { border-color: var(--muted); }
+  .prop {
+    margin-top: 14px; border: 1px solid #2f6b4c; background: #16261d; border-radius: 10px; padding: 12px 14px;
+  }
+  .prop.guess { border-color: #6b552f; background: #262015; }
+  .prop h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+  .prop .tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 7px; }
+  .prop .tg { font-size: 14px; font-weight: 600; background: #17321f; border: 1px solid #2f6b4c; color: #9fe3bd; border-radius: 7px; padding: 3px 11px; }
+  .prop.guess .tg { background: #2f2717; border-color: #6b552f; color: #eccf9a; }
+  .prop .why { font-size: 12.5px; color: var(--muted); }
+  .prop .acts { display: flex; gap: 8px; margin-top: 11px; flex-wrap: wrap; }
+  .prop-mini { font-size: 11.5px; margin-top: 3px; }
+  .prop-mini .tg { background: #17321f; border: 1px solid #2f6b4c; color: #9fe3bd; border-radius: 5px; padding: 1px 7px; margin-right: 4px; }
+  .prop-mini.guess .tg { background: #2f2717; border-color: #6b552f; color: #eccf9a; }
+
   .pager { display: flex; gap: 10px; align-items: center; justify-content: center; padding: 16px; font-size: 13px; color: var(--muted); }
 </style>
 </head>
@@ -199,9 +213,18 @@
         </select>
         <select id="fYear"><option value="">年份：全部</option></select>
       </div>
-      <select id="fType">
-        <option value="">类型 / 平台：全部</option>
-      </select>
+      <div class="filters">
+        <select id="fType">
+          <option value="">类型 / 平台：全部</option>
+        </select>
+        <select id="fProp">
+          <option value="">建议：全部</option>
+          <option value="any">只看有标签建议的</option>
+          <option value="guess">只看「靠猜」的建议</option>
+          <option value="high">只看有把握的建议</option>
+          <option value="none">只看没有建议的</option>
+        </select>
+      </div>
     </div>
     <div class="list" id="list"></div>
   </aside>
@@ -241,7 +264,7 @@ function revOf(id) { return REV[id] || null }
 function visible() {
   const q = norm($('#q').value)
   const fs = $('#fState').value, fsev = $('#fSev').value
-  const fc = $('#fConf').value, fy = $('#fYear').value, ft = $('#fType').value
+  const fc = $('#fConf').value, fy = $('#fYear').value, ft = $('#fType').value, fp = $('#fProp').value
   return ENTRIES.filter(e => {
     const r = revOf(e.id)
     if (fs === 'todo' && r) return false
@@ -255,6 +278,10 @@ function visible() {
     if (fc && e.confidence !== fc) return false
     if (fy && !e.date.startsWith(fy)) return false
     if (ft && `${e.type}/${e.platform}` !== ft) return false
+    if (fp === 'any' && !e.proposal) return false
+    if (fp === 'none' && e.proposal) return false
+    if (fp === 'guess' && !(e.proposal && e.proposal.confidence === 'guess')) return false
+    if (fp === 'high' && !(e.proposal && e.proposal.confidence === 'high')) return false
     if (q && !norm(e.title + e.id + e.date + e.gameNames.join('') + e.tags.join('')).includes(q)) return false
     return true
   })
@@ -319,6 +346,7 @@ function renderSweep() {
   $('#main').innerHTML = `
     <div class="sweep-head">
       <button class="btn ok" id="bAllOk">这一页 ${slice.length} 条都没问题</button>
+      ${slice.some(e => e.proposal) ? `<button class="btn ok" id="bAllAccept">采纳这一页的 ${slice.filter(e => e.proposal).length} 条建议</button>` : ''}
       <span class="hint">共 ${list.length} 条符合筛选 · 第 ${PAGE + 1} / ${pages} 页 · 点标题进「逐条细看」</span>
     </div>
     <div class="sweep">
@@ -331,8 +359,10 @@ function renderSweep() {
           <div>
             <div class="st" data-open="1" style="cursor:pointer">${esc(e.title || '（无标题）')}</div>
             <div class="sm">${esc(e.date)}${e.time ? ' ' + esc(e.time) : ''} · ${esc(e.type)}/${esc(e.platform)} · ${e.durationMin != null ? e.durationMin + '分' : '无时长'} · ${esc(e.confidence || '—')}${e.gameNames.length ? ' · ' + esc(e.gameNames.join('、')) : ''}${e.tags.length ? ' · ' + esc(e.tags.join('、')) : ''}<br>${sev}</div>
+            ${e.proposal ? `<div class="prop-mini ${e.proposal.confidence === 'guess' ? 'guess' : ''}">建议：${e.proposal.tags.map(t => `<span class="tg">${esc(t)}</span>`).join('')}<span style="color:var(--faint)">${esc(e.proposal.why)}</span></div>` : ''}
           </div>
           <div class="acts">
+            ${e.proposal ? '<button class="y" data-v="accept">采纳建议</button>' : ''}
             <button class="y" data-v="ok">✓ 没问题</button>
             <button class="n" data-v="bad">✗ 有问题</button>
             <button class="o" data-v="open">细看 →</button>
@@ -352,6 +382,17 @@ function renderSweep() {
     if (!confirm(`把这一页 ${slice.length} 条全部标成「没问题」？`)) return
     await saveMany(slice.map(e => ({ id: e.id, verdict: 'ok', title: e.title, date: e.date, bulk: true })))
   })
+  if ($('#bAllAccept')) $('#bAllAccept').addEventListener('click', async () => {
+    const withProp = slice.filter(e => e.proposal)
+    const guesses = withProp.filter(e => e.proposal.confidence === 'guess').length
+    const warn = guesses ? `\n\n其中 ${guesses} 条是靠标题猜的，一次全采纳等于没看就认了。` : ''
+    if (!confirm(`采纳这一页 ${withProp.length} 条建议？${warn}`)) return
+    await saveMany(withProp.map(e => ({
+      id: e.id, verdict: 'bad', wrong: ['tags'], applyTags: e.proposal.tags,
+      fromProposal: e.proposal.rule, note: `采纳建议：${e.proposal.tags.join(' + ')}`,
+      title: e.title, date: e.date, file: e.file,
+    })))
+  })
   $('#bPrev').addEventListener('click', () => { PAGE = Math.max(0, PAGE - 1); render(); $('#main').scrollTop = 0 })
   $('#bNext').addEventListener('click', () => { PAGE = PAGE + 1; render(); $('#main').scrollTop = 0 })
 
@@ -363,7 +404,17 @@ function renderSweep() {
         const v = b.dataset.v
         if (v === 'open') { curId = id; MODE = 'detail'; syncModeButtons(); render(); return }
         const e = ENTRIES.find(x => x.id === id)
+        // 「有问题」必须说清哪里不对，所以always跳到细看页填，不在列表里直接存。
         if (v === 'bad') { curId = id; MODE = 'detail'; syncModeButtons(); render(); return }
+        if (v === 'accept') {
+          if (!e.proposal) return
+          await saveOne({
+            id, verdict: 'bad', wrong: ['tags'], applyTags: e.proposal.tags,
+            fromProposal: e.proposal.rule, note: `采纳建议：${e.proposal.tags.join(' + ')}`,
+            title: e.title, date: e.date, file: e.file,
+          })
+          return
+        }
         await saveOne({ id, verdict: v, title: e.title, date: e.date })
       })
     }
@@ -390,6 +441,16 @@ function renderDetail() {
     </div>
 
     ${e.checks.length ? `<div class="checks">${e.checks.map(c => `<div class="check ${c.severity}"><b>⚑</b><span>${esc(c.text)}</span></div>`).join('')}</div>` : ''}
+
+    ${e.proposal ? `<div class="prop ${e.proposal.confidence === 'guess' ? 'guess' : ''}">
+      <h3>建议给它打这些标签${e.proposal.confidence === 'guess' ? '（靠标题猜的，判错就否掉）' : ''}</h3>
+      <div class="tags">${e.proposal.tags.map(t => `<span class="tg">${esc(t)}</span>`).join('')}</div>
+      <div class="why">${esc(e.proposal.why)}</div>
+      <div class="acts">
+        <button class="btn ok" id="bAccept">采纳这个建议<kbd>1</kbd></button>
+        <button class="btn no" id="bReject">建议不对<kbd>2</kbd></button>
+      </div>
+    </div>` : ''}
 
     <div class="card">
       <h2>档案里现在是这样写的</h2>
@@ -433,10 +494,12 @@ function renderDetail() {
       <button class="btn warn" id="bSkip">拿不准<kbd>K</kbd></button>
       <button class="btn" id="bClear">清除判定</button>
       <span class="saved" id="savedMsg">${r.verdict ? '已判定：' + ({ ok: '没问题', bad: '有问题', skip: '拿不准' }[r.verdict]) : ''}</span>
-      <span class="kbd-help">J/K 上下 · S 没问题 · D 有问题 · A 上一条</span>
+      <span class="kbd-help">J/K 上下 · S 没问题 · D 有问题${e.proposal ? ' · 1 采纳建议 · 2 建议不对' : ''}</span>
     </div>
   `
 
+  if ($('#bAccept')) $('#bAccept').addEventListener('click', acceptProposal)
+  if ($('#bReject')) $('#bReject').addEventListener('click', rejectProposal)
   $('#bOk').addEventListener('click', () => saveDetail('ok'))
   $('#bBad').addEventListener('click', () => saveDetail('bad'))
   $('#bSkip').addEventListener('click', () => saveDetail('skip'))
@@ -455,6 +518,41 @@ function collectDetail(verdict) {
     date: e.date,
     file: e.file,
   }
+}
+
+/**
+ * 采纳建议 = 判成「有问题·标签不对」，并把建议的标签写进 applyTags。
+ * 落盘时按 applyTags 给这条补标签——所以「采纳」不是「没问题」，
+ * 它明确表示「档案现在缺标签，应该补成这几个」。
+ */
+async function acceptProposal() {
+  const e = ENTRIES.find(x => x.id === curId)
+  if (!e || !e.proposal) return
+  await saveOne({
+    id: e.id,
+    verdict: 'bad',
+    wrong: ['tags'],
+    applyTags: e.proposal.tags,
+    fromProposal: e.proposal.rule,
+    note: ($('#note') ? $('#note').value.trim() : '') || `采纳建议：${e.proposal.tags.join(' + ')}`,
+    title: e.title, date: e.date, file: e.file,
+  })
+  nextEntry()
+}
+
+/** 否掉建议：这条不该按建议标，但也还没说该标什么——留成「拿不准」等人写清楚。 */
+async function rejectProposal() {
+  const e = ENTRIES.find(x => x.id === curId)
+  if (!e) return
+  await saveOne({
+    id: e.id,
+    verdict: 'skip',
+    wrong: [],
+    rejectedProposal: e.proposal ? e.proposal.tags : [],
+    note: ($('#note') ? $('#note').value.trim() : '') || '建议不对，正确的分类待定',
+    title: e.title, date: e.date, file: e.file,
+  })
+  nextEntry()
 }
 
 async function saveDetail(verdict) {
@@ -519,12 +617,14 @@ document.addEventListener('keydown', ev => {
   else if (ev.key === 'a') { ev.preventDefault(); stepEntry(-1) }
   else if (ev.key === 's') { ev.preventDefault(); saveDetail('ok') }
   else if (ev.key === 'd') { ev.preventDefault(); saveDetail('bad') }
+  else if (ev.key === '1') { ev.preventDefault(); acceptProposal() }
+  else if (ev.key === '2') { ev.preventDefault(); rejectProposal() }
 })
 
 for (const b of document.querySelectorAll('#modes button')) {
   b.addEventListener('click', () => { MODE = b.dataset.mode; PAGE = 0; syncModeButtons(); render(); $('#main').scrollTop = 0 })
 }
-for (const id of ['#q', '#fState', '#fSev', '#fConf', '#fYear', '#fType']) {
+for (const id of ['#q', '#fState', '#fSev', '#fConf', '#fYear', '#fType', '#fProp']) {
   $(id).addEventListener(id === '#q' ? 'input' : 'change', () => { PAGE = 0; render() })
 }
 

@@ -37,3 +37,4 @@ scripts/calibrate/resolve-round2.py
 # 但每一轮清点产出的人工判定是一次性工作产物，不进。
 scripts/audit/reviews.json
 scripts/audit/reviews-backups/
+scripts/audit/tag-proposals.json
