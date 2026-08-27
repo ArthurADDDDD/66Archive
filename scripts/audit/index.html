@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>档案条目清点</title>
+<style>
+  :root {
+    --bg: #10131a; --panel: #171b24; --panel-2: #1e232e; --line: #2b3240;
+    --ink: #e8eaf0; --muted: #98a1b3; --faint: #6b7488;
+    --live: #5bc8e8; --ok: #58c98b; --warn: #e0a244; --no: #e0607a; --video: #b98cf0;
+    --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+    overflow: hidden;
+  }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+
+  .app { display: grid; grid-template-columns: 330px minmax(0,1fr); height: 100vh; }
+
+  /* ---------- 左栏 ---------- */
+  .side { border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; background: var(--panel); }
+  .side-head { padding: 12px 14px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+  .progress-line { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .progress-line b { font-family: var(--mono); font-size: 19px; font-weight: 600; }
+  .progress-line span { font-size: 12px; color: var(--muted); }
+  .bar { height: 5px; background: var(--panel-2); border-radius: 3px; overflow: hidden; display: flex; }
+  .bar > i { display: block; height: 100%; transition: width .2s; }
+  .bar > i.ok { background: var(--ok); }
+  .bar > i.bad { background: var(--no); }
+  .bar > i.skip { background: var(--warn); }
+  .side input[type=search], .side select {
+    width: 100%; background: var(--bg); border: 1px solid var(--line);
+    border-radius: 7px; padding: 7px 9px; font-size: 13px;
+  }
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tally { display: flex; gap: 10px; font-size: 11.5px; font-family: var(--mono); color: var(--faint); }
+  .tally b { font-weight: 600; }
+  .tally .g { color: var(--ok); } .tally .r { color: var(--no); } .tally .y { color: var(--warn); }
+  .list { overflow-y: auto; flex: 1; min-height: 0; }
+  .row {
+    display: grid; grid-template-columns: 14px minmax(0,1fr); gap: 8px; align-items: start;
+    padding: 7px 12px; border-bottom: 1px solid var(--line); cursor: pointer;
+  }
+  .row:hover { background: var(--panel-2); }
+  .row.sel { background: #22304a; }
+  .row .dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; background: var(--faint); opacity: .35; }
+  .row.v-ok .dot { background: var(--ok); opacity: 1; }
+  .row.v-bad .dot { background: var(--no); opacity: 1; }
+  .row.v-skip .dot { background: var(--warn); opacity: 1; }
+  .row .t { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .m { font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .row.done .t { color: var(--muted); }
+  .row .sev { font-size: 11px; }
+  .row .sev.high { color: var(--no); }
+  .row .sev.medium { color: var(--warn); }
+
+  /* ---------- 右栏 ---------- */
+  .main { overflow-y: auto; padding: 18px 24px 80px; min-height: 0; }
+  .crumb { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+  h1 { font-size: 21px; margin: 6px 0 2px; line-height: 1.35; }
+  .meta { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
+  .chip { border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; background: var(--panel); }
+  .chip.live { color: var(--live); border-color: #2b4c5a; }
+  .chip.video { color: var(--video); border-color: #45376a; }
+  .chip.c-low { color: var(--no); border-color: #6b2f3d; }
+  .chip.c-medium { color: var(--warn); border-color: #6b552f; }
+  .chip.c-high { color: var(--ok); border-color: #2f6b4c; }
+
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 11px; padding: 13px 15px; margin-top: 14px; }
+  .card h2 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin: 0 0 9px; font-weight: 600; }
+
+  .fields { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 5px 14px; font-size: 13px; }
+  .fields dt { color: var(--faint); font-family: var(--mono); font-size: 12px; }
+  .fields dd { margin: 0; word-break: break-word; }
+  .fields dd.blank { color: var(--faint); font-style: italic; }
+
+  .checks { margin-top: 13px; display: flex; flex-direction: column; gap: 6px; }
+  .check {
+    display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px;
+    border-radius: 8px; padding: 8px 11px;
+  }
+  .check.high { background: #2f171d; border: 1px solid #6b2f3d; color: #f0a8b8; }
+  .check.medium { background: #2f2717; border: 1px solid #6b552f; color: #eccf9a; }
+  .check b { opacity: .8; }
+
+  .srcs { display: flex; flex-direction: column; gap: 5px; }
+  .srcs a { color: var(--live); font-size: 12.5px; text-decoration: none; word-break: break-all; }
+  .srcs a:hover { text-decoration: underline; }
+  .srcs .k { font-family: var(--mono); font-size: 10.5px; color: var(--faint); margin-right: 6px; }
+  .srcs .st-dead { color: var(--no); }
+  .srcs .st-alive { color: var(--ok); }
+
+  .wrong { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wrong label {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px;
+    border: 1px solid var(--line); background: var(--panel-2); border-radius: 7px; padding: 5px 10px; cursor: pointer;
+  }
+  .wrong label:has(input:checked) { border-color: var(--no); background: #2f171d; color: #f0a8b8; }
+  .wrong input { accent-color: var(--no); }
+
+  textarea.note { width: 100%; min-height: 62px; resize: vertical; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
+
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .btn { border: 1px solid var(--line); background: var(--panel-2); color: var(--ink); border-radius: 8px; padding: 8px 14px; font-size: 13.5px; }
+  .btn:hover { border-color: var(--muted); }
+  .btn.ok { border-color: #2f6b4c; background: #17321f; color: #9fe3bd; }
+  .btn.ok:hover { border-color: var(--ok); }
+  .btn.no { border-color: #6b2f3d; background: #2f171d; color: #f0a8b8; }
+  .btn.no:hover { border-color: var(--no); }
+  .btn.warn { border-color: #6b552f; background: #2f2717; color: #eccf9a; }
+  .btn.big { padding: 13px 20px; font-size: 15px; font-weight: 500; }
+  .btn kbd { font-family: var(--mono); font-size: 10.5px; background: rgba(255,255,255,.09); border-radius: 3px; padding: 1px 4px; margin-left: 6px; }
+
+  .savebar {
+    position: sticky; bottom: 0; margin: 16px -24px -80px; padding: 12px 24px;
+    background: linear-gradient(transparent, var(--bg) 22%); display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  }
+  .saved { font-size: 12.5px; color: var(--ok); }
+  .empty { padding: 60px 20px; text-align: center; color: var(--faint); }
+  .kbd-help { font-size: 11.5px; color: var(--faint); margin-left: auto; font-family: var(--mono); }
+
+  .modes { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .modes button { flex: 1; background: var(--panel-2); border: none; border-right: 1px solid var(--line); padding: 8px 6px; font-size: 12.5px; color: var(--muted); }
+  .modes button:last-child { border-right: none; }
+  .modes button[aria-pressed=true] { background: #22304a; color: var(--ink); font-weight: 600; }
+
+  /* ---------- 快速清点（列表模式） ---------- */
+  .sweep-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
+  .sweep-head .hint { font-size: 12.5px; color: var(--muted); }
+  .sweep { border: 1px solid var(--line); border-radius: 11px; overflow: hidden; }
+  .sweep-row {
+    display: grid; grid-template-columns: minmax(0,1fr) max-content; gap: 12px; align-items: center;
+    padding: 9px 13px; border-bottom: 1px solid var(--line); background: var(--panel);
+  }
+  .sweep-row:last-child { border-bottom: none; }
+  .sweep-row:hover { background: var(--panel-2); }
+  .sweep-row.v-ok { background: #14251b; }
+  .sweep-row.v-bad { background: #26151a; }
+  .sweep-row.v-skip { background: #252015; }
+  .sweep-row .st { font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sweep-row .sm { font-family: var(--mono); font-size: 11.5px; color: var(--faint); margin-top: 2px; }
+  .sweep-row .sm .sev-high { color: var(--no); }
+  .sweep-row .sm .sev-medium { color: var(--warn); }
+  .sweep-row .acts { display: flex; gap: 6px; }
+  .sweep-row .acts button { border: 1px solid var(--line); background: var(--panel-2); border-radius: 7px; padding: 4px 10px; font-size: 12.5px; }
+  .sweep-row .acts button.y { color: #9fe3bd; } .sweep-row .acts button.y:hover { border-color: var(--ok); background: #17321f; }
+  .sweep-row .acts button.n { color: #f0a8b8; } .sweep-row .acts button.n:hover { border-color: var(--no); background: #2f171d; }
+  .sweep-row .acts button.o { color: var(--muted); } .sweep-row .acts button.o:hover { border-color: var(--muted); }
+  .pager { display: flex; gap: 10px; align-items: center; justify-content: center; padding: 16px; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-head">
+      <div class="progress-line">
+        <b id="pgN">0</b>
+        <span id="pgT">/ 0 已清点</span>
+      </div>
+      <div class="bar"><i class="ok" id="barOk" style="width:0"></i><i class="bad" id="barBad" style="width:0"></i><i class="skip" id="barSkip" style="width:0"></i></div>
+      <div class="tally">
+        <span class="g">没问题 <b id="cOk">0</b></span>
+        <span class="r">有问题 <b id="cBad">0</b></span>
+        <span class="y">拿不准 <b id="cSkip">0</b></span>
+      </div>
+      <div class="modes" id="modes">
+        <button type="button" data-mode="sweep" aria-pressed="true">快速清点</button>
+        <button type="button" data-mode="detail" aria-pressed="false">逐条细看</button>
+      </div>
+      <input type="search" id="q" placeholder="搜标题 / id / 日期 / 游戏…">
+      <div class="filters">
+        <select id="fState">
+          <option value="todo">待清点</option>
+          <option value="">全部</option>
+          <option value="ok">已确认没问题</option>
+          <option value="bad">标了有问题</option>
+          <option value="skip">拿不准</option>
+        </select>
+        <select id="fSev">
+          <option value="">疑点：全部</option>
+          <option value="high">只看「几乎一定要改」</option>
+          <option value="medium">只看「值得看一眼」</option>
+          <option value="any">只看有疑点的</option>
+          <option value="none">只看没查出问题的</option>
+        </select>
+      </div>
+      <div class="filters">
+        <select id="fConf">
+          <option value="">置信度：全部</option>
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </select>
+        <select id="fYear"><option value="">年份：全部</option></select>
+      </div>
+      <select id="fType">
+        <option value="">类型 / 平台：全部</option>
+      </select>
+    </div>
+    <div class="list" id="list"></div>
+  </aside>
+
+  <main class="main" id="main"><div class="empty">载入中…</div></main>
+</div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s)
+let ENTRIES = [], REV = {}, STATS = {}, curId = null, MODE = 'sweep', PAGE = 0
+const PAGE_SIZE = 60
+
+const norm = s => String(s || '').toLowerCase().replace(/[\s,._:\-()（）【】\[\]、《》"'!！?？~～]/g, '')
+const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))
+
+const WRONG_FIELDS = [
+  ['date', '日期'], ['title', '标题'], ['type', '类型 live/video'], ['platform', '平台'],
+  ['duration', '时长'], ['games', '游戏'], ['tags', '标签'], ['series', '系列'],
+  ['sources', '链接 / 来源'], ['duplicate', '是重复条目'], ['other', '其他'],
+]
+
+async function boot() {
+  const r = await fetch('/api/data')
+  const d = await r.json()
+  ENTRIES = d.entries; REV = d.reviews || {}; STATS = d.stats || {}
+
+  const years = [...new Set(ENTRIES.map(e => e.date.slice(0, 4)).filter(Boolean))].sort()
+  $('#fYear').innerHTML = '<option value="">年份：全部</option>' + years.map(y => `<option value="${y}">${y}</option>`).join('')
+  const kinds = [...new Set(ENTRIES.map(e => `${e.type}/${e.platform}`))].sort()
+  $('#fType').innerHTML = '<option value="">类型 / 平台：全部</option>' + kinds.map(k => `<option value="${esc(k)}">${esc(k)}</option>`).join('')
+
+  render()
+}
+
+function revOf(id) { return REV[id] || null }
+
+function visible() {
+  const q = norm($('#q').value)
+  const fs = $('#fState').value, fsev = $('#fSev').value
+  const fc = $('#fConf').value, fy = $('#fYear').value, ft = $('#fType').value
+  return ENTRIES.filter(e => {
+    const r = revOf(e.id)
+    if (fs === 'todo' && r) return false
+    if (fs === 'ok' && (!r || r.verdict !== 'ok')) return false
+    if (fs === 'bad' && (!r || r.verdict !== 'bad')) return false
+    if (fs === 'skip' && (!r || r.verdict !== 'skip')) return false
+    if (fsev === 'high' && e.worst !== 0) return false
+    if (fsev === 'medium' && e.worst !== 1) return false
+    if (fsev === 'any' && e.worst === 9) return false
+    if (fsev === 'none' && e.worst !== 9) return false
+    if (fc && e.confidence !== fc) return false
+    if (fy && !e.date.startsWith(fy)) return false
+    if (ft && `${e.type}/${e.platform}` !== ft) return false
+    if (q && !norm(e.title + e.id + e.date + e.gameNames.join('') + e.tags.join('')).includes(q)) return false
+    return true
+  })
+}
+
+function renderProgress() {
+  const total = ENTRIES.length
+  const vals = Object.values(REV)
+  const ok = vals.filter(v => v.verdict === 'ok').length
+  const bad = vals.filter(v => v.verdict === 'bad').length
+  const skip = vals.filter(v => v.verdict === 'skip').length
+  const done = ok + bad + skip
+  $('#pgN').textContent = done
+  $('#pgT').textContent = '/ ' + total + ' 已清点'
+  $('#barOk').style.width = (total ? ok / total * 100 : 0) + '%'
+  $('#barBad').style.width = (total ? bad / total * 100 : 0) + '%'
+  $('#barSkip').style.width = (total ? skip / total * 100 : 0) + '%'
+  $('#cOk').textContent = ok; $('#cBad').textContent = bad; $('#cSkip').textContent = skip
+}
+
+function rowClass(e) {
+  const r = revOf(e.id)
+  if (!r) return ''
+  return 'done v-' + r.verdict
+}
+
+function renderList() {
+  const list = visible()
+  $('#list').innerHTML = list.slice(0, 400).map(e => {
+    const sev = e.worst === 0 ? '<span class="sev high">⚑</span>' : e.worst === 1 ? '<span class="sev medium">⚑</span>' : ''
+    return `<div class="row ${rowClass(e)} ${e.id === curId ? 'sel' : ''}" data-id="${esc(e.id)}">
+      <div class="dot"></div>
+      <div><div class="t">${esc(e.title || '（无标题）')} ${sev}</div>
+      <div class="m">${esc(e.date)} · ${esc(e.type)} · ${esc(e.confidence || '—')}</div></div>
+    </div>`
+  }).join('') + (list.length > 400 ? `<div class="empty" style="padding:14px;font-size:12px">只列出前 400 条（共 ${list.length}）——用筛选或搜索缩小范围</div>` : '')
+    || '<div class="empty">这个筛选下没有条目。</div>'
+
+  for (const el of document.querySelectorAll('.row')) {
+    el.addEventListener('click', () => { curId = el.dataset.id; MODE = 'detail'; syncModeButtons(); render() })
+  }
+}
+
+function syncModeButtons() {
+  for (const b of document.querySelectorAll('#modes button')) b.setAttribute('aria-pressed', String(b.dataset.mode === MODE))
+}
+
+function render() {
+  renderProgress()
+  renderList()
+  if (MODE === 'sweep') renderSweep()
+  else renderDetail()
+}
+
+/* ---------------- 快速清点：一屏一批，逐行点 ---------------- */
+function renderSweep() {
+  const list = visible()
+  const pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE))
+  if (PAGE >= pages) PAGE = pages - 1
+  const slice = list.slice(PAGE * PAGE_SIZE, (PAGE + 1) * PAGE_SIZE)
+
+  $('#main').innerHTML = `
+    <div class="sweep-head">
+      <button class="btn ok" id="bAllOk">这一页 ${slice.length} 条都没问题</button>
+      <span class="hint">共 ${list.length} 条符合筛选 · 第 ${PAGE + 1} / ${pages} 页 · 点标题进「逐条细看」</span>
+    </div>
+    <div class="sweep">
+      ${slice.map(e => {
+        const r = revOf(e.id)
+        const sev = e.checks.length
+          ? e.checks.map(c => `<span class="sev-${c.severity}">⚑ ${esc(c.text)}</span>`).join(' · ')
+          : '没查出问题'
+        return `<div class="sweep-row ${r ? 'v-' + r.verdict : ''}" data-id="${esc(e.id)}">
+          <div>
+            <div class="st" data-open="1" style="cursor:pointer">${esc(e.title || '（无标题）')}</div>
+            <div class="sm">${esc(e.date)}${e.time ? ' ' + esc(e.time) : ''} · ${esc(e.type)}/${esc(e.platform)} · ${e.durationMin != null ? e.durationMin + '分' : '无时长'} · ${esc(e.confidence || '—')}${e.gameNames.length ? ' · ' + esc(e.gameNames.join('、')) : ''}${e.tags.length ? ' · ' + esc(e.tags.join('、')) : ''}<br>${sev}</div>
+          </div>
+          <div class="acts">
+            <button class="y" data-v="ok">✓ 没问题</button>
+            <button class="n" data-v="bad">✗ 有问题</button>
+            <button class="o" data-v="open">细看 →</button>
+          </div>
+        </div>`
+      }).join('') || '<div class="empty">这个筛选下没有条目。</div>'}
+    </div>
+    <div class="pager">
+      <button class="btn" id="bPrev" ${PAGE === 0 ? 'disabled' : ''}>← 上一页</button>
+      <span>第 ${PAGE + 1} / ${pages} 页</span>
+      <button class="btn" id="bNext" ${PAGE >= pages - 1 ? 'disabled' : ''}>下一页 →</button>
+    </div>
+  `
+
+  $('#bAllOk').addEventListener('click', async () => {
+    if (!slice.length) return
+    if (!confirm(`把这一页 ${slice.length} 条全部标成「没问题」？`)) return
+    await saveMany(slice.map(e => ({ id: e.id, verdict: 'ok', title: e.title, date: e.date, bulk: true })))
+  })
+  $('#bPrev').addEventListener('click', () => { PAGE = Math.max(0, PAGE - 1); render(); $('#main').scrollTop = 0 })
+  $('#bNext').addEventListener('click', () => { PAGE = PAGE + 1; render(); $('#main').scrollTop = 0 })
+
+  for (const row of document.querySelectorAll('.sweep-row')) {
+    const id = row.dataset.id
+    row.querySelector('[data-open]').addEventListener('click', () => { curId = id; MODE = 'detail'; syncModeButtons(); render() })
+    for (const b of row.querySelectorAll('.acts button')) {
+      b.addEventListener('click', async () => {
+        const v = b.dataset.v
+        if (v === 'open') { curId = id; MODE = 'detail'; syncModeButtons(); render(); return }
+        const e = ENTRIES.find(x => x.id === id)
+        if (v === 'bad') { curId = id; MODE = 'detail'; syncModeButtons(); render(); return }
+        await saveOne({ id, verdict: v, title: e.title, date: e.date })
+      })
+    }
+  }
+}
+
+/* ---------------- 逐条细看 ---------------- */
+function renderDetail() {
+  const e = ENTRIES.find(x => x.id === curId) || visible()[0]
+  if (!e) { $('#main').innerHTML = '<div class="empty">这个筛选下没有条目。</div>'; return }
+  curId = e.id
+  const r = revOf(e.id) || {}
+  const wrong = new Set(r.wrong || [])
+
+  $('#main').innerHTML = `
+    <div class="crumb">${esc(e.id)} · ${esc(e.file)}</div>
+    <h1>${esc(e.title || '（无标题）')}</h1>
+    <div class="meta">
+      <span class="chip">${esc(e.date)}${e.time ? ' ' + esc(e.time) : ''}</span>
+      <span class="chip ${e.type === 'live' ? 'live' : 'video'}">${esc(e.type)}</span>
+      <span class="chip">${esc(e.platform)}</span>
+      ${e.durationMin != null ? `<span class="chip">${e.durationMin} 分钟</span>` : '<span class="chip">没有时长</span>'}
+      ${e.confidence ? `<span class="chip c-${esc(e.confidence)}">${esc(e.confidence)}</span>` : ''}
+    </div>
+
+    ${e.checks.length ? `<div class="checks">${e.checks.map(c => `<div class="check ${c.severity}"><b>⚑</b><span>${esc(c.text)}</span></div>`).join('')}</div>` : ''}
+
+    <div class="card">
+      <h2>档案里现在是这样写的</h2>
+      <dl class="fields">
+        <dt>date</dt><dd>${esc(e.date)}${e.time ? ' ' + esc(e.time) : ''}</dd>
+        <dt>title</dt><dd class="${e.title ? '' : 'blank'}">${esc(e.title) || '（空）'}</dd>
+        <dt>type</dt><dd>${esc(e.type)}</dd>
+        <dt>platform</dt><dd>${esc(e.platform)}</dd>
+        <dt>duration</dt><dd class="${e.durationMin == null ? 'blank' : ''}">${e.durationMin != null ? e.durationMin + ' 分钟（' + (e.durationMin / 60).toFixed(1) + ' 小时）' : '没有'}</dd>
+        <dt>games</dt><dd class="${e.gameNames.length ? '' : 'blank'}">${e.gameNames.length ? esc(e.gameNames.join('、')) + ' <span style="color:var(--faint);font-family:var(--mono);font-size:11px">' + esc(e.games.join(' ')) + '</span>' : '没有'}</dd>
+        <dt>tags</dt><dd class="${e.tags.length ? '' : 'blank'}">${e.tags.length ? esc(e.tags.join('、')) : '没有'}</dd>
+        <dt>series</dt><dd class="${e.seriesName ? '' : 'blank'}">${e.seriesName ? esc(e.seriesName) : '没有'}</dd>
+        <dt>confidence</dt><dd class="${e.confidence ? '' : 'blank'}">${esc(e.confidence) || '没标'}</dd>
+        <dt>来源账号</dt><dd class="${e.accountNames.length ? '' : 'blank'}">${e.accountNames.length ? esc(e.accountNames.join('、')) : '没有'}</dd>
+      </dl>
+    </div>
+
+    ${e.note ? `<div class="card"><h2>档案备注</h2><div style="font-size:13px;color:var(--muted)">${esc(e.note)}</div></div>` : ''}
+
+    ${e.segments.length ? `<div class="card"><h2>分段（${e.segments.length}）</h2><div style="font-size:12.5px;color:var(--muted)">${e.segments.map(s => esc(`${s.at} ${s.label || s.game || ''}`)).join(' · ')}</div></div>` : ''}
+
+    ${e.sources.length ? `<div class="card"><h2>去看原片（核对标题 / 日期 / 时长最快的办法）</h2><div class="srcs">
+      ${e.sources.map(s => `<div><span class="k">${esc(s.kind)}<span class="st-${esc(s.status)}">·${esc(s.status)}</span>${s.parts ? '·' + s.parts + 'P' : ''}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url)}</a></div>`).join('')}
+    </div></div>` : '<div class="card"><h2>来源</h2><div style="color:var(--no);font-size:13px">这条没有任何来源链接</div></div>'}
+
+    <div class="card">
+      <h2>哪里不对（标「有问题」时勾一下，我按这个去改）</h2>
+      <div class="wrong" id="wrong">
+        ${WRONG_FIELDS.map(([k, label]) => `<label><input type="checkbox" value="${k}" ${wrong.has(k) ? 'checked' : ''}>${esc(label)}</label>`).join('')}
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>正确的应该是什么 / 备注</h2>
+      <textarea class="note" id="note" placeholder="比如：日期应该是 2019-07-13，标题里的「第二期」其实是第三期；或者贴一个正确的链接">${esc(r.note || '')}</textarea>
+    </div>
+
+    <div class="savebar">
+      <button class="btn ok big" id="bOk">✓ 没问题<kbd>S</kbd></button>
+      <button class="btn no big" id="bBad">✗ 有问题<kbd>D</kbd></button>
+      <button class="btn warn" id="bSkip">拿不准<kbd>K</kbd></button>
+      <button class="btn" id="bClear">清除判定</button>
+      <span class="saved" id="savedMsg">${r.verdict ? '已判定：' + ({ ok: '没问题', bad: '有问题', skip: '拿不准' }[r.verdict]) : ''}</span>
+      <span class="kbd-help">J/K 上下 · S 没问题 · D 有问题 · A 上一条</span>
+    </div>
+  `
+
+  $('#bOk').addEventListener('click', () => saveDetail('ok'))
+  $('#bBad').addEventListener('click', () => saveDetail('bad'))
+  $('#bSkip').addEventListener('click', () => saveDetail('skip'))
+  $('#bClear').addEventListener('click', clearOne)
+}
+
+function collectDetail(verdict) {
+  const e = ENTRIES.find(x => x.id === curId)
+  const wrong = [...document.querySelectorAll('#wrong input:checked')].map(i => i.value)
+  return {
+    id: e.id,
+    verdict,                        // ok | bad | skip
+    wrong: verdict === 'bad' ? wrong : [],
+    note: $('#note') ? $('#note').value.trim() : '',
+    title: e.title,
+    date: e.date,
+    file: e.file,
+  }
+}
+
+async function saveDetail(verdict) {
+  if (!curId) return
+  const payload = collectDetail(verdict)
+  if (verdict === 'bad' && !payload.wrong.length && !payload.note) {
+    if (!confirm('标成「有问题」但没勾字段也没写备注 —— 这样我只知道它有问题，不知道哪里错。确定就这样存？')) return
+  }
+  await saveOne(payload)
+  nextEntry()
+}
+
+async function saveOne(payload) {
+  const r = await fetch('/api/review', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload),
+  })
+  if (!r.ok) { alert('保存失败'); return }
+  REV[payload.id] = payload
+  render()
+}
+
+async function saveMany(items) {
+  const r = await fetch('/api/review', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(items),
+  })
+  if (!r.ok) { alert('保存失败'); return }
+  for (const it of items) REV[it.id] = it
+  render()
+}
+
+async function clearOne() {
+  if (!curId) return
+  await fetch('/api/review', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: curId, __delete: true }),
+  })
+  delete REV[curId]
+  render()
+}
+
+function nextEntry() {
+  const list = visible()
+  if (!list.length) { $('#main').innerHTML = '<div class="empty">这一批清点完了 🎉 换个筛选继续。</div>'; return }
+  const i = list.findIndex(x => x.id === curId)
+  // 「待清点」筛选下存完当前条会从列表消失，原位就是下一条。
+  const nx = (list[i] && list[i].id !== curId) ? list[i] : (list[i + 1] || list[Math.max(0, list.length - 1)])
+  if (nx) { curId = nx.id; render() }
+}
+
+function stepEntry(delta) {
+  const list = visible()
+  if (!list.length) return
+  const i = list.findIndex(x => x.id === curId)
+  const nx = list[Math.min(Math.max((i < 0 ? 0 : i) + delta, 0), list.length - 1)]
+  if (nx) { curId = nx.id; MODE = 'detail'; syncModeButtons(); render() }
+}
+
+document.addEventListener('keydown', ev => {
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return
+  if (MODE !== 'detail') return
+  if (ev.key === 'j') { ev.preventDefault(); stepEntry(1) }
+  else if (ev.key === 'k' && !ev.metaKey) { ev.preventDefault(); stepEntry(-1) }
+  else if (ev.key === 'a') { ev.preventDefault(); stepEntry(-1) }
+  else if (ev.key === 's') { ev.preventDefault(); saveDetail('ok') }
+  else if (ev.key === 'd') { ev.preventDefault(); saveDetail('bad') }
+})
+
+for (const b of document.querySelectorAll('#modes button')) {
+  b.addEventListener('click', () => { MODE = b.dataset.mode; PAGE = 0; syncModeButtons(); render(); $('#main').scrollTop = 0 })
+}
+for (const id of ['#q', '#fState', '#fSev', '#fConf', '#fYear', '#fType']) {
+  $(id).addEventListener(id === '#q' ? 'input' : 'change', () => { PAGE = 0; render() })
+}
+
+/**
+ * 定期从服务端拉一次最新判定，合并进本地 REV。
+ * 开了局域网访问之后，两台设备各自内存里的 REV 只在页面刚打开时是准的；
+ * 不同步的话进度条会一直显得落后，也可能把别的设备刚判过的条目又判一遍。
+ * 正在「逐条细看」时不整页重渲染，避免把没保存的输入框内容刷掉。
+ */
+async function pollReviews() {
+  try {
+    const r = await fetch('/api/reviews')
+    if (!r.ok) return
+    const { reviews } = await r.json()
+    REV = reviews || {}
+    if (MODE === 'sweep') render()
+    else { renderProgress(); renderList() }
+  } catch {
+    // 断网 / 服务端重启中，安静地跳过这一轮。
+  }
+}
+setInterval(pollReviews, 12_000)
+document.addEventListener('visibilitychange', () => { if (!document.hidden) pollReviews() })
+
+boot()
+</script>
+</body>
+</html>

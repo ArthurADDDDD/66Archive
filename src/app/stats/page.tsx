@@ -5,6 +5,8 @@ import { SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
 import { YearBarChart } from '@/components/YearCharts'
 import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
+import { CoverageGaps } from '@/components/CoverageMap'
+import { buildCoverage } from '@/lib/coverage'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
@@ -129,6 +131,9 @@ export default function StatsPage() {
       })),
     })
   }
+
+  // —— 06 缺口 ——（与联系页同一份口径，同一个组件）
+  const coverage = buildCoverage(timeline)
 
   // —— 05 节目 ——
   const series = buildSeriesList(ds, timeline)
@@ -336,6 +341,22 @@ export default function StatsPage() {
         </Observation>
       </Section>
       )}
+
+      {/* 06 档案还有多少空白？ */}
+      <Section
+        question="档案还有多少空白？"
+        accent="#5BC8E8"
+        legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
+      >
+        <CoverageGaps coverage={coverage} defaultExpanded />
+        <Observation>
+          还差哪些素材、以及每一段空白是怎么回事，
+          <Link href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
+            联系页
+          </Link>
+          里有同一张图和逐条说明——手上有对应时间的录像可以直接从那里告诉我。
+        </Observation>
+      </Section>
 
       <SiteFooter />
     </main>

@@ -32,3 +32,8 @@ scripts/calibrate/note-mapping.json
 scripts/calibrate/plan.json
 scripts/calibrate/pishuang-suspects.json
 scripts/calibrate/resolve-round2.py
+
+# 全量清点工具（scripts/audit/）同样是可复用的，进版本库；
+# 但每一轮清点产出的人工判定是一次性工作产物，不进。
+scripts/audit/reviews.json
+scripts/audit/reviews-backups/
