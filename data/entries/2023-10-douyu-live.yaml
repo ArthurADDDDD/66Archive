@@ -321,6 +321,7 @@
     platform: douyu
     confidence: high
     duration_min: 266
+    tags: [户外]
     note: "B站「女流录像小屋」全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Dw411c7fR"
@@ -390,6 +391,7 @@
     duration_min: 272
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bf2a90a3674849009ce0a964192f05e0.jpeg?imageslim"
     games: []
+    tags: [佩奇, 聊天]
     sources:
       - url: https://www.bilibili.com/video/BV1nN411t7oc
         kind: replay
