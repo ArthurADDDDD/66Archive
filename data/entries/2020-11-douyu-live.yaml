@@ -708,22 +708,6 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2020-11-25-live-01
-    type: live
-    date: '2020-11-25'
-    title: 恶魔之魂
-    platform: douyu
-    confidence: high
-    duration_min: 235
-    games: [demons-souls]
-    note: 补自 B 站「秘密录像屋」已注销账号（UID 28047516）BV1Mv411b76N；标题与日期经 BiliPlus / Bilibili
-      API 双重确认。
-    sources:
-      - url: https://www.bilibili.com/video/BV1Mv411b76N
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-    contributed_by: data-agent
   - id: 2020-11-27-live-01
     type: live
     date: "2020-11-27"
