@@ -111,8 +111,9 @@
     platform: douyu
     confidence: high
     duration_min: 440
-    games: []
-    note: "B站「女流录像小屋」《我回来啦》，全长录播。"
+    games: [lets-build-a-zoo]
+    tags: [一起See]
+    note: "B站「女流录像小屋」《我回来啦》，全长录播。前半段一起See、后半段玩 Let's Build a Zoo（人工核对，未定位精确切分时间点，暂不拆 segments）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Fr4y1y7uY"
         kind: replay

@@ -30,6 +30,7 @@
     title: "一起看《大时代》"
     platform: douyu
     confidence: high
+    duration_min: 331
     games: []
     tags: [一起See]
     segments:
@@ -39,7 +40,8 @@
       - url: https://www.bilibili.com/video/BV1EP4y1i7iG
         kind: replay
         status: alive
-    note: "B站完整一起看《大时代》录像；原标题明确标注「直播录像 20230102」，据此确定直播日期。"
+        parts: 12
+    note: "B站完整一起看《大时代》录像；原标题明确标注「直播录像 20230102」，据此确定直播日期。时长由分 P 时长人工核对：前 11P 各 28:41、第 12P 15:29，合计 331 分钟。"
     contributed_by: data-agent
 
   - id: 2023-01-03-live-01
