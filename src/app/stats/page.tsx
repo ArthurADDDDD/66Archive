@@ -132,7 +132,7 @@ export default function StatsPage() {
     })
   }
 
-  // —— 06 缺口 ——（与联系页同一份口径，同一个组件）
+  // —— 06 缺口 ——（全站唯一一份，联系页只留提交入口）
   const coverage = buildCoverage(timeline)
 
   // —— 05 节目 ——
@@ -350,11 +350,11 @@ export default function StatsPage() {
       >
         <CoverageGaps coverage={coverage} />
         <Observation>
-          还差哪些素材、以及每一段空白是怎么回事，
+          手上有对应时间的录播、切片或者原视频链接，可以从
           <Link href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
             联系页
           </Link>
-          里有同一张图和逐条说明——手上有对应时间的录像可以直接从那里告诉我。
+          告诉我，这张图就会少一块空白。
         </Observation>
       </Section>
 

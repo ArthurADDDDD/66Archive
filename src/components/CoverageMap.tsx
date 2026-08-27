@@ -73,11 +73,11 @@ export function CoverageGaps({
       <div className="relative grid gap-px bg-line/60 sm:grid-cols-2 lg:grid-cols-4">
         <Tile label="已收录记录" value={totalEntries.toLocaleString()} unit="条" />
         <Tile label="有记录的月份" value={`${monthCoverage}%`} unit={`${filledMonths} / ${monthsInRange} 个月`} />
-        <Tile label="空白月份" value={blankMonths.toLocaleString()} unit="个月一条记录都没有" accent="#5BC8E8" />
+        <Tile label="空白月份" value={blankMonths.toLocaleString()} unit="个月没有任何记录" accent="#5BC8E8" />
         <Tile
           label="已经查清原因"
           value={explainedBlanks.toLocaleString()}
-          unit={`个空白月有说明 · 其余 ${Math.max(0, blankMonths - explainedBlanks)} 个还没有`}
+          unit={`个有说明 · ${Math.max(0, blankMonths - explainedBlanks)} 个待查`}
           accent="#E0A244"
         />
         <button
@@ -93,12 +93,9 @@ export function CoverageGaps({
       {expanded && (
       <div className="border-t border-line/70 p-[clamp(0.875rem,1.4vw,1.5rem)]">
         <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
-          <div>
-            <h3 className="text-h3 font-medium text-ink">
-              {years[0]} — {years[years.length - 1]}，每个格子是一个月
-            </h3>
-            <p className="mt-1 text-meta text-faint">亮起来＝档案里有记录；空格＝还没有找到任何录像</p>
-          </div>
+          <h3 className="text-h3 font-medium text-ink">
+            {years[0]} — {years[years.length - 1]}，一格一个月
+          </h3>
           <Readout reading={reading} />
         </div>
 
@@ -169,28 +166,36 @@ export function CoverageGaps({
           ))}
         </div>
 
-        <div className="mt-[clamp(0.875rem,1.2vw,1.25rem)] flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line/60 pt-4">
-          <span className="flex items-center gap-2 text-meta text-faint">
+        <div className="mt-[clamp(0.875rem,1.2vw,1.25rem)] flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line/60 pt-4 text-meta text-faint">
+          <span className="flex items-center gap-1.5">
             少
             {[1, 2, 3, 4].map((lv) => (
               <span key={lv} className="h-3 w-3 rounded-[0.1875rem]" style={{ background: '#5BC8E8', opacity: LEVEL_OPACITY[lv] }} />
             ))}
-            多 · 颜色跟随所处时期（视频 / 斗鱼 / 抖音）
+            多
           </span>
-          <span className="flex items-center gap-2 text-meta text-faint">
+          <span className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-[0.1875rem] bg-raised/70 ring-1 ring-inset ring-line/70" />
-            空白，还没查清
+            空白待查
           </span>
-          <span className="flex items-center gap-2 text-meta text-faint">
+          <span className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-[0.1875rem] bg-raised/50 ring-1 ring-inset ring-[#E0A244]/45" />
-            空白，已知原因 / 正在找
+            空白已知原因
           </span>
+          <span>颜色＝当时的平台时期</span>
         </div>
 
-        <p className="mt-4 text-meta text-faint">
-          另外：{missingDuration.toLocaleString()} 条记录还缺可核对时长（{durationCoverage}% 已有）、
-          {deadOnly.toLocaleString()} 条来源已全部失效、{noSource.toLocaleString()} 条还没有任何来源链接。
-        </p>
+        {/* 数字全是 0 的时候整行不渲染——「0 条失效、0 条没链接」不是信息，是噪音 */}
+        {(missingDuration > 0 || deadOnly > 0 || noSource > 0) && (
+          <p className="mt-3 text-meta text-faint">
+            另外还缺：
+            {[
+              missingDuration > 0 && `${missingDuration.toLocaleString()} 条没有可核对时长`,
+              deadOnly > 0 && `${deadOnly.toLocaleString()} 条来源已全部失效`,
+              noSource > 0 && `${noSource.toLocaleString()} 条没有来源链接`,
+            ].filter(Boolean).join(' · ')}
+          </p>
+        )}
       </div>
       )}
 
@@ -202,7 +207,7 @@ export function CoverageGaps({
             <p className="text-meta uppercase tracking-[0.16em] text-faint">这些空白是怎么回事</p>
             <p className="text-meta text-faint">事实与推测分开写</p>
           </div>
-          <ul className="mt-4 grid gap-2.5 xl:grid-cols-2">
+          <ul className="mt-4 grid gap-2 xl:grid-cols-2">
             {GAP_NOTES.map((note) => (
               <li key={note.id} className="rounded-xl border border-line/70 bg-base/25 p-[clamp(0.75rem,1vw,1rem)]">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -218,15 +223,23 @@ export function CoverageGaps({
                     {note.kind === 'gap' ? '还在找' : '已知原因'}
                   </span>
                 </div>
-                <p className="measure-body mt-1.5 text-meta text-muted">{note.known}</p>
-                {note.guess && (
-                  <p className="measure-body mt-1.5 text-meta text-faint">
-                    <span className="uppercase tracking-[0.16em]">推测 · </span>
-                    {note.guess}
-                  </p>
-                )}
-                {note.wanted && (
-                  <p className="measure-body mt-1.5 text-meta text-faint">最有用的证据：{note.wanted}</p>
+                <p className="mt-1.5 text-meta leading-relaxed text-muted">{note.known}</p>
+                {(note.guess || note.wanted) && (
+                  <details className="group mt-2">
+                    <summary className="ui-press inline-flex cursor-pointer list-none items-center gap-1 text-meta text-faint hover:text-muted [&::-webkit-details-marker]:hidden">
+                      推测与所需证据
+                      <span aria-hidden className="font-mono transition-transform group-open:rotate-90">›</span>
+                    </summary>
+                    {note.guess && (
+                      <p className="mt-2 text-meta leading-relaxed text-faint">
+                        <span className="uppercase tracking-[0.16em]">推测 · </span>
+                        {note.guess}
+                      </p>
+                    )}
+                    {note.wanted && (
+                      <p className="mt-1.5 text-meta leading-relaxed text-faint">最有用的证据：{note.wanted}</p>
+                    )}
+                  </details>
                 )}
               </li>
             ))}
@@ -262,9 +275,6 @@ export function CoverageGaps({
               </li>
             ))}
           </ul>
-          <p className="mt-5 border-t border-line/70 pt-4 text-meta text-faint">
-            点年份可以直接打开那一年的录播室，看看现在都收了什么。
-          </p>
         </div>
       </div>
       )}
@@ -280,7 +290,7 @@ function Readout({ reading }: { reading: Reading | null }) {
   return (
     <div className="h-[3.5rem] w-full min-w-0 overflow-hidden rounded-lg border border-line/60 bg-base/25 px-3 py-2 sm:w-[26rem]">
       {!reading ? (
-        <p className="flex h-full items-center text-meta text-faint">把鼠标移到格子上（手机点一下），看这个月收了多少</p>
+        <p className="flex h-full items-center text-meta text-faint">移到格子上看这个月的数字</p>
       ) : (
         <>
           <p className="font-mono text-control text-ink tnum">
