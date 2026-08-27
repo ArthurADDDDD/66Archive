@@ -547,3 +547,22 @@
     contributed_by: collection-review
     games: [how-to-fish]
     tags: [弹幕版]
+
+  - id: 2026-08-26-live-01
+    type: live
+    date: "2026-08-26"
+    title: "美好的晚间游戏时光"
+    platform: douyin
+    duration_min: 159
+    games:
+      - vacation-cafe-simulator
+    tags:
+      - 弹幕版
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/f9990173208e40e5bf0672b838f5cbf3199dde2f.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1eC8R64EQP"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 3f6ea491-b1bf-40f3-9c66-25b92ef92d4f）。"
+    contributed_by: collection-review
