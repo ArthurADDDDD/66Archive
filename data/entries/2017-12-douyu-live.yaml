@@ -392,6 +392,7 @@
     duration_min: 128
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_13/1513151274.JPG?imageslim"
     games: []
+    tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "P1-K歌不停歇-弹幕版"
@@ -580,6 +581,7 @@
     duration_min: 15
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_18/1513560700.JPG?imageslim"
     games: []
+    tags: [户外]
     sources:
       - url: https://www.bilibili.com/video/BV1TW41187Rd
         kind: replay
@@ -684,6 +686,7 @@
     duration_min: 258
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_21/1513867554.jpg?imageslim"
     games: []
+    tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "P1-12.21-大周桌面展"
@@ -922,6 +925,7 @@
     duration_min: 301
     cover: "https://tx-free-imgs.acfun.cn/content/2017_11_29/1514558691.jpg?imageslim"
     games: []
+    tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "P1-12.29-欢迎关注颜值主播6酱"
@@ -1103,6 +1107,7 @@
     confidence: high
     duration_min: 33
     games: []
+    tags: [聊天]
     sources:
       - url: https://www.bilibili.com/video/BV11W411q7oA
         kind: replay

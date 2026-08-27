@@ -93,6 +93,7 @@
     duration_min: 174
     cover: "https://tx-free-imgs.acfun.cn/FlME0T0xB42q0PIFWErKZIzAFFFA?imageslim"
     games: []
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "回家浪里个啷"
@@ -216,6 +217,7 @@
     duration_min: 443
     cover: "https://tx-free-imgs.acfun.cn/Fn-bzo-akeQTEQ7i3Ni8xCVCFI9d?imageslim"
     games: []
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "E3游戏展现场"
@@ -665,6 +667,7 @@
     platform: douyu
     confidence: high
     duration_min: 32
+    tags: [户外]
     sources:
       - url: https://v.douyu.com/show/8pa9v5OKmLqMVrqA
         kind: replay

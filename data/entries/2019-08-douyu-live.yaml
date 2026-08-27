@@ -7,6 +7,7 @@
     duration_min: 129
     cover: "https://tx-free-imgs.acfun.cn/FqRAQKgGaLPx25cymr7SLfgoVDr4?imageslim"
     games: []
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "Part1"
@@ -123,6 +124,7 @@
     confidence: high
     duration_min: 88
     games: []
+    tags: [聊天]
     note: "B站「女流录像小屋」《挑战麦迪时刻》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1S4411S7Yg"
@@ -342,6 +344,7 @@
     platform: douyu
     confidence: high
     duration_min: 152
+    tags: [一起See]
     sources:
       - url: https://v.douyu.com/show/X3JzMaJyY0lWPQro
         kind: replay
@@ -355,6 +358,7 @@
     platform: douyu
     confidence: high
     duration_min: 61
+    tags: [户外]
     sources:
       - url: https://v.douyu.com/show/X3JzMaJobkAWPQro
         kind: replay
@@ -368,6 +372,7 @@
     platform: douyu
     confidence: high
     duration_min: 17
+    tags: [聊天]
     sources:
       - url: https://v.douyu.com/show/XqeO74p1Bne7xywG
         kind: replay
