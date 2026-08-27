@@ -51,28 +51,11 @@ export default function ContactPage() {
         <Eyebrow color="#E5568A">Contact &amp; correction</Eyebrow>
         <h1 className="measure-hero mt-4 text-h1 font-semibold">让这份索引更准确。</h1>
         <p className="measure-body mt-6 text-body text-muted">
-          如果你发现日期、标题、链接或直播内容有误，可以提交线索。游戏标签校准直接放在编年史条目的展开区域里，无需注册账号。
+          日期、标题、时长、链接、游戏标签——任何一处对不上都可以直接在下面告诉我。
+          你手上有档案里缺的录像，也从这里说。所有线索都由我逐条核对后再改，不会自动生效。
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40">
-            <span className="text-meta uppercase tracking-[0.16em] text-live">资料纠错</span>
-            <h2 className="mt-3 text-h3 font-medium">需要提供什么</h2>
-            <ul className="mt-4 space-y-2 text-body text-muted">
-              <li>具体条目的页面地址</li>
-              <li>认为有误或缺失的字段</li>
-              <li>能够佐证修改的公开来源</li>
-            </ul>
-          </article>
-
-          <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 hover:border-today/40">
-            <span className="text-meta uppercase tracking-[0.16em] text-today">联系渠道</span>
-            <h2 className="mt-3 text-h3 font-medium">目前可以从 GitHub 联系</h2>
-            <p className="mt-4 text-body text-muted">
-              发现错漏、想补档或者提供来源，都可以从下面的项目仓库找到我。
-            </p>
-          </article>
-
           <CorrectionSubmission />
 
           <Link
