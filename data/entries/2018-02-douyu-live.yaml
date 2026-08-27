@@ -266,7 +266,7 @@
     confidence: high
     duration_min: 396
     cover: "https://tx-free-imgs.acfun.cn/content/2018_02_18/1518961977.JPG?imageslim"
-    games: []
+    games: [pubg]
     segments:
       - at: "00:00:00"
         label: "P1-游戏前聊10块钱的"
@@ -300,6 +300,7 @@
         label: "P4.7-继续乐高拼图"
       - at: "06:11:44"
         label: "P4.8-继续乐高拼图"
+    note: "标题的「吃一个新年第一鸡」是绝地求生（P2）；后半段「乐高拼图」分P 只写了这个说法，暂时无法确认是哪一款乐高游戏、还是在拼实体积木，故未登记第二个 games。"
     sources:
       - url: https://www.bilibili.com/video/BV1ZW411j7oc
         kind: replay
