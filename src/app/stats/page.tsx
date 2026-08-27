@@ -348,7 +348,7 @@ export default function StatsPage() {
         accent="#5BC8E8"
         legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
       >
-        <CoverageGaps coverage={coverage} defaultExpanded />
+        <CoverageGaps coverage={coverage} />
         <Observation>
           还差哪些素材、以及每一段空白是怎么回事，
           <Link href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
