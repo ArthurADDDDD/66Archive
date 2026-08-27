@@ -53,6 +53,10 @@ export function SubmissionForm({
   className?: string
 }) {
   const [config, setConfig] = useState<CorrectionConfig | null>(null)
+  // 拿配置这一步失败，跟服务端明确说「没开」是两码事——见 fetchCorrectionConfig 的注释。
+  // configAttempt 只用来让下面的 useEffect 在点「重试」时重新跑一遍，值本身不重要。
+  const [configFailed, setConfigFailed] = useState(false)
+  const [configAttempt, setConfigAttempt] = useState(0)
   const [name, setName] = useState('')
   const [body, setBody] = useState('')
   const [token, setToken] = useState<string | null>(null)
@@ -64,13 +68,19 @@ export function SubmissionForm({
 
   useEffect(() => {
     let active = true
-    void fetchCorrectionConfig().then((next) => {
-      if (active) setConfig(next)
-    })
+    fetchCorrectionConfig()
+      .then((next) => {
+        if (!active) return
+        setConfig(next)
+        setConfigFailed(false)
+      })
+      .catch(() => {
+        if (active) setConfigFailed(true)
+      })
     return () => {
       active = false
     }
-  }, [])
+  }, [configAttempt])
 
   /**
    * **令牌是一次性的。** 用过一次（无论提交成功还是被服务端拒绝）就作废，
@@ -136,6 +146,21 @@ export function SubmissionForm({
     } finally {
       resetWidget()
     }
+  }
+
+  if (configFailed) {
+    return (
+      <div className={className}>
+        <p className="text-control text-muted">这次没能问到人机验证配置，多半是网络抖了一下。</p>
+        <button
+          type="button"
+          onClick={() => setConfigAttempt((value) => value + 1)}
+          className="ui-press mt-2 rounded-full border border-line px-4 py-1.5 text-control text-muted hover:border-muted hover:text-ink"
+        >
+          重试
+        </button>
+      </div>
+    )
   }
 
   if (config === null) {

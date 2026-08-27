@@ -49,20 +49,31 @@ async function requestJson(path: string, init?: RequestInit): Promise<unknown> {
   }
 }
 
+/**
+ * **有意不在这里吞掉网络错误。** 早先的版本 catch 到任何失败都静默退回
+ * `CORRECTION_CONFIG_FALLBACK`（`enabled: false`），调用方因此分不清「服务端明确
+ * 说功能没开」和「这次请求恰好超时/断线，压根没问到答案」——两种在界面上长得一样，
+ * 都是一句「提交功能暂未开放」。
+ *
+ * 表单原本在页面一加载就挂载，config 有大半个页面停留时间去重试/追上，
+ * 瞬时失败很少被用户看见。改成点开才挂载（联系页，避免一进页面就白触发
+ * Cloudflare 人机验证）之后，这次请求就是唯一机会，没有缓冲时间——瞬时失败第一次
+ * 就会直接展示成"暂未开放"，而用户一刷新（= 再请求一次）就好了，这正是这类问题的
+ * 典型指纹。所以这里把失败原样抛给调用方，由 SubmissionForm 区分「真的关着」
+ * 和「这次没问到，可以重试」，只在前者显示 disabledMessage。
+ */
 export async function fetchCorrectionConfig(): Promise<CorrectionConfig> {
-  try {
-    const body = (await requestJson('/api/correction/config')) as Partial<CorrectionConfig> | null
-    if (!body || typeof body.enabled !== 'boolean') return CORRECTION_CONFIG_FALLBACK
-    return {
-      enabled: body.enabled,
-      turnstileSiteKey: body.turnstileSiteKey ?? null,
-      limits: {
-        nameMax: body.limits?.nameMax ?? CORRECTION_CONFIG_FALLBACK.limits.nameMax,
-        bodyMax: body.limits?.bodyMax ?? CORRECTION_CONFIG_FALLBACK.limits.bodyMax,
-      },
-    }
-  } catch {
-    return CORRECTION_CONFIG_FALLBACK
+  const body = (await requestJson('/api/correction/config')) as Partial<CorrectionConfig> | null
+  if (!body || typeof body.enabled !== 'boolean') {
+    throw new Error('人机验证配置响应格式不对')
+  }
+  return {
+    enabled: body.enabled,
+    turnstileSiteKey: body.turnstileSiteKey ?? null,
+    limits: {
+      nameMax: body.limits?.nameMax ?? CORRECTION_CONFIG_FALLBACK.limits.nameMax,
+      bodyMax: body.limits?.bodyMax ?? CORRECTION_CONFIG_FALLBACK.limits.bodyMax,
+    },
   }
 }
 
