@@ -31,7 +31,14 @@ const LEVEL_OPACITY = [0, 0.28, 0.5, 0.75, 1]
 
 type Reading = { year: number; month: number; count: number; note?: GapNote }
 
-export function CoverageGaps({ coverage }: { coverage: Coverage }) {
+export function CoverageGaps({
+  coverage,
+  defaultExpanded = false,
+}: {
+  coverage: Coverage
+  /** 数据页默认摊开（那一页本来就是来看数据的）；联系页保持折叠。 */
+  defaultExpanded?: boolean
+}) {
   const {
     years,
     cells,
@@ -47,7 +54,7 @@ export function CoverageGaps({ coverage }: { coverage: Coverage }) {
   } = coverage
 
   const [reading, setReading] = useState<Reading | null>(null)
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(defaultExpanded)
 
   const byKey = new Map(cells.map((cell) => [`${cell.year}-${cell.month}`, cell]))
   const filledMonths = monthsInRange - blankMonths
