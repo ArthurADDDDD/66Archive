@@ -133,6 +133,7 @@
     platform: douyu
     confidence: high
     games: []
+    tags: [户外]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六
     sources:
       - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
@@ -333,6 +334,7 @@
     duration_min: 241
     cover: "https://tx-free-imgs.acfun.cn/o_1eaumpq11r79eoi1idd5kj1rg80.jpeg?imageslim"
     games: []
+    tags: [佩奇]
     segments:
       - at: "00:00:00"
         label: "佩奇不来66来"
