@@ -72,6 +72,8 @@ async function loadEntries() {
           status: s.status || '',
           account: s.account || null,
           parts: s.parts ?? null,
+          // 只取页码：判断「同一个链接是不是按分 P 页码不重叠地拆给了不同条目」不需要标题/时长。
+          pageSet: (s.part_details || []).map((pd) => pd.page),
         })),
       })
     }
@@ -200,12 +202,29 @@ function checksFor(e, ctx) {
 
   // —— 疑似重复 ——
   if (ctx.dupIds.has(e.id)) add('medium', 'duplicate', `同一天还有标题几乎一样的另一条（${ctx.dupIds.get(e.id)}）`)
-  // 同一个链接挂在多条上：可能是拆错/重复录入，也可能是一个合集录像本来就横跨好几天。
-  // 机器分不出这两种，所以只标出来给人看，不当成硬错误。
+  // 同一个链接挂在多条上：可能是拆错/重复录入，也可能是一个合集录像本来就横跨好几场，
+  // 按分 P 页码正确拆给了不同条目（有 part_details 佐证，页码互不重叠）。
+  // 2026-08-27 那一轮人工核对过一遍：只按「有没有共享」判，误报率极高（48 条里 47 条是合集正常拆分）；
+  // 现在按「有没有 part_details 佐证、页码是否重叠」分两档，能大幅收窄到真正可疑的那批。
   for (const s of e.sources) {
-    const others = (ctx.urlOwners.get(s.url) || []).filter((id) => id !== e.id)
-    if (others.length) {
-      add('medium', 'shared-source', `同一个链接还挂在另外 ${others.length} 条上（${others.slice(0, 4).join('、')}${others.length > 4 ? ' 等' : ''}）——是合集跨天就没问题，是拆错就要改`)
+    const owners = ctx.urlOwners.get(s.url) || []
+    const others = owners.filter((o) => o.id !== e.id)
+    if (!others.length) continue
+    const isPrimary = e.sources[0] === s
+    const overlapsPages = s.pageSet.length && others.some((o) =>
+      o.pageSet.length === 0 || o.pageSet.some((p) => s.pageSet.includes(p)))
+    const bothHavePageProof = s.pageSet.length && others.every((o) => o.pageSet.length > 0)
+    if (bothHavePageProof && !overlapsPages) {
+      // 双方都有 part_details，且页码不重叠——合集正确拆分，不是问题，不标。
+      continue
+    }
+    const names = others.map((o) => o.id)
+    if (isPrimary) {
+      add('high', 'shared-source-primary',
+        `这条唯一/第一来源的链接同时是另外 ${others.length} 条的来源（${names.slice(0, 4).join('、')}${others.length > 4 ? ' 等' : ''}），且没有分 P 页码佐证区分——很可能是把同一份录像错挂到了两个日期上`)
+    } else {
+      add('medium', 'shared-source',
+        `同一个链接还挂在另外 ${others.length} 条上（${names.slice(0, 4).join('、')}${others.length > 4 ? ' 等' : ''}）——是合集跨天就没问题，是拆错就要改`)
     }
   }
 
@@ -258,13 +277,18 @@ function findDuplicates(list) {
 
 const today = new Date().toISOString().slice(0, 10)
 const dupIds = findDuplicates(entries)
-/** url → 引用它的条目 id 列表。同一个链接被两条条目引用几乎总是录入问题。 */
+/**
+ * url → 引用它的条目列表（带各自的 part_details 页码）。
+ * 多数「共享」其实是同一份长录像按分 P 正确拆给了不同场次，不是错误——
+ * 靠页码是否重叠来分辨，而不是靠「链接出现了几次」本身。
+ */
 const urlOwners = new Map()
 for (const e of entries) {
   for (const s of e.sources) {
     if (!s.url) continue
     if (!urlOwners.has(s.url)) urlOwners.set(s.url, [])
-    if (!urlOwners.get(s.url).includes(e.id)) urlOwners.get(s.url).push(e.id)
+    const list = urlOwners.get(s.url)
+    if (!list.some((o) => o.id === e.id)) list.push({ id: e.id, pageSet: s.pageSet })
   }
 }
 const ctx = { today, dupIds, urlOwners }
