@@ -23,9 +23,11 @@ export function CorrectionSubmission() {
       <span className="text-meta uppercase tracking-[0.16em] text-live">提交线索</span>
       <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-h3 font-medium">直接在这里告诉我</h2>
+          <h2 className="text-h3 font-medium">发现哪里不对，写在这里</h2>
           <p className="measure-body mt-2 text-body text-muted">
-            不用注册，也不用去 GitHub 开 issue。写清楚是哪条记录、哪里不对就行。
+            说清三件事就够：<strong className="font-medium text-ink">是哪条记录</strong>（贴页面地址最快）、
+            <strong className="font-medium text-ink">哪里不对</strong>、
+            <strong className="font-medium text-ink">正确的应该是什么</strong>。
           </p>
         </div>
         <span className="flex shrink-0 items-center gap-1.5 text-meta text-live">
@@ -36,6 +38,24 @@ export function CorrectionSubmission() {
         </span>
       </div>
     </>
+  )
+
+  /**
+   * 一个真实例子胜过一句"请描述清楚"。
+   * 展开时才显示：折叠态那张卡是入口，塞满示例会盖过它旁边的另外两张卡。
+   */
+  const hint = (
+    <div className="mt-5 rounded-xl border border-line/70 bg-base/25 p-[clamp(0.875rem,1.4vw,1.25rem)]">
+      <p className="text-meta uppercase tracking-[0.16em] text-faint">比如这样写</p>
+      <p className="measure-body mt-2 text-body text-muted">
+        「/archive 里 2019-07-13 那场，标题写的是第二期，实际是第三期，
+        录像 1:02:30 左右能看到标的是三。」
+      </p>
+      <p className="measure-body mt-3 text-meta text-faint">
+        有能佐证的链接一起贴上来最好；拿不准也可以提，我会去核对。
+        所有线索都进人工队列，不会自动改到档案上。
+      </p>
+    </div>
   )
 
   if (!open) {
@@ -64,6 +84,7 @@ export function CorrectionSubmission() {
         {head}
       </button>
       <div id="correction-submission-panel" className="ui-panel-in">
+        {hint}
         <SubmissionForm
           kind="correction"
           className="mt-5"
