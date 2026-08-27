@@ -36,6 +36,7 @@
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b38f6bcac812474e84995048351cb970.jpeg?imageslim"
     games: []
+    tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "周六来个下午茶吧"
@@ -102,6 +103,7 @@
     duration_min: 554
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_101fdf03068040d6a6cc8da658ffb899.jpeg?imageslim"
     games: []
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "出门走走逛逛"
@@ -322,6 +324,7 @@
     confidence: high
     duration_min: 241
     games: []
+    tags: [心灵砒霜]
     note: "B站「女流录像小屋」《心灵砒霜》，全长录播。 B站源含纯净+弹幕双版，只按一版计时。"
     sources:
       - url: "https://www.bilibili.com/video/BV1fv411J7CE"
@@ -372,6 +375,7 @@
     duration_min: 171
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3b56d579b6b04fa28fa6cb7bdeccde32.jpeg?imageslim"
     games: []
+    tags: [佩奇, 聊天]
     segments:
       - at: "00:00:00"
         label: "美好的下午时光"
@@ -504,6 +508,7 @@
     duration_min: 89
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e561274629e24121ab3e8694077af7d3.jpeg?imageslim"
     games: []
+    tags: [户外]
     sources:
       - url: https://www.bilibili.com/video/BV1ao4y1D7HR
         kind: replay
