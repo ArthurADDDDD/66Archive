@@ -535,10 +535,7 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
       return {
         ...beat,
         date: override.date || beat.date,
-        // 公仓旧基线的「好久不见。」升级为复播节点；保留管理员写过的其他自定义标题。
-        title: beat.id === 'back-again' && override.title === '好久不见。'
-          ? beat.title
-          : override.title || beat.title,
+        title: override.title || beat.title,
         body: override.body || undefined,
         expanded: override.expanded,
         important: override.important,
