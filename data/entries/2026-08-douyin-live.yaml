@@ -566,3 +566,22 @@
         status: alive
     note: "自动采集候选经人工审批新建（组 3f6ea491-b1bf-40f3-9c66-25b92ef92d4f）。"
     contributed_by: collection-review
+
+  - id: 2026-08-27-live-01
+    type: live
+    date: "2026-08-27"
+    title: "中元节玩燕云 对味"
+    platform: douyin
+    duration_min: 120
+    games:
+      - where-winds-meet
+    tags:
+      - 弹幕版
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/40265503708338ab06a3de531252dd981a30d8d1.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1zh4o6aEZo"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 38ffc806-569a-42e7-a9b8-57b012e74a8b）。"
+    contributed_by: collection-review
