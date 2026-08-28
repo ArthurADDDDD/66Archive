@@ -266,10 +266,11 @@ export const HOMEPAGE_ACTS: Act[] = [
       },
       {
         id: 'back-again',
-        date: '2024',
+        important: true,
+        date: '2024.08.18',
         size: 'hero',
-        title: '好久不见',
-        body: '斗鱼156277 熄灯以后，过了一段时间。新的直播间又亮起来了。',
+        title: '抖音首播',
+        body: '斗鱼156277 熄灯之后，隔了八个多月。这一晚，新的直播间第一次亮起——她回来了。',
         target: { kind: 'entry', id: '2024-08-18-live-01' },
       },
       {
