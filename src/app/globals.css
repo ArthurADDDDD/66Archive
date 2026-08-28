@@ -515,6 +515,11 @@ body {
     height: 0.1875rem;
   }
 
+  .home-section-rail__mark--milestone {
+    width: clamp(1.35rem, 1.7vw, 2rem);
+    height: 0.1875rem;
+  }
+
   .home-section-rail__cursor {
     width: clamp(1.35rem, 1.75vw, 2.1rem);
     height: 0.2rem;

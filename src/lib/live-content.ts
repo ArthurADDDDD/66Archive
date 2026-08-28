@@ -427,6 +427,7 @@ function resolveCustomBeat(live: LiveBeat, actId: ActId, home: boolean): Resolve
     date: live.date,
     // 后台自定义 montage 没有构建期素材，统一按 type 字排大卡渲染。
     size: live.size === 'montage' ? 'type' : live.size,
+    important: live.important,
     kicker: home ? (live.important ? '重要' : undefined) : live.kicker || undefined,
     title: live.title,
     body: live.body || undefined,
@@ -540,6 +541,7 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
           : override.title || beat.title,
         body: override.body || undefined,
         expanded: override.expanded,
+        important: override.important,
         kicker: home ? (override.important ? '重要' : undefined) : override.kicker || undefined,
         size: override.size,
         chips: override.chips.length > 0 ? override.chips : undefined,
@@ -726,15 +728,22 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     if (!override) return beat
     const anchorChanged = override.entryId !== undefined
     const entryId = override.entryId ?? ''
+    // 旧实时文档把首播节点只写到月份，正文也还是“2015 年初”。证据校准到
+    // 2015-01-21 后，只对这组可识别的旧基线值升级；管理员后来写过的其他内容照常优先。
+    const legacyDebutCopy = beat.id === 'door-156277'
+      && override.date === '2015.01'
+      && override.body.startsWith('2015 年初，她开始在斗鱼直播')
+    const displayDate = legacyDebutCopy ? beat.date : override.date || beat.date
     return {
       ...beat,
       // 「展示日期」只管故事页编排；archive entry 的日期仍是数据层的唯一史料。
-      date: override.date || beat.date,
-      storyYear: storyYearFromDisplayDate(override.date) ?? beat.storyYear,
+      date: displayDate,
+      storyYear: storyYearFromDisplayDate(displayDate) ?? beat.storyYear,
       kicker: override.kicker || undefined,
       title: override.title || beat.title,
-      body: override.body || undefined,
+      body: legacyDebutCopy ? beat.body : override.body || undefined,
       expanded: override.expanded,
+      important: override.important,
       ...(anchorChanged ? {
         href: entryId ? `/e/${entryId}/` : null,
         external: false,

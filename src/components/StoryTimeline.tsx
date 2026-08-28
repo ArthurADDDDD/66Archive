@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, type ReactNode } from 'react'
+import { useState, type CSSProperties, type ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
@@ -206,12 +206,14 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         type="button"
         onClick={() => setManualOpen(true)}
         aria-expanded={false}
-        className="group flex w-full items-start justify-between gap-4 rounded-card border border-line/70 bg-surface/25 px-4 py-3 text-left transition-colors hover:border-live/40 hover:bg-surface/50"
+        className={`group flex w-full items-start justify-between gap-4 rounded-card border px-4 py-3 text-left transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/45' : 'border-line/70 bg-surface/25 hover:border-live/40'}`}
+        style={beat.important ? milestoneSurface(accent) : undefined}
       >
         <span className="min-w-0">
           <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
             {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
             {beat.kicker && <span>· {beat.kicker}</span>}
+            {beat.important && <MilestoneBadge accent={accent} compact />}
           </span>
           <span className="mt-1 block text-body font-semibold text-ink">{beat.title}</span>
         </span>
@@ -226,6 +228,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
         {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
         {beat.kicker && <span>· {beat.kicker}</span>}
+        {beat.important && <MilestoneBadge accent={accent} compact />}
       </div>
       {beat.cover && (
         <div className="mt-4 chronicle-media-measure">
@@ -261,7 +264,10 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   )
 
   return (
-    <div>
+    <div
+      className={beat.important ? 'rounded-card border bg-surface/20 p-4 sm:p-5' : undefined}
+      style={beat.important ? milestoneSurface(accent) : undefined}
+    >
       <div className="mb-2 flex justify-end">
         <button
           type="button"
@@ -324,16 +330,47 @@ function MemoryTag({ children, accent }: { children: ReactNode; accent: string }
 }
 
 /**
+ * 关键节点不用奖杯、金色或大面积高光；一枚菱形和细描边足以形成“已确认里程碑”的层级。
+ * 展开、折叠、紧凑行与右侧导轨都沿用这一语义，避免只有打开卡片后才看得出来。
+ */
+function MilestoneBadge({ accent, compact = false }: { accent: string; compact?: boolean }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full border font-medium normal-case ${compact ? 'px-2 py-0.5 text-[10px] tracking-[0.12em]' : 'px-2.5 py-0.5 text-[11px] tracking-[0.1em]'}`}
+      style={{
+        color: accent,
+        borderColor: `color-mix(in srgb, ${accent} 38%, transparent)`,
+        background: `color-mix(in srgb, ${accent} 8%, transparent)`,
+      }}
+    >
+      <span aria-hidden className="h-1.5 w-1.5 rotate-45 bg-current opacity-90" />
+      关键节点
+    </span>
+  )
+}
+
+function milestoneSurface(accent: string): CSSProperties {
+  return {
+    borderColor: `color-mix(in srgb, ${accent} 34%, transparent)`,
+    boxShadow: `inset 3px 0 0 color-mix(in srgb, ${accent} 72%, transparent)`,
+    backgroundImage: `linear-gradient(100deg, color-mix(in srgb, ${accent} 7%, transparent), transparent 42%)`,
+  }
+}
+
+/**
  * 没有来源链接的节点不是「档案卡」，而是一句补足时间线的阶段说明。
  * 只保留年月和说明正文，不显示标题、tag 或箭头，避免制造可以点击的暗示。
  */
-function StageNote({ beat, className = '' }: { beat: ResolvedBeat; className?: string }) {
+function StageNote({ beat, accent, className = '' }: { beat: ResolvedBeat; accent?: string; className?: string }) {
   const text = beat.body?.trim() || beat.title
 
   return (
     <div className={`grid chronicle-row-measure grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)] ${className}`}>
       <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{chronicleDate(beat.date)}</span>
-      <p className="text-body leading-relaxed text-muted">{text}</p>
+      <div>
+        <p className="text-body leading-relaxed text-muted">{text}</p>
+        {beat.important && accent && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
+      </div>
     </div>
   )
 }
@@ -344,7 +381,7 @@ function StageNote({ beat, className = '' }: { beat: ResolvedBeat; className?: s
  */
 function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
   if (!beat.href) {
-    return <StageNote beat={beat} className="border-l border-line/50 py-2 pl-5" />
+    return <StageNote beat={beat} accent={accent} className="border-l border-line/50 py-2 pl-5" />
   }
 
   const displayDate = chronicleDate(beat.date)
@@ -353,7 +390,10 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       {!hideDate && <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
       <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
         <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
-        {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+        <span className="flex flex-wrap items-center gap-1.5">
+          {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+          {beat.important && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
+        </span>
       </div>
       <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
         →
@@ -366,7 +406,8 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
-      className="group block rounded border-l border-line/50 py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50"
+      className={`group block rounded border-l py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/20' : 'border-line/50'}`}
+      style={beat.important ? milestoneSurface(accent) : undefined}
     >
       {body}
     </Link>
@@ -391,7 +432,7 @@ function SecondaryList({
         if (!beat.href) {
           return (
             <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
-              <StageNote beat={beat} className={`px-1 ${rowPad}`} />
+              <StageNote beat={beat} accent={accent} className={`px-1 ${rowPad}`} />
             </li>
           )
         }
@@ -402,7 +443,10 @@ function SecondaryList({
             <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
             <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
               <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
-              {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+              <span className="flex flex-wrap items-center gap-1.5">
+                {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
+                {beat.important && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
+              </span>
             </div>
             <span
               aria-hidden
@@ -419,7 +463,8 @@ function SecondaryList({
               href={beat.href}
               target={beat.external ? '_blank' : undefined}
               rel={beat.external ? 'noreferrer' : undefined}
-              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
+              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/20' : ''} ${rowPad}`}
+              style={beat.important ? milestoneSurface(accent) : undefined}
             >
               {inner}
             </Link>
