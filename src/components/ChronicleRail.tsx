@@ -15,6 +15,7 @@ type ChronicleMark = {
   title: string
   cover?: string | null
   color: string
+  important: boolean
   kind: 'year' | 'memory'
 }
 
@@ -30,6 +31,7 @@ function marksForSection(section: StorySection): ChronicleMark[] {
       date: section.label,
       title: section.archiveCount > 0 ? `${section.archiveCount.toLocaleString()} 条档案记录` : '这一年的资料仍在补充',
       color: section.accent,
+      important: false,
       kind: 'year',
     }]
   }
@@ -41,6 +43,7 @@ function marksForSection(section: StorySection): ChronicleMark[] {
     title: beat.title,
     cover: beat.cover,
     color: section.accent,
+    important: Boolean(beat.important),
     kind: index === 0 ? 'year' : 'memory',
   }))
 }
@@ -110,8 +113,8 @@ export function ChronicleRail({ sections: baselineSections }: { sections: StoryS
       const element = markRefs.current[index]
       if (!element) return
       const position = marks.length > 1 ? index / (marks.length - 1) : 0
-      const baseScale = mark.kind === 'year' ? 1.35 : 1
-      const baseOpacity = index === activeIndex ? 0.9 : mark.kind === 'year' ? 0.42 : 0.2
+      const baseScale = mark.important ? 1.75 : mark.kind === 'year' ? 1.35 : 1
+      const baseOpacity = index === activeIndex ? 0.9 : mark.important ? 0.62 : mark.kind === 'year' ? 0.42 : 0.2
       if (previewPct == null) {
         element.style.transform = `scaleX(${baseScale})`
         element.style.opacity = String(baseOpacity)
@@ -209,7 +212,7 @@ export function ChronicleRail({ sections: baselineSections }: { sections: StoryS
               key={mark.id}
               ref={(element) => { markRefs.current[index] = element }}
               aria-hidden
-              className={`home-section-rail__mark absolute right-[clamp(0.5rem,1vw,1.25rem)] rounded-full ${mark.kind === 'year' ? 'home-section-rail__mark--section' : ''}`}
+              className={`home-section-rail__mark absolute right-[clamp(0.5rem,1vw,1.25rem)] rounded-full ${mark.kind === 'year' ? 'home-section-rail__mark--section' : ''} ${mark.important ? 'home-section-rail__mark--milestone' : ''}`}
               style={{
                 top: `${top}%`,
                 background: mark.color,
@@ -237,15 +240,29 @@ export function ChronicleRail({ sections: baselineSections }: { sections: StoryS
               <MediaFrame src={previewMark.cover} alt="" className="aspect-video w-full rounded-none border-0">
                 <span aria-hidden className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-base/95 to-transparent" />
                 <span className="absolute inset-x-3 bottom-3">
-                  <span className="inline-flex rounded-full bg-base/75 px-2 py-0.5 font-mono text-meta backdrop-blur tnum" style={{ color: previewMark.color }}>
-                    {previewMark.year}
+                  <span className="flex flex-wrap items-center gap-1.5">
+                    <span className="inline-flex rounded-full bg-base/75 px-2 py-0.5 font-mono text-meta backdrop-blur tnum" style={{ color: previewMark.color }}>
+                      {previewMark.year}
+                    </span>
+                    {previewMark.important && (
+                      <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-base/75 px-2 py-0.5 text-[10px] tracking-[0.12em] text-white/90 backdrop-blur">
+                        <span aria-hidden className="h-1 w-1 rotate-45 bg-current" />关键节点
+                      </span>
+                    )}
                   </span>
                   <span className="mt-1.5 block text-control font-medium leading-snug text-white">{previewMark.title}</span>
                 </span>
               </MediaFrame>
             ) : (
               <div className="px-3.5 py-3">
-                <span className="font-mono text-meta tnum" style={{ color: previewMark.color }}>{previewMark.year}</span>
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="font-mono text-meta tnum" style={{ color: previewMark.color }}>{previewMark.year}</span>
+                  {previewMark.important && (
+                    <span className="inline-flex items-center gap-1 text-[10px] tracking-[0.12em]" style={{ color: previewMark.color }}>
+                      <span aria-hidden className="h-1 w-1 rotate-45 bg-current" />关键节点
+                    </span>
+                  )}
+                </span>
                 <span className="mt-1 block text-control leading-snug text-ink">{previewMark.title}</span>
               </div>
             )}
