@@ -120,7 +120,7 @@ export type Act = {
   label: string
   /** 展示年份范围（含叙事副标，如「2010 — 2015 · 视频时代」） */
   years: string
-  /** 数据起止（含），to 为空表示开放结束。首页分布条用 display 范围，计数另走互斥口径。 */
+  /** 数据起止（含），to 为空表示开放结束。只用于统计、配色与定位，不直接拼成叙事文案。 */
   from: string
   to: string
   color: string
@@ -140,7 +140,7 @@ export type Act = {
  * - ACT II 2015-01-21 ~ 2023-11-30：156277 直播间那些年。首次实际开播由本人官方录像标题、
  *   同场整场补源与历年 1 月 21 日周年录像交叉确认；2015-01-24 是正式签约日。
  * - ACT III 2022-09-09 起：从「双人模式」讲起，与 ACT II 尾段叙事重叠（生活也开了多人模式）。
- * `from` 会直接显示成「这一幕，从某日开始」，不能用 1 月 1 日代替只有年份的范围边界。
+ * `from` 只参与统计、配色与定位；幕首展示使用可在后台编辑的 body，不把日期硬拼成文案。
  */
 export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
   'act-i': {
@@ -152,7 +152,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
     color: '#E0A244', // token: video
     kicker: 'ACT I · 女流',
     title: '女流',
-    body: ['一个人，从录视频，走到坐进直播间。'],
+    body: ['一个人，从视频，到直播间。这段回忆，也成为了很多人的青春。'],
     closer: { line: '从一个人的录制，走进一群人的直播间。' },
   },
   'act-ii': {
@@ -163,8 +163,8 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
     to: '2023-11-30',
     color: '#5BC8E8', // token: live
     kicker: 'ACT II · 斗鱼156277',
-    title: '斗鱼156277',
-    body: ['大周的那些年。直播、游戏、弹幕，很多个晚上。'],
+    title: '女流66',
+    body: ['直播、游戏、弹幕，还有很多个互相陪伴的晚上。'],
     closer: { line: '一个直播间，后来变成了一群人的共同记忆。' },
   },
   'act-iii': {
@@ -177,7 +177,7 @@ export const ACT_META: Record<ActId, Omit<Act, 'beats'>> = {
     kicker: 'ACT III · 余生',
     title: '余生请与我一起双人成行',
     body: ['斗鱼156277 还没有结束的时候，她人生的下一段已经开始了。'],
-    closer: { line: '娃睡了来突袭。', tail: 'TO BE CONTINUED' },
+    closer: { line: '娃睡以后，直播间的灯又悄悄亮起。', tail: 'TO BE CONTINUED' },
   },
 }
 
@@ -199,7 +199,7 @@ export const HOMEPAGE_ACTS: Act[] = [
         date: '2010',
         size: 'hero',
         title: '第一次上传',
-        body: '那时候还叫「女流」。从小游戏解说开始，一期一期录下来。',
+        body: '“分享最新最特别的小游戏，大家好，我是女流。”',
         target: { kind: 'entry', id: '2010-05-08-video-01' },
       },
       {
@@ -225,27 +225,27 @@ export const HOMEPAGE_ACTS: Act[] = [
     ...ACT_META['act-ii'],
     beats: [
       {
-        id: 'dazhou-formed',
-        important: true,
-        date: '2015—16',
-        size: 'type',
-        title: '这里有了一个名字。——大周',
-        body: '《大周MC》之后，水友开始叫自己「大周」。',
-        target: { kind: 'game', id: 'minecraft' },
-      },
-      {
         id: 'days-montage',
-        date: '2016 — 2022',
+        date: '2015 — 2023',
         size: 'montage',
         title: '日子就这么一天天过',
         body: '一场接一场直播，斗鱼156277 也慢慢有了自己的样子。',
         chips: ['心灵砒霜', '主机新作', '壮壮', '朋友', '联机', '户外', '黑屏聊天'],
       },
       {
+        id: 'dazhou-formed',
+        important: true,
+        date: '2017',
+        size: 'hero',
+        title: '这里有了一个名字——大周',
+        body: '《大周MC》之后，大周、大周女皇、壮王府等直播间梗皆诞生至此。',
+        target: { kind: 'game', id: 'minecraft' },
+      },
+      {
         id: 'see-you-around',
         important: true,
         date: '2023.11',
-        size: 'type',
+        size: 'hero',
         title: 'see you around~',
         body: '斗鱼156277 最后一次亮起。',
         target: { kind: 'entry', id: '2023-11-30-live-01' },
@@ -259,33 +259,24 @@ export const HOMEPAGE_ACTS: Act[] = [
         id: 'double-mode',
         important: true,
         date: '2022',
-        size: 'type',
-        title: '双人模式开启。',
-        body: '和炮炮领证。「双人模式开启。」',
+        size: 'hero',
+        title: '双人模式开启',
+        body: '和炮炮领证，「双人模式开启」。',
         target: { kind: 'entry', id: '2022-09-09-live-01' },
       },
       {
         id: 'back-again',
-        important: true,
-        date: '2024.08.18',
+        date: '2024',
         size: 'hero',
-        title: '时隔 {douyinReturnDays} 天，66 又回来了。',
-        body: '斗鱼156277 最后一次亮起后，女流66 在抖音重新开播。',
+        title: '好久不见',
+        body: '斗鱼156277 熄灯以后，过了一段时间。新的直播间又亮起来了。',
         target: { kind: 'entry', id: '2024-08-18-live-01' },
-      },
-      {
-        id: 'cuiwa',
-        date: '2025',
-        size: 'small',
-        title: '催娃有果。',
-        body: '从「双人模式」，变成了三个人。',
-        target: { kind: 'none' },
       },
       {
         id: 'duoduo',
         important: true,
         date: '2025',
-        size: 'type',
+        size: 'hero',
         title: '朵朵来了。',
         body: '66姐有了一个新的身份：朵朵妈。',
         cover: '/images/home/duoduo.jpg',
@@ -295,7 +286,7 @@ export const HOMEPAGE_ACTS: Act[] = [
       {
         id: 'wawa',
         date: '2026',
-        size: 'small',
+        size: 'type',
         title: '娃睡了来突袭。',
         body: '带娃、直播、继续玩游戏。',
         target: { kind: 'entry', id: '2026-08-09-live-02' },
@@ -304,9 +295,9 @@ export const HOMEPAGE_ACTS: Act[] = [
         id: 'back-maple',
         important: true,
         date: '2026',
-        size: 'type',
-        title: '姐弟俩，又回冒险岛了。',
-        body: '小时候和壮壮一起玩过的游戏，这么多年以后，又一起上线了。',
+        size: 'hero',
+        title: '姐弟俩，重回冒险岛。',
+        body: '小时候和壮壮一起玩过的游戏，这么多年以后，又一起上线了，这一次，大家都有了新的身份。',
         target: { kind: 'game', id: 'maplestory' },
       },
     ],

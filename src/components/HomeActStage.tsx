@@ -134,6 +134,7 @@ export function HomeActStage({
   const resolved = acts[step?.actIndex ?? 0]
   const beat = step?.beatIndex == null ? null : resolved?.beats[step.beatIndex] ?? null
   const closer = step?.closer ? resolved?.act.closer : undefined
+  const intro = !beat && !closer
   const stepPosition = step?.closer ? resolved?.beats.length ?? 0 : step?.beatIndex ?? -1
   const stepCount = resolved ? resolved.beats.length + (resolved.act.closer ? 1 : 0) : 0
   const actProgress = resolved
@@ -300,9 +301,11 @@ export function HomeActStage({
             <h2 className="mt-3 text-[clamp(2.75rem,4.6vw,6.5rem)] font-black leading-[0.95] tracking-[-0.04em] text-ink">
               {act.title}
             </h2>
-            <div className="measure-body mt-6 space-y-2">
-              {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
-            </div>
+            {!intro && (
+              <div className="measure-body mt-6 space-y-2">
+                {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
+              </div>
+            )}
             <div className="mt-9 flex items-center gap-4">
               <span className="font-mono text-meta text-faint tnum">
                 {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
@@ -321,7 +324,11 @@ export function HomeActStage({
                 <StageCloser line={closer.line} />
               ) : (
                 <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
-                  <p className="measure-hero mt-5 text-h2 font-semibold text-ink">这一幕，从 {formatActStart(act.from)} 开始。</p>
+                  <div className="measure-hero space-y-3">
+                    {(act.body.length > 0 ? act.body : [act.title]).map((line) => (
+                      <p key={line} className="text-h2 font-semibold text-ink">{line}</p>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -354,12 +361,6 @@ export function HomeActStage({
       </div>
     </section>
   )
-}
-
-function formatActStart(date: string): string {
-  const match = date.match(/^(\d{4})-(\d{2})-(\d{2})$/)
-  if (!match) return date
-  return `${match[1]} 年 ${Number(match[2])} 月 ${Number(match[3])} 日`
 }
 
 /** 幕尾与幕首共用同一张纯文字页版式：一句收束，不额外加标签或尾标。 */
