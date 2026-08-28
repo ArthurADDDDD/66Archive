@@ -247,10 +247,10 @@ export function LiveStatusIndicator() {
             </dl>
 
             <p className="mt-4 text-meta leading-relaxed text-faint">
-              开播与下播时间来自本站定时观测，可能与平台实际时间相差一个检查周期；
-              场次时长只计入观测确认过的部分。
+              现在在不在播来自本站定时观测，可能与平台实际时间相差一个检查周期。
+              最近 7 / 30 天按站内档案已收录的场次统计；档案还没跟上的那几天，用观测补齐。
               {(!snapshot.recent7d.covered || !snapshot.recent30d.covered) && dayLabel(snapshot.monitoringSince)
-                ? ` 观测自 ${dayLabel(snapshot.monitoringSince)} 起，在此之前的直播不在统计内。`
+                ? ` 这段时间还没有档案支撑，只统计了 ${dayLabel(snapshot.monitoringSince)} 开始观测到的部分。`
                 : ''}
               {' '}最近检查：{relativeTime(snapshot.observedAt, now)}。
             </p>
@@ -268,7 +268,7 @@ function LiveWindowStat({ label, value }: { label: string; value: LiveWindow }) 
     <div className="bg-surface/80 p-3.5">
       <dt className="font-mono text-meta text-faint">
         {label}
-        {!value.covered && <span className="ml-1 text-faint/70">（观测期内）</span>}
+        {!value.covered && <span className="ml-1 text-faint/70">（仅观测期）</span>}
       </dt>
       <dd className="mt-1.5 text-control font-semibold text-ink">{value.sessions} 次</dd>
       <dd className="mt-0.5 text-meta text-muted">{durationLabel(value.totalMinutes)}</dd>
