@@ -362,14 +362,16 @@
     confidence: high
     duration_min: 320
     cover: "https://tx-free-imgs.acfun.cn/o_1en0rssru1g6libg26b1jidrhd0.jpeg?imageslim"
-    games: [sakuna]
+    games: [sakuna, astro-bot, sackboy-big-adventure]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:16:07"
         label: "宇宙机器人"
+        game: astro-bot
       - at: "00:42:26"
         label: "麻布仔大冒险"
+        game: sackboy-big-adventure
       - at: "01:09:01"
         label: "天穗之咲稻姬"
       - at: "02:11:44"
@@ -388,6 +390,7 @@
         parts: 7
         status: alive
     contributed_by: data-agent
+    note: "标题及分段同时确认《麻布仔大冒险》（Sackboy: A Big Adventure）。"
 
   - id: 2020-11-14-live-01
     type: live
@@ -717,18 +720,23 @@
     confidence: high
     duration_min: 173
     cover: "https://tx-free-imgs.acfun.cn/o_1eo54ndba1o122a61tv2l2blgf0.jpeg?imageslim"
-    games: [demons-souls]
+    games: [demons-souls, world-of-warcraft]
     segments:
       - at: "00:00:00"
         label: "暗影国度-助唱艾泽拉斯"
+        game: world-of-warcraft
       - at: "00:11:15"
         label: "暗影国度-助唱艾泽拉斯"
+        game: world-of-warcraft
       - at: "00:51:40"
         label: "暗影国度-助唱艾泽拉斯"
+        game: world-of-warcraft
       - at: "01:32:06"
         label: "暗影国度-助唱艾泽拉斯v"
+        game: world-of-warcraft
       - at: "02:12:32"
         label: "暗影国度-助唱艾泽拉斯"
+        game: world-of-warcraft
     sources:
       - url: https://www.bilibili.com/video/BV1fA411x7jx
         kind: replay

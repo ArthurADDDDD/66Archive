@@ -86,7 +86,7 @@
     confidence: high
     duration_min: 240
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_03/1522757898.JPG?imageslim"
-    games: [puyo-puyo-tetris]
+    games: [puyo-puyo-tetris, cave-story]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -102,12 +102,16 @@
         label: "P2.5-2018.4.3-噗哟噗哟vs俄罗斯方块S"
       - at: "02:22:19"
         label: "P3.1-2018.4.3-洞窟物语"
+        game: cave-story
       - at: "02:46:47"
         label: "P3.2-2018.4.3-洞窟物语"
+        game: cave-story
       - at: "03:11:17"
         label: "P3.3-2018.4.3-洞窟物语"
+        game: cave-story
       - at: "03:35:46"
         label: "P3.4-2018.4.3-洞窟物语"
+        game: cave-story
     sources:
       - url: https://www.bilibili.com/video/BV12W411T7mY
         kind: replay
@@ -168,7 +172,7 @@
     duration_min: 101
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523061996.JPG?imageslim"
     games: []
-    tags: [佩奇, 聊天]
+    tags: [佩奇, 聊天, 唱歌]
     segments:
       - at: "00:00:00"
         label: "P1.1-2018.4.6-豆6组合了解一下"
@@ -210,6 +214,7 @@
     duration_min: 85
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_06/1523016488.JPG?imageslim"
     games: []
+    tags: [佩奇, 聊天]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -379,7 +384,7 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2018_04_13/1523620162.JPG?imageslim"
-    games: [old-mans-journey]
+    games: [old-mans-journey, the-lives]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -393,14 +398,19 @@
         label: "P2.3-2018.4.13-回忆之旅"
       - at: "01:55:48"
         label: "P3.1-2018.4.13-众生"
+        game: the-lives
       - at: "02:22:02"
         label: "P3.2-2018.4.13-众生"
+        game: the-lives
       - at: "02:48:17"
         label: "P3.3-2018.4.13-众生"
+        game: the-lives
       - at: "03:14:32"
         label: "P3.4-2018.4.13-众生"
+        game: the-lives
       - at: "03:40:46"
         label: "P3.5-2018.4.13-众生"
+        game: the-lives
     sources:
       - url: "https://www.acfun.cn/v/ac4309315"
         kind: replay

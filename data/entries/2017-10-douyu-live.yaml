@@ -346,12 +346,14 @@
     confidence: high
     duration_min: 260
     cover: "https://tx-free-imgs.acfun.cn/content/2017_9_11/1507726208.JPG?imageslim"
-    games: [euro-truck-simulator-2]
+    games: [euro-truck-simulator-2, dont-cut-your-hand]
     segments:
       - at: "00:00:00"
         label: "P1.1-10.11-Don t cut your hand"
+        game: dont-cut-your-hand
       - at: "00:17:09"
         label: "P1.2-10.11-Don t cut your hand"
+        game: dont-cut-your-hand
       - at: "00:34:18"
         label: "P2.1-10.11- 欧洲卡车模拟2"
       - at: "01:02:05"
@@ -723,7 +725,7 @@
     confidence: high
     duration_min: 255
     cover: "https://tx-free-imgs.acfun.cn/content/2017_9_23/1508763129.jpg?imageslim"
-    games: []
+    games: [doudizhu]
     tags: [心灵砒霜, 弹幕版]
     segments:
       - at: "00:00:00"
@@ -748,6 +750,7 @@
         label: "P10-10.22-心灵砒霜-弹幕版"
       - at: "03:58:54"
         label: "P11-10.22-欢乐斗地主-弹幕版"
+        game: doudizhu
     sources:
       - url: https://www.bilibili.com/video/BV1gx411u7oJ
         kind: replay
@@ -900,7 +903,7 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/content/2017_9_26/1509021706.JPG?imageslim"
-    games: [rusty-lake]
+    games: [rusty-lake, doudizhu]
     segments:
       - at: "00:00:00"
         label: "P1-10.26-游戏前聊10块钱的"
@@ -947,7 +950,7 @@
     confidence: high
     duration_min: 287
     cover: "https://tx-free-imgs.acfun.cn/content/2017_9_27/1509106483.JPG?imageslim"
-    games: [pubg]
+    games: [pubg, doudizhu]
     segments:
       - at: "00:00:00"
         label: "P1.1-10.27-游戏前聊10块钱的"

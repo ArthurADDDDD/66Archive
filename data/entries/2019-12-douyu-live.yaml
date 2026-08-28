@@ -283,7 +283,7 @@
     confidence: high
     duration_min: 237
     cover: "https://tx-free-imgs.acfun.cn/o_1dskab04qh3ulkc1lga1pukcam0.jpeg?imageslim"
-    games: [ashen]
+    games: [ashen, feel-the-snow]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -291,6 +291,7 @@
         label: "游戏前聊10块钱的"
       - at: "01:40:48"
         label: "Feel The Snow"
+        game: feel-the-snow
       - at: "02:05:12"
         label: "Ashen"
         game: ashen

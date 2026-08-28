@@ -286,7 +286,7 @@
     confidence: high
     duration_min: 232
     cover: "https://tx-free-imgs.acfun.cn/Fj22UUvanWvqmeeqteVyNfs4rMOj?imageslim"
-    games: [mist-detective]
+    games: [mist-detective, monopoly-plus]
     segments:
       - at: "00:00:00"
         label: "游戏前说会儿封神"
@@ -296,6 +296,7 @@
         label: "迷雾侦探"
       - at: "02:45:02"
         label: "大富翁"
+        game: monopoly-plus
     sources:
       - url: https://www.bilibili.com/video/BV1U4411Y7LP
         kind: replay

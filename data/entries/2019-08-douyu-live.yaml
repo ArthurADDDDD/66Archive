@@ -310,7 +310,7 @@
     confidence: high
     duration_min: 319
     cover: "https://tx-free-imgs.acfun.cn/Fg3BNfer9jaflMHHS8TLp2X5KdFq?imageslim"
-    games: [heave-ho]
+    games: [heave-ho, sishen-duijue]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -325,8 +325,10 @@
         game: heave-ho
       - at: "03:50:04"
         label: "死神对决"
+        game: sishen-duijue
       - at: "04:34:20"
         label: "死神对决"
+        game: sishen-duijue
     sources:
       - url: https://www.bilibili.com/video/BV1i4411274R
         kind: replay

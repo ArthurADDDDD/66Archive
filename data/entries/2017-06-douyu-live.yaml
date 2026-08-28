@@ -130,14 +130,16 @@
     confidence: high
     duration_min: 149
     cover: "https://tx-free-imgs.acfun.cn/content/2017_06_05/1496669915.jpg?imageslim"
-    games: []
+    games: [1-2-switch, tumbleseed]
     segments:
       - at: "00:00:00"
         label: "P1-6.5-游戏前聊10块钱的"
       - at: "00:42:43"
         label: "P2-6.5-Switch小游戏"
+        game: 1-2-switch
       - at: "01:26:16"
         label: "P3-6.5-Switch小游戏"
+        game: tumbleseed
       - at: "02:09:47"
         label: "P4-6.5-水墨苏绣"
     sources:
@@ -150,6 +152,7 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+    note: "人工画面复核：B站 P2 约 21:43 为《1-2-Switch》；P3 开场及约 21:42 为《TumbleSeed》。"
 
   - id: 2017-06-06-live-01
     type: live

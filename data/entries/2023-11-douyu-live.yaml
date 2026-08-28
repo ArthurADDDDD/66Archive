@@ -6,13 +6,17 @@
     confidence: high
     duration_min: 328
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_316741fb77bf4ddaa35fa1b5ef4603db.jpeg?imageslim"
-    games: [valorant]
+    games: [valorant, rhythm-royale]
     sources:
       - url: "https://www.acfun.cn/v/ac42821016"
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42821015
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P1 互补回放：ac42821015；P1/P2 标题均明确《无畏契约》与《Rhythm Royale》。"
 
   - id: 2023-11-08-live-01
     type: live
@@ -22,13 +26,17 @@
     confidence: high
     duration_min: 317
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b5cbf6ae851245c988cc8c24e6bb9154.jpeg?imageslim"
-    games: [jiezou-gezi]
+    games: [jiezou-gezi, pummel-party, dont-scream]
     sources:
       - url: "https://www.acfun.cn/v/ac42898970"
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42898972
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站互补回放：ac42898972；两页标题均明确《节奏鸽子》《DON'T SCREAM》《揍击派对》。"
 
   - id: 2023-11-09-live-01
     type: live
@@ -38,7 +46,7 @@
     confidence: high
     duration_min: 564
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_be4d543fa44a4370886ae4e7ee8ff027.jpeg?imageslim"
-    games: [magicraft]
+    games: [magicraft, goose-goose-duck, fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV1kw411T7Sg
         kind: replay
@@ -48,7 +56,14 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42909912
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac42909914
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P1/P2 互补回放：ac42909912、ac42909914；三页标题均明确《魔法工艺》《鹅鹅鸭》《糖豆人》。"
 
   - id: 2023-11-10-live-01
     type: live
@@ -64,7 +79,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42927658
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac42927658。"
 
   - id: 2023-11-11-live-01
     type: live
@@ -80,7 +99,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42928065
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P1 互补回放：ac42928065。"
 
   - id: 2023-11-12-live-01
     type: live
@@ -118,7 +141,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42981802
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac42981802。"
 
   - id: 2023-11-17-live-01
     type: live
@@ -128,13 +155,14 @@
     confidence: high
     duration_min: 247
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_37f266e5e7e041bbb0adb01857e4c8d6.jpeg?imageslim"
-    games: [rhythm-doctor]
+    games: [rhythm-doctor, remnant-2]
     sources:
       - url: "https://www.acfun.cn/v/ac42983241"
         kind: replay
         parts: 1
         status: alive
     contributed_by: data-agent
+    note: "A站 ac42983241 标题明确为《节奏医生》《遗迹2》P1；后半段《遗迹2》已补入游戏标签。"
 
   - id: 2023-11-17-live-02
     type: live
@@ -170,7 +198,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac42995236
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P1 互补回放：ac42995236。"
 
   - id: 2023-11-19-live-01
     type: live
@@ -190,7 +222,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac43013631
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P1 互补回放：ac43013631。"
 
   - id: 2023-11-20-live-01
     type: live
@@ -259,7 +295,14 @@
         kind: replay
         parts: 1
         status: alive
+      - url: https://www.acfun.cn/v/ac43023986
+        kind: replay
+        status: alive
+      - url: https://www.acfun.cn/v/ac43023984
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2/P3 互补回放：ac43023986、ac43023984。"
 
   - id: 2023-11-22-live-01
     type: live
@@ -275,7 +318,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac43033661"
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac43033661。"
 
   - id: 2023-11-23-live-01
     type: live
@@ -331,7 +378,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac43062952"
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac43062952。"
 
   - id: 2023-11-26-live-01
     type: live
@@ -369,7 +420,14 @@
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac43081533"
+        kind: replay
+        status: alive
+      - url: "https://www.acfun.cn/v/ac43081535"
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2/P3 互补回放：ac43081533、ac43081535。"
 
   - id: 2023-11-28-live-01
     type: live
@@ -385,7 +443,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac43090635"
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac43090635。"
 
   - id: 2023-11-29-live-01
     type: live
@@ -401,7 +463,11 @@
         kind: replay
         parts: 1
         status: alive
+      - url: "https://www.acfun.cn/v/ac43111500"
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "补入 A站 P2 互补回放：ac43111500。"
 
   - id: 2023-11-30-live-01
     type: live

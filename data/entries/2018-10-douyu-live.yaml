@@ -143,7 +143,7 @@
     confidence: high
     duration_min: 227
     cover: "https://tx-free-imgs.acfun.cn/content/2018_9_08/1538998354.JPG?imageslim"
-    games: [jian-ai]
+    games: [jian-ai, old-school-musical]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -151,6 +151,7 @@
         label: "拣爱"
       - at: "01:10:19"
         label: "Old School Musical"
+        game: old-school-musical
     sources:
       - url: https://www.bilibili.com/video/BV1VW41117ds
         kind: replay

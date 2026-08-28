@@ -160,9 +160,8 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    games: []
-    tags: [聊天]
-    note: "B站「女流录像小屋」《VR游戏来一波》，全长录播。"
+    games: [vacation-simulator, derail-valley, beat-saber]
+    note: "B站全长录播人工画面复核：P2 为《Vacation Simulator》并转入《Derail Valley》；P3 延续《Derail Valley》后转《Beat Saber》，P4/P5 为《Beat Saber》。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Eb411M78s"
         kind: replay

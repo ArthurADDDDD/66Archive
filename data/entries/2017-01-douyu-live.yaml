@@ -470,18 +470,19 @@
     confidence: high
     duration_min: 44
     cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1485008911.JPG?imageslim"
-    games: []
+    games: [league-of-legends]
     tags: [聊天]
     sources:
       - url: "https://www.acfun.cn/v/ac3422592"
         kind: replay
-        status: unchecked
+        status: alive
         parts: 1
       - url: "https://www.acfun.cn/v/ac3422739"
         kind: replay
         status: alive
         parts: 1
     contributed_by: data-agent
+    note: "人工页面复核：A站 ac3422592、ac3422739 标题分别明确为《英雄联盟》part1、part2。"
 
   - id: 2017-01-22-live-01
     type: live

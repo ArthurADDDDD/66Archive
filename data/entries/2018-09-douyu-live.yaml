@@ -301,7 +301,7 @@
     confidence: high
     duration_min: 263
     cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537186010.JPG?imageslim"
-    games: [witch-it]
+    games: [witch-it, 39-days-to-mars]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -309,6 +309,7 @@
         label: "Witch It"
       - at: "02:03:42"
         label: "39天到火星"
+        game: 39-days-to-mars
     sources:
       - url: https://www.bilibili.com/video/BV12W411k7Ec
         kind: replay

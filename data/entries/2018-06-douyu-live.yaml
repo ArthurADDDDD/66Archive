@@ -447,12 +447,13 @@
     confidence: high
     duration_min: 184
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_22/1529664317.JPG?imageslim"
-    games: [hand-simulator]
+    games: [hand-simulator, comedy-night]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:20:10"
         label: "Comedy Night（喜剧之夜）"
+        game: comedy-night
       - at: "00:43:04"
         label: "Hand Simulator（手掌模拟器）"
     sources:
@@ -675,7 +676,7 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/content/2018_06_30/1530366519.JPG?imageslim"
-    games: [farm-together]
+    games: [farm-together, justice-online]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -683,8 +684,10 @@
         label: "Farm Together"
       - at: "01:25:30"
         label: "逆水寒"
+        game: justice-online
       - at: "02:53:48"
         label: "逆水寒"
+        game: justice-online
     sources:
       - url: https://www.bilibili.com/video/BV1Us4115723
         kind: replay

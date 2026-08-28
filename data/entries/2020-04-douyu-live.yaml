@@ -41,7 +41,7 @@
     confidence: high
     duration_min: 204
     cover: "https://tx-free-imgs.acfun.cn/o_1e4tpu9cr1hao1sn417a1med3ul0.jpeg?imageslim"
-    games: [animal-crossing-nh]
+    games: [animal-crossing-nh, reading-people]
     segments:
       - at: "00:00:00"
         label: "集合啦！动物森友会"
@@ -53,8 +53,10 @@
         label: "集合啦！动物森友会"
       - at: "02:20:22"
         label: "察言观色"
+        game: reading-people
       - at: "02:52:11"
         label: "察言观色"
+        game: reading-people
     sources:
       - url: "https://www.acfun.cn/v/ac14432591"
         kind: replay

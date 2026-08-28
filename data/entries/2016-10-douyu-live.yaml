@@ -297,7 +297,7 @@
         status: alive
     contributed_by: data-agent
 
-    note: 按人工规则：单P短录像，先按切片处理，不计入直播场次。
+    note: "后续人工复核已确认该条按直播场次保留；虽为单P短录播，type 仍为 live。"
   - id: 2016-10-21-live-01
     type: live
     date: "2016-10-21"

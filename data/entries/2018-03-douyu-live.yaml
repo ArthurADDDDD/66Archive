@@ -911,7 +911,7 @@
     confidence: high
     duration_min: 216
     cover: "https://tx-free-imgs.acfun.cn/content/2018_03_31/1522496073.JPG?imageslim"
-    games: [mom-hid-my-game]
+    games: [mom-hid-my-game, mr-blackface]
     segments:
       - at: "00:00:00"
         label: "P1.1-游戏前聊10块钱的"
@@ -919,12 +919,16 @@
         label: "P1.2-游戏前聊10块钱的"
       - at: "00:46:42"
         label: "P2.1-黑脸先生"
+        game: mr-blackface
       - at: "01:16:37"
         label: "P2.2-黑脸先生"
+        game: mr-blackface
       - at: "01:46:33"
         label: "P2.3-黑脸先生"
+        game: mr-blackface
       - at: "02:16:29"
         label: "P2.4-黑脸先生"
+        game: mr-blackface
       - at: "02:46:25"
         label: "P3.1-妈妈把我的游戏藏起来了"
       - at: "03:11:26"
