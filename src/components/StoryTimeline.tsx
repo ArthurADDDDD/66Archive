@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, type CSSProperties, type ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
@@ -206,8 +206,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
         type="button"
         onClick={() => setManualOpen(true)}
         aria-expanded={false}
-        className={`group flex w-full items-start justify-between gap-4 rounded-card border px-4 py-3 text-left transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/45' : 'border-line/70 bg-surface/25 hover:border-live/40'}`}
-        style={beat.important ? milestoneSurface(accent) : undefined}
+        className="group flex w-full items-start justify-between gap-4 rounded-card border border-line/70 bg-surface/25 px-4 py-3 text-left transition-colors hover:border-live/40 hover:bg-surface/50"
       >
         <span className="min-w-0">
           <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
@@ -264,10 +263,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   )
 
   return (
-    <div
-      className={beat.important ? 'rounded-card border bg-surface/20 p-4 sm:p-5' : undefined}
-      style={beat.important ? milestoneSurface(accent) : undefined}
-    >
+    <div>
       <div className="mb-2 flex justify-end">
         <button
           type="button"
@@ -349,14 +345,6 @@ function MilestoneBadge({ accent, compact = false }: { accent: string; compact?:
   )
 }
 
-function milestoneSurface(accent: string): CSSProperties {
-  return {
-    borderColor: `color-mix(in srgb, ${accent} 34%, transparent)`,
-    boxShadow: `inset 3px 0 0 color-mix(in srgb, ${accent} 72%, transparent)`,
-    backgroundImage: `linear-gradient(100deg, color-mix(in srgb, ${accent} 7%, transparent), transparent 42%)`,
-  }
-}
-
 /**
  * 没有来源链接的节点不是「档案卡」，而是一句补足时间线的阶段说明。
  * 只保留年月和说明正文，不显示标题、tag 或箭头，避免制造可以点击的暗示。
@@ -406,8 +394,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
-      className={`group block rounded border-l py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/20' : 'border-line/50'}`}
-      style={beat.important ? milestoneSurface(accent) : undefined}
+      className="group block rounded border-l border-line/50 py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50"
     >
       {body}
     </Link>
@@ -463,8 +450,7 @@ function SecondaryList({
               href={beat.href}
               target={beat.external ? '_blank' : undefined}
               rel={beat.external ? 'noreferrer' : undefined}
-              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${beat.important ? 'bg-surface/20' : ''} ${rowPad}`}
-              style={beat.important ? milestoneSurface(accent) : undefined}
+              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
             >
               {inner}
             </Link>

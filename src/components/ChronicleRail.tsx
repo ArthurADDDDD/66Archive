@@ -113,8 +113,8 @@ export function ChronicleRail({ sections: baselineSections }: { sections: StoryS
       const element = markRefs.current[index]
       if (!element) return
       const position = marks.length > 1 ? index / (marks.length - 1) : 0
-      const baseScale = mark.important ? 1.75 : mark.kind === 'year' ? 1.35 : 1
-      const baseOpacity = index === activeIndex ? 0.9 : mark.important ? 0.62 : mark.kind === 'year' ? 0.42 : 0.2
+      const baseScale = mark.kind === 'year' ? 1.35 : 1
+      const baseOpacity = index === activeIndex ? 0.9 : mark.kind === 'year' ? 0.42 : 0.2
       if (previewPct == null) {
         element.style.transform = `scaleX(${baseScale})`
         element.style.opacity = String(baseOpacity)
@@ -212,7 +212,7 @@ export function ChronicleRail({ sections: baselineSections }: { sections: StoryS
               key={mark.id}
               ref={(element) => { markRefs.current[index] = element }}
               aria-hidden
-              className={`home-section-rail__mark absolute right-[clamp(0.5rem,1vw,1.25rem)] rounded-full ${mark.kind === 'year' ? 'home-section-rail__mark--section' : ''} ${mark.important ? 'home-section-rail__mark--milestone' : ''}`}
+              className={`home-section-rail__mark absolute right-[clamp(0.5rem,1vw,1.25rem)] rounded-full ${mark.kind === 'year' ? 'home-section-rail__mark--section' : ''}`}
               style={{
                 top: `${top}%`,
                 background: mark.color,
