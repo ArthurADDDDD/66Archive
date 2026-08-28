@@ -6,6 +6,8 @@ import { createPortal } from 'react-dom'
 type LiveWindow = {
   sessions: number
   totalMinutes: number
+  /** 这个时间窗是否完全落在观测期内。false 表示观测开始得比窗口晚，数字偏小。 */
+  covered: boolean
 }
 
 type LiveStatusSnapshot = {
@@ -16,25 +18,49 @@ type LiveStatusSnapshot = {
   startedAt?: string
   lastEndedAt?: string
   observedAt: string
+  monitoringSince: string
   recent7d: LiveWindow
   recent30d: LiveWindow
 }
 
+/** 生产环境前台与接口同域时留空即可；本地联调可指向别处。 */
+const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
+const STATUS_PATH = '/api/content/live-status'
 const REFRESH_MS = 60_000
+const REQUEST_TIMEOUT_MS = 6_000
+/**
+ * 观测超过这个时间没更新，就不再显示这个圆点。
+ *
+ * 「在播」和「不在播」都是有保质期的结论：观测停了之后，最后一次的结论只会越来越
+ * 可能是错的。而一份「最后一次成功的内容」被继续返回，对文案是好事，对直播状态不是。
+ * 所以过期与否由前台自己按 observedAt 判定，不依赖接口那一侧的新鲜度。
+ */
+const STALE_LIMIT_MS = 10 * 60_000
 
+/**
+ * 本地开发用的固定样本：只有在 URL 上显式写了 `?live=live` / `?live=offline` 时才用，
+ * 用来核对两种状态的样式。默认不启用——接口没通就该看见「什么都不显示」，
+ * 那才是线上的真实行为。
+ */
 function localDemo(status: 'live' | 'offline'): LiveStatusSnapshot {
   const now = Date.now()
   return {
     status,
     platform: '抖音直播',
-    roomUrl: 'https://www.douyin.com/',
-    title: status === 'live' ? '测试直播间标题' : undefined,
+    roomUrl: 'https://live.douyin.com/',
+    title: status === 'live' ? '测试直播间标题' : '上一场的标题',
     startedAt: status === 'live' ? new Date(now - 2 * 60 * 60 * 1000 - 18 * 60 * 1000).toISOString() : undefined,
     lastEndedAt: status === 'offline' ? new Date(now - 19 * 60 * 60 * 1000).toISOString() : undefined,
     observedAt: new Date(now - 34 * 1000).toISOString(),
-    recent7d: { sessions: 3, totalMinutes: 487 },
-    recent30d: { sessions: 11, totalMinutes: 1_936 },
+    monitoringSince: new Date(now - 3 * 24 * 60 * 60 * 1000).toISOString(),
+    recent7d: { sessions: 3, totalMinutes: 487, covered: false },
+    recent30d: { sessions: 11, totalMinutes: 1_936, covered: false },
   }
+}
+
+function validWindow(value: unknown): value is LiveWindow {
+  const item = value as Partial<LiveWindow> | undefined
+  return typeof item?.sessions === 'number' && typeof item.totalMinutes === 'number' && typeof item.covered === 'boolean'
 }
 
 function validSnapshot(value: unknown): value is LiveStatusSnapshot {
@@ -44,10 +70,9 @@ function validSnapshot(value: unknown): value is LiveStatusSnapshot {
     && typeof item.platform === 'string'
     && typeof item.roomUrl === 'string'
     && typeof item.observedAt === 'string'
-    && typeof item.recent7d?.sessions === 'number'
-    && typeof item.recent7d?.totalMinutes === 'number'
-    && typeof item.recent30d?.sessions === 'number'
-    && typeof item.recent30d?.totalMinutes === 'number'
+    && typeof item.monitoringSince === 'string'
+    && validWindow(item.recent7d)
+    && validWindow(item.recent30d)
 }
 
 function durationLabel(totalMinutes: number) {
@@ -69,11 +94,18 @@ function relativeTime(date: string | undefined, now: number) {
   return `${Math.floor(hours / 24)} 天前`
 }
 
+function dayLabel(date: string) {
+  const parsed = new Date(date)
+  if (Number.isNaN(parsed.getTime())) return ''
+  return `${parsed.getFullYear()} 年 ${parsed.getMonth() + 1} 月 ${parsed.getDate()} 日`
+}
+
 /**
  * 首页的轻量直播状态灯。
  *
- * 生产环境只展示监控接口返回的事实；接口不可用时整块静默消失。
- * 本地开发默认提供一份可交互的直播中示例，URL 加 `?live=offline` 可检查未开播状态。
+ * 灯只有一个圆点：灰色是不在播，红色呼吸是在播，详情要点开才看。
+ * 数据来自只读接口 `/api/content/live-status`，接口不可用时整块静默消失——
+ * 我们宁可什么都不显示，也不显示一个猜出来的状态。
  */
 export function LiveStatusIndicator() {
   const [snapshot, setSnapshot] = useState<LiveStatusSnapshot | null>(null)
@@ -92,14 +124,19 @@ export function LiveStatusIndicator() {
         return
       }
 
+      const controller = new AbortController()
+      const timer = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
       try {
-        const response = await fetch('/api/live-status', { cache: 'no-store' })
+        const response = await fetch(`${CONTENT_ORIGIN}${STATUS_PATH}`, { cache: 'no-store', signal: controller.signal })
         if (!response.ok) throw new Error('live status unavailable')
         const next: unknown = await response.json()
-        if (!cancelled && validSnapshot(next)) setSnapshot(next)
+        if (cancelled) return
+        // 拿不到合规的快照就保持上一次的显示，而不是把灯换成一个错的状态。
+        if (validSnapshot(next)) setSnapshot(next)
       } catch {
-        // 前端原型阶段：本地默认展示直播中，方便直接验收；生产失败必须保持安静，绝不造状态。
-        if (!cancelled && process.env.NODE_ENV !== 'production') setSnapshot(localDemo('live'))
+        // 接口不通、超时、还没有任何一次成功观测——一律不显示，也不改已有显示。
+      } finally {
+        window.clearTimeout(timer)
       }
     }
 
@@ -139,8 +176,10 @@ export function LiveStatusIndicator() {
   }, [now, snapshot])
 
   if (!snapshot) return null
+  // 过期的观测不显示：宁可什么都不说，也不说一个可能已经过时的状态。
+  if (now - new Date(snapshot.observedAt).getTime() > STALE_LIMIT_MS) return null
   const live = snapshot.status === 'live'
-  const liveTitle = snapshot.title?.trim() || '她现在正在直播。'
+  const liveTitle = snapshot.title?.trim() || ''
 
   const indicator = (
     <div ref={rootRef} className="relative shrink-0">
@@ -150,7 +189,7 @@ export function LiveStatusIndicator() {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-haspopup="dialog"
-        aria-label={live ? `${liveTitle}，打开直播状态` : '女流66 当前未开播，打开直播记录'}
+        aria-label={live ? '正在直播，打开直播状态' : '当前未开播，打开直播记录'}
         className={`ui-press fixed bottom-5 left-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition-[border-color,background-color,color,box-shadow] sm:bottom-8 sm:left-8 ${
           live
             ? 'border-today/40 bg-today/10 text-ink shadow-[0_0_24px_rgba(255,107,117,0.12)] hover:border-today/70'
@@ -174,7 +213,9 @@ export function LiveStatusIndicator() {
               <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${live ? 'bg-today shadow-[0_0_10px_rgba(255,107,117,0.8)]' : 'bg-faint/70'}`} />
               <div className="min-w-0 flex-1">
                 <p className="font-mono text-meta uppercase tracking-[0.16em] text-faint">Live monitor · 本站观测</p>
-                <h2 className="mt-2 text-h3 font-semibold text-ink">{live ? liveTitle : '现在没有开播。'}</h2>
+                <h2 className="mt-2 text-h3 font-semibold text-ink">
+                  {live ? liveTitle || '她现在正在直播。' : '现在没有开播。'}
+                </h2>
                 <p className="mt-2 text-body text-muted">
                   {live
                     ? `${snapshot.platform}${currentDuration ? ` · 已观测 ${currentDuration}` : ''}`
@@ -182,6 +223,9 @@ export function LiveStatusIndicator() {
                       ? `上次下播于 ${relativeTime(snapshot.lastEndedAt, now)}`
                       : '等待下一次开播记录。'}
                 </p>
+                {!live && liveTitle && (
+                  <p className="mt-1 text-meta text-faint">最近一场：{liveTitle}</p>
+                )}
               </div>
             </div>
 
@@ -203,8 +247,12 @@ export function LiveStatusIndicator() {
             </dl>
 
             <p className="mt-4 text-meta leading-relaxed text-faint">
-              开播与下播时间来自本站定时观测，可能与平台实际时间相差一个检查周期。
-              最近检查：{relativeTime(snapshot.observedAt, now)}。
+              开播与下播时间来自本站定时观测，可能与平台实际时间相差一个检查周期；
+              场次时长只计入观测确认过的部分。
+              {(!snapshot.recent7d.covered || !snapshot.recent30d.covered) && dayLabel(snapshot.monitoringSince)
+                ? ` 观测自 ${dayLabel(snapshot.monitoringSince)} 起，在此之前的直播不在统计内。`
+                : ''}
+              {' '}最近检查：{relativeTime(snapshot.observedAt, now)}。
             </p>
           </div>
         </section>
@@ -218,7 +266,10 @@ export function LiveStatusIndicator() {
 function LiveWindowStat({ label, value }: { label: string; value: LiveWindow }) {
   return (
     <div className="bg-surface/80 p-3.5">
-      <dt className="font-mono text-meta text-faint">{label}</dt>
+      <dt className="font-mono text-meta text-faint">
+        {label}
+        {!value.covered && <span className="ml-1 text-faint/70">（观测期内）</span>}
+      </dt>
       <dd className="mt-1.5 text-control font-semibold text-ink">{value.sessions} 次</dd>
       <dd className="mt-0.5 text-meta text-muted">{durationLabel(value.totalMinutes)}</dd>
     </div>
