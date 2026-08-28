@@ -672,14 +672,17 @@
     confidence: high
     duration_min: 352
     cover: "https://tx-free-imgs.acfun.cn/content/2017_10_22/1511358141.JPG?imageslim"
-    games: [super-mario-odyssey]
+    games: [super-mario-odyssey, tiny-toon-busters-hidden-treasure]
+    note: "人工画面复核：B站 P2 开场出现 KONAMI 标识及该作世界地图，确认“兔宝宝历险记”为《Tiny Toon Adventures: Buster's Hidden Treasure》。"
     segments:
       - at: "00:00:00"
         label: "P1-11.22-游戏前聊10块钱的"
       - at: "00:27:45"
         label: "P2.1-11.22-兔宝宝历险记"
+        game: tiny-toon-busters-hidden-treasure
       - at: "00:44:01"
         label: "P2.2-11.22-兔宝宝历险记"
+        game: tiny-toon-busters-hidden-treasure
       - at: "01:00:18"
         label: "P3.1-11.22-超级马里奥-奥德赛"
       - at: "01:18:56"

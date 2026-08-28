@@ -567,17 +567,20 @@
     confidence: high
     duration_min: 282
     cover: "https://tx-free-imgs.acfun.cn/o_1ee36nmop167d19lu3navk3db90.jpeg?imageslim"
-    games: [menghuan-xiyou]
+    games: [menghuan-xiyou, superliminal]
     segments:
       - at: "00:00:00"
         label: "梦幻西游送福利了"
         game: menghuan-xiyou
       - at: "01:15:45"
         label: "Superliminal"
+        game: superliminal
       - at: "02:24:36"
         label: "Superliminal"
+        game: superliminal
       - at: "03:33:27"
         label: "Superliminal"
+        game: superliminal
     sources:
       - url: https://www.bilibili.com/video/BV1ep4y1i7xx
         kind: replay

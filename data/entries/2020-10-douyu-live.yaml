@@ -119,19 +119,23 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ejv9iklu5fs13bn1oatejr1d6g0.jpeg?imageslim"
-    games: [fall-guys]
+    games: [fall-guys, art-of-rally, f1-2020]
     segments:
       - at: "00:00:00"
         label: "art of rally"
+        game: art-of-rally
       - at: "00:32:43"
         label: "Fall Guys"
         game: fall-guys
       - at: "01:28:26"
         label: "F1 2020"
+        game: f1-2020
       - at: "02:21:47"
         label: "F1 2020"
+        game: f1-2020
       - at: "03:15:07"
         label: "F1 2020"
+        game: f1-2020
     sources:
       - url: https://www.bilibili.com/video/BV1fy4y1k74X
         kind: replay
@@ -252,12 +256,13 @@
     confidence: high
     duration_min: 249
     cover: "https://tx-free-imgs.acfun.cn/o_1ekm53q7ce839ji1t2q1eb911d90.jpeg?imageslim"
-    games: [fall-guys]
+    games: [fall-guys, wudao-micang]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:22:03"
         label: "舞蹈迷藏"
+        game: wudao-micang
       - at: "01:36:11"
         label: "Fall Guys"
         game: fall-guys
@@ -374,15 +379,18 @@
     confidence: high
     duration_min: 235
     cover: "https://tx-free-imgs.acfun.cn/o_1el0fl9pp1vvr16691j75i3k1tjg0.jpeg?imageslim"
-    games: []
-    tags: [聊天]
+    games: [rolo-to-the-rescue]
+    note: "人工画面复核：B站 P1/P2/P3 均为《Rolo to the Rescue》（常见中文名“小象露露历险记”）。"
     segments:
       - at: "00:00:00"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
       - at: "01:18:28"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
       - at: "02:36:58"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
     sources:
       - url: https://www.bilibili.com/video/BV175411L7ML
         kind: replay
@@ -402,17 +410,21 @@
     confidence: high
     duration_min: 253
     cover: "https://tx-free-imgs.acfun.cn/o_1el2ume6772n18ra1fma1g1bue00.jpeg?imageslim"
-    games: []
-    tags: [聊天]
+    games: [rolo-to-the-rescue, circus-charlie]
+    note: "人工画面复核：B站 P1-P3 延续《Rolo to the Rescue》，P4 为《Circus Charlie》（画面标题“马戏团 汉化版”）。"
     segments:
       - at: "00:00:00"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
       - at: "01:16:07"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
       - at: "02:32:17"
         label: "儿时的游戏"
+        game: rolo-to-the-rescue
       - at: "03:48:26"
         label: "儿时的游戏"
+        game: circus-charlie
     sources:
       - url: https://www.bilibili.com/video/BV1f54y167uY
         kind: replay
@@ -432,18 +444,23 @@
     confidence: high
     duration_min: 231
     cover: "https://tx-free-imgs.acfun.cn/o_1elam8j129gcmag1q9b1en2vk90.jpeg?imageslim"
-    games: []
+    games: [mitsume-ga-tooru]
+    note: "人工画面复核：B站游戏标题画面及后续实机均为《三目童子》（Mitsume ga Tooru）。"
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:12:09"
         label: "儿时的游戏"
+        game: mitsume-ga-tooru
       - at: "01:06:04"
         label: "儿时的游戏"
+        game: mitsume-ga-tooru
       - at: "01:59:59"
         label: "儿时的游戏"
+        game: mitsume-ga-tooru
       - at: "02:55:24"
         label: "儿时的游戏"
+        game: mitsume-ga-tooru
     sources:
       - url: https://www.bilibili.com/video/BV1VZ4y1V7xZ
         kind: replay

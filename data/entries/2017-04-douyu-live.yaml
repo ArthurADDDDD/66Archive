@@ -495,7 +495,7 @@
     confidence: high
     duration_min: 209
     cover: "https://tx-free-imgs.acfun.cn/content/2017_04_19/1492610927.JPG?imageslim"
-    games: [puyo-puyo-tetris]
+    games: [puyo-puyo-tetris, wonder-boy]
     segments:
       - at: "00:00:00"
         label: "P1-4.18-游戏前聊10块钱的"
@@ -505,6 +505,7 @@
         label: "P3-4.18-俄罗斯方块大战噗呦噗呦"
       - at: "02:29:49"
         label: "P4-4.18-神奇男孩3-龙之陷阱"
+        game: wonder-boy
     sources:
       - url: https://www.bilibili.com/video/BV1vx411D7pr
         kind: replay

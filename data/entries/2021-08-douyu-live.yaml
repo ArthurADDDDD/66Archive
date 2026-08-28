@@ -109,16 +109,20 @@
     confidence: high
     duration_min: 222
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6fddae7c1f5b4b57ac87fbbf735314b6.jpeg?imageslim"
-    games: [rhythm-doctor, eldest-souls]
+    games: [rhythm-doctor, eldest-souls, sudoku]
     segments:
       - at: "00:00:00"
         label: "数独"
+        game: sudoku
       - at: "00:37:30"
         label: "数独"
+        game: sudoku
       - at: "01:15:00"
         label: "数独"
+        game: sudoku
       - at: "01:52:31"
         label: "数独"
+        game: sudoku
       - at: "02:30:01"
         label: "节奏医生"
       - at: "02:38:01"

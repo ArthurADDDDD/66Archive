@@ -324,7 +324,7 @@
     confidence: high
     duration_min: 226
     cover: "https://tx-free-imgs.acfun.cn/o_1efeqag0agd31g2h1ipge0a2l80.jpeg?imageslim"
-    games: [fall-guys]
+    games: [fall-guys, grounded]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -336,8 +336,10 @@
         game: fall-guys
       - at: "02:05:35"
         label: "Grounded"
+        game: grounded
       - at: "02:55:44"
         label: "Grounded"
+        game: grounded
     sources:
       - url: https://www.bilibili.com/video/BV1qt4y1D7YP
         kind: replay

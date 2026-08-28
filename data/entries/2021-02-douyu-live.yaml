@@ -209,7 +209,7 @@
     confidence: high
     duration_min: 325
     cover: "https://tx-free-imgs.acfun.cn/o_1eu13coa61nc11gvcuf26ku1o6h0.jpeg?imageslim"
-    games: [yanhua]
+    games: [yanhua, yimeng-jianghu]
     segments:
       - at: "00:00:00"
         label: "烟火"
@@ -221,8 +221,10 @@
         label: "烟火"
       - at: "04:00:02"
         label: "一梦江湖"
+        game: yimeng-jianghu
       - at: "04:42:20"
         label: "一梦江湖"
+        game: yimeng-jianghu
     sources:
       - url: https://www.bilibili.com/video/BV1cf4y1r7Xb
         kind: replay

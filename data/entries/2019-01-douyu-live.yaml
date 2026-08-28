@@ -166,7 +166,7 @@
     confidence: high
     duration_min: 275
     cover: "https://tx-free-imgs.acfun.cn/FnXTEsQySvcpdGMcde7b_vg1Qxc-?imageslim"
-    games: [equilinox]
+    games: [equilinox, human-fall-flat]
     segments:
       - at: "00:00:00"
         label: "P1.1-2019.1.7-游戏前聊10块钱的"
@@ -174,10 +174,13 @@
         label: "P1.2-2019.1.7-游戏前聊10块钱的"
       - at: "00:10:59"
         label: "P2.1-2019.1.7-Human Fall Falt"
+        game: human-fall-flat
       - at: "00:45:12"
         label: "P2.2-2019.1.7-Human Fall Falt"
+        game: human-fall-flat
       - at: "01:21:22"
         label: "P2.3-2019.1.7-Human Fall Falt"
+        game: human-fall-flat
       - at: "01:57:34"
         label: "P3.1-2019.1.7-Equilinox（自然生态）"
         game: equilinox

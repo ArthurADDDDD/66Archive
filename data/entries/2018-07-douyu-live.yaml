@@ -111,7 +111,7 @@
     confidence: high
     duration_min: 315
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_07/1530969394.JPG?imageslim"
-    games: [steamworld-dig, steep]
+    games: [steamworld-dig, steep, justice-online]
     segments:
       - at: "00:00:00"
         label: "蒸汽世界（ Steam World Dig）"
@@ -119,6 +119,7 @@
         label: "极限巅峰（Steep）"
       - at: "02:55:23"
         label: "逆水寒"
+        game: justice-online
     sources:
       - url: https://www.bilibili.com/video/BV1Ws411p7iW
         kind: replay
@@ -687,7 +688,7 @@
     confidence: high
     duration_min: 203
     cover: "https://tx-free-imgs.acfun.cn/content/2018_07_31/1533041112.jpg?imageslim"
-    games: [bomb-chicken]
+    games: [bomb-chicken, justice-online]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -695,6 +696,7 @@
         label: "炸弹鸡"
       - at: "01:57:13"
         label: "逆水寒"
+        game: justice-online
     sources:
       - url: https://www.bilibili.com/video/BV15s411w7g7
         kind: replay

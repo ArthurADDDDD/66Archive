@@ -124,16 +124,19 @@
     confidence: high
     duration_min: 262
     cover: "https://tx-free-imgs.acfun.cn/FotEZkHI_k1B1_BcMgFHxMd4w6TF?imageslim"
-    games: [trials-rising]
+    games: [trials-rising, bloody-spell]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:11:02"
         label: "P2.1-2019.3.4-嗜血印"
+        game: bloody-spell
       - at: "00:58:49"
         label: "P2.2-2019.3.4-嗜血印"
+        game: bloody-spell
       - at: "01:46:36"
         label: "P2.3-2019.3.4-嗜血印"
+        game: bloody-spell
       - at: "02:34:22"
         label: "P3.1-2019.3.4-特技摩托：崛起"
         game: trials-rising

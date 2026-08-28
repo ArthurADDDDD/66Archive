@@ -265,8 +265,8 @@
     confidence: high
     duration_min: 246
     cover: "https://tx-free-imgs.acfun.cn/content/2018_05_10/1525953910.JPG?imageslim"
-    games: []
-    tags: [聊天]
+    games: [beat-saber, ice-lakes, in-death]
+    note: "人工画面复核：B站录播包含《Beat Saber》《Ice Lakes》《In Death》。"
     segments:
       - at: "00:00:00"
         label: "试试VR的感觉"
@@ -276,8 +276,10 @@
         label: "试试VR的感觉"
       - at: "01:27:54"
         label: "试试VR的感觉"
+        game: ice-lakes
       - at: "01:57:12"
         label: "试试VR的感觉"
+        game: ice-lakes
       - at: "02:26:31"
         label: "试试VR的感觉"
       - at: "02:55:49"
