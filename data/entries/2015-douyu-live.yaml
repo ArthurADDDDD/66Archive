@@ -7,7 +7,7 @@
     title: 重启之后还是一条好汉
     platform: douyu
     confidence: high
-    duration_min: 34
+    duration_min: 123
     games: [rhythm-heaven]
     tags:
       - 直播过渡
@@ -16,27 +16,15 @@
         cover: https://i1.hdslb.com/bfs/archive/248bb3891c9e01cd46b9e6e3dd8531192731ee46.jpg
         kind: replay
         status: alive
-        account: bili-fan-record-house
+        account: bilibili-official
       - url: https://v.youku.com/v_show/id_XODc4ODk2NTY4.html
         kind: original
         status: alive
-    contributed_by: data-agent
-    note: B站官方「女流66」《[1.21直播录像]重启之后还是一条好汉》，标题直接标注直播日期 2015-01-21；优酷版本于 2015-01-24 上传，原曾以 video-era-milestones 的 2015-01-24-video-01 收录，现合并为本 live 条目。duration_min 仅为现存录像/片段时长，不代表当日完整直播时长。
-  - id: 2015-01-22-live-01
-    type: live
-    date: '2015-01-22'
-    title: 斗鱼首秀（背对摄像头真的好吗）
-    platform: douyu
-    confidence: high
-    duration_min: 123
-    games: []
-    tags: [聊天]
-    sources:
       - url: https://www.acfun.cn/v/ac1691798
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: AcFun「斗鱼录像厅」发布于 2015-01-22，标题为「知名游戏解说女流斗鱼首秀 背对摄像头真的好吗」，时长约 2:02:51；为目前可确认的 2015-01 斗鱼直播录像。
+    note: B站官方「女流66」与优酷官方旧号均以《[1.21直播录像]重启之后还是一条好汉》直接标注直播日期 2015-01-21，作为本条主源。AcFun「斗鱼录像厅」于次日发布的 2:02:50《斗鱼首秀 背对摄像头真的好吗》为同场完整录像补源；其 2015-01-22 是投稿日，不另建直播场次。结合 2017-01-21「直播2周年」、2018-01-21「三周年」等连续周年录像，确认 2015-01-21 为首次实际开播；斗鱼官方所述 2015-01-24 为正式签约日。duration_min 取完整补源时长，官方主源现存片段为 34:25。
   - id: 2015-01-29-live-01
     type: live
     date: '2015-01-29'
