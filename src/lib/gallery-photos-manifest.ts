@@ -12,5 +12,7 @@ const MANIFEST = path.join(process.cwd(), 'data/reports/gallery-photos.yaml')
 export function getGalleryPhotos(): GalleryPhoto[] {
   if (!fs.existsSync(MANIFEST)) return []
   const doc = yaml.load(fs.readFileSync(MANIFEST, 'utf8')) as { photos?: GalleryPhoto[] }
-  return (doc.photos ?? []).filter((p) => p.width > 0 && p.height > 0)
+  // hidden 在这里就过滤掉：不是每个读这份清单的调用方都会记得再判一次，
+  // 漏判的后果是「后台点了隐藏，图还在首页」，比多写一次判断贵得多。
+  return (doc.photos ?? []).filter((p) => p.width > 0 && p.height > 0 && !p.hidden)
 }

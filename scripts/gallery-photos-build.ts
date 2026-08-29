@@ -18,6 +18,7 @@ import os from 'node:os'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
 import yaml from 'js-yaml'
+import { MANIFEST_HEADER } from './gallery-edit-core'
 
 const ROOT = process.cwd()
 const INCOMING = path.resolve(process.argv[2] ?? path.join(os.homedir(), 'Downloads/tmp'))
@@ -122,9 +123,40 @@ type Photo = {
   title: string | null
   caption: string | null
   source: string | null
+  hidden: boolean
+}
+
+/** 后台可编辑的字段。已经存在的条目上这些字段永远保留原值，构建脚本从不覆盖。 */
+const EDITABLE_FIELDS = ['title', 'caption', 'date', 'time', 'year', 'source', 'hidden'] as const
+
+/**
+ * 已有清单里的这批字段是「事实」——由人（后台管理画廊）核实、修正过。
+ * 这个脚本只负责两件事：给新收的图建条目、给旧图刷新技术性字段（尺寸、路径）。
+ * 它绝不能在重跑时把后台改过的标题、日期、隐藏状态冲掉，否则后台编辑和本地加图
+ * 谁跑得晚就赢，等于没有一边是可信的。
+ */
+function loadExisting(): Map<string, Photo> {
+  const map = new Map<string, Photo>()
+  if (!fs.existsSync(MANIFEST)) return map
+  const doc = yaml.load(fs.readFileSync(MANIFEST, 'utf8')) as { photos?: Photo[] }
+  for (const photo of doc.photos ?? []) map.set(photo.id, photo)
+  return map
+}
+
+function withPreservedFields(id: string, computed: Photo, existing: Map<string, Photo>): Photo {
+  const prior = existing.get(id)
+  if (!prior) return computed
+  const merged = { ...computed }
+  for (const field of EDITABLE_FIELDS) {
+    // 字段本身缺失（比如给旧清单新加了一个字段）时保留新算出来的默认值，
+    // 不要把 undefined 写回去——那会在下次 dump 时把这个键整个丢掉。
+    if (field in prior) (merged as Record<string, unknown>)[field] = prior[field]
+  }
+  return merged
 }
 
 const verified = loadVerified()
+const existing = loadExisting()
 fs.mkdirSync(OUT_DIR, { recursive: true })
 
 const photos: Photo[] = []
@@ -144,21 +176,28 @@ for (const filename of fs.existsSync(LEGACY_DIR) ? fs.readdirSync(LEGACY_DIR).so
     built++
   }
   const known = verified.get(stem)
-  photos.push({
-    id: stem,
-    src: `/gallery/${filename}`,
-    thumb: `/gallery/photos/${stem}.thumb.jpg`,
-    width: size.width,
-    height: size.height,
-    year: known?.date.slice(0, 4) ?? null,
-    date: known?.date ?? null,
-    time: null,
-    seq: null,
-    sourceRef: null,
-    title: known?.alt ?? null,
-    caption: known?.caption ?? null,
-    source: known?.source ?? null,
-  })
+  photos.push(
+    withPreservedFields(
+      stem,
+      {
+        id: stem,
+        src: `/gallery/${filename}`,
+        thumb: `/gallery/photos/${stem}.thumb.jpg`,
+        width: size.width,
+        height: size.height,
+        year: known?.date.slice(0, 4) ?? null,
+        date: known?.date ?? null,
+        time: null,
+        seq: null,
+        sourceRef: null,
+        title: known?.alt ?? null,
+        caption: known?.caption ?? null,
+        source: known?.source ?? null,
+        hidden: false,
+      },
+      existing,
+    ),
+  )
 }
 
 /** 新收来的原图：压出 full + thumb 两档，原图不进仓库。 */
@@ -178,21 +217,28 @@ for (const filename of fs.existsSync(INCOMING) ? fs.readdirSync(INCOMING).sort()
   // 清单里记的是 full 的尺寸——布局按它的宽高比排，缩略图只是同比例的小一号
   const fullSize = sipsDimensions(fullDest)
   const parsed = parseName(stem)
-  photos.push({
-    id: stem,
-    src: `/gallery/photos/${stem}.jpg`,
-    thumb: `/gallery/photos/${stem}.thumb.jpg`,
-    width: fullSize.width,
-    height: fullSize.height,
-    year: parsed.date?.slice(0, 4) ?? null,
-    date: parsed.date,
-    time: parsed.time,
-    seq: parsed.seq,
-    sourceRef: parsed.sourceRef,
-    title: null,
-    caption: null,
-    source: null,
-  })
+  photos.push(
+    withPreservedFields(
+      stem,
+      {
+        id: stem,
+        src: `/gallery/photos/${stem}.jpg`,
+        thumb: `/gallery/photos/${stem}.thumb.jpg`,
+        width: fullSize.width,
+        height: fullSize.height,
+        year: parsed.date?.slice(0, 4) ?? null,
+        date: parsed.date,
+        time: parsed.time,
+        seq: parsed.seq,
+        sourceRef: parsed.sourceRef,
+        title: null,
+        caption: null,
+        source: null,
+        hidden: false,
+      },
+      existing,
+    ),
+  )
 }
 
 photos.sort((a, b) => {
@@ -203,14 +249,7 @@ photos.sort((a, b) => {
 
 const undated = photos.filter((p) => p.year === null)
 
-const header = [
-  '# 画廊清单 —— 由 scripts/gallery-photos-build.ts 生成，不要手改。',
-  '# width / height 是 full 版的像素尺寸，布局按它的宽高比排等高行。',
-  '# year / date 为 null 表示还没核实出拍摄年份，前台会归到「年份待定」，不做推测。',
-  '',
-].join('\n')
-
-fs.writeFileSync(MANIFEST, `${header}${yaml.dump({ photos }, { lineWidth: 120 })}`)
+fs.writeFileSync(MANIFEST, `${MANIFEST_HEADER}${yaml.dump({ photos }, { lineWidth: 120 })}`)
 
 const bytes = (dir: string) =>
   fs.readdirSync(dir).reduce((sum, f) => sum + fs.statSync(path.join(dir, f)).size, 0)

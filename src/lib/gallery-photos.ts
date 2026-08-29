@@ -26,6 +26,8 @@ export type GalleryPhoto = {
   title: string | null
   caption: string | null
   source: string | null
+  /** 后台隐藏开关：已收录但暂不展示（重复、待复核等），不是「删除」。 */
+  hidden: boolean
 }
 
 /** 年份未定的那一组的桶键；前台单独成段，排在所有年份之后。 */
