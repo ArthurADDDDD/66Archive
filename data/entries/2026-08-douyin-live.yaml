@@ -585,3 +585,22 @@
         status: alive
     note: "自动采集候选经人工审批新建（组 38ffc806-569a-42e7-a9b8-57b012e74a8b）。"
     contributed_by: collection-review
+
+  - id: 2026-08-28-live-01
+    type: live
+    date: "2026-08-28"
+    title: "江南新镇守"
+    platform: douyin
+    duration_min: 162
+    games:
+      - where-winds-meet
+    tags:
+      - 弹幕版
+    confidence: medium
+    cover: "http://i0.hdslb.com/bfs/archive/92232d22500183432f2e9d87b70ada805111b5cc.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1jhtP61EY3"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 c18e87ef-3116-4b16-801d-657681b8c56c）。"
+    contributed_by: collection-review
