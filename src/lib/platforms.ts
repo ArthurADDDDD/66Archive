@@ -32,6 +32,9 @@ export function detectPlatform(url: string): Platform | null {
  */
 export function proxyImage(url: string | undefined, width = 480): string | null {
   if (!url) return null
+  // 本站自带的封面（public/images/**）用站内绝对路径表示，任何图片代理都取不到它，
+  // 必须原样返回；配置了 NEXT_PUBLIC_IMG_PROXY 时尤其容易把它代理成 404。
+  if (url.startsWith('/')) return url
   // B 站元数据接口至今仍可能返回 http 图床地址；本站 Worker 只接受 https，
   // 这里统一升级，既能命中图片代理，也避免在 HTTPS 页面触发 mixed content。
   const normalized = url.replace(/^http:\/\/((?:[a-z0-9-]+\.)?hdslb\.com)\//i, 'https://$1/')
