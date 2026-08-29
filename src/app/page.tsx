@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { HomeHero } from '@/components/HomeHero'
-import { LiveStatusIndicator } from '@/components/LiveStatusIndicator'
 import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/components/HomeActRail'
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { HomeActSections } from '@/components/HomeActSections'
@@ -133,7 +132,6 @@ export default async function HomePage() {
       <div className="flex flex-col lg:min-h-[100svh]">
         <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="home" />
-          <LiveStatusIndicator />
           <Link href="/archive/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta tnum text-live lg:block">
             打开全部 {data.totals.entries.toLocaleString()} 条记录 →
           </Link>

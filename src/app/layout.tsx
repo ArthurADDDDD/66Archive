@@ -3,6 +3,7 @@ import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
 import { BgmPlayer } from '@/components/BgmPlayer'
+import { LiveStatusIndicator } from '@/components/LiveStatusIndicator'
 import { SiteAnalytics } from '@/components/SiteAnalytics'
 import { fetchBakedShell } from '@/lib/baked-content'
 
@@ -87,6 +88,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <LiveDocumentMeta />
           <SiteAnalytics />
           {children}
+          {/* 直播状态属于全站浮层；挂在 layout 上，站内换页时保持显示与轮询。 */}
+          <LiveStatusIndicator />
           {/* 背景音乐：挂在 layout 上，站内跳页时不会断掉重来 */}
           <BgmPlayer />
         </LiveContentProvider>
