@@ -643,3 +643,34 @@ button:not(:disabled):active,
 .ui-card.ui-press:active {
   transform: translateY(1px) scale(0.985);
 }
+
+/* 画廊图墙在手机上贴边：正文的 13vw 安全边距套在图墙上，一行只剩两张。 */
+@media (max-width: 639px) {
+  .gallery-bleed {
+    margin-inline: calc(var(--page-pad) * -1);
+    padding-inline: 1rem;
+  }
+}
+
+/* 浮动 dock 里的横向滚动条会在控件下面切出一条灰线，比它解决的问题更显眼。 */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  height: 0;
+}
+
+/* 「整齐」模式：放弃真实比例，换一眼能点清数量的规则网格。
+   「原貌」模式的等高行由 GalleryBoard 自己算（要按容器宽度分行），这里没有对应样式。 */
+.photo-uniform {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--cell-w), 1fr));
+  gap: 0.625rem;
+}
+
+/* 时期色以 CSS 变量透出，供内联样式取用（时期分界由数据推导，不写死年份）。 */
+:root {
+  --era-video: #e0a244;
+  --era-live: #5bc8e8;
+}
