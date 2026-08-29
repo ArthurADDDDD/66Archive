@@ -177,14 +177,14 @@
     platform: douyu
     confidence: high
     duration_min: 93
-    games: []
+    games: [fez]
     sources:
       - url: https://www.bilibili.com/video/BV1Mo4y1h7Jn
         kind: replay
         status: alive
         account: bili-fan-xiaomoe
     contributed_by: maintainer
-    note: 原标题《2015.4 女流 背部直播》仅到月份（对应 gap-notes 的 2015-04 缺口），具体日期 2015-04-29 由维护者线下核实后确认补全。
+    note: 原标题《2015.4 女流 背部直播》仅到月份（对应 gap-notes 的 2015-04 缺口），具体日期 2015-04-29 与游戏（FEZ）均由维护者线下核实后确认补全。
   - id: 2015-06-24-live-01
     type: live
     date: '2015-06-24'
@@ -216,14 +216,14 @@
     platform: douyu
     confidence: high
     duration_min: 80
-    games: []
+    games: [gone-home]
     sources:
       - url: https://www.bilibili.com/video/BV1f64y1F7Ex
         kind: replay
         status: alive
         account: bili-fan-xiaomoe
     contributed_by: maintainer
-    note: 具体日期 2015-06-30 由维护者线下核实后确认补全，2015 年珍贵早期直播录像补充。
+    note: 具体日期 2015-06-30 与游戏（Gone Home / 《到家》）均由维护者线下核实后确认补全，2015 年珍贵早期直播录像补充。
   - id: 2015-07-05-live-01
     type: live
     date: '2015-07-05'
