@@ -606,7 +606,8 @@
     aliases: []
 
   - id: fez
-    name: FEZ
+    name: 菲斯
+    aliases: [FEZ]
 
   - id: final-fantasy-15
     name: 最终幻想15
@@ -705,8 +706,8 @@
     name: Golf with your friends
 
   - id: gone-home
-    name: Gone Home
-    aliases: [到家]
+    name: 到家
+    aliases: [Gone Home]
 
   - id: goose-goose-duck
     name: Goose Goose Duck
@@ -3320,9 +3321,3 @@
 
   - id: dont-scream
     name: DON'T SCREAM
-
-  - id: feisi
-    name: 菲斯
-
-  - id: huijia
-    name: 到家
