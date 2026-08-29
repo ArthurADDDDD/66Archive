@@ -277,7 +277,7 @@
   platform: youku
   duration_min: 16
   confidence: high
-  cover: "https://m.ykimg.com/05420408525AD15A6A0A4142D71B7052"
+  cover: "/images/covers/2010-07-11-video-01.jpg"
   games: [rhythm-heaven]
   tags: [视频时代]
   sources:
@@ -285,6 +285,7 @@
       kind: original
       status: alive
   contributed_by: data-agent
+  note: "封面替换（2026-08-29）：优酷原封面已退化为全黑占位图，改用从这段录像里截取的标题画面。"
 
 - id: 2010-07-15-video-01
   type: video
