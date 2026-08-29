@@ -258,6 +258,14 @@
   confidence: medium
   note: "优酷上《女流之心灵砒霜》2016 年系列的原上传者（专辑 49327740，含 20160306 等期），B 站补档视频简介明确标注『原作者优酷id：俺是红领巾』。注意：url 为其专辑页而非账号主页，账号主页 URL 未确认；专辑页当前是否仍可访问未验证。"
 
+- id: youku-fan-yuwaixiong
+  platform: youku
+  name: "乱世帝王于歪熊"
+  url: "https://i.youku.com/u/UMjYyODg2OTI="
+  role: fan-archive
+  confidence: high
+  note: "优酷《女流赤途》播单上传者，UID UMjYyODg2OTI=。2016-01 上传 3 段《潜伏之赤途》详情页仍可访问，标题与上线日期明确标注斗鱼房号 156277 及日期，共同确认 2016-01-28、2016-01-29 两场直播。"
+
 # ═══ 三、切片/考古号（非完整录播，作补充入口） ═══
 
 - id: bili-fan-clip-pao

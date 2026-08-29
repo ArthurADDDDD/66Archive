@@ -83,6 +83,45 @@
         status: alive
     contributed_by: data-agent
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-01-28-live-01
+    type: live
+    date: '2016-01-28'
+    title: 潜伏之赤途
+    platform: douyu
+    confidence: high
+    duration_min: 113
+    games: []
+    sources:
+      - url: https://v.youku.com/v_show/id_XMTQ1OTQzMTUzMg==.html
+        cover: https://m.ykimg.com/0542040856AA30FB6A0A3F04588F0FF5
+        kind: replay
+        status: alive
+        account: youku-fan-yuwaixiong
+    contributed_by: data-agent
+    note: 优酷详情页标题明确标注「01-28斗鱼女流玩潜伏游戏--潜伏之赤途（房号156277）」，上线时间为 2016-01-28 20:32:29，页面时长 1:53:23（6803 秒）。
+  - id: 2016-01-29-live-01
+    type: live
+    date: '2016-01-29'
+    title: 潜伏之赤途（续）
+    platform: douyu
+    confidence: high
+    duration_min: 160
+    games: []
+    sources:
+      - url: https://v.youku.com/v_show/id_XMTQ1OTY4MjgwMA==.html
+        cover: https://m.ykimg.com/0542040856AA7E5E6A0A4B046FC5B324
+        kind: replay
+        status: alive
+        account: youku-fan-yuwaixiong
+        note: 第 2 段，页面时长 1:59:48（7188 秒）。
+      - url: https://v.youku.com/v_show/id_XMTQ1OTcyMjU5Mg==.html
+        cover: https://m.ykimg.com/0542040856AA65666A0A4F0465717A63
+        kind: replay
+        status: alive
+        account: youku-fan-yuwaixiong
+        note: 第 3 段，页面时长 40:44（2444 秒）。
+    contributed_by: data-agent
+    note: 两个优酷详情页标题均明确标注「01-29斗鱼女流玩潜伏游戏--潜伏之赤途」与房号 156277，上线时间分别为 2016-01-29 02:03:55、02:06:30；合计可见录像 2:40:32。
   - id: 2016-01-31-live-01
     type: live
     date: '2016-01-31'
