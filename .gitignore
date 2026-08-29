@@ -41,7 +41,3 @@ scripts/audit/tag-proposals.json
 scripts/audit/need-games.json
 scripts/audit/PENDING-REVIEW.md
 
-# 画廊改版的本地预览素材与其清单：图片本身不进公仓，清单里又全是指向这些图片的路径，
-# 进了仓库只会让别人 clone 出一页坏图。正式素材走 data/assets + public/gallery。
-public/_preview/
-data/_demo/gallery-preview.json

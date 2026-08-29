@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import type { GalleryPhoto } from '@/lib/gallery-preview'
+import { bucketOf, sortBucket, UNDATED, UNDATED_LABEL, type GalleryPhoto } from '@/lib/gallery-photos'
 import { SearchField } from './SearchField'
 
 /**
@@ -102,31 +102,40 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   const visible = useMemo(() => {
     const needle = q.trim().toLowerCase()
     if (!needle) return photos
-    return photos.filter((p) => `${p.title ?? ''} ${p.date ?? p.year} ${p.time ?? ''}`.toLowerCase().includes(needle))
+    return photos.filter((p) =>
+      `${p.title ?? ''} ${p.caption ?? ''} ${p.date ?? p.year ?? UNDATED_LABEL} ${p.time ?? ''}`.toLowerCase().includes(needle),
+    )
   }, [photos, q])
 
   const sections = useMemo(() => {
     const map = new Map<string, GalleryPhoto[]>()
     for (const p of visible) {
-      const bucket = map.get(p.year)
-      if (bucket) bucket.push(p)
-      else map.set(p.year, [p])
+      const key = bucketOf(p)
+      const list = map.get(key)
+      if (list) list.push(p)
+      else map.set(key, [p])
     }
-    return [...map.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([y, list]) => ({ year: y, photos: list }))
+    return [...map.entries()].sort(([a], [b]) => sortBucket(a, b)).map(([y, list]) => ({ year: y, photos: list }))
   }, [visible])
 
   // 年份谱按全量统计，不跟着筛选变——它是这批素材的固定形状，缩放会让人失去参照。
   const spectrum = useMemo(() => {
     const map = new Map<string, number>()
-    for (const p of photos) map.set(p.year, (map.get(p.year) ?? 0) + 1)
-    const years = [...map.keys()].sort()
+    for (const p of photos) {
+      const key = bucketOf(p)
+      map.set(key, (map.get(key) ?? 0) + 1)
+    }
+    const keys = [...map.keys()].sort(sortBucket)
     const max = Math.max(1, ...map.values())
-    return years.map((y) => ({ year: y, count: map.get(y)!, ratio: map.get(y)! / max }))
+    return keys.map((y) => ({ year: y, count: map.get(y)!, ratio: map.get(y)! / max }))
   }, [photos])
 
   // 时期色由数据推导出的分界决定，桌面柱状谱和手机选择面板共用一套
   const eraColor = useCallback(
-    (y: string) => (eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'),
+    (y: string) => {
+      if (y === UNDATED) return 'var(--era-unknown)'
+      return eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'
+    },
     [eraBoundary],
   )
 
@@ -194,8 +203,8 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                 key={y}
                 type="button"
                 onClick={() => jumpToYear(y)}
-                title={`${y} 年 · ${count} 张`}
-                aria-label={`跳到 ${y} 年 · ${count} 张`}
+                title={y === UNDATED ? `${UNDATED_LABEL} · ${count} 张` : `${y} 年 · ${count} 张`}
+                aria-label={y === UNDATED ? `跳到${UNDATED_LABEL} · ${count} 张` : `跳到 ${y} 年 · ${count} 张`}
                 aria-current={isActive ? 'true' : undefined}
                 className="group ui-press flex w-[2.375rem] shrink-0 flex-col items-center gap-[3px] rounded-sm"
               >
@@ -214,7 +223,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                   className="font-mono text-[10px] leading-none tnum transition-colors"
                   style={{ color: isActive ? era : undefined }}
                 >
-                  <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y}</span>
+                  <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y === UNDATED ? '待定' : y}</span>
                 </span>
               </button>
             )
@@ -280,17 +289,19 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
             <header className="mb-4 flex items-baseline gap-4">
-              <h2
-                className="font-mono text-h2 font-semibold tnum leading-none"
-                style={{ color: eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)' }}
-              >
-                {y}
+              <h2 className="font-mono text-h2 font-semibold tnum leading-none" style={{ color: eraColor(y) }}>
+                {y === UNDATED ? UNDATED_LABEL : y}
               </h2>
               <span className="text-meta text-faint tnum">{list.length} 张</span>
               <span className="h-px flex-1 bg-line/70" />
-              <Link href={`/archive/?y=${y}`} className="ui-press shrink-0 rounded-sm text-meta text-faint transition-colors hover:text-live">
-                这一年的编年史 →
-              </Link>
+              {/* 年份没核实出来就没有「这一年」可跳；与其给个假链接，不如说清楚它还缺什么 */}
+              {y === UNDATED ? (
+                <span className="shrink-0 text-meta text-faint">还没核实出拍摄年份</span>
+              ) : (
+                <Link href={`/archive/?y=${y}`} className="ui-press shrink-0 rounded-sm text-meta text-faint transition-colors hover:text-live">
+                  这一年的编年史 →
+                </Link>
+              )}
             </header>
 
             {mode === 'natural' ? (
@@ -665,21 +676,28 @@ function SegmentedControl<T extends string>({
   )
 }
 
+/** 没有确认过的标题就不编一个，只说这是哪一天（或者还没定年份）的画面。 */
+function photoAlt(photo: GalleryPhoto) {
+  if (photo.title) return photo.title
+  return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
+}
+
 function PhotoCell({ photo, uniform = false, onOpen }: { photo: GalleryPhoto; uniform?: boolean; onOpen: () => void }) {
   const ar = photo.width / photo.height
   return (
     <button
       type="button"
       onClick={onOpen}
-      aria-label={`打开大图：${photo.title ?? photo.date ?? photo.year}`}
+      aria-label={`打开大图：${photoAlt(photo)}`}
       className="group relative block h-full min-w-0 overflow-hidden rounded-[3px] bg-raised outline-none"
       style={uniform ? undefined : { flex: `${ar} 1 0` }}
     >
       <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
+        {/* 列表一律用 thumb：一屏几十张，用大图等于把带宽烧在 200px 高的格子上 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={photo.src}
-          alt={photo.title ?? `${photo.date ?? photo.year} 的画面`}
+          src={photo.thumb}
+          alt={photoAlt(photo)}
           loading="lazy"
           decoding="async"
           width={photo.width}
@@ -689,7 +707,7 @@ function PhotoCell({ photo, uniform = false, onOpen }: { photo: GalleryPhoto; un
       </span>
       {/* 平时是纯图，hover / 聚焦才浮出时间戳——一屏几十张时，常驻文字才是疲劳的来源。 */}
       <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 pb-1.5 pt-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <span className="truncate font-mono text-meta tnum text-white/90">{photo.date ?? photo.year}</span>
+        <span className="truncate font-mono text-meta tnum text-white/90">{photo.date ?? photo.year ?? UNDATED_LABEL}</span>
         {photo.time && <span className="shrink-0 font-mono text-meta tnum text-white/55">{photo.time}</span>}
       </span>
     </button>
@@ -735,15 +753,17 @@ function Lightbox({
   }, [onClose, onStep])
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-label={photo.title ?? `${photo.date ?? photo.year} 的画面`}>
+    <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-label={photoAlt(photo)}>
       <button aria-label="关闭" onClick={onClose} className="absolute inset-0 bg-base/94 backdrop-blur-md" />
 
       {/* 大图独占版面，说明只留一条底栏——竖图在侧栏式灯箱里会被挤得很小。 */}
       <div className="ui-backdrop-in relative flex min-h-0 flex-1 items-center justify-center p-4 sm:p-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
+        {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。 */}
         <img
           src={photo.src}
-          alt={photo.title ?? `${photo.date ?? photo.year} 的画面`}
+          alt={photoAlt(photo)}
+          style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
           className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
         />
         <button
@@ -763,11 +783,13 @@ function Lightbox({
       </div>
 
       <div className="relative flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line/60 bg-surface/80 px-4 py-3 backdrop-blur sm:px-10">
-        <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{photo.year}</span>
-        <span className="font-mono text-meta tnum text-muted">
-          {photo.date ?? '日期待定'}
-          {photo.time ? ` · ${photo.time}` : ''}
-        </span>
+        <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{photo.year ?? UNDATED_LABEL}</span>
+        {photo.date && (
+          <span className="font-mono text-meta tnum text-muted">
+            {photo.date}
+            {photo.time ? ` · ${photo.time}` : ''}
+          </span>
+        )}
         <span className="font-mono text-meta tnum text-faint">
           {photo.width} × {photo.height}
         </span>
@@ -776,6 +798,7 @@ function Lightbox({
         ) : (
           <span className="text-meta text-faint">标题待命名</span>
         )}
+        {photo.source && <span className="font-mono text-meta text-faint">{photo.source}</span>}
         <span className="ml-auto font-mono text-meta tnum text-faint">
           {index + 1} / {total}
         </span>

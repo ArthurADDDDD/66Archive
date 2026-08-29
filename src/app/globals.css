@@ -673,4 +673,6 @@ button:not(:disabled):active,
 :root {
   --era-video: #e0a244;
   --era-live: #5bc8e8;
+  /* 年份未定：中性灰。给它一个时期色等于替它认领了一个时期。 */
+  --era-unknown: #7c8296;
 }
