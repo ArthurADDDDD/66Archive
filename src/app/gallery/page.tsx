@@ -4,7 +4,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryBoard } from '@/components/GalleryBoard'
-import { getGalleryPhotos } from '@/lib/gallery-preview'
+import { getGalleryPhotos } from '@/lib/gallery-photos-manifest'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { deriveEraBoundary } from '@/lib/ui'
 
@@ -15,7 +15,8 @@ import { deriveEraBoundary } from '@/lib/ui'
 export default function GalleryPage() {
   const photos = getGalleryPhotos()
   const eraBoundary = deriveEraBoundary(toTimelineEntries(getDataset()))
-  const years = [...new Set(photos.map((p) => p.year))].sort()
+  const years = [...new Set(photos.map((p) => p.year).filter((y): y is string => y !== null))].sort()
+  const undated = photos.filter((p) => p.year === null).length
 
   return (
     <main className="ui-page-in min-h-screen overflow-x-clip">
@@ -34,7 +35,8 @@ export default function GalleryPage() {
           <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal" />
           {photos.length > 0 && (
             <p className="ui-reveal mt-6 text-body text-muted tnum">
-              目前 {photos.length} 张，跨 {years[0]}–{years[years.length - 1]} 年。标题与出处还在逐张核对，未确认的一律不写。
+              目前 {photos.length} 张，跨 {years[0]}–{years[years.length - 1]} 年
+              {undated > 0 && `，另有 ${undated} 张还没核实出年份`}。标题与出处还在逐张核对，未确认的一律不写。
             </p>
           )}
         </div>
