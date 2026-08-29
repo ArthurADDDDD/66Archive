@@ -77,6 +77,8 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   const [activeYear, setActiveYear] = useState<string | null>(null)
   const [yearPickerOpen, setYearPickerOpen] = useState(false)
   const boardRef = useRef<HTMLDivElement>(null)
+  // dock 滑到图墙末尾就停在那儿，不跟着飘到征集文案和页脚上面
+  const boardOuterRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
 
@@ -167,7 +169,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   return (
     <>
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
-      <ControlDock>
+      <ControlDock stopRef={boardOuterRef}>
         {/* 底部对齐：dock 里所有东西——柱子的底线、年份标签、按钮——落在同一条线上。
             居中对齐时柱状谱会浮在按钮中间，底线跟谁都对不上，看着就是「差一点」。 */}
         <div className="flex items-end gap-2 sm:gap-3">
@@ -195,13 +197,13 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                 title={`${y} 年 · ${count} 张`}
                 aria-label={`跳到 ${y} 年 · ${count} 张`}
                 aria-current={isActive ? 'true' : undefined}
-                className="group ui-press flex shrink-0 flex-col items-center gap-[3px] rounded-sm px-0.5"
+                className="group ui-press flex w-[2.375rem] shrink-0 flex-col items-center gap-[3px] rounded-sm"
               >
                 {/* 柱高封到 18px：dock 是一条工具条，不是一块图表面板——
                     再高一点，整条 dock 就得跟着长，按钮也会被顶得离底边很远。
                     具体张数交给 title / aria-label，柱高只回答「哪年多」。 */}
                 <span
-                  className="w-6 rounded-[2px] transition-[height,opacity,background-color] duration-500 sm:w-8"
+                  className="w-full rounded-[2px] transition-[height,opacity,background-color] duration-500"
                   style={{
                     height: `${4 + ratio * 14}px`,
                     background: era,
@@ -212,7 +214,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                   className="font-mono text-[10px] leading-none tnum transition-colors"
                   style={{ color: isActive ? era : undefined }}
                 >
-                  <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y.slice(2)}</span>
+                  <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y}</span>
                 </span>
               </button>
             )
@@ -273,7 +275,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
 
       {/* gallery-bleed：手机上让图墙贴近屏幕边缘——13vw 的安全边距是给正文的，
           套在图墙上会把一行挤到只剩两张。底部留出 dock 的高度，否则最后一行永远被浮层压住一截。 */}
-      <div className="gallery-bleed pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      <div ref={boardOuterRef} className="gallery-bleed pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
         <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
@@ -426,6 +428,8 @@ function YearPicker({
 
 const DOCK_POS_KEY = 'gallery-dock-pos'
 const DOCK_MARGIN = 12
+/** dock 贴视口底边（以及停靠时贴图墙底边）的距离 */
+const DOCK_BOTTOM = 20
 
 /**
  * 控制区 dock：浮在内容之上，可以拖到任何位置，默认停在视口底部居中。
@@ -438,13 +442,15 @@ const DOCK_MARGIN = 12
  */
 const subscribeNoop = () => () => {}
 
-function ControlDock({ children }: { children: React.ReactNode }) {
+function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef: React.RefObject<HTMLElement | null> }) {
   // dock 必须挂到 body 上：页面容器带入场 transform，会成为 fixed 的包含块，
   // 留在原地的话「浮在视口底部」会变成「浮在文档某个位置」，滚两屏就不见了。
   const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false)
   const ref = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
   const [dragging, setDragging] = useState(false)
+  // 停靠位置（文档坐标）。null = 还在跟着视口底边走。
+  const [parkedTop, setParkedTop] = useState<number | null>(null)
   const offset = useRef<{ dx: number; dy: number } | null>(null)
 
   const clampToViewport = useCallback((x: number, y: number) => {
@@ -473,6 +479,40 @@ function ControlDock({ children }: { children: React.ReactNode }) {
       // localStorage 不可用（隐私模式等）就用默认位置，不值得为此报错
     }
   }, [clampToViewport])
+
+  /**
+   * 图墙看完了，dock 就该停下。
+   *
+   * 一直钉在视口底边，往下翻到征集文案和页脚时它还浮在那儿——那些地方没有一张图，
+   * 一条挑年份、调密度的工具条待在上面纯属挡路。所以滚到图墙末尾时把它从 fixed
+   * 换成 absolute，钉在图墙底边（图墙本来就为它留了 pb-28 的位置）；往回滚、
+   * 图墙底边重新落到 dock 下面时再交还给视口。
+   *
+   * 判据就是比大小：视口底边那条线要是已经越过图墙底边，就停靠。
+   * 手动拖过的位置不参与——那是人自己挑的地方，不该被这套规则改掉。
+   */
+  useEffect(() => {
+    // 拖过之后位置由人说了算，这套规则整个让开（placement 里 pos 优先，残留值不影响）
+    if (pos) return
+    const update = () => {
+      const node = ref.current
+      const stop = stopRef.current
+      if (!node || !stop) return
+      const height = node.offsetHeight
+      const stopBottomDoc = stop.getBoundingClientRect().bottom + window.scrollY
+      const parked = stopBottomDoc - DOCK_BOTTOM - height
+      const followingViewport = window.scrollY + window.innerHeight - DOCK_BOTTOM - height
+      setParkedTop(followingViewport > parked ? parked : null)
+    }
+    const raf = requestAnimationFrame(update)
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [pos, stopRef])
 
   // 窗口变小后不能让 dock 留在视口外面
   useEffect(() => {
@@ -527,8 +567,10 @@ function ControlDock({ children }: { children: React.ReactNode }) {
   }
 
   const placement: React.CSSProperties = pos
-    ? { left: pos.x, top: pos.y }
-    : { left: '50%', bottom: 20, transform: 'translateX(-50%)' }
+    ? { position: 'fixed', left: pos.x, top: pos.y }
+    : parkedTop !== null
+      ? { position: 'absolute', left: '50%', top: parkedTop, transform: 'translateX(-50%)' }
+      : { position: 'fixed', left: '50%', bottom: DOCK_BOTTOM, transform: 'translateX(-50%)' }
 
   if (!mounted) return null
 
@@ -542,7 +584,7 @@ function ControlDock({ children }: { children: React.ReactNode }) {
       onDoubleClick={(e) => {
         if (!(e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) resetPos()
       }}
-      className={`fixed z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-2.5 ${
+      className={`z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-2.5 ${
         dragging ? 'cursor-grabbing' : 'cursor-grab'
       }`}
       style={placement}
