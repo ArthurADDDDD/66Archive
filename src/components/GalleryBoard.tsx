@@ -157,10 +157,11 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
     <>
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
       <ControlDock>
-        <div className="flex items-end gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <DragGrip />
-          {/* 年份谱单独横向滚动：年份多起来也不会把控制区挤到下一行、把吸顶条撑成一堵墙。 */}
-          <div className="no-scrollbar flex shrink-0 items-end gap-1.5 overflow-x-auto max-sm:min-w-0 max-sm:max-w-[45vw] max-sm:shrink sm:gap-2.5">
+          {/* 年份谱单独横向滚动：年份多起来也不会把控制区挤到下一行、把 dock 撑成一堵墙。
+              touch-auto 抵消 dock 上的 touch-none，否则手机上没法横着拨年份。 */}
+          <div className="no-scrollbar flex shrink-0 touch-auto items-end gap-1.5 overflow-x-auto max-sm:min-w-0 max-sm:max-w-[42vw] max-sm:shrink sm:gap-2">
           {spectrum.map(({ year: y, count, ratio }) => {
             const isActive = activeYear === y
             const era = eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'
@@ -169,24 +170,24 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                 key={y}
                 type="button"
                 onClick={() => document.getElementById(`gy-${y}`)?.scrollIntoView({ block: 'start' })}
+                title={`${y} 年 · ${count} 张`}
                 aria-label={`跳到 ${y} 年 · ${count} 张`}
                 aria-current={isActive ? 'true' : undefined}
-                className="group ui-press flex shrink-0 flex-col items-center gap-1 rounded-sm px-1"
+                className="group ui-press flex shrink-0 flex-col items-center gap-[3px] rounded-sm px-0.5"
               >
-                {/* 张数只在桌面常驻：手机上这一行会把吸顶条又撑高一截，柱高已经说明了多少。 */}
-                <span className="hidden font-mono text-meta tnum text-faint transition-colors group-hover:text-ink sm:block" style={isActive ? { color: era } : undefined}>
-                  {count}
-                </span>
+                {/* 柱高封到 18px：dock 是一条工具条，不是一块图表面板——
+                    再高一点，整条 dock 就得跟着长，按钮也会被顶得离底边很远。
+                    具体张数交给 title / aria-label，柱高只回答「哪年多」。 */}
                 <span
-                  className="w-7 rounded-[2px] transition-[height,opacity,background-color] duration-500 sm:w-9"
+                  className="w-6 rounded-[2px] transition-[height,opacity,background-color] duration-500 sm:w-8"
                   style={{
-                    height: `${6 + ratio * 22}px`,
+                    height: `${4 + ratio * 14}px`,
                     background: era,
-                    opacity: isActive ? 1 : 0.28,
+                    opacity: isActive ? 1 : 0.3,
                   }}
                 />
                 <span
-                  className="font-mono text-meta tnum transition-colors"
+                  className="font-mono text-[10px] leading-none tnum transition-colors"
                   style={{ color: isActive ? era : undefined }}
                 >
                   <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y.slice(2)}</span>
@@ -361,8 +362,11 @@ function ControlDock({ children }: { children: React.ReactNode }) {
   }, [pos, clampToViewport])
 
   const onPointerDown = (e: React.PointerEvent) => {
-    // 只从握把拖：否则在搜索框里选文字、在分段控件上滑动都会变成拖动整条 dock。
-    if (!(e.target as HTMLElement).closest('[data-dock-grip]')) return
+    if (e.button !== 0 && e.pointerType === 'mouse') return
+    // 除了控件本身，dock 上任何地方都能拖：一个几像素的小握把是设计上的偷懒。
+    // 反过来，落在按钮 / 输入框 / 可横滚的年份谱上就一定不是拖动——
+    // 那是点按钮、选文字、拨年份，抢了手势等于把控件废掉。
+    if ((e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) return
     const rect = ref.current?.getBoundingClientRect()
     if (!rect) return
     offset.current = { dx: e.clientX - rect.left, dy: e.clientY - rect.top }
@@ -415,10 +419,10 @@ function ControlDock({ children }: { children: React.ReactNode }) {
       onPointerUp={endDrag}
       onPointerCancel={endDrag}
       onDoubleClick={(e) => {
-        if ((e.target as HTMLElement).closest('[data-dock-grip]')) resetPos()
+        if (!(e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) resetPos()
       }}
-      className={`fixed z-40 max-w-[calc(100vw-1.5rem)] rounded-2xl border border-white/[0.07] bg-base/35 px-2.5 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-3.5 sm:py-2.5 ${
-        dragging ? 'cursor-grabbing select-none' : ''
+      className={`fixed z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-2.5 ${
+        dragging ? 'cursor-grabbing' : 'cursor-grab'
       }`}
       style={placement}
     >
@@ -428,14 +432,13 @@ function ControlDock({ children }: { children: React.ReactNode }) {
   )
 }
 
-/** 拖动握把：dock 只认这一块，避免和里面的控件抢手势。 */
+/** 拖动提示：整条 dock 都能拖，这几个点只是告诉人「这东西可以挪」。 */
 function DragGrip() {
   return (
     <span
-      data-dock-grip
       aria-hidden
       title="拖动 · 双击回到默认位置"
-      className="mb-1 flex shrink-0 cursor-grab touch-none flex-col gap-[3px] px-1 py-2 opacity-40 transition-opacity hover:opacity-80 active:cursor-grabbing"
+      className="flex shrink-0 flex-col gap-[3px] px-1 opacity-35"
     >
       {[0, 1, 2].map((i) => (
         <span key={i} className="flex gap-[3px]">
