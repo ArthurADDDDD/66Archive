@@ -75,6 +75,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   const [q, setQ] = useState('')
   const [openId, setOpenId] = useState<string | null>(null)
   const [activeYear, setActiveYear] = useState<string | null>(null)
+  const [yearPickerOpen, setYearPickerOpen] = useState(false)
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
@@ -121,6 +122,16 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
     return years.map((y) => ({ year: y, count: map.get(y)!, ratio: map.get(y)! / max }))
   }, [photos])
 
+  // 时期色由数据推导出的分界决定，桌面柱状谱和手机选择面板共用一套
+  const eraColor = useCallback(
+    (y: string) => (eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'),
+    [eraBoundary],
+  )
+
+  const jumpToYear = useCallback((y: string) => {
+    document.getElementById(`gy-${y}`)?.scrollIntoView({ block: 'start' })
+  }, [])
+
   const openIndex = openId === null ? -1 : visible.findIndex((p) => p.id === openId)
 
   const step = useCallback(
@@ -157,19 +168,30 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
     <>
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
       <ControlDock>
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* 底部对齐：dock 里所有东西——柱子的底线、年份标签、按钮——落在同一条线上。
+            居中对齐时柱状谱会浮在按钮中间，底线跟谁都对不上，看着就是「差一点」。 */}
+        <div className="flex items-end gap-2 sm:gap-3">
           <DragGrip />
-          {/* 年份谱单独横向滚动：年份多起来也不会把控制区挤到下一行、把 dock 撑成一堵墙。
-              touch-auto 抵消 dock 上的 touch-none，否则手机上没法横着拨年份。 */}
-          <div className="no-scrollbar flex shrink-0 touch-auto items-end gap-1.5 overflow-x-auto max-sm:min-w-0 max-sm:max-w-[42vw] max-sm:shrink sm:gap-2">
+          {/* 手机端：横着拨的年份谱在 375px 上只露得出三四年，改成点开的选择面板。 */}
+          <YearPicker
+            spectrum={spectrum}
+            activeYear={activeYear}
+            eraColor={eraColor}
+            open={yearPickerOpen}
+            onOpenChange={setYearPickerOpen}
+            onPick={jumpToYear}
+          />
+
+          {/* 桌面端：年份谱单独横向滚动，年份再多也不会把控制区挤到下一行。 */}
+          <div className="no-scrollbar hidden shrink-0 touch-auto items-end gap-1.5 overflow-x-auto sm:flex sm:gap-2">
           {spectrum.map(({ year: y, count, ratio }) => {
             const isActive = activeYear === y
-            const era = eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'
+            const era = eraColor(y)
             return (
               <button
                 key={y}
                 type="button"
-                onClick={() => document.getElementById(`gy-${y}`)?.scrollIntoView({ block: 'start' })}
+                onClick={() => jumpToYear(y)}
                 title={`${y} 年 · ${count} 张`}
                 aria-label={`跳到 ${y} 年 · ${count} 张`}
                 aria-current={isActive ? 'true' : undefined}
@@ -300,6 +322,105 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
           document.body,
         )}
     </>
+  )
+}
+
+type SpectrumEntry = { year: string; count: number; ratio: number }
+
+/**
+ * 手机端的年份选择：dock 里只留一枚显示当前年份的按钮，点开才铺出全部年份。
+ *
+ * 横着拨的柱状谱在 375px 宽上只露得出三四年，剩下的要靠盲滑找——
+ * 一个知道自己在哪、点一下就能挑的面板比它可用得多。面板里保留柱子（等比长度）
+ * 和张数，「哪年多」这个信息不因为换了形态就丢掉。
+ */
+function YearPicker({
+  spectrum,
+  activeYear,
+  eraColor,
+  open,
+  onOpenChange,
+  onPick,
+}: {
+  spectrum: SpectrumEntry[]
+  activeYear: string | null
+  eraColor: (year: string) => string
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  onPick: (year: string) => void
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const current = activeYear ?? spectrum[0]?.year ?? ''
+
+  useEffect(() => {
+    if (!open) return
+    const onDocPointerDown = (e: PointerEvent) => {
+      if (!ref.current?.contains(e.target as Node)) onOpenChange(false)
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onOpenChange(false)
+    }
+    document.addEventListener('pointerdown', onDocPointerDown)
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('pointerdown', onDocPointerDown)
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [open, onOpenChange])
+
+  if (spectrum.length === 0) return null
+
+  return (
+    <div ref={ref} data-no-drag className="relative shrink-0 sm:hidden">
+      <button
+        type="button"
+        onClick={() => onOpenChange(!open)}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        className="ui-press flex items-center gap-1.5 rounded-full border border-line/80 bg-surface/50 px-3 py-2 font-mono text-meta tnum transition-colors"
+        style={{ color: eraColor(current) }}
+      >
+        {current}
+        <span className="text-faint">▾</span>
+      </button>
+
+      {open && (
+        // dock 停在视口底部，面板只能往上开
+        <div
+          role="menu"
+          className="absolute bottom-full left-0 z-10 mb-2 w-[13.5rem] rounded-xl border border-line bg-surface/95 p-1.5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-md"
+        >
+          {spectrum.map(({ year, count, ratio }) => {
+            const isActive = year === activeYear
+            return (
+              <button
+                key={year}
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  onPick(year)
+                  onOpenChange(false)
+                }}
+                className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left transition-colors ${
+                  isActive ? 'bg-raised' : 'hover:bg-raised/60'
+                }`}
+              >
+                <span className="font-mono text-meta tnum" style={{ color: isActive ? eraColor(year) : undefined }}>
+                  <span className={isActive ? '' : 'text-muted'}>{year}</span>
+                </span>
+                <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-line/70">
+                  <span
+                    className="block h-full rounded-full"
+                    style={{ width: `${Math.max(6, ratio * 100)}%`, background: eraColor(year), opacity: isActive ? 1 : 0.5 }}
+                  />
+                </span>
+                <span className="w-10 shrink-0 text-right font-mono text-meta tnum text-faint">{count} 张</span>
+              </button>
+            )
+          })}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -438,7 +559,7 @@ function DragGrip() {
     <span
       aria-hidden
       title="拖动 · 双击回到默认位置"
-      className="flex shrink-0 flex-col gap-[3px] px-1 opacity-35"
+      className="mb-2.5 flex shrink-0 flex-col gap-[3px] px-1 opacity-35"
     >
       {[0, 1, 2].map((i) => (
         <span key={i} className="flex gap-[3px]">
