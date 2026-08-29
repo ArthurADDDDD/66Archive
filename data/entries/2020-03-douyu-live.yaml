@@ -77,6 +77,24 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-03-05-live-01
+    type: live
+    date: "2020-03-05"
+    title: "聊天"
+    platform: douyu
+    confidence: high
+    duration_min: 185
+    games: []
+    tags: [聊天]
+    note: "女流吧《2020年直播记录》记为‘3.5 聊天’；B 站「秘密录像屋」标题含完整直播日期，3P 合计 3:05:08。"
+    sources:
+      - url: https://www.bilibili.com/video/BV1CE411W7Nk
+        kind: replay
+        parts: 3
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent
+
   - id: 2020-03-06-live-01
     type: live
     date: "2020-03-06"
