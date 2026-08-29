@@ -443,6 +443,23 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-09-21-live-01
+    type: live
+    date: "2020-09-21"
+    title: "唱歌 / 佩奇九月首亮相"
+    platform: douyu
+    confidence: high
+    duration_min: 227
+    games: []
+    tags: [唱歌, 佩奇]
+    note: "女流吧《2020年直播记录》记为‘9.21 唱歌’；B 站「秘密录像屋」完整录播标题含直播日期，时长 3:46:47。"
+    sources:
+      - url: https://www.bilibili.com/video/BV1Wk4y1175c
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent
+
   - id: 2020-09-22-live-01
     type: live
     date: "2020-09-22"

@@ -1,6 +1,6 @@
 # 2015 年 B 站官方「女流66」投稿补录。
 # 这些条目大多为官方实况/试玩/解说视频，非完整直播回放；使用上传日期作为 video 条目日期。
-# 其中明确标题带「直播录像/生放送」的，同时放入 unresolved catalog 作 live candidate。
+# 标题里的「直播录像/生放送」不单独作为直播证据；人工核对片头后确认的预录内容仍按 video 收录。
   - id: 2015-02-02-video-01
     type: video
     date: '2015-02-02'
@@ -54,17 +54,17 @@
     date: '2015-06-20'
     title: "【解密佳作】逃脱方块：四季女流直播录像"
     platform: bilibili
-    confidence: medium
+    confidence: high
     duration_min: 55
     games: [cube-escape-seasons]
     tags: [视频时代]
     sources:
       - url: https://www.bilibili.com/video/BV1Ds411U7gG
-        kind: replay
+        kind: original
         status: alive
-        account: bili-fan-record-house
+        account: bilibili-official
     contributed_by: data-agent
-    note: 标题含「直播录像」，但未给精确直播日期；上传日为 2015-06-20，暂作 video 条目并列入 live candidate，不直接占用直播日。
+    note: 经人工核对片头，含视频时代惯用开场语，确认是预先录制的实况视频，并非直播回放；按 B 站官方上传日 2015-06-20 收录。
   - id: 2015-06-26-video-01
     type: video
     date: '2015-06-26'
@@ -246,14 +246,14 @@
     date: '2015-12-29'
     title: "【女流直播生放送】Rusty Lake生锈小湖Hotel新章实况录像"
     platform: bilibili
-    confidence: medium
+    confidence: high
     duration_min: 122
     games: [rusty-lake]
     tags: [视频时代]
     sources:
       - url: https://www.bilibili.com/video/BV1As411R7Bg
-        kind: replay
+        kind: original
         status: alive
-        account: bili-fan-record-house
+        account: bilibili-official
     contributed_by: data-agent
-    note: 标题含「直播生放送」，但未写精确直播日期；上传日为 2015-12-29，暂作 video 条目并列入 live candidate，不直接占用直播日。
+    note: 经人工核对片头，含视频时代惯用开场语，确认是预先录制的实况视频，并非直播回放；按 B 站官方上传日 2015-12-29 收录。

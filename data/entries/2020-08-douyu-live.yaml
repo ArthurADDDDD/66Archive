@@ -481,6 +481,26 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-08-18-live-01
+    type: live
+    date: "2020-08-18"
+    title: "唱歌"
+    platform: douyu
+    confidence: high
+    duration_min: 251
+    games: []
+    tags: [唱歌]
+    note: "女流吧《2020年直播记录》记为‘8.18 唱歌’；两份 B 站完整录播标题均含直播日期，时长同为 4:10:41。"
+    sources:
+      - url: https://www.bilibili.com/video/BV1Qi4y1g733
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+      - url: https://www.bilibili.com/video/BV1Y54y1U7kV
+        kind: reupload
+        status: alive
+    contributed_by: data-agent
+
   - id: 2020-08-19-live-01
     type: live
     date: '2020-08-19'

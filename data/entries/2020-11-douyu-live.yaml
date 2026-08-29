@@ -712,6 +712,23 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2020-11-25-live-01
+    type: live
+    date: "2020-11-25"
+    title: "恶魔之魂"
+    platform: douyu
+    confidence: high
+    duration_min: 235
+    games: [demons-souls]
+    note: "女流吧《2020年直播记录》记为‘11.25 恶魔之魂重制版’；B 站完整录播标题含直播日期，2P 合计 3:54:59。"
+    sources:
+      - url: https://www.bilibili.com/video/BV1PK4y1776Q
+        kind: replay
+        parts: 2
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent
+
   - id: 2020-11-27-live-01
     type: live
     date: "2020-11-27"
