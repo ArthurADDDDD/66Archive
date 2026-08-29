@@ -1,4 +1,6 @@
-# 画廊清单 —— 由 scripts/gallery-photos-build.ts 生成，不要手改。
+# 画廊清单 —— 由 scripts/gallery-photos-build.ts（新增照片）与后台「画廊管理」
+# （编辑已收录照片的元数据）共同维护。前者只在字段缺失时才写入默认值，
+# 不会覆盖已经确认过的标题/日期/图注/隐藏状态，因此这份文件永远不需要手改。
 # width / height 是 full 版的像素尺寸，布局按它的宽高比排等高行。
 # year / date 为 null 表示还没核实出拍摄年份，前台会归到「年份待定」，不做推测。
 photos:
@@ -15,6 +17,7 @@ photos:
     title: 女流66 直播一周年纪念 2016年1月24日
     caption: 一周年直播纪念（B站超清搬运）。粉丝用《我的世界》搭建黄渤、约会、淘宝店版祝福模型，25万粉参与。
     source: bilibili BV1Rx411S7Ta
+    hidden: false
   - id: anniv_02_1st_2016_fanmade
     src: /gallery/anniv_02_1st_2016_fanmade.jpg
     thumb: /gallery/photos/anniv_02_1st_2016_fanmade.thumb.jpg
@@ -28,6 +31,7 @@ photos:
     title: 女流直播一周年纪念《致女流》粉丝自制
     caption: 一周年粉丝自制纪念视频《致女流》，BGM 陈一发儿《尚好的青春》。
     source: bilibili BV1zs411R7nJ
+    hidden: false
   - id: anniv_03_1st_2016_youku
     src: /gallery/anniv_03_1st_2016_youku.jpg
     thumb: /gallery/photos/anniv_03_1st_2016_youku.thumb.jpg
@@ -41,6 +45,7 @@ photos:
     title: 女流直播一周年纪念 优酷原视频封面
     caption: 一周年优酷原始视频封面。原视频仍存活（v.youku.com/v_show/id_XMTQ1ODg5MzQyOA==.html）。
     source: 优酷 XMTQ1ODg5MzQyOA==
+    hidden: false
   - id: anniv_05_birthday_2016
     src: /gallery/anniv_05_birthday_2016.jpg
     thumb: /gallery/photos/anniv_05_birthday_2016.thumb.jpg
@@ -54,6 +59,7 @@ photos:
     title: 女流66 2016年生日 粉丝祝福视频
     caption: 2016年10月3日生日粉丝祝福视频，粉丝搬运保留。
     source: bilibili BV1xx411n7jQ
+    hidden: false
   - id: 2016-11-17_2201_391314_01
     src: /gallery/photos/2016-11-17_2201_391314_01.jpg
     thumb: /gallery/photos/2016-11-17_2201_391314_01.thumb.jpg
@@ -67,6 +73,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-11-17_2201_391314_02
     src: /gallery/photos/2016-11-17_2201_391314_02.jpg
     thumb: /gallery/photos/2016-11-17_2201_391314_02.thumb.jpg
@@ -80,6 +87,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-11-29_2015_421721_01
     src: /gallery/photos/2016-11-29_2015_421721_01.jpg
     thumb: /gallery/photos/2016-11-29_2015_421721_01.thumb.jpg
@@ -93,6 +101,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-02_1745_671913_01
     src: /gallery/photos/2016-12-02_1745_671913_01.jpg
     thumb: /gallery/photos/2016-12-02_1745_671913_01.thumb.jpg
@@ -106,6 +115,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-13_1500_612406_01
     src: /gallery/photos/2016-12-13_1500_612406_01.jpg
     thumb: /gallery/photos/2016-12-13_1500_612406_01.thumb.jpg
@@ -119,6 +129,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-15_1130_772610_01
     src: /gallery/photos/2016-12-15_1130_772610_01.jpg
     thumb: /gallery/photos/2016-12-15_1130_772610_01.thumb.jpg
@@ -132,6 +143,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-21_2046_324361_01
     src: /gallery/photos/2016-12-21_2046_324361_01.jpg
     thumb: /gallery/photos/2016-12-21_2046_324361_01.thumb.jpg
@@ -145,6 +157,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-22_1530_391805_01
     src: /gallery/photos/2016-12-22_1530_391805_01.jpg
     thumb: /gallery/photos/2016-12-22_1530_391805_01.thumb.jpg
@@ -158,6 +171,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-28_1430_906610_01
     src: /gallery/photos/2016-12-28_1430_906610_01.jpg
     thumb: /gallery/photos/2016-12-28_1430_906610_01.thumb.jpg
@@ -171,6 +185,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-30_1345_076711_01
     src: /gallery/photos/2016-12-30_1345_076711_01.jpg
     thumb: /gallery/photos/2016-12-30_1345_076711_01.thumb.jpg
@@ -184,6 +199,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2016-12-30_2015_100105_01
     src: /gallery/photos/2016-12-30_2015_100105_01.jpg
     thumb: /gallery/photos/2016-12-30_2015_100105_01.thumb.jpg
@@ -197,6 +213,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: anniv_04_debut_2016
     src: /gallery/anniv_04_debut_2016.jpg
     thumb: /gallery/photos/anniv_04_debut_2016.thumb.jpg
@@ -210,6 +227,7 @@ photos:
     title: 女流66 露脸周年纪念 一代女皇六则天
     caption: 早期露脸纪念视频《一代女皇六则天》，女流亲自献唱，粉丝剪辑。
     source: bilibili BV14x411H75G
+    hidden: false
   - id: 2017-01-02_2030_360209_01
     src: /gallery/photos/2017-01-02_2030_360209_01.jpg
     thumb: /gallery/photos/2017-01-02_2030_360209_01.thumb.jpg
@@ -223,6 +241,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-01-08_2246_886804_01
     src: /gallery/photos/2017-01-08_2246_886804_01.jpg
     thumb: /gallery/photos/2017-01-08_2246_886804_01.thumb.jpg
@@ -236,6 +255,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-01-12_1500_204415_01
     src: /gallery/photos/2017-01-12_1500_204415_01.jpg
     thumb: /gallery/photos/2017-01-12_1500_204415_01.thumb.jpg
@@ -249,6 +269,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-01-14_2045_397906_01
     src: /gallery/photos/2017-01-14_2045_397906_01.jpg
     thumb: /gallery/photos/2017-01-14_2045_397906_01.thumb.jpg
@@ -262,6 +283,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-01-22_1846_082005_01
     src: /gallery/photos/2017-01-22_1846_082005_01.jpg
     thumb: /gallery/photos/2017-01-22_1846_082005_01.thumb.jpg
@@ -275,6 +297,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-03-28_1338_679491_01
     src: /gallery/photos/2017-03-28_1338_679491_01.jpg
     thumb: /gallery/photos/2017-03-28_1338_679491_01.thumb.jpg
@@ -288,6 +311,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-07-09_1413_580821_01
     src: /gallery/photos/2017-07-09_1413_580821_01.jpg
     thumb: /gallery/photos/2017-07-09_1413_580821_01.thumb.jpg
@@ -301,6 +325,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-07-11_1158_745522_01
     src: /gallery/photos/2017-07-11_1158_745522_01.jpg
     thumb: /gallery/photos/2017-07-11_1158_745522_01.thumb.jpg
@@ -314,6 +339,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-07-14_1137_003468_01
     src: /gallery/photos/2017-07-14_1137_003468_01.jpg
     thumb: /gallery/photos/2017-07-14_1137_003468_01.thumb.jpg
@@ -327,6 +353,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2017-10-03_0057_963465_01
     src: /gallery/photos/2017-10-03_0057_963465_01.jpg
     thumb: /gallery/photos/2017-10-03_0057_963465_01.thumb.jpg
@@ -340,6 +367,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
     src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.jpg
     thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.thumb.jpg
@@ -353,6 +381,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y
     src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y.jpg
     thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y.thumb.jpg
@@ -366,6 +395,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vm3ph6gj20qo0zkqfd
     src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vm3ph6gj20qo0zkqfd.jpg
     thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vm3ph6gj20qo0zkqfd.thumb.jpg
@@ -379,6 +409,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: anniv_06_3rd_2018_gala
     src: /gallery/anniv_06_3rd_2018_gala.png
     thumb: /gallery/photos/anniv_06_3rd_2018_gala.thumb.jpg
@@ -392,6 +423,7 @@ photos:
     title: 女流66 三周年盛典 2018年1月21日
     caption: 三周年盛典全场录播（高清弹幕版），1300+飞机、冯提莫跨平台送超火、大主播祝福。
     source: bilibili BV1nW411i7sV
+    hidden: false
   - id: anniv_07_3rd_2018_blessing
     src: /gallery/anniv_07_3rd_2018_blessing.png
     thumb: /gallery/photos/anniv_07_3rd_2018_blessing.thumb.jpg
@@ -405,6 +437,7 @@ photos:
     title: 女流66 三周年粉丝祝福特稿
     caption: 三周年粉丝自制祝福特稿，木由叶 & 播音彬制作。
     source: bilibili BV1PW411i7G8
+    hidden: false
   - id: 2018-05-01_1538_160291_03
     src: /gallery/photos/2018-05-01_1538_160291_03.jpg
     thumb: /gallery/photos/2018-05-01_1538_160291_03.thumb.jpg
@@ -418,6 +451,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2018-06-14_1341_954895_01
     src: /gallery/photos/2018-06-14_1341_954895_01.jpg
     thumb: /gallery/photos/2018-06-14_1341_954895_01.thumb.jpg
@@ -431,6 +465,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2018-06-14_1341_954895_03
     src: /gallery/photos/2018-06-14_1341_954895_03.jpg
     thumb: /gallery/photos/2018-06-14_1341_954895_03.thumb.jpg
@@ -444,6 +479,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2018-09-21_1300_506014_02
     src: /gallery/photos/2018-09-21_1300_506014_02.jpg
     thumb: /gallery/photos/2018-09-21_1300_506014_02.thumb.jpg
@@ -457,6 +493,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2018-09-21_1300_506014_04
     src: /gallery/photos/2018-09-21_1300_506014_04.jpg
     thumb: /gallery/photos/2018-09-21_1300_506014_04.thumb.jpg
@@ -470,6 +507,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2018-09-21_1300_506014_06
     src: /gallery/photos/2018-09-21_1300_506014_06.jpg
     thumb: /gallery/photos/2018-09-21_1300_506014_06.thumb.jpg
@@ -483,6 +521,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: anniv_08_carnival_2018
     src: /gallery/anniv_08_carnival_2018.jpg
     thumb: /gallery/photos/anniv_08_carnival_2018.thumb.jpg
@@ -496,6 +535,7 @@ photos:
     title: 女流66 斗鱼嘉年华后台
     caption: 斗鱼嘉年华后台花絮，高清记录。
     source: bilibili BV1tW4113783
+    hidden: false
   - id: anniv_09_duet_2018
     src: /gallery/anniv_09_duet_2018.png
     thumb: /gallery/photos/anniv_09_duet_2018.thumb.jpg
@@ -509,6 +549,7 @@ photos:
     title: 女流66 与表妹豆豆合唱《理想之歌》
     caption: 直播现场与表妹豆豆合唱《理想之歌》，经典时刻。
     source: bilibili BV1WW411M7oq
+    hidden: false
   - id: 2019-03-06_1537_857879_01
     src: /gallery/photos/2019-03-06_1537_857879_01.jpg
     thumb: /gallery/photos/2019-03-06_1537_857879_01.thumb.jpg
@@ -522,6 +563,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2019-08-03_1052_800750_01
     src: /gallery/photos/2019-08-03_1052_800750_01.jpg
     thumb: /gallery/photos/2019-08-03_1052_800750_01.thumb.jpg
@@ -535,6 +577,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20190926234345_6fd3e1b7ly1fk4dys0kuxj20j50sctdt
     src: /gallery/photos/20190926234345_6fd3e1b7ly1fk4dys0kuxj20j50sctdt.jpg
     thumb: /gallery/photos/20190926234345_6fd3e1b7ly1fk4dys0kuxj20j50sctdt.thumb.jpg
@@ -548,6 +591,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: anniv_10_5th_2020
     src: /gallery/anniv_10_5th_2020.jpg
     thumb: /gallery/photos/anniv_10_5th_2020.thumb.jpg
@@ -561,6 +605,7 @@ photos:
     title: 女流66 与YJJ观看五周年祝福视频
     caption: 五周年祝福视频 reaction，女流与 YJJ 同框观看粉丝祝福。
     source: bilibili BV1sq4y1L7sa
+    hidden: false
   - id: 2020-12-29_0916_204563_01
     src: /gallery/photos/2020-12-29_0916_204563_01.jpg
     thumb: /gallery/photos/2020-12-29_0916_204563_01.thumb.jpg
@@ -574,6 +619,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20220124110210_0022Ya6rly1gyllg2qn86j60sn0c4wg902
     src: /gallery/photos/20220124110210_0022Ya6rly1gyllg2qn86j60sn0c4wg902.jpg
     thumb: /gallery/photos/20220124110210_0022Ya6rly1gyllg2qn86j60sn0c4wg902.thumb.jpg
@@ -587,6 +633,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: anniv_11_7th_2022
     src: /gallery/anniv_11_7th_2022.jpg
     thumb: /gallery/photos/anniv_11_7th_2022.thumb.jpg
@@ -600,6 +647,7 @@ photos:
     title: 女流66 七周年纪念
     caption: 七周年纪念视频：沿海见证了我的直播生涯。2023年12月停播前倒数第二个周年。
     source: bilibili BV1Xq4y1k7AU
+    hidden: false
   - id: 2022-03-24_1721_113672_01
     src: /gallery/photos/2022-03-24_1721_113672_01.jpg
     thumb: /gallery/photos/2022-03-24_1721_113672_01.thumb.jpg
@@ -613,6 +661,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2022-03-31_1357_706249_01
     src: /gallery/photos/2022-03-31_1357_706249_01.jpg
     thumb: /gallery/photos/2022-03-31_1357_706249_01.thumb.jpg
@@ -626,6 +675,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2022-04-08_1527_402868_01
     src: /gallery/photos/2022-04-08_1527_402868_01.jpg
     thumb: /gallery/photos/2022-04-08_1527_402868_01.thumb.jpg
@@ -639,6 +689,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 2022-04-08_1527_402868_02
     src: /gallery/photos/2022-04-08_1527_402868_02.jpg
     thumb: /gallery/photos/2022-04-08_1527_402868_02.thumb.jpg
@@ -652,6 +703,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02
     src: /gallery/photos/20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02.thumb.jpg
@@ -665,6 +717,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hlyxc2by0dj623u35skjl02
     src: /gallery/photos/20240121135816_0022Ya6rly1hlyxc2by0dj623u35skjl02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hlyxc2by0dj623u35skjl02.thumb.jpg
@@ -678,6 +731,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hm05kq8n7bj623u35sx6p02
     src: /gallery/photos/20240121135816_0022Ya6rly1hm05kq8n7bj623u35sx6p02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hm05kq8n7bj623u35sx6p02.thumb.jpg
@@ -691,6 +745,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hm05kqydb7j61oz26a4qp02
     src: /gallery/photos/20240121135816_0022Ya6rly1hm05kqydb7j61oz26a4qp02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hm05kqydb7j61oz26a4qp02.thumb.jpg
@@ -704,6 +759,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hm05krny7aj61ma27o7wh02
     src: /gallery/photos/20240121135816_0022Ya6rly1hm05krny7aj61ma27o7wh02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hm05krny7aj61ma27o7wh02.thumb.jpg
@@ -717,6 +773,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02
     src: /gallery/photos/20241031044106_0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02.thumb.jpg
@@ -730,6 +787,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1hu9jvo6rcij60u01hcwvv02
     src: /gallery/photos/20241031044106_0022Ya6rly1hu9jvo6rcij60u01hcwvv02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1hu9jvo6rcij60u01hcwvv02.thumb.jpg
@@ -743,6 +801,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02
     src: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.thumb.jpg
@@ -756,6 +815,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1hukx1c92v7j60u01hcnaz02
     src: /gallery/photos/20241031044106_0022Ya6rly1hukx1c92v7j60u01hcnaz02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1hukx1c92v7j60u01hcnaz02.thumb.jpg
@@ -769,6 +829,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1huu4h9xm22j610o1sm13202
     src: /gallery/photos/20241031044106_0022Ya6rly1huu4h9xm22j610o1sm13202.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1huu4h9xm22j610o1sm13202.thumb.jpg
@@ -782,6 +843,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1huyh881bv0j60u01hck5h02
     src: /gallery/photos/20241031044106_0022Ya6rly1huyh881bv0j60u01hck5h02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1huyh881bv0j60u01hck5h02.thumb.jpg
@@ -795,6 +857,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20241031044106_0022Ya6rly1hv4q3ymgt5j60jx0iemxv02
     src: /gallery/photos/20241031044106_0022Ya6rly1hv4q3ymgt5j60jx0iemxv02.jpg
     thumb: /gallery/photos/20241031044106_0022Ya6rly1hv4q3ymgt5j60jx0iemxv02.thumb.jpg
@@ -808,6 +871,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02
     src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.jpg
     thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.thumb.jpg
@@ -821,6 +885,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02
     src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.jpg
     thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.thumb.jpg
@@ -834,6 +899,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02
     src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.jpg
     thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.thumb.jpg
@@ -847,6 +913,7 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
   - id: 20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh
     src: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.jpg
     thumb: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.thumb.jpg
@@ -860,3 +927,4 @@ photos:
     title: null
     caption: null
     source: null
+    hidden: false
