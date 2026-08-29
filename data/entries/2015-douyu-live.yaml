@@ -173,11 +173,11 @@
   - id: 2015-04-29-live-01
     type: live
     date: '2015-04-29'
-    title: 背部直播
+    title: "背部直播（游戏名：FEZ 菲斯）"
     platform: douyu
     confidence: high
     duration_min: 93
-    games: [fez]
+    games: []
     sources:
       - url: https://www.bilibili.com/video/BV1Mo4y1h7Jn
         kind: replay
@@ -212,7 +212,7 @@
   - id: 2015-06-30-live-01
     type: live
     date: '2015-06-30'
-    title: 女流考古 15年初入斗鱼直播的女流
+    title: "直播标题已遗失（游戏名称:Gone home 到家）"
     platform: douyu
     confidence: high
     duration_min: 80
