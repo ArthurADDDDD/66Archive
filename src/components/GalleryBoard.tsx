@@ -169,7 +169,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   return (
     <>
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
-      <ControlDock stopRef={boardOuterRef}>
+      <ControlDock stopRef={boardOuterRef} alignRef={boardRef}>
         {/* 底部对齐：dock 里所有东西——柱子的底线、年份标签、按钮——落在同一条线上。
             居中对齐时柱状谱会浮在按钮中间，底线跟谁都对不上，看着就是「差一点」。 */}
         <div className="flex items-end gap-2 sm:gap-3">
@@ -442,7 +442,17 @@ const DOCK_BOTTOM = 20
  */
 const subscribeNoop = () => () => {}
 
-function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef: React.RefObject<HTMLElement | null> }) {
+function ControlDock({
+  children,
+  stopRef,
+  alignRef,
+}: {
+  children: React.ReactNode
+  /** 停靠边界：滚过它的底边，dock 就钉在那儿不再跟着视口 */
+  stopRef: React.RefObject<HTMLElement | null>
+  /** 左对齐基准：图墙的内容区（不含手机端的贴边内边距） */
+  alignRef: React.RefObject<HTMLElement | null>
+}) {
   // dock 必须挂到 body 上：页面容器带入场 transform，会成为 fixed 的包含块，
   // 留在原地的话「浮在视口底部」会变成「浮在文档某个位置」，滚两屏就不见了。
   const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false)
@@ -451,6 +461,8 @@ function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef
   const [dragging, setDragging] = useState(false)
   // 停靠位置（文档坐标）。null = 还在跟着视口底边走。
   const [parkedTop, setParkedTop] = useState<number | null>(null)
+  // 默认横向位置：对齐图墙左边缘。null = 还没量到，先居中兜底。
+  const [defaultLeft, setDefaultLeft] = useState<number | null>(null)
   const offset = useRef<{ dx: number; dy: number } | null>(null)
 
   const clampToViewport = useCallback((x: number, y: number) => {
@@ -499,10 +511,16 @@ function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef
       const stop = stopRef.current
       if (!node || !stop) return
       const height = node.offsetHeight
-      const stopBottomDoc = stop.getBoundingClientRect().bottom + window.scrollY
+      const stopRect = stop.getBoundingClientRect()
+      const stopBottomDoc = stopRect.bottom + window.scrollY
       const parked = stopBottomDoc - DOCK_BOTTOM - height
       const followingViewport = window.scrollY + window.innerHeight - DOCK_BOTTOM - height
       setParkedTop(followingViewport > parked ? parked : null)
+      // 左对齐图墙：正中间是「没想好放哪」的位置，跟版面上任何一条边都对不上。
+      // dock 比图墙还宽时（窄屏）往回收，别顶出右边缘。
+      const maxLeft = Math.max(DOCK_MARGIN, window.innerWidth - node.offsetWidth - DOCK_MARGIN)
+      const alignLeft = alignRef.current?.getBoundingClientRect().left ?? stopRect.left
+      setDefaultLeft(Math.min(Math.max(DOCK_MARGIN, alignLeft), maxLeft))
     }
     const raf = requestAnimationFrame(update)
     window.addEventListener('scroll', update, { passive: true })
@@ -512,7 +530,7 @@ function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
     }
-  }, [pos, stopRef])
+  }, [pos, stopRef, alignRef])
 
   // 窗口变小后不能让 dock 留在视口外面
   useEffect(() => {
@@ -566,11 +584,15 @@ function ControlDock({ children, stopRef }: { children: React.ReactNode; stopRef
     }
   }
 
+  // 还没量到图墙位置的那一帧先居中兜底，量到之后一律左对齐
+  const horizontal: React.CSSProperties =
+    defaultLeft !== null ? { left: defaultLeft } : { left: '50%', transform: 'translateX(-50%)' }
+
   const placement: React.CSSProperties = pos
     ? { position: 'fixed', left: pos.x, top: pos.y }
     : parkedTop !== null
-      ? { position: 'absolute', left: '50%', top: parkedTop, transform: 'translateX(-50%)' }
-      : { position: 'fixed', left: '50%', bottom: DOCK_BOTTOM, transform: 'translateX(-50%)' }
+      ? { position: 'absolute', top: parkedTop, ...horizontal }
+      : { position: 'fixed', bottom: DOCK_BOTTOM, ...horizontal }
 
   if (!mounted) return null
 
