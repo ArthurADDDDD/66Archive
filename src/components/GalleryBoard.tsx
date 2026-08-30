@@ -44,13 +44,16 @@ function clamp(min: number, v: number, max: number) {
  * 收行时反解出这一行的高度 —— (容器宽 - 间距) / 这一行宽高比之和。
  * 于是同一行里每张图高度一致、整行正好铺满，而每张都保持真实比例，一刀不裁。
  *
- * 尾行不拉伸，按目标高度停住：几张图被撑成一整排巨图比留白难看得多。
+ * 尾行不拉伸，按目标高度原样停住，`stretched: false`——渲染时据此关掉 flex-grow，
+ * 否则浏览器仍会把这几张图在宽度上撑满整行，行高却没跟着放大到匹配的比例，
+ * 于是每张图的渲染框宽高比偏离原图，object-cover 只能拿裁切去填这个偏差。
+ * 空出来的一角留白，好过每张图都被莫名其妙切一刀。
  *
- * 宽度不写死像素，交给 flex-grow 按宽高比分配 —— 亚像素误差由浏览器吸收，
- * 不会出现四舍五入攒出来的一条缝。
+ * 宽度不写死像素，交给 flex-grow 按宽高比分配（仅限已铺满的行）——
+ * 亚像素误差由浏览器吸收，不会出现四舍五入攒出来的一条缝。
  */
 function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) {
-  const rows: { photos: GalleryPhoto[]; height: number }[] = []
+  const rows: { photos: GalleryPhoto[]; height: number; stretched: boolean }[] = []
   let line: GalleryPhoto[] = []
   let arSum = 0
 
@@ -60,12 +63,12 @@ function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) 
     arSum += ar
     const width = arSum * targetH + GAP * (line.length - 1)
     if (width >= containerW) {
-      rows.push({ photos: line, height: (containerW - GAP * (line.length - 1)) / arSum })
+      rows.push({ photos: line, height: (containerW - GAP * (line.length - 1)) / arSum, stretched: true })
       line = []
       arSum = 0
     }
   }
-  if (line.length > 0) rows.push({ photos: line, height: targetH })
+  if (line.length > 0) rows.push({ photos: line, height: targetH, stretched: false })
   return rows
 }
 
@@ -309,7 +312,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
                 {buildRows(list, boardW, DENSITY[density].targetH(boardW)).map((row, i) => (
                   <div key={i} className="flex" style={{ gap: GAP, height: row.height }}>
                     {row.photos.map((p) => (
-                      <PhotoCell key={p.id} photo={p} onOpen={() => setOpenId(p.id)} />
+                      <PhotoCell key={p.id} photo={p} rowHeight={row.height} stretched={row.stretched} onOpen={() => setOpenId(p.id)} />
                     ))}
                   </div>
                 ))}
@@ -331,7 +334,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
       {openIndex >= 0 &&
         typeof document !== 'undefined' &&
         createPortal(
-          <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} onClose={() => setOpenId(null)} onStep={step} />,
+          <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} visible={visible} onClose={() => setOpenId(null)} onStep={step} />,
           document.body,
         )}
     </>
@@ -682,15 +685,36 @@ function photoAlt(photo: GalleryPhoto) {
   return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
 }
 
-function PhotoCell({ photo, uniform = false, onOpen }: { photo: GalleryPhoto; uniform?: boolean; onOpen: () => void }) {
+function PhotoCell({
+  photo,
+  uniform = false,
+  rowHeight,
+  stretched = true,
+  onOpen,
+}: {
+  photo: GalleryPhoto
+  uniform?: boolean
+  /** natural 模式下这一行的高度；未铺满的行据此算出每张图自己的真实宽度，不交给 flex-grow 撑。 */
+  rowHeight?: number
+  /** 这一行是否铺满了容器宽度。false 时关掉 flex-grow——见 buildRows 顶部注释。 */
+  stretched?: boolean
+  onOpen: () => void
+}) {
   const ar = photo.width / photo.height
+  const naturalStyle: React.CSSProperties | undefined = uniform
+    ? undefined
+    : stretched
+      ? { flex: `${ar} 1 0` }
+      // 未铺满的行：宽度按真实宽高比 × 行高算死，不参与 flex-grow 分配剩余空间，
+      // 行末留白，好过把这几张图硬撑满整行宽度、挤出裁切。
+      : { flex: '0 0 auto', width: rowHeight ? rowHeight * ar : undefined }
   return (
     <button
       type="button"
       onClick={onOpen}
       aria-label={`打开大图：${photoAlt(photo)}`}
       className="group relative block h-full min-w-0 overflow-hidden rounded-[3px] bg-raised outline-none"
-      style={uniform ? undefined : { flex: `${ar} 1 0` }}
+      style={naturalStyle}
     >
       <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
         {/* 列表一律用 thumb：一屏几十张，用大图等于把带宽烧在 200px 高的格子上 */}
@@ -718,16 +742,37 @@ function Lightbox({
   photo,
   index,
   total,
+  visible,
   onClose,
   onStep,
 }: {
   photo: GalleryPhoto
   index: number
   total: number
+  /** 当前可见的完整列表，只用来预取左右邻居的大图，不参与渲染。 */
+  visible: GalleryPhoto[]
   onClose: () => void
   onStep: (delta: number) => void
 }) {
   const closeRef = useRef<HTMLButtonElement>(null)
+
+  // 预取左右各两张的大图：切换时如果还要等网络请求，方向键连按会明显卡顿。
+  // 提前把邻居的大图丢进浏览器缓存，onStep 换下一张时基本是本地命中。
+  useEffect(() => {
+    if (visible.length === 0) return
+    const neighbors = [-2, -1, 1, 2].map((delta) => visible[(index + delta + visible.length) % visible.length])
+    const images = neighbors.map((p) => {
+      const img = new Image()
+      img.src = p.src
+      return img
+    })
+    return () => {
+      // 卸载不该继续吃带宽——把 src 清掉，浏览器会中止还没完成的请求。
+      images.forEach((img) => {
+        img.src = ''
+      })
+    }
+  }, [index, visible])
 
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null
@@ -756,8 +801,16 @@ function Lightbox({
     <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-label={photoAlt(photo)}>
       <button aria-label="关闭" onClick={onClose} className="absolute inset-0 bg-base/94 backdrop-blur-md" />
 
-      {/* 大图独占版面，说明只留一条底栏——竖图在侧栏式灯箱里会被挤得很小。 */}
-      <div className="ui-backdrop-in relative flex min-h-0 flex-1 items-center justify-center p-4 sm:p-10">
+      {/* 大图独占版面，说明只留一条底栏——竖图在侧栏式灯箱里会被挤得很小。
+          点击图片本身以外的任何地方都要能关闭，不能只靠 Esc：这一整块本来看着像空白背景，
+          但它是不透明的 div，盖在最外层那个全屏关闭按钮上面，点了没反应。
+          用 target === currentTarget 判断「点的是这层本身，不是里面的图或按钮」。 */}
+      <div
+        className="ui-backdrop-in relative flex min-h-0 flex-1 items-center justify-center p-4 sm:p-10"
+        onClick={(e) => {
+          if (e.target === e.currentTarget) onClose()
+        }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。 */}
         <img
