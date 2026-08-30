@@ -96,6 +96,14 @@ export const Source = z.object({
   url: z.string().url(),
   /** 这个来源自己的投稿封面；不同来源不得借用条目级封面冒充。 */
   cover: z.string().url().optional(),
+  /**
+   * 这个来源没有自己的 cover，且平台按视频整体返回的封面不代表这一条目实际内容——
+   * 常见于「过往精彩录像补投」这类把好几个月、好几个真实直播日剪进同一个视频/分 P 的合集：
+   * 平台封面 API 只返回整条视频的封面，可能来自其中某一天，与当前条目的真实日期无关
+   * （例如封面拍到后期已经露脸，但这条目对应的是早期不露脸的那一天）。
+   * 设为 true 后，展示层不应该再用平台接口动态拉取封面兜底，应直接留空或用中性占位。
+   */
+  cover_unreliable: z.boolean().optional(),
   account: idStr.optional(),
   kind: z.enum(['original', 'replay', 'clip', 'reupload']),
   parts: z.number().int().positive().optional(),
