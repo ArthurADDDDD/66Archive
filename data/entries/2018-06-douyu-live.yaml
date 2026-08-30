@@ -206,7 +206,7 @@
   - id: 2018-06-11-live-01
     type: live
     date: "2018-06-11"
-    title: "聊天"
+    title: "E3之行，倒倒时差聊聊天"
     platform: douyu
     confidence: high
     duration_min: 81
@@ -223,6 +223,7 @@
         parts: 1
         status: alive
     contributed_by: data-agent
+    note: "原泛化标题「聊天」已恢复为录像原题；结合 06-09 国内直播与 06-12 E3 现场录像，本场为赴美倒时差场次。"
 
   - id: 2018-06-12-live-01
     type: live
