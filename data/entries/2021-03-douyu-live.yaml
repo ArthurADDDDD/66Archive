@@ -386,7 +386,7 @@
     title: "雀魂"
     platform: douyu
     confidence: high
-    duration_min: 68
+    duration_min: 225
     cover: "https://tx-free-imgs.acfun.cn/o_1f0lvemp91sjiporndb1i561ilo0.jpeg?imageslim"
     games: [majsoul]
     segments:
@@ -397,6 +397,7 @@
     sources:
       - url: https://www.bilibili.com/video/BV1c64y1D7As
         kind: replay
+        parts: 6
         status: alive
         account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac26761234"
@@ -404,6 +405,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
+    note: "原记录只按前 2P（68 分钟）登记；B 站源实为 6P 完整版，全长 225 分钟（13506 秒），已订正。"
 
   - id: 2021-03-14-live-01
     type: live
