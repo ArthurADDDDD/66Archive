@@ -577,6 +577,7 @@
     platform: douyu
     confidence: high
     duration_min: 120
+    cover: "https://sta-op.douyucdn.cn/vod-cover/2022/06/16/28f870d688d48fb9eedcb9f41cba5349.png"
     sources:
       - url: https://v.douyu.com/show/X3JzMakExdYvPQro
         kind: replay
@@ -591,6 +592,7 @@
     platform: douyu
     confidence: high
     duration_min: 300
+    cover: "https://sta-op.douyucdn.cn/vod-cover/2022/06/24/6b087286f489eb49e85ff77efdb5bd98.png"
     sources:
       - url: https://v.douyu.com/show/1LDR7QlQwKrvJzx8
         kind: replay
@@ -605,6 +607,7 @@
     platform: douyu
     confidence: high
     duration_min: 274
+    cover: "https://sta-op.douyucdn.cn/vod-cover/2022/06/25/45de9136b82cf3834dd3b9fff509cb3c.png"
     sources:
       - url: https://v.douyu.com/show/JmbBMklJQO9W40XA
         kind: replay
