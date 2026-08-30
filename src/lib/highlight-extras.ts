@@ -47,10 +47,10 @@ export const EXTRA_HIGHLIGHTS: ResolvedBeat[] = [
     kicker: '砒霜名场面',
     title: '感谢大自然的馈赠',
     body: '「感谢大自然的馈赠。」',
-    href: 'https://m.acfun.cn/v/?ac=35552495',
+    href: 'https://www.bilibili.com/video/BV14S4y1n73w?t=12323',
     external: true,
     cover: null,
-    emphasis: '01:22:48',
+    emphasis: '03:25:23',
     category: 'xinling-pishuang',
   },
   {

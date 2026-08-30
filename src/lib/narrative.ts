@@ -757,7 +757,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '周年作品',
         title: '010陈周年作品',
-        target: { kind: 'href', href: 'https://www.acfun.cn/v/ac4204297' },
+        target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1PW411i7hW' },
       },
       {
         id: 'carnival-2018',
@@ -862,8 +862,8 @@ export const STORY_ACTS: Act[] = [
         kicker: '四周年 · 7P 合集',
         title: '《四周年各部视频合集》',
         body: '完整合集实际分为 7P：北京部、搞事部、海外部（2P）、010、女皇密令、众人眼中的石66。搞事部公开祝福画面里能确认赛文柒Seven、YJJ、PIGFF、钱小佳、菠萝赛东、刘飞儿、小缘、PC冷冷、纳豆；010 单元是《达拉崩吧 Live 四周年版》。',
-        cover: 'https://tx-free-imgs.acfun.cn/Fp_PxgXItrwOToTDstcp1f-V72hT?imageslim',
-        target: { kind: 'href', href: 'https://www.acfun.cn/v/ac4885083' },
+        cover: 'https://i0.hdslb.com/bfs/archive/89b20810aceea05be4edcee7af50e5d46ab30c79.png',
+        target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1Ft411h78L' },
       },
       {
         id: 'nasdaq',
