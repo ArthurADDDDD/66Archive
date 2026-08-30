@@ -341,6 +341,30 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2016-09-23-live-01
+    type: live
+    date: "2016-09-23"
+    title: "直播标题已遗失"
+    platform: douyu
+    confidence: high
+    duration_min: 31
+    games: []
+    sources:
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=78"
+        kind: replay
+        parts: 2
+        status: alive
+        account: bili-fan-warehouser
+        part_details:
+          - page: 78
+            title: "2016-09-23^05-46-49"
+            duration_sec: 1556
+          - page: 79
+            title: "2016-09-23^06-13-04"
+            duration_sec: 297
+    contributed_by: maintainer
+    note: "维护者人工复核 B站「仓储员」合集 BV1qt411c7xR 的 P78/P79，均确认是女流本人；两段文件名分别为 2016-09-23^05-46-49、2016-09-23^06-13-04，时长 25:56 + 04:57 = 30:53，属于同一个直播日期。合集上传时间 2019-07-31 仅为投稿日期，不作为直播日期。duration_min 按 30:53 记为 31 分钟，分 P 精确时长保存在 part_details。"
+
   - id: 2016-09-24-live-01
     type: live
     date: "2016-09-24"
