@@ -844,6 +844,22 @@
         account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2016-07-09-live-01
+    type: live
+    date: "2016-07-09"
+    title: "周六日常"
+    platform: douyu
+    confidence: high
+    duration_min: 42
+    games: []
+    sources:
+      - url: "https://www.bilibili.com/video/BV1Ls411y78J"
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+    contributed_by: data-agent
+    note: "B站「女流录像小屋」全量投稿扫描补入，页面时长 42:27。"
+
   - id: 2016-07-10-live-01
     type: live
     date: "2016-07-10"
