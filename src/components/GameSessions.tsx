@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
+import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
 import { EntryTimeline } from './EntryTimeline'
+import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 
 /**
@@ -18,6 +20,9 @@ export function GameSessions({ entries, color = '#E0A244' }: { entries: Timeline
   // getGameProfile 交出来的是降序（最近一场在前）
   const visible = useMemo(() => applyEntryFilter(entries, year, order, 'desc'), [entries, year, order])
 
+  const { view, setView, compact } = useEntryView()
+  // 网格一次只展开一条；列表沿用「默认全开、逐条收合」的对照读法。
+  const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set(entries.map((entry) => entry.id)))
   const allExpanded = visible.length > 0 && visible.every((entry) => expanded.has(entry.id))
   const expandAll = () => setExpanded(new Set([...expanded, ...visible.map((entry) => entry.id)]))
@@ -58,6 +63,8 @@ export function GameSessions({ entries, color = '#E0A244' }: { entries: Timeline
         <div className="flex flex-wrap items-center gap-2">
           <ClearYearButton />
           <OrderToggle />
+          <EntryViewToggle view={view} setView={setView} compact={compact} />
+          {view === 'list' && (
           <button
             type="button"
             onClick={allExpanded ? collapseAll : expandAll}
@@ -70,10 +77,20 @@ export function GameSessions({ entries, color = '#E0A244' }: { entries: Timeline
           >
             {allExpanded ? '全部折叠' : '全部展开'}
           </button>
+          )}
         </div>
       </div>
 
-      {visible.length > 10 ? (
+      {view === 'grid' ? (
+        <div className="mt-6 w-full">
+          <EntryGrid
+            entries={visible}
+            expandedId={gridExpandedId}
+            onToggle={(id) => setGridExpandedId(gridExpandedId === id ? null : id)}
+            showFullDate
+          />
+        </div>
+      ) : visible.length > 10 ? (
         <div className="mt-6 w-full">
           {/* key 让筛选/换序后时间轴从头量一遍，不留上一份的游标位置 */}
           <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} renderEntry={row} />

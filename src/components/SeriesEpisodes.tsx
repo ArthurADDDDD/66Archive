@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
+import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
 import { EntryTimeline } from './EntryTimeline'
+import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 
 /**
@@ -27,6 +29,9 @@ export function SeriesEpisodes({
   unit?: string
 }) {
   const { year, order } = useEntryFilter()
+  const { view, setView, compact } = useEntryView()
+  // 网格一次只展开一条：整行插入的详情面板很高，同时开两块就没法对照了。
+  const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   // buildSeries 交出来的是升序（第一期在前）
@@ -65,6 +70,8 @@ export function SeriesEpisodes({
         <div className="flex flex-wrap items-center gap-2">
           <ClearYearButton />
           <OrderToggle />
+          <EntryViewToggle view={view} setView={setView} compact={compact} />
+          {view === 'list' && (
           <button
             type="button"
             onClick={allExpanded ? collapseAll : expandAll}
@@ -78,10 +85,20 @@ export function SeriesEpisodes({
           >
             {allExpanded ? '全部折叠' : '全部展开'}
           </button>
+          )}
         </div>
       </div>
 
-      {visible.length > 10 ? (
+      {view === 'grid' ? (
+        <div className="mt-4 w-full">
+          <EntryGrid
+            entries={visible}
+            expandedId={gridExpandedId}
+            onToggle={(id) => setGridExpandedId(gridExpandedId === id ? null : id)}
+            showFullDate
+          />
+        </div>
+      ) : visible.length > 10 ? (
         <div className="mt-4 w-full">
           {/* key 让筛选/换序后时间轴从头量一遍，不留上一份的游标位置 */}
           <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} renderEntry={row} />

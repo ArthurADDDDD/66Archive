@@ -3,7 +3,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { MONTH_CN } from '@/lib/ui'
+import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
+import { applyTagSelection, EMPTY_TAG_SELECTION, EntryTagFilter, hasTagSelection, type EntryTagSelection } from './EntryTagFilter'
+import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
 import { SearchField } from './SearchField'
 import { SiteNav } from './SiteNav'
@@ -99,8 +102,14 @@ export function Timeline({
   const [activeMonth, setActiveMonth] = useState<number | null>(null)
   // 展开状态改成集合：档案是用来对照着查的，逐条互斥地开合每次只能看见一条。
   const [expanded, setExpanded] = useState<Set<string>>(() => new Set())
-  const [order, setOrder] = useState<'desc' | 'asc'>('desc')
+  // 默认旧→新：点进某个月，最上面应该是那个月的第一场，顺着往下读就是那段时间发生的顺序。
+  const [order, setOrder] = useState<'desc' | 'asc'>('asc')
   const [sheetOpen, setSheetOpen] = useState(false)
+  // 月内的游戏 / 标签筛选。只作用于当前这一批条目，换年换月即清空，不写进 URL，也不碰全局筛选。
+  const [tagSelection, setTagSelection] = useState<EntryTagSelection>(EMPTY_TAG_SELECTION)
+  // 网格视图一次只展开一条：整行插入的详情面板很高，同时开两块就没法对照了。
+  const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
+  const { view, setView, compact } = useEntryView()
   const searchRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
   const monthArchiveRef = useRef<HTMLElement>(null)
@@ -161,6 +170,9 @@ export function Timeline({
   }, [filters, latestYear])
 
   const set = useCallback((patch: Partial<Filters>) => {
+    // 范围一变，挂在旧范围上的月内标签筛选就没有意义了——清掉，别让上一批的标签压着新结果。
+    setTagSelection(EMPTY_TAG_SELECTION)
+    setGridExpandedId(null)
     setFilters((prev) => {
       const next = { ...prev, ...patch }
       writeUrl(next, activeYear, activeMonth)
@@ -174,6 +186,8 @@ export function Timeline({
     setActiveMonth(null)
     setFilters(nextFilters)
     setExpanded(new Set())
+    setTagSelection(EMPTY_TAG_SELECTION)
+    setGridExpandedId(null)
     writeUrl(nextFilters, year, null)
     // 手机端年度卡与月份索引相隔较远：选完年份后直接把月份送到视线里。
     if (window.matchMedia('(max-width: 639px)').matches) {
@@ -189,6 +203,8 @@ export function Timeline({
   const selectMonth = useCallback((month: number | null) => {
     setActiveMonth(month)
     setExpanded(new Set())
+    setTagSelection(EMPTY_TAG_SELECTION)
+    setGridExpandedId(null)
     writeUrl(filters, activeYear, month)
   }, [activeYear, filters, writeUrl])
 
@@ -329,13 +345,16 @@ export function Timeline({
 
   const dirtyCount = filters.platforms.length + filters.types.length + filters.games.length + Number(filters.onlyAlive)
   const searchLimit = 300
-  // 默认新→旧（档案的习惯读法）；想按时间顺序读完一段的人可以翻过来。
+  // visible 是当前范围（这一月 / 这次搜索）；标签筛选只在这个范围里再切一刀。
+  const listed = useMemo(() => applyTagSelection(visible, tagSelection), [tagSelection, visible])
+  // 默认旧→新，顺着时间往下读；想倒着翻的人一键切回来。
   const ordered = useMemo(() => {
-    const list = [...visible]
+    const list = [...listed]
     list.sort((a, b) => (order === 'desc' ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date)))
     return list
-  }, [order, visible])
+  }, [listed, order])
   const rendered = searching ? ordered.slice(0, searchLimit) : ordered
+  const gridExpandedEntry = gridExpandedId !== null && rendered.some((entry) => entry.id === gridExpandedId) ? gridExpandedId : null
   const allExpanded = rendered.length > 0 && rendered.every((entry) => expanded.has(entry.id))
   const toggleEntry = (id: string) => {
     setExpanded((current) => {
@@ -559,14 +578,29 @@ export function Timeline({
 
               {(searching || activeMonth !== null) && (
                 <div ref={listRef} className={searching ? '' : 'mt-10 scroll-mt-24 border-t border-line pt-6'}>
-                  <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+                  {/* 先看这一批里都有什么，再决定看哪几条——所以标签条排在条目列表前面。 */}
+                  <EntryTagFilter
+                    entries={visible}
+                    selection={tagSelection}
+                    onChange={(next) => {
+                      setTagSelection(next)
+                      setGridExpandedId(null)
+                    }}
+                    color={activeEra.color}
+                    matched={listed.length}
+                    title={searching ? '这批结果里都有什么' : '这个月都在播什么'}
+                  />
+
+                  <div className="mb-4 mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
                     <h3 className="text-h3 font-semibold tracking-tight text-ink">
                       {searching ? '搜索结果' : `${activeYear} 年 ${MONTH_CN[activeMonth! - 1]}`}
                       <span className="ml-3 text-meta font-normal text-faint tnum">
-                        <span className="font-mono text-[0.9375rem] font-semibold text-ink">{visible.length.toLocaleString()}</span> 条
+                        <span className="font-mono text-[0.9375rem] font-semibold text-ink">{listed.length.toLocaleString()}</span> 条
+                        {hasTagSelection(tagSelection) && <span className="text-faint">（共 {visible.length.toLocaleString()} 条）</span>}
                       </span>
                     </h3>
                     <div className="flex flex-wrap items-center gap-2">
+                      <EntryViewToggle view={view} setView={setView} compact={compact} />
                       {/* 排序：图标即状态，不再写「日期 新 → 旧」这行字——按钮本身够小够勤，不需要一直挂着文案。 */}
                       <button
                         type="button"
@@ -577,21 +611,47 @@ export function Timeline({
                       >
                         <span aria-hidden className="font-mono text-[0.9375rem]">{order === 'desc' ? '↓' : '↑'}</span>
                       </button>
-                      <button
-                        type="button"
-                        onClick={() => setExpanded(allExpanded ? new Set() : new Set(rendered.map((entry) => entry.id)))}
-                        aria-expanded={allExpanded}
-                        className={`ui-press rounded-full border px-4 py-2 text-meta transition-colors sm:px-3 sm:py-1.5 ${
-                          allExpanded
-                            ? 'border-line text-muted hover:border-muted hover:text-ink'
-                            : 'border-live/50 bg-live/5 text-live hover:border-live hover:bg-live/10'
-                        }`}
-                      >
-                        {allExpanded ? '全部折叠' : '全部展开'}
-                      </button>
+                      {/* 网格视图一次只开一条，「全部展开」在那边没有对应动作，所以只在列表视图出现。 */}
+                      {view === 'list' && (
+                        <button
+                          type="button"
+                          onClick={() => setExpanded(allExpanded ? new Set() : new Set(rendered.map((entry) => entry.id)))}
+                          aria-expanded={allExpanded}
+                          className={`ui-press rounded-full border px-4 py-2 text-meta transition-colors sm:px-3 sm:py-1.5 ${
+                            allExpanded
+                              ? 'border-line text-muted hover:border-muted hover:text-ink'
+                              : 'border-live/50 bg-live/5 text-live hover:border-live hover:bg-live/10'
+                          }`}
+                        >
+                          {allExpanded ? '全部折叠' : '全部展开'}
+                        </button>
+                      )}
                     </div>
                   </div>
 
+                  {rendered.length === 0 ? (
+                    <div className="rounded-xl border border-dashed border-line py-16 text-center">
+                      <p className="text-body text-muted">这一批里没有同时满足所选标签的记录。</p>
+                      <button
+                        onClick={() => setTagSelection(EMPTY_TAG_SELECTION)}
+                        className="mt-3 text-meta text-live underline underline-offset-4"
+                      >
+                        清除标签筛选
+                      </button>
+                    </div>
+                  ) : view === 'grid' ? (
+                    <div key={searching ? 'search-results' : `${activeYear}-${activeMonth}`} className="ui-content-swap">
+                      <EntryGrid
+                        entries={rendered}
+                        expandedId={gridExpandedEntry}
+                        onToggle={(id) => setGridExpandedId(gridExpandedEntry === id ? null : id)}
+                        showFullDate={searching}
+                      />
+                      {searching && visible.length > searchLimit && (
+                        <p className="py-6 text-center text-meta text-faint tnum">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
+                      )}
+                    </div>
+                  ) : (
                   <div
                     key={searching ? 'search-results' : `${activeYear}-${activeMonth}`}
                     className={`ui-content-swap divide-y divide-line/50 ${searching ? '' : 'ui-stagger'}`}
@@ -618,6 +678,7 @@ export function Timeline({
                       <p className="py-6 text-center text-meta text-faint tnum">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
                     )}
                   </div>
+                  )}
                 </div>
               )}
             </>

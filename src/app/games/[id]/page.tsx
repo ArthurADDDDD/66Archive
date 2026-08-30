@@ -109,7 +109,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       </section>
 
       {/* 年份分布点一下就筛下面的场次列表——两块隔着服务端渲染的内容，用 context 串 */}
-      <EntryFilterProvider anchorId="game-sessions" defaultOrder="desc">
+      <EntryFilterProvider anchorId="game-sessions" defaultOrder="asc">
         {/* 第二屏：指标（在问题之后，而非之前）；稀疏游戏跳过 */}
         {!sparse && profile.sessions > 0 && (
           <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
