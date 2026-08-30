@@ -477,6 +477,21 @@
         parts: 4
         status: alive
     contributed_by: data-agent
+  - id: 2019-12-05-live-01
+    type: live
+    date: '2019-12-05'
+    title: Children of Morta
+    platform: douyu
+    confidence: high
+    duration_min: 251
+    games: [children-of-morta]
+    sources:
+      - url: https://www.bilibili.com/video/BV1pJ411i7nm
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+    contributed_by: data-agent
+    note: "「秘密录像屋」全量投稿扫描补入，页面时长 4:11:27。"
   - id: 2019-12-06-live-01
     type: live
     date: '2019-12-06'
