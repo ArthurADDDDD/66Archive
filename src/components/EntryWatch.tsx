@@ -28,6 +28,8 @@ export type WatchSource = {
   accountName?: string
   /** 来源原本所属条目的标题；同场多录像时用来区分版本 */
   entryTitle: string
+  /** 见 schema 里的注释：平台按视频整体返回的封面对这个来源不准确，展示层不应该拿它兜底。 */
+  coverUnreliable?: boolean
 }
 
 export type WatchSegment = {
@@ -383,11 +385,12 @@ function EntryCover({
   accent: string
 }) {
   const sourceCover = proxyImage(source?.cover ?? source?.partDetails?.[0]?.cover, 960)
+  const coverUnreliable = Boolean(source?.coverUnreliable)
   const [fallback, setFallback] = useState<{ url: string; cover: string | null } | null>(null)
   const sourceUrl = source?.url
 
   useEffect(() => {
-    if (sourceCover || !sourceUrl) return
+    if (sourceCover || !sourceUrl || coverUnreliable) return
     let cancelled = false
     getBilibiliVideoMeta(sourceUrl).then((meta) => {
       if (!cancelled) setFallback({ url: sourceUrl, cover: meta?.cover ? proxyImage(meta.cover, 960) : null })
@@ -395,9 +398,12 @@ function EntryCover({
     return () => {
       cancelled = true
     }
-  }, [sourceCover, sourceUrl])
+  }, [sourceCover, sourceUrl, coverUnreliable])
 
-  const cover = sourceCover ?? (fallback && fallback.url === sourceUrl ? fallback.cover : null) ?? proxyImage(entryCover ?? undefined, 960)
+  const cover =
+    sourceCover ??
+    (coverUnreliable ? null : fallback && fallback.url === sourceUrl ? fallback.cover : null) ??
+    proxyImage(entryCover ?? undefined, 960)
 
   const image = cover ? (
     // eslint-disable-next-line @next/next/no-img-element

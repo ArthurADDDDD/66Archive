@@ -79,6 +79,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         status: source.status,
         parts: source.parts,
         partDetails: source.part_details,
+        coverUnreliable: source.cover_unreliable,
         accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
         entryTitle: item.title,
       })),

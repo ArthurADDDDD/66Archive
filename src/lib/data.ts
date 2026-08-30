@@ -110,6 +110,8 @@ export type TimelineEntry = {
     entryTitle: string
     /** 仅属于这个来源的分 P 信息；不可在不同来源之间复用。 */
     partDetails?: Source['part_details']
+    /** 见 schema 里的注释：平台按视频整体返回的封面对这个来源不准确，展示层不应该拿它兜底。 */
+    coverUnreliable?: boolean
 }
 
 const SAME_LIVE_NOTE = /与 ([a-z0-9-]+) 属同场直播的不同录像，前端可作备选源切换/g
@@ -172,6 +174,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
           status: source.status,
           parts: source.parts,
           partDetails: source.part_details,
+          coverUnreliable: source.cover_unreliable,
         accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
         entryTitle: item.title,
       })))
