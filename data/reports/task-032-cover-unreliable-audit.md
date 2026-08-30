@@ -49,14 +49,20 @@ P2.1/P2.2 对应 2015-07-22、P3 对应 2015-08-20（均已露脸）。经 bilib
    （`data/entries/2015-douyu-live.yaml`、`data/entries/2016-early-douyu-live.yaml`）。
 3. `2015-02-04-live-01` 的 note 补充了用户核实的具体证据（封面取自 P2/P3 而非 P1）。
 
-## 尚未完成、需要展示层配合（Codex 负责范围）
+## 展示层修复（2026-08-31 完成，由 Claude 直接实现）
 
-`cover_unreliable: true` 目前只是数据标记，**前端组件还没有读取这个字段**。
-`src/components/EntryRow.tsx`、`src/components/EntryWatch.tsx` 里对封面为空时的
-兜底逻辑（`getBilibiliVideoMeta` 动态拉取）需要改成：当 `selectedSource.cover_unreliable`
-为 true 时，跳过动态拉取，直接留空 / 用中性占位，而不是显示可能取自别的日期的画面。
-在此之前，这 77 条来源在页面上仍会显示当前的（可能不准确的）自动拉取封面——数据
-标记已经就位，只是还没有渲染效果。
+`cover_unreliable` 字段已经打通到展示层：
+
+- `src/lib/data.ts`：`TimelineSource` 新增 `coverUnreliable`，`toTimelineEntries` 从
+  `source.cover_unreliable` 映射过来。
+- `src/app/e/[id]/page.tsx`：组装 `WatchSource` 时同样带上 `coverUnreliable`。
+- `src/components/EntryRow.tsx`、`src/components/EntryWatch.tsx`：当选中来源的
+  `coverUnreliable` 为 true 时，跳过 `getBilibiliVideoMeta` 的动态拉取（不发请求，
+  不用返回值兜底），效果等同于「这个来源没有封面」——时间轴行退化为无图状态，
+  详情页封面卡片显示已有的「封面待补」占位。
+
+已在本地验证：`2015-02-04-live-01`（本次触发案例）不再发出封面请求、显示
+「封面待补」；未标记的普通条目（如 `2016-06-12-live-01`）自动拉取封面的行为不受影响。
 
 ## 后续建议
 

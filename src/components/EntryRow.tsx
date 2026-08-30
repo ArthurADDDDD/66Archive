@@ -35,17 +35,18 @@ export function EntryRow({
   const [sourceIndex, setSourceIndex] = useState(defaultSourceIndex)
   const selectedSource = entry.sources[sourceIndex] ?? entry.sources[0]
   const selectedCover = proxyImage(selectedSource?.cover ?? selectedSource?.partDetails?.[0]?.cover ?? entry.cover ?? undefined, 640)
+  const coverUnreliable = Boolean(selectedSource?.coverUnreliable)
   const [sourceFallbackCover, setSourceFallbackCover] = useState<{ url: string; cover: string | null } | null>(null)
   const selectedSourceUrl = selectedSource?.url
   useEffect(() => {
-    if (selectedCover || !selectedSourceUrl) return
+    if (selectedCover || !selectedSourceUrl || coverUnreliable) return
     let cancelled = false
     getBilibiliVideoMeta(selectedSourceUrl).then((meta) => {
       if (!cancelled) setSourceFallbackCover({ url: selectedSourceUrl, cover: meta?.cover ?? null })
     })
     return () => { cancelled = true }
-  }, [selectedCover, selectedSourceUrl])
-  const displayCover = selectedCover ?? (sourceFallbackCover?.url === selectedSourceUrl ? sourceFallbackCover.cover : null)
+  }, [selectedCover, selectedSourceUrl, coverUnreliable])
+  const displayCover = selectedCover ?? (coverUnreliable ? null : sourceFallbackCover?.url === selectedSourceUrl ? sourceFallbackCover.cover : null)
   const compactGameIds = new Set(visibleGameIds(entry.games.map((game) => game.id)))
   const compactGames = entry.games.filter((game) => compactGameIds.has(game.id))
   const dateClass = showFullDate
