@@ -372,7 +372,7 @@
     cover: "https://i1.hdslb.com/bfs/archive/0683b798a7309e4ecabcb8c584930f45d714b5cf.jpg"
     confidence: medium
     games: []
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；人工复核确认与 2024-12-21-live-03 (BV1KkktYTEMB，100:03) 为同一场直播，已合并为一条。以 104:17 较长版为主源。"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；原记录误判 BV1eWktYJE9e（104:17）与 2024-12-21-live-03 BV1KkktYTEMB（100:03）为同一场重复录像，人工复核确认两段实为互补（前后接续），已合并计入完整时长 205 分钟。"
     sources:
       - url: "https://www.bilibili.com/video/BV1eWktYJE9e"
         kind: replay
@@ -383,7 +383,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 104
+    duration_min: 205
     tags: [聊天, 户外]
 
   - id: 2024-12-22-live-02
@@ -413,7 +413,7 @@
     confidence: high
     games:
       - where-winds-meet
-    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
+    note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿；BV1VfCEYtEc6 与 BV1xmCsYFEif 两段人工复核确认为互补（前后接续），非重复录像，已合并计入完整时长 483 分钟。"
     segments:
       - at: "00:00:00"
         label: "女流66-2024年12月27日11点54分"
@@ -437,7 +437,7 @@
         status: alive
     contributed_by: data-agent
 
-    duration_min: 262
+    duration_min: 483
 
   - id: 2024-12-28-live-04
     type: live
