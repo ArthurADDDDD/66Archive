@@ -6,6 +6,9 @@ import { Eyebrow } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
 
+/** 站点维护者。目前只有一个人，如实写一个人，不摆一排占位头像。 */
+const MAINTAINERS = [{ id: '哈密瓜逮捕可达鸭', role: '建站 · 数据整理 · 校对' }]
+
 /**
  * 录播/切片来源致谢。
  * 名单不是手写的：按条目里 source.account 的实际引用次数从数据派生，
@@ -93,7 +96,22 @@ export default function ContactPage() {
             感谢上传录播的大家以及切片man
           </p>
 
-          <div className="mt-8 grid gap-4">
+          <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+            <div className="rounded-2xl border border-line bg-surface/55 p-6">
+              <span className="text-meta uppercase tracking-[0.16em] text-faint">维护</span>
+              <ul className="mt-4 space-y-4">
+                {MAINTAINERS.map((person) => (
+                  <li key={person.id}>
+                    <p className="text-h3 font-medium text-ink">{person.id}</p>
+                    <p className="mt-1 text-meta text-faint">{person.role}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 border-t border-line/70 pt-4 text-meta text-faint">
+                想一起补档或校对，可以从上面的 GitHub 仓库找到我。
+              </p>
+            </div>
+
             <div className="rounded-2xl border border-line bg-surface/55 p-6">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <span className="text-meta uppercase tracking-[0.16em] text-faint">录播 · 切片来源</span>
