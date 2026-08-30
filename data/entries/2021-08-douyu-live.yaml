@@ -6,7 +6,7 @@
     platform: douyu
     confidence: high
     duration_min: 248
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c032df4beec34ad998f97c22f7d6442c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1d1519bab8187f1c185a8b14251adf15f39da0b7.png"
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播按上（ac30494403）、下（ac30494413）分 P 的弹幕版原本被建模为两条重复条目，已合并（纯净版未收录）。"
@@ -39,7 +39,7 @@
     platform: douyu
     confidence: high
     duration_min: 288
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d23a25e5c53a43da9e54b2f66e7645e4.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4497d2655914d79c40e022f698007fb74c344981.png"
     games: [naraka-bladepoint]
     segments:
       - at: "00:00:00"
@@ -72,7 +72,7 @@
     platform: douyu
     confidence: high
     duration_min: 248
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6ea3c816ef5549b4b9664ca71f0cbe6a.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d36f1fb7bc17c44fdd0bf5d3ad583a2323e9b66e.png"
     games: [naraka-bladepoint]
     segments:
       - at: "00:00:00"
@@ -108,7 +108,7 @@
     platform: douyu
     confidence: high
     duration_min: 222
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6fddae7c1f5b4b57ac87fbbf735314b6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2da108cf79c0ab414b7f3576116b4f41d59c19e9.png"
     games: [rhythm-doctor, eldest-souls, sudoku]
     segments:
       - at: "00:00:00"
@@ -130,6 +130,10 @@
       - at: "03:10:13"
         label: "上古之魂"
     sources:
+      - url: https://www.bilibili.com/video/BV13v411J7Ef
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30523644"
         kind: replay
         parts: 7
@@ -143,7 +147,7 @@
     platform: douyu
     confidence: high
     duration_min: 200
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f7b78d40164a4b299f940cc05dec254b.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2da108cf79c0ab414b7f3576116b4f41d59c19e9.png"
     games: [naraka-bladepoint]
     segments:
       - at: "00:00:00"
@@ -162,6 +166,10 @@
         label: "永劫无间"
         game: naraka-bladepoint
     sources:
+      - url: https://www.bilibili.com/video/BV13v411J7Ef
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30523449"
         kind: replay
         parts: 5
@@ -175,7 +183,7 @@
     platform: douyu
     confidence: high
     duration_min: 395
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_da8537bdb69645cc9bd0156ae5fd43d6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2da108cf79c0ab414b7f3576116b4f41d59c19e9.png"
     games: [eldest-souls]
     segments:
       - at: "00:00:00"
@@ -208,7 +216,7 @@
     platform: douyu
     confidence: high
     duration_min: 460
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92b437d132e941f7b92185ba7d1db7ca.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2da108cf79c0ab414b7f3576116b4f41d59c19e9.png"
     games:
       - eldest-souls
       - naraka-bladepoint
@@ -238,6 +246,10 @@
         label: "永劫无间"
         game: naraka-bladepoint
     sources:
+      - url: https://www.bilibili.com/video/BV1Th411B7yT
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30552665"
         kind: replay
         parts: 5
@@ -256,7 +268,7 @@
     platform: douyu
     confidence: high
     duration_min: 302
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6c5d4321c2f44327b597097c6d1df298.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4e70fef7c2768b9644b7e3dd6b1aa826a7672464.jpg"
     games:
       - lifeafter
     segments:
@@ -277,6 +289,10 @@
         label: "明日之后"
         game: lifeafter
     sources:
+      - url: https://www.bilibili.com/video/BV1rq4y1n7yn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30566750"
         kind: replay
         parts: 5
@@ -296,7 +312,7 @@
     platform: douyu
     confidence: high
     duration_min: 332
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_722c79feb8404696912a2f413af7607d.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/45c8129945982886b50d3789b6d8c4d78c659384.png"
     games: [naraka-bladepoint]
     tags: [心灵砒霜]
     segments:
@@ -320,6 +336,10 @@
         label: "P8-2021.8.8-永劫无间"
         game: naraka-bladepoint
     sources:
+      - url: https://www.bilibili.com/video/BV1s3411z7cz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30609039"
         kind: replay
         parts: 5
@@ -338,7 +358,7 @@
     platform: douyu
     confidence: high
     duration_min: 514
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_70833a21b63349c0a86e15288f3592ba.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/21d36dad53278ba7e78eb40d75b7549c075af617.png"
     games: [toodee-and-topdee]
     note: "ACFun 将同一场直播拆为 2 个回放视频（ac30651837 含 P5–P8、ac30651839 含 P9–P11，P 编号连续），按一天一条原则合并为单条。；补入
       A站互补回放：ac30651240"
@@ -365,6 +385,10 @@
         label: "P11"
         game: toodee-and-topdee
     sources:
+      - url: https://www.bilibili.com/video/BV1Rb4y1U7GK
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30651837"
         kind: replay
         parts: 4
@@ -385,7 +409,7 @@
     platform: douyu
     confidence: high
     duration_min: 236
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_23e2098a78044eab910dd26dbf9d7510.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c9a9cca8c4b7e044f7a5743980ed995191244297.png"
     games: [dark-detective]
     segments:
       - at: "00:00:00"
@@ -417,7 +441,7 @@
     platform: douyu
     confidence: high
     duration_min: 511
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629126955796.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c6037cbf894fc13f02b490b5de69057d95c5602e.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -449,7 +473,7 @@
     platform: douyu
     confidence: high
     duration_min: 299
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629390230872.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/560f98caa41905c24dfef878c0ea087b8f6a3da4.png"
     games: [road-96]
     segments:
       - at: "00:00:00"
@@ -482,7 +506,7 @@
     platform: douyu
     confidence: high
     duration_min: 302
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629469555268.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6e86a3a23f7da2dc4f88c8055384b275e7843268.png"
     games: [grime]
     segments:
       - at: "00:00:00"
@@ -498,6 +522,10 @@
         label: "GRIME"
         game: grime
     sources:
+      - url: https://www.bilibili.com/video/BV1mq4y1S7gX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30757457"
         kind: replay
         parts: 4
@@ -515,7 +543,7 @@
     platform: douyu
     confidence: high
     duration_min: 154
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629469417494.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6e86a3a23f7da2dc4f88c8055384b275e7843268.png"
     games: [road-96]
     segments:
       - at: "00:00:00"
@@ -527,6 +555,10 @@
       - at: "01:50:46"
         label: "九十六号公路"
     sources:
+      - url: https://www.bilibili.com/video/BV1mq4y1S7gX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac30756071"
         kind: replay
         parts: 4
@@ -540,7 +572,7 @@
     platform: douyu
     confidence: high
     duration_min: 228
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629561615296.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6e86a3a23f7da2dc4f88c8055384b275e7843268.png"
     games: [grime]
     segments:
       - at: "00:00:00"
@@ -578,7 +610,7 @@
     platform: douyu
     confidence: high
     duration_min: 313
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629561730487.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6e86a3a23f7da2dc4f88c8055384b275e7843268.png"
     games: [grime]
     segments:
       - at: "00:00:00"
@@ -614,7 +646,7 @@
     platform: douyu
     confidence: high
     duration_min: 379
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629821195875.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/502eb4c661bd3700091113f07f0f6c371598db65.png"
     games: [codenames]
     segments:
       - at: "00:00:00"
@@ -645,7 +677,7 @@
     platform: douyu
     confidence: high
     duration_min: 381
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629905773812.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c3ec712abc44138d777c8c3be929aa8339733921.png"
     games: [codenames]
     segments:
       - at: "00:00:00"
@@ -680,7 +712,7 @@
     platform: douyu
     confidence: high
     duration_min: 273
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1629991723918.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1736ab05bd7f102c64a0f4a008336e52e6c439d6.png"
     games: [hoa]
     segments:
       - at: "00:00:00"
@@ -712,7 +744,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630079560640.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/539976822251a206aeccb3e3dc02de65363e8ce6.png"
     games: [ghost-of-tsushima]
     segments:
       - at: "00:00:00"
@@ -747,7 +779,7 @@
     platform: douyu
     confidence: high
     duration_min: 426
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630166334554.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7a8ccac22e5959a4b045b6feaad7e18750ce16a3.jpg"
     games: [ghost-of-tsushima]
     segments:
       - at: "00:00:00"
@@ -782,7 +814,7 @@
     platform: douyu
     confidence: high
     duration_min: 279
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630250673913.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0680b964f869972e75e366ffc6dfa951d87bb4de.png"
     games: [fling-to-the-finish]
     segments:
       - at: "00:00:00"
@@ -813,7 +845,7 @@
     platform: douyu
     confidence: high
     duration_min: 260
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1630334332420.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/de6b80c9f2b9ec129d9546518c5b61d52b049a4e.jpg"
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播原本被建模为两条重复条目，已合并；并补齐目录中同场其余投稿：纯净版 ac30913126、弹幕版（上）ac30922231。"

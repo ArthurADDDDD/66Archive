@@ -6,7 +6,7 @@
     platform: douyu
     confidence: high
     duration_min: 244
-    cover: "https://tx-free-imgs.acfun.cn/FqaBtfz9PfRGcuGv9OU0TTqn1E1F?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8a92cb3c4676748518098e826c54d1dc96ed4d18.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -48,7 +48,7 @@
     platform: douyu
     confidence: high
     duration_min: 110
-    cover: "https://tx-free-imgs.acfun.cn/FlU02RYSd4u-TKzwsTWaKKu_9Ooi?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/98f5bd1c4320d9874889ded5236cb8ee9e167344.png"
     games: []
     tags: [聊天]
     segments:
@@ -75,7 +75,7 @@
     platform: douyu
     confidence: high
     duration_min: 259
-    cover: "https://tx-free-imgs.acfun.cn/FieHWRVx6V3kzJTelK53n7uWB7R7?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dc74e64e18ee4698528195ada6b21fe8d349b8f4.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -105,7 +105,7 @@
     platform: douyu
     confidence: high
     duration_min: 225
-    cover: "https://tx-free-imgs.acfun.cn/Fri1ANQhN4PVZX3r3Ukl432hxlg4?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5cdfdc340fcec8ed37596a457cc6c07536fd5356.png"
     games: []
     tags: [佩奇, 聊天]
     segments:
@@ -133,7 +133,7 @@
     platform: douyu
     confidence: high
     duration_min: 386
-    cover: "https://tx-free-imgs.acfun.cn/FrIbUztwtGZa8AhFJT8eo9lR631A?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9ec82cafab660413caf603ec941c547ade833fd0.png"
     games: [deliver-us-the-moon]
     note: "原标题为『游戏前聊10块钱的』。视频 P1 为直播前聊天（32分），P2~7 为《Deliver Us The Moon》（飞向月球）主体内容，标题按主游戏命名。"
     segments:
@@ -152,6 +152,10 @@
       - at: "05:28:45"
         label: "Deliver Us The Moon"
     sources:
+      - url: https://www.bilibili.com/video/BV1dJ411y7DA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac11901879"
         kind: replay
         parts: 7
@@ -165,7 +169,7 @@
     platform: douyu
     confidence: high
     duration_min: 230
-    cover: "https://tx-free-imgs.acfun.cn/FuYww_69U2o9MuffQXHbwqeYs_NU?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ef120bd77edb51212ec3c0e1ebf0abf34d30d31f.png"
     games: [raft]
     segments:
       - at: "00:00:00"
@@ -201,7 +205,7 @@
     platform: douyu
     confidence: high
     duration_min: 255
-    cover: "https://tx-free-imgs.acfun.cn/FkwPH0TYInwvOKPB_coJh6g1QnAg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/03dd8e586615a4ae6a06f932721ef4dbb4744fcb.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -243,7 +247,7 @@
     platform: douyu
     confidence: high
     duration_min: 284
-    cover: "https://tx-free-imgs.acfun.cn/o_1dscq3fabmh1185b1as6enc1rm60.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dbf1f04306edd57ae92ca29ea11c1f214325989e.png"
     games: [raft]
     segments:
       - at: "00:00:00"
@@ -265,12 +269,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1HJ411t7br
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac12045067"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1HJ411t7br
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -282,7 +286,7 @@
     platform: douyu
     confidence: high
     duration_min: 237
-    cover: "https://tx-free-imgs.acfun.cn/o_1dskab04qh3ulkc1lga1pukcam0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/de1e8ff9e6686f00eec1613095325ffe23ebbe71.png"
     games: [ashen, feel-the-snow]
     segments:
       - at: "00:00:00"
@@ -316,7 +320,7 @@
     platform: douyu
     confidence: high
     duration_min: 230
-    cover: "https://tx-free-imgs.acfun.cn/o_1dskdn8lu16ljkgd80g3f6a2n0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/de1e8ff9e6686f00eec1613095325ffe23ebbe71.png"
     games: [ashen]
     segments:
       - at: "00:00:00"
@@ -351,7 +355,7 @@
     platform: douyu
     confidence: high
     duration_min: 294
-    cover: "https://tx-free-imgs.acfun.cn/o_1dsn04c1bm4lksq1htc1kic1kr10.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/66c987ec5c84843c540e4108e3c793fa35966e03.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -370,12 +374,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1hJ411s7hF
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac12126748"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1hJ411s7hF
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -427,7 +431,7 @@
     platform: douyu
     confidence: high
     duration_min: 196
-    cover: "https://tx-free-imgs.acfun.cn/o_1dt3sumk61olj14821h98ki1126i0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0181bf815057d2c481518ef751235a3284f6dc68.png"
     games: [brain-training-switch]
     segments:
       - at: "00:00:00"
@@ -455,7 +459,7 @@
     platform: douyu
     confidence: high
     duration_min: 252
-    cover: "https://tx-free-imgs.acfun.cn/o_1dtb4mv2o1kbi1if7ma8dgk3l10.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/280eb0f7cce237209cf23d56e17f4d9b98498628.png"
     games: []
     tags: [心灵砒霜]
     segments:

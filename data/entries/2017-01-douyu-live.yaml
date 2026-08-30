@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_01/1483278784.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ae917cdfed65a8cfa92d7475543954072e70e6ea.jpg"
     games: [league-of-legends]
     segments:
       - at: "00:00:00"
@@ -39,7 +39,7 @@
     platform: douyu
     confidence: high
     duration_min: 226
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483451376.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4564f5d43eca1424843622fd12ad36e5db13b8d3.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -67,7 +67,7 @@
     platform: douyu
     confidence: high
     duration_min: 193
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_03/1483455126.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b3f1ce8fb9bd81754e7e651c1f719b8c0c9515be.jpg"
     games: [shengshi-tianxia]
     segments:
       - at: "00:00:00"
@@ -97,7 +97,7 @@
     platform: douyu
     confidence: high
     duration_min: 224
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_04/1483531948.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e72efb8efd42c138bea19601950297fc633c8bab.jpg"
     games: [shengshi-tianxia]
     segments:
       - at: "00:00:00"
@@ -126,7 +126,7 @@
     platform: douyu
     confidence: high
     duration_min: 227
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_07/1483797274.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2c6d2767e7fd7485798ee96ae5510443577adf7e.jpg"
     games: [league-of-legends]
     segments:
       - at: "00:00:00"
@@ -161,7 +161,7 @@
     platform: douyu
     confidence: high
     duration_min: 98
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_10/1484052496.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2e1e5058511ad9160827042102175e2f5419002d.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -187,7 +187,7 @@
     platform: douyu
     confidence: high
     duration_min: 154
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_10/1484051182.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5ddf68d2c8da7f2865b5d93d5ae616b2fbe23b83.jpg"
     games: [dark-souls-3]
     segments:
       - at: "00:00:00"
@@ -214,7 +214,7 @@
     platform: douyu
     confidence: high
     duration_min: 228
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_11/1484144133.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/684cfc5e60c77bd6280e0de830040313ed95eaaa.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -242,7 +242,7 @@
     platform: douyu
     confidence: high
     duration_min: 80
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_12/1484228962.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c404e5407c7fe04a5dfa4d1f54e6195aed851dd1.jpg"
     games: [league-of-legends]
     segments:
       - at: "00:00:00"
@@ -268,7 +268,7 @@
     platform: douyu
     confidence: high
     duration_min: 144
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_12/1484232204.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/df7af135b52419b0b2e34b40730c56d495c1d9b0.jpg"
     games: [dark-souls-3]
     segments:
       - at: "00:00:00"
@@ -295,7 +295,7 @@
     platform: douyu
     confidence: high
     duration_min: 213
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_13/1484319479.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4815ef114df7807433515e7efe305211caade99c.jpg"
     games: []
     tags: [户外]
     segments:
@@ -306,6 +306,10 @@
       - at: "01:58:14"
         label: "P3-1.13-A站年会"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ys411h7pB
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3403380"
         kind: replay
         parts: 3
@@ -325,7 +329,7 @@
     platform: douyu
     confidence: high
     duration_min: 151
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484617930.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0320007fd49e0f339c7be51b43ad71a58bbb38d6.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -336,6 +340,10 @@
       - at: "02:30:42"
         label: "P3-1.15-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1hs411h7xA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3410716"
         kind: replay
         parts: 3
@@ -349,7 +357,7 @@
     platform: douyu
     confidence: high
     duration_min: 125
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_16/1484562894.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2db37fa362f355f3b8187da495a7f46338803927.jpg"
     games: [move-or-die]
     segments:
       - at: "00:00:00"
@@ -376,7 +384,7 @@
     platform: douyu
     confidence: high
     duration_min: 179
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_17/1484651137.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/44e3a5694d358b62c285cc2c954ede096cc60d29.jpg"
     games: [battleblock-theater]
     segments:
       - at: "00:00:00"
@@ -405,7 +413,7 @@
     platform: douyu
     confidence: high
     duration_min: 256
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_18/1484760345.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cb3ae0091836203b0b34b001f1ad35d54ffe8c5f.jpg"
     games:
       - geometry-dash
       - reigns
@@ -419,6 +427,10 @@
       - at: "02:42:05"
         label: "P4-1.18-王权"
     sources:
+      - url: https://www.bilibili.com/video/BV1Ss411h7Un
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3415692"
         kind: replay
         parts: 2
@@ -427,10 +439,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1Ss411h7Un
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: A站将同一场按 P1-P4 拆为两个投稿，合并为一场。
@@ -441,7 +449,7 @@
     platform: douyu
     confidence: high
     duration_min: 217
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1484988007.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/993747c81b3df06f295e0fe4c5ef1bbe95f2acde.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -469,10 +477,14 @@
     platform: douyu
     confidence: high
     duration_min: 44
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_21/1485008911.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/642a6c0adb4c856b12c5c49f16347dc02faf7d83.jpg"
     games: [league-of-legends]
     tags: [聊天]
     sources:
+      - url: https://www.bilibili.com/video/BV1rs411b7od
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3422592"
         kind: replay
         status: alive
@@ -492,7 +504,7 @@
     platform: douyu
     confidence: high
     duration_min: 77
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_24/1485261172.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4e9f9d652634d52055c5392a35bc9a3ac75ef833.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -518,7 +530,7 @@
     platform: douyu
     confidence: high
     duration_min: 14
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_25/1485353057.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7ee1b4baa726b4ea91797313ce47a15227652791.jpg"
     games: []
     segments:
       - at: "00:00:00"
@@ -544,7 +556,7 @@
     platform: douyu
     confidence: high
     duration_min: 209
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_26/1485427796.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5d084397a2f4644e70b0d0bfe68e1569ac8c6e84.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -570,7 +582,7 @@
     platform: douyu
     confidence: high
     duration_min: 45
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_26/1485423075.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7884efb373b00937ae025304a600d09a73f4f7ed.jpg"
     games: [winnie-the-pooh-adventure]
     sources:
       - url: https://www.bilibili.com/video/BV1Ps411872T
@@ -590,7 +602,7 @@
     platform: douyu
     confidence: high
     duration_min: 195
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_27/1485533743.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c8e07470f55069742267a133a8f136a1fd9d0c48.jpg"
     games: [guess-my-drawing]
     sources:
       - url: https://www.bilibili.com/video/BV13s41187DY
@@ -610,7 +622,7 @@
     platform: douyu
     confidence: high
     duration_min: 32
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_01_29/1485689598.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/991fe5804a460241856f09cf7a9ef6a165d700e1.jpg"
     games: []
     segments:
       - at: "00:00:00"

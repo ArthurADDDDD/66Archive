@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 488
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_95452eff5cc74e17bd63cc97c12e9e53.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/60d99adc287e4ea28ca3dd95ad3127901f649941.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -38,7 +38,7 @@
     platform: douyu
     confidence: high
     duration_min: 518
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f23b78bddfbb470a9ea0f23a90ae81ce.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/60d99adc287e4ea28ca3dd95ad3127901f649941.png"
     games: [lost-judgment]
     note: "ACFun 将同一场直播拆为 2 个回放视频（ac31326394 含 P5–P8、ac31326861 含 P9–P12，P 编号连续），按一天一条原则合并为单条。；补入
       A站互补回放：ac31325844"
@@ -68,6 +68,10 @@
         label: "P12"
         game: lost-judgment
     sources:
+      - url: https://www.bilibili.com/video/BV1ff4y1j7Du
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac31326394"
         kind: replay
         parts: 4
@@ -89,7 +93,7 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_79f5d7d4506b4f5facd72c636efa727c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/90cf340618732bb69a1871490f43c4417a430747.png"
     games: []
     tags: [心灵砒霜, 一起See]
     segments:
@@ -121,7 +125,7 @@
     platform: douyu
     confidence: high
     duration_min: 416
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_530df1d276e14cf0a54bb3a543aa3bef.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/61c554152ea5c91c09800657dc290c78cc65d7d0.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -154,7 +158,7 @@
     platform: douyu
     confidence: high
     duration_min: 428
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03c325ee0e2d4d61bfd64d4d0a1b297a.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/61c554152ea5c91c09800657dc290c78cc65d7d0.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -189,7 +193,7 @@
     platform: douyu
     confidence: high
     duration_min: 250
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c08d59e0f4d647d8af898e6aacdb9bc6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/61c554152ea5c91c09800657dc290c78cc65d7d0.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -220,7 +224,7 @@
     platform: douyu
     confidence: high
     duration_min: 305
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3986e20f3bb34115948e4b2fe742c1a8.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/61c554152ea5c91c09800657dc290c78cc65d7d0.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -251,7 +255,7 @@
     platform: douyu
     confidence: high
     duration_min: 170
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_82dec1cad4724ed493d0d3b3ca380090.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/61c554152ea5c91c09800657dc290c78cc65d7d0.png"
     games: [lost-judgment]
     segments:
       - at: "00:00:00"
@@ -280,7 +284,7 @@
     platform: douyu
     confidence: high
     duration_min: 209
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_82b1a24259cc4dc28c65fce2c111f25d.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0605027ca6f01c2f7ed53fb735670ac277d3660a.png"
     games: [back-4-blood]
     segments:
       - at: "00:00:00"
@@ -316,7 +320,7 @@
     platform: douyu
     confidence: high
     duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1434d4af1de24b0e9aade4d1e4a13609.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0605027ca6f01c2f7ed53fb735670ac277d3660a.png"
     games: [back-4-blood]
     segments:
       - at: "00:00:00"
@@ -356,7 +360,7 @@
     platform: douyu
     confidence: high
     duration_min: 345
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e7c296af83d64f96ae93f58fe6e0d9d8.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/78e2786d446069c4d5f147cdae489207c96c77f8.png"
     games: [xianjian-7]
     segments:
       - at: "00:00:00"
@@ -387,7 +391,7 @@
     platform: douyu
     confidence: high
     duration_min: 283
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b962d7f2546541edabae203fcf4133b0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/78e2786d446069c4d5f147cdae489207c96c77f8.png"
     games: [xianjian-7]
     segments:
       - at: "00:00:00"
@@ -420,7 +424,7 @@
     platform: douyu
     confidence: high
     duration_min: 191
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d7f45b677a3543bba3ff1b878b5f9252.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/78e2786d446069c4d5f147cdae489207c96c77f8.png"
     games: [xianjian-7]
     segments:
       - at: "00:00:00"
@@ -452,7 +456,7 @@
     platform: douyu
     confidence: high
     duration_min: 191
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9f6b31c74b22466b81ebb7740deda854.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cba3be7231a78cea88d9b9524fed74ffa977c247.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -484,7 +488,7 @@
     platform: douyu
     confidence: high
     duration_min: 251
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_604eb64bb4ca4744ac9aeccc2d31b386.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/78e2786d446069c4d5f147cdae489207c96c77f8.png"
     games: [xianjian-7]
     segments:
       - at: "00:00:00"
@@ -517,7 +521,7 @@
     platform: douyu
     confidence: high
     duration_min: 437
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6dd1fdb8af544f31928d89dd77df8ef1.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/78e2786d446069c4d5f147cdae489207c96c77f8.png"
     games: [xianjian-7]
     segments:
       - at: "00:00:00"
@@ -552,7 +556,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0f2bfba530404be4a117b4c05cb70327.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2894cde13aafba39713eba041fc955ca696ad3d6.png"
     games: [yingzi-gongchang]
     segments:
       - at: "00:00:00"
@@ -584,7 +588,7 @@
     platform: douyu
     confidence: high
     duration_min: 282
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6776c66a04b94e6abebfdb60033f220b.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5279575127d0a13a85681a5bdec35b553b90e4c.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -618,7 +622,7 @@
     platform: douyu
     confidence: high
     duration_min: 368
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a93c1eb8c4834e8e8112f1d06f6ca4c7.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/89d8c074b934d22c6692b6eac4c348663708e7ec.png"
     games: [majsoul]
     segments:
       - at: "00:00:00"
@@ -651,7 +655,7 @@
     platform: douyu
     confidence: high
     duration_min: 378
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fc74e85e056d45289076c9b3281c59bf.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8a81de952ead52f7a8efc385bb136ee446da1aed.png"
     games:
       - luori-shanqiu
       - moying-xiazong
@@ -679,6 +683,10 @@
       - at: "05:32:35"
         label: "洞穴探险2"
     sources:
+      - url: https://www.bilibili.com/video/BV1XQ4y1U7rS
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac31584429"
         kind: replay
         parts: 6
@@ -697,7 +705,7 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2f37feae80e944c5b4958a6908a8a4e5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/244783d72270c7da17d92bacf646db1d2bc6a238.png"
     games: [mario-party-superstars]
     segments:
       - at: "00:00:00"
@@ -728,7 +736,7 @@
     platform: douyu
     confidence: high
     duration_min: 285
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3ad7df75b809433bb0c1424996201995.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/bd21aa8b9b76b1f7786d903394fb6a7e93a1ee5e.png"
     games: [toem]
     segments:
       - at: "00:00:00"
@@ -777,7 +785,7 @@
     tags:
       - 心灵砒霜
     series: xinling-pishuang
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cb6e4c5448e2459e81854753c1ddca2f.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/27174939728257b01151eb880dd4c8efcc290ca5.png"
     segments: []
   - id: 2021-10-06-live-01
     type: live

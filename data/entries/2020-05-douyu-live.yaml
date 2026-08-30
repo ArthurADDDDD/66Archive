@@ -38,7 +38,7 @@
     platform: douyu
     confidence: high
     duration_min: 341
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7iqa4c8102h7p11mu5uib1gat0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c09c0227acc4e527c7921ec18a3cc9dfe67716fc.png"
     games: [juicy-realm]
     segments:
       - at: "00:00:00"
@@ -105,7 +105,7 @@
     platform: douyu
     confidence: high
     duration_min: 206
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7p5o72p1nfof09vqihp7fbf0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/03ef22a6ac499d058adc0bfe29561fb7d4281f7a.png"
     games: []
     tags: [佩奇]
     segments:
@@ -135,7 +135,7 @@
     platform: douyu
     confidence: high
     duration_min: 269
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7t16e6uvf3go41bbggi5at30.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0b0004cdfa4ef50caee322adab99d42854220df1.png"
     games: []
     segments:
       - at: "00:00:00"
@@ -151,12 +151,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1iK41157nG
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac15435107"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV1iK41157nG
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -169,7 +169,7 @@
     platform: douyu
     confidence: high
     duration_min: 83
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7vi9bn7qbsck61p6n1m67g000.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dbb76f4dc6dd0c9b2b7ed7e9fd5d86d61e7afc17.png"
     games: [maoxian-gongshe]
     segments:
       - at: "00:00:00"
@@ -177,6 +177,10 @@
       - at: "00:17:20"
         label: "冒险公社"
     sources:
+      - url: https://www.bilibili.com/video/BV15t4y117EG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15451024"
         kind: replay
         parts: 2
@@ -190,7 +194,7 @@
     platform: douyu
     confidence: high
     duration_min: 285
-    cover: "https://tx-free-imgs.acfun.cn/o_1e7vifi9n1pfi1rsdbi8gsv47j0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dbb76f4dc6dd0c9b2b7ed7e9fd5d86d61e7afc17.png"
     games: [project-winter]
     segments:
       - at: "00:00:00"
@@ -206,6 +210,10 @@
       - at: "03:54:30"
         label: "冬日计划"
     sources:
+      - url: https://www.bilibili.com/video/BV15t4y117EG
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac15450853"
         kind: replay
         parts: 6
@@ -219,7 +227,7 @@
     platform: douyu
     confidence: high
     duration_min: 293
-    cover: "https://tx-free-imgs.acfun.cn/o_1e821ns9pfjgju7ksrnrddqq0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8d73221fea8a4b046433d1c3f5ebadb538eb7d0c.png"
     games: [a-dance-of-fire-and-ice]
     segments:
       - at: "00:00:00"
@@ -250,7 +258,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/o_1e84nj46f1tvh1euc1t69mgv1e8i0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8d73221fea8a4b046433d1c3f5ebadb538eb7d0c.png"
     games: [a-dance-of-fire-and-ice]
     segments:
       - at: "00:00:00"
@@ -281,7 +289,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/o_1e84oc1bra0214v9aariuq9df0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7cff63a1bc9bf98d4ab711ad65944a673133b816.png"
     games: []
     segments:
       - at: "00:00:00"
@@ -327,7 +335,7 @@
     platform: douyu
     confidence: high
     duration_min: 239
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8cdsqeh1brrgbjsf891es30.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cd414f0dd17ee6092477025594563c1f5baa7682.png"
     games: [hydroneer]
     segments:
       - at: "00:00:00"
@@ -362,7 +370,7 @@
     platform: douyu
     confidence: high
     duration_min: 178
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8f09aoffhp4g87511p2l1o2g0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cd414f0dd17ee6092477025594563c1f5baa7682.png"
     games: [hydroneer]
     segments:
       - at: "00:00:00"
@@ -375,14 +383,14 @@
         label: "Hydroneer"
         game: hydroneer
     sources:
-      - url: "https://www.acfun.cn/v/ac15574903"
-        kind: replay
-        parts: 3
-        status: alive
       - url: https://www.bilibili.com/video/BV1ZA411i7ZL
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac15574903"
+        kind: replay
+        parts: 3
+        status: alive
     contributed_by: data-agent
 
   - id: 2020-05-17-live-01
@@ -393,7 +401,7 @@
     platform: douyu
     confidence: high
     duration_min: 274
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8jvd4dk13f11htj1922j2u1rmp0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9130395c5a2c117bc7926c315c225874fddcc20c.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -425,7 +433,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8otdo4c1hja1svohi81k491uoh0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a800c98c4f2991ac759575c1dd96489498cb9d9b.png"
     games: [cloudpunk]
     segments:
       - at: "00:00:00"
@@ -474,7 +482,7 @@
     platform: douyu
     confidence: high
     duration_min: 194
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8rm1r2m1vsg1vps8ul1l2m11jr0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8a8d0de9350faca5277c2af370e5339b05d52b3e.png"
     games: []
     tags: [聊天]
     segments:
@@ -504,7 +512,7 @@
     platform: douyu
     confidence: high
     duration_min: 226
-    cover: "https://tx-free-imgs.acfun.cn/o_1e8udde021qgc2le1ovpvoa1ulj0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3cc4dfc39bf23f955593cce0a29a56a82b910594.png"
     games: [tsioque]
     segments:
       - at: "00:00:00"
@@ -553,7 +561,7 @@
     platform: douyu
     confidence: high
     duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/o_1e95kt8hj1196h661efc1cg1uev0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0e7eb1da4e8871144917ef2763a9e443588d0f3b.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -570,12 +578,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV16z411v7qp
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac15758557"
         kind: replay
         parts: 4
-        status: alive
-      - url: https://www.bilibili.com/video/BV16z411v7qp
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -587,7 +595,7 @@
     platform: douyu
     confidence: high
     duration_min: 219
-    cover: "https://tx-free-imgs.acfun.cn/o_1e9dmlvhg1l391pi61odkgre1bfr0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/24a50e15bd70f6acbb40c108906ef8ca962327c9.png"
     games: [rhythm-fighter]
     segments:
       - at: "00:00:00"
@@ -616,7 +624,7 @@
     platform: douyu
     confidence: high
     duration_min: 251
-    cover: "https://tx-free-imgs.acfun.cn/o_1e9lhs7aa1bj01aov62q17dgfcl0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/977d3fcc56548d91be1a0e7b68e2daef15e09eab.png"
     games: [poly-bridge]
     segments:
       - at: "00:00:00"
@@ -650,7 +658,7 @@
     platform: douyu
     confidence: high
     duration_min: 277
-    cover: "https://tx-free-imgs.acfun.cn/o_1e9o03ub4oa2hams8gqqg8640.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ae41c421c8603519a2b447d0e30f1d0a794f3305.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -669,12 +677,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1gT4y1g7DC
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac15918867"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1gT4y1g7DC
-        kind: replay
         status: alive
     contributed_by: data-agent
     note: 补入 B 站「秘密录像屋」BV1gT4y1g7DC

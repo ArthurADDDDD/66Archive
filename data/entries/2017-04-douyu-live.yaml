@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 259
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491097724.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/eb47cbe5a6ed6ff5062eec09e28090b30692f1f1.jpg"
     games: [jianjian-shijie]
     segments:
       - at: "00:00:00"
@@ -36,7 +36,7 @@
     platform: douyu
     confidence: high
     duration_min: 103
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491141307.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/165864db0756b787f27cff61e9b62feba785ece8.jpg"
     games: [1-2-switch]
     segments:
       - at: "00:00:00"
@@ -61,7 +61,7 @@
     platform: douyu
     confidence: high
     duration_min: 59
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491140793.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5b96c63a5a9e1bbacdc22fe087bb57cbb05dc696.jpg"
     games: [puyo-puyo-tetris]
     sources:
       - url: https://www.bilibili.com/video/BV1jx411Q7wL
@@ -81,7 +81,7 @@
     platform: douyu
     confidence: high
     duration_min: 134
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_02/1491141273.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0c38c67f6f3f6aab739806af3a98b5dd7c15d901.jpg"
     games: [zelda-botw]
     segments:
       - at: "00:00:00"
@@ -106,7 +106,7 @@
     platform: douyu
     confidence: high
     duration_min: 347
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_04/1491274206.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/55092ba377d03052cc796cd96f5fb2ed75c94a3b.jpg"
     games: [zelda-botw]
     segments:
       - at: "00:00:00"
@@ -137,12 +137,16 @@
     platform: douyu
     confidence: high
     duration_min: 290
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491394664.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5b2d8664af6da3b53a3c492a27c5f3cf369820b3.jpg"
     games:
       - 1-2-switch
       - super-bomberman-r
       - zelda-botw
     sources:
+      - url: https://www.bilibili.com/video/BV1Ux411Q7Cd
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3601502"
         kind: replay
         parts: 1
@@ -155,10 +159,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1Ux411Q7Cd
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     segments:
@@ -174,7 +174,7 @@
     platform: douyu
     confidence: high
     duration_min: 237
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_05/1491399782.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a7330dd994ab4128d18b220f83ae2c3fb3fcc8d7.jpg"
     games: [zelda-botw]
     segments:
       - at: "00:00:00"
@@ -203,7 +203,7 @@
     platform: douyu
     confidence: high
     duration_min: 55
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_09/1491744393.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/83b630ba51ca4935c4cd751dcca3c2f241fd2438.jpg"
     games: [maplestory-2]
     sources:
       - url: https://www.bilibili.com/video/BV1Bx411S7PP
@@ -224,7 +224,7 @@
     platform: douyu
     confidence: high
     duration_min: 189
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_07/1491575832.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ef8e8cdb774b60d953266b8b03c0a87b2758f844.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -250,7 +250,7 @@
     platform: douyu
     confidence: high
     duration_min: 231
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_11/1491915677.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/be3e7f471960be5ecd6348241b5ae5831c493004.jpg"
     games: [zelda-botw]
     segments:
       - at: "00:00:00"
@@ -279,7 +279,7 @@
     platform: douyu
     confidence: high
     duration_min: 257
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_12/1492002662.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5e7d40ff82c26cb2dca4a4f48e753641f4983d4.jpg"
     games: [zelda-botw]
     segments:
       - at: "00:00:00"
@@ -308,7 +308,7 @@
     platform: douyu
     confidence: high
     duration_min: 236
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_13/1492089354.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/72d08b0a4a65328fd1ce0956fb3ea8361052e0b0.jpg"
     games: [bloodborne]
     segments:
       - at: "00:00:00"
@@ -337,7 +337,7 @@
     platform: douyu
     confidence: high
     duration_min: 275
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_15/1492234500.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/258c796f560d99dfa908b3f6877daf6f928af7de.jpg"
     games: [shengshi-tianxia]
     segments:
       - at: "00:00:00"
@@ -372,7 +372,7 @@
     platform: douyu
     confidence: high
     duration_min: 365
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_16/1492343182.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/258c796f560d99dfa908b3f6877daf6f928af7de.jpg"
     games: [shengshi-tianxia]
     segments:
       - at: "00:00:00"
@@ -409,7 +409,7 @@
     platform: douyu
     confidence: high
     duration_min: 148
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_19/1492608663.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b87e197107dd6beb0c1d4a69938cbfaca7233371.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -435,7 +435,7 @@
     platform: douyu
     confidence: high
     duration_min: 95
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_17/1492434616.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/258c796f560d99dfa908b3f6877daf6f928af7de.jpg"
     games: [shengshi-tianxia]
     segments:
       - at: "00:00:00"
@@ -462,7 +462,7 @@
     platform: douyu
     confidence: high
     duration_min: 257
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_18/1492486853.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7070dc6d09b4d39a994acdba064273dbe862f9ff.jpg"
     games: [stardew-valley]
     segments:
       - at: "00:00:00"
@@ -494,7 +494,7 @@
     platform: douyu
     confidence: high
     duration_min: 209
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_19/1492610927.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c7deb882020886194d6a097a0704b743a901fa65.jpg"
     games: [puyo-puyo-tetris, wonder-boy]
     segments:
       - at: "00:00:00"
@@ -524,7 +524,7 @@
     platform: douyu
     confidence: high
     duration_min: 289
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_20/1492693656.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7e309f71ffa6a933b9a9c2da0809ed1f5957cca8.jpg"
     games: [wonder-boy]
     segments:
       - at: "00:00:00"
@@ -553,7 +553,7 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_21/1492781776.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/100f310fc25b297280a9e016c5054929893a09d7.jpg"
     games: [wonder-boy]
     segments:
       - at: "00:00:00"
@@ -579,7 +579,7 @@
     platform: douyu
     confidence: high
     duration_min: 214
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_05_02/1493746236.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/be6a32669ba54953a8f07c22a87a194871dddb71.jpg"
     games: []
     tags: [心灵砒霜, 弹幕版]
     sources:
@@ -600,7 +600,7 @@
     platform: douyu
     confidence: high
     duration_min: 276
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_04_24/1493045788.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f7ba89b9894af52ecf73f950c0c463c99c0d5d8a.jpg"
     games: [jianjian-shijie]
     segments:
       - at: "00:00:00"

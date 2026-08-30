@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/Fp--3qr1I9y9OIGGl2TmRHBlE1MW?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/41efa18fc66516b73fcf73af0574452a2efce57a.png"
     games: [trials-rising, mages-of-mystralia]
     segments:
       - at: "00:00:00"
@@ -41,7 +41,7 @@
     platform: douyu
     confidence: high
     duration_min: 372
-    cover: "https://tx-free-imgs.acfun.cn/FqJgvFay6DIZpbS0G6oD9kevf0Rq?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/44d1791e3be8348b3d1b977bab1ff54ea2929b46.png"
     games: [mages-of-mystralia, trials-rising]
     segments:
       - at: "00:00:00"
@@ -86,7 +86,7 @@
     platform: douyu
     confidence: high
     duration_min: 271
-    cover: "https://tx-free-imgs.acfun.cn/FqsJ9Zf7pkganLid4Ca-FdZdqQPi?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4b6734e85d729a6749bbd1f23e5200d5293f4a95.png"
     games: [trials-rising]
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播（心灵砒霜 & 特技摩托：崛起）的弹幕版（ac4991712）与纯净版（ac4989814）原本被建模为两条重复条目，已合并。"
@@ -106,6 +106,10 @@
         label: "特技摩托：崛起"
         game: trials-rising
     sources:
+      - url: https://www.bilibili.com/video/BV1mb411B7qY
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4991712"
         kind: replay
         parts: 1
@@ -123,7 +127,7 @@
     platform: douyu
     confidence: high
     duration_min: 262
-    cover: "https://tx-free-imgs.acfun.cn/FotEZkHI_k1B1_BcMgFHxMd4w6TF?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7a9eb0855faabc0baae5153dd596e963592c3add.png"
     games: [trials-rising, bloody-spell]
     segments:
       - at: "00:00:00"
@@ -161,7 +165,7 @@
     platform: douyu
     confidence: high
     duration_min: 115
-    cover: "https://tx-free-imgs.acfun.cn/Fv-tsB2HerU_H7-HrJQuVc7XzOlt?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/da5a0a6f3756931515dab4910070e26be9bae919.png"
     games: [sekiro]
     segments:
       - at: "00:00:00"
@@ -200,7 +204,7 @@
     platform: douyu
     confidence: high
     duration_min: 33
-    cover: "https://tx-free-imgs.acfun.cn/Fv4-iRXKvbfWVM77e5dfiq04Z0mW?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c055859cee3fd4679e779d4a9dc8ec91702637f5.png"
     games: [devil-may-cry-5]
     segments:
       - at: "00:00:00"
@@ -227,7 +231,7 @@
     platform: douyu
     confidence: high
     duration_min: 263
-    cover: "https://tx-free-imgs.acfun.cn/Fo9oXGLCK2hT84kVSajPLYnXk6nY?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1025eb26d43b4ac68667e8e67e33603a481feba3.png"
     games: [devil-may-cry-5]
     segments:
       - at: "00:00:00"
@@ -263,7 +267,7 @@
     platform: douyu
     confidence: high
     duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/Flaz7MqzNAp46jnZDOCoVpbzYMSI?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d9aaccc9f5c6592a7ac1de0dd8a9b313e7619444.png"
     games: [devil-may-cry-5]
     tags: [心灵砒霜, 一起See]
     segments:
@@ -275,6 +279,10 @@
       - at: "02:28:36"
         label: "P2.2-2019.3.10-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1Nb411e7xp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac5011369"
         kind: replay
         parts: 1
@@ -283,10 +291,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1Nb411e7xp
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     note: "同一场（3.10 周日）拆 2 视频：鬼泣5 纯净版（ac5011369，P1）+ 砒霜弹幕版（ac5012009，P2.1-P2.2，次日渲染上传），P
       编号连续，按一天一条原则合并"
     contributed_by: data-agent
@@ -313,7 +317,7 @@
     platform: douyu
     confidence: high
     duration_min: 143
-    cover: "https://tx-free-imgs.acfun.cn/Fial0fLtJqwApPgUb9NL44JQXf2c?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/16e50e643a854fa885fbafa793b0018b31caf2f2.png"
     games: [devil-may-cry-5]
     segments:
       - at: "00:00:00"
@@ -342,7 +346,7 @@
     platform: douyu
     confidence: high
     duration_min: 338
-    cover: "https://tx-free-imgs.acfun.cn/FjfYm0y0XKD6gJa9BW9mYBRA3G8m?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2ac52d537d8ff6fbc9b03980154c65109802bcd9.png"
     games: [trials-rising]
     segments:
       - at: "00:00:00"
@@ -380,7 +384,7 @@
     platform: douyu
     confidence: high
     duration_min: 257
-    cover: "https://tx-free-imgs.acfun.cn/FoxAkVF9zxcyj8SfhOI1kyviKU19?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9d93f0fa69fca44f4810ecf5d06401d23eb33726.png"
     games: [baba-is-you]
     segments:
       - at: "00:00:00"
@@ -412,7 +416,7 @@
     platform: douyu
     confidence: high
     duration_min: 290
-    cover: "https://tx-free-imgs.acfun.cn/Fn9FIzHYLkom4_LEWgIgHRQobujo?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c6ea751315e6f436b346684f1bf8d6cf3c4fa3a4.png"
     games: [trials-rising, sekiro]
     segments:
       - at: "00:00:00"
@@ -449,7 +453,7 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/Fu-ZCy5APryQDGHB9D0o2QDYzfte?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d0e58b7afccda5b22926ae05f0b8e25270c9400d.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -462,6 +466,10 @@
       - at: "03:01:37"
         label: "心灵砒霜"
     sources:
+      - url: https://www.bilibili.com/video/BV1nb411n7X4
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac10010771"
         kind: replay
         parts: 4
@@ -479,7 +487,7 @@
     platform: douyu
     confidence: high
     duration_min: 230
-    cover: "https://tx-free-imgs.acfun.cn/FklpRjiN-IFFicahioCRwKflt8fC?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/86349729484fdce40d3e2d7d8609237ccec349ae.png"
     games: [trials-rising]
     segments:
       - at: "00:00:00"
@@ -514,7 +522,7 @@
     platform: douyu
     confidence: high
     duration_min: 209
-    cover: "https://tx-free-imgs.acfun.cn/FoeBnZCsdswr82viUZEfJAzjOi9F?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5b78e7e431a0ebdf2b70318fc818e9a1a4025102.png"
     games: [cat-mario]
     segments:
       - at: "00:00:00"
@@ -543,7 +551,7 @@
     platform: douyu
     confidence: high
     duration_min: 452
-    cover: "https://tx-free-imgs.acfun.cn/FqacD4zbUMvMjNvLyb32tZgZ8NEk?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fefd2f46398debb4c8e584b6671bad8e7b5ac382.png"
     games: [sekiro]
     segments:
       - at: "00:00:00"
@@ -590,7 +598,7 @@
     platform: douyu
     confidence: high
     duration_min: 327
-    cover: "https://tx-free-imgs.acfun.cn/Fn9XOy9n7xL4pn-oRmvIlez-oEJI?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6200a1a5dd6554661ff16ae2592c20c87c77f6d0.png"
     games: [sekiro]
     segments:
       - at: "00:00:00"
@@ -631,7 +639,7 @@
     platform: douyu
     confidence: high
     duration_min: 444
-    cover: "https://tx-free-imgs.acfun.cn/FpgwWD3tQq8j91n0fMWcSh3ApBZs?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/725a19b3d684f30227a5641bdc190831912c2b23.png"
     games: [sekiro]
     segments:
       - at: "00:00:00"
@@ -668,7 +676,7 @@
     platform: douyu
     confidence: high
     duration_min: 267
-    cover: "https://tx-free-imgs.acfun.cn/FmFtR_OOFeiSQxSf2VP0LCaybbHB?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a42d236f059f5080e42d761d4a571920c3ecc506.png"
     games: [sekiro]
     segments:
       - at: "00:00:00"
@@ -706,7 +714,7 @@
     platform: douyu
     confidence: high
     duration_min: 66
-    cover: "https://tx-free-imgs.acfun.cn/Fkgl0ifCUpQlaDoIRNUfBkWwjdyd?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/49cfbe4c5162e1850edd2256f68bb2d5705d93ef.png"
     games: [sekiro]
     sources:
       - url: https://www.bilibili.com/video/BV18b411t7i5
@@ -757,7 +765,7 @@
     platform: douyu
     confidence: high
     duration_min: 267
-    cover: "https://tx-free-imgs.acfun.cn/FtYRlmKnmUJnFgoByEG3yT4718gw?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/374125e64fbaec31d2403e80263aceea6b295dd5.png"
     games: [unheard, sekiro]
     segments:
       - at: "00:00:00"
@@ -792,7 +800,7 @@
     platform: douyu
     confidence: high
     duration_min: 347
-    cover: "https://tx-free-imgs.acfun.cn/FrNIAAnY1Jxb1n_wfgHVf6aOxDFL?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fa1fd524f92266bd8e17091766eb62b218035c25.png"
     games: [cat-mario]
     segments:
       - at: "00:00:00"

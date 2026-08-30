@@ -5,10 +5,14 @@
     platform: douyu
     confidence: high
     duration_min: 585
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a352e974d1c49a18de2511f0d5da23a.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6f82aae523b2b31b929f13478e14f05077089cae.jpg"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆分为 3 个回放段（P1–P3，同夜上传），按一天一条原则合并为单条。"
     sources:
+      - url: https://www.bilibili.com/video/BV1jL4y137nL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac33847866"
         kind: replay
         parts: 1
@@ -21,10 +25,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.bilibili.com/video/BV1jL4y137nL
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-03-02-live-01
@@ -34,10 +34,14 @@
     platform: douyu
     confidence: high
     duration_min: 618
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02d601c45d0d46f28fbce24d19777983.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a2058ced867594c94a3603d090ee9db35ba500b3.jpg"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆分为 4 个回放段（P1–P4，同夜上传），按一天一条原则合并为单条。"
     sources:
+      - url: https://www.bilibili.com/video/BV1mr4y1z7dj
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac33860764"
         kind: replay
         parts: 1
@@ -54,10 +58,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.bilibili.com/video/BV1mr4y1z7dj
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-03-04-live-01
@@ -67,10 +67,14 @@
     platform: douyu
     confidence: high
     duration_min: 648
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2196141b41724f5e841d27126c9e916f.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5135fb066fbc0e429a136c078d1276dee877ab1.jpg"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆分为 4 个回放段（P1–P4，同夜上传），按一天一条原则合并为单条。"
     sources:
+      - url: https://www.bilibili.com/video/BV1e341157Pg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac33888760"
         kind: replay
         parts: 1
@@ -87,10 +91,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.bilibili.com/video/BV1e341157Pg
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-03-05-live-01
@@ -100,10 +100,14 @@
     platform: douyu
     confidence: high
     duration_min: 486
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7d46747535d8425e88c318c0bfbd39c5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5135fb066fbc0e429a136c078d1276dee877ab1.jpg"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆分为 3 个回放段（P1–P3，同夜上传），按一天一条原则合并为单条。"
     sources:
+      - url: https://www.bilibili.com/video/BV1C341157zA
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac33902778"
         kind: replay
         parts: 1
@@ -116,10 +120,6 @@
         kind: replay
         parts: 1
         status: alive
-      - url: https://www.bilibili.com/video/BV1C341157zA
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-03-06-live-01
@@ -129,7 +129,7 @@
     platform: douyu
     confidence: high
     duration_min: 590
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c01fd0645df44056b79a6ffeebbd4b42.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5135fb066fbc0e429a136c078d1276dee877ab1.jpg"
     games: [elden-ring]
     note: "ACFun 将同一场直播拆为 2 个回放段（ac33910899 上、ac33910802 下，同时长、同夜上传），按一天一条原则合并为单条。"
     segments:
@@ -161,7 +161,7 @@
     platform: douyu
     confidence: high
     duration_min: 397
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ab4753ad2f764da88c83f7a42b974be8.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5135fb066fbc0e429a136c078d1276dee877ab1.jpg"
     games: [elden-ring]
     sources:
       - url: https://www.bilibili.com/video/BV1FL411P77H
@@ -181,7 +181,7 @@
     platform: douyu
     confidence: high
     duration_min: 489
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_f2c0924488d34f21866501374bfc2dfc.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a5135fb066fbc0e429a136c078d1276dee877ab1.jpg"
     games: [elden-ring]
     sources:
       - url: https://www.bilibili.com/video/BV1Mi4y1C7JJ
@@ -201,9 +201,13 @@
     platform: douyu
     confidence: high
     duration_min: 474
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_dfdac34ddf814a47971568246e3a9bac.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6f82aae523b2b31b929f13478e14f05077089cae.jpg"
     games: [elden-ring]
     sources:
+      - url: https://www.bilibili.com/video/BV15L411P7kT
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac33960181"
         kind: replay
         parts: 1
@@ -217,7 +221,7 @@
     platform: douyu
     confidence: high
     duration_min: 342
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9615b7898c1d453eaa9c30e66a722698.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6f82aae523b2b31b929f13478e14f05077089cae.jpg"
     games: [elden-ring]
     sources:
       - url: https://www.bilibili.com/video/BV1ZP4y1g7nm
@@ -237,7 +241,7 @@
     platform: douyu
     confidence: high
     duration_min: 398
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5e364e436237492badbe23b5d814c075.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4d1967068c3a246532584ea948950d82f8a16e2.jpg"
     games: [a-perfect-day]
     sources:
       - url: https://www.bilibili.com/video/BV1tU4y1Z7B3
@@ -257,9 +261,13 @@
     platform: douyu
     confidence: high
     duration_min: 341
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_35201534710f42939ea649f9690b5811.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4d1967068c3a246532584ea948950d82f8a16e2.jpg"
     games: [a-perfect-day]
     sources:
+      - url: https://www.bilibili.com/video/BV1E44y1T7Df
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac34041424"
         kind: replay
         parts: 1
@@ -267,10 +275,6 @@
       - url: https://www.acfun.cn/v/ac34041428
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1E44y1T7Df
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac34041428
@@ -281,7 +285,7 @@
     platform: douyu
     confidence: high
     duration_min: 316
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fe3616c7e42949509715fdadb3e558dd.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4d1967068c3a246532584ea948950d82f8a16e2.jpg"
     games: [a-perfect-day]
     sources:
       - url: https://www.bilibili.com/video/BV1EL411w7DC
@@ -305,7 +309,7 @@
     platform: douyu
     confidence: high
     duration_min: 304
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_53f8c97b013a47929b372686000b62c8.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4d1967068c3a246532584ea948950d82f8a16e2.jpg"
     games: [a-perfect-day]
     sources:
       - url: https://www.bilibili.com/video/BV19L411P76P
@@ -329,7 +333,7 @@
     platform: douyu
     confidence: high
     duration_min: 312
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7795184d89bf4a83af947e53eb8d25d4.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8ff6bc3ff4ee4fd480cb8d23528ac80794495cb3.jpg"
     games: [kirby-star-allies]
     sources:
       - url: https://www.bilibili.com/video/BV1BS4y127Vm
@@ -349,7 +353,7 @@
     platform: douyu
     confidence: high
     duration_min: 436
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2871a8dd9fd344e296032975e15c4e07.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/75a7b1bc9be6458dfd7cdc366a8fc2b2fc378a77.jpg"
     games: [kirby-star-allies]
     sources:
       - url: https://www.bilibili.com/video/BV1RS4y1N7bg
@@ -369,7 +373,7 @@
     platform: douyu
     confidence: high
     duration_min: 439
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9cd14e8ed089455592e75f1b10cd5dff.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/75a7b1bc9be6458dfd7cdc366a8fc2b2fc378a77.jpg"
     games: [kirby-star-allies]
     sources:
       - url: https://www.bilibili.com/video/BV1Pi4y1Q7Wa
@@ -389,7 +393,7 @@
     platform: douyu
     confidence: high
     duration_min: 268
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3da4453925e94b3188145ef8dc1be801.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/75a7b1bc9be6458dfd7cdc366a8fc2b2fc378a77.jpg"
     games: [kirby-star-allies]
     sources:
       - url: https://www.bilibili.com/video/BV1U44y1A7J2
@@ -413,7 +417,7 @@
     platform: douyu
     confidence: high
     duration_min: 253
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3346b74627e847819d329275b8cf2858.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/75a7b1bc9be6458dfd7cdc366a8fc2b2fc378a77.jpg"
     games: [kirby-star-allies]
     sources:
       - url: https://www.bilibili.com/video/BV1L3411W7Pm

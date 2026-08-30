@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 289
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ba9c5e0fbffc4b1bbdf4167239c8676c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a0e216e0842463741055fa0a3ad2cb4553a6020c.jpg"
     games: [ship-of-fools]
     sources:
       - url: https://www.bilibili.com/video/BV1sD4y1Y7Pi
@@ -25,7 +25,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1726b61b100248e38f6f88039fc3fa30.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d9cd8ffb203d7808d5bee31e8c402ccb2e6fd7fe.jpg"
     games: [tunic]
     sources:
       - url: https://www.bilibili.com/video/BV1W14y1J7ws
@@ -46,7 +46,7 @@
     platform: douyu
     confidence: high
     duration_min: 129
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5914e758df7e42feae9df4a9c6167ff7.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b2c45768a85abe646eb1f323babb978f74720a0d.jpg"
     games: []
     tags: [心灵砒霜]
     sources:
@@ -67,7 +67,7 @@
     platform: douyu
     confidence: high
     duration_min: 355
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_211804f16c9f42fe8617ff55e6ca14ef.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f17a0c00a753ec33ec4c76132977473eb209a65e.jpg"
     games: [tunic]
     sources:
       - url: https://www.bilibili.com/video/BV1cg411p7rY
@@ -87,7 +87,7 @@
     platform: douyu
     confidence: high
     duration_min: 528
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b15488a916b04a68abc7502e1eb34617.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d9cd8ffb203d7808d5bee31e8c402ccb2e6fd7fe.jpg"
     games: [tunic]
     sources:
       - url: https://www.bilibili.com/video/BV1dV4y1P7aR
@@ -108,10 +108,14 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_02a7c4cd2e7f4b71aa2e1b4be6952d53.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b60b22e2003f24f4bfb9fb95320a9c52014b705f.jpg"
     games: []
     tags: [心灵砒霜]
     sources:
+      - url: https://www.bilibili.com/video/BV1Be411P7Qn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40137339"
         kind: replay
         parts: 1
@@ -119,10 +123,6 @@
       - url: https://www.acfun.cn/v/ac40137241
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1Be411P7Qn
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac40137241
@@ -133,7 +133,7 @@
     platform: douyu
     confidence: high
     duration_min: 289
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_21f8ab7293d8465db777a7aa3cda1413.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/550832c7f1387c02e548fa49d79b4e0401458397.jpg"
     games: [tianming-qiyu-guitu]
     sources:
       - url: https://www.bilibili.com/video/BV1s8411V7L5
@@ -153,9 +153,13 @@
     platform: douyu
     confidence: high
     duration_min: 659
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_37a8a0d5d0184388b3e083a798a058f2.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2eaec4ac8a424382cd16b76e8d60797b76cc0ff4.jpg"
     games: [heiyang]
     sources:
+      - url: https://www.bilibili.com/video/BV1nv4y1Q7y8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40182199"
         kind: replay
         parts: 1
@@ -163,10 +167,6 @@
       - url: https://www.acfun.cn/v/ac40182200
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1nv4y1Q7y8
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac40182200
@@ -177,7 +177,7 @@
     platform: douyu
     confidence: high
     duration_min: 311
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9c7c684e225149189051cbf86a69441e.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7e265500495c42f137b909ae6d797796b10a65a6.jpg"
     games: [a-little-to-the-left]
     sources:
       - url: https://www.bilibili.com/video/BV1Wd4y1Y76h
@@ -197,7 +197,7 @@
     platform: douyu
     confidence: high
     duration_min: 170
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e7533858353142f5abb7e5ff571c7bfc.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fd8660b6a9780652f296ac90697507fa3a9c18ea.jpg"
     games: [springblades]
     sources:
       - url: https://www.bilibili.com/video/BV1914y1N7hX
@@ -217,7 +217,7 @@
     platform: douyu
     confidence: high
     duration_min: 75
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6f0c4c554bfc429d8b97c3d2a39e8246.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f237d6f7f7cd34955e8031cae97a7b95cd614c22.jpg"
     games: [insomnia-theater-in-the-head]
     sources:
       - url: https://www.bilibili.com/video/BV1624y1D7t2
@@ -237,7 +237,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3ffa6757ca8c4640af0d655e5f9f2cc4.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
       - url: https://www.bilibili.com/video/BV1214y1A7Bq
@@ -257,7 +257,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9b4e8971c3ff47a684d762788849531f.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
       - url: https://www.bilibili.com/video/BV1QR4y167ui
@@ -277,17 +277,17 @@
     platform: douyu
     confidence: high
     duration_min: 172
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5528937558374331a905b5bda96e4777.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
-      - url: "https://www.acfun.cn/v/ac40235986"
-        kind: replay
-        parts: 1
-        status: alive
       - url: https://www.bilibili.com/video/BV1nv4y1z7ng
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac40235986"
+        kind: replay
+        parts: 1
+        status: alive
     contributed_by: data-agent
 
   - id: 2022-12-23-live-01
@@ -297,9 +297,13 @@
     platform: douyu
     confidence: high
     duration_min: 348
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df0759369f224f52ac68ae5afa33712a.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/50b9b8b6eba47062d476b53d07e43386f84b4f26.jpg"
     games: [sky-children-of-the-light, subnautica]
     sources:
+      - url: https://www.bilibili.com/video/BV1dg411t7Qy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40245602"
         kind: replay
         parts: 1
@@ -313,7 +317,7 @@
     platform: douyu
     confidence: high
     duration_min: 283
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_df73929067374514a6fa7e058360c26d.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
       - url: https://www.bilibili.com/video/BV1cK411B7g7
@@ -333,9 +337,13 @@
     platform: douyu
     confidence: high
     duration_min: 292
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0e87dcf9830f411e933c14e7ecbc3819.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
+      - url: https://www.bilibili.com/video/BV1Ae411w7rs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40262721"
         kind: replay
         parts: 1
@@ -353,7 +361,7 @@
     platform: douyu
     confidence: high
     duration_min: 315
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_45411f359adf4af3aeee425517291259.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7781f3640a2501f777d74ae803d6a8a9d17c9113.jpg"
     games: [subnautica]
     sources:
       - url: https://www.bilibili.com/video/BV1WG4y1E7Pc
@@ -373,7 +381,7 @@
     platform: douyu
     confidence: high
     duration_min: 302
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3924472ef47047119e5de4374d9db0c6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/954e794a7feef8c126dbea34e20365c1ae0eaca8.jpg"
     games: [the-house-of-da-vinci-3]
     sources:
       - url: https://www.bilibili.com/video/BV1g84y1W73G
@@ -393,7 +401,7 @@
     platform: douyu
     confidence: high
     duration_min: 311
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_b44ccc5393ef45c4afbfc60e791bb50d.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2dadf795f03bdc00c17cccb97984fe0cd1b8d019.jpg"
     games: [fresh-start]
     sources:
       - url: https://www.bilibili.com/video/BV1p84y1W7Bo
