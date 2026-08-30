@@ -50,6 +50,7 @@
     confidence: high
     duration_min: 200
     games: [journey]
+    cover: "/images/covers/2015-02-04-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1KW411g7Hr?p=1
         kind: replay
@@ -61,7 +62,7 @@
         status: alive
         cover_unreliable: true
     contributed_by: data-agent
-    note: "B站「女流录像小屋」《女流过往精彩录像补投-风之旅人（2015.2.4/7.22/8.20）》P1.1/P1.2。用户人工核实发现：该 BV 平台封面实际取自 P2/P3（2015.7.22/8.20，已露脸期），与本条目对应的 2015-02-04（尚未露脸期）不符，已标记 cover_unreliable。"
+    note: "B站「女流录像小屋」《女流过往精彩录像补投-风之旅人（2015.2.4/7.22/8.20）》P1.1/P1.2。用户人工核实发现：该 BV 平台封面实际取自 P2/P3（2015.7.22/8.20，已露脸期），与本条目对应的 2015-02-04（尚未露脸期）不符，已标记 cover_unreliable 并改用从 P1 内截取的画面作为封面。"
   - id: 2015-02-05-live-01
     type: live
     date: '2015-02-05'
@@ -70,6 +71,7 @@
     confidence: high
     duration_min: 138
     games: [to-the-moon]
+    cover: "/images/covers/2015-02-05-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV13W41187BJ?p=1
         kind: replay
@@ -86,6 +88,7 @@
     confidence: high
     duration_min: 206
     games: [to-the-moon]
+    cover: "/images/covers/2015-02-06-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV13W41187BJ?p=2
         kind: replay
@@ -123,6 +126,7 @@
     confidence: high
     duration_min: 163
     games: [beyond-two-souls]
+    cover: "/images/covers/2015-03-02-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=1
         kind: replay
@@ -143,6 +147,7 @@
     confidence: high
     duration_min: 256
     games: [beyond-two-souls]
+    cover: "/images/covers/2015-03-10-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=3
         kind: replay
@@ -175,6 +180,7 @@
     confidence: high
     duration_min: 67
     games: [beyond-two-souls]
+    cover: "/images/covers/2015-03-11-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=8
         kind: replay
@@ -245,6 +251,7 @@
     confidence: high
     duration_min: 185
     games: []
+    cover: "/images/covers/2015-07-05-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=1
         kind: replay
@@ -264,6 +271,7 @@
     confidence: high
     duration_min: 159
     games: []
+    cover: "/images/covers/2015-07-12-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=2
         kind: replay
@@ -283,6 +291,7 @@
     confidence: high
     duration_min: 167
     games: []
+    cover: "/images/covers/2015-07-16-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=3
         kind: replay
@@ -302,6 +311,7 @@
     confidence: high
     duration_min: 169
     games: []
+    cover: "/images/covers/2015-07-19-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=4
         kind: replay
@@ -321,6 +331,7 @@
     confidence: high
     duration_min: 116
     games: [journey]
+    cover: "/images/covers/2015-07-22-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1KW411g7Hr?p=3
         kind: replay
@@ -355,6 +366,7 @@
     confidence: high
     duration_min: 105
     games: []
+    cover: "/images/covers/2015-07-26-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=5
         kind: replay
@@ -374,6 +386,7 @@
     confidence: high
     duration_min: 210
     games: []
+    cover: "/images/covers/2015-08-09-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=6
         kind: replay
@@ -414,6 +427,7 @@
     confidence: high
     duration_min: 106
     games: []
+    cover: "/images/covers/2015-08-16-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=7
         kind: replay
@@ -433,6 +447,7 @@
     confidence: high
     duration_min: 97
     games: [journey]
+    cover: "/images/covers/2015-08-20-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1KW411g7Hr?p=5
         kind: replay
@@ -449,6 +464,7 @@
     confidence: high
     duration_min: 109
     games: []
+    cover: "/images/covers/2015-09-09-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=8
         kind: replay
@@ -468,6 +484,7 @@
     confidence: high
     duration_min: 62
     games: []
+    cover: "/images/covers/2015-09-10-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=9
         kind: replay
@@ -487,6 +504,7 @@
     confidence: high
     duration_min: 128
     games: []
+    cover: "/images/covers/2015-09-13-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=10
         kind: replay
@@ -506,6 +524,7 @@
     confidence: high
     duration_min: 193
     games: []
+    cover: "/images/covers/2015-10-11-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=11
         kind: replay
@@ -525,6 +544,7 @@
     confidence: high
     duration_min: 186
     games: []
+    cover: "/images/covers/2015-10-18-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=12
         kind: replay
@@ -580,6 +600,7 @@
     confidence: high
     duration_min: 199
     games: []
+    cover: "/images/covers/2015-10-25-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=13
         kind: replay
@@ -692,6 +713,7 @@
     confidence: high
     duration_min: 188
     games: []
+    cover: "/images/covers/2015-10-30-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=14
         kind: replay
@@ -711,6 +733,7 @@
     confidence: high
     duration_min: 185
     games: []
+    cover: "/images/covers/2015-11-08-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=15
         kind: replay
@@ -730,6 +753,7 @@
     confidence: high
     duration_min: 120
     games: []
+    cover: "/images/covers/2015-11-15-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=16
         kind: replay
@@ -749,6 +773,7 @@
     confidence: high
     duration_min: 294
     games: []
+    cover: "/images/covers/2015-11-26-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=17
         kind: replay
@@ -768,6 +793,7 @@
     confidence: high
     duration_min: 204
     games: []
+    cover: "/images/covers/2015-12-13-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=18
         kind: replay
@@ -787,6 +813,7 @@
     confidence: high
     duration_min: 234
     games: []
+    cover: "/images/covers/2015-12-19-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=19
         kind: replay
