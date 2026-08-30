@@ -53,7 +53,7 @@
     platform: douyu
     confidence: high
     duration_min: 193
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_08/1470619273.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ef6651c2f4a92ad424d52a53ec5f41a37d9c512c.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -81,7 +81,7 @@
     platform: douyu
     confidence: high
     duration_min: 174
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_08/1470656775.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/bfc92ab392fdc87c1972cc492eeb4a242391bbc1.jpg"
     games: [dota-2]
     segments:
       - at: "00:00:00"
@@ -112,7 +112,7 @@
     platform: douyu
     confidence: high
     duration_min: 73
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_09/1470755980.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/36df90f450413df2e9368a53a4fd2b3b84288a11.jpg"
     games: [no-mans-sky]
     segments:
       - at: "00:00:00"
@@ -139,7 +139,7 @@
     platform: douyu
     confidence: high
     duration_min: 185
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_10/1470843127.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"
@@ -168,7 +168,7 @@
     platform: douyu
     confidence: high
     duration_min: 205
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_12/1471005582.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"
@@ -199,7 +199,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_16/1471364449.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"
@@ -230,12 +230,16 @@
     platform: douyu
     confidence: high
     duration_min: 236
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_17/1471434707.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ed0580cfcd1d4cdb084cc12daf12f73910f9c871.jpg"
     games:
       - tricky-towers
       - starbound
       - overwatch
     sources:
+      - url: https://www.bilibili.com/video/BV1gs411k7r2
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3029684"
         kind: replay
         parts: 1
@@ -248,10 +252,6 @@
         kind: replay
         parts: 2
         status: alive
-      - url: https://www.bilibili.com/video/BV1gs411k7r2
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     segments:
@@ -271,7 +271,7 @@
     platform: douyu
     confidence: high
     duration_min: 343
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_19/1471625847.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/372aa8149b5d80102d87eb0d46e490f1f560abce.jpg"
     games: [turmoil]
     segments:
       - at: "00:00:00"
@@ -305,7 +305,7 @@
     platform: douyu
     confidence: high
     duration_min: 163
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_22/1471868725.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cd6722b47aee8bff0b6b12aa7a0b42fb43be33ba.jpg"
     games:
       - contra
     tags:
@@ -344,7 +344,7 @@
     platform: douyu
     confidence: high
     duration_min: 149
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_23/1471967822.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/090763f4e81d742904749918dc898ad4adfe7e05.jpg"
     games: [contra]
     segments:
       - at: "00:00:00"
@@ -373,7 +373,7 @@
     platform: douyu
     confidence: high
     duration_min: 142
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_25/1472136269.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d081098eaa800b87952d89ba857cfcc04ccab823.jpg"
     games: [worms-wmd]
     segments:
       - at: "00:00:00"
@@ -398,7 +398,7 @@
     platform: douyu
     confidence: high
     duration_min: 225
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_25/1472136915.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d081098eaa800b87952d89ba857cfcc04ccab823.jpg"
     games: [worms-wmd]
     segments:
       - at: "00:00:00"
@@ -427,7 +427,7 @@
     platform: douyu
     confidence: high
     duration_min: 255
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_26/1472225667.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"
@@ -457,7 +457,7 @@
     platform: douyu
     confidence: high
     duration_min: 117
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_28/1472382642.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/223581897cb563a1d895c95b7be795e8eb7efb0d.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -485,7 +485,7 @@
     platform: douyu
     confidence: high
     duration_min: 234
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_29/1472477996.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"
@@ -514,7 +514,7 @@
     platform: douyu
     confidence: high
     duration_min: 131
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_08_30/1472561822.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
       - at: "00:00:00"

@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_01/1501595373.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/545c704f2a584cbf8758fb6622629a43cc599dc2.jpg"
     games: [minecraft]
     segments:
       - at: "00:00:00"
@@ -82,7 +82,7 @@
     platform: douyu
     confidence: high
     duration_min: 246
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_03/1501749633.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/23f3ff0fbd969ae0f9dc20e5ebe5320c359da711.jpg"
     games: [minecraft]
     segments:
       - at: "00:00:00"
@@ -154,7 +154,7 @@
     platform: douyu
     confidence: high
     duration_min: 228
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_04/1501852496.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/77691fa633edb637f4af83f5917d05d65a414ad7.jpg"
     games:
       - minecraft
     segments:
@@ -227,7 +227,7 @@
     platform: douyu
     confidence: high
     duration_min: 110
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_05/1501937378.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/29a5f3aed8f75dd3ccb3b8346e851fa762e9a158.jpg"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -266,7 +266,7 @@
     platform: douyu
     confidence: high
     duration_min: 217
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_07/1502115849.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d23762c0696ad0d7a24ab38499d8318f018556d7.jpg"
     games:
       - minecraft
     segments:
@@ -336,7 +336,7 @@
     platform: douyu
     confidence: high
     duration_min: 77
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_08/1502157294.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c70979423a6d4e3d35613750c309fff1e357e715.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -370,7 +370,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_08/1502203157.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c402478c564171cab5cc9b934b9ccba77f98f77b.jpg"
     games:
       - minecraft
     segments:
@@ -452,7 +452,7 @@
     platform: douyu
     confidence: high
     duration_min: 209
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_09/1502281426.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f431d33d7e75c512ac5dff48d5a450d9115c8557.jpg"
     games: []
     tags: [聊天]
     segments:
@@ -506,7 +506,7 @@
     platform: douyu
     confidence: high
     duration_min: 236
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_11/1502464752.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9ab515b78f02756b888dd21bfe8789b6e31c1f75.jpg"
     games: [minecraft, geometry-dash]
     segments:
       - at: "00:00:00"
@@ -580,7 +580,7 @@
     platform: douyu
     confidence: high
     duration_min: 249
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_13/1502600385.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/192251ea6bcc9c21e9418709f65d0ec023276ff4.jpg"
     games:
       - minecraft
     segments:
@@ -639,7 +639,7 @@
     platform: douyu
     confidence: high
     duration_min: 263
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_14/1502670454.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9b1c1823c0caf20a63ee409914f35abf9fbbcb83.png"
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播的弹幕版（ac3918562）与纯净版（ac3916709，目录标题『心灵砒霜21』）原本被建模为两条重复条目，已合并。"
@@ -673,6 +673,10 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1Xx411E7Qz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3918562"
         kind: replay
         parts: 12
@@ -681,10 +685,6 @@
         kind: replay
         parts: 21
         status: alive
-      - url: https://www.bilibili.com/video/BV1Xx411E7Qz
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-08-14-live-01
@@ -694,7 +694,7 @@
     platform: douyu
     confidence: high
     duration_min: 135
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_20/1503236585.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f3886462a2873852e67b544f4967de6cc342457e.png"
     games: []
     tags: [聊天]
     segments:
@@ -726,7 +726,7 @@
     platform: douyu
     confidence: high
     duration_min: 239
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_19/1503150154.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d147368c278e43bcc3f72680da3fb6cafec573b4.png"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -768,7 +768,7 @@
     platform: douyu
     confidence: high
     duration_min: 192
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_21/1503319041.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/19ff4beb578fe26bd6ee2666f251ad26a47f6916.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -806,7 +806,7 @@
     platform: douyu
     confidence: high
     duration_min: 280
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_21/1503330301.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/568c187b3c5b0996f5de06998d114c463474690f.png"
     games: [human-resource-machine]
     segments:
       - at: "00:00:00"
@@ -851,7 +851,7 @@
     platform: douyu
     confidence: high
     duration_min: 189
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_22/1503411362.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8000cea2d34b422aef3d2347c3f9d4a9c9b81546.png"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -886,7 +886,7 @@
     platform: douyu
     confidence: high
     duration_min: 235
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_23/1503493312.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6fddf9e8fe3effb32c106484b018cbd9a5c835bd.png"
     games: [worms-wmd]
     segments:
       - at: "00:00:00"
@@ -925,7 +925,7 @@
     platform: douyu
     confidence: high
     duration_min: 277
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_26/1503720000.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0d5155dcbc73d666c04aa58dd367b40f5bd77fa8.png"
     games: [oxygen-not-included]
     segments:
       - at: "00:00:00"
@@ -968,7 +968,7 @@
     platform: douyu
     confidence: high
     duration_min: 298
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_26/1503760487.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2308fa7b19e583cdb47bff659b8640e65030beac.png"
     games: [oxygen-not-included]
     segments:
       - at: "00:00:00"
@@ -1012,7 +1012,7 @@
     platform: douyu
     confidence: high
     duration_min: 237
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_28/1503924559.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e3837c8a9f7e3b77ab0827a51457d9dc7adf13df.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -1052,7 +1052,7 @@
     platform: douyu
     confidence: high
     duration_min: 211
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_29/1504011185.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0f933b027072cee9a12f408f8e0bef5ea7768cc0.png"
     games:
       - minecraft
     segments:
@@ -1100,7 +1100,7 @@
     platform: douyu
     confidence: high
     duration_min: 285
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_08_30/1504105773.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a824c81974dee9e18566907bedbdc6c126494bd9.png"
     games: [sumoman]
     segments:
       - at: "00:00:00"

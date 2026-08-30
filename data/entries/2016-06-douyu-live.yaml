@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 54
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783664.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b63c3b3db4472e844e1ed82e190fd015e26a8698.jpg"
     games: [nine-hours-nine-persons-nine-doors]
     sources:
       - url: https://www.bilibili.com/video/BV1rs411i7rn
@@ -25,7 +25,7 @@
     platform: douyu
     confidence: high
     duration_min: 93
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_01/1464783240.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e287ee1d41de52597b583ab1099cd6d34f737f55.jpg"
     games: [nixizhixingtu-shanyao]
     sources:
       - url: https://www.bilibili.com/video/BV1rs411i7rV
@@ -45,7 +45,7 @@
     platform: douyu
     confidence: high
     duration_min: 29
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464873196.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3d710378f4d5b53b406d00e8582da02970eab66a.jpg"
     games: [little-inferno]
     sources:
       - url: https://www.bilibili.com/video/BV1ys411i7Vb
@@ -65,7 +65,7 @@
     platform: douyu
     confidence: high
     duration_min: 58
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464870856.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3d710378f4d5b53b406d00e8582da02970eab66a.jpg"
     games: [once-upon-a-time-game]
     sources:
       - url: https://www.bilibili.com/video/BV1ys411i75i
@@ -85,7 +85,7 @@
     platform: douyu
     confidence: high
     duration_min: 122
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_02/1464868220.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3d710378f4d5b53b406d00e8582da02970eab66a.jpg"
     games: [stranded-deep]
     segments:
       - at: "00:00:00"
@@ -110,7 +110,7 @@
     platform: douyu
     confidence: high
     duration_min: 236
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_03/1464968148.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/42660ee35b44e82d29c24a12d53432ed83332515.jpg"
     games: [little-inferno]
     segments:
       - at: "00:00:00"
@@ -139,7 +139,7 @@
     platform: douyu
     confidence: high
     duration_min: 85
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465036729.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3d710378f4d5b53b406d00e8582da02970eab66a.jpg"
     games: [geometry-dash]
     segments:
       - at: "00:00:00"
@@ -164,7 +164,7 @@
     platform: douyu
     confidence: high
     duration_min: 159
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_04/1465052401.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/381df902d4aca591c21cec4362cc517884aa0622.jpg"
     games: [salt-and-sanctuary]
     segments:
       - at: "00:00:00"
@@ -189,9 +189,13 @@
     platform: douyu
     confidence: high
     duration_min: 132
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_06_05/1465143423.gif?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ac4907f5be1e982aac40e8b15b90c110686d8892.jpg"
     games: []
     sources:
+      - url: https://www.bilibili.com/video/BV19s411i79W
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac2795451"
         kind: replay
         parts: 1

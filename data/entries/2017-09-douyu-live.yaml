@@ -20,7 +20,7 @@
     platform: douyu
     confidence: high
     duration_min: 245
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_02/1504356455.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/50cf6757d071c41b638c708bc3947b0cc7bb1c3b.png"
     games: [patapon]
     segments:
       - at: "00:00:00"
@@ -63,7 +63,7 @@
     platform: douyu
     confidence: high
     duration_min: 139
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_05/1504571017.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f875ecf4e7b5f6196e5a2018a36ff46cbf9ed918.png"
     games: [horizon-zero-dawn]
     segments:
       - at: "00:00:00"
@@ -94,7 +94,7 @@
     platform: douyu
     confidence: high
     duration_min: 275
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_06/1504706209.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/af08e28ae700ba937e1b9533c46ddbd632555303.png"
     games: [patapon]
     segments:
       - at: "00:00:00"
@@ -137,7 +137,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_07/1504791389.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/74af735bb6e1568209de17cb653dc3a900af603e.png"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -174,7 +174,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_08/1504880454.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6a30e627174ca4058dc6abe0234191de0855b979.png"
     games: [patapon]
     segments:
       - at: "00:00:00"
@@ -215,7 +215,7 @@
     platform: douyu
     confidence: high
     duration_min: 215
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_09/1504967519.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/87799d77d40c3f3c22aa390ebda9126db1e9676d.png"
     games: []
     tags: [聊天]
     segments:
@@ -236,6 +236,10 @@
       - at: "03:14:07"
         label: "P8-9.9-尬聊"
     sources:
+      - url: https://www.bilibili.com/video/BV14x41147Jw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3969217"
         kind: replay
         parts: 8
@@ -250,7 +254,7 @@
     platform: douyu
     confidence: high
     duration_min: 142
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_10/1505083727.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3be1d89ae5011adb2e445b8bf10731aa2617d0c6.png"
     games: []
     tags: [心灵砒霜, 弹幕版]
     note: "同一场直播的弹幕版（ac3971648）与纯净版（ac3970580）原本被建模为两条重复条目，已合并（两版本目录标题均注『无聊天部分』）。"
@@ -268,6 +272,10 @@
       - at: "01:58:44"
         label: "P6-9.10-心灵砒霜-弹幕版（无聊天部分）"
     sources:
+      - url: https://www.bilibili.com/video/BV1ax411478t
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac3971648"
         kind: replay
         parts: 6
@@ -285,7 +293,7 @@
     platform: douyu
     confidence: high
     duration_min: 254
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_11/1505137384.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/18b11061ab2950e988d3e98603dd89b64ab1ec6e.png"
     games: [mario-rabbids]
     segments:
       - at: "00:00:00"
@@ -309,14 +317,14 @@
       - at: "03:47:56"
         label: "P10-9.11-马里奥疯兔"
     sources:
-      - url: "https://www.acfun.cn/v/ac3972500"
-        kind: replay
-        parts: 10
-        status: alive
       - url: https://www.bilibili.com/video/BV1Sx41147EX
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac3972500"
+        kind: replay
+        parts: 10
+        status: alive
     contributed_by: data-agent
 
   - id: 2017-09-12-live-01
@@ -347,7 +355,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_13/1505311564.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fad5cb6dcb9da804d514b28752b5708fac5ec034.png"
     games: [mario-rabbids]
     segments:
       - at: "00:00:00"
@@ -390,7 +398,7 @@
     platform: douyu
     confidence: high
     duration_min: 80
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_15/1505433684.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/196111ed31869576d76fd4b334b2ca084b350542.png"
     games: []
     tags: [户外]
     segments:
@@ -418,7 +426,7 @@
     platform: douyu
     confidence: high
     duration_min: 136
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_16/1505534577.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e3e608e8e192eb4547ffaacc866e5a731290b32d.jpg"
     games: [minecraft]
     segments:
       - at: "00:00:00"
@@ -457,7 +465,7 @@
     platform: douyu
     confidence: high
     duration_min: 216
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_17/1505615884.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/bccd5d42487e96b1e2c8724a3a6248ee476f122b.jpg"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -495,7 +503,7 @@
     platform: douyu
     confidence: high
     duration_min: 242
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_19/1505785714.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e4ddab9b83e30a3f0ac82620a608f5792de7b9dd.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -537,7 +545,7 @@
     platform: douyu
     confidence: high
     duration_min: 300
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_19/1505780142.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/da5d021256267a0a5da0b945e421c7aadcec8af0.png"
     games: [cook-serve-delicious]
     segments:
       - at: "00:00:00"
@@ -574,7 +582,7 @@
     platform: douyu
     confidence: high
     duration_min: 253
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_20/1505866149.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ab7be3001890926b144364a3800052334cc5c198.png"
     games: [cook-serve-delicious]
     segments:
       - at: "00:00:00"
@@ -615,7 +623,7 @@
     platform: douyu
     confidence: high
     duration_min: 131
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_20/1505916920.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2057605fe3be4f1a9b8531a91bc93e3ea29ab4df.png"
     games: [euro-truck-simulator-2, cook-serve-delicious]
     segments:
       - at: "00:00:00"
@@ -646,7 +654,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_21/1506004904.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/185076293233ee9e6b65ffe47c62044bea6acfc4.png"
     games: []
     tags: [户外]
     segments:
@@ -694,7 +702,7 @@
     platform: douyu
     confidence: high
     duration_min: 159
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_22/1506093005.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b268842d04958ae6b4ca0b8379e95e0d36e3f656.png"
     games: [euro-truck-simulator-2]
     segments:
       - at: "00:00:00"
@@ -727,7 +735,7 @@
     platform: douyu
     confidence: high
     duration_min: 274
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_24/1506215676.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/03ff73b0b8ad81679b3e3f289b5568a4be8169dc.png"
     games: [euro-truck-simulator-2]
     segments:
       - at: "00:00:00"
@@ -771,7 +779,7 @@
     platform: douyu
     confidence: high
     duration_min: 142
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_26/1506384849.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a7e8262e8479911bb392cc95661919798da3f0d3.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -813,7 +821,7 @@
     platform: douyu
     confidence: high
     duration_min: 170
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_27/1506519353.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/4f52d897e6e329d757d508deb8224775089ced2e.png"
     games: [euro-truck-simulator-2]
     segments:
       - at: "00:00:00"
@@ -846,7 +854,7 @@
     platform: douyu
     confidence: high
     duration_min: 215
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_30/1506769675.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/560358f69144e8f543efca8f803b1ef127600dae.png"
     games: [pubg]
     segments:
       - at: "00:00:00"
@@ -885,7 +893,7 @@
     platform: douyu
     confidence: high
     duration_min: 282
-    cover: "https://tx-free-imgs.acfun.cn/content/2017_09_30/1506780946.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f5c50c2767faffd6ea417d0c54959f5c107f9dff.png"
     games: [cuphead]
     segments:
       - at: "00:00:00"

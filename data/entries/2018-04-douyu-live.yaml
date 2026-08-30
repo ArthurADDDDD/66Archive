@@ -6,7 +6,7 @@
     platform: douyu
     confidence: high
     duration_min: 256
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522629780.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/778bfd535748784d572d104d501067243882b3c3.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -46,7 +46,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_02/1522669381.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3dbc7eafe1177ba5d04c6eff1762e11d9ab8e843.png"
     games: [puyo-puyo-tetris]
     segments:
       - at: "00:00:00"
@@ -85,7 +85,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_03/1522757898.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/22191a4d1c5ec24c8cfdbf83c5e0433114a5b4c7.png"
     games: [puyo-puyo-tetris, cave-story]
     segments:
       - at: "00:00:00"
@@ -130,7 +130,7 @@
     platform: douyu
     confidence: high
     duration_min: 242
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_04/1522843836.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ca6235e13f5b89e6275094d4260a4aa6350fee61.png"
     games: []
     tags: [聊天]
     segments:
@@ -170,7 +170,7 @@
     platform: douyu
     confidence: high
     duration_min: 101
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523061996.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4bc48a026b47571a43265702bf064a68111698c.png"
     games: []
     tags: [佩奇, 聊天, 唱歌]
     segments:
@@ -195,14 +195,14 @@
       - at: "01:37:14"
         label: "【P3.4-女流&豆豆】喜剧之王cover李荣浩"
     sources:
-      - url: "https://www.acfun.cn/v/ac4298460"
-        kind: replay
-        parts: 10
-        status: alive
       - url: https://www.bilibili.com/video/BV1ZW411N7Ye
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac4298460"
+        kind: replay
+        parts: 10
+        status: alive
     contributed_by: data-agent
 
   - id: 2018-04-06-live-02
@@ -212,7 +212,7 @@
     platform: douyu
     confidence: high
     duration_min: 85
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_06/1523016488.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/bce7b11aa02056b8a1639f9daecde09d0af5aae2.png"
     games: []
     tags: [佩奇, 聊天]
     segments:
@@ -240,7 +240,7 @@
     platform: douyu
     confidence: high
     duration_min: 202
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_07/1523106647.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8293a87fc10a14eccd8066f6b193c6ddd1ee045a.png"
     games: [kartrider]
     tags: [户外]
     segments:
@@ -308,7 +308,7 @@
     platform: douyu
     confidence: high
     duration_min: 191
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_11/1523447816.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8b3b084d6975fe894568440fd3d0bf9c73c253fb.png"
     games: [rhythm-heaven]
     segments:
       - at: "00:00:00"
@@ -355,7 +355,7 @@
     platform: douyu
     confidence: high
     duration_min: 68
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524632411.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3b6512064cad0dcdb8c3617042ed8009d40e129d.png"
     games: []
     tags: [聊天]
     segments:
@@ -383,7 +383,7 @@
     platform: douyu
     confidence: high
     duration_min: 247
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_13/1523620162.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/897f84653aeb9fd02ee26aeff2bfa923948b8f39.png"
     games: [old-mans-journey, the-lives]
     segments:
       - at: "00:00:00"
@@ -412,6 +412,10 @@
         label: "P3.5-2018.4.13-众生"
         game: the-lives
     sources:
+      - url: https://www.bilibili.com/video/BV15W411L7oe
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4309315"
         kind: replay
         parts: 10
@@ -426,7 +430,7 @@
     platform: douyu
     confidence: high
     duration_min: 233
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_15/1523792304.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/df8d3ba65fbf666a9d7f54b98789d8b4cd4b769c.png"
     games: []
     tags: [戏说聊斋, 心灵砒霜]
     segments:
@@ -449,6 +453,10 @@
       - at: "03:25:12"
         label: "P2-2018.4.15-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1mW411L7PL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4311550"
         kind: replay
         parts: 4
@@ -461,10 +469,6 @@
         kind: replay
         parts: 5
         status: alive
-      - url: https://www.bilibili.com/video/BV1mW411L7PL
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     note: "同一场（4.15 周日）拆 3 视频：聊斋第三期纯净版（ac4311550，P1）+ 聊斋弹幕版（ac4311943，P1，次日上传）+ 砒霜弹幕版（ac4311945，P2，网易云第 79 期《论中文语言的博大精深~》），P 编号连续，按一天一条原则合并"
     contributed_by: data-agent
   - id: 2018-04-16-live-01
@@ -474,7 +478,7 @@
     platform: douyu
     confidence: high
     duration_min: 314
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_16/1523888489.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7036cb787c71dd03e0c334d2ead449f423a9a371.png"
     games: [maplestory]
     segments:
       - at: "00:00:00"
@@ -519,7 +523,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965798.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e6c5d5b8a02da2190015a34936c3cfca011735ac.png"
     games: [fortnite]
     segments:
       - at: "00:00:00"
@@ -561,7 +565,7 @@
     platform: douyu
     confidence: high
     duration_min: 16
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_17/1523965702.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/df8d3ba65fbf666a9d7f54b98789d8b4cd4b769c.png"
     games: []
     tags: [戏说聊斋]
     sources:
@@ -582,7 +586,7 @@
     platform: douyu
     confidence: high
     duration_min: 286
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_20/1524226134.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1d4d19fbfa269279c8820767b3be0579f748d4c3.png"
     games: [god-of-war-4]
     segments:
       - at: "00:00:00"
@@ -629,7 +633,7 @@
     platform: douyu
     confidence: high
     duration_min: 272
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_21/1524312954.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/19fd87e632ac82d809cb753d161d0a453d5d3112.png"
     games: [god-of-war-4]
     segments:
       - at: "00:00:00"
@@ -670,7 +674,7 @@
     platform: douyu
     confidence: high
     duration_min: 58
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_22/1524400508.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/75aa8751d5d9f53eb811ee3c6894f370cca07d81.png"
     games: [maplestory]
     segments:
       - at: "00:00:00"
@@ -696,7 +700,7 @@
     platform: douyu
     confidence: high
     duration_min: 188
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524441673.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e091050d5892c0238049bf9def2648f2248e11f5.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -732,7 +736,7 @@
     platform: douyu
     confidence: high
     duration_min: 128
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524491783.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f32f2f1eb9d77094c8bd8cc7577794368b91382e.png"
     games: [fortnite]
     segments:
       - at: "00:00:00"
@@ -764,7 +768,7 @@
     platform: douyu
     confidence: high
     duration_min: 58
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486723.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/df8d3ba65fbf666a9d7f54b98789d8b4cd4b769c.png"
     games: []
     tags: [戏说聊斋]
     segments:
@@ -790,7 +794,7 @@
     platform: douyu
     confidence: high
     duration_min: 148
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_23/1524486628.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/bdf2b1d9a694969659496403f9dde77694eeb17b.png"
     games: [god-of-war-4]
     segments:
       - at: "00:00:00"
@@ -823,7 +827,7 @@
     platform: douyu
     confidence: high
     duration_min: 101
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524662418.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/541cae0b4cd38fc57658f4a4c2233fa1d4042362.png"
     games: []
     tags: [聊天]
     segments:
@@ -853,7 +857,7 @@
     platform: douyu
     confidence: high
     duration_min: 180
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_25/1524668794.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a8a9ed1e1f9bfe8b4c8077ae377b092171e25cbf.png"
     games: [fortnite]
     segments:
       - at: "00:00:00"
@@ -888,7 +892,7 @@
     platform: douyu
     confidence: high
     duration_min: 207
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_26/1524754286.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b4fc65c4fcfa2c8ccd5e8b5a98e38abe3eb754f4.png"
     games: [fortnite]
     segments:
       - at: "00:00:00"
@@ -908,6 +912,10 @@
       - at: "03:00:18"
         label: "堡垒之夜主播擂台赛-决赛"
     sources:
+      - url: https://www.bilibili.com/video/BV1fW411G7YX
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4328697"
         kind: replay
         parts: 8
@@ -921,7 +929,7 @@
     platform: douyu
     confidence: high
     duration_min: 166
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_27/1524826819.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f9503bf720c61271f2f15bf31a8734ce896c52c1.png"
     games: [god-of-war-4]
     segments:
       - at: "00:00:00"
@@ -956,7 +964,7 @@
     platform: douyu
     confidence: high
     duration_min: 159
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_04_30/1525130359.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fd620c53d62d55b94747eb7f2e4e5db12a36ee72.png"
     games: []
     tags: [聊天]
     segments:

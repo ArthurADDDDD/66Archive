@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 279
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_71e1b96ce8744d91a53bd5b5d6ce40de.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f61c15694b0497952f2b6f844a762e979ecb146e.jpg"
     games: [wo-long]
     sources:
       - url: https://www.bilibili.com/video/BV1BD4y1M7Un
@@ -25,7 +25,7 @@
     platform: douyu
     confidence: high
     duration_min: 248
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_60cd140885574453b566555b37716c6a.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ce49400a8f348c85467167302eb1b15d0b59d4d6.jpg"
     games: [brotato]
     sources:
       - url: https://www.bilibili.com/video/BV1BM41147so
@@ -45,7 +45,7 @@
     platform: douyu
     confidence: high
     duration_min: 465
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_26d3663d257c4463baf183391339cba3.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f61c15694b0497952f2b6f844a762e979ecb146e.jpg"
     games: [wo-long]
     sources:
       - url: https://www.bilibili.com/video/BV1f24y137Ut
@@ -65,7 +65,7 @@
     platform: douyu
     confidence: high
     duration_min: 476
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7c0810daf0bc459ea36b53586a6e5d21.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f61c15694b0497952f2b6f844a762e979ecb146e.jpg"
     games: [wo-long]
     sources:
       - url: https://www.bilibili.com/video/BV1vT411e7iJ
@@ -85,7 +85,7 @@
     platform: douyu
     confidence: high
     duration_min: 491
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_56d944fc650046828e1f648392383629.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f61c15694b0497952f2b6f844a762e979ecb146e.jpg"
     games: [wo-long]
     sources:
       - url: https://www.bilibili.com/video/BV1rY41167np
@@ -105,7 +105,7 @@
     platform: douyu
     confidence: high
     duration_min: 433
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_190311312ca843c9a795809b0298a9cc.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/65d9baaef2ad187f6fcd7330efbefb8a7f0bf826.jpg"
     games: [daxia-lizhizhuan]
     sources:
       - url: https://www.bilibili.com/video/BV1Vo4y1671w
@@ -125,7 +125,7 @@
     platform: douyu
     confidence: high
     duration_min: 359
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a239f316b3e24c15ac0c3739f7337a8e.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/65d9baaef2ad187f6fcd7330efbefb8a7f0bf826.jpg"
     games: [daxia-lizhizhuan]
     sources:
       - url: https://www.bilibili.com/video/BV1Fv4y18715
@@ -145,7 +145,7 @@
     platform: douyu
     confidence: high
     duration_min: 354
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1c579058ce4f489ab7520e7cdf429f10.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/65d9baaef2ad187f6fcd7330efbefb8a7f0bf826.jpg"
     games: [daxia-lizhizhuan]
     sources:
       - url: https://www.bilibili.com/video/BV16k4y1h7AF
@@ -165,7 +165,7 @@
     platform: douyu
     confidence: high
     duration_min: 372
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_c3f95ddfb1384c6c9eff72e6bfdde162.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/65d9baaef2ad187f6fcd7330efbefb8a7f0bf826.jpg"
     games: [daxia-lizhizhuan]
     sources:
       - url: https://www.bilibili.com/video/BV1hL411y7Wv
@@ -205,9 +205,13 @@
     platform: douyu
     confidence: high
     duration_min: 420
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9ac0b63580ad4fa4b0881c7a80c6296f.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/79e977bb14894739fd7a9a8f4a1b88b0ae59e785.jpg"
     games: [resident-evil-2]
     sources:
+      - url: https://www.bilibili.com/video/BV1JV4y197mw
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40923395"
         kind: replay
         parts: 1
@@ -215,10 +219,6 @@
       - url: https://www.acfun.cn/v/ac40923399
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1JV4y197mw
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac40923399
@@ -230,7 +230,7 @@
     platform: douyu
     confidence: high
     duration_min: 229
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_89e8ef5e5cca47059b72f9dc9507db94.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/79e977bb14894739fd7a9a8f4a1b88b0ae59e785.jpg"
     games: [resident-evil-2]
     sources:
       - url: https://www.bilibili.com/video/BV1ds4y1H7DX
@@ -250,9 +250,13 @@
     platform: douyu
     confidence: high
     duration_min: 138
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_efbf758e085e4c63bfe648486280e4d9.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/79e977bb14894739fd7a9a8f4a1b88b0ae59e785.jpg"
     games: [resident-evil-2]
     sources:
+      - url: https://www.bilibili.com/video/BV1N24y1473m
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac40916713"
         kind: replay
         parts: 1
@@ -266,7 +270,7 @@
     platform: douyu
     confidence: high
     duration_min: 308
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_15151795730842eca7731402a3be08c3.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8bf5082845c34135c8514875ede04fe3446d296f.jpg"
     games: [league-of-legends]
     sources:
       - url: https://www.bilibili.com/video/BV1zP411d76f
@@ -287,7 +291,7 @@
     platform: douyu
     confidence: high
     duration_min: 108
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d183243338e54a4395fa8557fa813343.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/48435aec714eccdda83187181c81d5451e9c99f2.jpg"
     games: []
     tags: [心灵砒霜]
     sources:
@@ -308,7 +312,7 @@
     platform: douyu
     confidence: high
     duration_min: 401
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6a6319a1db3e4e43b89f6c8bd3f98edb.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/83ee41b64d412c0abe554d8ce7dbab4f38e9dd28.jpg"
     games: [resident-evil-3]
     sources:
       - url: https://www.bilibili.com/video/BV1ks4y1n72m
@@ -328,7 +332,7 @@
     platform: douyu
     confidence: high
     duration_min: 338
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bd8d9bbbdb2e4d4783fbee36f1222b6d.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/098505fea4e8dfa84dc2859fb201466b5d964f92.jpg"
     games: [resident-evil-4]
     sources:
       - url: https://www.bilibili.com/video/BV1im4y167pK
@@ -348,7 +352,7 @@
     platform: douyu
     confidence: high
     duration_min: 397
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bf37159613584561a5b9fda346a59da6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6bcc77d1756e8d78f2532e021934ede75028d787.jpg"
     games: [resident-evil-4]
     sources:
       - url: https://www.bilibili.com/video/BV1dM411u7H4
@@ -368,7 +372,7 @@
     platform: douyu
     confidence: high
     duration_min: 410
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3ba6e8a5dcc34865a3d427ffa45caad5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cb6471cf1d5aeefb2482c832e29f4f65abe3df9f.jpg"
     games: [resident-evil-4]
     sources:
       - url: https://www.bilibili.com/video/BV1tg4y1s7yn
@@ -388,7 +392,7 @@
     platform: douyu
     confidence: high
     duration_min: 120
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_aebc1e4b077a4d8eb394e406c8bb8ca5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5f787de79d5a25a4f6b4a4ea0132b2991c0997ac.jpg"
     games: [storyteller]
     sources:
       - url: https://www.bilibili.com/video/BV1aL411S7ie

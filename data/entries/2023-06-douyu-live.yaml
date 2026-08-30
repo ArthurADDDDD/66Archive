@@ -5,9 +5,13 @@
     platform: douyu
     confidence: high
     duration_min: 627
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0a3fe571efb84eb99dc9cd33109d3c9e.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d37cafc1e8647a7bd8d8c3eb212012a636946a36.jpg"
     games: [zelda-totk]
     sources:
+      - url: https://www.bilibili.com/video/BV17k4y1s7Th
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41503160"
         kind: replay
         parts: 1
@@ -18,10 +22,6 @@
       - url: https://www.acfun.cn/v/ac41503144
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV17k4y1s7Th
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41503159、ac41503144
@@ -33,9 +33,13 @@
     platform: douyu
     confidence: high
     duration_min: 537
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_cd27af57cccc4219b79629f8ec6190ad.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d37cafc1e8647a7bd8d8c3eb212012a636946a36.jpg"
     games: [zelda-totk]
     sources:
+      - url: https://www.bilibili.com/video/BV1RL411q78m
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41510625"
         kind: replay
         parts: 1
@@ -46,10 +50,6 @@
       - url: https://www.acfun.cn/v/ac41510628
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1RL411q78m
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41510624、ac41510628
@@ -61,9 +61,13 @@
     platform: douyu
     confidence: high
     duration_min: 280
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_613616cf0bfd4b13b09ca3ddd7a0defc.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5bcf173345d3b99ecf5da87312cff31ab3ae2867.jpg"
     games: [only-up]
     sources:
+      - url: https://www.bilibili.com/video/BV1Ts4y1q7L8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41538892"
         kind: replay
         parts: 1
@@ -82,9 +86,13 @@
     platform: douyu
     confidence: high
     duration_min: 344
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e9e3b9dbbf1e4b3b931c2892d2f7f52b.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5bcf173345d3b99ecf5da87312cff31ab3ae2867.jpg"
     games: [only-up]
     sources:
+      - url: https://www.bilibili.com/video/BV1ez4y1v7Kt
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41543907"
         kind: replay
         parts: 1
@@ -103,7 +111,7 @@
     platform: douyu
     confidence: high
     duration_min: 282
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6370d101a45e4c8289a293cc0472a307.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5bcf173345d3b99ecf5da87312cff31ab3ae2867.jpg"
     games: [only-up]
     sources:
       - url: https://www.bilibili.com/video/BV1sj411Q7po
@@ -142,9 +150,13 @@
     platform: douyu
     confidence: high
     duration_min: 340
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e919b3e1c463487aaebf355850630063.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
+      - url: https://www.bilibili.com/video/BV1Nu411Y7yL
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41564078"
         kind: replay
         parts: 1
@@ -163,7 +175,7 @@
     platform: douyu
     confidence: high
     duration_min: 231
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_004a074f0f5f482d93814bcdd95110f5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
       - url: https://www.bilibili.com/video/BV1ah411T7EA
@@ -183,9 +195,13 @@
     platform: douyu
     confidence: high
     duration_min: 352
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a7065055a4ce4f1ea4edcd7bcbc0170b.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
+      - url: https://www.bilibili.com/video/BV11k4y1n76m
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41585873"
         kind: replay
         parts: 1
@@ -204,7 +220,7 @@
     platform: douyu
     confidence: high
     duration_min: 320
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2362a96890dd418b98503e8f62a48eb2.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
       - url: https://www.bilibili.com/video/BV1Js4y1y7qN
@@ -224,7 +240,7 @@
     platform: douyu
     confidence: high
     duration_min: 452
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_fe56bfe1d4ed4b1c9ceea5e75fc55c92.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
       - url: https://www.bilibili.com/video/BV11c411g7YJ
@@ -244,9 +260,13 @@
     platform: douyu
     confidence: high
     duration_min: 288
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_370bdd132b0944c6b3bee571f4cbd0f6.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
+      - url: https://www.bilibili.com/video/BV1QP411B7EM
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41601809"
         kind: replay
         parts: 1
@@ -265,7 +285,7 @@
     platform: douyu
     confidence: high
     duration_min: 136
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1eb01ec8b1e445008ea58b9d43171232.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1cebaa1eda3893f5aea1519a82a1e831b626fc28.jpg"
     games: [maplestory-m]
     sources:
       - url: https://www.bilibili.com/video/BV1Sm4y1Y7Rh
@@ -285,7 +305,7 @@
     platform: douyu
     confidence: high
     duration_min: 389
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_92b1ed8ea40c4d4d960287584a29f699.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fd079c3f924b469d132b68749c62c83734cadb24.jpg"
     games: [fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV1mc411M7YT
@@ -305,7 +325,7 @@
     platform: douyu
     confidence: high
     duration_min: 392
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_da8723d2804d4ae592936626168ee057.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/295fb8a9f3810cd3fe6440efd9a411741564acb8.jpg"
     games: [fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV1EN411r7w4
@@ -325,7 +345,7 @@
     platform: douyu
     confidence: high
     duration_min: 436
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e351d49127944a72855259aed84fce2b.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/295fb8a9f3810cd3fe6440efd9a411741564acb8.jpg"
     games: [fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV1M14y1U7oU
@@ -345,7 +365,7 @@
     platform: douyu
     confidence: high
     duration_min: 530
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_bb9cd3441fc24d17b20e23a6bd916194.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3ad3890d16adf0ed98802b6834de2b7e8e9996f6.jpg"
     games: [fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV19V4y1C7nk
@@ -365,7 +385,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_840d6509a4a84e7b8820e2a529951372.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/295fb8a9f3810cd3fe6440efd9a411741564acb8.jpg"
     games: [fall-guys]
     sources:
       - url: https://www.bilibili.com/video/BV1Dk4y1M7iT
@@ -401,9 +421,13 @@
     platform: douyu
     confidence: high
     duration_min: 348
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_4bd9ee2677324ac7b817fae10c9e93a4.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/556699e0bef4dd969bff0e3a5ef91c898d40ad42.jpg"
     games: [final-fantasy-16]
     sources:
+      - url: https://www.bilibili.com/video/BV1Tu411h7an
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41670789"
         kind: replay
         parts: 1
@@ -414,10 +438,6 @@
       - url: https://www.acfun.cn/v/ac41670161
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1Tu411h7an
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41670159、ac41670161
@@ -429,9 +449,13 @@
     platform: douyu
     confidence: high
     duration_min: 356
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_a7338df33a6c42a0baba9611ad00624a.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/556699e0bef4dd969bff0e3a5ef91c898d40ad42.jpg"
     games: [final-fantasy-16]
     sources:
+      - url: https://www.bilibili.com/video/BV12P411v7h1
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41681958"
         kind: replay
         parts: 1
@@ -450,9 +474,13 @@
     platform: douyu
     confidence: high
     duration_min: 332
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7895340503794a6bad7b026a7c1af034.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/556699e0bef4dd969bff0e3a5ef91c898d40ad42.jpg"
     games: [final-fantasy-16]
     sources:
+      - url: https://www.bilibili.com/video/BV1zu41187Qi
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41682260"
         kind: replay
         parts: 1
@@ -471,7 +499,7 @@
     platform: douyu
     confidence: high
     duration_min: 292
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_d63806a8a4834aa58799ae79e2e5e37c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/556699e0bef4dd969bff0e3a5ef91c898d40ad42.jpg"
     games: [final-fantasy-16]
     sources:
       - url: https://www.bilibili.com/video/BV1hu41187PK
@@ -491,9 +519,13 @@
     platform: douyu
     confidence: high
     duration_min: 436
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_6056bca321cc44bd92e03c0f7325e1a0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/556699e0bef4dd969bff0e3a5ef91c898d40ad42.jpg"
     games: [final-fantasy-16]
     sources:
+      - url: https://www.bilibili.com/video/BV1HX4y1q7ao
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41698726"
         kind: replay
         parts: 1
@@ -501,10 +533,6 @@
       - url: https://www.acfun.cn/v/ac41698725
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1HX4y1q7ao
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41698725
@@ -516,7 +544,7 @@
     platform: douyu
     confidence: high
     duration_min: 234
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5cb87cc219e54bbfa2ebe8ed0a82a6ee.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b812831b040a4b0be38e3a93030b9ad6c9226816.jpg"
     games: [wo-long]
     sources:
       - url: https://www.bilibili.com/video/BV1km4y1a7ib
@@ -536,9 +564,13 @@
     platform: douyu
     confidence: high
     duration_min: 284
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_15c91d03f82c48b1b0f9aaa9e873415f.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e340f4a27be9a9d7ac9dd02f2912454985ee7eee.jpg"
     games: [street-fighter-6]
     sources:
+      - url: https://www.bilibili.com/video/BV1jF411o7tz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac41724303"
         kind: replay
         parts: 1
@@ -546,10 +578,6 @@
       - url: https://www.acfun.cn/v/ac41724195
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1jF411o7tz
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
     contributed_by: data-agent
     note: 补入 A站互补回放：ac41724195
   - id: 2023-06-28-live-01

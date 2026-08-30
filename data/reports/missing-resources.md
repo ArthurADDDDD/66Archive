@@ -105,6 +105,7 @@
 - [`task-029-2015-timeline.md`](task-029-2015-timeline.md)：2015 时间线重建、女流录像小屋全量投稿扫描；
 - [`task-030-official-bilibili-2015-2019-sources.md`](task-030-official-bilibili-2015-2019-sources.md)：2015 官方 B 站补录与 2019 备份源；
 - [`task-031-full-label-calibration.md`](task-031-full-label-calibration.md)：2026-08-28 全量结构化扫描、游戏 / 标签校准与 2023-11 AcFun 补源；
+- [`task-034-bilibili-source-priority.md`](task-034-bilibili-source-priority.md)：2026-08-31 双源条目改以 B 站为主源、B 站侧全量目录补齐，并附「B 站侧确实没有、只剩 A 站独苗」的 48 条清单与两处疑似漏收；
 - [`unresolved-2015-replay-candidates.csv`](../catalogs/unresolved-2015-replay-candidates.csv)：目前仍需确认的 2015-04 候选与用于排除误判的同月官方视频。
 
 本文件应作为**当前对外征集缺失资源的入口**；后续若有大规模补档，应优先更新这里的状态，而不是继续沿用历史报告里的旧数字。

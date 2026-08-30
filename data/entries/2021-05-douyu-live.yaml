@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 163
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4mn30msmr290112d51uj6mdr0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/62932cfbf4a804b71daa00d441ae7ae586a84b62.png"
     games: [world-games-51]
     segments:
       - at: "00:00:00"
@@ -21,6 +21,10 @@
         label: "世界游戏大全51"
         game: world-games-51
     sources:
+      - url: https://www.bilibili.com/video/BV1i54y157hs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28433673"
         kind: replay
         parts: 4
@@ -34,7 +38,7 @@
     platform: douyu
     confidence: high
     duration_min: 138
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4mmgj45u8a1dev193b1k70klh0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/62932cfbf4a804b71daa00d441ae7ae586a84b62.png"
     games: [super-mario-party]
     segments:
       - at: "00:00:00"
@@ -52,6 +56,10 @@
         label: "超级马里欧派对"
         game: super-mario-party
     sources:
+      - url: https://www.bilibili.com/video/BV1i54y157hs
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac28432400"
         kind: replay
         parts: 5
@@ -66,7 +74,7 @@
     platform: douyu
     confidence: high
     duration_min: 291
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4rshbf1b0eod91rp11skr1lor0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/21e7f5c239721af629d80a79db5c9ea9e9d32cc7.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -99,7 +107,7 @@
     platform: douyu
     confidence: high
     duration_min: 263
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4s3mmup1ned1ns11et4pkl1p120.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f0a042e608c59246fb1484967d4bc8025a74ff17.png"
     games: [world-games-51]
     segments:
       - at: "00:00:00"
@@ -139,7 +147,7 @@
     platform: douyu
     confidence: high
     duration_min: 278
-    cover: "https://tx-free-imgs.acfun.cn/o_1f4s3v4l3tkdgpb19uq1a001ac80.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/65cda0d537de4558af9d5a7cd98052901782025b.png"
     games:
       - world-games-51
       - super-mario-party
@@ -190,7 +198,7 @@
     platform: douyu
     confidence: high
     duration_min: 272
-    cover: "https://tx-free-imgs.acfun.cn/o_1f50v580u1mm71dtpi2h1egecr10.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/53d356dcb58a678f3c81756b591c451e050758b4.png"
     games: [wonder-boy-asha, wonder-boy]
     segments:
       - at: "00:00:00"
@@ -224,7 +232,7 @@
     platform: douyu
     confidence: high
     duration_min: 298
-    cover: "https://tx-free-imgs.acfun.cn/o_1f53h924h6v9166dnv88j1hoj0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ac71d83b647783bd002c455aa599d5ff37830b42.png"
     games: [resident-evil-8]
     segments:
       - at: "00:00:00"
@@ -262,7 +270,7 @@
     platform: douyu
     confidence: high
     duration_min: 329
-    cover: "https://tx-free-imgs.acfun.cn/o_1f561sq7r1f061k0vrhv1est320.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e09858e7651b92edc596619542ec31274ad2d587.png"
     games: [resident-evil-8]
     segments:
       - at: "00:00:00"
@@ -300,7 +308,7 @@
     platform: douyu
     confidence: high
     duration_min: 342
-    cover: "https://tx-free-imgs.acfun.cn/o_1f58r67si187p152q1l787fh3es0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ac71d83b647783bd002c455aa599d5ff37830b42.png"
     games: [resident-evil-8]
     segments:
       - at: "00:00:00"
@@ -338,7 +346,7 @@
     platform: douyu
     confidence: high
     duration_min: 198
-    cover: "https://tx-free-imgs.acfun.cn/o_1f5b780tc1mf11vdb1vv51viofut0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/1e2bb741400ea7eb36db010d9cd9256acc94726a.png"
     games: []
     tags: [佩奇, 聊天]
     segments:
@@ -370,7 +378,7 @@
     platform: douyu
     confidence: high
     duration_min: 327
-    cover: "https://tx-free-imgs.acfun.cn/o_1f5gd8g4m1qg8lq9qok1qk91eam0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/34461abc8a19780c858a22f2664ca0fcbc6c43ed.png"
     games: [hood-outlaws]
     segments:
       - at: "00:00:00"
@@ -404,7 +412,7 @@
     platform: douyu
     confidence: high
     duration_min: 290
-    cover: "https://tx-free-imgs.acfun.cn/o_1f5ivhkrv6ei16qkc3bm5eq7p0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/557af8d511eb13b77f19cac698ecd50e0ade4ddf.png"
     games: [monster-boy]
     segments:
       - at: "00:00:00"
@@ -439,7 +447,7 @@
     platform: douyu
     confidence: high
     duration_min: 249
-    cover: "https://tx-free-imgs.acfun.cn/o_1f5st8dakceh1ur11q051uj91br80.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c55ad2dcc23d2fbeb7642f8b44c0e5a62bd6b2dc.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -509,7 +517,7 @@
     platform: douyu
     confidence: high
     duration_min: 324
-    cover: "https://tx-free-imgs.acfun.cn/o_1f5vqu25n18ua1g0g1h971gmk16210.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d5f8f5aa643318992262f70d767e3c2a0da916ac.png"
     games: [subnautica]
     segments:
       - at: 00:00:00
@@ -549,7 +557,7 @@
     platform: douyu
     confidence: high
     duration_min: 262
-    cover: "https://tx-free-imgs.acfun.cn/o_1f62989c2pf91fq41q0l1mqq1udj0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d5f8f5aa643318992262f70d767e3c2a0da916ac.png"
     games: [subnautica]
     segments:
       - at: "00:00:00"
@@ -582,7 +590,7 @@
     platform: douyu
     confidence: high
     duration_min: 343
-    cover: "https://tx-free-imgs.acfun.cn/o_1f652ec61unu1nmjpsl5mvrab0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d5f8f5aa643318992262f70d767e3c2a0da916ac.png"
     games: [subnautica]
     segments:
       - at: "00:00:00"
@@ -614,7 +622,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    cover: "https://tx-free-imgs.acfun.cn/o_1f67hap7u17j41ah0199b1am0u340.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d5f8f5aa643318992262f70d767e3c2a0da916ac.png"
     games: [subnautica]
     segments:
       - at: "00:00:00"
@@ -647,7 +655,7 @@
     platform: douyu
     confidence: high
     duration_min: 271
-    cover: "https://tx-free-imgs.acfun.cn/o_1f6f9m84l1gptrla1p330s1450.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d5f8f5aa643318992262f70d767e3c2a0da916ac.png"
     games: [subnautica]
     segments:
       - at: "00:00:00"
@@ -680,7 +688,7 @@
     platform: douyu
     confidence: high
     duration_min: 205
-    cover: "https://tx-free-imgs.acfun.cn/o_1f6hnkeqm1qj01l90fnf5ehfkk0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ed2d40add217192ccc74b210bea5fa1c1c517f1f.png"
     games: [turnip-boy]
     segments:
       - at: "00:00:00"
@@ -732,7 +740,7 @@
     platform: douyu
     confidence: high
     duration_min: 325
-    cover: "https://tx-free-imgs.acfun.cn/o_1f6pj0bht5qr1chihnp1tn710im0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/fba9bb0dd2ab5b7e8f16ce58b0f69d33ec5de61f.png"
     games: [luck-be-a-landlord]
     segments:
       - at: "00:00:00"
@@ -764,7 +772,7 @@
     platform: douyu
     confidence: high
     duration_min: 493
-    cover: "https://tx-free-imgs.acfun.cn/o_1f6s9duumof288d1mf01agb1nml0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e1315d497aad6668fb9787288f31e6035d8633be.png"
     games: []
     tags: [户外, 聊天]
     segments:

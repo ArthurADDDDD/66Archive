@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 222
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_10/1462889208.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7aa0b5e7316304387c56a682a31f8c4d68aa64f9.jpg"
     games: [dark-souls-3]
     segments:
       - at: "00:00:00"
@@ -15,6 +15,10 @@
       - at: "02:22:39"
         label: "冰骑士P3"
     sources:
+      - url: https://www.bilibili.com/video/BV17s411B7uy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac2731728"
         kind: replay
         parts: 3
@@ -28,7 +32,7 @@
     platform: douyu
     confidence: high
     duration_min: 110
-    cover: "https://tx-free-imgs.acfun.cn/content/2016_05_08/1462714295.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7aa0b5e7316304387c56a682a31f8c4d68aa64f9.jpg"
     games: [dark-souls-3]
     segments:
       - at: "00:00:00"
@@ -36,6 +40,10 @@
       - at: "00:55:23"
         label: "咒蚀大树P2"
     sources:
+      - url: https://www.bilibili.com/video/BV1Js411B7Xn
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac2726616"
         kind: replay
         parts: 2

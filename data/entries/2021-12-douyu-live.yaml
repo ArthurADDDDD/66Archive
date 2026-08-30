@@ -5,7 +5,7 @@
     platform: douyu
     confidence: high
     duration_min: 298
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03a05da933a94729a82ce2e19bdc4f02.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/91ff83b11aeace2bd538ead3d2b237321ed8573a.png"
     games: [majsoul]
     segments:
       - at: "00:00:00"
@@ -39,7 +39,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_980c37a1b7a64876a53d6662890a81ea.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/12e137c88e1bc573f3d5fd6e96fbbe269aaf8237.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -71,7 +71,7 @@
     platform: douyu
     confidence: high
     duration_min: 280
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_563bff57d68c4611a2aff5e733372187.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/eed87adaa192ddecdcb87e575f994cf58031f7b2.jpg"
     games: [linghuo-naoxueyuan]
     segments:
       - at: "00:00:00"
@@ -102,7 +102,7 @@
     platform: douyu
     confidence: high
     duration_min: 250
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_751fc45ad48e40ebaa28f330ae75abc1.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6a7353ed42bc996c39f24db9f25d3e5d8bafc742.jpg"
     games: [propnight]
     segments:
       - at: "00:00:00"
@@ -138,7 +138,7 @@
     platform: douyu
     confidence: high
     duration_min: 290
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7dc181262f8542ff8474f69e5451e540.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/91fd9093269307185eebb036dd5922ddb0ecc45d.jpg"
     games: [icarus]
     segments:
       - at: "00:00:00"
@@ -172,7 +172,7 @@
     platform: douyu
     confidence: high
     duration_min: 179
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2c544eaec51043d69f27cc3d371311cf.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f9d43f6c5db19272961e47b60d4cf92a6e73cd81.jpg"
     games: [icarus]
     segments:
       - at: "00:00:00"
@@ -188,6 +188,10 @@
         label: "ICARUS"
         game: icarus
     sources:
+      - url: https://www.bilibili.com/video/BV1WM4y1A7t9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32707433"
         kind: replay
         parts: 4
@@ -201,7 +205,7 @@
     platform: douyu
     confidence: high
     duration_min: 66
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_ad338ff7cb18456ba6293f2e13eec5fb.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/f9d43f6c5db19272961e47b60d4cf92a6e73cd81.jpg"
     games: [majsoul]
     segments:
       - at: "00:00:00"
@@ -209,6 +213,10 @@
       - at: "00:33:08"
         label: "雀魂麻将"
     sources:
+      - url: https://www.bilibili.com/video/BV1WM4y1A7t9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32707131"
         kind: replay
         parts: 2
@@ -274,7 +282,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_9690c4229fda4c7fb64e6d28848e42b2.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7c4f2e840bbe50be514e1f90354ad80d181a4a25.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -306,7 +314,7 @@
     platform: douyu
     confidence: high
     duration_min: 349
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_28db289bf74548faa7d5f746d74d1c62.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6100f5eb4718d795bb8007c4fe3187bdbe040d0a.jpg"
     games: [kena-bridge-of-spirits]
     segments:
       - at: "00:00:00"
@@ -331,7 +339,7 @@
     platform: douyu
     confidence: high
     duration_min: 385
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_7c7e5d7e46d54974aa8a09cdfba4b446.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/58ee8f4cbbcff0fe2e3db358c2013b451dcb53d6.jpg"
     games: [kena-bridge-of-spirits]
     segments:
       - at: "00:00:00"
@@ -365,7 +373,7 @@
     platform: douyu
     confidence: high
     duration_min: 356
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_5e8e4fd9578a43a1b9d003a4e86bac78.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a314dc620d3e6aea45c4b981a5206b9ae0a8a01a.jpg"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -384,12 +392,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1xP4y1J7LB"
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac32839159"
         kind: replay
         parts: 5
-        status: alive
-      - url: "https://www.bilibili.com/video/BV1xP4y1J7LB"
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -400,7 +408,7 @@
     platform: douyu
     confidence: high
     duration_min: 299
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_0bef5c13011d451cafa0c02aa2f3ff83.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/10e6ad5d4d4a58b30c53312fb327563d329e735f.jpg"
     games: [escape-simulator]
     segments:
       - at: "00:00:00"
@@ -431,7 +439,7 @@
     platform: douyu
     confidence: high
     duration_min: 276
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_941ea6e10b714aff851f9caa0f176be7.png?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ae6809ed8407869ed5b402a06c3584d1f39fc76b.jpg"
     games: [majsoul]
     segments:
       - at: "00:00:00"
@@ -464,7 +472,7 @@
     platform: douyu
     confidence: high
     duration_min: 282
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_2b71e421138745fe9d05c9d98226a8de.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/09d8fe8c132d2e72ac02e529c40ad4fadb29244e.jpg"
     games: [escape-simulator]
     segments:
       - at: "00:00:00"
@@ -497,7 +505,7 @@
     platform: douyu
     confidence: high
     duration_min: 129
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_040d2c7115bc49d19df24d593af8a1f5.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cf65aabf66c02e238e470de70005e5e78fd3ac6f.jpg"
     games: [fall-guys]
     segments:
       - at: "00:00:00"
@@ -509,6 +517,10 @@
       - at: "01:34:59"
         label: "FallGuys"
     sources:
+      - url: https://www.bilibili.com/video/BV1YD4y1c7sb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32877646"
         kind: replay
         parts: 4
@@ -522,7 +534,7 @@
     platform: douyu
     confidence: high
     duration_min: 227
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_1e6c1c3399de4e6a8c3842dd0bfd6424.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/cf65aabf66c02e238e470de70005e5e78fd3ac6f.jpg"
     games: [layers-of-fear]
     segments:
       - at: "00:00:00"
@@ -536,6 +548,10 @@
       - at: "03:01:53"
         label: "层层恐惧"
     sources:
+      - url: https://www.bilibili.com/video/BV1YD4y1c7sb
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac32878030"
         kind: replay
         parts: 5
@@ -576,7 +592,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_3cef89decfd146878dbf0bb2d95b6d7c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a32682c126060ec58670545c2cc947dcdf61a3e7.jpg"
     games: [bloodborne]
     segments:
       - at: "00:00:00"
@@ -603,7 +619,7 @@
     platform: douyu
     confidence: high
     duration_min: 279
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_e2870a77a11042b193dda7c2d199891c.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7468f504e72dedce402db2c8248aa8ec7d20cabe.jpg"
     games: [bloodborne]
     tags: [一起See]
     segments:
@@ -637,7 +653,7 @@
     platform: douyu
     confidence: high
     duration_min: 256
-    cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_865e8c163cde45d7a3b5489e28cdfefa.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/7468f504e72dedce402db2c8248aa8ec7d20cabe.jpg"
     games: [bloodborne]
     segments:
       - at: "00:00:00"

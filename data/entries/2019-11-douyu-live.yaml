@@ -22,7 +22,7 @@
     platform: douyu
     confidence: high
     duration_min: 268
-    cover: "https://tx-free-imgs.acfun.cn/FkPzhTUZa28qvmkNJMI9nXaHsFF9?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ae204dc0112902b2fcb35df88bc9d8a61676797f.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -76,7 +76,7 @@
     platform: douyu
     confidence: high
     duration_min: 200
-    cover: "https://tx-free-imgs.acfun.cn/FqFJWHKUuxkPIOEJgZhDj4L0x8Xt?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6d10d310522afc8925f980cd135a0f0ad1ecb354.png"
     games: []
     tags: [聊天]
     segments:
@@ -118,7 +118,7 @@
     platform: douyu
     confidence: high
     duration_min: 256
-    cover: "https://tx-free-imgs.acfun.cn/Foi81EoyIALxGH8gxIIxudEWZL9k?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/711747ffd3d4337cb88af880825828f21fe345a0.png"
     games: [death-stranding]
     segments:
       - at: "00:00:00"
@@ -152,7 +152,7 @@
     platform: douyu
     confidence: high
     duration_min: 183
-    cover: "https://tx-free-imgs.acfun.cn/FkuHg9jPwjdoNDXIC7vzwFrgnlUP?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/0f83fa588e19dba7dcf63bfaccfcfa71590e4237.png"
     games: []
     tags: [心灵砒霜]
     sources:
@@ -173,7 +173,7 @@
     platform: douyu
     confidence: high
     duration_min: 280
-    cover: "https://tx-free-imgs.acfun.cn/FmqNCEUansTRtyV7nuxU7Uxn9uy3?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/3710e1f1fa807b192b1aaefd3fa403a26ced9d08.png"
     games: [death-stranding]
     segments:
       - at: "00:00:00"
@@ -207,7 +207,7 @@
     platform: douyu
     confidence: high
     duration_min: 254
-    cover: "https://tx-free-imgs.acfun.cn/FgC1p5g-FxRDyLJtXorrej_f1FHz?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a65f34bbb36381e6a3e0fd6e63ef546b452103af.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -233,7 +233,7 @@
     platform: douyu
     confidence: high
     duration_min: 281
-    cover: "https://tx-free-imgs.acfun.cn/FuUZvyu-So25vcFkV96pf5WXB0ht?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/9b966be268c3a30d06feeaf326953d1ae0b19b66.png"
     games: [we-were-here-together]
     segments:
       - at: "00:00:00"
@@ -273,7 +273,7 @@
     platform: douyu
     confidence: high
     duration_min: 214
-    cover: "https://tx-free-imgs.acfun.cn/FpEvF3UCc6q0jH3JGBJ-Wf36smW9?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/e812fba5893efc91fc00c162cb182313ddb2a600.png"
     games: [monster-hunter-world]
     segments:
       - at: "00:00:00"
@@ -298,7 +298,7 @@
     platform: douyu
     confidence: high
     duration_min: 275
-    cover: "https://tx-free-imgs.acfun.cn/FgEcl6HUuUFmaQwh_7lpNhEnrGfW?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/32d0a5770871c097745ab26284b453701211cf58.png"
     games: [tangle-tower]
     segments:
       - at: "00:00:00"
@@ -330,7 +330,7 @@
     platform: douyu
     confidence: high
     duration_min: 240
-    cover: "https://tx-free-imgs.acfun.cn/FuZGCDYkzV2qkWcYtFyh5opnp9al?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b81f1902842017668073a51a100ac2bdfe9a34be.png"
     games: [farmers-dynasty]
     segments:
       - at: "00:00:00"
@@ -348,12 +348,12 @@
         label: "Farmers Dynasty"
         game: farmers-dynasty
     sources:
+      - url: https://www.bilibili.com/video/BV1YJ411Q7ZQ
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac11786188"
         kind: replay
         parts: 5
-        status: alive
-      - url: https://www.bilibili.com/video/BV1YJ411Q7ZQ
-        kind: replay
         status: alive
     contributed_by: data-agent
   - id: 2019-11-04-live-01

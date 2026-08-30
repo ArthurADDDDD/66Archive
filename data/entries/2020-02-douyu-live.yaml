@@ -21,7 +21,7 @@
     platform: douyu
     confidence: high
     duration_min: 383
-    cover: "https://tx-free-imgs.acfun.cn/o_1e0ar5vek1l26laut7657339d0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5dc9e889b2e2fb6dce837f844064f47bd623c065.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -60,7 +60,7 @@
     platform: douyu
     confidence: high
     duration_min: 382
-    cover: "https://tx-free-imgs.acfun.cn/o_1e0djj54scau1cp512ej14fekd60.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5dc9e889b2e2fb6dce837f844064f47bd623c065.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -105,7 +105,7 @@
     platform: douyu
     confidence: high
     duration_min: 330
-    cover: "https://tx-free-imgs.acfun.cn/o_1e0g04vspn1o19jivngcbc93m0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5dc9e889b2e2fb6dce837f844064f47bd623c065.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -130,12 +130,12 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1R7411b74Q
+        kind: replay
+        status: alive
       - url: "https://www.acfun.cn/v/ac12749038"
         kind: replay
         parts: 6
-        status: alive
-      - url: https://www.bilibili.com/video/BV1R7411b74Q
-        kind: replay
         status: alive
     contributed_by: data-agent
 
@@ -147,7 +147,7 @@
     platform: douyu
     confidence: high
     duration_min: 200
-    cover: "https://tx-free-imgs.acfun.cn/o_1e0ii27561n91efo10m630h1e0u0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5dc9e889b2e2fb6dce837f844064f47bd623c065.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -250,7 +250,7 @@
     platform: douyu
     confidence: high
     duration_min: 387
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1237j101fj31ifs17171svugq00.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5dc9e889b2e2fb6dce837f844064f47bd623c065.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -301,7 +301,7 @@
     platform: douyu
     confidence: high
     duration_min: 200
-    cover: "https://tx-free-imgs.acfun.cn/o_1e14kudq9195v139s1fea18doas80.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/aed5e8f1d539d42cca7db0fcfba84d06d43d1322.png"
     games: [rune-factory-4]
     note: "原标题为『游戏前聊10块钱的』。视频 P1~2 为直播前聊天（36+36分），P3~4 为《符文工坊4模拟经营》主体内容（该月多场同为符文工坊4），标题按主游戏命名。"
     segments:
@@ -316,6 +316,10 @@
         label: "符文工坊4模拟经营"
         game: rune-factory-4
     sources:
+      - url: https://www.bilibili.com/video/BV1F7411n7pp
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac12938585"
         kind: replay
         parts: 4
@@ -378,7 +382,7 @@
     platform: douyu
     confidence: high
     duration_min: 398
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1euoo961nl6uaarfl6kd17950.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/aed5e8f1d539d42cca7db0fcfba84d06d43d1322.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -416,7 +420,7 @@
     platform: douyu
     confidence: high
     duration_min: 347
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1hio14f1hrufg51c55sih7hj0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/aed5e8f1d539d42cca7db0fcfba84d06d43d1322.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -452,7 +456,7 @@
     platform: douyu
     confidence: high
     duration_min: 360
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1mnpknk14jb119j101bf5rilb0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/aed5e8f1d539d42cca7db0fcfba84d06d43d1322.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -505,7 +509,7 @@
     platform: douyu
     confidence: high
     duration_min: 337
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1p930u11qk3lie9mqmm7o1r0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/aed5e8f1d539d42cca7db0fcfba84d06d43d1322.png"
     games: [rune-factory-4]
     segments:
       - at: "00:00:00"
@@ -542,7 +546,7 @@
     platform: douyu
     confidence: high
     duration_min: 104
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1roapmm3m11pnlmdj1tqet7a0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/74ba6da4169be3517742d771843975ec9a1a9b23.png"
     games: []
     tags: [聊天]
     segments:
@@ -568,7 +572,7 @@
     platform: douyu
     confidence: high
     duration_min: 210
-    cover: "https://tx-free-imgs.acfun.cn/o_1e1udi89v1p4vqmh1v3919g4ti0.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/c91bb38cdad912626a88f5c6c82fb3137852fb39.png"
     games: []
     tags: [聊天]
     segments:
@@ -598,7 +602,7 @@
     platform: douyu
     confidence: high
     duration_min: 353
-    cover: "https://tx-free-imgs.acfun.cn/o_1e2640u8f12jibdapgl6huia20.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/d073ca8f0236ea9bae9ebf666e270cedaeb947be.png"
     games: [majsoul]
     segments:
       - at: "00:00:00"
@@ -629,7 +633,7 @@
     platform: douyu
     confidence: high
     duration_min: 287
-    cover: "https://tx-free-imgs.acfun.cn/o_1e28mdfj317ev1efo4141d9p050.jpeg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/503cf88612a0145893c8f69c519b615010c3fb0a.png"
     games: [majsoul]
     segments:
       - at: "00:00:00"

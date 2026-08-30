@@ -21,7 +21,7 @@
     platform: douyu
     confidence: high
     duration_min: 311
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536193115.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/6a9adbe735d53dcd457da180e0a6f9f9b1950d44.png"
     games: [two-point-hospital]
     segments:
       - at: "00:00:00"
@@ -48,7 +48,7 @@
     platform: douyu
     confidence: high
     duration_min: 257
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_06/1536235361.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/29005a74b8aceddde0588b41954a7593d2fedc40.png"
     games: [dota-2]
     segments:
       - at: "00:00:00"
@@ -58,6 +58,10 @@
       - at: "02:15:46"
         label: "Dota 2"
     sources:
+      - url: https://www.bilibili.com/video/BV1VW411d7Hh
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4569103"
         kind: replay
         parts: 3
@@ -71,7 +75,7 @@
     platform: douyu
     confidence: high
     duration_min: 275
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_08/1536409742.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/22cf3aa0a294bf587873f8dbef944ebf16c8ad24.png"
     games: [donut-county]
     segments:
       - at: "00:00:00"
@@ -101,7 +105,7 @@
     platform: douyu
     confidence: high
     duration_min: 271
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_10/1536537933.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/419b21eaf1a43e33ce50b67b345822d026085545.png"
     games: []
     tags: [心灵砒霜, 弹幕版]
     segments:
@@ -114,6 +118,10 @@
       - at: "04:05:39"
         label: "心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1LW411o7a5
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: "https://www.acfun.cn/v/ac4574749"
         kind: replay
         parts: 4
@@ -127,7 +135,7 @@
     platform: douyu
     confidence: high
     duration_min: 307
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_11/1536665200.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/2a2c1cbb90fc5fd4933ec5b4bc32ed906083d193.png"
     games: [planet-coaster]
     tags: [一起See]
     segments:
@@ -155,7 +163,7 @@
     platform: douyu
     confidence: high
     duration_min: 298
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_12/1536756016.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/55909c0f0ccfb65e43c49bc1bed5f7fd6d61cf85.png"
     games: [steep]
     segments:
       - at: "00:00:00"
@@ -182,7 +190,7 @@
     platform: douyu
     confidence: high
     duration_min: 230
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_13/1536837882.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/578f293b71d2b0be301e0ddea141132ba9dd07d3.png"
     games: [strange-brigade]
     segments:
       - at: "00:00:00"
@@ -213,7 +221,7 @@
     platform: douyu
     confidence: high
     duration_min: 308
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_14/1536936793.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/de1e2080569a2ad993890f558150b727a5bb0ee1.png"
     games: [strange-brigade]
     segments:
       - at: "00:00:00"
@@ -246,7 +254,7 @@
     platform: douyu
     confidence: high
     duration_min: 155
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_15/1537013621.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ff9966559cf275358b7f4adad7cfcfa7658debe9.png"
     games: [strange-brigade]
     segments:
       - at: "00:00:00"
@@ -272,7 +280,7 @@
     platform: douyu
     confidence: high
     duration_min: 251
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537143832.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8d7c27d390e50579b97e6bdcd87605afdbaf21bf.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -300,7 +308,7 @@
     platform: douyu
     confidence: high
     duration_min: 263
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_17/1537186010.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/66d14b231002997bf6ff6b9370b4a9772cce97b9.png"
     games: [witch-it, 39-days-to-mars]
     segments:
       - at: "00:00:00"
@@ -328,7 +336,7 @@
     platform: douyu
     confidence: high
     duration_min: 15
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538181206.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/b3bdf0dfba44b7f541dd2073e0891e30f48ff65b.png"
     games: []
     tags: [聊天]
     sources:
@@ -349,7 +357,7 @@
     platform: douyu
     confidence: high
     duration_min: 258
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_21/1537529735.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/ca10c77786ab92e72abf4337501db2eb29ca5007.png"
     games: [rusty-lake]
     segments:
       - at: "00:00:00"
@@ -375,7 +383,7 @@
     platform: douyu
     confidence: high
     duration_min: 290
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_22/1537617579.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/a4f11e796fe488793dce83f664d49ff74a96b373.png"
     games: [ultimate-fishing-simulator]
     segments:
       - at: "00:00:00"
@@ -401,7 +409,7 @@
     platform: douyu
     confidence: high
     duration_min: 204
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_24/1537754100.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/5cf197441e0c293f3e141dc49774e50d97d162a6.png"
     games: []
     tags: [心灵砒霜]
     segments:
@@ -445,7 +453,7 @@
     platform: douyu
     confidence: high
     duration_min: 230
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_26/1537968116.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/057641d45c8e8e6d61cf1ad5e13e1dd09a2ff2d7.png"
     games: [ultimate-fishing-simulator]
     segments:
       - at: "00:00:00"
@@ -470,7 +478,7 @@
     platform: douyu
     confidence: high
     duration_min: 147
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_27/1538048840.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/8b1149ea1b331726120fb47aa735892ad7ec0ce9.png"
     games: [parkasaurus]
     segments:
       - at: "00:00:00"
@@ -495,7 +503,7 @@
     platform: douyu
     confidence: high
     duration_min: 350
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_28/1538141473.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/125cda801c2477dd0dc9a863c40a3e3ddb15d49c.png"
     games: [chinese-parents]
     segments:
       - at: "00:00:00"
@@ -520,7 +528,7 @@
     platform: douyu
     confidence: high
     duration_min: 311
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_09_29/1538230725.JPG?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/758222cb64fcc5073721f2f9a4681a472cb69ccf.png"
     games: [chinese-parents]
     segments:
       - at: "00:00:00"
@@ -546,7 +554,7 @@
     platform: douyu
     confidence: high
     duration_min: 202
-    cover: "https://tx-free-imgs.acfun.cn/content/2018_9_01/1538357203.jpg?imageslim"
+    cover: "https://i0.hdslb.com/bfs/archive/45d5618ad2e7c143630ef0956b72a5bc96fd761d.png"
     games: []
     tags: [心灵砒霜]
     segments:
