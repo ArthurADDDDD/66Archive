@@ -1,6 +1,9 @@
 node_modules/
 .next/
 out/
+
+# 「水友们最爱看」的标题索引：由 data/** 派生，构建时生成（scripts/popular-index-build.ts）
+public/data/popular-index.json
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
