@@ -6,6 +6,8 @@ import { LivePageHeader } from '@/components/LiveSection'
 import { YearBarChart } from '@/components/YearCharts'
 import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
 import { CoverageGaps } from '@/components/CoverageMap'
+import { PopularContent } from '@/components/PopularContent'
+import { StatsSection as Section } from '@/components/StatsSection'
 import { buildCoverage } from '@/lib/coverage'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { getGameProfile } from '@/lib/narrative'
@@ -342,7 +344,14 @@ export default function StatsPage() {
       </Section>
       )}
 
-      {/* 06 档案还有多少空白？ */}
+      {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
+      <PopularContent
+        question="水友们最爱点开哪些记录？"
+        accent="#7BD88F"
+        legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
+      />
+
+      {/* 07 档案还有多少空白？ */}
       <Section
         question="档案还有多少空白？"
         accent="#5BC8E8"
@@ -366,33 +375,6 @@ export default function StatsPage() {
 function hoursTop(yearRows: [number, { count: number; minutes: number; known: number }][]): string {
   const top = yearRows.reduce((acc, [, r]) => (r.minutes > acc.minutes ? r : acc), { minutes: 0, known: 0 })
   return top.minutes ? Math.round(top.minutes / 60).toLocaleString() : '—'
-}
-
-function Section({
-  question,
-  accent,
-  legend,
-  children,
-}: {
-  question: string
-  accent: string
-  /** 图形的读法：这一节的图怎么看，一句话写在标题下面 */
-  legend?: string
-  children: React.ReactNode
-}) {
-  return (
-    <section className="border-t border-line">
-        <div className="site-container-wide px-page py-[clamp(3rem,8vh,7rem)]">
-        <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em] text-faint">
-          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
-          一个问题
-        </p>
-        <h2 className="mt-3 max-w-[min(100%,72rem)] text-[clamp(2rem,3vw,4rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-ink">{question}</h2>
-        {legend && <p className="measure-body mt-3 text-meta text-muted">{legend}</p>}
-        <div className="mt-6 w-full">{children}</div>
-      </div>
-    </section>
-  )
 }
 
 function Observation({ children }: { children: React.ReactNode }) {

@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "npm run validate && next build",
+    "dev": "npm run index:popular && next dev",
+    "build": "npm run validate && npm run index:popular && next build",
+    "index:popular": "tsx scripts/popular-index-build.ts",
     "start": "next start",
     "lint": "eslint .",
     "validate": "tsx scripts/validate.ts",
     "archive:edit": "tsx scripts/archive-edit.ts",
     "archive:test": "tsx scripts/test-archive-edit.ts",
-    "test:vote-search": "tsx scripts/test-vote-search.ts"
+    "test:vote-search": "tsx scripts/test-vote-search.ts",
+    "test:analytics": "tsx scripts/test-site-analytics.ts"
   },
   "dependencies": {
     "next": "^15.1.6",

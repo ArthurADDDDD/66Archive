@@ -42,6 +42,29 @@ let flushTimer: number | null = null
 let lastPageViewPath: string | null = null
 
 /**
+ * 同一个目标在这段时间内只算一次。
+ *
+ * 「点开次数」要经得起看：双击、误触、手抖连点在人眼里是一次打开，逐次上报
+ * 会让排行变成「谁手最抖」。窗口刻意短——真的隔一会儿再点开同一条，仍然算
+ * 新的一次。
+ */
+const DUPLICATE_WINDOW_MS = 4_000
+const lastReported = new Map<string, number>()
+
+/**
+ * 自动化浏览器不算人。
+ *
+ * UA 里带 bot/crawler 关键字的那批在服务端就被丢掉了，但 Puppeteer / Playwright
+ * / Selenium 默认带的是正常 Chrome UA——服务端看不出来，浏览器自己知道：
+ * WebDriver 控制的会话 `navigator.webdriver` 为 true。这一层挡不住铁了心伪造的
+ * 请求（那属于服务端的限流与聚合口径要解决的问题），但能把「跑个脚本抓一遍全站」
+ * 这类最常见的噪音挡在统计之外。
+ */
+function isAutomatedBrowser(): boolean {
+  return typeof navigator !== 'undefined' && navigator.webdriver === true
+}
+
+/**
  * 自己人不算数：站长/开发者天天在线上调试，这些访问会把「访问与点击」刷成噪音。
  *
  * 打开 `?analytics=off` 任意一页，这台浏览器从此不再上报（记在 localStorage，
@@ -135,9 +158,18 @@ export function flushSiteAnalytics() {
 }
 
 export function trackSiteEvent(name: SiteAnalyticsEventName, target?: string) {
-  if (typeof window === 'undefined' || isOptedOut()) return
+  if (typeof window === 'undefined' || isOptedOut() || isAutomatedBrowser()) return
   const route = analyticsRoute(window.location.pathname)
   if (!route) return
+  const dedupeKey = `${name}\u0000${target ?? ''}\u0000${route.kind}${'id' in route ? `:${route.id}` : ''}`
+  const now = Date.now()
+  const previous = lastReported.get(dedupeKey)
+  if (previous !== undefined && now - previous < DUPLICATE_WINDOW_MS) return
+  lastReported.set(dedupeKey, now)
+  // 只保留还在窗口内的记录，避免长时间停留的页面把这张表越攒越大。
+  if (lastReported.size > 200) {
+    for (const [key, at] of lastReported) if (now - at >= DUPLICATE_WINDOW_MS) lastReported.delete(key)
+  }
   queue.push({ name, route, ...(target ? { target } : {}), viewport: viewportClass() })
   if (queue.length > MAX_QUEUE) queue = queue.slice(-MAX_QUEUE)
   if (queue.length >= MAX_BATCH) flushSiteAnalytics()
