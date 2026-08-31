@@ -12,9 +12,10 @@ import { StatsSection } from './StatsSection'
  * 1. **数据在运行期拉，不烤进静态页。** 站点是静态导出的，排行每天都在变，
  *    所以和其他实时内容一样：首屏什么都不画，拿到数据再补上。接口不可用就
  *    退回一行说明，绝不让数据页因为一个次要板块而空一块。
- * 2. **拿不到数据就整节不渲染。** 内容服务不可用、或者还没累计到任何点击时，
- *    页面上不该留一个「一个问题」的空标题——那看起来像坏了。这也是这一节把
- *    小节外壳一起画在客户端的原因。
+ * 2. **接口读不到才整节不渲染；读到了但还没数据，照常出现。** 内容服务不可用时
+ *    页面上不该留一个「一个问题」的空标题——那看起来像坏了。但「通了只是还没
+ *    累计到点击」和「功能压根没上线」在页面上必须看得出区别，否则每次都要上服务器
+ *    才知道是哪种。这也是这一节把小节外壳一起画在客户端的原因。
  * 3. **接口只回 ID 和次数。** 标题由构建期生成的静态索引解析
  *    （scripts/popular-index-build.ts）。索引没加载出来时退回显示 ID，
  *    链接照样能点——宁可标题难看，也不要一条都不显示。
@@ -101,8 +102,24 @@ export function PopularContent({ question, accent, legend }: { question: string;
     }
   }, [])
 
-  // 读不到、还没读完、或者还没有任何累计——都不渲染这一节。
-  if (state !== 'ready' || items.length === 0) return null
+  // 还没读完、或者接口根本读不到时才整节不渲染：内容服务不可用不能让数据页
+  // 空一块，也不该在页面上立一个「一个问题」的空标题。
+  if (state !== 'ready') return null
+
+  // 接口通、只是还没累计到点击——这一节照常出现，只是把话说明白。
+  // 空榜单和「功能没上线」看起来一模一样，分不清的话每次都要去查一遍服务器。
+  if (items.length === 0) {
+    return (
+      <StatsSection question={question} accent={accent} legend={legend}>
+        <p className="measure-body text-body text-muted">
+          还没有累计到点击。等有人在站内点开条目、游戏或节目之后，这里会按次数排出前十。
+        </p>
+        {countedSince && (
+          <p className="mt-6 text-meta text-faint tnum">统计自 {countedSince.slice(0, 10)}</p>
+        )}
+      </StatsSection>
+    )
+  }
 
   const max = Math.max(...items.map((item) => item.count))
 
