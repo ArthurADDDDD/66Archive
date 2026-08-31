@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { bucketOf, sortBucket, UNDATED, UNDATED_LABEL, type GalleryPhoto } from '@/lib/gallery-photos'
+import { gallerySourceHref } from '@/lib/gallery-href'
 import { SearchField } from './SearchField'
 
 /**
@@ -21,6 +22,7 @@ import { SearchField } from './SearchField'
 
 type ViewMode = 'natural' | 'uniform'
 type Density = 'loose' | 'normal' | 'dense'
+type CollectionMode = 'featured' | 'all'
 
 /**
  * 密度档位。natural 模式下是「每行目标高度」，按容器宽度换算——
@@ -72,7 +74,16 @@ function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) 
   return rows
 }
 
-export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; eraBoundary: number | null }) {
+export function GalleryBoard({
+  featuredPhotos,
+  allPhotos,
+  eraBoundary,
+}: {
+  featuredPhotos: GalleryPhoto[]
+  allPhotos: GalleryPhoto[]
+  eraBoundary: number | null
+}) {
+  const [collection, setCollection] = useState<CollectionMode>('featured')
   const [mode, setMode] = useState<ViewMode>('natural')
   const [density, setDensity] = useState<Density>('normal')
   const [q, setQ] = useState('')
@@ -84,6 +95,7 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
   const boardOuterRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
+  const photos = collection === 'featured' ? featuredPhotos : allPhotos
 
   useEffect(() => {
     const node = boardRef.current
@@ -178,8 +190,47 @@ export function GalleryBoard({ photos, eraBoundary }: { photos: GalleryPhoto[]; 
 
   const filtered = q.trim().length > 0
 
+  const chooseCollection = (next: CollectionMode) => {
+    if (next === collection) return
+    setCollection(next)
+    setQ('')
+    setOpenId(null)
+    setActiveYear(null)
+    setYearPickerOpen(false)
+  }
+
   return (
     <>
+      <div className="mb-8 flex flex-col gap-3 border-y border-line/70 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex w-fit items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={collection === 'featured'}
+            onClick={() => chooseCollection('featured')}
+            className={`ui-press rounded-full px-4 py-2 text-control transition-colors ${
+              collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
+            }`}
+          >
+            精选 · {featuredPhotos.length}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={collection === 'all'}
+            onClick={() => chooseCollection('all')}
+            className={`ui-press rounded-full px-4 py-2 text-control transition-colors ${
+              collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
+            }`}
+          >
+            全量 · {allPhotos.length}
+          </button>
+        </div>
+        <p className="text-meta text-faint">
+          {collection === 'featured' ? '按时间收拢关键节点与代表画面' : '按年份铺开，每场直播或视频保留一张代表帧'}
+        </p>
+      </div>
+
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
       <ControlDock stopRef={boardOuterRef} alignRef={boardRef}>
         {/* 底部对齐：dock 里所有东西——柱子的底线、年份标签、按钮——落在同一条线上。
@@ -755,6 +806,7 @@ function Lightbox({
   onStep: (delta: number) => void
 }) {
   const closeRef = useRef<HTMLButtonElement>(null)
+  const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
 
   // 预取左右各两张的大图：切换时如果还要等网络请求，方向键连按会明显卡顿。
   // 提前把邻居的大图丢进浏览器缓存，onStep 换下一张时基本是本地命中。
@@ -811,8 +863,8 @@ function Lightbox({
           if (e.target === e.currentTarget) onClose()
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。 */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photo.src}
           alt={photoAlt(photo)}
@@ -835,29 +887,43 @@ function Lightbox({
         </button>
       </div>
 
-      <div className="relative flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line/60 bg-surface/80 px-4 py-3 backdrop-blur sm:px-10">
-        <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{photo.year ?? UNDATED_LABEL}</span>
-        {photo.date && (
-          <span className="font-mono text-meta tnum text-muted">
-            {photo.date}
-            {photo.time ? ` · ${photo.time}` : ''}
+      <div className="relative border-t border-line/60 bg-surface/85 px-4 py-3 backdrop-blur sm:px-10 sm:py-4">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+          <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{photo.year ?? UNDATED_LABEL}</span>
+          {photo.date && (
+            <span className="font-mono text-meta tnum text-muted">
+              {photo.date}
+              {photo.time ? ` · ${photo.time}` : ''}
+            </span>
+          )}
+          <span className="font-mono text-meta tnum text-faint">
+            {photo.width} × {photo.height}
           </span>
-        )}
-        <span className="font-mono text-meta tnum text-faint">
-          {photo.width} × {photo.height}
-        </span>
-        {photo.title ? (
-          <span className="text-body text-ink">{photo.title}</span>
-        ) : (
-          <span className="text-meta text-faint">标题待命名</span>
-        )}
-        {photo.source && <span className="font-mono text-meta text-faint">{photo.source}</span>}
-        <span className="ml-auto font-mono text-meta tnum text-faint">
-          {index + 1} / {total}
-        </span>
-        <button ref={closeRef} onClick={onClose} className="ui-press rounded-sm px-2 py-1 text-meta text-muted transition-colors hover:text-ink">
-          关闭 · Esc
-        </button>
+          <span className="ml-auto font-mono text-meta tnum text-faint">
+            {index + 1} / {total}
+          </span>
+          <button ref={closeRef} onClick={onClose} className="ui-press rounded-sm px-2 py-1 text-meta text-muted transition-colors hover:text-ink">
+            关闭 · Esc
+          </button>
+        </div>
+
+        <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+          {photo.title ? <h3 className="text-body font-medium text-ink">{photo.title}</h3> : <span className="text-meta text-faint">标题待命名</span>}
+          {photo.caption && <p className="max-w-3xl text-meta leading-relaxed text-muted">{photo.caption}</p>}
+          {photo.source &&
+            (sourceHref ? (
+              <a
+                href={sourceHref}
+                target="_blank"
+                rel="noreferrer"
+                className="ui-press shrink-0 text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
+              >
+                查看来源 ↗
+              </a>
+            ) : (
+              <span className="shrink-0 font-mono text-meta text-faint">{photo.source}</span>
+            ))}
+        </div>
       </div>
     </div>
   )
