@@ -67,7 +67,7 @@ export const SITE_COPY: SiteCopy = {
     title: '女流',
     body: ['{archiveYears}年的游戏、直播和那些晚上，', '重新连成一条路。'],
     primaryAction: '开始',
-    secondaryAction: '打开编年史',
+    secondaryAction: '关于女流',
   },
   homeSections: [
     {
@@ -102,7 +102,7 @@ export const SITE_COPY: SiteCopy = {
     {
       id: 'gallery',
       eyebrow: 'Gallery · 影像档案',
-      title: '不是照片墙，是由画面组成的历史节点。',
+      title: '直播间那些值得纪念的时刻。',
       lede: '纪念版只留下能讲故事的节点；全量版按年份铺开更多直播、活动与偶然入镜。同一场直播只取一张代表帧，但会收录尽可能多的不同直播与视频。',
     },
     { id: 'games', eyebrow: '', title: '她的游戏库', lede: '' },

@@ -6,6 +6,7 @@ import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/c
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { HomeActSections } from '@/components/HomeActSections'
 import { HomeActStage } from '@/components/HomeActStage'
+import { HomeExplorePromo, type ExplorePromoData } from '@/components/HomeExplorePromo'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { LiveNarrativeSeed } from '@/components/LiveContentProvider'
 import { fetchBakedContent } from '@/lib/baked-content'
@@ -18,6 +19,7 @@ import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
+import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 
 /**
  * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 历史上的今天）+ 游戏预告 + 四个房间入口。
@@ -112,6 +114,25 @@ export default async function HomePage() {
     color: act.color,
     beats: beats.map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
   }))
+  // 三幕讲完之后的去处：编年史（按条读）与画廊（按年看）。
+  // 预览用的是真数据——缩略图取自纪念版的等距抽样，不挑“好看的那几张”。
+  const gallery = getGalleryCollections()
+  const galleryYears = [...new Set(gallery.all.map((p) => p.year).filter((y): y is string => y !== null))].sort()
+  const thumbStep = Math.max(1, Math.floor(gallery.featured.length / 8))
+  const explorePromo: ExplorePromoData = {
+    chronicle: {
+      acts: [actI, actII, actIII].map(({ act }) => ({ id: act.id, years: act.years, color: act.color })),
+      entries: data.totals.entries,
+      years: data.totals.years,
+    },
+    gallery: {
+      thumbs: gallery.featured.filter((_, i) => i % thumbStep === 0).slice(0, 8).map((p) => ({ id: p.id, src: p.thumb })),
+      featured: gallery.featured.length,
+      total: gallery.all.length,
+      span: galleryYears.length > 1 ? `${galleryYears[0]}–${galleryYears[galleryYears.length - 1]}` : galleryYears[0] ?? null,
+    },
+  }
+
   const homeSections: HomeSectionRailItem[] = [
     { id: 'home-top', label: '首页', meta: 'START', color: '#E6E4EF' },
     { id: 'home-highlights', label: '一些记得住的时刻', meta: 'LIVE MEMES', color: '#5BC8E8' },
@@ -143,8 +164,12 @@ export default async function HomePage() {
 
       {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
       <div id="home-acts" className="scroll-mt-0">
-        <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+        <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} promo={explorePromo} />
         <HomeActSections acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+        {/* 桌面端这块由舞台的最后一步承担；手机端没有舞台，就在三幕之后自然接上。 */}
+        <section aria-label="接着往下看" className="border-t border-line xl:hidden">
+          <HomeExplorePromo data={explorePromo} />
+        </section>
       </div>
 
       {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}

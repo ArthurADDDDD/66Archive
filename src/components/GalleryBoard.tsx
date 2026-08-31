@@ -24,10 +24,17 @@ type ViewMode = 'natural' | 'uniform'
 type Density = 'loose' | 'normal' | 'dense'
 type CollectionMode = 'featured' | 'all'
 
+/**
+ * 纪念版分类说明先不露出：分类名本身已经写在筛选按钮上，
+ * 一整块解释文字挡在图墙前面，读者还没看到图就先读了一屏说明。
+ * 数组保留——筛选按钮的顺序与文案还靠它。
+ */
+const SHOW_CATEGORY_GUIDE = false
+
 const FEATURED_CATEGORY_GUIDE = [
   {
     name: '直播时期',
-    description: '从不露脸、手部机位、“无头骑士”、屏风时代到“女流之背”，也记录搬家与直播间场景的更替。',
+    description: '从不露脸、手部机位、“无头骑士”、屏风时代到“女流之背”，也记录皮套、双机位等形态变化与直播间场景的更替。',
   },
   {
     name: '周年与生日',
@@ -40,10 +47,6 @@ const FEATURED_CATEGORY_GUIDE = [
   {
     name: '线下活动',
     description: '收录盛典、嘉年华、校园分享和其他离开直播间后发生的重要现场。',
-  },
-  {
-    name: '特殊直播形态',
-    description: '记录皮套、双机位等明显改变观看方式和画面语言的特殊直播节点。',
   },
 ] as const
 
@@ -294,6 +297,7 @@ export function GalleryBoard({
             })}
           </div>
 
+          {SHOW_CATEGORY_GUIDE && (
           <section className="mb-10 rounded-2xl border border-line/70 bg-surface/35 p-5 sm:mb-14 sm:p-7" aria-label="纪念版分类说明">
             <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
               <div>
@@ -313,6 +317,7 @@ export function GalleryBoard({
               </dl>
             </div>
           </section>
+          )}
         </>
       )}
 
@@ -430,7 +435,7 @@ export function GalleryBoard({
 
       {/* 图墙沿用全站 px-page 的左右安全边距；底部留出 dock 的高度，
           否则最后一行会被浮层压住一截。 */}
-      <div ref={boardOuterRef} className="pb-40 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      <div ref={boardOuterRef} className="pb-16 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
         <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
@@ -697,11 +702,12 @@ function ControlDock({
       const parked = stopBottomDoc - dockBottom - height
       const followingViewport = window.scrollY + window.innerHeight - dockBottom - height
       setParkedTop(followingViewport > parked ? parked : null)
-      // 左对齐图墙：正中间是「没想好放哪」的位置，跟版面上任何一条边都对不上。
-      // dock 比图墙还宽时（窄屏）往回收，别顶出右边缘。
+      // 右对齐图墙：左下角住着状态球和播放器，工具条停在那儿会和它们叠在一起。
+      // 贴着图墙右边缘（也就是页面的 padding 边）落位，两边互不打架。
+      // dock 比图墙还宽时（窄屏）往回收，别顶出左边缘。
       const maxLeft = Math.max(DOCK_MARGIN, window.innerWidth - node.offsetWidth - DOCK_MARGIN)
-      const alignLeft = alignRect.left
-      setDefaultLeft(Math.min(Math.max(DOCK_MARGIN, alignLeft), maxLeft))
+      const alignRight = alignRect.right - node.offsetWidth
+      setDefaultLeft(Math.min(Math.max(DOCK_MARGIN, alignRight), maxLeft))
     }
     const raf = requestAnimationFrame(update)
     const ro = new ResizeObserver(update)
@@ -784,6 +790,9 @@ function ControlDock({
       ? { position: 'absolute', top: parkedTop, ...horizontal }
       : { position: 'fixed', bottom: mobile ? MOBILE_DOCK_BOTTOM : DOCK_BOTTOM, ...horizontal }
 
+  // 手机端不给这条工具条：一屏就那么宽，年份面板 / 搜索 / 排列全挤在一条浮层里，
+  // 挡图还抢手势，翻图的人其实用不上它。
+  if (mobile) return null
   if (!mounted) return null
 
   return createPortal(
@@ -893,7 +902,7 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
         {(photo.tags ?? []).length > 0 && (
           <span className="absolute left-3 top-3 flex flex-wrap gap-1.5">
             {photo.tags!.map((value) => (
-              <span key={value} className="rounded-full border border-white/15 bg-black/70 px-2 py-0.5 text-[10px] text-white backdrop-blur-md sm:px-2.5 sm:py-1 sm:text-meta">
+              <span key={value} className="inline-flex min-w-[5.25rem] items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-black/70 px-2 py-0.5 text-[10px] text-white backdrop-blur-md sm:min-w-[6.5rem] sm:px-2.5 sm:py-1 sm:text-meta">
                 {value}
               </span>
             ))}
@@ -907,7 +916,8 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
           {photo.time ? <span className="text-faint"> · {photo.time}</span> : null}
         </p>
         {photo.title ? <h3 className="mt-1.5 text-control font-semibold leading-snug text-ink sm:mt-2 sm:text-h3">{photo.title}</h3> : <p className="mt-1.5 text-[11px] text-faint sm:mt-2 sm:text-control">标题待命名</p>}
-        {photo.caption && <p className="mt-1.5 text-[11px] leading-relaxed text-muted sm:mt-2 sm:text-control">{photo.caption}</p>}
+        {/* 备注长短不一，在手机的两栏窄卡里会把每张卡撑成不同高度；小屏只留标题。 */}
+        {photo.caption && <p className="mt-1.5 hidden text-[11px] leading-relaxed text-muted sm:mt-2 sm:block sm:text-control">{photo.caption}</p>}
         {photo.source &&
           (sourceHref ? (
             <a
