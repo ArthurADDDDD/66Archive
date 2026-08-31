@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { bucketOf, sortBucket, UNDATED, UNDATED_LABEL, type GalleryPhoto } from '@/lib/gallery-photos'
 import { gallerySourceHref } from '@/lib/gallery-href'
+import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
@@ -104,11 +105,9 @@ function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) 
 export function GalleryBoard({
   featuredPhotos,
   allPhotos,
-  eraBoundary,
 }: {
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
-  eraBoundary: number | null
 }) {
   const [collection, setCollection] = useState<CollectionMode>('featured')
   const [mode, setMode] = useState<ViewMode>('natural')
@@ -187,15 +186,6 @@ export function GalleryBoard({
     }
     return map
   }, [photos])
-
-  // 时期色由数据推导出的分界决定，桌面柱状谱和手机选择面板共用一套
-  const eraColor = useCallback(
-    (y: string) => {
-      if (y === UNDATED) return 'var(--era-unknown)'
-      return eraBoundary !== null && Number(y) >= eraBoundary ? 'var(--era-live)' : 'var(--era-video)'
-    },
-    [eraBoundary],
-  )
 
   const openIndex = openId === null ? -1 : visible.findIndex((p) => p.id === openId)
 
@@ -348,7 +338,7 @@ export function GalleryBoard({
       )}
 
       {/* 年份轨：和站内其他页面一样的右侧时间轴。悬停出预览，点了跳年份。 */}
-      <GalleryYearRail spectrum={spectrum} eraColor={eraColor} coverOf={yearCovers} />
+      <GalleryYearRail spectrum={spectrum} coverOf={yearCovers} />
 
       {filtered && (
         <p className="mb-6 text-meta text-faint tnum">
@@ -366,14 +356,14 @@ export function GalleryBoard({
         </p>
       )}
 
-      {/* 图墙沿用全站 px-page 的左右安全边距；底部留出 dock 的高度，
-          否则最后一行会被浮层压住一截。 */}
-      <div className="pb-16 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      {/* 图墙沿用全站 px-page 的左右安全边距，再给右侧年份轨让出一条：
+          轨道的悬停区有 5–7rem 宽，不让路的话最右一列图会被它盖住，点不动。 */}
+      <div className="pb-16 sm:pb-28 md:pr-[5.5rem] xl:pr-[7rem]" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
         <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
             <header className="mb-4 flex items-baseline gap-4">
-              <h2 className="font-mono text-h2 font-semibold tnum leading-none" style={{ color: eraColor(y) }}>
+              <h2 className="font-mono text-h2 font-semibold tnum leading-none" style={{ color: yearColor(y === UNDATED ? null : y) }}>
                 {y === UNDATED ? UNDATED_LABEL : y}
               </h2>
               <span className="text-meta text-faint tnum">{list.length} 张</span>
@@ -441,24 +431,23 @@ type SpectrumEntry = { year: string; count: number; ratio: number }
  */
 function GalleryYearRail({
   spectrum,
-  eraColor,
   coverOf,
 }: {
   spectrum: SpectrumEntry[]
-  eraColor: (year: string) => string
   coverOf: Map<string, GalleryPhoto>
 }) {
   const marks = useMemo<TimelineRailMark[]>(
-    () => spectrum.map(({ year: y, count }) => ({
+    () => spectrum.map(({ year: y, count, ratio }) => ({
       // 跳转目标就是图墙上那一年的分段标题
       id: `gy-${y}`,
       meta: y === UNDATED ? UNDATED_LABEL : y,
       title: `${count} 张`,
-      color: eraColor(y),
+      color: yearColor(y === UNDATED ? null : y),
       cover: coverOf.get(y)?.thumb ?? null,
-      weight: 'lead' as const,
+      // 刻度长短就是当年张数的分档：一条长短一致的轨道读不出「哪年多」
+      weight: (ratio >= 0.6 ? 'lead' : ratio >= 0.25 ? 'major' : 'minor') as TimelineRailMark['weight'],
     })),
-    [spectrum, eraColor, coverOf],
+    [spectrum, coverOf],
   )
 
   return (

@@ -34,6 +34,25 @@ const GAME_COLORS = [
   '#E58F8F', '#8FCBE8', '#B9CE7F', '#D89BC4',
 ]
 
+/**
+ * 年份取色：固定 8 色调色板，按年份顺序分配。
+ *
+ * 画廊只有「年」这一层结构，全站的时期色（视频 / 直播两色）在这里分不出年份，
+ * 一整条轨道会糊成两段。用有限调色板而不是随机色：同一年在任何地方都是同一个颜色，
+ * 服务端和客户端也不会各渲染出一种颜色。相邻年份必然落在不同色相上。
+ */
+const YEAR_COLORS = [
+  '#5BC8E8', '#E0A244', '#A78BFA', '#7FD6B8',
+  '#FF6B75', '#8FB8E8', '#E5568A', '#B9CE7F',
+]
+
+/** 年份未定的那一桶不参与配色：它不是某一年，给个中性灰。 */
+export function yearColor(year: string | null): string {
+  const n = Number(year)
+  if (!year || !Number.isFinite(n)) return 'var(--era-unknown)'
+  return YEAR_COLORS[((n % YEAR_COLORS.length) + YEAR_COLORS.length) % YEAR_COLORS.length]
+}
+
 export function gameColor(id: string | null): string {
   if (!id) return '#3C4256' // 非游戏时段（杂谈等）用中性灰
   let h = 0

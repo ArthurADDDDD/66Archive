@@ -5,13 +5,10 @@ import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryBoard } from '@/components/GalleryBoard'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
-import { getDataset, toTimelineEntries } from '@/lib/data'
-import { deriveEraBoundary } from '@/lib/ui'
 
 /** 画廊：精选节点与全量年份底片架共用一套发布版浏览体验。 */
 export default function GalleryPage() {
   const collections = getGalleryCollections()
-  const eraBoundary = deriveEraBoundary(toTimelineEntries(getDataset()))
   const years = [...new Set(collections.all.map((p) => p.year).filter((y): y is string => y !== null))].sort()
 
   return (
@@ -39,7 +36,7 @@ export default function GalleryPage() {
 
       {collections.all.length > 0 && (
         <section className="site-container-wide px-page pb-20">
-          <GalleryBoard featuredPhotos={collections.featured} allPhotos={collections.all} eraBoundary={eraBoundary} />
+          <GalleryBoard featuredPhotos={collections.featured} allPhotos={collections.all} />
         </section>
       )}
 
