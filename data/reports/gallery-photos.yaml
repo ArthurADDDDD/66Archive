@@ -4,6 +4,160 @@
 # width / height 是 full 版的像素尺寸，布局按它的宽高比排等高行。
 # year / date 为 null 表示还没核实出拍摄年份，前台会归到「年份待定」，不做推测。
 photos:
+  - id: archive-2015-01
+    src: /gallery/photos/archive-2015-01.jpg
+    thumb: /gallery/photos/archive-2015-01.thumb.jpg
+    width: 684
+    height: 360
+    year: '2015'
+    date: '2015-02-04'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 斗鱼早期
+    caption: 早期不露脸直播，镜头只有布偶狗以及身体出现。
+    source: https://www.bilibili.com/video/BV1KW411g7Hr/?p=1&t=60
+    hidden: false
+  - id: archive-2015-02
+    src: /gallery/photos/archive-2015-02.jpg
+    thumb: /gallery/photos/archive-2015-02.thumb.jpg
+    width: 640
+    height: 360
+    year: '2015'
+    date: '2015-03-02'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 手部机位
+    caption: 右上角只拍双手和操作区，是早期不露脸阶段代表。
+    source: https://www.bilibili.com/video/BV1bW411W74m/?p=1&t=2700
+    hidden: false
+  - id: archive-2015-03
+    src: /gallery/photos/archive-2015-03.jpg
+    thumb: /gallery/photos/archive-2015-03.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2015'
+    date: '2015-04-29'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 无头上身机位
+    caption: null
+    source: null
+    hidden: false
+  - id: featured-2015-01
+    src: /gallery/photos/featured-2015-01.jpg
+    thumb: /gallery/photos/featured-2015-01.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2015'
+    date: '2015-04-29'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 无头时代
+    caption: 水友戏称“无头骑士”时代。
+    source: https://www.bilibili.com/video/BV1Mo4y1h7Jn/?t=60
+    hidden: false
+  - id: archive-2015-04
+    src: /gallery/photos/archive-2015-04.jpg
+    thumb: /gallery/photos/archive-2015-04.thumb.jpg
+    width: 636
+    height: 360
+    year: '2015'
+    date: '2015-06-24'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 早期直播代表帧
+    caption: null
+    source: null
+    hidden: false
+  - id: archive-2015-05
+    src: /gallery/photos/archive-2015-05.jpg
+    thumb: /gallery/photos/archive-2015-05.thumb.jpg
+    width: 640
+    height: 360
+    year: '2015'
+    date: '2015-08-11'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 完整露脸／屏风时代
+    caption: 156277正式进入屏风时代。
+    source: https://www.bilibili.com/video/BV1Jx411E7JV/?p=1&t=6000
+    hidden: false
+  - id: archive-2015-06
+    src: /gallery/photos/archive-2015-06.jpg
+    thumb: /gallery/photos/archive-2015-06.thumb.jpg
+    width: 640
+    height: 360
+    year: '2015'
+    date: '2015-10-20'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 完整露脸／近景构图
+    caption: 妆发、机位继续变化，同一时期的细微差别。
+    source: https://www.bilibili.com/video/BV1fW411b7Lv/?p=1&t=600
+    hidden: false
+  - id: archive-2015-07
+    src: /gallery/photos/archive-2015-07.jpg
+    thumb: /gallery/photos/archive-2015-07.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2015'
+    date: '2015-11-04'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 屏风时代
+    caption: 目前找到屏风时代里，摄像头占比较大的一场直播。
+    source: https://www.bilibili.com/video/BV1TQ4y1h7BG/?t=600
+    hidden: false
+  - id: archive-2016-01
+    src: /gallery/photos/archive-2016-01.jpg
+    thumb: /gallery/photos/archive-2016-01.thumb.jpg
+    width: 1104
+    height: 622
+    year: '2016'
+    date: '2016-01-01'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 元旦直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=1&t=5702
+    hidden: false
+  - id: archive-2016-02
+    src: /gallery/photos/archive-2016-02.jpg
+    thumb: /gallery/photos/archive-2016-02.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-01-10'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 一月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=2&t=3634
+    hidden: false
+  - id: archive-2016-03
+    src: /gallery/photos/archive-2016-03.jpg
+    thumb: /gallery/photos/archive-2016-03.thumb.jpg
+    width: 1104
+    height: 622
+    year: '2016'
+    date: '2016-01-20'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 一月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=3&t=3756
+    hidden: false
   - id: anniv_01_1st_2016_bilibili
     src: /gallery/anniv_01_1st_2016_bilibili.jpg
     thumb: /gallery/photos/anniv_01_1st_2016_bilibili.thumb.jpg
@@ -14,9 +168,9 @@ photos:
     time: null
     seq: null
     sourceRef: null
-    title: 女流66 直播一周年纪念 2016年1月24日
-    caption: 一周年直播纪念（B站超清搬运）。粉丝用《我的世界》搭建黄渤、约会、淘宝店版祝福模型，25万粉参与。
-    source: bilibili BV1Rx411S7Ta
+    title: 直播一周年
+    caption: 第一年完整直播生活的纪念节点。
+    source: https://www.bilibili.com/video/BV1Rx411S7Ta
     hidden: false
   - id: anniv_02_1st_2016_fanmade
     src: /gallery/anniv_02_1st_2016_fanmade.jpg
@@ -46,6 +200,146 @@ photos:
     caption: 一周年优酷原始视频封面。原视频仍存活（v.youku.com/v_show/id_XMTQ1ODg5MzQyOA==.html）。
     source: 优酷 XMTQ1ODg5MzQyOA==
     hidden: false
+  - id: archive-2016-04
+    src: /gallery/photos/archive-2016-04.jpg
+    thumb: /gallery/photos/archive-2016-04.thumb.jpg
+    width: 1104
+    height: 622
+    year: '2016'
+    date: '2016-01-31'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 一月末直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=5&t=7419
+    hidden: false
+  - id: archive-2016-05
+    src: /gallery/photos/archive-2016-05.jpg
+    thumb: /gallery/photos/archive-2016-05.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-02-21'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 二月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=6&t=7101
+    hidden: false
+  - id: archive-2016-06
+    src: /gallery/photos/archive-2016-06.jpg
+    thumb: /gallery/photos/archive-2016-06.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-03-06'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 三月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=7&t=6276
+    hidden: false
+  - id: archive-2016-07
+    src: /gallery/photos/archive-2016-07.jpg
+    thumb: /gallery/photos/archive-2016-07.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-03-13'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 三月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=8&t=2429
+    hidden: false
+  - id: archive-2016-08
+    src: /gallery/photos/archive-2016-08.jpg
+    thumb: /gallery/photos/archive-2016-08.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-03-20'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 三月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=9&t=4122
+    hidden: false
+  - id: archive-2016-09
+    src: /gallery/photos/archive-2016-09.jpg
+    thumb: /gallery/photos/archive-2016-09.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-03-27'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 三月末直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=10&t=2127
+    hidden: false
+  - id: archive-2016-10
+    src: /gallery/photos/archive-2016-10.jpg
+    thumb: /gallery/photos/archive-2016-10.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2016'
+    date: '2016-04-10'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 四月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=11&t=3443
+    hidden: false
+  - id: archive-2016-11
+    src: /gallery/photos/archive-2016-11.jpg
+    thumb: /gallery/photos/archive-2016-11.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-04-17'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 四月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=12&t=3213
+    hidden: false
+  - id: archive-2016-12
+    src: /gallery/photos/archive-2016-12.jpg
+    thumb: /gallery/photos/archive-2016-12.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-04-24'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 四月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=13&t=778
+    hidden: false
+  - id: archive-2016-13
+    src: /gallery/photos/archive-2016-13.jpg
+    thumb: /gallery/photos/archive-2016-13.thumb.jpg
+    width: 640
+    height: 360
+    year: '2016'
+    date: '2016-07-03'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 七月直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1ZN411o7VN/?p=14&t=733
+    hidden: false
   - id: anniv_05_birthday_2016
     src: /gallery/anniv_05_birthday_2016.jpg
     thumb: /gallery/photos/anniv_05_birthday_2016.thumb.jpg
@@ -56,9 +350,23 @@ photos:
     time: null
     seq: null
     sourceRef: null
-    title: 女流66 2016年生日 粉丝祝福视频
-    caption: 2016年10月3日生日粉丝祝福视频，粉丝搬运保留。
-    source: bilibili BV1xx411n7jQ
+    title: 2016 生日祝福
+    caption: 直播第二年，来自水友们的祝福。
+    source: https://www.bilibili.com/video/BV1xx411n7jQ
+    hidden: false
+  - id: archive-2016-14
+    src: /gallery/photos/archive-2016-14.jpg
+    thumb: /gallery/photos/archive-2016-14.thumb.jpg
+    width: 638
+    height: 360
+    year: '2016'
+    date: '2016-10-12'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 壮壮第一次出现在直播间镜头前
+    caption: 比《结石记》早一年多，姐弟首次并排出现在156277镜头前。
+    source: https://www.bilibili.com/video/BV1Ms41147QK/?t=405
     hidden: false
   - id: 2016-11-17_2201_391314_01
     src: /gallery/photos/2016-11-17_2201_391314_01.jpg
@@ -84,7 +392,7 @@ photos:
     time: '22:01'
     seq: '02'
     sourceRef: '391314'
-    title: null
+    title: 站内历史照片 · 2016-11-17
     caption: null
     source: null
     hidden: false
@@ -112,7 +420,7 @@ photos:
     time: '17:45'
     seq: '01'
     sourceRef: '671913'
-    title: null
+    title: 站内历史照片 · 2016-12-02
     caption: null
     source: null
     hidden: false
@@ -126,7 +434,7 @@ photos:
     time: '15:00'
     seq: '01'
     sourceRef: '612406'
-    title: null
+    title: 站内历史照片 · 2016-12-13
     caption: null
     source: null
     hidden: false
@@ -168,7 +476,7 @@ photos:
     time: '15:30'
     seq: '01'
     sourceRef: '391805'
-    title: null
+    title: 站内历史照片 · 2016-12-22
     caption: null
     source: null
     hidden: false
@@ -182,7 +490,7 @@ photos:
     time: '14:30'
     seq: '01'
     sourceRef: '906610'
-    title: null
+    title: 站内历史照片 · 2016-12-28
     caption: null
     source: null
     hidden: false
@@ -196,7 +504,7 @@ photos:
     time: '13:45'
     seq: '01'
     sourceRef: '076711'
-    title: null
+    title: 站内历史照片 · 2016-12-30
     caption: null
     source: null
     hidden: false
@@ -210,7 +518,7 @@ photos:
     time: '20:15'
     seq: '01'
     sourceRef: '100105'
-    title: null
+    title: 站内历史照片 · 2016-12-30
     caption: null
     source: null
     hidden: false
@@ -228,6 +536,20 @@ photos:
     caption: 早期露脸纪念视频《一代女皇六则天》，女流亲自献唱，粉丝剪辑。
     source: bilibili BV14x411H75G
     hidden: false
+  - id: archive-2016-15
+    src: /gallery/photos/archive-2016-15.jpg
+    thumb: /gallery/photos/archive-2016-15.thumb.jpg
+    width: 1080
+    height: 608
+    year: '2016'
+    date: '2016'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 屏风时代后期直播
+    caption: 来自两周年回顾中的 2016 年素材。
+    source: https://www.bilibili.com/video/BV1Ux41117zW/?t=230
+    hidden: false
   - id: 2017-01-02_2030_360209_01
     src: /gallery/photos/2017-01-02_2030_360209_01.jpg
     thumb: /gallery/photos/2017-01-02_2030_360209_01.thumb.jpg
@@ -238,7 +560,7 @@ photos:
     time: '20:30'
     seq: '01'
     sourceRef: '360209'
-    title: null
+    title: 站内历史照片 · 2017-01-02
     caption: null
     source: null
     hidden: false
@@ -249,12 +571,12 @@ photos:
     height: 720
     year: '2017'
     date: '2017-01-08'
-    time: '22:46'
+    time: null
     seq: '01'
     sourceRef: '886804'
-    title: null
-    caption: null
-    source: null
+    title: UCG 游戏大赏 2016／现场访谈
+    caption: 2017 年 1 月 8 日举行的 UCG 游戏大赏。
+    source: https://www.ucg.cn/newsinfo/2090001.html
     hidden: false
   - id: 2017-01-12_1500_204415_01
     src: /gallery/photos/2017-01-12_1500_204415_01.jpg
@@ -266,7 +588,7 @@ photos:
     time: '15:00'
     seq: '01'
     sourceRef: '204415'
-    title: null
+    title: 站内历史照片 · 2017-01-12
     caption: null
     source: null
     hidden: false
@@ -280,7 +602,7 @@ photos:
     time: '20:45'
     seq: '01'
     sourceRef: '397906'
-    title: null
+    title: 站内历史照片 · 2017-01-14
     caption: null
     source: null
     hidden: false
@@ -294,7 +616,49 @@ photos:
     time: '18:46'
     seq: '01'
     sourceRef: '082005'
-    title: null
+    title: 站内历史照片 · 2017-01-22
+    caption: null
+    source: null
+    hidden: false
+  - id: archive-2017-01
+    src: /gallery/photos/archive-2017-01.jpg
+    thumb: /gallery/photos/archive-2017-01.thumb.jpg
+    width: 348
+    height: 608
+    year: '2017'
+    date: '2017-01-26'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 可乐鸡翅直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1Ks411875B/?p=1&t=429
+    hidden: false
+  - id: archive-2017-02
+    src: /gallery/photos/archive-2017-02.jpg
+    thumb: /gallery/photos/archive-2017-02.thumb.jpg
+    width: 1080
+    height: 608
+    year: '2017'
+    date: '2017-02-16'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 《几何冲刺》前聊天
+    caption: null
+    source: https://www.bilibili.com/video/BV1Tx411y7KA/?p=1&t=815
+    hidden: false
+  - id: 20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh
+    src: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.jpg
+    thumb: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.thumb.jpg
+    width: 1600
+    height: 1066
+    year: '2017'
+    date: '2017-03-23'
+    time: '07:22'
+    seq: null
+    sourceRef: 6fd3e1b7ly1fdw17l3tl8j235s23u7wh
+    title: PlayStation 国行两周年定制主机
     caption: null
     source: null
     hidden: false
@@ -304,13 +668,41 @@ photos:
     width: 1600
     height: 1067
     year: '2017'
-    date: '2017-03-28'
-    time: '13:38'
+    date: '2017-03-24'
+    time: null
     seq: '01'
     sourceRef: '679491'
-    title: null
+    title: PlayStation 国行两周年／定制主机纪念
+    caption: 中国之星发布会暨 PlayStation 国行两周年活动，获赠国行首台个人定制 PS4。
+    source: https://nvliu.me/profile
+    hidden: false
+  - id: archive-2017-03
+    src: /gallery/photos/archive-2017-03.jpg
+    thumb: /gallery/photos/archive-2017-03.thumb.jpg
+    width: 1080
+    height: 608
+    year: '2017'
+    date: '2017-03-24'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 女流 × 壮壮《1-2-Switch》
     caption: null
-    source: null
+    source: https://www.bilibili.com/video/BV17x411k78a/?p=1&t=84
+    hidden: false
+  - id: archive-2017-04
+    src: /gallery/photos/archive-2017-04.jpg
+    thumb: /gallery/photos/archive-2017-04.thumb.jpg
+    width: 640
+    height: 360
+    year: '2017'
+    date: '2017-06-25'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 屏风时代结束 / 新的直播间出现
+    caption: 书架、收藏品和设备成为稳定背景。
+    source: https://www.bilibili.com/video/BV13x411r7Zu/?t=120
     hidden: false
   - id: 2017-07-09_1413_580821_01
     src: /gallery/photos/2017-07-09_1413_580821_01.jpg
@@ -336,7 +728,7 @@ photos:
     time: '11:58'
     seq: '01'
     sourceRef: '745522'
-    title: null
+    title: 站内历史照片 · 2017-07-11
     caption: null
     source: null
     hidden: false
@@ -350,9 +742,23 @@ photos:
     time: '11:37'
     seq: '01'
     sourceRef: '003468'
-    title: null
+    title: 站内历史照片 · 2017-07-14
     caption: null
     source: null
+    hidden: false
+  - id: archive-2017-05
+    src: /gallery/photos/archive-2017-05.jpg
+    thumb: /gallery/photos/archive-2017-05.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2017'
+    date: '2017-09-16'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 《加油向未来》直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1Ks411t7Tu/?p=1&t=1625
     hidden: false
   - id: 2017-10-03_0057_963465_01
     src: /gallery/photos/2017-10-03_0057_963465_01.jpg
@@ -364,9 +770,23 @@ photos:
     time: '00:57'
     seq: '01'
     sourceRef: '963465'
-    title: null
+    title: 站内历史照片 · 2017-10-03
     caption: null
     source: null
+    hidden: false
+  - id: archive-2017-06
+    src: /gallery/photos/archive-2017-06.jpg
+    thumb: /gallery/photos/archive-2017-06.thumb.jpg
+    width: 640
+    height: 360
+    year: '2017'
+    date: '2017-10-06'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 豆豆首次出现在直播间
+    caption: 目前找到的较早完整同框（不保证是最早）。
+    source: https://www.bilibili.com/video/BV1Rx41137td/?p=1&t=720
     hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
     src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.jpg
@@ -375,11 +795,11 @@ photos:
     height: 900
     year: '2017'
     date: '2017-10-18'
-    time: '07:43'
+    time: null
     seq: null
     sourceRef: 6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
-    title: null
-    caption: null
+    title: 线下活动大合影
+    caption: 多人合影很有年代价值；具体活动名暂未确认。
     source: null
     hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y
@@ -392,7 +812,7 @@ photos:
     time: '07:43'
     seq: null
     sourceRef: 6fd3e1b7gy1fh1vlkm3rxj20m80esq3y
-    title: null
+    title: 站内历史照片 · 2017-10-18
     caption: null
     source: null
     hidden: false
@@ -406,9 +826,23 @@ photos:
     time: '07:43'
     seq: null
     sourceRef: 6fd3e1b7gy1fh1vm3ph6gj20qo0zkqfd
-    title: null
+    title: 站内历史照片 · 2017-10-18
     caption: null
     source: null
+    hidden: false
+  - id: archive-2017-07
+    src: /gallery/photos/archive-2017-07.jpg
+    thumb: /gallery/photos/archive-2017-07.thumb.jpg
+    width: 360
+    height: 626
+    year: '2017'
+    date: '2017-12-31'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 2018新年致辞
+    caption: 新年致辞，竖屏近景记录了与固定机位不同的状态。
+    source: https://www.bilibili.com/video/BV11W411q7oA/?t=1520
     hidden: false
   - id: anniv_06_3rd_2018_gala
     src: /gallery/anniv_06_3rd_2018_gala.png
@@ -438,6 +872,76 @@ photos:
     caption: 三周年粉丝自制祝福特稿，木由叶 & 播音彬制作。
     source: bilibili BV1PW411i7G8
     hidden: false
+  - id: archive-2018-01
+    src: /gallery/photos/archive-2018-01.jpg
+    thumb: /gallery/photos/archive-2018-01.thumb.jpg
+    width: 480
+    height: 360
+    year: '2018'
+    date: 2018-03-02（待考究）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 壮壮《结石记》／姐弟名场面
+    caption: 姐弟同坐摄像头前复盘结石求医经历，难忘的早晨。
+    source: https://www.bilibili.com/video/BV1PW411x7Td/?t=1200
+    hidden: false
+  - id: archive-2018-02
+    src: /gallery/photos/archive-2018-02.jpg
+    thumb: /gallery/photos/archive-2018-02.thumb.jpg
+    width: 640
+    height: 360
+    year: '2018'
+    date: '2018-03-08'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 颜值主播片段
+    caption: null
+    source: https://www.bilibili.com/video/BV1yW411W7BJ/?p=1&t=176
+    hidden: false
+  - id: archive-2018-03
+    src: /gallery/photos/archive-2018-03.jpg
+    thumb: /gallery/photos/archive-2018-03.thumb.jpg
+    width: 630
+    height: 360
+    year: '2018'
+    date: '2018-04-06'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 女流 × 豆豆《理想之歌》
+    caption: 比首次同框更有记忆点的‘豆6组合’现场。
+    source: https://www.bilibili.com/video/BV1WW411M7oq/?t=306
+    hidden: false
+  - id: archive-2018-04
+    src: /gallery/photos/archive-2018-04.jpg
+    thumb: /gallery/photos/archive-2018-04.thumb.jpg
+    width: 1366
+    height: 768
+    year: '2018'
+    date: '2018-04-29'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 斗鱼嘉年华红毯
+    caption: null
+    source: https://www.bilibili.com/video/BV1WW411V7sN/?p=7&t=52
+    hidden: false
+  - id: archive-2018-08
+    src: /gallery/photos/archive-2018-08.jpg
+    thumb: /gallery/photos/archive-2018-08.thumb.jpg
+    width: 360
+    height: 640
+    year: '2018'
+    date: '2018-04-29'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 斗鱼嘉年华后台
+    caption: 后台花絮代表线下活动时期。
+    source: https://www.bilibili.com/video/BV1tW4113783/?t=13
+    hidden: false
   - id: 2018-05-01_1538_160291_03
     src: /gallery/photos/2018-05-01_1538_160291_03.jpg
     thumb: /gallery/photos/2018-05-01_1538_160291_03.thumb.jpg
@@ -445,12 +949,40 @@ photos:
     height: 480
     year: '2018'
     date: '2018-05-01'
-    time: '15:38'
+    time: null
     seq: '03'
     sourceRef: '160291'
-    title: null
+    title: 2018 斗鱼嘉年华／粉丝大合影
+    caption: 活动于 4 月 29 日至 5 月 1 日在武汉举办。
+    source: https://www.gamersky.com/news/201804/1042340.shtml
+    hidden: false
+  - id: archive-2018-05
+    src: /gallery/photos/archive-2018-05.jpg
+    thumb: /gallery/photos/archive-2018-05.thumb.jpg
+    width: 780
+    height: 360
+    year: '2018'
+    date: '2018-05-04'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 小涡小崽首次出现在直播间
+    caption: 伴随156277共同成长的两只吉祥物小猫咪。
+    source: https://www.bilibili.com/video/BV1MW411G7H4/?t=62
+    hidden: false
+  - id: archive-2018-06
+    src: /gallery/photos/archive-2018-06.jpg
+    thumb: /gallery/photos/archive-2018-06.thumb.jpg
+    width: 640
+    height: 360
+    year: '2018'
+    date: '2018-06-06'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 活动舞蹈《呼吸》
     caption: null
-    source: null
+    source: https://www.bilibili.com/video/BV1BW411A7An/?p=1&t=19
     hidden: false
   - id: 2018-06-14_1341_954895_01
     src: /gallery/photos/2018-06-14_1341_954895_01.jpg
@@ -462,7 +994,7 @@ photos:
     time: '13:41'
     seq: '01'
     sourceRef: '954895'
-    title: null
+    title: 站内历史照片 · 2018-06-14
     caption: null
     source: null
     hidden: false
@@ -476,7 +1008,7 @@ photos:
     time: '13:41'
     seq: '03'
     sourceRef: '954895'
-    title: null
+    title: 站内历史照片 · 2018-06-14
     caption: null
     source: null
     hidden: false
@@ -490,7 +1022,7 @@ photos:
     time: '13:00'
     seq: '02'
     sourceRef: '506014'
-    title: null
+    title: 站内历史照片 · 2018-09-21
     caption: null
     source: null
     hidden: false
@@ -504,7 +1036,7 @@ photos:
     time: '13:00'
     seq: '04'
     sourceRef: '506014'
-    title: null
+    title: 站内历史照片 · 2018-09-21
     caption: null
     source: null
     hidden: false
@@ -518,9 +1050,23 @@ photos:
     time: '13:00'
     seq: '06'
     sourceRef: '506014'
-    title: null
+    title: 站内历史照片 · 2018-09-21
     caption: null
     source: null
+    hidden: false
+  - id: archive-2018-07
+    src: /gallery/photos/archive-2018-07.jpg
+    thumb: /gallery/photos/archive-2018-07.thumb.jpg
+    width: 1600
+    height: 899
+    year: '2018'
+    date: '2018-11-12'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 搬到新家第一天／皮卡丘书柜
+    caption: 再搬新家，此次为新直播间首场开播收录。
+    source: https://www.bilibili.com/video/BV1Ct411U7A6/?t=90
     hidden: false
   - id: anniv_08_carnival_2018
     src: /gallery/anniv_08_carnival_2018.jpg
@@ -560,9 +1106,79 @@ photos:
     time: '15:37'
     seq: '01'
     sourceRef: '857879'
-    title: null
+    title: 站内历史照片 · 2019-03-06
     caption: null
     source: null
+    hidden: false
+  - id: archive-2019-01
+    src: /gallery/photos/archive-2019-01.jpg
+    thumb: /gallery/photos/archive-2019-01.thumb.jpg
+    width: 852
+    height: 480
+    year: '2019'
+    date: '2019-05-04'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第九期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=13&t=2007
+    hidden: false
+  - id: archive-2019-02
+    src: /gallery/photos/archive-2019-02.jpg
+    thumb: /gallery/photos/archive-2019-02.thumb.jpg
+    width: 852
+    height: 480
+    year: '2019'
+    date: '2019-05-15'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第十三期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=19&t=202
+    hidden: false
+  - id: archive-2019-03
+    src: /gallery/photos/archive-2019-03.jpg
+    thumb: /gallery/photos/archive-2019-03.thumb.jpg
+    width: 852
+    height: 480
+    year: '2019'
+    date: '2019-05-20'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第十五期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=22&t=313
+    hidden: false
+  - id: archive-2019-04
+    src: /gallery/photos/archive-2019-04.jpg
+    thumb: /gallery/photos/archive-2019-04.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2019'
+    date: '2019-05-28'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第十八期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=26&t=1748
+    hidden: false
+  - id: archive-2019-05
+    src: /gallery/photos/archive-2019-05.jpg
+    thumb: /gallery/photos/archive-2019-05.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2019'
+    date: '2019-06-06'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 活动舞蹈《泉水叮咚》
+    caption: null
+    source: https://www.bilibili.com/video/BV1o4411M7Sw/?p=1&t=41
     hidden: false
   - id: 2019-08-03_1052_800750_01
     src: /gallery/photos/2019-08-03_1052_800750_01.jpg
@@ -571,12 +1187,12 @@ photos:
     height: 750
     year: '2019'
     date: '2019-08-03'
-    time: '10:52'
+    time: null
     seq: '01'
     sourceRef: '800750'
-    title: null
-    caption: null
-    source: null
+    title: 2019 ChinaJoy／展台粉丝合影
+    caption: 2019 ChinaJoy 现场大合影。
+    source: https://games.sina.com.cn/wlyx/2019-08-02/doc-ihytcitm6447514.shtml
     hidden: false
   - id: 20190926234345_6fd3e1b7ly1fk4dys0kuxj20j50sctdt
     src: /gallery/photos/20190926234345_6fd3e1b7ly1fk4dys0kuxj20j50sctdt.jpg
@@ -588,9 +1204,93 @@ photos:
     time: '23:43'
     seq: null
     sourceRef: 6fd3e1b7ly1fk4dys0kuxj20j50sctdt
-    title: null
+    title: 站内历史照片 · 2019-09-26
     caption: null
     source: null
+    hidden: false
+  - id: archive-2019-06
+    src: /gallery/photos/archive-2019-06.jpg
+    thumb: /gallery/photos/archive-2019-06.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2019'
+    date: '2019-11-26'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊《还珠格格》
+    caption: null
+    source: https://www.bilibili.com/video/BV1KJ411X7Re/?p=1&t=310
+    hidden: false
+  - id: archive-2019-07
+    src: /gallery/photos/archive-2019-07.jpg
+    thumb: /gallery/photos/archive-2019-07.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2019'
+    date: 2019（补档第一期）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第一期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=1&t=624
+    hidden: false
+  - id: archive-2019-08
+    src: /gallery/photos/archive-2019-08.jpg
+    thumb: /gallery/photos/archive-2019-08.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2019'
+    date: 2019（补档第九期）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第九期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=9&t=184
+    hidden: false
+  - id: archive-2019-09
+    src: /gallery/photos/archive-2019-09.jpg
+    thumb: /gallery/photos/archive-2019-09.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2019'
+    date: 2019（补档第五期）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 戏说《封神演义》第五期
+    caption: null
+    source: https://www.bilibili.com/video/BV1c4411e7ef/?p=5&t=1518
+    hidden: false
+  - id: archive-2020-01
+    src: /gallery/photos/archive-2020-01.jpg
+    thumb: /gallery/photos/archive-2020-01.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2020'
+    date: '2020-01-02'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 新年直播
+    caption: null
+    source: https://www.bilibili.com/video/BV1WJ411j7qN/?p=1&t=495
+    hidden: false
+  - id: archive-2020-02
+    src: /gallery/photos/archive-2020-02.jpg
+    thumb: /gallery/photos/archive-2020-02.thumb.jpg
+    width: 640
+    height: 360
+    year: '2020'
+    date: '2020-01-22'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 二哥网购战利品
+    caption: null
+    source: https://www.bilibili.com/video/BV157411e747/?p=1&t=86
     hidden: false
   - id: anniv_10_5th_2020
     src: /gallery/anniv_10_5th_2020.jpg
@@ -598,13 +1298,55 @@ photos:
     width: 2366
     height: 1192
     year: '2020'
-    date: 2020-01
+    date: 2020-01（五周年）
     time: null
     seq: null
     sourceRef: null
-    title: 女流66 与YJJ观看五周年祝福视频
-    caption: 五周年祝福视频 reaction，女流与 YJJ 同框观看粉丝祝福。
-    source: bilibili BV1sq4y1L7sa
+    title: 女流 × YJJ／五周年祝福同框
+    caption: 早期与yjj同框纪念节点。
+    source: https://www.bilibili.com/video/BV1sq4y1L7sa
+    hidden: false
+  - id: archive-2020-03
+    src: /gallery/photos/archive-2020-03.jpg
+    thumb: /gallery/photos/archive-2020-03.thumb.jpg
+    width: 640
+    height: 360
+    year: '2020'
+    date: 2020-02-25（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊托福名场面
+    caption: null
+    source: https://www.bilibili.com/video/BV1o7411T7iM/?p=1&t=75
+    hidden: false
+  - id: archive-2020-04
+    src: /gallery/photos/archive-2020-04.jpg
+    thumb: /gallery/photos/archive-2020-04.thumb.jpg
+    width: 640
+    height: 360
+    year: '2020'
+    date: 2020-03-31（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊壮壮喝醉名场面
+    caption: null
+    source: https://www.bilibili.com/video/BV1W54y1d7PA/?p=1&t=300
+    hidden: false
+  - id: archive-2020-05
+    src: /gallery/photos/archive-2020-05.jpg
+    thumb: /gallery/photos/archive-2020-05.thumb.jpg
+    width: 1048
+    height: 584
+    year: '2020'
+    date: 2020-12-13（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊直播电脑硬件
+    caption: null
+    source: https://www.bilibili.com/video/BV1JZ4y137Py/?p=1&t=180
     hidden: false
   - id: 2020-12-29_0916_204563_01
     src: /gallery/photos/2020-12-29_0916_204563_01.jpg
@@ -616,9 +1358,37 @@ photos:
     time: '09:16'
     seq: '01'
     sourceRef: '204563'
-    title: null
+    title: 站内历史照片 · 2020-12-29
     caption: null
     source: null
+    hidden: false
+  - id: archive-2021-01
+    src: /gallery/photos/archive-2021-01.jpg
+    thumb: /gallery/photos/archive-2021-01.thumb.jpg
+    width: 720
+    height: 360
+    year: '2021'
+    date: 2021-01-20（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊自己的读书观
+    caption: null
+    source: https://www.bilibili.com/video/BV12t4y1z75h/?p=1&t=180
+    hidden: false
+  - id: archive-2021-02
+    src: /gallery/photos/archive-2021-02.jpg
+    thumb: /gallery/photos/archive-2021-02.thumb.jpg
+    width: 640
+    height: 360
+    year: '2021'
+    date: 2021-07-18（活动日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: TapTap 游戏发布会采访
+    caption: null
+    source: https://www.bilibili.com/video/BV1Dq4y1H7jq/?p=1&t=160
     hidden: false
   - id: 20220124110210_0022Ya6rly1gyllg2qn86j60sn0c4wg902
     src: /gallery/photos/20220124110210_0022Ya6rly1gyllg2qn86j60sn0c4wg902.jpg
@@ -630,7 +1400,7 @@ photos:
     time: '11:02'
     seq: null
     sourceRef: 0022Ya6rly1gyllg2qn86j60sn0c4wg902
-    title: null
+    title: 站内历史照片 · 2022-01-24
     caption: null
     source: null
     hidden: false
@@ -658,7 +1428,7 @@ photos:
     time: '17:21'
     seq: '01'
     sourceRef: '113672'
-    title: null
+    title: 站内历史照片 · 2022-03-24
     caption: null
     source: null
     hidden: false
@@ -672,7 +1442,7 @@ photos:
     time: '13:57'
     seq: '01'
     sourceRef: '706249'
-    title: null
+    title: 站内历史照片 · 2022-03-31
     caption: null
     source: null
     hidden: false
@@ -686,7 +1456,7 @@ photos:
     time: '15:27'
     seq: '01'
     sourceRef: '402868'
-    title: null
+    title: 站内历史照片 · 2022-04-08
     caption: null
     source: null
     hidden: false
@@ -704,19 +1474,89 @@ photos:
     caption: null
     source: null
     hidden: false
+  - id: archive-2022-01
+    src: /gallery/photos/archive-2022-01.jpg
+    thumb: /gallery/photos/archive-2022-01.thumb.jpg
+    width: 640
+    height: 360
+    year: '2022'
+    date: '2022-04-20'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 真正的女流之背机位出现了
+    caption: 双机位直播，时隔数年再现“女流之背”。
+    source: https://www.bilibili.com/video/BV1j3411M76h/?t=30
+    hidden: false
+  - id: archive-2022-02
+    src: /gallery/photos/archive-2022-02.jpg
+    thumb: /gallery/photos/archive-2022-02.thumb.jpg
+    width: 640
+    height: 320
+    year: '2022'
+    date: '2022-11-19'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 婚后早期共同出镜视频
+    caption: 与王师傅拍vlog。
+    source: https://www.bilibili.com/video/BV1xY411o7uk/?t=430
+    hidden: false
+  - id: archive-2023-01
+    src: /gallery/photos/archive-2023-01.jpg
+    thumb: /gallery/photos/archive-2023-01.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2023'
+    date: '2023-09-16'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 猪猪公主皮套
+    caption: 第一回皮套开播，借用的Asaki的皮套。
+    source: https://www.bilibili.com/video/BV1iz4y15799/?t=30
+    hidden: false
+  - id: archive-2023-02
+    src: /gallery/photos/archive-2023-02.jpg
+    thumb: /gallery/photos/archive-2023-02.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2023'
+    date: '2023-09-24'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 怀里抱猴皮套
+    caption: 这是皮套6的第二套皮肤首次出现的节点。
+    source: https://www.bilibili.com/video/BV1pK4y1F7hD/?t=35
+    hidden: false
+  - id: archive-2023-03
+    src: /gallery/photos/archive-2023-03.jpg
+    thumb: /gallery/photos/archive-2023-03.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2023'
+    date: '2023-11-03'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 搬家后首次开摄像头
+    caption: 房间更空，书柜和摆件重新布置。
+    source: https://www.bilibili.com/video/BV1xa4y1D7Gp/?t=60
+    hidden: false
   - id: 20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02
     src: /gallery/photos/20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02.jpg
     thumb: /gallery/photos/20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02.thumb.jpg
     width: 1200
     height: 1600
     year: '2024'
-    date: '2024-01-21'
-    time: '13:58'
+    date: '2024-01-11'
+    time: null
     seq: null
     sourceRef: 0022Ya6rly1hlyxc13zf6j61y52ljx5l02
-    title: null
-    caption: null
-    source: null
+    title: 2023 游戏家盛典／星光大使
+    caption: 西安颁奖礼返图；活动为 2023 游戏家盛典，女流以星光大使身份出席。
+    source: https://peachring.com/u/1876156855-%E5%A5%B3%E6%B5%81/4991903829331283
     hidden: false
   - id: 20240121135816_0022Ya6rly1hlyxc2by0dj623u35skjl02
     src: /gallery/photos/20240121135816_0022Ya6rly1hlyxc2by0dj623u35skjl02.jpg
@@ -728,7 +1568,7 @@ photos:
     time: '13:58'
     seq: null
     sourceRef: 0022Ya6rly1hlyxc2by0dj623u35skjl02
-    title: null
+    title: 站内历史照片 · 2024-01-21
     caption: null
     source: null
     hidden: false
@@ -742,7 +1582,7 @@ photos:
     time: '13:58'
     seq: null
     sourceRef: 0022Ya6rly1hm05kq8n7bj623u35sx6p02
-    title: null
+    title: 站内历史照片 · 2024-01-21
     caption: null
     source: null
     hidden: false
@@ -756,7 +1596,7 @@ photos:
     time: '13:58'
     seq: null
     sourceRef: 0022Ya6rly1hm05kqydb7j61oz26a4qp02
-    title: null
+    title: 站内历史照片 · 2024-01-21
     caption: null
     source: null
     hidden: false
@@ -770,9 +1610,65 @@ photos:
     time: '13:58'
     seq: null
     sourceRef: 0022Ya6rly1hm05krny7aj61ma27o7wh02
-    title: null
+    title: 站内历史照片 · 2024-01-21
     caption: null
     source: null
+    hidden: false
+  - id: 20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02
+    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.jpg
+    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.thumb.jpg
+    width: 1600
+    height: 1067
+    year: '2024'
+    date: '2024-09-20'
+    time: null
+    seq: null
+    sourceRef: 0022Ya6rgy1htvb9vkp86j635s23wb2a02
+    title: 北大校园研学会／回校分享
+    caption: 地点为北京大学第二教学楼；
+    source: https://peachring.com/u/1876156855-%E5%A5%B3%E6%B5%81/5081046936979501
+    hidden: false
+  - id: 20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02
+    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.jpg
+    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.thumb.jpg
+    width: 1600
+    height: 1067
+    year: '2024'
+    date: '2024-09-21'
+    time: '06:10'
+    seq: null
+    sourceRef: 0022Ya6rgy1htvb9wi28yj635s23wb2a02
+    title: 北大校园研学会返图
+    caption: null
+    source: null
+    hidden: false
+  - id: 20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02
+    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.jpg
+    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.thumb.jpg
+    width: 1199
+    height: 1600
+    year: '2024'
+    date: '2024-09-21'
+    time: '06:10'
+    seq: null
+    sourceRef: 0022Ya6rgy1htvb9yn1rnj62da35skjm02
+    title: 北大校园研学会返图
+    caption: null
+    source: null
+    hidden: false
+  - id: 20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02
+    src: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.jpg
+    thumb: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2024'
+    date: '2024-10-06'
+    time: null
+    seq: null
+    sourceRef: 0022Ya6rly1hubwag1pxpj61hc0u0h2x02
+    title: 女流 × 壮壮／《黑神话：悟空》音乐会
+    caption: 女流与壮壮共同观看《黑神话：悟空》音乐会。
+    source: https://peachring.com/u/1876156855-%E5%A5%B3%E6%B5%81/5086245105439483
     hidden: false
   - id: 20241031044106_0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02
     src: /gallery/photos/20241031044106_0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02.jpg
@@ -784,7 +1680,7 @@ photos:
     time: '04:41'
     seq: null
     sourceRef: 0022Ya6rly1ht2ojlgm8xj61hc0u0hdp02
-    title: null
+    title: 站内历史照片 · 2024-10-31
     caption: null
     source: null
     hidden: false
@@ -798,21 +1694,7 @@ photos:
     time: '04:41'
     seq: null
     sourceRef: 0022Ya6rly1hu9jvo6rcij60u01hcwvv02
-    title: null
-    caption: null
-    source: null
-    hidden: false
-  - id: 20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02
-    src: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.jpg
-    thumb: /gallery/photos/20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02.thumb.jpg
-    width: 1600
-    height: 900
-    year: '2024'
-    date: '2024-10-31'
-    time: '04:41'
-    seq: null
-    sourceRef: 0022Ya6rly1hubwag1pxpj61hc0u0h2x02
-    title: null
+    title: 站内历史照片 · 2024-10-31
     caption: null
     source: null
     hidden: false
@@ -826,7 +1708,7 @@ photos:
     time: '04:41'
     seq: null
     sourceRef: 0022Ya6rly1hukx1c92v7j60u01hcnaz02
-    title: null
+    title: 站内历史照片 · 2024-10-31
     caption: null
     source: null
     hidden: false
@@ -840,7 +1722,7 @@ photos:
     time: '04:41'
     seq: null
     sourceRef: 0022Ya6rly1huu4h9xm22j610o1sm13202
-    title: null
+    title: 站内历史照片 · 2024-10-31
     caption: null
     source: null
     hidden: false
@@ -872,59 +1754,101 @@ photos:
     caption: null
     source: null
     hidden: false
-  - id: 20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02
-    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.jpg
-    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02.thumb.jpg
-    width: 1600
-    height: 1067
-    year: '2025'
-    date: '2025-01-23'
-    time: '06:10'
+  - id: archive-2024-01
+    src: /gallery/photos/archive-2024-01.jpg
+    thumb: /gallery/photos/archive-2024-01.thumb.jpg
+    width: 720
+    height: 1280
+    year: '2024'
+    date: '2024-12-04'
+    time: null
     seq: null
-    sourceRef: 0022Ya6rgy1htvb9vkp86j635s23wb2a02
-    title: null
+    sourceRef: null
+    title: 《清汤大老爷》前聊天
     caption: null
-    source: null
+    source: https://www.bilibili.com/video/BV1ZUiUYcEB1/?p=1&t=300
     hidden: false
-  - id: 20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02
-    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.jpg
-    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9wi28yj635s23wb2a02.thumb.jpg
-    width: 1600
-    height: 1067
-    year: '2025'
-    date: '2025-01-23'
-    time: '06:10'
+  - id: featured-2026-01
+    src: /gallery/photos/featured-2026-01.jpg
+    thumb: /gallery/photos/featured-2026-01.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: '2026-04-19'
+    time: null
     seq: null
-    sourceRef: 0022Ya6rgy1htvb9wi28yj635s23wb2a02
-    title: null
-    caption: null
-    source: null
+    sourceRef: null
+    title: 壮壮怀旧当年首次露脸合影
+    caption: 壮壮把这张老合照称作自己在姐姐直播间第一次露脸。
+    source: https://www.bilibili.com/video/BV1zWdfBTE19/?t=15
     hidden: false
-  - id: 20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02
-    src: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.jpg
-    thumb: /gallery/photos/20250123061030_0022Ya6rgy1htvb9yn1rnj62da35skjm02.thumb.jpg
-    width: 1199
-    height: 1600
-    year: '2025'
-    date: '2025-01-23'
-    time: '06:10'
+  - id: archive-2026-01
+    src: /gallery/photos/archive-2026-01.jpg
+    thumb: /gallery/photos/archive-2026-01.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: '2026-06-09'
+    time: null
     seq: null
-    sourceRef: 0022Ya6rgy1htvb9yn1rnj62da35skjm02
-    title: null
-    caption: null
-    source: null
+    sourceRef: null
+    title: 小涡术后休养／带病出镜
+    caption: 涡皇你受苦了555
+    source: https://www.bilibili.com/video/BV16wE36jEvA/?t=170
     hidden: false
-  - id: 20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh
-    src: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.jpg
-    thumb: /gallery/photos/20250930072234_6fd3e1b7ly1fdw17l3tl8j235s23u7wh.thumb.jpg
-    width: 1600
-    height: 1066
-    year: '2025'
-    date: '2025-09-30'
-    time: '07:22'
+  - id: archive-2026-02
+    src: /gallery/photos/archive-2026-02.jpg
+    thumb: /gallery/photos/archive-2026-02.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: 2026-07-07（发布日）
+    time: null
     seq: null
-    sourceRef: 6fd3e1b7ly1fdw17l3tl8j235s23u7wh
-    title: null
+    sourceRef: null
+    title: 回顾十年直播风格
     caption: null
-    source: null
+    source: https://www.bilibili.com/video/BV1UZM86WEYq/?p=1&t=209
+    hidden: false
+  - id: archive-2026-03
+    src: /gallery/photos/archive-2026-03.jpg
+    thumb: /gallery/photos/archive-2026-03.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: 2026-07-15（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊 BW 线下见闻
+    caption: null
+    source: https://www.bilibili.com/video/BV17RN66xELL/?p=1&t=31
+    hidden: false
+  - id: archive-2026-04
+    src: /gallery/photos/archive-2026-04.jpg
+    thumb: /gallery/photos/archive-2026-04.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: 2026-07-19（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊最喜欢的礼物
+    caption: null
+    source: https://www.bilibili.com/video/BV1NuKC6mEQ8/?p=1&t=187
+    hidden: false
+  - id: archive-2026-05
+    src: /gallery/photos/archive-2026-05.jpg
+    thumb: /gallery/photos/archive-2026-05.thumb.jpg
+    width: 1280
+    height: 720
+    year: '2026'
+    date: 2026-08-10（发布日）
+    time: null
+    seq: null
+    sourceRef: null
+    title: 聊下半年期待游戏
+    caption: null
+    source: https://www.bilibili.com/video/BV1sJuR6nEF1/?p=1&t=51
     hidden: false
