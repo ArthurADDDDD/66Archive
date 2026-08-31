@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveActs } from '@/lib/live-content'
 import { useLiveContent } from './LiveContentProvider'
+import { HomeExplorePromo, type ExplorePromoData } from './HomeExplorePromo'
 
 type StageStep = {
   id: string
@@ -12,6 +13,8 @@ type StageStep = {
   beatIndex: number | null
   /** 幕尾收束：和事件卡一样占据桌面舞台的一步。 */
   closer?: boolean
+  /** 全篇最后一步：不属于任何一幕，负责把编年史 / 画廊两条路交出去。 */
+  outro?: boolean
 }
 
 const STEP_DISTANCE_SVH = 32
@@ -40,24 +43,30 @@ function wheelPixels(event: WheelEvent) {
 export function HomeActStage({
   acts: baselineActs,
   now,
+  promo,
 }: {
   acts: ResolvedAct[]
   now: { year: string; label: string; count: number }
+  /** 故事讲完后的去处；给了才会多出最后一步。 */
+  promo?: ExplorePromoData
 }) {
   const { narrative } = useLiveContent()
   const acts = applyLiveActs(baselineActs, narrative?.homeActs, true, narrative?.deletedIds ?? [])
   const rootRef = useRef<HTMLElement>(null)
   const steps = useMemo<StageStep[]>(
-    () => acts.flatMap((act, actIndex) => [
-      { id: act.act.id, actIndex, beatIndex: null },
-      ...act.beats.map((beat, beatIndex) => ({
-        id: `home-${act.act.id}-${beat.id}`,
-        actIndex,
-        beatIndex,
-      })),
-      ...(act.act.closer ? [{ id: `home-${act.act.id}-closer`, actIndex, beatIndex: null, closer: true }] : []),
-    ]),
-    [acts],
+    () => [
+      ...acts.flatMap((act, actIndex) => [
+        { id: act.act.id, actIndex, beatIndex: null },
+        ...act.beats.map((beat, beatIndex) => ({
+          id: `home-${act.act.id}-${beat.id}`,
+          actIndex,
+          beatIndex,
+        })),
+        ...(act.act.closer ? [{ id: `home-${act.act.id}-closer`, actIndex, beatIndex: null, closer: true }] : []),
+      ]),
+      ...(promo ? [{ id: 'home-acts-outro', actIndex: acts.length - 1, beatIndex: null, outro: true }] : []),
+    ],
+    [acts, promo],
   )
   const [activeIndex, setActiveIndex] = useState(0)
   const activeIndexRef = useRef(0)
@@ -134,7 +143,8 @@ export function HomeActStage({
   const resolved = acts[step?.actIndex ?? 0]
   const beat = step?.beatIndex == null ? null : resolved?.beats[step.beatIndex] ?? null
   const closer = step?.closer ? resolved?.act.closer : undefined
-  const intro = !beat && !closer
+  const outro = Boolean(step?.outro)
+  const intro = !beat && !closer && !outro
   const stepPosition = step?.closer ? resolved?.beats.length ?? 0 : step?.beatIndex ?? -1
   const stepCount = resolved ? resolved.beats.length + (resolved.act.closer ? 1 : 0) : 0
   const actProgress = resolved
@@ -291,6 +301,13 @@ export function HomeActStage({
           className="absolute inset-0 opacity-70 transition-colors duration-700"
           style={{ background: `radial-gradient(circle at 68% 48%, ${act.color}16, transparent 36%)` }}
         />
+        {outro && promo ? (
+          <div className="home-content-container relative flex h-full flex-col justify-center px-page py-[clamp(4.5rem,8vh,7rem)] pr-[clamp(8rem,10vw,12rem)]">
+            <div key="home-acts-outro" className="home-act-stage-enter">
+              <HomeExplorePromo data={promo} variant="stage" />
+            </div>
+          </div>
+        ) : (
         <div className="home-content-container relative grid h-full grid-cols-[minmax(18rem,0.78fr)_minmax(0,1.22fr)] items-center gap-[clamp(3rem,6vw,8rem)] px-page py-[clamp(4.5rem,8vh,7rem)] pr-[clamp(8rem,10vw,12rem)]">
           <div key={`act-${act.id}`} className="home-act-stage-enter min-w-0">
             <div className="flex items-center gap-4">
@@ -334,6 +351,7 @@ export function HomeActStage({
             </div>
           </div>
         </div>
+        )}
 
         <div className="absolute bottom-[clamp(1.5rem,3vh,3rem)] left-1/2 flex -translate-x-1/2 items-center gap-3">
           <button type="button" onClick={() => jumpTo(activeIndex - 1)} disabled={activeIndex === 0} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="上一个节点">←</button>
@@ -341,7 +359,11 @@ export function HomeActStage({
           <button type="button" onClick={() => jumpTo(activeIndex + 1)} disabled={activeIndex === steps.length - 1} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="下一个节点">→</button>
         </div>
 
-        {step?.actIndex === acts.length - 1 && (step.closer || (!resolved.act.closer && step.beatIndex === resolved.beats.length - 1)) && (
+        {/* 「还在继续 · N 条」跟着故事的最后一屏走：有 promo 时它就是那一屏，
+            没有 promo 时才回落到幕尾。中间的步骤不该提前把出口摆出来。 */}
+        {(promo
+          ? outro
+          : step?.actIndex === acts.length - 1 && (step.closer || (!resolved.act.closer && step.beatIndex === resolved.beats.length - 1))) && (
           <Link href="/archive/" className="ui-press absolute bottom-[clamp(1.5rem,3vh,3rem)] right-[clamp(8rem,10vw,12rem)] rounded-full border border-line bg-surface/70 px-5 py-2 text-meta text-ink">
             {now.year}，{now.label} · {now.count.toLocaleString()} 条 →
           </Link>

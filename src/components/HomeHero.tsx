@@ -1,10 +1,12 @@
 'use client'
 
-import Link from 'next/link'
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { PresenceIndicator } from './PresenceIndicator'
 import { RotatingAvatar } from './RotatingAvatar'
 import { useSiteCopy } from './LiveContentProvider'
+
+/** 「关于女流」的去处：百度百科「女流66」词条（跳转到本人「石悦」词条）。 */
+const ABOUT_HREF = 'https://baike.baidu.com/item/%E5%A5%B3%E6%B5%8166'
 
 export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYears: number }) {
   const copy = useSiteCopy()
@@ -89,9 +91,17 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
             >
               {copy.hero.primaryAction} <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
-            <Link href="/chronicle/" className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink">
+            {/* 次要按钮指向百度百科，不是站内的编年史：编年史就在左上角导航里，
+                谁都看得见，这儿再放一个是重复。而「她是谁」这个问题需要一份长期
+                有人维护的资料——这个站不保证一直有人在维护，百度百科会。 */}
+            <a
+              href={ABOUT_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink"
+            >
               {copy.hero.secondaryAction}
-            </Link>
+            </a>
             </div>
             <PresenceIndicator pageKey="home" mode="global" className="mt-4" />
           </div>
