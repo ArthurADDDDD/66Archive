@@ -553,8 +553,8 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
               rel="noreferrer"
               className="ui-press mt-3 inline-flex rounded-sm text-[11px] text-live underline decoration-live/40 underline-offset-4 hover:text-ink sm:mt-4 sm:text-control"
             >
-              <span className="sm:hidden">来源 ↗</span>
-              <span className="hidden sm:inline">查看公开来源 ↗</span>
+              <span className="sm:hidden">来源</span>
+              <span className="hidden sm:inline">查看公开来源</span>
             </a>
           ) : (
             <span className="mt-3 block font-mono text-[10px] text-faint sm:mt-4 sm:text-meta">来源：{photo.source}</span>
@@ -691,14 +691,36 @@ function Lightbox({
           if (e.target === e.currentTarget) onClose()
         }}
       >
-        {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。 */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={photo.src}
-          alt={photoAlt(photo)}
-          style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
-          className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
-        />
+        {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。
+            有公开来源时整张图就是触控区——底栏那行小字在手机上是个太小的靶子。 */}
+        {sourceHref ? (
+          <a
+            href={sourceHref}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`打开公开来源：${photoAlt(photo)}`}
+            className="group/media relative flex max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={photo.src}
+              alt={photoAlt(photo)}
+              style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
+              className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
+            />
+            <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
+              查看公开来源
+            </span>
+          </a>
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={photo.src}
+            alt={photoAlt(photo)}
+            style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
+            className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
+          />
+        )}
         <button
           onClick={() => onStep(-1)}
           aria-label="上一张"
@@ -751,7 +773,7 @@ function Lightbox({
                 rel="noreferrer"
                 className="ui-press shrink-0 text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
               >
-                查看来源 ↗
+                查看公开来源
               </a>
             ) : (
               <span className="shrink-0 font-mono text-meta text-faint">{photo.source}</span>
