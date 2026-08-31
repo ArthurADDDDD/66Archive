@@ -600,26 +600,6 @@
         status: alive
     contributed_by: data-agent
 
-  - id: 2017-01-26-live-02
-    type: live
-    date: "2017-01-26"
-    title: "维尼噗"
-    platform: douyu
-    confidence: high
-    duration_min: 45
-    cover: "https://i0.hdslb.com/bfs/archive/7884efb373b00937ae025304a600d09a73f4f7ed.jpg"
-    games: [winnie-the-pooh-adventure]
-    sources:
-      - url: https://www.bilibili.com/video/BV1Ps411872T
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.acfun.cn/v/ac3432740"
-        kind: replay
-        parts: 1
-        status: alive
-    contributed_by: data-agent
-
   - id: 2017-01-27-live-01
     type: live
     date: "2017-01-27"
