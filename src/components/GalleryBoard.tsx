@@ -378,8 +378,10 @@ export function GalleryBoard({
               )}
             </header>
 
+            {/* 纪念版：不写 items-start——让同一行的卡片对齐到同一高度，
+                将来真有条目多出一行文字，也是整行一起长，不会只戳出一张。 */}
             {collection === 'featured' ? (
-              <div className="grid grid-cols-2 items-start gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {list.map((p) => (
                   <FeaturedPhotoCard key={p.id} photo={p} onOpen={() => setOpenId(p.id)} />
                 ))}
@@ -538,12 +540,23 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
       </button>
 
       <div className="p-3 sm:p-5">
-        <p className="font-mono text-[10px] font-medium text-today tnum sm:text-control">
+        {/* 日期行也封成一行：清单里有「2021-07-18（活动日）」这种带注的日期，
+            在窄卡上会折成两行，又是一张比邻居高一截的卡。 */}
+        <p className="truncate font-mono text-[10px] font-medium text-today tnum sm:overflow-visible sm:whitespace-normal sm:text-control">
           {photo.date ?? photo.year ?? UNDATED_LABEL}
           {photo.time ? <span className="text-faint"> · {photo.time}</span> : null}
         </p>
-        {photo.title ? <h3 className="mt-1.5 text-control font-semibold leading-snug text-ink sm:mt-2 sm:text-h3">{photo.title}</h3> : <p className="mt-1.5 text-[11px] text-faint sm:mt-2 sm:text-control">标题待命名</p>}
-        {/* 备注长短不一，在手机的两栏窄卡里会把每张卡撑成不同高度；小屏只留标题。 */}
+        {/* 手机端两栏窄卡要一样高，靠的不是「少写点」，而是每一行都占固定的高度：
+            标题封成两行（不足两行也占两行的位置），备注和来源行整条不出现——
+            它们有的照片有、有的没有，只要出现就会把这张卡比邻居多顶出一截。
+            来源在手机上并没有丢：点开大图后整张图就是打开来源的链接。 */}
+        {photo.title ? (
+          <h3 className="mt-1.5 line-clamp-2 min-h-[2.75em] text-control font-semibold leading-snug text-ink sm:mt-2 sm:line-clamp-none sm:min-h-0 sm:text-h3">
+            {photo.title}
+          </h3>
+        ) : (
+          <p className="mt-1.5 min-h-[2.75em] text-[11px] leading-snug text-faint sm:mt-2 sm:min-h-0 sm:text-control">标题待命名</p>
+        )}
         {photo.caption && <p className="mt-1.5 hidden text-[11px] leading-relaxed text-muted sm:mt-2 sm:block sm:text-control">{photo.caption}</p>}
         {photo.source &&
           (sourceHref ? (
@@ -551,13 +564,12 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
               href={sourceHref}
               target="_blank"
               rel="noreferrer"
-              className="ui-press mt-3 inline-flex rounded-sm text-[11px] text-live underline decoration-live/40 underline-offset-4 hover:text-ink sm:mt-4 sm:text-control"
+              className="ui-press mt-3 hidden rounded-sm text-[11px] text-live underline decoration-live/40 underline-offset-4 hover:text-ink sm:mt-4 sm:inline-flex sm:text-control"
             >
-              <span className="sm:hidden">来源</span>
-              <span className="hidden sm:inline">查看公开来源</span>
+              查看公开来源
             </a>
           ) : (
-            <span className="mt-3 block font-mono text-[10px] text-faint sm:mt-4 sm:text-meta">来源：{photo.source}</span>
+            <span className="mt-3 hidden font-mono text-[10px] text-faint sm:mt-4 sm:block sm:text-meta">来源：{photo.source}</span>
           ))}
       </div>
     </article>
