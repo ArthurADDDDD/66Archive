@@ -644,14 +644,6 @@ button:not(:disabled):active,
   transform: translateY(1px) scale(0.985);
 }
 
-/* 画廊图墙在手机上贴边：正文的 13vw 安全边距套在图墙上，一行只剩两张。 */
-@media (max-width: 639px) {
-  .gallery-bleed {
-    margin-inline: calc(var(--page-pad) * -1);
-    padding-inline: 1rem;
-  }
-}
-
 /* 浮动 dock 里的横向滚动条会在控件下面切出一条灰线，比它解决的问题更显眼。 */
 .no-scrollbar {
   scrollbar-width: none;

@@ -8,10 +8,7 @@ import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { deriveEraBoundary } from '@/lib/ui'
 
-/**
- * 画廊：总览优先的年份底片架。
- * 素材还在陆续补，所以页面下半部分继续保留征集说明——有图看不等于收齐了。
- */
+/** 画廊：精选节点与全量年份底片架共用一套发布版浏览体验。 */
 export default function GalleryPage() {
   const collections = getGalleryCollections()
   const eraBoundary = deriveEraBoundary(toTimelineEntries(getDataset()))
@@ -34,7 +31,7 @@ export default function GalleryPage() {
           <LivePageHeading pageId="gallery" eyebrowColor="#E5568A" className="ui-reveal" />
           {collections.all.length > 0 && (
             <p className="ui-reveal mt-6 text-body text-muted tnum">
-              精选 {collections.featured.length} 张关键节点，也可以切到 {collections.all.length} 张全量影像；跨 {years[0]}–{years[years.length - 1]} 年。
+              {collections.featured.length} 张纪念节点，{collections.all.length} 张全量影像，跨 {years[0]}–{years[years.length - 1]} 年。
             </p>
           )}
         </div>

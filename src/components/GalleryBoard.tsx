@@ -24,6 +24,29 @@ type ViewMode = 'natural' | 'uniform'
 type Density = 'loose' | 'normal' | 'dense'
 type CollectionMode = 'featured' | 'all'
 
+const FEATURED_CATEGORY_GUIDE = [
+  {
+    name: '直播时期',
+    description: '从不露脸、手部机位、“无头骑士”、屏风时代到“女流之背”，也记录搬家与直播间场景的更替。',
+  },
+  {
+    name: '周年与生日',
+    description: '沿着周年、生日和新年等固定时间节点，留下直播生涯的阶段性纪念。',
+  },
+  {
+    name: '大周宇宙',
+    description: '记录壮壮、豆豆、YJJ、小涡等成员首次、末次或具有特殊意义的入镜与同框。',
+  },
+  {
+    name: '线下活动',
+    description: '收录盛典、嘉年华、校园分享和其他离开直播间后发生的重要现场。',
+  },
+  {
+    name: '特殊直播形态',
+    description: '记录皮套、双机位等明显改变观看方式和画面语言的特殊直播节点。',
+  },
+] as const
+
 /**
  * 密度档位。natural 模式下是「每行目标高度」，按容器宽度换算——
  * 用 vw 会在窄容器里失准，用容器宽度才对得上一行放几张。
@@ -86,6 +109,7 @@ export function GalleryBoard({
   const [collection, setCollection] = useState<CollectionMode>('featured')
   const [mode, setMode] = useState<ViewMode>('natural')
   const [density, setDensity] = useState<Density>('normal')
+  const [tag, setTag] = useState<string | null>(null)
   const [q, setQ] = useState('')
   const [openId, setOpenId] = useState<string | null>(null)
   const [activeYear, setActiveYear] = useState<string | null>(null)
@@ -96,6 +120,14 @@ export function GalleryBoard({
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
   const photos = collection === 'featured' ? featuredPhotos : allPhotos
+
+  const tagCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const photo of featuredPhotos) {
+      for (const value of photo.tags ?? []) counts.set(value, (counts.get(value) ?? 0) + 1)
+    }
+    return counts
+  }, [featuredPhotos])
 
   useEffect(() => {
     const node = boardRef.current
@@ -115,12 +147,13 @@ export function GalleryBoard({
   }, [])
 
   const visible = useMemo(() => {
+    const tagged = tag ? photos.filter((photo) => photo.tags?.includes(tag)) : photos
     const needle = q.trim().toLowerCase()
-    if (!needle) return photos
-    return photos.filter((p) =>
-      `${p.title ?? ''} ${p.caption ?? ''} ${p.date ?? p.year ?? UNDATED_LABEL} ${p.time ?? ''}`.toLowerCase().includes(needle),
+    if (!needle) return tagged
+    return tagged.filter((p) =>
+      `${p.title ?? ''} ${p.caption ?? ''} ${(p.tags ?? []).join(' ')} ${p.date ?? p.year ?? UNDATED_LABEL} ${p.time ?? ''}`.toLowerCase().includes(needle),
     )
-  }, [photos, q])
+  }, [photos, q, tag])
 
   const sections = useMemo(() => {
     const map = new Map<string, GalleryPhoto[]>()
@@ -188,11 +221,12 @@ export function GalleryBoard({
     return () => io.disconnect()
   }, [sections])
 
-  const filtered = q.trim().length > 0
+  const filtered = q.trim().length > 0 || tag !== null
 
   const chooseCollection = (next: CollectionMode) => {
     if (next === collection) return
     setCollection(next)
+    setTag(null)
     setQ('')
     setOpenId(null)
     setActiveYear(null)
@@ -201,7 +235,7 @@ export function GalleryBoard({
 
   return (
     <>
-      <div className="mb-8 flex flex-col gap-3 border-y border-line/70 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-4 flex border-y border-line/70 py-4">
         <div className="flex w-fit items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
           <button
             type="button"
@@ -212,7 +246,7 @@ export function GalleryBoard({
               collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            精选 · {featuredPhotos.length}
+            纪念版 · {featuredPhotos.length}
           </button>
           <button
             type="button"
@@ -223,13 +257,64 @@ export function GalleryBoard({
               collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            全量 · {allPhotos.length}
+            全量版 · {allPhotos.length}
           </button>
         </div>
-        <p className="text-meta text-faint">
-          {collection === 'featured' ? '按时间收拢关键节点与代表画面' : '按年份铺开，每场直播或视频保留一张代表帧'}
-        </p>
       </div>
+
+      {collection === 'featured' && (
+        <>
+          <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label="按纪念版分类筛选">
+            <button
+              type="button"
+              onClick={() => setTag(null)}
+              aria-pressed={tag === null}
+              className={`ui-press shrink-0 rounded-full border px-3.5 py-2 text-control transition-colors ${
+                tag === null ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 text-muted hover:text-ink'
+              }`}
+            >
+              全部 · {featuredPhotos.length}
+            </button>
+            {FEATURED_CATEGORY_GUIDE.map((item) => {
+              const count = tagCounts.get(item.name) ?? 0
+              if (count === 0) return null
+              return (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={() => setTag(item.name)}
+                  aria-pressed={tag === item.name}
+                  className={`ui-press shrink-0 rounded-full border px-3.5 py-2 text-control transition-colors ${
+                    tag === item.name ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 text-muted hover:text-ink'
+                  }`}
+                >
+                  {item.name} · {count}
+                </button>
+              )
+            })}
+          </div>
+
+          <section className="mb-10 rounded-2xl border border-line/70 bg-surface/35 p-5 sm:mb-14 sm:p-7" aria-label="纪念版分类说明">
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
+              <div>
+                <p className="font-mono text-meta uppercase tracking-[0.16em] text-today">Memorial · 纪念版</p>
+                <p className="mt-3 max-w-2xl text-control leading-relaxed text-muted">
+                  每张图都经过人工筛选与修订。这里记录的不只是“出现过”，还包括露脸方式、机位与直播间场景的变化，
+                  每一次搬家，以及重要成员第一次、最后一次或最有意义的入镜。
+                </p>
+              </div>
+              <dl className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                {FEATURED_CATEGORY_GUIDE.map((item) => (
+                  <div key={item.name}>
+                    <dt className="text-control font-medium text-ink">{item.name}</dt>
+                    <dd className="mt-1 text-meta leading-relaxed text-faint">{item.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
       <ControlDock stopRef={boardOuterRef} alignRef={boardRef}>
@@ -290,27 +375,31 @@ export function GalleryBoard({
             <SearchField
               value={q}
               onChange={setQ}
-              placeholder={`搜索日期 · 共 ${photos.length} 张`}
+              placeholder={`搜索标题、日期或备注 · 共 ${photos.length} 张`}
               ariaLabel="搜索画面"
               inputClassName="w-[10rem] rounded-md border border-line bg-surface px-3 py-2 text-control text-ink placeholder:text-faint transition-[border-color,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:outline-none sm:w-[13rem]"
             />
-            <SegmentedControl
-              label="排列"
-              value={mode}
-              options={[
-                { value: 'natural' as const, label: '原貌' },
-                { value: 'uniform' as const, label: '整齐' },
-              ]}
-              onChange={setMode}
-            />
-            <div className="hidden sm:block">
-              <SegmentedControl
-                label="密度"
-                value={density}
-                options={(Object.keys(DENSITY) as Density[]).map((d) => ({ value: d, label: DENSITY[d].label }))}
-                onChange={setDensity}
-              />
-            </div>
+            {collection === 'all' && (
+              <>
+                <SegmentedControl
+                  label="排列"
+                  value={mode}
+                  options={[
+                    { value: 'natural' as const, label: '原貌' },
+                    { value: 'uniform' as const, label: '整齐' },
+                  ]}
+                  onChange={setMode}
+                />
+                <div className="hidden sm:block">
+                  <SegmentedControl
+                    label="密度"
+                    value={density}
+                    options={(Object.keys(DENSITY) as Density[]).map((d) => ({ value: d, label: DENSITY[d].label }))}
+                    onChange={setDensity}
+                  />
+                </div>
+              </>
+            )}
             <button
               type="button"
               onClick={randomOpen}
@@ -328,7 +417,10 @@ export function GalleryBoard({
           筛出 {visible.length} 张
           <button
             type="button"
-            onClick={() => setQ('')}
+            onClick={() => {
+              setQ('')
+              setTag(null)
+            }}
             className="ml-2 text-live underline underline-offset-4"
           >
             清除
@@ -336,9 +428,9 @@ export function GalleryBoard({
         </p>
       )}
 
-      {/* gallery-bleed：手机上让图墙贴近屏幕边缘——13vw 的安全边距是给正文的，
-          套在图墙上会把一行挤到只剩两张。底部留出 dock 的高度，否则最后一行永远被浮层压住一截。 */}
-      <div ref={boardOuterRef} className="gallery-bleed pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      {/* 图墙沿用全站 px-page 的左右安全边距；底部留出 dock 的高度，
+          否则最后一行会被浮层压住一截。 */}
+      <div ref={boardOuterRef} className="pb-40 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
         <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
@@ -358,7 +450,13 @@ export function GalleryBoard({
               )}
             </header>
 
-            {mode === 'natural' ? (
+            {collection === 'featured' ? (
+              <div className="grid grid-cols-2 items-start gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {list.map((p) => (
+                  <FeaturedPhotoCard key={p.id} photo={p} onOpen={() => setOpenId(p.id)} />
+                ))}
+              </div>
+            ) : mode === 'natural' ? (
               <div className="flex flex-col" style={{ gap: GAP }}>
                 {buildRows(list, boardW, DENSITY[density].targetH(boardW)).map((row, i) => (
                   <div key={i} className="flex" style={{ gap: GAP, height: row.height }}>
@@ -495,6 +593,16 @@ const DOCK_POS_KEY = 'gallery-dock-pos'
 const DOCK_MARGIN = 12
 /** dock 贴视口底边（以及停靠时贴图墙底边）的距离 */
 const DOCK_BOTTOM = 20
+/** 手机端给左下状态球和右下回顶按钮留出一整层，dock 放在它们上方。 */
+const MOBILE_DOCK_BOTTOM = 80
+
+const subscribeMobile = (callback: () => void) => {
+  const media = window.matchMedia('(max-width: 639px)')
+  media.addEventListener('change', callback)
+  return () => media.removeEventListener('change', callback)
+}
+
+const getMobileSnapshot = () => window.matchMedia('(max-width: 639px)').matches
 
 /**
  * 控制区 dock：浮在内容之上，可以拖到任何位置，默认停在视口底部居中。
@@ -521,9 +629,11 @@ function ControlDock({
   // dock 必须挂到 body 上：页面容器带入场 transform，会成为 fixed 的包含块，
   // 留在原地的话「浮在视口底部」会变成「浮在文档某个位置」，滚两屏就不见了。
   const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false)
+  const mobile = useSyncExternalStore(subscribeMobile, getMobileSnapshot, () => false)
   const ref = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
   const [dragging, setDragging] = useState(false)
+  const [dockVisible, setDockVisible] = useState(false)
   // 停靠位置（文档坐标）。null = 还在跟着视口底边走。
   const [parkedTop, setParkedTop] = useState<number | null>(null)
   // 默认横向位置：对齐图墙左边缘。null = 还没量到，先居中兜底。
@@ -543,6 +653,7 @@ function ControlDock({
   // 读取上次拖到的位置。放在 effect 里而不是初始 state：服务端没有 localStorage，
   // 直接读会让首屏 HTML 和客户端对不上。
   useEffect(() => {
+    if (mobile) return
     try {
       const saved = window.localStorage.getItem(DOCK_POS_KEY)
       if (saved) {
@@ -555,7 +666,7 @@ function ControlDock({
     } catch {
       // localStorage 不可用（隐私模式等）就用默认位置，不值得为此报错
     }
-  }, [clampToViewport])
+  }, [clampToViewport, mobile])
 
   /**
    * 图墙看完了，dock 就该停下。
@@ -569,33 +680,42 @@ function ControlDock({
    * 手动拖过的位置不参与——那是人自己挑的地方，不该被这套规则改掉。
    */
   useEffect(() => {
-    // 拖过之后位置由人说了算，这套规则整个让开（placement 里 pos 优先，残留值不影响）
-    if (pos) return
     const update = () => {
       const node = ref.current
       const stop = stopRef.current
-      if (!node || !stop) return
+      const align = alignRef.current
+      if (!node || !stop || !align) return
       const height = node.offsetHeight
+      const dockBottom = mobile ? MOBILE_DOCK_BOTTOM : DOCK_BOTTOM
       const stopRect = stop.getBoundingClientRect()
+      const alignRect = align.getBoundingClientRect()
+      // 页头与分类说明不是操作图墙的地方；直到第一组图片真正来到 dock 上方才显示。
+      setDockVisible(alignRect.top <= window.innerHeight - dockBottom - height)
+      // 拖过之后位置由人说了算，停靠和默认横向位置不再覆盖它。
+      if (pos) return
       const stopBottomDoc = stopRect.bottom + window.scrollY
-      const parked = stopBottomDoc - DOCK_BOTTOM - height
-      const followingViewport = window.scrollY + window.innerHeight - DOCK_BOTTOM - height
+      const parked = stopBottomDoc - dockBottom - height
+      const followingViewport = window.scrollY + window.innerHeight - dockBottom - height
       setParkedTop(followingViewport > parked ? parked : null)
       // 左对齐图墙：正中间是「没想好放哪」的位置，跟版面上任何一条边都对不上。
       // dock 比图墙还宽时（窄屏）往回收，别顶出右边缘。
       const maxLeft = Math.max(DOCK_MARGIN, window.innerWidth - node.offsetWidth - DOCK_MARGIN)
-      const alignLeft = alignRef.current?.getBoundingClientRect().left ?? stopRect.left
+      const alignLeft = alignRect.left
       setDefaultLeft(Math.min(Math.max(DOCK_MARGIN, alignLeft), maxLeft))
     }
     const raf = requestAnimationFrame(update)
+    const ro = new ResizeObserver(update)
+    if (alignRef.current) ro.observe(alignRef.current)
+    if (stopRef.current && stopRef.current !== alignRef.current) ro.observe(stopRef.current)
     window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update)
     return () => {
       cancelAnimationFrame(raf)
+      ro.disconnect()
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
     }
-  }, [pos, stopRef, alignRef])
+  }, [pos, stopRef, alignRef, mobile])
 
   // 窗口变小后不能让 dock 留在视口外面
   useEffect(() => {
@@ -606,6 +726,7 @@ function ControlDock({
   }, [pos, clampToViewport])
 
   const onPointerDown = (e: React.PointerEvent) => {
+    if (mobile) return
     if (e.button !== 0 && e.pointerType === 'mouse') return
     // 除了控件本身，dock 上任何地方都能拖：一个几像素的小握把是设计上的偷懒。
     // 反过来，落在按钮 / 输入框 / 可横滚的年份谱上就一定不是拖动——
@@ -651,19 +772,24 @@ function ControlDock({
 
   // 还没量到图墙位置的那一帧先居中兜底，量到之后一律左对齐
   const horizontal: React.CSSProperties =
-    defaultLeft !== null ? { left: defaultLeft } : { left: '50%', transform: 'translateX(-50%)' }
+    mobile
+      ? { left: '50%', transform: 'translateX(-50%)' }
+      : defaultLeft !== null
+        ? { left: defaultLeft }
+        : { left: '50%', transform: 'translateX(-50%)' }
 
-  const placement: React.CSSProperties = pos
+  const placement: React.CSSProperties = !mobile && pos
     ? { position: 'fixed', left: pos.x, top: pos.y }
     : parkedTop !== null
       ? { position: 'absolute', top: parkedTop, ...horizontal }
-      : { position: 'fixed', bottom: DOCK_BOTTOM, ...horizontal }
+      : { position: 'fixed', bottom: mobile ? MOBILE_DOCK_BOTTOM : DOCK_BOTTOM, ...horizontal }
 
   if (!mounted) return null
 
   return createPortal(
     <div
       ref={ref}
+      data-gallery-dock
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={endDrag}
@@ -671,8 +797,9 @@ function ControlDock({
       onDoubleClick={(e) => {
         if (!(e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) resetPos()
       }}
-      className={`z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-2.5 ${
-        dragging ? 'cursor-grabbing' : 'cursor-grab'
+      className={`z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-[opacity,transform] duration-200 sm:px-2.5 ${
+        dockVisible ? 'opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
+      } ${mobile ? 'cursor-default' : dragging ? 'cursor-grabbing' : 'cursor-grab'
       }`}
       style={placement}
     >
@@ -688,7 +815,7 @@ function DragGrip() {
     <span
       aria-hidden
       title="拖动 · 双击回到默认位置"
-      className="mb-2.5 flex shrink-0 flex-col gap-[3px] px-1 opacity-35"
+      className="mb-2.5 hidden shrink-0 flex-col gap-[3px] px-1 opacity-35 sm:flex"
     >
       {[0, 1, 2].map((i) => (
         <span key={i} className="flex gap-[3px]">
@@ -734,6 +861,70 @@ function SegmentedControl<T extends string>({
 function photoAlt(photo: GalleryPhoto) {
   if (photo.title) return photo.title
   return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
+}
+
+/**
+ * 纪念版不是缩略图索引，而是人工整理过的历史节点：日期、标题、备注与分类默认展开。
+ * 图片仍然可以点进发布版灯箱，来源也在卡片上直接可见。
+ */
+function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () => void }) {
+  const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
+  return (
+    <article className="overflow-hidden rounded-xl border border-line/80 bg-surface/45 shadow-[0_14px_40px_rgba(0,0,0,0.12)]">
+      <button
+        type="button"
+        onClick={onOpen}
+        aria-label={`打开大图：${photoAlt(photo)}`}
+        className="group relative block w-full overflow-hidden bg-black/35 text-left outline-none"
+      >
+        <span className="relative block aspect-[4/3] bg-black/35 sm:aspect-[16/10]">
+          {/* 纪念版只有 34 张，卡片直接使用大图；全量瀑布流才使用 thumb，保证细节清晰。 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photo.src}
+            alt={photoAlt(photo)}
+            loading="lazy"
+            decoding="async"
+            width={photo.width}
+            height={photo.height}
+            className="block h-full w-full object-contain transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.015] group-hover:brightness-105 group-focus-visible:brightness-110"
+          />
+        </span>
+        {(photo.tags ?? []).length > 0 && (
+          <span className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+            {photo.tags!.map((value) => (
+              <span key={value} className="rounded-full border border-white/15 bg-black/70 px-2 py-0.5 text-[10px] text-white backdrop-blur-md sm:px-2.5 sm:py-1 sm:text-meta">
+                {value}
+              </span>
+            ))}
+          </span>
+        )}
+      </button>
+
+      <div className="p-3 sm:p-5">
+        <p className="font-mono text-[10px] font-medium text-today tnum sm:text-control">
+          {photo.date ?? photo.year ?? UNDATED_LABEL}
+          {photo.time ? <span className="text-faint"> · {photo.time}</span> : null}
+        </p>
+        {photo.title ? <h3 className="mt-1.5 text-control font-semibold leading-snug text-ink sm:mt-2 sm:text-h3">{photo.title}</h3> : <p className="mt-1.5 text-[11px] text-faint sm:mt-2 sm:text-control">标题待命名</p>}
+        {photo.caption && <p className="mt-1.5 text-[11px] leading-relaxed text-muted sm:mt-2 sm:text-control">{photo.caption}</p>}
+        {photo.source &&
+          (sourceHref ? (
+            <a
+              href={sourceHref}
+              target="_blank"
+              rel="noreferrer"
+              className="ui-press mt-3 inline-flex rounded-sm text-[11px] text-live underline decoration-live/40 underline-offset-4 hover:text-ink sm:mt-4 sm:text-control"
+            >
+              <span className="sm:hidden">来源 ↗</span>
+              <span className="hidden sm:inline">查看公开来源 ↗</span>
+            </a>
+          ) : (
+            <span className="mt-3 block font-mono text-[10px] text-faint sm:mt-4 sm:text-meta">来源：{photo.source}</span>
+          ))}
+      </div>
+    </article>
+  )
 }
 
 function PhotoCell({
@@ -889,6 +1080,11 @@ function Lightbox({
 
       <div className="relative border-t border-line/60 bg-surface/85 px-4 py-3 backdrop-blur sm:px-10 sm:py-4">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+          {(photo.tags ?? []).map((value) => (
+            <span key={value} className="rounded-full border border-line/80 bg-raised/60 px-2.5 py-1 text-meta text-ink">
+              {value}
+            </span>
+          ))}
           <span className="font-mono text-meta uppercase tracking-[0.16em] text-today">{photo.year ?? UNDATED_LABEL}</span>
           {photo.date && (
             <span className="font-mono text-meta tnum text-muted">
