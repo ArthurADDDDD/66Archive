@@ -25,7 +25,7 @@ import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent } from 
  * 写成默认值是为了让发布流水线不需要任何改动就能享受烤入。换域名时用 `SITE_ORIGIN`
  * 覆盖它，代码里这个常量只是最后一层兜底。
  */
-const DEFAULT_BAKE_ORIGIN = 'https://i6i6.space'
+const FALLBACK_SITE_ORIGIN = 'https://nvliu.wiki'
 
 const EMPTY: LiveContent = { narrative: null, copy: null, editorial: null }
 
@@ -44,7 +44,7 @@ function resolveOrigin(): string | null {
   if (raw === 'off') return null
   if (raw) return raw.replace(/\/$/, '')
   if (process.env.NODE_ENV !== 'production') return null
-  return (process.env.SITE_ORIGIN?.trim() || DEFAULT_BAKE_ORIGIN).replace(/\/$/, '')
+  return (process.env.SITE_ORIGIN?.trim() || FALLBACK_SITE_ORIGIN).replace(/\/$/, '')
 }
 
 /**
