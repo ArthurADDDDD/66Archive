@@ -21,8 +21,9 @@ import { get as httpsGet } from 'node:https'
 import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent } from './live-content'
 
 /**
- * 站点公开地址。已经写在 README 里，属于公开信息，不是需要注入的生产配置——
- * 写成默认值是为了让发布流水线不需要任何改动就能享受烤入。
+ * 站点公开地址的兜底值。已经写在 README 里，属于公开信息，不是需要注入的生产配置——
+ * 写成默认值是为了让发布流水线不需要任何改动就能享受烤入。换域名时用 `SITE_ORIGIN`
+ * 覆盖它，代码里这个常量只是最后一层兜底。
  */
 const DEFAULT_BAKE_ORIGIN = 'https://i6i6.space'
 
@@ -34,7 +35,7 @@ const REQUEST_TIMEOUT_MS = 10_000
  * 决定这次构建去哪拉内容：
  * - `CONTENT_BAKE_ORIGIN=off` → 完全关闭（离线构建用）
  * - `CONTENT_BAKE_ORIGIN=<url>` → 用指定地址（本地验证烤入效果用）
- * - 未设置 + 生产构建 → 用默认公开地址
+ * - 未设置 + 生产构建 → `SITE_ORIGIN`，没有才落到默认公开地址
  * - 未设置 + dev → 不烤。dev 下每次请求都打线上既慢又没必要，
  *   而客户端覆盖在 dev 里照常工作，行为不受影响。
  */
@@ -43,7 +44,7 @@ function resolveOrigin(): string | null {
   if (raw === 'off') return null
   if (raw) return raw.replace(/\/$/, '')
   if (process.env.NODE_ENV !== 'production') return null
-  return DEFAULT_BAKE_ORIGIN
+  return (process.env.SITE_ORIGIN?.trim() || DEFAULT_BAKE_ORIGIN).replace(/\/$/, '')
 }
 
 /**
