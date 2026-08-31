@@ -1,6 +1,7 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { createPortal } from 'react-dom'
 import { MediaFrame } from './primitives'
 
 /**
@@ -11,6 +12,9 @@ import { MediaFrame } from './primitives'
  * 数据长什么样、颜色怎么分段，全交给调用方——它不认识幕、年份或照片。
  *
  * 约定：每个刻度的 `id` 必须是页面上一个真实元素的 id，跳转就是滚到那个元素。
+ *
+ * 轨道挂到 body 上：页面容器带入场动画的 transform，会成为 fixed 的包含块，
+ * 留在原地的话「贴住视口右缘」会变成「停在整页高度的正中间」。
  */
 
 export type TimelineRailMark = {
@@ -30,6 +34,9 @@ export type TimelineRailMark = {
   /** 预览卡底栏左侧的补充信息 */
   footer?: string | null
 }
+
+/** 服务端没有 document，portal 只能在挂载后建立。 */
+const subscribeNoop = () => () => {}
 
 const WEIGHT_CLASS: Record<NonNullable<TimelineRailMark['weight']>, string> = {
   lead: 'timeline-rail__mark--lead',
@@ -57,6 +64,7 @@ export function TimelineRail({
   height?: string
   magnify?: { radius: number; scale: number }
 }) {
+  const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false)
   const railRef = useRef<HTMLDivElement>(null)
   const markRefs = useRef<(HTMLSpanElement | null)[]>([])
   const draggingRef = useRef(false)
@@ -114,7 +122,7 @@ export function TimelineRail({
       const position = marks.length > 1 ? index / (marks.length - 1) : 0
       const weight = mark.weight ?? 'minor'
       const baseScale = weight === 'lead' ? 1.35 : weight === 'major' ? 1.12 : 1
-      const baseOpacity = index === activeIndex ? 0.9 : weight === 'minor' ? 0.2 : 0.42
+      const baseOpacity = index === activeIndex ? 0.9 : weight === 'lead' ? 0.42 : weight === 'major' ? 0.34 : 0.2
       if (previewPct == null) {
         element.style.transform = `scaleX(${baseScale})`
         element.style.opacity = String(baseOpacity)
@@ -171,9 +179,9 @@ export function TimelineRail({
     jumpToIndex(next)
   }
 
-  if (marks.length === 0) return null
+  if (!mounted || marks.length === 0) return null
 
-  return (
+  return createPortal(
     <aside
       className={`pointer-events-none fixed right-0 top-0 z-30 hidden items-center ${
         reserveBottom ? 'bottom-[6.5rem]' : 'bottom-0'
@@ -281,6 +289,7 @@ export function TimelineRail({
           </div>
         )}
       </div>
-    </aside>
+    </aside>,
+    document.body,
   )
 }
