@@ -55,5 +55,12 @@ jobs:
       - name: Verify game search matching
         run: npm run test:vote-search
 
+      # 这条流水线只做校验，产物不发布，所以关掉构建期的内容烤入。
+      # 开着的话，每次 push 的构建都要求线上站点此刻可达且三份内容都取得到，
+      # 取不到就中止构建——于是站点侧的任何波动都会让 CI 变红，
+      # 而报错内容和本次改动毫无关系，排查方向会被整个带偏。
+      # 发布用的构建另有其事，那里才需要真的烤入。
       - name: Validate data and build static site
+        env:
+          CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
