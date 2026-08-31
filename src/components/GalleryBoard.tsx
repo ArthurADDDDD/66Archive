@@ -1,11 +1,12 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { bucketOf, sortBucket, UNDATED, UNDATED_LABEL, type GalleryPhoto } from '@/lib/gallery-photos'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import { SearchField } from './SearchField'
+import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
 /**
  * 画廊改版：总览优先的「年份底片架」。
@@ -115,11 +116,7 @@ export function GalleryBoard({
   const [tag, setTag] = useState<string | null>(null)
   const [q, setQ] = useState('')
   const [openId, setOpenId] = useState<string | null>(null)
-  const [activeYear, setActiveYear] = useState<string | null>(null)
-  const [yearPickerOpen, setYearPickerOpen] = useState(false)
   const boardRef = useRef<HTMLDivElement>(null)
-  // dock 滑到图墙末尾就停在那儿，不跟着飘到征集文案和页脚上面
-  const boardOuterRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
   const photos = collection === 'featured' ? featuredPhotos : allPhotos
@@ -181,6 +178,16 @@ export function GalleryBoard({
     return keys.map((y) => ({ year: y, count: map.get(y)!, ratio: map.get(y)! / max }))
   }, [photos])
 
+  // 每年挑第一张作为轨道预览图。预览要的是「这一年长什么样」，不是缩略图墙。
+  const yearCovers = useMemo(() => {
+    const map = new Map<string, GalleryPhoto>()
+    for (const p of photos) {
+      const key = bucketOf(p)
+      if (!map.has(key)) map.set(key, p)
+    }
+    return map
+  }, [photos])
+
   // 时期色由数据推导出的分界决定，桌面柱状谱和手机选择面板共用一套
   const eraColor = useCallback(
     (y: string) => {
@@ -189,10 +196,6 @@ export function GalleryBoard({
     },
     [eraBoundary],
   )
-
-  const jumpToYear = useCallback((y: string) => {
-    document.getElementById(`gy-${y}`)?.scrollIntoView({ block: 'start' })
-  }, [])
 
   const openIndex = openId === null ? -1 : visible.findIndex((p) => p.id === openId)
 
@@ -209,21 +212,6 @@ export function GalleryBoard({
     setOpenId(visible[Math.floor(Math.random() * visible.length)].id)
   }
 
-  // 滚到哪一年，年份谱就点亮哪一年。观察线放在视口上三分之一处，跟阅读位置一致。
-  useEffect(() => {
-    const nodes = sections.map(({ year: y }) => document.getElementById(`gy-${y}`)).filter(Boolean) as HTMLElement[]
-    if (nodes.length === 0) return
-    const io = new IntersectionObserver(
-      (entries) => {
-        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
-        if (hit) setActiveYear(hit.target.id.replace('gy-', ''))
-      },
-      { rootMargin: '-12% 0px -70% 0px', threshold: 0 },
-    )
-    nodes.forEach((n) => io.observe(n))
-    return () => io.disconnect()
-  }, [sections])
-
   const filtered = q.trim().length > 0 || tag !== null
 
   const chooseCollection = (next: CollectionMode) => {
@@ -232,8 +220,6 @@ export function GalleryBoard({
     setTag(null)
     setQ('')
     setOpenId(null)
-    setActiveYear(null)
-    setYearPickerOpen(false)
   }
 
   return (
@@ -261,6 +247,46 @@ export function GalleryBoard({
             }`}
           >
             全量版 · {allPhotos.length}
+          </button>
+        </div>
+
+        {/* 控件回到文档流：原先它们住在一条可拖拽的浮层里，挡图、抢手势，
+            还要记住自己被拖到哪儿。手机端不给这一排——小屏上翻图就够了。 */}
+        <div className="ml-auto hidden shrink-0 items-center gap-2 sm:flex">
+          <SearchField
+            value={q}
+            onChange={setQ}
+            placeholder={`搜索标题、日期或备注 · 共 ${photos.length} 张`}
+            ariaLabel="搜索画面"
+            inputClassName="w-[13rem] rounded-md border border-line bg-surface px-3 py-2 text-control text-ink placeholder:text-faint transition-[border-color,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:outline-none lg:w-[16rem]"
+          />
+          {collection === 'all' && (
+            <>
+              <SegmentedControl
+                label="排列"
+                value={mode}
+                options={[
+                  { value: 'natural' as const, label: '原貌' },
+                  { value: 'uniform' as const, label: '整齐' },
+                ]}
+                onChange={setMode}
+              />
+              <div className="hidden lg:block">
+                <SegmentedControl
+                  label="密度"
+                  value={density}
+                  options={(Object.keys(DENSITY) as Density[]).map((d) => ({ value: d, label: DENSITY[d].label }))}
+                  onChange={setDensity}
+                />
+              </div>
+            </>
+          )}
+          <button
+            type="button"
+            onClick={randomOpen}
+            className="ui-press shrink-0 rounded-full border border-line/80 bg-surface/50 px-3 py-2 text-meta text-muted transition-colors hover:border-today/60 hover:text-today"
+          >
+            随便翻一张 ↯
           </button>
         </div>
       </div>
@@ -321,101 +347,8 @@ export function GalleryBoard({
         </>
       )}
 
-      {/* 年份谱 + 控制区：浮在画面之上的一条可拖拽 dock，默认停在底部。 */}
-      <ControlDock stopRef={boardOuterRef} alignRef={boardRef}>
-        {/* 底部对齐：dock 里所有东西——柱子的底线、年份标签、按钮——落在同一条线上。
-            居中对齐时柱状谱会浮在按钮中间，底线跟谁都对不上，看着就是「差一点」。 */}
-        <div className="flex items-end gap-2 sm:gap-3">
-          <DragGrip />
-          {/* 手机端：横着拨的年份谱在 375px 上只露得出三四年，改成点开的选择面板。 */}
-          <YearPicker
-            spectrum={spectrum}
-            activeYear={activeYear}
-            eraColor={eraColor}
-            open={yearPickerOpen}
-            onOpenChange={setYearPickerOpen}
-            onPick={jumpToYear}
-          />
-
-          {/* 桌面端：年份谱单独横向滚动，年份再多也不会把控制区挤到下一行。 */}
-          <div className="no-scrollbar hidden shrink-0 touch-auto items-end gap-1.5 overflow-x-auto sm:flex sm:gap-2">
-          {spectrum.map(({ year: y, count, ratio }) => {
-            const isActive = activeYear === y
-            const era = eraColor(y)
-            return (
-              <button
-                key={y}
-                type="button"
-                onClick={() => jumpToYear(y)}
-                title={y === UNDATED ? `${UNDATED_LABEL} · ${count} 张` : `${y} 年 · ${count} 张`}
-                aria-label={y === UNDATED ? `跳到${UNDATED_LABEL} · ${count} 张` : `跳到 ${y} 年 · ${count} 张`}
-                aria-current={isActive ? 'true' : undefined}
-                className="group ui-press flex w-[2.375rem] shrink-0 flex-col items-center gap-[3px] rounded-sm"
-              >
-                {/* 柱高封到 18px：dock 是一条工具条，不是一块图表面板——
-                    再高一点，整条 dock 就得跟着长，按钮也会被顶得离底边很远。
-                    具体张数交给 title / aria-label，柱高只回答「哪年多」。 */}
-                <span
-                  className="w-full rounded-[2px] transition-[height,opacity,background-color] duration-500"
-                  style={{
-                    height: `${4 + ratio * 14}px`,
-                    background: era,
-                    opacity: isActive ? 1 : 0.3,
-                  }}
-                />
-                <span
-                  className="font-mono text-[10px] leading-none tnum transition-colors"
-                  style={{ color: isActive ? era : undefined }}
-                >
-                  <span className={isActive ? '' : 'text-faint group-hover:text-muted'}>{y === UNDATED ? '待定' : y}</span>
-                </span>
-              </button>
-            )
-          })}
-
-          </div>
-
-          {/* 控制区固定在右侧，不参与换行；手机端只保留最必要的两个 */}
-          <div className="flex shrink-0 items-center gap-2">
-            <SearchField
-              value={q}
-              onChange={setQ}
-              placeholder={`搜索标题、日期或备注 · 共 ${photos.length} 张`}
-              ariaLabel="搜索画面"
-              inputClassName="w-[10rem] rounded-md border border-line bg-surface px-3 py-2 text-control text-ink placeholder:text-faint transition-[border-color,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:outline-none sm:w-[13rem]"
-            />
-            {collection === 'all' && (
-              <>
-                <SegmentedControl
-                  label="排列"
-                  value={mode}
-                  options={[
-                    { value: 'natural' as const, label: '原貌' },
-                    { value: 'uniform' as const, label: '整齐' },
-                  ]}
-                  onChange={setMode}
-                />
-                <div className="hidden sm:block">
-                  <SegmentedControl
-                    label="密度"
-                    value={density}
-                    options={(Object.keys(DENSITY) as Density[]).map((d) => ({ value: d, label: DENSITY[d].label }))}
-                    onChange={setDensity}
-                  />
-                </div>
-              </>
-            )}
-            <button
-              type="button"
-              onClick={randomOpen}
-              aria-label="随便翻一张"
-              className="ui-press rounded-full border border-line/80 bg-surface/50 px-3 py-2 text-meta text-muted transition-colors hover:border-today/60 hover:text-today"
-            >
-              <span className="hidden sm:inline">随便翻一张 </span>↯
-            </button>
-          </div>
-        </div>
-      </ControlDock>
+      {/* 年份轨：和站内其他页面一样的右侧时间轴。悬停出预览，点了跳年份。 */}
+      <GalleryYearRail spectrum={spectrum} eraColor={eraColor} coverOf={yearCovers} />
 
       {filtered && (
         <p className="mb-6 text-meta text-faint tnum">
@@ -435,7 +368,7 @@ export function GalleryBoard({
 
       {/* 图墙沿用全站 px-page 的左右安全边距；底部留出 dock 的高度，
           否则最后一行会被浮层压住一截。 */}
-      <div ref={boardOuterRef} className="pb-16 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      <div className="pb-16 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
         <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
@@ -498,341 +431,46 @@ export function GalleryBoard({
 type SpectrumEntry = { year: string; count: number; ratio: number }
 
 /**
- * 手机端的年份选择：dock 里只留一枚显示当前年份的按钮，点开才铺出全部年份。
+ * 画廊的年份轨：把年份桶翻译成共用 TimelineRail 的刻度，本身不画任何东西。
  *
- * 横着拨的柱状谱在 375px 宽上只露得出三四年，剩下的要靠盲滑找——
- * 一个知道自己在哪、点一下就能挑的面板比它可用得多。面板里保留柱子（等比长度）
- * 和张数，「哪年多」这个信息不因为换了形态就丢掉。
+ * 它替掉的是画廊自己那条可拖拽的浮动跳转条——那条要自己记住被拖到哪儿、
+ * 挡图又抢手势，还和站内其他页面的导航长得不一样。预览图用当年的第一张。
+ *
+ * 平板宽度就出现（md 起），并给右下角的回到顶部按钮让出底部一层；
+ * 手机端不出现——小屏上它会压在图上，而且那儿也没有 hover 可用。
  */
-function YearPicker({
+function GalleryYearRail({
   spectrum,
-  activeYear,
   eraColor,
-  open,
-  onOpenChange,
-  onPick,
+  coverOf,
 }: {
   spectrum: SpectrumEntry[]
-  activeYear: string | null
   eraColor: (year: string) => string
-  open: boolean
-  onOpenChange: (open: boolean) => void
-  onPick: (year: string) => void
+  coverOf: Map<string, GalleryPhoto>
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const current = activeYear ?? spectrum[0]?.year ?? ''
-
-  useEffect(() => {
-    if (!open) return
-    const onDocPointerDown = (e: PointerEvent) => {
-      if (!ref.current?.contains(e.target as Node)) onOpenChange(false)
-    }
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onOpenChange(false)
-    }
-    document.addEventListener('pointerdown', onDocPointerDown)
-    window.addEventListener('keydown', onKey)
-    return () => {
-      document.removeEventListener('pointerdown', onDocPointerDown)
-      window.removeEventListener('keydown', onKey)
-    }
-  }, [open, onOpenChange])
-
-  if (spectrum.length === 0) return null
+  const marks = useMemo<TimelineRailMark[]>(
+    () => spectrum.map(({ year: y, count }) => ({
+      // 跳转目标就是图墙上那一年的分段标题
+      id: `gy-${y}`,
+      meta: y === UNDATED ? UNDATED_LABEL : y,
+      title: `${count} 张`,
+      color: eraColor(y),
+      cover: coverOf.get(y)?.thumb ?? null,
+      weight: 'lead' as const,
+    })),
+    [spectrum, eraColor, coverOf],
+  )
 
   return (
-    <div ref={ref} data-no-drag className="relative shrink-0 sm:hidden">
-      <button
-        type="button"
-        onClick={() => onOpenChange(!open)}
-        aria-expanded={open}
-        aria-haspopup="menu"
-        className="ui-press flex items-center gap-1.5 rounded-full border border-line/80 bg-surface/50 px-3 py-2 font-mono text-meta tnum transition-colors"
-        style={{ color: eraColor(current) }}
-      >
-        {current}
-        <span className="text-faint">▾</span>
-      </button>
-
-      {open && (
-        // dock 停在视口底部，面板只能往上开
-        <div
-          role="menu"
-          className="absolute bottom-full left-0 z-10 mb-2 w-[13.5rem] rounded-xl border border-line bg-surface/95 p-1.5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-md"
-        >
-          {spectrum.map(({ year, count, ratio }) => {
-            const isActive = year === activeYear
-            return (
-              <button
-                key={year}
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  onPick(year)
-                  onOpenChange(false)
-                }}
-                className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left transition-colors ${
-                  isActive ? 'bg-raised' : 'hover:bg-raised/60'
-                }`}
-              >
-                <span className="font-mono text-meta tnum" style={{ color: isActive ? eraColor(year) : undefined }}>
-                  <span className={isActive ? '' : 'text-muted'}>{year}</span>
-                </span>
-                <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-line/70">
-                  <span
-                    className="block h-full rounded-full"
-                    style={{ width: `${Math.max(6, ratio * 100)}%`, background: eraColor(year), opacity: isActive ? 1 : 0.5 }}
-                  />
-                </span>
-                <span className="w-10 shrink-0 text-right font-mono text-meta tnum text-faint">{count} 张</span>
-              </button>
-            )
-          })}
-        </div>
-      )}
-    </div>
-  )
-}
-
-const DOCK_POS_KEY = 'gallery-dock-pos'
-const DOCK_MARGIN = 12
-/** dock 贴视口底边（以及停靠时贴图墙底边）的距离 */
-const DOCK_BOTTOM = 20
-/** 手机端给左下状态球和右下回顶按钮留出一整层，dock 放在它们上方。 */
-const MOBILE_DOCK_BOTTOM = 80
-
-const subscribeMobile = (callback: () => void) => {
-  const media = window.matchMedia('(max-width: 639px)')
-  media.addEventListener('change', callback)
-  return () => media.removeEventListener('change', callback)
-}
-
-const getMobileSnapshot = () => window.matchMedia('(max-width: 639px)').matches
-
-/**
- * 控制区 dock：浮在内容之上，可以拖到任何位置，默认停在视口底部居中。
- *
- * 放底部而不是顶部：翻图时视线在画面上，工具停在下缘更像是「手边的东西」，
- * 顶部吸顶条则会一直在读图的正上方切一刀。
- *
- * 底色只压到刚好能和图分开——再厚就变成一块挡板，画廊的主角是图不是控件。
- * 位置写进 localStorage，拖到顺手的地方下次还在那儿。
- */
-const subscribeNoop = () => () => {}
-
-function ControlDock({
-  children,
-  stopRef,
-  alignRef,
-}: {
-  children: React.ReactNode
-  /** 停靠边界：滚过它的底边，dock 就钉在那儿不再跟着视口 */
-  stopRef: React.RefObject<HTMLElement | null>
-  /** 左对齐基准：图墙的内容区（不含手机端的贴边内边距） */
-  alignRef: React.RefObject<HTMLElement | null>
-}) {
-  // dock 必须挂到 body 上：页面容器带入场 transform，会成为 fixed 的包含块，
-  // 留在原地的话「浮在视口底部」会变成「浮在文档某个位置」，滚两屏就不见了。
-  const mounted = useSyncExternalStore(subscribeNoop, () => true, () => false)
-  const mobile = useSyncExternalStore(subscribeMobile, getMobileSnapshot, () => false)
-  const ref = useRef<HTMLDivElement>(null)
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
-  const [dragging, setDragging] = useState(false)
-  const [dockVisible, setDockVisible] = useState(false)
-  // 停靠位置（文档坐标）。null = 还在跟着视口底边走。
-  const [parkedTop, setParkedTop] = useState<number | null>(null)
-  // 默认横向位置：对齐图墙左边缘。null = 还没量到，先居中兜底。
-  const [defaultLeft, setDefaultLeft] = useState<number | null>(null)
-  const offset = useRef<{ dx: number; dy: number } | null>(null)
-
-  const clampToViewport = useCallback((x: number, y: number) => {
-    const rect = ref.current?.getBoundingClientRect()
-    const w = rect?.width ?? 0
-    const h = rect?.height ?? 0
-    return {
-      x: Math.min(Math.max(DOCK_MARGIN, x), Math.max(DOCK_MARGIN, window.innerWidth - w - DOCK_MARGIN)),
-      y: Math.min(Math.max(DOCK_MARGIN, y), Math.max(DOCK_MARGIN, window.innerHeight - h - DOCK_MARGIN)),
-    }
-  }, [])
-
-  // 读取上次拖到的位置。放在 effect 里而不是初始 state：服务端没有 localStorage，
-  // 直接读会让首屏 HTML 和客户端对不上。
-  useEffect(() => {
-    if (mobile) return
-    try {
-      const saved = window.localStorage.getItem(DOCK_POS_KEY)
-      if (saved) {
-        const parsed = JSON.parse(saved) as { x: number; y: number }
-        // 从 localStorage 恢复位置只能在挂载后做：服务端没有 localStorage，
-        // 放进 useState 初值会让首屏 HTML 和客户端渲染对不上。
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        if (Number.isFinite(parsed.x) && Number.isFinite(parsed.y)) setPos(clampToViewport(parsed.x, parsed.y))
-      }
-    } catch {
-      // localStorage 不可用（隐私模式等）就用默认位置，不值得为此报错
-    }
-  }, [clampToViewport, mobile])
-
-  /**
-   * 图墙看完了，dock 就该停下。
-   *
-   * 一直钉在视口底边，往下翻到征集文案和页脚时它还浮在那儿——那些地方没有一张图，
-   * 一条挑年份、调密度的工具条待在上面纯属挡路。所以滚到图墙末尾时把它从 fixed
-   * 换成 absolute，钉在图墙底边（图墙本来就为它留了 pb-28 的位置）；往回滚、
-   * 图墙底边重新落到 dock 下面时再交还给视口。
-   *
-   * 判据就是比大小：视口底边那条线要是已经越过图墙底边，就停靠。
-   * 手动拖过的位置不参与——那是人自己挑的地方，不该被这套规则改掉。
-   */
-  useEffect(() => {
-    const update = () => {
-      const node = ref.current
-      const stop = stopRef.current
-      const align = alignRef.current
-      if (!node || !stop || !align) return
-      const height = node.offsetHeight
-      const dockBottom = mobile ? MOBILE_DOCK_BOTTOM : DOCK_BOTTOM
-      const stopRect = stop.getBoundingClientRect()
-      const alignRect = align.getBoundingClientRect()
-      // 页头与分类说明不是操作图墙的地方；直到第一组图片真正来到 dock 上方才显示。
-      setDockVisible(alignRect.top <= window.innerHeight - dockBottom - height)
-      // 拖过之后位置由人说了算，停靠和默认横向位置不再覆盖它。
-      if (pos) return
-      const stopBottomDoc = stopRect.bottom + window.scrollY
-      const parked = stopBottomDoc - dockBottom - height
-      const followingViewport = window.scrollY + window.innerHeight - dockBottom - height
-      setParkedTop(followingViewport > parked ? parked : null)
-      // 右对齐图墙：左下角住着状态球和播放器，工具条停在那儿会和它们叠在一起。
-      // 贴着图墙右边缘（也就是页面的 padding 边）落位，两边互不打架。
-      // dock 比图墙还宽时（窄屏）往回收，别顶出左边缘。
-      const maxLeft = Math.max(DOCK_MARGIN, window.innerWidth - node.offsetWidth - DOCK_MARGIN)
-      const alignRight = alignRect.right - node.offsetWidth
-      setDefaultLeft(Math.min(Math.max(DOCK_MARGIN, alignRight), maxLeft))
-    }
-    const raf = requestAnimationFrame(update)
-    const ro = new ResizeObserver(update)
-    if (alignRef.current) ro.observe(alignRef.current)
-    if (stopRef.current && stopRef.current !== alignRef.current) ro.observe(stopRef.current)
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update)
-    return () => {
-      cancelAnimationFrame(raf)
-      ro.disconnect()
-      window.removeEventListener('scroll', update)
-      window.removeEventListener('resize', update)
-    }
-  }, [pos, stopRef, alignRef, mobile])
-
-  // 窗口变小后不能让 dock 留在视口外面
-  useEffect(() => {
-    if (!pos) return
-    const onResize = () => setPos((p) => (p ? clampToViewport(p.x, p.y) : p))
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [pos, clampToViewport])
-
-  const onPointerDown = (e: React.PointerEvent) => {
-    if (mobile) return
-    if (e.button !== 0 && e.pointerType === 'mouse') return
-    // 除了控件本身，dock 上任何地方都能拖：一个几像素的小握把是设计上的偷懒。
-    // 反过来，落在按钮 / 输入框 / 可横滚的年份谱上就一定不是拖动——
-    // 那是点按钮、选文字、拨年份，抢了手势等于把控件废掉。
-    if ((e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) return
-    const rect = ref.current?.getBoundingClientRect()
-    if (!rect) return
-    offset.current = { dx: e.clientX - rect.left, dy: e.clientY - rect.top }
-    setPos({ x: rect.left, y: rect.top })
-    setDragging(true)
-    ;(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId)
-    e.preventDefault()
-  }
-
-  const onPointerMove = (e: React.PointerEvent) => {
-    if (!dragging || !offset.current) return
-    setPos(clampToViewport(e.clientX - offset.current.dx, e.clientY - offset.current.dy))
-  }
-
-  const endDrag = (e: React.PointerEvent) => {
-    if (!dragging) return
-    setDragging(false)
-    offset.current = null
-    ;(e.currentTarget as HTMLElement).releasePointerCapture?.(e.pointerId)
-    if (pos) {
-      try {
-        window.localStorage.setItem(DOCK_POS_KEY, JSON.stringify(pos))
-      } catch {
-        // 存不下就算了，位置只是便利，不是数据
-      }
-    }
-  }
-
-  // 拖到犄角旮旯之后要能一键收回来：双击握把恢复默认的底部居中。
-  const resetPos = () => {
-    setPos(null)
-    try {
-      window.localStorage.removeItem(DOCK_POS_KEY)
-    } catch {
-      // 同上，存储不可用不影响功能
-    }
-  }
-
-  // 还没量到图墙位置的那一帧先居中兜底，量到之后一律左对齐
-  const horizontal: React.CSSProperties =
-    mobile
-      ? { left: '50%', transform: 'translateX(-50%)' }
-      : defaultLeft !== null
-        ? { left: defaultLeft }
-        : { left: '50%', transform: 'translateX(-50%)' }
-
-  const placement: React.CSSProperties = !mobile && pos
-    ? { position: 'fixed', left: pos.x, top: pos.y }
-    : parkedTop !== null
-      ? { position: 'absolute', top: parkedTop, ...horizontal }
-      : { position: 'fixed', bottom: mobile ? MOBILE_DOCK_BOTTOM : DOCK_BOTTOM, ...horizontal }
-
-  // 手机端不给这条工具条：一屏就那么宽，年份面板 / 搜索 / 排列全挤在一条浮层里，
-  // 挡图还抢手势，翻图的人其实用不上它。
-  if (mobile) return null
-  if (!mounted) return null
-
-  return createPortal(
-    <div
-      ref={ref}
-      data-gallery-dock
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerCancel={endDrag}
-      onDoubleClick={(e) => {
-        if (!(e.target as HTMLElement).closest('button, a, input, select, textarea, [data-no-drag]')) resetPos()
-      }}
-      className={`z-40 max-w-[calc(100vw-1.5rem)] touch-none select-none rounded-2xl border border-white/[0.07] bg-base/35 px-2 py-2 shadow-[0_16px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-[opacity,transform] duration-200 sm:px-2.5 ${
-        dockVisible ? 'opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
-      } ${mobile ? 'cursor-default' : dragging ? 'cursor-grabbing' : 'cursor-grab'
-      }`}
-      style={placement}
-    >
-      {children}
-    </div>,
-    document.body,
-  )
-}
-
-/** 拖动提示：整条 dock 都能拖，这几个点只是告诉人「这东西可以挪」。 */
-function DragGrip() {
-  return (
-    <span
-      aria-hidden
-      title="拖动 · 双击回到默认位置"
-      className="mb-2.5 hidden shrink-0 flex-col gap-[3px] px-1 opacity-35 sm:flex"
-    >
-      {[0, 1, 2].map((i) => (
-        <span key={i} className="flex gap-[3px]">
-          <span className="h-[3px] w-[3px] rounded-full bg-ink" />
-          <span className="h-[3px] w-[3px] rounded-full bg-ink" />
-        </span>
-      ))}
-    </span>
+    <TimelineRail
+      marks={marks}
+      ariaLabel="画廊年份时间轴"
+      positionLabel="画廊浏览位置"
+      showFrom="md"
+      reserveBottom
+      height="clamp(20rem,60vh,44rem)"
+      magnify={{ radius: 0.14, scale: 2.4 }}
+    />
   )
 }
 
