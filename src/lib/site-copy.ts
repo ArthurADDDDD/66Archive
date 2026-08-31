@@ -84,7 +84,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'chronicle', kicker: 'Chronicle', title: '编年史', body: '走过的路，一条一条地看下去。逐条查记录，去录播室。' },
     { id: 'series', kicker: 'Series', title: '节目', body: '从心灵砒霜、一起 See，到更早的视频连载。' },
     { id: 'stats', kicker: 'Stats', title: '数据', body: '把这些年放到一起，看看数字会说什么。' },
-    { id: 'gallery', kicker: 'Gallery', title: '画廊', body: '画廊还在收集中。周年图片、粉丝作品和老截图，欢迎补一条线索。' },
+    { id: 'gallery', kicker: 'Gallery', title: '影像档案', body: '从能讲故事的关键节点，到按年份铺开的完整影像，用两种尺度回看同一段历史。' },
   ],
   pages: [
     {
@@ -99,7 +99,12 @@ export const SITE_COPY: SiteCopy = {
       title: '这些数字背后，是被保存下来的时间。',
       lede: '这些数字都来自目前保存下来的记录。先看看发生了什么，再看看它们连起来是什么样。',
     },
-    { id: 'gallery', eyebrow: 'Gallery · 资料征集', title: '画廊还在收集中。', lede: '' },
+    {
+      id: 'gallery',
+      eyebrow: 'Gallery · 影像档案',
+      title: '不是照片墙，是由画面组成的历史节点。',
+      lede: '纪念版只留下能讲故事的节点；全量版按年份铺开更多直播、活动与偶然入镜。同一场直播只取一张代表帧，但会收录尽可能多的不同直播与视频。',
+    },
     { id: 'games', eyebrow: '', title: '她的游戏库', lede: '' },
   ],
 }

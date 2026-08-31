@@ -25,6 +25,8 @@ export type GalleryPhoto = {
   sourceRef: string | null
   title: string | null
   caption: string | null
+  /** 面向读者的策展标签；素材批次、内部考证状态不放进这里。 */
+  tags?: string[]
   source: string | null
   /** 后台隐藏开关：已收录但暂不展示（重复、待复核等），不是「删除」。 */
   hidden: boolean

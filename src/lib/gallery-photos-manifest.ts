@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
 import type { GalleryPhoto } from './gallery-photos'
-import { FEATURED_GALLERY_IDS, FULL_GALLERY_IDS } from './gallery-selection'
+import { FEATURED_GALLERY_CATEGORY_BY_ID, FEATURED_GALLERY_IDS, FULL_GALLERY_IDS } from './gallery-selection'
 
 /**
  * 读画廊清单。清单由 scripts/gallery-photos-build.ts 生成。
@@ -31,8 +31,12 @@ function selectPhotos(photos: GalleryPhoto[], ids: readonly string[]) {
 /** 发布版的两种看法共用同一份照片元数据，只在这里按稳定 id 取不同顺序。 */
 export function getGalleryCollections() {
   const photos = getGalleryPhotos()
+  const featured = selectPhotos(photos, FEATURED_GALLERY_IDS).map((photo) => {
+    const category = FEATURED_GALLERY_CATEGORY_BY_ID[photo.id as keyof typeof FEATURED_GALLERY_CATEGORY_BY_ID]
+    return category ? { ...photo, tags: [category] } : photo
+  })
   return {
-    featured: selectPhotos(photos, FEATURED_GALLERY_IDS),
+    featured,
     all: selectPhotos(photos, FULL_GALLERY_IDS),
   }
 }

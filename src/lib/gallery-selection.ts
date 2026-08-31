@@ -39,6 +39,47 @@ export const FEATURED_GALLERY_IDS = [
   "archive-2026-01",
 ] as const
 
+/**
+ * 纪念版原稿中的公开分类。它们描述画面在档案中的意义，不是素材来源批次；
+ * 后者属于整理过程信息，不应出现在发布版。
+ */
+export const FEATURED_GALLERY_CATEGORY_BY_ID: Partial<Record<(typeof FEATURED_GALLERY_IDS)[number], string>> = {
+  "archive-2015-01": "直播时期",
+  "archive-2015-02": "直播时期",
+  "featured-2015-01": "直播时期",
+  "archive-2015-05": "直播时期",
+  "archive-2015-06": "直播时期",
+  "archive-2015-07": "直播时期",
+  "anniv_01_1st_2016_bilibili": "周年与生日",
+  "anniv_05_birthday_2016": "周年与生日",
+  "archive-2016-14": "大周宇宙",
+  "archive-2016-15": "直播时期",
+  "2017-01-08_2246_886804_01": "线下活动",
+  "2017-03-28_1338_679491_01": "线下活动",
+  "archive-2017-04": "直播时期",
+  "archive-2017-06": "大周宇宙",
+  "20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi": "线下活动",
+  "archive-2017-07": "周年与生日",
+  "archive-2018-01": "大周宇宙",
+  "archive-2018-03": "大周宇宙",
+  "archive-2018-08": "线下活动",
+  "2018-05-01_1538_160291_03": "线下活动",
+  "archive-2018-05": "大周宇宙",
+  "archive-2018-07": "直播时期",
+  "2019-08-03_1052_800750_01": "线下活动",
+  "anniv_10_5th_2020": "大周宇宙",
+  "archive-2022-01": "直播时期",
+  "archive-2022-02": "大周宇宙",
+  "archive-2023-01": "特殊直播形态",
+  "archive-2023-02": "特殊直播形态",
+  "archive-2023-03": "直播时期",
+  "20240121135816_0022Ya6rly1hlyxc13zf6j61y52ljx5l02": "线下活动",
+  "20250123061030_0022Ya6rgy1htvb9vkp86j635s23wb2a02": "线下活动",
+  "20241031044106_0022Ya6rly1hubwag1pxpj61hc0u0h2x02": "大周宇宙",
+  "featured-2026-01": "大周宇宙",
+  "archive-2026-01": "大周宇宙",
+}
+
 export const FULL_GALLERY_IDS = [
   "archive-2015-01",
   "archive-2015-02",
