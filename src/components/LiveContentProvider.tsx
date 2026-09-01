@@ -136,6 +136,10 @@ export function mergeSiteCopy(baseline: SiteCopy, live: LiveSiteCopy | null): Si
       return override ? { ...room, kicker: override.kicker, title: override.title || room.title, body: override.body } : room
     }),
     pages: mergeBlocks(baseline.pages, live.pages),
+    // 名单是整份替换，不逐个按 id 覆盖——排序、加人、删人都要能生效，
+    // 而按 id 合并只能改字段，改不了「有谁、谁在前面」。
+    // 空数组按「没有覆盖」处理：内容服务里还没有这份名单时，页面照常显示基线。
+    maintainers: live.maintainers.length > 0 ? live.maintainers.map((person) => ({ ...person })) : baseline.maintainers,
   }
 }
 

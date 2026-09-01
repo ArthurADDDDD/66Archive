@@ -173,6 +173,8 @@ export type LiveSiteCopy = {
   homeSections: LiveCopyBlock[]
   rooms: { id: string; kicker: string; title: string; body: string }[]
   pages: LiveCopyBlock[]
+  /** 维护者名单。整份替换（顺序、增删都在这份里），空数组表示沿用基线。 */
+  maintainers: { id: string; name: string; role: string }[]
 }
 
 export type LiveEditorialItem = { kind: string; refId: string; title: string; description: string }
@@ -328,6 +330,15 @@ export function parseSiteCopy(payload: unknown): LiveSiteCopy | null {
           .filter((item): item is LiveSiteCopy['rooms'][number] => item !== null)
       : [],
     pages: parseBlocks(source.pages),
+    maintainers: Array.isArray(source.maintainers)
+      ? source.maintainers
+          .map((item) =>
+            isRecord(item) && typeof item.id === 'string' && typeof item.name === 'string' && item.name !== ''
+              ? { id: item.id, name: item.name, role: str(item.role) }
+              : null,
+          )
+          .filter((item): item is LiveSiteCopy['maintainers'][number] => item !== null)
+      : [],
   }
 }
 

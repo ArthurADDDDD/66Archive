@@ -23,6 +23,16 @@ export type SiteCopyBlock = {
   lede: string
 }
 
+/** 站点维护者：显示在联系页「维护」那一栏，数组顺序就是页面上的先后顺序。 */
+export type SiteMaintainer = {
+  /** 稳定 ID，内容服务按它对齐；不显示给访客 */
+  id: string
+  /** 展示名 */
+  name: string
+  /** 一句话职责，空串表示不显示这一行 */
+  role: string
+}
+
 export type SiteCopy = {
   version: 1
   site: { title: string; description: string }
@@ -43,6 +53,8 @@ export type SiteCopy = {
   rooms: { id: string; kicker: string; title: string; body: string }[]
   /** 子页页头 */
   pages: SiteCopyBlock[]
+  /** 联系页的维护者名单，可增删与排序 */
+  maintainers: SiteMaintainer[]
 }
 
 export const SITE_COPY: SiteCopy = {
@@ -107,6 +119,8 @@ export const SITE_COPY: SiteCopy = {
     },
     { id: 'games', eyebrow: '', title: '她的游戏库', lede: '' },
   ],
+  // 目前只有一个人，就如实写一个人，不摆一排占位头像。
+  maintainers: [{ id: 'maintainer-1', name: '哈密瓜逮捕可达鸭', role: '建站 · 数据整理 · 校对' }],
 }
 
 export function siteCopyBlock(blocks: SiteCopyBlock[], id: string): SiteCopyBlock {
