@@ -44,3 +44,5 @@ scripts/audit/tag-proposals.json
 scripts/audit/need-games.json
 scripts/audit/PENDING-REVIEW.md
 
+# 本机专用的系列标签人工复核页，不进入公开仓库
+scripts/series-review/
