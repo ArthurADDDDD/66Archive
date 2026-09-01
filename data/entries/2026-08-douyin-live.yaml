@@ -608,3 +608,23 @@
         status: alive
     note: "自动采集候选经人工审批新建（组 c18e87ef-3116-4b16-801d-657681b8c56c）。"
     contributed_by: collection-review
+
+  - id: 2026-08-31-live-01
+    type: live
+    date: "2026-08-31"
+    title: "冒险岛 怀旧服第八天 和炮炮壮壮建新家族联盟 08 31"
+    platform: douyin
+    duration_min: 181
+    games:
+      - maplestory
+      - maplestory-classic
+    tags:
+      - 弹幕版
+    confidence: medium
+    cover: "http://i2.hdslb.com/bfs/archive/3f0c293d832e22c3b9245df1e99462bc420bfd19.jpg"
+    sources:
+      - url: "https://www.bilibili.com/video/BV1pGta6aEFh"
+        kind: replay
+        status: alive
+    note: "自动采集候选经人工审批新建（组 d0b88360-4523-456b-8e63-1e21ba4f0546）。"
+    contributed_by: collection-review
