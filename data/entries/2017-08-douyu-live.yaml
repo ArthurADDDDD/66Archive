@@ -453,40 +453,55 @@
     confidence: high
     duration_min: 209
     cover: "https://i0.hdslb.com/bfs/archive/f431d33d7e75c512ac5dff48d5a450d9115c8557.jpg"
-    games: []
+    games: [pubg]
     tags: [聊天]
     segments:
       - at: "00:00:00"
         label: "P1-8.9-大周有嘻哈"
       - at: "00:13:26"
+        game: pubg
         label: "P2-8.9-大周有嘻哈"
       - at: "00:26:53"
+        game: pubg
         label: "P3-8.9-大周有嘻哈"
       - at: "00:40:21"
+        game: pubg
         label: "P4-8.9-大周有嘻哈"
       - at: "00:53:49"
+        game: pubg
         label: "P5-8.9-大周有嘻哈"
       - at: "01:07:15"
+        game: pubg
         label: "P6-8.9-大周有嘻哈"
       - at: "01:20:42"
+        game: pubg
         label: "P7-8.9-大周有嘻哈"
       - at: "01:34:09"
+        game: pubg
         label: "P8-8.9-大周有嘻哈"
       - at: "01:47:37"
+        game: pubg
         label: "P9-8.9-大周有嘻哈"
       - at: "02:00:18"
+        game: pubg
         label: "P10-8.9-大周有嘻哈"
       - at: "02:13:00"
+        game: pubg
         label: "P11-8.9-大周有嘻哈"
       - at: "02:25:42"
+        game: pubg
         label: "P12-8.9-大周有嘻哈"
       - at: "02:38:24"
+        game: pubg
         label: "P13-8.9-大周有嘻哈"
       - at: "02:51:06"
+        game: pubg
         label: "P14-8.9-大周有嘻哈"
       - at: "03:03:48"
+        game: pubg
         label: "P15-8.9-大周有嘻哈"
       - at: "03:16:30"
+        game: pubg
         label: "P16-8.9-大周有嘻哈"
     sources:
       - url: https://www.bilibili.com/video/BV1vx411n7jt
@@ -695,18 +710,23 @@
     confidence: high
     duration_min: 135
     cover: "https://i0.hdslb.com/bfs/archive/f3886462a2873852e67b544f4967de6cc342457e.png"
-    games: []
+    games: [minecraft]
     tags: [聊天]
     segments:
       - at: "00:00:00"
+        game: minecraft
         label: "P1-8.14-大周好声音弹幕版"
       - at: "00:26:05"
+        game: minecraft
         label: "P2-8.14-大周好声音弹幕版"
       - at: "00:52:13"
+        game: minecraft
         label: "P5-8.14-大周好声音弹幕版"
       - at: "01:16:04"
+        game: minecraft
         label: "P3-8.14-大周好声音弹幕版"
       - at: "01:45:36"
+        game: minecraft
         label: "P4-8.14-大周好声音弹幕版"
     sources:
       - url: https://www.bilibili.com/video/BV1Kx411n7ek

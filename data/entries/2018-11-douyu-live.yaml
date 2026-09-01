@@ -255,7 +255,7 @@
     confidence: high
     duration_min: 169
     cover: "https://i0.hdslb.com/bfs/archive/07dec67ac1fefc0230fe5d6d56399007e549899f.png"
-    games: []
+    games: [red-dead-redemption-2]
     tags: [聊天]
     segments:
       - at: "00:00:00"
@@ -263,6 +263,7 @@
       - at: "00:56:21"
         label: "欢迎BBC来到女流直播间-弹幕版"
       - at: "01:52:43"
+        game: red-dead-redemption-2
         label: "欢迎BBC来到女流直播间-字幕版"
     sources:
       - url: https://www.bilibili.com/video/BV15t41127eU
@@ -445,7 +446,7 @@
     duration_min: 139
     cover: "https://i0.hdslb.com/bfs/archive/65a56b31679529c59746c7d4769295cc9a2f9d6a.png"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "中国青年好网民"
@@ -535,7 +536,7 @@
     duration_min: 19
     cover: "https://i0.hdslb.com/bfs/archive/bd32e3cf55910fd0adae5637200041756481010f.png"
     games: []
-    tags: [聊天, 户外]
+    tags: [户外, 聊天]
     sources:
       - url: https://www.bilibili.com/video/BV1wt411R7z6
         kind: replay

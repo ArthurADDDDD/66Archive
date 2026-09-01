@@ -212,7 +212,7 @@
     duration_min: 81
     cover: "https://i0.hdslb.com/bfs/archive/31b0797fd1964c916192bba5490475e7e220682d.png"
     games: []
-    tags: [聊天]
+    tags: [户外, 聊天]
     sources:
       - url: https://www.bilibili.com/video/BV1FW411w7Sv
         kind: replay
@@ -402,7 +402,7 @@
     duration_min: 103
     cover: "https://i0.hdslb.com/bfs/archive/cf18f54db6d816ca624175532bc980be75f5d22d.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     sources:
       - url: https://www.bilibili.com/video/BV1Qs411j7Bj
         kind: replay
@@ -438,8 +438,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
-    tags: [聊天]
-
+    tags: [户外, 聊天]
   - id: 2018-06-22-live-01
     type: live
     date: "2018-06-22"
@@ -639,7 +638,7 @@
     confidence: high
     duration_min: 223
     games: []
-    tags: [聊天]
+    tags: [户外, 聊天]
     note: "B站「女流录像小屋」《粉丝节福利大放送》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Ks41157k6"

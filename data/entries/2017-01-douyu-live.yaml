@@ -547,8 +547,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
-    tags: [聊天, 户外]
-
+    tags: [户外]
   - id: 2017-01-26-live-01
     type: live
     date: "2017-01-26"
@@ -558,7 +557,7 @@
     duration_min: 209
     cover: "https://i0.hdslb.com/bfs/archive/5d084397a2f4644e70b0d0bfe68e1569ac8c6e84.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "P2"
@@ -619,4 +618,4 @@
         parts: 2
         status: alive
     contributed_by: data-agent
-    tags: [聊天, 户外]
+    tags: [户外]

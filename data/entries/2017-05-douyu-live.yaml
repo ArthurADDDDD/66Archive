@@ -7,7 +7,7 @@
     duration_min: 274
     cover: "https://i0.hdslb.com/bfs/archive/aa27d352caf28e5b0b64a08b00ac4aecc72bd42b.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "P1-5.2-大周，还好么"
@@ -75,8 +75,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
-    tags: [聊天, 户外]
-
+    tags: [户外]
   - id: 2017-05-05-live-01
     type: live
     date: "2017-05-05"
@@ -206,7 +205,7 @@
     confidence: high
     duration_min: 301
     games: []
-    tags: [聊天]
+    tags: [户外]
     note: "B站「女流录像小屋」《手工猪小拱》，全长录播。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Rx411m7ha"
@@ -482,7 +481,7 @@
     duration_min: 188
     cover: "https://i0.hdslb.com/bfs/archive/76776d8c716e56ff962b3bf7e58dee818a2a0f5a.jpg"
     games: []
-    tags: [聊天]
+    tags: [佩奇, 聊天]
     sources:
       - url: https://www.bilibili.com/video/BV1hx411Y7d4
         kind: replay

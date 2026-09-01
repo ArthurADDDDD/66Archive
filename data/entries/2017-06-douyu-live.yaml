@@ -281,7 +281,7 @@
     duration_min: 48
     cover: "https://i0.hdslb.com/bfs/archive/d72a2e55e410d4ab17a79b85b92868e7d0a52891.jpg"
     games: []
-    tags: [一起See]
+    tags: [户外]
     sources:
       - url: https://www.bilibili.com/video/BV1qx41187Tx
         kind: replay
@@ -317,8 +317,7 @@
         parts: 2
         status: alive
     contributed_by: data-agent
-    tags: [聊天, 户外]
-
+    tags: [户外, 聊天]
   - id: 2017-06-14-live-01
     type: live
     date: "2017-06-14"
@@ -403,7 +402,7 @@
     duration_min: 15
     cover: "https://i0.hdslb.com/bfs/archive/38c425a8a01c79060afcdec4696f46ecef579e9d.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外, 聊天]
     sources:
       - url: https://www.bilibili.com/video/BV1ox411878B
         kind: replay
@@ -631,8 +630,7 @@
         parts: 3
         status: alive
     contributed_by: data-agent
-    tags: [聊天]
-
+    tags: [户外]
   - id: 2017-06-26-live-02
     type: live
     date: "2017-06-26"
@@ -642,7 +640,7 @@
     duration_min: 181
     cover: "https://i0.hdslb.com/bfs/archive/e43b486828279ffadbe1b7008882ffb031c822a1.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "P1-6.26-有顶天家族2圣地巡礼"
@@ -674,7 +672,7 @@
     duration_min: 92
     cover: "https://i0.hdslb.com/bfs/archive/66ba27e87299f25f9f1f4b65bf6a5cb03e56451a.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外, 聊天]
     segments:
       - at: "00:00:00"
         label: "P1-6.27-森见登美彦专访"
@@ -721,7 +719,7 @@
     duration_min: 105
     cover: "https://i0.hdslb.com/bfs/archive/ee110a7750a0127bf1f612813067fc9fb05fabb6.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     sources:
       - url: https://www.bilibili.com/video/BV1mx41167yL
         kind: replay
@@ -742,7 +740,7 @@
     duration_min: 53
     cover: "https://i0.hdslb.com/bfs/archive/175d422661d2b31678264cc985887c05dcb7eb1e.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "P1-6.29-采访前准备"
@@ -768,7 +766,7 @@
     duration_min: 88
     cover: "https://i0.hdslb.com/bfs/archive/e631aa6dd53f053f317f672ada6460130a90b4ae.jpg"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "P1-女流-6.30-回国之前剪个头"

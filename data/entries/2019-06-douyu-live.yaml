@@ -393,17 +393,19 @@
     duration_min: 222
     cover: "https://i0.hdslb.com/bfs/archive/51de31f28f2aee6dec80e20761285fddfeaaf355.png"
     games: [driving-test-sim]
-    tags: [聊天]
-    note: "当日直播全程为直播前聊天环节（4P 全聊天，无主游戏内容），标题如实反映，非错标。"
+    note: "第一段为直播前聊天；第二至第四段为东方驾考模拟器。"
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
       - at: "00:29:49"
-        label: "游戏前聊10块钱的"
+        game: driving-test-sim
+        label: "东方驾考模拟器"
       - at: "02:00:01"
-        label: "游戏前聊10块钱的"
+        game: driving-test-sim
+        label: "东方驾考模拟器"
       - at: "02:50:59"
-        label: "游戏前聊10块钱的"
+        game: driving-test-sim
+        label: "东方驾考模拟器"
     sources:
       - url: https://www.bilibili.com/video/BV1C441137BE
         kind: replay

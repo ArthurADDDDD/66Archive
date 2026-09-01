@@ -132,7 +132,7 @@
     duration_min: 242
     cover: "https://i0.hdslb.com/bfs/archive/ca6235e13f5b89e6275094d4260a4aa6350fee61.png"
     games: []
-    tags: [聊天]
+    tags: [一起See, 聊天]
     segments:
       - at: "00:00:00"
         label: "P1.1-2018.4.4-专属鼠标垫了解一下"
@@ -172,7 +172,7 @@
     duration_min: 101
     cover: "https://i0.hdslb.com/bfs/archive/a4bc48a026b47571a43265702bf064a68111698c.png"
     games: []
-    tags: [佩奇, 聊天, 唱歌]
+    tags: [佩奇, 唱歌, 聊天]
     segments:
       - at: "00:00:00"
         label: "P1.1-2018.4.6-豆6组合了解一下"
@@ -356,14 +356,15 @@
     confidence: high
     duration_min: 68
     cover: "https://i0.hdslb.com/bfs/archive/3b6512064cad0dcdb8c3617042ed8009d40e129d.png"
-    games: []
-    tags: [聊天]
+    games: [super-bunny-man]
+    tags: [心灵砒霜]
     segments:
       - at: "00:00:00"
         label: "欢迎丁丁张老师做客156277"
       - at: "00:22:45"
         label: "欢迎丁丁张老师做客156277"
       - at: "00:45:31"
+        game: super-bunny-man
         label: "欢迎丁丁张老师做客156277"
     sources:
       - url: https://www.bilibili.com/video/BV1zW411G7R7
@@ -829,7 +830,7 @@
     duration_min: 101
     cover: "https://i0.hdslb.com/bfs/archive/541cae0b4cd38fc57658f4a4c2233fa1d4042362.png"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "Play Station 媒体体验会"
@@ -966,7 +967,7 @@
     duration_min: 159
     cover: "https://i0.hdslb.com/bfs/archive/fd620c53d62d55b94747eb7f2e4e5db12a36ee72.png"
     games: []
-    tags: [聊天]
+    tags: [户外]
     segments:
       - at: "00:00:00"
         label: "大周聚餐暨女流水友交流会"
