@@ -1,31 +1,19 @@
+import { getImageProxyPolicy } from '../../../src/lib/image-proxy-policy'
+
 /**
  * 六六编年史 · 封面图代理
  *
  * 只做两件事：
- * 1. 带上各平台自己认可的 Referer，绕开防盗链（浏览器直连时 no-referrer 在部分场景仍会被拦）。
+ * 1. 带上各平台自己认可的 Referer，绕开防盗链。
  * 2. 交给 Cloudflare Image Resizing 按需缩放（未开通该功能的账号会静默跳过，退化为原图代理）。
  *
- * 不是通用代理：只放行数据里实际出现过的封面域名，避免被当成开放代理滥用。
+ * 不是通用代理：允许进入 Worker 的 host 与前端共用
+ * src/lib/image-proxy-policy.ts 这一份 policy，避免两边再次漂移。
  */
-
-type OriginConfig = {
-  host: RegExp
-  referer: string
-}
-
-const ALLOWED_ORIGINS: OriginConfig[] = [
-  { host: /(^|\.)hdslb\.com$/, referer: 'https://www.bilibili.com/' },
-  { host: /(^|\.)acfun\.cn$/, referer: 'https://www.acfun.cn/' },
-  { host: /(^|\.)ykimg\.com$/, referer: 'https://www.youku.com/' },
-]
 
 const MIN_WIDTH = 40
 const MAX_WIDTH = 1280
 const DEFAULT_WIDTH = 480
-
-function resolveOrigin(url: URL): OriginConfig | null {
-  return ALLOWED_ORIGINS.find((o) => o.host.test(url.hostname)) ?? null
-}
 
 function clampWidth(raw: string | null): number {
   const n = Number(raw)
@@ -42,21 +30,21 @@ function isRedirectStatus(status: number): boolean {
 /**
  * 拉取封面并安全处理重定向。
  *
- * 不跟随未校验的跨域跳转：每次 3xx 都必须重新过 allowlist，且只允许 https。
+ * 不跟随未校验的跨域跳转：每次 3xx 都必须重新过共享 policy，且只允许 https。
  */
 async function fetchAllowlisted(initialUrl: URL, width: number): Promise<Response> {
   let current = initialUrl
   const userAgent =
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0 Safari/537.36'
 
   for (let hop = 0; hop < 4; hop += 1) {
-    const origin = resolveOrigin(current)
-    if (!origin) return new Response('redirect target not allowlisted', { status: 403 })
+    const policy = getImageProxyPolicy(current.hostname)
+    if (!policy) return new Response('redirect target not allowlisted', { status: 403 })
 
     const response = await fetch(current.toString(), {
       redirect: 'manual',
       headers: {
-        Referer: origin.referer,
+        Referer: policy.referer,
         'User-Agent': userAgent,
       },
       cf: {
@@ -79,7 +67,9 @@ async function fetchAllowlisted(initialUrl: URL, width: number): Promise<Respons
       return new Response('invalid redirect location', { status: 502 })
     }
     if (next.protocol !== 'https:') return new Response('redirect target must be https', { status: 403 })
-    if (!resolveOrigin(next)) return new Response('redirect target not allowlisted', { status: 403 })
+    if (!getImageProxyPolicy(next.hostname)) {
+      return new Response('redirect target not allowlisted', { status: 403 })
+    }
 
     current = next
   }
@@ -105,17 +95,12 @@ export default {
       return new Response('invalid url', { status: 400 })
     }
     if (originUrl.protocol !== 'https:') return new Response('only https origins allowed', { status: 400 })
-
-    const origin = resolveOrigin(originUrl)
-    if (!origin) return new Response('origin not allowlisted', { status: 403 })
+    if (!getImageProxyPolicy(originUrl.hostname)) return new Response('origin not allowlisted', { status: 403 })
 
     const width = clampWidth(reqUrl.searchParams.get('w'))
-
     const upstream = await fetchAllowlisted(originUrl, width)
 
-    if (!upstream.ok) {
-      return new Response('upstream error', { status: 502 })
-    }
+    if (!upstream.ok) return new Response('upstream error', { status: 502 })
 
     const headers = new Headers(upstream.headers)
     headers.set('Cache-Control', 'public, max-age=604800, immutable')
