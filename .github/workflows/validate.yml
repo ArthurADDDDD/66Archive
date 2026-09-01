@@ -49,15 +49,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Temporary verification for PR #7. Removed after the exact Worker source
-      # has been typechecked and bundled once without contacting Cloudflare.
-      - name: Verify image proxy Worker bundle
-        working-directory: workers/img-proxy
-        run: |
-          npm ci
-          npx tsc --noEmit
-          npx wrangler deploy --dry-run --outdir /tmp/chronicle-66-img-proxy
-
       # 游戏搜索框的匹配逻辑。它的失败方式不是抛错而是"搜不到"——
       # 排序或别名匹配退化了没人会报 bug，用户只会转去填自由文本，
       # 而那要人工处理一遍。跑在真实的 587 条词库上。
