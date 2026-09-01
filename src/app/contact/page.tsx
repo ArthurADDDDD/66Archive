@@ -3,7 +3,7 @@ import { SiteNav } from '@/components/SiteNav'
 import { CorrectionSubmission } from '@/components/CorrectionSubmission'
 import { MaintainerCredits } from '@/components/MaintainerCredits'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { LivePageIntro } from '@/components/LiveSection'
+import { LivePageIntro, LivePageNote } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
 
@@ -92,18 +92,19 @@ export default function ContactPage() {
         </div>
 
         <section aria-label="贡献者与来源致谢" className="mt-16 border-t border-line pt-10">
-          <LivePageIntro
+          <LivePageNote
             pageId="contact-credits"
             eyebrowColor="#E0A244"
-            heading="h2"
-            titleClassName="measure-hero mt-3 text-h2 font-semibold"
-          />
-          <p className="mt-6 text-meta text-faint tnum">
-            已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
-            {firstYear !== null && lastYear !== null && (
-              <> · 覆盖 <span className="font-mono text-control font-semibold text-ink">{firstYear}</span> — <span className="font-mono text-control font-semibold text-ink">{lastYear}</span></>
+            signature="哈密瓜逮捕可达鸭"
+            footer={(
+              <>
+                已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
+                {firstYear !== null && lastYear !== null && (
+                  <> · 覆盖 <span className="font-mono text-control font-semibold text-ink">{firstYear}</span> — <span className="font-mono text-control font-semibold text-ink">{lastYear}</span></>
+                )}
+              </>
             )}
-          </p>
+          />
 
           <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
             <MaintainerCredits />

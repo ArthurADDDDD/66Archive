@@ -103,11 +103,82 @@ export function LivePageIntro({
       {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
       {block.title && <Heading className={titleClassName}>{block.title}</Heading>}
       {paragraphs.map((paragraph, index) => (
-        <p key={paragraph.slice(0, 24)} className={`measure-body text-body text-muted ${index === 0 ? 'mt-6' : 'mt-4'}`}>
+        <p key={paragraph.slice(0, 24)} className={`w-full text-body text-muted ${index === 0 ? 'mt-6' : 'mt-4'}`}>
           {paragraph}
         </p>
       ))}
     </div>
+  )
+}
+
+/**
+ * 编者语。
+ *
+ * 一段第一人称的长文字，和周围「一条条事实」的版式要能一眼分开，所以做成一张
+ * 带引号的卡片：右上角一个大引号，末尾一行署名与统计。
+ *
+ * 宽度上刻意不套 `measure-body`：那条阅读宽度到 70rem 就封顶，在宽屏上变成一个
+ * 定死的像素值，右边界比同屏其它卡片短一截——看起来像没对齐，而不是像排版。
+ * 这里让卡片本身顶到页面安全边距（与上下的卡片同一条边界），改用分栏控制行长：
+ * 超宽屏分两栏，每栏才是真正的阅读宽度，段落不跨栏断开。
+ */
+export function LivePageNote({
+  pageId,
+  eyebrowColor,
+  signature,
+  footer,
+}: {
+  pageId: string
+  eyebrowColor?: string
+  /** 署名，留空则不显示。 */
+  signature?: string
+  /** 署名同一行右侧的补充（例如收录条数），可留空。 */
+  footer?: React.ReactNode
+}) {
+  const block = useCopyBlock('pages', pageId)
+  const paragraphs = block.lede.split('\n').map((line) => line.trim()).filter((line) => line.length > 0)
+  const paragraphColumns = paragraphs.length > 3
+    ? [paragraphs.slice(0, Math.ceil(paragraphs.length / 2)), paragraphs.slice(Math.ceil(paragraphs.length / 2))]
+    : [paragraphs]
+  return (
+    <figure className="relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12">
+      {/* 装饰性引号：大字淡色压在右上角，纯装饰，不进无障碍树。 */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute right-3 top-3 select-none font-serif text-[9rem] leading-none text-video/15 sm:right-8 sm:text-[12rem]"
+      >
+        “
+      </span>
+
+      <div className="relative">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span className="rounded-full border border-video/30 bg-video/10 px-3 py-1 text-meta font-medium tracking-[0.12em] text-video">
+            编者语
+          </span>
+          {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
+        </div>
+        {block.title && <h2 className="measure-hero mt-4 text-h2 font-semibold text-ink">{block.title}</h2>}
+
+        <blockquote className="mt-7 grid gap-5 text-ink/90 xl:grid-cols-2 xl:gap-x-12">
+          {paragraphColumns.map((column, columnIndex) => (
+            <div key={columnIndex} className="space-y-5">
+              {column.map((paragraph) => (
+                <p key={paragraph.slice(0, 24)} className="text-body leading-[1.9]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ))}
+        </blockquote>
+
+        {(signature || footer) && (
+          <figcaption className="mt-9 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t border-video/20 pt-5">
+            {signature && <span className="text-control font-medium text-ink">—— {signature}</span>}
+            {footer && <span className="text-meta text-muted tnum">{footer}</span>}
+          </figcaption>
+        )}
+      </div>
+    </figure>
   )
 }
 
