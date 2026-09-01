@@ -120,15 +120,7 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
           </div>
         )}
 
-        {entry.tags.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-1.5">
-            {entry.tags.map((tag) => (
-              <span key={tag} className="rounded-sm border border-line px-1.5 py-0.5 text-meta text-muted">{tag}</span>
-            ))}
-          </div>
-        )}
-
-        <InlineTagCalibration entryId={entry.id} games={entry.games} />
+        <InlineTagCalibration entryId={entry.id} games={entry.games} tags={entry.tags} />
       </div>
     </div>
   )

@@ -66,12 +66,12 @@ export function getVoteTaskByEntry(entryId: string): Promise<VoteTaskDetail> {
   return request(`/api/vote/entry/${encodeURIComponent(entryId)}`)
 }
 
-export type VoteGame = { id: string; name: string; aliases: string[] }
+export type VoteGame = { id: string; name: string; aliases: string[]; kind?: 'game' | 'tag' }
 
 let gamesCache: Promise<VoteGame[]> | null = null
 
 /**
- * 可选游戏词库，整页共用一份。
+ * 可选游戏与内容标签词库，整页共用一份。
  *
  * 不从构建期烤入的数据里读：服务端认的是数据库快照，两份在「公开仓加了新游戏
  * 但快照还没导入」的窗口期会不一致，用户会遇到「选得中、提交不了」。

@@ -30,9 +30,11 @@ type Answer = 'selection' | 'none' | 'unsure'
 export function InlineTagCalibration({
   entryId,
   games,
+  tags,
 }: {
   entryId: string
   games: GameTag[]
+  tags: string[]
 }) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -58,10 +60,16 @@ export function InlineTagCalibration({
   const labels = useMemo(() => {
     const map = new Map<string, string>()
     for (const game of games) map.set(game.id, game.name)
+    for (const tag of tags) map.set(`tag:${tag}`, tag)
     for (const candidate of detail?.task.candidates ?? []) map.set(candidate.gameId, candidate.label)
     for (const game of catalog ?? []) if (!map.has(game.id)) map.set(game.id, game.name)
     return map
-  }, [games, detail, catalog])
+  }, [games, tags, detail, catalog])
+
+  const currentLabels = useMemo(() => [
+    ...games.map((game) => ({ id: game.id, label: game.name, kind: 'game' as const })),
+    ...tags.map((tag) => ({ id: `tag:${tag}`, label: tag, kind: 'tag' as const })),
+  ], [games, tags])
 
   /** 摆出来的选项 = 这条记录现在标的游戏 + 用户从搜索框加进来的。 */
   const chipIds = useMemo(() => {
@@ -157,17 +165,17 @@ export function InlineTagCalibration({
   }
 
   return (
-    <section className="mt-4 border-t border-line pt-4" aria-label="标签校准">
+    <section className="mt-4 border-t border-line pt-4" aria-label="内容标签校准">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">这场标的游戏</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint">这场的游戏与内容</p>
           <div className="mt-2 flex flex-wrap gap-2">
-            {games.length > 0 ? games.map((game) => (
-              <span key={game.id} className="inline-flex min-h-8 items-center gap-2 rounded-full border border-line bg-base/45 px-3 text-control text-muted">
-                <span className="h-2 w-2 rounded-sm" style={{ background: gameColor(game.id) }} />
-                {game.name}
+            {currentLabels.length > 0 ? currentLabels.map((item) => (
+              <span key={item.id} className="inline-flex min-h-8 items-center gap-2 rounded-full border border-live/45 bg-live/10 px-3 text-control text-ink">
+                {item.kind === 'game' && <span className="h-2 w-2 rounded-sm" style={{ background: gameColor(item.id) }} />}
+                {item.label}
               </span>
-            )) : <span className="text-control text-faint">这场还没有标游戏</span>}
+            )) : <span className="text-control text-faint">这场还没有标游戏或内容标签</span>}
           </div>
         </div>
         <button
@@ -177,12 +185,12 @@ export function InlineTagCalibration({
           aria-expanded={open}
           className="ui-press min-h-10 rounded-full border border-live/35 bg-live/8 px-4 text-control text-live hover:bg-live/14"
         >
-          {open ? '收起' : games.length > 0 ? '标错了？帮忙改一下' : '知道这场玩的什么？'}
+          {open ? '收起' : currentLabels.length > 0 ? '标错了？帮忙纠错' : '知道这场是什么内容？'}
         </button>
       </div>
 
       <p className="mt-3 text-meta leading-relaxed text-faint">
-        打开上面的录像看一眼，如果标错了，在这里选实际玩的游戏。拿不准可以选「无法判断」。
+        打开上面的录像看一眼，如果游戏、聊天、户外或节目标签标错了，都可以从同一个入口纠正。拿不准可以选「无法判断」。
       </p>
 
       {open && (
@@ -219,7 +227,7 @@ export function InlineTagCalibration({
                   aria-expanded={pickerOpen}
                   className={`ui-press min-h-11 rounded-lg border px-3 py-2 text-left text-control ${pickerOpen ? 'border-live/45 bg-live/8 text-ink' : 'border-line text-muted hover:border-muted hover:text-ink'}`}
                 >
-                  {chipIds.length > 0 ? '都不对，是别的游戏…' : '搜索游戏…'}
+                  {chipIds.length > 0 ? '都不对，是别的游戏或内容…' : '搜索游戏或内容…'}
                 </button>
                 {detail.task.allowUnsure && (
                   <button type="button" onClick={() => chooseAnswer('unsure')} aria-pressed={answer === 'unsure'} className={`ui-press min-h-11 rounded-lg border px-3 py-2 text-left text-control ${answer === 'unsure' ? 'border-faint bg-raised text-ink' : 'border-line text-muted hover:border-muted hover:text-ink'}`}>
@@ -235,13 +243,13 @@ export function InlineTagCalibration({
                   ) : (
                     <>
                       <label className="block text-meta text-faint">
-                        搜索游戏（共 {catalog.length} 款）
+                        搜索游戏或内容标签（共 {catalog.length} 项）
                         <input
                           ref={searchRef}
                           type="text"
                           value={keyword}
                           onChange={(event) => setKeyword(event.target.value.slice(0, 60))}
-                          placeholder="输入游戏名，中英文、别名都可以"
+                          placeholder="输入游戏、聊天、户外或节目名"
                           className="mt-2 min-h-11 w-full rounded-lg border border-line bg-base/60 px-3 text-control text-ink outline-none placeholder:text-faint focus:border-live"
                         />
                       </label>
@@ -267,7 +275,7 @@ export function InlineTagCalibration({
                               })}
                             </ul>
                           ) : (
-                            <p className="text-control text-faint">词库里没有匹配的游戏。</p>
+                            <p className="text-control text-faint">词库里没有匹配的游戏或内容标签。</p>
                           )}
                         </div>
                       )}
@@ -290,7 +298,7 @@ export function InlineTagCalibration({
               {answer === 'none' && (
                 <label className="mt-3 block text-meta text-faint">
                   你认为是什么？（可不填，仅管理员可见）
-                  <textarea value={otherText} onChange={(event) => setOtherText(event.target.value.slice(0, 200))} rows={2} className="mt-2 w-full resize-y rounded-lg border border-line bg-base/60 px-3 py-2 text-control text-ink outline-none placeholder:text-faint focus:border-video" placeholder="例如：实际在播某款游戏，或这段不是游戏内容。" />
+                  <textarea value={otherText} onChange={(event) => setOtherText(event.target.value.slice(0, 200))} rows={2} className="mt-2 w-full resize-y rounded-lg border border-line bg-base/60 px-3 py-2 text-control text-ink outline-none placeholder:text-faint focus:border-video" placeholder="例如：实际是户外直播，或这段是一起 See，不是聊天。" />
                   <span className="mt-1 block text-right tnum">{[...otherText].length} / 200</span>
                 </label>
               )}
