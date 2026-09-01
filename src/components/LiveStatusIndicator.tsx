@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { usePathname } from 'next/navigation'
 
 type LiveWindow = {
   sessions: number
@@ -28,6 +29,7 @@ const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\
 const STATUS_PATH = '/api/content/live-status'
 const REFRESH_MS = 60_000
 const REQUEST_TIMEOUT_MS = 6_000
+const FIRST_VISIT_HINT_KEY = '66archive:live-status-hint:v1'
 /**
  * 观测超过这个时间没更新，就不再把圆点显示成「在播」或「未开播」。
  *
@@ -138,17 +140,40 @@ function dayLabel(date: string) {
  * 但降级为中性「待确认」状态，不把旧结论冒充当前事实。
  */
 export function LiveStatusIndicator() {
+  const pathname = usePathname()
   const [snapshot, setSnapshot] = useState<LiveStatusSnapshot | null>(null)
   const [open, setOpen] = useState(false)
   const [now, setNow] = useState(() => Date.now())
   const [mounted, setMounted] = useState(false)
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null)
+  const [showFirstVisitHint, setShowFirstVisitHint] = useState(false)
   const rootRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    // Portal 只能在浏览器端挂到 document.body。
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true)
+    // 路由切换会替换页头节点；每次都重新取得当前 SiteNav 预留的位置。
+    const frame = requestAnimationFrame(() => {
+      setPortalTarget(document.querySelector<HTMLElement>('[data-live-status-slot]'))
+      setMounted(true)
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [pathname])
+
+  useEffect(() => {
+    const forceHint = process.env.NODE_ENV !== 'production'
+      && new URLSearchParams(window.location.search).get('hint') === 'live'
+    try {
+      if (!forceHint && window.localStorage.getItem(FIRST_VISIT_HINT_KEY)) return
+      if (!forceHint) window.localStorage.setItem(FIRST_VISIT_HINT_KEY, 'shown')
+    } catch {
+      // 隐私模式或存储被禁用时照常显示；提示本身不值得阻塞页面。
+    }
+    const showFrame = requestAnimationFrame(() => setShowFirstVisitHint(true))
+    const hideTimer = window.setTimeout(() => setShowFirstVisitHint(false), 5_000)
+    return () => {
+      cancelAnimationFrame(showFrame)
+      window.clearTimeout(hideTimer)
+    }
   }, [])
 
   useEffect(() => {
@@ -240,7 +265,7 @@ export function LiveStatusIndicator() {
     return durationLabel((now - Date.parse(snapshot.startedAt)) / 60_000)
   }, [now, snapshot])
 
-  if (!mounted) return null
+  if (!mounted || !portalTarget) return null
   const stale = snapshot === null || now - Date.parse(snapshot.observedAt) > STALE_LIMIT_MS
   const mode: LiveStatusSnapshot['status'] | 'unknown' = stale ? 'unknown' : snapshot.status
   const live = mode === 'live'
@@ -258,22 +283,25 @@ export function LiveStatusIndicator() {
       <button
         ref={buttonRef}
         type="button"
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => {
+          setShowFirstVisitHint(false)
+          setOpen((value) => !value)
+        }}
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-label={label}
         data-live-status={mode}
-        className={`ui-press fixed bottom-5 left-4 z-40 flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition-[border-color,background-color,color,box-shadow] sm:bottom-8 sm:left-8 ${
+        className={`ui-press flex h-11 items-center gap-2 rounded-sm text-sm font-semibold tracking-tight transition-colors ${
           live
-            ? 'border-today/40 bg-today/10 text-ink shadow-[0_0_24px_rgba(255,107,117,0.12)] hover:border-today/70'
+            ? 'text-ink hover:text-today'
             : offline
-              ? 'border-line/80 bg-surface/60 text-faint hover:border-muted/70 hover:text-muted'
-              : 'border-line/80 bg-surface/80 text-muted hover:border-muted hover:text-ink'
+              ? 'text-ink/85 hover:text-ink'
+              : 'text-muted hover:text-ink'
         }`}
       >
-        <span className="relative flex h-4 w-4 items-center justify-center" aria-hidden>
-          {live && <span className="absolute h-4 w-4 animate-ping rounded-full bg-today/20 motion-reduce:animate-none" />}
-          <span className={`relative h-2 w-2 rounded-full ${
+        <span className="relative flex h-3 w-3 items-center justify-center" aria-hidden>
+          {live && <span className="absolute h-3 w-3 animate-ping rounded-full bg-today/20 motion-reduce:animate-none" />}
+          <span className={`relative h-1.5 w-1.5 rounded-full ${
             live
               ? 'bg-today shadow-[0_0_10px_rgba(255,107,117,0.8)]'
               : offline
@@ -281,13 +309,23 @@ export function LiveStatusIndicator() {
                 : 'border border-muted bg-transparent'
           }`} />
         </span>
+        <span>女流编年史</span>
       </button>
+
+      {showFirstVisitHint && !open && (
+        <p
+          role="status"
+          className="ui-sheet-in pointer-events-none absolute left-0 top-full z-50 mt-1.5 whitespace-nowrap rounded-lg border border-line/80 bg-base/95 px-3 py-2 text-meta font-normal tracking-normal text-muted shadow-[0_12px_36px_rgba(0,0,0,0.24)] backdrop-blur-xl"
+        >
+          点击查看直播间状态
+        </p>
+      )}
 
       {open && (
         <section
           role="dialog"
           aria-label="直播状态"
-          className="ui-sheet-in fixed bottom-20 left-4 right-4 z-50 w-auto overflow-hidden rounded-2xl border border-line/90 bg-base/95 shadow-[0_24px_80px_rgba(0,0,0,0.38)] backdrop-blur-xl sm:bottom-[5.5rem] sm:left-8 sm:right-auto sm:w-[min(22rem,calc(100vw-4rem))]"
+          className="ui-sheet-in absolute left-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-line/90 bg-base/95 shadow-[0_24px_80px_rgba(0,0,0,0.38)] backdrop-blur-xl"
         >
           <div className="p-5 sm:p-6">
             <div className="flex items-start gap-3">
@@ -370,7 +408,7 @@ export function LiveStatusIndicator() {
     </div>
   )
 
-  return createPortal(indicator, document.body)
+  return createPortal(indicator, portalTarget)
 }
 
 function LiveWindowStat({ label, value }: { label: string; value: LiveWindow }) {

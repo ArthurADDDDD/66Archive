@@ -9,6 +9,7 @@ import { applyTagSelection, EMPTY_TAG_SELECTION, EntryTagFilter, hasTagSelection
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
 import { SearchField } from './SearchField'
+import { MobileQuickNav } from './ScrollAffordances'
 import { SiteNav } from './SiteNav'
 
 type Era = {
@@ -374,7 +375,31 @@ export function Timeline({
 
   return (
     <>
-      <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
+      <MobileQuickNav
+        active="archive"
+        tools={
+          <>
+            <SearchField
+              value={filters.q}
+              onChange={(v) => set({ q: v })}
+              placeholder={`搜索 ${entries.length.toLocaleString()} 条记录`}
+              ariaLabel="搜索全部记录"
+              inputClassName="h-9 w-[clamp(9rem,22vw,16rem)] bg-transparent px-3 pr-8 text-meta text-ink placeholder:text-faint focus:outline-none"
+              iconClassName="shrink-0"
+            />
+            <button
+              type="button"
+              onClick={() => setSheetOpen(true)}
+              aria-label={dirtyCount > 0 ? `筛选记录，已启用 ${dirtyCount} 项` : '筛选记录'}
+              className="ui-press flex h-11 shrink-0 items-center rounded-full px-3 text-meta text-muted transition-colors hover:bg-raised/70 hover:text-ink sm:h-9"
+            >
+              筛选{dirtyCount > 0 && <span className="ml-1.5 tnum text-live">{dirtyCount}</span>}
+            </button>
+          </>
+        }
+      />
+
+      <header className="ui-slide-down border-b border-line bg-base/95">
         <div className="site-header-container flex flex-wrap items-center gap-2 px-page py-3 sm:flex-nowrap sm:gap-3">
           <SiteNav active="archive" />
           {/* 手机端 SearchField 已经塌成一个 44px 圆形图标——原本的 order-3 w-full

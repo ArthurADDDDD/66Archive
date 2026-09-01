@@ -2,11 +2,11 @@
 
 import { useEffect, useId, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react'
 import { createPortal } from 'react-dom'
-import Link, { useLinkStatus } from 'next/link'
+import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useSiteCopy } from './LiveContentProvider'
 
-const ITEMS = [
+export const NAV_ITEMS = [
   { href: '/', label: '首页', id: 'home' },
   { href: '/chronicle/', label: '编年史', id: 'chronicle' },
   { href: '/archive/', label: '录播室', id: 'archive' },
@@ -19,23 +19,26 @@ const ITEMS = [
 
 /**
  * 主导航。
- * 桌面（sm+）：横向 pill 行，与之前一致，不做任何改动。
- * 移动端（<sm）：顶部一行 = 站名 + 「当前栏目 / Menu」按钮；
+ * 宽屏（lg+）：横向 pill 行。
+ * 手机与中屏（<lg）：顶部一行 = 直播状态/站名 + 「当前栏目 / Menu」按钮；
  * 点击展开整宽 dropdown（不引入任何 drawer 库）——触控目标 ≥44px、
  * Escape / 点击外部关闭、键盘可达、当前栏目明显、无横向滚动。
  */
 export function SiteNav({
   active,
   compact = false,
+  statusSlot = true,
 }: {
   active: 'home' | 'chronicle' | 'archive' | 'games' | 'series' | 'stats' | 'gallery' | 'contact' | 'entry'
   compact?: boolean
+  /** 快捷导航里关闭，保证全站只有页头主导航承载直播状态入口。 */
+  statusSlot?: boolean
 }) {
   const router = useRouter()
   const pathname = usePathname()
   // 导航显示名可以由后台改（去哪个页面是固定的）。拉不到就用基线里的名字。
   const copy = useSiteCopy()
-  const items = ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
+  const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
   const [open, setOpen] = useState(false)
   // 一个页面上可能同时存在两个 SiteNav（页头一个 + 下拉唤起的快捷导航一个），
   // 菜单面板的 id 必须各自唯一，否则 aria-controls 会指向错的那一个。
@@ -156,29 +159,17 @@ export function SiteNav({
   }, [open])
 
   return (
-    <div ref={rootRef} className="flex min-w-0 flex-1 items-center gap-3 sm:flex-none sm:gap-5">
+    <div ref={rootRef} className="flex min-w-0 flex-1 items-center gap-2 lg:flex-none lg:gap-5">
       {!compact && (
-        <Link
-          href="/"
-          prefetch={false}
-          onMouseEnter={() => queueIntentPrefetch('/', active === 'home')}
-          onMouseLeave={() => cancelIntentPrefetch()}
-          onFocus={() => queueIntentPrefetch('/', active === 'home')}
-          onBlur={() => cancelIntentPrefetch()}
-          onPointerDown={() => cancelIntentPrefetch()}
-          onClick={(event) => beginNavigation(event, '/', active === 'home')}
-          data-analytics-event="nav.click"
-          data-analytics-target="home"
-          className="ui-press flex h-11 shrink-0 items-center rounded-sm text-sm font-semibold tracking-tight text-ink transition-colors hover:text-live"
-        >
-          女流编年史
-        </Link>
+        statusSlot
+          ? <span data-live-status-slot className="flex h-11 min-w-[5.5rem] shrink-0 items-center" />
+          : <span className="flex h-11 shrink-0 items-center text-sm font-semibold tracking-tight text-ink">女流编年史</span>
       )}
 
       {/* 桌面：pill 行（保持原样） */}
       <nav
         aria-label="主导航"
-        className="hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/70 p-1 shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-[border-color,box-shadow] duration-300 hover:border-muted/70 hover:shadow-[0_10px_35px_rgba(0,0,0,0.18)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex"
+        className="hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/70 p-1 shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-[border-color,box-shadow] duration-300 hover:border-muted/70 hover:shadow-[0_10px_35px_rgba(0,0,0,0.18)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex"
       >
         {items.map((item) => {
           const selected = active === item.id || (active === 'entry' && item.id === 'archive')
@@ -196,10 +187,10 @@ export function SiteNav({
               data-analytics-event="nav.click"
               data-analytics-target={item.id}
               aria-current={selected ? 'page' : undefined}
-              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-2.5 py-1.5 text-meta sm:px-3 ${selected ? 'bg-ink text-[#12141C] shadow-[0_4px_14px_rgba(230,228,239,0.12)]' : 'text-muted hover:bg-raised hover:text-ink'
+              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-meta ${selected ? 'bg-ink text-[#12141C] shadow-[0_4px_14px_rgba(230,228,239,0.12)]' : 'text-muted hover:bg-raised hover:text-ink'
                 }`}
             >
-              <NavItemLabel label={item.label} />
+              {item.label}
             </Link>
           )
         })}
@@ -213,11 +204,11 @@ export function SiteNav({
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
-        className="ui-press ml-auto flex h-11 shrink-0 items-center gap-2 rounded-full border border-line/80 bg-surface/70 px-3.5 text-meta text-muted transition-colors hover:border-muted/70 hover:text-ink sm:hidden"
+        className="ui-press ml-auto flex h-11 min-w-0 shrink items-center gap-1.5 rounded-full border border-line/80 bg-surface/70 px-3 text-meta text-muted transition-colors hover:border-muted/70 hover:text-ink lg:hidden"
       >
-        <span className="flex items-center gap-1.5">
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-live" />
-          {current.label}
+        <span className="flex min-w-0 items-center gap-1.5">
+          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-live" />
+          <span className="truncate">{current.label}</span>
         </span>
         <span aria-hidden className={`text-faint transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
           ⌄
@@ -236,7 +227,7 @@ export function SiteNav({
           id={menuId}
           role="menu"
           ref={panelRef}
-          className="ui-sheet-in fixed inset-x-0 z-[60] border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:hidden"
+          className="ui-sheet-in fixed inset-x-0 z-[60] border-b border-line bg-base shadow-[0_24px_60px_rgba(0,0,0,0.35)] lg:hidden"
           style={{ top: panelTop }}
         >
           <div className="site-container-wide px-page pb-4 pt-2">
@@ -272,7 +263,7 @@ export function SiteNav({
                         aria-hidden
                         className={`h-1.5 w-1.5 rounded-full ${selected ? 'bg-live' : 'bg-line'}`}
                       />
-                      <NavItemLabel label={item.label} />
+                      {item.label}
                       {selected && <span className="ml-auto text-meta text-live">当前</span>}
                     </Link>
                   </li>
@@ -284,19 +275,5 @@ export function SiteNav({
         document.body,
       )}
     </div>
-  )
-}
-
-/** Link 自己知道导航何时 pending；把这个状态留在子节点里，点击后下一帧就给出反馈。 */
-function NavItemLabel({ label }: { label: string }) {
-  const { pending } = useLinkStatus()
-  return (
-    <span className="inline-flex items-center" aria-live="polite">
-      <span className={pending ? 'opacity-70' : undefined}>{pending ? `${label}打开中` : label}</span>
-      <span
-        aria-hidden
-        className={`ml-1 inline-block h-1.5 w-1.5 rounded-full transition-colors ${pending ? 'animate-pulse bg-current' : 'bg-transparent'}`}
-      />
-    </span>
   )
 }

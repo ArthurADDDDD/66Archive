@@ -127,6 +127,7 @@ export function LivePageNote({
   eyebrowColor,
   signature,
   footer,
+  className = '',
 }: {
   pageId: string
   eyebrowColor?: string
@@ -134,6 +135,7 @@ export function LivePageNote({
   signature?: string
   /** 署名同一行右侧的补充（例如收录条数），可留空。 */
   footer?: React.ReactNode
+  className?: string
 }) {
   const block = useCopyBlock('pages', pageId)
   const paragraphs = block.lede.split('\n').map((line) => line.trim()).filter((line) => line.length > 0)
@@ -141,14 +143,9 @@ export function LivePageNote({
     ? [paragraphs.slice(0, Math.ceil(paragraphs.length / 2)), paragraphs.slice(Math.ceil(paragraphs.length / 2))]
     : [paragraphs]
   return (
-    <figure className="relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12">
+    <figure className={`relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12 ${className}`}>
       <div className="relative">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <span className="rounded-full border border-video/30 bg-video/10 px-3 py-1 text-meta font-medium tracking-[0.12em] text-video">
-            编者语
-          </span>
-          {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
-        </div>
+        {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
         {block.title && <h2 className="measure-hero mt-4 text-h2 font-semibold text-ink">{block.title}</h2>}
 
         <blockquote className="mt-7 grid gap-5 text-ink/90 xl:grid-cols-2 xl:gap-x-12">

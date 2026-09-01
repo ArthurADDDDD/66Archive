@@ -249,7 +249,7 @@ export function BgmPlayer() {
         <source src={track.m4a} type="audio/mp4; codecs=mp4a.40.2" />
       </audio>
 
-      <div className="group fixed bottom-5 left-[4.5rem] z-40 flex items-center overflow-hidden rounded-full border border-line/80 bg-surface/80 backdrop-blur sm:bottom-8 sm:left-[5.5rem]">
+      <div className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/70 bg-surface/70 opacity-45 backdrop-blur transition-opacity hover:opacity-100 focus-within:opacity-100 sm:bottom-8 sm:left-8">
         <button
           type="button"
           data-bgm-control

@@ -71,32 +71,26 @@ export function ArchiveLoader() {
 function ArchiveLoadingShell({ failed, onRetry }: { failed: boolean; onRetry: () => void }) {
   return (
     <>
-      <header className="ui-slide-down sticky top-0 z-30 border-b border-line bg-base/95 backdrop-blur">
+      <header className="ui-slide-down border-b border-line bg-base/95">
         <div className="site-header-container flex items-center gap-3 px-page py-3">
           <SiteNav active="archive" />
         </div>
       </header>
       <main className="ui-page-in site-container-wide px-page pb-16 pt-10" aria-busy={!failed}>
-        <ArchiveBreadcrumb />
-        <section className="mt-8 rounded-xl border border-line bg-surface/45 px-5 py-10 sm:px-8">
-          {failed ? (
-            <div role="alert">
-              <p className="text-lg font-semibold text-ink">档案数据暂时没有加载成功</p>
-              <p className="mt-2 measure-body text-body text-muted">页面已经打开，可以直接重试；其他栏目和背景音乐不会被这次失败卡住。</p>
-              <button type="button" onClick={onRetry} className="ui-press mt-5 rounded-full border border-live/60 bg-live/5 px-5 py-2.5 text-sm text-live hover:bg-live/10">
-                重新加载档案
-              </button>
-            </div>
-          ) : (
-            <div role="status" aria-live="polite">
-              <p className="text-lg font-semibold text-ink">录播室已经打开</p>
-              <p className="mt-2 measure-body text-body text-muted">正在载入完整档案，搜索和筛选马上就绪。</p>
-              <span aria-hidden className="mt-6 block h-1.5 w-full max-w-md overflow-hidden rounded-full bg-line/60">
-                <span className="block h-full w-1/3 animate-pulse rounded-full bg-live" />
-              </span>
-            </div>
-          )}
-        </section>
+        {failed && (
+          <>
+            <ArchiveBreadcrumb />
+            <section className="mt-8 rounded-xl border border-line bg-surface/45 px-5 py-10 sm:px-8">
+              <div role="alert">
+                <p className="text-lg font-semibold text-ink">档案数据暂时没有加载成功</p>
+                <p className="mt-2 measure-body text-body text-muted">页面已经打开，可以直接重试；其他栏目和背景音乐不会被这次失败卡住。</p>
+                <button type="button" onClick={onRetry} className="ui-press mt-5 rounded-full border border-live/60 bg-live/5 px-5 py-2.5 text-sm text-live hover:bg-live/10">
+                  重新加载档案
+                </button>
+              </div>
+            </section>
+          </>
+        )}
       </main>
     </>
   )

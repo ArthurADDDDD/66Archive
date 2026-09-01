@@ -91,10 +91,11 @@ export default function ContactPage() {
           </a>
         </div>
 
-        <section aria-label="贡献者与来源致谢" className="mt-16 border-t border-line pt-10">
+        <section aria-label="贡献者与来源致谢" className="mt-16 flex flex-col border-t border-line pt-10">
           <LivePageNote
             pageId="contact-credits"
             eyebrowColor="#E0A244"
+            className="order-2 mt-8 sm:order-none sm:mt-0"
             footer={(
               <>
                 已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
@@ -105,7 +106,7 @@ export default function ContactPage() {
             )}
           />
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+          <div className="order-1 grid gap-4 sm:order-none sm:mt-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
             <MaintainerCredits />
 
             <div className="rounded-2xl border border-line bg-surface/55 p-6">
