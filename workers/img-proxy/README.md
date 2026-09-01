@@ -15,7 +15,7 @@
 
 `/gallery/**`、`/images/**` 以及其它以 `/` 开头的站内绝对路径同样始终原样返回。画廊性能优化是独立问题，不经过这个 Worker。
 
-Worker 只做两件事：带上来源平台认可的 `Referer`；把请求交给 Cloudflare Image Resizing 按 `w` 缩放（账号未开通该能力时会退化为原图代理）。每次重定向都会重新检查同一份 policy，非允许 host 返回 403，避免变成开放代理。
+Worker 只做两件事：带上来源平台认可的 `Referer`；把请求交给 Cloudflare Image Resizing 按 `w` 缩放。转换或上游请求失败时当前实现返回 502，不会自动放宽 allowlist 或静默改走别的来源。每次重定向都会重新检查同一份 policy，非允许 host 返回 403，避免变成开放代理。
 
 ## NEXT_PUBLIC_IMG_PROXY
 
