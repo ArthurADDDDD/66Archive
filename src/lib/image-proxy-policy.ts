@@ -1,30 +1,49 @@
 export type ImageProxyFallback = 'direct' | 'weserv'
+export type ImageProxyRoute = 'direct' | 'weserv' | 'worker'
 
 export type ImageProxyPolicy = {
   /** Exact hostname or parent-domain suffix. `example.com` also matches `*.example.com`. */
   suffix: string
   /** Referer sent by the self-hosted Worker when fetching the upstream image. */
   referer: string
-  /** Behaviour while NEXT_PUBLIC_IMG_PROXY is intentionally unset. */
+  /** Production frontend route selected after measurement. */
+  route: ImageProxyRoute
+  /** Fallback used only when route=worker but NEXT_PUBLIC_IMG_PROXY is absent. */
   fallback: ImageProxyFallback
+  /** Whether the Worker may fetch this origin during explicit/manual requests. */
+  workerAllowed: boolean
 }
 
 /**
- * Single source of truth for image origins that are allowed to enter our
- * self-hosted proxy. Keep this deliberately narrow: a host belongs here only
- * when there is a concrete compatibility or performance reason to proxy it.
+ * Single source of truth for image-origin policy. Frontend routing and Worker
+ * admission both read this file, but those are deliberately separate decisions:
+ * an origin can be safe to benchmark through the Worker without being selected
+ * as the production frontend route.
  *
- * Current evidence:
- * - hdslb.com: proxying materially reduces bytes/latency and avoids hotlink
- *   fragility. Until our Worker is validated, keep the existing weserv path.
- * - acfun.cn: direct images can be very large/slow, so it is a Worker candidate;
- *   keep today's direct behaviour until NEXT_PUBLIC_IMG_PROXY is enabled.
+ * 2026-09-01 deployed-Worker measurements:
+ * - hdslb.com: weserv remained materially faster on both cold and warm requests,
+ *   with essentially the same transfer size. Keep production on weserv.
+ * - acfun.cn: Worker warm-cache performance and transfer size were excellent,
+ *   but cold transformations were materially slower than direct origin. Keep
+ *   production direct until a later benchmark justifies changing that tradeoff.
  *
- * YouTube, Douyu and Youku covers stay direct and therefore do not appear here.
+ * YouTube, Douyu and Youku covers stay direct and are not Worker-allowlisted.
  */
 export const IMAGE_PROXY_POLICY = [
-  { suffix: 'hdslb.com', referer: 'https://www.bilibili.com/', fallback: 'weserv' },
-  { suffix: 'acfun.cn', referer: 'https://www.acfun.cn/', fallback: 'direct' },
+  {
+    suffix: 'hdslb.com',
+    referer: 'https://www.bilibili.com/',
+    route: 'weserv',
+    fallback: 'weserv',
+    workerAllowed: true,
+  },
+  {
+    suffix: 'acfun.cn',
+    referer: 'https://www.acfun.cn/',
+    route: 'direct',
+    fallback: 'direct',
+    workerAllowed: true,
+  },
 ] as const satisfies readonly ImageProxyPolicy[]
 
 export function getImageProxyPolicy(hostname: string): ImageProxyPolicy | null {
