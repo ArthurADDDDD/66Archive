@@ -206,7 +206,7 @@
     duration_min: 33
     cover: "https://i0.hdslb.com/bfs/archive/c055859cee3fd4679e779d4a9dc8ec91702637f5.png"
     games: [devil-may-cry-5]
-    tags: [户外]
+    tags: [户外, 发布会]
     segments:
       - at: "00:00:00"
         label: "鬼泣5发布会后台（画质感人敬请谅解）"
@@ -717,6 +717,7 @@
     duration_min: 66
     cover: "https://i0.hdslb.com/bfs/archive/49cfbe4c5162e1850edd2256f68bb2d5705d93ef.png"
     games: [sekiro]
+    tags: [发布会]
     sources:
       - url: https://www.bilibili.com/video/BV18b411t7i5
         kind: replay

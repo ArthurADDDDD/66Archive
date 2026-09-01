@@ -72,6 +72,11 @@
   binds_series: together-see
   description: "直播中陪观众一起观看视频、节目、发布会、PV、预告等内容的长期节目。"
 
+- name: 发布会
+  group: series
+  binds_series: press-events
+  description: "发布会、直面会、PV / 预告，以及游戏和平台相关的展会、盛典、峰会与线下活动。"
+
 # —— 里程碑：写首页高光时用的人工标记，代码不读取，仅供检索与人工回溯 ——
 - name: 首作
   group: milestone

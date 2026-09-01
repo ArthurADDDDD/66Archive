@@ -217,7 +217,7 @@
     duration_min: 443
     cover: "https://i0.hdslb.com/bfs/archive/74aa236cab1abf0c65058c45027b8999a6581c04.png"
     games: []
-    tags: [户外]
+    tags: [户外, 发布会]
     segments:
       - at: "00:00:00"
         label: "E3游戏展现场"
@@ -672,7 +672,7 @@
     platform: douyu
     confidence: high
     duration_min: 32
-    tags: [户外]
+    tags: [户外, 发布会]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/06/14/3ba147824fda97b6610e99a1cd1740d0.jpg"
     sources:
       - url: https://v.douyu.com/show/8pa9v5OKmLqMVrqA
