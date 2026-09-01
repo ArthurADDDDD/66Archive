@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>系列标签人工复核</title>
+<style>
+  :root { --bg:#11141b; --panel:#191e28; --line:#303846; --ink:#eef2f7; --muted:#9ca8ba; --blue:#76c8ff; --good:#67d498; --warn:#f0ba62; --bad:#ff879e; }
+  * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif; }
+  button,input,textarea,select { font:inherit; } button { cursor:pointer; } .app { display:grid; grid-template-columns:340px minmax(0,1fr); min-height:100vh; }
+  aside { position:sticky; top:0; height:100vh; overflow:auto; border-right:1px solid var(--line); background:var(--panel); padding:14px; }
+  main { padding:28px; max-width:1080px; } h1 { margin:0; font-size:25px; } h2 { margin:0 0 8px; font-size:15px; } .sub { color:var(--muted); margin:7px 0 16px; }
+  input,select,textarea { width:100%; color:var(--ink); background:#10141c; border:1px solid var(--line); border-radius:7px; padding:8px 10px; } textarea { min-height:74px; resize:vertical; }
+  .stack { display:grid; gap:8px; } .controls { margin:15px 0; } .stats { color:var(--muted); font-size:12px; margin:10px 0; } .list { border-top:1px solid var(--line); }
+  .row { width:100%; text-align:left; color:var(--ink); background:transparent; border:0; border-bottom:1px solid var(--line); padding:10px 4px; } .row:hover,.row.active { background:#222b3a; }
+  .row-title { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:13px; } .row-meta { color:var(--muted); font-size:11px; margin-top:3px; }
+  .badge { display:inline-block; margin:3px 4px 0 0; padding:1px 6px; border-radius:999px; font-size:11px; background:#273246; color:var(--blue); } .badge.suggest { background:#42371f; color:var(--warn); } .badge.done { background:#1e4634; color:var(--good); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin-top:16px; } .meta { color:var(--muted); font-size:12px; }
+  .tags { display:flex; gap:10px; flex-wrap:wrap; } .check { display:flex; align-items:center; gap:7px; padding:9px 11px; border:1px solid var(--line); border-radius:7px; background:#121721; } .check input { width:auto; accent-color:var(--good); }
+  .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; } .btn { border:1px solid var(--line); border-radius:7px; padding:8px 11px; background:#222b3a; color:var(--ink); } .btn.good { background:#173c2a; border-color:#2f7b55; color:#a9efc6; } .btn.bad { background:#461e29; border-color:#8b394b; color:#ffb0be; } .btn:hover { filter:brightness(1.15); }
+  .evidence { white-space:pre-wrap; overflow-wrap:anywhere; color:#cbd4e0; } .source { display:block; color:var(--blue); overflow-wrap:anywhere; margin:5px 0; } .segment { color:#cbd4e0; margin:4px 0; } code { color:#b7c9dc; }
+  .empty { padding:50px; text-align:center; color:var(--muted); } .notice { border-left:3px solid var(--warn); padding:9px 11px; color:#efd39c; background:#332b1d; margin-top:14px; }
+  @media (max-width:780px) { .app { display:block; } aside { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); } main { padding:18px; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h2>系列标签人工复核</h2>
+    <p class="sub">只生成审校 JSON，不会修改档案。</p>
+    <div class="stack controls">
+      <input id="search" type="search" placeholder="搜索标题、ID、年份">
+      <select id="scope"><option value="">全部候选</option><option value="一起See">一起 See</option><option value="户外">户外</option><option value="聊天">聊天</option><option value="suggested">仅疑似漏标</option><option value="todo">未判定</option><option value="done">已判定</option></select>
+      <button class="btn good" id="export">导出审校 JSON</button>
+      <label class="btn">导入此前 JSON<input id="import" type="file" accept="application/json" hidden></label>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="list" id="list"></div>
+  </aside>
+  <main id="main"><div class="empty">正在读取档案…</div></main>
+</div>
+<script>
+const $=(s)=>document.querySelector(s); const esc=(s)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let ENTRIES=[], TAGS=[], DEC={}, cur=null;
+const currentState=(entry,tag)=>DEC[entry.id]?.tags?.[tag] ?? entry.tags.includes(tag);
+const reviewed=(entry)=>Boolean(DEC[entry.id]?.reviewed);
+function visible(){ const q=$('#search').value.trim().toLowerCase(), scope=$('#scope').value; return ENTRIES.filter(e=>{const text=(e.id+' '+e.date+' '+e.title+' '+e.note).toLowerCase(); if(q&&!text.includes(q))return false; if(scope==='suggested')return e.suggested.length>0; if(scope==='todo')return !reviewed(e); if(scope==='done')return reviewed(e); return !scope||e.current.includes(scope)||e.suggested.includes(scope);}); }
+function renderList(){ const items=visible(), done=ENTRIES.filter(reviewed).length; $('#stats').textContent=`${done} / ${ENTRIES.length} 已人工判定 · 当前 ${items.length} 条`; $('#list').innerHTML=items.map(e=>`<button class="row ${cur===e.id?'active':''}" data-id="${e.id}"><div class="row-title">${esc(e.title)}</div><div class="row-meta">${esc(e.date)} · ${esc(e.id)}</div>${e.current.map(t=>`<span class="badge">${esc(t)}</span>`).join('')}${e.suggested.map(t=>`<span class="badge suggest">疑似 ${esc(t)}</span>`).join('')}${reviewed(e)?'<span class="badge done">已判</span>':''}</button>`).join('')||'<div class="empty">没有符合筛选的条目</div>'; $('#list').querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>select(b.dataset.id)); }
+function select(id){cur=id; renderList(); renderMain();}
+function decision(entry){return DEC[entry.id]??{id:entry.id,tags:Object.fromEntries(TAGS.map(t=>[t,entry.tags.includes(t)])),reviewed:false,note:''};}
+function save(entry,next){DEC[entry.id]={...next,id:entry.id,reviewedAt:new Date().toISOString()}; renderList(); renderMain();}
+function renderMain(){const e=ENTRIES.find(x=>x.id===cur); if(!e){$('#main').innerHTML='<div class="empty">请选择一条记录。</div>';return;} const d=decision(e); $('#main').innerHTML=`<h1>${esc(e.title)}</h1><div class="meta"><code>${esc(e.id)}</code> · ${esc(e.date)} · ${esc(e.platform)} · ${esc(e.type)}${e.durationMin?' · '+e.durationMin+' 分钟':''} · ${esc(e.file)}</div><div class="notice">勾选的是这三个系列标签在该条上“最终应该存在”的状态。点击确认或修改勾选后，才会进入导出的审校计划；不会直接写入 data。</div><section class="card"><h2>人工结论</h2><div class="tags">${TAGS.map(t=>`<label class="check"><input type="checkbox" data-tag="${t}" ${d.tags[t]?'checked':''}> ${t}</label>`).join('')}</div><div class="actions"><button class="btn good" id="confirm">确认当前勾选无误</button><button class="btn bad" id="clear">移除这三个标签</button></div></section><section class="card"><h2>人工备注</h2><textarea id="note" placeholder="写下判断依据、需回看的时间点或不确定原因…">${esc(d.note||'')}</textarea></section><section class="card"><h2>现有标签与机器提示</h2><div>${e.tags.map(t=>`<span class="badge">${esc(t)}</span>`).join('')||'<span class="meta">无标签</span>'}</div>${e.suggested.length?`<p class="meta">标题和分段触发的疑似漏标：${e.suggested.map(esc).join('、')}。这只是候选，不是自动结论。</p>`:''}</section><section class="card"><h2>分段</h2>${e.segments.length?e.segments.map(s=>`<div class="segment"><code>${esc(s.at)}</code>　${esc(s.label)}</div>`).join(''):'<div class="meta">没有已保存分段</div>'}</section><section class="card"><h2>备注</h2><div class="evidence">${esc(e.note||'没有备注')}</div></section><section class="card"><h2>原平台来源</h2>${e.sources.map(s=>`<a class="source" href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.kind||'source')} · ${esc(s.status||'')} · ${esc(s.url)}</a>`).join('')||'<div class="meta">没有来源</div>'}</section>`; $('#main').querySelectorAll('[data-tag]').forEach(input=>input.onchange=()=>{const n=decision(e);n.tags[input.dataset.tag]=input.checked; n.reviewed=true; n.note=$('#note').value; save(e,n);}); $('#confirm').onclick=()=>{const n=decision(e);n.reviewed=true;n.note=$('#note').value;save(e,n)}; $('#clear').onclick=()=>{const n=decision(e);for(const t of TAGS)n.tags[t]=false;n.reviewed=true;n.note=$('#note').value;save(e,n)}; }
+function exportJson(){const decisions=Object.values(DEC).filter(d=>d.reviewed);const payload={version:1,kind:'series-tag-review',createdAt:new Date().toISOString(),reviewTags:TAGS,decisions};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='series-tag-review.json';a.click();URL.revokeObjectURL(a.href);}
+async function boot(){const r=await fetch('/api/candidates');const d=await r.json();ENTRIES=d.entries;TAGS=d.reviewTags;renderList();select(visible()[0]?.id);}
+$('#search').oninput=()=>{renderList();if(!visible().some(e=>e.id===cur))select(visible()[0]?.id)};$('#scope').onchange=()=>{renderList();if(!visible().some(e=>e.id===cur))select(visible()[0]?.id)};$('#export').onclick=exportJson;$('#import').onchange=async e=>{const f=e.target.files[0];if(!f)return;const json=JSON.parse(await f.text());if(json.kind!=='series-tag-review'||!Array.isArray(json.decisions))throw new Error('不是本工具导出的 JSON');DEC=Object.fromEntries(json.decisions.map(d=>[d.id,d]));renderList();renderMain();};
+boot().catch(err=>$('#main').innerHTML=`<div class="empty">读取失败：${esc(err.message)}</div>`);
+</script>
+</body>
+</html>
