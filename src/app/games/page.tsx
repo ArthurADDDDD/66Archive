@@ -9,7 +9,7 @@ import { LivePageHeading } from '@/components/LiveSection'
 
 /**
  * 游戏收藏架（v2 设计）：封面墙 + 「她的游戏库」页头。
- * 封面是首播那天的直播截图（face）；默认按「最近玩过」排，往下滚封面年代往回退。
+ * 封面优先是首播那天的直播截图（face）；默认按「从新到旧」排，游戏列表按页展示。
  * 覆盖 games.yaml 已登记 + 策展游戏；只展示有场次的游戏（v2 口径），
  * 游戏字段的补录进度如实说明——覆盖率是派生值，不是口号。
  */
@@ -23,6 +23,10 @@ export default function GamesPage() {
 
   const played = profiles.filter((p) => p.sessions > 0)
   const longest = [...played].sort((a, b) => b.spanDays - a.spanDays)[0]
+  const latestArchiveDate = timeline.reduce<string | null>(
+    (latest, entry) => (!latest || entry.date > latest ? entry.date : latest),
+    null,
+  )
 
   const library: LibraryGame[] = played.map((p) => ({
     id: p.id,
@@ -51,7 +55,7 @@ export default function GamesPage() {
       <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
         <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
         <p className="measure-body mt-5 text-body text-muted">
-          {played.length} 个游戏。
+          {played.length} 个游戏，档案收录至 {latestArchiveDate ?? '待补录'}。
           {longest?.firstDate && longest?.lastDate && (
             <>
               {' '}跨得最长的是《{longest.name}》，从 {longest.firstDate} 到 {longest.lastDate}，

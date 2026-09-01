@@ -1810,7 +1810,7 @@ export type GameProfile = {
   hoursLabel: string
   /** 最近一次场次的封面（详情页用） */
   cover: string | null
-  /** 首播那天的封面（游戏库墙用——默认按「最近玩过」排，往下滚封面年代跟着首播年份往回退） */
+  /** 首播那天的封面（游戏库墙用）；无截图时回退到 games.yaml 的已核验 cover */
   face: string | null
   /** 相邻场次间最长中断天数（≥180 天才算「又打开了」）；没有长中断为 0 */
   comebackDays: number
@@ -1849,6 +1849,7 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
 
   const totalMinutes = matches.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   const latestCover = matches.find((e) => e.cover)?.cover ?? null
+  const registeredCover = registered?.cover ?? null
   const name = curated?.name ?? registered?.name ?? gameId
   const heroStory = GAME_HERO_STORIES[gameId]
   const oneLiner = heroStory?.oneLiner
@@ -1881,8 +1882,10 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     hoursLabel: formatDuration(totalMinutes),
     cover: heroStory?.cover
       ? proxyImage(heroStory.cover, 900)
-      : latestCover ? proxyImage(latestCover, 900) : null,
-    face: firstCover ? proxyImage(firstCover ?? undefined, 480) : null,
+      : latestCover ? proxyImage(latestCover, 900) : registeredCover ? proxyImage(registeredCover, 900) : null,
+    face: firstCover
+      ? proxyImage(firstCover, 480)
+      : registeredCover ? proxyImage(registeredCover, 480) : null,
     comebackDays,
     spanDays: first && last ? daysBetween(first.date, last.date) : 0,
     oneLiner,
