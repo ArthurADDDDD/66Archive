@@ -1,6 +1,5 @@
-import { getDataset, toTimelineEntries } from '@/lib/data'
-import { Timeline } from '@/components/Timeline'
 import { BackToTop } from '@/components/ScrollAffordances'
+import { ArchiveLoader } from '@/components/ArchiveLoader'
 
 /**
  * 录播室：档案模式。完整 Timeline，能力一条不丢，搜索/筛选/年份/来源全部保留。
@@ -8,33 +7,10 @@ import { BackToTop } from '@/components/ScrollAffordances'
  * （静态导出无法在服务端读 searchParams）。
  */
 export default function ArchivePage() {
-  const ds = getDataset()
-  const allEntries = toTimelineEntries(ds)
-  const visibleEntries =
-    process.env.NODE_ENV === 'development' && !ds.isDemo
-      ? allEntries.filter((entry) => entry.uncheckedCount === 0)
-      : allEntries
-
   return (
     <>
-      <Timeline
-        entries={visibleEntries}
-        isDemo={ds.isDemo}
-        hiddenUnreviewed={allEntries.length - visibleEntries.length}
-        extra={<ArchiveBreadcrumb />}
-      />
+      <ArchiveLoader />
       <BackToTop />
     </>
-  )
-}
-
-/** 录播室页头只保留当前页面标识；年份范围和跨页跳转在这里都属于重复信息。 */
-function ArchiveBreadcrumb() {
-  return (
-    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live [&~p]:hidden [&~span]:hidden">
-      <span>Chronicle</span>
-      <span aria-hidden className="text-faint/50">·</span>
-      <span>录播室</span>
-    </div>
   )
 }

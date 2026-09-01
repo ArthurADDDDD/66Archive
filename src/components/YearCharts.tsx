@@ -32,6 +32,7 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
             <Link
               key={year}
               href={`/archive/?y=${year}`}
+              prefetch={false}
               className="group flex h-full min-w-[1.875rem] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
               title={`${year} 年 · ${row.count.toLocaleString()} 条`}
             >

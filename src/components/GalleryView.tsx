@@ -243,6 +243,7 @@ function Lightbox({
             )}
             <Link
               href={`/archive/?y=${item.year}`}
+              prefetch={false}
               data-analytics-event="nav.click"
               data-analytics-target="archive"
               className="ui-press rounded-sm border border-line px-2 py-1 text-muted transition-colors hover:border-live/60 hover:text-live"

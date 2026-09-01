@@ -137,6 +137,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
               <div className="mt-8">
                 <Link
                   href={ctaHref}
+                  prefetch={false}
                   className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
                 >
                   在编年史里查看全部相关记录

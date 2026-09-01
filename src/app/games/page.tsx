@@ -43,7 +43,7 @@ export default function GamesPage() {
       <BackToTop />
       <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="games" />
-        <Link href="/archive/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
+        <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
           打开全部 {timeline.length.toLocaleString()} 条记录 →
         </Link>
       </header>

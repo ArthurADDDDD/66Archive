@@ -372,7 +372,7 @@ export function GalleryBoard({
               {y === UNDATED ? (
                 <span className="shrink-0 text-meta text-faint">还没核实出拍摄年份</span>
               ) : (
-                <Link href={`/archive/?y=${y}`} className="ui-press shrink-0 rounded-sm text-meta text-faint transition-colors hover:text-live">
+                <Link href={`/archive/?y=${y}`} prefetch={false} className="ui-press shrink-0 rounded-sm text-meta text-faint transition-colors hover:text-live">
                   这一年的编年史 →
                 </Link>
               )}

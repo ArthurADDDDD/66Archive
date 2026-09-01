@@ -117,7 +117,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="entry" />
-        <Link href={backHref} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+        <Link href={backHref} prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
           ← {backLabel}
         </Link>
       </header>
@@ -126,6 +126,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       <section className="site-container px-page pb-10 pt-6 sm:pb-14 sm:pt-10">
         <Link
           href={backHref}
+          prefetch={false}
           className="ui-press -my-2 inline-block rounded-sm py-2 text-meta text-muted underline underline-offset-4 transition-colors hover:text-live tnum lg:hidden"
         >
           ← {backLabel}
@@ -247,7 +248,11 @@ function Chip({ href, color, children }: { href?: string; color?: string; childr
     'inline-flex min-h-[2.25rem] items-center gap-2 rounded-full border border-line bg-surface/50 px-3 py-1.5 text-meta text-muted'
   if (!href) return <span className={shell}>{inner}</span>
   return (
-    <Link href={href} className={`ui-press group ${shell} transition-colors hover:border-muted hover:text-ink`}>
+    <Link
+      href={href}
+      prefetch={href.startsWith('/archive/') ? false : undefined}
+      className={`ui-press group ${shell} transition-colors hover:border-muted hover:text-ink`}
+    >
       {inner}
     </Link>
   )
