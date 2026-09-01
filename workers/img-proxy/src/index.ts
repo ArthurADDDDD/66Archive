@@ -5,7 +5,8 @@ import { getImageProxyPolicy } from '../../../src/lib/image-proxy-policy'
  *
  * 只做两件事：
  * 1. 带上各平台自己认可的 Referer，绕开防盗链。
- * 2. 交给 Cloudflare Image Resizing 按需缩放（未开通该功能的账号会静默跳过，退化为原图代理）。
+ * 2. 交给 Cloudflare Image Resizing 按需缩放；转换或上游请求失败时返回 502，
+ *    不会为了兜底而放宽 allowlist。
  *
  * 不是通用代理：允许进入 Worker 的 host 与前端共用
  * src/lib/image-proxy-policy.ts 这一份 policy，避免两边再次漂移。
