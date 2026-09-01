@@ -115,7 +115,7 @@ export function LivePageIntro({
  * 编者语。
  *
  * 一段第一人称的长文字，和周围「一条条事实」的版式要能一眼分开，所以做成一张
- * 带引号的卡片：右上角一个大引号，末尾一行署名与统计。
+ * 编辑说明卡片：末尾可放一行署名与统计。
  *
  * 宽度上刻意不套 `measure-body`：那条阅读宽度到 70rem 就封顶，在宽屏上变成一个
  * 定死的像素值，右边界比同屏其它卡片短一截——看起来像没对齐，而不是像排版。
@@ -142,14 +142,6 @@ export function LivePageNote({
     : [paragraphs]
   return (
     <figure className="relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12">
-      {/* 装饰性引号：大字淡色压在右上角，纯装饰，不进无障碍树。 */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute right-3 top-3 select-none font-serif text-[9rem] leading-none text-video/15 sm:right-8 sm:text-[12rem]"
-      >
-        “
-      </span>
-
       <div className="relative">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <span className="rounded-full border border-video/30 bg-video/10 px-3 py-1 text-meta font-medium tracking-[0.12em] text-video">

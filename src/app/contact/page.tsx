@@ -95,7 +95,6 @@ export default function ContactPage() {
           <LivePageNote
             pageId="contact-credits"
             eyebrowColor="#E0A244"
-            signature="哈密瓜逮捕可达鸭"
             footer={(
               <>
                 已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
