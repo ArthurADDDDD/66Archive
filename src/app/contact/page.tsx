@@ -3,7 +3,7 @@ import { SiteNav } from '@/components/SiteNav'
 import { CorrectionSubmission } from '@/components/CorrectionSubmission'
 import { MaintainerCredits } from '@/components/MaintainerCredits'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { Eyebrow } from '@/components/primitives'
+import { LivePageIntro } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
 
@@ -31,11 +31,18 @@ function collectSources() {
     .map(([id, count]) => ({ account: ds.accounts.get(id)!, count }))
     .filter((row) => Boolean(row.account) && row.account.platform !== 'youtube')
     .sort((a, b) => b.count - a.count || a.account.name.localeCompare(b.account.name))
-  return { credited }
+  const years = entries.map((entry) => Number(entry.date.slice(0, 4))).filter((year) => Number.isFinite(year))
+  return {
+    credited,
+    // 三个数字都从当前数据算出来，不写死——补一条档案，这里就跟着变。
+    entryCount: entries.length,
+    firstYear: years.length > 0 ? Math.min(...years) : null,
+    lastYear: years.length > 0 ? Math.max(...years) : null,
+  }
 }
 
 export default function ContactPage() {
-  const { credited } = collectSources()
+  const { credited, entryCount, firstYear, lastYear } = collectSources()
   return (
     <main className="ui-page-in min-h-screen">
       <MobileQuickNav active="contact" />
@@ -46,12 +53,8 @@ export default function ContactPage() {
 
       <section className="site-container px-page pb-20 pt-16 sm:pt-24">
         <div className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-today/10 blur-[60px] sm:h-72 sm:w-72 sm:blur-[100px]" />
-        <Eyebrow color="#E5568A">Contact &amp; correction</Eyebrow>
-        <h1 className="measure-hero mt-4 text-h1 font-semibold">让这份索引更准确。</h1>
-        <p className="measure-body mt-6 text-body text-muted">
-          日期、标题、时长、链接、游戏标签——任何一处对不上都可以直接在下面告诉我。
-          你手上有档案里缺的录像，也从这里说。所有线索都由我逐条核对后再改，不会自动生效。
-        </p>
+
+        <LivePageIntro pageId="contact" eyebrowColor="#E5568A" />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           <CorrectionSubmission />
@@ -89,10 +92,17 @@ export default function ContactPage() {
         </div>
 
         <section aria-label="贡献者与来源致谢" className="mt-16 border-t border-line pt-10">
-          <Eyebrow color="#E0A244">Credits · 谁把这些留了下来</Eyebrow>
-          <h2 className="measure-hero mt-3 text-h2 font-semibold">这份档案不是一个人攒出来的。</h2>
-          <p className="measure-body mt-4 text-body text-muted">
-            感谢上传录播的大家以及切片man
+          <LivePageIntro
+            pageId="contact-credits"
+            eyebrowColor="#E0A244"
+            heading="h2"
+            titleClassName="measure-hero mt-3 text-h2 font-semibold"
+          />
+          <p className="mt-6 text-meta text-faint tnum">
+            已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
+            {firstYear !== null && lastYear !== null && (
+              <> · 覆盖 <span className="font-mono text-control font-semibold text-ink">{firstYear}</span> — <span className="font-mono text-control font-semibold text-ink">{lastYear}</span></>
+            )}
           </p>
 
           <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">

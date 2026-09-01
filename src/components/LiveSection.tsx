@@ -74,6 +74,43 @@ export function LivePageHeading({
   )
 }
 
+/**
+ * 多段引子的页头。
+ *
+ * 与 `LivePageHeading` 的差别只有一处：`lede` 按换行分段渲染成多个 `<p>`。
+ * 「这个站为什么存在」这类文字一段说不完，而挤成一整块的长段落没人会读完。
+ * 分段仍然是一个可编辑字段——在文案里换行就是换段，不需要为每一段单独建一项。
+ */
+export function LivePageIntro({
+  pageId,
+  eyebrowColor,
+  heading = 'h1',
+  titleClassName = 'measure-hero mt-4 text-h1 font-semibold',
+  className,
+}: {
+  pageId: string
+  eyebrowColor?: string
+  /** 一页只能有一个 h1；同一页里的第二块用 h2。 */
+  heading?: 'h1' | 'h2'
+  titleClassName?: string
+  className?: string
+}) {
+  const block = useCopyBlock('pages', pageId)
+  const Heading = heading
+  const paragraphs = block.lede.split('\n').map((line) => line.trim()).filter((line) => line.length > 0)
+  return (
+    <div className={className}>
+      {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
+      {block.title && <Heading className={titleClassName}>{block.title}</Heading>}
+      {paragraphs.map((paragraph, index) => (
+        <p key={paragraph.slice(0, 24)} className={`measure-body text-body text-muted ${index === 0 ? 'mt-6' : 'mt-4'}`}>
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  )
+}
+
 const ROOM_HREF: Record<string, string> = {
   chronicle: '/chronicle/',
   series: '/series/',
