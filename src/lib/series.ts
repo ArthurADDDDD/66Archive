@@ -65,7 +65,9 @@ export function buildSeries(
 
   const games = [...new Set(entries.flatMap((e) => e.games.map((g) => g.name)))]
   const representativeCoverId = id === 'night-talk' ? '2016-10-20-video-01' : null
-  const coverEntry = (representativeCoverId ? entries.find((entry) => entry.id === representativeCoverId) : null)
+  const latestCoverEntry = id === 'press-events' ? [...entries].reverse().find((entry) => entry.cover) : null
+  const coverEntry = latestCoverEntry
+    ?? (representativeCoverId ? entries.find((entry) => entry.id === representativeCoverId) : null)
     ?? entries.find((entry) => entry.cover)
 
   return {
