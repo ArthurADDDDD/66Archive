@@ -28,19 +28,19 @@ export function detectPlatform(url: string): Platform | null {
 }
 
 /**
- * 封面只在共享 policy 明确允许时进入图片代理。
+ * 封面路由由共享 policy 明确决定，而不是由环境变量全局覆盖。
  *
  * - `/gallery/**`、`/images/**` 以及其它站内绝对路径永远原样返回。
- * - 设置 NEXT_PUBLIC_IMG_PROXY 只替换 policy 内 host 的取图路径，不会把所有远端图
- *   都送进 Worker。
- * - 未设置时，各 host 按 policy 的 fallback 行为处理；其余远端 host 永远直连。
+ * - route=direct 永远直连，route=weserv 永远走 weserv。
+ * - 只有 route=worker 的 host 才会读取 NEXT_PUBLIC_IMG_PROXY；变量缺失时再按
+ *   policy fallback 处理。
+ * - 因此误设 NEXT_PUBLIC_IMG_PROXY 也不会把未验证的远程图批量切进 Worker。
  */
 export function proxyImage(url: string | undefined, width = 480): string | null {
   if (!url) return null
   if (url.startsWith('/')) return url
 
-  // B 站元数据接口至今仍可能返回 http 图床地址；本站 Worker 只接受 https，
-  // 这里统一升级，既能命中图片代理，也避免在 HTTPS 页面触发 mixed content。
+  // B 站元数据接口至今仍可能返回 http 图床地址；统一升级避免 mixed content。
   const normalized = url.replace(/^http:\/\/((?:[a-z0-9-]+\.)?hdslb\.com)\//i, 'https://$1/')
 
   let policy
@@ -49,7 +49,11 @@ export function proxyImage(url: string | undefined, width = 480): string | null 
   } catch {
     return normalized
   }
-  if (!policy) return normalized
+  if (!policy || policy.route === 'direct') return normalized
+
+  if (policy.route === 'weserv') {
+    return `https://images.weserv.nl/?url=${encodeURIComponent(normalized)}&w=${width}`
+  }
 
   const base = process.env.NEXT_PUBLIC_IMG_PROXY?.replace(/\/+$/, '')
   if (base) return `${base}?url=${encodeURIComponent(normalized)}&w=${width}`
