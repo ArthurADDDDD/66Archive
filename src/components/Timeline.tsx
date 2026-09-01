@@ -59,26 +59,9 @@ const ERAS: Era[] = [
   { id: 'douyin', label: '抖音时期', detail: '2024—至今', from: 2024, to: 9999, color: '#FF6B75' },
 ]
 
-/**
- * 文档首次加载时的地址。之后站内软跳转（router.push / replaceState）都不会改它，
- * 用来区分「刷新的是这一页」和「刷新别的页之后又跳过来」。
- */
-const INITIAL_URL = typeof window === 'undefined' ? '' : window.location.href
-
-/**
- * 这次加载该不该恢复 URL 里的筛选条件。
- *
- * 刷新（F5 / ⌘R）当作「重新开始」：把上一次筛选留在地址栏里的参数丢掉，回到全年目录。
- * 筛选是当下的动作，不该在下一次打开时还压在结果上。
- * 但分享链接、从编年史点进来的 /archive/?y=2015 是正常导航（navigate），
- * 前进后退是 back_forward——这两种照常恢复，否则外链就废了。
- */
+/** 当前地址栏就是录播室状态：刷新、分享链接和前进后退都按同一套参数恢复。 */
 function paramsForThisLoad() {
-  const [nav] = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[]
-  const reloadedHere = nav?.type === 'reload' && window.location.href === INITIAL_URL
-  if (!reloadedHere) return new URLSearchParams(window.location.search)
-  window.history.replaceState(null, '', window.location.pathname)
-  return new URLSearchParams()
+  return new URLSearchParams(window.location.search)
 }
 
 export function Timeline({
