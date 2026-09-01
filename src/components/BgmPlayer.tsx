@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
+import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
 import { trackSiteEvent } from '@/lib/site-analytics'
 
 /**
@@ -10,8 +10,8 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  * 1. **离开就停**：切标签页、切到别的应用、锁屏——一律暂停，回来再续上。
  *    这是个视频索引站，用户点开外站视频后老标签页不该还在自己哼。
  * 2. **只预热起播所需的数据**：`preload="metadata"`，先取很小的媒体头，正文仍按播放进度下载。
- * 3. **关了就别再响，但只管这一次**：手动关掉后，站内翻页不会再自己响起来；
- *    刷新即重来——「关掉」是当下这次浏览的决定，不该被记成永久设置。
+ * 3. **关了就别再响**：用户手动暂停后写进 localStorage；同一设备之后翻页、刷新都保持暂停，
+ *    直到用户再次手动播放或换一首。
  *
  * 浏览器不允许「带声音的自动播放」——首次进站的自动播放大概率被拦，
  * 因此先挂手势监听再尝试播放，用户第一次点/按/触屏时无缝补上。
@@ -85,8 +85,14 @@ export function BgmPlayer() {
     // 曲目只能在客户端定（localStorage 在 SSR 读不到），一次性
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTrack(picked)
-    // 每次新的页面加载都从「想放」开始：关掉只在本次浏览内有效（见文件头规则 3）。
-    wantsRef.current = true
+
+    let off = false
+    try {
+      off = window.localStorage.getItem(BGM_OFF_KEY) === '1'
+    } catch {
+      // 隐私模式下记不住暂停偏好；这次仍按默认自动播放处理。
+    }
+    wantsRef.current = !off
   }, [])
 
   // 先监听手势、再尝试自动播放：既不漏掉首屏的快速点击，也让 iOS 的
@@ -185,6 +191,11 @@ export function BgmPlayer() {
   function skip() {
     if (!track) return
     wantsRef.current = true
+    try {
+      window.localStorage.removeItem(BGM_OFF_KEY)
+    } catch {
+      // 记不住不影响这次切歌
+    }
     setTrack(nextTrack(track.id))
   }
 
@@ -194,11 +205,21 @@ export function BgmPlayer() {
     if (el.paused) {
       trackSiteEvent('media.play', 'audio')
       wantsRef.current = true
+      try {
+        window.localStorage.removeItem(BGM_OFF_KEY)
+      } catch {
+        // 存不下不影响这一次播放
+      }
       void tryPlay()
     } else {
       trackSiteEvent('media.pause', 'audio')
       wantsRef.current = false
       el.pause()
+      try {
+        window.localStorage.setItem(BGM_OFF_KEY, '1')
+      } catch {
+        // 这一次先停下；记不住就只影响这次浏览。
+      }
     }
   }
 
