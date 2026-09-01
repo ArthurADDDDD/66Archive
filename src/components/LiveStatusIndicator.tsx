@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { usePathname } from 'next/navigation'
 
@@ -30,6 +30,8 @@ const STATUS_PATH = '/api/content/live-status'
 const REFRESH_MS = 60_000
 const REQUEST_TIMEOUT_MS = 6_000
 const FIRST_VISIT_HINT_KEY = '66archive:live-status-hint:v1'
+const LIVE_SESSION_HINT_KEY = '66archive:live-session-hint:v1'
+const HINT_DURATION_MS = 5_000
 /**
  * 观测超过这个时间没更新，就不再把圆点显示成「在播」或「未开播」。
  *
@@ -146,17 +148,49 @@ export function LiveStatusIndicator() {
   const [now, setNow] = useState(() => Date.now())
   const [mounted, setMounted] = useState(false)
   const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null)
-  const [showFirstVisitHint, setShowFirstVisitHint] = useState(false)
+  const [statusHint, setStatusHint] = useState<string | null>(null)
   const rootRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const hintTimerRef = useRef<number | null>(null)
+
+  const dismissStatusHint = useCallback(() => {
+    if (hintTimerRef.current !== null) window.clearTimeout(hintTimerRef.current)
+    hintTimerRef.current = null
+    setStatusHint(null)
+  }, [])
+
+  const showStatusHint = useCallback((message: string) => {
+    if (hintTimerRef.current !== null) window.clearTimeout(hintTimerRef.current)
+    setStatusHint(message)
+    hintTimerRef.current = window.setTimeout(() => {
+      hintTimerRef.current = null
+      setStatusHint(null)
+    }, HINT_DURATION_MS)
+  }, [])
 
   useEffect(() => {
-    // 路由切换会替换页头节点；每次都重新取得当前 SiteNav 预留的位置。
-    const frame = requestAnimationFrame(() => {
-      setPortalTarget(document.querySelector<HTMLElement>('[data-live-status-slot]'))
+    // 路由切换会替换页头节点；录播室加载完完整档案时也会在同一路由内
+    // 用 Timeline 页头替换加载壳。只监听 pathname 会让 portal 留在已移除的旧节点里，
+    // 于是按钮和开播提示一起消失。观察 DOM 插槽变化，始终绑定当前仍在页面里的插槽。
+    let frame: number | null = null
+    const bindCurrentSlot = () => {
+      frame = null
+      const nextTarget = document.querySelector<HTMLElement>('[data-live-status-slot]')
+      setPortalTarget((current) => (current === nextTarget ? current : nextTarget))
       setMounted(true)
-    })
-    return () => cancelAnimationFrame(frame)
+    }
+    const scheduleBind = () => {
+      if (frame !== null) return
+      frame = requestAnimationFrame(bindCurrentSlot)
+    }
+
+    scheduleBind()
+    const observer = new MutationObserver(scheduleBind)
+    observer.observe(document.body, { childList: true, subtree: true })
+    return () => {
+      observer.disconnect()
+      if (frame !== null) cancelAnimationFrame(frame)
+    }
   }, [pathname])
 
   useEffect(() => {
@@ -168,12 +202,31 @@ export function LiveStatusIndicator() {
     } catch {
       // 隐私模式或存储被禁用时照常显示；提示本身不值得阻塞页面。
     }
-    const showFrame = requestAnimationFrame(() => setShowFirstVisitHint(true))
-    const hideTimer = window.setTimeout(() => setShowFirstVisitHint(false), 5_000)
+    const showFrame = requestAnimationFrame(() => showStatusHint('点击查看直播间状态'))
     return () => {
       cancelAnimationFrame(showFrame)
-      window.clearTimeout(hideTimer)
     }
+  }, [showStatusHint])
+
+  useEffect(() => {
+    if (snapshot?.status !== 'live') return
+    if (Date.now() - Date.parse(snapshot.observedAt) > STALE_LIMIT_MS) return
+
+    // 同一场直播在一次浏览器会话里提示一次；startedAt 变化即视为新一场。
+    // 页面已经开着时由轮询从 offline 切到 live，也会走到这里主动提醒。
+    const sessionId = snapshot.startedAt ?? 'live-without-start-time'
+    try {
+      if (window.sessionStorage.getItem(LIVE_SESSION_HINT_KEY) === sessionId) return
+      window.sessionStorage.setItem(LIVE_SESSION_HINT_KEY, sessionId)
+    } catch {
+      // 存储不可用时宁可再次提示，也不能让真实的开播状态静默消失。
+    }
+    const showFrame = requestAnimationFrame(() => showStatusHint('正在直播 · 点击查看直播间状态'))
+    return () => cancelAnimationFrame(showFrame)
+  }, [showStatusHint, snapshot])
+
+  useEffect(() => () => {
+    if (hintTimerRef.current !== null) window.clearTimeout(hintTimerRef.current)
   }, [])
 
   useEffect(() => {
@@ -284,7 +337,7 @@ export function LiveStatusIndicator() {
         ref={buttonRef}
         type="button"
         onClick={() => {
-          setShowFirstVisitHint(false)
+          dismissStatusHint()
           setOpen((value) => !value)
         }}
         aria-expanded={open}
@@ -312,12 +365,12 @@ export function LiveStatusIndicator() {
         <span>女流编年史</span>
       </button>
 
-      {showFirstVisitHint && !open && (
+      {statusHint && !open && (
         <p
           role="status"
           className="ui-sheet-in pointer-events-none absolute left-0 top-full z-50 mt-1.5 whitespace-nowrap rounded-lg border border-line/80 bg-base/95 px-3 py-2 text-meta font-normal tracking-normal text-muted shadow-[0_12px_36px_rgba(0,0,0,0.24)] backdrop-blur-xl"
         >
-          点击查看直播间状态
+          {statusHint}
         </p>
       )}
 
