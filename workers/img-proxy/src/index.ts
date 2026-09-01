@@ -8,8 +8,9 @@ import { getImageProxyPolicy } from '../../../src/lib/image-proxy-policy'
  * 2. 交给 Cloudflare Image Resizing 按需缩放；转换或上游请求失败时返回 502，
  *    不会为了兜底而放宽 allowlist。
  *
- * 不是通用代理：允许进入 Worker 的 host 与前端共用
- * src/lib/image-proxy-policy.ts 这一份 policy，避免两边再次漂移。
+ * 不是通用代理：Worker admission 与前端生产路由都来自
+ * src/lib/image-proxy-policy.ts，但由不同字段控制。一个 host 可以被允许做显式
+ * Worker 基准测试，而不代表前端会自动把生产流量切进 Worker。
  */
 
 const MIN_WIDTH = 40
@@ -20,6 +21,11 @@ function clampWidth(raw: string | null): number {
   const n = Number(raw)
   if (!Number.isFinite(n) || n <= 0) return DEFAULT_WIDTH
   return Math.min(MAX_WIDTH, Math.max(MIN_WIDTH, Math.round(n)))
+}
+
+function resolveWorkerPolicy(hostname: string) {
+  const policy = getImageProxyPolicy(hostname)
+  return policy?.workerAllowed ? policy : null
 }
 
 const REDIRECT_STATUSES = new Set([301, 302, 303, 307, 308])
@@ -39,7 +45,7 @@ async function fetchAllowlisted(initialUrl: URL, width: number): Promise<Respons
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0 Safari/537.36'
 
   for (let hop = 0; hop < 4; hop += 1) {
-    const policy = getImageProxyPolicy(current.hostname)
+    const policy = resolveWorkerPolicy(current.hostname)
     if (!policy) return new Response('redirect target not allowlisted', { status: 403 })
 
     const response = await fetch(current.toString(), {
@@ -68,7 +74,7 @@ async function fetchAllowlisted(initialUrl: URL, width: number): Promise<Respons
       return new Response('invalid redirect location', { status: 502 })
     }
     if (next.protocol !== 'https:') return new Response('redirect target must be https', { status: 403 })
-    if (!getImageProxyPolicy(next.hostname)) {
+    if (!resolveWorkerPolicy(next.hostname)) {
       return new Response('redirect target not allowlisted', { status: 403 })
     }
 
@@ -96,7 +102,7 @@ export default {
       return new Response('invalid url', { status: 400 })
     }
     if (originUrl.protocol !== 'https:') return new Response('only https origins allowed', { status: 400 })
-    if (!getImageProxyPolicy(originUrl.hostname)) return new Response('origin not allowlisted', { status: 403 })
+    if (!resolveWorkerPolicy(originUrl.hostname)) return new Response('origin not allowlisted', { status: 403 })
 
     const width = clampWidth(reqUrl.searchParams.get('w'))
     const upstream = await fetchAllowlisted(originUrl, width)
