@@ -137,7 +137,6 @@
     duration_min: 307
     cover: "https://i0.hdslb.com/bfs/archive/2a2c1cbb90fc5fd4933ec5b4bc32ed906083d193.png"
     games: [planet-coaster]
-    tags: [一起See]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -435,6 +434,7 @@
     date: "2018-09-24"
     title: "回老家过中秋"
     platform: douyu
+    cover: "/images/covers/2018-09-24-live-01.jpg"
     confidence: high
     duration_min: 178
     games: []
