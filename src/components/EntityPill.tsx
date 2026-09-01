@@ -15,6 +15,7 @@ export function EntityPill({
   return (
     <Link
       href={href}
+      prefetch={href.startsWith('/archive/') ? false : undefined}
       className="ui-press group inline-flex min-h-[2.75rem] items-center gap-2 rounded-full border border-line bg-surface/60 px-3.5 py-2.5 text-control text-muted transition-colors hover:border-muted hover:text-ink sm:min-h-0 sm:py-1.5"
     >
       {color && <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: color }} />}

@@ -39,6 +39,7 @@ export default async function SeriesPage() {
         <SiteNav active="series" />
         <Link
           href="/archive/"
+          prefetch={false}
           className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block"
         >
           在录播室搜索全部记录 →

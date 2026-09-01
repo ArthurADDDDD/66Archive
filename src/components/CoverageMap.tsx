@@ -251,7 +251,7 @@ export function CoverageGaps({
           <ul className="mt-5 space-y-3">
             {worstYears.map((row) => (
               <li key={row.year}>
-                <Link href={`/archive/?y=${row.year}`} className="ui-press group block">
+                <Link href={`/archive/?y=${row.year}`} prefetch={false} className="ui-press group block">
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="font-mono text-control text-ink tnum">{row.year}</span>
                     <span className="text-meta text-faint tnum">{row.blankMonths} / 12 个月空白</span>

@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react'
 import { createPortal } from 'react-dom'
-import Link from 'next/link'
+import Link, { useLinkStatus } from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useSiteCopy } from './LiveContentProvider'
 
 const ITEMS = [
@@ -30,6 +31,8 @@ export function SiteNav({
   active: 'home' | 'chronicle' | 'archive' | 'games' | 'series' | 'stats' | 'gallery' | 'contact' | 'entry'
   compact?: boolean
 }) {
+  const router = useRouter()
+  const pathname = usePathname()
   // 导航显示名可以由后台改（去哪个页面是固定的）。拉不到就用基线里的名字。
   const copy = useSiteCopy()
   const items = ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
@@ -41,6 +44,10 @@ export function SiteNav({
   const buttonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const [panelTop, setPanelTop] = useState(0)
+  const prefetchTimerRef = useRef<number | null>(null)
+  const prefetchedRoutesRef = useRef(new Set<string>())
+  const navigatingToRef = useRef<string | null>(null)
+  const navigationResetTimerRef = useRef<number | null>(null)
   // 面板要挂到 body 上（见下方注释），SSR 阶段没有 document，先不渲染。
   const [portalReady, setPortalReady] = useState(false)
 
@@ -48,6 +55,65 @@ export function SiteNav({
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setPortalReady(true)
   }, [])
+
+  /**
+   * Next Link 默认会把视口里的链接全部预取。主导航同时露出七个目标时，首页会立刻
+   * 拉下整套子页 RSC（仅录播室压缩前就有 3MB+）和页面脚本，反而把用户真正点的
+   * 导航与背景音乐堵在后面。这里关掉视口预取，只在一个目标被 hover / focus 一小段
+   * 时间后预热它：桌面仍保留“指向即将打开”的速度，触屏也不会为没点的页面花流量。
+   */
+  function cancelIntentPrefetch() {
+    if (prefetchTimerRef.current === null) return
+    window.clearTimeout(prefetchTimerRef.current)
+    prefetchTimerRef.current = null
+  }
+
+  function queueIntentPrefetch(href: string, selected: boolean) {
+    cancelIntentPrefetch()
+    if (selected || prefetchedRoutesRef.current.has(href)) return
+    prefetchTimerRef.current = window.setTimeout(() => {
+      prefetchTimerRef.current = null
+      prefetchedRoutesRef.current.add(href)
+      router.prefetch(href)
+    }, 180)
+  }
+
+  /**
+   * 慢网下重复点同一个入口不会让导航队列越积越长。第一次点击照常交给 Next，
+   * 后续同目标点击在路由完成前只保留为一次；12 秒后自动放开，避免网络失败时无法重试。
+   */
+  function beginNavigation(event: ReactMouseEvent<HTMLAnchorElement>, href: string, selected: boolean) {
+    cancelIntentPrefetch()
+    if (selected) return
+    if (navigatingToRef.current === href) {
+      event.preventDefault()
+      return
+    }
+
+    navigatingToRef.current = href
+    if (navigationResetTimerRef.current !== null) window.clearTimeout(navigationResetTimerRef.current)
+    navigationResetTimerRef.current = window.setTimeout(() => {
+      navigatingToRef.current = null
+      navigationResetTimerRef.current = null
+    }, 12_000)
+  }
+
+  useEffect(
+    () => () => {
+      if (prefetchTimerRef.current !== null) window.clearTimeout(prefetchTimerRef.current)
+      if (navigationResetTimerRef.current !== null) window.clearTimeout(navigationResetTimerRef.current)
+    },
+    [],
+  )
+
+  // 路由已经完成：立即解除重复点击保护，不依赖组件是否被新页面复用。
+  useEffect(() => {
+    navigatingToRef.current = null
+    if (navigationResetTimerRef.current !== null) {
+      window.clearTimeout(navigationResetTimerRef.current)
+      navigationResetTimerRef.current = null
+    }
+  }, [pathname])
 
   const current = items.find((i) => active === i.id || (active === 'entry' && i.id === 'archive')) ?? items[1]
 
@@ -94,6 +160,13 @@ export function SiteNav({
       {!compact && (
         <Link
           href="/"
+          prefetch={false}
+          onMouseEnter={() => queueIntentPrefetch('/', active === 'home')}
+          onMouseLeave={() => cancelIntentPrefetch()}
+          onFocus={() => queueIntentPrefetch('/', active === 'home')}
+          onBlur={() => cancelIntentPrefetch()}
+          onPointerDown={() => cancelIntentPrefetch()}
+          onClick={(event) => beginNavigation(event, '/', active === 'home')}
           data-analytics-event="nav.click"
           data-analytics-target="home"
           className="ui-press flex h-11 shrink-0 items-center rounded-sm text-sm font-semibold tracking-tight text-ink transition-colors hover:text-live"
@@ -113,13 +186,20 @@ export function SiteNav({
             <Link
               key={item.id}
               href={item.href}
+              prefetch={false}
+              onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
+              onMouseLeave={() => cancelIntentPrefetch()}
+              onFocus={() => queueIntentPrefetch(item.href, selected)}
+              onBlur={() => cancelIntentPrefetch()}
+              onPointerDown={() => cancelIntentPrefetch()}
+              onClick={(event) => beginNavigation(event, item.href, selected)}
               data-analytics-event="nav.click"
               data-analytics-target={item.id}
               aria-current={selected ? 'page' : undefined}
               className={`ui-press shrink-0 whitespace-nowrap rounded-full px-2.5 py-1.5 text-meta sm:px-3 ${selected ? 'bg-ink text-[#12141C] shadow-[0_4px_14px_rgba(230,228,239,0.12)]' : 'text-muted hover:bg-raised hover:text-ink'
                 }`}
             >
-              {item.label}
+              <NavItemLabel label={item.label} />
             </Link>
           )
         })}
@@ -170,11 +250,20 @@ export function SiteNav({
                   <li key={item.id}>
                     <Link
                       href={item.href}
+                      prefetch={false}
+                      onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
+                      onMouseLeave={() => cancelIntentPrefetch()}
+                      onFocus={() => queueIntentPrefetch(item.href, selected)}
+                      onBlur={() => cancelIntentPrefetch()}
+                      onPointerDown={() => cancelIntentPrefetch()}
                       data-analytics-event="nav.click"
                       data-analytics-target={item.id}
                       role="menuitem"
                       aria-current={selected ? 'page' : undefined}
-                      onClick={() => setOpen(false)}
+                      onClick={(event) => {
+                        beginNavigation(event, item.href, selected)
+                        setOpen(false)
+                      }}
                       className={`ui-press flex min-h-[2.75rem] items-center gap-3 rounded-md px-3 py-2.5 text-sm transition-colors ${
                         selected ? 'bg-surface/80 text-ink' : 'text-muted hover:bg-surface/50 hover:text-ink'
                       }`}
@@ -183,7 +272,7 @@ export function SiteNav({
                         aria-hidden
                         className={`h-1.5 w-1.5 rounded-full ${selected ? 'bg-live' : 'bg-line'}`}
                       />
-                      {item.label}
+                      <NavItemLabel label={item.label} />
                       {selected && <span className="ml-auto text-meta text-live">当前</span>}
                     </Link>
                   </li>
@@ -195,5 +284,19 @@ export function SiteNav({
         document.body,
       )}
     </div>
+  )
+}
+
+/** Link 自己知道导航何时 pending；把这个状态留在子节点里，点击后下一帧就给出反馈。 */
+function NavItemLabel({ label }: { label: string }) {
+  const { pending } = useLinkStatus()
+  return (
+    <span className="inline-flex items-center" aria-live="polite">
+      <span className={pending ? 'opacity-70' : undefined}>{pending ? `${label}打开中` : label}</span>
+      <span
+        aria-hidden
+        className={`ml-1 inline-block h-1.5 w-1.5 rounded-full transition-colors ${pending ? 'animate-pulse bg-current' : 'bg-transparent'}`}
+      />
+    </span>
   )
 }

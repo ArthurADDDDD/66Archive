@@ -9,7 +9,7 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  *
  * 1. **离开就停**：切标签页、切到别的应用、锁屏——一律暂停，回来再续上。
  *    这是个视频索引站，用户点开外站视频后老标签页不该还在自己哼。
- * 2. **不主动花流量**：`preload="none"`，没真正开始播就一个字节都不下载。
+ * 2. **只预热起播所需的数据**：`preload="metadata"`，先取很小的媒体头，正文仍按播放进度下载。
  * 3. **关了就别再响，但只管这一次**：手动关掉后，站内翻页不会再自己响起来；
  *    刷新即重来——「关掉」是当下这次浏览的决定，不该被记成永久设置。
  *
@@ -20,14 +20,15 @@ export function BgmPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [track, setTrack] = useState<BgmTrack | null>(null)
   const [playing, setPlaying] = useState(false)
+  const [loading, setLoading] = useState(false)
   /** 「换一首」平时收着：桌面端 hover / 键盘 focus 时露出，触屏上点一下主键才露出 */
   const [revealed, setRevealed] = useState(false)
   const revealTimerRef = useRef<number | null>(null)
   /** 用户意愿：音乐「应该」是开着的吗（和实际有没有在响分开） */
   const wantsRef = useRef(false)
   const fadeRef = useRef<number | null>(null)
-  /** 这次换曲是用户点「下一首」换的——换完要立刻接着放 */
-  const skipRef = useRef(false)
+  /** 同一时刻只留一个 play() promise；慢网下连点不会叠出多轮起播请求。 */
+  const playAttemptRef = useRef<Promise<boolean> | null>(null)
 
   /** 淡入到目标音量：突然炸响比没有音乐更糟 */
   const fadeIn = useCallback(() => {
@@ -53,19 +54,28 @@ export function BgmPlayer() {
   }, [])
 
   /** 试着播放；被浏览器拦下时返回 false（交给调用方去等一个用户手势） */
-  const tryPlay = useCallback(async () => {
+  const tryPlay = useCallback((): Promise<boolean> => {
     const el = audioRef.current
-    if (!el) return false
-    if (document.hidden) return false
-    if (!el.paused) return true
-    try {
-      el.volume = 0
-      await el.play()
-      fadeIn()
-      return true
-    } catch {
-      return false
-    }
+    if (!el || document.hidden) return Promise.resolve(false)
+    if (!el.paused) return Promise.resolve(true)
+    if (playAttemptRef.current) return playAttemptRef.current
+
+    const attempt = (async () => {
+      setLoading(true)
+      try {
+        el.volume = 0
+        await el.play()
+        fadeIn()
+        return true
+      } catch {
+        return false
+      } finally {
+        playAttemptRef.current = null
+        setLoading(false)
+      }
+    })()
+    playAttemptRef.current = attempt
+    return attempt
   }, [fadeIn])
 
   // 客户端决定曲目与用户意愿。真正的播放放到 track 挂载后的 effect，
@@ -107,6 +117,9 @@ export function BgmPlayer() {
     }
 
     gestures.forEach((eventName) => document.addEventListener(eventName, onGesture, { capture: true, passive: true }))
+    // 明确启动 metadata 请求，不把这件事交给浏览器几秒后的低优先级调度；
+    // load() 必须在 play() 前，否则会中断已经发出的起播 promise。
+    audioRef.current?.load()
     void tryPlay()
 
     // 浏览器已经放行自动播放时（Chrome 的 media engagement 够高，或用户给了站点权限），
@@ -161,16 +174,6 @@ export function BgmPlayer() {
     [],
   )
 
-  // 换了曲子就得重新 load()，否则 <source> 变了播放器还咬着旧文件
-  useEffect(() => {
-    if (!skipRef.current) return
-    skipRef.current = false
-    const el = audioRef.current
-    if (!el) return
-    el.load()
-    void tryPlay()
-  }, [track, tryPlay])
-
   /** 触屏没有 hover：点主键的同时把「换一首」顶出来，几秒没动静再收回去 */
   function revealForTouch() {
     if (window.matchMedia('(hover: hover)').matches) return
@@ -181,7 +184,6 @@ export function BgmPlayer() {
 
   function skip() {
     if (!track) return
-    skipRef.current = true
     wantsRef.current = true
     setTrack(nextTrack(track.id))
   }
@@ -204,14 +206,23 @@ export function BgmPlayer() {
 
   return (
     <>
-      {/* preload="none"：不点开就不下载，省的是服务器的流量 */}
+      {/* metadata 只预热媒体头；移除全站路由抢跑后，净首屏流量仍显著下降。 */}
       <audio
         ref={audioRef}
         loop
-        preload="none"
+        preload="metadata"
         playsInline
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
+        onPlaying={() => {
+          setLoading(false)
+          setPlaying(true)
+        }}
+        onWaiting={() => {
+          if (wantsRef.current) setLoading(true)
+        }}
+        onPause={() => {
+          setLoading(false)
+          setPlaying(false)
+        }}
       >
         <source src={track.webm} type="audio/webm; codecs=opus" />
         <source src={track.m4a} type="audio/mp4; codecs=mp4a.40.2" />
@@ -226,14 +237,15 @@ export function BgmPlayer() {
             toggle()
           }}
           aria-pressed={playing}
-          title={playing ? '背景音乐（点击暂停）' : '背景音乐已暂停（点击播放）'}
+          aria-busy={loading}
+          title={loading ? '正在加载背景音乐' : playing ? '背景音乐（点击暂停）' : '背景音乐已暂停（点击播放）'}
           className={`ui-press flex h-11 w-10 shrink-0 items-center justify-center rounded-full transition-[opacity,color] duration-300 hover:text-ink ${
-            playing ? 'text-live opacity-70 hover:opacity-100' : 'text-faint opacity-45 hover:opacity-90'
+            playing || loading ? 'text-live opacity-70 hover:opacity-100' : 'text-faint opacity-45 hover:opacity-90'
           }`}
         >
-          <span className="sr-only">{playing ? '暂停背景音乐' : '播放背景音乐'}</span>
+          <span className="sr-only">{loading ? '正在加载背景音乐' : playing ? '暂停背景音乐' : '播放背景音乐'}</span>
           {/* 三根柱子：播放时跳动，暂停时压平成一条线 */}
-          <span className={`bgm-bars ${playing ? 'is-playing' : ''}`} aria-hidden="true">
+          <span className={`bgm-bars ${playing ? 'is-playing' : ''} ${loading ? 'animate-pulse' : ''}`} aria-hidden="true">
             <i />
             <i />
             <i />

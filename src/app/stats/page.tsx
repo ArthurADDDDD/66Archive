@@ -150,7 +150,7 @@ export default function StatsPage() {
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="stats" />
-        <Link href="/archive/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+        <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
           去录播室逐条查看 →
         </Link>
       </header>
@@ -275,6 +275,7 @@ export default function StatsPage() {
             <Link
               key={era.id}
               href={`/archive/?y=${era.from}`}
+              prefetch={false}
               className="rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60"
             >
               <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em]" style={{ color: era.color }}>

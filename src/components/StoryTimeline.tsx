@@ -58,7 +58,7 @@ export function StoryTimeline({
 
       <p className="mt-8 text-meta text-faint">
         想找具体日期、游戏或来源，可以去{' '}
-        <Link href="/archive/" className="text-live underline underline-offset-4 hover:text-ink">
+        <Link href="/archive/" prefetch={false} className="text-live underline underline-offset-4 hover:text-ink">
           录播室
         </Link>
         。
@@ -183,6 +183,7 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
         这一年留下了 {section.archiveCount.toLocaleString()} 条记录。
         <Link
           href={`/archive/?y=${section.year}`}
+          prefetch={false}
           className="ml-2 inline-block underline underline-offset-4 transition-opacity hover:opacity-80"
           style={{ color: accent }}
         >

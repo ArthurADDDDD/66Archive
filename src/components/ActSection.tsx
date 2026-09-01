@@ -90,6 +90,7 @@ export function ActSection({
           <Reveal>
             <Link
               href="/archive/"
+              prefetch={false}
               className="group mt-8 inline-flex items-center gap-3 rounded-full border border-today/30 bg-today/5 py-2 pl-3 pr-5 transition-colors hover:border-today/60"
             >
               <span aria-hidden className="ui-now-pulse h-2 w-2 shrink-0 rounded-full bg-today" />

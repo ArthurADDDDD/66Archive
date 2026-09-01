@@ -60,6 +60,7 @@ export default function ContactPage() {
 
           <Link
             href="/archive/"
+            prefetch={false}
             className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
           >
             <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
