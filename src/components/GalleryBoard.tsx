@@ -501,6 +501,49 @@ function photoAlt(photo: GalleryPhoto) {
   return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
 }
 
+/** 清单只保存稳定的 JPEG 兜底路径；现代格式文件名可机械推导，不污染人工维护的数据。 */
+function galleryThumbSources(thumb: string) {
+  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
+  if (stem === thumb) return null
+  return {
+    avif: `${stem}.thumb-360.avif 360w, ${stem}.thumb-720.avif 720w`,
+    webp: `${stem}.thumb-360.webp 360w, ${stem}.thumb-720.webp 720w`,
+  }
+}
+
+function galleryThumbBackground(thumb: string) {
+  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
+  if (stem === thumb) return `url("${thumb}")`
+  return `image-set(url("${stem}.thumb-720.avif") type("image/avif"), url("${stem}.thumb-720.webp") type("image/webp"), url("${thumb}") type("image/jpeg"))`
+}
+
+function GalleryThumbnail({
+  photo,
+  sizes,
+  className,
+}: {
+  photo: GalleryPhoto
+  sizes: string
+  className: string
+}) {
+  const sources = galleryThumbSources(photo.thumb)
+  return (
+    <picture className="block h-full w-full">
+      {sources ? <source type="image/avif" srcSet={sources.avif} sizes={sizes} /> : null}
+      {sources ? <source type="image/webp" srcSet={sources.webp} sizes={sizes} /> : null}
+      <img
+        src={photo.thumb}
+        alt={photoAlt(photo)}
+        loading="lazy"
+        decoding="async"
+        width={photo.width}
+        height={photo.height}
+        className={className}
+      />
+    </picture>
+  )
+}
+
 /**
  * 纪念版不是缩略图索引，而是人工整理过的历史节点：日期、标题、备注与分类默认展开。
  * 图片仍然可以点进发布版灯箱，来源也在卡片上直接可见。
@@ -516,15 +559,10 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
         className="group relative block w-full overflow-hidden bg-black/35 text-left outline-none"
       >
         <span className="relative block aspect-[4/3] bg-black/35 sm:aspect-[16/10]">
-          {/* 纪念版只有 34 张，卡片直接使用大图；全量瀑布流才使用 thumb，保证细节清晰。 */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={photo.src}
-            alt={photoAlt(photo)}
-            loading="lazy"
-            decoding="async"
-            width={photo.width}
-            height={photo.height}
+          {/* 卡片只取响应式缩略图；原图严格等到用户打开灯箱后再请求。 */}
+          <GalleryThumbnail
+            photo={photo}
+            sizes="(min-width: 1280px) 560px, (min-width: 640px) 45vw, 50vw"
             className="block h-full w-full object-contain transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.015] group-hover:brightness-105 group-focus-visible:brightness-110"
           />
         </span>
@@ -608,15 +646,10 @@ function PhotoCell({
       style={naturalStyle}
     >
       <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
-        {/* 列表一律用 thumb：一屏几十张，用大图等于把带宽烧在 200px 高的格子上 */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={photo.thumb}
-          alt={photoAlt(photo)}
-          loading="lazy"
-          decoding="async"
-          width={photo.width}
-          height={photo.height}
+        {/* 列表一律用浏览器按显示宽度挑选的现代格式缩略图。 */}
+        <GalleryThumbnail
+          photo={photo}
+          sizes={uniform ? '(min-width: 1024px) 165px, 33vw' : '(min-width: 1024px) 360px, 50vw'}
           className="block h-full w-full object-cover transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] group-hover:brightness-110"
         />
       </span>
@@ -647,14 +680,16 @@ function Lightbox({
 }) {
   const closeRef = useRef<HTMLButtonElement>(null)
   const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
+  const [loadedSrc, setLoadedSrc] = useState<string | null>(null)
 
-  // 预取左右各两张的大图：切换时如果还要等网络请求，方向键连按会明显卡顿。
-  // 提前把邻居的大图丢进浏览器缓存，onStep 换下一张时基本是本地命中。
+  // 当前大图加载完成后才低优先级预取左右各一张。旧策略一打开就并发取 4 张邻图，
+  // 会让真正要看的这一张和后台下载争带宽，在慢网或多人同时访问时尤其得不偿失。
   useEffect(() => {
-    if (visible.length === 0) return
-    const neighbors = [-2, -1, 1, 2].map((delta) => visible[(index + delta + visible.length) % visible.length])
+    if (visible.length === 0 || loadedSrc !== photo.src) return
+    const neighbors = [-1, 1].map((delta) => visible[(index + delta + visible.length) % visible.length])
     const images = neighbors.map((p) => {
       const img = new Image()
+      img.fetchPriority = 'low'
       img.src = p.src
       return img
     })
@@ -664,7 +699,7 @@ function Lightbox({
         img.src = ''
       })
     }
-  }, [index, visible])
+  }, [index, loadedSrc, photo.src, visible])
 
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null
@@ -717,7 +752,11 @@ function Lightbox({
             <img
               src={photo.src}
               alt={photoAlt(photo)}
-              style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              onLoad={() => setLoadedSrc(photo.src)}
+              style={{ backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }}
               className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
             />
             <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
@@ -729,7 +768,11 @@ function Lightbox({
           <img
             src={photo.src}
             alt={photoAlt(photo)}
-            style={{ backgroundImage: `url(${photo.thumb})`, backgroundSize: 'cover' }}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            onLoad={() => setLoadedSrc(photo.src)}
+            style={{ backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }}
             className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
           />
         )}

@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "npm run index:popular && next dev",
-    "build": "npm run validate && npm run index:popular && next build",
+    "build": "npm run validate && npm run index:popular && npm run gallery:optimize && next build",
     "index:popular": "tsx scripts/popular-index-build.ts",
     "start": "next start",
     "lint": "eslint .",
     "validate": "tsx scripts/validate.ts",
     "archive:edit": "tsx scripts/archive-edit.ts",
     "archive:test": "tsx scripts/test-archive-edit.ts",
+    "gallery:optimize": "tsx scripts/gallery-images-optimize.ts",
     "test:vote-search": "tsx scripts/test-vote-search.ts",
     "test:analytics": "tsx scripts/test-site-analytics.ts"
   },
@@ -30,6 +31,7 @@
     "eslint-config-next": "^16.3.0",
     "js-yaml": "^4.1.0",
     "postcss": "^8.5.1",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
