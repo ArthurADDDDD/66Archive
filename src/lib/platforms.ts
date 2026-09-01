@@ -1,4 +1,5 @@
 import type { Platform } from './schema'
+import { getImageProxyPolicy } from './image-proxy-policy'
 
 export const PLATFORM_META: Record<
   Platform,
@@ -27,26 +28,34 @@ export function detectPlatform(url: string): Platform | null {
 }
 
 /**
- * 封面可选走部署方图片代理；B 站封面在未配置时使用公开的缩略图代理，
- * 以绕开图床对本地站点来源的防盗链。其他来源继续直接使用原图。
+ * 封面只在共享 policy 明确允许时进入图片代理。
+ *
+ * - `/gallery/**`、`/images/**` 以及其它站内绝对路径永远原样返回。
+ * - 设置 NEXT_PUBLIC_IMG_PROXY 只替换 policy 内 host 的取图路径，不会把所有远端图
+ *   都送进 Worker。
+ * - 未设置时，各 host 按 policy 的 fallback 行为处理；其余远端 host 永远直连。
  */
 export function proxyImage(url: string | undefined, width = 480): string | null {
   if (!url) return null
-  // 本站自带的封面（public/images/**）用站内绝对路径表示，任何图片代理都取不到它，
-  // 必须原样返回；配置了 NEXT_PUBLIC_IMG_PROXY 时尤其容易把它代理成 404。
   if (url.startsWith('/')) return url
+
   // B 站元数据接口至今仍可能返回 http 图床地址；本站 Worker 只接受 https，
   // 这里统一升级，既能命中图片代理，也避免在 HTTPS 页面触发 mixed content。
   const normalized = url.replace(/^http:\/\/((?:[a-z0-9-]+\.)?hdslb\.com)\//i, 'https://$1/')
-  const base = process.env.NEXT_PUBLIC_IMG_PROXY
-  if (base) return `${base}?url=${encodeURIComponent(normalized)}&w=${width}`
+
+  let policy
   try {
-    const host = new URL(normalized).hostname
-    if (host === 'hdslb.com' || host.endsWith('.hdslb.com')) {
-      return `https://images.weserv.nl/?url=${encodeURIComponent(normalized)}&w=${width}`
-    }
+    policy = getImageProxyPolicy(new URL(normalized).hostname)
   } catch {
     return normalized
+  }
+  if (!policy) return normalized
+
+  const base = process.env.NEXT_PUBLIC_IMG_PROXY?.replace(/\/+$/, '')
+  if (base) return `${base}?url=${encodeURIComponent(normalized)}&w=${width}`
+
+  if (policy.fallback === 'weserv') {
+    return `https://images.weserv.nl/?url=${encodeURIComponent(normalized)}&w=${width}`
   }
   return normalized
 }
