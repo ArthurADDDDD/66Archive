@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import { NAV_ITEMS, SiteNav } from './SiteNav'
+import { usePathname } from 'next/navigation'
+import { NAV_ITEMS, NavItemLabel, SiteNav, useNavIntentPrefetch } from './SiteNav'
 import { useSiteCopy } from './LiveContentProvider'
 
 /**
@@ -82,19 +83,52 @@ function PageNavCapsule({
   tools?: ReactNode
 }) {
   const { y } = useScrollState()
+  const pathname = usePathname()
   const copy = useSiteCopy()
+  const { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch } = useNavIntentPrefetch()
   const [open, setOpen] = useState(false)
+  const [pendingHref, setPendingHref] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
   const rootRef = useRef<HTMLDivElement>(null)
+  const pendingResetTimerRef = useRef<number | null>(null)
   // 原先半屏以上的阈值很像组件迟迟没加载；页头离开后就应立即提供入口。
   const shown = y > 96
   const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
   const current = items.find((item) => active === item.id || (active === 'entry' && item.id === 'archive')) ?? items[0]
+  const pendingItem = items.find((item) => item.href === pendingHref)
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => setMounted(true))
-    return () => cancelAnimationFrame(frame)
+    return () => {
+      cancelAnimationFrame(frame)
+      if (pendingResetTimerRef.current !== null) window.clearTimeout(pendingResetTimerRef.current)
+    }
   }, [])
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setPendingHref(null)
+    if (pendingResetTimerRef.current !== null) {
+      window.clearTimeout(pendingResetTimerRef.current)
+      pendingResetTimerRef.current = null
+    }
+  }, [pathname])
+
+  function beginNavigation(href: string, selected: boolean) {
+    cancelIntentPrefetch()
+    if (selected) {
+      setOpen(false)
+      return
+    }
+
+    setPendingHref(href)
+    setOpen(false)
+    if (pendingResetTimerRef.current !== null) window.clearTimeout(pendingResetTimerRef.current)
+    pendingResetTimerRef.current = window.setTimeout(() => {
+      setPendingHref(null)
+      pendingResetTimerRef.current = null
+    }, 12_000)
+  }
 
   useEffect(() => {
     if (!open) return
@@ -135,15 +169,16 @@ function PageNavCapsule({
             tabIndex={shown ? 0 : -1}
             aria-expanded={shown && open}
             aria-haspopup="menu"
-            aria-label={`${current.label}，打开页面导航`}
+            aria-busy={Boolean(pendingItem)}
+            aria-label={pendingItem ? `${pendingItem.label}打开中` : `${current.label}，打开页面导航`}
             onClick={() => setOpen((value) => !value)}
             className={`ui-press flex h-11 min-w-24 items-center justify-between gap-3 rounded-full px-3.5 text-meta transition-[background-color,color] sm:h-9 ${
               open ? 'bg-raised/95 text-ink' : 'text-muted hover:bg-raised/70 hover:text-ink'
             }`}
           >
             <span className="flex items-center gap-2">
-              <i className="h-1.5 w-1.5 rounded-full bg-live" aria-hidden />
-              {current.label}
+              <i className={`h-1.5 w-1.5 rounded-full bg-live ${pendingItem ? 'motion-safe:animate-pulse' : ''}`} aria-hidden />
+              <span aria-live="polite">{pendingItem ? `${pendingItem.label}打开中` : current.label}</span>
             </span>
             <svg
               width="11"
@@ -176,13 +211,19 @@ function PageNavCapsule({
                       <Link
                         href={item.href}
                         prefetch={false}
+                        onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
+                        onMouseLeave={() => cancelIntentPrefetch()}
+                        onFocus={() => queueIntentPrefetch(item.href, selected)}
+                        onBlur={() => cancelIntentPrefetch()}
+                        onPointerDown={() => prefetchNow(item.href, selected)}
                         aria-current={selected ? 'page' : undefined}
-                        onClick={() => setOpen(false)}
+                        aria-busy={pendingHref === item.href || undefined}
+                        onClick={() => beginNavigation(item.href, selected)}
                         className={`ui-press flex min-h-10 items-center justify-between rounded-xl px-3 text-control transition-colors ${
                           selected ? 'bg-raised text-ink' : 'text-muted hover:bg-surface hover:text-ink'
                         }`}
                       >
-                        {item.label}
+                        <NavItemLabel label={item.label} />
                         {selected && <span className="h-1.5 w-1.5 rounded-full bg-live" aria-hidden />}
                       </Link>
                     </li>

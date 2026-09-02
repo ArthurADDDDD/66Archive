@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 type LiveWindow = {
@@ -149,8 +150,10 @@ export function LiveStatusIndicator() {
   const [mounted, setMounted] = useState(false)
   const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null)
   const [statusHint, setStatusHint] = useState<string | null>(null)
+  const [dialogPosition, setDialogPosition] = useState({ top: 64, left: 16 })
   const rootRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const dialogRef = useRef<HTMLElement>(null)
   const hintTimerRef = useRef<number | null>(null)
 
   const dismissStatusHint = useCallback(() => {
@@ -296,7 +299,11 @@ export function LiveStatusIndicator() {
   useEffect(() => {
     if (!open) return
     const close = (event: MouseEvent | TouchEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) setOpen(false)
+      const path = event.composedPath()
+      const root = rootRef.current
+      const dialog = dialogRef.current
+      if ((root && path.includes(root)) || (dialog && path.includes(dialog))) return
+      setOpen(false)
     }
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return
@@ -332,17 +339,26 @@ export function LiveStatusIndicator() {
       : '直播状态暂时不可确认，打开说明'
 
   const indicator = (
-    <div ref={rootRef} className="relative shrink-0">
+    <div ref={rootRef} className="relative z-[70] shrink-0">
       <button
         ref={buttonRef}
         type="button"
         onClick={() => {
           dismissStatusHint()
+          if (!open && buttonRef.current) {
+            const rect = buttonRef.current.getBoundingClientRect()
+            const panelWidth = Math.min(352, window.innerWidth - 32)
+            setDialogPosition({
+              top: rect.bottom + 12,
+              left: Math.max(16, Math.min(rect.left, window.innerWidth - panelWidth - 16)),
+            })
+          }
           setOpen((value) => !value)
         }}
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-label={label}
+        title={label}
         data-live-status={mode}
         className={`ui-press flex h-11 items-center gap-2 rounded-sm text-sm font-semibold tracking-tight transition-colors ${
           live
@@ -374,11 +390,13 @@ export function LiveStatusIndicator() {
         </p>
       )}
 
-      {open && (
+      {open && createPortal(
         <section
+          ref={dialogRef}
           role="dialog"
           aria-label="直播状态"
-          className="ui-sheet-in absolute left-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-line/90 bg-base/95 shadow-[0_24px_80px_rgba(0,0,0,0.38)] backdrop-blur-xl"
+          className="ui-sheet-in fixed z-[80] w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-line/90 bg-base/95 shadow-[0_24px_80px_rgba(0,0,0,0.38)] backdrop-blur-xl"
+          style={dialogPosition}
         >
           <div className="p-5 sm:p-6">
             <div className="flex items-start gap-3">
@@ -422,17 +440,29 @@ export function LiveStatusIndicator() {
               </div>
             </div>
 
-            {(live || mode === 'unknown') && roomUrl && (
-              <a
-                href={roomUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="ui-press mt-5 flex min-h-11 w-full items-center justify-between rounded-full bg-ink px-4 text-control font-medium text-base"
+            <div className="mt-5 grid gap-2">
+              <Link
+                href="/"
+                data-analytics-event="nav.click"
+                data-analytics-target="home"
+                className="ui-press flex min-h-11 w-full items-center justify-between rounded-full border border-line bg-surface px-4 text-control font-medium text-ink transition-colors hover:border-live/60 hover:bg-raised"
               >
-                {live ? '去直播间看看' : '去直播间自行确认'}
-                <span aria-hidden>↗</span>
-              </a>
-            )}
+                回到首页
+                <span aria-hidden>→</span>
+              </Link>
+
+              {(live || mode === 'unknown') && roomUrl && (
+                <a
+                  href={roomUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="ui-press flex min-h-11 w-full items-center justify-between rounded-full bg-ink px-4 text-control font-medium text-base"
+                >
+                  {live ? '去直播间看看' : '去直播间自行确认'}
+                  <span aria-hidden>↗</span>
+                </a>
+              )}
+            </div>
 
             {snapshot && (
               <dl className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line/70 bg-line/70">
@@ -456,7 +486,8 @@ export function LiveStatusIndicator() {
               )}
             </p>
           </div>
-        </section>
+        </section>,
+        document.body,
       )}
     </div>
   )

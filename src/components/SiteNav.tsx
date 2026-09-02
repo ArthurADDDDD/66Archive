@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react'
 import { createPortal } from 'react-dom'
-import Link from 'next/link'
+import Link, { useLinkStatus } from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useSiteCopy } from './LiveContentProvider'
 
@@ -16,6 +16,49 @@ export const NAV_ITEMS = [
   { href: '/gallery/', label: '画廊', id: 'gallery' },
   { href: '/contact/', label: '联系我们', id: 'contact' },
 ] as const
+
+const INTENT_PREFETCH_DELAY_MS = 100
+
+/**
+ * 只预热用户正在指向的页面，不恢复 Next Link 的整排视口预取。
+ * hover / focus 给桌面用户一小段提前量；pointer-down 覆盖快速点击与触屏。
+ */
+export function useNavIntentPrefetch() {
+  const router = useRouter()
+  const prefetchTimerRef = useRef<number | null>(null)
+  const prefetchedRoutesRef = useRef(new Set<string>())
+
+  function cancelIntentPrefetch() {
+    if (prefetchTimerRef.current === null) return
+    window.clearTimeout(prefetchTimerRef.current)
+    prefetchTimerRef.current = null
+  }
+
+  function prefetchNow(href: string, selected: boolean) {
+    cancelIntentPrefetch()
+    if (selected || prefetchedRoutesRef.current.has(href)) return
+    prefetchedRoutesRef.current.add(href)
+    router.prefetch(href)
+  }
+
+  function queueIntentPrefetch(href: string, selected: boolean) {
+    cancelIntentPrefetch()
+    if (selected || prefetchedRoutesRef.current.has(href)) return
+    prefetchTimerRef.current = window.setTimeout(() => {
+      prefetchTimerRef.current = null
+      prefetchNow(href, selected)
+    }, INTENT_PREFETCH_DELAY_MS)
+  }
+
+  useEffect(
+    () => () => {
+      if (prefetchTimerRef.current !== null) window.clearTimeout(prefetchTimerRef.current)
+    },
+    [],
+  )
+
+  return { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch }
+}
 
 /**
  * 主导航。
@@ -34,8 +77,8 @@ export function SiteNav({
   /** 快捷导航里关闭，保证全站只有页头主导航承载直播状态入口。 */
   statusSlot?: boolean
 }) {
-  const router = useRouter()
   const pathname = usePathname()
+  const { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch } = useNavIntentPrefetch()
   // 导航显示名可以由后台改（去哪个页面是固定的）。拉不到就用基线里的名字。
   const copy = useSiteCopy()
   const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
@@ -47,10 +90,9 @@ export function SiteNav({
   const buttonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const [panelTop, setPanelTop] = useState(0)
-  const prefetchTimerRef = useRef<number | null>(null)
-  const prefetchedRoutesRef = useRef(new Set<string>())
   const navigatingToRef = useRef<string | null>(null)
   const navigationResetTimerRef = useRef<number | null>(null)
+  const [pendingHref, setPendingHref] = useState<string | null>(null)
   // 面板要挂到 body 上（见下方注释），SSR 阶段没有 document，先不渲染。
   const [portalReady, setPortalReady] = useState(false)
 
@@ -65,22 +107,6 @@ export function SiteNav({
    * 导航与背景音乐堵在后面。这里关掉视口预取，只在一个目标被 hover / focus 一小段
    * 时间后预热它：桌面仍保留“指向即将打开”的速度，触屏也不会为没点的页面花流量。
    */
-  function cancelIntentPrefetch() {
-    if (prefetchTimerRef.current === null) return
-    window.clearTimeout(prefetchTimerRef.current)
-    prefetchTimerRef.current = null
-  }
-
-  function queueIntentPrefetch(href: string, selected: boolean) {
-    cancelIntentPrefetch()
-    if (selected || prefetchedRoutesRef.current.has(href)) return
-    prefetchTimerRef.current = window.setTimeout(() => {
-      prefetchTimerRef.current = null
-      prefetchedRoutesRef.current.add(href)
-      router.prefetch(href)
-    }, 180)
-  }
-
   /**
    * 慢网下重复点同一个入口不会让导航队列越积越长。第一次点击照常交给 Next，
    * 后续同目标点击在路由完成前只保留为一次；12 秒后自动放开，避免网络失败时无法重试。
@@ -94,16 +120,17 @@ export function SiteNav({
     }
 
     navigatingToRef.current = href
+    setPendingHref(href)
     if (navigationResetTimerRef.current !== null) window.clearTimeout(navigationResetTimerRef.current)
     navigationResetTimerRef.current = window.setTimeout(() => {
       navigatingToRef.current = null
       navigationResetTimerRef.current = null
+      setPendingHref(null)
     }, 12_000)
   }
 
   useEffect(
     () => () => {
-      if (prefetchTimerRef.current !== null) window.clearTimeout(prefetchTimerRef.current)
       if (navigationResetTimerRef.current !== null) window.clearTimeout(navigationResetTimerRef.current)
     },
     [],
@@ -112,6 +139,8 @@ export function SiteNav({
   // 路由已经完成：立即解除重复点击保护，不依赖组件是否被新页面复用。
   useEffect(() => {
     navigatingToRef.current = null
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setPendingHref(null)
     if (navigationResetTimerRef.current !== null) {
       window.clearTimeout(navigationResetTimerRef.current)
       navigationResetTimerRef.current = null
@@ -119,6 +148,7 @@ export function SiteNav({
   }, [pathname])
 
   const current = items.find((i) => active === i.id || (active === 'entry' && i.id === 'archive')) ?? items[1]
+  const pendingItem = items.find((item) => item.href === pendingHref)
 
   // 路由变化时自动收起：无需监听——菜单项点击自带 setOpen(false)，
   // 跨页导航则整个组件卸载重置；usePathname 在这里没有收起的意义。
@@ -182,15 +212,16 @@ export function SiteNav({
               onMouseLeave={() => cancelIntentPrefetch()}
               onFocus={() => queueIntentPrefetch(item.href, selected)}
               onBlur={() => cancelIntentPrefetch()}
-              onPointerDown={() => cancelIntentPrefetch()}
+              onPointerDown={() => prefetchNow(item.href, selected)}
               onClick={(event) => beginNavigation(event, item.href, selected)}
               data-analytics-event="nav.click"
               data-analytics-target={item.id}
               aria-current={selected ? 'page' : undefined}
+              aria-busy={pendingHref === item.href || undefined}
               className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-meta ${selected ? 'bg-ink text-[#12141C] shadow-[0_4px_14px_rgba(230,228,239,0.12)]' : 'text-muted hover:bg-raised hover:text-ink'
                 }`}
             >
-              {item.label}
+              <NavItemLabel label={item.label} />
             </Link>
           )
         })}
@@ -204,11 +235,12 @@ export function SiteNav({
         aria-expanded={open}
         aria-controls={menuId}
         aria-haspopup="menu"
+        aria-busy={Boolean(pendingItem)}
         className="ui-press ml-auto flex h-11 min-w-0 shrink items-center gap-1.5 rounded-full border border-line/80 bg-surface/70 px-3 text-meta text-muted transition-colors hover:border-muted/70 hover:text-ink lg:hidden"
       >
         <span className="flex min-w-0 items-center gap-1.5">
-          <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-live" />
-          <span className="truncate">{current.label}</span>
+          <span aria-hidden className={`h-1.5 w-1.5 shrink-0 rounded-full bg-live ${pendingItem ? 'motion-safe:animate-pulse' : ''}`} />
+          <span className="truncate" aria-live="polite">{pendingItem ? `${pendingItem.label}打开中` : current.label}</span>
         </span>
         <span aria-hidden className={`text-faint transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
           ⌄
@@ -246,11 +278,12 @@ export function SiteNav({
                       onMouseLeave={() => cancelIntentPrefetch()}
                       onFocus={() => queueIntentPrefetch(item.href, selected)}
                       onBlur={() => cancelIntentPrefetch()}
-                      onPointerDown={() => cancelIntentPrefetch()}
+                      onPointerDown={() => prefetchNow(item.href, selected)}
                       data-analytics-event="nav.click"
                       data-analytics-target={item.id}
                       role="menuitem"
                       aria-current={selected ? 'page' : undefined}
+                      aria-busy={pendingHref === item.href || undefined}
                       onClick={(event) => {
                         beginNavigation(event, item.href, selected)
                         setOpen(false)
@@ -263,7 +296,7 @@ export function SiteNav({
                         aria-hidden
                         className={`h-1.5 w-1.5 rounded-full ${selected ? 'bg-live' : 'bg-line'}`}
                       />
-                      {item.label}
+                      <NavItemLabel label={item.label} />
                       {selected && <span className="ml-auto text-meta text-live">当前</span>}
                     </Link>
                   </li>
@@ -275,5 +308,19 @@ export function SiteNav({
         document.body,
       )}
     </div>
+  )
+}
+
+/** Link 的真实路由 pending 状态：点击后下一帧就反馈，不依赖网络或代理速度。 */
+export function NavItemLabel({ label }: { label: string }) {
+  const { pending } = useLinkStatus()
+  return (
+    <span className="inline-flex items-center" aria-live="polite">
+      <span className={pending ? 'opacity-70' : undefined}>{pending ? `${label}打开中` : label}</span>
+      <span
+        aria-hidden
+        className={`ml-1 inline-block h-1.5 w-1.5 rounded-full transition-colors ${pending ? 'bg-current motion-safe:animate-pulse' : 'bg-transparent'}`}
+      />
+    </span>
   )
 }
