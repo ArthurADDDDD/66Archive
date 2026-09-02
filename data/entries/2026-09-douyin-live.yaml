@@ -1,0 +1,20 @@
+# 2026-09 douyin live 条目。由后台审批的采集候选新建。
+- id: 2026-09-01-live-01
+  type: live
+  date: "2026-09-01"
+  title: "冒险岛 怀旧服第九天 和炮炮夫妻档 氪金抽时装砸装备 09 01"
+  platform: douyin
+  duration_min: 186
+  games:
+    - maplestory
+    - maplestory-classic
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/d7b375e41dba3856d679666b71f9c27fba57175a.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1MKtV69E6z"
+      kind: replay
+      status: alive
+  note: "自动采集候选经人工审批新建（组 88e905c3-6c4a-4c72-82f1-962f4838d71e）。"
+  contributed_by: collection-review
