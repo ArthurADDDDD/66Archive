@@ -18,3 +18,22 @@
       status: alive
   note: "自动采集候选经人工审批新建（组 88e905c3-6c4a-4c72-82f1-962f4838d71e）。"
   contributed_by: collection-review
+
+- id: 2026-09-02-live-01
+  type: live
+  date: "2026-09-02"
+  title: "这是动画还是游戏 轨道双子星"
+  platform: douyin
+  duration_min: 60
+  games:
+    - orbitals
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/bad9798a06a6b562e5c91e335ced3d9a63718754.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1xitD6ZEhh"
+      kind: replay
+      status: alive
+  note: "自动采集候选经人工审批新建（组 dd00e1b6-93eb-45ab-9c92-7122513a15d2）。"
+  contributed_by: collection-review
