@@ -45,14 +45,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({ url: siteUrl(path) }))
 
   /**
-   * 只有记录页带 `lastModified`，因为只有这里有一个**真实存在**的日期可用。
-   * 游戏页 / 节目页 / 索引页的「最后更新时间」需要凭空构造，按 AGENTS.md 的
-   * 「不编造数据」，宁可不写——sitemap 允许缺省这个字段，而一个编出来的时间戳
-   * 会让 Google 认定整份 sitemap 的时间不可信，反而不如没有。
+   * **全站都不写 `lastModified`。**
+   *
+   * 曾经在记录页上填过 `entry.date`，那是错的：`entry.date` 是这场直播/这个视频
+   * **发生**的日期，不是这个页面**最后修改**的时间。一条 2015 年的记录如果今天
+   * 补了标题或时长，页面变了而 `entry.date` 纹丝不动——填它等于持续告诉搜索引擎
+   * 「这页十年没动过」，反而压制重新抓取。
+   *
+   * 这个项目目前没有任何可靠的「页面最后修改时间」可用（数据文件没有逐条的
+   * 修订时间戳，构建时间又对每一页都一样，同样没有信息量）。sitemap 允许缺省
+   * 这个字段，而一个语义不对的时间戳比没有更糟：Google 一旦认定 lastmod 不可信，
+   * 会连带忽略整份 sitemap 的时间信息。所以宁可只给 `url`。
    */
   const entryPages: MetadataRoute.Sitemap = ds.entries.map((entry) => ({
     url: siteUrl(`/e/${entry.id}/`),
-    lastModified: entry.date,
   }))
 
   const gamePages: MetadataRoute.Sitemap = allGameIds(ds)
