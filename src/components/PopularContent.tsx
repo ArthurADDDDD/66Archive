@@ -155,7 +155,20 @@ export function PopularContent({
                   </span>
                 </div>
                 <div className="mt-1.5 flex items-center gap-3 pl-9">
-                  <span className="shrink-0 text-meta text-faint tnum">
+                  {/*
+                    固定宽度，不是 shrink-0。
+                    
+                    这一列的内容长短不一（「记录 · 2026-04-28」对「游戏」），而条形图紧跟在它
+                    后面。让它按内容撑开的话，每一行的条就从不同的 x 开始——十行下来是十个
+                    起点，人眼第一时间读到的不是「谁更长」，而是「这些条没对齐」。
+                    条形图的全部意义在于横向比较，起点不齐就等于把这个意义抹掉了。
+
+                    宽度按最长的那种（记录 + 完整日期）取，超出的截断并保留 title。
+                  */}
+                  <span
+                    className="w-[6.5rem] shrink-0 truncate text-meta text-faint tnum"
+                    title={`${KIND_LABEL[item.kind]}${label?.d ? ` · ${label.d}` : ''}`}
+                  >
                     {KIND_LABEL[item.kind]}
                     {label?.d ? ` · ${label.d}` : ''}
                   </span>
