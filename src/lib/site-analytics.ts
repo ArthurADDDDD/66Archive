@@ -37,7 +37,21 @@ const EVENT_NAMES = new Set<SiteAnalyticsEventName>([
   'calibration.open', 'calibration.submit',
 ])
 
+/**
+ * 一次 Web Vitals 采样。
+ *
+ * **刻意不带 route。** LCP/INP/CLS 是 document 生命周期指标，而本站有客户端换页，
+ * 上报时刻（pagehide）的 pathname 不等于指标实际所属的页面——按当时的 pathname 记
+ * 会系统性地归错页。第一版只做全站 + 视口聚合。
+ */
+export type SiteVitalMetric = 'lcp' | 'inp' | 'cls'
+type QueuedVital = { metric: SiteVitalMetric; value: number; viewport: ViewportClass }
+
+/** 与服务端 Schema 的 `vitals: z.array(...).max(12)` 对齐。 */
+const MAX_VITALS_BATCH = 12
+
 let queue: QueuedEvent[] = []
+let vitalsQueue: QueuedVital[] = []
 let flushTimer: number | null = null
 let lastPageViewPath: string | null = null
 
@@ -131,8 +145,9 @@ function scheduleFlush() {
   }, FLUSH_DELAY_MS)
 }
 
-function deliver(events: QueuedEvent[]) {
-  const body = JSON.stringify({ version: 1, events })
+function deliver(events: QueuedEvent[], vitals: QueuedVital[]) {
+  if (events.length === 0 && vitals.length === 0) return
+  const body = JSON.stringify({ version: 1, events, vitals })
   const blob = new Blob([body], { type: 'application/json' })
   if (navigator.sendBeacon?.(ENDPOINT, blob)) return
   void fetch(ENDPOINT, {
@@ -145,16 +160,21 @@ function deliver(events: QueuedEvent[]) {
 }
 
 export function flushSiteAnalytics() {
-  if (typeof window === 'undefined' || queue.length === 0) return
+  if (typeof window === 'undefined' || (queue.length === 0 && vitalsQueue.length === 0)) return
   if (isOptedOut()) {
     queue = []
+    vitalsQueue = []
     return
   }
   if (flushTimer !== null) {
     window.clearTimeout(flushTimer)
     flushTimer = null
   }
-  while (queue.length > 0) deliver(queue.splice(0, MAX_BATCH))
+  // 两个队列配对发出；一边先空了就发只带另一边的批次——服务端允许 events 或
+  // vitals 单独为空，只是不能两边都空（deliver 里已经挡掉那种情况）。
+  while (queue.length > 0 || vitalsQueue.length > 0) {
+    deliver(queue.splice(0, MAX_BATCH), vitalsQueue.splice(0, MAX_VITALS_BATCH))
+  }
 }
 
 export function trackSiteEvent(name: SiteAnalyticsEventName, target?: string) {
@@ -173,6 +193,26 @@ export function trackSiteEvent(name: SiteAnalyticsEventName, target?: string) {
   queue.push({ name, route, ...(target ? { target } : {}), viewport: viewportClass() })
   if (queue.length > MAX_QUEUE) queue = queue.slice(-MAX_QUEUE)
   if (queue.length >= MAX_BATCH) flushSiteAnalytics()
+  else scheduleFlush()
+}
+
+/**
+ * 记一次 Web Vitals 采样。
+ *
+ * 与 `trackSiteEvent` 共用同一条上报链路（因此后端的 Origin 校验、机器人过滤、
+ * `ANALYTICS_EXCLUDED_IPS` 排除名单对性能样本一并生效），但**落库时走的是另一张表**，
+ * 不会进入 PV / 交互 / 访客 / 地区 / 内容排行任何一个口径。
+ *
+ * 原始数值只在请求里出现一次，服务端映射成固定直方图桶之后即丢弃，不落库。
+ */
+export function trackWebVital(metric: SiteVitalMetric, value: number) {
+  if (typeof window === 'undefined' || isOptedOut() || isAutomatedBrowser()) return
+  if (!Number.isFinite(value) || value < 0) return
+  vitalsQueue.push({ metric, value, viewport: viewportClass() })
+  if (vitalsQueue.length > MAX_VITALS_BATCH) vitalsQueue = vitalsQueue.slice(-MAX_VITALS_BATCH)
+  // 页面已经隐藏时不能再等定时器：web-vitals 的终值正是在 pagehide / visibilitychange
+  // 那一刻才吐出来，而那时全站的 flush 监听可能已经跑过了，攒着就等于丢掉。
+  if (document.visibilityState === 'hidden') flushSiteAnalytics()
   else scheduleFlush()
 }
 

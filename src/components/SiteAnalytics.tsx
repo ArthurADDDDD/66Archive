@@ -8,6 +8,7 @@ import {
   trackPageView,
   trackSiteEvent,
 } from '@/lib/site-analytics'
+import { startWebVitalsReporting } from '@/lib/web-vitals-report'
 
 /**
  * One document-level listener keeps analytics out of component state and avoids
@@ -18,6 +19,15 @@ export function SiteAnalytics() {
   const pathname = usePathname()
 
   useEffect(() => trackPageView(pathname), [pathname])
+
+  /**
+   * 必须排在下面那个 effect 之前。
+   *
+   * web-vitals 会自己监听 visibilitychange / pagehide 来吐终值，而下面注册的是同样
+   * 两个事件上的 flush。同一事件的监听器按注册顺序触发——先注册 web-vitals，
+   * 终值才会在 flush 之前入队，跟着那一次请求发出去。
+   */
+  useEffect(() => startWebVitalsReporting(), [])
 
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
