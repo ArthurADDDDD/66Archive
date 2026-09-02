@@ -19,13 +19,7 @@
 
 import { get as httpsGet } from 'node:https'
 import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent } from './live-content'
-
-/**
- * 站点公开地址的兜底值。已经写在 README 里，属于公开信息，不是需要注入的生产配置——
- * 写成默认值是为了让发布流水线不需要任何改动就能享受烤入。换域名时用 `SITE_ORIGIN`
- * 覆盖它，代码里这个常量只是最后一层兜底。
- */
-const FALLBACK_SITE_ORIGIN = 'https://nvliu.wiki'
+import { FALLBACK_SITE_ORIGIN } from './site-url'
 
 const EMPTY: LiveContent = { narrative: null, copy: null, editorial: null }
 

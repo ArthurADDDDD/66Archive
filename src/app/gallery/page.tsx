@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -5,6 +6,11 @@ import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryLiveBoard } from '@/components/GalleryLiveBoard'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
+
+/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
+export const metadata: Metadata = {
+  alternates: { canonical: '/gallery/' },
+}
 
 /** 画廊：精选节点与全量年份底片架共用一套发布版浏览体验。 */
 export default function GalleryPage() {

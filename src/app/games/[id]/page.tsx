@@ -27,7 +27,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params
   const profileId = id === 'maplestory-classic' ? 'maplestory' : id
   const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), profileId)
-  return { title: profile ? `${profile.name} · 游戏收藏架` : '游戏 · 女流66编年史' }
+  return {
+    title: profile ? `${profile.name} · 游戏收藏架` : '游戏 · 女流66编年史',
+    // `maplestory-classic` 会 permanentRedirect 到 `/games/maplestory/`，
+    // 所以它的 canonical 要指向跳转目标，而不是自己这个会 301 的地址。
+    alternates: { canonical: `/games/${profileId}/` },
+  }
 }
 
 export default async function GamePage({ params }: { params: Promise<{ id: string }> }) {

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -9,6 +10,11 @@ import { buildSeriesList, type SeriesInfo } from '@/lib/series'
 import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
 import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
 import { SeriesMontage, type SeriesMontageSample } from '@/components/SeriesMontage'
+
+/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
+export const metadata: Metadata = {
+  alternates: { canonical: '/series/' },
+}
 
 const SERIES_COLOR = { longRunning: '#A78BFA', themed: '#5BC8E8', video: '#E0A244' } as const
 

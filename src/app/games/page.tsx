@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -6,6 +7,11 @@ import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { allGameIds, getGameProfile } from '@/lib/narrative'
 import { LivePageHeading } from '@/components/LiveSection'
+
+/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
+export const metadata: Metadata = {
+  alternates: { canonical: '/games/' },
+}
 
 /**
  * 游戏收藏架（v2 设计）：封面墙 + 「她的游戏库」页头。

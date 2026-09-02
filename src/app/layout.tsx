@@ -6,6 +6,7 @@ import { BgmPlayer } from '@/components/BgmPlayer'
 import { LiveStatusIndicator } from '@/components/LiveStatusIndicator'
 import { SiteAnalytics } from '@/components/SiteAnalytics'
 import { fetchBakedShell } from '@/lib/baked-content'
+import { siteOrigin } from '@/lib/site-url'
 
 const display = Archivo({
   subsets: ['latin'],
@@ -33,6 +34,15 @@ const mono = IBM_Plex_Mono({
  * 页面正文的烤入不受影响——那条路径走的是 `LiveContentProvider` 的初始值。
  */
 export const metadata: Metadata = {
+  /**
+   * 让各页 `alternates.canonical` 能写成相对路径（`'/archive/'`），由 Next 解析成绝对地址。
+   *
+   * **这里刻意不写 `alternates`。** Next 的 metadata 是父到子浅合并，根 layout 写下
+   * `canonical: '/'` 会被每一个没有显式覆盖的页面继承——`/archive/`、`/chronicle/`、
+   * 两千多个 `/e/[id]/` 会全部 canonical 到首页，等于告诉搜索引擎「这些页面都是首页的副本」。
+   * canonical 只能各页自己声明。
+   */
+  metadataBase: new URL(siteOrigin()),
   title: '女流编年史',
   description:
     '2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。',

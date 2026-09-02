@@ -1,9 +1,15 @@
+import type { Metadata } from 'next'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { resolveStoryActs } from '@/lib/narrative'
 import { buildStorySections } from '@/lib/story-years'
 import { ChronicleView } from '@/components/ChronicleView'
 import { LiveNarrativeSeed } from '@/components/LiveContentProvider'
 import { fetchBakedContent } from '@/lib/baked-content'
+
+/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
+export const metadata: Metadata = {
+  alternates: { canonical: '/chronicle/' },
+}
 
 /**
  * 编年史：故事模式。年份脊柱时间线，条目仍来自 STORY_ACTS 的策展列表

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -20,6 +21,11 @@ import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/Liv
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
+
+/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 /**
  * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 历史上的今天）+ 游戏预告 + 四个房间入口。

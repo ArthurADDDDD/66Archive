@@ -20,7 +20,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const s = getDataset().series.get(id)
-  return { title: s ? `${s.name} · 节目单` : '节目 · 女流66编年史' }
+  return {
+    title: s ? `${s.name} · 节目单` : '节目 · 女流66编年史',
+    alternates: { canonical: `/series/${id}/` },
+  }
 }
 
 /**

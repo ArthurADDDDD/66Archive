@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     description: entry
       ? `${entry.date}${entry.time ? ` ${entry.time}` : ''} · ${formatDuration(entry.duration_min)} · 只索引，不搬运。`
       : undefined,
+    alternates: { canonical: `/e/${id}/` },
   }
 }
 
