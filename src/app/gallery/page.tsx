@@ -3,7 +3,7 @@ import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
-import { GalleryBoard } from '@/components/GalleryBoard'
+import { GalleryLiveBoard } from '@/components/GalleryLiveBoard'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 
 /** 画廊：精选节点与全量年份底片架共用一套发布版浏览体验。 */
@@ -36,7 +36,7 @@ export default function GalleryPage() {
 
       {collections.all.length > 0 && (
         <section className="site-container-wide px-page pb-20">
-          <GalleryBoard featuredPhotos={collections.featured} allPhotos={collections.all} />
+          <GalleryLiveBoard featuredPhotos={collections.featured} allPhotos={collections.all} />
         </section>
       )}
 

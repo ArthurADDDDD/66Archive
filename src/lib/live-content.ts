@@ -394,7 +394,7 @@ async function fetchJsonOnce(path: string): Promise<Attempt> {
  * 间隔带随机抖动：三份内容是并发拉的，同时失败时若按固定间隔一起重试，
  * 等于把刚才打爆配额的那一拨突发原样再发一遍。
  */
-async function fetchJson(path: string): Promise<unknown | null> {
+export async function fetchJson(path: string): Promise<unknown | null> {
   // 先看首屏预取有没有现成的。有就直接用，省掉一整趟往返。
   const booted = await bootedJson(path)
   if (booted !== null) return booted
