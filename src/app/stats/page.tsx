@@ -7,7 +7,7 @@ import { YearBarChart } from '@/components/YearCharts'
 import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
 import { CoverageGaps } from '@/components/CoverageMap'
 import { PopularContent } from '@/components/PopularContent'
-import { StatsSection as Section } from '@/components/StatsSection'
+import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { getGameProfile } from '@/lib/narrative'
@@ -164,7 +164,7 @@ export default function StatsPage() {
       </section>
 
       {/* 00 已收录直播与已确认时长 */}
-      <Section question="已收录直播有多少？" accent="#E5568A">
+      <Section questionId="stats-q-recorded" fallback="已收录直播有多少？" accent="#E5568A">
         <div className="grid gap-3 sm:grid-cols-3">
           <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
             <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
@@ -189,7 +189,7 @@ export default function StatsPage() {
       </Section>
 
       {/* 01 哪一年留下的记录最多？ */}
-      <Section question="哪一年留下的记录最多？" accent="#E0A244">
+      <Section questionId="stats-q-busiest-year" fallback="哪一年留下的记录最多？" accent="#E0A244">
         <YearBarChart rows={yearRows} topYear={topYear} />
         <Observation>
           最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
@@ -201,7 +201,7 @@ export default function StatsPage() {
       </Section>
 
       {/* 02 哪些游戏陪得最久？ */}
-      <Section question="哪些游戏陪得最久？" accent="#E5568A">
+      <Section questionId="stats-q-longest-games" fallback="哪些游戏陪得最久？" accent="#E5568A">
         <div className="space-y-3">
           {longest.map((p, i) => (
             <Link key={p.id} href={`/games/${p.id}/`} className="group block">
@@ -228,7 +228,7 @@ export default function StatsPage() {
 
       {/* 03 哪些游戏反复回来？ */}
       <Section
-        question="哪些游戏，隔了几年还会回来？"
+        questionId="stats-q-returning-games" fallback="哪些游戏，隔了几年还会回来？"
         accent="#5BC8E8"
         legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
       >
@@ -269,7 +269,7 @@ export default function StatsPage() {
       </Section>
 
       {/* 04 时代如何变化？ */}
-      <Section question="时代如何变化？" accent="#FF6B75">
+      <Section questionId="stats-q-eras" fallback="时代如何变化？" accent="#FF6B75">
         <div className="grid gap-3 sm:grid-cols-3">
           {eras.map((era) => (
             <Link
@@ -311,7 +311,7 @@ export default function StatsPage() {
       {/* 05 哪些节目坚持得最久？——隐藏中，见 SHOW_LONGEST_RUNNING_SERIES */}
       {SHOW_LONGEST_RUNNING_SERIES && (
       <Section
-        question="哪些节目坚持得最久？"
+        questionId="stats-q-longest-series" fallback="哪些节目坚持得最久？"
         accent="#A78BFA"
         legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 柱子越高，这一年更新得越多`}
       >
@@ -347,14 +347,14 @@ export default function StatsPage() {
 
       {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
       <PopularContent
-        question="水友们最爱点开哪些记录？"
+        questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
         accent="#7BD88F"
         legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
       />
 
       {/* 07 档案还有多少空白？ */}
       <Section
-        question="档案还有多少空白？"
+        questionId="stats-q-gaps" fallback="档案还有多少空白？"
         accent="#5BC8E8"
         legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
       >

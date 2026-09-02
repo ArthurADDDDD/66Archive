@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { StatsSection } from './StatsSection'
+import { useCopyBlock } from './LiveContentProvider'
 
 /**
  * 「水友们最爱看」——站内内容被点开次数的全期排行。
@@ -71,7 +72,19 @@ function isPopularItem(value: unknown): value is PopularItem {
   )
 }
 
-export function PopularContent({ question, accent, legend }: { question: string; accent: string; legend: string }) {
+export function PopularContent({
+  questionId,
+  fallback,
+  accent,
+  legend,
+}: {
+  questionId: string
+  /** 后台把标题清空时用它——空标题看起来像渲染坏了，不像「有人清空了一个字段」。 */
+  fallback: string
+  accent: string
+  legend: string
+}) {
+  const question = useCopyBlock('pages', questionId).title || fallback
   const [state, setState] = useState<'loading' | 'ready' | 'unavailable'>('loading')
   const [items, setItems] = useState<PopularItem[]>([])
   const [countedSince, setCountedSince] = useState<string | null>(null)

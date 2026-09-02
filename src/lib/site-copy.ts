@@ -160,6 +160,18 @@ export const SITE_COPY: SiteCopy = {
     },
   ],
   pages: [
+    // —— 数据页的八个提问 ——
+    // 这些原本硬编码在 src/app/stats/page.tsx 里，改一个字要改代码、发一次版。
+    // 收进这里之后就和其他页头文案同一条路：后台可改、保存即生效。
+    // title 是页面上那一行提问；lede 留空（数据页每节自带图注，不需要引子）。
+    { id: 'stats-q-recorded', eyebrow: '', title: '已收录直播有多少？', lede: '' },
+    { id: 'stats-q-busiest-year', eyebrow: '', title: '哪一年留下的记录最多？', lede: '' },
+    { id: 'stats-q-longest-games', eyebrow: '', title: '哪些游戏陪得最久？', lede: '' },
+    { id: 'stats-q-returning-games', eyebrow: '', title: '哪些游戏，隔了几年还会回来？', lede: '' },
+    { id: 'stats-q-eras', eyebrow: '', title: '时代如何变化？', lede: '' },
+    { id: 'stats-q-longest-series', eyebrow: '', title: '哪些节目坚持得最久？', lede: '' },
+    { id: 'stats-q-popular', eyebrow: '', title: '水友们最爱点开哪些记录？', lede: '' },
+    { id: 'stats-q-gaps', eyebrow: '', title: '档案还有多少空白？', lede: '' },
     {
       id: 'series',
       eyebrow: 'Series · 节目单',
