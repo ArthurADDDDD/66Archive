@@ -15,7 +15,7 @@ let archiveRequest: Promise<ArchivePayload> | null = null
 
 function fetchArchive(): Promise<ArchivePayload> {
   if (archiveRequest) return archiveRequest
-  archiveRequest = fetch('/archive-data.json', { cache: 'force-cache' })
+  archiveRequest = fetch('/archive-data.json', { cache: 'no-cache' })
     .then(async (response) => {
       if (!response.ok) throw new Error(`archive data returned ${response.status}`)
       return response.json() as Promise<ArchivePayload>
