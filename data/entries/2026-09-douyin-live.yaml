@@ -41,3 +41,20 @@
       cover: "http://i2.hdslb.com/bfs/archive/7535894539963502244cda0814d8f24343705131.jpg"
   note: "自动采集候选经人工审批新建（组 dd00e1b6-93eb-45ab-9c92-7122513a15d2）。"
   contributed_by: collection-review
+
+- id: 2026-09-03-live-01
+  type: live
+  date: "2026-09-03"
+  title: "鬼武者"
+  platform: douyin
+  duration_min: 120
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/72358de054ec14a3cdca62c82e65938665207b02.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1NLtf6LEpB"
+      kind: replay
+      status: alive
+  note: "第二场判定：第二场 自动采集候选经人工审批新建（组 46854978-3f19-4c1b-9030-10ff2a96baec）。"
+  contributed_by: collection-review
