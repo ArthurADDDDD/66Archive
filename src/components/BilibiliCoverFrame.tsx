@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
-import { MediaFrame } from './primitives'
+import { MediaFrame } from './MediaFrame'
 
 /** 已有 B 站来源的封面优先即时读取；本地已有的同栏目封面仅作为加载中的视觉兜底。 */
 export function BilibiliCoverFrame({

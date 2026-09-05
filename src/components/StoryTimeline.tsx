@@ -6,7 +6,8 @@ import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
 import { formatDuration } from '@/lib/ui'
-import { Eyebrow, MediaFrame } from './primitives'
+import { MediaFrame } from './MediaFrame'
+import { Eyebrow } from './primitives'
 import { useLiveContent } from './LiveContentProvider'
 
 /**

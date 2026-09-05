@@ -23,14 +23,19 @@ type MonthGroup = {
  */
 export function EntryTimeline({
   entries,
+  indexEntries = entries,
   color = '#5BC8E8',
   renderEntry,
+  onMissingTarget,
 }: {
   entries: TimelineEntry[]
+  /** 可比正文更完整：分批渲染时仍保留完整年月索引。 */
+  indexEntries?: TimelineEntry[]
   color?: string
   renderEntry: (entry: TimelineEntry) => ReactNode
+  onMissingTarget?: (id: string) => void
 }) {
-  const groups = useMemo(() => groupByMonth(entries), [entries])
+  const groups = useMemo(() => groupByMonth(indexEntries), [indexEntries])
   const maxCount = useMemo(() => Math.max(1, ...groups.map((group) => group.count)), [groups])
   const marks = useMemo<TimelineRailMark[]>(
     () => groups.map((group) => ({
@@ -51,6 +56,8 @@ export function EntryTimeline({
         marks={marks}
         ariaLabel="条目年月时间轴"
         positionLabel="按年月查找条目"
+        onMissingTarget={onMissingTarget}
+        targetVersion={entries.length}
         height="clamp(26rem,72vh,54rem)"
         magnify={{ radius: 0.115, scale: 2.25 }}
       />

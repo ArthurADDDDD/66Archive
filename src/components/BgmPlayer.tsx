@@ -9,7 +9,7 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  *
  * 1. **离开就停**：切标签页、切到别的应用、锁屏——一律暂停，回来再续上。
  *    这是个视频索引站，用户点开外站视频后老标签页不该还在自己哼。
- * 2. **只预热起播所需的数据**：`preload="metadata"`，先取很小的媒体头，正文仍按播放进度下载。
+ * 2. **交互前不碰音频网络**：`preload="none"`，首次正常用户手势到来后才起播。
  * 3. **关了就别再响**：用户手动暂停后写进 localStorage；同一设备之后翻页、刷新都保持暂停，
  *    直到用户再次手动播放或换一首。
  *
@@ -26,6 +26,10 @@ export function BgmPlayer() {
   const revealTimerRef = useRef<number | null>(null)
   /** 用户意愿：音乐「应该」是开着的吗（和实际有没有在响分开） */
   const wantsRef = useRef(false)
+  /** 只有真正收到过用户手势，回到页面时才允许自动续播。 */
+  const activatedRef = useRef(false)
+  /** 「换一首」会更换 <source>，等 DOM 更新后再起播新曲。 */
+  const playAfterTrackChangeRef = useRef(false)
   const fadeRef = useRef<number | null>(null)
   /** 同一时刻只留一个 play() promise；慢网下连点不会叠出多轮起播请求。 */
   const playAttemptRef = useRef<Promise<boolean> | null>(null)
@@ -78,8 +82,7 @@ export function BgmPlayer() {
     return attempt
   }, [fadeIn])
 
-  // 客户端决定曲目与用户意愿。真正的播放放到 track 挂载后的 effect，
-  // 确保调用 play() 时 <audio> 已经存在。
+  // 客户端决定曲目与用户意愿；这里不发起任何媒体请求。
   useEffect(() => {
     const picked = pickTrack()
     // 曲目只能在客户端定（localStorage 在 SSR 读不到），一次性
@@ -95,52 +98,48 @@ export function BgmPlayer() {
     wantsRef.current = !off
   }, [])
 
-  // 先监听手势、再尝试自动播放：既不漏掉首屏的快速点击，也让 iOS 的
-  // play() 直接发生在手势调用栈里。播放器自己的按钮由 click handler 处理，
+  // 监听首次正常手势，让 iOS 的 play() 直接发生在手势调用栈里。
+  // 播放器自己的按钮由 click handler 处理，
   // 否则 pointerdown 播放成功后，紧接着的 click 会误把音乐再次关掉。
   useEffect(() => {
     if (!track || !wantsRef.current) return
 
+    // 页面已经完成一次真实交互、但监听器因 hydration 较慢还没来得及挂上时，
+    // userActivation 会替我们记住它。此分支仍严格发生在交互之后，不会提前请求音频。
+    if (navigator.userActivation?.hasBeenActive) {
+      activatedRef.current = true
+      void tryPlay()
+    }
+
     // pointerdown 在部分 Chromium 环境里早于 user activation 生效；click 是
     // 必要的第二道保障。touchend 则覆盖旧版 iOS Safari 的触摸激活时机。
-    //
-    // wheel / scroll 排在后面是**重试**，不是激活：按 HTML 规范，滚动不算
-    // 「activation triggering input event」，浏览器不会因为你滚了两下就放行带声音的
-    // 自动播放。但重试本身有价值——首屏点击有可能发生在 <audio> 还没挂上的瞬间，
-    // 那次激活已经拿到、play() 却还没人调用，滚动就是最早补上的那一下。
-    const gestures = ['pointerdown', 'pointerup', 'mouseup', 'click', 'keydown', 'touchend', 'wheel', 'scroll'] as const
-    // 滚动一秒能来几十个事件，被拦下时别每帧都发一次 play()
-    let lastAttempt = 0
+    // wheel / scroll 不是激活手势，不应触发音频请求。
+    const gestures = ['pointerdown', 'click', 'keydown', 'touchend'] as const
     const onGesture = (event: Event) => {
       const el = audioRef.current
       if (!wantsRef.current || !el?.paused || document.hidden) return
       const target = event.target
       if (target instanceof Element && target.closest('[data-bgm-control]')) return
-      const now = Date.now()
-      if (now - lastAttempt < 350) return
-      lastAttempt = now
+      activatedRef.current = true
       void tryPlay()
     }
 
     gestures.forEach((eventName) => document.addEventListener(eventName, onGesture, { capture: true, passive: true }))
-    // 明确启动 metadata 请求，不把这件事交给浏览器几秒后的低优先级调度；
-    // load() 必须在 play() 前，否则会中断已经发出的起播 promise。
-    audioRef.current?.load()
-    void tryPlay()
-
-    // 浏览器已经放行自动播放时（Chrome 的 media engagement 够高，或用户给了站点权限），
-    // 第一次尝试仍可能撞上首屏的图片/字体抢带宽。头几秒补几次，被拦下的情况白花几微秒而已。
-    const retries = [500, 1500, 3000].map((delay) =>
-      window.setTimeout(() => {
-        if (!wantsRef.current || !audioRef.current?.paused || document.hidden) return
-        void tryPlay()
-      }, delay),
-    )
 
     return () => {
       gestures.forEach((eventName) => document.removeEventListener(eventName, onGesture, true))
-      retries.forEach((id) => window.clearTimeout(id))
     }
+  }, [track, tryPlay])
+
+  // 换曲是明确用户手势，可以在新 <source> 挂载后立即加载并续播；
+  // 首次挑选曲目时这个标记为 false，因此不会偷跑媒体请求。
+  useEffect(() => {
+    if (!track || !playAfterTrackChangeRef.current) return
+    playAfterTrackChangeRef.current = false
+    const el = audioRef.current
+    if (!el || !wantsRef.current || document.hidden) return
+    el.load()
+    void tryPlay()
   }, [track, tryPlay])
 
   // 离开这个界面就停：切标签页 / 切窗口 / 锁屏
@@ -153,7 +152,7 @@ export function BgmPlayer() {
       el.pause()
     }
     const back = () => {
-      if (!wantsRef.current || document.hidden || !el.paused) return
+      if (!activatedRef.current || !wantsRef.current || document.hidden || !el.paused) return
       void tryPlay()
     }
 
@@ -190,7 +189,9 @@ export function BgmPlayer() {
 
   function skip() {
     if (!track) return
+    activatedRef.current = true
     wantsRef.current = true
+    playAfterTrackChangeRef.current = true
     try {
       window.localStorage.removeItem(BGM_OFF_KEY)
     } catch {
@@ -204,6 +205,7 @@ export function BgmPlayer() {
     if (!el) return
     if (el.paused) {
       trackSiteEvent('media.play', 'audio')
+      activatedRef.current = true
       wantsRef.current = true
       try {
         window.localStorage.removeItem(BGM_OFF_KEY)
@@ -227,11 +229,11 @@ export function BgmPlayer() {
 
   return (
     <>
-      {/* metadata 只预热媒体头；移除全站路由抢跑后，净首屏流量仍显著下降。 */}
+      {/* 等首次真实手势才让 play() 启动媒体请求。 */}
       <audio
         ref={audioRef}
         loop
-        preload="metadata"
+        preload="none"
         playsInline
         onPlaying={() => {
           setLoading(false)

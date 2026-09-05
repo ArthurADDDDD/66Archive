@@ -6,6 +6,8 @@ export type BilibiliVideoMeta = {
 }
 
 const cache = new Map<string, Promise<BilibiliVideoMeta | null>>()
+const BILIBILI_FETCH_TIMEOUT_MS = 6_000
+const BILIBILI_JSONP_TIMEOUT_MS = 8_000
 
 export function bilibiliBvid(url: string | null | undefined): string | null {
   if (!url) return null
@@ -30,9 +32,8 @@ export function getBilibiliVideoMeta(url: string | null | undefined): Promise<Bi
   // B 站接口在部分浏览器网络环境不会给 fetch 放行 CORS；JSONP 是该公开接口
   // 原生支持的方式。节目页会在构建期预取，客户端只为其他按需展开的来源降级读取。
   const request = loadVideoMetaJsonp(bvid)
-    .then((meta) => meta ?? fetchVideoMeta(bvid))
-    .catch(() => fetchVideoMeta(bvid))
     .catch(() => null)
+    .then((meta) => meta ?? fetchVideoMeta(bvid).catch(() => null))
 
   cache.set(bvid, request)
   return request
@@ -55,11 +56,18 @@ export async function getBilibiliVideoMetaAtBuild(url: string | null | undefined
 type BilibiliPayload = { code?: number; data?: { pic?: string; stat?: { view?: number } } }
 
 async function fetchVideoMeta(bvid: string): Promise<BilibiliVideoMeta | null> {
-  const response = await fetch(`https://api.bilibili.com/x/web-interface/view?bvid=${encodeURIComponent(bvid)}`, {
-    credentials: 'omit',
-  })
-  if (!response.ok) return null
-  return toVideoMeta(await response.json() as BilibiliPayload)
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), BILIBILI_FETCH_TIMEOUT_MS)
+  try {
+    const response = await fetch(`https://api.bilibili.com/x/web-interface/view?bvid=${encodeURIComponent(bvid)}`, {
+      credentials: 'omit',
+      signal: controller.signal,
+    })
+    if (!response.ok) return null
+    return toVideoMeta(await response.json() as BilibiliPayload)
+  } finally {
+    clearTimeout(timeout)
+  }
 }
 
 function loadVideoMetaJsonp(bvid: string): Promise<BilibiliVideoMeta | null> {
@@ -74,7 +82,7 @@ function loadVideoMetaJsonp(bvid: string): Promise<BilibiliVideoMeta | null> {
       delete callbackTarget[callbackName]
       resolve(payload ? toVideoMeta(payload) : null)
     }
-    const timeout = window.setTimeout(() => finish(), 8_000)
+    const timeout = window.setTimeout(() => finish(), BILIBILI_JSONP_TIMEOUT_MS)
     callbackTarget[callbackName] = (payload: BilibiliPayload) => finish(payload)
     script.async = true
     script.onerror = () => finish()

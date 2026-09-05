@@ -27,6 +27,11 @@ export function detectPlatform(url: string): Platform | null {
   return null
 }
 
+/** wsrv 只服务远程封面；固定输出 WebP，避免大尺寸 PNG 占用国内用户首屏带宽。 */
+function weservImage(url: string, width: number): string {
+  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=${width}&output=webp&q=80`
+}
+
 /**
  * 封面路由由共享 policy 明确决定，而不是由环境变量全局覆盖。
  *
@@ -52,14 +57,14 @@ export function proxyImage(url: string | undefined, width = 480): string | null 
   if (!policy || policy.route === 'direct') return normalized
 
   if (policy.route === 'weserv') {
-    return `https://images.weserv.nl/?url=${encodeURIComponent(normalized)}&w=${width}`
+    return weservImage(normalized, width)
   }
 
   const base = process.env.NEXT_PUBLIC_IMG_PROXY?.replace(/\/+$/, '')
   if (base) return `${base}?url=${encodeURIComponent(normalized)}&w=${width}`
 
   if (policy.fallback === 'weserv') {
-    return `https://images.weserv.nl/?url=${encodeURIComponent(normalized)}&w=${width}`
+    return weservImage(normalized, width)
   }
   return normalized
 }

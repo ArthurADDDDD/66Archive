@@ -1,6 +1,3 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
 
 /**
@@ -102,46 +99,6 @@ export function SectionHeading({
       {eyebrow && <Eyebrow color={eyebrowColor}>{eyebrow}</Eyebrow>}
       <h2 className="mt-3 text-h2 font-semibold text-ink">{title}</h2>
       {body && <div className="measure-body mt-3 text-body text-muted">{body}</div>}
-    </div>
-  )
-}
-
-/** 视觉框：真实封面，缺失或加载失败（onError）时退化为字排版色块（绝不用假图） */
-export function MediaFrame({
-  src,
-  alt = '',
-  fallback,
-  aspect = 'aspect-video',
-  className = '',
-  children,
-}: {
-  src?: string | null
-  alt?: string
-  fallback?: React.ReactNode
-  aspect?: string
-  className?: string
-  children?: React.ReactNode
-}) {
-  const [broken, setBroken] = useState(false)
-  const showImage = Boolean(src) && !broken
-  return (
-    <div className={`relative ${aspect} overflow-hidden rounded-xl border border-line/80 bg-raised ${className}`}>
-      {showImage ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src!}
-          alt={alt}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          onError={() => setBroken(true)}
-          className="h-full w-full object-cover"
-        />
-      ) : (
-        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/12 via-raised to-live/8 p-6">
-          {fallback ?? <span className="text-meta tracking-widest text-faint">封面待补</span>}
-        </div>
-      )}
-      {children}
     </div>
   )
 }

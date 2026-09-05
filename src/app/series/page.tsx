@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
-import { Eyebrow, MediaFrame, SiteFooter } from '@/components/primitives'
+import { MediaFrame } from '@/components/MediaFrame'
+import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeriesList, type SeriesInfo } from '@/lib/series'
@@ -29,7 +30,7 @@ export default async function SeriesPage() {
   const timeline = toTimelineEntries(ds)
   const series = buildSeriesList(ds, timeline)
   const pishuang = series.find((s) => s.id === 'xinling-pishuang')
-  const pishuangMontage = pishuang ? await buildPishuangMontage(pishuang) : []
+  const pishuangMontage = pishuang ? buildPishuangMontage(pishuang) : []
   const pishuangFirstBiliSource = pishuang?.entries[0]?.sources.find((source) => source.url.includes('bilibili.com/video/'))?.url
   const pishuangFirstBiliMeta = await getBilibiliVideoMetaAtBuild(pishuangFirstBiliSource)
   const pishuangFallbackCover = pishuangFirstBiliMeta?.cover ?? pishuang?.entries.find((entry) => entry.cover)?.cover
@@ -98,6 +99,7 @@ export default async function SeriesPage() {
               </p>
               <Link
                 href="/series/xinling-pishuang/"
+                prefetch={false}
                 className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
               >
                 打开心灵砒霜的全部 {pishuang.count} 期
@@ -131,20 +133,17 @@ export default async function SeriesPage() {
   )
 }
 
-async function buildPishuangMontage(series: SeriesInfo): Promise<SeriesMontageSample[]> {
-  const seenBvid = new Set<string>()
+function buildPishuangMontage(series: SeriesInfo): SeriesMontageSample[] {
+  // 档案条目本身已有足够多的已核验封面。只取最近 24 条，既保留长档案的
+  // 横向浏览感，也避免为了播放量排序在每次构建时逐条请求第三方元数据。
   const samples: SeriesMontageSample[] = []
-  for (const entry of series.entries) {
-    const source = entry.sources.find((candidate) => candidate.url.includes('bilibili.com/video/'))
-    const bvid = source?.url.match(/\/video\/(BV[\w-]+)/i)?.[1]
-    if (!source || !bvid || seenBvid.has(bvid)) continue
-    seenBvid.add(bvid)
-    samples.push({ id: entry.id, date: entry.date, title: entry.title, sourceUrl: source.url, cover: entry.cover, views: null })
+  const recentFirst = [...series.entries].sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id))
+  for (const entry of recentFirst) {
+    if (!entry.cover) continue
+    samples.push({ id: entry.id, date: entry.date, title: entry.title, cover: entry.cover })
+    if (samples.length === 24) break
   }
-  return Promise.all(samples.map(async (sample) => {
-    const meta = await getBilibiliVideoMetaAtBuild(sample.sourceUrl)
-    return { ...sample, cover: meta?.cover ?? sample.cover, views: meta?.views ?? null }
-  }))
+  return samples
 }
 
 function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
@@ -160,6 +159,7 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
       </div>
       <Link
         href={`/series/${series.id}/`}
+        prefetch={false}
         className="ui-press group mt-6 grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
       >
         <div className="min-w-0 p-6 sm:p-8 lg:p-10">
@@ -217,6 +217,7 @@ function SeriesGroup({
           <Link
             key={s.id}
             href={`/series/${s.id}/`}
+            prefetch={false}
             className="ui-press group flex flex-col rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60 hover:bg-surface"
           >
             {s.cover ? (

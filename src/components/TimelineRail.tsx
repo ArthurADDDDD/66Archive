@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
-import { MediaFrame } from './primitives'
+import { MediaFrame } from './MediaFrame'
 
 /**
  * 右侧快速时间轴：全站共用的那条「条儿」。
@@ -48,6 +48,8 @@ export function TimelineRail({
   marks,
   ariaLabel,
   positionLabel,
+  onMissingTarget,
+  targetVersion,
   /** 轨道出现的最小宽度。首页和编年史要整屏版面才放得下，画廊平板就能用。 */
   showFrom = 'xl',
   /** 右下角有回到顶部这类浮动按钮时抬高轨道底边，两个浮层不叠在一起。 */
@@ -59,6 +61,10 @@ export function TimelineRail({
   marks: TimelineRailMark[]
   ariaLabel: string
   positionLabel: string
+  /** 分批渲染页面可在目标尚未进 DOM 时先把对应批次补出来。 */
+  onMissingTarget?: (id: string) => void
+  /** 目标 DOM 集合变化时重建观察器；刻度本身不必跟着重算。 */
+  targetVersion?: string | number
   showFrom?: 'md' | 'xl'
   reserveBottom?: boolean
   height?: string
@@ -68,6 +74,8 @@ export function TimelineRail({
   const railRef = useRef<HTMLDivElement>(null)
   const markRefs = useRef<(HTMLSpanElement | null)[]>([])
   const draggingRef = useRef(false)
+  /** 键盘/拖动明确选中的刻度要保持为导航基准，直到用户自己滚动正文。 */
+  const navigationLockRef = useRef('')
   const activeIdRef = useRef(marks[0]?.id ?? '')
   const [activeId, setActiveId] = useState(marks[0]?.id ?? '')
   const [hoverPct, setHoverPct] = useState<number | null>(null)
@@ -77,6 +85,7 @@ export function TimelineRail({
   // 当前位置跟着正文走：观察每个刻度对应的真实元素，不另外维护一份滚动量换算。
   useEffect(() => {
     const setActive = (id: string) => {
+      if (navigationLockRef.current && navigationLockRef.current !== id) return
       if (activeIdRef.current === id) return
       activeIdRef.current = id
       setActiveId(id)
@@ -98,14 +107,51 @@ export function TimelineRail({
         if (entry.isIntersecting && knownIds.has(entry.target.id)) setActive(entry.target.id)
       }
     }, { rootMargin: '-45% 0px -49% 0px', threshold: 0 })
+    // IntersectionObserver 负责滚动中的轻量跟随；停止后再按正文真实位置校准一次，
+    // 解决程序化长距离跳转时多个交叉回调到达顺序不固定的问题。
+    let settleTimer = 0
+    const onScroll = () => {
+      if (settleTimer) window.clearTimeout(settleTimer)
+      settleTimer = window.setTimeout(findCurrent, 140)
+    }
 
     for (const mark of marks) {
       const element = document.getElementById(mark.id)
       if (element) observer.observe(element)
     }
-    findCurrent()
-    return () => observer.disconnect()
-  }, [marks])
+    // 分批页面会在同一次 commit 后由父级把新目标滚进视口；等到下一帧再
+    // 读位置，避免先用旧滚动位置覆盖刚由键盘/拖动选中的轨道游标。
+    const frame = window.requestAnimationFrame(findCurrent)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.cancelAnimationFrame(frame)
+      if (settleTimer) window.clearTimeout(settleTimer)
+      window.removeEventListener('scroll', onScroll)
+      observer.disconnect()
+    }
+  }, [marks, targetVersion])
+
+  // 用户重新接管正文滚动后，当前位置恢复由 IntersectionObserver 跟随。
+  useEffect(() => {
+    const unlock = () => { navigationLockRef.current = '' }
+    const unlockOutsideRail = (event: PointerEvent) => {
+      if (!(event.target instanceof Node) || !railRef.current?.contains(event.target)) unlock()
+    }
+    const unlockFromKeyboard = (event: KeyboardEvent) => {
+      if (event.target instanceof Node && railRef.current?.contains(event.target)) return
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) unlock()
+    }
+    window.addEventListener('wheel', unlock, { passive: true })
+    window.addEventListener('touchstart', unlock, { passive: true })
+    window.addEventListener('pointerdown', unlockOutsideRail)
+    window.addEventListener('keydown', unlockFromKeyboard)
+    return () => {
+      window.removeEventListener('wheel', unlock)
+      window.removeEventListener('touchstart', unlock)
+      window.removeEventListener('pointerdown', unlockOutsideRail)
+      window.removeEventListener('keydown', unlockFromKeyboard)
+    }
+  }, [])
 
   const activeIndex = Math.max(0, marks.findIndex((mark) => mark.id === activeId))
   const previewPct = dragPct ?? hoverPct
@@ -144,13 +190,22 @@ export function TimelineRail({
   const jumpToIndex = useCallback((index: number) => {
     const mark = marks[Math.max(0, Math.min(marks.length - 1, index))]
     const target = mark ? document.getElementById(mark.id) : null
-    if (!target) return
+    if (!mark) return
+    // 先同步轨道本身：目标若尚未渲染，补批次和滚动之间也要保持正确的
+    // 游标/aria-valuenow，下一次键盘 ArrowUp/Down 才会从刚选中的月份继续。
+    navigationLockRef.current = mark.id
+    activeIdRef.current = mark.id
+    setActiveId(mark.id)
+    window.history.replaceState(null, '', `#${mark.id}`)
+    if (!target) {
+      onMissingTarget?.(mark.id)
+      return
+    }
     target.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       block: 'start',
     })
-    window.history.replaceState(null, '', `#${mark.id}`)
-  }, [marks])
+  }, [marks, onMissingTarget])
 
   useEffect(() => {
     const onPointerUp = (event: PointerEvent) => {
