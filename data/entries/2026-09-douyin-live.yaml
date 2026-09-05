@@ -82,3 +82,22 @@
       status: alive
   note: "自动采集候选经人工审批新建（组 e6ec6790-720a-4c8b-bf3b-73108a1dc0be）。"
   contributed_by: collection-review
+
+- id: 2026-09-04-live-02
+  type: live
+  date: "2026-09-04"
+  title: "卡普空新作 鬼武者 剑之道 最高难度 第二天游戏实况 09 04"
+  platform: douyin
+  duration_min: 349
+  games:
+    - guiwuzhe2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/48bac593ce03153075ea6be08abeccb63580d598.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1eftq6vE3G"
+      kind: replay
+      status: alive
+  note: "自动采集候选经人工审批新建（组 c65efbc7-2f01-4b5c-b148-3c2445410c11）。"
+  contributed_by: collection-review
