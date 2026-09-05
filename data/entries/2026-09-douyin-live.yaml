@@ -56,8 +56,13 @@
     - url: "https://www.bilibili.com/video/BV1NLtf6LEpB"
       kind: replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV14Qtf6SEXY"
+      kind: replay
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/acaf19bf383729b9013f7ab70a48edf06bc15812.jpg"
   note: "第二场判定：第二场 自动采集候选经人工审批新建（组 46854978-3f19-4c1b-9030-10ff2a96baec）。"
   contributed_by: collection-review
+  games: [guiwuzhe2]
 
 - id: 2026-09-04-live-01
   type: live
