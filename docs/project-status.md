@@ -32,7 +32,7 @@
 - [`README.md`](../README.md)：项目介绍、现有功能、参与方式与当前缺口概览；
 - [`data/reports/missing-resources.md`](../data/reports/missing-resources.md)：当前对外征集的长期缺失资源；
 - [`data/reports/source-registry.md`](../data/reports/source-registry.md)：已经审计过的主要来源与覆盖范围；
-- [`AGENTS.md`](../AGENTS.md)：Agent 协作、安全边界、角色与提交规则；
+- [`AGENTS.md`](../AGENTS.md)：Agent 接续、跨仓安全边界与提交规则；
 - [`rfc-001-bake-content-into-build.md`](rfc-001-bake-content-into-build.md)：构建期后台文案烤入的历史设计与实施记录。
 
 ## 文档维护约定
