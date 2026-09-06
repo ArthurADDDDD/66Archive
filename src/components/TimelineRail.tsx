@@ -38,6 +38,32 @@ export type TimelineRailMark = {
 /** 服务端没有 document，portal 只能在挂载后建立。 */
 const subscribeNoop = () => () => {}
 
+/**
+ * 落点高亮：跳过去之后给目标元素套一圈会自己退场的光晕。
+ * 轨道刻度只有月份精度，落点是那个月的第一条——网格视图里它可能是某一行中间的
+ * 一张卡，不点亮的话用户根本不知道自己停在了哪一条上。
+ */
+const LANDED_CLASS = 'timeline-rail-landed'
+const LANDED_MS = 3600
+/** 目标还没渲染时（分批列表）等父级补批次，最多等这么久。 */
+const LANDED_WAIT_MS = 3000
+const LANDED_POLL_MS = 60
+
+/**
+ * 落点光需要同色的半透明版本。刻度色都是 6 位十六进制，直接补 alpha 位——
+ * 用 color-mix() 写在 CSS 里更短，但它一旦不被支持，整条 box-shadow 声明都会作废，
+ * 那就是「跳过去完全没有提示」，不是「提示淡一点」。
+ */
+function withAlpha(color: string, alpha: string): string {
+  return /^#[0-9a-f]{6}$/i.test(color) ? `${color}${alpha}` : color
+}
+
+function clearAccent(element: HTMLElement) {
+  element.style.removeProperty('--landed-accent')
+  element.style.removeProperty('--landed-accent-soft')
+  element.style.removeProperty('--landed-accent-wash')
+}
+
 const WEIGHT_CLASS: Record<NonNullable<TimelineRailMark['weight']>, string> = {
   lead: 'timeline-rail__mark--lead',
   major: 'timeline-rail__mark--major',
@@ -181,6 +207,56 @@ export function TimelineRail({
     })
   }, [activeIndex, marks, previewPct, radius, maxScale])
 
+  const landedRef = useRef<{ element: HTMLElement; timer: number } | null>(null)
+  const landedWaitRef = useRef(0)
+
+  /** 目标进 DOM 就点亮它；分批页面允许先等一会儿再点。 */
+  const flashTarget = useCallback((id: string, color: string) => {
+    if (landedWaitRef.current) window.clearTimeout(landedWaitRef.current)
+    const deadline = Date.now() + LANDED_WAIT_MS
+    const attempt = () => {
+      landedWaitRef.current = 0
+      const element = document.getElementById(id)
+      if (!element) {
+        if (Date.now() < deadline) landedWaitRef.current = window.setTimeout(attempt, LANDED_POLL_MS)
+        return
+      }
+      const previous = landedRef.current
+      if (previous) {
+        window.clearTimeout(previous.timer)
+        previous.element.classList.remove(LANDED_CLASS)
+        clearAccent(previous.element)
+      }
+      element.style.setProperty('--landed-accent', color)
+      element.style.setProperty('--landed-accent-soft', withAlpha(color, '8C'))
+      element.style.setProperty('--landed-accent-wash', withAlpha(color, '24'))
+      // 连点同一个月也要再闪一次：先摘类、强制回流，动画才会从头播。
+      element.classList.remove(LANDED_CLASS)
+      void element.offsetWidth
+      element.classList.add(LANDED_CLASS)
+      landedRef.current = {
+        element,
+        timer: window.setTimeout(() => {
+          element.classList.remove(LANDED_CLASS)
+          clearAccent(element)
+          landedRef.current = null
+        }, LANDED_MS),
+      }
+    }
+    attempt()
+  }, [])
+
+  // 离场时别把高亮和待办的等待留在页面上。
+  useEffect(() => () => {
+    if (landedWaitRef.current) window.clearTimeout(landedWaitRef.current)
+    const landed = landedRef.current
+    if (!landed) return
+    window.clearTimeout(landed.timer)
+    landed.element.classList.remove(LANDED_CLASS)
+    clearAccent(landed.element)
+    landedRef.current = null
+  }, [])
+
   const getPct = useCallback((clientY: number) => {
     const rect = railRef.current?.getBoundingClientRect()
     if (!rect) return null
@@ -199,13 +275,15 @@ export function TimelineRail({
     window.history.replaceState(null, '', `#${mark.id}`)
     if (!target) {
       onMissingTarget?.(mark.id)
+      flashTarget(mark.id, mark.color)
       return
     }
     target.scrollIntoView({
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       block: 'start',
     })
-  }, [marks, onMissingTarget])
+    flashTarget(mark.id, mark.color)
+  }, [flashTarget, marks, onMissingTarget])
 
   useEffect(() => {
     const onPointerUp = (event: PointerEvent) => {

@@ -155,7 +155,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             <dl className="mt-6 grid max-w-md grid-cols-3 gap-4 border-y border-line/60 py-4">
               <Fact
                 value={formatClock(entry.duration_min)}
-                label={entry.duration_min ? '时长 时:分' : '时长未知'}
+                label={entry.duration_min ? '时长 时:分:秒' : '时长未知'}
                 accent={entry.duration_min ? accent : undefined}
               />
               <Fact value={String(entry.segments.length)} label="分段" />

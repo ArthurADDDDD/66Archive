@@ -36,8 +36,9 @@ export function EntryRow({
     ? 'w-[clamp(4.75rem,7vw,7rem)]'
     : 'w-[clamp(2.75rem,4vw,4rem)] sm:w-[clamp(3.5rem,5vw,5rem)]'
 
+  // 列表行没有封面可以发光，落点改成整行短暂染色（entry-landing-row，见 globals.css）
   return (
-    <article id={`entry-${entry.id}`} className={`group relative scroll-mt-24 rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25 p-[clamp(0.75rem,1.25vw,1.75rem)]' : 'hover:bg-surface/10'}`}>
+    <article id={`entry-${entry.id}`} className={`entry-landing-row group relative scroll-mt-24 rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25 p-[clamp(0.75rem,1.25vw,1.75rem)]' : 'hover:bg-surface/10'}`}>
       <div className="py-[clamp(0.375rem,0.55vw,0.75rem)]">
         {/* 收起也是点这颗按钮，但那不是「点开」：展开状态下不挂上报属性，
             否则一次展开加一次收起会被记成两次打开。 */}

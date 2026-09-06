@@ -16,23 +16,22 @@ type MonthGroup = {
 }
 
 /**
- * 条目列表右侧的年月索引。
+ * 条目正文右侧的年月索引（只有轨道，不管正文怎么排）。
  *
- * 目录仍然保持原来的横向条目布局，刻度和首页共用 TimelineRail：月份越密集，
- * 刻度越长、越亮；悬停时会放大并显示该月第一张可用封面，点击或拖动才定位正文。
+ * 刻度和首页共用 TimelineRail：月份越密集，刻度越长、越亮；悬停时会放大并显示
+ * 该月第一张可用封面，点击或拖动才定位正文。列表和封面网格都用它——网格的卡片
+ * 同样带 `entry-<id>` 锚点，轨道不需要知道正文是横排还是网格。
  */
-export function EntryTimeline({
+export function EntryMonthRail({
   entries,
   indexEntries = entries,
   color = '#5BC8E8',
-  renderEntry,
   onMissingTarget,
 }: {
   entries: TimelineEntry[]
   /** 可比正文更完整：分批渲染时仍保留完整年月索引。 */
   indexEntries?: TimelineEntry[]
   color?: string
-  renderEntry: (entry: TimelineEntry) => ReactNode
   onMissingTarget?: (id: string) => void
 }) {
   const groups = useMemo(() => groupByMonth(indexEntries), [indexEntries])
@@ -51,18 +50,42 @@ export function EntryTimeline({
   )
 
   return (
+    <TimelineRail
+      marks={marks}
+      ariaLabel="条目年月时间轴"
+      positionLabel="按年月查找条目"
+      onMissingTarget={onMissingTarget}
+      targetVersion={entries.length}
+      height="clamp(26rem,72vh,54rem)"
+      magnify={{ radius: 0.115, scale: 2.25 }}
+    />
+  )
+}
+
+/** 年月轴 + 原来的横向条目列表：列表视图的组合，网格视图直接用 EntryMonthRail。 */
+export function EntryTimeline({
+  entries,
+  indexEntries = entries,
+  color = '#5BC8E8',
+  renderEntry,
+  onMissingTarget,
+}: {
+  entries: TimelineEntry[]
+  indexEntries?: TimelineEntry[]
+  color?: string
+  renderEntry: (entry: TimelineEntry) => ReactNode
+  onMissingTarget?: (id: string) => void
+}) {
+  return (
     <>
-      <TimelineRail
-        marks={marks}
-        ariaLabel="条目年月时间轴"
-        positionLabel="按年月查找条目"
+      <EntryMonthRail
+        entries={entries}
+        indexEntries={indexEntries}
+        color={color}
         onMissingTarget={onMissingTarget}
-        targetVersion={entries.length}
-        height="clamp(26rem,72vh,54rem)"
-        magnify={{ radius: 0.115, scale: 2.25 }}
       />
 
-      <div aria-label="按年月查找条目" className="w-full divide-y divide-line/50 border-y border-line/60">
+      <div aria-label="按年月查找条目" className="entry-landing-stage w-full divide-y divide-line/50 border-y border-line/60">
         {entries.map((entry) => (
           <div key={entry.id}>{renderEntry(entry)}</div>
         ))}

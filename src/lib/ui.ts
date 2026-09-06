@@ -20,9 +20,17 @@ export function formatDuration(min?: number): string {
   return h ? `${h} 小时 ${m ? `${m} 分` : ''}`.trim() : `${m} 分钟`
 }
 
+/**
+ * 卡片角标 / 关键数字上的时长，走播放器惯例：满一小时给 HH:MM:SS，否则 MM:SS。
+ * 早先只写「时:分」，于是 3 小时的直播显示成 03:00，跟一条 3 分钟的短视频撞脸。
+ * 数据只有分钟粒度，秒位恒为 00——补这一位是让人一眼分清量级的最小代价。
+ */
 export function formatClock(min?: number): string {
   if (!min) return '--:--'
-  return `${String(Math.floor(min / 60)).padStart(2, '0')}:${String(min % 60).padStart(2, '0')}`
+  const h = Math.floor(min / 60)
+  const m = min % 60
+  const mmss = `${String(m).padStart(2, '0')}:00`
+  return h ? `${String(h).padStart(2, '0')}:${mmss}` : mmss
 }
 
 /**

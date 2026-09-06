@@ -73,10 +73,11 @@ export function EntryGrid({
   const expandedRow = expandedIndex >= 0 ? Math.floor(expandedIndex / columns) : -1
   const expandedEntry = expandedIndex >= 0 ? entries[expandedIndex] : null
 
+  // entry-landing-stage：年月轴落点时，这一片会短暂退到落点卡后面（见 globals.css）
   return (
     <div
       ref={gridRef}
-      className="grid grid-cols-[repeat(auto-fill,minmax(13.5rem,1fr))] gap-x-4 gap-y-6 xl:grid-cols-[repeat(auto-fill,minmax(15rem,1fr))]"
+      className="entry-landing-stage grid grid-cols-[repeat(auto-fill,minmax(13.5rem,1fr))] gap-x-4 gap-y-6 xl:grid-cols-[repeat(auto-fill,minmax(15rem,1fr))]"
     >
       {entries.map((entry, index) => {
         const lastInRow = (index + 1) % columns === 0 || index === entries.length - 1
@@ -154,8 +155,9 @@ function EntryCard({
       aria-controls={`entry-preview-${entry.id}`}
       className="group ui-press flex min-w-0 scroll-mt-24 flex-col text-left"
     >
+      {/* entry-landing-cover：年月轴跳到这张卡时，只有封面从底下透出光（见 globals.css） */}
       <span
-        className={`relative block aspect-video w-full overflow-hidden rounded-lg border bg-raised transition-[border-color,box-shadow] duration-300 ${
+        className={`entry-landing-cover relative block aspect-video w-full overflow-hidden rounded-lg border bg-raised transition-[border-color,box-shadow] duration-300 ${
           expanded ? 'border-live/70 shadow-[0_10px_30px_rgba(91,200,232,0.16)]' : 'border-line/70 group-hover:border-muted'
         }`}
       >

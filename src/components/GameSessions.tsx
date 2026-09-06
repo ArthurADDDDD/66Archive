@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
-import { EntryTimeline } from './EntryTimeline'
+import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 
@@ -83,6 +83,10 @@ export function GameSessions({ entries, color = '#E0A244' }: { entries: Timeline
 
       {view === 'grid' ? (
         <div className="mt-6 w-full">
+          {/* 网格没有月份小标题，落点会停在某一行中间——轨道跳转时那张卡会自己亮一下。 */}
+          {visible.length > 10 && (
+            <EntryMonthRail key={`${year ?? 'all'}-${order}`} entries={visible} color={color} />
+          )}
           <EntryGrid
             entries={visible}
             expandedId={gridExpandedId}

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
-import { EntryTimeline } from './EntryTimeline'
+import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 
@@ -228,6 +228,16 @@ export function SeriesEpisodes({
 
       {view === 'grid' ? (
         <div id="series-episode-list" className="mt-4 w-full">
+          {/* 网格没有月份小标题，落点会停在某一行中间——轨道跳转时那张卡会自己亮一下。 */}
+          {loadedEntries.length > 10 && (
+            <EntryMonthRail
+              key={batchKey}
+              entries={loadedEntries}
+              indexEntries={visible}
+              color={color}
+              onMissingTarget={revealTarget}
+            />
+          )}
           <EntryGrid
             entries={loadedEntries}
             expandedId={gridExpandedId}

@@ -248,6 +248,56 @@ body {
   }
 }
 
+/* 封面底下的落点光。快速亮起（滚动还没停就已经在亮了），稳定亮住大半程再化开——
+   淡入淡出各占一半的话，用户抬眼时正好赶上最暗的两头，等于没提示。 */
+@keyframes timeline-rail-landed-cover {
+  0% {
+    box-shadow:
+      0 0.5rem 1.25rem -0.75rem transparent,
+      0 0 1.5rem -0.5rem transparent;
+  }
+  8%,
+  68% {
+    box-shadow:
+      0 1.15rem 2.75rem -0.5rem var(--landed-accent, #5BC8E8),
+      0 0 1.75rem -0.35rem var(--landed-accent-soft, #5BC8E88C);
+  }
+  100% {
+    box-shadow:
+      0 0.5rem 1.25rem -0.75rem transparent,
+      0 0 1.5rem -0.5rem transparent;
+  }
+}
+
+/* 落点周围短暂退场。比落点光短一截，而且晚 260ms 才起——滚动动画通常这时候
+   才停，早了会在滚动过程中糊一层，既看不清也最容易掉帧。 */
+@keyframes timeline-rail-landed-stage {
+  0% {
+    opacity: 0;
+  }
+  22%,
+  62% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 列表行没有封面，改成整行染一层同色底 */
+@keyframes timeline-rail-landed-row {
+  0% {
+    background-color: transparent;
+  }
+  8%,
+  68% {
+    background-color: var(--landed-accent-wash, #5BC8E824);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 @layer utilities {
   /* 兼顾手机与 4K：字号随视口温和增长，不让中文在超宽屏上缩成细小像素。 */
   .text-hero {
@@ -513,6 +563,63 @@ body {
   .timeline-rail__mark--lead {
     width: clamp(1.15rem, 1.45vw, 1.75rem);
     height: 0.1875rem;
+  }
+
+  /* 轨道落点：跳过去的那一条自己亮一下再退场。先稳定亮 55%，再慢慢化开——
+     一上来就淡出的话，滚动动画还没停用户就已经错过它了。
+     颜色由 TimelineRail 写在目标元素上的 --landed-accent 决定，跟随当前栏目色。 */
+  /* 落点本身不画任何框：光只从封面底下透出来，卡片轮廓保持干净。
+     抬一层既是为了压住下面那层退场蒙版，也因为光会溢到相邻卡片的位置，
+     不抬会被后面的卡盖掉半边。 */
+  .timeline-rail-landed {
+    position: relative;
+    z-index: 2;
+  }
+
+  .entry-landing-stage {
+    position: relative;
+  }
+
+  /* 「其他期退开」只用这一层蒙版，不去挨个给卡片上 filter：
+     一屏几十上百张带封面的卡，每张一个 blur 就是几十上百个新图层，
+     那种卡顿比没有这个效果糟得多。蒙版是一个元素，backdrop-filter 也只糊
+     它盖住的那块可视区域，代价与条目数无关。 */
+  .entry-landing-stage:has(.timeline-rail-landed)::after {
+    content: '';
+    position: absolute;
+    inset: -0.75rem;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(18, 20, 28, 0.55);
+    backdrop-filter: blur(3px);
+    animation: timeline-rail-landed-stage 1500ms 260ms ease-out both;
+  }
+
+  /* 减少动态偏好：蒙版会被全局规则压成瞬间完成，留着等于糊一层不会退的雾。 */
+  @media (prefers-reduced-motion: reduce) {
+    .entry-landing-stage:has(.timeline-rail-landed)::after {
+      content: none;
+    }
+  }
+
+  .timeline-rail-landed .entry-landing-cover {
+    animation: timeline-rail-landed-cover 3600ms ease-out both;
+  }
+
+  .timeline-rail-landed.entry-landing-row {
+    animation: timeline-rail-landed-row 3600ms ease-out both;
+  }
+
+  /* 减少动态偏好下全局把动画时长压成 0，上面两段等于没有——给一份静态的同款效果，
+     它照样会在 3.6 秒后由脚本摘掉。 */
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-rail-landed .entry-landing-cover {
+      box-shadow: 0 1.15rem 2.75rem -0.5rem var(--landed-accent, #5BC8E8);
+    }
+
+    .timeline-rail-landed.entry-landing-row {
+      background-color: var(--landed-accent-wash, #5BC8E824);
+    }
   }
 
   .timeline-rail__cursor {
