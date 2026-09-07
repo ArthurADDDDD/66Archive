@@ -282,8 +282,18 @@ export function LiveStatusIndicator() {
     }
 
     void refresh()
-    const refreshTimer = window.setInterval(() => void refresh(), REFRESH_MS)
-    const clockTimer = window.setInterval(() => setNow(Date.now()), 30_000)
+    // 标签页在后台时不轮询。`/api/content/live-status` 是 no-store 的（实测 377 B、
+    // TTFB 424–611ms），后台挂一小时就是 60 次不可缓存的请求，换来一个没人看见的圆点。
+    // 页面回到前台时下面的 visibilitychange → refreshWhenVisible 会立刻补一次，
+    // 所以状态不会因此变旧——只是把「没人看的时候」这段省掉。
+    const refreshTimer = window.setInterval(() => {
+      if (document.hidden) return
+      void refresh()
+    }, REFRESH_MS)
+    const clockTimer = window.setInterval(() => {
+      if (document.hidden) return
+      setNow(Date.now())
+    }, 30_000)
     window.addEventListener('online', refreshWhenVisible)
     document.addEventListener('visibilitychange', refreshWhenVisible)
     return () => {
@@ -443,6 +453,7 @@ export function LiveStatusIndicator() {
             <div className="mt-5 grid gap-2">
               <Link
                 href="/"
+                prefetch={false}
                 data-analytics-event="nav.click"
                 data-analytics-target="home"
                 className="ui-press flex min-h-11 w-full items-center justify-between rounded-full border border-line bg-surface px-4 text-control font-medium text-ink transition-colors hover:border-live/60 hover:bg-raised"

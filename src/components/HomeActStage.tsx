@@ -264,8 +264,30 @@ export function HomeActStage({
       jumpTo(current + direction)
     }
 
-    window.addEventListener('wheel', onWheel, { passive: false, capture: true })
-    return () => window.removeEventListener('wheel', onWheel, { capture: true })
+    /*
+     * 只在 xl 以上挂这个监听。
+     *
+     * 舞台自身是 `hidden ... xl:block`，xl 以下根本不存在，但监听器此前是无条件挂上的：
+     * 于是手机和平板上每一次滚轮 / 触控板滚动都要跑一趟主线程，并在 `isStageActive()`
+     * 里做三次强制布局读取（offsetHeight ×2 + getBoundingClientRect），只为得出
+     * 「舞台是隐藏的，什么都不做」。而且它是 `passive: false`，浏览器不能把滚动
+     * 直接交给合成器。
+     *
+     * 用 matchMedia 跟着断点开关，行为与从前完全一致——xl 以下 `isStageActive()`
+     * 本来就恒为 false（尺寸是 0），只是现在连事件都不用进来了。
+     * 监听 change 是因为窗口可以被拖过 1280，或者平板旋转。
+     */
+    const desktop = window.matchMedia('(min-width: 1280px)')
+    const attach = () => window.addEventListener('wheel', onWheel, { passive: false, capture: true })
+    const detach = () => window.removeEventListener('wheel', onWheel, { capture: true })
+    const sync = () => (desktop.matches ? attach() : detach())
+
+    sync()
+    desktop.addEventListener('change', sync)
+    return () => {
+      desktop.removeEventListener('change', sync)
+      detach()
+    }
   }, [isStageActive, jumpTo, stopAnimation, steps.length])
 
   /** 左右键不要求先聚焦舞台；只要桌面 ACT 正在视口中就能翻页。 */
@@ -431,6 +453,7 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
   return beat.href ? (
     <Link
       href={beat.href}
+      prefetch={false}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}
