@@ -42,6 +42,18 @@ async function main() {
   const targets = batch.events.map((event) => event.target).join(',')
   if (targets !== 'entry:a,entry:b') throw new Error(`重复点击没有被合并：${targets}`)
 
+  // 非法 target 必须在发出前就被丢掉：服务端是整批校验，一条不过就 400，
+  // 同一批里的页面浏览、导航点击会跟着一起没。
+  sent.length = 0
+  trackSiteEvent('content.open', 'gallery:0022Ya6rly1gyllg2qn86j60sn0c4wg902') // 大写字母
+  trackSiteEvent('content.open', 'entry:-leading-hyphen')
+  trackSiteEvent('content.open', undefined)
+  trackSiteEvent('nav.click', 'archive')
+  flushSiteAnalytics()
+  const guarded = JSON.parse(await (sent[0] as Blob).text()) as { events: { name: string }[] }
+  const names = guarded.events.map((event) => event.name).join(',')
+  if (names !== 'nav.click') throw new Error(`非法 target 没有被拦下，批次里是：${names}`)
+
   fakeNavigator.webdriver = true
   sent.length = 0
   trackSiteEvent('content.open', 'entry:c')

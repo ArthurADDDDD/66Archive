@@ -177,8 +177,32 @@ export function flushSiteAnalytics() {
   }
 }
 
+/**
+ * 服务端对「内容目标」的字符集要求。
+ *
+ * **不合规的 target 不是丢掉它自己，而是让整批请求 400。** 服务端用 Zod 校验整个
+ * 批次，一条不过，同一批里最多 24 个事件（页面浏览、导航点击、性能采样）一起没了。
+ * 所以宁可在发出前就把它扔掉：少记一次点击是小事，把别的事件也带走不是。
+ *
+ * 这类 ID 来自数据而不是代码——画廊照片的 id 有一批是从微博文件名带过来的，里面
+ * 有大写字母；将来还会有别的来源。其余事件的 target 是代码里写死的枚举（导航项、
+ * 平台名、筛选维度），不会长出意外形状，所以只在这里挡住带数据 ID 的这两类。
+ */
+const CONTENT_TARGET = /^(entry|game|series|gallery):[a-z0-9][a-z0-9_-]{0,119}$/
+
+function targetAcceptedByServer(name: SiteAnalyticsEventName, target?: string): boolean {
+  if (name !== 'content.open' && name !== 'gallery.open') return true
+  if (!target) return false
+  if (name === 'gallery.open') return CONTENT_TARGET.test(target) && target.startsWith('gallery:')
+  return CONTENT_TARGET.test(target)
+}
+
 export function trackSiteEvent(name: SiteAnalyticsEventName, target?: string) {
   if (typeof window === 'undefined' || isOptedOut() || isAutomatedBrowser()) return
+  if (!targetAcceptedByServer(name, target)) {
+    if (process.env.NODE_ENV !== 'production') console.warn(`[analytics] 目标不符合服务端契约，已丢弃：${name} ${target}`)
+    return
+  }
   const route = analyticsRoute(window.location.pathname)
   if (!route) return
   const dedupeKey = `${name}\u0000${target ?? ''}\u0000${route.kind}${'id' in route ? `:${route.id}` : ''}`
