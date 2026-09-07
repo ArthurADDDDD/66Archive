@@ -1,13 +1,14 @@
 'use client'
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import {
+  contentPathsFor,
   fetchLiveContent,
   type LiveAct,
   type LiveContent,
   type LiveCopyBlock,
   type LiveEditorialSection,
-  type LiveNarrative,
   type LiveSiteCopy,
 } from '@/lib/live-content'
 import { SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
@@ -24,7 +25,25 @@ import { SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
 
 const EMPTY_CONTENT: LiveContent = { narrative: null, copy: null, editorial: null }
 
-const LiveContentContext = createContext<LiveContent>(EMPTY_CONTENT)
+/**
+ * **必须只有这一个实例。** `LiveNarrativeSeed` 住在另一个文件里（见
+ * `LiveNarrativeSeed.tsx` 顶部关于 chunk 归属的说明），它要往同一个 context 上
+ * 叠一层。两个模块各自 `createContext` 会让首页与编年史的叙事覆盖静默失效——
+ * 页面不报错，只是永远显示公开仓基线。
+ */
+export const LiveContentContext = createContext<LiveContent>(EMPTY_CONTENT)
+
+/**
+ * 后台的站点文案是否已经到达。
+ *
+ * 只给 `LiveCopySeed` 用：它需要区分「上下文里的 copy 还是构建期烤入的那份」和
+ * 「已经换成内容服务的当前值」，好在后者到达时让位。做成独立的 context 而不是往
+ * `LiveContent` 里加字段——那个类型是覆盖链路的契约，读它的地方很多，
+ * 为一个内部信号改它的形状不划算。
+ *
+ * 拉失败时保持 false：那种情况下页面本来就该继续用烤入值，不是让位给 null。
+ */
+export const LiveCopyArrivedContext = createContext(false)
 
 /**
  * `initial` 是构建期烤进来的后台文案（见 `lib/baked-content.ts`）。
@@ -40,13 +59,25 @@ export function LiveContentProvider({
   initial?: LiveContent
 }) {
   const [content, setContent] = useState<LiveContent>(initial ?? EMPTY_CONTENT)
+  const [copyArrived, setCopyArrived] = useState(false)
+  const pathname = usePathname()
+  // 已经拿到（或已经发出过）的分片。站内换页不该把 site-copy 再拉一遍，
+  // 而换到首页 / 编年史时又必须补上此前没拉的 narrative。
+  const requested = useRef<Set<string>>(new Set())
+  // effect 的依赖必须是稳定值：`contentPathsFor` 每次返回新数组，直接当依赖会每帧重跑。
+  const wanted = contentPathsFor(pathname).join('|')
 
   useEffect(() => {
+    const missing = wanted.split('|').filter((path) => !requested.current.has(path))
+    if (missing.length === 0) return
+    for (const path of missing) requested.current.add(path)
+
     let active = true
-    void fetchLiveContent().then((live) => {
+    void fetchLiveContent(missing).then((live) => {
       if (!active) return
-      // 逐份回退，不能直接 setContent(live)：实时请求失败时那一份是 null，
-      // 整份覆盖会把烤进来的内容清掉，页面反而退回公仓基线——
+      if (live.copy) setCopyArrived(true)
+      // 逐份回退，不能直接 setContent(live)：这次没拉的分片、以及拉失败的那一份
+      // 都是 null，整份覆盖会把烤进来的内容清掉，页面反而退回公仓基线——
       // 那正是烤入要解决的问题，写成整份覆盖等于白做。
       setContent((prev) => ({
         narrative: live.narrative ?? prev.narrative,
@@ -57,38 +88,17 @@ export function LiveContentProvider({
     return () => {
       active = false
     }
-  }, [])
+  }, [wanted])
 
-  return <LiveContentContext.Provider value={content}>{children}</LiveContentContext.Provider>
+  return (
+    <LiveContentContext.Provider value={content}>
+      <LiveCopyArrivedContext.Provider value={copyArrived}>{children}</LiveCopyArrivedContext.Provider>
+    </LiveContentContext.Provider>
+  )
 }
 
 export function useLiveContent(): LiveContent {
   return useContext(LiveContentContext)
-}
-
-/**
- * 把构建期烤入的 narrative 补进上下文，只包在真正渲染叙事内容的页面外面。
- *
- * 为什么不直接放进根 layout 的 `initial`：narrative 约 28KB，是三份内容里最大的一份，
- * 而站内两千多个条目页根本不读它。整份放进根 layout 会让每个页面的 RSC 载荷都背上它
- * ——实测 `out/` 从 231M 涨到 610M、条目页 HTML 几乎翻倍。
- *
- * 实时内容到达后 `parent.narrative` 就不再是 null，这里自动让位给它，
- * 所以不会盖住后台的最新改动。
- */
-export function LiveNarrativeSeed({
-  narrative,
-  children,
-}: {
-  narrative: LiveNarrative | null
-  children: React.ReactNode
-}) {
-  const parent = useLiveContent()
-  const value = useMemo(
-    () => (parent.narrative ? parent : { ...parent, narrative }),
-    [parent, narrative],
-  )
-  return <LiveContentContext.Provider value={value}>{children}</LiveContentContext.Provider>
 }
 
 /** 当前生效的站点文案：后台有就用后台的，没有就用公开仓基线。 */

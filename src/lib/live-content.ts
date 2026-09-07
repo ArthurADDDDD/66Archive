@@ -407,11 +407,65 @@ export async function fetchJson(path: string): Promise<unknown | null> {
   }
 }
 
-export async function fetchLiveContent(): Promise<LiveContent> {
+/** 三份内容各自的只读接口路径。首屏预取脚本与这里读的必须是同一组常量。 */
+export const CONTENT_PATHS = {
+  siteCopy: '/api/content/site-copy',
+  narrative: '/api/content/narrative',
+  editorial: '/api/content/editorial',
+} as const
+
+/**
+ * 哪些路由真的会渲染 narrative / editorial。
+ *
+ * `baked-content.ts` 早就把烤入按需分层了——根 layout 只烤站点文案与板块编排，
+ * narrative 交给首页和编年史自己用 `LiveNarrativeSeed` 补，理由是「两千多个条目页
+ * 根本不读它」。但**运行时那一层一直没跟上**：`fetchLiveContent` 无条件并发拉三份，
+ * `<head>` 里的预取脚本也无条件发三个请求。实测线上 `/games/`：
+ * `/api/content/narrative` 传输 9,648 B（解压 34,578 B）、`/api/content/editorial`
+ * 传输 1,627 B，两份都在首屏关键路径上，而这一页一个字都不会用到它们。
+ *
+ * 所以按同一条界线把网络这一层也分开。写成常量而不是散落的 if：预取脚本要把它
+ * 内联进 `<head>`，两边必须读同一份数据，否则就会出现「脚本预取了、客户端不认」
+ * 这种只在某些路由上冒头的错配。
+ *
+ * **猜错的后果是有界的**：某个路由没被列进来却渲染了 narrative，它拿到的是构建期
+ * 烤入的那一份（`LiveNarrativeSeed` 的 `narrative` prop），也就是退回已知的
+ * 「烤入漂移」行为——显示的是上次部署那一刻的文案，不是空白。开发环境下
+ * `LiveNarrativeSeed` 会就此告警。
+ */
+export const NARRATIVE_ROUTES = ['/', '/chronicle/'] as const
+export const EDITORIAL_ROUTES = ['/'] as const
+
+function includesPath(routes: readonly string[], pathname: string): boolean {
+  // trailingSlash: true，但直接敲地址栏或从外站进来时可能没有尾斜杠。
+  const normalized = pathname.endsWith('/') ? pathname : `${pathname}/`
+  return routes.includes(normalized)
+}
+
+/** 当前路由需要向内容服务拉取的分片。 */
+export function contentPathsFor(pathname: string): string[] {
+  const paths: string[] = [CONTENT_PATHS.siteCopy]
+  if (includesPath(NARRATIVE_ROUTES, pathname)) paths.push(CONTENT_PATHS.narrative)
+  if (includesPath(EDITORIAL_ROUTES, pathname)) paths.push(CONTENT_PATHS.editorial)
+  return paths
+}
+
+/**
+ * 拉指定的那几份内容。
+ *
+ * 调用方给的是「这次还缺哪几份」，不是「这个路由要哪几份」——站内换页时
+ * 已经拿到的分片不该再拉一遍。没在列表里的那一份返回 `null`，语义与
+ * 「拉了但失败了」完全一致：`LiveContentProvider` 是逐份回退的
+ * （`live.narrative ?? prev.narrative`），所以跳过的分片保留烤入值，
+ * 不会把页面打回公开仓基线。
+ */
+export async function fetchLiveContent(paths: readonly string[]): Promise<LiveContent> {
+  const wanted = new Set(paths)
+  const want = (path: string) => (wanted.has(path) ? fetchJson(path) : Promise.resolve(null))
   const [narrative, copy, editorial] = await Promise.all([
-    fetchJson('/api/content/narrative'),
-    fetchJson('/api/content/site-copy'),
-    fetchJson('/api/content/editorial'),
+    want(CONTENT_PATHS.narrative),
+    want(CONTENT_PATHS.siteCopy),
+    want(CONTENT_PATHS.editorial),
   ])
   return {
     narrative: parseNarrative(narrative),

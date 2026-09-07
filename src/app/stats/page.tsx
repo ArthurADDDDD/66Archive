@@ -1,3 +1,5 @@
+import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
@@ -28,7 +30,11 @@ export const metadata: Metadata = {
 /** 「哪些节目坚持得最久」这一节数据意义不大，先隐藏不删——想恢复直接改回 true。 */
 const SHOW_LONGEST_RUNNING_SERIES = false
 
-export default function StatsPage() {
+export default async function StatsPage() {
+  // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
+  // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
+  const { copy: bakedCopy } = await fetchBakedContent()
+
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
@@ -151,231 +157,233 @@ export default function StatsPage() {
   const pishuangSeries = series.find((s) => s.id === 'xinling-pishuang')
 
   return (
-    <main className="ui-page-in min-h-screen overflow-x-clip">
-      <MobileQuickNav active="stats" />
-      <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
-        <SiteNav active="stats" />
-        <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-          去录播室逐条查看 →
-        </Link>
-      </header>
+    <LiveCopySeed copy={bakedCopy}>
+      <main className="ui-page-in min-h-screen overflow-x-clip">
+        <MobileQuickNav active="stats" />
+        <BackToTop />
+        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
+          <SiteNav active="stats" />
+          <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+            去录播室逐条查看 →
+          </Link>
+        </header>
 
-      <section className="site-container-wide px-page pb-[clamp(3rem,7vh,7rem)] pt-[clamp(2.5rem,6vh,6rem)]">
-        <LivePageHeader
-          pageId="stats"
-          eyebrowColor="#E5568A"
-          wide
-        />
-      </section>
+        <section className="site-container-wide px-page pb-[clamp(3rem,7vh,7rem)] pt-[clamp(2.5rem,6vh,6rem)]">
+          <LivePageHeader
+            pageId="stats"
+            eyebrowColor="#E5568A"
+            wide
+          />
+        </section>
 
-      {/* 00 已收录直播与已确认时长 */}
-      <Section questionId="stats-q-recorded" fallback="已收录直播有多少？" accent="#E5568A">
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
-            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveTimeline.length.toLocaleString()}</p>
-            <p className="mt-1 text-meta text-faint tnum">场直播</p>
-          </div>
-          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
-            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
-            <p className="mt-1 text-meta text-faint tnum">小时 · {liveDurationCoverage}% 的直播已有可核对时长</p>
-          </div>
-          <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">公开口径累计时长</p>
-            <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{publicHoursLowerBound.toLocaleString()}+</p>
-            <p className="mt-1 text-meta text-faint tnum">小时 · 下限</p>
-          </div>
-        </div>
-        <Observation>
-          早期有一部分直播录像已经找不到了，所以「已确认时长」只代表目前能核对到的那些，不等于她实际播了多久。
-          {`公开采访与平台年度统计等资料给出的累计时长下限为 ${publicHoursFloor.toLocaleString()} 小时；若站内已确认时长超过这一数值，卡片会随档案更新。`}
-        </Observation>
-      </Section>
-
-      {/* 01 哪一年留下的记录最多？ */}
-      <Section questionId="stats-q-busiest-year" fallback="哪一年留下的记录最多？" accent="#E0A244">
-        <YearBarChart rows={yearRows} topYear={topYear} />
-        <Observation>
-          最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
-          {emptyYears.length > 0
-            ? ` ${emptyYears.join('、')} 年目前没有保存下来的站内录像。`
-            : ' 档案覆盖到的每一年都至少留下了一条记录。'}
-        </Observation>
-        <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
-      </Section>
-
-      {/* 02 哪些游戏陪得最久？ */}
-      <Section questionId="stats-q-longest-games" fallback="哪些游戏陪得最久？" accent="#E5568A">
-        <div className="space-y-3">
-          {longest.map((p, i) => (
-            <Link key={p.id} href={`/games/${p.id}/`} className="group block">
-              <div className="flex items-baseline justify-between gap-3">
-                <span className="flex items-baseline gap-2 text-body text-muted group-hover:text-ink">
-                  <span className="font-mono text-meta text-faint tnum">{String(i + 1).padStart(2, '0')}</span>
-                  {p.name}
-                </span>
-                <span className="text-meta text-faint tnum">{p.hoursLabel}</span>
-              </div>
-              <div className="mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
-                <span
-                  className="block h-full rounded-full transition-[width,filter] group-hover:brightness-150"
-                  style={{ width: `${(p.totalMinutes / maxMinutes) * 100}%`, background: '#E5568A' }}
-                />
-              </div>
-            </Link>
-          ))}
-        </div>
-        <Observation>
-          陪伴最久的游戏是「{longest[0]?.name}」，已录 {longest[0]?.hoursLabel}。
-        </Observation>
-      </Section>
-
-      {/* 03 哪些游戏反复回来？ */}
-      <Section
-        questionId="stats-q-returning-games" fallback="哪些游戏，隔了几年还会回来？"
-        accent="#5BC8E8"
-        legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
-      >
-        <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
-        <div className="divide-y divide-line/60 border-y border-line/60">
-          {revisited.map(({ p, years, gaps }) => (
-            <Link key={p.id} href={`/games/${p.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <span className="text-body font-medium text-ink">{p.name}</span>
-                <span className="text-meta text-faint tnum">
-                  <span className="font-mono text-control font-semibold text-ink">{years.length}</span> 个年份里打过
-                  {gaps > 0 && <> · 中途断过 {gaps} 次</>}
-                </span>
-              </div>
-              <div className="mt-2">
-                <YearLane
-                  from={firstArchiveYear}
-                  to={lastArchiveYear}
-                  perYear={p.entries.reduce<{ year: number; count: number }[]>((acc, entry) => {
-                    const y = Number(entry.date.slice(0, 4))
-                    const row = acc.find((item) => item.year === y)
-                    if (row) row.count += 1
-                    else acc.push({ year: y, count: 1 })
-                    return acc
-                  }, [])}
-                  color="#5BC8E8"
-                  unit="场"
-                  compact
-                  showAxis={false}
-                />
-              </div>
-            </Link>
-          ))}
-        </div>
-        <Observation>
-          有些游戏隔了几年，还是会重新打开：「{revisited[0]?.p.name}」在 {revisited[0]?.years.length} 个不同年份里都出现过。
-        </Observation>
-      </Section>
-
-      {/* 04 时代如何变化？ */}
-      <Section questionId="stats-q-eras" fallback="时代如何变化？" accent="#FF6B75">
-        <div className="grid gap-3 sm:grid-cols-3">
-          {eras.map((era) => (
-            <Link
-              key={era.id}
-              href={`/archive/?y=${era.from}`}
-              prefetch={false}
-              className="rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60"
-            >
-              <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em]" style={{ color: era.color }}>
-                <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: era.color }} />
-                {era.label}
-              </p>
-              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{era.count.toLocaleString()}</p>
-              <p className="mt-1 text-meta text-faint tnum">条记录 · {era.hours.toLocaleString()} 小时</p>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-6 rounded-xl border border-line/80 bg-surface/40 p-[clamp(0.875rem,1.2vw,1.25rem)]">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-            <p className="text-body font-medium text-ink">一年一根柱子，颜色就是当时的主场</p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-              {eras.map((era) => (
-                <span key={era.id} className="flex items-center gap-2 text-meta text-faint">
-                  <span aria-hidden className="h-2.5 w-2.5 rounded-[0.1875rem]" style={{ background: era.color }} />
-                  {era.label}
-                </span>
-              ))}
+        {/* 00 已收录直播与已确认时长 */}
+        <Section questionId="stats-q-recorded" fallback="已收录直播有多少？" accent="#E5568A">
+          <div className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
+              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveTimeline.length.toLocaleString()}</p>
+              <p className="mt-1 text-meta text-faint tnum">场直播</p>
+            </div>
+            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
+              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
+              <p className="mt-1 text-meta text-faint tnum">小时 · {liveDurationCoverage}% 的直播已有可核对时长</p>
+            </div>
+            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
+              <p className="text-meta uppercase tracking-[0.16em] text-faint">公开口径累计时长</p>
+              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{publicHoursLowerBound.toLocaleString()}+</p>
+              <p className="mt-1 text-meta text-faint tnum">小时 · 下限</p>
             </div>
           </div>
-          <div className="mt-[clamp(0.875rem,1.4vw,1.25rem)]">
-            <EraFlow rows={eraColumns} />
+          <Observation>
+            早期有一部分直播录像已经找不到了，所以「已确认时长」只代表目前能核对到的那些，不等于她实际播了多久。
+            {`公开采访与平台年度统计等资料给出的累计时长下限为 ${publicHoursFloor.toLocaleString()} 小时；若站内已确认时长超过这一数值，卡片会随档案更新。`}
+          </Observation>
+        </Section>
+
+        {/* 01 哪一年留下的记录最多？ */}
+        <Section questionId="stats-q-busiest-year" fallback="哪一年留下的记录最多？" accent="#E0A244">
+          <YearBarChart rows={yearRows} topYear={topYear} />
+          <Observation>
+            最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
+            {emptyYears.length > 0
+              ? ` ${emptyYears.join('、')} 年目前没有保存下来的站内录像。`
+              : ' 档案覆盖到的每一年都至少留下了一条记录。'}
+          </Observation>
+          <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
+        </Section>
+
+        {/* 02 哪些游戏陪得最久？ */}
+        <Section questionId="stats-q-longest-games" fallback="哪些游戏陪得最久？" accent="#E5568A">
+          <div className="space-y-3">
+            {longest.map((p, i) => (
+              <Link prefetch={false} key={p.id} href={`/games/${p.id}/`} className="group block">
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="flex items-baseline gap-2 text-body text-muted group-hover:text-ink">
+                    <span className="font-mono text-meta text-faint tnum">{String(i + 1).padStart(2, '0')}</span>
+                    {p.name}
+                  </span>
+                  <span className="text-meta text-faint tnum">{p.hoursLabel}</span>
+                </div>
+                <div className="mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
+                  <span
+                    className="block h-full rounded-full transition-[width,filter] group-hover:brightness-150"
+                    style={{ width: `${(p.totalMinutes / maxMinutes) * 100}%`, background: '#E5568A' }}
+                  />
+                </div>
+              </Link>
+            ))}
           </div>
-        </div>
-        <Observation>
-          视频时期靠录像，斗鱼时期靠直播。2023 年 11 月斗鱼停播以后，到 2024 年 8 月重新开播之间，直播记录自然出现了一段空档。
-        </Observation>
-      </Section>
+          <Observation>
+            陪伴最久的游戏是「{longest[0]?.name}」，已录 {longest[0]?.hoursLabel}。
+          </Observation>
+        </Section>
 
-      {/* 05 哪些节目坚持得最久？——隐藏中，见 SHOW_LONGEST_RUNNING_SERIES */}
-      {SHOW_LONGEST_RUNNING_SERIES && (
-      <Section
-        questionId="stats-q-longest-series" fallback="哪些节目坚持得最久？"
-        accent="#A78BFA"
-        legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 柱子越高，这一年更新得越多`}
-      >
-        <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
-        <div className="divide-y divide-line/60 border-y border-line/60">
-          {series.slice(0, 6).map((s) => (
-            <Link key={s.id} href={`/series/${s.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <span className="text-body font-medium text-ink">{s.name}</span>
-                <span className="text-meta text-faint tnum">
-                  <span className="font-mono text-control font-semibold text-ink">{s.count}</span> 期 · 从 {s.firstDate.slice(0, 4)} 播到 {s.lastDate.slice(0, 4)}
-                </span>
+        {/* 03 哪些游戏反复回来？ */}
+        <Section
+          questionId="stats-q-returning-games" fallback="哪些游戏，隔了几年还会回来？"
+          accent="#5BC8E8"
+          legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
+        >
+          <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
+          <div className="divide-y divide-line/60 border-y border-line/60">
+            {revisited.map(({ p, years, gaps }) => (
+              <Link prefetch={false} key={p.id} href={`/games/${p.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <span className="text-body font-medium text-ink">{p.name}</span>
+                  <span className="text-meta text-faint tnum">
+                    <span className="font-mono text-control font-semibold text-ink">{years.length}</span> 个年份里打过
+                    {gaps > 0 && <> · 中途断过 {gaps} 次</>}
+                  </span>
+                </div>
+                <div className="mt-2">
+                  <YearLane
+                    from={firstArchiveYear}
+                    to={lastArchiveYear}
+                    perYear={p.entries.reduce<{ year: number; count: number }[]>((acc, entry) => {
+                      const y = Number(entry.date.slice(0, 4))
+                      const row = acc.find((item) => item.year === y)
+                      if (row) row.count += 1
+                      else acc.push({ year: y, count: 1 })
+                      return acc
+                    }, [])}
+                    color="#5BC8E8"
+                    unit="场"
+                    compact
+                    showAxis={false}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+          <Observation>
+            有些游戏隔了几年，还是会重新打开：「{revisited[0]?.p.name}」在 {revisited[0]?.years.length} 个不同年份里都出现过。
+          </Observation>
+        </Section>
+
+        {/* 04 时代如何变化？ */}
+        <Section questionId="stats-q-eras" fallback="时代如何变化？" accent="#FF6B75">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {eras.map((era) => (
+              <Link
+                key={era.id}
+                href={`/archive/?y=${era.from}`}
+                prefetch={false}
+                className="rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60"
+              >
+                <p className="flex items-center gap-2 text-meta uppercase tracking-[0.16em]" style={{ color: era.color }}>
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: era.color }} />
+                  {era.label}
+                </p>
+                <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{era.count.toLocaleString()}</p>
+                <p className="mt-1 text-meta text-faint tnum">条记录 · {era.hours.toLocaleString()} 小时</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 rounded-xl border border-line/80 bg-surface/40 p-[clamp(0.875rem,1.2vw,1.25rem)]">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+              <p className="text-body font-medium text-ink">一年一根柱子，颜色就是当时的主场</p>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                {eras.map((era) => (
+                  <span key={era.id} className="flex items-center gap-2 text-meta text-faint">
+                    <span aria-hidden className="h-2.5 w-2.5 rounded-[0.1875rem]" style={{ background: era.color }} />
+                    {era.label}
+                  </span>
+                ))}
               </div>
-              <div className="mt-2">
-                <YearLane
-                  from={firstArchiveYear}
-                  to={lastArchiveYear}
-                  perYear={s.perYear}
-                  color="#A78BFA"
-                  unit="期"
-                  compact
-                  showAxis={false}
-                />
-              </div>
+            </div>
+            <div className="mt-[clamp(0.875rem,1.4vw,1.25rem)]">
+              <EraFlow rows={eraColumns} />
+            </div>
+          </div>
+          <Observation>
+            视频时期靠录像，斗鱼时期靠直播。2023 年 11 月斗鱼停播以后，到 2024 年 8 月重新开播之间，直播记录自然出现了一段空档。
+          </Observation>
+        </Section>
+
+        {/* 05 哪些节目坚持得最久？——隐藏中，见 SHOW_LONGEST_RUNNING_SERIES */}
+        {SHOW_LONGEST_RUNNING_SERIES && (
+        <Section
+          questionId="stats-q-longest-series" fallback="哪些节目坚持得最久？"
+          accent="#A78BFA"
+          legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 柱子越高，这一年更新得越多`}
+        >
+          <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
+          <div className="divide-y divide-line/60 border-y border-line/60">
+            {series.slice(0, 6).map((s) => (
+              <Link prefetch={false} key={s.id} href={`/series/${s.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <span className="text-body font-medium text-ink">{s.name}</span>
+                  <span className="text-meta text-faint tnum">
+                    <span className="font-mono text-control font-semibold text-ink">{s.count}</span> 期 · 从 {s.firstDate.slice(0, 4)} 播到 {s.lastDate.slice(0, 4)}
+                  </span>
+                </div>
+                <div className="mt-2">
+                  <YearLane
+                    from={firstArchiveYear}
+                    to={lastArchiveYear}
+                    perYear={s.perYear}
+                    color="#A78BFA"
+                    unit="期"
+                    compact
+                    showAxis={false}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+          <Observation>
+            「{pishuangSeries?.name ?? longestSeries?.name ?? '心灵砒霜'}」横跨了 {pishuangSeries?.span ?? longestSeries?.span ?? 0} 年——固定出现在每周日，是档案里坚持最久的节目。
+          </Observation>
+        </Section>
+        )}
+
+        {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
+        <PopularContent
+          questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
+          accent="#7BD88F"
+          legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
+        />
+
+        {/* 07 档案还有多少空白？ */}
+        <Section
+          questionId="stats-q-gaps" fallback="档案还有多少空白？"
+          accent="#5BC8E8"
+          legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
+        >
+          <CoverageGaps coverage={coverage} />
+          <Observation>
+            手上有对应时间的录播、切片或者原视频链接，可以从
+            <Link prefetch={false} href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
+              联系页
             </Link>
-          ))}
-        </div>
-        <Observation>
-          「{pishuangSeries?.name ?? longestSeries?.name ?? '心灵砒霜'}」横跨了 {pishuangSeries?.span ?? longestSeries?.span ?? 0} 年——固定出现在每周日，是档案里坚持最久的节目。
-        </Observation>
-      </Section>
-      )}
+            告诉我，这张图就会少一块空白。
+          </Observation>
+        </Section>
 
-      {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
-      <PopularContent
-        questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
-        accent="#7BD88F"
-        legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
-      />
-
-      {/* 07 档案还有多少空白？ */}
-      <Section
-        questionId="stats-q-gaps" fallback="档案还有多少空白？"
-        accent="#5BC8E8"
-        legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
-      >
-        <CoverageGaps coverage={coverage} />
-        <Observation>
-          手上有对应时间的录播、切片或者原视频链接，可以从
-          <Link href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
-            联系页
-          </Link>
-          告诉我，这张图就会少一块空白。
-        </Observation>
-      </Section>
-
-      <SiteFooter />
-    </main>
+        <SiteFooter />
+      </main>
+    </LiveCopySeed>
   )
 }
 

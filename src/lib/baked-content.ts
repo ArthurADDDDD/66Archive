@@ -18,7 +18,7 @@
  */
 
 import { get as httpsGet } from 'node:https'
-import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent } from './live-content'
+import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent, type LiveNarrative } from './live-content'
 import { FALLBACK_SITE_ORIGIN } from './site-url'
 
 const EMPTY: LiveContent = { narrative: null, copy: null, editorial: null }
@@ -139,6 +139,38 @@ export function fetchBakedContent(): Promise<LiveContent> {
 }
 
 /**
+ * 根 layout 烤的最小一份：站点标题与导航标签，别的都不带。
+ *
+ * 此前这里烤的是**整份** site-copy 加整份 editorial。但站内 3,488 个导出页里有 3,483 个
+ * 只用得到 `site`（`LiveDocumentMeta` 改 title）和 `nav`（`SiteNav` / `MobileQuickNav` 的标签）——
+ * `hero` / `homeSections` / `rooms` / `pages` / `maintainers` / `editorial` 各自只有一两个页面读。
+ * 实测整份带着走在条目页上是 3,860 B br（该页的 32%）、`/archive/` 上 3,919 B（44%）、
+ * 游戏详情页 3,846 B。
+ *
+ * 需要更多的页面（首页、/stats/、/games/、/series/、/gallery/、/contact/）用
+ * `LiveCopySeed` 自己补齐，做法与 narrative 那一层完全一致。
+ *
+ * 空数组 / 空字符串在 `mergeSiteCopy` 里就是「没有覆盖」，所以被裁掉的字段自然退回
+ * `site-copy.ts` 的公开仓基线——而那些字段在这些页面上根本没有渲染位置。
+ */
+export async function fetchBakedNavShell(): Promise<LiveContent> {
+  const { copy } = await fetchBakedContent()
+  if (!copy) return { narrative: null, copy: null, editorial: null }
+  return {
+    narrative: null,
+    editorial: null,
+    copy: {
+      ...copy,
+      hero: { status: '', eyebrow: '', title: '', body: [], primaryAction: '', secondaryAction: '' },
+      homeSections: [],
+      rooms: [],
+      pages: [],
+      maintainers: [],
+    },
+  }
+}
+
+/**
  * 全站通用的那部分：站点文案与板块编排，**不含 narrative**。
  *
  * 根 layout 只烤这一份。narrative 约 28KB，是三份里最大的一份，而站内两千多个
@@ -151,4 +183,30 @@ export function fetchBakedContent(): Promise<LiveContent> {
 export async function fetchBakedShell(): Promise<LiveContent> {
   const { copy, editorial } = await fetchBakedContent()
   return { narrative: null, copy, editorial }
+}
+
+/**
+ * narrative 的第二层分层：首页只要 `homeActs` + `highlights`，编年史只要 `storyActs`。
+ *
+ * 这份烤入已经被从根 layout 里摘出去过一次（见上面 `fetchBakedShell` 的说明），
+ * 但摘出去之后，首页和编年史各自仍然背着**整份** narrative——包括对方那一半。
+ * 实测：`storyActs` 占首页 flight 的 18.4%（21,091 / 114,871 字符），首页一个字都不读；
+ * 编年史那边 `homeActs` + `highlights` 是 7,810 字符，同样不读。按幕切开之后
+ * 首页 HTML 少 6,174 B、编年史少 1,999 B（brotli）。
+ *
+ * `deletedIds` 两边都要留——它是「后台删掉了哪些节点」的名单，三个 scope 共用，
+ * 丢掉会让已删除的节点重新冒出来。
+ *
+ * 这只影响**烤入的初始值**。实时内容到达后 `LiveContentProvider` 会整份换成
+ * `/api/content/narrative` 的响应，两个页面拿到的仍是完整 narrative。
+ */
+export async function fetchBakedHomeNarrative(): Promise<LiveNarrative | null> {
+  const { narrative } = await fetchBakedContent()
+  return narrative && { ...narrative, storyActs: [] }
+}
+
+/** 编年史那一半：只留 `storyActs`（与共用的 `deletedIds`）。 */
+export async function fetchBakedStoryNarrative(): Promise<LiveNarrative | null> {
+  const { narrative } = await fetchBakedContent()
+  return narrative && { ...narrative, homeActs: [], highlights: [] }
 }

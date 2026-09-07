@@ -1,3 +1,4 @@
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
@@ -9,8 +10,8 @@ import { HomeActSections } from '@/components/HomeActSections'
 import { HomeActStage } from '@/components/HomeActStage'
 import { HomeExplorePromo, type ExplorePromoData } from '@/components/HomeExplorePromo'
 import { HighlightStrip } from '@/components/HighlightStrip'
-import { LiveNarrativeSeed } from '@/components/LiveContentProvider'
-import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
+import { fetchBakedContent, fetchBakedHomeNarrative } from '@/lib/baked-content'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
@@ -34,17 +35,28 @@ export const metadata: Metadata = {
  * 「历史上的今天」以构建日期为准（静态站约束），同月同日、一年一条。
  */
 export default async function HomePage() {
-  // 首页是站内唯一渲染叙事内容（幕 / 高光）的页面，所以只有它需要烤入 narrative。
+  // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
+  // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
+  const { copy: bakedCopy, editorial: bakedEditorial } = await fetchBakedContent()
+
+  // 首页渲染的是三幕与高光，不碰编年史那份 storyActs——所以只烤这一半。
   // 其余页面由根 layout 烤入的站点文案与板块编排即可，详见 lib/baked-content.ts。
-  const { narrative: bakedNarrative } = await fetchBakedContent()
+  const bakedNarrative = await fetchBakedHomeNarrative()
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
   const data = resolveHomepage(ds, timeline)
 
   // 随机记忆池：有封面 / 有游戏 / 有栏目 的条目才配进入（宁缺毋滥）。
-  // 全时间线等距抽样（最多 400 条）——不偏向任何时期，构建期确定，无随机数。
+  // 全时间线等距抽样——不偏向任何时期，构建期确定，无随机数。
+  //
+  // 抽 60 条而不是 400：这个池整份要序列化进首页的 RSC 载荷，而卡片一次只显示一条。
+  // 实测 400 条占首页 flight 的 23.5%（27,042 / 114,871 字符），其中 380 条在渲染出来的
+  // DOM 里一次都没出现过；收到 60 条后首页 HTML 少 7,130 B、`index.txt` 少 6,880 B（brotli）。
+  // 代价是「随便回到一个晚上」的不同结果从 400 种降到 60 种——按钮可以反复点，
+  // 60 种对一个随机入口足够，为剩下 340 种付这份带宽不划算。
+  // 文案里的总数由下面的 `total` 单独给，仍然是全部符合条件的条目数。
   const meaningful = timeline.filter((e) => e.cover || e.games.length > 0 || e.seriesName)
-  const step = Math.max(1, Math.ceil(meaningful.length / 400))
+  const step = Math.max(1, Math.ceil(meaningful.length / 60))
   const memoryPool: MemoryCandidate[] = meaningful
     .filter((_, i) => i % step === 0)
     .map((e) => ({ id: e.id, date: e.date, title: e.title }))
@@ -149,96 +161,98 @@ export default async function HomePage() {
   ]
 
   return (
-    <LiveNarrativeSeed narrative={bakedNarrative}>
-      <HomeActRail acts={homeActRail} sections={homeSections} />
-      <main className="ui-page-in flex min-h-screen flex-col overflow-x-clip">
-      <MobileQuickNav active="home" />
-      <BackToTop />
-      <TimelineProgress />
+    <LiveCopySeed copy={bakedCopy} editorial={bakedEditorial}>
+      <LiveNarrativeSeed narrative={bakedNarrative}>
+        <HomeActRail acts={homeActRail} sections={homeSections} />
+        <main className="ui-page-in flex min-h-screen flex-col overflow-x-clip">
+        <MobileQuickNav active="home" />
+        <BackToTop />
+        <TimelineProgress />
 
-      <div className="flex flex-col lg:min-h-[100svh]">
-        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
-          <SiteNav active="home" />
-          <Link
-            href="/archive/"
-            prefetch={false}
-            className="ui-press hidden whitespace-nowrap rounded-sm text-meta tnum text-live lg:block"
-          >
-            打开全部 {data.totals.entries.toLocaleString()} 条记录 →
-          </Link>
-        </header>
+        <div className="flex flex-col lg:min-h-[100svh]">
+          <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
+            <SiteNav active="home" />
+            <Link
+              href="/archive/"
+              prefetch={false}
+              className="ui-press hidden whitespace-nowrap rounded-sm text-meta tnum text-live lg:block"
+            >
+              打开全部 {data.totals.entries.toLocaleString()} 条记录 →
+            </Link>
+          </header>
 
-        {/* 第一屏：人物，不是数据。PC 端连同导航占满一整个视口，不提前露出 ACT I。 */}
-        <HomeHero nowYear={data.now.year} historyYears={data.totals.years} />
-      </div>
-
-      {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
-      <div id="home-acts" className="scroll-mt-0">
-        <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} promo={explorePromo} />
-        <HomeActSections acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
-        {/* 桌面端这块由舞台的最后一步承担；手机端没有舞台，就在三幕之后自然接上。 */}
-        <section aria-label="接着往下看" className="border-t border-line xl:hidden">
-          <HomeExplorePromo data={explorePromo} />
-        </section>
-      </div>
-
-      {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
-      <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} memeMontages={data.memeMontages} />
-
-      {/* 记忆：随机一晚 + 历史上的今天 */}
-      <LiveSectionGate sectionId="home-memory">
-      <section id="home-memory" className="scroll-mt-4 border-t border-line bg-surface/15">
-        <div className="home-content-container px-page py-12 sm:py-16">
-          <LiveSectionHeading sectionId="home-memory" />
-          <div className="memory-cards mt-6 grid items-start gap-5 lg:grid-cols-2">
-            <RandomMemory pool={memoryPool} />
-            <TodayInHistory rows={todayRows} />
-          </div>
+          {/* 第一屏：人物，不是数据。PC 端连同导航占满一整个视口，不提前露出 ACT I。 */}
+          <HomeHero nowYear={data.now.year} historyYears={data.totals.years} />
         </div>
-      </section>
 
-      </LiveSectionGate>
+        {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
+        <div id="home-acts" className="scroll-mt-0">
+          <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} promo={explorePromo} />
+          <HomeActSections acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
+          {/* 桌面端这块由舞台的最后一步承担；手机端没有舞台，就在三幕之后自然接上。 */}
+          <section aria-label="接着往下看" className="border-t border-line xl:hidden">
+            <HomeExplorePromo data={explorePromo} />
+          </section>
+        </div>
 
-      {/* 游戏预告 */}
-      {gamePreview.length > 0 && (
-        <LiveSectionGate sectionId="home-games">
-        <section id="home-games" className="scroll-mt-4 border-t border-line">
+        {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}
+        <HighlightStrip beats={data.highlights} emphasisVars={data.emphasisVars} memeMontages={data.memeMontages} />
+
+        {/* 记忆：随机一晚 + 历史上的今天 */}
+        <LiveSectionGate sectionId="home-memory">
+        <section id="home-memory" className="scroll-mt-4 border-t border-line bg-surface/15">
           <div className="home-content-container px-page py-12 sm:py-16">
-            <div className="flex flex-wrap items-baseline justify-between gap-3">
-              <div>
-                <LiveSectionHeading sectionId="home-games" eyebrowColor="#E0A244" />
+            <LiveSectionHeading sectionId="home-memory" />
+            <div className="memory-cards mt-6 grid items-start gap-5 lg:grid-cols-2">
+              <RandomMemory pool={memoryPool} total={meaningful.length} />
+              <TodayInHistory rows={todayRows} />
+            </div>
+          </div>
+        </section>
+
+        </LiveSectionGate>
+
+        {/* 游戏预告 */}
+        {gamePreview.length > 0 && (
+          <LiveSectionGate sectionId="home-games">
+          <section id="home-games" className="scroll-mt-4 border-t border-line">
+            <div className="home-content-container px-page py-12 sm:py-16">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <div>
+                  <LiveSectionHeading sectionId="home-games" eyebrowColor="#E0A244" />
+                </div>
+                <Link prefetch={false} href="/games/" className="ui-press -my-2 rounded-sm py-2 text-meta text-live underline underline-offset-4">
+                  全部游戏 →
+                </Link>
               </div>
-              <Link href="/games/" className="ui-press -my-2 rounded-sm py-2 text-meta text-live underline underline-offset-4">
-                全部游戏 →
-              </Link>
+              <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+                {gamePreview.map((p) => (
+                  <GameCard key={p.id} profile={p} />
+                ))}
+              </div>
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-              {gamePreview.map((p) => (
-                <GameCard key={p.id} profile={p} />
-              ))}
-            </div>
+          </section>
+          </LiveSectionGate>
+        )}
+
+        {/* 四个房间 */}
+        <LiveSectionGate sectionId="home-rooms">
+        <section id="home-rooms" className="scroll-mt-4 border-t border-line">
+          <div className="home-content-container px-page py-12 sm:py-16">
+            <LiveSectionHeading sectionId="home-rooms" />
+            <LiveRooms />
           </div>
         </section>
         </LiveSectionGate>
-      )}
 
-      {/* 四个房间 */}
-      <LiveSectionGate sectionId="home-rooms">
-      <section id="home-rooms" className="scroll-mt-4 border-t border-line">
-        <div className="home-content-container px-page py-12 sm:py-16">
-          <LiveSectionHeading sectionId="home-rooms" />
-          <LiveRooms />
+        <HomeStats data={data} />
+
+        <div className="mt-auto w-full border-t border-line">
+          <SiteFooter />
         </div>
-      </section>
-      </LiveSectionGate>
-
-      <HomeStats data={data} />
-
-      <div className="mt-auto w-full border-t border-line">
-        <SiteFooter />
-      </div>
-      </main>
-    </LiveNarrativeSeed>
+        </main>
+      </LiveNarrativeSeed>
+    </LiveCopySeed>
   )
 }
 

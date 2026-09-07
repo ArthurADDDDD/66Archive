@@ -1,10 +1,13 @@
+import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { GamesLibrary, type LibraryGame } from '@/components/GamesLibrary'
+import { GamesLibrary } from '@/components/GamesLibrary'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { allGameIds, getGameProfile } from '@/lib/narrative'
 import { LivePageHeading } from '@/components/LiveSection'
 
@@ -19,7 +22,11 @@ export const metadata: Metadata = {
  * 覆盖 games.yaml 已登记 + 策展游戏；只展示有场次的游戏（v2 口径），
  * 游戏字段的补录进度如实说明——覆盖率是派生值，不是口号。
  */
-export default function GamesPage() {
+export default async function GamesPage() {
+  // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
+  // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
+  const { copy: bakedCopy } = await fetchBakedContent()
+
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
@@ -47,38 +54,44 @@ export default function GamesPage() {
     comebackDays: p.comebackDays,
   }))
 
+  // 列存转置：搜索和排序仍然跑在全部 745 个游戏上，只是换个形状过 RSC 载荷。
+  // 理由与还原方式见 lib/games.ts 里 LIBRARY_COLUMNS 上方的说明。
+  const libraryColumns = LIBRARY_COLUMNS.map((key) => library.map((game) => game[key])) as LibraryColumns
+
   return (
-    <main className="ui-page-in min-h-screen">
-      <MobileQuickNav active="games" />
-      <BackToTop />
-      <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
-        <SiteNav active="games" />
-        <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
-          打开全部 {timeline.length.toLocaleString()} 条记录 →
-        </Link>
-      </header>
+    <LiveCopySeed copy={bakedCopy}>
+      <main className="ui-page-in min-h-screen">
+        <MobileQuickNav active="games" />
+        <BackToTop />
+        <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
+          <SiteNav active="games" />
+          <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
+            打开全部 {timeline.length.toLocaleString()} 条记录 →
+          </Link>
+        </header>
 
-      <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
-        <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
-        <p className="measure-body mt-5 text-body text-muted">
-          {/* 日期一律包成不换行：`2010-07-11` 里的连字符是浏览器的断行点，
-              正文折到这里会把日期折成「2010-」+「07-11」两行。 */}
-          {played.length} 个游戏，档案收录至 <span className="whitespace-nowrap tnum">{latestArchiveDate ?? '待补录'}</span>。
-          {longest?.firstDate && longest?.lastDate && (
-            <>
-              {' '}跨得最长的是《{longest.name}》，从 <span className="whitespace-nowrap tnum">{longest.firstDate}</span> 到{' '}
-              <span className="whitespace-nowrap tnum">{longest.lastDate}</span>，
-              {longest.spanDays.toLocaleString()} 天。
-            </>
-          )}
-        </p>
-      </section>
+        <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
+          <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
+          <p className="measure-body mt-5 text-body text-muted">
+            {/* 日期一律包成不换行：`2010-07-11` 里的连字符是浏览器的断行点，
+                正文折到这里会把日期折成「2010-」+「07-11」两行。 */}
+            {played.length} 个游戏，档案收录至 <span className="whitespace-nowrap tnum">{latestArchiveDate ?? '待补录'}</span>。
+            {longest?.firstDate && longest?.lastDate && (
+              <>
+                {' '}跨得最长的是《{longest.name}》，从 <span className="whitespace-nowrap tnum">{longest.firstDate}</span> 到{' '}
+                <span className="whitespace-nowrap tnum">{longest.lastDate}</span>，
+                {longest.spanDays.toLocaleString()} 天。
+              </>
+            )}
+          </p>
+        </section>
 
-      <section className="site-container-wide px-page pb-20">
-        <GamesLibrary games={library} />
-      </section>
+        <section className="site-container-wide px-page pb-20">
+          <GamesLibrary columns={libraryColumns} />
+        </section>
 
-      <SiteFooter />
-    </main>
+        <SiteFooter />
+      </main>
+    </LiveCopySeed>
   )
 }

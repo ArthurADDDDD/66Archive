@@ -1,3 +1,5 @@
+import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
@@ -7,6 +9,7 @@ import { MediaFrame } from '@/components/MediaFrame'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { proxyImage } from '@/lib/platforms'
 import { buildSeriesList, type SeriesInfo } from '@/lib/series'
 import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
 import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
@@ -27,6 +30,10 @@ const SERIES_COLOR = { longRunning: '#A78BFA', themed: '#5BC8E8', video: '#E0A24
  * 夜 / 邮件 / 电台 / 周日 / 长期陪伴的气质靠深色 + 字排 + 留白完成，不画收音机。
  */
 export default async function SeriesPage() {
+  // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
+  // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
+  const { copy: bakedCopy } = await fetchBakedContent()
+
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
   const series = buildSeriesList(ds, timeline)
@@ -34,105 +41,110 @@ export default async function SeriesPage() {
   const pishuangMontage = pishuang ? buildPishuangMontage(pishuang) : []
   const pishuangFirstBiliSource = pishuang?.entries[0]?.sources.find((source) => source.url.includes('bilibili.com/video/'))?.url
   const pishuangFirstBiliMeta = await getBilibiliVideoMetaAtBuild(pishuangFirstBiliSource)
-  const pishuangFallbackCover = pishuangFirstBiliMeta?.cover ?? pishuang?.entries.find((entry) => entry.cover)?.cover
+  // B 站元数据那一支已经在 toVideoMeta 里过了 proxyImage；档案条目这一支是原始来源地址，
+  // 不过一遍就会把 acfun / 斗鱼的原图整张下下来（实测单张可达 1.9 MB）。
+  const pishuangFallbackCover =
+    pishuangFirstBiliMeta?.cover ?? proxyImage(pishuang?.entries.find((entry) => entry.cover)?.cover ?? undefined, 640)
   const togetherSee = series.find((s) => s.id === 'together-see')
   const themed = series.filter((s) => s.category === 'themed')
   const videoSeries = series.filter((s) => s.category === 'video')
 
   return (
-    <main className="ui-page-in min-h-screen overflow-x-clip">
-      <MobileQuickNav active="series" />
-      <BackToTop />
-      <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
-        <SiteNav active="series" />
-        <Link
-          href="/archive/"
-          prefetch={false}
-          className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block"
-        >
-          在录播室搜索全部记录 →
-        </Link>
-      </header>
+    <LiveCopySeed copy={bakedCopy}>
+      <main className="ui-page-in min-h-screen overflow-x-clip">
+        <MobileQuickNav active="series" />
+        <BackToTop />
+        <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
+          <SiteNav active="series" />
+          <Link
+            href="/archive/"
+            prefetch={false}
+            className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block"
+          >
+            在录播室搜索全部记录 →
+          </Link>
+        </header>
 
-      <section className="site-container px-page pb-12 pt-10 sm:pb-16 sm:pt-14">
-        <LivePageHeader pageId="series" eyebrowColor="#A78BFA" />
-      </section>
-
-      {pishuang && (
-        <section className="border-y border-line/70 bg-[#0C0E15]">
-          <div className="site-container grid items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
-            <div className="min-w-0">
-              <Eyebrow color="#5BC8E8" dot>
-                周日情感电台 · 斗鱼时期 · 心灵砒霜
-              </Eyebrow>
-              <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
-              <p className="measure-body mt-5 text-body text-muted"><KeepDates text={pishuang.description} /></p>
-              <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
-                <span className="text-body text-ink">{pishuang.count} 期</span>
-                <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
-                <span>横跨 {Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1} 年</span>
-              </div>
-              <div className="mt-8">
-                <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} descriptive />
-              </div>
-              {pishuangMontage.length > 0 && (
-                <div className="mt-8 border-t border-line/50 pt-6">
-                  <SeriesMontage samples={pishuangMontage} />
-                </div>
-              )}
-            </div>
-
-            <div className="min-w-0 flex flex-col gap-8 lg:pt-10">
-              {pishuang.firstTitle && (
-                <blockquote className="border-l-2 border-line/60 pl-5">
-                  <p className="text-h3 font-medium leading-relaxed text-ink/90">第一期是「{pishuang.firstTitle}」。</p>
-                  <p className="mt-3 text-meta text-muted tnum">{pishuang.firstDate}</p>
-                </blockquote>
-              )}
-              <BilibiliCoverFrame
-                sourceUrl={pishuangFirstBiliSource}
-                fallbackSrc={pishuangFallbackCover}
-                alt={pishuang.firstTitle ?? pishuang.name}
-                className="w-full"
-              />
-              <p className="measure-body text-body text-muted">
-                游戏暂停，邮件打开，一个星期日。后来，它陆续留下了 {pishuang.count} 期——有的很长，有的很短，很多个星期日，直播间都会等到这档节目。
-              </p>
-              <Link
-                href="/series/xinling-pishuang/"
-                prefetch={false}
-                data-analytics-event="content.open"
-                data-analytics-target="series:xinling-pishuang"
-                className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
-              >
-                打开心灵砒霜的全部 {pishuang.count} 期
-                <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
-              </Link>
-            </div>
-          </div>
+        <section className="site-container px-page pb-12 pt-10 sm:pb-16 sm:pt-14">
+          <LivePageHeader pageId="series" eyebrowColor="#A78BFA" />
         </section>
-      )}
 
-      <section className="site-container px-page py-12 sm:py-20">
-        {togetherSee && <TogetherSeeFeature series={togetherSee} />}
-        <div className="mt-16" />
-        <SeriesGroup
-          label="主题栏目"
-          description="围绕一个故事、玩法或共同主题，在一段时间里连续出现。"
-          color={SERIES_COLOR.themed}
-          series={themed}
-        />
-        <div className="mt-14" />
-        <SeriesGroup
-          label="视频系列"
-          description="直播之前留下的连载解说与完整流程。"
-          color={SERIES_COLOR.video}
-          series={videoSeries}
-        />
-      </section>
+        {pishuang && (
+          <section className="border-y border-line/70 bg-[#0C0E15]">
+            <div className="site-container grid items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
+              <div className="min-w-0">
+                <Eyebrow color="#5BC8E8" dot>
+                  周日情感电台 · 斗鱼时期 · 心灵砒霜
+                </Eyebrow>
+                <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
+                <p className="measure-body mt-5 text-body text-muted"><KeepDates text={pishuang.description} /></p>
+                <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
+                  <span className="text-body text-ink">{pishuang.count} 期</span>
+                  <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
+                  <span>横跨 {Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1} 年</span>
+                </div>
+                <div className="mt-8">
+                  <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} descriptive />
+                </div>
+                {pishuangMontage.length > 0 && (
+                  <div className="mt-8 border-t border-line/50 pt-6">
+                    <SeriesMontage samples={pishuangMontage} />
+                  </div>
+                )}
+              </div>
 
-      <SiteFooter />
-    </main>
+              <div className="min-w-0 flex flex-col gap-8 lg:pt-10">
+                {pishuang.firstTitle && (
+                  <blockquote className="border-l-2 border-line/60 pl-5">
+                    <p className="text-h3 font-medium leading-relaxed text-ink/90">第一期是「{pishuang.firstTitle}」。</p>
+                    <p className="mt-3 text-meta text-muted tnum">{pishuang.firstDate}</p>
+                  </blockquote>
+                )}
+                <BilibiliCoverFrame
+                  sourceUrl={pishuangFirstBiliSource}
+                  fallbackSrc={pishuangFallbackCover}
+                  alt={pishuang.firstTitle ?? pishuang.name}
+                  className="w-full"
+                />
+                <p className="measure-body text-body text-muted">
+                  游戏暂停，邮件打开，一个星期日。后来，它陆续留下了 {pishuang.count} 期——有的很长，有的很短，很多个星期日，直播间都会等到这档节目。
+                </p>
+                <Link
+                  href="/series/xinling-pishuang/"
+                  prefetch={false}
+                  data-analytics-event="content.open"
+                  data-analytics-target="series:xinling-pishuang"
+                  className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
+                >
+                  打开心灵砒霜的全部 {pishuang.count} 期
+                  <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="site-container px-page py-12 sm:py-20">
+          {togetherSee && <TogetherSeeFeature series={togetherSee} />}
+          <div className="mt-16" />
+          <SeriesGroup
+            label="主题栏目"
+            description="围绕一个故事、玩法或共同主题，在一段时间里连续出现。"
+            color={SERIES_COLOR.themed}
+            series={themed}
+          />
+          <div className="mt-14" />
+          <SeriesGroup
+            label="视频系列"
+            description="直播之前留下的连载解说与完整流程。"
+            color={SERIES_COLOR.video}
+            series={videoSeries}
+          />
+        </section>
+
+        <SiteFooter />
+      </main>
+    </LiveCopySeed>
   )
 }
 
@@ -150,9 +162,15 @@ function buildPishuangMontage(series: SeriesInfo): SeriesMontageSample[] {
 }
 
 function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
-  const featureCover = [...series.entries]
-    .reverse()
-    .find((entry) => entry.cover && /一起看|发布会|直面会|颁奖|榜单/.test(entry.title))?.cover ?? series.cover
+  // `series.cover` 那一支在 lib/series.ts 里已经过了 proxyImage；这里挑出来的条目封面是
+  // 原始来源地址，必须自己过一遍，否则命中正则时反而退化成直连原图。
+  const featureCover =
+    proxyImage(
+      [...series.entries]
+        .reverse()
+        .find((entry) => entry.cover && /一起看|发布会|直面会|颁奖|榜单/.test(entry.title))?.cover ?? undefined,
+      960,
+    ) ?? series.cover
 
   return (
     <div>

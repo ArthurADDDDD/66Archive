@@ -1,3 +1,5 @@
+import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
@@ -47,115 +49,121 @@ function collectSources() {
   }
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
+  // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
+  const { copy: bakedCopy } = await fetchBakedContent()
+
   const { credited, entryCount, firstYear, lastYear } = collectSources()
   return (
-    <main className="ui-page-in min-h-screen">
-      <MobileQuickNav active="contact" />
-      <BackToTop />
-      <header className="site-header-container flex items-center px-page py-5">
-        <SiteNav active="contact" />
-      </header>
+    <LiveCopySeed copy={bakedCopy}>
+      <main className="ui-page-in min-h-screen">
+        <MobileQuickNav active="contact" />
+        <BackToTop />
+        <header className="site-header-container flex items-center px-page py-5">
+          <SiteNav active="contact" />
+        </header>
 
-      <section className="site-container px-page pb-20 pt-16 sm:pt-24">
-        <div className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-today/10 blur-[60px] sm:h-72 sm:w-72 sm:blur-[100px]" />
+        <section className="site-container px-page pb-20 pt-16 sm:pt-24">
+          <div className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-today/10 blur-[60px] sm:h-72 sm:w-72 sm:blur-[100px]" />
 
-        <LivePageIntro pageId="contact" eyebrowColor="#E5568A" />
+          <LivePageIntro pageId="contact" eyebrowColor="#E5568A" />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          <CorrectionSubmission />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            <CorrectionSubmission />
 
-          <Link
-            href="/archive/"
-            prefetch={false}
-            className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
-          >
-            <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
-            <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
-              <div>
-                <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
-                <p className="measure-body mt-2 text-body text-muted">打开对应录像，看过原片以后，再帮忙补标签或者纠错。</p>
+            <Link
+              href="/archive/"
+              prefetch={false}
+              className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
+            >
+              <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
+              <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
+                  <p className="measure-body mt-2 text-body text-muted">打开对应录像，看过原片以后，再帮忙补标签或者纠错。</p>
+                </div>
+                <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开录播室 ↗</span>
               </div>
-              <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开录播室 ↗</span>
-            </div>
-          </Link>
+            </Link>
 
-          <a
-            href="https://github.com/ArthurADDDDD/66archive"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
-          >
-            <span className="text-meta uppercase tracking-[0.16em] text-live">项目仓库</span>
-            <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
-              <div>
-                <h2 className="text-h3 font-medium">GitHub · 66archive</h2>
-                <p className="mt-2 text-body text-muted">查看项目源码、数据更新和版本记录。</p>
+            <a
+              href="https://github.com/ArthurADDDDD/66archive"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
+            >
+              <span className="text-meta uppercase tracking-[0.16em] text-live">项目仓库</span>
+              <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <h2 className="text-h3 font-medium">GitHub · 66archive</h2>
+                  <p className="mt-2 text-body text-muted">查看项目源码、数据更新和版本记录。</p>
+                </div>
+                <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开仓库 ↗</span>
               </div>
-              <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开仓库 ↗</span>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <section aria-label="贡献者与来源致谢" className="mt-16 flex flex-col border-t border-line pt-10">
-          <LivePageNote
-            pageId="contact-credits"
-            eyebrowColor="#E0A244"
-            className="order-2 mt-8 sm:order-none sm:mt-0"
-            footer={(
-              <>
-                已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
-                {firstYear !== null && lastYear !== null && (
-                  <> · 覆盖 <span className="font-mono text-control font-semibold text-ink">{firstYear}</span> — <span className="font-mono text-control font-semibold text-ink">{lastYear}</span></>
-                )}
-              </>
-            )}
-          />
+          <section aria-label="贡献者与来源致谢" className="mt-16 flex flex-col border-t border-line pt-10">
+            <LivePageNote
+              pageId="contact-credits"
+              eyebrowColor="#E0A244"
+              className="order-2 mt-8 sm:order-none sm:mt-0"
+              footer={(
+                <>
+                  已收录 <span className="font-mono text-control font-semibold text-ink">{entryCount.toLocaleString()}</span> 条记录
+                  {firstYear !== null && lastYear !== null && (
+                    <> · 覆盖 <span className="font-mono text-control font-semibold text-ink">{firstYear}</span> — <span className="font-mono text-control font-semibold text-ink">{lastYear}</span></>
+                  )}
+                </>
+              )}
+            />
 
-          <div className="order-1 grid gap-4 sm:order-none sm:mt-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
-            <MaintainerCredits />
+            <div className="order-1 grid gap-4 sm:order-none sm:mt-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+              <MaintainerCredits />
 
-            <div className="rounded-2xl border border-line bg-surface/55 p-6">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="text-meta uppercase tracking-[0.16em] text-faint">录播 · 切片来源</span>
-                <span className="text-meta text-faint tnum">
-                  <span className="font-mono text-[1.125rem] font-bold text-video">{credited.length}</span> 位 UP 主的录像被本站索引
-                </span>
+              <div className="rounded-2xl border border-line bg-surface/55 p-6">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <span className="text-meta uppercase tracking-[0.16em] text-faint">录播 · 切片来源</span>
+                  <span className="text-meta text-faint tnum">
+                    <span className="font-mono text-[1.125rem] font-bold text-video">{credited.length}</span> 位 UP 主的录像被本站索引
+                  </span>
+                </div>
+                <ul className="mt-5 divide-y divide-line/50">
+                  {credited.map(({ account, count }) => (
+                    <li key={account.id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-2.5">
+                      <a
+                        href={account.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ui-press min-w-0 truncate text-control text-ink transition-colors hover:text-video"
+                      >
+                        {account.name}
+                      </a>
+                      <span className="shrink-0 text-meta text-faint">{PLATFORM_META[account.platform]?.name ?? account.platform}</span>
+                      <span className="ml-auto shrink-0 text-meta text-faint tnum">
+                        <span className="font-mono text-control font-semibold text-ink">{count.toLocaleString()}</span> 场
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 border-t border-line/70 pt-4 text-meta text-faint">
+                  名单会随着补档继续增加。如果漏了谁，欢迎告诉我。
+                </p>
               </div>
-              <ul className="mt-5 divide-y divide-line/50">
-                {credited.map(({ account, count }) => (
-                  <li key={account.id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-2.5">
-                    <a
-                      href={account.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ui-press min-w-0 truncate text-control text-ink transition-colors hover:text-video"
-                    >
-                      {account.name}
-                    </a>
-                    <span className="shrink-0 text-meta text-faint">{PLATFORM_META[account.platform]?.name ?? account.platform}</span>
-                    <span className="ml-auto shrink-0 text-meta text-faint tnum">
-                      <span className="font-mono text-control font-semibold text-ink">{count.toLocaleString()}</span> 场
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-5 border-t border-line/70 pt-4 text-meta text-faint">
-                名单会随着补档继续增加。如果漏了谁，欢迎告诉我。
-              </p>
             </div>
+          </section>
+
+          <div className="mt-12 flex flex-wrap gap-3">
+            <Link prefetch={false} href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-control font-medium text-[#12141C] hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
+              前往编年史
+            </Link>
+            <Link prefetch={false} href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-control text-muted hover:border-muted hover:text-ink">
+              返回首页
+            </Link>
           </div>
         </section>
-
-        <div className="mt-12 flex flex-wrap gap-3">
-          <Link href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-control font-medium text-[#12141C] hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
-            前往编年史
-          </Link>
-          <Link href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-control text-muted hover:border-muted hover:text-ink">
-            返回首页
-          </Link>
-        </div>
-      </section>
-    </main>
+      </main>
+    </LiveCopySeed>
   )
 }

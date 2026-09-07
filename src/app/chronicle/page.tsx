@@ -3,8 +3,8 @@ import { getDataset, toTimelineEntries } from '@/lib/data'
 import { resolveStoryActs } from '@/lib/narrative'
 import { buildStorySections } from '@/lib/story-years'
 import { ChronicleView } from '@/components/ChronicleView'
-import { LiveNarrativeSeed } from '@/components/LiveContentProvider'
-import { fetchBakedContent } from '@/lib/baked-content'
+import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
+import { fetchBakedStoryNarrative } from '@/lib/baked-content'
 
 /** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
 export const metadata: Metadata = {
@@ -27,7 +27,8 @@ export default async function ChroniclePage() {
   const storySections = buildStorySections(storyActs, visibleEntries)
   const latestYear = Number(visibleEntries[0]?.date.slice(0, 4)) || new Date().getFullYear()
 
-  const { narrative } = await fetchBakedContent()
+  // 编年史只渲染 storyActs；首页那份 homeActs / highlights 在这里是纯负重。
+  const narrative = await fetchBakedStoryNarrative()
 
   return (
     <LiveNarrativeSeed narrative={narrative}>
