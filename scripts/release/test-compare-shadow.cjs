@@ -30,14 +30,16 @@ test('immutable shadow digest gate', async () => {
         return { data: fs.readFileSync('previous.zip') }
       } } },
     }
-    const invoke = () => compare({ github, context: { repo: { owner: 'example', repo: 'public' }, sha: current.publicSha, runId: 10 }, core: { setOutput: (_, v) => { output = v } } })
+    const invoke = () => compare({ github, context: { repo: { owner: 'example', repo: 'public' }, sha: current.publicSha, runId: 10, runNumber: 10 }, core: { setOutput: (_, v) => { output = v } } })
     await invoke()
     assert.equal(output, 'false')
     process.env.GITHUB_RUN_ATTEMPT = '2'
     await assert.rejects(invoke, /Previous attempt evidence is missing/)
     process.env.GITHUB_RUN_ATTEMPT = '1'
-    runs = [{ id: 9, head_sha: current.publicSha }]
+    runs = [{ id: 9, run_number: 9, head_sha: current.publicSha }]
     await assert.rejects(invoke, /Previous same-SHA run exists/)
+    runs = [{ id: 11, run_number: 11, head_sha: current.publicSha }]
+    await invoke() // A queued future run must not block the first publisher.
     runs = []
     artifacts = [{ id: 1, expired: false, workflow_run: { head_sha: current.publicSha, head_branch: 'main' } }]
     await invoke()

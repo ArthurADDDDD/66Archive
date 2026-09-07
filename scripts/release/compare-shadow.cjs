@@ -17,7 +17,7 @@ module.exports = async ({ github, context, core }) => {
     const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
       ...context.repo, workflow_id: 'release-web.yml', head_sha: current.publicSha, per_page: 100,
     })
-    if (runs.some(run => run.head_sha === current.publicSha && run.id !== context.runId)) {
+    if (runs.some(run => run.head_sha === current.publicSha && run.run_number < context.runNumber)) {
       throw new Error('Previous same-SHA run exists without verifiable evidence; refusing publication')
     }
   }
