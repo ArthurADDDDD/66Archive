@@ -13,6 +13,7 @@
     "archive:test": "tsx scripts/test-archive-edit.ts",
     "gallery:optimize": "tsx scripts/gallery-images-optimize.ts",
     "test:vote-search": "tsx scripts/test-vote-search.ts",
+    "test:archive-payload": "tsx scripts/test-archive-payload.ts",
     "test:analytics": "tsx scripts/test-site-analytics.ts"
   },
   "dependencies": {

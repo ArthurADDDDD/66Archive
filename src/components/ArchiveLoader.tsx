@@ -1,15 +1,13 @@
 'use client'
 
 import { startTransition, useEffect, useState } from 'react'
-import type { TimelineEntry } from '@/lib/data'
 import { Timeline } from './Timeline'
 import { SiteNav } from './SiteNav'
-
-type ArchivePayload = {
-  entries: TimelineEntry[]
-  isDemo: boolean
-  hiddenUnreviewed: number
-}
+import {
+  decodeArchivePayload,
+  type ArchivePayload,
+  type EncodedArchivePayload,
+} from '@/lib/archive-payload'
 
 let archiveRequest: Promise<ArchivePayload> | null = null
 
@@ -29,14 +27,19 @@ function takeBooted(): Promise<unknown> | null {
 }
 
 /** 预取脚本只保证「要么是解析出来的 JSON，要么是 null」，形状还得自己认一遍。 */
-function isArchivePayload(value: unknown): value is ArchivePayload {
-  return Boolean(value) && Array.isArray((value as ArchivePayload).entries)
+function isEncodedPayload(value: unknown): value is EncodedArchivePayload {
+  return Boolean(value) && Array.isArray((value as EncodedArchivePayload).entries)
 }
 
+/**
+ * 解码必须在这里做完，不能留到渲染时按需展开：`Timeline` 的首帧 memo 就要读
+ * `aliveCount`（「只看还能播的」筛选）。整份 2,711 条的解码在 node 里量过是毫秒级，
+ * 与 JSON.parse 本身（中位数 9.2 ms）相比可以忽略。
+ */
 function requestArchive(): Promise<ArchivePayload> {
   return fetch('/archive-data.json').then(async (response) => {
     if (!response.ok) throw new Error(`archive data returned ${response.status}`)
-    return response.json() as Promise<ArchivePayload>
+    return decodeArchivePayload((await response.json()) as EncodedArchivePayload)
   })
 }
 
@@ -47,7 +50,7 @@ function fetchArchive(): Promise<ArchivePayload> {
   // 真失败了下面的 catch 会清掉模块缓存，「重新加载档案」照常能重来。
   const booted = takeBooted()
   archiveRequest = (booted
-    ? booted.then((data) => (isArchivePayload(data) ? data : requestArchive()))
+    ? booted.then((data) => (isEncodedPayload(data) ? decodeArchivePayload(data) : requestArchive()))
     : requestArchive()
   ).catch((error) => {
     // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。

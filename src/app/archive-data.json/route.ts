@@ -1,4 +1,5 @@
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { encodeArchivePayload } from '@/lib/archive-payload'
 
 export const dynamic = 'force-static'
 
@@ -14,9 +15,13 @@ export function GET() {
       ? allEntries.filter((entry) => entry.uncheckedCount === 0)
       : allEntries
 
-  return Response.json({
-    entries,
-    isDemo: ds.isDemo,
-    hiddenUnreviewed: allEntries.length - entries.length,
-  })
+  // 线上编码见 lib/archive-payload.ts：只压缩「怎么写下来」，条目形状不变，
+  // 解码在 ArchiveLoader 里，构造上无损（scripts/test-archive-payload.ts 逐条比对）。
+  return Response.json(
+    encodeArchivePayload({
+      entries,
+      isDemo: ds.isDemo,
+      hiddenUnreviewed: allEntries.length - entries.length,
+    }),
+  )
 }

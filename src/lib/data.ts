@@ -159,6 +159,21 @@ export function buildSourceGroups(entries: Entry[]): Map<string, Entry[]> {
   return groups
 }
 
+/**
+ * 色带端点保留三位小数。
+ *
+ * 这两个数最后是 CSS 百分比，`0.5705761316872427` 和 `0.571` 在任何屏幕上都画在
+ * 同一个像素里，但前者要 19 个字符、后者 5 个。`bands` 是 `/games/[id]/` 上最大的
+ * 单个字段——在 minecraft 那种密集页上占 entries 数组的 41.5%（19,183 字符），
+ * 一页 406 个长浮点字面量，753 个游戏页合计 10,606 个。
+ * 实测 minecraft 页 HTML 少 1,269 B、`index.txt` 少 1,424 B（brotli）；
+ * 全部 entries 路由（/archive/、/chronicle/、/e/*）同样受益，因为它构建于
+ * `toTimelineEntries`，全站只算一次。
+ *
+ * 0.001 是一条色带的 0.1%，在任何现实宽度下都远小于一个设备像素。
+ */
+const ratio = (value: number) => Math.round(value * 1e3) / 1e3
+
 export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
   const groups = buildSourceGroups(ds.entries)
 
@@ -187,8 +202,8 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       return {
         game: s.game ?? null,
         name: s.game ? (ds.games.get(s.game)?.name ?? s.game) : s.label,
-        from: total ? from / total : 0,
-        to: total ? Math.min(to / total, 1) : 0,
+        from: ratio(total ? from / total : 0),
+        to: ratio(total ? Math.min(to / total, 1) : 0),
       }
     })
 
