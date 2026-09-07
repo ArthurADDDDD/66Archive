@@ -2,7 +2,9 @@
 
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { actColorForDate } from '@/lib/narrative'
+import { proxyImageSrcSet } from '@/lib/platforms'
 import { trackSiteEvent } from '@/lib/site-analytics'
 import { SearchField } from './SearchField'
 
@@ -15,17 +17,18 @@ import { SearchField } from './SearchField'
  *
  * 保留下来的能力：名称/别名搜索 · 四种排序 · 分页 · 计数与提示行。
  */
-export type LibraryGame = {
-  id: string
-  name: string
-  aliases: string[]
-  face: string | null
-  sessions: number
-  totalMinutes: number
-  knownDurationCount: number
-  firstDate: string | null
-  lastDate: string | null
-  comebackDays: number
+/** 把列存载荷装回组件内部一直在用的对象数组。 */
+function toLibraryGames(columns: LibraryColumns): LibraryGame[] {
+  const count = columns[0]?.length ?? 0
+  const games: LibraryGame[] = new Array(count)
+  for (let row = 0; row < count; row += 1) {
+    const game = {} as Record<string, unknown>
+    for (let col = 0; col < LIBRARY_COLUMNS.length; col += 1) {
+      game[LIBRARY_COLUMNS[col]] = columns[col]?.[row]
+    }
+    games[row] = game as LibraryGame
+  }
+  return games
 }
 
 type SortKey = 'newest' | 'oldest' | 'duration' | 'sessions'
@@ -37,13 +40,28 @@ const SORTS: { id: SortKey; label: string; hint: string }[] = [
   { id: 'sessions', label: '播得最多', hint: '按出场场次排' },
 ]
 
+export type { LibraryColumns, LibraryGame } from '@/lib/games'
+
 const PAGE_SIZE = 60
 
-export function GamesLibrary({ games }: { games: LibraryGame[] }) {
+/**
+ * 封面墙的列宽：grid-cols-2 → sm:3 → lg:4 → xl:5，版心最宽 87.5rem。
+ *
+ * `sizes` 写成视口比例而不是固定像素，是因为固定值只在一个视口宽度上是对的：
+ * 实测 1280 视口下瓦片是 211 CSS px，写死 260px 会让 DPR 1 的浏览器判断 240w 不够、
+ * 直接跳到 480w——正好把这次优化抵消掉。按列数折算成 vw 就能一路跟着版心走。
+ */
+const TILE_WIDTHS = [240, 480] as const
+const TILE_SIZES = '(min-width: 1280px) 17vw, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw'
+
+export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
   const [q, setQ] = useState('')
   const [sort, setSort] = useState<SortKey>('newest')
   const [page, setPage] = useState(1)
   const reportedZero = useRef(false)
+
+  // 装回对象数组一次，下面的筛选 / 排序 / 渲染完全不用改。
+  const games = useMemo(() => toLibraryGames(columns), [columns])
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
@@ -238,6 +256,7 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
     <li>
       <Link
         href={`/games/${g.id}/`}
+        prefetch={false}
         data-analytics-event="content.open"
         data-analytics-target={`game:${g.id}`}
         className="ui-press group block"
@@ -247,6 +266,10 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={g.face}
+              /* 瓦片实际显示 180–260 CSS px，此前无论屏幕如何都下 w=480。
+                 给两档让浏览器按 DPR 挑：DPR 1 拿 240（实测约为 480 的 36%），DPR 2 仍拿 480。 */
+              srcSet={proxyImageSrcSet(g.face, TILE_WIDTHS) ?? undefined}
+              sizes={TILE_SIZES}
               alt=""
               loading="lazy"
               decoding="async"
