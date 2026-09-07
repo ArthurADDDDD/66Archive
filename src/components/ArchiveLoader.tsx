@@ -13,18 +13,47 @@ type ArchivePayload = {
 
 let archiveRequest: Promise<ArchivePayload> | null = null
 
+/**
+ * 取走首屏预取的结果，并从全局上摘掉（预取脚本见 `app/archive/page.tsx`）。
+ *
+ * **只认一次**是关键：一个已经 settle 的 promise 每次 await 都返回同一个结果，
+ * 不摘掉的话，一次预取失败会让「重新加载档案」按钮永远重播那次失败。
+ */
+function takeBooted(): Promise<unknown> | null {
+  if (typeof window === 'undefined') return null
+  const holder = window as { __i6i6ArchiveBoot?: Promise<unknown> }
+  const pending = holder.__i6i6ArchiveBoot
+  if (!pending) return null
+  delete holder.__i6i6ArchiveBoot
+  return pending
+}
+
+/** 预取脚本只保证「要么是解析出来的 JSON，要么是 null」，形状还得自己认一遍。 */
+function isArchivePayload(value: unknown): value is ArchivePayload {
+  return Boolean(value) && Array.isArray((value as ArchivePayload).entries)
+}
+
+function requestArchive(): Promise<ArchivePayload> {
+  return fetch('/archive-data.json').then(async (response) => {
+    if (!response.ok) throw new Error(`archive data returned ${response.status}`)
+    return response.json() as Promise<ArchivePayload>
+  })
+}
+
 function fetchArchive(): Promise<ArchivePayload> {
   if (archiveRequest) return archiveRequest
-  archiveRequest = fetch('/archive-data.json', { cache: 'no-cache' })
-    .then(async (response) => {
-      if (!response.ok) throw new Error(`archive data returned ${response.status}`)
-      return response.json() as Promise<ArchivePayload>
-    })
-    .catch((error) => {
-      // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。
-      archiveRequest = null
-      throw error
-    })
+  // 首屏预取多半已经在路上了，直接接手，省掉「等水合再发请求」那一整趟。
+  // 有意不给它加超时竞速：这份载荷三百多 KB，放弃一个在途请求再从零下载只会更慢；
+  // 真失败了下面的 catch 会清掉模块缓存，「重新加载档案」照常能重来。
+  const booted = takeBooted()
+  archiveRequest = (booted
+    ? booted.then((data) => (isArchivePayload(data) ? data : requestArchive()))
+    : requestArchive()
+  ).catch((error) => {
+    // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。
+    archiveRequest = null
+    throw error
+  })
   return archiveRequest
 }
 

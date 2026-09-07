@@ -8,6 +8,31 @@ export const metadata: Metadata = {
 }
 
 /**
+ * 档案载荷的首屏预取。
+ *
+ * 原先 `ArchiveLoader` 把 fetch 写在 `useEffect` 里，于是这份 2.7MB 的数据必须等
+ * 十几个 chunk 全部下载、解析、React 水合完才发得出去。线上实测：最后一个 JS 在
+ * 3463ms 落地，请求在 3517ms 才出现——中间 2.1 秒纯粹在排队等 JS，网络是空的。
+ *
+ * 这个 URL 是固定的，不依赖任何页面状态，所以没有理由等 JS。放在页面正文最前面
+ * 用原生 `<script>` 发出去，请求就和 JS 下载并行。做法与根 layout 里的
+ * `CONTENT_BOOT_SCRIPT` 完全一致（见 `app/layout.tsx` 的注释）：必须是原生标签，
+ * `next/script` 的 beforeInteractive 在 App Router 下会被序列化进 RSC 载荷，
+ * 要等 React 处理到那一条才执行，正好绕回「等 JS」这个要解决的问题。
+ *
+ * 脚本自带 `.catch`：它跑在框架之前，出错没有任何人接得住；而消费方要到水合后
+ * 才来 await，中间这段时间没有 handler，不兜住就是 unhandled rejection。
+ *
+ * 消费方在 `ArchiveLoader` 的 `fetchArchive`：拿不到就照常自己发请求，所以脚本
+ * 没跑、被 CSP 拦掉、或者浏览器太老，行为都和从前一致。
+ *
+ * 不带 `cache` 选项是有意的：响应头是 `max-age=0, stale-while-revalidate=86400`，
+ * 浏览器仍然每次都再验证，但回访时可以先拿缓存里的那份立刻渲染、后台再刷新。
+ * 原先写死的 `cache: 'no-cache'` 会把这条路堵掉，让每次进录播室都从零下载。
+ */
+const ARCHIVE_BOOT_SCRIPT = `(function(){try{window.__i6i6ArchiveBoot=fetch('/archive-data.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})}catch(e){}})()`
+
+/**
  * 录播室：档案模式。完整 Timeline，能力一条不丢，搜索/筛选/年份/来源全部保留。
  * 深链（?y=/?m=/?q=/?p=/?t=/?g=/?alive=）由 Timeline 自己在客户端恢复
  * （静态导出无法在服务端读 searchParams）。
@@ -15,6 +40,7 @@ export const metadata: Metadata = {
 export default function ArchivePage() {
   return (
     <>
+      <script dangerouslySetInnerHTML={{ __html: ARCHIVE_BOOT_SCRIPT }} />
       <ArchiveLoader />
       <BackToTop />
     </>
