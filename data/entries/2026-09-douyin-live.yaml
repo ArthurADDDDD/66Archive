@@ -107,3 +107,22 @@
       parts: 8
   note: "自动采集候选经人工审批新建（组 5c917a20-5066-4e13-a193-fb87b7c32428）。"
   contributed_by: collection-review
+
+- id: 2026-09-06-live-01
+  type: live
+  date: "2026-09-06"
+  title: "最高难度鬼武者"
+  platform: douyin
+  duration_min: 228
+  games:
+    - guiwuzhe2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/d08a1185e4a08195bab0bbcac15ecb30131832b2.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1tXbc6oExg"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
