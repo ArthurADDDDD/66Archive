@@ -101,6 +101,8 @@ export default async function SeriesPage() {
               <Link
                 href="/series/xinling-pishuang/"
                 prefetch={false}
+                data-analytics-event="content.open"
+                data-analytics-target="series:xinling-pishuang"
                 className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
               >
                 打开心灵砒霜的全部 {pishuang.count} 期
@@ -161,6 +163,8 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
       <Link
         href={`/series/${series.id}/`}
         prefetch={false}
+        data-analytics-event="content.open"
+        data-analytics-target={`series:${series.id}`}
         className="ui-press group mt-6 grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
       >
         <div className="min-w-0 p-6 sm:p-8 lg:p-10">
@@ -219,6 +223,8 @@ function SeriesGroup({
             key={s.id}
             href={`/series/${s.id}/`}
             prefetch={false}
+            data-analytics-event="content.open"
+            data-analytics-target={`series:${s.id}`}
             className="ui-press group flex flex-col rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60 hover:bg-surface"
           >
             {s.cover ? (

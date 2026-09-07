@@ -20,8 +20,11 @@ import { useCopyBlock } from './LiveContentProvider'
  * 3. **接口只回 ID 和次数。** 标题由构建期生成的静态索引解析
  *    （scripts/popular-index-build.ts）。索引没加载出来时退回显示 ID，
  *    链接照样能点——宁可标题难看，也不要一条都不显示。
- * 4. **这里的链接不上报 content.open。** 否则排行会自己喂自己：排进前十 →
- *    更多人从这里点 → 排得更前。榜单只反映用户在站内其他地方的真实点击。
+ * 4. **这里的链接也上报 content.open。** 早先刻意不报，怕排行自己喂自己：排进
+ *    前十 → 更多人从这里点 → 排得更前。但那样一来榜单就漏掉了一整类真实点击，
+ *    「从榜单点进去的人有多少」也永远看不见。现在改成照常上报——正反馈的风险
+ *    仍然存在，靠 TOP_N 只有十条、且这一节位于数据页较靠后的位置来限制，真出现
+ *    某条被榜单本身推上去的迹象时再考虑分开记一个来源维度。
  */
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
@@ -144,7 +147,12 @@ export function PopularContent({
           const title = label?.t || item.id
           return (
             <li key={item.targetKey}>
-              <Link href={hrefFor(item)} className="group block">
+              <Link
+                href={hrefFor(item)}
+                data-analytics-event="content.open"
+                data-analytics-target={item.targetKey}
+                className="group block"
+              >
                 <div className="flex items-baseline gap-3">
                   <span className="w-6 shrink-0 text-right font-mono text-meta text-faint tnum">
                     {String(index + 1).padStart(2, '0')}
