@@ -195,6 +195,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
               beat.href ? (
                 <Link
                   href={beat.href}
+                  prefetch={false}
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
                   aria-label={`播放：${beat.title}`}
@@ -225,6 +226,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
               {beat.href ? (
                 <Link
                   href={beat.href}
+                  prefetch={false}
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
                   aria-label={`播放：${beat.title}`}
@@ -251,6 +253,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
               {beat.href && (
                 <Link
                   href={beat.href}
+                  prefetch={false}
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
                   {...contentOpenProps(beat.href)}

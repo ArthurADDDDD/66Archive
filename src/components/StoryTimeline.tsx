@@ -262,6 +262,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   const content = !beat.href ? <div>{body}</div> : (
     <Link
       href={beat.href}
+      prefetch={false}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}
@@ -401,6 +402,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
   return (
     <Link
       href={beat.href}
+      prefetch={false}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}
@@ -458,6 +460,7 @@ function SecondaryList({
           <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
             <Link
               href={beat.href}
+              prefetch={false}
               target={beat.external ? '_blank' : undefined}
               rel={beat.external ? 'noreferrer' : undefined}
               {...contentOpenProps(beat.href)}

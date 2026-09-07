@@ -188,6 +188,7 @@ export function PopularContent({
             <li key={item.targetKey}>
               <Link
                 href={hrefFor(item)}
+                prefetch={false}
                 data-analytics-event="content.open"
                 data-analytics-target={item.targetKey}
                 className="group block"

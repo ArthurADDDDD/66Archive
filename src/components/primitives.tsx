@@ -134,6 +134,7 @@ export function ArchiveRow({
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex min-h-[44px] flex-wrap items-baseline gap-x-3 gap-y-1 py-3 transition-colors hover:bg-surface/30 sm:flex-nowrap"
     >
       <span className="order-1 shrink-0 font-mono text-meta text-faint tnum sm:order-none sm:w-[104px]">{date}</span>
@@ -162,7 +163,7 @@ export function SiteFooter() {
       className="site-container flex flex-col justify-between gap-4 px-page py-10 text-meta text-faint sm:flex-row"
     >
       <span>只索引，不搬运 · 所有播放回到原平台</span>
-      <Link href="/contact/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">
+      <Link prefetch={false} href="/contact/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">
         资料纠错与联系 →
       </Link>
     </footer>

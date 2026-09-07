@@ -110,6 +110,7 @@ function BeatRow({ beat, color, anchorId }: { beat: ResolvedBeat; color: string;
   const card = beat.href ? (
     <Link
       href={beat.href}
+      prefetch={false}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}

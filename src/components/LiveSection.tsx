@@ -199,7 +199,7 @@ export function LiveRooms() {
         const href = ROOM_HREF[room.id]
         if (!href) return null
         return (
-          <Link
+          <Link prefetch={false}
             key={room.id}
             href={href}
             className="ui-press group rounded-2xl border border-line bg-surface/25 p-6 transition-colors hover:border-muted/70 hover:bg-surface/45"

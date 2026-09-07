@@ -251,7 +251,7 @@ function Chip({ href, color, children }: { href?: string; color?: string; childr
   return (
     <Link
       href={href}
-      prefetch={href.startsWith('/archive/') ? false : undefined}
+      prefetch={false}
       className={`ui-press group ${shell} transition-colors hover:border-muted hover:text-ink`}
     >
       {inner}
@@ -272,6 +272,7 @@ function NeighborLink({
   return (
     <Link
       href={`/e/${entry.id}/`}
+      prefetch={false}
       className={`ui-press group flex min-h-[4rem] flex-col justify-center rounded-xl border border-line bg-surface/30 px-4 py-3 transition-colors hover:border-muted hover:bg-surface/60 ${
         isPrev ? '' : 'sm:items-end sm:text-right'
       }`}

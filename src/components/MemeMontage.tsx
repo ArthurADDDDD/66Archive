@@ -24,7 +24,7 @@ export function MemeMontage({
           <p className="text-h3 font-medium text-ink">{title}</p>
           <p className="measure-body mt-2 text-meta leading-relaxed text-muted">{description}</p>
         </div>
-        <Link href={href} className="ui-press rounded-sm text-meta text-live underline underline-offset-4">
+        <Link prefetch={false} href={href} className="ui-press rounded-sm text-meta text-live underline underline-offset-4">
           {linkLabel} →
         </Link>
       </div>
@@ -32,7 +32,7 @@ export function MemeMontage({
       <div className="mt-5 overflow-x-auto" aria-label={`${title}视频列表`}>
         <div className="flex gap-3 pb-1">
           {samples.map((sample) => (
-            <Link key={sample.id} href={`/e/${sample.id}/`} className="group w-[clamp(10.5rem,18vw,15rem)] shrink-0">
+            <Link prefetch={false} key={sample.id} href={`/e/${sample.id}/`} className="group w-[clamp(10.5rem,18vw,15rem)] shrink-0">
               <div className="aspect-video overflow-hidden rounded-lg border border-line/60 bg-raised">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

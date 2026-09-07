@@ -19,7 +19,7 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
       <div className="min-w-0 max-w-full overflow-x-auto" aria-label="蒙太奇视频列表">
           <div className="flex w-max min-w-full gap-3 pb-1">
           {montage.samples.map((sample) => (
-            <Link
+            <Link prefetch={false}
               key={sample.id}
               href={`/e/${sample.id}/`}
               data-analytics-event="content.open"
@@ -68,7 +68,7 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
         <div className="mt-5 overflow-x-auto">
           <div className="flex gap-3 pb-1">
             {montage.samples.map((sample) => (
-              <Link
+              <Link prefetch={false}
                 key={sample.id}
                 href={`/e/${sample.id}/`}
                 data-analytics-event="content.open"
