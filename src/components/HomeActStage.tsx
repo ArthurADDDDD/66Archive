@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveActs } from '@/lib/live-content'
+import { contentOpenProps } from '@/lib/analytics-target'
 import { useLiveContent } from './LiveContentProvider'
 import { HomeExplorePromo, type ExplorePromoData } from './HomeExplorePromo'
 
@@ -428,7 +429,13 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
   )
 
   return beat.href ? (
-    <Link href={beat.href} target={beat.external ? '_blank' : undefined} rel={beat.external ? 'noreferrer' : undefined} className="group block">
+    <Link
+      href={beat.href}
+      target={beat.external ? '_blank' : undefined}
+      rel={beat.external ? 'noreferrer' : undefined}
+      {...contentOpenProps(beat.href)}
+      className="group block"
+    >
       {body}
     </Link>
   ) : <div className="group">{body}</div>

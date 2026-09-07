@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { EXTRA_HIGHLIGHTS } from '@/lib/highlight-extras'
 import { actColor, MEME_CATEGORIES, type HomepageData, type MemeCategory, type ResolvedBeat } from '@/lib/narrative'
 import { applyLiveHighlights } from '@/lib/live-content'
+import { contentOpenProps } from '@/lib/analytics-target'
 import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
 import { useCopyBlock, useLiveContent } from './LiveContentProvider'
@@ -197,6 +198,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
                   aria-label={`播放：${beat.title}`}
+                  {...contentOpenProps(beat.href)}
                   className="group/highlight-cover block aspect-video overflow-hidden rounded-lg border border-line/70"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -226,6 +228,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
                   aria-label={`播放：${beat.title}`}
+                  {...contentOpenProps(beat.href)}
                   className="ui-press -m-2 block rounded-lg p-2 text-left transition-colors hover:text-live"
                 >
                   {showEmphasis && (
@@ -250,6 +253,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   href={beat.href}
                   target={beat.external ? '_blank' : undefined}
                   rel={beat.external ? 'noreferrer' : undefined}
+                  {...contentOpenProps(beat.href)}
                   className="ui-press mt-5 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-meta text-live transition-colors hover:border-muted"
                 >
                   打开播放 <span aria-hidden>↗</span>

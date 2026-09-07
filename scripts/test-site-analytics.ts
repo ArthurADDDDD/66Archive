@@ -48,7 +48,37 @@ async function main() {
   flushSiteAnalytics()
   if (sent.length !== 0) throw new Error('WebDriver 会话仍然上报了事件')
 
-  console.log('✓ 上报口径：重复点击合并、自动化会话不计入')
+  await checkContentOpenTarget()
+
+  console.log('✓ 上报口径：重复点击合并、自动化会话不计入、站内链接解析正确')
+}
+
+/**
+ * 编年史 / 三幕 / 高光的节点卡只拿得到一个最终 href，目标是从它反推的。
+ * 解析错了不会报错，只会静静地把点击算到别的内容头上，或者发出一个被服务端
+ * 整批拒掉的事件——两种都要靠这里挡住。
+ */
+async function checkContentOpenTarget() {
+  const { contentOpenTarget } = await import('../src/lib/analytics-target')
+  const cases: [string | null, string | undefined][] = [
+    ['/e/2015-07-05-live-01/', 'entry:2015-07-05-live-01'],
+    ['/games/maplestory/', 'game:maplestory'],
+    ['/series/xinling-pishuang/', 'series:xinling-pishuang'],
+    ['/e/2015-07-05-live-01', 'entry:2015-07-05-live-01'],
+    // 外链、纯文案卡、列表页、带查询串的跳转都不是「点开一条内容」
+    ['https://www.bilibili.com/video/BV1zs411R7nJ', undefined],
+    [null, undefined],
+    ['/archive/', undefined],
+    ['/archive/?y=2026', undefined],
+    ['/e/2015-07-05-live-01/?from=story', undefined],
+    // 服务端 schema 只收 [a-z0-9][a-z0-9_-]* 开头的 ID
+    ['/e/-bad-id/', undefined],
+    ['/e/Bad-Id/', undefined],
+  ]
+  for (const [href, expected] of cases) {
+    const actual = contentOpenTarget(href)
+    if (actual !== expected) throw new Error(`${href} → ${actual}，应为 ${expected}`)
+  }
 }
 
 void main()

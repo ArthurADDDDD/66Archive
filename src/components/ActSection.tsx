@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveAct } from '@/lib/live-content'
+import { contentOpenProps } from '@/lib/analytics-target'
 import { Reveal } from './Reveal'
 import { useLiveAct, useLiveContent } from './LiveContentProvider'
 import { MontageVideoList } from './MontageVideoList'
@@ -111,6 +112,7 @@ function BeatRow({ beat, color, anchorId }: { beat: ResolvedBeat; color: string;
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
+      {...contentOpenProps(beat.href)}
       className="group block"
     >
       <BeatBody beat={beat} color={color} />

@@ -6,6 +6,7 @@ import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
 import { formatDuration } from '@/lib/ui'
+import { contentOpenProps } from '@/lib/analytics-target'
 import { MediaFrame } from './MediaFrame'
 import { Eyebrow } from './primitives'
 import { useLiveContent } from './LiveContentProvider'
@@ -259,7 +260,13 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   )
 
   const content = !beat.href ? <div>{body}</div> : (
-    <Link href={beat.href} target={beat.external ? '_blank' : undefined} rel={beat.external ? 'noreferrer' : undefined} className="group block">
+    <Link
+      href={beat.href}
+      target={beat.external ? '_blank' : undefined}
+      rel={beat.external ? 'noreferrer' : undefined}
+      {...contentOpenProps(beat.href)}
+      className="group block"
+    >
       {body}
     </Link>
   )
@@ -396,6 +403,7 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       href={beat.href}
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
+      {...contentOpenProps(beat.href)}
       className="group block rounded border-l border-line/50 py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50"
     >
       {body}
@@ -452,6 +460,7 @@ function SecondaryList({
               href={beat.href}
               target={beat.external ? '_blank' : undefined}
               rel={beat.external ? 'noreferrer' : undefined}
+              {...contentOpenProps(beat.href)}
               className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
             >
               {inner}
