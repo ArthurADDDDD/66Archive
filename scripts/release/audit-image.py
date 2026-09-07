@@ -29,7 +29,9 @@ def audit(filename, public_sha):
         manifest = json.loads(blob(descriptor))
         config = json.loads(blob(manifest['config']))
         assert config['os'] == 'linux' and config['architecture'] == 'amd64'
-        assert not config.get('config', {}).get('Env'), 'Unexpected image environment'
+        environment = config.get('config', {}).get('Env') or []
+        default_path = ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin']
+        assert environment in ([], default_path), 'Unexpected image environment'
         diff_ids = []
         for layer in manifest['layers']:
             raw = blob(layer)

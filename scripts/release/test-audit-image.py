@@ -30,7 +30,7 @@ def tar_bytes(items):
     return output.getvalue()
 
 
-def image(extra=None, source=None):
+def image(extra=None, source=None, environment=None):
     raw = json.dumps({'version': 1, 'source': source or {'commit': SHA, 'generatedAt': '2026-01-01T00:00:00.000Z'}}).encode()
     files = {'site/index.html': b'<html/>', 'snapshot/dataset-snapshot.json': raw,
              'snapshot/dataset-snapshot.json.sha256': hashlib.sha256(raw).hexdigest().encode()}
@@ -41,7 +41,7 @@ def image(extra=None, source=None):
         digest = hashlib.sha256(raw).hexdigest()
         blobs[f'blobs/sha256/{digest}'] = raw
         return {'digest': f'sha256:{digest}', 'size': len(raw), 'mediaType': media_type}
-    config = blob(json.dumps({'os': 'linux', 'architecture': 'amd64', 'rootfs': {'diff_ids': ['sha256:' + hashlib.sha256(layer).hexdigest()]}}).encode(), 'application/vnd.oci.image.config.v1+json')
+    config = blob(json.dumps({'os': 'linux', 'architecture': 'amd64', 'config': {'Env': environment or []}, 'rootfs': {'diff_ids': ['sha256:' + hashlib.sha256(layer).hexdigest()]}}).encode(), 'application/vnd.oci.image.config.v1+json')
     manifest = blob(json.dumps({'config': config, 'layers': [blob(layer, 'application/vnd.oci.image.layer.v1.tar')]}).encode(), 'application/vnd.oci.image.manifest.v1+json')
     blobs['index.json'] = json.dumps({'manifests': [manifest]}).encode()
     return tar_bytes(blobs)
@@ -56,6 +56,12 @@ class AuditTests(unittest.TestCase):
 
     def test_valid(self):
         self.assertEqual(self.check(image())['files'], 3)
+
+    def test_environment_allowlist(self):
+        default = ['PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin']
+        self.assertEqual(self.check(image(environment=default))['files'], 3)
+        with self.assertRaises(AssertionError):
+            self.check(image(environment=default + ['UNEXPECTED=value']))
 
     def test_forbidden_files_and_links(self):
         for name, raw in [('other/file', b'x'), ('site/.env', b'x'), ('site/link', None),
