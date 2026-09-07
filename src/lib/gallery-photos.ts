@@ -32,6 +32,19 @@ export type GalleryPhoto = {
   hidden: boolean
 }
 
+/**
+ * 一张照片在「最爱看」排行里显示成什么。
+ *
+ * 与画廊页的 photoAlt 同一口径：**没有确认过的标题就不编一个**，只说这是哪一天
+ * 的画面。构建期的标题索引和运行时并进来的新照片都走这里，两边长歪就会出现
+ * 「同一张图，排行里叫法和画廊里不一样」。
+ */
+export function galleryPhotoLabel(photo: Pick<GalleryPhoto, 'title' | 'caption' | 'date'>): string {
+  if (photo.title) return photo.title
+  if (photo.caption) return photo.caption
+  return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
+}
+
 /** 年份未定的那一组的桶键；前台单独成段，排在所有年份之后。 */
 export const UNDATED = 'undated'
 export const UNDATED_LABEL = '年份待定'

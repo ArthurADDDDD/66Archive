@@ -17,7 +17,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { getDataset } from '../src/lib/data'
-import { getGalleryCollection } from '../src/lib/gallery'
+import { getGalleryPhotos } from '../src/lib/gallery-photos-manifest'
+import { galleryPhotoLabel } from '../src/lib/gallery-photos'
 import { buildSeriesList } from '../src/lib/series'
 import { toTimelineEntries } from '../src/lib/data'
 
@@ -34,8 +35,13 @@ function main() {
   for (const entry of ds.entries) items[`entry:${entry.id}`] = { t: entry.title, d: entry.date }
   for (const [id, game] of ds.games) items[`game:${id}`] = { t: game.name }
   for (const series of buildSeriesList(ds, timeline)) items[`series:${series.id}`] = { t: series.name }
-  for (const photo of getGalleryCollection().items) {
-    items[`gallery:${photo.id}`] = { t: photo.caption || photo.alt || photo.id, d: photo.date }
+  // 画廊取的是**画廊页真正在渲染的那份清单**（gallery-photos.yaml），不是旧的
+  // gallery-assets。两份数据的 ID 空间不一样，取错了这里会生成一堆永远匹配不上的键，
+  // 排行里的照片则永远退回显示 ID。
+  //
+  // 标题沿用画廊自己的口径：没有确认过的标题不编一个，只说这是哪一天的画面。
+  for (const photo of getGalleryPhotos()) {
+    items[`gallery:${photo.id}`] = { t: galleryPhotoLabel(photo), ...(photo.date ? { d: photo.date } : {}) }
   }
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true })

@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { fetchGalleryAdditions } from '@/lib/gallery-additions'
+import { galleryPhotoLabel } from '@/lib/gallery-photos'
 import { StatsSection } from './StatsSection'
 import { useCopyBlock } from './LiveContentProvider'
 
@@ -75,6 +77,40 @@ function isPopularItem(value: unknown): value is PopularItem {
   )
 }
 
+/**
+ * 补上构建期索引里没有的画廊标题。
+ *
+ * 画廊是唯一会在两次部署之间长出新内容的一类：新收的照片由内容服务在运行时并进
+ * 画廊页（见 gallery-additions），而标题索引是构建期的产物——一张昨天刚收进来的
+ * 照片今天就能被点上榜，索引里却查无此人，排行只好显示它的 ID。
+ *
+ * 条目 / 游戏 / 节目没有这个问题：它们的数据在公开仓里，多一条就意味着一次重新
+ * 构建，索引跟着一起重生成。
+ *
+ * 只在真的缺的时候才拉：榜单里没有画廊、或者都认得，就不该为此多发一个请求。
+ * 拉取失败照旧什么都不做——退回显示 ID 也比整节消失好。
+ */
+async function fillRuntimeGalleryLabels(
+  ranked: PopularItem[],
+  indexed: LabelIndex,
+  cancelled: () => boolean,
+  setLabels: (update: (current: LabelIndex) => LabelIndex) => void,
+) {
+  const missing = ranked.some((item) => item.kind === 'gallery' && !indexed[item.targetKey]?.t)
+  if (!missing) return
+  const additions = await fetchGalleryAdditions()
+  if (cancelled() || additions.length === 0) return
+  setLabels((current) => {
+    const merged = { ...current }
+    for (const photo of additions) {
+      const key = `gallery:${photo.id}`
+      if (merged[key]?.t) continue
+      merged[key] = { t: galleryPhotoLabel(photo), ...(photo.date ? { d: photo.date } : {}) }
+    }
+    return merged
+  })
+}
+
 export function PopularContent({
   questionId,
   fallback,
@@ -111,7 +147,10 @@ export function PopularContent({
       if (ranked.length === 0) return
       // 标题索引只在真的有排行时才去取：没有榜单就没必要下载整本目录。
       const index = await fetchJson<{ items?: LabelIndex }>('/data/popular-index.json')
-      if (!cancelled && index?.items) setLabels(index.items)
+      if (cancelled) return
+      const indexed = index?.items ?? {}
+      if (index?.items) setLabels(indexed)
+      await fillRuntimeGalleryLabels(ranked, indexed, () => cancelled, setLabels)
     })()
     return () => {
       cancelled = true
@@ -128,7 +167,7 @@ export function PopularContent({
     return (
       <StatsSection question={question} accent={accent} legend={legend}>
         <p className="measure-body text-body text-muted">
-          还没有累计到点击。等有人在站内点开条目、游戏或节目之后，这里会按次数排出前十。
+          还没有累计到点击。等有人在站内点开条目、游戏、节目或照片之后，这里会按次数排出前十。
         </p>
         {countedSince && (
           <p className="mt-6 text-meta text-faint tnum">统计自 {countedSince.slice(0, 10)}</p>

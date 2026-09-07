@@ -556,6 +556,8 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
         type="button"
         onClick={onOpen}
         aria-label={`打开大图：${photoAlt(photo)}`}
+        data-analytics-event="content.open"
+        data-analytics-target={`gallery:${photo.id}`}
         className="group relative block w-full overflow-hidden bg-black/35 text-left outline-none"
       >
         <span className="relative block aspect-[4/3] bg-black/35 sm:aspect-[16/10]">
@@ -642,6 +644,8 @@ function PhotoCell({
       type="button"
       onClick={onOpen}
       aria-label={`打开大图：${photoAlt(photo)}`}
+      data-analytics-event="content.open"
+      data-analytics-target={`gallery:${photo.id}`}
       className="group relative block h-full min-w-0 overflow-hidden rounded-[3px] bg-raised outline-none"
       style={naturalStyle}
     >
