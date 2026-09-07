@@ -100,5 +100,10 @@
     - url: "https://www.bilibili.com/video/BV1BFbj6JEcg"
       kind: replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV1vdbn64ECY"
+      kind: replay
+      status: alive
+      cover: "http://i0.hdslb.com/bfs/archive/5fdcec1b2b85a28c336b41134bec7b1445f6c485.jpg"
+      parts: 8
   note: "自动采集候选经人工审批新建（组 5c917a20-5066-4e13-a193-fb87b7c32428）。"
   contributed_by: collection-review
