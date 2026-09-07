@@ -61,10 +61,13 @@ export default function GamesPage() {
       <section className="site-container-wide px-page pb-8 pt-10 sm:pt-14">
         <LivePageHeading pageId="games" titleClassName="text-h1 font-semibold" />
         <p className="measure-body mt-5 text-body text-muted">
-          {played.length} 个游戏，档案收录至 {latestArchiveDate ?? '待补录'}。
+          {/* 日期一律包成不换行：`2010-07-11` 里的连字符是浏览器的断行点，
+              正文折到这里会把日期折成「2010-」+「07-11」两行。 */}
+          {played.length} 个游戏，档案收录至 <span className="whitespace-nowrap tnum">{latestArchiveDate ?? '待补录'}</span>。
           {longest?.firstDate && longest?.lastDate && (
             <>
-              {' '}跨得最长的是《{longest.name}》，从 {longest.firstDate} 到 {longest.lastDate}，
+              {' '}跨得最长的是《{longest.name}》，从 <span className="whitespace-nowrap tnum">{longest.firstDate}</span> 到{' '}
+              <span className="whitespace-nowrap tnum">{longest.lastDate}</span>，
               {longest.spanDays.toLocaleString()} 天。
             </>
           )}

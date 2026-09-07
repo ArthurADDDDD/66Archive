@@ -105,7 +105,9 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
       <div className="px-3 py-2.5">
         {p.sessions > 0 ? (
           <p className="text-meta text-faint tnum">
-            {p.sessions} 场 · {p.hoursLabel} · {p.firstDate} 起
+            {/* 日期整体不断行：`2020-08-10` 里的连字符是浏览器的断行点，
+                卡片一窄就会折成「2020-」+「08-10」，读起来像两个数字。 */}
+            {p.sessions} 场 · {p.hoursLabel} · <span className="whitespace-nowrap">{p.firstDate} 起</span>
           </p>
         ) : (
           <p className="text-meta text-faint">档案中暂无已标记条目 · 待补录</p>

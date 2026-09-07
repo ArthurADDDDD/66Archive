@@ -294,15 +294,21 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
         <p className="mt-2.5 line-clamp-2 min-h-[2.6em] text-control leading-snug text-ink group-hover:text-live">
           {g.name}
         </p>
-        <p className="mt-1 text-meta text-faint tnum">
+        {/* 首播 / 最近两个日期各占一行，不再挤在同一行里靠换行救急：
+            瓦片只有两三百像素宽，一行放不下 `YYYY-MM-DD → YYYY-MM-DD`，浏览器会从日期中间断开，
+            读到的是「2026-09-03 → 2026-」加下一行的「09-04」。日期是不能断的整体（whitespace-nowrap），
+            所以干脆固定两行槽位：有区间就写两行，只有一天就空着第二行，同一行的瓦片仍然对齐。 */}
+        <p className="mt-1 min-h-[3em] text-meta text-faint tnum">
           {g.firstDate ? (
-            <span className="font-mono" style={{ color: eraColor }}>
+            <span className="block whitespace-nowrap font-mono" style={{ color: eraColor }}>
               {g.firstDate}
             </span>
           ) : (
-            <span>日期待补</span>
+            <span className="block">日期待补</span>
           )}
-          {g.lastDate && g.lastDate !== g.firstDate && <span className="font-mono"> → {g.lastDate}</span>}
+          {g.lastDate && g.lastDate !== g.firstDate && (
+            <span className="block whitespace-nowrap font-mono">→ {g.lastDate}</span>
+          )}
         </p>
         <p className="text-meta text-faint tnum" title={`${g.totalMinutes.toLocaleString()} 分钟 · ${g.knownDurationCount}/${g.sessions} 场有记录`}>
           {g.knownDurationCount === 0

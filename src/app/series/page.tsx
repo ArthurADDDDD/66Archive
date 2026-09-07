@@ -11,6 +11,7 @@ import { buildSeriesList, type SeriesInfo } from '@/lib/series'
 import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
 import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
 import { SeriesMontage, type SeriesMontageSample } from '@/components/SeriesMontage'
+import { KeepDates } from '@/components/KeepDates'
 
 /** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
 export const metadata: Metadata = {
@@ -65,7 +66,7 @@ export default async function SeriesPage() {
                 周日情感电台 · 斗鱼时期 · 心灵砒霜
               </Eyebrow>
               <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
-              <p className="measure-body mt-5 text-body text-muted">{pishuang.description}</p>
+              <p className="measure-body mt-5 text-body text-muted"><KeepDates text={pishuang.description} /></p>
               <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
                 <span className="text-body text-ink">{pishuang.count} 期</span>
                 <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
@@ -165,7 +166,7 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
         <div className="min-w-0 p-6 sm:p-8 lg:p-10">
           <Eyebrow color={SERIES_COLOR.longRunning}>Together See · 一起看</Eyebrow>
           <h2 className="mt-4 text-h2 font-semibold tracking-tight text-ink">一起 See</h2>
-          <p className="measure-body mt-4 text-body text-muted">{series.description}</p>
+          <p className="measure-body mt-4 text-body text-muted"><KeepDates text={series.description} /></p>
           <div className="mt-6 flex flex-wrap items-baseline gap-x-5 gap-y-2 text-meta text-muted tnum">
             <span className="text-body text-ink">{series.count} 场</span>
             <span>{formatMonth(series.firstDate)} — {formatMonth(series.lastDate)}</span>
@@ -211,7 +212,7 @@ function SeriesGroup({
         </Eyebrow>
         <span className="font-mono text-meta text-faint tnum">{years}</span>
       </div>
-      <p className="measure-body mt-4 text-body text-muted">{description}</p>
+      <p className="measure-body mt-4 text-body text-muted"><KeepDates text={description} /></p>
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {series.map((s) => (
           <Link
@@ -231,7 +232,7 @@ function SeriesGroup({
             <p className="mt-1.5 text-meta text-faint tnum">
               <span className="font-mono text-[0.9375rem] font-semibold text-ink">{s.count}</span> 期 · {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
             </p>
-            <p className="mt-2.5 line-clamp-2 min-h-[2.8em] text-body text-muted">{s.description}</p>
+            <p className="mt-2.5 line-clamp-2 min-h-[2.8em] text-body text-muted"><KeepDates text={s.description} /></p>
             <div className="mt-4">
               <ActivityStrip perYear={s.perYear} color={color} height={26} descriptive />
             </div>

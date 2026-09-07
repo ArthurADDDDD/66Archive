@@ -10,6 +10,7 @@ import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeries } from '@/lib/series'
 import { formatDuration } from '@/lib/ui'
+import { KeepDates } from '@/components/KeepDates'
 
 export const dynamicParams = false
 
@@ -96,7 +97,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
           </span>
           {!isTogetherSee && longest?.duration_min && <span>最长一{unit} {formatDuration(longest.duration_min)}</span>}
         </div>
-        <p className="measure-body mt-6 text-body text-muted">{s.description}</p>
+        <p className="measure-body mt-6 text-body text-muted"><KeepDates text={s.description} /></p>
       </section>
 
       {/* 代表性一句：第一期标题，原文照录 */}
