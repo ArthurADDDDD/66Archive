@@ -76,7 +76,7 @@ npm run validate     # Schema 校验 + 唯一性 + 链接格式
 
 ## 改动怎么才能上线
 
-**合进 `main` ≠ 上线。** 公仓的 CI 只做校验，不构建、不部署，也没有任何定时部署任务。
+**合进 `main` ≠ 上线。** 公仓 CI 会校验并构建；`release-web` shadow workflow 额外生成供核验的 web OCI artifact，但不推送 registry、不触发部署，也没有定时部署任务。
 
 1. 改动进入 `main`（`npm run validate` 必须过）
 2. **由人类在后台控制台确认部署**——控制台会提示发现更新
