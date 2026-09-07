@@ -21,8 +21,13 @@ not be released under that checkout's HEAD SHA. The workflow uses a fresh checko
 
 For the same SHA, the workflow serializes execution and compares the OCI manifest
 digest and snapshot hash with all retained artifacts of that name. Mismatch,
-expired evidence, unexpected source, and API/download errors fail closed. An equal
-artifact is reused without replacement. Evidence is retained for 30 days; deleted
+expired evidence, unexpected source, and API/download errors fail closed. Missing
+artifacts also fail closed on a rerun or when any prior same-SHA workflow run exists
+(including failed runs). A first publication requires a first attempt with no prior
+same-SHA run. This prevents rerun cleanup from being mistaken for a new SHA. An equal
+artifact is reused without replacement. Use a new manual dispatch to compare a rebuild while preserving the previous
+run artifact: rerunning the original run can remove its earlier artifact.
+Evidence is retained for 30 days; deleted
 history cannot establish a permanent immutable registry contract. This is a shadow
 validation mechanism, not a production artifact resolver.
 

@@ -9,6 +9,8 @@ const compare = require('./compare-shadow.cjs')
 test('immutable shadow digest gate', async () => {
   const original = process.cwd()
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'shadow-test-'))
+  const oldAttempt = process.env.GITHUB_RUN_ATTEMPT
+  process.env.GITHUB_RUN_ATTEMPT = "1"
   const oldTemp = process.env.RUNNER_TEMP
   process.chdir(tmp)
   process.env.RUNNER_TEMP = tmp
@@ -17,19 +19,26 @@ test('immutable shadow digest gate', async () => {
     const current = { publicSha: 'a'.repeat(40), digest: 'sha256:' + 'b'.repeat(64), snapshotSha256: 'c'.repeat(64) }
     fs.writeFileSync('.local/release/image-report.json', JSON.stringify(current))
     let artifacts = []
+    let runs = []
     let previous = current
     let output
     const github = {
-      paginate: async () => artifacts,
-      rest: { actions: { listArtifactsForRepo() {}, downloadArtifact: async () => {
+      paginate: async (_, args) => args.workflow_id ? runs : artifacts,
+      rest: { actions: { listArtifactsForRepo() {}, listWorkflowRuns() {}, downloadArtifact: async () => {
         fs.writeFileSync('image-report.json', JSON.stringify(previous))
         execFileSync('zip', ['-q', 'previous.zip', 'image-report.json'])
         return { data: fs.readFileSync('previous.zip') }
       } } },
     }
-    const invoke = () => compare({ github, context: { repo: { owner: 'example', repo: 'public' } }, core: { setOutput: (_, v) => { output = v } } })
+    const invoke = () => compare({ github, context: { repo: { owner: 'example', repo: 'public' }, sha: current.publicSha, runId: 10 }, core: { setOutput: (_, v) => { output = v } } })
     await invoke()
     assert.equal(output, 'false')
+    process.env.GITHUB_RUN_ATTEMPT = '2'
+    await assert.rejects(invoke, /Previous attempt evidence is missing/)
+    process.env.GITHUB_RUN_ATTEMPT = '1'
+    runs = [{ id: 9, head_sha: current.publicSha }]
+    await assert.rejects(invoke, /Previous same-SHA run exists/)
+    runs = []
     artifacts = [{ id: 1, expired: false, workflow_run: { head_sha: current.publicSha, head_branch: 'main' } }]
     await invoke()
     assert.equal(output, 'true')
@@ -46,6 +55,8 @@ test('immutable shadow digest gate', async () => {
     await assert.rejects(invoke, /API unavailable/)
   } finally {
     process.chdir(original)
+    if (oldAttempt === undefined) delete process.env.GITHUB_RUN_ATTEMPT
+    else process.env.GITHUB_RUN_ATTEMPT = oldAttempt
     if (oldTemp === undefined) delete process.env.RUNNER_TEMP
     else process.env.RUNNER_TEMP = oldTemp
     fs.rmSync(tmp, { recursive: true, force: true })
