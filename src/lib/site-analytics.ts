@@ -188,7 +188,9 @@ export function flushSiteAnalytics() {
  * 有大写字母；将来还会有别的来源。其余事件的 target 是代码里写死的枚举（导航项、
  * 平台名、筛选维度），不会长出意外形状，所以只在这里挡住带数据 ID 的这两类。
  */
-const CONTENT_TARGET = /^(entry|game|series|gallery):[a-z0-9][a-z0-9_-]{0,119}$/
+// 画廊那一支允许大写：照片 id 有一批源自素材文件名，同时也是磁盘上的文件名，
+// 改不动（后端迁移 033 同口径）。其余有受控词表，保持严格。
+const CONTENT_TARGET = /^(?:(?:entry|game|series):[a-z0-9][a-z0-9_-]{0,119}|gallery:[A-Za-z0-9][A-Za-z0-9_-]{0,119})$/
 
 function targetAcceptedByServer(name: SiteAnalyticsEventName, target?: string): boolean {
   if (name !== 'content.open' && name !== 'gallery.open') return true
