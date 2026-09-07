@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
-import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage } from '@/lib/platforms'
+import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, proxyImageSrcSet } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
 
 /**
@@ -47,6 +47,10 @@ export type WatchSegment = {
   from: number
   to: number
 }
+
+/** 来源面板封面：桌面是 lg:grid-cols-[minmax(0,1fr)_20.5rem] 的那一列，手机接近整宽。 */
+const COVER_WIDTHS = [360, 720] as const
+const COVER_SIZES = '(min-width: 1024px) 328px, 92vw'
 
 export function EntryWatch({
   sources,
@@ -407,7 +411,26 @@ function EntryCover({
 
   const image = cover ? (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={cover} alt={`${entryTitle} 封面`} referrerPolicy="no-referrer" className="h-full w-full object-cover" />
+    <img
+      src={cover}
+      /*
+       * 这是条目页的 LCP 元素——全站 2,711 个条目页都是它先被看到，而它显示在一列
+       * 固定 20.5rem（328 CSS px）的侧栏里（手机上是接近整宽的 ~366px）。
+       * 此前无论如何都请求 w=960：DPR 1 下是需要像素的 2.9 倍。实测同一张封面
+       * w=960 35,864 B、w=720 26,148 B、w=360 只要 12,306 B。
+       *
+       * 两档交给浏览器挑：DPR 1 桌面拿 360，DPR 2 拿 720（需要 656，720 够）。
+       * `fetchPriority="high"` 是因为它虽然是 eager 的，浏览器给图片的默认优先级仍是
+       * low，会排在四个预载字体和 CSS 后面——而它才是决定 LCP 的那一个。
+       */
+      srcSet={proxyImageSrcSet(cover, COVER_WIDTHS) ?? undefined}
+      sizes={COVER_SIZES}
+      alt={`${entryTitle} 封面`}
+      fetchPriority="high"
+      decoding="async"
+      referrerPolicy="no-referrer"
+      className="h-full w-full object-cover"
+    />
   ) : (
     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/12 via-raised to-live/8 p-6">
       <span className="text-center text-meta tracking-widest text-faint">封面待补</span>

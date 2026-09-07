@@ -3,10 +3,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { GameCardData } from '@/lib/games'
+import { proxyImageSrcSet } from '@/lib/platforms'
 
 /** 封面缺失 / 加载失败时的档案式字排版封面（不是随机彩色渐变）：
  * 时代 accent 只由首次年份决定（视频 #E0A244 / 斗鱼 #5BC8E8 / 抖音 #FF6B75），
  * 内容只有真实信息：游戏名 / 年份 / 场次。 */
+/** 首页游戏预告：grid-cols-2 → lg:grid-cols-4。 */
+const CARD_WIDTHS = [320, 640] as const
+const CARD_SIZES = '(min-width: 1024px) 23vw, 45vw'
+
 const ERAS = [
   { maxYear: 2015, label: '视频时代', color: '#E0A244' },
   { maxYear: 2023, label: '斗鱼时代', color: '#5BC8E8' },
@@ -31,6 +36,7 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
   return (
     <Link
       href={`/games/${p.id}/`}
+      prefetch={false}
       data-analytics-event="content.open"
       data-analytics-target={`game:${p.id}`}
       className="ui-card ui-press group relative block overflow-hidden rounded-xl border border-line bg-surface/40 transition-colors hover:border-muted hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]"
@@ -40,8 +46,12 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={p.cover!}
+            /* 首页预告卡在 lg 下是四列、约 280 CSS px 宽；两档让 DPR 1 少下一半像素。 */
+            srcSet={proxyImageSrcSet(p.cover, CARD_WIDTHS) ?? undefined}
+            sizes={CARD_SIZES}
             alt=""
             loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer"
             onError={() => setBroken(true)}
             className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"

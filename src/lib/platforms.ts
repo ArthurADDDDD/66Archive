@@ -68,3 +68,20 @@ export function proxyImage(url: string | undefined, width = 480): string | null 
   }
   return normalized
 }
+
+/**
+ * 同一张封面的多档宽度，供 `srcset` 用。
+ *
+ * 封面瓦片一直只请求一个固定宽度（游戏库是 `w=480`），但它实际显示成 180–260 CSS px。
+ * 也就是说 DPR 1 的屏幕（绝大多数桌面）下载的像素是需要的 2 倍多：实测同一张图
+ * `w=480` 19,052 B、`w=240` 只要 6,774 B（36%）。给浏览器两档，让它按 DPR 和
+ * 实际列宽自己挑——DPR 2 仍然拿 480，画质不降。
+ *
+ * 只有 weserv 地址能改尺寸，所以这里就地重写 `w=` 参数；直连地址（例如优酷，
+ * 它的原图本来就小）没有多档可给，返回 null，调用方照常只用 `src`。
+ */
+export function proxyImageSrcSet(url: string | null | undefined, widths: readonly number[]): string | null {
+  if (!url || !url.startsWith('https://images.weserv.nl/')) return null
+  if (!/[?&]w=\d+/.test(url)) return null
+  return widths.map((width) => `${url.replace(/([?&]w=)\d+/, `$1${width}`)} ${width}w`).join(', ')
+}

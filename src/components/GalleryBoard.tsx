@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import { bucketOf, sortBucket, UNDATED, UNDATED_LABEL, type GalleryPhoto } from '@/lib/gallery-photos'
+import { bucketOf, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
@@ -499,22 +499,6 @@ function SegmentedControl<T extends string>({
 function photoAlt(photo: GalleryPhoto) {
   if (photo.title) return photo.title
   return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
-}
-
-/** 清单只保存稳定的 JPEG 兜底路径；现代格式文件名可机械推导，不污染人工维护的数据。 */
-function galleryThumbSources(thumb: string) {
-  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
-  if (stem === thumb) return null
-  return {
-    avif: `${stem}.thumb-360.avif 360w, ${stem}.thumb-720.avif 720w`,
-    webp: `${stem}.thumb-360.webp 360w, ${stem}.thumb-720.webp 720w`,
-  }
-}
-
-function galleryThumbBackground(thumb: string) {
-  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
-  if (stem === thumb) return `url("${thumb}")`
-  return `image-set(url("${stem}.thumb-720.avif") type("image/avif"), url("${stem}.thumb-720.webp") type("image/webp"), url("${thumb}") type("image/jpeg"))`
 }
 
 function GalleryThumbnail({

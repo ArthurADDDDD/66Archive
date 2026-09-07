@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { galleryThumbSources } from '@/lib/gallery-photos'
 
 /**
  * 三幕讲完之后的最后一屏：把「还能往哪儿走」交出去。
@@ -62,17 +63,27 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
           color="#E5568A"
         >
           <div className="grid grid-cols-4 gap-1.5">
-            {data.gallery.thumbs.slice(0, 8).map((photo) => (
-              <span key={photo.id} className="aspect-square overflow-hidden rounded-[4px] bg-raised">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photo.src}
-                  alt=""
-                  loading="lazy"
-                  className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:opacity-100"
-                />
-              </span>
-            ))}
+            {data.gallery.thumbs.slice(0, 8).map((photo) => {
+              // 这八张显示成 ~70px 的方块，却一直在下 `.thumb.jpg` 原尺寸：
+              // 实测八张合计 340,257 B，同一批 `.thumb-360.avif` 只要 54,532 B。
+              // 变体文件构建时就已经生成、画廊页也早在用，这里只是没接上。
+              const sources = galleryThumbSources(photo.src)
+              return (
+                <span key={photo.id} className="aspect-square overflow-hidden rounded-[4px] bg-raised">
+                  <picture className="block h-full w-full">
+                    {sources ? <source type="image/avif" srcSet={sources.avif} sizes="80px" /> : null}
+                    {sources ? <source type="image/webp" srcSet={sources.webp} sizes="80px" /> : null}
+                    <img
+                      src={photo.src}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:opacity-100"
+                    />
+                  </picture>
+                </span>
+              )
+            })}
           </div>
         </PromoCard>
       </div>
@@ -100,6 +111,7 @@ function PromoCard({
   return (
     <Link
       href={href}
+      prefetch={false}
       className="ui-press group flex flex-col gap-5 rounded-2xl border border-line/80 bg-surface/35 p-6 transition-colors hover:border-muted/60 sm:p-7"
     >
       <div>

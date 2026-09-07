@@ -60,3 +60,30 @@ export function sortBucket(a: string, b: string) {
   if (b === UNDATED) return -1
   return a.localeCompare(b)
 }
+
+/**
+ * 缩略图的现代格式变体。
+ *
+ * 清单里只保存稳定的 JPEG 兜底路径；`.thumb-360` / `.thumb-720` 的 avif/webp
+ * 文件名可以机械推导，不必污染人工维护的数据（生成见
+ * `scripts/gallery-images-optimize.ts`）。
+ *
+ * 放在这个纯函数模块里，是因为画廊页和首页的画廊预告都要用：预告那八张图
+ * 显示成 ~70px 的方块，此前直接引 `.thumb.jpg`，实测八张合计 340,257 B，
+ * 而同一批 `.thumb-360.avif` 只要 54,532 B。同一份推导逻辑写两遍必然长歪。
+ */
+export function galleryThumbSources(thumb: string) {
+  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
+  if (stem === thumb) return null
+  return {
+    avif: `${stem}.thumb-360.avif 360w, ${stem}.thumb-720.avif 720w`,
+    webp: `${stem}.thumb-360.webp 360w, ${stem}.thumb-720.webp 720w`,
+  }
+}
+
+/** 同一套推导，用于 CSS 背景（灯箱的模糊底）。 */
+export function galleryThumbBackground(thumb: string) {
+  const stem = thumb.replace(/\.thumb\.jpg$/i, '')
+  if (stem === thumb) return `url("${thumb}")`
+  return `image-set(url("${stem}.thumb-720.avif") type("image/avif"), url("${stem}.thumb-720.webp") type("image/webp"), url("${thumb}") type("image/jpeg"))`
+}

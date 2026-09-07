@@ -7,6 +7,7 @@ import { GameSessions } from '@/components/GameSessions'
 import { EntryFilterProvider, YearBars } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { proxyImageSrcSet } from '@/lib/platforms'
 import { actColorForDate, allGameIds, getGameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
 
@@ -80,7 +81,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="games" />
-        <Link href="/games/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+        <Link prefetch={false} href="/games/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
           ← 游戏收藏架
         </Link>
       </header>
@@ -161,6 +162,10 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   )
 }
 
+/** 游戏页首屏封面：site-container（最宽 87.5rem）里 lg:grid-cols-[1.1fr_.9fr] 的右列。 */
+const HERO_WIDTHS = [480, 960] as const
+const HERO_SIZES = '(min-width: 1024px) 42vw, 92vw'
+
 function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGameProfile>> }) {
   const media = (
     <>
@@ -168,7 +173,17 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={profile.cover}
+          /*
+           * 753 个游戏页的 LCP 元素。它在 lg:grid-cols-[1.1fr_.9fr] 的右列里，
+           * 1440 屏上约 585 CSS px，此前固定请求 w=900：DPR 1 下多了一半像素，
+           * DPR 2 下反而不够。两档各自对上，并按 LCP 元素该有的优先级请求
+           * （eager 只保证「不延后发」，浏览器给图片的默认优先级仍是 low）。
+           */
+          srcSet={proxyImageSrcSet(profile.cover, HERO_WIDTHS) ?? undefined}
+          sizes={HERO_SIZES}
           alt={profile.heroCoverAlt ?? `${profile.name} 封面`}
+          fetchPriority="high"
+          decoding="async"
           referrerPolicy="no-referrer"
           className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
         />
