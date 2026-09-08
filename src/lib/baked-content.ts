@@ -18,7 +18,7 @@
  */
 
 import { get as httpsGet } from 'node:https'
-import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent, type LiveNarrative } from './live-content'
+import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent, type LiveNarrative, type LiveSiteCopy } from './live-content'
 import { FALLBACK_SITE_ORIGIN } from './site-url'
 
 const EMPTY: LiveContent = { narrative: null, copy: null, editorial: null }
@@ -167,6 +167,38 @@ export async function fetchBakedNavShell(): Promise<LiveContent> {
       pages: [],
       maintainers: [],
     },
+  }
+}
+
+/**
+ * 某个页面真正会渲染的那几块文案。
+ *
+ * `fetchBakedNavShell` 把根 layout 收成了 `{site, nav}`，但用 `LiveCopySeed` 补齐的
+ * 那六个页面当时是把**整份** copy 补了回去——而它们每个其实只渲染一两个 `pages` 区块。
+ * 于是 /gallery/ 背着 /stats/ 的页头、/games/ 背着 /contact/ 的致谢名单，
+ * 还有一份谁都不看的 `hero` / `homeSections` / `rooms`。
+ *
+ * 实测（brotli q4）：/games/ −2,899、/series/ −2,605、/gallery/ −2,522、
+ * /stats/ −2,443、/contact/ −1,410，合计 −11,879 B。
+ *
+ * 首页不走这里：它 `hero` / `homeSections` / `rooms` / `pages` 全都要。
+ *
+ * 空数组 / 空字符串在 `mergeSiteCopy` 里就是「没有覆盖」，所以裁掉的部分自然退回
+ * `site-copy.ts` 的公开仓基线——而它们在这些页面上根本没有渲染位置。
+ */
+export async function fetchBakedPageCopy(
+  pageIds: readonly string[],
+  options: { maintainers?: boolean } = {},
+): Promise<LiveSiteCopy | null> {
+  const { copy } = await fetchBakedContent()
+  if (!copy) return null
+  return {
+    ...copy,
+    hero: { status: '', eyebrow: '', title: '', body: [], primaryAction: '', secondaryAction: '' },
+    homeSections: [],
+    rooms: [],
+    pages: copy.pages.filter((block) => pageIds.includes(block.id)),
+    maintainers: options.maintainers ? copy.maintainers : [],
   }
 }
 

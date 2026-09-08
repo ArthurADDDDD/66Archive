@@ -1,4 +1,4 @@
-import { fetchBakedContent } from '@/lib/baked-content'
+import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default async function GamesPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const { copy: bakedCopy } = await fetchBakedContent()
+  const bakedCopy = await fetchBakedPageCopy(['games'])
 
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
