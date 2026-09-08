@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
+import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
 import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
@@ -15,7 +16,19 @@ import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from '
  * 年份筛选来自上面那张「年份分布」条形图（点某一年就只看那一年），
  * 正倒序则是这里的切换键。右侧年月时间轴从 entries 现算，跟着一起变。
  */
-export function GameSessions({ entries, color = '#E0A244' }: { entries: TimelineEntry[]; color?: string }) {
+export function GameSessions({
+  entries: encodedEntries,
+  color = '#E0A244',
+}: {
+  /**
+   * 与 `/archive-data.json` 同一套无损编码（见 `lib/archive-payload.ts`）。
+   * 753 个游戏页每一个都要把这份场次列表内联进 HTML，编码省下来的是这 753 份的
+   * 共同开销，不是某一页的特例。
+   */
+  entries: EncodedEntry[]
+  color?: string
+}) {
+  const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
   const { year, order } = useEntryFilter()
   // getGameProfile 交出来的是降序（最近一场在前）
   const visible = useMemo(() => applyEntryFilter(entries, year, order, 'desc'), [entries, year, order])

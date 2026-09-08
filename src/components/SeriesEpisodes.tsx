@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
+import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
 import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
@@ -20,16 +21,22 @@ const EPISODES_BATCH_SIZE = 60
  * 不需要额外通知它。
  */
 export function SeriesEpisodes({
-  entries,
+  entries: encodedEntries,
   color,
   count,
   unit = '期',
 }: {
-  entries: TimelineEntry[]
+  /**
+   * 与 `/archive-data.json` 同一套无损编码（见 `lib/archive-payload.ts`）。
+   * 这一屏首批只画 60 期，但筛选、正倒序和右侧年月轴都要跑在全部期数上，
+   * 所以整份必须到客户端——省的是「怎么写下来」，不是「传多少条」。
+   */
+  entries: EncodedEntry[]
   color: string
   count: number
   unit?: string
 }) {
+  const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
   const { year, order } = useEntryFilter()
   const { view, setView, compact } = useEntryView()
   // 网格一次只展开一条：整行插入的详情面板很高，同时开两块就没法对照了。

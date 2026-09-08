@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { encodeArchiveEntry } from '@/lib/archive-payload'
 import { notFound } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -137,7 +138,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
                 这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。
               </p>
             )}
-            <SeriesEpisodes entries={s.entries} color={color} count={s.count} unit={unit} />
+            <SeriesEpisodes entries={s.entries.map(encodeArchiveEntry)} color={color} count={s.count} unit={unit} />
           </div>
         </section>
       </EntryFilterProvider>

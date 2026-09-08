@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { encodeArchiveEntry } from '@/lib/archive-payload'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -139,7 +140,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
         {profile.entries.length > 0 && (
           <section id="game-sessions" className="scroll-mt-6 border-t border-line py-14 sm:py-20">
             <div className="site-container px-page">
-              <GameSessions entries={profile.entries} color="#E0A244" />
+              <GameSessions entries={profile.entries.map(encodeArchiveEntry)} color="#E0A244" />
               <div className="mt-8">
                 <Link
                   href={ctaHref}
