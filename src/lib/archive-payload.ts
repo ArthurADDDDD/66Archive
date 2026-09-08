@@ -100,7 +100,28 @@ export function encodeArchiveEntry(entry: TimelineEntry): EncodedEntry {
   }
 }
 
-export function decodeArchiveEntry(encoded: EncodedEntry): TimelineEntry {
+/**
+ * 这份载荷**没有**和 JS 一起原子切换。
+ *
+ * HTML 与 chunk 是同一次发布里换掉的，但 `/archive-data.json` 由边缘按
+ * `s-maxage=600, stale-while-revalidate=86400` 独立缓存——也就是说发布之后最长 24 小时里，
+ * 新的解码器都可能拿到**上一版格式**的载荷。浏览器缓存、Service Worker 同理。
+ *
+ * 2026-09-08 就这么炸过一次：发布后边缘还在发 9.4 小时前的旧载荷，
+ * `const [game, from] = band` 对着旧格式的对象抛 `TypeError: band is not iterable`，
+ * 整个 promise reject，录播室直接显示「档案数据暂时没有加载成功」。
+ *
+ * 所以格式判别是**必须**的，不是防御性编程的锦上添花：任何时候改这份载荷的形状，
+ * 解码器都必须能同时读旧的那一版。判据用只存在于旧格式的字段
+ * （编码器会删掉 `aliveCount` 等五个可重算字段），比看 `bands[0]` 是不是数组可靠——
+ * 没有分段的条目 `bands` 是空数组，看不出来。
+ */
+function isLegacyEntry(entry: EncodedEntry | TimelineEntry): entry is TimelineEntry {
+  return 'aliveCount' in entry
+}
+
+export function decodeArchiveEntry(encoded: EncodedEntry | TimelineEntry): TimelineEntry {
+  if (isLegacyEntry(encoded)) return encoded
   const sources: TimelineSource[] = encoded.sources.map((source) => ({
     ...source,
     entryTitle: source.entryTitle ?? encoded.title,
@@ -138,6 +159,6 @@ export function encodeArchivePayload(payload: ArchivePayload): EncodedArchivePay
   return { ...payload, entries: payload.entries.map(encodeArchiveEntry) }
 }
 
-export function decodeArchivePayload(payload: EncodedArchivePayload): ArchivePayload {
+export function decodeArchivePayload(payload: EncodedArchivePayload | ArchivePayload): ArchivePayload {
   return { ...payload, entries: payload.entries.map(decodeArchiveEntry) }
 }

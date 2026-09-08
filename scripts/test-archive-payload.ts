@@ -51,6 +51,27 @@ for (const entry of entries) {
   }
 }
 
+/**
+ * 旧格式必须原样通过。
+ *
+ * 这份载荷由边缘按 stale-while-revalidate=86400 独立缓存，不与 JS 同步切换——
+ * 发布后最长 24 小时内新解码器都可能拿到上一版格式。2026-09-08 就这么让录播室
+ * 整页显示「档案数据暂时没有加载成功」过一次。
+ */
+const legacyFailures: string[] = []
+for (const entry of entries.slice(0, 400)) {
+  const passthrough = decodeArchiveEntry(entry as never)
+  const out: string[] = []
+  diff(`legacy:${entry.id}`, entry, passthrough, out)
+  if (out.length > 0) legacyFailures.push(...out)
+}
+if (legacyFailures.length > 0) {
+  console.error('\n✗ 旧格式条目没有原样通过：')
+  for (const line of legacyFailures.slice(0, 8)) console.error('  ' + line)
+  process.exit(1)
+}
+console.log(`✓ 旧格式（未编码）条目 400 条原样通过解码器，不会因为边缘缓存错位而炸`)
+
 const encodedBytes = Buffer.byteLength(JSON.stringify(entries.map(encodeArchiveEntry)))
 const plainBytes = Buffer.byteLength(JSON.stringify(entries))
 
