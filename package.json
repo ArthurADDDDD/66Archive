@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run index:popular && next dev",
-    "build": "npm run validate && npm run index:popular && npm run gallery:optimize && next build",
+    "build": "npm run validate && npm run index:popular && npm run gallery:optimize && npm run covers:optimize && next build",
     "index:popular": "tsx scripts/popular-index-build.ts",
     "start": "next start",
     "lint": "eslint .",
@@ -14,7 +14,8 @@
     "gallery:optimize": "tsx scripts/gallery-images-optimize.ts",
     "test:vote-search": "tsx scripts/test-vote-search.ts",
     "test:archive-payload": "tsx scripts/test-archive-payload.ts",
-    "test:analytics": "tsx scripts/test-site-analytics.ts"
+    "test:analytics": "tsx scripts/test-site-analytics.ts",
+    "covers:optimize": "tsx scripts/entry-covers-optimize.ts"
   },
   "dependencies": {
     "next": "^15.1.6",

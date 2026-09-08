@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, proxyImageSrcSet } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
+import { entryCoverSources } from '@/lib/entry-covers'
 
 /**
  * 一场记录的「观看台」。
@@ -409,7 +410,11 @@ function EntryCover({
     (coverUnreliable ? null : fallback && fallback.url === sourceUrl ? fallback.cover : null) ??
     proxyImage(entryCover ?? undefined, 960)
 
-  const image = cover ? (
+  // 本地封面（`/images/covers/*.jpg`）走 <picture>：`proxyImage` 对 `/` 开头原样返回，
+  // 所以这批一直在发 960px 原图。派生文件见 scripts/entry-covers-optimize.ts。
+  const localSources = entryCoverSources(cover)
+
+  const img = cover ? (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={cover}
@@ -435,6 +440,18 @@ function EntryCover({
     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/12 via-raised to-live/8 p-6">
       <span className="text-center text-meta tracking-widest text-faint">封面待补</span>
     </div>
+  )
+
+  // 没有派生文件时不要包 <picture>：空壳只会多一层节点。有的话 avif → webp → 原图，
+  // 认不出前两种的浏览器落到 <img> 上，`fetchPriority` 之类的属性也仍然挂在它身上。
+  const image = localSources ? (
+    <picture className="block h-full w-full">
+      <source type="image/avif" srcSet={localSources.avif} sizes={COVER_SIZES} />
+      <source type="image/webp" srcSet={localSources.webp} sizes={COVER_SIZES} />
+      {img}
+    </picture>
+  ) : (
+    img
   )
 
   if (!source) {
