@@ -116,12 +116,18 @@ export function PopularContent({
   fallback,
   accent,
   legend,
+  labelIndexUrl,
 }: {
   questionId: string
   /** 后台把标题清空时用它——空标题看起来像渲染坏了，不像「有人清空了一个字段」。 */
   fallback: string
   accent: string
   legend: string
+  /**
+   * 标题索引的地址，由服务端带版本号传下来（见 `lib/popular-index-url.ts`）。
+   * **不要在这里写死路径**：那样发布之后边缘可能还发着上一版索引，新条目会显示成裸 ID。
+   */
+  labelIndexUrl: string
 }) {
   const question = useCopyBlock('pages', questionId).title || fallback
   const [state, setState] = useState<'loading' | 'ready' | 'unavailable'>('loading')
@@ -146,7 +152,7 @@ export function PopularContent({
       setState('ready')
       if (ranked.length === 0) return
       // 标题索引只在真的有排行时才去取：没有榜单就没必要下载整本目录。
-      const index = await fetchJson<{ items?: LabelIndex }>('/data/popular-index.json')
+      const index = await fetchJson<{ items?: LabelIndex }>(labelIndexUrl)
       if (cancelled) return
       const indexed = index?.items ?? {}
       if (index?.items) setLabels(indexed)

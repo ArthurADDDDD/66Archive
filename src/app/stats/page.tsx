@@ -10,6 +10,7 @@ import { YearBarChart } from '@/components/YearCharts'
 import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
 import { CoverageGaps } from '@/components/CoverageMap'
 import { PopularContent } from '@/components/PopularContent'
+import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
 import { getDataset, toTimelineEntries } from '@/lib/data'
@@ -370,6 +371,7 @@ export default async function StatsPage() {
 
         {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
         <PopularContent
+          labelIndexUrl={popularIndexUrl()}
           questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
           accent="#7BD88F"
           legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
