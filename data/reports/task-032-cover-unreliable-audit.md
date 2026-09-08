@@ -79,7 +79,11 @@ P2.1/P2.2 对应 2015-07-22、P3 对应 2015-08-20（均已露脸）。经 bilib
    （`2016-04-20-live-01`，命中黑屏）换时间点重截；
 5. 存入 `public/images/covers/<entry-id>.jpg`，给对应条目补上
    `cover: "/images/covers/<entry-id>.jpg"`（条目级覆盖，优先级高于来源级的
-   `cover_unreliable` 动态兜底，因此这些条目现在不会再触发那条兜底逻辑）。
+   `cover_unreliable` 动态兜底，因此这些条目现在不会再触发那条兜底逻辑）；
+6. 跑一次 `npm run covers:optimize`，把生成的 `.w360/.w720` avif+webp 一起提交。
+   条目页用 `<picture>` 发这几档，而 `<source>` 加载失败**不会**回落到 `<img>`——
+   少提交派生文件的话，`next dev` 里那张封面会直接是空的（发布构建会自己补上，
+   所以线上看不出来，本地反而更容易被当成别的问题查半天）。
 
 上表 8 个 BV、55 个不同日期条目已全部截图入库并写回 `cover` 字段（`77` 处标记
 `cover_unreliable: true` 的来源里，同一天的多个来源共用一张日期级封面）。
@@ -88,7 +92,8 @@ P2.1/P2.2 对应 2015-07-22、P3 对应 2015-08-20（均已露脸）。经 bilib
 
 - 后续若发现某张截图选到了不合适的画面（比如恰好是黑屏、加载图、或者不能代表
   当天内容），直接换时间点重截替换 `public/images/covers/<id>.jpg` 即可，不需要
-  改 `cover_unreliable` 标记。
+  改 `cover_unreliable` 标记；换完同样要重跑 `npm run covers:optimize`
+  （它按 mtime 判断，新图会自动重出派生文件）并提交。
 - 未来任何新导入的「过往精彩录像补投」类多日期合集，导入时就应该检查 BV 官方封面
   对应哪个分 P/日期，不匹配就直接标 `cover_unreliable: true` 并考虑同步截图补
   `cover`，不要等用户发现。
