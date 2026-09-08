@@ -8,6 +8,7 @@ import {
   type ArchivePayload,
   type EncodedArchivePayload,
 } from '@/lib/archive-payload'
+import type { ArchiveNav } from '@/lib/archive-nav'
 
 let archiveRequest: Promise<ArchivePayload> | null = null
 
@@ -60,7 +61,7 @@ function fetchArchive(): Promise<ArchivePayload> {
   return archiveRequest
 }
 
-export function ArchiveLoader() {
+export function ArchiveLoader({ nav }: { nav: ArchiveNav }) {
   const [payload, setPayload] = useState<ArchivePayload | null>(null)
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)
@@ -97,10 +98,10 @@ export function ArchiveLoader() {
     )
   }
 
-  return <ArchiveLoadingShell failed={failed} onRetry={retry} />
+  return <ArchiveLoadingShell nav={nav} failed={failed} onRetry={retry} />
 }
 
-function ArchiveLoadingShell({ failed, onRetry }: { failed: boolean; onRetry: () => void }) {
+function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed: boolean; onRetry: () => void }) {
   return (
     <>
       <header className="ui-slide-down border-b border-line bg-base/95">
@@ -137,49 +138,79 @@ function ArchiveLoadingShell({ failed, onRetry }: { failed: boolean; onRetry: ()
                 <div>
                   <ArchiveBreadcrumb />
                   <h1 className="measure-hero mt-2 text-h1 font-semibold">从记得的内容，找到那段时间。</h1>
-                  <p className="measure-body mt-3 text-body text-muted" role="status" aria-live="polite">
-                    正在加载完整档案与年度线索…
+                  <p className="measure-body mt-3 text-body text-muted">
+                    每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
                   </p>
                 </div>
-                <div aria-hidden className="grid grid-cols-3 gap-3 sm:flex sm:gap-6">
-                  {[0, 1, 2].map((item) => (
-                    <div key={item} className="w-20">
-                      <div className="h-3 w-12 rounded bg-line/70 motion-safe:animate-pulse" />
-                      <div className="mt-2 h-6 w-16 rounded bg-raised motion-safe:animate-pulse" />
-                    </div>
-                  ))}
-                </div>
+                {/* 这三个数是构建期就算好的，没有理由等 2.7MB 的载荷才显示。 */}
+                <dl className="grid grid-cols-3 gap-x-3 text-meta uppercase tracking-[0.16em] text-faint tnum sm:flex sm:gap-6">
+                  <ShellStat label="条目" value={nav.total.toLocaleString()} />
+                  <ShellStat label="已录时长" value={nav.hours.toLocaleString()} unit="小时" />
+                  <ShellStat label="时长覆盖" value={`${nav.coverage}%`} />
+                </dl>
               </div>
             </section>
 
-            <section aria-label="正在加载时间定位" className="rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
-              <div aria-hidden className="grid gap-2 sm:grid-cols-3">
-                {[0, 1, 2].map((item) => (
-                  <div key={item} className="flex min-h-[62px] items-center justify-between rounded-lg border border-line bg-base/30 px-4 py-3">
-                    <div className="space-y-2">
-                      <div className="h-4 w-20 rounded bg-raised motion-safe:animate-pulse" />
-                      <div className="h-3 w-16 rounded bg-line/70 motion-safe:animate-pulse" />
-                    </div>
-                    <div className="h-6 w-9 rounded bg-raised motion-safe:animate-pulse" />
-                  </div>
+            {/*
+              时间定位：真的导航，不是占位。
+
+              这一块只依赖各年各时期的条数与标题，与那份 2.7MB 的档案载荷无关，
+              但此前它要等载荷到齐才画得出来——在此之前用户看到的是一屏脉冲灰条。
+              现在构建期就把它烤进 HTML：首屏立刻可读、可点、可分享。
+              这些年份是真链接（`/archive/?y=YYYY`），载荷没到也能直接跳；
+              载荷到达后 Timeline 接管同一块区域，数字一致，不会跳。
+            */}
+            <section aria-label="时间定位" className="rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
+              <div className="grid gap-2 sm:grid-cols-3">
+                {nav.eras.map((era) => (
+                  <a
+                    key={era.id}
+                    href={`/archive/?y=${era.id === 'douyin' ? nav.latestYear : era.to}`}
+                    className="ui-card ui-press flex min-w-0 items-center justify-between rounded-lg border border-line bg-base/30 px-4 py-3 text-left text-muted hover:bg-raised/60"
+                  >
+                    <span className="min-w-0">
+                      <span className="block text-control font-medium">{era.label}</span>
+                      <span className="mt-0.5 block font-mono text-meta text-faint tnum">{era.detail}</span>
+                    </span>
+                    <span className="shrink-0 font-mono text-[1.375rem] font-bold leading-none tnum opacity-75">
+                      {era.count.toLocaleString()}
+                    </span>
+                  </a>
                 ))}
               </div>
+
               <div className="mt-5 border-t border-line pt-4">
                 <div className="mb-2 flex items-center justify-between">
                   <h2 className="text-meta uppercase tracking-[0.16em] text-faint">年度线索</h2>
-                  <span className="text-meta text-faint">正在整理…</span>
+                  <span className="text-meta text-faint">{nav.activeEraLabel} · 选一年看看</span>
                 </div>
-                <div aria-hidden className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-                  {[0, 1, 2, 3].map((item) => (
-                    <div key={item} className="min-h-[116px] rounded-lg border border-line bg-base/40 p-3">
-                      <div className="flex items-center justify-between">
-                        <div className="h-6 w-14 rounded bg-raised motion-safe:animate-pulse" />
-                        <div className="h-4 w-20 rounded bg-line/70 motion-safe:animate-pulse" />
-                      </div>
-                      <div className="mt-3 h-3 w-24 rounded bg-line/70 motion-safe:animate-pulse" />
-                      <div className="mt-4 h-3 w-full rounded bg-raised motion-safe:animate-pulse" />
-                      <div className="mt-2 h-3 w-3/4 rounded bg-raised motion-safe:animate-pulse" />
-                    </div>
+                <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                  {nav.years.map((year) => (
+                    <a
+                      key={year.year}
+                      href={`/archive/?y=${year.year}`}
+                      className="ui-card ui-press flex min-h-[116px] min-w-0 flex-col rounded-lg border border-line bg-base/40 p-3 text-left hover:border-muted hover:bg-raised/50"
+                    >
+                      <span className="flex items-baseline justify-between gap-2">
+                        <span className="font-display text-xl font-bold tnum">{year.year}</span>
+                        <span className="shrink-0 text-meta text-faint tnum">
+                          <span className="font-mono text-[0.9375rem] font-semibold text-ink">{year.count.toLocaleString()}</span> 条 ·{' '}
+                          <span className="font-mono text-[0.9375rem] font-semibold text-ink">{year.months}</span> 个月
+                        </span>
+                      </span>
+                      <span className="mt-1 block text-meta text-faint tnum">
+                        {year.hasDuration ? (
+                          <>
+                            已录 <span className="font-mono text-control font-semibold text-ink">{year.hours.toLocaleString()}</span> 小时
+                          </>
+                        ) : '时长待补'}
+                      </span>
+                      <span className="mt-2 block space-y-1">
+                        {year.titles.map((title) => (
+                          <span key={title} className="block truncate text-meta leading-snug text-muted">{title}</span>
+                        ))}
+                      </span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -198,6 +229,19 @@ function ArchiveBreadcrumb() {
       <span>Chronicle</span>
       <span aria-hidden className="text-faint/50">·</span>
       <span>录播室</span>
+    </div>
+  )
+}
+
+/** 与 Timeline 的 Stat 同一份排版；首屏外壳与接管后的正文必须长得一样，否则会跳。 */
+function ShellStat({ label, value, unit }: { label: string; value: string; unit?: string }) {
+  return (
+    <div className="min-w-0">
+      <dt className="text-meta uppercase tracking-[0.16em] text-faint">{label}</dt>
+      <dd className="mt-1.5 whitespace-nowrap font-mono text-[1.0625rem] font-bold tracking-normal text-ink tnum sm:text-[1.375rem]">
+        {value}
+        {unit && <span className="ml-1 font-sans text-meta font-normal text-faint">{unit}</span>}
+      </dd>
     </div>
   )
 }

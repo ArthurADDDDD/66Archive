@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { BackToTop } from '@/components/ScrollAffordances'
 import { ArchiveLoader } from '@/components/ArchiveLoader'
+import { getDataset, toTimelineEntries } from '@/lib/data'
+import { buildArchiveNav } from '@/lib/archive-nav'
 
 /** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
 export const metadata: Metadata = {
@@ -38,10 +40,13 @@ const ARCHIVE_BOOT_SCRIPT = `(function(){try{window.__i6i6ArchiveBoot=fetch('/ar
  * （静态导出无法在服务端读 searchParams）。
  */
 export default function ArchivePage() {
+  // 首屏「时间定位」的构建期版本。它不依赖那份 2.7MB 的载荷——只是各年各时期的条数
+  // 与标题——所以没有理由让用户先看一屏脉冲占位再等请求回来。见 lib/archive-nav.ts。
+  const nav = buildArchiveNav(toTimelineEntries(getDataset()))
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: ARCHIVE_BOOT_SCRIPT }} />
-      <ArchiveLoader />
+      <ArchiveLoader nav={nav} />
       <BackToTop />
     </>
   )

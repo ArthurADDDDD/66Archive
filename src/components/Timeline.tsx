@@ -8,18 +8,10 @@ import { EntryRow } from './EntryRow'
 import { applyTagSelection, EMPTY_TAG_SELECTION, EntryTagFilter, hasTagSelection, type EntryTagSelection } from './EntryTagFilter'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { EMPTY_FILTERS, FilterRail, type Filters } from './FilterRail'
+import { ERAS, type Era } from '@/lib/archive-nav'
 import { SearchField } from './SearchField'
 import { MobileQuickNav } from './ScrollAffordances'
 import { SiteNav } from './SiteNav'
-
-type Era = {
-  id: string
-  label: string
-  detail: string
-  from: number
-  to: number
-  color: string
-}
 
 type MonthSummary = {
   count: number
@@ -53,12 +45,6 @@ function formatHoursTag(minutes: number): string {
   if (minutes < 60) return `${Math.round(minutes)} 分`
   return `${Math.round(minutes / 60)} 小时`
 }
-
-const ERAS: Era[] = [
-  { id: 'video', label: '视频时期', detail: '2010—2014', from: 2010, to: 2014, color: '#E0A244' },
-  { id: 'douyu', label: '斗鱼时期', detail: '2015—2023', from: 2015, to: 2023, color: '#5BC8E8' },
-  { id: 'douyin', label: '抖音时期', detail: '2024—至今', from: 2024, to: 9999, color: '#FF6B75' },
-]
 
 /** 当前地址栏就是录播室状态：刷新、分享链接和前进后退都按同一套参数恢复。 */
 function paramsForThisLoad() {
