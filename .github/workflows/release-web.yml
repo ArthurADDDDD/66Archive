@@ -1,9 +1,15 @@
 name: release-web (candidate)
+run-name: Web candidate ${{ inputs.request_id || github.sha }}
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      request_id:
+        description: Optional caller correlation UUID; never an artifact identity
+        required: false
+        type: string
 
 permissions:
   contents: read
