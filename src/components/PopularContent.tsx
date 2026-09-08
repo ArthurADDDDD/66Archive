@@ -161,7 +161,8 @@ export function PopularContent({
     return () => {
       cancelled = true
     }
-  }, [])
+    // 地址在一次构建里是常量，列出来只是让依赖检查闭合，不会真的重跑。
+  }, [labelIndexUrl])
 
   // 还没读完、或者接口根本读不到时才整节不渲染：内容服务不可用不能让数据页
   // 空一块，也不该在页面上立一个「一个问题」的空标题。
