@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveAct } from '@/lib/live-content'
 import { contentOpenProps } from '@/lib/analytics-target'
+import { proxyImageSrcSet } from '@/lib/platforms'
 import { Reveal } from './Reveal'
 import { useLiveAct, useLiveContent } from './LiveContentProvider'
 import { MontageVideoList } from './MontageVideoList'
@@ -139,6 +140,20 @@ function BeatBody({ beat, color }: { beat: ResolvedBeat; color: string }) {
   return <SmallRow beat={beat} color={color} />
 }
 
+/**
+ * 配图大卡的框：`max-w-[680px]`，实测 375→276、768→596 CSS px；≥1280（`xl`）时首页换成
+ * 另一套排版，这一支整块 `display:none`，配合 `loading="lazy"` 不会发请求。
+ *
+ * `lib/narrative.ts` 把 hero 封面烤成单一的 w=900。档位**封顶仍是 900**——再往上加
+ * 只会让平板下载得比现在多；这次只解决手机的过取。实测这 6 张 w=900 合计 278,812 B，
+ * DPR 2 的手机改挑 640 后 182,990 B（−34%），DPR 1 落到 320 只要 72,474 B。
+ *
+ * 本地封面（`/images/...`、`/gallery/...`）和直连来源改不了尺寸，`proxyImageSrcSet`
+ * 返回 null，照常只用 src。
+ */
+const HERO_COVER_WIDTHS = [320, 480, 640, 720, 900] as const
+const HERO_COVER_SIZES = '(min-width: 1024px) 680px, (min-width: 640px) 78vw, 74vw'
+
 /** 配图大卡：真实封面 + 标题/引子 */
 function HeroCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
   return (
@@ -156,7 +171,15 @@ function HeroCard({ beat, color }: { beat: ResolvedBeat; color: string }) {
       <div className="relative mt-4 aspect-video max-w-[680px] overflow-hidden rounded-xl border border-line/80 bg-surface/40">
         {beat.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={beat.cover} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover" />
+          <img
+            src={beat.cover}
+            srcSet={proxyImageSrcSet(beat.cover, HERO_COVER_WIDTHS) ?? undefined}
+            sizes={proxyImageSrcSet(beat.cover, HERO_COVER_WIDTHS) ? HERO_COVER_SIZES : undefined}
+            alt=""
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            className="h-full w-full object-cover"
+          />
         ) : (
           <div
             className="flex h-full w-full items-center justify-center"

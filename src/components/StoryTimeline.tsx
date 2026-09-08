@@ -197,6 +197,20 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
 }
 
 /** Type A：完整 Hero。没有真实封面就不放图，也不留同尺寸占位。 */
+/**
+ * 编年史正文里的封面框。`chronicle-media-measure` 的宽度在断点之间连续变化，
+ * 实测（模拟视口，单位 CSS px）：375→256、414→284、640→458、768→576、
+ * 1024→622、1280→678、1440→747、1920→996。`sizes` 按这几个点分段，
+ * 宁可略微报大——报小会让浏览器挑到偏糊的一档。
+ *
+ * 档位**有意封顶在 900**，那正是原先烤入的唯一宽度：再往上加 1080/1440 会让平板
+ * 和高 DPR 桌面下载得比现在更多。这次要解决的只是手机上的过取——375 的屏上
+ * 显示宽 256 px 却下载 900 px，DPR 2 也仍有 1.76 倍。实测这 13 张封面：
+ * w=900 合计 450,710 B；DPR 2 的手机改挑 540 后 240,510 B（−47%）。
+ */
+const STORY_COVER_WIDTHS = [360, 540, 720, 900] as const
+const STORY_COVER_SIZES = '(min-width: 1360px) 52vw, (min-width: 1024px) 700px, (min-width: 768px) 76vw, 72vw'
+
 function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
   // null 表示用户尚未手动切换：实时后台值到达时仍可接管默认状态。
   const [manualOpen, setManualOpen] = useState<boolean | null>(null)
@@ -234,7 +248,13 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
       </div>
       {beat.cover && (
         <div className="mt-4 chronicle-media-measure">
-          <MediaFrame src={beat.cover} alt={beat.title} className="aspect-video w-full">
+          <MediaFrame
+            src={beat.cover}
+            alt={beat.title}
+            className="aspect-video w-full"
+            widths={STORY_COVER_WIDTHS}
+            sizes={STORY_COVER_SIZES}
+          >
             <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
               {displayDate}
             </span>

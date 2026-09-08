@@ -2,9 +2,22 @@
 
 import Link from 'next/link'
 import type { ResolvedBeat } from '@/lib/narrative'
+import { proxyImageSrcSet } from '@/lib/platforms'
 import { Reveal } from './Reveal'
 
 const PUBLIC_LIVE_HOURS_FLOOR = 10_000
+
+/**
+ * 蒙太奇缩略图的框是写死的 `w-[168px] sm:w-[196px]`，实测 375→166、768→194 CSS px；
+ * ≥1280（`xl`）时首页换成另一套排版，这一支整块 `display:none`，配合 `loading="lazy"`
+ * 根本不会发请求——所以这几档只服务手机与平板。
+ *
+ * `lib/narrative.ts` 把这些封面烤成单一的 w=480：DPR 2 的手机只需要 336。
+ * 实测这 14 张 w=480 合计 287,002 B，改挑 360 后 189,744 B（−34%）；
+ * DPR 1 落到 180 只要 65,518 B。DPR 2 的平板仍然落在 480，画质不降。
+ */
+const THUMB_WIDTHS = [180, 360, 480] as const
+const THUMB_SIZES = '(min-width: 640px) 196px, 168px'
 
 /**
  * 首页 ACT II 的蒙太奇视频条。
@@ -30,6 +43,8 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={sample.cover}
+                  srcSet={proxyImageSrcSet(sample.cover, THUMB_WIDTHS) ?? undefined}
+                  sizes={proxyImageSrcSet(sample.cover, THUMB_WIDTHS) ? THUMB_SIZES : undefined}
                   alt={sample.title}
                   loading="lazy"
                   referrerPolicy="no-referrer"
@@ -79,6 +94,8 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={sample.cover}
+                    srcSet={proxyImageSrcSet(sample.cover, THUMB_WIDTHS) ?? undefined}
+                    sizes={proxyImageSrcSet(sample.cover, THUMB_WIDTHS) ? THUMB_SIZES : undefined}
                     alt={sample.title}
                     loading="lazy"
                     referrerPolicy="no-referrer"
