@@ -1,4 +1,4 @@
-name: release-web (shadow)
+name: release-web (candidate)
 
 on:
   push:
@@ -7,72 +7,144 @@ on:
 
 permissions:
   contents: read
-  actions: read
 
 concurrency:
-  group: release-web-${{ github.sha }}
+  group: release-web-${{ github.run_id }}-${{ github.run_attempt }}
   cancel-in-progress: false
 
+env:
+  SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
+  NEXT_TELEMETRY_DISABLED: '1'
+
 jobs:
-  shadow:
+  build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      SITE_ORIGIN: ${{ vars.PUBLIC_SITE_ORIGIN }}
-      NEXT_TELEMETRY_DISABLED: '1'
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: 22
           cache: npm
-      - name: Require explicit production origin
-        run: |
-          node -e 'const u = new URL(process.env.SITE_ORIGIN); if (u.protocol !== "https:" || u.username || u.password || u.pathname !== "/" || u.search || u.hash) process.exit(1)'
       - run: npm ci
       - run: npm run validate && npm run test:vote-search
-      - name: Test artifact safety gates
-        run: node --test scripts/release/test-compare-shadow.cjs && python3 scripts/release/test-audit-image.py
-      - name: Generate and reproduce snapshot
+      - name: Test release identity and safety gates
         run: |
+          npx tsx scripts/release/test-baked-input.ts
+          node --test scripts/release/test-publish-record.cjs
+          python3 scripts/release/test-audit-image.py
+          python3 scripts/release/test-build-record.py
+      - name: Freeze public content and source snapshot
+        run: |
+          npx tsx scripts/release/capture-content.ts
           npx tsx scripts/build-snapshot.ts
-          cp .local/dataset-snapshot.json .local/snapshot-first.json
+          cp .local/dataset-snapshot.json .local/release/dataset-snapshot.json
           npx tsx scripts/build-snapshot.ts
-          cmp .local/snapshot-first.json .local/dataset-snapshot.json
+          cmp .local/release/dataset-snapshot.json .local/dataset-snapshot.json
           echo "SOURCE_DATE_EPOCH=$(git show -s --format=%ct HEAD)" >> "$GITHUB_ENV"
-      - name: Build production site with live public content
+          echo "CONTENT_BAKE_SHA256=$(cat .local/release/baked-content.json.sha256)" >> "$GITHUB_ENV"
+          echo "WEB_IMAGE_REPOSITORY=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/66archive-web-releases" >> "$GITHUB_ENV"
+      - name: Build production site from the frozen input only
+        env:
+          CONTENT_BAKE_FILE: ${{ github.workspace }}/.local/release/baked-content.json
+          CONTENT_BAKE_FROZEN_REQUIRED: '1'
         run: npm run build
-      - name: Prepare minimal image context
+      - name: Prepare public-only image context
         run: |
           test -f out/index.html
-          mkdir -p .local/context/site .local/context/snapshot .local/release
+          mkdir -p .local/context/site .local/context/snapshot
           cp -a out/. .local/context/site/
           cp .local/dataset-snapshot.json .local/dataset-snapshot.json.sha256 .local/context/snapshot/
-      - uses: docker/setup-buildx-action@v3
-      - name: Build OCI image without registry publication
+          cp .local/release/baked-content.json .local/context/snapshot/
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - name: Build OCI archive
         run: |
           docker buildx build --platform linux/amd64 --provenance=false --sbom=false \
             --build-arg SOURCE_DATE_EPOCH="$SOURCE_DATE_EPOCH" \
-            --tag "66archive-web:$GITHUB_SHA" \
+            --build-arg SOURCE_REPOSITORY="https://github.com/$GITHUB_REPOSITORY" \
+            --tag "66archive-web:build-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT" \
             --output type=oci,dest=.local/release/66archive-web.tar,rewrite-timestamp=true \
             --file Dockerfile.web-artifact .local/context
-      - name: Inspect all image layers and snapshot integrity
-        run: python3 scripts/release/audit-image.py .local/release/66archive-web.tar "$GITHUB_SHA" .local/release/image-report.json
-      - name: Fail closed on existing SHA digest mismatch
-        id: compare
-        uses: actions/github-script@v8
+          python3 scripts/release/build-record.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
-          script: |
-            await require('./scripts/release/compare-shadow.cjs')({ github, context, core })
-      - uses: actions/upload-artifact@v7
-        if: steps.compare.outputs.exists != 'true'
-        with:
-          name: 66archive-web-${{ github.sha }}
+          name: web-candidate-${{ github.run_id }}-${{ github.run_attempt }}
           path: .local/release/
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 3
           compression-level: 0
           overwrite: false
+
+  publish:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: web-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .local/release
+      - name: Re-audit exact image and input identities
+        id: record
+        run: |
+          export WEB_IMAGE_REPOSITORY="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/66archive-web-releases"
+          echo "WEB_IMAGE_REPOSITORY=$WEB_IMAGE_REPOSITORY" >> "$GITHUB_ENV"
+          python3 scripts/release/build-record.py --verify
+      - name: Install registry copy tool
+        run: sudo apt-get update -qq && sudo apt-get install -y skopeo
+      - name: Verify artifact extraction through Docker without starting a container
+        run: |
+          skopeo copy oci-archive:.local/release/66archive-web.tar docker-daemon:66archive-web:inspection
+          container="$(docker create 66archive-web:inspection)"
+          trap 'docker rm -f "$container" >/dev/null' EXIT
+          mkdir -p .local/extracted
+          docker cp "$container:/snapshot/." .local/extracted/
+          cmp .local/extracted/dataset-snapshot.json .local/release/dataset-snapshot.json
+          cmp .local/extracted/baked-content.json .local/release/baked-content.json
+      - name: Copy audited bytes to candidate registry without changing digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_DIGEST: ${{ steps.record.outputs.image_digest }}
+        run: |
+          printf '%s' "$GH_TOKEN" | skopeo login --username "$GITHUB_ACTOR" --password-stdin ghcr.io
+          skopeo copy --preserve-digests \
+            oci-archive:.local/release/66archive-web.tar \
+            "docker://$WEB_IMAGE_REPOSITORY@$EXPECTED_DIGEST" \
+            --digestfile .local/copied-digest
+          test "$(cat .local/copied-digest)" = "$EXPECTED_DIGEST"
+      - name: Attest release record provenance
+        id: record_provenance
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4
+        with:
+          subject-path: .local/release/release.json
+      - name: Attest image and complete input binding
+        id: image_provenance
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4
+        with:
+          subject-name: ${{ env.WEB_IMAGE_REPOSITORY }}
+          subject-digest: ${{ steps.record.outputs.image_digest }}
+          predicate-type: https://github.com/ArthurADDDDD/66Archive/attestations/web-release/v2
+          predicate-path: .local/release/release.json
+      - name: Preserve signature bundles
+        env:
+          RECORD_BUNDLE: ${{ steps.record_provenance.outputs.bundle-path }}
+          IMAGE_BUNDLE: ${{ steps.image_provenance.outputs.bundle-path }}
+        run: |
+          cp "$RECORD_BUNDLE" .local/release/record-provenance.jsonl
+          cp "$IMAGE_BUNDLE" .local/release/image-provenance.jsonl
+      - name: Publish immutable candidate record and recovery assets
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: await require('./scripts/release/publish-record.cjs')({ github, context })

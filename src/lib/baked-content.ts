@@ -18,6 +18,7 @@
  */
 
 import { get as httpsGet } from 'node:https'
+import { readBakedInput } from './baked-input'
 import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent, type LiveNarrative, type LiveSiteCopy } from './live-content'
 import { FALLBACK_SITE_ORIGIN } from './site-url'
 
@@ -89,6 +90,14 @@ async function fetchOne(origin: string, path: string): Promise<unknown | null> {
 }
 
 async function loadBakedContent(): Promise<LiveContent> {
+  const frozen = process.env.CONTENT_BAKE_FILE
+  if (frozen) {
+    if (process.env.CONTENT_BAKE_ORIGIN === 'off') throw new Error('Frozen input cannot be combined with baking disabled')
+    return readBakedInput(frozen, process.env.CONTENT_BAKE_SHA256 || '', process.env.SITE_ORIGIN || '')
+  }
+  if (process.env.CONTENT_BAKE_SHA256 || process.env.CONTENT_BAKE_FROZEN_REQUIRED === '1') {
+    throw new Error('Frozen public content file is required; refusing live fallback')
+  }
   const origin = resolveOrigin()
   if (!origin) return EMPTY
 
@@ -131,7 +140,8 @@ let inflight: Promise<LiveContent> | null = null
  * 而静态导出里每个页面都是独立渲染——站点有两千多个条目页，按渲染去重等于
  * 「页数 × 3」次请求打向线上。实测会被限流挡回 429、整份烤入失败，
  * 相当于用自己的构建把自己的站点刷了一遍。模块级 promise 在整个构建进程里
- * 只解析一次，全程就 3 次请求。
+ * 只解析一次。不同 worker 有不同模块实例；发布构建必须通过 CONTENT_BAKE_FILE
+ * 共享同一份已经冻结且校验过 hash 的输入，不能用进程单例宣称跨 worker 一致。
  */
 export function fetchBakedContent(): Promise<LiveContent> {
   inflight ??= loadBakedContent()

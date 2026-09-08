@@ -1,3 +1,7 @@
 FROM scratch
+ARG SOURCE_REPOSITORY
+LABEL org.opencontainers.image.source=$SOURCE_REPOSITORY
 COPY site/ /site/
 COPY snapshot/ /snapshot/
+# Artifact transport only: docker create/cp is supported; never start it.
+CMD ["/artifact-only"]

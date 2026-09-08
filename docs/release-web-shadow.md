@@ -1,3 +1,7 @@
+> Phase 1 historical reference. The current candidate workflow and trust contract
+> are documented in [Web release identity](web-release-identity.md). SHA-only
+> shadow identity and Actions retention are no longer release trust anchors.
+
 # Public web shadow build
 
 `release-web.yml` runs on `main` pushes and manual dispatch on `main`. It validates

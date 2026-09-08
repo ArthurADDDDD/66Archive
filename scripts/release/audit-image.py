@@ -8,7 +8,7 @@ import tarfile
 from pathlib import PurePosixPath, Path
 
 
-def audit(filename, public_sha):
+def audit(filename, public_sha, baked_content=None):
     assert re.fullmatch(r'[0-9a-f]{40}', public_sha), 'Invalid public SHA'
     files = {}
     with tarfile.open(filename) as archive:
@@ -50,9 +50,14 @@ def audit(filename, public_sha):
                     if member.isfile():
                         assert not name.endswith(('.map', '.pem', '.key')), f'Forbidden file: {name}'
                         if path.parts[0] == 'snapshot':
-                            assert name in ('snapshot/dataset-snapshot.json', 'snapshot/dataset-snapshot.json.sha256')
+                            allowed = {'snapshot/dataset-snapshot.json', 'snapshot/dataset-snapshot.json.sha256'}
+                            if baked_content is not None:
+                                allowed.add('snapshot/baked-content.json')
+                            assert name in allowed
                         files[name] = contents.extractfile(member).read()
         assert config['rootfs']['diff_ids'] == diff_ids
+    if baked_content is not None:
+        assert files['snapshot/baked-content.json'] == baked_content, 'Image baked input differs from build input'
     assert 'site/index.html' in files
     snapshot_raw = files['snapshot/dataset-snapshot.json']
     snapshot_hash = hashlib.sha256(snapshot_raw).hexdigest()
