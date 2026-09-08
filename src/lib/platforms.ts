@@ -27,9 +27,15 @@ export function detectPlatform(url: string): Platform | null {
   return null
 }
 
+/**
+ * 封面代理的源。单独导出是给根 layout 的 `<link rel="preconnect">` 用——
+ * 那一行必须和这里指向同一个 host，各写一遍迟早会漂。
+ */
+export const IMAGE_PROXY_ORIGIN = 'https://images.weserv.nl'
+
 /** wsrv 只服务远程封面；固定输出 WebP，避免大尺寸 PNG 占用国内用户首屏带宽。 */
 function weservImage(url: string, width: number): string {
-  return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=${width}&output=webp&q=80`
+  return `${IMAGE_PROXY_ORIGIN}/?url=${encodeURIComponent(url)}&w=${width}&output=webp&q=80`
 }
 
 /**
@@ -81,7 +87,7 @@ export function proxyImage(url: string | undefined, width = 480): string | null 
  * 它的原图本来就小）没有多档可给，返回 null，调用方照常只用 `src`。
  */
 export function proxyImageSrcSet(url: string | null | undefined, widths: readonly number[]): string | null {
-  if (!url || !url.startsWith('https://images.weserv.nl/')) return null
+  if (!url || !url.startsWith(`${IMAGE_PROXY_ORIGIN}/`)) return null
   if (!/[?&]w=\d+/.test(url)) return null
   return widths.map((width) => `${url.replace(/([?&]w=)\d+/, `$1${width}`)} ${width}w`).join(', ')
 }

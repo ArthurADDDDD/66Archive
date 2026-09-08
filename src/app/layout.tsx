@@ -9,6 +9,7 @@ import { RouteIntentPrefetch } from '@/components/RouteIntentPrefetch'
 import { fetchBakedNavShell } from '@/lib/baked-content'
 import { CONTENT_PATHS, EDITORIAL_ROUTES, NARRATIVE_ROUTES } from '@/lib/live-content'
 import { siteOrigin } from '@/lib/site-url'
+import { IMAGE_PROXY_ORIGIN } from '@/lib/platforms'
 
 const display = Archivo({
   subsets: ['latin'],
@@ -112,6 +113,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const baked = await fetchBakedNavShell()
   return (
     <html lang="zh-CN" className={`${display.variable} ${mono.variable}`}>
+      <head>
+        {/*
+          全站的远程封面现在只有一个来源（见 lib/image-proxy-policy.ts），
+          3,488 个导出页里有 3,158 个至少加载一张。但第一张图要等 DNS + TCP + TLS
+          走完才开始传——实测这段握手约 210–230ms，而条目页和游戏页的封面正是
+          那些页面的 LCP 元素。preconnect 让握手和 CSS / JS 的下载并行。
+
+          **不能带 crossorigin**：站内都是普通 `<img src>`（no-CORS 请求），
+          带上 crossorigin 会预热到另一个连接池条目，图片照样得自己再握一次手。
+        */}
+        <link rel="preconnect" href={IMAGE_PROXY_ORIGIN} />
+      </head>
       <body className="font-sans">
         {/*
           必须是原生 <script>，不能用 next/script 的 beforeInteractive：实测在 App Router
