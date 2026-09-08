@@ -37,22 +37,27 @@ function isEncodedPayload(value: unknown): value is EncodedArchivePayload {
  * `aliveCount`（「只看还能播的」筛选）。整份 2,711 条的解码在 node 里量过是毫秒级，
  * 与 JSON.parse 本身（中位数 9.2 ms）相比可以忽略。
  */
-function requestArchive(): Promise<ArchivePayload> {
-  return fetch('/archive-data.json').then(async (response) => {
+function requestArchive(dataUrl: string): Promise<ArchivePayload> {
+  return fetch(dataUrl).then(async (response) => {
     if (!response.ok) throw new Error(`archive data returned ${response.status}`)
     return decodeArchivePayload((await response.json()) as EncodedArchivePayload)
   })
 }
 
-function fetchArchive(): Promise<ArchivePayload> {
+/**
+ * 地址由服务端当 prop 传下来（见 `app/archive/page.tsx`），带着按载荷字节算出的
+ * 版本号。**不要在这里写死 `/archive-data.json`**：那样重试会绕开版本号，
+ * 拿到边缘上可能是上一版的那份，而且不报任何错。
+ */
+function fetchArchive(dataUrl: string): Promise<ArchivePayload> {
   if (archiveRequest) return archiveRequest
   // 首屏预取多半已经在路上了，直接接手，省掉「等水合再发请求」那一整趟。
   // 有意不给它加超时竞速：这份载荷三百多 KB，放弃一个在途请求再从零下载只会更慢；
   // 真失败了下面的 catch 会清掉模块缓存，「重新加载档案」照常能重来。
   const booted = takeBooted()
   archiveRequest = (booted
-    ? booted.then((data) => (isEncodedPayload(data) ? decodeArchivePayload(data) : requestArchive()))
-    : requestArchive()
+    ? booted.then((data) => (isEncodedPayload(data) ? decodeArchivePayload(data) : requestArchive(dataUrl)))
+    : requestArchive(dataUrl)
   ).catch((error) => {
     // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。
     archiveRequest = null
@@ -61,14 +66,14 @@ function fetchArchive(): Promise<ArchivePayload> {
   return archiveRequest
 }
 
-export function ArchiveLoader({ nav }: { nav: ArchiveNav }) {
+export function ArchiveLoader({ nav, dataUrl }: { nav: ArchiveNav; dataUrl: string }) {
   const [payload, setPayload] = useState<ArchivePayload | null>(null)
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)
 
   useEffect(() => {
     let active = true
-    void fetchArchive().then(
+    void fetchArchive(dataUrl).then(
       (data) => {
         // 2,700+ 条数据的首次计算放进低优先级更新，先让已打开的页面与导航保持可交互。
         if (active) startTransition(() => setPayload(data))
@@ -80,7 +85,7 @@ export function ArchiveLoader({ nav }: { nav: ArchiveNav }) {
     return () => {
       active = false
     }
-  }, [attempt])
+  }, [attempt, dataUrl])
 
   function retry() {
     setFailed(false)

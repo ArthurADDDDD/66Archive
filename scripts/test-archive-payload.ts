@@ -6,8 +6,10 @@
  * 比如某场的 segment 越过了标称时长，相邻色带并不首尾相接——就会静默改写数据：
  * 页面照常渲染，只是数字悄悄错了。所以这里拿真实数据集逐条深度比对。
  */
+import { createHash } from 'node:crypto'
 import { getDataset, toTimelineEntries } from '../src/lib/data'
 import { decodeArchiveEntry, encodeArchiveEntry } from '../src/lib/archive-payload'
+import { archiveDataUrl, archivePayload } from '../src/lib/archive-data-url'
 
 function diff(path: string, a: unknown, b: unknown, out: string[]): void {
   if (out.length > 12) return
@@ -84,3 +86,24 @@ if (failures.length > 0) {
   process.exit(1)
 }
 console.log('✓ 全部条目 encode → decode 后与原值深度相等')
+
+/**
+ * URL 上的版本号必须是**发出去那串字节**的哈希，不是数据集的。
+ *
+ * 这条不是形式主义：如果版本号改成按数据集算，那么「只改编码格式、数据没动」的
+ * 那种发布不会换 URL，边缘就会把旧格式的字节喂给新解码器——正是 f6e89ca 那次
+ * 整页失败的成因。反过来，只改代码、载荷字节没变的发布版本号不变，缓存照常复用。
+ */
+const emittedBody = JSON.stringify(archivePayload())
+const expectedVersion = createHash('sha256').update(emittedBody).digest('hex').slice(0, 12)
+const url = archiveDataUrl()
+if (url !== `/archive-data.json?v=${expectedVersion}`) {
+  console.error(`\n✗ 载荷地址的版本号与实际字节对不上：${url}，按字节算应该是 ${expectedVersion}`)
+  process.exit(1)
+}
+if (!url.startsWith('/archive-data.json?')) {
+  console.error(`\n✗ 载荷路径变了：${url}。路径必须保持 /archive-data.json——nginx 是 location = 精确匹配，`)
+  console.error('  换成别的文件名会掉进兜底 404 并丢掉边缘 TTL，旧 HTML 也就再也取不到载荷。')
+  process.exit(1)
+}
+console.log(`✓ 载荷地址 ${url} 的版本号 = 发出字节的 sha256 前 12 位`)

@@ -3,6 +3,7 @@ import { BackToTop } from '@/components/ScrollAffordances'
 import { ArchiveLoader } from '@/components/ArchiveLoader'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildArchiveNav } from '@/lib/archive-nav'
+import { archiveDataUrl } from '@/lib/archive-data-url'
 
 /** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
 export const metadata: Metadata = {
@@ -31,8 +32,16 @@ export const metadata: Metadata = {
  * 不带 `cache` 选项是有意的：响应头是 `max-age=0, stale-while-revalidate=86400`，
  * 浏览器仍然每次都再验证，但回访时可以先拿缓存里的那份立刻渲染、后台再刷新。
  * 原先写死的 `cache: 'no-cache'` 会把这条路堵掉，让每次进录播室都从零下载。
+ *
+ * 这条之所以现在还安全，是因为地址带上了按载荷字节算出来的版本号
+ * （见 `lib/archive-data-url.ts`）：缓存按完整 URL 建键，新发布换新 URL，
+ * 旧条目命不中，所以「先拿缓存那份」拿到的一定是这次发布自己的载荷。
+ * 没有版本号的时候这里是个真问题——实测浏览器能拿着 24 小时前的字节
+ * `transferSize: 0` 直接渲染，一次网络都不发。
  */
-const ARCHIVE_BOOT_SCRIPT = `(function(){try{window.__i6i6ArchiveBoot=fetch('/archive-data.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})}catch(e){}})()`
+function archiveBootScript(dataUrl: string): string {
+  return `(function(){try{window.__i6i6ArchiveBoot=fetch(${JSON.stringify(dataUrl)}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}catch(e){}})()`
+}
 
 /**
  * 录播室：档案模式。完整 Timeline，能力一条不丢，搜索/筛选/年份/来源全部保留。
@@ -43,10 +52,13 @@ export default function ArchivePage() {
   // 首屏「时间定位」的构建期版本。它不依赖那份 2.7MB 的载荷——只是各年各时期的条数
   // 与标题——所以没有理由让用户先看一屏脉冲占位再等请求回来。见 lib/archive-nav.ts。
   const nav = buildArchiveNav(toTimelineEntries(getDataset()))
+  // 预取脚本与 ArchiveLoader 必须取同一个地址：两边各写一份字面量的话，
+  // 只改其中一处就会让预取永远落空或者让「重新加载」悄悄换一个版本，且不报错。
+  const dataUrl = archiveDataUrl()
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: ARCHIVE_BOOT_SCRIPT }} />
-      <ArchiveLoader nav={nav} />
+      <script dangerouslySetInnerHTML={{ __html: archiveBootScript(dataUrl) }} />
+      <ArchiveLoader nav={nav} dataUrl={dataUrl} />
       <BackToTop />
     </>
   )
