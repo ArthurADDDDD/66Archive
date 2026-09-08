@@ -21,26 +21,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/series/' },
 }
 
-const SERIES_COLOR = { longRunning: '#A78BFA', themed: '#5BC8E8', video: '#E0A244' } as const
+const SERIES_COLOR = { themed: '#5BC8E8', video: '#E0A244' } as const
 
 /**
  * 节目单：按内容形态区分长期直播节目、主题栏目和视频系列。
  * 心灵砒霜（期数最多、横跨整个斗鱼时代）单独以大块深色展示；
- * 一起 See 作为跨平台延续的长期节目重点展示。
- * 夜 / 邮件 / 电台 / 周日 / 长期陪伴的气质靠深色 + 字排 + 留白完成，不画收音机。
- */
-/**
- * 节目封面在两处复用同一个 URL，但框差了一倍多。
+ * 一起 See 不再单独突出，和夜话、户外直播等栏目一起放在「主题栏目」分组里。
  *
+ * 节目封面在两处复用同一个 URL，但框差了一倍多。
  * `lib/series.ts` 按详情页的需要烤成 w=960，卡片网格却只有 254×142（1440 视口下
  * sm:grid-cols-2 → lg:grid-cols-4）。实测 14 张真实封面的中位数：
  * w=960 37,171 B · w=480 16,157 B · w=320 9,176 B。
  */
 const CARD_COVER_WIDTHS = [320, 640] as const
 const CARD_COVER_SIZES = '(min-width: 1024px) 254px, (min-width: 640px) 296px, 92vw'
-/** 「一起 See」那张大图：1440 下约 459×341。 */
-const FEATURE_COVER_WIDTHS = [480, 960] as const
-const FEATURE_COVER_SIZES = '(min-width: 1024px) 459px, 92vw'
 
 export default async function SeriesPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
@@ -58,7 +52,6 @@ export default async function SeriesPage() {
   // 不过一遍就会把 acfun / 斗鱼的原图整张下下来（实测单张可达 1.9 MB）。
   const pishuangFallbackCover =
     pishuangFirstBiliMeta?.cover ?? proxyImage(pishuang?.entries.find((entry) => entry.cover)?.cover ?? undefined, 640)
-  const togetherSee = series.find((s) => s.id === 'together-see')
   const themed = series.filter((s) => s.category === 'themed')
   const videoSeries = series.filter((s) => s.category === 'video')
 
@@ -138,8 +131,6 @@ export default async function SeriesPage() {
         )}
 
         <section className="site-container px-page py-12 sm:py-20">
-          {togetherSee && <TogetherSeeFeature series={togetherSee} />}
-          <div className="mt-16" />
           <SeriesGroup
             label="主题栏目"
             description="围绕一个故事、玩法或共同主题，在一段时间里连续出现。"
@@ -172,61 +163,6 @@ function buildPishuangMontage(series: SeriesInfo): SeriesMontageSample[] {
     if (samples.length === 24) break
   }
   return samples
-}
-
-function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
-  // `series.cover` 那一支在 lib/series.ts 里已经过了 proxyImage；这里挑出来的条目封面是
-  // 原始来源地址，必须自己过一遍，否则命中正则时反而退化成直连原图。
-  const featureCover =
-    proxyImage(
-      [...series.entries]
-        .reverse()
-        .find((entry) => entry.cover && /一起看|发布会|直面会|颁奖|榜单/.test(entry.title))?.cover ?? undefined,
-      960,
-    ) ?? series.cover
-
-  return (
-    <div>
-      <div className="flex items-baseline justify-between border-b border-line/60 pb-3">
-        <Eyebrow color={SERIES_COLOR.longRunning} dot>长期直播节目</Eyebrow>
-        <span className="font-mono text-meta text-faint tnum">2018 — 至今</span>
-      </div>
-      <Link
-        href={`/series/${series.id}/`}
-        prefetch={false}
-        data-analytics-event="content.open"
-        data-analytics-target={`series:${series.id}`}
-        className="ui-press group mt-6 grid grid-cols-[minmax(0,1fr)] overflow-hidden rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-[#A78BFA]/60 hover:bg-surface lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,.85fr)]"
-      >
-        <div className="min-w-0 p-6 sm:p-8 lg:p-10">
-          <Eyebrow color={SERIES_COLOR.longRunning}>Together See · 一起看</Eyebrow>
-          <h2 className="mt-4 text-h2 font-semibold tracking-tight text-ink">一起 See</h2>
-          <p className="measure-body mt-4 text-body text-muted"><KeepDates text={series.description} /></p>
-          <div className="mt-6 flex flex-wrap items-baseline gap-x-5 gap-y-2 text-meta text-muted tnum">
-            <span className="text-body text-ink">{series.count} 场</span>
-            <span>{formatMonth(series.firstDate)} — {formatMonth(series.lastDate)}</span>
-          </div>
-          <div className="mt-6 max-w-2xl">
-            <ActivityStrip perYear={series.perYear} color={SERIES_COLOR.longRunning} unit="场" descriptive />
-          </div>
-          <span className="mt-6 inline-flex items-center gap-2 text-control text-[#C4B5FD]">
-            查看已确认的一起 See 记录
-            <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
-          </span>
-        </div>
-        <div className="min-w-0 border-t border-line/60 p-5 sm:p-6 lg:border-l lg:border-t-0 lg:p-8">
-          <MediaFrame
-            src={featureCover}
-            alt={series.name}
-            fallback={<span className="text-h3 font-semibold text-ink/75">一起 See</span>}
-            className="h-full min-h-48 w-full"
-            widths={FEATURE_COVER_WIDTHS}
-            sizes={FEATURE_COVER_SIZES}
-          />
-        </div>
-      </Link>
-    </div>
-  )
 }
 
 function SeriesGroup({
@@ -298,6 +234,3 @@ function seriesYearRange(series: SeriesInfo[]): string {
   return first === last ? String(first) : `${first} — ${last}`
 }
 
-function formatMonth(date: string): string {
-  return date ? `${date.slice(0, 4)}.${date.slice(5, 7)}` : '待确认'
-}

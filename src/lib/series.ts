@@ -107,7 +107,7 @@ function getDisplayDescription(id: string, fallback: string, entries: TimelineEn
 }
 
 function getSeriesCategory(id: string, firstType?: TimelineEntry['type']): SeriesInfo['category'] {
-  if (id === 'xinling-pishuang' || id === 'together-see') return 'long-running'
+  if (id === 'xinling-pishuang') return 'long-running'
   if (id === 'xishuo-fengshen' || id === 'xishuo-liaozhai' || id === 'chiji-jiayuan') return 'themed'
   return firstType === 'video' ? 'video' : 'themed'
 }
