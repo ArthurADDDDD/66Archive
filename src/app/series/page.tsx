@@ -29,6 +29,19 @@ const SERIES_COLOR = { longRunning: '#A78BFA', themed: '#5BC8E8', video: '#E0A24
  * 一起 See 作为跨平台延续的长期节目重点展示。
  * 夜 / 邮件 / 电台 / 周日 / 长期陪伴的气质靠深色 + 字排 + 留白完成，不画收音机。
  */
+/**
+ * 节目封面在两处复用同一个 URL，但框差了一倍多。
+ *
+ * `lib/series.ts` 按详情页的需要烤成 w=960，卡片网格却只有 254×142（1440 视口下
+ * sm:grid-cols-2 → lg:grid-cols-4）。实测 14 张真实封面的中位数：
+ * w=960 37,171 B · w=480 16,157 B · w=320 9,176 B。
+ */
+const CARD_COVER_WIDTHS = [320, 640] as const
+const CARD_COVER_SIZES = '(min-width: 1024px) 254px, (min-width: 640px) 296px, 92vw'
+/** 「一起 See」那张大图：1440 下约 459×341。 */
+const FEATURE_COVER_WIDTHS = [480, 960] as const
+const FEATURE_COVER_SIZES = '(min-width: 1024px) 459px, 92vw'
+
 export default async function SeriesPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
@@ -207,6 +220,8 @@ function TogetherSeeFeature({ series }: { series: SeriesInfo }) {
             alt={series.name}
             fallback={<span className="text-h3 font-semibold text-ink/75">一起 See</span>}
             className="h-full min-h-48 w-full"
+            widths={FEATURE_COVER_WIDTHS}
+            sizes={FEATURE_COVER_SIZES}
           />
         </div>
       </Link>
@@ -246,7 +261,14 @@ function SeriesGroup({
             className="ui-press group flex flex-col rounded-xl border border-line/80 bg-surface/40 p-5 transition-colors hover:border-muted/60 hover:bg-surface"
           >
             {s.cover ? (
-              <MediaFrame src={s.cover} alt={s.name} aspect="aspect-video" className="w-full" />
+              <MediaFrame
+                src={s.cover}
+                alt={s.name}
+                aspect="aspect-video"
+                className="w-full"
+                widths={CARD_COVER_WIDTHS}
+                sizes={CARD_COVER_SIZES}
+              />
             ) : (
               <div className="flex h-16 w-full items-center">
                 <span className="text-h3 font-bold text-ink/85">{s.name}</span>

@@ -233,6 +233,10 @@ function Stat({ value, label }: { value: string; label: string }) {
   )
 }
 
+/** 稀疏游戏首屏封面：`max-w-[26.25rem]` = 420 px 上限，手机上接近整宽。 */
+const SPARSE_HERO_WIDTHS = [480, 840] as const
+const SPARSE_HERO_SIZES = '(min-width: 640px) 420px, 92vw'
+
 /** 稀疏游戏（场次 <= 1）：紧凑 hero——游戏名 / 日期 / 「只留下一个晚上」/ 封面 / 一场的完整信息。 */
 function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGameProfile>> }) {
   const hasEntry = profile.sessions > 0
@@ -253,7 +257,16 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={profile.cover}
+            /*
+             * 稀疏游戏页（323 个）的首屏封面：框最宽 26.25rem = 420 px，
+             * 却和主 hero 共用同一个 w=900 的 URL。实测 w=900 34,839 B、w=480 16,157 B。
+             * 它同样是这些页面的 LCP 元素，所以一并提优先级。
+             */
+            srcSet={proxyImageSrcSet(profile.cover, SPARSE_HERO_WIDTHS) ?? undefined}
+            sizes={SPARSE_HERO_SIZES}
             alt={`${profile.name} 封面`}
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
             className="aspect-video w-full max-w-[26.25rem] rounded-xl border border-line/80 bg-raised object-cover"
           />

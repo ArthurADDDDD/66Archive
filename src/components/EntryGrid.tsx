@@ -1,6 +1,7 @@
 'use client'
 
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { proxyImageSrcSet } from '@/lib/platforms'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody, useEntrySource } from './EntryDetail'
 import { visibleGameIds } from '@/lib/games'
@@ -18,6 +19,10 @@ import type { Platform } from '@/lib/schema'
  *
  * 手机端不用这个视图（一行一列时网格没有意义，只是把列表变高），由调用方决定。
  */
+/** 网格瓦片：auto-fill minmax(13.5rem) → xl minmax(15rem)，实测 1440 下 296×166。 */
+const GRID_COVER_WIDTHS = [320, 640] as const
+const GRID_COVER_SIZES = '(min-width: 640px) 296px, 92vw'
+
 export function EntryGrid({
   entries,
   expandedId,
@@ -165,8 +170,17 @@ function EntryCard({
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={displayCover}
+            /*
+             * 封面 URL 由 `useEntrySource` 按 w=640 烤好（EntryDetail 展开面板要那个尺寸），
+             * 但网格瓦片实测只有 296×166（1440 下 auto-fill 排四列）。实测中位数
+             * w=640 23,196 B、w=320 9,176 B——DPR 1 白下两倍多的像素。
+             * 展开面板那张走自己的 sizes，仍然拿得到大图。
+             */
+            srcSet={proxyImageSrcSet(displayCover, GRID_COVER_WIDTHS) ?? undefined}
+            sizes={GRID_COVER_SIZES}
             alt=""
             loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer"
             className={`h-full w-full object-cover transition duration-500 group-hover:scale-[1.04] ${dead ? 'opacity-45 grayscale' : ''}`}
           />
