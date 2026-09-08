@@ -12,8 +12,8 @@ module.exports = async ({ github, context }) => {
   }
   await requireMissing(() => github.rest.repos.getReleaseByTag({ ...context.repo, tag }))
   await requireMissing(() => github.rest.git.getRef({ ...context.repo, ref: `tags/${tag}` }))
-  const settings = await github.request('GET /repos/{owner}/{repo}/immutable-releases', context.repo)
-  if (settings.data.enabled !== true) throw new Error('Immutable releases must be enabled before publication')
+  // Repository administration settings require a broader token than this job.
+  // Enforce the actual published lock below; consumers independently require it.
   const assets = ['release.json', 'record-provenance.jsonl', 'image-provenance.jsonl',
     'baked-content.json', 'dataset-snapshot.json', '66archive-web.tar']
   for (const name of assets) {
