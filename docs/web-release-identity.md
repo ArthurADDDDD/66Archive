@@ -66,5 +66,8 @@ trust roots. Immutability prevents rewriting a published release; deletion or
 registry garbage collection can still make it unavailable. Keep an independently
 verified copy of the OCI archive and proof for the required rollback window.
 
-This phase publishes candidates and verification tooling only. Production consumer
-selection and removal of another build are separate decisions after acceptance.
+## Production status
+
+As of 2026-09-08 this identity/provenance model is the **production web artifact contract**, not a shadow-only experiment. This repository still only builds and publishes verified candidates; deployment remains a separate downstream action. Frontend/performance work must preserve frozen input, deterministic snapshot bytes, immutable release identity, exact digest binding, provenance and the public-only image boundary.
+
+Do not simplify the release path back to a mutable SHA tag, per-worker live content fetches, path-dependent snapshot metadata, or an unsigned image because a page-level optimization does not appear to need the extra machinery. Changes to `src/lib/baked-content.ts`, the snapshot exporter, `release-web.yml`, `Dockerfile.web-artifact`, or build/export scripts are release-critical and require the corresponding release/snapshot tests in addition to normal frontend validation.
