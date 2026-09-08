@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import { bucketOf, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
+import { bucketOf, galleryFullSource, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
@@ -650,6 +650,50 @@ function PhotoCell({
   )
 }
 
+/**
+ * 灯箱里的大图。
+ *
+ * 用 `<picture>` 而不是给 `<img>` 加 `srcSet`：srcset 不做格式协商，把 webp 塞进去，
+ * 认不出的浏览器会拿到一张画不出来的图。派生文件见 `lib/gallery-photos.ts` 的
+ * `galleryFullSource`；没有派生文件（例如 `anniv_*` 那批）就照常只用原图。
+ *
+ * `prefetch` 的那两张是左右邻居：不显示，但走同一套选择逻辑。用 1px 全透明定位而不是
+ * `display: none`——`display: none` 的子树里浏览器可以不发请求，那预取就白写了。
+ */
+function LightboxImage({
+  photo,
+  onLoad,
+  prefetch = false,
+}: {
+  photo: GalleryPhoto
+  onLoad?: () => void
+  prefetch?: boolean
+}) {
+  const webp = galleryFullSource(photo.src)
+  return (
+    <picture className="contents">
+      {webp ? <source type="image/webp" srcSet={webp} /> : null}
+      <img
+        src={photo.src}
+        alt={prefetch ? '' : photoAlt(photo)}
+        aria-hidden={prefetch || undefined}
+        loading="eager"
+        decoding="async"
+        fetchPriority={prefetch ? 'low' : 'high'}
+        onLoad={onLoad}
+        style={
+          prefetch
+            ? { position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }
+            : { backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }
+        }
+        className={
+          prefetch ? '' : 'max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]'
+        }
+      />
+    </picture>
+  )
+}
+
 function Lightbox({
   photo,
   index,
@@ -672,22 +716,15 @@ function Lightbox({
 
   // 当前大图加载完成后才低优先级预取左右各一张。旧策略一打开就并发取 4 张邻图，
   // 会让真正要看的这一张和后台下载争带宽，在慢网或多人同时访问时尤其得不偿失。
-  useEffect(() => {
-    if (visible.length === 0 || loadedSrc !== photo.src) return
-    const neighbors = [-1, 1].map((delta) => visible[(index + delta + visible.length) % visible.length])
-    const images = neighbors.map((p) => {
-      const img = new Image()
-      img.fetchPriority = 'low'
-      img.src = p.src
-      return img
-    })
-    return () => {
-      // 卸载不该继续吃带宽——把 src 清掉，浏览器会中止还没完成的请求。
-      images.forEach((img) => {
-        img.src = ''
-      })
-    }
-  }, [index, loadedSrc, photo.src, visible])
+  //
+  // 预取**必须和真正显示时走同一条选择逻辑**，所以这里渲染两个隐藏的 `<LightboxImage>`，
+  // 而不是像从前那样 `new Image()` 直接给 `src`：`new Image()` 没有 `<source>`，
+  // 拿到的永远是原 jpg，而显示时用的是 webp——那等于每张邻图白下一份。
+  // 卸载时 React 会把节点摘掉，浏览器照样会中止还没完成的请求，和从前清 `src` 等效。
+  const neighbors =
+    visible.length > 0 && loadedSrc === photo.src
+      ? [-1, 1].map((delta) => visible[(index + delta + visible.length) % visible.length])
+      : []
 
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null
@@ -736,34 +773,17 @@ function Lightbox({
             aria-label={`打开公开来源：${photoAlt(photo)}`}
             className="group/media relative flex max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={photo.src}
-              alt={photoAlt(photo)}
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              onLoad={() => setLoadedSrc(photo.src)}
-              style={{ backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }}
-              className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
-            />
+            <LightboxImage photo={photo} onLoad={() => setLoadedSrc(photo.src)} />
             <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
               查看公开来源
             </span>
           </a>
         ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={photo.src}
-            alt={photoAlt(photo)}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            onLoad={() => setLoadedSrc(photo.src)}
-            style={{ backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }}
-            className="max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
-          />
+          <LightboxImage photo={photo} onLoad={() => setLoadedSrc(photo.src)} />
         )}
+        {neighbors.map((neighbor) => (
+          <LightboxImage key={`prefetch-${neighbor.id}`} photo={neighbor} prefetch />
+        ))}
         <button
           onClick={() => onStep(-1)}
           aria-label="上一张"

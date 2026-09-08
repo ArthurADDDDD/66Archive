@@ -55,6 +55,25 @@ async function main() {
     }
   }
 
+  // 灯箱大图：不缩尺寸，只转 webp。理由与档位选择见 lib/gallery-photos.ts 的
+  // `galleryFullSource`——这批原图本来就只有 1,048 px 中位宽，能省的是编码不是尺寸。
+  const originals = (await fs.readdir(PHOTOS_DIR))
+    .filter((name) => name.endsWith('.jpg') && !name.endsWith('.thumb.jpg'))
+    .sort()
+  let fullBuilt = 0
+  let fullReused = 0
+  for (const filename of originals) {
+    const source = path.join(PHOTOS_DIR, filename)
+    const destination = path.join(PHOTOS_DIR, `${filename.slice(0, -'.jpg'.length)}.full.webp`)
+    if (await upToDate(source, destination)) {
+      fullReused++
+      continue
+    }
+    await sharp(source).rotate().webp({ quality: 80, effort: 4 }).toFile(destination)
+    fullBuilt++
+  }
+  console.log(`灯箱大图：${originals.length} 张；新生成 ${fullBuilt} 个，复用 ${fullReused} 个`)
+
   const generated = (await fs.readdir(PHOTOS_DIR)).filter((name) => /\.thumb-(360|720)\.(avif|webp)$/.test(name))
   const bytes = (await Promise.all(generated.map(async (name) => (await fs.stat(path.join(PHOTOS_DIR, name))).size))).reduce(
     (sum, size) => sum + size,

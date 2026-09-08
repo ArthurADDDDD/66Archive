@@ -81,6 +81,28 @@ export function galleryThumbSources(thumb: string) {
   }
 }
 
+/**
+ * 灯箱大图的现代格式变体。
+ *
+ * 和缩略图那两档不是一回事：这里**不缩尺寸**，只换编码。实测 122 张原图宽度中位数
+ * 只有 1,048 px（max 1,600），103 张本来就 ≤1,280——按显示宽度分档在这批图上几乎没有
+ * 空间（加一档 1280 全站只省 21%）。真正的空间在格式：同尺寸转 webp q80 之后
+ * 22,275,690 B → 7,594,588 B（−65.9%），平均每张 182,588 → 62,251 B。
+ * 灯箱一次要三张（当前 + 预取左右各一），也就是每次打开约 548 KB → 187 KB。
+ *
+ * **只出 webp，不出 avif**（与缩略图那两档不同）：avif q63 是 −68.1%，
+ * 比 webp 只多 2.2 个百分点，却要再往仓库里加 7.1 MB；而 webp 的覆盖面更宽
+ * （Safari 14 起就支持，avif 要等到 16.4）。认不出 webp 的浏览器落回原 jpg，
+ * 图照样是对的，只是重一些。
+ *
+ * 只认 `/gallery/photos/<name>.jpg`。`anniv_*` 那批的 src 不在这个目录下，
+ * 没有派生文件，返回 null。
+ */
+export function galleryFullSource(src: string): string | null {
+  const match = /^\/gallery\/photos\/([^/]+)\.jpg$/i.exec(src)
+  return match ? `/gallery/photos/${match[1]}.full.webp` : null
+}
+
 /** 同一套推导，用于 CSS 背景（灯箱的模糊底）。 */
 export function galleryThumbBackground(thumb: string) {
   const stem = thumb.replace(/\.thumb\.jpg$/i, '')
