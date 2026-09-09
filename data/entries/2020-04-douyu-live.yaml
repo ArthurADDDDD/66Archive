@@ -170,6 +170,19 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.9 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/10/6ef5c8812f3c8deb1933f1d7cea9c4c1.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1vK411L7Wc
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: 逆转裁判2，异议！ 01
+            duration_sec: 9295
+          - page: 2
+            title: 逆转裁判2，异议！ 02
+            duration_sec: 7253
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/2V0JMVJ2QV5MRY5k
         kind: replay
         status: alive
@@ -215,6 +228,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.11 游戏：逆转裁判2。斗鱼回放标题：逆转裁判2，异议！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/13/5a927dc77399612fd46eca70b9994e8c.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1YC4y1s7aK
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: 逆转裁判2，异议！ 01
+            duration_sec: 8903
+          - page: 2
+            title: 逆转裁判2，异议！ 02
+            duration_sec: 9621
+          - page: 3
+            title: 逆转裁判2，异议！ 03
+            duration_sec: 9597
+          - page: 4
+            title: 逆转裁判2，异议！04
+            duration_sec: 3768
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/a4Jj7l2K03rWDk01
         kind: replay
         status: alive

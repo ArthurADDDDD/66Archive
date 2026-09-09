@@ -192,6 +192,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.9 游戏：剧本杀。斗鱼回放标题：今天看看谁是凶手
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/03/10/c1850be31cd4cc1a2219c911382806d7.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1HE411T7h4
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: 今天看看谁是凶手 01
+            duration_sec: 3527
+          - page: 2
+            title: 今天看看谁是凶手 02
+            duration_sec: 3527
+          - page: 3
+            title: 今天看看谁是凶手 03
+            duration_sec: 3530
+          - page: 4
+            title: 今天看看谁是凶手 04
+            duration_sec: 3792
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/qJgOWx29RBZ7kVzL
         kind: replay
         status: alive

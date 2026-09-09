@@ -267,6 +267,19 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.10 游戏：生锈小湖：白门/ Rusty Lake:The White Door。斗鱼回放标题：cube escape新作解密
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/10/c554242cfd2a4c5b782958190d7d30d6.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1SJ411H7Uf
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: 斗鱼-女流66_2020-01-10  cubeescape新作解密day2  01
+            duration_sec: 13572
+          - page: 2
+            title: 斗鱼-女流66_2020-01-10  cubeescape新作解密day2  02
+            duration_sec: 1669
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/Aox276km3LoMVz8Z
         kind: replay
         status: alive
@@ -408,6 +421,22 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.18 游戏：疑案追声-黑面观音/ Unheard DLC。斗鱼回放标题：继续听声断案！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/19/2b87a56882ec86e660c96c26e73da15a.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1T7411q7tL
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: 斗鱼-女流66_2020-01-18  继续听声断案 01
+            duration_sec: 6032
+          - page: 2
+            title: 斗鱼-女流66_2020-01-18  继续听声断案 02
+            duration_sec: 6358
+          - page: 3
+            title: 斗鱼-女流66_2020-01-18  继续听声断案 03
+            duration_sec: 4403
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/ZB5Kv95B1nKva93x
         kind: replay
         status: alive
@@ -472,6 +501,16 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.24 除夕直播。斗鱼回放标题：春节快乐，年后见啦
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/26/23fcd14c7b8e66e882e0578ddc348f66.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Q7411r7dJ
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 1
+        part_details:
+          - page: 1
+            title: 斗鱼-女流66_2020-01-24  春节快乐年后见啦
+            duration_sec: 4461
+        note: 2026-09-09 核对投稿标题中的直播日期、内容及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/EO0XvNNryoRvDrBd
         kind: replay
         status: alive
