@@ -145,3 +145,22 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-08-live-01
+  type: live
+  date: "2026-09-08"
+  title: "一起看塞尔达传说40周年纪念直面会 时之笛来了 继续和壮壮一起玩 轨道双子星"
+  platform: douyin
+  duration_min: 184
+  games:
+    - orbitals
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/3f674af3be45085792350f446b595ecdfbf0a455.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1DXYE6sEh6"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
