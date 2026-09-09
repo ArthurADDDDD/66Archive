@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
+import { flashLandedTarget, scrollToLandingTarget } from '@/lib/landing-flash'
+import { useCopyBlock } from './LiveContentProvider'
 import { EntryGrid } from './EntryGrid'
 import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
@@ -37,6 +39,8 @@ export function SeriesEpisodes({
   unit?: string
 }) {
   const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
+  // 列表上方那行提示走后台文案（见 site-copy.ts 的 series-detail-*-hint）。
+  const hint = useCopyBlock('pages', unit === '场' ? 'series-detail-sessions-hint' : 'series-detail-episodes-hint').lede
   const { year, order } = useEntryFilter()
   const { view, setView, compact } = useEntryView()
   // 网格一次只展开一条：整行插入的详情面板很高，同时开两块就没法对照了。
@@ -182,6 +186,39 @@ export function SeriesEpisodes({
   const loadMore = () =>
     setBatch({ key: batchKey, count: Math.min(loadedCount + EPISODES_BATCH_SIZE, visible.length) })
 
+  /**
+   * 随机一期。
+   *
+   * 「档案里有几百期，我想随便看一期」在这里之前只能自己滚——年份筛选和正倒序
+   * 都要求先知道想看哪一段，而这个诉求恰恰是「不知道」。
+   *
+   * 落点复用右侧年月轨道那套跳转：补批次 → 滚过去 → 目标自己亮一下再退场
+   * （`lib/landing-flash.ts`）。同一个页面上「跳到某一条」只该有一种表现。
+   * 抽到的一期若还没渲染，`revealTarget` 会把它所在的批次补出来，
+   * 高亮那边也会等目标进 DOM（最多 3 秒）再点亮，两条路自己会合上。
+   *
+   * 抽样范围是**当前筛选结果**而不是全部期数：用户先点了 2019 年，再点随机，
+   * 期待的是「2019 年里随便一期」。
+   */
+  const lastRandomRef = useRef<string | null>(null)
+  const jumpToRandom = () => {
+    if (visible.length === 0) return
+    // 连点两下不该停在同一期：把上一次抽中的那条从池子里去掉再抽。
+    const lastIndex = visible.findIndex((entry) => entry.id === lastRandomRef.current)
+    const pool = lastIndex >= 0 && visible.length > 1 ? visible.length - 1 : visible.length
+    let index = Math.floor(Math.random() * pool)
+    if (lastIndex >= 0 && visible.length > 1 && index >= lastIndex) index += 1
+    const entry = visible[index]
+    if (!entry) return
+    lastRandomRef.current = entry.id
+    const targetId = `entry-${entry.id}`
+    // 地址栏跟着走：随机到喜欢的一期可以直接把链接发出去。
+    window.history.replaceState(null, '', `#${targetId}`)
+    // 已经在 DOM 里就自己平滑滚过去；还没渲染则交给 revealTarget 补批次后对齐。
+    if (!scrollToLandingTarget(targetId)) revealTarget(targetId)
+    flashLandedTarget(targetId, color)
+  }
+
   const toggle = (id: string) =>
     setExpanded((current) => {
       const next = new Set(current)
@@ -198,7 +235,7 @@ export function SeriesEpisodes({
     <div>
       <div className="flex flex-wrap items-end justify-between gap-3">
         <p className="text-meta text-faint">
-          {unit === '场' ? '点击记录' : '点击期数'}展开原平台来源、分段和标签信息
+          {hint}
           {year === null ? (
             <span className="ml-2 tnum">· {count} {unit}</span>
           ) : (
@@ -212,6 +249,17 @@ export function SeriesEpisodes({
           )}
         </p>
         <div className="flex flex-wrap items-center gap-2">
+          {visible.length > 1 && (
+            <button
+              type="button"
+              onClick={jumpToRandom}
+              aria-controls="series-episode-list"
+              className="ui-press rounded-full border border-line bg-surface/30 px-4 py-2 text-meta text-muted transition-colors hover:bg-surface hover:text-ink sm:px-3 sm:py-1.5"
+            >
+              <span aria-hidden className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full align-middle" style={{ background: color }} />
+              随机一{unit}
+            </button>
+          )}
           <ClearYearButton />
           <OrderToggle />
           <EntryViewToggle view={view} setView={setView} compact={compact} />
