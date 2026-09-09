@@ -491,6 +491,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.30 游戏：生锈小湖：轮回的房间/ Rusty Lake：Samsara Room。斗鱼回放标题：samsara room锈湖新作
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/04/9ae7b9e3ea71dfa0edb1911adc889632.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1fQ4y1P7UN
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: P1-2020.4.30-游戏前聊10块钱的
+            duration_sec: 2539
+          - page: 2
+            title: P2-2020.4.30-游戏前聊10块钱的
+            duration_sec: 2540
+          - page: 3
+            title: P3-2020.4.30-Samsara Room
+            duration_sec: 2697
+          - page: 4
+            title: P4-2020.4.30-Samsara Room
+            duration_sec: 2703
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/qJgOWx2yDoX7kVzL
         kind: replay
         status: alive

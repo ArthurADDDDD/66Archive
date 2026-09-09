@@ -240,6 +240,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.8 游戏：纸片马里奥：折纸国王。斗鱼回放标题：纸片马里奥全收集
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/08/08/be64fd4a67e931893a34b2d350c78187.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1ft4y1D75B
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: P1-2020.8.8-游戏前聊10块钱的
+            duration_sec: 896
+          - page: 2
+            title: P2-2020.8.8-纸片马里奥全收集
+            duration_sec: 3802
+          - page: 3
+            title: P3-2020.8.8-纸片马里奥全收集
+            duration_sec: 3803
+          - page: 4
+            title: P4-2020.8.8-纸片马里奥全收集
+            duration_sec: 3801
+          - page: 5
+            title: P5-2020.8.8-纸片马里奥全收集
+            duration_sec: 3802
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/8KxjMdo9onQ7VLwb
         kind: replay
         status: alive
@@ -511,10 +533,10 @@
     games: [there-is-no-game]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：8.19 游戏：这里没有游戏:错误维度/ There Is No Game:Wrong Dimension。斗鱼回放标题：thereis no game；补入 B 站「秘密录像屋」BV1aC4y1t7yx
     sources:
-      - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
+      - url: https://www.bilibili.com/video/BV1aC4y1t7yx
         kind: replay
         status: alive
-      - url: https://www.bilibili.com/video/BV1aC4y1t7yx
+      - url: https://v.douyu.com/show/a2JEMJjbba2MNxml
         kind: replay
         status: alive
     contributed_by: data-agent

@@ -585,6 +585,25 @@
     tags: [心灵砒霜]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2018/10/21/3dae378da356383addb7265e9a81acb9.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1St411o7Pm
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: P1.1-2018.10.21-砒霜前聊10块钱的
+            duration_sec: 2937
+          - page: 2
+            title: P1.2-2018.10.21-心灵砒霜
+            duration_sec: 7587
+          - page: 3
+            title: P1-2018.10.21-砒霜前聊10块钱的-弹幕版
+            duration_sec: 2937
+          - page: 4
+            title: P2.2-2018.10.21-心灵砒霜-弹幕版
+            duration_sec: 7594
+        note: 2026-09-09 核对投稿及分P元数据。P1–P2为纯净版（2:55:24），P3–P4为弹幕版（2:55:31），两版不累计为直播时长；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/NVm0WKpQE2PvJeBP
         kind: replay
         status: alive

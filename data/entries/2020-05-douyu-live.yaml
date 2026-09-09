@@ -8,6 +8,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.1 游戏：捣蛋大作战 /Rascal Fight。斗鱼回放标题：捣蛋大作战，多人休闲
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/01/a69e7824e3b9f09884dfc47a0f9d99ab.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1SQ4y1N7u8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: P1-2020.5.1-游戏前聊10块钱的
+            duration_sec: 2674
+          - page: 2
+            title: P2-2020.5.1-捣蛋大作战
+            duration_sec: 3101
+          - page: 3
+            title: P3-2020.5.1-捣蛋大作战
+            duration_sec: 3105
+          - page: 4
+            title: P4-2020.5.1-捣蛋大作战
+            duration_sec: 3102
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/JmbBMkDydROW40XA
         kind: replay
         status: alive
@@ -74,6 +93,37 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.5 游戏：转变/ Change。斗鱼回放标题：流浪的人儿想念谁
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/06/1442089d182304a502ab9ec916521889.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1oQ4y1N7fJ
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 8
+        part_details:
+          - page: 1
+            title: P1-2020.5.5-游戏前聊10块钱的
+            duration_sec: 2077
+          - page: 2
+            title: P2-2020.5.5-游戏前聊10块钱的
+            duration_sec: 2078
+          - page: 3
+            title: P3-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3091
+          - page: 4
+            title: P4-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3498
+          - page: 5
+            title: P5-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3499
+          - page: 6
+            title: P6-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3503
+          - page: 7
+            title: P7-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3502
+          - page: 8
+            title: P8-2020.5.5- 改变无家可归生存体验
+            duration_sec: 3496
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/Aox276k3QGxMVz8Z
         kind: replay
         status: alive
@@ -89,10 +139,35 @@
     games: [a-dance-of-fire-and-ice]
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.6 游戏：冰与火之舞/ A Dance of FireandIce。斗鱼回放标题：你们都玩什么游戏呢 156277；补入 B 站「秘密录像屋」BV1fK4y1b7dd
     sources:
-      - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
+      - url: https://www.bilibili.com/video/BV1Nt4y117iY
         kind: replay
         status: alive
+        account: bili-fan-record-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: P1-2020.5.6-游戏前聊10块钱的
+            duration_sec: 3854
+          - page: 2
+            title: P2-2020.5.6-游戏前聊10块钱的
+            duration_sec: 3861
+          - page: 3
+            title: P3-2020.5.6-游戏前聊10块钱的
+            duration_sec: 3859
+          - page: 4
+            title: P4-2020.5.6-冰与火之舞
+            duration_sec: 2811
+          - page: 5
+            title: P5-2020.5.6-冰与火之舞
+            duration_sec: 2812
+          - page: 6
+            title: P6-2020.5.6-冰与火之舞
+            duration_sec: 2814
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://www.bilibili.com/video/BV1fK4y1b7dd
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/yVmjvB42EVRMqkNb
         kind: replay
         status: alive
     contributed_by: data-agent
@@ -469,6 +544,31 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.20 游戏：云城朋克/ Cloudpunk。斗鱼回放标题：未来世界的司机cloudpunk
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/20/ce39d9594f8bc19c1170d3236a3a086c.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Vk4y1r7MR
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: P1-2020.5.20-佩奇的音乐时间
+            duration_sec: 2031
+          - page: 2
+            title: P2-2020.5.20-云端朋克
+            duration_sec: 3535
+          - page: 3
+            title: P3-2020.5.20-云端朋克
+            duration_sec: 3535
+          - page: 4
+            title: P4-2020.5.20-云端朋克
+            duration_sec: 3537
+          - page: 5
+            title: P5-2020.5.20-云端朋克
+            duration_sec: 3534
+          - page: 6
+            title: P6-2020.5.20-云端朋克
+            duration_sec: 3536
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/NbwE7ZGmkQPMn5Zz
         kind: replay
         status: alive
@@ -547,6 +647,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.23 游戏：步行者/ The Pedestrian。斗鱼回放标题：The Pedestrian动动脑解密啦
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/23/86f32864f22d653eb244bfc5327e1b34.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Az4y197s8
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: P1-2020.5.23-游戏前聊10块钱的
+            duration_sec: 4201
+          - page: 2
+            title: P2-2020.5.23-The Pedestrian
+            duration_sec: 3793
+          - page: 3
+            title: P3-2020.5.23-The Pedestrian
+            duration_sec: 3791
+          - page: 4
+            title: P4-2020.5.23-The Pedestrian
+            duration_sec: 3792
+          - page: 5
+            title: P5-2020.5.23-The Pedestrian
+            duration_sec: 3793
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/NbwE7ZGqE10Mn5Zz
         kind: replay
         status: alive

@@ -299,6 +299,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.15 游戏：世界游戏大全51款。斗鱼回放标题：今天就是要玩转！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/07/16/12f7db3fdd00d89a3edbd5bef56ddb94.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1ok4y1q7fU
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: P1-2020.7.15-世界游戏大全51
+            duration_sec: 4433
+          - page: 2
+            title: P2-2020.7.15-世界游戏大全51
+            duration_sec: 4434
+          - page: 3
+            title: P3-2020.7.15-世界游戏大全51
+            duration_sec: 4435
+          - page: 4
+            title: P4-2020.7.15-世界游戏大全51
+            duration_sec: 4434
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/r90XWgrwbLNMgk25
         kind: replay
         status: alive
@@ -669,6 +688,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：7.28 游戏：纸片马里奥：折纸国王龙之谷2。斗鱼回放标题：纸片马里奥玩一下
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/07/28/42d9195814bea1ecce311d43c52f5dfa.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1X64y1F7ch
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: P1-2020.7.28-纸片马里奥
+            duration_sec: 3600
+          - page: 2
+            title: P2-2020.7.28-纸片马里奥
+            duration_sec: 3602
+          - page: 3
+            title: P3-2020.7.28-纸片马里奥
+            duration_sec: 973
+          - page: 4
+            title: P4-2020.7.28-龙之谷
+            duration_sec: 3557
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/a2JEMJjxwYoMNxml
         kind: replay
         status: alive

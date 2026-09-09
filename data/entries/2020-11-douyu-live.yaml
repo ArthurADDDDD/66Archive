@@ -548,6 +548,28 @@
       Sakuna Of Rice and Ruin。斗鱼回放标题：种地种地66种地
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/11/21/4992361d05b3ef40bff1ad4bc752e870.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Yy4y167QE
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: P1-2020.11.19-天穗之咲稻姬
+            duration_sec: 4144
+          - page: 2
+            title: P2-2020.11.19-天穗之咲稻姬
+            duration_sec: 4145
+          - page: 3
+            title: P3-2020.11.19-天穗之咲稻姬
+            duration_sec: 4144
+          - page: 4
+            title: P4-2020.11.19-天穗之咲稻姬
+            duration_sec: 4144
+          - page: 5
+            title: P5-2020.11.19-天穗之咲稻姬
+            duration_sec: 4145
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/1LDR7QG6XlgWJzx8
         kind: replay
         status: alive

@@ -429,6 +429,40 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.17 游戏：仁王2。斗鱼回放标题：仁王2飒女一枚
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/03/18/e82ceb9bea600df38a5dc7693edf3a77.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1F7411d7Ed
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 9
+        part_details:
+          - page: 1
+            title: P1-2020.03.17-游戏前聊10块钱的
+            duration_sec: 2144
+          - page: 2
+            title: P2-2020.03.17-游戏前聊10块钱的
+            duration_sec: 2149
+          - page: 3
+            title: P3-2020.03.17-游戏前聊10块钱的
+            duration_sec: 2146
+          - page: 4
+            title: P4-2020.3.17-仁王2
+            duration_sec: 2148
+          - page: 5
+            title: P5-2020.3.17-仁王2
+            duration_sec: 2491
+          - page: 6
+            title: P6-2020.3.17-仁王2
+            duration_sec: 2490
+          - page: 7
+            title: P7-2020.3.17-仁王2
+            duration_sec: 2509
+          - page: 8
+            title: P8-2020.3.17-仁王2
+            duration_sec: 2494
+          - page: 9
+            title: P9-2020.3.17-仁王2
+            duration_sec: 2496
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/NVm0WKn2a18MJeBP
         kind: replay
         status: alive
@@ -780,6 +814,37 @@
       Fella。斗鱼回放标题：踩高跷stilt fella~~
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/01/0024a7ebc2f18b1884ee6af5a4780e1a.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV13z411b7gz
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+        parts: 8
+        part_details:
+          - page: 1
+            title: P1-2020.03.31-游戏前聊10块钱的
+            duration_sec: 2227
+          - page: 2
+            title: P2-2020.03.31-游戏前聊10块钱的
+            duration_sec: 2228
+          - page: 3
+            title: P3-2020.03.31-游戏前聊10块钱的
+            duration_sec: 2229
+          - page: 4
+            title: P4-2020.03.31-游戏前聊10块钱的
+            duration_sec: 2231
+          - page: 5
+            title: P5-2020.3.31-踩高跷stilt fella
+            duration_sec: 2210
+          - page: 6
+            title: P6-2020.3.31-踩高跷stilt fella
+            duration_sec: 2209
+          - page: 7
+            title: P7-2020.3.31-踩高跷stilt fella
+            duration_sec: 2212
+          - page: 8
+            title: P8-2020.3.31-踩高跷stilt fella
+            duration_sec: 2212
+        note: 2026-09-09 核对投稿日期、内容标题及分P元数据；未逐P验证播放与完整性。
       - url: https://v.douyu.com/show/ZB5Kv95RJXbva93x
         kind: replay
         status: alive
