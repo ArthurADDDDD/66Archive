@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { fetchBakedPageCopy } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 import { encodeArchiveEntry } from '@/lib/archive-payload'
 import { notFound } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
@@ -6,8 +8,9 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { ActivityStrip } from '@/components/ActivityStrip'
 import { RelatedRail } from '@/components/RelatedRail'
 import { SeriesEpisodes } from '@/components/SeriesEpisodes'
+import { SeriesKindEyebrow, SeriesNote, SeriesSectionEyebrow } from '@/components/SeriesDetailCopy'
 import { EntryFilterProvider, YearChips } from '@/components/EntryFilters'
-import { Eyebrow, SiteFooter } from '@/components/primitives'
+import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildSeries } from '@/lib/series'
 import { formatDuration } from '@/lib/ui'
@@ -29,6 +32,22 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 /**
+ * 这一页会渲染的后台文案：分类小标、两个区块小标、列表提示与一起See 的归档说明。
+ * 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell），
+ * 所以这里把自己那几块补回来——站内有两千多个页面，整份烤进根 layout 的代价见那边的注释。
+ */
+const SERIES_DETAIL_COPY_IDS = [
+  'series-detail-kind-live',
+  'series-detail-kind-themed',
+  'series-detail-kind-video',
+  'series-detail-years',
+  'series-detail-episodes',
+  'series-detail-episodes-hint',
+  'series-detail-sessions-hint',
+  'series-detail-together-see',
+] as const
+
+/**
  * 节目详情：固定结构 = Hero → 代表性一句 → 活动纹理 → 年份 → 全部期数（档案列表）→ 相关。
  * 心灵砒霜的「夜 / 周日 / 长期陪伴」气质靠深色区块 + 字排 + 留白完成，不做任何拟物。
  */
@@ -38,6 +57,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const def = ds.series.get(id)
   if (!def) notFound()
 
+  const bakedCopy = await fetchBakedPageCopy(SERIES_DETAIL_COPY_IDS)
   const timeline = toTimelineEntries(ds)
   const s = buildSeries(ds, timeline, id, def.name, def.description ?? '')
   const isPishuang = id === 'xinling-pishuang'
@@ -75,77 +95,75 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   )
 
   return (
-    <main className={`ui-page-in min-h-screen overflow-x-clip ${dark ? 'bg-[#0C0E15]' : ''}`}>
-      <MobileQuickNav active="series" />
-      <BackToTop />
-      <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
-        <SiteNav active="series" />
-        <Link prefetch={false} href="/series/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-          ← 全部节目
-        </Link>
-      </header>
+    <LiveCopySeed copy={bakedCopy}>
+      <main className={`ui-page-in min-h-screen overflow-x-clip ${dark ? 'bg-[#0C0E15]' : ''}`}>
+        <MobileQuickNav active="series" />
+        <BackToTop />
+        <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
+          <SiteNav active="series" />
+          <Link prefetch={false} href="/series/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
+            ← 全部节目
+          </Link>
+        </header>
 
-      {/* Hero */}
-      <section className="site-container px-page pb-10 pt-12 sm:pb-14 sm:pt-16">
-        <Eyebrow color={color} dot>
-          {s.category === 'video' ? '视频系列' : s.category === 'themed' ? '主题栏目' : '长期直播节目'}
-        </Eyebrow>
-        <h1 className="measure-hero mt-4 text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
-        <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
-          <span className="text-body text-ink">{s.count} {unit}</span>
-          <span>
-            {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
-          </span>
-          {!isTogetherSee && longest?.duration_min && <span>最长一{unit} {formatDuration(longest.duration_min)}</span>}
-        </div>
-        <p className="measure-body mt-6 text-body text-muted"><KeepDates text={s.description} /></p>
-      </section>
-
-      {/* 代表性一句：第一期标题，原文照录 */}
-      {s.firstTitle && (
-        <section className="site-container px-page pb-10 sm:pb-14">
-          <blockquote className="measure-body border-l-2 pl-5" style={{ borderColor: color }}>
-            <p className="text-h3 font-medium leading-relaxed text-ink">
-              {isTogetherSee ? '目前最早确认的一场' : `第一${unit}`}：「{s.firstTitle}」
-            </p>
-            <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
-          </blockquote>
-        </section>
-      )}
-
-      {/* 年份筛选与正倒序共享一份内存状态，横跨下面两个区块 */}
-      <EntryFilterProvider anchorId="series-episodes" defaultOrder="asc">
-        {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
-        <section className="site-container px-page pb-10 sm:pb-14">
-          <Eyebrow className="text-muted">活跃年份</Eyebrow>
-          <div className="mt-4 w-full">
-            <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
-            <YearChips perYear={s.perYear} color={color} unit={unit} />
+        {/* Hero */}
+        <section className="site-container px-page pb-10 pt-12 sm:pb-14 sm:pt-16">
+          <SeriesKindEyebrow kind={s.category === 'video' ? 'video' : s.category === 'themed' ? 'themed' : 'live'} color={color} />
+          <h1 className="measure-hero mt-4 text-h1 font-bold tracking-[-0.01em] text-ink">{s.name}</h1>
+          <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
+            <span className="text-body text-ink">{s.count} {unit}</span>
+            <span>
+              {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
+            </span>
+            {!isTogetherSee && longest?.duration_min && <span>最长一{unit} {formatDuration(longest.duration_min)}</span>}
           </div>
+          <p className="measure-body mt-6 text-body text-muted"><KeepDates text={s.description} /></p>
         </section>
 
-        {/* 全部期数（档案列表，一条不省） */}
-        <section id="series-episodes" className="scroll-mt-6 site-container px-page pb-16 sm:pb-24">
-          <div className="border-b border-line/60 pb-3">
-            <Eyebrow className="text-muted">Episodes · 全部记录</Eyebrow>
-            <h2 className="mt-2 text-h3 font-semibold text-ink">
-              {s.name} · 档案里的 {s.count} {unit}
-            </h2>
-          </div>
-          <div className="mt-3">
-            {isTogetherSee && (
-              <p className="mb-4 max-w-3xl text-meta leading-relaxed text-faint">
-                这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。
+        {/* 代表性一句：第一期标题，原文照录 */}
+        {s.firstTitle && (
+          <section className="site-container px-page pb-10 sm:pb-14">
+            <blockquote className="measure-body border-l-2 pl-5" style={{ borderColor: color }}>
+              <p className="text-h3 font-medium leading-relaxed text-ink">
+                {isTogetherSee ? '目前最早确认的一场' : `第一${unit}`}：「{s.firstTitle}」
               </p>
-            )}
-            <SeriesEpisodes entries={s.entries.map(encodeArchiveEntry)} color={color} count={s.count} unit={unit} />
-          </div>
-        </section>
-      </EntryFilterProvider>
+              <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
+            </blockquote>
+          </section>
+        )}
 
-      <RelatedRail rails={rails} />
+        {/* 年份筛选与正倒序共享一份内存状态，横跨下面两个区块 */}
+        <EntryFilterProvider anchorId="series-episodes" defaultOrder="asc">
+          {/* 活跃年份：统一使用摘要条，不再绘制容易误读的迷你柱状图。 */}
+          <section className="site-container px-page pb-10 sm:pb-14">
+            <SeriesSectionEyebrow pageId="series-detail-years" />
+            <div className="mt-4 w-full">
+              <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
+              <YearChips perYear={s.perYear} color={color} unit={unit} />
+            </div>
+          </section>
 
-      <SiteFooter />
-    </main>
+          {/* 全部期数（档案列表，一条不省） */}
+          <section id="series-episodes" className="scroll-mt-6 site-container px-page pb-16 sm:pb-24">
+            <div className="border-b border-line/60 pb-3">
+              <SeriesSectionEyebrow pageId="series-detail-episodes" />
+              <h2 className="mt-2 text-h3 font-semibold text-ink">
+                {s.name} · 档案里的 {s.count} {unit}
+              </h2>
+            </div>
+            <div className="mt-3">
+              {isTogetherSee && (
+                <SeriesNote pageId="series-detail-together-see" className="mb-4 max-w-3xl text-meta leading-relaxed text-faint" />
+              )}
+              <SeriesEpisodes entries={s.entries.map(encodeArchiveEntry)} color={color} count={s.count} unit={unit} />
+            </div>
+          </section>
+        </EntryFilterProvider>
+
+        <RelatedRail rails={rails} />
+
+        <SiteFooter />
+      </main>
+    </LiveCopySeed>
   )
 }

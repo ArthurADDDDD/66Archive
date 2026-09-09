@@ -178,6 +178,27 @@ export const SITE_COPY: SiteCopy = {
       title: '反复出现，也各有自己的名字。',
       lede: '有些是持续多年的直播节目，有些是一段时期里的主题栏目，也有更早的视频连载。它们留下的不只是期数，还有每个时期固定会等到的内容。',
     },
+    // —— 节目详情页（/series/<id>/）上的固定文字 ——
+    // 每个节目自己的名字与简介是史料，在 `data/series.yaml`（后台「目录维护 · 节目 / 系列」）里改；
+    // 下面这些是那一页的版式文字，原本硬编码在 `src/app/series/[id]/page.tsx`
+    // 和 `SeriesEpisodes` 里，改一个字要改代码、发一次版。收进来之后和数据页那八个提问
+    // 走同一条路：后台可改、保存即生效。
+    // 分类小标三选一，按节目的 category 取；只用 title 字段。
+    { id: 'series-detail-kind-live', eyebrow: '', title: '长期直播节目', lede: '' },
+    { id: 'series-detail-kind-themed', eyebrow: '', title: '主题栏目', lede: '' },
+    { id: 'series-detail-kind-video', eyebrow: '', title: '视频系列', lede: '' },
+    { id: 'series-detail-years', eyebrow: '活跃年份', title: '', lede: '' },
+    { id: 'series-detail-episodes', eyebrow: 'Episodes · 全部记录', title: '', lede: '' },
+    // 期数列表上方那行提示。按整场直播归档的节目（一起See）量词是「场」，
+    // 两句话分别可改，不做占位符替换——占位符是给程序看的，不是给写文案的人看的。
+    { id: 'series-detail-episodes-hint', eyebrow: '', title: '', lede: '点击期数展开原平台来源、分段和标签信息' },
+    { id: 'series-detail-sessions-hint', eyebrow: '', title: '', lede: '点击记录展开原平台来源、分段和标签信息' },
+    {
+      id: 'series-detail-together-see',
+      eyebrow: '',
+      title: '',
+      lede: '这里按整场直播归档；一起 See 有时只是其中一个环节，所以条目仍保留当晚直播的原始标题。展开后可以查看已保存的分段信息。',
+    },
     {
       id: 'stats',
       eyebrow: 'Stats · 数据里的发现',
