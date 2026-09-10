@@ -171,10 +171,7 @@
   title: "一起看任天堂9月游戏直面会 星之卡比新作 轨道双子星 通关完结 鸣潮 抽清宵池子"
   platform: douyin
   duration_min: 182
-  games:
-    - kirby-star-allies
-    - orbitals
-    - wuthering-waves
+  games: [orbitals, wuthering-waves]
   tags:
     - 弹幕版
   confidence: medium
