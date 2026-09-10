@@ -13,82 +13,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Verify 38 discovered BV candidates against video metadata
+      - name: Capture raw Bilibili search HTML
         shell: bash
         run: |
           python - <<'PY'
-          import json, time, urllib.parse, urllib.request, urllib.error
-
-          UID = 8290691
-          PREFIX = 'DOUYU_156277_'
-          UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
-          BVS = '''
-          BV1244y1W7WZ BV12j411T7Fp BV13v4y1c71Z BV15Y4y1R7QS BV19w411Q7x8
-          BV1C84y1d77R BV1CP411k74s BV1CU4y127my BV1Ce4y1K7d3 BV1D24y1T7pY
-          BV1Du4y167jn BV1Eh41177yC BV1GCoWBhE46 BV1Gs4y1p7Jp BV1JnqrB6ExD
-          BV1Ju411K7Um BV1La41157Lw BV1Rs4y117hB BV1WA4y1Z71k BV1Wc411H7qT
-          BV1ZW4y1J79r BV1Za4y1f7Xw BV1bZ421M7pR BV1dT411u7sM BV1di4y1U7hx
-          BV1ey4y1L74z BV1hs411K7EF BV1iU4y1177s BV1ka411U72R BV1kg4y1d7wE
-          BV1mk4y147eQ BV1nG411b7eQ BV1nr4y1K7QW BV1pF411S7pW BV1q7421o75p
-          BV1r54y1p7o9 BV1sc411Z7Nt BV1yY4y1S7eH
-          '''.split()
-
-          def get(url):
-              req = urllib.request.Request(url, headers={
-                  'User-Agent': UA,
-                  'Referer': 'https://www.bilibili.com/',
-                  'Accept': 'application/json,text/plain,*/*',
-                  'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-              })
-              with urllib.request.urlopen(req, timeout=10) as r:
-                  return r.status, r.read().decode('utf-8', 'replace')
-
-          verified=[]
-          inspected=[]
-          errors=[]
-          for bvid in BVS:
-              url='https://api.bilibili.com/x/web-interface/view?'+urllib.parse.urlencode({'bvid':bvid})
-              try:
-                  status,body=get(url)
-                  obj=json.loads(body)
-                  d=obj.get('data') or {}
-                  owner=d.get('owner') or {}
-                  rec={
-                      'bvid':d.get('bvid') or bvid,
-                      'title':d.get('title'),
-                      'owner_mid':owner.get('mid'),
-                      'owner_name':owner.get('name'),
-                      'duration_sec':d.get('duration'),
-                      'pubdate':d.get('pubdate'),
-                      'videos':d.get('videos'),
-                      'view':((d.get('stat') or {}).get('view') if isinstance(d.get('stat'),dict) else None),
-                      'code':obj.get('code'),
-                  }
-                  inspected.append(rec)
-                  if owner.get('mid')==UID and str(d.get('title') or '').startswith(PREFIX):
-                      verified.append(rec)
-              except Exception as e:
-                  errors.append({'bvid':bvid,'error':repr(e)})
-              time.sleep(0.25)
-
-          verified.sort(key=lambda x:(x.get('title') or '',x.get('bvid') or ''))
-          result={
-              'uid':UID,
-              'candidate_count':len(BVS),
-              'inspected_count':len(inspected),
-              'verified_count':len(verified),
-              'verified':verified,
-              'errors':errors,
-          }
-          with open('bili-8290691-verified-38.json','w',encoding='utf-8') as f:
-              json.dump(result,f,ensure_ascii=False,indent=2)
-          print(json.dumps(result,ensure_ascii=False,indent=2))
+          import json, re, urllib.parse, urllib.request
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
+          meta=[]
+          for page in (1,2,3):
+              url='https://search.bilibili.com/all?'+urllib.parse.urlencode({'keyword':'156277','page':page})
+              req=urllib.request.Request(url,headers={'User-Agent':UA,'Referer':'https://www.bilibili.com/','Accept-Language':'zh-CN,zh;q=0.9'})
+              with urllib.request.urlopen(req,timeout=20) as r:
+                  text=r.read().decode('utf-8','replace')
+              open(f'bili-search-156277-p{page}.html','w',encoding='utf-8').write(text)
+              meta.append({'page':page,'bytes':len(text),'titles':sorted(set(re.findall(r'DOUYU_156277_[0-9_]+(?:_bilibili)?',text))),'bvs':sorted(set(re.findall(r'BV[0-9A-Za-z]{10}',text)))})
+          open('meta.json','w',encoding='utf-8').write(json.dumps(meta,ensure_ascii=False,indent=2))
+          print(json.dumps(meta,ensure_ascii=False,indent=2))
           PY
 
-      - name: Upload catalog output
+      - name: Upload raw search pages
         uses: actions/upload-artifact@v7
         with:
-          name: bili-8290691-verified-38
-          path: bili-8290691-verified-38.json
+          name: bili-8290691-search-html
+          path: |
+            bili-search-156277-p1.html
+            bili-search-156277-p2.html
+            bili-search-156277-p3.html
+            meta.json
           if-no-files-found: error
           retention-days: 7
