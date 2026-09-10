@@ -1,4 +1,4 @@
-name: Research priority 8290691 candidates
+name: Research priority 8290691 candidates stage2
 
 on:
   push:
@@ -13,117 +13,96 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Probe Bilibili video metadata comments and danmaku
+      - name: Probe Bilibili player endpoints
         shell: bash
         run: |
           python - <<'PY'
-          import json, time, urllib.request, urllib.parse, gzip, html, re
+          import json, time, urllib.request, urllib.parse, gzip, re, html
 
-          BVIDS = [
-            'BV1624y1k7JN', 'BV1nG411T7KG',
-            'BV1GR4y1C76g', 'BV17V4y1P78U',
-            'BV1tW4y1a7mn', 'BV16d4y1T7Ma',
-            'BV11G4y1p7xy', 'BV1BP411V7AX',
-          ]
+          BVIDS=['BV1624y1k7JN','BV1nG411T7KG','BV1GR4y1C76g','BV17V4y1P78U','BV1tW4y1a7mn','BV16d4y1T7Ma','BV11G4y1p7xy','BV1BP411V7AX']
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
           HDR={'User-Agent':UA,'Referer':'https://www.bilibili.com/','Accept-Language':'zh-CN,zh;q=0.9'}
 
-          def get(url, binary=False):
+          def get(url,binary=False):
               req=urllib.request.Request(url,headers=HDR)
               try:
                   with urllib.request.urlopen(req,timeout=20) as r:
                       raw=r.read()
-                      enc=(r.headers.get('Content-Encoding') or '').lower()
-                      if enc=='gzip': raw=gzip.decompress(raw)
-                      if binary: return {'ok':True,'status':r.status,'raw':raw}
-                      text=raw.decode('utf-8','replace')
-                      return {'ok':True,'status':r.status,'text':text}
+                      if (r.headers.get('Content-Encoding') or '').lower()=='gzip': raw=gzip.decompress(raw)
+                      return {'ok':True,'status':r.status,'raw':raw} if binary else {'ok':True,'status':r.status,'text':raw.decode('utf-8','replace')}
               except Exception as e:
                   return {'ok':False,'error':repr(e)}
+
+          def jget(url):
+              r=get(url)
+              if not r.get('ok'): return {'_http':r}
+              try: return json.loads(r['text'])
+              except Exception as e: return {'_parse_error':repr(e),'sample':r['text'][:1000]}
 
           out=[]
           for bv in BVIDS:
               item={'bvid':bv}
-              view=get('https://api.bilibili.com/x/web-interface/view?'+urllib.parse.urlencode({'bvid':bv}))
-              item['view_raw_status']={k:v for k,v in view.items() if k!='text'}
-              if view.get('ok'):
-                  try:
-                      j=json.loads(view['text']); item['view_code']=j.get('code')
-                      d=j.get('data') or {}
-                      item['view']={
-                        'aid':d.get('aid'),'bvid':d.get('bvid'),'title':d.get('title'),'desc':d.get('desc'),
-                        'duration':d.get('duration'),'pubdate':d.get('pubdate'),'ctime':d.get('ctime'),
-                        'owner':d.get('owner'),'stat':d.get('stat'),'pic':d.get('pic'),
-                        'pages':[{k:p.get(k) for k in ['cid','page','from','part','duration','vid']} for p in (d.get('pages') or [])],
-                      }
-                  except Exception as e: item['view_parse_error']=repr(e); item['view_text']=view['text'][:1000]
-              d=item.get('view') or {}; aid=d.get('aid'); pages=d.get('pages') or []
+              item['archive_stat']=jget('https://api.bilibili.com/x/web-interface/archive/stat?'+urllib.parse.urlencode({'bvid':bv}))
+              pg=jget('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv,'jsonp':'jsonp'}))
+              item['pagelist']=pg
+              pages=(pg.get('data') or []) if isinstance(pg,dict) else []
 
-              tags=get('https://api.bilibili.com/x/tag/archive/tags?'+urllib.parse.urlencode({'bvid':bv}))
-              if tags.get('ok'):
-                  try:
-                      tj=json.loads(tags['text']); item['tags']=[x.get('tag_name') for x in (tj.get('data') or [])]
-                  except Exception as e: item['tags_error']=repr(e)
-
-              if aid:
-                  replies=[]
-                  for pn in (1,2):
-                      ru='https://api.bilibili.com/x/v2/reply?'+urllib.parse.urlencode({'pn':pn,'type':1,'oid':aid,'sort':2})
-                      rr=get(ru)
-                      if not rr.get('ok'):
-                          replies.append({'page':pn,'error':rr.get('error')}); break
-                      try:
-                          rj=json.loads(rr['text']); rd=rj.get('data') or {}
-                          for r in (rd.get('replies') or []):
-                              replies.append({
-                                'page':pn,'rpid':r.get('rpid'),'ctime':r.get('ctime'),'like':r.get('like'),'rcount':r.get('rcount'),
-                                'uname':((r.get('member') or {}).get('uname')),
-                                'message':(((r.get('content') or {}).get('message'))),
-                              })
-                      except Exception as e:
-                          replies.append({'page':pn,'parse_error':repr(e),'sample':rr['text'][:500]}); break
-                      time.sleep(.5)
-                  item['replies']=replies
-
-              # Grab a small danmaku text sample from each page; useful when title/desc are machine-generated.
-              dm=[]
-              for p in pages[:8]:
+              # player v2 is often less aggressively blocked than /view and may expose owner/title-related context.
+              p2=[]
+              for p in pages[:4]:
                   cid=p.get('cid')
                   if not cid: continue
-                  dr=get('https://api.bilibili.com/x/v1/dm/list.so?'+urllib.parse.urlencode({'oid':cid}), binary=True)
-                  if not dr.get('ok'):
-                      dm.append({'cid':cid,'part':p.get('part'),'error':dr.get('error')}); continue
-                  raw=dr['raw']
-                  try:
-                      text=raw.decode('utf-8','replace')
-                      msgs=[html.unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<d\b[^>]*>(.*?)</d>',text,re.S)]
-                      dm.append({'cid':cid,'part':p.get('part'),'count':len(msgs),'sample':msgs[:120]})
-                  except Exception as e:
-                      dm.append({'cid':cid,'part':p.get('part'),'parse_error':repr(e),'bytes':len(raw)})
-                  time.sleep(.35)
-              item['danmaku']=dm
+                  p2j=jget('https://api.bilibili.com/x/player/v2?'+urllib.parse.urlencode({'bvid':bv,'cid':cid}))
+                  p2.append({'cid':cid,'page':p.get('page'),'part':p.get('part'),'duration':p.get('duration'),'player_v2':p2j})
+                  time.sleep(.4)
+              item['player_v2']=p2
 
-              # HTML fallback: preserve snippets around title/description in case APIs are sparse.
-              vh=get('https://www.bilibili.com/video/'+bv+'/')
-              if vh.get('ok'):
-                  txt=vh['text']
-                  item['html_bytes']=len(txt)
-                  # only save textual windows around our machine title and common state keys, not the whole page
-                  wins=[]
-                  for needle in [bv, 'DOUYU_156277_', 'description', 'videoData']:
-                      pos=txt.find(needle)
-                      if pos>=0: wins.append(txt[max(0,pos-500):pos+1500])
-                  item['html_windows']=wins[:4]
+              # Try videoshot/storyboard metadata. No image bytes are downloaded here.
+              shots=[]
+              for p in pages[:3]:
+                  cid=p.get('cid')
+                  if not cid: continue
+                  for params in ({'bvid':bv,'cid':cid,'index':1},{'cid':cid,'index':1}):
+                      sj=jget('https://api.bilibili.com/x/player/videoshot?'+urllib.parse.urlencode(params))
+                      shots.append({'cid':cid,'params':params,'result':sj})
+                      if isinstance(sj,dict) and sj.get('code')==0: break
+                  time.sleep(.3)
+              item['videoshot']=shots
+
+              # Try public playurl metadata at low quality; keep only codec/URL metadata, not video content.
+              play=[]
+              for p in pages[:2]:
+                  cid=p.get('cid')
+                  if not cid: continue
+                  pj=jget('https://api.bilibili.com/x/player/playurl?'+urllib.parse.urlencode({'bvid':bv,'cid':cid,'qn':16,'fnval':0,'fourk':0}))
+                  if isinstance(pj,dict) and isinstance(pj.get('data'),dict):
+                      d=pj['data']
+                      slim={'code':pj.get('code'),'quality':d.get('quality'),'format':d.get('format'),'timelength':d.get('timelength'),'accept_quality':d.get('accept_quality')}
+                      if d.get('durl'):
+                          slim['durl']=[{'length':x.get('length'),'size':x.get('size'),'url':x.get('url'),'backup_url':x.get('backup_url')} for x in d['durl']]
+                      pj=slim
+                  play.append({'cid':cid,'result':pj})
+                  time.sleep(.4)
+              item['playurl']=play
+
+              # Attempt comments only if archive/stat happens to expose aid.
+              aid=None
+              st=item.get('archive_stat')
+              if isinstance(st,dict) and isinstance(st.get('data'),dict): aid=st['data'].get('aid')
+              item['aid_from_stat']=aid
+              if aid:
+                  reps=jget('https://api.bilibili.com/x/v2/reply?'+urllib.parse.urlencode({'pn':1,'type':1,'oid':aid,'sort':2}))
+                  item['replies']=reps
+
+              print('DONE',bv,'pages',len(pages),'aid',aid,'stat_code',item['archive_stat'].get('code') if isinstance(item['archive_stat'],dict) else None)
               out.append(item)
-              print('PROBED',bv,'title=',(item.get('view') or {}).get('title'),'replies=',len(item.get('replies') or []),'pages=',len(pages))
-              time.sleep(1.0)
+              time.sleep(.8)
 
-          with open('priority-bilibili-probe.json','w',encoding='utf-8') as f:
-              json.dump(out,f,ensure_ascii=False,indent=2)
+          with open('priority-bilibili-stage2.json','w',encoding='utf-8') as f: json.dump(out,f,ensure_ascii=False,indent=2)
           PY
 
       - uses: actions/upload-artifact@v7
         with:
-          name: priority-bilibili-probe
-          path: priority-bilibili-probe.json
+          name: priority-bilibili-stage2
+          path: priority-bilibili-stage2.json
           retention-days: 7
