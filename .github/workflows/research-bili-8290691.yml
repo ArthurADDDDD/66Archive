@@ -1,4 +1,4 @@
-name: Research all 2021-2022 live entries
+name: Research priority 8290691 candidates
 
 on:
   push:
@@ -11,70 +11,119 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v5
-        with:
-          ref: main
-
-      - name: Extract all 2021-2022 live entries and source coverage
+      - name: Probe Bilibili video metadata comments and danmaku
         shell: bash
         run: |
-          python -m pip install --quiet pyyaml
           python - <<'PY'
-          import csv, glob, json, urllib.parse, yaml
+          import json, time, urllib.request, urllib.parse, gzip, html, re
 
-          def host(url):
+          BVIDS = [
+            'BV1624y1k7JN', 'BV1nG411T7KG',
+            'BV1GR4y1C76g', 'BV17V4y1P78U',
+            'BV1tW4y1a7mn', 'BV16d4y1T7Ma',
+            'BV11G4y1p7xy', 'BV1BP411V7AX',
+          ]
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
+          HDR={'User-Agent':UA,'Referer':'https://www.bilibili.com/','Accept-Language':'zh-CN,zh;q=0.9'}
+
+          def get(url, binary=False):
+              req=urllib.request.Request(url,headers=HDR)
               try:
-                  return (urllib.parse.urlparse(str(url)).hostname or '').lower()
-              except Exception:
-                  return ''
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      raw=r.read()
+                      enc=(r.headers.get('Content-Encoding') or '').lower()
+                      if enc=='gzip': raw=gzip.decompress(raw)
+                      if binary: return {'ok':True,'status':r.status,'raw':raw}
+                      text=raw.decode('utf-8','replace')
+                      return {'ok':True,'status':r.status,'text':text}
+              except Exception as e:
+                  return {'ok':False,'error':repr(e)}
 
-          rows=[]
-          for path in glob.glob('data/entries/*.yaml'):
-              with open(path,encoding='utf-8') as f:
-                  obj=yaml.safe_load(f)
-              if isinstance(obj,dict):
-                  items=obj.get('entries') or obj.get('items') or []
-              elif isinstance(obj,list):
-                  items=obj
-              else:
-                  continue
-              for e in items:
-                  if not isinstance(e,dict) or e.get('type')!='live':
-                      continue
-                  date=str(e.get('date') or '')
-                  if not (date.startswith('2021-') or date.startswith('2022-')):
-                      continue
-                  src=e.get('sources') or []
-                  urls=[s.get('url') for s in src if isinstance(s,dict) and s.get('url')]
-                  hosts=[host(u) for u in urls]
-                  rows.append({
-                      'entry_id':e.get('id'),
-                      'date':date,
-                      'title':e.get('title'),
-                      'duration_min':e.get('duration_min'),
-                      'source_count':len(urls),
-                      'bilibili_count':sum(h=='bilibili.com' or h.endswith('.bilibili.com') for h in hosts),
-                      'acfun_count':sum(h=='acfun.cn' or h.endswith('.acfun.cn') for h in hosts),
-                      'douyu_count':sum(h in {'douyu.com','douyu.tv'} or h.endswith('.douyu.com') or h.endswith('.douyu.tv') for h in hosts),
-                      'non_douyu_count':sum(not (h in {'douyu.com','douyu.tv'} or h.endswith('.douyu.com') or h.endswith('.douyu.tv')) for h in hosts),
-                      'urls':' | '.join(urls),
-                      'file':path,
-                  })
-          rows.sort(key=lambda r:(r['date'],r['entry_id'] or ''))
-          fields=['entry_id','date','title','duration_min','source_count','bilibili_count','acfun_count','douyu_count','non_douyu_count','urls','file']
-          with open('all-live-entries-2021-2022.csv','w',encoding='utf-8-sig',newline='') as f:
-              w=csv.DictWriter(f,fieldnames=fields)
-              w.writeheader(); w.writerows(rows)
-          print('COUNT',len(rows))
-          print('UNIQUE_DATES',len(set(r['date'] for r in rows)))
-          print('NO_BILIBILI',sum(r['bilibili_count']==0 for r in rows))
-          print('DOUYU_ONLY',sum(r['source_count']>0 and r['non_douyu_count']==0 for r in rows))
+          out=[]
+          for bv in BVIDS:
+              item={'bvid':bv}
+              view=get('https://api.bilibili.com/x/web-interface/view?'+urllib.parse.urlencode({'bvid':bv}))
+              item['view_raw_status']={k:v for k,v in view.items() if k!='text'}
+              if view.get('ok'):
+                  try:
+                      j=json.loads(view['text']); item['view_code']=j.get('code')
+                      d=j.get('data') or {}
+                      item['view']={
+                        'aid':d.get('aid'),'bvid':d.get('bvid'),'title':d.get('title'),'desc':d.get('desc'),
+                        'duration':d.get('duration'),'pubdate':d.get('pubdate'),'ctime':d.get('ctime'),
+                        'owner':d.get('owner'),'stat':d.get('stat'),'pic':d.get('pic'),
+                        'pages':[{k:p.get(k) for k in ['cid','page','from','part','duration','vid']} for p in (d.get('pages') or [])],
+                      }
+                  except Exception as e: item['view_parse_error']=repr(e); item['view_text']=view['text'][:1000]
+              d=item.get('view') or {}; aid=d.get('aid'); pages=d.get('pages') or []
+
+              tags=get('https://api.bilibili.com/x/tag/archive/tags?'+urllib.parse.urlencode({'bvid':bv}))
+              if tags.get('ok'):
+                  try:
+                      tj=json.loads(tags['text']); item['tags']=[x.get('tag_name') for x in (tj.get('data') or [])]
+                  except Exception as e: item['tags_error']=repr(e)
+
+              if aid:
+                  replies=[]
+                  for pn in (1,2):
+                      ru='https://api.bilibili.com/x/v2/reply?'+urllib.parse.urlencode({'pn':pn,'type':1,'oid':aid,'sort':2})
+                      rr=get(ru)
+                      if not rr.get('ok'):
+                          replies.append({'page':pn,'error':rr.get('error')}); break
+                      try:
+                          rj=json.loads(rr['text']); rd=rj.get('data') or {}
+                          for r in (rd.get('replies') or []):
+                              replies.append({
+                                'page':pn,'rpid':r.get('rpid'),'ctime':r.get('ctime'),'like':r.get('like'),'rcount':r.get('rcount'),
+                                'uname':((r.get('member') or {}).get('uname')),
+                                'message':(((r.get('content') or {}).get('message'))),
+                              })
+                      except Exception as e:
+                          replies.append({'page':pn,'parse_error':repr(e),'sample':rr['text'][:500]}); break
+                      time.sleep(.5)
+                  item['replies']=replies
+
+              # Grab a small danmaku text sample from each page; useful when title/desc are machine-generated.
+              dm=[]
+              for p in pages[:8]:
+                  cid=p.get('cid')
+                  if not cid: continue
+                  dr=get('https://api.bilibili.com/x/v1/dm/list.so?'+urllib.parse.urlencode({'oid':cid}), binary=True)
+                  if not dr.get('ok'):
+                      dm.append({'cid':cid,'part':p.get('part'),'error':dr.get('error')}); continue
+                  raw=dr['raw']
+                  try:
+                      text=raw.decode('utf-8','replace')
+                      msgs=[html.unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<d\b[^>]*>(.*?)</d>',text,re.S)]
+                      dm.append({'cid':cid,'part':p.get('part'),'count':len(msgs),'sample':msgs[:120]})
+                  except Exception as e:
+                      dm.append({'cid':cid,'part':p.get('part'),'parse_error':repr(e),'bytes':len(raw)})
+                  time.sleep(.35)
+              item['danmaku']=dm
+
+              # HTML fallback: preserve snippets around title/description in case APIs are sparse.
+              vh=get('https://www.bilibili.com/video/'+bv+'/')
+              if vh.get('ok'):
+                  txt=vh['text']
+                  item['html_bytes']=len(txt)
+                  # only save textual windows around our machine title and common state keys, not the whole page
+                  wins=[]
+                  for needle in [bv, 'DOUYU_156277_', 'description', 'videoData']:
+                      pos=txt.find(needle)
+                      if pos>=0: wins.append(txt[max(0,pos-500):pos+1500])
+                  item['html_windows']=wins[:4]
+              out.append(item)
+              print('PROBED',bv,'title=',(item.get('view') or {}).get('title'),'replies=',len(item.get('replies') or []),'pages=',len(pages))
+              time.sleep(1.0)
+
+          with open('priority-bilibili-probe.json','w',encoding='utf-8') as f:
+              json.dump(out,f,ensure_ascii=False,indent=2)
           PY
 
       - uses: actions/upload-artifact@v7
         with:
-          name: all-live-entries-2021-2022
-          path: all-live-entries-2021-2022.csv
+          name: priority-bilibili-probe
+          path: priority-bilibili-probe.json
           retention-days: 7
