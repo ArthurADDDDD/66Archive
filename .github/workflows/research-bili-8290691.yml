@@ -11,100 +11,76 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
-      - name: Discover and verify candidate BVs
+      - name: Verify 38 discovered BV candidates against video metadata
         shell: bash
         run: |
           python - <<'PY'
-          import json, re, time, urllib.parse, urllib.request, urllib.error
+          import json, time, urllib.parse, urllib.request, urllib.error
 
           UID = 8290691
           PREFIX = 'DOUYU_156277_'
           UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
+          BVS = '''
+          BV1244y1W7WZ BV12j411T7Fp BV13v4y1c71Z BV15Y4y1R7QS BV19w411Q7x8
+          BV1C84y1d77R BV1CP411k74s BV1CU4y127my BV1Ce4y1K7d3 BV1D24y1T7pY
+          BV1Du4y167jn BV1Eh41177yC BV1GCoWBhE46 BV1Gs4y1p7Jp BV1JnqrB6ExD
+          BV1Ju411K7Um BV1La41157Lw BV1Rs4y117hB BV1WA4y1Z71k BV1Wc411H7qT
+          BV1ZW4y1J79r BV1Za4y1f7Xw BV1bZ421M7pR BV1dT411u7sM BV1di4y1U7hx
+          BV1ey4y1L74z BV1hs411K7EF BV1iU4y1177s BV1ka411U72R BV1kg4y1d7wE
+          BV1mk4y147eQ BV1nG411b7eQ BV1nr4y1K7QW BV1pF411S7pW BV1q7421o75p
+          BV1r54y1p7o9 BV1sc411Z7Nt BV1yY4y1S7eH
+          '''.split()
 
-          def get(url, timeout=15):
+          def get(url):
               req = urllib.request.Request(url, headers={
                   'User-Agent': UA,
                   'Referer': 'https://www.bilibili.com/',
                   'Accept': 'application/json,text/plain,*/*',
                   'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
               })
-              with urllib.request.urlopen(req, timeout=timeout) as r:
+              with urllib.request.urlopen(req, timeout=10) as r:
                   return r.status, r.read().decode('utf-8', 'replace')
 
-          candidate_bvs = set()
-          discovered_titles = set()
-          search_pages = []
-
-          # The SSR search source exposes both real BV links and machine titles, but their
-          # DOM association is unstable. Use it only for discovery, never for final mapping.
-          for page in range(1, 21):
-              url = 'https://search.bilibili.com/all?' + urllib.parse.urlencode({'keyword':'156277','page':page})
+          verified=[]
+          inspected=[]
+          errors=[]
+          for bvid in BVS:
+              url='https://api.bilibili.com/x/web-interface/view?'+urllib.parse.urlencode({'bvid':bvid})
               try:
-                  status, text = get(url)
+                  status,body=get(url)
+                  obj=json.loads(body)
+                  d=obj.get('data') or {}
+                  owner=d.get('owner') or {}
+                  rec={
+                      'bvid':d.get('bvid') or bvid,
+                      'title':d.get('title'),
+                      'owner_mid':owner.get('mid'),
+                      'owner_name':owner.get('name'),
+                      'duration_sec':d.get('duration'),
+                      'pubdate':d.get('pubdate'),
+                      'videos':d.get('videos'),
+                      'view':((d.get('stat') or {}).get('view') if isinstance(d.get('stat'),dict) else None),
+                      'code':obj.get('code'),
+                  }
+                  inspected.append(rec)
+                  if owner.get('mid')==UID and str(d.get('title') or '').startswith(PREFIX):
+                      verified.append(rec)
               except Exception as e:
-                  search_pages.append({'page':page,'error':repr(e)})
-                  break
-
-              titles = set(re.findall(r'DOUYU_156277_[0-9_]+(?:_bilibili)?', text))
-              discovered_titles.update(titles)
-              page_candidates = set()
-              for tm in re.finditer(r'DOUYU_156277_[0-9_]+(?:_bilibili)?', text):
-                  # Wide enough to include the surrounding result payload; false positives are
-                  # harmless because every BV is verified against its own video metadata below.
-                  window = text[max(0,tm.start()-12000):min(len(text),tm.end()+12000)]
-                  page_candidates.update(re.findall(r'BV[0-9A-Za-z]{10}', window))
-              candidate_bvs.update(page_candidates)
-              search_pages.append({
-                  'page':page,'status':status,'bytes':len(text),
-                  'titles':len(titles),'candidate_bvs':len(page_candidates)
-              })
-              # Once several trailing pages expose no machine titles, results are exhausted.
-              if page >= 6 and all(x.get('titles',0)==0 for x in search_pages[-3:]):
-                  break
-              time.sleep(0.7)
-
-          verified = []
-          verify_errors = []
-          for i,bvid in enumerate(sorted(candidate_bvs)):
-              url = 'https://api.bilibili.com/x/web-interface/view?' + urllib.parse.urlencode({'bvid':bvid})
-              try:
-                  status, body = get(url, 10)
-                  obj = json.loads(body)
-                  data = obj.get('data') or {}
-                  owner = data.get('owner') or {}
-                  title = str(data.get('title') or '')
-                  if owner.get('mid') == UID and title.startswith(PREFIX):
-                      verified.append({
-                          'bvid': data.get('bvid') or bvid,
-                          'aid': data.get('aid'),
-                          'title': title,
-                          'duration_sec': data.get('duration'),
-                          'pubdate': data.get('pubdate'),
-                          'owner_mid': owner.get('mid'),
-                          'owner_name': owner.get('name'),
-                          'view': ((data.get('stat') or {}).get('view') if isinstance(data.get('stat'),dict) else None),
-                          'videos': data.get('videos'),
-                      })
-              except Exception as e:
-                  verify_errors.append({'bvid':bvid,'error':repr(e)})
-              time.sleep(0.12)
+                  errors.append({'bvid':bvid,'error':repr(e)})
+              time.sleep(0.25)
 
           verified.sort(key=lambda x:(x.get('title') or '',x.get('bvid') or ''))
-          result = {
+          result={
               'uid':UID,
-              'prefix':PREFIX,
-              'discovered_title_count':len(discovered_titles),
-              'discovered_titles':sorted(discovered_titles),
-              'candidate_bv_count':len(candidate_bvs),
+              'candidate_count':len(BVS),
+              'inspected_count':len(inspected),
               'verified_count':len(verified),
               'verified':verified,
-              'verify_error_count':len(verify_errors),
-              'verify_errors':verify_errors[:50],
-              'search_pages':search_pages,
+              'errors':errors,
           }
-          with open('bili-8290691-verified-catalog.json','w',encoding='utf-8') as f:
+          with open('bili-8290691-verified-38.json','w',encoding='utf-8') as f:
               json.dump(result,f,ensure_ascii=False,indent=2)
           print(json.dumps(result,ensure_ascii=False,indent=2))
           PY
@@ -112,7 +88,7 @@ jobs:
       - name: Upload catalog output
         uses: actions/upload-artifact@v7
         with:
-          name: bili-8290691-verified-catalog
-          path: bili-8290691-verified-catalog.json
+          name: bili-8290691-verified-38
+          path: bili-8290691-verified-38.json
           if-no-files-found: error
           retention-days: 7
