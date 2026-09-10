@@ -1,6 +1,7 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -16,10 +17,12 @@ import { BilibiliCoverFrame } from '@/components/BilibiliCoverFrame'
 import { SeriesMontage, type SeriesMontageSample } from '@/components/SeriesMontage'
 import { KeepDates } from '@/components/KeepDates'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/series/' },
-}
+/** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/series/',
+  title: '节目单',
+  description: '心灵砒霜、一起 See、夜话……那些反复出现、也各有名字的节目。',
+})
 
 const SERIES_COLOR = { themed: '#5BC8E8', video: '#E0A244' } as const
 

@@ -8,7 +8,8 @@ import { SiteAnalytics } from '@/components/SiteAnalytics'
 import { RouteIntentPrefetch } from '@/components/RouteIntentPrefetch'
 import { fetchBakedNavShell } from '@/lib/baked-content'
 import { CONTENT_PATHS, EDITORIAL_ROUTES, NARRATIVE_ROUTES } from '@/lib/live-content'
-import { siteOrigin } from '@/lib/site-url'
+import { siteOrigin, siteUrl } from '@/lib/site-url'
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from '@/lib/page-metadata'
 import { IMAGE_PROXY_ORIGIN } from '@/lib/platforms'
 
 const display = Archivo({
@@ -61,12 +62,34 @@ export const metadata: Metadata = {
    * canonical 只能各页自己声明。
    */
   metadataBase: new URL(siteOrigin()),
-  title: '女流编年史',
-  description:
-    '2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。',
+  /**
+   * `template` 让子页只写短名（「录播室」）就能得到「录播室 · 女流编年史」。
+   * `/e/[id]` 的标题自带日期与场次名，也走同一条 template，不要再自己拼站名。
+   */
+  title: { default: SITE_NAME, template: `%s · ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
   icons: {
     icon: '/images/avatars/v1_2015.jpg',
     apple: '/images/avatars/v1_2015.jpg',
+  },
+  /**
+   * 站点级社交卡片兜底。各页用 `pageMetadata()` 覆盖成自己的标题与简介；
+   * 没覆盖到的路由（404 等）至少也有图有字，不会渲染成一条裸链。
+   */
+  openGraph: {
+    type: 'website',
+    siteName: SITE_NAME,
+    locale: 'zh_CN',
+    url: siteUrl('/'),
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 }
 

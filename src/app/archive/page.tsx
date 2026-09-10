@@ -1,14 +1,17 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import { BackToTop } from '@/components/ScrollAffordances'
 import { ArchiveLoader } from '@/components/ArchiveLoader'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildArchiveNav } from '@/lib/archive-nav'
 import { archiveDataUrl } from '@/lib/archive-data-url'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/archive/' },
-}
+/** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/archive/',
+  title: '录播室',
+  description: '按年份和月份翻，或者直接搜标题——找到你记得的那一场。',
+})
 
 /**
  * 档案载荷的首屏预取。

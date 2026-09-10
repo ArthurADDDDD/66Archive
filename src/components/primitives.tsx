@@ -162,8 +162,12 @@ export function SiteFooter() {
     <footer
       className="site-container flex flex-col justify-between gap-4 px-page py-10 text-meta text-faint sm:flex-row"
     >
-      <span>只索引，不搬运 · 所有播放回到原平台</span>
-      <Link prefetch={false} href="/contact/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">
+      <span className="measure-body">
+        粉丝自建的非官方档案，与女流本人及其所属机构无关 · 只索引，不搬运，所有播放回到原平台
+        <br className="hidden sm:block" />
+        如本人或版权方希望调整任何内容，请从这里联系，会尽快处理。
+      </span>
+      <Link prefetch={false} href="/contact/" className="ui-press -my-2 shrink-0 rounded-sm py-2 transition-colors hover:text-live">
         资料纠错与联系 →
       </Link>
     </footer>
