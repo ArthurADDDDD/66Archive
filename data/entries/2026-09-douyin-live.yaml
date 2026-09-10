@@ -164,3 +164,27 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-09-live-01
+  type: live
+  date: "2026-09-09"
+  title: "一起看任天堂9月游戏直面会 星之卡比新作 轨道双子星 通关完结 鸣潮 抽清宵池子"
+  platform: douyin
+  duration_min: 182
+  games:
+    - kirby-star-allies
+    - orbitals
+    - wuthering-waves
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/d3041bae942bbc68f75dd758330a1c780c03209c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1dfY46WE8Z"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1raY86BEXr"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
