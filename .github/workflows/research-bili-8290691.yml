@@ -1,4 +1,4 @@
-name: Research priority 8290691 visual probe
+name: Research backup candidate visuals
 
 on:
   push:
@@ -11,106 +11,45 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
-      - name: Capture storyboards comments and danmaku
+      - name: Capture first frames and storyboard samples
         shell: bash
         run: |
           python - <<'PY'
-          import os, json, urllib.request, urllib.parse, gzip, re, html, time
-
-          ITEMS={
-            'BV1624y1k7JN':690890940,
-            'BV1nG411T7KG':433412555,
-            'BV1GR4y1C76g':348464139,
-            'BV17V4y1P78U':860960558,
-            'BV1tW4y1a7mn':941714223,
-            'BV16d4y1T7Ma':344158872,
-            'BV11G4y1p7xy':816548686,
-            'BV1BP411V7AX':302654598,
-          }
+          import os,json,urllib.request,urllib.parse,time
+          BVIDS=['BV1TP4y1f7Tm','BV1UD4y167aV','BV1XB4y1G7sj','BV1Yt4y1N7P5','BV1wd4y187nf']
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
-          HDR={'User-Agent':UA,'Referer':'https://www.bilibili.com/','Accept-Language':'zh-CN,zh;q=0.9'}
-          os.makedirs('storyboards',exist_ok=True)
-
-          def get(url,binary=False):
-            req=urllib.request.Request(url,headers=HDR)
+          H={'User-Agent':UA,'Referer':'https://www.bilibili.com/'}
+          os.makedirs('frames',exist_ok=True)
+          def get(u,b=False):
             try:
-              with urllib.request.urlopen(req,timeout=25) as r:
-                raw=r.read()
-                if (r.headers.get('Content-Encoding') or '').lower()=='gzip': raw=gzip.decompress(raw)
-                return raw if binary else raw.decode('utf-8','replace')
-            except Exception as e:
-              return None
-
-          out=[]
-          for bv,aid in ITEMS.items():
-            item={'bvid':bv,'aid':aid}
-            pg_raw=get('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv}))
-            pg=json.loads(pg_raw) if pg_raw else {}
-            pages=pg.get('data') or []
-            item['pages']=pages
-            if pages:
-              cid=pages[0]['cid']
-              # storyboard metadata
-              vs_raw=get('https://api.bilibili.com/x/player/videoshot?'+urllib.parse.urlencode({'bvid':bv,'cid':cid,'index':1}))
-              vs=json.loads(vs_raw) if vs_raw else {}
-              vdata=vs.get('data') or {}
-              imgs=vdata.get('image') or []
-              item['videoshot']={'index':vdata.get('index'),'images':imgs,'img_x_len':vdata.get('img_x_len'),'img_y_len':vdata.get('img_y_len'),'img_x_size':vdata.get('img_x_size'),'img_y_size':vdata.get('img_y_size')}
-              picks=[]
-              if imgs:
-                picks=sorted(set([0,len(imgs)//2,len(imgs)-1]))
-              saved=[]
-              for pos in picks:
-                url='https:'+imgs[pos] if imgs[pos].startswith('//') else imgs[pos]
-                raw=get(url,binary=True)
-                if raw:
-                  fn=f'storyboards/{bv}-sheet-{pos+1:02d}-of-{len(imgs):02d}.jpg'
-                  open(fn,'wb').write(raw); saved.append({'sheet_index':pos+1,'sheet_count':len(imgs),'file':fn,'url':url})
-              item['saved_storyboards']=saved
-
-              # first frame
-              ff=pages[0].get('first_frame')
+              with urllib.request.urlopen(urllib.request.Request(u,headers=H),timeout=20) as r:
+                x=r.read(); return x if b else x.decode('utf-8','replace')
+            except Exception as e: return None
+          meta=[]
+          for bv in BVIDS:
+            pg=json.loads(get('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv})) or '{}').get('data') or []
+            item={'bvid':bv,'pages':pg}
+            if pg:
+              p=pg[0]; cid=p['cid']; ff=p.get('first_frame')
               if ff:
-                url=ff.replace('http://','https://')
-                raw=get(url,binary=True)
-                if raw:
-                  fn=f'storyboards/{bv}-first-frame.jpg'; open(fn,'wb').write(raw); item['first_frame_file']=fn
-
-              # danmaku XML gives useful content words even when title is machine-generated
-              dm_raw=get('https://api.bilibili.com/x/v1/dm/list.so?'+urllib.parse.urlencode({'oid':cid}))
-              msgs=[]
-              if dm_raw:
-                msgs=[html.unescape(re.sub('<[^>]+>','',m)) for m in re.findall(r'<d\b[^>]*>(.*?)</d>',dm_raw,re.S)]
-              item['danmaku_sample']=msgs[:300]
-              item['danmaku_count_returned']=len(msgs)
-
-            # comments, up to 3 pages
-            replies=[]
-            for pn in (1,2,3):
-              rr=get('https://api.bilibili.com/x/v2/reply?'+urllib.parse.urlencode({'pn':pn,'type':1,'oid':aid,'sort':2}))
-              if not rr: break
-              try: rj=json.loads(rr)
-              except: break
-              if rj.get('code')!=0: break
-              rs=(rj.get('data') or {}).get('replies') or []
-              for r in rs:
-                replies.append({'rpid':r.get('rpid'),'ctime':r.get('ctime'),'like':r.get('like'),'rcount':r.get('rcount'),'uname':((r.get('member') or {}).get('uname')),'message':((r.get('content') or {}).get('message'))})
-              if not rs: break
-              time.sleep(.4)
-            item['replies']=replies
-            print('CAPTURED',bv,'storyboards',len(item.get('saved_storyboards') or []),'comments',len(replies),'dm',item.get('danmaku_count_returned',0))
-            out.append(item)
-            time.sleep(.7)
-
-          open('priority-content-probe.json','w',encoding='utf-8').write(json.dumps(out,ensure_ascii=False,indent=2))
+                raw=get(ff.replace('http://','https://'),True)
+                if raw: open(f'frames/{bv}-first.jpg','wb').write(raw)
+              vs=json.loads(get('https://api.bilibili.com/x/player/videoshot?'+urllib.parse.urlencode({'bvid':bv,'cid':cid,'index':1})) or '{}').get('data') or {}
+              imgs=vs.get('image') or []
+              for pos in sorted(set([0,len(imgs)//2,len(imgs)-1])) if imgs else []:
+                u=imgs[pos]; u='https:'+u if u.startswith('//') else u
+                raw=get(u,True)
+                if raw: open(f'frames/{bv}-sheet-{pos+1:02d}.jpg','wb').write(raw)
+              item['sheet_count']=len(imgs)
+            meta.append(item); print(bv,pg[0].get('part') if pg else None,pg[0].get('duration') if pg else None); time.sleep(.6)
+          open('meta.json','w').write(json.dumps(meta,ensure_ascii=False,indent=2))
           PY
-
       - uses: actions/upload-artifact@v7
         with:
-          name: priority-content-probe
+          name: backup-candidate-visuals
           path: |
-            priority-content-probe.json
-            storyboards/
+            meta.json
+            frames/
           retention-days: 7
