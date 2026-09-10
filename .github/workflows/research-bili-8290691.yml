@@ -1,4 +1,4 @@
-name: Research current Douyu gaps
+name: Research all 2021-2022 live entries
 
 on:
   push:
@@ -17,19 +17,18 @@ jobs:
         with:
           ref: main
 
-      - name: Recompute current 2021-2022 Douyu-only entries
+      - name: Extract all 2021-2022 live entries and source coverage
         shell: bash
         run: |
           python -m pip install --quiet pyyaml
           python - <<'PY'
           import csv, glob, json, urllib.parse, yaml
 
-          def is_douyu(url):
+          def host(url):
               try:
-                  host=(urllib.parse.urlparse(str(url)).hostname or '').lower()
+                  return (urllib.parse.urlparse(str(url)).hostname or '').lower()
               except Exception:
-                  return False
-              return host in {'douyu.com','douyu.tv'} or host.endswith('.douyu.com') or host.endswith('.douyu.tv')
+                  return ''
 
           rows=[]
           for path in glob.glob('data/entries/*.yaml'):
@@ -42,32 +41,40 @@ jobs:
               else:
                   continue
               for e in items:
-                  if not isinstance(e,dict):
+                  if not isinstance(e,dict) or e.get('type')!='live':
                       continue
                   date=str(e.get('date') or '')
                   if not (date.startswith('2021-') or date.startswith('2022-')):
                       continue
                   src=e.get('sources') or []
                   urls=[s.get('url') for s in src if isinstance(s,dict) and s.get('url')]
-                  if urls and all(is_douyu(u) for u in urls):
-                      rows.append({
-                          'entry_id':e.get('id'),
-                          'date':date,
-                          'title':e.get('title'),
-                          'duration_min':e.get('duration_min'),
-                          'urls':' | '.join(urls),
-                          'file':path,
-                      })
+                  hosts=[host(u) for u in urls]
+                  rows.append({
+                      'entry_id':e.get('id'),
+                      'date':date,
+                      'title':e.get('title'),
+                      'duration_min':e.get('duration_min'),
+                      'source_count':len(urls),
+                      'bilibili_count':sum(h=='bilibili.com' or h.endswith('.bilibili.com') for h in hosts),
+                      'acfun_count':sum(h=='acfun.cn' or h.endswith('.acfun.cn') for h in hosts),
+                      'douyu_count':sum(h in {'douyu.com','douyu.tv'} or h.endswith('.douyu.com') or h.endswith('.douyu.tv') for h in hosts),
+                      'non_douyu_count':sum(not (h in {'douyu.com','douyu.tv'} or h.endswith('.douyu.com') or h.endswith('.douyu.tv')) for h in hosts),
+                      'urls':' | '.join(urls),
+                      'file':path,
+                  })
           rows.sort(key=lambda r:(r['date'],r['entry_id'] or ''))
-          with open('current-douyu-only-2021-2022.csv','w',encoding='utf-8-sig',newline='') as f:
-              w=csv.DictWriter(f,fieldnames=['entry_id','date','title','duration_min','urls','file'])
+          fields=['entry_id','date','title','duration_min','source_count','bilibili_count','acfun_count','douyu_count','non_douyu_count','urls','file']
+          with open('all-live-entries-2021-2022.csv','w',encoding='utf-8-sig',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields)
               w.writeheader(); w.writerows(rows)
           print('COUNT',len(rows))
-          print(json.dumps(rows,ensure_ascii=False,indent=2))
+          print('UNIQUE_DATES',len(set(r['date'] for r in rows)))
+          print('NO_BILIBILI',sum(r['bilibili_count']==0 for r in rows))
+          print('DOUYU_ONLY',sum(r['source_count']>0 and r['non_douyu_count']==0 for r in rows))
           PY
 
       - uses: actions/upload-artifact@v7
         with:
-          name: current-douyu-only-2021-2022
-          path: current-douyu-only-2021-2022.csv
+          name: all-live-entries-2021-2022
+          path: all-live-entries-2021-2022.csv
           retention-days: 7
