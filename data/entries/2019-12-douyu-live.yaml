@@ -509,6 +509,31 @@
       - url: https://v.douyu.com/show/8pa9v5jodOa7VrqA
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1yJ411e7dV
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2019-12-06 Children of morta 1"
+            duration_sec: 2383
+          - page: 2
+            title: "斗鱼-女流66_2019-12-06 Children of morta2"
+            duration_sec: 2270
+          - page: 3
+            title: "斗鱼-女流66_2019-12-06 Children of morta 3"
+            duration_sec: 2291
+          - page: 4
+            title: "斗鱼-女流66_2019-12-06 Children of morta 4"
+            duration_sec: 2273
+          - page: 5
+            title: "斗鱼-女流66_2019-12-06 Children of morta 5"
+            duration_sec: 2259
+          - page: 6
+            title: "斗鱼-女流66_2019-12-06 Children of morta 6"
+            duration_sec: 1771
+        note: "2026-09-10 经 B 站空间接口全量枚举补入。投稿 6 个分P 合计 3:40:47，条目 duration_min 为 252 分钟，缺口约 31 分钟，覆盖范围未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [children-of-morta]
@@ -521,6 +546,31 @@
     duration_min: 254
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/12/12/4d1f385638271cd5ad538f134de0736f.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1GJ41117SY
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新01"
+            duration_sec: 2410
+          - page: 2
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新02"
+            duration_sec: 2423
+          - page: 3
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新03"
+            duration_sec: 2399
+          - page: 4
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新04"
+            duration_sec: 2369
+          - page: 5
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新05"
+            duration_sec: 2415
+          - page: 6
+            title: "斗鱼-女流66_2019-12-11 Raft姐弟大海漂流记更新06"
+            duration_sec: 3162
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/3rob7j2Ow317gkZl
         kind: replay
         status: alive
@@ -536,6 +586,22 @@
     duration_min: 240
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/12/17/f01078a003ccd5b1d3eb053ebf55edee.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1MJ411r7gT
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2019-12-17 jump king jump jump day2  01"
+            duration_sec: 6033
+          - page: 2
+            title: "斗鱼-女流66_2019-12-17 jump king jump jump day2  02"
+            duration_sec: 6219
+          - page: 3
+            title: "斗鱼-女流66_2019-12-17 jump king jump jump day2  03"
+            duration_sec: 2068
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/6Aw87Oa8zrxWYGkg
         kind: replay
         status: alive
@@ -551,6 +617,22 @@
     duration_min: 278
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/12/25/29ec1e846e20b0a9df9ee6d462eeef06.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1dJ411p7Ck
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2019-12-24 没几天就元旦了01"
+            duration_sec: 6123
+          - page: 2
+            title: "斗鱼-女流66_2019-12-24 没几天就元旦了02"
+            duration_sec: 5685
+          - page: 3
+            title: "斗鱼-女流66_2019-12-24 没几天就元旦了03"
+            duration_sec: 4715
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/Aox276kYw88MVz8Z
         kind: replay
         status: alive
@@ -566,6 +648,22 @@
     duration_min: 234
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/12/29/d53cb02a266920a1b2a898231509d54f.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1oJ411h77v
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2019-12-28 矿工生存之道01"
+            duration_sec: 6243
+          - page: 2
+            title: "斗鱼-女流66_2019-12-28 矿工生存之道02"
+            duration_sec: 6143
+          - page: 3
+            title: "斗鱼-女流66_2019-12-28 矿工生存之道03"
+            duration_sec: 1556
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/0Q8mMYkxP5Jv49Ad
         kind: replay
         status: alive

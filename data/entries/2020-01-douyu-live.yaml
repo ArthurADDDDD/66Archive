@@ -142,6 +142,28 @@
       - url: https://v.douyu.com/show/r90XWgXR13Nvgk25
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1oJ41157Ff
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-04 一零零一成都IFS可恋活动01"
+            duration_sec: 384
+          - page: 2
+            title: "斗鱼-女流66_2020-01-04 一零零一成都IFS可恋活动02"
+            duration_sec: 1253
+          - page: 3
+            title: "斗鱼-女流66_2020-01-04 一零零一成都IFS可恋活动03"
+            duration_sec: 3033
+          - page: 4
+            title: "斗鱼-女流66_2020-01-04 一零零一成都IFS可恋活动04"
+            duration_sec: 394
+          - page: 5
+            title: "斗鱼-女流66_2020-01-04 一零零一成都IFS可恋活动05"
+            duration_sec: 1682
+        note: "2026-09-10 当日斗鱼有 14:00、16:00 两场回放（共 201 分钟），该投稿 5 个分P 合计 1:52:26，究竟对应哪一场或两场的哪些片段尚未核实，因此仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 14:00
     duration_min: 117
@@ -159,6 +181,22 @@
       - url: https://v.douyu.com/show/LDBbMAJAjyLWyJRP
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=285"
+        kind: replay
+        status: alive
+        account: bili-fan-warehouser
+        parts: 3
+        part_details:
+          - page: 285
+            title: "斗鱼-女流66_202001041605088577"
+            duration_sec: 2772
+          - page: 286
+            title: "斗鱼-女流66_202001041654133881"
+            duration_sec: 256
+          - page: 287
+            title: "斗鱼-女流66_202001041701599518"
+            duration_sec: 1465
+        note: "2026-09-10 经 B 站空间接口枚举「仓储员」的女流合集后补入。该合集按录制片段切分，本条目取 P285–P287，覆盖 16:05–17:26 合计 1:14:53，约为条目 84 分钟的 89%，片段间有小缺口；仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     time: 16:00
     duration_min: 84
@@ -203,6 +241,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.6 游戏：莎木3。斗鱼回放标题：莎木3~~~~~~~~~~~
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/06/303c21952cf4729c6e01ff5cfc55d821.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1qJ411V7MV
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-06 莎木3  001"
+            duration_sec: 6240
+          - page: 2
+            title: "斗鱼-女流66_2020-01-06 莎木3  002_0001"
+            duration_sec: 1081
+          - page: 3
+            title: "斗鱼-女流66_2020-01-06 莎木3  003"
+            duration_sec: 3123
+          - page: 4
+            title: "斗鱼-女流66_2020-01-06 莎木3  004"
+            duration_sec: 6188
+          - page: 5
+            title: "斗鱼-女流66_2020-01-06 莎木3  005"
+            duration_sec: 620
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/a4Jj7l2d8jbWDk01
         kind: replay
         status: alive
@@ -219,6 +279,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.7 游戏：莎木3。斗鱼回放标题：莎木3~~~~~~~~~~~
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/08/258f1cb0cc721000df1b782057c54686.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1YJ41157nS
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-07-1728_01-07-1910_莎木3"
+            duration_sec: 6162
+          - page: 2
+            title: "斗鱼-女流66_2020-01-07-1910_01-07-2053_莎木3"
+            duration_sec: 6156
+          - page: 3
+            title: "斗鱼-女流66_2020-01-07-2053_01-07-2159_莎木3"
+            duration_sec: 3980
+          - page: 4
+            title: "斗鱼-女流66_2020-01-07-2159_01-07-2241_莎木3"
+            duration_sec: 2512
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/Kg1VWRPK32Q7GbNA
         kind: replay
         status: alive
@@ -235,6 +314,22 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.8 游戏：莎木3。斗鱼回放标题：莎木3~~~~~周三四点来
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/08/7cf26ff5b03e3b5c4c5d4929c1b80716.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1EJ411G78P
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-08 莎木3周三四点来 01"
+            duration_sec: 5988
+          - page: 2
+            title: "斗鱼-女流66_2020-01-08 莎木3周三四点来 02"
+            duration_sec: 4814
+          - page: 3
+            title: "斗鱼-女流66_2020-01-08 莎木3周三四点来 03"
+            duration_sec: 2158
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/0zZVvPRK3B5MO4E2
         kind: replay
         status: alive
@@ -251,6 +346,19 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.9 游戏：脑锻炼Switch。斗鱼回放标题：cube escape新作解密
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/10/f2aca8a6b797eea6cfb16007f7976c15.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1SJ411G7vF
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-09 cubeescape新作解密 01"
+            duration_sec: 5831
+          - page: 2
+            title: "斗鱼-女流66_2020-01-09 cubeescape新作解密 02"
+            duration_sec: 2848
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/JmbBMkDN86NW40XA
         kind: replay
         status: alive
@@ -296,6 +404,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.11 游戏：时光之帽/A Hat in Time。斗鱼回放标题：时光之帽继续探索！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/11/8de0cde1e5133c335d0f37522aa9270b.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1WJ411p7Sq
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-11 时光之帽继续探索 01"
+            duration_sec: 5835
+          - page: 2
+            title: "斗鱼-女流66_2020-01-11 时光之帽继续探索 02"
+            duration_sec: 5567
+          - page: 3
+            title: "斗鱼-女流66_2020-01-11 时光之帽继续探索 03"
+            duration_sec: 5555
+          - page: 4
+            title: "斗鱼-女流66_2020-01-11 时光之帽继续探索 04"
+            duration_sec: 682
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/EO0XvNN6XqXvDrBd
         kind: replay
         status: alive
@@ -360,6 +487,22 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.14 游戏：手模拟器:生存/ HandSimulator:Survival。斗鱼回放标题：大家下午好呀
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/15/d583107d2984430e651ac84342f394a1.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1GJ411J7jb
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-14  大家下午好呀  01"
+            duration_sec: 5971
+          - page: 2
+            title: "斗鱼-女流66_2020-01-14  大家下午好呀  02"
+            duration_sec: 5896
+          - page: 3
+            title: "斗鱼-女流66_2020-01-14  大家下午好呀  03"
+            duration_sec: 3427
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/yVY8WwZE59oMLOz9
         kind: replay
         status: alive
@@ -408,6 +551,22 @@
       - url: https://v.douyu.com/show/Qyz171mB6K57BJj9
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1CJ411E78h
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-01-17 unheard新内容玩玩01"
+            duration_sec: 5991
+          - page: 2
+            title: "斗鱼-女流66_2020-01-17 unheard新内容玩玩02"
+            duration_sec: 6241
+          - page: 3
+            title: "斗鱼-女流66_2020-01-17 unheard新内容玩玩03"
+            duration_sec: 181
+        note: "2026-09-10 投稿 3 个分P 合计 3:26:53，条目 duration_min 为 327 分钟，缺口约 2 小时，覆盖范围未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 15:14
     duration_min: 327

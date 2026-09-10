@@ -350,6 +350,19 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.16 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/16/58c18711d882f22a0f103939ab5106f1.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Wz411B75e
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: "女流66_2020-04-16 逆转裁判3~异议！01"
+            duration_sec: 9131
+          - page: 2
+            title: "女流66_2020-04-16 逆转裁判3~异议！02"
+            duration_sec: 5730
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/r90XWgXbmaQvgk25
         kind: replay
         status: alive
@@ -366,6 +379,19 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.17 游戏：逆转裁判3。斗鱼回放标题：逆转裁判3~异议！
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/18/e522465c18a1011ce495e6b3cf9cfb10.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1MK4y1k7J2
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-04-17 逆转裁判3~异议！ 01"
+            duration_sec: 9452
+          - page: 2
+            title: "斗鱼-女流66_2020-04-17 逆转裁判3~异议！ 02"
+            duration_sec: 5772
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/8KxjMdJD2eovVLwb
         kind: replay
         status: alive
@@ -478,6 +504,22 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：4.28 聊天。斗鱼回放标题：动动手指头~~
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/04/30/f2df6ae1e0e3bf4092691b7ec373ffc3.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1q64y1M77w
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "动动手指头~~01"
+            duration_sec: 7360
+          - page: 2
+            title: "动动手指头~~ 02"
+            duration_sec: 7360
+          - page: 3
+            title: "动动手指头~~ 03"
+            duration_sec: 1482
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/GnzXvbYy4alW462l
         kind: replay
         status: alive

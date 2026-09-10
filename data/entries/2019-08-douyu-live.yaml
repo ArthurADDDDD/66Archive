@@ -473,6 +473,34 @@
       - url: https://v.douyu.com/show/JmbBMkGQw8yM40XA
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=118"
+        kind: replay
+        status: alive
+        account: bili-fan-warehouser
+        parts: 7
+        part_details:
+          - page: 118
+            title: "斗鱼-女流66_201908241536258960"
+            duration_sec: 1108
+          - page: 119
+            title: "斗鱼-女流66_201908241554477311"
+            duration_sec: 1083
+          - page: 120
+            title: "斗鱼-女流66_201908241612418155"
+            duration_sec: 1085
+          - page: 121
+            title: "斗鱼-女流66_201908241630384631"
+            duration_sec: 1064
+          - page: 122
+            title: "斗鱼-女流66_201908241649201682"
+            duration_sec: 1082
+          - page: 123
+            title: "斗鱼-女流66_201908241707130046"
+            duration_sec: 1074
+          - page: 124
+            title: "斗鱼-女流66_201908241724589556"
+            duration_sec: 773
+        note: "2026-09-10 经 B 站空间接口枚举「仓储员」的女流合集后补入。该合集按录制片段切分，本条目取 P118–P124，连续覆盖 15:36–17:37 合计 2:01:09，仅约为条目 255 分钟的 48%，17:37 之后没有对应片段；明确不是全场，仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [remnant-from-the-ashes]

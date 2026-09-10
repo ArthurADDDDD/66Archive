@@ -433,6 +433,19 @@
       - url: https://v.douyu.com/show/jNBdvnrApARvE2yw
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1iT411v7Wa
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 2
+        part_details:
+          - page: 1
+            title: "[2023-03-01 15-37-20][女流66][3月份的新66]"
+            duration_sec: 4228
+          - page: 2
+            title: "[2023-03-01 16-49-41][女流66][3月份的新66]"
+            duration_sec: 13009
+        note: "2026-09-10 经 B 站空间接口枚举「Zytau」后补入。房间标题「3月份的新66」与本条目一致；2 个分P 合计 4:47:17，自 15:37 起录，短于条目 duration_min 的 321 分钟约 34 分钟（开头缺失），仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     tags: [聊天]
@@ -445,6 +458,19 @@
     duration_min: 240
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/07/b0b6ebefcb51053994f057cb1e386f32.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1eY4y1y7jm
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 2
+        part_details:
+          - page: 1
+            title: "[2023-03-07 15-07-34][女流66][都让开，老六来了]"
+            duration_sec: 8006
+          - page: 2
+            title: "[2023-03-07 17-36-58][女流66][都让开，老六来了]"
+            duration_sec: 9532
+        note: "2026-09-10 经 B 站空间接口枚举「Zytau」后补入。投稿标题内的日期、开播时刻（15-07-34）与房间标题「都让开，老六来了」均与本条目一致；录像 4:52:18 长于条目 duration_min 的 240 分钟。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/DO84vrKwYYQ7edGr
         kind: replay
         status: alive
@@ -460,9 +486,44 @@
     duration_min: 120
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/14/cc2d862e1cfb71d358dc8b2fceb98819.png"
     sources:
+      - url: https://www.bilibili.com/video/BV1gx4y1K7yc
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 2
+        part_details:
+          - page: 1
+            title: "[2023-03-14 13-12-22][女流66][156277直播间]"
+            duration_sec: 25088
+          - page: 2
+            title: "[2023-03-14 20-16-36][女流66][156277直播间]"
+            duration_sec: 1903
+        note: "2026-09-10 投稿标题内的日期与开播时刻（13-12-22）同条目「13点场」一致。录像共 7:29:51，其中 P2 为当日 20:16 起的另一段，本条目 duration_min 记 120 分钟，二者出入尚未核实，未据此改动条目时长。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/yVmjvBbwgJdvqkNb
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1bo4y1B77D
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 5
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-03-14T17_47_14"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-03-14T18_18_24"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-03-14T18_49_39"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-03-14T19_20_54"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-03-14T20_23_24"
+            duration_sec: 1487
+        note: "2026-09-10 同日另一位录制者的备份，共 2:29:51：P1–P4 连续覆盖 17:47–19:52，P5 另起于 20:23（24:47），中间有缺口，且不含 13 点场开头部分；作为附加备份保留。未逐P验证播放与完整性。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [resident-evil-4]
@@ -476,6 +537,16 @@
     tags: [心灵砒霜]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/20/5a149577eff1f7a64003db80e0a95ba2.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Hc411j7Jt
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 1
+        part_details:
+          - page: 1
+            title: "[2023-03-19 13-20-12][女流66][【钻粉2.5倍】陪你下午茶]"
+            duration_sec: 20925
+        note: "2026-09-10 经 B 站空间接口枚举「Zytau」后补入。房间标题「【钻粉2.5倍】陪你下午茶」与本条目一致；单P 5:48:45，自 13:20 起录，完整覆盖本条目记的 17 点场 111 分钟，并额外包含 13:20 之后一段本档案未收录的内容（见调查文档）。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/JmbBMk91XNNv40XA
         kind: replay
         status: alive
@@ -490,6 +561,16 @@
     duration_min: 401
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/21/29ff2f9916ca6ed5e4263b40ec52982c.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1gN411K7Pv
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 1
+        part_details:
+          - page: 1
+            title: "[2023-03-21 12-34-45][女流66][【女流】156277直播间]"
+            duration_sec: 24018
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/4xq3WDpZYylWLGNz
         kind: replay
         status: alive
@@ -505,6 +586,19 @@
     duration_min: 240
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/28/07395f1a5df27c7a8ba3a1221c7b9cdb.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV11o4y1W7UF
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 2
+        part_details:
+          - page: 1
+            title: "[2023-03-28 13-34-45][女流66][【女流】156277直播间]"
+            duration_sec: 5623
+          - page: 2
+            title: "[2023-03-28 15-24-17][女流66][晚8点看wegame发布]"
+            duration_sec: 21805
+        note: "2026-09-10 经 B 站空间接口枚举「Zytau」后补入。P2 的标题即本条目的房间标题「晚8点看wegame发布」，可确认同场；录像 7:37:08 长于条目 duration_min 的 240 分钟，13:34 起录，15:08–15:24 之间有约 16 分钟断点。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/6Aw87OOLyA07YGkg
         kind: replay
         status: alive

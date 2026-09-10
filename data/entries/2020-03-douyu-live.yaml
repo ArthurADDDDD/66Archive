@@ -8,6 +8,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.1 游戏：陶艺大师。斗鱼回放标题：玩土是从小就会玩土
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/03/02/e901a7f50ab9b7aa6c828690196a5176.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1iE411E7vX
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-03-01 玩土 01"
+            duration_sec: 5257
+          - page: 2
+            title: "斗鱼-女流66_2020-03-01 玩土 02"
+            duration_sec: 5251
+          - page: 3
+            title: "斗鱼-女流66_2020-03-01 玩土 03"
+            duration_sec: 5258
+          - page: 4
+            title: "斗鱼-女流66_2020-03-01 玩土 04"
+            duration_sec: 5252
+          - page: 5
+            title: "斗鱼-女流66_2020-03-01 玩土 05"
+            duration_sec: 2233
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/Kp1QM8216QVvk4bj
         kind: replay
         status: alive
@@ -400,6 +422,31 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：3.15 游戏：仁王2。斗鱼回放标题：仁王2试试水
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/03/18/652854bb82f7cefc5441cc561574a028.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Y7411f75d
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: "聊天"
+            duration_sec: 1813
+          - page: 2
+            title: "仁王2试试水 day 3 01"
+            duration_sec: 5243
+          - page: 3
+            title: "仁王2试试水 day 3 02"
+            duration_sec: 3527
+          - page: 4
+            title: "仁王2试试水 day 3 03"
+            duration_sec: 3527
+          - page: 5
+            title: "仁王2试试水 day 3 04"
+            duration_sec: 3529
+          - page: 6
+            title: "仁王2试试水 day 3 05"
+            duration_sec: 2100
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/Qyz171mKe2D7BJj9
         kind: replay
         status: alive
@@ -534,6 +581,25 @@
       - url: https://v.douyu.com/show/a2JEMJEPaGm7Nxml
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV13E411N77A
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "仁王2飒女一枚 01"
+            duration_sec: 3528
+          - page: 2
+            title: "仁王2飒女一枚 02"
+            duration_sec: 3527
+          - page: 3
+            title: "仁王2飒女一枚 03"
+            duration_sec: 3530
+          - page: 4
+            title: "仁王2飒女一枚 04"
+            duration_sec: 459
+        note: "2026-09-10 经 B 站空间接口全量枚举补入。投稿标题自述「只有一半」，4 个分P 合计 3:04:04，条目 duration_min 为 502 分钟，明确不是全场；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 12:26
     duration_min: 502
@@ -550,6 +616,25 @@
       - url: https://v.douyu.com/show/85BAvqxpEB1WG4Lm
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1XE411A73B
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "仁王2飒女一枚  01"
+            duration_sec: 3530
+          - page: 2
+            title: "仁王2飒女一枚  02"
+            duration_sec: 3527
+          - page: 3
+            title: "仁王2飒女一枚  03"
+            duration_sec: 3527
+          - page: 4
+            title: "仁王2飒女一枚  04"
+            duration_sec: 1845
+        note: "2026-09-10 经 B 站空间接口全量枚举补入。投稿 4 个分P 合计 3:27:09，条目 duration_min 为 324 分钟，缺口约 117 分钟，覆盖范围未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 13:51
     duration_min: 324
@@ -819,6 +904,22 @@
       - url: https://v.douyu.com/show/XqeO74ePYL2MxywG
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1hZ4y1j7Wo
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "踩高跷stilt fella~~ 01"
+            duration_sec: 4571
+          - page: 2
+            title: "踩高跷stilt fella~~ 02"
+            duration_sec: 4572
+          - page: 3
+            title: "踩高跷stilt fella~~ 03"
+            duration_sec: 3847
+        note: "2026-09-10 投稿 3 个分P 合计 3:36:30，条目 duration_min 为 293 分钟，缺口约 76 分钟，覆盖范围未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 15:12
     duration_min: 293

@@ -437,6 +437,40 @@
     duration_min: 240
     cover: "https://sta-op.douyucdn.cn/vod-cover/2022/12/12/6b184f1864177b993e504103d7358395.png"
     sources:
+      - url: https://www.bilibili.com/video/BV1c14y1T7G1
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 9
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-12T15_06_07"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-12T15_34_47"
+            duration_sec: 1721
+          - page: 3
+            title: "女流66直播录像2022-12-12T16_03_28"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2022-12-12T16_32_09"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2022-12-12T17_00_49"
+            duration_sec: 1721
+          - page: 6
+            title: "女流66直播录像2022-12-12T17_29_30"
+            duration_sec: 1721
+          - page: 7
+            title: "女流66直播录像2022-12-12T17_58_11"
+            duration_sec: 1721
+          - page: 8
+            title: "女流66直播录像2022-12-12T18_26_52"
+            duration_sec: 1721
+          - page: 9
+            title: "女流66直播录像2022-12-12T18_55_33"
+            duration_sec: 630
+        note: "2026-09-10 经 B 站空间接口枚举「KassyTan」（该号 2022-12-08 至 2023-07-25 近乎逐日存有女流录播）后补入。录像 9 个分P 合计 3:59:58，与条目 duration_min 的 240 分钟吻合。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/Qyz171Zlgo5MBJj9
         kind: replay
         status: alive
@@ -452,6 +486,43 @@
     duration_min: 120
     cover: "https://sta-op.douyucdn.cn/vod-cover/2022/12/19/81d8b59cf4df8def53c43295ac86c64c.png"
     sources:
+      - url: https://www.bilibili.com/video/BV1wg411J7Er
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 10
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-19T15_13_07"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-19T15_41_47"
+            duration_sec: 1721
+          - page: 3
+            title: "女流66直播录像2022-12-19T16_10_28"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2022-12-19T16_39_09"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2022-12-19T17_07_50"
+            duration_sec: 1721
+          - page: 6
+            title: "女流66直播录像2022-12-19T17_36_31"
+            duration_sec: 1721
+          - page: 7
+            title: "女流66直播录像2022-12-19T18_05_11"
+            duration_sec: 1721
+          - page: 8
+            title: "女流66直播录像2022-12-19T18_33_52"
+            duration_sec: 1721
+          - page: 9
+            title: "女流66直播录像2022-12-19T19_02_33"
+            duration_sec: 1721
+          - page: 10
+            title: "女流66直播录像2022-12-19T19_31_14"
+            duration_sec: 298
+        note: "2026-09-10 经 B 站空间接口枚举「KassyTan」（该号 2022-12-08 至 2023-07-25 近乎逐日存有女流录播）后补入。录像 10 个分P 合计 4:23:07，长于条目 duration_min 的 120 分钟；120 分钟疑为占位值，本批未据此改动条目时长。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/EO0XvN3xONa7DrBd
         kind: replay
         status: alive
@@ -467,6 +538,43 @@
     duration_min: 161
     cover: "https://sta-op.douyucdn.cn/vod-cover/2022/12/29/0dd73e803b5c14f2998b1e165520c2ba.png"
     sources:
+      - url: https://www.bilibili.com/video/BV1zR4y1D7yy
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 10
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-29T15_03_30"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-29T15_32_10"
+            duration_sec: 1721
+          - page: 3
+            title: "女流66直播录像2022-12-29T16_00_51"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2022-12-29T16_29_32"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2022-12-29T16_58_13"
+            duration_sec: 1721
+          - page: 6
+            title: "女流66直播录像2022-12-29T17_26_53"
+            duration_sec: 1721
+          - page: 7
+            title: "女流66直播录像2022-12-29T17_55_34"
+            duration_sec: 1721
+          - page: 8
+            title: "女流66直播录像2022-12-29T18_24_15"
+            duration_sec: 1721
+          - page: 9
+            title: "女流66直播录像2022-12-29T18_52_56"
+            duration_sec: 1721
+          - page: 10
+            title: "女流66直播录像2022-12-29T19_21_36"
+            duration_sec: 1299
+        note: "2026-09-10 经 B 站空间接口枚举「KassyTan」（该号 2022-12-08 至 2023-07-25 近乎逐日存有女流录播）后补入。录像 10 个分P 合计 4:39:48，长于条目 duration_min 的 161 分钟。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/0zZVvP9wPJ27O4E2
         kind: replay
         status: alive

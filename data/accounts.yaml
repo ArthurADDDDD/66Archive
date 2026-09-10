@@ -123,7 +123,7 @@
   url: "https://space.bilibili.com/28047516"
   role: fan-archive
   confidence: high
-  note: "斗鱼期录播搬运号，已注销；UID 28047516。标题前缀常见「{秘密录像屋}」，经 BiliPlus aidinfo/view 缓存确认原属该号。已确认最早女流投稿 2019-12-02，实际账号总投稿包含非女流内容，不视为女流全集。"
+  note: "斗鱼期录播搬运号，已注销；UID 28047516。标题前缀常见「{秘密录像屋}」，经 BiliPlus aidinfo/view 缓存确认原属该号。2026-09-10 经空间接口全量枚举：共 548 条投稿，其中标题含「女流」的 386 条，可定日期的女流场次覆盖 2019-12-02 至 2021-02-22（2019 年 22 天、2020 年 267 天、2021 年 45 天）。后期部分投稿标题改用「【弹幕录像屋】」「【弹幕】」前缀或不带前缀，只能按 UID 归属；账号总投稿还包含 Chloe5337244、大周、Sylvia维乐 等其他主播内容，不是女流全集。完整目录见 data/catalogs/bilibili-secret-house.csv。"
 
 - id: bili-fan-warehouser
   platform: bilibili
@@ -131,7 +131,15 @@
   url: "https://space.bilibili.com/324445265"
   role: fan-archive
   confidence: high
-  note: "斗鱼期录播搬运号，签名自述『纳豆录了4个T』（纳豆为女流家猫，指其早期录像体量）。最早确认投稿 2019-07-31。"
+  note: "多主播斗鱼录播存档号，共 360 条投稿，同时存档南妹儿呀、赵小臭、刘灶灶、纳豆nado 等主播；「斗鱼-纳豆nado」与「斗鱼-女流66」格式一致，应为被存档的另一位主播，此前把「纳豆」解为女流家猫的说法未获证实，已改写。女流相关为 6 条合集共约 20800 分钟：BV1qt411c7xR（659 分P，2016—2021 跨度最大）、BV1dy4y147qY、BV1Ab4y1f7bc、BV1q64y1b7y1、BV12o4y1k7UJ、BV1pP4y157EG。分P按录制片段切分并以「日期+时刻」命名，单场往往只有部分片段，不能按整场录像使用。最早确认投稿 2019-07-31。"
+
+- id: bili-fan-kassytan
+  platform: bilibili
+  name: "KassyTan"
+  url: "https://space.bilibili.com/30032863"
+  role: fan-archive
+  confidence: medium
+  note: "多主播直播录像搬运号，共约 5045 条投稿。2026-09-10 经空间接口定向枚举其 2022-12—2023-07 区段：女流录播近乎逐日，共 198 条，覆盖 2022-12-08 至 2023-07-25，是该时段目前已知最完整的非斗鱼备份来源。标题格式随时间变化：『女流66直播录像YYYY-MM-DD』『女流66-心灵砒霜直播录像YYYY-MM-DD』『【女流66】直播回放YYYY-MM-DD』。按录制时段切分多个分P，同一天可能拆成多条投稿，单条不一定覆盖全场。该区段目录见 data/catalogs/bilibili-kassytan-douyu-era.csv（仅女流部分，非全号目录）。"
 
 - id: bili-fan-zytau
   platform: bilibili
@@ -139,7 +147,7 @@
   url: "https://space.bilibili.com/35246867"
   role: fan-archive
   confidence: high
-  note: "斗鱼期特定游戏录播搬运号（如《森林之子》2023-02-25/26 系列，标题格式『[女流66][森林之子玩玩看]』）。最早确认投稿 2023-02-26。"
+  note: "斗鱼期录播搬运号，共 87 条投稿，其中女流相关 42 条，覆盖 2022-12-30 至 2023-05-09（2026-09-10 经空间接口全量枚举）。标题格式『[直播日期 开播时刻][女流66][斗鱼房间标题]』，方括号内的时刻是录制文件起点、不等于开播时刻，分P 可能跨当日多段开播。女流部分目录见 data/catalogs/bilibili-zytau.csv。"
 
 - id: bili-fan-xiaomoe
   platform: bilibili

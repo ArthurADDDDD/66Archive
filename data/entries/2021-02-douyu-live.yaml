@@ -734,6 +734,25 @@
     duration_min: 240
     cover: "https://sta-op.douyucdn.cn/vod-cover/2021/02/20/c3590b11653446f341f83178ee64f048.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1BV411e7z6
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "01"
+            duration_sec: 3607
+          - page: 2
+            title: "02"
+            duration_sec: 3608
+          - page: 3
+            title: "03"
+            duration_sec: 3610
+          - page: 4
+            title: "04"
+            duration_sec: 3608
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。 该投稿标题无「秘密录像屋」前缀，按投稿者 UID 28047516 归属该号。"
       - url: https://v.douyu.com/show/Qyz171gzVxBWBJj9
         kind: replay
         status: alive

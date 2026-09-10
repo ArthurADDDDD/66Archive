@@ -43,6 +43,22 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：5.3 聊天。斗鱼回放标题：流浪的人儿想念谁
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/05/03/822d66d5b721383c448ae482d53aba38.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV11g4y1q7Ht
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 3
+        part_details:
+          - page: 1
+            title: "流浪的人儿想念谁 01"
+            duration_sec: 7372
+          - page: 2
+            title: "流浪的人儿想念谁 02"
+            duration_sec: 7371
+          - page: 3
+            title: "流浪的人儿想念谁 03"
+            duration_sec: 5903
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/n8GzMXlX3dDM6qyP
         kind: replay
         status: alive
@@ -400,6 +416,25 @@
       - url: https://v.douyu.com/show/a2JEMJELZx07Nxml
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=497"
+        kind: replay
+        status: alive
+        account: bili-fan-warehouser
+        parts: 4
+        part_details:
+          - page: 497
+            title: "斗鱼-女流66_202005131520007064"
+            duration_sec: 3154
+          - page: 498
+            title: "斗鱼-女流66_202005131612407341"
+            duration_sec: 3154
+          - page: 499
+            title: "斗鱼-女流66_202005131706373612"
+            duration_sec: 3155
+          - page: 500
+            title: "斗鱼-女流66_202005131853579816"
+            duration_sec: 2389
+        note: "2026-09-10 经 B 站空间接口枚举「仓储员」的女流合集后补入。该合集按录制片段切分，本条目取 P497–P500，合计 3:17:32，约为条目 256 分钟的 77%；17:59–18:54 之间约 55 分钟没有对应片段；仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     time: 15:15
     duration_min: 256

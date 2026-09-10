@@ -589,6 +589,58 @@
     duration_min: 455
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/06/28/0d60e63f9ab33ecfbf5d48d0392e3134.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1ym4y1a7VE
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 15
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-06-28T13_46_09"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-06-28T14_17_18"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-06-28T14_48_33"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-06-28T15_19_48"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-06-28T15_51_03"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-06-28T16_22_18"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-06-28T16_53_33"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-06-28T17_24_48"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-06-28T17_56_03"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-06-28T18_27_18"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-06-28T18_58_33"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-06-28T19_29_47"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-06-28T20_01_03"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-06-28T20_32_17"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-06-28T21_03_33"
+            duration_sec: 913
+        note: "2026-09-10 经 B 站空间接口枚举「KassyTan」（该号 2022-12-08 至 2023-07-25 近乎逐日存有女流录播）后补入。录像 15 个分P 合计 7:32:57，与条目 duration_min 的 455 分钟吻合。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/ZB5Kv9YreDZva93x
         kind: replay
         status: alive

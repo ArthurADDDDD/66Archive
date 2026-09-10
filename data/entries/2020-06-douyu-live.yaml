@@ -45,6 +45,19 @@
       Poly Bridge 2游戏：硬核机甲。斗鱼回放标题：搭桥poly bridge 2
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/06/02/09ade9e3dcef8cf19aa499ba13fea11d.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1ha4y1v7XM
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: "1"
+            duration_sec: 6810
+          - page: 2
+            title: "2"
+            duration_sec: 6812
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。 该投稿对应当日 15:07 场《桥梁建造师 2》，不覆盖同日 20:01 的《硬核机甲》场（2020-06-02-live-02）。"
       - url: https://v.douyu.com/show/ERALvENpXLA71Vw0
         kind: replay
         status: alive
@@ -142,6 +155,19 @@
       - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1e54y1t7XR
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 2
+        part_details:
+          - page: 1
+            title: "17点"
+            duration_sec: 7203
+          - page: 2
+            title: "19点"
+            duration_sec: 1025
+        note: "2026-09-10 该录像来自同场活动主持方 Sylvia维乐 的直播间（知名主播访谈录第二期），不是女流本人机位，覆盖范围与本条目 120 分钟的对应关系未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 15:09
     duration_min: 120
@@ -222,6 +248,49 @@
       - url: https://v.douyu.com/show/worZv05Vn197JBk3
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=556"
+        kind: replay
+        status: alive
+        account: bili-fan-warehouser
+        parts: 12
+        part_details:
+          - page: 556
+            title: "斗鱼-女流66_202006091518396989"
+            duration_sec: 3151
+          - page: 557
+            title: "斗鱼-女流66_202006091610588745"
+            duration_sec: 16
+          - page: 558
+            title: "斗鱼-女流66_202006091612052363"
+            duration_sec: 13
+          - page: 559
+            title: "斗鱼-女流66_202006091613036576"
+            duration_sec: 1023
+          - page: 560
+            title: "斗鱼-女流66_202006091630187758"
+            duration_sec: 224
+          - page: 561
+            title: "斗鱼-女流66_202006091634203386"
+            duration_sec: 1083
+          - page: 562
+            title: "斗鱼-女流66_202006091653417140"
+            duration_sec: 230
+          - page: 563
+            title: "斗鱼-女流66_202006091701420565"
+            duration_sec: 669
+          - page: 564
+            title: "斗鱼-女流66_202006091713146651"
+            duration_sec: 410
+          - page: 565
+            title: "斗鱼-女流66_202006091720193824"
+            duration_sec: 3152
+          - page: 566
+            title: "斗鱼-女流66_202006091812369149"
+            duration_sec: 22
+          - page: 567
+            title: "斗鱼-女流66_202006091814301794"
+            duration_sec: 2710
+        note: "2026-09-10 经 B 站空间接口枚举「仓储员」的女流合集后补入。该合集按录制片段切分，本条目取 P556–P567，覆盖 15:18–18:59 合计 3:31:43，约为条目 222 分钟的 95%，片段间有小缺口；仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     time: 15:16
     duration_min: 222
@@ -370,6 +439,25 @@
       The Last of Us: Part II。斗鱼回放标题：最后生还者part2难度3飒一飒'
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/06/20/951c636d93243035f96e03a575dbb2cc.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1PC4y1Y7zP
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "1"
+            duration_sec: 6853
+          - page: 2
+            title: "2"
+            duration_sec: 6853
+          - page: 3
+            title: "3"
+            duration_sec: 6856
+          - page: 4
+            title: "4"
+            duration_sec: 6853
+        note: "2026-09-10 核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。 投稿标题与斗鱼回放标题「最后生还者part2难度3飒一飒」一致。"
       - url: https://v.douyu.com/show/qJgOWx2D1Xl7kVzL
         kind: replay
         status: alive

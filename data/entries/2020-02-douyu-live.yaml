@@ -93,6 +93,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.6 游戏：符文工房4。斗鱼回放标题：午后的美好种地时光
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/07/2a72788ea48c3ba731e915cd3e73082b.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Y7411h7zE
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-02-06 午后的美好种地时光 01"
+            duration_sec: 5257
+          - page: 2
+            title: "斗鱼-女流66_2020-02-06 午后的美好种地时光 02"
+            duration_sec: 5251
+          - page: 3
+            title: "斗鱼-女流66_2020-02-06 午后的美好种地时光 03"
+            duration_sec: 5251
+          - page: 4
+            title: "斗鱼-女流66_2020-02-06 午后的美好种地时光 04"
+            duration_sec: 5257
+          - page: 5
+            title: "斗鱼-女流66_2020-02-06 午后的美好种地时光 05"
+            duration_sec: 1429
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/0Q8mMYkdx5Lv49Ad
         kind: replay
         status: alive
@@ -183,6 +205,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.9 游戏：符文工房4。斗鱼回放标题：周日也要种地哦
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/09/db0cce7dc6bab0fdaf2ebadb5a195e62.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Y7411b7da
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-02-09 周日也要种地哦 day6   01"
+            duration_sec: 5257
+          - page: 2
+            title: "斗鱼-女流66_2020-02-09 周日也要种地哦 day6   02"
+            duration_sec: 5257
+          - page: 3
+            title: "斗鱼-女流66_2020-02-09 周日也要种地哦 day6   03"
+            duration_sec: 5257
+          - page: 4
+            title: "斗鱼-女流66_2020-02-09 周日也要种地哦 day6   04"
+            duration_sec: 5251
+          - page: 5
+            title: "斗鱼-女流66_2020-02-09 周日也要种地哦 day6   05"
+            duration_sec: 1205
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/8pa9v5jlLNa7VrqA
         kind: replay
         status: alive
@@ -240,6 +284,31 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.11 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/11/154500cb0657598e3ce9f4b8f85e2664.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1U741157Bv
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 6
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 001"
+            duration_sec: 1385
+          - page: 2
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 002"
+            duration_sec: 5257
+          - page: 3
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 003"
+            duration_sec: 5257
+          - page: 4
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 004"
+            duration_sec: 5257
+          - page: 5
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 005"
+            duration_sec: 5251
+          - page: 6
+            title: "斗鱼-女流66_2020-02-11 大能这一天忙忙活活DAY n 006"
+            duration_sec: 2119
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/DO84vrJEYZNvedGr
         kind: replay
         status: alive
@@ -314,6 +383,25 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.14 游戏：雀魂。斗鱼回放标题：大能这一天忙忙活活
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/14/71aefc71e9412b629253b9e01e66ab0d.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1b7411g7Lf
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "斗鱼-女流66_2020-02-14 大能这一天忙忙活活 001"
+            duration_sec: 5257
+          - page: 2
+            title: "斗鱼-女流66_2020-02-14 大能这一天忙忙活活 002"
+            duration_sec: 5251
+          - page: 3
+            title: "斗鱼-女流66_2020-02-14 大能这一天忙忙活活 003"
+            duration_sec: 5257
+          - page: 4
+            title: "斗鱼-女流66_2020-02-14 大能这一天忙忙活活 004"
+            duration_sec: 4693
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/DO84vrJEeowvedGr
         kind: replay
         status: alive
@@ -406,6 +494,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.17 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/17/89bf3b49e991335b088d3b982dab81ad.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1Q7411j7d2
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "聊天 5毛的"
+            duration_sec: 5803
+          - page: 2
+            title: "游戏 大能这一天忙忙活活 01"
+            duration_sec: 5251
+          - page: 3
+            title: "游戏 大能这一天忙忙活活 02"
+            duration_sec: 5257
+          - page: 4
+            title: "游戏 大能这一天忙忙活活 03"
+            duration_sec: 799
+          - page: 5
+            title: "游戏 大能这一天忙忙活活 04"
+            duration_sec: 4257
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/mPyq7o6w8J2v1gLY
         kind: replay
         status: alive
@@ -426,6 +536,55 @@
       - url: https://v.douyu.com/show/X3JzMaGNNOLvPQro
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1qt411c7xR/?p=342"
+        kind: replay
+        status: alive
+        account: bili-fan-warehouser
+        parts: 14
+        part_details:
+          - page: 342
+            title: "斗鱼-女流66_202002181253213929"
+            duration_sec: 1051
+          - page: 343
+            title: "斗鱼-女流66_202002181315056675"
+            duration_sec: 588
+          - page: 344
+            title: "斗鱼-女流66_202002181326169989"
+            duration_sec: 1052
+          - page: 345
+            title: "斗鱼-女流66_202002181343410616"
+            duration_sec: 1051
+          - page: 346
+            title: "斗鱼-女流66_202002181404022434"
+            duration_sec: 1053
+          - page: 347
+            title: "斗鱼-女流66_202002181422295488"
+            duration_sec: 1051
+          - page: 348
+            title: "斗鱼-女流66_202002181439549836"
+            duration_sec: 1051
+          - page: 349
+            title: "斗鱼-女流66_202002181457158451"
+            duration_sec: 1052
+          - page: 350
+            title: "斗鱼-女流66_202002181516405887"
+            duration_sec: 921
+          - page: 351
+            title: "斗鱼-女流66_202002181532477940"
+            duration_sec: 1052
+          - page: 352
+            title: "斗鱼-女流66_202002181552546571"
+            duration_sec: 1053
+          - page: 353
+            title: "斗鱼-女流66_202002181612303273"
+            duration_sec: 1051
+          - page: 354
+            title: "斗鱼-女流66_202002181630019705"
+            duration_sec: 1051
+          - page: 355
+            title: "斗鱼-女流66_202002181648290608"
+            duration_sec: 714
+        note: "2026-09-10 经 B 站空间接口枚举「仓储员」的女流合集后补入。该合集按录制片段切分，本条目取 P342–P355，覆盖 12:53–17:00 合计 3:49:31，约为条目 265 分钟的 87%，片段间有小缺口；仅作补充来源，斗鱼回放仍列首位。未逐P验证播放与完整性。"
     contributed_by: data-agent
     time: 12:32
     duration_min: 265
@@ -549,6 +708,28 @@
     note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：2.22 游戏：符文工房4。斗鱼回放标题：大能这一天忙忙活活
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/02/22/e9c78e62efe7d9dd289ea78f017c7f78.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV117411c7Sd
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 5
+        part_details:
+          - page: 1
+            title: "聊天01"
+            duration_sec: 5251
+          - page: 2
+            title: "聊天 02"
+            duration_sec: 4361
+          - page: 3
+            title: "大能这一天忙忙活活  01"
+            duration_sec: 890
+          - page: 4
+            title: "大能这一天忙忙活活 02"
+            duration_sec: 5252
+          - page: 5
+            title: "大能这一天忙忙活活 03"
+            duration_sec: 658
+        note: "2026-09-10 经 B 站空间接口全量枚举该号投稿后补入；核对投稿标题中的直播日期、内容及分P元数据，总时长与条目 duration_min 吻合；未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/mPyq7o6pZ9qv1gLY
         kind: replay
         status: alive

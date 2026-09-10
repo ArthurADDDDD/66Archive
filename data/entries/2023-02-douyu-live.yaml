@@ -406,6 +406,46 @@
     duration_min: 315
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/02/14/391237e918ab84d90605d5558c2149ee.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1eR4y1B7X1
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 11
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-02-14T15_16_37"
+            duration_sec: 1867
+          - page: 2
+            title: "女流66直播录像2023-02-14T15_47_38"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-02-14T16_18_53"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-02-14T16_50_08"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-02-14T17_21_23"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-02-14T17_52_38"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-02-14T18_23_53"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-02-14T18_55_08"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-02-14T19_26_23"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-02-14T19_57_38"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-02-14T20_28_53"
+            duration_sec: 146
+        note: "2026-09-10 经 B 站空间接口枚举「KassyTan」（该号 2022-12-08 至 2023-07-25 近乎逐日存有女流录播）后补入。录像 11 个分P 合计 5:14:57，与条目 duration_min 的 315 分钟高度吻合。另有 Zytau 的 BV1V14y1F7iq 自当日 19:19 起录 5:11:35，与本条目 15 点场不是同一段，未挂入本条目（见调查文档）。未逐P验证播放与完整性。"
       - url: https://v.douyu.com/show/0zZVvP9jQnE7O4E2
         kind: replay
         status: alive
