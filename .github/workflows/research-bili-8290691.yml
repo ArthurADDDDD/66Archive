@@ -1,0 +1,115 @@
+name: Research Bilibili 8290691 catalog
+
+on:
+  push:
+    branches:
+      - research/bili-8290691-catalog
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Probe public Bilibili search and space metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, re, urllib.parse, urllib.request, time
+
+          UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
+          out = {'search_pages': [], 'matches': [], 'space_probes': []}
+          seen = set()
+
+          def get(url):
+              req = urllib.request.Request(url, headers={
+                  'User-Agent': UA,
+                  'Referer': 'https://www.bilibili.com/',
+                  'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+              })
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  return r.status, r.read().decode('utf-8', 'replace')
+
+          # Public search HTML: collect real BV links adjacent to DOUYU_156277 titles.
+          for page in range(1, 21):
+              url = 'https://search.bilibili.com/all?' + urllib.parse.urlencode({'keyword':'156277','page':page})
+              try:
+                  status, text = get(url)
+                  out['search_pages'].append({'page': page, 'status': status, 'bytes': len(text)})
+                  found_this_page = 0
+                  # Search around every exact machine-title occurrence and retain nearby real BV ids.
+                  for tm in re.finditer(r'DOUYU_156277_[0-9_]+(?:_bilibili)?', text):
+                      title = tm.group(0)
+                      window = text[max(0, tm.start()-5000):min(len(text), tm.end()+2500)]
+                      bvs = re.findall(r'BV[0-9A-Za-z]{10}', window)
+                      # Prefer closest preceding/following BV by textual distance.
+                      candidates = []
+                      for bm in re.finditer(r'BV[0-9A-Za-z]{10}', window):
+                          candidates.append((abs((max(0, tm.start()-5000)+bm.start()) - tm.start()), bm.group(0)))
+                      candidates.sort()
+                      bvid = candidates[0][1] if candidates else None
+                      key = (title, bvid)
+                      if key not in seen:
+                          seen.add(key)
+                          out['matches'].append({'title': title, 'bvid_nearest': bvid, 'all_nearby_bvids': bvs[:12], 'page': page})
+                          found_this_page += 1
+                  if page >= 3 and found_this_page == 0:
+                      # still check a few pages, then stop if search results clearly exhausted
+                      if all(x.get('matches', 0) == 0 for x in []):
+                          pass
+              except Exception as e:
+                  out['search_pages'].append({'page': page, 'error': repr(e)})
+              time.sleep(1.2)
+
+          # Try read-only public/APP space endpoints. Record status/body prefix only on failure.
+          probes = [
+              'https://app.bilibili.com/x/v2/space/archive/cursor?vmid=8290691',
+              'https://api.bilibili.com/x/space/arc/search?mid=8290691&pn=1&ps=30&order=pubdate',
+          ]
+          for url in probes:
+              try:
+                  status, text = get(url)
+                  rec = {'url': url, 'status': status, 'bytes': len(text), 'prefix': text[:500]}
+                  try:
+                      obj = json.loads(text)
+                      rec['code'] = obj.get('code')
+                      data = obj.get('data') or {}
+                      vlist = ((data.get('list') or {}).get('vlist') or data.get('items') or data.get('archives') or [])
+                      if isinstance(vlist, list):
+                          rec['sample'] = [{k:v.get(k) for k in ('bvid','title','duration','created','pubdate')} for v in vlist[:5] if isinstance(v, dict)]
+                  except Exception:
+                      pass
+                  out['space_probes'].append(rec)
+              except Exception as e:
+                  out['space_probes'].append({'url': url, 'error': repr(e)})
+
+          with open('bili-8290691-probe.json', 'w', encoding='utf-8') as f:
+              json.dump(out, f, ensure_ascii=False, indent=2)
+          print(json.dumps(out, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Try flat user-space enumeration with yt-dlp
+        continue-on-error: true
+        shell: bash
+        run: |
+          python -m pip install -q -U yt-dlp
+          yt-dlp --ignore-config --flat-playlist --dump-json --playlist-end 5000 'https://space.bilibili.com/8290691/video' > yt-dlp-8290691.jsonl 2> yt-dlp-8290691.stderr || true
+          echo '--- yt-dlp stderr ---'
+          cat yt-dlp-8290691.stderr || true
+          echo '--- matching 156277 lines ---'
+          grep -F 'DOUYU_156277_' yt-dlp-8290691.jsonl || true
+
+      - name: Upload probe outputs
+        uses: actions/upload-artifact@v7
+        with:
+          name: bili-8290691-probe
+          path: |
+            bili-8290691-probe.json
+            yt-dlp-8290691.jsonl
+            yt-dlp-8290691.stderr
+          if-no-files-found: warn
+          retention-days: 7
