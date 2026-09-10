@@ -1,6 +1,7 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -11,10 +12,12 @@ import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/ga
 import { allGameIds, getGameProfile } from '@/lib/narrative'
 import { LivePageHeading } from '@/components/LiveSection'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/games/' },
-}
+/** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/games/',
+  title: '游戏厅',
+  description: '她玩过的每一款游戏：第一次是哪天，后来又回来过几次。',
+})
 
 /**
  * 游戏收藏架（v2 设计）：封面墙 + 「她的游戏库」页头。
@@ -66,7 +69,7 @@ export default async function GamesPage() {
         <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="games" />
           <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
-            打开全部 {timeline.length.toLocaleString()} 条记录 →
+            去录播室搜一场 →
           </Link>
         </header>
 

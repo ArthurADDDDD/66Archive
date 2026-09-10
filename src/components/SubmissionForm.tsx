@@ -31,6 +31,7 @@ type Status = 'idle' | 'submitting' | 'success'
 
 export function SubmissionForm({
   kind,
+  initialBody = '',
   nameLabel,
   namePlaceholder,
   bodyLabel,
@@ -42,6 +43,12 @@ export function SubmissionForm({
   className,
 }: {
   kind: 'correction' | 'meme'
+  /**
+   * 正文的初始内容。联系页按「补一场 / 纠错 / 老图」三种来意各给一份填空模板——
+   * 面对一个空白 textarea，多数人写不出后台能直接用的信息。
+   * 组件按 `initialBody` 重挂载（调用方给 key），所以这里只做初始值即可。
+   */
+  initialBody?: string
   nameLabel: string
   namePlaceholder: string
   bodyLabel: string
@@ -58,7 +65,7 @@ export function SubmissionForm({
   const [configFailed, setConfigFailed] = useState(false)
   const [configAttempt, setConfigAttempt] = useState(0)
   const [name, setName] = useState('')
-  const [body, setBody] = useState('')
+  const [body, setBody] = useState(initialBody)
   const [token, setToken] = useState<string | null>(null)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState<string | null>(null)
@@ -137,7 +144,7 @@ export function SubmissionForm({
       await submitCorrection({ reporterName: trimmedName, body: trimmedBody, kind, turnstileToken: token })
       setStatus('success')
       setName('')
-      setBody('')
+      setBody(initialBody)
     } catch (submitError) {
       // **不清空输入。** 提交失败时把用户刚写的一段话抹掉是最让人恼火的事，
       // 而失败原因往往是限流或网络，稍后重试就好。

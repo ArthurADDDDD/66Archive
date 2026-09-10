@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { resolveStoryActs } from '@/lib/narrative'
 import { buildStorySections } from '@/lib/story-years'
@@ -6,10 +7,12 @@ import { ChronicleView } from '@/components/ChronicleView'
 import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
 import { fetchBakedStoryNarrative } from '@/lib/baked-content'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/chronicle/' },
-}
+/** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/chronicle/',
+  title: '编年史',
+  description: '从 2010 年的第一支视频到今天，一年一年走下来的路。',
+})
 
 /**
  * 编年史：故事模式。年份脊柱时间线，条目仍来自 STORY_ACTS 的策展列表
@@ -32,7 +35,7 @@ export default async function ChroniclePage() {
 
   return (
     <LiveNarrativeSeed narrative={narrative}>
-      <ChronicleView storySections={storySections} total={visibleEntries.length} latestYear={latestYear} />
+      <ChronicleView storySections={storySections} latestYear={latestYear} />
     </LiveNarrativeSeed>
   )
 }

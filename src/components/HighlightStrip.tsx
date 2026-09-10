@@ -88,15 +88,12 @@ export function HighlightStrip({
                   </button>
                 )
               })}
-              <MemeSubmissionButton open={submissionOpen} onToggle={() => setSubmissionOpen((value) => !value)} />
             </div>
           </div>
           <div className="mt-5 border-l border-line/70 pl-4 sm:pl-5" role="tabpanel" aria-label={active.label}>
             <p className="text-control font-medium text-ink">{active.label}</p>
             <p className="mt-1 measure-body text-meta leading-relaxed text-faint">{active.description}</p>
           </div>
-
-          {submissionOpen && <MemeSubmissionPanel />}
 
           {active.id === 'xinling-pishuang' && (
             <MemeMontage
@@ -124,6 +121,26 @@ export function HighlightStrip({
               <Row beat={beat} />
             </Reveal>
           ))}
+        </div>
+
+        {/*
+          投稿入口原本是分类 tab 行里的一颗「补充 +」胶囊——和「日常梗」「游戏梗」
+          同样的形状、同样的位置，读起来就是第五个分类，想投梗的人认不出它是入口。
+
+          梗这一块靠一个人记不全，投稿口不该是藏起来的按钮。所以从 tab 行撤下来，
+          改成梗墙看完之后的一句正面邀请：先看完，再被问一句「你记得的呢」。
+        */}
+        <div className="mt-8 rounded-2xl border border-line bg-surface/35 p-5 sm:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+            <div className="min-w-0">
+              <p className="text-control font-medium text-ink">你记得的梗，这里还没有？</p>
+              <p className="measure-body mt-1.5 text-meta leading-relaxed text-faint">
+                这一整面墙是靠大家一起想起来的。记得是哪场、几分几秒最好，只记得个大概也可以先说一声。
+              </p>
+            </div>
+            <MemeSubmissionButton open={submissionOpen} onToggle={() => setSubmissionOpen((value) => !value)} />
+          </div>
+          {submissionOpen && <MemeSubmissionPanel />}
         </div>
       </div>
     </section>

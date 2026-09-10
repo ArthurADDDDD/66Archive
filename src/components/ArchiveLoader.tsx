@@ -147,11 +147,14 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
                     每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
                   </p>
                 </div>
-                {/* 这三个数是构建期就算好的，没有理由等 2.7MB 的载荷才显示。 */}
-                <dl className="grid grid-cols-3 gap-x-3 text-meta uppercase tracking-[0.16em] text-faint tnum sm:flex sm:gap-6">
-                  <ShellStat label="条目" value={nav.total.toLocaleString()} />
-                  <ShellStat label="已录时长" value={nav.hours.toLocaleString()} unit="小时" />
-                  <ShellStat label="时长覆盖" value={`${nav.coverage}%`} />
+                {/*
+                  这里原本还有「已录时长」与「时长覆盖 %」。两个都是校对口径——
+                  覆盖率是给补档的人看的进度条，累计时长是把一个人的十六年结算成一个数，
+                  对来找某一场的人没有任何用处。这些留在联系页的征集语境里说更合适。
+                  剩下的这一个是搜索范围，构建期就算好，没有理由等 2.7MB 的载荷才显示。
+                */}
+                <dl className="text-meta uppercase tracking-[0.16em] text-faint tnum">
+                  <ShellStat label="能翻的记录" value={nav.total.toLocaleString()} />
                 </dl>
               </div>
             </section>

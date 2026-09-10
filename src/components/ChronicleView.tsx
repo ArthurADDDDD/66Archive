@@ -8,6 +8,7 @@ import { BackToTop } from './ScrollAffordances'
 import { SearchField } from './SearchField'
 import { StoryTimeline } from './StoryTimeline'
 import { ChronicleRail } from './ChronicleRail'
+import { SiteFooter } from './primitives'
 
 /**
  * 编年史：故事模式。年份脊柱时间线，条目仍由 STORY_ACTS 策展。
@@ -18,11 +19,9 @@ const ARCHIVE_PARAMS = ['y', 'm', 'q', 'p', 't', 'g', 'alive'] as const
 
 export function ChronicleView({
   storySections,
-  total,
   latestYear,
 }: {
   storySections: StorySection[]
-  total: number
   latestYear: number
 }) {
   const router = useRouter()
@@ -51,7 +50,7 @@ export function ChronicleView({
               if (!value.trim()) return
               router.push(`/archive/?q=${encodeURIComponent(value)}`)
             }}
-            placeholder={`搜索全部 ${total.toLocaleString()} 条记录`}
+            placeholder="搜标题、游戏、日期…"
             ariaLabel="搜索全部记录"
             iconClassName="ml-auto sm:hidden"
             inputClassName="hidden"
@@ -61,7 +60,7 @@ export function ChronicleView({
             href="/archive/"
             className="ui-press ml-auto hidden shrink-0 rounded-sm text-meta text-live tnum sm:block"
           >
-            搜索全部 {total.toLocaleString()} 条记录 →
+            去录播室搜一场 →
           </a>
         </div>
       </header>
@@ -75,6 +74,7 @@ export function ChronicleView({
         />
       </div>
       <ChronicleRail sections={storySections} />
+      <SiteFooter />
       <BackToTop />
     </>
   )

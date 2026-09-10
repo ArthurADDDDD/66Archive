@@ -3,9 +3,13 @@
 import { SubmissionForm } from './SubmissionForm'
 
 /**
- * 「直播间梗」区域的投稿入口按钮，和分类 tab 放在一起，带「补充+」文字。
- * 展开状态由父组件（HighlightStrip）持有——按钮在 tab 行，但表单要展开在
- * 分类说明下面那一整行，两处不在同一个容器里，所以状态提到共同的父级。
+ * 「直播间梗」的投稿入口按钮。
+ *
+ * 曾经它叫「补充 +」、摆在分类 tab 行里，形状和「日常梗」「游戏梗」一模一样，
+ * 于是被当成第五个分类。现在它和邀请语一起摆在梗墙末尾（见 HighlightStrip），
+ * 文案也改成一个动作而不是一个名词。
+ *
+ * 展开状态仍由父组件持有：按钮和表单在同一张卡里，但父组件还要据此决定别的排版。
  */
 export function MemeSubmissionButton({ open, onToggle }: { open: boolean; onToggle: () => void }) {
   return (
@@ -16,9 +20,9 @@ export function MemeSubmissionButton({ open, onToggle }: { open: boolean; onTogg
       aria-controls="meme-submission-panel"
       aria-label={open ? '收起投稿' : '投稿一个梗'}
       title={open ? '收起投稿' : '投稿一个梗'}
-      className="ui-press flex shrink-0 cursor-pointer items-center gap-1.5 rounded-full border border-line px-3 py-2 text-meta text-faint transition-colors hover:border-live/45 hover:text-ink"
+      className="ui-press flex shrink-0 cursor-pointer items-center gap-1.5 rounded-full border border-live/45 bg-live/8 px-4 py-2.5 text-control text-live transition-colors hover:bg-live/14"
     >
-      <span>补充</span>
+      <span>{open ? '收起' : '说一个'}</span>
       <span aria-hidden className={`font-mono transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
     </button>
   )

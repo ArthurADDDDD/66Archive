@@ -133,6 +133,10 @@ export const SITE_COPY: SiteCopy = {
       lede: '',
     },
   ],
+  /**
+   * 「有谁、谁在前面」由这份基线决定——`mergeSiteCopy` 是按 id 覆盖字段，
+   * 加一个房间、去一个房间都要改这里，改后台改不动（见 LiveContentProvider）。
+   */
   rooms: [
     {
       id: 'chronicle',
@@ -141,22 +145,22 @@ export const SITE_COPY: SiteCopy = {
       body: '走过的路，一条一条。',
     },
     {
-      id: 'series',
-      kicker: 'Series',
-      title: '节目',
-      body: '从心灵砒霜、一起 See，到更早的视频连载。',
+      id: 'games',
+      kicker: 'Games',
+      title: '游戏厅',
+      body: '她玩过的每一款游戏。第一次是哪天，后来又回来过几次。',
     },
     {
       id: 'stats',
       kicker: 'Stats',
       title: '数据',
-      body: '一些主要的主播数据统计',
+      body: '哪一年留下的最多，哪款游戏陪得最久，水友们最爱点开哪一场。',
     },
     {
       id: 'gallery',
       kicker: 'Gallery',
-      title: '画廊',
-      body: '画廊还在收集中。周年图片、粉丝作品和老截图，欢迎补一条线索。',
+      title: '纪念画廊',
+      body: '从屏风时代到现在，直播间里那些值得纪念的画面。',
     },
   ],
   pages: [
@@ -171,6 +175,8 @@ export const SITE_COPY: SiteCopy = {
     { id: 'stats-q-eras', eyebrow: '', title: '时代如何变化？', lede: '' },
     { id: 'stats-q-longest-series', eyebrow: '', title: '哪些节目坚持得最久？', lede: '' },
     { id: 'stats-q-popular', eyebrow: '', title: '水友们最爱点开哪些记录？', lede: '' },
+    // 新 id：`import-snapshot` 是 append-only，新增的会被自动采纳，不需要像 034 那样走迁移。
+    { id: 'stats-q-trail', eyebrow: '', title: '你自己翻过哪些？', lede: '' },
     { id: 'stats-q-gaps', eyebrow: '', title: '档案还有多少空白？', lede: '' },
     {
       id: 'series',
@@ -220,8 +226,8 @@ export const SITE_COPY: SiteCopy = {
     {
       id: 'contact',
       eyebrow: 'Contact & correction',
-      title: '让这份索引更准确。',
-      lede: '日期、标题、时长、链接、游戏标签——任何一处对不上都可以直接在下面告诉我。你手上有档案里缺的录像，也从这里说。所有线索都由我逐条核对后再改，不会自动生效。',
+      title: '缺的、错的，都可以在这儿说一声。',
+      lede: '这份档案不是一个人翻出来的。你想起一场没被收录的直播，发现哪一处对不上，或者手里存着一张老图——都可以从下面挑一件告诉我。所有线索都由我逐条核对后再改，不会自动生效。',
     },
     // 建站的来龙去脉，第一人称。放在致谢区而不是页面最上面：这一段说的是
     // 「这份档案是怎么来的」，和下面的维护者、录播来源是同一件事的三个部分。
