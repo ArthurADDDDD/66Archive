@@ -7,6 +7,9 @@ import { formatClock, formatDuration, gameColor } from '@/lib/ui'
 import { actColorForDate } from '@/lib/narrative'
 import { toSeconds, type Platform } from '@/lib/schema'
 import { buildEntryRails } from '@/lib/relations'
+import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
+import { InlineTagCalibration } from '@/components/InlineTagCalibration'
+import { TrailRecorder } from '@/components/Trail'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { RelatedRail } from '@/components/RelatedRail'
@@ -42,13 +45,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const entry = getDataset().entries.find((e) => e.id === id)
-  return {
-    title: entry ? `${entry.date} ${entry.title} · 女流编年史` : '记录 · 女流66编年史',
+  // 站名由根 layout 的 title template 补，这里只给这一场自己的名字。
+  return pageMetadata({
+    path: `/e/${id}/`,
+    title: entry ? `${entry.date} ${entry.title}` : '记录',
     description: entry
       ? `${entry.date}${entry.time ? ` ${entry.time}` : ''} · ${formatDuration(entry.duration_min)} · 只索引，不搬运。`
-      : undefined,
-    alternates: { canonical: `/e/${id}/` },
-  }
+      : SITE_DESCRIPTION,
+  })
 }
 
 export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -116,6 +120,8 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="entry" />
       <BackToTop />
+      {/* 记一笔足迹（纯本地，见 lib/trail.ts）。没有可见输出。 */}
+      <TrailRecorder id={entry.id} title={entry.title} date={entry.date} />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="entry" />
         <Link href={backHref} prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
@@ -206,6 +212,19 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             entryCover={entry.cover ?? null}
             entryTitle={entry.title}
           />
+          {/*
+            校对入口以前只挂在录播室里展开的那一行（EntryDetailBody），
+            条目页——也就是被分享出去、被搜索引擎收到、从游戏厅点进来的那一个入口——
+            反而一个都没有。发现游戏标错的那一刻正好发生在这一页，却只能自己想到去
+            「联系我们」，绝大多数人不会绕这一趟。
+
+            位置放在观看台**下面**：组件文案是「打开上面的录像看一眼」，
+            看过再判断才是这个功能想要的顺序。它不在挂载时请求任何接口，
+            展开才拉任务与词库，所以两千多张静态页不会因此多出一次请求。
+          */}
+          <div className="mt-10">
+            <InlineTagCalibration entryId={entry.id} games={games} tags={entry.tags} />
+          </div>
         </div>
       </section>
 

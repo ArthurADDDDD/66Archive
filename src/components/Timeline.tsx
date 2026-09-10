@@ -12,6 +12,7 @@ import { ERAS, type Era } from '@/lib/archive-nav'
 import { SearchField } from './SearchField'
 import { MobileQuickNav } from './ScrollAffordances'
 import { SiteNav } from './SiteNav'
+import { ResumeStrip } from './Trail'
 
 type MonthSummary = {
   count: number
@@ -256,15 +257,6 @@ export function Timeline({
     return [...counts.values()].sort((a, b) => b.count - a.count)
   }, [entries])
 
-  const durationStats = useMemo(() => {
-    const known = entries.filter((entry) => entry.duration_min)
-    const minutes = known.reduce((sum, entry) => sum + (entry.duration_min ?? 0), 0)
-    return {
-      hours: Math.round(minutes / 60),
-      coverage: entries.length ? Math.round((known.length / entries.length) * 100) : 0,
-    }
-  }, [entries])
-
   const activeEra = ERAS.find((era) => activeYear >= era.from && activeYear <= era.to) ?? ERAS[0]
   const activeEraYears = years
     .filter((year) => year >= activeEra.from && year <= activeEra.to)
@@ -403,7 +395,7 @@ export function Timeline({
             <SearchField
               value={filters.q}
               onChange={(v) => set({ q: v })}
-              placeholder={`搜索全部 ${entries.length.toLocaleString()} 条记录`}
+              placeholder="搜标题、游戏、日期…"
               ariaLabel="搜索全部记录"
               kbd="/"
               inputRef={searchRef}
@@ -420,6 +412,8 @@ export function Timeline({
       </header>
 
       <main className="ui-page-in site-container-wide px-page pb-16">
+        {/* 录播室是最容易「上次看到哪儿了」的一页。它是浮层，不占文档流。 */}
+        <ResumeStrip />
         <section className="ui-reveal pb-8 pt-4 sm:py-10">
           <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
@@ -435,10 +429,9 @@ export function Timeline({
                 每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
               </p>
             </div>
-            <dl className="grid grid-cols-3 gap-x-3 text-meta uppercase tracking-[0.16em] text-faint tnum sm:flex sm:gap-6">
-              <Stat label="条目" value={entries.length.toLocaleString()} />
-              <Stat label="已录时长" value={durationStats.hours.toLocaleString()} unit="小时" />
-              <Stat label="时长覆盖" value={`${durationStats.coverage}%`} />
+            {/* 口径同 ArchiveLoader 的骨架头：只留搜索范围，时长与覆盖率不在这里说。 */}
+            <dl className="text-meta uppercase tracking-[0.16em] text-faint tnum">
+              <Stat label="能翻的记录" value={entries.length.toLocaleString()} />
             </dl>
           </div>
 

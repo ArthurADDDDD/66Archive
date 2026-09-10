@@ -4,6 +4,7 @@ import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } f
 import { proxyImageSrcSet } from '@/lib/platforms'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody, useEntrySource } from './EntryDetail'
+import { SeenDot } from './Trail'
 import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META } from '@/lib/platforms'
 import { formatClock, gameColor } from '@/lib/ui'
@@ -225,6 +226,8 @@ function EntryCard({
           <span className="font-mono">{dateLabel}</span>
           <span className="text-line">·</span>
           <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
+          {/* 翻过 / 看过的淡标记。纯本地，见 lib/trail.ts——翻到第三页时能一眼看出从哪儿断的。 */}
+          <SeenDot id={entry.id} />
         </span>
         {compactGames.length > 0 && (
           <span className="mt-1 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-0.5 text-meta text-muted">

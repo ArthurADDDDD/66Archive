@@ -2,6 +2,7 @@
 
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody } from './EntryDetail'
+import { SeenDot } from './Trail'
 import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META } from '@/lib/platforms'
 import { barHeight, formatDuration, gameColor } from '@/lib/ui'
@@ -109,6 +110,8 @@ export function EntryRow({
               <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
               <span className="text-line">·</span>
               <span>{formatDuration(entry.duration_min)}</span>
+              {/* 翻过 / 看过的淡标记。纯本地，见 lib/trail.ts。 */}
+              <SeenDot id={entry.id} />
             </div>
 
             {compactGames.length > 0 && (

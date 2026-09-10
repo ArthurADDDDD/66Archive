@@ -1,9 +1,11 @@
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
+import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { HomeHero } from '@/components/HomeHero'
+import { ResumeStrip } from '@/components/Trail'
 import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/components/HomeActRail'
 import { TimelineProgress } from '@/components/TimelineProgress'
 import { HomeActSections } from '@/components/HomeActSections'
@@ -23,10 +25,11 @@ import { getDataset, toTimelineEntries } from '@/lib/data'
 import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/' },
-}
+/** 首页不覆盖标题（保持站名本身），只补 canonical 与社交卡片。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/',
+  description: SITE_DESCRIPTION,
+})
 
 /**
  * 首页 = 三幕 + 幕间 + 高光 + 记忆（随机一晚 / 历史上的今天）+ 游戏预告 + 四个房间入口。
@@ -177,9 +180,15 @@ export default async function HomePage() {
               prefetch={false}
               className="ui-press hidden whitespace-nowrap rounded-sm text-meta tnum text-live lg:block"
             >
-              打开全部 {data.totals.entries.toLocaleString()} 条记录 →
+              搜一场你记得的 →
             </Link>
           </header>
+
+          {/*
+            回来的人会看到「接着上次」。浮层，不进文档流——第一次来的人
+            什么都不会看到，首屏保持干净。
+          */}
+          <ResumeStrip />
 
           {/* 第一屏：人物，不是数据。PC 端连同导航占满一整个视口，不提前露出 ACT I。 */}
           <HomeHero nowYear={data.now.year} historyYears={data.totals.years} />

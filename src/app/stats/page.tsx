@@ -1,6 +1,7 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -10,6 +11,9 @@ import { YearBarChart } from '@/components/YearCharts'
 import { YearLane, YearAxis, EraFlow } from '@/components/YearLane'
 import { CoverageGaps } from '@/components/CoverageMap'
 import { PopularContent } from '@/components/PopularContent'
+import { PresenceIndicator } from '@/components/PresenceIndicator'
+import { SiteReach } from '@/components/SiteReach'
+import { TrailSection } from '@/components/Trail'
 import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
@@ -18,10 +22,12 @@ import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
 import { allGameIds } from '@/lib/narrative'
 
-/** canonical 指向自身的 apex 地址。根 layout 只给 metadataBase，canonical 必须各页自己声明。 */
-export const metadata: Metadata = {
-  alternates: { canonical: '/stats/' },
-}
+/** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
+export const metadata: Metadata = pageMetadata({
+  path: '/stats/',
+  title: '数据',
+  description: '关于这份档案的一些观察：哪一年留下的最多，哪款游戏陪得最久。',
+})
 
 /**
  * 数据里的发现：每一节只回答一个问题。
@@ -30,6 +36,9 @@ export const metadata: Metadata = {
  */
 /** 「哪些节目坚持得最久」这一节数据意义不大，先隐藏不删——想恢复直接改回 true。 */
 const SHOW_LONGEST_RUNNING_SERIES = false
+
+/** 「哪些游戏隔了几年还会回来」同理：读者拿它做不了任何事，先隐藏不删。 */
+const SHOW_RETURNING_GAMES = false
 
 export default async function StatsPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
@@ -43,6 +52,7 @@ export default async function StatsPage() {
     'stats-q-eras',
     'stats-q-longest-series',
     'stats-q-popular',
+    'stats-q-trail',
     'stats-q-gaps',
   ])
 
@@ -53,7 +63,6 @@ export default async function StatsPage() {
   const liveTimeline = timeline.filter((e) => e.type === 'live')
   const liveKnownMinutes = liveTimeline.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
   const liveKnownHours = Math.round(liveKnownMinutes / 60)
-  const liveDurationCoverage = liveTimeline.length ? Math.round((liveTimeline.filter((e) => e.duration_min).length / liveTimeline.length) * 100) : 0
   const publicHoursFloor = 10_000
   const publicHoursLowerBound = Math.max(publicHoursFloor, liveKnownHours)
 
@@ -185,9 +194,31 @@ export default async function StatsPage() {
             eyebrowColor="#E5568A"
             wide
           />
+          {/* 这一页说的是「我们」，那就先说此刻这里有谁、一共来过多少人。两者都拿不到就都不出现。 */}
+          <PresenceIndicator pageKey="stats" mode="global" className="mt-6" />
+          <SiteReach className="mt-2" />
         </section>
 
-        {/* 00 已收录直播与已确认时长 */}
+        {/*
+          00 水友们最爱点开哪些记录？
+
+          这一节原本排在第七位。但它是全页唯一一节**读者自己参与生成**的内容——
+          先摆它，这一页才是「我们」而不是「她的产出报表」。
+          数据在运行期从内容服务拉；拿不到就整节不出现。
+        */}
+        <PopularContent
+          labelIndexUrl={popularIndexUrl()}
+          questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
+          accent="#7BD88F"
+          legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」"
+        />
+
+        {/* 01 你的足迹——纯本地，不上报 */}
+        <Section questionId="stats-q-trail" fallback="你自己翻过哪些？" accent="#A78BFA">
+          <TrailSection />
+        </Section>
+
+        {/* 02 已收录直播与已确认时长 */}
         <Section questionId="stats-q-recorded" fallback="已收录直播有多少？" accent="#E5568A">
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
@@ -198,7 +229,7 @@ export default async function StatsPage() {
             <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
               <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
               <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
-              <p className="mt-1 text-meta text-faint tnum">小时 · {liveDurationCoverage}% 的直播已有可核对时长</p>
+              <p className="mt-1 text-meta text-faint tnum">小时</p>
             </div>
             <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
               <p className="text-meta uppercase tracking-[0.16em] text-faint">公开口径累计时长</p>
@@ -250,47 +281,49 @@ export default async function StatsPage() {
           </Observation>
         </Section>
 
-        {/* 03 哪些游戏反复回来？ */}
-        <Section
-          questionId="stats-q-returning-games" fallback="哪些游戏，隔了几年还会回来？"
-          accent="#5BC8E8"
-          legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
-        >
-          <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
-          <div className="divide-y divide-line/60 border-y border-line/60">
-            {revisited.map(({ p, years, gaps }) => (
-              <Link prefetch={false} key={p.id} href={`/games/${p.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                  <span className="text-body font-medium text-ink">{p.name}</span>
-                  <span className="text-meta text-faint tnum">
-                    <span className="font-mono text-control font-semibold text-ink">{years.length}</span> 个年份里打过
-                    {gaps > 0 && <> · 中途断过 {gaps} 次</>}
-                  </span>
-                </div>
-                <div className="mt-2">
-                  <YearLane
-                    from={firstArchiveYear}
-                    to={lastArchiveYear}
-                    perYear={p.entries.reduce<{ year: number; count: number }[]>((acc, entry) => {
-                      const y = Number(entry.date.slice(0, 4))
-                      const row = acc.find((item) => item.year === y)
-                      if (row) row.count += 1
-                      else acc.push({ year: y, count: 1 })
-                      return acc
-                    }, [])}
-                    color="#5BC8E8"
-                    unit="场"
-                    compact
-                    showAxis={false}
-                  />
-                </div>
-              </Link>
-            ))}
-          </div>
-          <Observation>
-            有些游戏隔了几年，还是会重新打开：「{revisited[0]?.p.name}」在 {revisited[0]?.years.length} 个不同年份里都出现过。
-          </Observation>
-        </Section>
+        {/* 03 哪些游戏反复回来？——隐藏中，见 SHOW_RETURNING_GAMES */}
+        {SHOW_RETURNING_GAMES && (
+          <Section
+            questionId="stats-q-returning-games" fallback="哪些游戏，隔了几年还会回来？"
+            accent="#5BC8E8"
+            legend={`一格一年（${firstArchiveYear} — ${lastArchiveYear}）· 亮起来＝这一年打过，暗格＝这一年没碰过`}
+          >
+            <YearAxis from={firstArchiveYear} to={lastArchiveYear} className="mb-1.5" />
+            <div className="divide-y divide-line/60 border-y border-line/60">
+              {revisited.map(({ p, years, gaps }) => (
+                <Link prefetch={false} key={p.id} href={`/games/${p.id}/`} className="group block py-3.5 transition-colors hover:bg-surface/30">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <span className="text-body font-medium text-ink">{p.name}</span>
+                    <span className="text-meta text-faint tnum">
+                      <span className="font-mono text-control font-semibold text-ink">{years.length}</span> 个年份里打过
+                      {gaps > 0 && <> · 中途断过 {gaps} 次</>}
+                    </span>
+                  </div>
+                  <div className="mt-2">
+                    <YearLane
+                      from={firstArchiveYear}
+                      to={lastArchiveYear}
+                      perYear={p.entries.reduce<{ year: number; count: number }[]>((acc, entry) => {
+                        const y = Number(entry.date.slice(0, 4))
+                        const row = acc.find((item) => item.year === y)
+                        if (row) row.count += 1
+                        else acc.push({ year: y, count: 1 })
+                        return acc
+                      }, [])}
+                      color="#5BC8E8"
+                      unit="场"
+                      compact
+                      showAxis={false}
+                    />
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <Observation>
+              有些游戏隔了几年，还是会重新打开：「{revisited[0]?.p.name}」在 {revisited[0]?.years.length} 个不同年份里都出现过。
+            </Observation>
+          </Section>
+        )}
 
         {/* 04 时代如何变化？ */}
         <Section questionId="stats-q-eras" fallback="时代如何变化？" accent="#FF6B75">
@@ -368,14 +401,6 @@ export default async function StatsPage() {
           </Observation>
         </Section>
         )}
-
-        {/* 06 站内点击排行——数据在运行期从内容服务拉；拿不到就整节不出现 */}
-        <PopularContent
-          labelIndexUrl={popularIndexUrl()}
-          questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
-          accent="#7BD88F"
-          legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」 · 这个功能刚上线，眼下的点击大多来自开发调试，数字随时可能重新从零开始"
-        />
 
         {/* 07 档案还有多少空白？ */}
         <Section
