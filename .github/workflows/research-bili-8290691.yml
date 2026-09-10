@@ -1,4 +1,4 @@
-name: Research Bilibili 8290691 catalog
+name: Research current Douyu gaps
 
 on:
   push:
@@ -11,43 +11,63 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
-      - name: Capture Bilibili search pages 16-50
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Recompute current 2021-2022 Douyu-only entries
         shell: bash
         run: |
+          python -m pip install --quiet pyyaml
           python - <<'PY'
-          import json, re, time, urllib.parse, urllib.request
-          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
-          meta=[]
-          empty=0
-          for page in range(16,51):
-              url='https://search.bilibili.com/all?'+urllib.parse.urlencode({'keyword':'156277','page':page})
-              req=urllib.request.Request(url,headers={'User-Agent':UA,'Referer':'https://www.bilibili.com/','Accept-Language':'zh-CN,zh;q=0.9'})
+          import csv, glob, json, urllib.parse, yaml
+
+          def is_douyu(url):
               try:
-                  with urllib.request.urlopen(req,timeout=20) as r:
-                      text=r.read().decode('utf-8','replace')
-              except Exception as e:
-                  meta.append({'page':page,'error':repr(e)})
-                  break
-              titles=sorted(set(re.findall(r'DOUYU_156277_[0-9_]+(?:_bilibili)?',text)))
-              bvs=sorted(set(re.findall(r'BV[0-9A-Za-z]{10}',text)))
-              open(f'bili-search-156277-p{page}.html','w',encoding='utf-8').write(text)
-              meta.append({'page':page,'bytes':len(text),'title_count':len(titles),'bv_count':len(bvs),'titles':titles})
-              empty = empty + 1 if not titles else 0
-              if empty >= 3:
-                  break
-              time.sleep(0.45)
-          open('meta-remaining.json','w',encoding='utf-8').write(json.dumps(meta,ensure_ascii=False,indent=2))
-          print(json.dumps(meta,ensure_ascii=False,indent=2))
+                  host=(urllib.parse.urlparse(str(url)).hostname or '').lower()
+              except Exception:
+                  return False
+              return host in {'douyu.com','douyu.tv'} or host.endswith('.douyu.com') or host.endswith('.douyu.tv')
+
+          rows=[]
+          for path in glob.glob('data/entries/*.yaml'):
+              with open(path,encoding='utf-8') as f:
+                  obj=yaml.safe_load(f)
+              if isinstance(obj,dict):
+                  items=obj.get('entries') or obj.get('items') or []
+              elif isinstance(obj,list):
+                  items=obj
+              else:
+                  continue
+              for e in items:
+                  if not isinstance(e,dict):
+                      continue
+                  date=str(e.get('date') or '')
+                  if not (date.startswith('2021-') or date.startswith('2022-')):
+                      continue
+                  src=e.get('sources') or []
+                  urls=[s.get('url') for s in src if isinstance(s,dict) and s.get('url')]
+                  if urls and all(is_douyu(u) for u in urls):
+                      rows.append({
+                          'entry_id':e.get('id'),
+                          'date':date,
+                          'title':e.get('title'),
+                          'duration_min':e.get('duration_min'),
+                          'urls':' | '.join(urls),
+                          'file':path,
+                      })
+          rows.sort(key=lambda r:(r['date'],r['entry_id'] or ''))
+          with open('current-douyu-only-2021-2022.csv','w',encoding='utf-8-sig',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['entry_id','date','title','duration_min','urls','file'])
+              w.writeheader(); w.writerows(rows)
+          print('COUNT',len(rows))
+          print(json.dumps(rows,ensure_ascii=False,indent=2))
           PY
 
-      - name: Upload raw search pages
-        uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v7
         with:
-          name: bili-8290691-search-html-remaining
-          path: |
-            bili-search-156277-p*.html
-            meta-remaining.json
-          if-no-files-found: error
+          name: current-douyu-only-2021-2022
+          path: current-douyu-only-2021-2022.csv
           retention-days: 7
