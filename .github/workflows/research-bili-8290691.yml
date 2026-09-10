@@ -13,85 +13,98 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v7
-
-      - name: Extract BV ids from public Bilibili search
+      - name: Enumerate UID 8290691 videos containing 156277
         shell: bash
         run: |
           python - <<'PY'
-          import html, json, re, urllib.parse, urllib.request, time
+          import json, urllib.parse, urllib.request, urllib.error
+          from datetime import datetime, timezone
 
+          UID = 8290691
+          PREFIX = 'DOUYU_156277_'
           UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
-          out = {'html_pages': [], 'html_matches': [], 'api_probes': []}
-          known_prefix = 'DOUYU_156277_'
 
-          def get(url, timeout=10):
+          def fetch(keywords):
+              qs = urllib.parse.urlencode({
+                  'mid': UID,
+                  'keywords': keywords,
+                  'pn': 0,
+                  'ps': 0,
+                  'orderby': 'pubdate',
+              })
+              url = 'https://api.bilibili.com/x/series/recArchivesByKeywords?' + qs
               req = urllib.request.Request(url, headers={
                   'User-Agent': UA,
-                  'Referer': 'https://www.bilibili.com/',
+                  'Referer': f'https://space.bilibili.com/{UID}/video',
+                  'Accept': 'application/json,text/plain,*/*',
                   'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
               })
-              with urllib.request.urlopen(req, timeout=timeout) as r:
-                  return r.status, r.read().decode('utf-8', 'replace')
-
-          # Search HTML should contain the actual /video/BV... hrefs rendered in result cards.
-          for page in range(1, 6):
-              url = 'https://search.bilibili.com/all?' + urllib.parse.urlencode({'keyword':'156277','page':page})
               try:
-                  status, text = get(url)
-                  out['html_pages'].append({'page':page,'status':status,'bytes':len(text)})
-                  for m in re.finditer(r'href=["\']([^"\']*/video/(BV[0-9A-Za-z]{10})[^"\']*)["\']', text):
-                      href, bvid = html.unescape(m.group(1)), m.group(2)
-                      window = text[max(0,m.start()-1500):min(len(text),m.end()+4000)]
-                      titles = re.findall(r'DOUYU_156277_[0-9_]+(?:_bilibili)?', window)
-                      for title in titles:
-                          out['html_matches'].append({'page':page,'bvid':bvid,'title_nearby':title,'href':href})
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      body = r.read().decode('utf-8', 'replace')
+                      return {'url': url, 'http_status': r.status, 'body': body}
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode('utf-8', 'replace')
+                  return {'url': url, 'http_status': e.code, 'body': body, 'error': repr(e)}
               except Exception as e:
-                  out['html_pages'].append({'page':page,'error':repr(e)})
-              time.sleep(0.5)
+                  return {'url': url, 'error': repr(e), 'body': ''}
 
-          # Public search JSON often exposes bvid directly. Probe both current/legacy route forms.
-          api_urls = [
-              'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=156277&page=1',
-              'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=156277&page=2',
-              'https://app.bilibili.com/x/v2/space/archive/cursor?vmid=8290691',
-              'https://api.bilibili.com/x/space/arc/search?mid=8290691&pn=1&ps=30&order=pubdate',
-          ]
-          for url in api_urls:
-              rec = {'url':url}
+          probes = [fetch('DOUYU_156277_'), fetch('156277')]
+          rows = {}
+          summaries = []
+
+          for p in probes:
+              rec = {'url': p['url'], 'http_status': p.get('http_status'), 'error': p.get('error')}
               try:
-                  status, text = get(url, 8)
-                  rec.update({'status':status,'bytes':len(text),'prefix':text[:300]})
-                  try:
-                      obj=json.loads(text)
-                      rec['code']=obj.get('code')
-                      data=obj.get('data')
-                      results=[]
-                      if isinstance(data, dict):
-                          if isinstance(data.get('result'), list): results=data['result']
-                          elif isinstance((data.get('list') or {}).get('vlist'), list): results=data['list']['vlist']
-                      rec['matches']=[{k:x.get(k) for k in ('bvid','aid','title','duration','author','mid','pubdate','created')} for x in results if isinstance(x,dict) and known_prefix in str(x.get('title',''))]
-                  except Exception as e:
-                      rec['json_error']=repr(e)
+                  obj = json.loads(p.get('body') or '{}')
+                  rec['code'] = obj.get('code')
+                  rec['message'] = obj.get('message')
+                  archives = ((obj.get('data') or {}).get('archives') or []) if isinstance(obj, dict) else []
+                  rec['archive_count'] = len(archives)
+                  for a in archives:
+                      if not isinstance(a, dict):
+                          continue
+                      title = str(a.get('title') or '')
+                      if PREFIX not in title:
+                          continue
+                      bvid = a.get('bvid')
+                      key = bvid or f"aid:{a.get('aid')}:{title}"
+                      pubdate = a.get('pubdate')
+                      pubdate_iso = None
+                      if isinstance(pubdate, (int, float)):
+                          pubdate_iso = datetime.fromtimestamp(pubdate, tz=timezone.utc).isoformat()
+                      rows[key] = {
+                          'bvid': bvid,
+                          'aid': a.get('aid'),
+                          'title': title,
+                          'duration_sec': a.get('duration'),
+                          'pubdate': pubdate,
+                          'pubdate_utc': pubdate_iso,
+                          'view': ((a.get('stat') or {}).get('view') if isinstance(a.get('stat'), dict) else None),
+                      }
               except Exception as e:
-                  rec['error']=repr(e)
-              out['api_probes'].append(rec)
+                  rec['parse_error'] = repr(e)
+                  rec['body_prefix'] = (p.get('body') or '')[:1000]
+              summaries.append(rec)
 
-          # Deduplicate exact bvid/title pairs produced by loose HTML windows.
-          dedup={}
-          for x in out['html_matches']:
-              dedup[(x['bvid'],x['title_nearby'])]=x
-          out['html_matches']=list(dedup.values())
+          result = {
+              'uid': UID,
+              'prefix': PREFIX,
+              'probe_summaries': summaries,
+              'count_unique': len(rows),
+              'videos': sorted(rows.values(), key=lambda x: (x.get('title') or '', x.get('bvid') or '')),
+          }
 
-          with open('bili-8290691-fast-probe.json','w',encoding='utf-8') as f:
-              json.dump(out,f,ensure_ascii=False,indent=2)
-          print(json.dumps(out,ensure_ascii=False,indent=2))
+          with open('bili-8290691-catalog.json', 'w', encoding='utf-8') as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+
+          print(json.dumps(result, ensure_ascii=False, indent=2))
           PY
 
-      - name: Upload probe output
+      - name: Upload catalog output
         uses: actions/upload-artifact@v7
         with:
-          name: bili-8290691-fast-probe
-          path: bili-8290691-fast-probe.json
+          name: bili-8290691-catalog
+          path: bili-8290691-catalog.json
           if-no-files-found: error
           retention-days: 7
