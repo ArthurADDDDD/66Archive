@@ -12,6 +12,7 @@ import {
   type LiveSiteCopy,
 } from '@/lib/live-content'
 import { fillSiteText, SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
+import { listenForLiveEditHost, type LiveEditDraft, type LiveEditSession } from '@/lib/live-edit'
 
 /**
  * 实时内容上下文。
@@ -90,9 +91,20 @@ export function LiveContentProvider({
     }
   }, [wanted])
 
+  // 现场编辑（见 lib/live-edit.ts）：只有被后台嵌进 iframe 时才会建立会话，
+  // 普通访客这里始终是 null，value 就是原来的 content。
+  const [editSession, setEditSession] = useState<LiveEditSession | null>(null)
+  const [editDraft, setEditDraft] = useState<LiveEditDraft | null>(null)
+  useEffect(() => listenForLiveEditHost(setEditSession, setEditDraft), [])
+  const value = useMemo(
+    () => (editSession ? editSession.apply(content, editDraft) : content),
+    [editSession, content, editDraft],
+  )
+
   return (
-    <LiveContentContext.Provider value={content}>
-      <LiveCopyArrivedContext.Provider value={copyArrived}>{children}</LiveCopyArrivedContext.Provider>
+    <LiveContentContext.Provider value={value}>
+      {/* 编辑会话里内容一律以上下文为准，各页烤入的那份要让位，否则草稿会被盖住。 */}
+      <LiveCopyArrivedContext.Provider value={copyArrived || editSession !== null}>{children}</LiveCopyArrivedContext.Provider>
     </LiveContentContext.Provider>
   )
 }
