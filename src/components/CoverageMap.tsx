@@ -44,10 +44,7 @@ export function CoverageGaps({
     cells,
     maxMonthCount,
     blankMonths,
-    monthsInRange,
-    totalEntries,
     missingDuration,
-    durationCoverage,
     deadOnly,
     noSource,
     yearRows,
@@ -57,8 +54,6 @@ export function CoverageGaps({
   const [expanded, setExpanded] = useState(defaultExpanded)
 
   const byKey = new Map(cells.map((cell) => [`${cell.year}-${cell.month}`, cell]))
-  const filledMonths = monthsInRange - blankMonths
-  const monthCoverage = monthsInRange ? Math.round((filledMonths / monthsInRange) * 100) : 0
   const explainedBlanks = cells.filter(
     (cell) => !cell.outOfRange && cell.count === 0 && noteForMonth(cell.year, cell.month),
   ).length
@@ -70,9 +65,13 @@ export function CoverageGaps({
   return (
     <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-surface/55">
       {/* 概览数字：先给结论，收起状态下这是唯一显示的内容 */}
-      <div className="relative grid gap-px bg-line/60 sm:grid-cols-2 lg:grid-cols-4">
-        <Tile label="已收录记录" value={totalEntries.toLocaleString()} unit="条" />
-        <Tile label="有记录的月份" value={`${monthCoverage}%`} unit={`${filledMonths} / ${monthsInRange} 个月`} />
+      {/*
+        原本是四格：已收录记录 N 条 / 有记录的月份 79% (155/197) / 空白 N 个月 /
+        已查清 N 个。前两格删掉——「已收录 N 条」是总数，在一节讲缺口的地方没有作用；
+        「有记录的月份 79%」是覆盖率，和已经撤掉的「时长覆盖率」是同一类校对口径。
+        留下的两格正是这一节要说的事：还缺哪些、其中哪些已经知道为什么缺。
+      */}
+      <div className="relative grid gap-px bg-line/60 sm:grid-cols-2">
         <Tile label="空白月份" value={blankMonths.toLocaleString()} unit="个月没有任何记录" accent="#5BC8E8" />
         <Tile
           label="已经查清原因"

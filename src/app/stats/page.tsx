@@ -59,13 +59,6 @@ export default async function StatsPage() {
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
 
-  // —— 00 已收录直播（只统计直播条目；视频投稿不计入直播时长）——
-  const liveTimeline = timeline.filter((e) => e.type === 'live')
-  const liveKnownMinutes = liveTimeline.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
-  const liveKnownHours = Math.round(liveKnownMinutes / 60)
-  const publicHoursFloor = 10_000
-  const publicHoursLowerBound = Math.max(publicHoursFloor, liveKnownHours)
-
   // —— 01 每一年 ——
   const byYear = new Map<number, { count: number; minutes: number; known: number }>()
   for (const e of timeline) {
@@ -116,32 +109,57 @@ export default async function StatsPage() {
 
   // —— 04 时代 ——
   // 2015 是视频投稿与斗鱼直播重叠的过渡年，时代统计按条目类型/平台分，不再按年份硬切。
+  /*
+   * 时期按**日期**切，不按平台切。
+   *
+   * 原先是 video / douyu 直播 / douyin 直播 三个 filter，于是 14 条 B 站直播
+   * （2015 年 3 条，2023-10 ~ 2024-03 共 11 条）谁都不属于，直接从这一节消失：
+   * 三档相加 2,700 条，而档案一共 2,714 条，页面上另一节又说直播有 2,618 场，
+   * 三个总数互相对不上，且没有任何一处会报错。
+   *
+   * 那 11 条恰恰是离开斗鱼、还没到抖音的那段过渡期——它本来就属于某个时期，
+   * 只是不属于任何一个平台。按日期切之后每条记录必定落进且只落进一个时期，
+   * 相加恒等于全部条目。
+   *
+   * 分界点从数据里取，不写死：第一场直播 / 第一场抖音直播。年份标签也由各档
+   * 自己的内容算出来——标签写死就迟早和内容对不上。
+   */
+  const sortedDates = timeline.map((entry) => entry.date).sort()
+  const firstLiveDate = timeline.filter((e) => e.type === 'live').map((e) => e.date).sort()[0] ?? sortedDates[0] ?? ''
+  const firstDouyinDate = timeline.filter((e) => e.platform === 'douyin').map((e) => e.date).sort()[0] ?? ''
+
+  const eraLabel = (rows: { date: string }[], openEnded = false) => {
+    if (rows.length === 0) return ''
+    const years = rows.map((row) => row.date.slice(0, 4)).sort()
+    return `${years[0]} — ${openEnded ? '至今' : years[years.length - 1]}`
+  }
+
+  const douyuLastDate = timeline.filter((e) => e.platform === 'douyu').map((e) => e.date).sort().at(-1) ?? ''
+  const interimCount = timeline.filter((e) => e.date > douyuLastDate && e.date < firstDouyinDate).length
+
   const eras = [
     {
       id: 'video',
       label: '视频时期',
-      years: '2010 — 2015',
       color: '#E0A244',
       from: 2010,
-      entries: timeline.filter((e) => e.type === 'video'),
+      entries: timeline.filter((e) => e.date < firstLiveDate),
     },
     {
       id: 'douyu',
       label: '斗鱼时期',
-      years: '2015 — 2023',
       color: '#5BC8E8',
       from: 2015,
-      entries: timeline.filter((e) => e.type === 'live' && e.platform === 'douyu'),
+      entries: timeline.filter((e) => e.date >= firstLiveDate && (firstDouyinDate === '' || e.date < firstDouyinDate)),
     },
     {
       id: 'douyin',
-      label: '抖音时期',
-      years: '2024 — 至今',
+      label: '现在',
       color: '#FF6B75',
       from: 2024,
-      entries: timeline.filter((e) => e.type === 'live' && e.platform === 'douyin'),
+      entries: timeline.filter((e) => firstDouyinDate !== '' && e.date >= firstDouyinDate),
     },
-  ].map((era) => {
+  ].map((era) => ({ ...era, years: eraLabel(era.entries, era.id === 'douyin') })).map((era) => {
     const count = era.entries.length
     const minutes = era.entries.reduce((sum, entry) => sum + (entry.duration_min ?? 0), 0)
     const perYear = new Map<number, number>()
@@ -218,30 +236,15 @@ export default async function StatsPage() {
           <TrailSection />
         </Section>
 
-        {/* 02 已收录直播与已确认时长 */}
-        <Section questionId="stats-q-recorded" fallback="已收录直播有多少？" accent="#E5568A">
-          <div className="grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-              <p className="text-meta uppercase tracking-[0.16em] text-faint">已收录直播</p>
-              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveTimeline.length.toLocaleString()}</p>
-              <p className="mt-1 text-meta text-faint tnum">场直播</p>
-            </div>
-            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-              <p className="text-meta uppercase tracking-[0.16em] text-faint">已确认时长</p>
-              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{liveKnownHours.toLocaleString()}</p>
-              <p className="mt-1 text-meta text-faint tnum">小时</p>
-            </div>
-            <div className="rounded-xl border border-line/80 bg-surface/40 p-5">
-              <p className="text-meta uppercase tracking-[0.16em] text-faint">公开口径累计时长</p>
-              <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{publicHoursLowerBound.toLocaleString()}+</p>
-              <p className="mt-1 text-meta text-faint tnum">小时 · 下限</p>
-            </div>
-          </div>
-          <Observation>
-            早期有一部分直播录像已经找不到了，所以「已确认时长」只代表目前能核对到的那些，不等于她实际播了多久。
-            {`公开采访与平台年度统计等资料给出的累计时长下限为 ${publicHoursFloor.toLocaleString()} 小时；若站内已确认时长超过这一数值，卡片会随档案更新。`}
-          </Observation>
-        </Section>
+        {/*
+          这里原本是「已收录直播有多少？」：已收录直播 N 场 / 已确认时长 N 小时 /
+          公开口径累计 N+ 小时。整节删掉，原因有两条——
+
+          一、它和下面的「时代如何变化」是同一批数据的两种切法，而且两套口径谁都
+              不等于档案总数，页面自己和自己打架。
+          二、这三个数说的是「她一共产出了多少」，既不可点也不通向任何地方，
+              读者拿它做不了任何事。校对口径（已确认时长、公开下限）属于征集语境。
+        */}
 
         {/* 01 哪一年留下的记录最多？ */}
         <Section questionId="stats-q-busiest-year" fallback="哪一年留下的记录最多？" accent="#E0A244">
@@ -252,7 +255,6 @@ export default async function StatsPage() {
               ? ` ${emptyYears.join('、')} 年目前没有保存下来的站内录像。`
               : ' 档案覆盖到的每一年都至少留下了一条记录。'}
           </Observation>
-          <p className="mt-6 text-meta text-faint tnum">已录时长最高的一年：{hoursTop(yearRows)} 小时</p>
         </Section>
 
         {/* 02 哪些游戏陪得最久？ */}
@@ -340,7 +342,9 @@ export default async function StatsPage() {
                   {era.label}
                 </p>
                 <p className="mt-3 font-mono text-h3 font-bold text-ink tnum">{era.count.toLocaleString()}</p>
-                <p className="mt-1 text-meta text-faint tnum">条记录 · {era.hours.toLocaleString()} 小时</p>
+                {/* 只说条数，不再并排一个「N 小时」：小时数与条数说的是同一件事的
+                    两个侧面，而且更像在结算工时。年份跨度由内容算出，见上面 eraLabel。 */}
+                <p className="mt-1 text-meta text-faint tnum">条记录 · {era.years}</p>
               </Link>
             ))}
           </div>
@@ -361,7 +365,15 @@ export default async function StatsPage() {
             </div>
           </div>
           <Observation>
-            视频时期靠录像，斗鱼时期靠直播。2023 年 11 月斗鱼停播以后，到 2024 年 8 月重新开播之间，直播记录自然出现了一段空档。
+            {/*
+              原文说这段是「空档」。按平台分桶时看起来确实是空的，但那只是因为
+              那几场不在斗鱼也不在抖音——档案里真实存在，只是落在了 B 站。
+              这三个数都从数据里算，改不动也不会和内容对不上。
+            */}
+            视频时期靠录像，斗鱼时期靠直播。斗鱼最后一场停在 {douyuLastDate}，抖音第一场是 {firstDouyinDate}；
+            {interimCount > 0
+              ? `中间隔了大半年，但那段时间并不是空的——档案里还留着 ${interimCount} 场 B 站的夜话和话疗。`
+              : '中间隔了大半年。'}
           </Observation>
         </Section>
 
@@ -422,11 +434,6 @@ export default async function StatsPage() {
       </main>
     </LiveCopySeed>
   )
-}
-
-function hoursTop(yearRows: [number, { count: number; minutes: number; known: number }][]): string {
-  const top = yearRows.reduce((acc, [, r]) => (r.minutes > acc.minutes ? r : acc), { minutes: 0, known: 0 })
-  return top.minutes ? Math.round(top.minutes / 60).toLocaleString() : '—'
 }
 
 function Observation({ children }: { children: React.ReactNode }) {
