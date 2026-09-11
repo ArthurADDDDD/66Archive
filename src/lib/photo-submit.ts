@@ -92,9 +92,15 @@ export async function submitWithPhotos(input: {
   const response = await fetch('/api/correction/photo', { method: 'POST', body: form, credentials: 'omit' })
   if (response.ok) return
 
-  // 网关的 413/429 不是 JSON，读 body 会拿到一段 HTML。按状态码给话，别把 HTML 抛给用户。
+  // 网关与 CDN 的错误不是 JSON，读 body 会拿到一段 HTML。按状态码给话，别把 HTML 抛给用户。
   if (response.status === 413) throw new Error('图片太大了，换张小一点的再试')
   if (response.status === 429) throw new Error('上传太频繁了，过一会儿再来')
+  /*
+   * 站点前面是 EdgeOne，它会用自己的 5xx 码回绝（实测过 554）。这**不是体积门槛**：
+   * 同一轮里 9MB 拿到 554 而 20MB 正常穿过去了，所以它是传输中的瞬时失败。
+   * 对用户而言唯一有用的信息是「再试一次通常就好」，不是那个数字。
+   */
+  if (response.status >= 500) throw new Error('上传中断了，再试一次通常就好')
   let message = '提交失败，请稍后再试'
   try {
     const body = (await response.json()) as { message?: string }

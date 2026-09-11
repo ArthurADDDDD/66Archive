@@ -78,6 +78,8 @@ export function SubmissionForm({
   const [error, setError] = useState<string | null>(null)
   const [photos, setPhotos] = useState<PreparedPhoto[]>([])
   const [preparing, setPreparing] = useState(false)
+  /** 成功回执里要说「收到 N 张图」，而 photos 在成功时已经清空了。 */
+  const [sentPhotoCount, setSentPhotoCount] = useState(0)
 
   const widgetRef = useRef<HTMLDivElement | null>(null)
   const widgetIdRef = useRef<string | null>(null)
@@ -150,6 +152,7 @@ export function SubmissionForm({
     setStatus('submitting')
     setError(null)
     try {
+      setSentPhotoCount(photos.length)
       if (photos.length > 0) {
         // 带图走 multipart 的那条路：文字和图片在同一个请求里，一个令牌一次提交。
         await submitWithPhotos({
@@ -200,18 +203,16 @@ export function SubmissionForm({
 
   if (status === 'success') {
     return (
-      <div className={className}>
-        <p role="status" className="text-body text-live">
-          {successMessage}
-        </p>
-        <button
-          type="button"
-          onClick={() => setStatus('idle')}
-          className="ui-press mt-4 min-h-10 rounded-full border border-line px-5 text-control text-muted hover:border-muted hover:text-ink"
-        >
-          {againLabel}
-        </button>
-      </div>
+      <SubmissionReceipt
+        className={className}
+        message={successMessage}
+        photoCount={sentPhotoCount}
+        againLabel={againLabel}
+        onAgain={() => {
+          setSentPhotoCount(0)
+          setStatus('idle')
+        }}
+      />
     )
   }
 
@@ -332,9 +333,72 @@ export function SubmissionForm({
           disabled={!canSubmit}
           className="ui-press min-h-10 rounded-full bg-ink px-5 text-control font-semibold text-[#12141C] disabled:cursor-not-allowed disabled:opacity-35"
         >
-          {status === 'submitting' ? '提交中…' : submitLabel}
+          {status === 'submitting'
+            ? photos.length > 0
+              ? `正在上传 ${photos.length} 张图…`
+              : '提交中…'
+            : submitLabel}
         </button>
       </div>
     </form>
+  )
+}
+
+/**
+ * 提交成功的回执。
+ *
+ * 从前这里只是一行青色小字。问题不在字本身，在**它出现的时候整个表单消失了**：
+ * 姓名、正文、图片列表、人机验证、提交行加起来好几百像素，一下塌掉，
+ * 于是原本盯着提交按钮的人，视口里剩下的是下面本来在屏幕外的内容——
+ * 那句「收到」跑到视口上方，看不见。用户只知道「我点了，好像没反应」。
+ *
+ * 所以两件事一起做：做成一张有边框的回执（看得出是一个结果，不是一句注脚），
+ * 并在挂载时把它滚进视野。带图时还要说清楚收到了几张、接下来会发生什么——
+ * 传图的人最想确认的就是这个。
+ */
+function SubmissionReceipt({
+  className,
+  message,
+  photoCount,
+  againLabel,
+  onAgain,
+}: {
+  className?: string
+  message: string
+  photoCount: number
+  againLabel: string
+  onAgain: () => void
+}) {
+  const ref = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    // 表单塌掉之后视口往往已经不在这块了，主动滚回来。
+    // 这里没有 setState，不受 react-hooks/set-state-in-effect 限制。
+    ref.current?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      role="status"
+      aria-live="polite"
+      className={`ui-panel-in rounded-xl border border-live/45 bg-live/8 p-5 ${className ?? ''}`}
+    >
+      <p className="text-h3 font-medium text-ink">收到了 ✓</p>
+      <p className="measure-body mt-2 text-body text-muted">{message}</p>
+      {photoCount > 0 && (
+        <p className="measure-body mt-2 text-body text-muted">
+          图片也收到了，一共 <span className="font-mono text-control font-semibold text-ink tnum">{photoCount}</span> 张。
+          它们现在只存在后台的待审队列里，我看过之后才会决定要不要放进画廊。
+        </p>
+      )}
+      <button
+        type="button"
+        onClick={onAgain}
+        className="ui-press mt-4 min-h-10 rounded-full border border-line px-5 text-control text-muted hover:border-muted hover:text-ink"
+      >
+        {againLabel}
+      </button>
+    </div>
   )
 }
