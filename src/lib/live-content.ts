@@ -113,7 +113,7 @@ export type LiveBeat = {
   footnote: { text: string; rel: string; date: string }
   /** 卡片尾标（如 `TO BE CONTINUED...`）；空串表示这张卡不带尾标 */
   tail: string
-  /** 故事卡当前锚定的档案条目；缺省表示沿用构建期基线。 */
+  /** 卡片当前锚定的档案条目（首页与编年史都读）；缺省表示沿用构建期基线，空串 = 纯文案卡。 */
   entryId?: string
   /** 内容接口按当前档案快照解析出的封面，只与 entryId 一起使用。 */
   entryCover?: string
@@ -605,8 +605,21 @@ export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = fals
       const override = liveBeats.get(beat.id)
       if (!override) return beat
       if (isCustomId(beat.id)) return resolveCustomBeat(override, act.act.id, home)
+      // 后台重选过锚定条目（entryId 有值，包括空串 = 改成纯文案卡）：链接与封面跟着换。
+      // 没选过（undefined）就沿用构建期基线。蒙太奇卡的素材是构建期派生的，不参与。
+      const anchorId = override.entryId
+      const anchor =
+        anchorId !== undefined && beat.size !== 'montage'
+          ? {
+              href: anchorId ? `/e/${anchorId}/` : null,
+              external: false,
+              cover: anchorId ? proxyImage(override.entryCover, override.size === 'hero' ? 900 : 640) : null,
+              durationMinutes: undefined,
+            }
+          : {}
       return {
         ...beat,
+        ...anchor,
         date: override.date || beat.date,
         title: override.title || beat.title,
         body: override.body || undefined,

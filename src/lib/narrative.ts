@@ -299,7 +299,9 @@ export const HOMEPAGE_ACTS: Act[] = [
         size: 'hero',
         title: '姐弟俩，重回冒险岛。',
         body: '小时候和壮壮一起玩过的游戏，这么多年以后，又一起上线了，这一次，大家都有了新的身份。',
-        target: { kind: 'game', id: 'maplestory' },
+        // 锚到具体那一场，而不是整个游戏：按游戏取封面会拿到「最近一期有封面的」，
+        // 那一期是她和爱人一起玩，和「姐弟俩」对不上。
+        target: { kind: 'entry', id: '2026-08-03-live-02' },
       },
     ],
   },

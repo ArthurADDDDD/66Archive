@@ -176,13 +176,15 @@ export function startLiveEditSession(
     }
   }
 
-  /** 后台文档里没有编年史卡片的封面（那是公开接口按档案现算的），从线上那份补过来。 */
+  /**
+   * 锚定条目的封面是公开接口按档案现算的，后台文档里没有。后台对新选的锚点会自己带上，
+   * 其余的从线上那份补过来。
+   */
   const withLiveCovers = (draft: LiveNarrative, live: LiveNarrative | null): LiveNarrative => {
     if (!live) return draft
-    return {
-      ...draft,
-      storyActs: draft.storyActs.map((act) => {
-        const liveAct = live.storyActs.find((candidate) => candidate.id === act.id)
+    const merge = (acts: LiveAct[], liveActs: LiveAct[]): LiveAct[] =>
+      acts.map((act) => {
+        const liveAct = liveActs.find((candidate) => candidate.id === act.id)
         if (!liveAct) return act
         return {
           ...act,
@@ -192,8 +194,8 @@ export function startLiveEditSession(
             return liveBeat && liveBeat.entryId === beat.entryId ? { ...beat, entryCover: liveBeat.entryCover } : beat
           }),
         }
-      }),
-    }
+      })
+    return { ...draft, homeActs: merge(draft.homeActs, live.homeActs), storyActs: merge(draft.storyActs, live.storyActs) }
   }
 
   const apply = (content: LiveContent, draft: LiveEditDraft | null): LiveContent => {
