@@ -33,15 +33,38 @@ const config: Config = {
         body: ['clamp(0.875rem, 1.4vw, 0.9375rem)', { lineHeight: '1.75' }],
         meta: ['0.6875rem', { lineHeight: '1.45' }],
       },
+      // Archivo / IBM Plex Mono 只有拉丁字形，中文逐字回退。回退链里必须显式写中文黑体：
+      // 等宽栈原先只剩 ui-monospace / monospace，Windows 上 monospace 的中文就是「新宋体」，
+      // 幕名、年份这些等宽小字里的中文会整行变成宋体。拉丁字形仍先落在 next/font 的字体与其度量回退上。
       fontFamily: {
-        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
+        display: [
+          'var(--font-display)',
+          '"PingFang SC"',
+          '"Hiragino Sans GB"',
+          '"Microsoft YaHei"',
+          '"Noto Sans SC"',
+          '"Noto Sans CJK SC"',
+          'system-ui',
+          'sans-serif',
+        ],
+        mono: [
+          'var(--font-mono)',
+          '"PingFang SC"',
+          '"Hiragino Sans GB"',
+          '"Microsoft YaHei"',
+          '"Noto Sans SC"',
+          '"Noto Sans CJK SC"',
+          'ui-monospace',
+          'monospace',
+        ],
         sans: [
           'var(--font-display)',
           '-apple-system',
           '"PingFang SC"',
           '"Hiragino Sans GB"',
           '"Microsoft YaHei"',
+          '"Noto Sans SC"',
+          '"Noto Sans CJK SC"',
           'sans-serif',
         ],
       },

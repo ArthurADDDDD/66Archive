@@ -30,6 +30,9 @@ type SwipeStart = {
   y: number
   id: number
   axis: 'x' | 'y' | null
+  /** 按下时刻，用来识别短而快的甩动。 */
+  t: number
+  touch: boolean
 }
 
 const TURN_OUT_MS = 170
@@ -77,6 +80,8 @@ export function HomeActStage({
   const [direction, setDirection] = useState<1 | -1>(1)
   const [dragX, setDragX] = useState(0)
   const [dragging, setDragging] = useState(false)
+  // 手指拖动时书页要明显跟手；鼠标保持原来较克制的位移。
+  const [dragFollow, setDragFollow] = useState(0.22)
 
   const publishChange = useCallback((id: string, active = visibleRef.current) => {
     window.dispatchEvent(new CustomEvent<HomeActChangeDetail>(HOME_ACT_CHANGE_EVENT, {
@@ -170,12 +175,26 @@ export function HomeActStage({
     goTo(activeIndexRef.current + delta)
   }
 
+  // 横向拖过之后吞掉紧跟的一次 click：没翻成页时，手指也可能正好停在卡内链接上。
+  const suppressNextClick = () => {
+    justDraggedRef.current = true
+    window.setTimeout(() => { justDraggedRef.current = false }, 400)
+  }
+
   // 鼠标和触屏都可以直接拖动书页；纵向触摸一旦被识别就完全交还页面滚动。
+  // 页角按钮也能作为滑动起点——手机上两个页角占了卡片底边一半以上的宽度。
   const onPointerDown = (event: ReactPointerEvent<HTMLElement>) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return
     if (event.target instanceof Element && event.target.closest('[data-page-control]')) return
     if (turnTimerRef.current) return
-    swipeStartRef.current = { x: event.clientX, y: event.clientY, id: event.pointerId, axis: null }
+    swipeStartRef.current = {
+      x: event.clientX,
+      y: event.clientY,
+      id: event.pointerId,
+      axis: null,
+      t: event.timeStamp,
+      touch: event.pointerType !== 'mouse',
+    }
   }
   const onPointerMove = (event: ReactPointerEvent<HTMLElement>) => {
     const start = swipeStartRef.current
@@ -186,6 +205,7 @@ export function HomeActStage({
       start.axis = Math.abs(dx) > Math.abs(dy) * 1.1 ? 'x' : 'y'
       if (start.axis === 'x') {
         event.currentTarget.setPointerCapture(event.pointerId)
+        setDragFollow(start.touch ? 0.6 : 0.22)
         setDragging(true)
       }
     }
@@ -208,23 +228,25 @@ export function HomeActStage({
       event.currentTarget.releasePointerCapture(event.pointerId)
     }
     setDragging(false)
+    if (start.axis === 'x') suppressNextClick()
     const horizontal = start.axis === 'x' && Math.abs(dx) > Math.abs(dy) * 1.1
-    const threshold = Math.max(48, Math.min(92, event.currentTarget.clientWidth * 0.085))
+    const width = event.currentTarget.clientWidth
+    // 触屏的翻页距离按卡宽的一成算；另外短促的甩动即使没拖够距离也算翻页。
+    const threshold = start.touch
+      ? Math.max(36, Math.min(64, width * 0.1))
+      : Math.max(48, Math.min(92, width * 0.085))
+    const flick = Math.abs(dx) >= 24 && event.timeStamp - start.t < 300
     const delta = dx < 0 ? 1 : -1
     const nextIndex = activeIndexRef.current + delta
-    if (!horizontal || Math.abs(dx) < threshold || nextIndex < 0 || nextIndex >= steps.length) {
+    if (!horizontal || (Math.abs(dx) < threshold && !flick) || nextIndex < 0 || nextIndex >= steps.length) {
       setDragX(0)
       return
     }
 
     // 先让这一页沿手势方向滑出一小段，再挂入下一页的方向性入场动画。
-    justDraggedRef.current = true
-    const slideOut = event.currentTarget.clientWidth * 0.18
+    const slideOut = width * 0.18
     setDragX(delta > 0 ? -slideOut : slideOut)
-    turnTimerRef.current = window.setTimeout(() => {
-      goTo(nextIndex)
-      window.requestAnimationFrame(() => { justDraggedRef.current = false })
-    }, TURN_OUT_MS)
+    turnTimerRef.current = window.setTimeout(() => goTo(nextIndex), TURN_OUT_MS)
   }
   const cancelPointer = () => {
     swipeStartRef.current = null
@@ -268,13 +290,28 @@ export function HomeActStage({
 
       <div
         aria-hidden
-        className="absolute inset-0 opacity-75 transition-colors duration-700"
-        style={{ background: `radial-gradient(circle at 72% 44%, ${act.color}1f, transparent 38%)` }}
+        className="absolute inset-0 opacity-70 transition-colors duration-700"
+        style={{ background: `radial-gradient(circle at 68% 48%, ${act.color}16, transparent 36%)` }}
       />
 
-      <div className="home-content-container home-act-frame relative flex h-auto flex-col xl:justify-center px-3 pb-3 pt-16 sm:h-full sm:px-page sm:pb-5 sm:pt-6 xl:pb-[clamp(1.5rem,3vh,2.75rem)] xl:pt-[clamp(1.75rem,3.5vh,3.5rem)] xl:pr-[clamp(8rem,10vw,12rem)]">
+      {/* 左右与导航、下面各节同一条页边距；顶部让开 lg 以下悬浮的菜单胶囊，底部留出与下一节的呼吸。
+          xl 起左沿按版心反推（大屏上版心封顶居中），右沿贴近时间轴。 */}
+      <div className="home-content-container home-act-frame relative flex h-auto flex-col px-page pb-[clamp(2.5rem,12vw,4rem)] pt-16 sm:h-full sm:pb-5 xl:max-w-none xl:pl-[var(--home-act-inset)] xl:pr-[var(--home-act-gutter)] xl:pb-[clamp(1.5rem,3vh,2.75rem)] xl:pt-[clamp(1.75rem,3.5vh,3.5rem)]">
+        {/* 各尺寸同一个结构：幕名 / 标题 / 进度直接落在页面上，只随翻页自动换；那张卡才是一叠可翻的纸。
+            xl 起左右并排（旧版版式），以下上下排列。 */}
+        <div className="flex flex-col gap-4 sm:min-h-0 sm:flex-1 sm:gap-5 xl:grid xl:grid-cols-[minmax(18rem,0.78fr)_minmax(0,1.22fr)] xl:grid-rows-[minmax(0,1fr)] xl:items-center xl:gap-[clamp(3rem,6vw,8rem)]">
+        {!outro && (
+          <div className="min-w-0 flex-none">
+            <div key={`act-${act.id}`} className="home-act-side-enter">
+              <ActHeader act={act} intro={intro} stepPosition={stepPosition} stepCount={stepCount} actProgress={actProgress} />
+            </div>
+          </div>
+        )}
+        {/* 卡片尺寸：手机按 4:5；平板填满 100svh 里剩下的高度；xl 在右栏按 20:17、不超过可用高度。
+            最后一页“接着往下看”是整个故事的收尾：不挂页眉，桌面端横跨两栏整张铺开，手机上高度随内容；
+            仍是同一张书页，拖拽、左下页角、键盘都能翻回上一页。 */}
         <div
-          className={`home-act-deck relative h-[clamp(28rem,145vw,40rem)] flex-none select-none sm:h-auto sm:min-h-0 sm:flex-1 ${dragging ? 'is-dragging cursor-grabbing' : 'cursor-grab'}`}
+          className={`home-act-deck relative w-full select-none sm:min-h-0 sm:flex-1 sm:aspect-auto xl:max-h-full ${outro ? 'max-sm:[container-type:inline-size] xl:col-span-2 xl:h-full' : 'aspect-[4/5] xl:col-start-2 xl:aspect-[20/17]'} ${dragging ? 'is-dragging cursor-grabbing' : 'cursor-grab'}`}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
@@ -286,7 +323,7 @@ export function HomeActStage({
             <span
               key={depth}
               aria-hidden
-              className={`home-act-deck__sheet absolute inset-0 rounded-[clamp(1.15rem,1.8vw,2rem)] border bg-surface ${depth === 1 ? 'home-act-deck__sheet--next' : ''}`}
+              className={`home-act-deck__sheet absolute inset-0 rounded-[clamp(1.15rem,1.8vw,2rem)] border bg-[color:var(--home-act-card)] ${depth === 1 ? 'home-act-deck__sheet--next' : ''}`}
               style={{
                 opacity: remaining >= depth ? 0.7 - depth * 0.12 : 0,
                 transform: `translate3d(calc(${depth * 0.7}rem + ${dragX * -0.025}px), ${depth * 0.42}rem, 0) rotate(${depth * 0.24}deg)`,
@@ -304,68 +341,39 @@ export function HomeActStage({
             />
           )}
 
+          {/* 这张卡本身就是事件卡：封面铺满上部、文字在下，不再卡中套卡。
+              封面吃掉正文用剩的高度，文字永远完整显示，卡内不出现第二层纵向滚动去和翻页手势抢。 */}
           <div
             key={step.id}
-            className="home-act-page-enter relative z-[4] grid h-full min-h-0 grid-cols-1 content-start gap-4 overflow-y-auto rounded-[clamp(1.15rem,1.8vw,2rem)] border border-line/90 bg-surface/95 px-[clamp(1rem,4vw,5rem)] py-4 shadow-[0_2.5rem_8rem_rgba(0,0,0,0.34)] sm:gap-5 sm:py-[clamp(1rem,3.5vh,3.5rem)] xl:grid-cols-[minmax(18rem,0.76fr)_minmax(0,1.24fr)] xl:content-normal xl:items-center xl:gap-[clamp(2.5rem,5vw,7rem)] xl:overflow-hidden"
+            className="home-act-page-enter relative z-[4] h-full min-h-0 overflow-hidden rounded-[clamp(1.15rem,1.8vw,2rem)] border border-line/80 bg-[color:var(--home-act-card)] shadow-[0_2.5rem_8rem_rgba(0,0,0,0.34)]"
             style={{
-              transform: dragX ? `translate3d(${dragX * 0.22}px, 0, 0) rotateY(${dragX * -0.018}deg)` : undefined,
+              transform: dragX ? `translate3d(${dragX * dragFollow}px, 0, 0) rotateY(${dragX * -0.018}deg)` : undefined,
               transformOrigin: dragX < 0 ? 'left center' : 'right center',
               transition: dragging ? 'none' : dragX ? `transform ${TURN_OUT_MS}ms cubic-bezier(0.4, 0, 1, 1), opacity ${TURN_OUT_MS}ms ease` : undefined,
               opacity: dragX && !dragging ? 0.72 : 1,
             }}
           >
             {outro && promo ? (
-              <div className="col-span-1 max-h-none overflow-visible pr-1 xl:col-span-2 xl:max-h-full xl:overflow-y-auto">
+              <div className="flex h-full flex-col justify-center p-[clamp(1rem,4cqw,3.5rem)]">
                 <HomeExplorePromo data={promo} variant="stage" />
               </div>
+            ) : beat ? (
+              <StageBeat beat={beat} color={act.color} />
+            ) : closer ? (
+              <StageCloser line={closer.line} />
             ) : (
-              <>
-                <div className="min-w-0 border-b border-line/60 pb-4 xl:border-b-0 xl:pb-0">
-                  <div className="flex items-center gap-4">
-                    <span className="font-mono text-meta tracking-[0.2em]" style={{ color: act.color }}>{act.kicker}</span>
-                    <span className="h-px flex-1 bg-line/70" />
-                  </div>
-                  <p className="mt-3 font-mono text-meta text-faint tnum xl:mt-5">{act.years}</p>
-                  <h2 className="mt-2 text-[clamp(1.75rem,8vw,5.75rem)] font-black leading-[0.98] tracking-[-0.04em] text-ink xl:mt-3 xl:text-[clamp(2.5rem,4.2vw,5.75rem)] xl:leading-[0.95]">
-                    {act.title}
-                  </h2>
-                  {!intro && (
-                    <div className="measure-body mt-3 space-y-2 xl:mt-6">
-                      {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
-                    </div>
-                  )}
-                  <div className="mt-4 flex items-center gap-4 xl:mt-9">
-                    <span className="font-mono text-meta text-faint tnum">
-                      {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
-                    </span>
-                    <span className="relative h-px flex-1 overflow-hidden bg-line/70">
-                      <span className="absolute inset-y-0 left-0 origin-left bg-current transition-transform duration-500" style={{ color: act.color, transform: `scaleX(${actProgress})` }} />
-                    </span>
-                  </div>
+              <div className={TEXT_PAGE_CLASS}>
+                <div className="measure-hero space-y-3">
+                  {(act.body.length > 0 ? act.body : [act.title]).map((line) => (
+                    <p key={line} className="text-h2 font-semibold text-ink">{line}</p>
+                  ))}
                 </div>
-
-                <div className="min-h-0 min-w-0 max-h-none overflow-visible pr-1 xl:max-h-full xl:overflow-y-auto">
-                  {beat ? (
-                    <StageBeat beat={beat} color={act.color} />
-                  ) : closer ? (
-                    <StageCloser line={closer.line} />
-                  ) : (
-                    <div className="flex min-h-[min(34svh,18rem)] flex-col justify-center border-y border-line/70 py-6 xl:min-h-[52cqh] xl:py-10">
-                      <div className="measure-hero space-y-3">
-                        {(act.body.length > 0 ? act.body : [act.title]).map((line) => (
-                          <p key={line} className="text-h2 font-semibold text-ink">{line}</p>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </>
+              </div>
             )}
           </div>
 
           <button
             type="button"
-            data-page-control
             disabled={activeIndex === 0}
             onClick={() => goTo(activeIndex - 1)}
             className="home-act-page-corner home-act-page-corner--prev absolute bottom-0 left-0 z-[8] disabled:pointer-events-none disabled:opacity-0"
@@ -373,16 +381,18 @@ export function HomeActStage({
           />
           <button
             type="button"
-            data-page-control
             disabled={activeIndex === steps.length - 1}
             onClick={() => goTo(activeIndex + 1)}
             className="home-act-page-corner home-act-page-corner--next absolute bottom-0 right-0 z-[8] disabled:pointer-events-none disabled:opacity-0"
             aria-label="翻到下一页"
           />
         </div>
+        </div>
 
         <div data-page-control className="relative z-10 mt-2 flex shrink-0 items-center gap-3 sm:mt-3">
-          <div className="min-w-0 flex-1">
+          {/* 页码条从 sm 起才出现，且压低存在感，悬停或键盘聚焦时才亮起；
+              手机上靠滑动和页角翻页，只留右侧的页码数字。 */}
+          <div className="hidden min-w-0 flex-1 opacity-40 transition-opacity duration-300 focus-within:opacity-100 hover:opacity-100 sm:block">
             <div className="flex items-center gap-0.5 sm:gap-1" aria-label={`第 ${activeIndex + 1} 页，共 ${steps.length} 页`}>
               {steps.map((item, index) => (
                 <button
@@ -405,7 +415,7 @@ export function HomeActStage({
               ))}
             </div>
           </div>
-          <span className="shrink-0 font-mono text-meta text-faint tnum" aria-live="polite">
+          <span className="ml-auto shrink-0 font-mono text-meta text-faint tnum" aria-live="polite">
             {String(activeIndex + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')}
           </span>
 
@@ -422,10 +432,58 @@ export function HomeActStage({
   )
 }
 
+/**
+ * 幕名、年份、幕内进度：直接落在页面上，只跟着卡片的翻页自动更新。
+ * xl 起在左栏、按旧版字号；以下在卡片上方，字号随屏宽收小。
+ */
+function ActHeader({
+  act,
+  intro,
+  stepPosition,
+  stepCount,
+  actProgress,
+}: {
+  act: ResolvedAct['act']
+  intro: boolean
+  stepPosition: number
+  stepCount: number
+  actProgress: number
+}) {
+  return (
+    <div className="min-w-0">
+      <div className="flex items-center gap-4">
+        <span className="font-mono text-meta tracking-[0.2em]" style={{ color: act.color }}>{act.kicker}</span>
+        <span className="h-px flex-1 bg-line/70" />
+      </div>
+      <p className="mt-3 font-mono text-meta text-faint tnum xl:mt-5">{act.years}</p>
+      <h2 className="mt-2 text-[clamp(1.75rem,7.5vw,3.5rem)] font-black leading-[0.98] tracking-[-0.04em] text-ink xl:mt-3 xl:text-[clamp(2.75rem,4.6vw,6.5rem)] xl:leading-[0.95]">
+        {act.title}
+      </h2>
+      {/* 这段幕简介在幕首页已经大字出现过；窄屏上每张事件页再重复一遍只会把卡片挤小，只在 xl 左栏保留。 */}
+      {!intro && (
+        <div className="measure-body mt-6 hidden space-y-2 xl:block">
+          {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
+        </div>
+      )}
+      <div className="mt-4 flex items-center gap-4 xl:mt-9">
+        <span className="font-mono text-meta text-faint tnum">
+          {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
+        </span>
+        <span className="relative h-px flex-1 overflow-hidden bg-line/70">
+          <span className="absolute inset-y-0 left-0 origin-left bg-current transition-transform duration-500" style={{ color: act.color, transform: `scaleX(${actProgress})` }} />
+        </span>
+      </div>
+    </div>
+  )
+}
+
+/** 纯文字页（幕首 / 幕尾）：和事件卡同一张卡，文字居中铺开，留白按卡片尺寸算。 */
+const TEXT_PAGE_CLASS = 'home-act-text-card flex h-full flex-col justify-center px-[clamp(1.5rem,7cqw,5.5rem)] py-[clamp(1.5rem,8cqh,5rem)]'
+
 /** 幕尾与幕首共用同一张纯文字页版式：一句收束，不额外加标签或尾标。 */
 function StageCloser({ line }: { line: string }) {
   return (
-    <div className="flex min-h-[min(34svh,18rem)] flex-col justify-center border-y border-line/70 py-6 xl:min-h-[52cqh] xl:py-10">
+    <div className={TEXT_PAGE_CLASS}>
       <h3 className="measure-hero text-h2 font-semibold text-ink">{line}</h3>
     </div>
   )
@@ -433,8 +491,9 @@ function StageCloser({ line }: { line: string }) {
 
 function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
   const body = (
-    <article className="home-act-stage-beat grid min-h-[min(42svh,24rem)] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[clamp(1rem,1.5vw,1.75rem)] border border-line/80 bg-base/35 shadow-[0_2rem_7rem_rgba(0,0,0,0.22)] xl:min-h-[56cqh]">
-      <div className={`relative min-h-0 overflow-hidden ${beat.coverAspect === 'video' ? 'aspect-video shrink-0' : ''}`}>
+    <article className="home-act-stage-beat grid h-full min-h-0 grid-rows-[minmax(0,1fr)_auto] overflow-hidden">
+      {/* 封面不锁 16:9：正文用剩的高度都给它，只保底卡高的两成；object-cover 让它缩放时只是裁切。 */}
+      <div className="relative min-h-[20cqh] overflow-hidden">
         {beat.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={beat.cover} alt="" className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-[1.025] group-hover:opacity-100" referrerPolicy="no-referrer" />
@@ -446,7 +505,7 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
             ))}
           </div>
         ) : (
-          <div className="flex h-full min-h-[min(24svh,15rem)] items-center justify-center xl:min-h-[31cqh]" style={{ background: `linear-gradient(145deg, ${color}22, transparent 64%)` }}>
+          <div className="flex h-full items-center justify-center" style={{ background: `linear-gradient(145deg, ${color}22, transparent 64%)` }}>
             <span className="font-display text-[clamp(4rem,9vw,11rem)] font-black leading-none opacity-20 tnum" style={{ color }}>{beat.emphasis ?? beat.date}</span>
           </div>
         )}
@@ -471,9 +530,9 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}
-      className="group block"
+      className="group block h-full"
     >
       {body}
     </Link>
-  ) : <div className="group">{body}</div>
+  ) : <div className="group h-full">{body}</div>
 }

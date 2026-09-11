@@ -31,7 +31,8 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
         <span className="font-mono text-meta tracking-[0.2em] text-faint">NEXT · 接着往下看</span>
         <span className="h-px flex-1 bg-line/70" />
       </div>
-      <div className={`grid lg:grid-cols-2 ${stage ? 'mt-4 gap-3 sm:mt-6 sm:gap-6 lg:gap-8' : 'mt-6 gap-4 sm:gap-6'}`}>
+      {/* 舞台版从 md 起就并排：两张竖着叠在一张卡里放不下，会在卡内出现第二个滚动条。 */}
+      <div className={`grid lg:grid-cols-2 ${stage ? 'mt-3 gap-2 sm:mt-6 sm:gap-6 md:grid-cols-2 lg:gap-8' : 'mt-6 gap-4 sm:gap-6'}`}>
         {/*
           编年史。body 原文是「N 年、N 条记录，按时间排好在那儿」——条数在这里
           不起任何作用：既不帮人决定要不要点进去，也不告诉人里面是什么。
@@ -47,7 +48,7 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
         >
           {/* 只列三幕的年份带（本身已经带着那一段的说明），标题留给编年史页自己讲。
               手机端一行放得下，不用靠截断把话说半句。 */}
-          <ul className="flex flex-col gap-2.5">
+          <ul className={`flex flex-col ${stage ? 'gap-1.5 sm:gap-2.5' : 'gap-2.5'}`}>
             {data.chronicle.acts.map((act) => (
               <li key={act.id} className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: act.color }} />
@@ -119,7 +120,7 @@ function PromoCard({
     <Link
       href={href}
       prefetch={false}
-      className={`ui-press group flex flex-col rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-muted/60 ${compact ? 'gap-3 p-4 sm:gap-5 sm:p-7' : 'gap-5 p-6 sm:p-7'}`}
+      className={`ui-press group flex flex-col rounded-2xl border border-line/80 bg-surface/35 transition-colors hover:border-muted/60 ${compact ? 'gap-2 p-4 sm:gap-5 sm:p-7' : 'gap-5 p-6 sm:p-7'}`}
     >
       <div>
         <p className="font-mono text-meta tracking-[0.16em]" style={{ color }}>{kicker}</p>

@@ -271,7 +271,7 @@ export function TimelineRail({
     >
       <div
         ref={railRef}
-        className={`timeline-rail pointer-events-auto relative w-[clamp(5rem,6vw,7rem)] cursor-grab select-none active:cursor-grabbing ${dragPct != null ? 'is-dragging' : ''}`}
+        className={`timeline-rail pointer-events-auto relative w-[var(--timeline-rail-w)] cursor-grab select-none active:cursor-grabbing ${dragPct != null ? 'is-dragging' : ''}`}
         style={{ height }}
         role="slider"
         tabIndex={0}

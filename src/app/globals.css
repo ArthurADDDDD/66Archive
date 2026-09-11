@@ -9,6 +9,8 @@
 
   /* 全站统一安全边距：移动端保持宽松留白，桌面端也不再退回到过窄的 1.5rem。 */
   --page-pad: clamp(1rem, 13vw, 5rem);
+  /* 右侧快速时间轴（TimelineRail）的宽度；首页书页的左右留白也按它对称地让出来。 */
+  --timeline-rail-w: clamp(5rem, 6vw, 7rem);
 }
 
 /* PC 端由站内彩色章节轴承担位置反馈；隐藏原生滚动条但保留全部滚动能力。 */
@@ -462,12 +464,14 @@ body {
   }
 
   /* 全站响应式版心：所有页面共享同一条外边界，内部内容再用 max-w 控制阅读宽度。 */
+  /* 版心上限写成变量：首页舞台在桌面端不受版心约束，但左沿要用同一个上限反推，才能和导航、各节对齐。 */
   .site-container,
   .site-header-container,
   .home-content-container,
   .site-container-wide {
+    --site-shell-max: 87.5rem;
     width: 100%;
-    max-width: 87.5rem;
+    max-width: var(--site-shell-max);
     margin-inline: auto;
   }
 
@@ -476,7 +480,7 @@ body {
     .site-header-container,
     .home-content-container,
     .site-container-wide {
-      max-width: min(92vw, 132rem);
+      --site-shell-max: min(92vw, 132rem);
     }
   }
 
@@ -524,21 +528,39 @@ body {
      页内的最小高度、页角大小都跟着书页走（cqh / cqmin），而不是跟视口或写死的 px。 */
   .home-act-frame {
     container-type: inline-size;
+    /* 桌面端舞台不受全站版心约束，但两侧各有依据：
+       左沿 = 版心居中后的外侧余量 + 页边距，和顶部导航、下面各节同一条线（大屏上版心封顶居中，余量会变大）；
+       右沿 = 时间轴宽度 + 一道缝，右侧卡片贴近时间轴。 */
+    --home-act-inset: calc((100vw - min(100vw, var(--site-shell-max))) / 2 + var(--page-pad));
+    --home-act-gutter: calc(var(--timeline-rail-w) + clamp(0.75rem, 1.2vw, 1.75rem));
+    /* 桌面端右侧卡片与身后纸叠共用的实色：等于旧版 surface/35 叠在 base 上的观感，
+       但不透明，身后纸叠的边线不会透进卡面。 */
+    --home-act-card: color-mix(in srgb, theme('colors.surface') 40%, theme('colors.base'));
   }
 
   .home-act-deck {
     container-type: size;
     isolation: isolate;
     perspective: 1400px;
-    touch-action: pan-y;
+    touch-action: pan-y pinch-zoom;
   }
 
-  /* 首页容器有 132rem 的宽度上限，4K 屏上书页宽度封顶、高度却跟着 100svh 继续长，
-     会变成竖长的空卡。桌面端给书页一个高宽比上限，多出来的高度由外框上下居中分掉。 */
-  @media (min-width: 1280px) {
-    .home-act-deck {
-      max-height: 72cqw;
+  /* 左栏文字只在换幕时淡入；同一幕内翻页只更新进度。 */
+  @keyframes home-act-side-enter {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+      filter: blur(4px);
     }
+    to {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+
+  .home-act-side-enter {
+    animation: home-act-side-enter 520ms var(--ease-out-expo) both;
   }
 
   .home-act-deck img,
@@ -550,6 +572,11 @@ body {
     border-color: color-mix(in srgb, var(--act-color, #5A5F73) 24%, #2C3140);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.18);
     transition: opacity 360ms ease, border-color 520ms ease, transform 520ms var(--ease-out-expo);
+  }
+
+  /* 幕首 / 幕尾文字卡：带一层很淡的本幕色，免得和事件卡相比显得空。 */
+  .home-act-text-card {
+    background: linear-gradient(145deg, color-mix(in srgb, var(--act-color, #5A5F73) 10%, transparent), transparent 62%);
   }
 
   /* 页叠右下方的整块留白都是“下一页”热区，而不只是一条纸边：
@@ -582,7 +609,11 @@ body {
     transform-origin: left center;
   }
 
+  /* 书页正文是 overflow-y-auto 的滚动容器，触控行为只向上合并到最近的滚动容器为止，
+     外层 .home-act-deck 的 pan-y 管不到这里。不单独声明的话，手机上在正文区横滑会被
+     浏览器接管并发出 pointercancel，只剩卡片边缘几像素能翻页。 */
   .home-act-page-enter {
+    touch-action: pan-y pinch-zoom;
     transform-origin: center bottom;
     backface-visibility: hidden;
     will-change: transform, opacity;
@@ -670,7 +701,6 @@ body {
     outline: none;
     box-shadow: none;
   }
-
   .home-act-deck:has(.home-act-page-corner--next:hover) .home-act-page-enter,
   .home-act-deck:has(.home-act-page-corner--next:focus-visible) .home-act-page-enter {
     transform: translateX(-0.2rem) rotateY(-0.65deg);
@@ -683,18 +713,6 @@ body {
     transform-origin: right center;
   }
 
-  @media (hover: none), (pointer: coarse) {
-    .home-act-page-corner::before,
-    .home-act-page-corner::after {
-      opacity: 0.3;
-      transform: translate(22%, 22%) scale(0.72);
-    }
-
-    .home-act-page-corner--prev::before,
-    .home-act-page-corner--prev::after {
-      transform: translate(-22%, 22%) scale(0.72);
-    }
-  }
 
   /* 卡片不画“激活态”整屏外框。内部页条仍各自保留标准键盘焦点提示。 */
   .home-act-stage:focus,
