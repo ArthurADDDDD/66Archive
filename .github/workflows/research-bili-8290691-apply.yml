@@ -32,10 +32,19 @@ jobs:
               if start < 0:
                   raise RuntimeError(f'entry {entry_id} not found')
               nxt = text.find('\n  - id: ', start + len(anchor))
-              end = len(text) if nxt < 0 else nxt + 1
-              return start, end
+              return start, len(text) if nxt < 0 else nxt + 1
 
-          def add_source(path, entry_id, url, source_block):
+          def source_block(url, note):
+              return '\n'.join([
+                  f'      - url: {url}',
+                  '        kind: replay',
+                  '        status: alive',
+                  '        account: bili-fan-8290691',
+                  '        cover_unreliable: true',
+                  f'        note: "{note}"',
+              ])
+
+          def add_source(path, entry_id, url, note):
               p = ROOT / path
               text = p.read_text(encoding='utf-8')
               start, end = entry_span(text, entry_id)
@@ -46,7 +55,7 @@ jobs:
               pos = block.find('\n    contributed_by:')
               if pos < 0:
                   raise RuntimeError(f'contributed_by missing in {entry_id}')
-              block = block[:pos] + '\n' + source_block.rstrip() + block[pos:]
+              block = block[:pos] + '\n' + source_block(url, note) + block[pos:]
               p.write_text(text[:start] + block + text[end:], encoding='utf-8')
               print('SOURCE ADDED', entry_id, url)
 
@@ -56,12 +65,7 @@ jobs:
               anchor = '  - id: hades\n'
               if anchor not in gtext:
                   raise RuntimeError('hades anchor missing in games.yaml')
-              haak = '''  - id: haak
-              name: 勇敢的哈克
-              aliases:
-                - HAAK
-
-          '''
+              haak = '  - id: haak\n    name: 勇敢的哈克\n    aliases:\n      - HAAK\n\n'
               gtext = gtext.replace(anchor, haak + anchor, 1)
               games.write_text(gtext, encoding='utf-8')
               print('GAME ADDED haak')
@@ -81,37 +85,12 @@ jobs:
           p.write_text(text[:start] + block + text[end:], encoding='utf-8')
           print('ENTRY CORRECTED 2022-08-25-live-01')
 
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1TP4y1f7Tm', '''      - url: https://www.bilibili.com/video/BV1TP4y1f7Tm
-              kind: replay
-              status: alive
-              account: bili-fan-8290691
-              cover_unreliable: true
-              note: "2026-09-11 已用正文 first_frame / storyboard 核验：此段属于 2022-08-25 同场直播，画面为 The House of Da Vinci。只作部分备份，不替代现有全长主源。"''')
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1UD4y167aV', '''      - url: https://www.bilibili.com/video/BV1UD4y167aV
-              kind: replay
-              status: alive
-              account: bili-fan-8290691
-              cover_unreliable: true
-              note: "2026-09-11 正文抽帧确认属于同场直播；该段后部能看到从 The House of Da Vinci 切换至《勇敢的哈克（HAAK）》的过程。只作部分备份。"''')
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1XB4y1G7sj', '''      - url: https://www.bilibili.com/video/BV1XB4y1G7sj
-              kind: replay
-              status: alive
-              account: bili-fan-8290691
-              cover_unreliable: true
-              note: "2026-09-11 正文 first_frame / storyboard 明确为《勇敢的哈克（HAAK）》后半场；与前一分段内容连续。只作部分备份。"''')
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1TP4y1f7Tm', '2026-09-11 已用正文 first_frame / storyboard 核验：此段属于 2022-08-25 同场直播，画面为 The House of Da Vinci。只作部分备份，不替代现有全长主源。')
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1UD4y167aV', '2026-09-11 正文抽帧确认属于同场直播；该段后部能看到从 The House of Da Vinci 切换至《勇敢的哈克（HAAK）》的过程。只作部分备份。')
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1XB4y1G7sj', '2026-09-11 正文 first_frame / storyboard 明确为《勇敢的哈克（HAAK）》后半场；与前一分段内容连续。只作部分备份。')
 
-          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1Yt4y1N7P5', '''      - url: https://www.bilibili.com/video/BV1Yt4y1N7P5
-              kind: replay
-              status: alive
-              account: bili-fan-8290691
-              cover_unreliable: true
-              note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与另一段合计约 3:31:38，明显短于现有 441 分钟全长主源，只作部分备份。"''')
-          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1wd4y187nf', '''      - url: https://www.bilibili.com/video/BV1wd4y187nf
-              kind: replay
-              status: alive
-              account: bili-fan-8290691
-              cover_unreliable: true
-              note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。"''')
+          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1Yt4y1N7P5', '2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与另一段合计约 3:31:38，明显短于现有 441 分钟全长主源，只作部分备份。')
+          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1wd4y187nf', '2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。')
 
           doc = ROOT / 'docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md'
           dtext = doc.read_text(encoding='utf-8')
@@ -121,24 +100,21 @@ jobs:
               dtext = dtext.replace(old_row, new_row, 1)
           marker = '## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核'
           if marker not in dtext:
-              dtext = dtext.rstrip() + '''
+              dtext = dtext.rstrip() + '\n\n' + '''## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核
 
-          ## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核
+### 2022-08-25
 
-          ### 2022-08-25
+对现有全长主源 `BV1wG4y1k7ef` 与 UID 8290691 三段正文 storyboard 交叉检查后确认：前段为 **The House of Da Vinci**，`BV1UD4y167aV` 后段能看到同场切换游戏，`BV1XB4y1G7sj` 正文明确为 **HAAK / 勇敢的哈克**；现有全长主源本身也覆盖 HAAK 后半场，因此是原条目内容字段漏记，不是误归日期。
 
-          对现有全长主源 `BV1wG4y1k7ef` 与 UID 8290691 三段正文 storyboard 交叉检查后确认：前段为 **The House of Da Vinci**，`BV1UD4y167aV` 后段能看到同场切换游戏，`BV1XB4y1G7sj` 正文明确为 **HAAK / 勇敢的哈克**；现有全长主源本身也覆盖 HAAK 后半场，因此是原条目内容字段漏记，不是误归日期。
+据此正式登记 `games.yaml` 的 `haak`（名称：勇敢的哈克；别名：HAAK），并把 `2022-08-25-live-01` 的 `games` 改为 `[the-house-of-da-vinci, haak]`。三段 8290691 录像作为部分备份追加，仍以女流录像小屋全长录像为主源。
 
-          据此正式登记 `games.yaml` 的 `haak`（名称：勇敢的哈克；别名：HAAK），并把 `2022-08-25-live-01` 的 `games` 改为 `[the-house-of-da-vinci, haak]`。三段 8290691 录像作为部分备份追加，仍以女流录像小屋全长录像为主源。
+### 2022-11-16
 
-          ### 2022-11-16
+`BV1Yt4y1N7P5` 与 `BV1wd4y187nf` 正文均确认是 **《战神5》**。两段合计约 3:31:38，短于现有 `BV1624y1y7cs` 的 441 分钟全长录像，因此只增加为部分备份。
 
-          `BV1Yt4y1N7P5` 与 `BV1wd4y187nf` 正文均确认是 **《战神5》**。两段合计约 3:31:38，短于现有 `BV1624y1y7cs` 的 441 分钟全长录像，因此只增加为部分备份。
+### 封面
 
-          ### 封面
-
-          本批仍执行 UID 8290691 的硬规则：**绝不使用其投稿自带封面**。此次只补已有条目的来源，不新增封面；新增 source 均继续标记 `cover_unreliable: true`。
-          ''' + '\n'
+本批仍执行 UID 8290691 的硬规则：**绝不使用其投稿自带封面**。此次只补已有条目的来源，不新增封面；新增 source 均继续标记 `cover_unreliable: true`。''' + '\n'
           doc.write_text(dtext, encoding='utf-8')
           print('DOC UPDATED')
           PY
