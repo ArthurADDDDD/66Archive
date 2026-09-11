@@ -18,106 +18,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Apply verified game and source corrections
+      - name: Apply
         shell: bash
         run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          ROOT = Path('.')
-
-          def entry_span(text, entry_id):
-              anchor = f'  - id: {entry_id}\n'
-              start = text.find(anchor)
-              if start < 0:
-                  raise RuntimeError(f'entry {entry_id} not found')
-              nxt = text.find('\n  - id: ', start + len(anchor))
-              return start, len(text) if nxt < 0 else nxt + 1
-
-          def source_block(url, note):
-              return '\n'.join([
-                  f'      - url: {url}',
-                  '        kind: replay',
-                  '        status: alive',
-                  '        account: bili-fan-8290691',
-                  '        cover_unreliable: true',
-                  f'        note: "{note}"',
-              ])
-
-          def add_source(path, entry_id, url, note):
-              p = ROOT / path
-              text = p.read_text(encoding='utf-8')
-              start, end = entry_span(text, entry_id)
-              block = text[start:end]
-              if url in block:
-                  print('SOURCE EXISTS', entry_id, url)
-                  return
-              pos = block.find('\n    contributed_by:')
-              if pos < 0:
-                  raise RuntimeError(f'contributed_by missing in {entry_id}')
-              block = block[:pos] + '\n' + source_block(url, note) + block[pos:]
-              p.write_text(text[:start] + block + text[end:], encoding='utf-8')
-              print('SOURCE ADDED', entry_id, url)
-
-          games = ROOT / 'data/games.yaml'
-          gtext = games.read_text(encoding='utf-8')
-          if '  - id: haak\n' not in gtext:
-              anchor = '  - id: hades\n'
-              if anchor not in gtext:
-                  raise RuntimeError('hades anchor missing in games.yaml')
-              haak = '  - id: haak\n    name: 勇敢的哈克\n    aliases:\n      - HAAK\n\n'
-              gtext = gtext.replace(anchor, haak + anchor, 1)
-              games.write_text(gtext, encoding='utf-8')
-              print('GAME ADDED haak')
-
-          p = ROOT / 'data/entries/2022-08-douyu-live.yaml'
-          text = p.read_text(encoding='utf-8')
-          start, end = entry_span(text, '2022-08-25-live-01')
-          block = text[start:end]
-          block = block.replace('    title: "The House of Da Vinci"\n', '    title: "The House of Da Vinci / 勇敢的哈克"\n', 1)
-          block = block.replace('    games: [the-house-of-da-vinci]\n', '    games: [the-house-of-da-vinci, haak]\n', 1)
-          old_note = '    note: "B站「女流录像小屋」全长录播。"\n'
-          new_note = '    note: "B站「女流录像小屋」全长录播。2026-09-11 经该全长录像与 UID 8290691 分段录像的正文 storyboard 交叉核验：当天前段为 The House of Da Vinci，后半段明确切换到《勇敢的哈克（HAAK）》；因此补登记 haak 游戏归属。"\n'
-          if old_note in block:
-              block = block.replace(old_note, new_note, 1)
-          elif '勇敢的哈克（HAAK）' not in block:
-              raise RuntimeError('unexpected 2022-08-25 note state')
-          p.write_text(text[:start] + block + text[end:], encoding='utf-8')
-          print('ENTRY CORRECTED 2022-08-25-live-01')
-
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1TP4y1f7Tm', '2026-09-11 已用正文 first_frame / storyboard 核验：此段属于 2022-08-25 同场直播，画面为 The House of Da Vinci。只作部分备份，不替代现有全长主源。')
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1UD4y167aV', '2026-09-11 正文抽帧确认属于同场直播；该段后部能看到从 The House of Da Vinci 切换至《勇敢的哈克（HAAK）》的过程。只作部分备份。')
-          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1XB4y1G7sj', '2026-09-11 正文 first_frame / storyboard 明确为《勇敢的哈克（HAAK）》后半场；与前一分段内容连续。只作部分备份。')
-
-          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1Yt4y1N7P5', '2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与另一段合计约 3:31:38，明显短于现有 441 分钟全长主源，只作部分备份。')
-          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1wd4y187nf', '2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。')
-
-          doc = ROOT / 'docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md'
-          dtext = doc.read_text(encoding='utf-8')
-          old_row = '| `2022-08-25-live-01`《The House of Da Vinci》 | 仅 `BV1wG4y1k7ef` | `BV1TP4y1f7Tm` + `BV1UD4y167aV` + `BV1XB4y1G7sj`，合计 **03:18:11** | 条目记 254 min，约 78%；可作为拆段式备用，但仍不够完整 |'
-          new_row = '| `2022-08-25-live-01`《The House of Da Vinci / 勇敢的哈克》 | 原仅 `BV1wG4y1k7ef` | `BV1TP4y1f7Tm` + `BV1UD4y167aV` + `BV1XB4y1G7sj`，合计 **03:18:11** | **内容级复核已确认同场由 The House of Da Vinci 切换至 HAAK；已补 `haak` 游戏归属与三段部分备份** |'
-          if old_row in dtext:
-              dtext = dtext.replace(old_row, new_row, 1)
-          marker = '## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核'
-          if marker not in dtext:
-              dtext = dtext.rstrip() + '\n\n' + '''## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核
-
-### 2022-08-25
-
-对现有全长主源 `BV1wG4y1k7ef` 与 UID 8290691 三段正文 storyboard 交叉检查后确认：前段为 **The House of Da Vinci**，`BV1UD4y167aV` 后段能看到同场切换游戏，`BV1XB4y1G7sj` 正文明确为 **HAAK / 勇敢的哈克**；现有全长主源本身也覆盖 HAAK 后半场，因此是原条目内容字段漏记，不是误归日期。
-
-据此正式登记 `games.yaml` 的 `haak`（名称：勇敢的哈克；别名：HAAK），并把 `2022-08-25-live-01` 的 `games` 改为 `[the-house-of-da-vinci, haak]`。三段 8290691 录像作为部分备份追加，仍以女流录像小屋全长录像为主源。
-
-### 2022-11-16
-
-`BV1Yt4y1N7P5` 与 `BV1wd4y187nf` 正文均确认是 **《战神5》**。两段合计约 3:31:38，短于现有 `BV1624y1y7cs` 的 441 分钟全长录像，因此只增加为部分备份。
-
-### 封面
-
-本批仍执行 UID 8290691 的硬规则：**绝不使用其投稿自带封面**。此次只补已有条目的来源，不新增封面；新增 source 均继续标记 `cover_unreliable: true`。''' + '\n'
-          doc.write_text(dtext, encoding='utf-8')
-          print('DOC UPDATED')
-          PY
+          echo 'ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpST09UID0gUGF0aCgnLicpCgpkZWYgZW50cnlfc3Bhbih0ZXh0LCBlbnRyeV9pZCk6CiAgICBhbmNob3IgPSBmJyAgLSBpZDoge2VudHJ5X2lkfVxuJwogICAgc3RhcnQgPSB0ZXh0LmZpbmQoYW5jaG9yKQogICAgaWYgc3RhcnQgPCAwOgogICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcihmJ2VudHJ5IHtlbnRyeV9pZH0gbm90IGZvdW5kJykKICAgIG54dCA9IHRleHQuZmluZCgnXG4gIC0gaWQ6ICcsIHN0YXJ0ICsgbGVuKGFuY2hvcikpCiAgICByZXR1cm4gc3RhcnQsIGxlbih0ZXh0KSBpZiBueHQgPCAwIGVsc2Ugbnh0ICsgMQoKZGVmIHNvdXJjZV9ibG9jayh1cmwsIG5vdGUpOgogICAgcmV0dXJuICdcbicuam9pbihbCiAgICAgICAgZicgICAgICAtIHVybDoge3VybH0nLAogICAgICAgICcgICAgICAgIGtpbmQ6IHJlcGxheScsCiAgICAgICAgJyAgICAgICAgc3RhdHVzOiBhbGl2ZScsCiAgICAgICAgJyAgICAgICAgYWNjb3VudDogYmlsaS1mYW4tODI5MDY5MScsCiAgICAgICAgJyAgICAgICAgY292ZXJfdW5yZWxpYWJsZTogdHJ1ZScsCiAgICAgICAgZicgICAgICAgIG5vdGU6ICJ7bm90ZX0iJywKICAgIF0pCgpkZWYgYWRkX3NvdXJjZShwYXRoLCBlbnRyeV9pZCwgdXJsLCBub3RlKToKICAgIHAgPSBST09UIC8gcGF0aAogICAgdGV4dCA9IHAucmVhZF90ZXh0KGVuY29kaW5nPSd1dGYtOCcpCiAgICBzdGFydCwgZW5kID0gZW50cnlfc3Bhbih0ZXh0LCBlbnRyeV9pZCkKICAgIGJsb2NrID0gdGV4dFtzdGFydDplbmRdCiAgICBpZiB1cmwgaW4gYmxvY2s6CiAgICAgICAgcHJpbnQoJ1NPVVJDRSBFWElTVFMnLCBlbnRyeV9pZCwgdXJsKQogICAgICAgIHJldHVybgogICAgcG9zID0gYmxvY2suZmluZCgnXG4gICAgY29udHJpYnV0ZWRfYnk6JykKICAgIGlmIHBvcyA8IDA6CiAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKGYnY29udHJpYnV0ZWRfYnkgbWlzc2luZyBpbiB7ZW50cnlfaWR9JykKICAgIGJsb2NrID0gYmxvY2tbOnBvc10gKyAnXG4nICsgc291cmNlX2Jsb2NrKHVybCwgbm90ZSkgKyBibG9ja1twb3M6XQogICAgcC53cml0ZV90ZXh0KHRleHRbOnN0YXJ0XSArIGJsb2NrICsgdGV4dFtlbmQ6XSwgZW5jb2Rpbmc9J3V0Zi04JykKICAgIHByaW50KCdTT1VSQ0UgQURERUQnLCBlbnRyeV9pZCwgdXJsKQoKZ2FtZXMgPSBST09UIC8gJ2RhdGEvZ2FtZXMueWFtbCcKZ3RleHQgPSBnYW1lcy5yZWFkX3RleHQoZW5jb2Rpbmc9J3V0Zi04JykKaWYgJyAgLSBpZDogaGFha1xuJyBub3QgaW4gZ3RleHQ6CiAgICBhbmNob3IgPSAnICAtIGlkOiBoYWRlc1xuJwogICAgaWYgYW5jaG9yIG5vdCBpbiBndGV4dDoKICAgICAgICByYWlzZSBSdW50aW1lRXJyb3IoJ2hhZGVzIGFuY2hvciBtaXNzaW5nIGluIGdhbWVzLnlhbWwnKQogICAgaGFhayA9ICcgIC0gaWQ6IGhhYWtcbiAgICBuYW1lOiDli4fmlaLnmoTlk4jlhYtcbiAgICBhbGlhc2VzOlxuICAgICAgLSBIQUFLXG5cbicKICAgIGd0ZXh0ID0gZ3RleHQucmVwbGFjZShhbmNob3IsIGhhYWsgKyBhbmNob3IsIDEpCiAgICBnYW1lcy53cml0ZV90ZXh0KGd0ZXh0LCBlbmNvZGluZz0ndXRmLTgnKQogICAgcHJpbnQoJ0dBTUUgQURERUQgaGFhaycpCmVsc2U6CiAgICBwcmludCgnR0FNRSBFWElTVFMgaGFhaycpCgpwID0gUk9PVCAvICdkYXRhL2VudHJpZXMvMjAyMi0wOC1kb3V5dS1saXZlLnlhbWwnCnRleHQgPSBwLnJlYWRfdGV4dChlbmNvZGluZz0ndXRmLTgnKQpzdGFydCwgZW5kID0gZW50cnlfc3Bhbih0ZXh0LCAnMjAyMi0wOC0yNS1saXZlLTAxJykKYmxvY2sgPSB0ZXh0W3N0YXJ0OmVuZF0KYmxvY2sgPSBibG9jay5yZXBsYWNlKCcgICAgdGl0bGU6ICJUaGUgSG91c2Ugb2YgRGEgVmluY2kiXG4nLCAnICAgIHRpdGxlOiAiVGhlIEhvdXNlIG9mIERhIFZpbmNpIC8g5YuH5pWi55qE5ZOI5YWLIlxuJywgMSkKYmxvY2sgPSBibG9jay5yZXBsYWNlKCcgICAgZ2FtZXM6IFt0aGUtaG91c2Utb2YtZGEtdmluY2ldXG4nLCAnICAgIGdhbWVzOiBbdGhlLWhvdXNlLW9mLWRhLXZpbmNpLCBoYWFrXVxuJywgMSkKb2xkX25vdGUgPSAnICAgIG5vdGU6ICJC56uZ44CM5aWz5rWB5b2V5YOP5bCP5bGL44CN5YWo6ZW/5b2V5pKt44CCIlxuJwpuZXdfbm90ZSA9ICcgICAgbm90ZTogIkLnq5njgIzlpbPmtYHlvZXlg4/lsI/lsYvjgI3lhajplb/lvZXmkq3jgIIyMDI2LTA5LTExIOe7j+ivpeWFqOmVv+W9leWDj+S4jiBVSUQgODI5MDY5MSDliIbmrrXlvZXlg4/nmoTmraPmlocgc3Rvcnlib2FyZCDkuqTlj4nmoLjpqozvvJrlvZPlpKnliY3mrrXkuLogVGhlIEhvdXNlIG9mIERhIFZpbmNp77yM5ZCO5Y2K5q615piO56Gu5YiH5o2i5Yiw44CK5YuH5pWi55qE5ZOI5YWL77yISEFBS++8ieOAi++8m+WboOatpOihpeeZu+iusCBoYWFrIOa4uOaIj+W9kuWxnuOAgiJcbicKaWYgb2xkX25vdGUgaW4gYmxvY2s6CiAgICBibG9jayA9IGJsb2NrLnJlcGxhY2Uob2xkX25vdGUsIG5ld19ub3RlLCAxKQplbGlmICfli4fmlaLnmoTlk4jlhYvvvIhIQUFL77yJJyBub3QgaW4gYmxvY2s6CiAgICByYWlzZSBSdW50aW1lRXJyb3IoJ3VuZXhwZWN0ZWQgMjAyMi0wOC0yNSBub3RlIHN0YXRlJykKcC53cml0ZV90ZXh0KHRleHRbOnN0YXJ0XSArIGJsb2NrICsgdGV4dFtlbmQ6XSwgZW5jb2Rpbmc9J3V0Zi04JykKcHJpbnQoJ0VOVFJZIENPUlJFQ1RFRCAyMDIyLTA4LTI1LWxpdmUtMDEnKQoKYWRkX3NvdXJjZSgnZGF0YS9lbnRyaWVzLzIwMjItMDgtZG91eXUtbGl2ZS55YW1sJywgJzIwMjItMDgtMjUtbGl2ZS0wMScsICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vQlYxVFA0eTFmN1RtJywgJzIwMjYtMDktMTEg5bey55So5q2j5paHIGZpcnN0X2ZyYW1lIC8gc3Rvcnlib2FyZCDmoLjpqozvvJrmraTmrrXlsZ7kuo4gMjAyMi0wOC0yNSDlkIzlnLrnm7Tmkq3vvIznlLvpnaLkuLogVGhlIEhvdXNlIG9mIERhIFZpbmNp44CC5Y+q5L2c6YOo5YiG5aSH5Lu977yM5LiN5pu/5Luj546w5pyJ5YWo6ZW/5Li75rqQ44CCJykKYWRkX3NvdXJjZSgnZGF0YS9lbnRyaWVzLzIwMjItMDgtZG91eXUtbGl2ZS55YW1sJywgJzIwMjItMDgtMjUtbGl2ZS0wMScsICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vQlYxVUQ0eTE2N2FWJywgJzIwMjYtMDktMTEg5q2j5paH5oq95bin56Gu6K6k5bGe5LqO5ZCM5Zy655u05pKt77yb6K+l5q615ZCO6YOo6IO955yL5Yiw5LuOIFRoZSBIb3VzZSBvZiBEYSBWaW5jaSDliIfmjaLoh7PjgIrli4fmlaLnmoTlk4jlhYvvvIhIQUFL77yJ44CL55qE6L+H56iL44CC5Y+q5L2c6YOo5YiG5aSH5Lu944CCJykKYWRkX3NvdXJjZSgnZGF0YS9lbnRyaWVzLzIwMjItMDgtZG91eXUtbGl2ZS55YW1sJywgJzIwMjItMDgtMjUtbGl2ZS0wMScsICdodHRwczovL3d3dy5iaWxpYmlsaS5jb20vdmlkZW8vQlYxWEI0eTFHN3NqJywgJzIwMjYtMDktMTEg5q2j5paHIGZpcnN0X2ZyYW1lIC8gc3Rvcnlib2FyZCDmmI7noa7kuLrjgIrli4fmlaLnmoTlk4jlhYvvvIhIQUFL77yJ44CL5ZCO5Y2K5Zy677yb5LiO5YmN5LiA5YiG5q615YaF5a656L+e57ut44CC5Y+q5L2c6YOo5YiG5aSH5Lu944CCJykKCmFkZF9zb3VyY2UoJ2RhdGEvZW50cmllcy8yMDIyLTExLWRvdXl1LWxpdmUueWFtbCcsICcyMDIyLTExLTE2LWxpdmUtMDEnLCAnaHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVl0NHkxTjdQNScsICcyMDI2LTA5LTExIOato+aWhyBmaXJzdF9mcmFtZSAvIHN0b3J5Ym9hcmQg5qC46aqM5Li644CK5oiY56WeNeOAi++8m+S4juWPpuS4gOauteWQiOiuoee6piAzOjMxOjM477yM5piO5pi+55+t5LqO546w5pyJIDQ0MSDliIbpkp/lhajplb/kuLvmupDvvIzlj6rkvZzpg6jliIblpIfku73jgIInKQphZGRfc291cmNlKCdkYXRhL2VudHJpZXMvMjAyMi0xMS1kb3V5dS1saXZlLnlhbWwnLCAnMjAyMi0xMS0xNi1saXZlLTAxJywgJ2h0dHBzOi8vd3d3LmJpbGliaWxpLmNvbS92aWRlby9CVjF3ZDR5MTg3bmYnLCAnMjAyNi0wOS0xMSDmraPmlocgZmlyc3RfZnJhbWUgLyBzdG9yeWJvYXJkIOaguOmqjOS4uuOAiuaImOelnjXjgIvvvJvkuI7liY3kuIDmrrXlkIzml6XlkIzlnLrvvIzlj6rkvZzpg6jliIblpIfku73vvIzkuI3mm7/ku6PlpbPmtYHlvZXlg4/lsI/lsYvlhajplb/kuLvmupDjgIInKQo=' | base64 -d > /tmp/apply-haak.py
+          python /tmp/apply-haak.py
 
       - name: Validate
         shell: bash
@@ -125,12 +30,12 @@ jobs:
           npm ci --ignore-scripts --no-audit --no-fund
           npm run validate
 
-      - name: Commit to main
+      - name: Commit
         shell: bash
         run: |
           git config user.name "AD"
           git config user.email "88820009+ArthurADDDDD@users.noreply.github.com"
-          git add data/games.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-11-douyu-live.yaml docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md
+          git add data/games.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-11-douyu-live.yaml
           if git diff --cached --quiet; then
             echo "Nothing to commit"
             exit 0
