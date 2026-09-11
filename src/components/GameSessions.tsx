@@ -10,9 +10,15 @@ import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 import { SiteText } from './SiteText'
 
+const NONE: ReadonlySet<string> = new Set()
+
 /**
  * 游戏详情页的相关场次：整行就地展开播放预览，不把点击行为变成详情页跳转。
- * 默认全部打开，让多日期、多视频的关系一次呈现；点击整行仍可单独收起或展开。
+ * 电脑上默认全部打开，让多日期、多视频的关系一次呈现；点击整行仍可单独收起或展开。
+ *
+ * **手机上默认全部收起。** 一场展开后有封面、来源、分 P、标签，差不多一整屏；
+ * 十几场默认全开，列表就成了十几屏的长卷，想找某一场只能一路往下滑。
+ * 收起来一行一场，配上底部的年月索引（EntryTimeline），才翻得动。
  *
  * 年份筛选来自上面那张「年份分布」条形图（点某一年就只看那一年），
  * 正倒序则是这里的切换键。右侧年月时间轴从 entries 现算，跟着一起变。
@@ -30,6 +36,7 @@ export function GameSessions({
   color?: string
 }) {
   const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
+  const allIds = useMemo<ReadonlySet<string>>(() => new Set(entries.map((entry) => entry.id)), [entries])
   const { year, order } = useEntryFilter()
   // getGameProfile 交出来的是降序（最近一场在前）
   const visible = useMemo(() => applyEntryFilter(entries, year, order, 'desc'), [entries, year, order])
@@ -37,23 +44,23 @@ export function GameSessions({
   const { view, setView, compact } = useEntryView()
   // 网格一次只展开一条；列表沿用「默认全开、逐条收合」的对照读法。
   const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
-  const [expanded, setExpanded] = useState<Set<string>>(() => new Set(entries.map((entry) => entry.id)))
+  // null = 还没动过：电脑默认全开，手机默认全收（compact 挂载后才知道，所以不能写进初始值）。
+  const [touched, setTouched] = useState<ReadonlySet<string> | null>(null)
+  const expanded = touched ?? (compact ? NONE : allIds)
   const allExpanded = visible.length > 0 && visible.every((entry) => expanded.has(entry.id))
-  const expandAll = () => setExpanded(new Set([...expanded, ...visible.map((entry) => entry.id)]))
-  const collapseAll = () =>
-    setExpanded((current) => {
-      const next = new Set(current)
-      for (const entry of visible) next.delete(entry.id)
-      return next
-    })
+  const expandAll = () => setTouched(new Set([...expanded, ...visible.map((entry) => entry.id)]))
+  const collapseAll = () => {
+    const next = new Set(expanded)
+    for (const entry of visible) next.delete(entry.id)
+    setTouched(next)
+  }
 
-  const toggle = (id: string) =>
-    setExpanded((current) => {
-      const next = new Set(current)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      return next
-    })
+  const toggle = (id: string) => {
+    const next = new Set(expanded)
+    if (next.has(id)) next.delete(id)
+    else next.add(id)
+    setTouched(next)
+  }
 
   const row = (entry: TimelineEntry) => (
     <EntryRow entry={entry} expanded={expanded.has(entry.id)} showFullDate onToggle={() => toggle(entry.id)} />
@@ -99,7 +106,7 @@ export function GameSessions({
         <div className="mt-6 w-full">
           {/* 网格没有月份小标题，落点会停在某一行中间——轨道跳转时那张卡会自己亮一下。 */}
           {visible.length > 10 && (
-            <EntryMonthRail key={`${year ?? 'all'}-${order}`} entries={visible} color={color} />
+            <EntryMonthRail key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" />
           )}
           <EntryGrid
             entries={visible}
@@ -111,7 +118,7 @@ export function GameSessions({
       ) : visible.length > 10 ? (
         <div className="mt-6 w-full">
           {/* key 让筛选/换序后时间轴从头量一遍，不留上一份的游标位置 */}
-          <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} renderEntry={row} />
+          <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" renderEntry={row} />
         </div>
       ) : (
         <div className="mt-6 w-full divide-y divide-line/50 border-y border-line/60">

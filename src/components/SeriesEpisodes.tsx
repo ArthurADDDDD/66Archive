@@ -308,6 +308,7 @@ export function SeriesEpisodes({
             entries={loadedEntries}
             indexEntries={visible}
             color={color}
+            unit={unit}
             renderEntry={row}
             onMissingTarget={revealTarget}
           />

@@ -191,7 +191,8 @@ export function InlineTagCalibration({
         </button>
       </div>
 
-      <p className="mt-3 text-meta leading-relaxed text-faint">
+      {/* 手机上这段说明收起时不占地方：一条记录点开，先看到的应该是录像，不是纠错须知。 */}
+      <p className={`mt-3 text-meta leading-relaxed text-faint ${open ? '' : 'hidden sm:block'}`}>
         {t('entry-calib-intro')}
       </p>
 

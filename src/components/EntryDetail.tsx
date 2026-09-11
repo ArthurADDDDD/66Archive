@@ -16,7 +16,14 @@ import { SiteText } from './SiteText'
  * 抽出来是因为现在有两种容器要用同一份内容：时间轴列表里就地展开的一行（EntryRow），
  * 以及封面网格里插在整行下方的详情面板（EntryGrid）。两边共用同一个组件，
  * 才不会出现「网格里点开的信息比列表里少一截」这种两套实现各长各的情况。
+ *
+ * 手机上它总是插在一行记录下面，而那一行已经写着标题、日期、平台和时长——
+ * 所以窄屏上凡是和那一行重复的都先收起来，分 P 也只露前几段，
+ * 免得点开一条就是一整屏，翻不到下一条。
  */
+
+/** 手机上分 P 先露几段；再多就折叠成「展开全部」。 */
+const PHONE_PART_PREVIEW = 3
 
 /**
  * 选中来源 + 该来源的封面。
@@ -55,35 +62,39 @@ export function useEntrySource(entry: TimelineEntry) {
 export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
   const platform = PLATFORM_META[entry.platform as Platform]
   const { sourceIndex, setSourceIndex, selectedSource, displayCover } = useEntrySource(entry)
+  // 来源标题和记录标题一样时，手机上不再重复一遍（上面那一行已经写着）。
+  const sameTitle = !selectedSource || selectedSource.entryTitle === entry.title
 
   return (
     <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
       <EntryCover cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
-      <div className="flex min-w-0 flex-col p-[clamp(1.25rem,1.65vw,2.75rem)]">
-        {selectedSource ? (
-          <a
-            href={selectedSource.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-analytics-event="source.open"
-            data-analytics-target={analyticsSourceTarget(detectPlatform(selectedSource.url))}
-            className="block text-h3 font-medium leading-snug text-ink transition-colors hover:text-live"
-          >
-            {selectedSource.entryTitle} <span className="font-mono text-meta text-live">↗</span>
-          </a>
-        ) : (
-          <h3 className="mt-2 text-h3 font-medium leading-snug text-ink">{entry.title}</h3>
-        )}
+      <div className="flex min-w-0 flex-col p-4 sm:p-[clamp(1.25rem,1.65vw,2.75rem)]">
+        <div className={sameTitle ? 'hidden sm:block' : ''}>
+          {selectedSource ? (
+            <a
+              href={selectedSource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-analytics-event="source.open"
+              data-analytics-target={analyticsSourceTarget(detectPlatform(selectedSource.url))}
+              className="block text-control font-medium leading-snug text-ink transition-colors hover:text-live sm:text-h3"
+            >
+              {selectedSource.entryTitle} <span className="font-mono text-meta text-live">↗</span>
+            </a>
+          ) : (
+            <h3 className="mt-2 text-h3 font-medium leading-snug text-ink">{entry.title}</h3>
+          )}
 
-        <div className="mt-2 flex flex-wrap gap-x-2.5 gap-y-1 text-meta text-faint tnum">
-          <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
-          <span>{entry.date}{entry.time ? ` ${entry.time}` : ''}</span>
-          <span>{formatDuration(entry.duration_min)}</span>
+          <div className="mt-2 hidden flex-wrap gap-x-2.5 gap-y-1 text-meta text-faint tnum sm:flex">
+            <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
+            <span>{entry.date}{entry.time ? ` ${entry.time}` : ''}</span>
+            <span>{formatDuration(entry.duration_min)}</span>
+          </div>
         </div>
 
         {entry.bands.some((band) => band.game) && (
-          <div className="mt-4">
+          <div className={sameTitle ? 'sm:mt-4' : 'mt-4'}>
             <SegmentBar entry={entry} />
           </div>
         )}
@@ -102,22 +113,28 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
                     onClick={() => setSourceIndex(index)}
                     aria-pressed={active}
                     title={`切换到${index === 0 ? '主链接' : `备选 ${index}`}`}
-                    className={`ui-press group/source flex min-h-14 min-w-0 w-full items-center justify-between gap-3 overflow-hidden rounded-xl border px-3 py-2.5 text-left text-control transition-colors ${active ? 'border-live/55 bg-live/10 text-ink shadow-[0_8px_24px_rgba(91,200,232,.06)]' : 'border-line bg-base/35 text-muted hover:border-muted hover:text-ink'}`}
+                    className={`ui-press group/source flex min-h-11 min-w-0 w-full items-center justify-between gap-3 overflow-hidden rounded-xl border px-3 py-2 text-left text-control transition-colors sm:min-h-14 sm:py-2.5 ${active ? 'border-live/55 bg-live/10 text-ink shadow-[0_8px_24px_rgba(91,200,232,.06)]' : 'border-line bg-base/35 text-muted hover:border-muted hover:text-ink'}`}
                   >
                     <span className="min-w-0">
                       <span className="font-medium" style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
                       <span className="ml-2 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
                       {source.accountName && <span className="ml-2 text-faint">{source.accountName}</span>}
                       {(source.parts ?? source.partDetails?.length) && <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 font-mono text-meta text-live">{source.parts ?? source.partDetails?.length}P</span>}
-                      <span className="mt-0.5 block truncate text-meta text-faint">{source.entryTitle}</span>
+                      <span className={`mt-0.5 truncate text-meta text-faint ${source.entryTitle === entry.title ? 'hidden sm:block' : 'block'}`}>{source.entryTitle}</span>
                     </span>
-                    <span className={`shrink-0 whitespace-nowrap font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>{active ? '当前来源 ✓' : '切换'}</span>
+                    <span className={`shrink-0 whitespace-nowrap font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>
+                      {active ? (
+                        <>
+                          <span className="hidden sm:inline">当前来源 </span>✓
+                        </>
+                      ) : '切换'}
+                    </span>
                   </button>
                 )
               })}
             </div>
 
-            <SelectedSourceParts source={selectedSource} />
+            <SelectedSourceParts key={selectedSource?.url} source={selectedSource} />
           </div>
         )}
 
@@ -128,6 +145,7 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
 }
 
 function SelectedSourceParts({ source }: { source: TimelineSource | undefined }) {
+  const [showAll, setShowAll] = useState(false)
   if (!source) return null
   if (!source.partDetails?.length) {
     return source.parts && source.parts > 1 ? (
@@ -137,20 +155,22 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
     ) : null
   }
 
+  const folded = !showAll && source.partDetails.length > PHONE_PART_PREVIEW
+
   return (
     <section className="ui-content-swap mt-3 rounded-xl border border-line bg-base/30 p-2.5" aria-label="当前来源的分 P">
       <div className="flex flex-wrap items-end justify-between gap-2 px-1 pb-2">
         <div>
           <p className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="entry-detail-parts-title" /></p>
-          <p className="mt-1 text-meta leading-relaxed text-faint"><SiteText id="entry-detail-parts-hint" /></p>
+          <p className="mt-1 hidden text-meta leading-relaxed text-faint sm:block"><SiteText id="entry-detail-parts-hint" /></p>
         </div>
         <span className="font-mono text-meta text-faint tnum">{source.partDetails.length}P</span>
       </div>
       <ol className="grid gap-1.5 lg:grid-cols-2">
-        {source.partDetails.map((part) => {
+        {source.partDetails.map((part, index) => {
           const partCover = proxyImage(part.cover, 180)
           return (
-            <li key={part.page}>
+            <li key={part.page} className={folded && index >= PHONE_PART_PREVIEW ? 'hidden sm:block' : undefined}>
               <a
                 href={sourcePartHref(source.url, part.page)}
                 target="_blank"
@@ -176,6 +196,16 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
           )
         })}
       </ol>
+      {source.partDetails.length > PHONE_PART_PREVIEW && (
+        <button
+          type="button"
+          onClick={() => setShowAll((value) => !value)}
+          aria-expanded={!folded}
+          className="ui-press mt-2 flex min-h-10 w-full items-center justify-center rounded-lg border border-line text-meta text-muted transition-colors hover:border-muted hover:text-ink sm:hidden"
+        >
+          {folded ? `展开全部 ${source.partDetails.length}P` : '收起分 P'}
+        </button>
+      )}
     </section>
   )
 }

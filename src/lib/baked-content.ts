@@ -21,6 +21,7 @@ import { get as httpsGet } from 'node:https'
 import { readBakedInput } from './baked-input'
 import { parseEditorial, parseNarrative, parseSiteCopy, type LiveContent, type LiveNarrative, type LiveSiteCopy } from './live-content'
 import { FALLBACK_SITE_ORIGIN } from './site-url'
+import { SITE_COPY } from './site-copy'
 
 const EMPTY: LiveContent = { narrative: null, copy: null, editorial: null }
 
@@ -189,9 +190,22 @@ export async function fetchBakedNavShell(): Promise<LiveContent> {
  */
 const GLOBAL_TEXT_PREFIXES = ['site-'] as const
 
+const BASELINE_TEXT = new Map(SITE_COPY.texts.map((item) => [item.id, item.text]))
+
+/**
+ * 只烤「后台改过」的那几句：和公开仓基线一字不差的、或者留空（= 恢复默认）的，
+ * 客户端的基线里本来就有，再烤一遍只是把同一句话多塞进每一页的 HTML。
+ * 实测不过滤时条目页多出 50 条文字、约 6 KB，乘上 3,500 个页面就是 27 MB。
+ * 覆盖规则不变（见 LiveContentProvider 的 textTable）：没带的 id 一律回退基线。
+ */
 export function pickTexts(copy: LiveSiteCopy, prefixes: readonly string[]): LiveSiteCopy['texts'] {
   const wanted = [...GLOBAL_TEXT_PREFIXES, ...prefixes]
-  return copy.texts.filter((item) => wanted.some((prefix) => item.id.startsWith(prefix)))
+  return copy.texts.filter(
+    (item) =>
+      wanted.some((prefix) => item.id.startsWith(prefix)) &&
+      item.text.trim() !== '' &&
+      item.text !== BASELINE_TEXT.get(item.id),
+  )
 }
 
 /**
