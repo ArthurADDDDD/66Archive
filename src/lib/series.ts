@@ -37,6 +37,9 @@ export type SeriesInfo = {
    * 前者数期数是致敬——「294 期」等于说她出现过 294 个星期日。后者不是节目，
    * 是分类；给它标上「137 期」既不准确（她从没编过号），读起来也像在清点
    * 「这些场次不是在打游戏」。所以桶只说活跃年份，不报期数。
+   *
+   * 一起 See 虽然是她起的名字，但它是「开着就一起看」，没有编过号，详情页也按「场」数；
+   * 节目单卡片上同样不报期数。
    */
   countsEpisodes: boolean
   games: string[]
@@ -85,7 +88,7 @@ export function buildSeries(
   return {
     id,
     name: getDisplayName(id, name),
-    countsEpisodes: !ARCHIVE_BUCKETS.has(id),
+    countsEpisodes: !ARCHIVE_BUCKETS.has(id) && id !== 'together-see',
     /*
      * 描述直接用 data/series.yaml 里的那一句，不再由代码覆盖。
      *
