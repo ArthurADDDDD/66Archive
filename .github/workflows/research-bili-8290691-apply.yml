@@ -1,0 +1,65 @@
+name: Apply verified 8290691 findings wrapper
+
+on:
+  push:
+    branches:
+      - research/bili-8290691-catalog
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Reuse verified apply payload
+        shell: bash
+        run: |
+          git fetch origin research/bili-8290691-catalog
+          git show origin/research/bili-8290691-catalog:.github/workflows/research-bili-8290691.yml > /tmp/source-workflow.yml
+          python -m pip install --quiet pillow pyyaml
+          python - <<'PY'
+          import re, subprocess
+          text = open('/tmp/source-workflow.yml', encoding='utf-8').read()
+          m = re.search(r"echo '([A-Za-z0-9+/=]+)' \| base64 -d > /tmp/apply829.py", text)
+          if not m:
+              raise SystemExit('apply payload not found')
+          import base64
+          open('/tmp/apply829.py','wb').write(base64.b64decode(m.group(1)))
+          subprocess.run(['python','/tmp/apply829.py'], check=True)
+          PY
+          # Do not invent a new controlled tag during source recovery; keep the existing broad `聊天` tag only.
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('data/entries/2022-08-douyu-live.yaml')
+          s=p.read_text(encoding='utf-8').replace('tags: [聊天, 音乐]', 'tags: [聊天]')
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Validate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import yaml
+          for p in ['data/accounts.yaml','data/entries/2022-08-douyu-live.yaml','data/entries/2022-09-douyu-live.yaml','data/entries/2022-10-douyu-live.yaml','data/entries/2022-12-douyu-live.yaml']:
+              with open(p, encoding='utf-8') as f:
+                  yaml.safe_load(f)
+              print('YAML OK', p)
+          PY
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run validate
+
+      - name: Commit to main
+        shell: bash
+        run: |
+          git config user.name "AD"
+          git config user.email "88820009+ArthurADDDDD@users.noreply.github.com"
+          git add data/accounts.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-09-douyu-live.yaml data/entries/2022-10-douyu-live.yaml data/entries/2022-12-douyu-live.yaml docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md public/images/covers/2022-08-03-live-01.jpg public/images/covers/2022-10-14-live-01.jpg public/images/covers/2022-12-03-live-01.jpg
+          git commit -m "data: recover three 2022 livestreams from 8290691"
+          git push origin HEAD:main
