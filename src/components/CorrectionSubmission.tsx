@@ -30,6 +30,8 @@ import { SubmissionForm } from './SubmissionForm'
 
 type Intent = {
   id: string
+  /** 这一种来意是否开放附图。只有「我存着老图」需要。 */
+  photos?: boolean
   label: string
   hint: string
   /** 展开后写在表单上方的一句话 */
@@ -57,9 +59,10 @@ const INTENTS: Intent[] = [
   },
   {
     id: 'photo',
+    photos: true,
     label: '我存着老图',
     hint: '周年图、生日贺图、直播间截图、粉丝作品',
-    lede: '画廊一直在收。哪怕只记得「那年有一张什么图」，也可以先说一声。',
+    lede: '画廊一直在收。有图就一起传上来；哪怕只记得「那年有一张什么图」，也可以先说一声。',
     bodyLabel: '这张图是什么',
     template: '【画廊线索】\n· 大概是哪一年：\n· 是什么画面：\n· 在哪儿能找到原图：\n',
   },
@@ -118,6 +121,7 @@ export function CorrectionSubmission() {
           <SubmissionForm
             key={active.id}
             kind="correction"
+            allowPhotos={active.photos === true}
             initialBody={active.template}
             className="mt-5"
             nameLabel="怎么称呼你"
