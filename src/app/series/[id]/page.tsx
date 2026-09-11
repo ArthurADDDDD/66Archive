@@ -138,7 +138,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
           <section className="site-container px-page pb-10 sm:pb-14">
             <SeriesSectionEyebrow pageId="series-detail-years" />
             <div className="mt-4 w-full">
-              <ActivityStrip perYear={s.perYear} color={color} unit={unit} />
+              <ActivityStrip perYear={s.perYear} color={color} />
               <YearChips perYear={s.perYear} color={color} unit={unit} />
             </div>
           </section>

@@ -39,10 +39,6 @@ export default async function GamesPage() {
 
   const played = profiles.filter((p) => p.sessions > 0)
   const longest = [...played].sort((a, b) => b.spanDays - a.spanDays)[0]
-  const latestArchiveDate = timeline.reduce<string | null>(
-    (latest, entry) => (!latest || entry.date > latest ? entry.date : latest),
-    null,
-  )
 
   const library: LibraryGame[] = played.map((p) => ({
     id: p.id,
@@ -78,7 +74,8 @@ export default async function GamesPage() {
           <p className="measure-body mt-5 text-body text-muted">
             {/* 日期一律包成不换行：`2010-07-11` 里的连字符是浏览器的断行点，
                 正文折到这里会把日期折成「2010-」+「07-11」两行。 */}
-            {played.length} 个游戏，档案收录至 <span className="whitespace-nowrap tnum">{latestArchiveDate ?? '待补录'}</span>。
+            {/* 「档案收录至 <日期>」是补档进度，读者用不上；跨度那句是真事实，留着。 */}
+            {played.length} 个游戏。
             {longest?.firstDate && longest?.lastDate && (
               <>
                 {' '}跨得最长的是《{longest.name}》，从 <span className="whitespace-nowrap tnum">{longest.firstDate}</span> 到{' '}

@@ -32,12 +32,15 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
         <span className="h-px flex-1 bg-line/70" />
       </div>
       <div className={`mt-6 grid gap-4 sm:gap-6 lg:grid-cols-2 ${stage ? 'lg:gap-8' : ''}`}>
-        {/* 编年史 */}
+        {/*
+          编年史。body 原文是「N 年、N 条记录，按时间排好在那儿」——条数在这里
+          不起任何作用：既不帮人决定要不要点进去，也不告诉人里面是什么。
+        */}
         <PromoCard
           href="/chronicle/"
           kicker="Chronicle · 编年史"
           title="一条一条地看下去。"
-          body={`${data.chronicle.years} 年、${data.chronicle.entries.toLocaleString()} 条记录，按时间排好在那儿。`}
+          body="从第一支视频到最近一场，一年一年排好在那儿。"
           cta="打开编年史 →"
           color="#5BC8E8"
         >
@@ -58,7 +61,7 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
           href="/gallery/"
           kicker="Gallery · 画廊"
           title="把这些年，一张张摊开。"
-          body={`${data.gallery.featured} 张纪念节点，${data.gallery.total} 张全量影像${data.gallery.span ? `，跨 ${data.gallery.span}` : ''}。`}
+          body={`屏风时代到现在，直播间里那些值得纪念的画面${data.gallery.span ? `，跨 ${data.gallery.span}` : ''}。`}
           cta="进入画廊 →"
           color="#E5568A"
         >

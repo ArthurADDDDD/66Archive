@@ -369,7 +369,7 @@ export function Timeline({
             <SearchField
               value={filters.q}
               onChange={(v) => set({ q: v })}
-              placeholder={`搜索 ${entries.length.toLocaleString()} 条记录`}
+              placeholder="搜标题、游戏、日期…"
               ariaLabel="搜索全部记录"
               inputClassName="h-9 w-[clamp(9rem,22vw,16rem)] bg-transparent px-3 pr-8 text-meta text-ink placeholder:text-faint focus:outline-none"
               iconClassName="shrink-0"
@@ -504,19 +504,7 @@ export function Timeline({
                         <span className="font-mono text-[0.9375rem] font-semibold text-ink">{summary?.months.size ?? 0}</span> 个月
                       </span>
                     </span>
-                    {summary && (
-                      <span className="mt-1 block text-meta text-faint tnum">
-                        {summary.durationCount > 0 ? (
-                          <>
-                            已录{' '}
-                            <span className="font-mono text-control font-semibold text-ink">
-                              {Math.round(summary.durationMinutes / 60).toLocaleString()}
-                            </span>{' '}
-                            小时
-                          </>
-                        ) : '时长待补'}
-                      </span>
-                    )}
+                    {/* 年度卡不再报「已录 N 小时」，口径同 ArchiveLoader 的骨架卡。 */}
                     <span className="mt-2 block space-y-1">
                       {summary?.titles.slice(0, 2).map((title) => (
                         <span key={title} className="block truncate text-meta leading-snug text-muted">{title}</span>
@@ -787,18 +775,10 @@ function MonthArchive({
                   <span className="h-full w-full" />
                 )}
               </span>
+              {/* 月份格原本在标题上面压一行「已录 N 小时 · 8/12 条有时长」。
+                  后半截是覆盖率，纯校对口径；前半截在这个粒度上也没有用——
+                  这一格要回答的是「这个月她在播什么」，标题自己就说清楚了。 */}
               <span className="mt-3 hidden space-y-1.5 sm:block">
-                <span className="block text-meta text-faint tnum">
-                  {summary.durationCount > 0 ? (
-                    <>
-                      已录{' '}
-                      <span className="font-mono text-control font-semibold text-ink">
-                        {Math.round(summary.durationMinutes / 60).toLocaleString()}
-                      </span>{' '}
-                      小时 · {summary.durationCount}/{summary.count} 条有时长
-                    </>
-                  ) : '时长待补'}
-                </span>
                 {summary.titles.map((title, index) => (
                   <span key={title.title} className="flex items-center gap-1.5 text-meta leading-snug text-muted">
                     <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: segments[index]?.color ?? OTHER_SEGMENT_COLOR }} />

@@ -121,10 +121,13 @@ function StorySectionBlock({
         <div className={`text-meta text-faint tnum ${p.countGap}`}>
           {section.archiveCount > 0 ? (
             <>
+              {/*
+                这里原本还有一行「已录 N 小时」。年份脊柱有十七个年份，那一行就
+                重复十七遍，而它说的是档案完成度（已经核对到多少时长），不是那一年
+                发生了什么——读者拿它做不了任何事。条数留着：它确实能看出哪几年
+                记录多、哪几年稀疏，是往下翻的线索。
+              */}
               <p>{section.archiveCount.toLocaleString()} 条记录</p>
-              {section.kind !== 'sparse' && section.durationCount > 0 && (
-                <p>已录 {Math.round(section.durationMinutes / 60).toLocaleString()} 小时</p>
-              )}
             </>
           ) : (
             /* 站内没有录像。有故事时这只是一句补充，不是「这段时间不知道发生了什么」。 */

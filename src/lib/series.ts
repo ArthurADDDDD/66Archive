@@ -27,6 +27,18 @@ export type SeriesInfo = {
   cover: string | null
   /** 节目页的内容形态；不按平台时代硬切，长期节目可以跨平台延续。 */
   category: 'long-running' | 'themed' | 'video'
+  /**
+   * 能不能数「第几期」。
+   *
+   * 这张表里混着两种东西：她自己起过名字的节目（心灵砒霜、一起 See、戏说封神、
+   * 光之子全剧情……），和**档案自己分出来的桶**（`night-talk` 在数据里就叫「聊天」、
+   * `outdoor-live` 叫「户外」、`press-events` 叫「发布会」，前台才改成现在的显示名）。
+   *
+   * 前者数期数是致敬——「294 期」等于说她出现过 294 个星期日。后者不是节目，
+   * 是分类；给它标上「137 期」既不准确（她从没编过号），读起来也像在清点
+   * 「这些场次不是在打游戏」。所以桶只说活跃年份，不报期数。
+   */
+  countsEpisodes: boolean
   games: string[]
 }
 
@@ -73,6 +85,7 @@ export function buildSeries(
   return {
     id,
     name: getDisplayName(id, name),
+    countsEpisodes: !ARCHIVE_BUCKETS.has(id),
     description: getDisplayDescription(id, description, entries),
     entries,
     count: entries.length,
@@ -86,6 +99,9 @@ export function buildSeries(
   }
 }
 
+/** 档案自己分出来的桶，不是她命名的节目。见 SeriesInfo.countsEpisodes。 */
+const ARCHIVE_BUCKETS = new Set(['night-talk', 'outdoor-live', 'press-events'])
+
 function getDisplayName(id: string, fallback: string): string {
   if (id === 'night-talk') return '夜话 / 聊天'
   if (id === 'outdoor-live') return '户外直播'
@@ -97,11 +113,13 @@ function getDisplayDescription(id: string, fallback: string, entries: TimelineEn
 
   const firstDate = entries[0].date
   const lastDate = entries[entries.length - 1].date
+  // 这两段原本写成校对口径（「目前档案已收录 N 期」「已确认 N 场」「为条目数最多的
+  // 栏目」「新的确认记录会自动加入这里」）。那是维护者视角，读者不关心档案的完成度。
   if (id === 'xinling-pishuang') {
-    return `斗鱼期固定栏目（周日情感电台），目前档案已收录 ${entries.length} 期，${firstDate} ~ ${lastDate}，为条目数最多的栏目。参考来源 nvliu.me 记该栏目于 2015-07-05 开播。`
+    return `每周日的情感电台。邮件打开，游戏暂停，从 ${firstDate} 一直读到 ${lastDate}。`
   }
   if (id === 'together-see') {
-    return `直播中与观众一起观看视频、节目、发布会、PV 和预告的长期节目。目前档案已确认 ${entries.length} 场，${firstDate} ~ ${lastDate}；它从斗鱼延续到抖音，新的确认记录会自动加入这里。`
+    return `和观众一起看视频、看节目、看发布会。从斗鱼一路跟到抖音，${firstDate} 起还在继续。`
   }
   return fallback
 }

@@ -157,14 +157,18 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               <PresenceIndicator pageKey={`entry:${entry.id}`} mode="page" />
             </div>
 
-            {/* 关键数字：这一屏最该被一眼抓到的三件事 */}
-            <dl className="mt-6 grid max-w-md grid-cols-3 gap-4 border-y border-line/60 py-4">
+            {/*
+              关键数字。「分段」为 0 时不画——大多数条目都没有录分段，
+              于是首屏三格里有一格常年摆着一个大大的 0，看起来像缺了什么东西。
+              没有分段是常态，不是缺陷，那就干脆不提。
+            */}
+            <dl className={`mt-6 grid max-w-md gap-4 border-y border-line/60 py-4 ${entry.segments.length > 0 ? 'grid-cols-3' : 'grid-cols-2'}`}>
               <Fact
                 value={formatClock(entry.duration_min)}
                 label={entry.duration_min ? '时长 时:分:秒' : '时长未知'}
                 accent={entry.duration_min ? accent : undefined}
               />
-              <Fact value={String(entry.segments.length)} label="分段" />
+              {entry.segments.length > 0 && <Fact value={String(entry.segments.length)} label="分段" />}
               <Fact value={String(sources.length)} label="来源" />
             </dl>
 

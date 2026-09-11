@@ -206,13 +206,8 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
                           <span className="font-mono text-[0.9375rem] font-semibold text-ink">{year.months}</span> 个月
                         </span>
                       </span>
-                      <span className="mt-1 block text-meta text-faint tnum">
-                        {year.hasDuration ? (
-                          <>
-                            已录 <span className="font-mono text-control font-semibold text-ink">{year.hours.toLocaleString()}</span> 小时
-                          </>
-                        ) : '时长待补'}
-                      </span>
+                      {/* 「已录 N 小时 / 时长待补」是补档进度，不是这一年发生了什么。
+                          来找某一场的人用不上它，口径的事留在联系页的征集语境里说。 */}
                       <span className="mt-2 block space-y-1">
                         {year.titles.map((title) => (
                           <span key={title} className="block truncate text-meta leading-snug text-muted">{title}</span>

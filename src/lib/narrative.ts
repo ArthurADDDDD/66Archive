@@ -1500,10 +1500,6 @@ export type MontageSample = {
 export type MontageStats = {
   /** 心灵砒霜期数 */
   xinling: string
-  /** 总时长（小时，四舍五入） */
-  hoursLabel: string
-  /** 直播场次 */
-  liveSessions: string
 }
 
 export type ResolvedAct = {
@@ -1613,14 +1609,12 @@ function buildMontage(timeline: TimelineEntry[]): ResolvedBeat['montage'] {
     .slice(0, 15)
     .map((e) => ({ id: e.id, date: e.date, title: e.title, cover: e.cover ? proxyImage(e.cover, 480) : null }))
     .filter((s): s is MontageSample => s.cover !== null)
-  const liveEntries = timeline.filter((e) => e.type === 'live')
-  const liveKnownMinutes = liveEntries.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
+  // 这里曾经还算过累计时长与直播场次，供蒙太奇下面那排统计用。那排已经撤掉
+  // （见 MontageVideoList 的注释），一并不再计算——留着只会让人以为还有人在读。
   return {
     samples,
     stats: {
       xinling: timeline.filter(isXinlingPishuangEntry).length.toLocaleString(),
-      hoursLabel: liveKnownMinutes ? Math.round(liveKnownMinutes / 60).toLocaleString() : '—',
-      liveSessions: liveEntries.length.toLocaleString(),
     },
   }
 }

@@ -87,8 +87,9 @@ export default async function SeriesPage() {
                 </Eyebrow>
                 <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
                 <p className="measure-body mt-5 text-body text-muted"><KeepDates text={pishuang.description} /></p>
+                {/* 这里原本还领着一个「294 期」。整页算上正文、按钮、描述、活跃年份条，
+                    同一个数字出现过五次；留正文那句和按钮上那次就够了。 */}
                 <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
-                  <span className="text-body text-ink">{pishuang.count} 期</span>
                   <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
                   <span>横跨 {Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1} 年</span>
                 </div>
@@ -214,9 +215,17 @@ function SeriesGroup({
               </div>
             )}
             <h3 className="mt-4 text-base font-semibold tracking-tight text-ink">{s.name}</h3>
-            <p className="mt-1.5 text-meta text-faint tnum">
-              <span className="font-mono text-[0.9375rem] font-semibold text-ink">{s.count}</span> 期 · {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
-            </p>
+            {/*
+              只有她自己起过名字的节目才报期数（见 SeriesInfo.countsEpisodes）。
+              「夜话 / 聊天」「户外直播」「发布会」是档案自己分出来的桶，她从没编过号，
+              给它们标上「137 期」既不准确，读起来也像在清点「这些不是在打游戏」。
+              年份范围也不在这里写了——下面的活跃年份条已经有，写两遍是同一个数字。
+            */}
+            {s.countsEpisodes && (
+              <p className="mt-1.5 text-meta text-faint tnum">
+                <span className="font-mono text-[0.9375rem] font-semibold text-ink">{s.count}</span> 期
+              </p>
+            )}
             <p className="mt-2.5 line-clamp-2 min-h-[2.8em] text-body text-muted"><KeepDates text={s.description} /></p>
             <div className="mt-4">
               <ActivityStrip perYear={s.perYear} color={color} height={26} descriptive />

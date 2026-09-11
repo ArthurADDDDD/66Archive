@@ -5,8 +5,6 @@ import type { ResolvedBeat } from '@/lib/narrative'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { Reveal } from './Reveal'
 
-const PUBLIC_LIVE_HOURS_FLOOR = 10_000
-
 /**
  * 蒙太奇缩略图的框是写死的 `w-[168px] sm:w-[196px]`，实测 375→166、768→194 CSS px；
  * ≥1280（`xl`）时首页换成另一套排版，这一支整块 `display:none`，配合 `loading="lazy"`
@@ -117,26 +115,15 @@ export function MontageVideoList({ beat, color, compact = false }: { beat: Resol
             <b className="tnum text-ink">{montage.stats.xinling}</b> 期心灵砒霜
           </span>
         </Reveal>
+        {/*
+          这里原本还并排着三个数：「10,000+ 小时公开累计下限」「N 小时档案已确认」
+          「N 场档案已收录」。它们正长在三幕故事中间——读者刚读完一段回忆，
+          下一行就是一张产出结算表。而且「公开累计下限」「档案已确认」是校对口径，
+          说的是档案完成度，不是她做过什么。留下的这一个是「多少期心灵砒霜」：
+          那是她自己的节目，数它等于数她出现过多少个星期日。
+        */}
         <span className="text-faint/40">·</span>
         <Reveal delay={60}>
-          <span>
-            <b className="tnum text-ink">{PUBLIC_LIVE_HOURS_FLOOR.toLocaleString()}+</b> 小时公开累计下限
-          </span>
-        </Reveal>
-        <span className="text-faint/40">·</span>
-        <Reveal delay={120}>
-          <span>
-            <b className="tnum text-ink">{montage.stats.hoursLabel}</b> 小时档案已确认
-          </span>
-        </Reveal>
-        <span className="text-faint/40">·</span>
-        <Reveal delay={180}>
-          <span>
-            <b className="tnum text-ink">{montage.stats.liveSessions}</b> 场档案已收录
-          </span>
-        </Reveal>
-        <span className="text-faint/40">·</span>
-        <Reveal delay={240}>
           <span style={{ color }}>大周</span>
         </Reveal>
       </div>
