@@ -249,6 +249,25 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-10-14-live-01
+    type: live
+    date: "2022-10-14"
+    title: "Coral Island"
+    platform: douyu
+    confidence: high
+    duration_min: 78
+    cover: "/images/covers/2022-10-14-live-01.jpg"
+    games: [coral-island]
+    sources:
+      - url: https://www.bilibili.com/video/BV11G4y1p7xy
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "DOUYU_156277_2022_10_14_15_38_47，1:17:52。已用 B 站 storyboard/正文首帧抽查全段，直播画面明确显示游戏 Coral Island，末段仍为同一游戏。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的自动录制中恢复。站内此前 10/12 与 10/15-17 均有 Coral Island，唯独 10/14 缺档；本录像经内容级复核确认属于女流当天 Coral Island 直播，因此补入。封面为视频正文帧另截，未使用该 UP 自带封面。"
+
   - id: 2022-10-15-live-01
     type: live
     date: "2022-10-15"

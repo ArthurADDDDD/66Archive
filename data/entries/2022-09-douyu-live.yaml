@@ -55,6 +55,12 @@
       - url: https://www.acfun.cn/v/ac37198688
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1BP411V7AX
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "1:50:52。2026-09-11 已用 storyboard/正文首帧核验实际画面为《女鬼桥》；明显短于本条 272 分钟，只作 B 站部分备份，不替代现有 A 站主来源。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac37198688

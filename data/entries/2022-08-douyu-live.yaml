@@ -38,6 +38,32 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-08-03-live-01
+    type: live
+    date: "2022-08-03"
+    title: "华语乐坛金曲回顾"
+    platform: douyu
+    confidence: medium
+    duration_min: 293
+    cover: "/images/covers/2022-08-03-live-01.jpg"
+    games: []
+    tags: [聊天]
+    sources:
+      - url: https://www.bilibili.com/video/BV1tW4y1a7mn
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "15:32:37 起，2:45:12。已用 B 站 storyboard/正文首帧核验：女流直播界面，内容为观看华语乐坛历年金曲合集，年份从约 1993 看到 1988。"
+      - url: https://www.bilibili.com/video/BV16d4y1T7Ma
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "19:54:47 起，31:16。已用 storyboard 核验：同一直播布局与同一金曲年代合集，内容从约 1984 继续到 1983。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的 DOUYU_156277 自动录制中恢复。两段实际内容连续，但第一段约 18:17:49 结束、第二段 19:54:47 才开始，中间约 1:36:58 无存档；因此录像不完整。duration_min=293 按首段开始至末段结束的时间跨度估算，不等同于现存录像时长。标题为按正文内容整理的描述性标题，并非已确认的当日斗鱼房间原题。封面为视频正文帧另截，未使用该 UP 自带封面。"
+
   - id: 2022-08-04-live-01
     type: live
     date: "2022-08-04"

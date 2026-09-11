@@ -18,6 +18,32 @@
         status: alive
     contributed_by: data-agent
 
+  - id: 2022-12-03-live-01
+    type: live
+    date: "2022-12-03"
+    title: "看日本住宅改造节目"
+    platform: douyu
+    confidence: medium
+    duration_min: 219
+    cover: "/images/covers/2022-12-03-live-01.jpg"
+    games: []
+    tags: [聊天]
+    sources:
+      - url: https://www.bilibili.com/video/BV1624y1k7JN
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "17:45:34 起，1:59:25。正文画面有斗鱼聊天栏/直播布局，主要内容为观看日本住宅改造类节目。"
+      - url: https://www.bilibili.com/video/BV1nG411T7KG
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "19:44:55 起，1:39:44。与前一 BV 保持同一直播布局与同一节目内容；前一段理论结束约 19:44:59，二者约 4 秒重叠，可高置信视为同场连续切段。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的自动录制中恢复。两段连续覆盖约 3:39:09；尚无法证明 17:45:34 就是当天真正开播起点，因此 duration_min=219 只记现存连续录像覆盖，标题为按正文内容整理的描述性标题。封面为视频正文帧另截，未使用该 UP 自带封面。"
+
   - id: 2022-12-04-live-01
     type: live
     date: "2022-12-04"
@@ -425,6 +451,18 @@
       - url: https://v.douyu.com/show/85BAvqKK6lBMG4Lm
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1GR4y1C76g
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "16:57:47 起，1:58:40。正文抽帧确认是 Tunic；与下一段在同一个 Boss 战场景衔接。"
+      - url: https://www.bilibili.com/video/BV17V4y1P78U
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "18:56:22 起，32:31。与前一段理论结束约 18:56:27，仅约 5 秒重叠；两段合计 2:31:11，确认属于同一场 Tunic 直播，但短于条目 264 分钟，只作部分备份。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [tunic]

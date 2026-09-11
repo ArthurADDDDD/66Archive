@@ -197,6 +197,15 @@
   confidence: medium
   note: "优酷上《女流之心灵砒霜》2016 年系列的原上传者（专辑 49327740，含 20160306 等期），B 站补档视频简介明确标注『原作者优酷id：俺是红领巾』。注意：url 为其专辑页而非账号主页，账号主页 URL 未确认；专辑页当前是否仍可访问未验证。"
 
+- id: bili-fan-8290691
+  platform: bilibili
+  name: "bili_8290691"
+  url: "https://space.bilibili.com/8290691"
+  role: fan-archive
+  active_from: "2021-01"
+  confidence: medium
+  note: "多主播斗鱼自动录制存档号，女流相关标题常为 DOUYU_156277_YYYY_MM_DD_HH_MM_SS。2026-09-11 对 B 站搜索结果 50 页做 SSR 解析后确认存在大量 156277 机器命名录像，并用 pagelist/videoshot/正文首帧做内容级复核。该号同时录制其他主播，存在超长混分P与碎片投稿，不能仅按文件名自动归档；采用前必须看正文画面。投稿自带封面大量为擦边图，禁止作为本站封面，正式采用的条目必须另截视频正文帧，并在 source 标记 cover_unreliable: true。"
+
 # ═══ 三、切片/考古号（非完整录播，作补充入口） ═══
 
 - id: bili-fan-clip-pao
