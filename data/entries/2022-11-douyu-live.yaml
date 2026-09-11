@@ -152,6 +152,18 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1Yt4y1N7P5
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与另一段合计约 3:31:38，明显短于现有 441 分钟全长主源，只作部分备份。"
+      - url: https://www.bilibili.com/video/BV1wd4y187nf
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。"
     contributed_by: data-agent
 
   - id: 2022-11-17-live-01

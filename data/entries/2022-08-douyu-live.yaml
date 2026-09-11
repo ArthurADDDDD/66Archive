@@ -478,17 +478,35 @@
   - id: 2022-08-25-live-01
     type: live
     date: "2022-08-25"
-    title: "The House of Da Vinci"
+    title: "The House of Da Vinci / 勇敢的哈克"
     platform: douyu
     confidence: high
     duration_min: 254
-    games: [the-house-of-da-vinci]
-    note: "B站「女流录像小屋」全长录播。"
+    games: [the-house-of-da-vinci, haak]
+    note: "B站「女流录像小屋」全长录播。2026-09-11 经该全长录像与 UID 8290691 分段录像的正文 storyboard 交叉核验：当天前段为 The House of Da Vinci，后半段明确切换到《勇敢的哈克（HAAK）》；因此补登记 haak 游戏归属。"
     sources:
       - url: "https://www.bilibili.com/video/BV1wG4y1k7ef"
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1TP4y1f7Tm
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "2026-09-11 已用正文 first_frame / storyboard 核验：此段属于 2022-08-25 同场直播，画面为 The House of Da Vinci。只作部分备份，不替代现有全长主源。"
+      - url: https://www.bilibili.com/video/BV1UD4y167aV
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "2026-09-11 正文抽帧确认属于同场直播；该段后部能看到从 The House of Da Vinci 切换至《勇敢的哈克（HAAK）》的过程。只作部分备份。"
+      - url: https://www.bilibili.com/video/BV1XB4y1G7sj
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "2026-09-11 正文 first_frame / storyboard 明确为《勇敢的哈克（HAAK）》后半场；与前一分段内容连续。只作部分备份。"
     contributed_by: data-agent
 
   - id: 2022-08-26-live-01
