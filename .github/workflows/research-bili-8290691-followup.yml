@@ -1,4 +1,4 @@
-name: Research existing full replays for 8290691 follow-up
+name: Research Xierwei archive parts
 
 on:
   push:
@@ -11,50 +11,34 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
-      - name: Capture pagelist and storyboards
+      - name: Expand known Xierwei multi-P archive
         shell: bash
         run: |
           python - <<'PY'
-          import os,json,urllib.request,urllib.parse,time
-          BVIDS=['BV1wG4y1k7ef','BV1624y1y7cs']
+          import json, urllib.request, urllib.parse
           H={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36','Referer':'https://www.bilibili.com/'}
-          os.makedirs('frames',exist_ok=True)
-          def get(u,b=False):
+          def get(url):
             try:
-              with urllib.request.urlopen(urllib.request.Request(u,headers=H),timeout=25) as r:
-                x=r.read(); return x if b else x.decode('utf-8','replace')
+              with urllib.request.urlopen(urllib.request.Request(url,headers=H),timeout=25) as r:
+                return json.loads(r.read().decode('utf-8','replace'))
             except Exception as e:
-              print('ERR',u,repr(e)); return None
-          meta=[]
-          for bv in BVIDS:
-            pg=json.loads(get('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv})) or '{}').get('data') or []
-            item={'bvid':bv,'pages':pg}
-            for p in pg:
-              cid=p['cid']; page=p.get('page')
-              ff=p.get('first_frame')
-              if ff:
-                raw=get(ff.replace('http://','https://'),True)
-                if raw: open(f'frames/{bv}-p{page}-first.jpg','wb').write(raw)
-              vs=json.loads(get('https://api.bilibili.com/x/player/videoshot?'+urllib.parse.urlencode({'bvid':bv,'cid':cid,'index':1})) or '{}').get('data') or {}
-              imgs=vs.get('image') or []
-              item.setdefault('sheet_counts',{})[str(page)]=len(imgs)
-              # beginning / 1/4 / middle / 3/4 / end gives better transition coverage
-              picks=sorted(set([0,len(imgs)//4,len(imgs)//2,(len(imgs)*3)//4,len(imgs)-1])) if imgs else []
-              for pos in picks:
-                u=imgs[pos]; u='https:'+u if u.startswith('//') else u
-                raw=get(u,True)
-                if raw: open(f'frames/{bv}-p{page}-sheet-{pos+1:02d}-of-{len(imgs):02d}.jpg','wb').write(raw)
-              time.sleep(.4)
-            meta.append(item)
-            print('META',bv,[(p.get('page'),p.get('part'),p.get('duration')) for p in pg])
-          open('meta.json','w',encoding='utf-8').write(json.dumps(meta,ensure_ascii=False,indent=2))
+              return {'error':repr(e),'url':url}
+          bv='BV1Bx411a7J2'
+          out={
+            'bvid':bv,
+            'view':get('https://api.bilibili.com/x/web-interface/view?'+urllib.parse.urlencode({'bvid':bv})),
+            'pages':get('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv})),
+          }
+          open('xierwei-121p.json','w',encoding='utf-8').write(json.dumps(out,ensure_ascii=False,indent=2))
+          pages=(out.get('pages') or {}).get('data') or []
+          print('PARTS',len(pages))
+          for p in pages:
+            print(p.get('page'), p.get('duration'), p.get('part'))
           PY
       - uses: actions/upload-artifact@v7
         with:
-          name: existing-full-replay-probe
-          path: |
-            meta.json
-            frames/
+          name: xierwei-121p-metadata
+          path: xierwei-121p.json
           retention-days: 7
