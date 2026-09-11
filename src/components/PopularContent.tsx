@@ -6,6 +6,7 @@ import { fetchGalleryAdditions } from '@/lib/gallery-additions'
 import { galleryPhotoLabel } from '@/lib/gallery-photos'
 import { StatsSection } from './StatsSection'
 import { useCopyBlock } from './LiveContentProvider'
+import { SiteText } from './SiteText'
 
 /**
  * 「水友们最爱看」——站内内容被点开次数的全期排行。
@@ -122,7 +123,7 @@ export function PopularContent({
   /** 后台把标题清空时用它——空标题看起来像渲染坏了，不像「有人清空了一个字段」。 */
   fallback: string
   accent: string
-  legend: string
+  legend: React.ReactNode
   /**
    * 标题索引的地址，由服务端带版本号传下来（见 `lib/popular-index-url.ts`）。
    * **不要在这里写死路径**：那样发布之后边缘可能还发着上一版索引，新条目会显示成裸 ID。
@@ -174,7 +175,7 @@ export function PopularContent({
     return (
       <StatsSection question={question} accent={accent} legend={legend}>
         <p className="measure-body text-body text-muted">
-          还没有累计到点击。等有人在站内点开条目、游戏、节目或照片之后，这里会按次数排出前十。
+          <SiteText id="stats-popular-empty" />
         </p>
         {countedSince && (
           <p className="mt-6 text-meta text-faint tnum">统计自 {countedSince.slice(0, 10)}</p>

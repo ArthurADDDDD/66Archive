@@ -1,5 +1,6 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
@@ -42,7 +43,7 @@ const CARD_COVER_SIZES = '(min-width: 1024px) 254px, (min-width: 640px) 296px, 9
 export default async function SeriesPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const bakedCopy = await fetchBakedPageCopy(['series'])
+  const bakedCopy = await fetchBakedPageCopy(['series'], { texts: ['series-'] })
 
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
@@ -70,7 +71,7 @@ export default async function SeriesPage() {
             prefetch={false}
             className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block"
           >
-            在录播室搜索全部记录 →
+            <SiteText id="series-archive-link" />
           </Link>
         </header>
 
@@ -83,15 +84,15 @@ export default async function SeriesPage() {
             <div className="site-container grid items-start gap-10 px-page py-12 sm:py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
               <div className="min-w-0">
                 <Eyebrow color="#5BC8E8" dot>
-                  周日情感电台 · 斗鱼时期 · 心灵砒霜
+                  <SiteText id="series-pishuang-eyebrow" />
                 </Eyebrow>
-                <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink">心灵砒霜</h2>
+                <h2 className="mt-5 text-hero font-bold tracking-[-0.01em] text-ink"><SiteText id="series-pishuang-title" /></h2>
                 <p className="measure-body mt-5 text-body text-muted"><KeepDates text={pishuang.description} /></p>
                 {/* 这里原本还领着一个「294 期」。整页算上正文、按钮、描述、活跃年份条，
                     同一个数字出现过五次；留正文那句和按钮上那次就够了。 */}
                 <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-meta text-muted tnum">
                   <span>{pishuang.firstDate.slice(0, 4)}.{pishuang.firstDate.slice(5, 7)} — {pishuang.lastDate.slice(0, 4)}.{pishuang.lastDate.slice(5, 7)}</span>
-                  <span>横跨 {Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1} 年</span>
+                  <span><SiteText id="series-pishuang-span" vars={{ years: Number(pishuang.lastDate.slice(0, 4)) - Number(pishuang.firstDate.slice(0, 4)) + 1 }} /></span>
                 </div>
                 <div className="mt-8">
                   <ActivityStrip perYear={pishuang.perYear} color="#5BC8E8" height={34} descriptive />
@@ -106,7 +107,7 @@ export default async function SeriesPage() {
               <div className="min-w-0 flex flex-col gap-8 lg:pt-10">
                 {pishuang.firstTitle && (
                   <blockquote className="border-l-2 border-line/60 pl-5">
-                    <p className="text-h3 font-medium leading-relaxed text-ink/90">第一期是「{pishuang.firstTitle}」。</p>
+                    <p className="text-h3 font-medium leading-relaxed text-ink/90"><SiteText id="series-pishuang-first" vars={{ title: pishuang.firstTitle }} /></p>
                     <p className="mt-3 text-meta text-muted tnum">{pishuang.firstDate}</p>
                   </blockquote>
                 )}
@@ -117,7 +118,7 @@ export default async function SeriesPage() {
                   className="w-full"
                 />
                 <p className="measure-body text-body text-muted">
-                  游戏暂停，邮件打开，一个星期日。后来，它陆续留下了 {pishuang.count} 期——有的很长，有的很短，很多个星期日，直播间都会等到这档节目。
+                  <SiteText id="series-pishuang-body" vars={{ count: pishuang.count }} />
                 </p>
                 <Link
                   href="/series/xinling-pishuang/"
@@ -126,7 +127,7 @@ export default async function SeriesPage() {
                   data-analytics-target="series:xinling-pishuang"
                   className="ui-press group inline-flex w-fit items-center gap-2 rounded-full border border-line/80 px-5 py-2.5 text-control text-ink transition-colors hover:border-live/60 hover:text-live"
                 >
-                  打开心灵砒霜的全部 {pishuang.count} 期
+                  <SiteText id="series-pishuang-cta" vars={{ count: pishuang.count }} />
                   <span aria-hidden className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
                 </Link>
               </div>
@@ -136,15 +137,15 @@ export default async function SeriesPage() {
 
         <section className="site-container px-page py-12 sm:py-20">
           <SeriesGroup
-            label="主题栏目"
-            description="围绕一个故事、玩法或共同主题，在一段时间里连续出现。"
+            label={<SiteText id="series-group-themed-label" />}
+            description={<SiteText id="series-group-themed-desc" />}
             color={SERIES_COLOR.themed}
             series={themed}
           />
           <div className="mt-14" />
           <SeriesGroup
-            label="视频系列"
-            description="直播之前留下的连载解说与完整流程。"
+            label={<SiteText id="series-group-video-label" />}
+            description={<SiteText id="series-group-video-desc" />}
             color={SERIES_COLOR.video}
             series={videoSeries}
           />
@@ -175,8 +176,8 @@ function SeriesGroup({
   color,
   series,
 }: {
-  label: string
-  description: string
+  label: React.ReactNode
+  description: React.ReactNode
   color: string
   series: SeriesInfo[]
 }) {
@@ -189,7 +190,7 @@ function SeriesGroup({
         </Eyebrow>
         <span className="font-mono text-meta text-faint tnum">{years}</span>
       </div>
-      <p className="measure-body mt-4 text-body text-muted"><KeepDates text={description} /></p>
+      <p className="measure-body mt-4 text-body text-muted">{typeof description === 'string' ? <KeepDates text={description} /> : description}</p>
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {series.map((s) => (
           <Link

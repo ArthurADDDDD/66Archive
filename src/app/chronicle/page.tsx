@@ -5,7 +5,8 @@ import { resolveStoryActs } from '@/lib/narrative'
 import { buildStorySections } from '@/lib/story-years'
 import { ChronicleView } from '@/components/ChronicleView'
 import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
-import { fetchBakedStoryNarrative } from '@/lib/baked-content'
+import { fetchBakedPageCopy, fetchBakedStoryNarrative } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
@@ -32,10 +33,14 @@ export default async function ChroniclePage() {
 
   // 编年史只渲染 storyActs；首页那份 homeActs / highlights 在这里是纯负重。
   const narrative = await fetchBakedStoryNarrative()
+  // 页面固定文字（`chronicle-`）一起烤进来，后台改过的句子首屏就是新的。
+  const bakedCopy = await fetchBakedPageCopy([], { texts: ['chronicle-'] })
 
   return (
-    <LiveNarrativeSeed narrative={narrative}>
-      <ChronicleView storySections={storySections} latestYear={latestYear} />
-    </LiveNarrativeSeed>
+    <LiveCopySeed copy={bakedCopy}>
+      <LiveNarrativeSeed narrative={narrative}>
+        <ChronicleView storySections={storySections} latestYear={latestYear} />
+      </LiveNarrativeSeed>
+    </LiveCopySeed>
   )
 }

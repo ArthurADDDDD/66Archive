@@ -175,6 +175,8 @@ export type LiveSiteCopy = {
   pages: LiveCopyBlock[]
   /** 维护者名单。整份替换（顺序、增删都在这份里），空数组表示沿用基线。 */
   maintainers: { id: string; name: string; role: string }[]
+  /** 各页面上的固定文字。只取 id 与文字；分组与说明是给后台列表看的。 */
+  texts: { id: string; text: string }[]
 }
 
 export type LiveEditorialItem = { kind: string; refId: string; title: string; description: string }
@@ -338,6 +340,12 @@ export function parseSiteCopy(payload: unknown): LiveSiteCopy | null {
               : null,
           )
           .filter((item): item is LiveSiteCopy['maintainers'][number] => item !== null)
+      : [],
+    // 旧版内容服务没有这个键：缺省就是空数组，页面整份沿用基线文字。
+    texts: Array.isArray(source.texts)
+      ? source.texts
+          .map((item) => (isRecord(item) && typeof item.id === 'string' && typeof item.text === 'string' ? { id: item.id, text: item.text } : null))
+          .filter((item): item is LiveSiteCopy['texts'][number] => item !== null)
       : [],
   }
 }

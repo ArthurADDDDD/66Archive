@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import { clearTrail, readTrail, recordTrail, resumeTarget, subscribeTrail, type TrailItem } from '@/lib/trail'
+import { SiteText } from './SiteText'
 
 /**
  * 足迹的三个露出点：记录（条目页）、继续（首页 / 录播室）、清单（数据页）。
@@ -147,7 +148,7 @@ export function ResumeStrip({ currentId }: { currentId?: string }) {
       className="ui-panel-in fixed bottom-20 right-4 z-40 w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-live/35 bg-base/92 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.38)] backdrop-blur sm:bottom-8 sm:right-24"
     >
       <div className="flex items-start justify-between gap-2">
-        <span className="text-meta uppercase tracking-[0.16em] text-live">接着上次</span>
+        <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="trail-resume" /></span>
         <button
           type="button"
           onClick={dismiss}
@@ -198,7 +199,7 @@ export function TrailSection() {
   if (trail.length === 0) {
     return (
       <p className="text-body text-muted">
-        你还没在这个站点开过什么。随便翻一条，这里就会记下来——只记在你自己的浏览器里。
+        <SiteText id="trail-empty" />
       </p>
     )
   }
@@ -209,16 +210,12 @@ export function TrailSection() {
   return (
     <div>
       <p className="measure-body text-body text-muted">
-        你在这个站点开过 <span className="font-mono text-control font-semibold text-ink tnum">{trail.length}</span> 条
+        <SiteText id="trail-summary" vars={{ count: <span className="font-mono text-control font-semibold text-ink tnum">{trail.length}</span> }} />
         {watched > 0 && (
-          <>
-            ，其中 <span className="font-mono text-control font-semibold text-ink tnum">{watched}</span> 条真的点开去看了
-          </>
+          <SiteText id="trail-summary-watched" vars={{ count: <span className="font-mono text-control font-semibold text-ink tnum">{watched}</span> }} />
         )}
         {earliest !== '9999' && (
-          <>
-            ；最早的一条是 <span className="font-mono text-control font-semibold text-ink tnum">{earliest.slice(0, 4)}</span> 年那场
-          </>
+          <SiteText id="trail-summary-earliest" vars={{ year: <span className="font-mono text-control font-semibold text-ink tnum">{earliest.slice(0, 4)}</span> }} />
         )}
         。
       </p>
@@ -270,7 +267,7 @@ export function TrailSection() {
           </button>
         )}
         <p className="text-meta text-faint">
-          这些只存在你这台设备的浏览器里，不会上传，我也看不到。换个设备或者清了浏览器数据就没了。
+          <SiteText id="trail-privacy" />
         </p>
       </div>
     </div>

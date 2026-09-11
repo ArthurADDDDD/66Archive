@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { galleryThumbSources } from '@/lib/gallery-photos'
+import { SiteText } from './SiteText'
 
 /**
  * 三幕讲完之后的最后一屏：把「还能往哪儿走」交出去。
@@ -28,7 +30,7 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
   return (
     <div className={stage ? 'w-full' : 'home-content-container px-page py-14 sm:py-20'}>
       <div className="flex items-center gap-4">
-        <span className="font-mono text-meta tracking-[0.2em] text-faint">NEXT · 接着往下看</span>
+        <span className="font-mono text-meta tracking-[0.2em] text-faint"><SiteText id="home-outro-eyebrow" /></span>
         <span className="h-px flex-1 bg-line/70" />
       </div>
       {/* 舞台版从 md 起就并排：两张竖着叠在一张卡里放不下，会在卡内出现第二个滚动条。 */}
@@ -39,10 +41,10 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
         */}
         <PromoCard
           href="/chronicle/"
-          kicker="Chronicle · 编年史"
-          title="一条一条地看下去。"
-          body="从第一支视频到最近一场，一年一年排好在那儿。"
-          cta="打开编年史 →"
+          kicker={<SiteText id="home-outro-chronicle-kicker" />}
+          title={<SiteText id="home-outro-chronicle-title" />}
+          body={<SiteText id="home-outro-chronicle-body" />}
+          cta={<SiteText id="home-outro-chronicle-cta" />}
           color="#5BC8E8"
           compact={stage}
         >
@@ -61,10 +63,10 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
         {/* 画廊 */}
         <PromoCard
           href="/gallery/"
-          kicker="Gallery · 画廊"
-          title="把这些年，一张张摊开。"
-          body={`屏风时代到现在，直播间里那些值得纪念的画面${data.gallery.span ? `，跨 ${data.gallery.span}` : ''}。`}
-          cta="进入画廊 →"
+          kicker={<SiteText id="home-outro-gallery-kicker" />}
+          title={<SiteText id="home-outro-gallery-title" />}
+          body={<SiteText id="home-outro-gallery-body" vars={{ span: data.gallery.span ?? '' }} />}
+          cta={<SiteText id="home-outro-gallery-cta" />}
           color="#E5568A"
           compact={stage}
         >
@@ -108,10 +110,10 @@ function PromoCard({
   children,
 }: {
   href: string
-  kicker: string
-  title: string
-  body: string
-  cta: string
+  kicker: ReactNode
+  title: ReactNode
+  body: ReactNode
+  cta: ReactNode
   color: string
   compact?: boolean
   children: React.ReactNode

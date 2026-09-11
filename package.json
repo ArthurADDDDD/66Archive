@@ -15,6 +15,7 @@
     "test:vote-search": "tsx scripts/test-vote-search.ts",
     "test:archive-payload": "tsx scripts/test-archive-payload.ts",
     "test:analytics": "tsx scripts/test-site-analytics.ts",
+    "test:site-texts": "tsx scripts/test-site-texts.ts",
     "covers:optimize": "tsx scripts/entry-covers-optimize.ts"
   },
   "dependencies": {

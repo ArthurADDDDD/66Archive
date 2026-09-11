@@ -1,6 +1,7 @@
 'use client'
 
 import { useSiteCopy } from './LiveContentProvider'
+import { SiteText } from './SiteText'
 
 /**
  * 联系页「维护」那一栏。
@@ -14,7 +15,7 @@ export function MaintainerCredits() {
   if (maintainers.length === 0) return null
   return (
     <div className="rounded-2xl border border-line bg-surface/55 p-6">
-      <span className="text-meta uppercase tracking-[0.16em] text-faint">维护</span>
+      <span className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="contact-maintainers-kicker" /></span>
       <ul className="mt-4 space-y-4">
         {maintainers.map((person) => (
           <li key={person.id}>
@@ -24,7 +25,7 @@ export function MaintainerCredits() {
         ))}
       </ul>
       <p className="mt-6 border-t border-line/70 pt-4 text-meta text-faint">
-        想一起补档或校对，可以从上面的 GitHub 仓库找到我。
+        <SiteText id="contact-maintainers-note" />
       </p>
     </div>
   )

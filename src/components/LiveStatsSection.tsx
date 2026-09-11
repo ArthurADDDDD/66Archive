@@ -29,7 +29,7 @@ export function LiveStatsSection({
   questionId: string
   fallback: string
   accent: string
-  legend?: string
+  legend?: React.ReactNode
   children: React.ReactNode
 }) {
   const block = useCopyBlock('pages', questionId)

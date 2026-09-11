@@ -3,6 +3,7 @@
 import { startTransition, useEffect, useState } from 'react'
 import { Timeline } from './Timeline'
 import { SiteNav } from './SiteNav'
+import { SiteText } from './SiteText'
 import {
   decodeArchivePayload,
   type ArchivePayload,
@@ -128,10 +129,10 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
             <ArchiveBreadcrumb />
             <section className="mt-8 rounded-xl border border-line bg-surface/45 px-5 py-10 sm:px-8">
               <div role="alert">
-                <p className="text-lg font-semibold text-ink">档案数据暂时没有加载成功</p>
-                <p className="mt-2 measure-body text-body text-muted">页面已经打开，可以直接重试；其他栏目和背景音乐不会被这次失败卡住。</p>
+                <p className="text-lg font-semibold text-ink"><SiteText id="archive-load-failed-title" /></p>
+                <p className="mt-2 measure-body text-body text-muted"><SiteText id="archive-load-failed-body" /></p>
                 <button type="button" onClick={onRetry} className="ui-press mt-5 rounded-full border border-live/60 bg-live/5 px-5 py-2.5 text-sm text-live hover:bg-live/10">
-                  重新加载档案
+                  <SiteText id="archive-load-retry" />
                 </button>
               </div>
             </section>
@@ -142,9 +143,9 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
               <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
                 <div>
                   <ArchiveBreadcrumb />
-                  <h1 className="measure-hero mt-2 text-h1 font-semibold">从记得的内容，找到那段时间。</h1>
+                  <h1 className="measure-hero mt-2 text-h1 font-semibold"><SiteText id="archive-title" /></h1>
                   <p className="measure-body mt-3 text-body text-muted">
-                    每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
+                    <SiteText id="archive-lede" />
                   </p>
                 </div>
                 {/*
@@ -189,8 +190,8 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
 
               <div className="mt-5 border-t border-line pt-4">
                 <div className="mb-2 flex items-center justify-between">
-                  <h2 className="text-meta uppercase tracking-[0.16em] text-faint">年度线索</h2>
-                  <span className="text-meta text-faint">{nav.activeEraLabel} · 选一年看看</span>
+                  <h2 className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="archive-year-clues" /></h2>
+                  <span className="text-meta text-faint"><SiteText id="archive-year-pick" vars={{ era: nav.activeEraLabel }} /></span>
                 </div>
                 <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {nav.years.map((year) => (

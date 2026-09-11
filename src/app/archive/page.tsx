@@ -5,6 +5,8 @@ import { ArchiveLoader } from '@/components/ArchiveLoader'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { buildArchiveNav } from '@/lib/archive-nav'
 import { archiveDataUrl } from '@/lib/archive-data-url'
+import { fetchBakedPageCopy } from '@/lib/baked-content'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
@@ -51,7 +53,10 @@ function archiveBootScript(dataUrl: string): string {
  * 深链（?y=/?m=/?q=/?p=/?t=/?g=/?alive=）由 Timeline 自己在客户端恢复
  * （静态导出无法在服务端读 searchParams）。
  */
-export default function ArchivePage() {
+export default async function ArchivePage() {
+  // 页面固定文字：录播室自己的（`archive-`）、「接着上次」浮条（`trail-`），
+  // 以及展开某一条时出现的条目文字（`entry-`）。
+  const bakedCopy = await fetchBakedPageCopy([], { texts: ['archive-', 'trail-', 'entry-'] })
   // 首屏「时间定位」的构建期版本。它不依赖那份 2.7MB 的载荷——只是各年各时期的条数
   // 与标题——所以没有理由让用户先看一屏脉冲占位再等请求回来。见 lib/archive-nav.ts。
   const nav = buildArchiveNav(toTimelineEntries(getDataset()))
@@ -61,7 +66,9 @@ export default function ArchivePage() {
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: archiveBootScript(dataUrl) }} />
-      <ArchiveLoader nav={nav} dataUrl={dataUrl} />
+      <LiveCopySeed copy={bakedCopy}>
+        <ArchiveLoader nav={nav} dataUrl={dataUrl} />
+      </LiveCopySeed>
       <BackToTop />
     </>
   )

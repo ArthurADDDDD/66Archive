@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useSiteTexts } from './LiveContentProvider'
 
 type LiveWindow = {
   sessions: number
@@ -143,6 +144,7 @@ function dayLabel(date: string) {
  * 但降级为中性「待确认」状态，不把旧结论冒充当前事实。
  */
 export function LiveStatusIndicator() {
+  const t = useSiteTexts()
   const pathname = usePathname()
   const [snapshot, setSnapshot] = useState<LiveStatusSnapshot | null>(null)
   const [open, setOpen] = useState(false)
@@ -418,29 +420,29 @@ export function LiveStatusIndicator() {
                     : 'border border-muted bg-transparent'
               }`} />
               <div className="min-w-0 flex-1">
-                <p className="font-mono text-meta uppercase tracking-[0.16em] text-faint">Live monitor · 本站观测</p>
+                <p className="font-mono text-meta uppercase tracking-[0.16em] text-faint">{t('site-live-eyebrow')}</p>
                 <h2 className="mt-2 text-h3 font-semibold text-ink">
                   {live
-                    ? liveTitle || '她现在正在直播。'
+                    ? liveTitle || t('site-live-title-live')
                     : offline
-                      ? '现在没有开播。'
+                      ? t('site-live-title-offline')
                       : snapshot
-                        ? '直播状态需要重新确认。'
-                        : '直播状态暂时不可用。'}
+                        ? t('site-live-title-stale')
+                        : t('site-live-title-unavailable')}
                 </h2>
                 <p className="mt-2 text-body text-muted">
                   {live
                     ? `${snapshot?.platform ?? ''}${currentDuration ? ` · 已观测 ${currentDuration}` : ''}`
                     : offline
                       ? snapshot?.lastEndedAt
-                        ? `上次下播于 ${relativeTime(snapshot.lastEndedAt, now)}`
-                        : '等待下一次开播记录。'
+                        ? t('site-live-offline-last', { time: relativeTime(snapshot.lastEndedAt, now) })
+                        : t('site-live-offline-waiting')
                       : snapshot
-                        ? `最近一次成功检查在 ${relativeTime(snapshot.observedAt, now)}`
-                        : '正在等待本站取得新的观测结果。'}
+                        ? t('site-live-stale-checked', { time: relativeTime(snapshot.observedAt, now) })
+                        : t('site-live-unavailable-waiting')}
                 </p>
                 {offline && liveTitle && (
-                  <p className="mt-1 text-meta text-faint">最近一场：{liveTitle}</p>
+                  <p className="mt-1 text-meta text-faint">{t('site-live-last-title', { title: liveTitle })}</p>
                 )}
                 {mode === 'unknown' && snapshot && (
                   <p className="mt-1 text-meta text-faint">
@@ -458,7 +460,7 @@ export function LiveStatusIndicator() {
                 data-analytics-target="home"
                 className="ui-press flex min-h-11 w-full items-center justify-between rounded-full border border-line bg-surface px-4 text-control font-medium text-ink transition-colors hover:border-live/60 hover:bg-raised"
               >
-                回到首页
+                {t('site-live-home')}
                 <span aria-hidden>→</span>
               </Link>
 
@@ -469,7 +471,7 @@ export function LiveStatusIndicator() {
                   rel="noreferrer noopener"
                   className="ui-press flex min-h-11 w-full items-center justify-between rounded-full bg-ink px-4 text-control font-medium text-base"
                 >
-                  {live ? '去直播间看看' : '去直播间自行确认'}
+                  {live ? t('site-live-room') : t('site-live-room-confirm')}
                   <span aria-hidden>↗</span>
                 </a>
               )}
@@ -483,16 +485,14 @@ export function LiveStatusIndicator() {
             )}
 
             <p className="mt-4 text-meta leading-relaxed text-faint">
-              {mode === 'unknown'
-                ? '当前状态不可确认，因此这里不会把旧结果显示成「正在直播」或「未开播」。'
-                : '现在在不在播来自本站定时观测，可能与平台实际时间相差一个检查周期。'}
+              {mode === 'unknown' ? t('site-live-note-unknown') : t('site-live-note-known')}
               {snapshot && (
                 <>
-                  {' '}最近 7 / 30 天按站内档案已收录的场次统计；档案还没跟上的那几天，用观测补齐。
+                  {' '}{t('site-live-note-windows')}
                   {(!snapshot.recent7d.covered || !snapshot.recent30d.covered) && dayLabel(snapshot.monitoringSince)
-                    ? ` 这段时间还没有档案支撑，只统计了 ${dayLabel(snapshot.monitoringSince)} 开始观测到的部分。`
+                    ? ` ${t('site-live-note-partial', { date: dayLabel(snapshot.monitoringSince) })}`
                     : ''}
-                  {' '}最近检查：{relativeTime(snapshot.observedAt, now)}。
+                  {' '}{t('site-live-note-checked', { time: relativeTime(snapshot.observedAt, now) })}
                 </>
               )}
             </p>

@@ -7,6 +7,9 @@ import { RelatedRail } from '@/components/RelatedRail'
 import { GameSessions } from '@/components/GameSessions'
 import { EntryFilterProvider, YearBars } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
+import { SiteText } from '@/components/SiteText'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { actColorForDate, allGameIds, getGameProfile } from '@/lib/narrative'
@@ -76,14 +79,18 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   // 稀疏游戏（场次 <= 1）：紧凑 hero——只留下一个晚上，不硬凑 4 个指标和年份分布。
   const sparse = profile.sessions <= 1
 
+  // 根 layout 只烤全站通用的那几句；这一页的固定文字（`game-`）在这里补上。
+  const bakedCopy = await fetchBakedPageCopy([], { texts: ['game-'] })
+
   return (
+    <LiveCopySeed copy={bakedCopy}>
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="games" />
       <BackToTop />
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="games" />
         <Link prefetch={false} href="/games/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-          ← 游戏收藏架
+          <SiteText id="game-back" />
         </Link>
       </header>
 
@@ -94,15 +101,15 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
         ) : (
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
             <div>
-              <p className="text-meta uppercase tracking-[0.16em] text-video">{profile.name} · 游戏收藏架</p>
-              <h1 className="measure-hero mt-4 text-h1 font-semibold">这款游戏和女流之间，发生过什么？</h1>
+              <p className="text-meta uppercase tracking-[0.16em] text-video"><SiteText id="game-eyebrow" vars={{ name: profile.name }} /></p>
+              <h1 className="measure-hero mt-4 text-h1 font-semibold"><SiteText id="game-question" /></h1>
               {profile.oneLiner ? (
                 <p className="measure-body mt-5 text-body text-muted">{profile.oneLiner}</p>
               ) : (
                 <p className="measure-body mt-5 text-body text-muted">
                   {profile.sessions > 0
-                    ? `从 ${profile.firstDate} 到 ${profile.lastDate}，档案里记下了 ${profile.sessions} 场，加起来 ${profile.hoursLabel}。`
-                    : `档案里还没有标记过《${profile.name}》的场次。`}
+                    ? <SiteText id="game-summary" vars={{ first: profile.firstDate ?? '', last: profile.lastDate ?? '', sessions: profile.sessions, hours: profile.hoursLabel }} />
+                    : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
                 </p>
               )}
               {profile.curated?.note && (
@@ -121,15 +128,15 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
         {!sparse && profile.sessions > 0 && (
           <section className="border-t border-line bg-surface/25 py-14 sm:py-20">
             <div className="site-container px-page">
-              <p className="text-meta uppercase tracking-[0.16em] text-faint">一起走过的时间</p>
+              <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-together-title" /></p>
               <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <Stat value={profile.hoursLabel} label="总时间" />
-                <Stat value={profile.sessions.toLocaleString()} label="场次" />
-                <Stat value={profile.firstDate ?? '—'} label="首次" />
-                <Stat value={profile.lastDate ?? '—'} label="最后" />
+                <Stat value={profile.hoursLabel} label={<SiteText id="game-stat-hours" />} />
+                <Stat value={profile.sessions.toLocaleString()} label={<SiteText id="game-stat-sessions" />} />
+                <Stat value={profile.firstDate ?? '—'} label={<SiteText id="game-stat-first" />} />
+                <Stat value={profile.lastDate ?? '—'} label={<SiteText id="game-stat-last" />} />
               </dl>
               <div className="mt-10 max-w-xl">
-                <p className="text-meta uppercase tracking-[0.16em] text-faint">年份分布 · 点某一年只看那一年</p>
+                <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-years-title" /></p>
                 <YearBars rows={yearRows} />
               </div>
             </div>
@@ -147,7 +154,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
                   prefetch={false}
                   className="ui-press group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-control font-medium text-base hover:shadow-[0_16px_50px_rgba(230,228,239,0.12)]"
                 >
-                  在编年史里查看全部相关记录
+                  <SiteText id="game-chronicle-cta" />
                   <span className="font-mono text-meta transition-transform group-hover:translate-x-1">→</span>
                 </Link>
               </div>
@@ -160,6 +167,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
 
       <SiteFooter />
     </main>
+    </LiveCopySeed>
   )
 }
 
@@ -201,7 +209,7 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
       )}
       {profile.heroLinkLabel && (
         <span className="absolute bottom-3 right-3 rounded-sm bg-base/70 px-2 py-1 text-meta text-live backdrop-blur-sm">
-          <span className="sm:hidden">观看切片 ↗</span>
+          <span className="sm:hidden"><SiteText id="game-clip-link" /> ↗</span>
           <span className="hidden sm:inline">{profile.heroLinkLabel} ↗</span>
         </span>
       )}
@@ -224,7 +232,7 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
   )
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
+function Stat({ value, label }: { value: string; label: React.ReactNode }) {
   return (
     <div>
       <dt className="font-mono text-h3 font-bold text-ink tnum">{value}</dt>
@@ -242,14 +250,12 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
   const hasEntry = profile.sessions > 0
   return (
     <div className="measure-hero">
-      <p className="text-meta uppercase tracking-[0.16em] text-video">{profile.name} · 游戏收藏架</p>
+      <p className="text-meta uppercase tracking-[0.16em] text-video"><SiteText id="game-eyebrow" vars={{ name: profile.name }} /></p>
       <h1 className="mt-3 text-h1 font-semibold text-ink">{profile.name}</h1>
       <p className="mt-3 text-body text-muted">
         {hasEntry
-          ? <>
-            只留下一个晚上。{profile.firstDate}，{profile.hoursLabel}。
-          </>
-          : <>档案里还没有标记过《{profile.name}》的场次。</>}
+          ? <SiteText id="game-single-summary" vars={{ date: profile.firstDate ?? '', hours: profile.hoursLabel }} />
+          : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
       </p>
 
       <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start">
@@ -289,7 +295,7 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
               <dt className="inline text-faint">日期 · </dt>
               <dd className="inline text-ink">{profile.firstDate}</dd>
             </div>
-            <p className="pt-1 text-faint">首次就是最后一场——档案里只此一次。</p>
+            <p className="pt-1 text-faint"><SiteText id="game-single-note" /></p>
           </dl>
         )}
       </div>

@@ -5,6 +5,7 @@ import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, proxyImageSrcSet } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
 import { entryCoverSources } from '@/lib/entry-covers'
+import { useSiteTexts } from './LiveContentProvider'
 
 /**
  * 一场记录的「观看台」。
@@ -74,6 +75,7 @@ export function EntryWatch({
 }) {
   const defaultIndex = Math.max(0, sources.findIndex((s) => s.status === 'alive'))
   const [sourceIndex, setSourceIndex] = useState(defaultIndex)
+  const t = useSiteTexts()
   // hover 是临时的（指针离开就还原），pinned 是点出来的（会一直留着）
   const [hovered, setHovered] = useState<number | null>(null)
   const [pinned, setPinned] = useState<number | null>(null)
@@ -136,20 +138,20 @@ export function EntryWatch({
       {/* 时间轴：桌面在左（内容主体），手机在下（先选来源，再挑时间点） */}
       <div className="order-2 min-w-0 lg:order-1">
         <SectionTitle
-          title="这场里在打什么"
+          title={t('entry-segments-title')}
           hint={
             segments.length === 0
               ? undefined
               : hasDuration
-                ? '把指针放到色带上可以预读某一段；点一下定位到下面的列表。'
-                : '这场时长未知，色带按段数等分，宽度不代表真实时长。'
+                ? t('entry-segments-hint-bar')
+                : t('entry-segments-hint-even')
           }
         />
 
         {segments.length === 0 ? (
           <p className="mt-4 text-body text-muted">
-            尚未录入分段信息。
-            {gameNames.length > 0 && <> 已知涉及：{gameNames.join('、')}。</>}
+            {t('entry-segments-empty')}
+            {gameNames.length > 0 && <> {t('entry-segments-games', { games: gameNames.join('、') })}</>}
           </p>
         ) : (
           <>
@@ -273,11 +275,11 @@ export function EntryWatch({
         <EntryCover source={source} entryCover={entryCover} entryTitle={entryTitle} accent={accent} />
 
         <div className="mt-6">
-          <SectionTitle title="在哪儿看" hint={sources.length > 1 ? `${sources.length} 个来源，选中的那个决定所有跳转与上面的封面。` : undefined} />
+          <SectionTitle title={t('entry-sources-title')} hint={sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
 
           {!source ? (
             <p className="mt-4 rounded-xl border border-line bg-surface/40 px-4 py-4 text-body text-muted">
-              还没有可用链接。如果你手上有，欢迎补录。
+              {t('entry-sources-empty')}
             </p>
           ) : (
             <div className="mt-4">
@@ -290,7 +292,7 @@ export function EntryWatch({
                 className="ui-press flex min-h-[3rem] w-full max-w-sm items-center justify-center gap-2 rounded-full px-5 text-control font-semibold text-[#12141C] lg:max-w-none"
                 style={{ background: source.status === 'dead' ? '#7C8296' : accent }}
               >
-                在 {sourceLabel} 打开
+                {t('entry-source-open', { source: sourceLabel })}
                 <span aria-hidden className="font-mono">↗</span>
               </a>
               {sources.length === 1 && (
@@ -301,10 +303,10 @@ export function EntryWatch({
                 </p>
               )}
               {source.status === 'dead' && (
-                <p className="mt-2 text-meta text-faint">这条来源上次检查时已失效，打开可能是 404。</p>
+                <p className="mt-2 text-meta text-faint">{t('entry-source-dead')}</p>
               )}
               {source.status === 'unchecked' && (
-                <p className="mt-2 text-meta text-faint">这条来源尚未核验，不保证还能打开。</p>
+                <p className="mt-2 text-meta text-faint">{t('entry-source-unchecked')}</p>
               )}
 
               {/* 用 aria-pressed 的切换按钮，不用 radiogroup——radio 语义会向读屏承诺方向键切换，

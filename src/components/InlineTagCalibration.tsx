@@ -10,6 +10,7 @@ import {
 } from '@/lib/vote-api'
 import { gameColor } from '@/lib/ui'
 import { searchGames } from '@/lib/vote-search'
+import { useSiteTexts } from './LiveContentProvider'
 
 /**
  * 条目内嵌的「这场标的游戏对不对」投票。
@@ -48,6 +49,7 @@ export function InlineTagCalibration({
   const [message, setMessage] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
+  const t = useSiteTexts()
 
   const searchRef = useRef<HTMLInputElement | null>(null)
 
@@ -154,7 +156,7 @@ export function InlineTagCalibration({
         ...(answer === 'none' && otherText.trim() ? { otherText: otherText.trim() } : {}),
       })
       setDetail((current) => current ? { ...current, aggregate: result.aggregate, viewer: result.viewer } : current)
-      setMessage(detail.viewer.hasVoted ? '你的判断已更新。' : '收到。你的判断会交给管理员复核，不会自动改写档案。')
+      setMessage(detail.viewer.hasVoted ? t('entry-calib-updated') : t('entry-calib-thanks'))
       setPickerOpen(false)
       setKeyword('')
     } catch (submitError) {
@@ -168,14 +170,14 @@ export function InlineTagCalibration({
     <section className="mt-4 border-t border-line pt-4" aria-label="内容标签校准">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">这场的游戏与内容</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint">{t('entry-calib-title')}</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {currentLabels.length > 0 ? currentLabels.map((item) => (
               <span key={item.id} className="inline-flex min-h-8 items-center gap-2 rounded-full border border-live/45 bg-live/10 px-3 text-control text-ink">
                 {item.kind === 'game' && <span className="h-2 w-2 rounded-sm" style={{ background: gameColor(item.id) }} />}
                 {item.label}
               </span>
-            )) : <span className="text-control text-faint">这场还没有标游戏或内容标签</span>}
+            )) : <span className="text-control text-faint">{t('entry-calib-none')}</span>}
           </div>
         </div>
         <button
@@ -185,12 +187,12 @@ export function InlineTagCalibration({
           aria-expanded={open}
           className="ui-press min-h-10 rounded-full border border-live/35 bg-live/8 px-4 text-control text-live hover:bg-live/14"
         >
-          {open ? '收起' : currentLabels.length > 0 ? '标错了？帮忙纠错' : '知道这场是什么内容？'}
+          {open ? '收起' : currentLabels.length > 0 ? t('entry-calib-open-fix') : t('entry-calib-open-new')}
         </button>
       </div>
 
       <p className="mt-3 text-meta leading-relaxed text-faint">
-        打开上面的录像看一眼，如果游戏、聊天、户外或节目标签标错了，都可以从同一个入口纠正。拿不准可以选「无法判断」。
+        {t('entry-calib-intro')}
       </p>
 
       {open && (
@@ -307,7 +309,7 @@ export function InlineTagCalibration({
               {error && <p role="alert" className="mt-3 text-control text-video">{error}</p>}
 
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-                <p className="text-meta text-faint">无需注册；结果只作为人工复核线索。</p>
+                <p className="text-meta text-faint">{t('entry-calib-footnote')}</p>
                 <button
                   type="button"
                   data-analytics-event="calibration.submit"

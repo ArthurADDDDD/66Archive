@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Coverage } from '@/lib/coverage'
 import { GAP_NOTES, noteForMonth, type GapNote } from '@/lib/gap-notes'
 import { actColorForDate } from '@/lib/narrative'
+import { useSiteTexts } from './LiveContentProvider'
 
 /**
  * 联系页的「档案缺口」面板：一眼看出哪些月份还是空的，以及为什么空。
@@ -52,6 +53,7 @@ export function CoverageGaps({
 
   const [reading, setReading] = useState<Reading | null>(null)
   const [expanded, setExpanded] = useState(defaultExpanded)
+  const t = useSiteTexts()
 
   const byKey = new Map(cells.map((cell) => [`${cell.year}-${cell.month}`, cell]))
   const explainedBlanks = cells.filter(
@@ -72,11 +74,11 @@ export function CoverageGaps({
         留下的两格正是这一节要说的事：还缺哪些、其中哪些已经知道为什么缺。
       */}
       <div className="relative grid gap-px bg-line/60 sm:grid-cols-2">
-        <Tile label="空白月份" value={blankMonths.toLocaleString()} unit="个月没有任何记录" accent="#5BC8E8" />
+        <Tile label={t('stats-coverage-blank-label')} value={blankMonths.toLocaleString()} unit={t('stats-coverage-blank-unit')} accent="#5BC8E8" />
         <Tile
-          label="已经查清原因"
+          label={t('stats-coverage-explained-label')}
           value={explainedBlanks.toLocaleString()}
-          unit={`个有说明 · ${Math.max(0, blankMonths - explainedBlanks)} 个待查`}
+          unit={t('stats-coverage-explained-unit', { pending: Math.max(0, blankMonths - explainedBlanks) })}
           accent="#E0A244"
         />
         <button
@@ -93,7 +95,7 @@ export function CoverageGaps({
       <div className="border-t border-line/70 p-[clamp(0.875rem,1.4vw,1.5rem)]">
         <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
           <h3 className="text-h3 font-medium text-ink">
-            {years[0]} — {years[years.length - 1]}，一格一个月
+            {t('stats-coverage-grid-title', { from: years[0], to: years[years.length - 1] })}
           </h3>
           <Readout reading={reading} />
         </div>
@@ -167,31 +169,31 @@ export function CoverageGaps({
 
         <div className="mt-[clamp(0.875rem,1.2vw,1.25rem)] flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line/60 pt-4 text-meta text-faint">
           <span className="flex items-center gap-1.5">
-            少
+            {t('stats-coverage-legend-less')}
             {[1, 2, 3, 4].map((lv) => (
               <span key={lv} className="h-3 w-3 rounded-[0.1875rem]" style={{ background: '#5BC8E8', opacity: LEVEL_OPACITY[lv] }} />
             ))}
-            多
+            {t('stats-coverage-legend-more')}
           </span>
           <span className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-[0.1875rem] bg-raised/70 ring-1 ring-inset ring-line/70" />
-            空白待查
+            {t('stats-coverage-legend-blank')}
           </span>
           <span className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-[0.1875rem] bg-raised/50 ring-1 ring-inset ring-[#E0A244]/45" />
-            空白已知原因
+            {t('stats-coverage-legend-known')}
           </span>
-          <span>颜色＝当时的平台时期</span>
+          <span>{t('stats-coverage-legend-color')}</span>
         </div>
 
         {/* 数字全是 0 的时候整行不渲染——「0 条失效、0 条没链接」不是信息，是噪音 */}
         {(missingDuration > 0 || deadOnly > 0 || noSource > 0) && (
           <p className="mt-3 text-meta text-faint">
-            另外还缺：
+            {t('stats-coverage-missing-lead')}
             {[
-              missingDuration > 0 && `${missingDuration.toLocaleString()} 条没有可核对时长`,
-              deadOnly > 0 && `${deadOnly.toLocaleString()} 条来源已全部失效`,
-              noSource > 0 && `${noSource.toLocaleString()} 条没有来源链接`,
+              missingDuration > 0 && t('stats-coverage-missing-duration', { count: missingDuration.toLocaleString() }),
+              deadOnly > 0 && t('stats-coverage-missing-dead', { count: deadOnly.toLocaleString() }),
+              noSource > 0 && t('stats-coverage-missing-nosource', { count: noSource.toLocaleString() }),
             ].filter(Boolean).join(' · ')}
           </p>
         )}
@@ -203,8 +205,8 @@ export function CoverageGaps({
       <div className="grid gap-px border-t border-line/70 bg-line/60 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         <div className="bg-surface/55 p-[clamp(0.875rem,1.4vw,1.5rem)]">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-            <p className="text-meta uppercase tracking-[0.16em] text-faint">这些空白是怎么回事</p>
-            <p className="text-meta text-faint">事实与推测分开写</p>
+            <p className="text-meta uppercase tracking-[0.16em] text-faint">{t('stats-coverage-notes-title')}</p>
+            <p className="text-meta text-faint">{t('stats-coverage-notes-sub')}</p>
           </div>
           <ul className="mt-4 grid gap-2 xl:grid-cols-2">
             {GAP_NOTES.map((note) => (
@@ -219,24 +221,24 @@ export function CoverageGaps({
                         : { background: 'rgba(139,143,163,0.14)', color: '#8B8FA3' }
                     }
                   >
-                    {note.kind === 'gap' ? '还在找' : '已知原因'}
+                    {note.kind === 'gap' ? t('stats-coverage-badge-gap') : t('stats-coverage-badge-known')}
                   </span>
                 </div>
                 <p className="mt-1.5 text-meta leading-relaxed text-muted">{note.known}</p>
                 {(note.guess || note.wanted) && (
                   <details className="group mt-2">
                     <summary className="ui-press inline-flex cursor-pointer list-none items-center gap-1 text-meta text-faint hover:text-muted [&::-webkit-details-marker]:hidden">
-                      推测与所需证据
+                      {t('stats-coverage-guess-toggle')}
                       <span aria-hidden className="font-mono transition-transform group-open:rotate-90">›</span>
                     </summary>
                     {note.guess && (
                       <p className="mt-2 text-meta leading-relaxed text-faint">
-                        <span className="uppercase tracking-[0.16em]">推测 · </span>
+                        <span className="uppercase tracking-[0.16em]">{t('stats-coverage-guess-label')} </span>
                         {note.guess}
                       </p>
                     )}
                     {note.wanted && (
-                      <p className="mt-1.5 text-meta leading-relaxed text-faint">最有用的证据：{note.wanted}</p>
+                      <p className="mt-1.5 text-meta leading-relaxed text-faint">{t('stats-coverage-wanted', { wanted: note.wanted })}</p>
                     )}
                   </details>
                 )}
@@ -246,7 +248,7 @@ export function CoverageGaps({
         </div>
 
         <div className="bg-surface/55 p-[clamp(0.875rem,1.4vw,1.5rem)]">
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">空得最多的年份</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint">{t('stats-coverage-worst-title')}</p>
           <ul className="mt-5 space-y-3">
             {worstYears.map((row) => (
               <li key={row.year}>
@@ -286,10 +288,11 @@ export function CoverageGaps({
  * 高度和宽度都锁死——内容从「提示语」切到「两行读数」时，下面的热力图不能跟着跳。
  */
 function Readout({ reading }: { reading: Reading | null }) {
+  const t = useSiteTexts()
   return (
     <div className="h-[3.5rem] w-full min-w-0 overflow-hidden rounded-lg border border-line/60 bg-base/25 px-3 py-2 sm:w-[26rem]">
       {!reading ? (
-        <p className="flex h-full items-center text-meta text-faint">移到格子上看这个月的数字</p>
+        <p className="flex h-full items-center text-meta text-faint">{t('stats-coverage-hover-hint')}</p>
       ) : (
         <>
           <p className="font-mono text-control text-ink tnum">
@@ -302,7 +305,7 @@ function Readout({ reading }: { reading: Reading | null }) {
           </p>
           {reading.note && (
             <p className="measure-note mt-0.5 line-clamp-1 text-meta text-faint">
-              {reading.note.label} · {reading.note.kind === 'gap' ? '还在找' : '已知原因'} — {reading.note.known}
+              {reading.note.label} · {reading.note.kind === 'gap' ? t('stats-coverage-badge-gap') : t('stats-coverage-badge-known')} — {reading.note.known}
             </p>
           )}
         </>

@@ -8,6 +8,8 @@ import { gallerySourceHref } from '@/lib/gallery-href'
 import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
+import { SiteText } from './SiteText'
+import { useSiteTexts } from './LiveContentProvider'
 
 /**
  * 画廊改版：总览优先的「年份底片架」。
@@ -114,6 +116,7 @@ export function GalleryBoard({
   const [density, setDensity] = useState<Density>('normal')
   const [tag, setTag] = useState<string | null>(null)
   const [q, setQ] = useState('')
+  const t = useSiteTexts()
   const [openId, setOpenId] = useState<string | null>(null)
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
@@ -225,7 +228,7 @@ export function GalleryBoard({
               collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            纪念版 · {featuredPhotos.length}
+            <SiteText id="gallery-tab-featured" vars={{ count: featuredPhotos.length }} />
           </button>
           <button
             type="button"
@@ -236,7 +239,7 @@ export function GalleryBoard({
               collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            全量版 · {allPhotos.length}
+            <SiteText id="gallery-tab-all" vars={{ count: allPhotos.length }} />
           </button>
         </div>
 
@@ -246,7 +249,7 @@ export function GalleryBoard({
           <SearchField
             value={q}
             onChange={setQ}
-            placeholder={`搜索标题、日期或备注 · 共 ${photos.length} 张`}
+            placeholder={t('gallery-search-placeholder', { count: photos.length })}
             ariaLabel="搜索画面"
             inputClassName="w-[13rem] rounded-md border border-line bg-surface px-3 py-2 text-control text-ink placeholder:text-faint transition-[border-color,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:outline-none lg:w-[16rem]"
           />
@@ -276,7 +279,7 @@ export function GalleryBoard({
             onClick={randomOpen}
             className="ui-press shrink-0 rounded-full border border-line/80 bg-surface/50 px-3 py-2 text-meta text-muted transition-colors hover:border-today/60 hover:text-today"
           >
-            随便翻一张 ↯
+            <SiteText id="gallery-random" />
           </button>
         </div>
       </div>
@@ -370,10 +373,10 @@ export function GalleryBoard({
               <span className="h-px flex-1 bg-line/70" />
               {/* 年份没核实出来就没有「这一年」可跳；与其给个假链接，不如说清楚它还缺什么 */}
               {y === UNDATED ? (
-                <span className="shrink-0 text-meta text-faint">还没核实出拍摄年份</span>
+                <span className="shrink-0 text-meta text-faint"><SiteText id="gallery-year-undated" /></span>
               ) : (
                 <Link href={`/archive/?y=${y}`} prefetch={false} className="ui-press shrink-0 rounded-sm text-meta text-faint transition-colors hover:text-live">
-                  这一年的编年史 →
+                  <SiteText id="gallery-year-link" />
                 </Link>
               )}
             </header>
@@ -408,7 +411,7 @@ export function GalleryBoard({
         </div>
       </div>
 
-      {visible.length === 0 && <p className="py-16 text-center text-meta text-faint">没有符合的画面。</p>}
+      {visible.length === 0 && <p className="py-16 text-center text-meta text-faint"><SiteText id="gallery-empty" /></p>}
 
       {openIndex >= 0 &&
         typeof document !== 'undefined' &&
@@ -579,7 +582,7 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
             {photo.title}
           </h3>
         ) : (
-          <p className="mt-1.5 min-h-[2.75em] text-[11px] leading-snug text-faint sm:mt-2 sm:min-h-0 sm:text-control">标题待命名</p>
+          <p className="mt-1.5 min-h-[2.75em] text-[11px] leading-snug text-faint sm:mt-2 sm:min-h-0 sm:text-control"><SiteText id="gallery-untitled" /></p>
         )}
         {photo.caption && <p className="mt-1.5 hidden text-[11px] leading-relaxed text-muted sm:mt-2 sm:block sm:text-control">{photo.caption}</p>}
         {photo.source &&
@@ -590,7 +593,7 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
               rel="noreferrer"
               className="ui-press mt-3 hidden rounded-sm text-[11px] text-live underline decoration-live/40 underline-offset-4 hover:text-ink sm:mt-4 sm:inline-flex sm:text-control"
             >
-              查看公开来源
+              <SiteText id="gallery-source-link" />
             </a>
           ) : (
             <span className="mt-3 hidden font-mono text-[10px] text-faint sm:mt-4 sm:block sm:text-meta">来源：{photo.source}</span>
@@ -775,7 +778,7 @@ function Lightbox({
           >
             <LightboxImage photo={photo} onLoad={() => setLoadedSrc(photo.src)} />
             <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
-              查看公开来源
+              <SiteText id="gallery-source-link" />
             </span>
           </a>
         ) : (
@@ -826,7 +829,7 @@ function Lightbox({
         </div>
 
         <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-          {photo.title ? <h3 className="text-body font-medium text-ink">{photo.title}</h3> : <span className="text-meta text-faint">标题待命名</span>}
+          {photo.title ? <h3 className="text-body font-medium text-ink">{photo.title}</h3> : <span className="text-meta text-faint"><SiteText id="gallery-untitled" /></span>}
           {photo.caption && <p className="max-w-3xl text-meta leading-relaxed text-muted">{photo.caption}</p>}
           {photo.source &&
             (sourceHref ? (
@@ -836,7 +839,7 @@ function Lightbox({
                 rel="noreferrer"
                 className="ui-press shrink-0 text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
               >
-                查看公开来源
+                <SiteText id="gallery-source-link" />
               </a>
             ) : (
               <span className="shrink-0 font-mono text-meta text-faint">{photo.source}</span>

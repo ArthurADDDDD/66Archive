@@ -1,5 +1,6 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
@@ -28,7 +29,7 @@ export const metadata: Metadata = pageMetadata({
 export default async function GamesPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const bakedCopy = await fetchBakedPageCopy(['games'])
+  const bakedCopy = await fetchBakedPageCopy(['games'], { texts: ['games-'] })
 
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
@@ -65,7 +66,7 @@ export default async function GamesPage() {
         <header className="ui-slide-down site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="games" />
           <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live tnum lg:block">
-            去录播室搜一场 →
+            <SiteText id="games-archive-link" />
           </Link>
         </header>
 
@@ -75,12 +76,19 @@ export default async function GamesPage() {
             {/* 日期一律包成不换行：`2010-07-11` 里的连字符是浏览器的断行点，
                 正文折到这里会把日期折成「2010-」+「07-11」两行。 */}
             {/* 「档案收录至 <日期>」是补档进度，读者用不上；跨度那句是真事实，留着。 */}
-            {played.length} 个游戏。
+            <SiteText id="games-summary" vars={{ count: played.length }} />
             {longest?.firstDate && longest?.lastDate && (
               <>
-                {' '}跨得最长的是《{longest.name}》，从 <span className="whitespace-nowrap tnum">{longest.firstDate}</span> 到{' '}
-                <span className="whitespace-nowrap tnum">{longest.lastDate}</span>，
-                {longest.spanDays.toLocaleString()} 天。
+                {' '}
+                <SiteText
+                  id="games-summary-longest"
+                  vars={{
+                    name: longest.name,
+                    from: <span className="whitespace-nowrap tnum">{longest.firstDate}</span>,
+                    to: <span className="whitespace-nowrap tnum">{longest.lastDate}</span>,
+                    days: longest.spanDays.toLocaleString(),
+                  }}
+                />
               </>
             )}
           </p>

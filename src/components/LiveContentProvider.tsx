@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import {
   contentPathsFor,
@@ -11,7 +11,7 @@ import {
   type LiveEditorialSection,
   type LiveSiteCopy,
 } from '@/lib/live-content'
-import { SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
+import { fillSiteText, SITE_COPY, type SiteCopy, type SiteCopyBlock } from '@/lib/site-copy'
 
 /**
  * 实时内容上下文。
@@ -113,6 +113,44 @@ export function useCopyBlock(scope: 'homeSections' | 'pages', id: string): SiteC
   return copy[scope].find((block) => block.id === id) ?? { id, eyebrow: '', title: '', lede: '' }
 }
 
+const BASELINE_TEXTS = new Map(SITE_COPY.texts.map((item) => [item.id, item.text]))
+const textTables = new WeakMap<LiveSiteCopy, Map<string, string>>()
+
+/**
+ * 页面文字的当前值表：基线打底，后台给了非空文字的覆盖上去。
+ *
+ * 按 copy 对象缓存——一页上几十处 `<SiteText>` 各自调一次 `useSiteCopy` 的话，
+ * 每一处都要把整份文案合并一遍。空字符串按「恢复默认」处理：一句按钮文字被清空，
+ * 页面上留下一个空按钮，比显示默认文字更糟。
+ */
+function textTable(copy: LiveSiteCopy | null): Map<string, string> {
+  if (!copy || copy.texts.length === 0) return BASELINE_TEXTS
+  const cached = textTables.get(copy)
+  if (cached) return cached
+  const table = new Map(BASELINE_TEXTS)
+  for (const item of copy.texts) {
+    if (BASELINE_TEXTS.has(item.id) && item.text.trim() !== '') table.set(item.id, item.text)
+  }
+  textTables.set(copy, table)
+  return table
+}
+
+/** 一句页面文字的当前值。id 不在基线里时原样返回 id——漏登记一眼就能看出来。 */
+export function useSiteText(id: string): string {
+  const { copy } = useLiveContent()
+  return textTable(copy).get(id) ?? id
+}
+
+/**
+ * 取文字的函数，第二个参数填占位符。一个组件里要取很多句（且多半是字符串属性、
+ * 三元表达式里的分支）时用它，省得每句写一个 hook。
+ */
+export function useSiteTexts(): (id: string, vars?: Record<string, string | number>) => string {
+  const { copy } = useLiveContent()
+  const table = textTable(copy)
+  return useCallback((id: string, vars?: Record<string, string | number>) => fillSiteText(table.get(id) ?? id, vars), [table])
+}
+
 /**
  * 站点文案合并：逐字段覆盖，后台给空字符串就是「这一项不显示」，
  * 后台没有这个 id 就沿用基线。基线里没有的 id 直接忽略——前台没有对应的位置放它。
@@ -150,6 +188,11 @@ export function mergeSiteCopy(baseline: SiteCopy, live: LiveSiteCopy | null): Si
     // 而按 id 合并只能改字段，改不了「有谁、谁在前面」。
     // 空数组按「没有覆盖」处理：内容服务里还没有这份名单时，页面照常显示基线。
     maintainers: live.maintainers.length > 0 ? live.maintainers.map((person) => ({ ...person })) : baseline.maintainers,
+    // 与 `useSiteText` 同一条规则：按基线的 id 逐条覆盖，空文字等于没有覆盖。
+    texts: baseline.texts.map((item) => {
+      const override = live.texts.find((candidate) => candidate.id === item.id)
+      return override && override.text.trim() !== '' ? { ...item, text: override.text } : item
+    }),
   }
 }
 

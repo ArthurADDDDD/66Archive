@@ -16,6 +16,9 @@ import { RelatedRail } from '@/components/RelatedRail'
 import { PresenceIndicator } from '@/components/PresenceIndicator'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { EntryWatch, type WatchSegment, type WatchSource } from '@/components/EntryWatch'
+import { SiteText } from '@/components/SiteText'
+import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { fetchBakedPageCopy } from '@/lib/baked-content'
 
 /**
  * 一条记录的详情页。
@@ -71,7 +74,6 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const year = entry.date.slice(0, 4)
   const month = Number(entry.date.slice(5, 7))
   const backHref = `/archive/?y=${year}&m=${month}`
-  const backLabel = `回到 ${year} 年 ${month} 月`
 
   // 同场的不同录像被数据审校标成一组；来源合并去重后一起展示，条目不重复出现。
   const sourceGroup = buildSourceGroups(ds.entries).get(entry.id) ?? [entry]
@@ -116,7 +118,11 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   const seriesDef = entry.series ? ds.series.get(entry.series) : undefined
   const rails = buildEntryRails(entry, ds)
 
+  // 两千多个条目页共用同一份：只带条目页自己的固定文字（`entry-`），几百字节。
+  const bakedCopy = await fetchBakedPageCopy([], { texts: ['entry-'] })
+
   return (
+    <LiveCopySeed copy={bakedCopy}>
     <main className="ui-page-in min-h-screen overflow-x-clip">
       <MobileQuickNav active="entry" />
       <BackToTop />
@@ -125,7 +131,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
         <SiteNav active="entry" />
         <Link href={backHref} prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-          ← {backLabel}
+          ← <SiteText id="entry-back" vars={{ year, month }} />
         </Link>
       </header>
 
@@ -136,7 +142,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
           prefetch={false}
           className="ui-press -my-2 inline-block rounded-sm py-2 text-meta text-muted underline underline-offset-4 transition-colors hover:text-live tnum lg:hidden"
         >
-          ← {backLabel}
+          ← <SiteText id="entry-back" vars={{ year, month }} />
         </Link>
 
         <div className="mt-4 lg:mt-0">
@@ -197,7 +203,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             {entry.note && <p className="measure-note mt-5 text-meta leading-relaxed text-faint">{entry.note}</p>}
             {sourceGroup.length > 1 && (
               <p className="measure-note mt-2 text-meta leading-relaxed text-faint">
-                档案里另有 {sourceGroup.length - 1} 条被标为同场的录像，它们的链接已并入下面的来源列表。
+                <SiteText id="entry-same-session" vars={{ count: sourceGroup.length - 1 }} />
               </p>
             )}
           </div>
@@ -242,6 +248,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
 
       <SiteFooter />
     </main>
+    </LiveCopySeed>
   )
 }
 

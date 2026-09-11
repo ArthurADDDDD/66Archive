@@ -15,7 +15,7 @@ export function StatsSection({
   question: string
   accent: string
   /** 图形的读法：这一节的图怎么看，一句话写在标题下面 */
-  legend?: string
+  legend?: React.ReactNode
   children: React.ReactNode
 }) {
   return (

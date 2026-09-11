@@ -13,6 +13,8 @@ import { SearchField } from './SearchField'
 import { MobileQuickNav } from './ScrollAffordances'
 import { SiteNav } from './SiteNav'
 import { ResumeStrip } from './Trail'
+import { SiteText } from './SiteText'
+import { useSiteTexts } from './LiveContentProvider'
 
 type MonthSummary = {
   count: number
@@ -76,6 +78,7 @@ export function Timeline({
   // 默认旧→新：点进某个月，最上面应该是那个月的第一场，顺着往下读就是那段时间发生的顺序。
   const [order, setOrder] = useState<'desc' | 'asc'>('asc')
   const [sheetOpen, setSheetOpen] = useState(false)
+  const t = useSiteTexts()
   // 月内的游戏 / 标签筛选。只作用于当前这一批条目，换年换月即清空，不写进 URL，也不碰全局筛选。
   const [tagSelection, setTagSelection] = useState<EntryTagSelection>(EMPTY_TAG_SELECTION)
   // 网格视图一次只展开一条：整行插入的详情面板很高，同时开两块就没法对照了。
@@ -369,7 +372,7 @@ export function Timeline({
             <SearchField
               value={filters.q}
               onChange={(v) => set({ q: v })}
-              placeholder="搜标题、游戏、日期…"
+              placeholder={t('archive-search-placeholder')}
               ariaLabel="搜索全部记录"
               inputClassName="h-9 w-[clamp(9rem,22vw,16rem)] bg-transparent px-3 pr-8 text-meta text-ink placeholder:text-faint focus:outline-none"
               iconClassName="shrink-0"
@@ -395,7 +398,7 @@ export function Timeline({
             <SearchField
               value={filters.q}
               onChange={(v) => set({ q: v })}
-              placeholder="搜标题、游戏、日期…"
+              placeholder={t('archive-search-placeholder')}
               ariaLabel="搜索全部记录"
               kbd="/"
               inputRef={searchRef}
@@ -424,9 +427,9 @@ export function Timeline({
                 {extra && <span aria-hidden className="hidden text-meta text-faint/50 sm:inline">·</span>}
                 <p className="w-full text-meta uppercase tracking-[0.16em] text-live tnum sm:w-auto">2010 — {latestYear}</p>
               </div>
-              <h1 className="measure-hero mt-2 text-h1 font-semibold">从记得的内容，找到那段时间。</h1>
+              <h1 className="measure-hero mt-2 text-h1 font-semibold"><SiteText id="archive-title" /></h1>
               <p className="measure-body mt-3 text-body text-muted">
-                每个年份和月份都列出真实标题作为线索，不需要先记住准确日期；知道关键词时，也可以直接搜索全部公开记录。
+                <SiteText id="archive-lede" />
               </p>
             </div>
             {/* 口径同 ArchiveLoader 的骨架头：只留搜索范围，时长与覆盖率不在这里说。 */}
@@ -476,8 +479,10 @@ export function Timeline({
 
           <div className="mt-5 border-t border-line pt-4">
             <div className="mb-2 flex items-center justify-between">
-              <h2 className="text-meta uppercase tracking-[0.16em] text-faint">年度线索</h2>
-              <span className="text-meta text-faint">{searching ? '正在搜索全部年份' : `${activeEra.label} · 选一年看看`}</span>
+              <h2 className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="archive-year-clues" /></h2>
+              <span className="text-meta text-faint">
+                {searching ? <SiteText id="archive-year-searching" /> : <SiteText id="archive-year-pick" vars={{ era: activeEra.label }} />}
+              </span>
             </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
               {activeEraYears.map((year) => {
@@ -544,7 +549,7 @@ export function Timeline({
 
           {visible.length === 0 ? (
             <div className="rounded-xl border border-dashed border-line py-20 text-center">
-              <p className="text-body text-muted">这里暂时没有符合条件的条目。</p>
+              <p className="text-body text-muted"><SiteText id="archive-empty" /></p>
               <button onClick={() => set(EMPTY_FILTERS)} className="mt-3 text-meta text-live underline underline-offset-4">清除搜索与筛选</button>
             </div>
           ) : (
@@ -572,7 +577,7 @@ export function Timeline({
                     }}
                     color={activeEra.color}
                     matched={listed.length}
-                    title={searching ? '这批结果里都有什么' : '这个月都在播什么'}
+                    title={searching ? t('archive-tags-title-search') : t('archive-tags-title-month')}
                   />
 
                   <div className="mb-4 mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
@@ -615,7 +620,7 @@ export function Timeline({
 
                   {rendered.length === 0 ? (
                     <div className="rounded-xl border border-dashed border-line py-16 text-center">
-                      <p className="text-body text-muted">这一批里没有同时满足所选标签的记录。</p>
+                      <p className="text-body text-muted"><SiteText id="archive-tags-empty" /></p>
                       <button
                         onClick={() => setTagSelection(EMPTY_TAG_SELECTION)}
                         className="mt-3 text-meta text-live underline underline-offset-4"
@@ -632,7 +637,7 @@ export function Timeline({
                         showFullDate={searching}
                       />
                       {searching && visible.length > searchLimit && (
-                        <p className="py-6 text-center text-meta text-faint tnum">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
+                        <p className="py-6 text-center text-meta text-faint tnum"><SiteText id="archive-search-limit" vars={{ count: searchLimit }} /></p>
                       )}
                     </div>
                   ) : (
@@ -659,7 +664,7 @@ export function Timeline({
                       )
                     })}
                     {searching && visible.length > searchLimit && (
-                      <p className="py-6 text-center text-meta text-faint tnum">仅显示前 {searchLimit} 条，请增加关键词继续缩小范围。</p>
+                      <p className="py-6 text-center text-meta text-faint tnum"><SiteText id="archive-search-limit" vars={{ count: searchLimit }} /></p>
                     )}
                   </div>
                   )}
@@ -718,7 +723,7 @@ function MonthArchive({
   return (
     <div>
       <p className="measure-body mb-4 text-body text-muted">
-        选一个月，看看那段时间都在播什么。
+        <SiteText id="archive-month-pick" />
       </p>
       <div className="ui-stagger grid grid-cols-3 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
         {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => {

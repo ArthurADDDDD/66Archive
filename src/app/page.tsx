@@ -1,4 +1,5 @@
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import type { Metadata } from 'next'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import Link from 'next/link'
@@ -12,7 +13,7 @@ import { HomeActStage } from '@/components/HomeActStage'
 import type { ExplorePromoData } from '@/components/HomeExplorePromo'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
-import { fetchBakedContent, fetchBakedHomeNarrative } from '@/lib/baked-content'
+import { fetchBakedContent, fetchBakedHomeNarrative, pickTexts } from '@/lib/baked-content'
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
@@ -39,7 +40,9 @@ export const metadata: Metadata = pageMetadata({
 export default async function HomePage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const { copy: bakedCopy, editorial: bakedEditorial } = await fetchBakedContent()
+  // 页面文字只带首页用得到的那几组（全站通用的 `site-` 由 pickTexts 自己带上）。
+  const { copy: bakedFullCopy, editorial: bakedEditorial } = await fetchBakedContent()
+  const bakedCopy = bakedFullCopy ? { ...bakedFullCopy, texts: pickTexts(bakedFullCopy, ['home-', 'trail-', 'form-']) } : null
 
   // 首页渲染的是三幕与高光，不碰编年史那份 storyActs——所以只烤这一半。
   // 其余页面由根 layout 烤入的站点文案与板块编排即可，详见 lib/baked-content.ts。
@@ -180,7 +183,7 @@ export default async function HomePage() {
               prefetch={false}
               className="ui-press hidden whitespace-nowrap rounded-sm text-meta tnum text-live lg:block"
             >
-              搜一场你记得的 →
+              <SiteText id="home-search-link" />
             </Link>
           </header>
 
@@ -226,7 +229,7 @@ export default async function HomePage() {
                   <LiveSectionHeading sectionId="home-games" eyebrowColor="#E0A244" />
                 </div>
                 <Link prefetch={false} href="/games/" className="ui-press -my-2 rounded-sm py-2 text-meta text-live underline underline-offset-4">
-                  全部游戏 →
+                  <SiteText id="home-games-all" />
                 </Link>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
@@ -266,10 +269,10 @@ function TodayInHistory({ rows }: { rows: TodayHistoryRow[] }) {
   const earliest = rows.find((r) => r.item)?.year ?? null
   return (
     <div className="flex flex-col rounded-2xl border border-line/80 bg-surface/25 p-6 sm:p-8 lg:min-h-[var(--memory-card-h)]">
-      <Eyebrow>Today in history</Eyebrow>
+      <Eyebrow><SiteText id="home-today-eyebrow" /></Eyebrow>
       {/* 卡片内标题：比节标题低一级，不和「回到过去，只需要一晚。」抢主次 */}
       <h3 className="mt-3 text-h3 font-semibold text-ink">
-        {earliest ? <>这一天，最早能回到 {earliest} 年。</> : '这一天，档案里暂时没有记录。'}
+        {earliest ? <SiteText id="home-today-title" vars={{ year: earliest }} /> : <SiteText id="home-today-empty" />}
       </h3>
       <TodayInHistoryList rows={rows} />
     </div>

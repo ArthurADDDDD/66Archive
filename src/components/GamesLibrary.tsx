@@ -7,6 +7,8 @@ import { actColorForDate } from '@/lib/narrative'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { trackSiteEvent } from '@/lib/site-analytics'
 import { SearchField } from './SearchField'
+import { SiteText } from './SiteText'
+import { useSiteText } from './LiveContentProvider'
 
 /**
  * 游戏库封面墙（v2 设计）。
@@ -58,6 +60,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
   const [q, setQ] = useState('')
   const [sort, setSort] = useState<SortKey>('newest')
   const [page, setPage] = useState(1)
+  const searchPlaceholder = useSiteText('games-search-placeholder')
   const reportedZero = useRef(false)
 
   // 装回对象数组一次，下面的筛选 / 排序 / 渲染完全不用改。
@@ -127,7 +130,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
         <SearchField
           value={q}
           onChange={changeSearch}
-          placeholder="搜索游戏名或别名…"
+          placeholder={searchPlaceholder}
           ariaLabel="搜索游戏"
           iconClassName="sm:max-w-xs"
           inputClassName="w-full max-w-xs rounded-full border border-line bg-surface/70 px-4 py-2 text-control text-ink outline-none transition-colors placeholder:text-faint focus:border-live/60 sm:w-64"
@@ -162,7 +165,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="mt-12 text-body text-muted">没有匹配「{q}」的游戏。</p>
+        <p className="mt-12 text-body text-muted"><SiteText id="games-search-empty" vars={{ q }} /></p>
       ) : (
         <ul
           key={`${sort}:${q.trim().toLowerCase()}:${currentPage}`}

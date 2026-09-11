@@ -10,6 +10,7 @@ import { contentOpenProps } from '@/lib/analytics-target'
 import { MediaFrame } from './MediaFrame'
 import { Eyebrow } from './primitives'
 import { useLiveContent } from './LiveContentProvider'
+import { SiteText } from './SiteText'
 
 /**
  * 故事模式：纵向编辑时间线（年份脊柱）。
@@ -43,10 +44,10 @@ export function StoryTimeline({
   return (
     <main className="ui-page-in site-container px-page pb-20">
       <section className="ui-reveal pb-8 pt-4 sm:py-12">
-        {eyebrow ?? <Eyebrow color="#5BC8E8">Chronicle · 编年史</Eyebrow>}
-        <h1 className="measure-hero mt-4 text-h1 font-semibold">时间不是一条列表，是一路走过来的。</h1>
+        {eyebrow ?? <Eyebrow color="#5BC8E8"><SiteText id="chronicle-eyebrow" /></Eyebrow>}
+        <h1 className="measure-hero mt-4 text-h1 font-semibold"><SiteText id="chronicle-title" /></h1>
         <p className="measure-body mt-5 text-body text-muted">
-          这里把视频、直播和能确认的重要节点串在一起。想找具体某一天，再去录播室里翻。
+          <SiteText id="chronicle-lede" />
         </p>
       </section>
 
@@ -59,11 +60,16 @@ export function StoryTimeline({
       </div>
 
       <p className="mt-8 text-meta text-faint">
-        想找具体日期、游戏或来源，可以去{' '}
-        <Link href="/archive/" prefetch={false} className="text-live underline underline-offset-4 hover:text-ink">
-          录播室
-        </Link>
-        。
+        <SiteText
+          id="chronicle-footer-hint"
+          vars={{
+            link: (
+              <Link href="/archive/" prefetch={false} className="text-live underline underline-offset-4 hover:text-ink">
+                <SiteText id="chronicle-footer-link" />
+              </Link>
+            ),
+          }}
+        />
       </p>
     </main>
   )
@@ -164,7 +170,7 @@ function StorySectionBlock({
         )}
 
         {section.endYear === latestYear && (
-          <p className="mt-3 text-meta text-faint">这一年还在继续。</p>
+          <p className="mt-3 text-meta text-faint"><SiteText id="chronicle-still-going" /></p>
         )}
       </div>
     </section>
@@ -177,7 +183,7 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
     return (
       <div className="border-l-2 border-line/50 py-1.5 pl-4">
         <p className="measure-body text-body text-muted">
-          这一年暂时还没找到能确认的记录。
+          <SiteText id="chronicle-year-empty" />
         </p>
       </div>
     )
@@ -185,14 +191,14 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
   return (
     <div className="border-l-2 border-line/50 py-1.5 pl-4">
       <p className="text-meta text-faint tnum">
-        这一年留下了 {section.archiveCount.toLocaleString()} 条记录。
+        <SiteText id="chronicle-year-count" vars={{ count: section.archiveCount.toLocaleString() }} />
         <Link
           href={`/archive/?y=${section.year}`}
           prefetch={false}
           className="ml-2 inline-block underline underline-offset-4 transition-opacity hover:opacity-80"
           style={{ color: accent }}
         >
-          去录播室看看 →
+          <SiteText id="chronicle-year-archive" />
         </Link>
       </p>
     </div>
@@ -319,7 +325,7 @@ function ActivityTimeline({ activity, accent }: { activity: NonNullable<Resolved
     <div className="mt-5 chronicle-media-measure rounded-xl border border-line/70 bg-surface/30 px-4 pb-3 pt-3.5 sm:px-5">
       <div className="flex items-baseline justify-between gap-4">
         <p className="text-meta font-medium text-ink/90">{activity.label}</p>
-        <p className="text-[11px] text-faint">按当前档案收录期数</p>
+        <p className="text-[11px] text-faint"><SiteText id="chronicle-activity-note" /></p>
       </div>
       <div className="mt-3 overflow-x-auto pb-1">
         <div
@@ -373,7 +379,7 @@ function MilestoneBadge({ accent, compact = false }: { accent: string; compact?:
       }}
     >
       <span aria-hidden className="h-1.5 w-1.5 rotate-45 bg-current opacity-90" />
-      关键节点
+      <SiteText id="chronicle-milestone" />
     </span>
   )
 }
@@ -515,7 +521,7 @@ function OpenArchiveButton({
       onClick={() => onOpenArchive(section.year)}
       className={`ui-press group inline-flex items-center gap-2 rounded-sm text-meta text-muted tnum transition-colors hover:text-ink ${className}`}
     >
-      看这一年的全部 {section.archiveCount.toLocaleString()} 条记录
+      <SiteText id="chronicle-open-archive" vars={{ count: section.archiveCount.toLocaleString() }} />
       <span aria-hidden className="font-mono transition-transform group-hover:translate-x-1" style={{ color: accent }}>
         →
       </span>

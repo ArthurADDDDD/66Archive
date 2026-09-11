@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Eyebrow } from './primitives'
+import { SiteText } from './SiteText'
 
 export type MemoryCandidate = { id: string; date: string; title: string }
 
@@ -23,18 +24,18 @@ export function RandomMemory({ pool, total }: { pool: MemoryCandidate[]; total: 
 
   return (
     <div className="flex flex-col rounded-2xl border border-dashed border-line bg-surface/25 p-6 sm:p-8 lg:min-h-[var(--memory-card-h)]">
-      <Eyebrow>Random · 随机记忆</Eyebrow>
+      <Eyebrow><SiteText id="home-random-eyebrow" /></Eyebrow>
       {/* 卡片内标题降到 h3——和「回到过去，只需要一晚。」这个节标题差一级 */}
-      <h3 className="mt-3 text-h3 font-semibold text-ink">随便回到一个晚上。</h3>
+      <h3 className="mt-3 text-h3 font-semibold text-ink"><SiteText id="home-random-title" /></h3>
       <p className="measure-body mt-3 text-body text-muted">
-        档案里有 {total.toLocaleString()} 个「值得回去」的晚上——有画面、有游戏、有栏目。抽一个，回去看看那天发生了什么。
+        <SiteText id="home-random-body" vars={{ total: total.toLocaleString() }} />
       </p>
       <button
         data-analytics-event="random.refresh"
         onClick={() => setPick(pool[Math.floor(Math.random() * pool.length)] ?? null)}
         className="ui-press group mt-5 w-fit rounded-full border border-line bg-surface/60 px-5 py-2.5 text-meta text-muted transition-colors hover:border-live/60 hover:text-ink"
       >
-        回到一个晚上
+        <SiteText id="home-random-action" />
         <span className="ml-2 inline-block font-mono transition-transform group-hover:translate-y-0.5">↯</span>
       </button>
 
@@ -51,7 +52,7 @@ export function RandomMemory({ pool, total }: { pool: MemoryCandidate[]; total: 
             <p className="mt-1.5 text-body font-medium leading-snug text-ink transition-colors group-hover:text-white">
               {pick.title}
             </p>
-            <p className="mt-2 text-meta text-live">打开这一晚 →</p>
+            <p className="mt-2 text-meta text-live"><SiteText id="home-random-open" /></p>
           </div>
         </Link>
       )}

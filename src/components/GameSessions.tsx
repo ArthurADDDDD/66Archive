@@ -8,6 +8,7 @@ import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
+import { SiteText } from './SiteText'
 
 /**
  * 游戏详情页的相关场次：整行就地展开播放预览，不把点击行为变成详情页跳转。
@@ -62,9 +63,9 @@ export function GameSessions({
     <div>
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-meta uppercase tracking-[0.16em] text-faint">Sessions · 这些晚上</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-sessions-eyebrow" /></p>
           <h2 className="mt-2 text-h3 font-semibold text-ink">
-            档案里的相关场次
+            <SiteText id="game-sessions-title" />
             {year !== null && (
               <span className="ml-2 text-control font-normal tnum" style={{ color }}>
                 · {year} 年 · {visible.length} 场

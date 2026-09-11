@@ -1,5 +1,6 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
@@ -56,7 +57,7 @@ function collectSources() {
 export default async function ContactPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const bakedCopy = await fetchBakedPageCopy(['contact', 'contact-credits'], { maintainers: true })
+  const bakedCopy = await fetchBakedPageCopy(['contact', 'contact-credits'], { maintainers: true, texts: ['contact-', 'form-'] })
 
   const { credited, entryCount, firstYear, lastYear } = collectSources()
   return (
@@ -81,13 +82,13 @@ export default async function ContactPage() {
               prefetch={false}
               className="ui-card ui-press group rounded-2xl border border-live/30 bg-live/5 p-6 hover:border-live/60 sm:col-span-2"
             >
-              <span className="text-meta uppercase tracking-[0.16em] text-live">一起校对</span>
+              <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="contact-review-kicker" /></span>
               <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
                 <div>
-                  <h2 className="text-h3 font-medium">在对应条目里帮忙判断</h2>
-                  <p className="measure-body mt-2 text-body text-muted">打开对应录像，看过原片以后，再帮忙补标签或者纠错。</p>
+                  <h2 className="text-h3 font-medium"><SiteText id="contact-review-title" /></h2>
+                  <p className="measure-body mt-2 text-body text-muted"><SiteText id="contact-review-body" /></p>
                 </div>
-                <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开录播室 ↗</span>
+                <span className="text-meta text-live transition-transform group-hover:translate-x-1"><SiteText id="contact-review-cta" /> ↗</span>
               </div>
             </Link>
 
@@ -97,13 +98,13 @@ export default async function ContactPage() {
               rel="noopener noreferrer"
               className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
             >
-              <span className="text-meta uppercase tracking-[0.16em] text-live">项目仓库</span>
+              <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="contact-repo-kicker" /></span>
               <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
                 <div>
                   <h2 className="text-h3 font-medium">GitHub · 66archive</h2>
-                  <p className="mt-2 text-body text-muted">查看项目源码、数据更新和版本记录。</p>
+                  <p className="mt-2 text-body text-muted"><SiteText id="contact-repo-body" /></p>
                 </div>
-                <span className="text-meta text-live transition-transform group-hover:translate-x-1">打开仓库 ↗</span>
+                <span className="text-meta text-live transition-transform group-hover:translate-x-1"><SiteText id="contact-repo-cta" /> ↗</span>
               </div>
             </a>
           </div>
@@ -128,9 +129,12 @@ export default async function ContactPage() {
 
               <div className="rounded-2xl border border-line bg-surface/55 p-6">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <span className="text-meta uppercase tracking-[0.16em] text-faint">录播 · 切片来源</span>
+                  <span className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="contact-sources-kicker" /></span>
                   <span className="text-meta text-faint tnum">
-                    <span className="font-mono text-[1.125rem] font-bold text-video">{credited.length}</span> 位 UP 主的录像被本站索引
+                    <SiteText
+                      id="contact-sources-count"
+                      vars={{ count: <span className="font-mono text-[1.125rem] font-bold text-video">{credited.length}</span> }}
+                    />
                   </span>
                 </div>
                 <ul className="mt-5 divide-y divide-line/50">
@@ -152,7 +156,7 @@ export default async function ContactPage() {
                   ))}
                 </ul>
                 <p className="mt-5 border-t border-line/70 pt-4 text-meta text-faint">
-                  名单会随着补档继续增加。如果漏了谁，欢迎告诉我。
+                  <SiteText id="contact-sources-note" />
                 </p>
               </div>
             </div>
@@ -160,10 +164,10 @@ export default async function ContactPage() {
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link prefetch={false} href="/chronicle/" className="ui-press rounded-full bg-ink px-5 py-2.5 text-control font-medium text-[#12141C] hover:bg-white hover:shadow-[0_12px_38px_rgba(91,200,232,0.18)]">
-              前往编年史
+              <SiteText id="contact-chronicle-link" />
             </Link>
             <Link prefetch={false} href="/" className="ui-press rounded-full border border-line px-5 py-2.5 text-control text-muted hover:border-muted hover:text-ink">
-              返回首页
+              <SiteText id="contact-home-link" />
             </Link>
           </div>
         </section>

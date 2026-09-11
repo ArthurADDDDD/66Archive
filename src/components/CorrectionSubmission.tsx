@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { SubmissionForm } from './SubmissionForm'
+import { SiteText } from './SiteText'
+import { useSiteTexts } from './LiveContentProvider'
 
 /**
  * 联系页的投稿入口。
@@ -20,6 +22,7 @@ import { SubmissionForm } from './SubmissionForm'
  * 提交接口只区分 `correction` 与 `meme` 两个归属。这里三件事都属于前者，
  * 靠模板首行的方括号标记（【补一场】/【纠错】/【画廊线索】）在人工队列里分流——
  * 为了三个标签去改后台契约不划算，而人工队列本来就要逐条看。
+ * 模板文字在后台可改；改的时候保留首行那个方括号标记，分流靠它。
  *
  * ## 折叠不只是排版
  *
@@ -32,6 +35,7 @@ type Intent = {
   id: string
   /** 这一种来意是否开放附图。只有「我存着老图」需要。 */
   photos?: boolean
+  /** 以下都是页面文字的 id（见 `lib/site-copy.ts` 的 `texts`），文字本身在后台改 */
   label: string
   hint: string
   /** 展开后写在表单上方的一句话 */
@@ -43,41 +47,42 @@ type Intent = {
 const INTENTS: Intent[] = [
   {
     id: 'footage',
-    label: '我有一场站里没有的',
-    hint: '录像、切片、或者只是记得有这么一场',
-    lede: '不用先找到链接。记得大概是哪一年、播的是什么，就已经够我去找了。',
-    bodyLabel: '这一场大概是什么样的',
-    template: '【补一场】\n· 大概什么时候：\n· 播的是什么（游戏 / 节目 / 事件）：\n· 在哪儿见过（有链接最好，没有也行）：\n',
+    label: 'contact-intent-footage-label',
+    hint: 'contact-intent-footage-hint',
+    lede: 'contact-intent-footage-lede',
+    bodyLabel: 'contact-intent-footage-body-label',
+    template: 'contact-intent-footage-template',
   },
   {
     id: 'correction',
-    label: '这里写错了',
-    hint: '日期、标题、时长、链接、游戏标签',
-    lede: '说清三件事就够：是哪条记录（贴页面地址最快）、哪里不对、正确的应该是什么。',
-    bodyLabel: '发现了什么问题',
-    template: '【纠错】\n· 哪条记录（贴页面地址最快）：\n· 哪里不对：\n· 正确的应该是：\n',
+    label: 'contact-intent-correction-label',
+    hint: 'contact-intent-correction-hint',
+    lede: 'contact-intent-correction-lede',
+    bodyLabel: 'contact-intent-correction-body-label',
+    template: 'contact-intent-correction-template',
   },
   {
     id: 'photo',
     photos: true,
-    label: '我存着老图',
-    hint: '周年图、生日贺图、直播间截图、粉丝作品',
-    lede: '画廊一直在收。有图就一起传上来；哪怕只记得「那年有一张什么图」，也可以先说一声。',
-    bodyLabel: '这张图是什么',
-    template: '【画廊线索】\n· 大概是哪一年：\n· 是什么画面：\n· 在哪儿能找到原图：\n',
+    label: 'contact-intent-photo-label',
+    hint: 'contact-intent-photo-hint',
+    lede: 'contact-intent-photo-lede',
+    bodyLabel: 'contact-intent-photo-body-label',
+    template: 'contact-intent-photo-template',
   },
 ]
 
 export function CorrectionSubmission() {
   const [openId, setOpenId] = useState<string | null>(null)
+  const t = useSiteTexts()
   const active = INTENTS.find((intent) => intent.id === openId) ?? null
 
   return (
     <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 sm:col-span-2">
-      <span className="text-meta uppercase tracking-[0.16em] text-live">提交线索</span>
-      <h2 className="mt-3 text-h3 font-medium">这份档案是大家一起补出来的</h2>
+      <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="contact-submit-kicker" /></span>
+      <h2 className="mt-3 text-h3 font-medium"><SiteText id="contact-submit-title" /></h2>
       <p className="measure-body mt-2 text-body text-muted">
-        下面三件事，随便哪一件都欢迎。所有线索都进人工队列，由我逐条核对后再决定怎么改，不会自动生效。
+        <SiteText id="contact-submit-intro" />
       </p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -97,12 +102,12 @@ export function CorrectionSubmission() {
               }`}
             >
               <span className="flex items-baseline justify-between gap-2">
-                <span className="text-control font-medium text-ink">{intent.label}</span>
+                <span className="text-control font-medium text-ink">{t(intent.label)}</span>
                 <span aria-hidden className={`shrink-0 font-mono text-meta text-live transition-transform ${selected ? 'rotate-45' : ''}`}>
                   +
                 </span>
               </span>
-              <span className="mt-1.5 block text-meta leading-relaxed text-faint">{intent.hint}</span>
+              <span className="mt-1.5 block text-meta leading-relaxed text-faint">{t(intent.hint)}</span>
             </button>
           )
         })}
@@ -110,9 +115,9 @@ export function CorrectionSubmission() {
 
       {active && (
         <div id="correction-submission-panel" className="ui-panel-in mt-5 border-t border-line/70 pt-5">
-          <p className="measure-body text-body text-muted">{active.lede}</p>
+          <p className="measure-body text-body text-muted">{t(active.lede)}</p>
           <p className="measure-body mt-2 text-meta text-faint">
-            下面的空按提示填就行，不用讲究格式。拿不准也可以提，我会去核对。
+            <SiteText id="contact-form-note" />
           </p>
           {/*
             key 让来意一换就重挂载，textarea 才会换成新模板。
@@ -122,16 +127,16 @@ export function CorrectionSubmission() {
             key={active.id}
             kind="correction"
             allowPhotos={active.photos === true}
-            initialBody={active.template}
+            initialBody={t(active.template)}
             className="mt-5"
-            nameLabel="怎么称呼你"
-            namePlaceholder="留个 ID 就行，方便我知道是谁发现的"
-            bodyLabel={active.bodyLabel}
-            bodyPlaceholder={active.template}
-            successMessage="收到，谢谢。我会逐条看过再决定怎么改。"
-            disabledMessage="提交功能暂未开放。你仍然可以从下面的项目仓库找到我。"
-            submitLabel="提交"
-            againLabel="再提交一条"
+            nameLabel={t('contact-form-name-label')}
+            namePlaceholder={t('contact-form-name-placeholder')}
+            bodyLabel={t(active.bodyLabel)}
+            bodyPlaceholder={t(active.template)}
+            successMessage={t('contact-form-success')}
+            disabledMessage={t('contact-form-disabled')}
+            submitLabel={t('contact-form-submit')}
+            againLabel={t('contact-form-again')}
           />
         </div>
       )}

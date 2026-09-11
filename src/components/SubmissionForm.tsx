@@ -10,6 +10,7 @@ import {
 import { loadTurnstile, type TurnstileApi } from '@/lib/turnstile'
 import { MAX_PHOTOS, preparePhotos, submitWithPhotos, type PreparedPhoto } from '@/lib/photo-submit'
 import { PhotoDropzone } from './PhotoDropzone'
+import { SiteText } from './SiteText'
 
 /**
  * 访客提交表单，资料纠错和梗投稿共用同一个组件。
@@ -254,7 +255,7 @@ export function SubmissionForm({
 
       {allowPhotos && (
         <div className="mt-5">
-          <p className="text-meta text-faint">有图的话可以一起传</p>
+          <p className="text-meta text-faint"><SiteText id="form-photo-lead" /></p>
           <div className="mt-2">
             <PhotoDropzone
               photos={photos}
@@ -281,8 +282,10 @@ export function SubmissionForm({
             它同时也是事实——图片落在后台的收件箱里，审核通过之前在公网上没有地址。
           */}
           <p className="measure-body mt-3 text-meta leading-relaxed text-faint">
-            你传上来的图我会一张张看过再决定收不收，<strong className="font-medium text-muted">上传不等于会出现在画廊里</strong>。
-            图片会先压小一点再上传，省你的流量。
+            <SiteText
+              id="form-photo-notice"
+              vars={{ emphasis: <strong className="font-medium text-muted"><SiteText id="form-photo-notice-emphasis" /></strong> }}
+            />
           </p>
         </div>
       )}
@@ -297,7 +300,7 @@ export function SubmissionForm({
       )}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-meta text-faint">无需注册。提交的内容只作为人工核对的线索，不会自动生效。</p>
+        <p className="text-meta text-faint"><SiteText id="form-footnote" /></p>
         <button
           type="submit"
           disabled={!canSubmit}
@@ -354,12 +357,14 @@ function SubmissionReceipt({
       aria-live="polite"
       className={`ui-panel-in rounded-xl border border-live/45 bg-live/8 p-5 ${className ?? ''}`}
     >
-      <p className="text-h3 font-medium text-ink">收到了 ✓</p>
+      <p className="text-h3 font-medium text-ink"><SiteText id="form-success-title" /></p>
       <p className="measure-body mt-2 text-body text-muted">{message}</p>
       {photoCount > 0 && (
         <p className="measure-body mt-2 text-body text-muted">
-          图片也收到了，一共 <span className="font-mono text-control font-semibold text-ink tnum">{photoCount}</span> 张。
-          它们现在只存在后台的待审队列里，我看过之后才会决定要不要放进画廊。
+          <SiteText
+            id="form-photo-received"
+            vars={{ count: <span className="font-mono text-control font-semibold text-ink tnum">{photoCount}</span> }}
+          />
         </p>
       )}
       <button

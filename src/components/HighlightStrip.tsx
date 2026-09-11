@@ -8,9 +8,10 @@ import { applyLiveHighlights } from '@/lib/live-content'
 import { contentOpenProps } from '@/lib/analytics-target'
 import { Eyebrow } from './primitives'
 import { Reveal } from './Reveal'
-import { useCopyBlock, useLiveContent } from './LiveContentProvider'
+import { useCopyBlock, useLiveContent, useSiteTexts } from './LiveContentProvider'
 import { MemeMontage } from './MemeMontage'
 import { MemeSubmissionButton, MemeSubmissionPanel } from './MemeSubmissionEntry'
+import { SiteText } from './SiteText'
 
 /**
  * 把补充梗插回对应的叙事位置；如果以后某个锚点被撤掉，兜底追加，避免整条高光消失。
@@ -58,6 +59,7 @@ export function HighlightStrip({
   const beats = applyLiveHighlights(withExtraHighlights(baseline), narrative?.highlights, emphasisVars, narrative?.deletedIds ?? [])
   const [activeCategory, setActiveCategory] = useState<MemeCategory>(MEME_CATEGORIES[0].id)
   const [submissionOpen, setSubmissionOpen] = useState(false)
+  const t = useSiteTexts()
   const active = MEME_CATEGORIES.find((category) => category.id === activeCategory) ?? MEME_CATEGORIES[0]
   const activeBeats = beats.filter((beat) => beat.category === active.id)
   if (!MEME_CATEGORIES.some((category) => beats.some((beat) => beat.category === category.id))) return null
@@ -97,19 +99,19 @@ export function HighlightStrip({
 
           {active.id === 'xinling-pishuang' && (
             <MemeMontage
-              title="那些星期日，心灵砒霜准时开场"
-              description="从早期节目到后来留下的名场面，沿着档案里的真实录像往回看。"
+              title={t('home-highlights-pishuang-title')}
+              description={t('home-highlights-pishuang-desc')}
               href="/series/xinling-pishuang/"
-              linkLabel="查看心灵砒霜系列"
+              linkLabel={t('home-highlights-pishuang-link')}
               samples={memeMontages.xinlingPishuang}
             />
           )}
           {active.id === 'game-meme' && (
             <MemeMontage
-              title="《我的世界》里的大周记忆"
-              description="大周从这里长出来。看看这个系列里保存下来的直播与视频。"
+              title={t('home-highlights-minecraft-title')}
+              description={t('home-highlights-minecraft-desc')}
               href="/games/minecraft/"
-              linkLabel="进入我的世界系列"
+              linkLabel={t('home-highlights-minecraft-link')}
               samples={memeMontages.minecraft}
             />
           )}
@@ -133,9 +135,9 @@ export function HighlightStrip({
         <div className="mt-8 rounded-2xl border border-line bg-surface/35 p-5 sm:p-6">
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
             <div className="min-w-0">
-              <p className="text-control font-medium text-ink">你记得的梗，这里还没有？</p>
+              <p className="text-control font-medium text-ink"><SiteText id="home-highlights-invite-title" /></p>
               <p className="measure-body mt-1.5 text-meta leading-relaxed text-faint">
-                这一整面墙是靠大家一起想起来的。记得是哪场、几分几秒最好，只记得个大概也可以先说一声。
+                <SiteText id="home-highlights-invite-body" />
               </p>
             </div>
             <MemeSubmissionButton open={submissionOpen} onToggle={() => setSubmissionOpen((value) => !value)} />
@@ -276,7 +278,7 @@ function Row({ beat }: { beat: ResolvedBeat }) {
                   {...contentOpenProps(beat.href)}
                   className="ui-press mt-5 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-meta text-live transition-colors hover:border-muted"
                 >
-                  打开播放 <span aria-hidden>↗</span>
+                  <SiteText id="home-highlights-play" /> <span aria-hidden>↗</span>
                 </Link>
               )}
             </div>

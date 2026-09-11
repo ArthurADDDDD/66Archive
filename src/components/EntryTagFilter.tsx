@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
 import { gameColor } from '@/lib/ui'
+import { SiteText } from './SiteText'
 
 export type EntryTagSelection = { games: string[]; tags: string[] }
 export const EMPTY_TAG_SELECTION: EntryTagSelection = { games: [], tags: [] }
@@ -96,7 +97,7 @@ export function EntryTagFilter({
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <h3 className="text-meta uppercase tracking-[0.16em]" style={{ color }}>{title}</h3>
-          <span className="text-meta text-faint">点一下只看它，再点一下取消，可以多选</span>
+          <span className="text-meta text-faint"><SiteText id="archive-tags-hint" /></span>
         </div>
         {active && (
           <div className="flex items-center gap-3 text-meta tnum">

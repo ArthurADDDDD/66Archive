@@ -1,5 +1,6 @@
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
@@ -54,7 +55,7 @@ export default async function StatsPage() {
     'stats-q-popular',
     'stats-q-trail',
     'stats-q-gaps',
-  ])
+  ], { texts: ['stats-', 'trail-'] })
 
   const ds = getDataset()
   const timeline = toTimelineEntries(ds)
@@ -202,7 +203,7 @@ export default async function StatsPage() {
         <header className="ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5">
           <SiteNav active="stats" />
           <Link href="/archive/" prefetch={false} className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-            去录播室逐条查看 →
+            <SiteText id="stats-archive-link" />
           </Link>
         </header>
 
@@ -228,7 +229,7 @@ export default async function StatsPage() {
           labelIndexUrl={popularIndexUrl()}
           questionId="stats-q-popular" fallback="水友们最爱点开哪些记录？"
           accent="#7BD88F"
-          legend="站内点开一次算一次，从建站起一路累计到现在 · 同一个人反复点开会重复计入，所以这是「被点开的次数」，不是「多少人看过」"
+          legend={<SiteText id="stats-popular-legend" />}
         />
 
         {/* 01 你的足迹——纯本地，不上报 */}
@@ -250,10 +251,11 @@ export default async function StatsPage() {
         <Section questionId="stats-q-busiest-year" fallback="哪一年留下的记录最多？" accent="#E0A244">
           <YearBarChart rows={yearRows} topYear={topYear} />
           <Observation>
-            最多的一年是 {topYear} 年，留下了 {topCount.toLocaleString()} 条记录。
+            <SiteText id="stats-busiest-summary" vars={{ year: topYear, count: topCount.toLocaleString() }} />
+            {' '}
             {emptyYears.length > 0
-              ? ` ${emptyYears.join('、')} 年目前没有保存下来的站内录像。`
-              : ' 档案覆盖到的每一年都至少留下了一条记录。'}
+              ? <SiteText id="stats-busiest-gaps" vars={{ years: emptyYears.join('、') }} />
+              : <SiteText id="stats-busiest-full" />}
           </Observation>
         </Section>
 
@@ -279,7 +281,7 @@ export default async function StatsPage() {
             ))}
           </div>
           <Observation>
-            陪伴最久的游戏是「{longest[0]?.name}」，已录 {longest[0]?.hoursLabel}。
+            <SiteText id="stats-longest-summary" vars={{ name: longest[0]?.name ?? '', hours: longest[0]?.hoursLabel ?? '' }} />
           </Observation>
         </Section>
 
@@ -350,7 +352,7 @@ export default async function StatsPage() {
           </div>
           <div className="mt-6 rounded-xl border border-line/80 bg-surface/40 p-[clamp(0.875rem,1.2vw,1.25rem)]">
             <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-              <p className="text-body font-medium text-ink">一年一根柱子，颜色就是当时的主场</p>
+              <p className="text-body font-medium text-ink"><SiteText id="stats-eras-chart-title" /></p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
                 {eras.map((era) => (
                   <span key={era.id} className="flex items-center gap-2 text-meta text-faint">
@@ -370,10 +372,10 @@ export default async function StatsPage() {
               那几场不在斗鱼也不在抖音——档案里真实存在，只是落在了 B 站。
               这三个数都从数据里算，改不动也不会和内容对不上。
             */}
-            视频时期靠录像，斗鱼时期靠直播。斗鱼最后一场停在 {douyuLastDate}，抖音第一场是 {firstDouyinDate}；
+            <SiteText id="stats-eras-summary" vars={{ douyuLast: douyuLastDate, douyinFirst: firstDouyinDate }} />
             {interimCount > 0
-              ? `中间隔了大半年，但那段时间并不是空的——档案里还留着 ${interimCount} 场 B 站的夜话和话疗。`
-              : '中间隔了大半年。'}
+              ? <SiteText id="stats-eras-interim" vars={{ count: interimCount }} />
+              : <SiteText id="stats-eras-interim-none" />}
           </Observation>
         </Section>
 
@@ -418,15 +420,20 @@ export default async function StatsPage() {
         <Section
           questionId="stats-q-gaps" fallback="档案还有多少空白？"
           accent="#5BC8E8"
-          legend="一格一个月 · 亮起来＝档案里有记录，空格＝还没有找到任何录像。空格不代表那个月没播。"
+          legend={<SiteText id="stats-gaps-legend" />}
         >
           <CoverageGaps coverage={coverage} />
           <Observation>
-            手上有对应时间的录播、切片或者原视频链接，可以从
-            <Link prefetch={false} href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
-              联系页
-            </Link>
-            告诉我，这张图就会少一块空白。
+            <SiteText
+              id="stats-gaps-ask"
+              vars={{
+                link: (
+                  <Link prefetch={false} href="/contact/" className="text-live underline decoration-line underline-offset-4 hover:decoration-live">
+                    <SiteText id="stats-gaps-ask-link" />
+                  </Link>
+                ),
+              }}
+            />
           </Observation>
         </Section>
 
@@ -439,7 +446,7 @@ export default async function StatsPage() {
 function Observation({ children }: { children: React.ReactNode }) {
   return (
     <p className="measure-body mt-6 border-l-2 border-line pl-4 text-body text-muted">
-      <span className="text-meta uppercase tracking-[0.16em] text-faint">观察 · </span>
+      <span className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="stats-observation-label" />{' '}</span>
       {children}
     </p>
   )

@@ -8,6 +8,7 @@ import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/
 import { formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
+import { SiteText } from './SiteText'
 
 /**
  * 展开后那一整块「来源 / 分 P / 标签 / 校准」的内容，连同它的来源切换状态。
@@ -131,7 +132,7 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
   if (!source.partDetails?.length) {
     return source.parts && source.parts > 1 ? (
       <p className="mt-3 rounded-lg border border-line bg-base/30 px-3 py-2 text-meta leading-relaxed text-faint">
-        当前来源共 {source.parts}P，具体标题和跳转页尚未核实。
+        <SiteText id="entry-detail-parts-unverified" vars={{ parts: source.parts }} />
       </p>
     ) : null
   }
@@ -140,8 +141,8 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
     <section className="ui-content-swap mt-3 rounded-xl border border-line bg-base/30 p-2.5" aria-label="当前来源的分 P">
       <div className="flex flex-wrap items-end justify-between gap-2 px-1 pb-2">
         <div>
-          <p className="text-meta uppercase tracking-[0.16em] text-live">当前来源的分 P</p>
-          <p className="mt-1 text-meta leading-relaxed text-faint">随上方来源切换；点击任意一段直接打开对应页面。</p>
+          <p className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="entry-detail-parts-title" /></p>
+          <p className="mt-1 text-meta leading-relaxed text-faint"><SiteText id="entry-detail-parts-hint" /></p>
         </div>
         <span className="font-mono text-meta text-faint tnum">{source.partDetails.length}P</span>
       </div>
@@ -244,7 +245,7 @@ function EntryCover({
 /** 分段条：这场的时间里，什么时候在打什么 */
 export function SegmentBar({ entry }: { entry: TimelineEntry }) {
   if (!entry.bands.length) {
-    return <p className="text-meta text-faint">尚未录入分段信息</p>
+    return <p className="text-meta text-faint"><SiteText id="entry-detail-segments-empty" /></p>
   }
   const isContentTimeline = entry.bands.some((band) => band.game)
   const fallbackColors = ['#5BC8E8', '#E5568A', '#E0A244', '#9B8AFB', '#72C7A5']

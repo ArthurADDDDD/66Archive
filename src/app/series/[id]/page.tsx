@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
+import { SiteText } from '@/components/SiteText'
 import { encodeArchiveEntry } from '@/lib/archive-payload'
 import { notFound } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
@@ -57,7 +58,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const def = ds.series.get(id)
   if (!def) notFound()
 
-  const bakedCopy = await fetchBakedPageCopy(SERIES_DETAIL_COPY_IDS)
+  const bakedCopy = await fetchBakedPageCopy(SERIES_DETAIL_COPY_IDS, { texts: ['series-'] })
   const timeline = toTimelineEntries(ds)
   const s = buildSeries(ds, timeline, id, def.name, def.description ?? '')
   const isPishuang = id === 'xinling-pishuang'
@@ -102,7 +103,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
         <header className={`ui-slide-down relative z-20 site-header-container flex items-center justify-between px-page py-5 ${dark ? 'sticky top-0 border-b border-line/60 bg-[#0C0E15]/95 backdrop-blur' : ''}`}>
           <SiteNav active="series" />
           <Link prefetch={false} href="/series/" className="ui-press hidden whitespace-nowrap rounded-sm text-meta text-live lg:block">
-            ← 全部节目
+            <SiteText id="series-detail-back" />
           </Link>
         </header>
 
@@ -115,7 +116,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             <span>
               {s.firstDate.slice(0, 4)}.{s.firstDate.slice(5, 7)} — {s.lastDate.slice(0, 4)}.{s.lastDate.slice(5, 7)}
             </span>
-            {!isTogetherSee && longest?.duration_min && <span>最长一{unit} {formatDuration(longest.duration_min)}</span>}
+            {!isTogetherSee && longest?.duration_min && <span><SiteText id="series-detail-longest" vars={{ unit, duration: formatDuration(longest.duration_min) }} /></span>}
           </div>
           <p className="measure-body mt-6 text-body text-muted"><KeepDates text={s.description} /></p>
         </section>
@@ -125,7 +126,9 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
           <section className="site-container px-page pb-10 sm:pb-14">
             <blockquote className="measure-body border-l-2 pl-5" style={{ borderColor: color }}>
               <p className="text-h3 font-medium leading-relaxed text-ink">
-                {isTogetherSee ? '目前最早确认的一场' : `第一${unit}`}：「{s.firstTitle}」
+                {isTogetherSee
+                  ? <SiteText id="series-detail-first-together" vars={{ title: s.firstTitle }} />
+                  : <SiteText id="series-detail-first" vars={{ unit, title: s.firstTitle }} />}
               </p>
               <p className="mt-3 text-meta text-muted tnum">{s.firstDate}</p>
             </blockquote>
@@ -148,7 +151,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
             <div className="border-b border-line/60 pb-3">
               <SeriesSectionEyebrow pageId="series-detail-episodes" />
               <h2 className="mt-2 text-h3 font-semibold text-ink">
-                {s.name} · 档案里的 {s.count} {unit}
+                <SiteText id="series-detail-archive-count" vars={{ name: s.name, count: s.count, unit }} />
               </h2>
             </div>
             <div className="mt-3">

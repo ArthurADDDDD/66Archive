@@ -176,8 +176,22 @@ export async function fetchBakedNavShell(): Promise<LiveContent> {
       rooms: [],
       pages: [],
       maintainers: [],
+      texts: pickTexts(copy, []),
     },
   }
+}
+
+/**
+ * 页面文字按 id 前缀分到各页。`site-` 开头的是每一页都会渲染的（页脚、404……），
+ * 所以任何一份烤入都带上它；其余前缀由用到它的页面自己点名。
+ *
+ * 裁掉的条目在 `useSiteText` 里退回公开仓基线，而它们在这一页本来就没有渲染位置。
+ */
+const GLOBAL_TEXT_PREFIXES = ['site-'] as const
+
+export function pickTexts(copy: LiveSiteCopy, prefixes: readonly string[]): LiveSiteCopy['texts'] {
+  const wanted = [...GLOBAL_TEXT_PREFIXES, ...prefixes]
+  return copy.texts.filter((item) => wanted.some((prefix) => item.id.startsWith(prefix)))
 }
 
 /**
@@ -198,7 +212,7 @@ export async function fetchBakedNavShell(): Promise<LiveContent> {
  */
 export async function fetchBakedPageCopy(
   pageIds: readonly string[],
-  options: { maintainers?: boolean } = {},
+  options: { maintainers?: boolean; texts?: readonly string[] } = {},
 ): Promise<LiveSiteCopy | null> {
   const { copy } = await fetchBakedContent()
   if (!copy) return null
@@ -209,6 +223,7 @@ export async function fetchBakedPageCopy(
     rooms: [],
     pages: copy.pages.filter((block) => pageIds.includes(block.id)),
     maintainers: options.maintainers ? copy.maintainers : [],
+    texts: pickTexts(copy, options.texts ?? []),
   }
 }
 
