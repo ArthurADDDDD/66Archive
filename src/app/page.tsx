@@ -8,9 +8,8 @@ import { HomeHero } from '@/components/HomeHero'
 import { ResumeStrip } from '@/components/Trail'
 import { HomeActRail, type HomeActRailItem, type HomeSectionRailItem } from '@/components/HomeActRail'
 import { TimelineProgress } from '@/components/TimelineProgress'
-import { HomeActSections } from '@/components/HomeActSections'
 import { HomeActStage } from '@/components/HomeActStage'
-import { HomeExplorePromo, type ExplorePromoData } from '@/components/HomeExplorePromo'
+import type { ExplorePromoData } from '@/components/HomeExplorePromo'
 import { HighlightStrip } from '@/components/HighlightStrip'
 import { LiveNarrativeSeed } from '@/components/LiveNarrativeSeed'
 import { fetchBakedContent, fetchBakedHomeNarrative } from '@/lib/baked-content'
@@ -134,6 +133,7 @@ export default async function HomePage() {
     years: act.years,
     color: act.color,
     beats: beats.map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
+    closer: act.closer?.line,
   }))
   // 三幕讲完之后的去处：编年史（按条读）与画廊（按年看）。
   // 预览用的是真数据——缩略图取自纪念版的等距抽样，不挑“好看的那几张”。
@@ -194,14 +194,9 @@ export default async function HomePage() {
           <HomeHero nowYear={data.now.year} historyYears={data.totals.years} />
         </div>
 
-        {/* PC 三幕共用一个满屏 sticky 舞台；手机保留自然文档流，避免触屏滚动被锁定。 */}
+        {/* 三幕在桌面与手机共用一张满屏翻页卡，页面纵向滚动始终保持原生。 */}
         <div id="home-acts" className="scroll-mt-0">
           <HomeActStage acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} promo={explorePromo} />
-          <HomeActSections acts={[actI, actII, actIII]} now={{ year: data.now.year, label: data.now.label, count: data.now.count }} />
-          {/* 桌面端这块由舞台的最后一步承担；手机端没有舞台，就在三幕之后自然接上。 */}
-          <section aria-label="接着往下看" className="border-t border-line xl:hidden">
-            <HomeExplorePromo data={explorePromo} />
-          </section>
         </div>
 
         {/* 高光：一些记得住的时刻（用户后续会给新的事件列表替换） */}

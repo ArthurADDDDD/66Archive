@@ -1,6 +1,12 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import {
+  HOME_ACT_CHANGE_EVENT,
+  HOME_ACT_SELECT_EVENT,
+  type HomeActChangeDetail,
+  type HomeActSelectDetail,
+} from '@/lib/home-act-pagination'
 import { useLiveContent, useSiteCopy } from './LiveContentProvider'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
@@ -10,6 +16,7 @@ export type HomeActRailItem = {
   years: string
   color: string
   beats: Array<{ id: string; date: string; title: string }>
+  closer?: string
 }
 
 export type HomeSectionRailItem = {
@@ -69,6 +76,7 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
           years: live.years || act.years,
           color: live.color || act.color,
           beats: visibleBeats,
+          closer: live.closer.line || act.closer,
         }
       })
     const customActs = (narrative?.homeActs ?? [])
@@ -84,16 +92,17 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
         label: live.kicker || live.label || live.title,
         years: live.years,
         color: live.color || '#5A5F73',
+        closer: live.closer.line || undefined,
         beats: live.beats
           .filter((beat) => !deleted.has(beat.id) && beat.visible !== false)
           .map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
       }))
     return [...baselineActsFiltered, ...customActs]
   }, [baselineActs, narrative])
-  const sections = baselineSections.map((section) => {
+  const sections = useMemo(() => baselineSections.map((section) => {
     const block = copy.homeSections.find((candidate) => candidate.id === section.id)
     return block?.title ? { ...section, label: block.title } : section
-  })
+  }), [baselineSections, copy.homeSections])
   const marks = useMemo<RailMark[]>(() => [
     ...(sections[0] ? [{
       id: sections[0].id,
@@ -120,7 +129,23 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
         color: act.color,
         kind: 'event' as const,
       })),
+      ...(act.closer ? [{
+        id: `home-${act.id}-closer`,
+        groupId: act.id,
+        date: '幕尾',
+        title: act.closer,
+        color: act.color,
+        kind: 'event' as const,
+      }] : []),
     ]),
+    {
+      id: 'home-acts-outro',
+      groupId: 'home-acts-outro',
+      date: 'NEXT',
+      title: '接着往下看',
+      color: '#E5568A',
+      kind: 'act' as const,
+    },
     ...sections.slice(1).map((section) => ({
       id: section.id,
       groupId: section.id,
@@ -143,12 +168,41 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
     })),
     [marks],
   )
+  const actPageIds = useMemo(
+    () => new Set([
+      ...acts.flatMap((act) => [
+        act.id,
+        ...act.beats.map((beat) => `home-${act.id}-${beat.id}`),
+        ...(act.closer ? [`home-${act.id}-closer`] : []),
+      ]),
+      'home-acts-outro',
+    ]),
+    [acts],
+  )
+  const [activeActPageId, setActiveActPageId] = useState<string | null>(null)
+
+  useEffect(() => {
+    const onChange = (event: Event) => {
+      const detail = (event as CustomEvent<HomeActChangeDetail>).detail
+      setActiveActPageId(detail.active ? detail.id : null)
+    }
+    window.addEventListener(HOME_ACT_CHANGE_EVENT, onChange)
+    return () => window.removeEventListener(HOME_ACT_CHANGE_EVENT, onChange)
+  }, [])
+
+  const selectMark = useCallback((mark: TimelineRailMark) => {
+    if (!actPageIds.has(mark.id)) return false
+    window.dispatchEvent(new CustomEvent<HomeActSelectDetail>(HOME_ACT_SELECT_EVENT, { detail: { id: mark.id } }))
+    return true
+  }, [actPageIds])
 
   return (
     <TimelineRail
       marks={railMarks}
       ariaLabel="首页章节时间轴"
       positionLabel="首页阅读位置"
+      activeMarkId={activeActPageId}
+      onSelectMark={selectMark}
       height="clamp(26rem,72vh,54rem)"
       magnify={{ radius: 0.115, scale: 2.25 }}
     />

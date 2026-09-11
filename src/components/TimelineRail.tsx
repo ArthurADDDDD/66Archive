@@ -59,6 +59,8 @@ export function TimelineRail({
   marks,
   ariaLabel,
   positionLabel,
+  activeMarkId,
+  onSelectMark,
   onMissingTarget,
   targetVersion,
   /** 轨道出现的最小宽度。首页和编年史要整屏版面才放得下，画廊平板就能用。 */
@@ -72,6 +74,10 @@ export function TimelineRail({
   marks: TimelineRailMark[]
   ariaLabel: string
   positionLabel: string
+  /** 卡片、播放器等非滚动式内容可临时接管游标位置；null 时仍按正文滚动跟随。 */
+  activeMarkId?: string | null
+  /** 返回 true 表示调用方已完成跳转，不再对同名 DOM 目标执行 scrollIntoView。 */
+  onSelectMark?: (mark: TimelineRailMark) => boolean
   /** 分批渲染页面可在目标尚未进 DOM 时先把对应批次补出来。 */
   onMissingTarget?: (id: string) => void
   /** 目标 DOM 集合变化时重建观察器；刻度本身不必跟着重算。 */
@@ -164,7 +170,10 @@ export function TimelineRail({
     }
   }, [])
 
-  const activeIndex = Math.max(0, marks.findIndex((mark) => mark.id === activeId))
+  const resolvedActiveId = activeMarkId && marks.some((mark) => mark.id === activeMarkId)
+    ? activeMarkId
+    : activeId
+  const activeIndex = Math.max(0, marks.findIndex((mark) => mark.id === resolvedActiveId))
   const previewPct = dragPct ?? hoverPct
   const previewIndex = previewPct == null
     ? activeIndex
@@ -203,7 +212,6 @@ export function TimelineRail({
 
   const jumpToIndex = useCallback((index: number) => {
     const mark = marks[Math.max(0, Math.min(marks.length - 1, index))]
-    const target = mark ? document.getElementById(mark.id) : null
     if (!mark) return
     // 先同步轨道本身：目标若尚未渲染，补批次和滚动之间也要保持正确的
     // 游标/aria-valuenow，下一次键盘 ArrowUp/Down 才会从刚选中的月份继续。
@@ -211,6 +219,8 @@ export function TimelineRail({
     activeIdRef.current = mark.id
     setActiveId(mark.id)
     window.history.replaceState(null, '', `#${mark.id}`)
+    if (onSelectMark?.(mark)) return
+    const target = document.getElementById(mark.id)
     if (!target) {
       onMissingTarget?.(mark.id)
       flashLandedTarget(mark.id, mark.color)
@@ -221,7 +231,7 @@ export function TimelineRail({
       block: 'start',
     })
     flashLandedTarget(mark.id, mark.color)
-  }, [marks, onMissingTarget])
+  }, [marks, onMissingTarget, onSelectMark])
 
   useEffect(() => {
     const onPointerUp = (event: PointerEvent) => {

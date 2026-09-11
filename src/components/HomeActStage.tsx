@@ -2,9 +2,16 @@
 
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react'
 import type { ResolvedAct, ResolvedBeat } from '@/lib/narrative'
 import { applyLiveActs } from '@/lib/live-content'
 import { contentOpenProps } from '@/lib/analytics-target'
+import {
+  HOME_ACT_CHANGE_EVENT,
+  HOME_ACT_SELECT_EVENT,
+  type HomeActChangeDetail,
+  type HomeActSelectDetail,
+} from '@/lib/home-act-pagination'
 import { useLiveContent } from './LiveContentProvider'
 import { HomeExplorePromo, type ExplorePromoData } from './HomeExplorePromo'
 
@@ -12,34 +19,24 @@ type StageStep = {
   id: string
   actIndex: number
   beatIndex: number | null
-  /** 幕尾收束：和事件卡一样占据桌面舞台的一步。 */
+  /** 幕尾收束：和事件卡一样占据书中的一页。 */
   closer?: boolean
-  /** 全篇最后一步：不属于任何一幕，负责把编年史 / 画廊两条路交出去。 */
+  /** 全篇最后一页：不属于任何一幕，负责把编年史 / 画廊两条路交出去。 */
   outro?: boolean
 }
 
-const STEP_DISTANCE_SVH = 32
-/** 自己驱动的翻页动画时长；结束时间可预测，不像 scroll-behavior:smooth 那样不可知。 */
-const STEP_SCROLL_MS = 420
-/** 动画落位后的短冷却，避免最后一帧的滚动事件立刻触发下一页。 */
-const STEP_COOLDOWN_MS = 90
-/** 两次滚轮事件间隔超过它就算新手势：新手势第一笔输入立刻翻一页。 */
-const WHEEL_GESTURE_GAP_MS = 140
-/** 同一手势里想再翻一页，需要继续滚出的额外距离（滤掉触控板惯性尾巴）。 */
-const WHEEL_REPEAT_DELTA = 90
-/** 判定舞台是否满屏时的容差，避免亚像素误差让接管时断时续。 */
-const STAGE_EDGE_TOLERANCE = 4
-
-/** 把不同 deltaMode 的滚轮事件折算成像素。 */
-function wheelPixels(event: WheelEvent) {
-  if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) return Math.abs(event.deltaY) * 16
-  if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE) return Math.abs(event.deltaY) * window.innerHeight
-  return Math.abs(event.deltaY)
+type SwipeStart = {
+  x: number
+  y: number
+  id: number
+  axis: 'x' | 'y' | null
 }
 
+const TURN_OUT_MS = 170
+
 /**
- * PC 首页三幕共用一个 100svh 的 sticky 舞台。
- * 舞台内把一次明确的滚轮 / 触控板手势映射为一页；到达首尾后恢复原生滚动离开舞台。
+ * 首页三幕共用一张 100svh 的翻页卡。
+ * 页面滚轮始终保持浏览器原生行为；卡内页码由横向拖拽、键盘、页条或桌面时间轴切换。
  */
 export function HomeActStage({
   acts: baselineActs,
@@ -48,12 +45,13 @@ export function HomeActStage({
 }: {
   acts: ResolvedAct[]
   now: { year: string; label: string; count: number }
-  /** 故事讲完后的去处；给了才会多出最后一步。 */
   promo?: ExplorePromoData
 }) {
   const { narrative } = useLiveContent()
-  const acts = applyLiveActs(baselineActs, narrative?.homeActs, true, narrative?.deletedIds ?? [])
-  const rootRef = useRef<HTMLElement>(null)
+  const acts = useMemo(
+    () => applyLiveActs(baselineActs, narrative?.homeActs, true, narrative?.deletedIds ?? []),
+    [baselineActs, narrative],
+  )
   const steps = useMemo<StageStep[]>(
     () => [
       ...acts.flatMap((act, actIndex) => [
@@ -69,340 +67,356 @@ export function HomeActStage({
     ],
     [acts, promo],
   )
-  const [activeIndex, setActiveIndex] = useState(0)
+  const rootRef = useRef<HTMLElement>(null)
   const activeIndexRef = useRef(0)
-  const stickyRef = useRef<HTMLDivElement>(null)
-  // 翻页动画自己跑 rAF：知道什么时候开始、什么时候结束，
-  // 动画期间滚动位置由我们写入，不再反过来推导状态（否则中间步会被一路重挂载而闪屏）。
-  const animRef = useRef<{ raf: number } | null>(null)
-  // 冷却截止时间。只在发起翻页时写一次，不会被后续滚轮事件不断延长
-  // ——旧实现每来一个惯性事件就把锁往后推 240ms，连续滚鼠标滚轮时锁永远不过期，
-  //   于是「狂滚也不翻页，停手才翻一页」。
-  const gateUntilRef = useRef(0)
-  const wheelRef = useRef({ accum: 0, peak: 0, direction: 0, lastAt: 0, stepped: false })
+  const visibleRef = useRef(false)
+  const swipeStartRef = useRef<SwipeStart | null>(null)
+  const turnTimerRef = useRef(0)
+  const justDraggedRef = useRef(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [direction, setDirection] = useState<1 | -1>(1)
+  const [dragX, setDragX] = useState(0)
+  const [dragging, setDragging] = useState(false)
 
-  const setActive = useCallback((index: number) => {
-    if (activeIndexRef.current === index) return
-    activeIndexRef.current = index
-    setActiveIndex(index)
+  const publishChange = useCallback((id: string, active = visibleRef.current) => {
+    window.dispatchEvent(new CustomEvent<HomeActChangeDetail>(HOME_ACT_CHANGE_EVENT, {
+      detail: { id, active },
+    }))
   }, [])
 
-  /** 舞台的滚动几何：sticky 可推进的总距离 / 每一步的距离。 */
-  const readMetrics = useCallback(() => {
-    const root = rootRef.current
-    const sticky = stickyRef.current
-    if (!root || !sticky) return null
-    const travel = root.offsetHeight - sticky.offsetHeight
-    const span = steps.length > 1 ? travel / (steps.length - 1) : 0
-    return { top: root.getBoundingClientRect().top + window.scrollY, span }
-  }, [steps.length])
+  const goTo = useCallback((index: number, updateHash = true) => {
+    if (turnTimerRef.current) window.clearTimeout(turnTimerRef.current)
+    turnTimerRef.current = 0
+    setDragging(false)
+    setDragX(0)
+    const bounded = Math.max(0, Math.min(steps.length - 1, index))
+    const previous = activeIndexRef.current
+    const next = steps[bounded]
+    if (!next) return
+    if (bounded !== previous) {
+      setDirection(bounded > previous ? 1 : -1)
+      activeIndexRef.current = bounded
+      setActiveIndex(bounded)
+    }
+    if (updateHash && window.location.hash !== `#${next.id}`) {
+      window.history.replaceState(null, '', `#${next.id}`)
+    }
+    publishChange(next.id)
+  }, [publishChange, steps])
 
-  // 位置直接由滚动距离算出：每一步固定 STEP_DISTANCE_SVH，
-  // 一次滚动跨过多少距离就前进多少步，不会漏也不会一次跳两层。
-  // （旧实现用 IntersectionObserver 观察 6vh 宽的判定带，标记点常常整帧掠过
-  //   判定带不被上报，于是卡一层、再跳两层。）
+  useEffect(() => () => {
+    if (turnTimerRef.current) window.clearTimeout(turnTimerRef.current)
+  }, [])
+
+  // 深链与右侧时间轴都能直接指定某一页；时间轴还会把整张卡带回视口。
+  useEffect(() => {
+    const syncHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1))
+      if (id === 'home-acts' || id === 'home-act-stage') {
+        goTo(0, false)
+        return
+      }
+      const index = steps.findIndex((item) => item.id === id)
+      if (index >= 0) goTo(index, false)
+    }
+    syncHash()
+
+    const onSelect = (event: Event) => {
+      const id = (event as CustomEvent<HomeActSelectDetail>).detail?.id
+      const index = steps.findIndex((item) => item.id === id)
+      if (index < 0) return
+      goTo(index)
+      rootRef.current?.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start',
+      })
+    }
+    window.addEventListener('hashchange', syncHash)
+    window.addEventListener(HOME_ACT_SELECT_EVENT, onSelect)
+    return () => {
+      window.removeEventListener('hashchange', syncHash)
+      window.removeEventListener(HOME_ACT_SELECT_EVENT, onSelect)
+    }
+  }, [goTo, steps])
+
+  // 卡片占据阅读焦点时，右侧时间轴的游标由当前页控制；离开后交还给正文滚动。
   useEffect(() => {
     const root = rootRef.current
-    const sticky = stickyRef.current
-    if (!root || !sticky) return
+    if (!root) return
+    const observer = new IntersectionObserver(([entry]) => {
+      visibleRef.current = entry.isIntersecting
+      publishChange(steps[activeIndexRef.current]?.id ?? steps[0]?.id ?? '', entry.isIntersecting)
+    }, { rootMargin: '-42% 0px -42% 0px', threshold: 0 })
+    observer.observe(root)
+    return () => observer.disconnect()
+  }, [publishChange, steps])
 
-    let raf = 0
-    let span = 0
-    const measure = () => {
-      const travel = root.offsetHeight - sticky.offsetHeight
-      span = steps.length > 1 ? travel / (steps.length - 1) : 0
+  useEffect(() => {
+    activeIndexRef.current = Math.min(activeIndexRef.current, Math.max(0, steps.length - 1))
+    setActiveIndex(activeIndexRef.current)
+  }, [steps.length])
+
+  const onKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const target = event.target
+    if (target instanceof HTMLElement && (target.isContentEditable || target.matches('input, textarea, select'))) return
+    const delta = event.key === 'ArrowRight' || event.key === 'PageDown'
+      ? 1
+      : event.key === 'ArrowLeft' || event.key === 'PageUp'
+        ? -1
+        : 0
+    if (!delta) return
+    event.preventDefault()
+    goTo(activeIndexRef.current + delta)
+  }
+
+  // 鼠标和触屏都可以直接拖动书页；纵向触摸一旦被识别就完全交还页面滚动。
+  const onPointerDown = (event: ReactPointerEvent<HTMLElement>) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return
+    if (event.target instanceof Element && event.target.closest('[data-page-control]')) return
+    if (turnTimerRef.current) return
+    swipeStartRef.current = { x: event.clientX, y: event.clientY, id: event.pointerId, axis: null }
+  }
+  const onPointerMove = (event: ReactPointerEvent<HTMLElement>) => {
+    const start = swipeStartRef.current
+    if (!start || start.id !== event.pointerId) return
+    const dx = event.clientX - start.x
+    const dy = event.clientY - start.y
+    if (!start.axis && Math.max(Math.abs(dx), Math.abs(dy)) > 7) {
+      start.axis = Math.abs(dx) > Math.abs(dy) * 1.1 ? 'x' : 'y'
+      if (start.axis === 'x') {
+        event.currentTarget.setPointerCapture(event.pointerId)
+        setDragging(true)
+      }
     }
-    const sync = () => {
-      if (span <= 0) return
-      // 动画期间的滚动是我们自己写的，交给动画收尾时统一定位。
-      if (animRef.current) return
-      const offset = -root.getBoundingClientRect().top
-      const index = Math.round(offset / span)
-      setActive(Math.max(0, Math.min(steps.length - 1, index)))
+    if (start.axis !== 'x') return
+    event.preventDefault()
+    const atEdge = (dx > 0 && activeIndexRef.current === 0) ||
+      (dx < 0 && activeIndexRef.current === steps.length - 1)
+    // 拖动幅度按书页本身的宽度算，4K 屏上的大卡和手机上的小卡手感一致。
+    const maxDrag = event.currentTarget.clientWidth * 0.3
+    const offset = atEdge ? dx * 0.16 : dx
+    setDragX(Math.max(-maxDrag, Math.min(maxDrag, offset)))
+  }
+  const onPointerUp = (event: ReactPointerEvent<HTMLElement>) => {
+    const start = swipeStartRef.current
+    swipeStartRef.current = null
+    if (!start || start.id !== event.pointerId) return
+    const dx = event.clientX - start.x
+    const dy = event.clientY - start.y
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
     }
-    const onScroll = () => {
-      cancelAnimationFrame(raf)
-      raf = requestAnimationFrame(sync)
-    }
-    const onResize = () => {
-      measure()
-      onScroll()
-    }
-
-    measure()
-    sync()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onResize)
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onResize)
-      cancelAnimationFrame(raf)
-    }
-  }, [setActive, steps.length])
-
-  const step = steps[activeIndex] ?? steps[0]
-  const resolved = acts[step?.actIndex ?? 0]
-  const beat = step?.beatIndex == null ? null : resolved?.beats[step.beatIndex] ?? null
-  const closer = step?.closer ? resolved?.act.closer : undefined
-  const outro = Boolean(step?.outro)
-  const intro = !beat && !closer && !outro
-  const stepPosition = step?.closer ? resolved?.beats.length ?? 0 : step?.beatIndex ?? -1
-  const stepCount = resolved ? resolved.beats.length + (resolved.act.closer ? 1 : 0) : 0
-  const actProgress = resolved
-    ? Math.max(0, Math.min(1, (stepPosition + 1) / (stepCount + 1)))
-    : 0
-
-  const stopAnimation = useCallback(() => {
-    const anim = animRef.current
-    if (!anim) return
-    cancelAnimationFrame(anim.raf)
-    animRef.current = null
-  }, [])
-
-  useEffect(() => stopAnimation, [stopAnimation])
-
-  /**
-   * 跳到第 index 步：滚到该步对应的精确位置。
-   * 动画由自己的 rAF 驱动，落位时间确定，冷却窗口也就确定；
-   * 状态在发起时立刻更新，滚动结束后再按真实位置对一次账，两边不会各说各话。
-   */
-  const jumpTo = useCallback((index: number) => {
-    const metrics = readMetrics()
-    if (!metrics || metrics.span <= 0) return
-    const bounded = Math.max(0, Math.min(steps.length - 1, index))
-    const to = Math.round(metrics.top + bounded * metrics.span)
-    const from = window.scrollY
-    setActive(bounded)
-    stopAnimation()
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const distance = to - from
-    // 全站 html 上有 scroll-behavior:smooth，逐帧写位置必须显式 instant，
-    // 否则每一帧都会被浏览器再包一层平滑动画，自己的动画永远追不上目标。
-    const setScroll = (y: number) => window.scrollTo({ top: y, behavior: 'instant' as ScrollBehavior })
-
-    if (reduceMotion || Math.abs(distance) < 2) {
-      setScroll(to)
-      gateUntilRef.current = performance.now() + STEP_COOLDOWN_MS
+    setDragging(false)
+    const horizontal = start.axis === 'x' && Math.abs(dx) > Math.abs(dy) * 1.1
+    const threshold = Math.max(48, Math.min(92, event.currentTarget.clientWidth * 0.085))
+    const delta = dx < 0 ? 1 : -1
+    const nextIndex = activeIndexRef.current + delta
+    if (!horizontal || Math.abs(dx) < threshold || nextIndex < 0 || nextIndex >= steps.length) {
+      setDragX(0)
       return
     }
 
-    const start = performance.now()
-    gateUntilRef.current = start + STEP_SCROLL_MS + STEP_COOLDOWN_MS
-    const tick = (frameAt: number) => {
-      const progress = Math.min(1, (frameAt - start) / STEP_SCROLL_MS)
-      const eased = 1 - (1 - progress) ** 3
-      setScroll(Math.round(from + distance * eased))
-      if (progress < 1) {
-        animRef.current = { raf: requestAnimationFrame(tick) }
-        return
-      }
-      animRef.current = null
-      gateUntilRef.current = performance.now() + STEP_COOLDOWN_MS
-    }
-    animRef.current = { raf: requestAnimationFrame(tick) }
-  }, [readMetrics, setActive, stopAnimation, steps.length])
+    // 先让这一页沿手势方向滑出一小段，再挂入下一页的方向性入场动画。
+    justDraggedRef.current = true
+    const slideOut = event.currentTarget.clientWidth * 0.18
+    setDragX(delta > 0 ? -slideOut : slideOut)
+    turnTimerRef.current = window.setTimeout(() => {
+      goTo(nextIndex)
+      window.requestAnimationFrame(() => { justDraggedRef.current = false })
+    }, TURN_OUT_MS)
+  }
+  const cancelPointer = () => {
+    swipeStartRef.current = null
+    setDragging(false)
+    setDragX(0)
+  }
+  const onClickCapture = (event: React.MouseEvent<HTMLElement>) => {
+    if (!justDraggedRef.current) return
+    event.preventDefault()
+    event.stopPropagation()
+  }
 
-  /** 舞台完整占据视口时才接管翻页；离开舞台后恢复普通页面行为。 */
-  const isStageActive = useCallback(() => {
-    const root = rootRef.current
-    const sticky = stickyRef.current
-    if (!root || !sticky) return false
-    // xl 以下桌面舞台会被 CSS 隐藏，但组件和 window wheel 监听仍然挂载。
-    // display:none 的 root / sticky 尺寸都是 0；若继续走边界判断，0 会被
-    // 误认为完整覆盖视口，导致隐藏舞台吞掉移动版页面的全部滚轮输入。
-    if (root.offsetHeight <= 0 || sticky.offsetHeight <= 0) return false
-    const rect = root.getBoundingClientRect()
-    return rect.top <= STAGE_EDGE_TOLERANCE && rect.bottom >= sticky.offsetHeight - STAGE_EDGE_TOLERANCE
-  }, [])
-
-  /**
-   * 一个手势 = 一页。新手势的第一笔纵向输入立刻翻页；
-   * 翻页动画期间的输入一律吞掉（不延长冷却），动画一结束就能接受下一次滚动。
-   * 在捕获阶段监听，覆盖右侧轨道、底部按钮等固定浮层，不让手势漏掉。
-   */
-  useEffect(() => {
-    const onWheel = (event: WheelEvent) => {
-      const state = wheelRef.current
-      if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY) || event.deltaY === 0) return
-      if (!isStageActive()) {
-        state.accum = 0
-        state.peak = 0
-        state.stepped = false
-        state.lastAt = performance.now()
-        return
-      }
-
-      const now = performance.now()
-      const direction = event.deltaY > 0 ? 1 : -1
-      const magnitude = wheelPixels(event)
-      if (now - state.lastAt > WHEEL_GESTURE_GAP_MS || state.direction !== direction) {
-        state.accum = 0
-        state.peak = 0
-        state.stepped = false
-      }
-      state.lastAt = now
-      state.direction = direction
-      state.accum += magnitude
-      state.peak = Math.max(state.peak, magnitude)
-
-      // 已经在首/尾还继续往外滚：交还给原生滚动，正常离开舞台。
-      const current = activeIndexRef.current
-      if ((direction < 0 && current === 0) || (direction > 0 && current === steps.length - 1)) {
-        stopAnimation()
-        return
-      }
-
-      event.preventDefault()
-      if (now < gateUntilRef.current) return
-      // 同一手势内要再翻一页，必须是「还在用力滚」而不是触控板的惯性尾巴：
-      // 惯性的 delta 逐帧衰减，真滚轮的每一格幅度基本不变。
-      if (state.stepped && (state.accum < WHEEL_REPEAT_DELTA || magnitude < state.peak * 0.6)) return
-
-      state.accum = 0
-      state.stepped = true
-      jumpTo(current + direction)
-    }
-
-    /*
-     * 只在 xl 以上挂这个监听。
-     *
-     * 舞台自身是 `hidden ... xl:block`，xl 以下根本不存在，但监听器此前是无条件挂上的：
-     * 于是手机和平板上每一次滚轮 / 触控板滚动都要跑一趟主线程，并在 `isStageActive()`
-     * 里做三次强制布局读取（offsetHeight ×2 + getBoundingClientRect），只为得出
-     * 「舞台是隐藏的，什么都不做」。而且它是 `passive: false`，浏览器不能把滚动
-     * 直接交给合成器。
-     *
-     * 用 matchMedia 跟着断点开关，行为与从前完全一致——xl 以下 `isStageActive()`
-     * 本来就恒为 false（尺寸是 0），只是现在连事件都不用进来了。
-     * 监听 change 是因为窗口可以被拖过 1280，或者平板旋转。
-     */
-    const desktop = window.matchMedia('(min-width: 1280px)')
-    const attach = () => window.addEventListener('wheel', onWheel, { passive: false, capture: true })
-    const detach = () => window.removeEventListener('wheel', onWheel, { capture: true })
-    const sync = () => (desktop.matches ? attach() : detach())
-
-    sync()
-    desktop.addEventListener('change', sync)
-    return () => {
-      desktop.removeEventListener('change', sync)
-      detach()
-    }
-  }, [isStageActive, jumpTo, stopAnimation, steps.length])
-
-  /** 左右键不要求先聚焦舞台；只要桌面 ACT 正在视口中就能翻页。 */
-  useEffect(() => {
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (!isStageActive() || event.altKey || event.ctrlKey || event.metaKey) return
-      // 按住不放时按动画节奏连续翻；单次按键永远即时响应（可以连点快速翻多页）。
-      if (event.repeat && performance.now() < gateUntilRef.current) return
-      const target = event.target
-      if (target instanceof HTMLElement && (target.isContentEditable || target.matches('input, textarea, select'))) return
-      const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0
-      if (!direction) return
-      event.preventDefault()
-      jumpTo(activeIndexRef.current + direction)
-    }
-
-    window.addEventListener('keydown', onKeyDown)
-    return () => window.removeEventListener('keydown', onKeyDown)
-  }, [isStageActive, jumpTo])
-
-  if (!resolved) return null
+  const step = steps[activeIndex] ?? steps[0]
+  const resolved = acts[step?.actIndex ?? 0]
+  if (!resolved || !step) return null
+  const beat = step.beatIndex == null ? null : resolved.beats[step.beatIndex] ?? null
+  const closer = step.closer ? resolved.act.closer : undefined
+  const outro = Boolean(step.outro)
+  const intro = !beat && !closer && !outro
   const act = resolved.act
+  const stepPosition = step.closer ? resolved.beats.length : step.beatIndex ?? -1
+  const stepCount = resolved.beats.length + (resolved.act.closer ? 1 : 0)
+  const actProgress = Math.max(0, Math.min(1, (stepPosition + 1) / (stepCount + 1)))
+  const remaining = steps.length - activeIndex - 1
+  const pageStyle = { '--act-color': act.color, '--page-direction': direction } as CSSProperties
 
   return (
     <section
       ref={rootRef}
-      aria-label="三幕故事"
-      className="relative hidden border-t border-line xl:block"
-      style={{ height: `calc(100svh + ${(steps.length - 1) * STEP_DISTANCE_SVH}svh)` }}
+      id="home-act-stage"
+      aria-label="三幕故事，可翻页"
+      aria-roledescription="翻页故事"
+      onKeyDown={onKeyDown}
+      className="home-act-stage relative block h-auto scroll-mt-0 overflow-hidden bg-base sm:h-[100svh]"
+      style={pageStyle}
     >
-      <div ref={stickyRef} className="sticky top-0 h-[100svh] overflow-hidden bg-base">
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-70 transition-colors duration-700"
-          style={{ background: `radial-gradient(circle at 68% 48%, ${act.color}16, transparent 36%)` }}
-        />
-        {outro && promo ? (
-          <div className="home-content-container relative flex h-full flex-col justify-center px-page py-[clamp(4.5rem,8vh,7rem)] pr-[clamp(8rem,10vw,12rem)]">
-            <div key="home-acts-outro" className="home-act-stage-enter">
-              <HomeExplorePromo data={promo} variant="stage" />
-            </div>
-          </div>
-        ) : (
-        <div className="home-content-container relative grid h-full grid-cols-[minmax(18rem,0.78fr)_minmax(0,1.22fr)] items-center gap-[clamp(3rem,6vw,8rem)] px-page py-[clamp(4.5rem,8vh,7rem)] pr-[clamp(8rem,10vw,12rem)]">
-          <div key={`act-${act.id}`} className="home-act-stage-enter min-w-0">
-            <div className="flex items-center gap-4">
-              <span className="font-mono text-meta tracking-[0.2em]" style={{ color: act.color }}>{act.kicker}</span>
-              <span className="h-px flex-1 bg-line/70" />
-            </div>
-            <p className="mt-5 font-mono text-meta text-faint tnum">{act.years}</p>
-            <h2 className="mt-3 text-[clamp(2.75rem,4.6vw,6.5rem)] font-black leading-[0.95] tracking-[-0.04em] text-ink">
-              {act.title}
-            </h2>
-            {!intro && (
-              <div className="measure-body mt-6 space-y-2">
-                {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
-              </div>
-            )}
-            <div className="mt-9 flex items-center gap-4">
-              <span className="font-mono text-meta text-faint tnum">
-                {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
-              </span>
-              <span className="relative h-px flex-1 overflow-hidden bg-line/70">
-                <span className="absolute inset-y-0 left-0 origin-left bg-current transition-transform duration-500" style={{ color: act.color, transform: `scaleX(${actProgress})` }} />
-              </span>
-            </div>
-          </div>
-
-          <div className="relative min-h-0 min-w-0">
-            <div key={step?.id} className="home-act-stage-enter">
-              {beat ? (
-                <StageBeat beat={beat} color={act.color} />
-              ) : closer ? (
-                <StageCloser line={closer.line} />
-              ) : (
-                <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
-                  <div className="measure-hero space-y-3">
-                    {(act.body.length > 0 ? act.body : [act.title]).map((line) => (
-                      <p key={line} className="text-h2 font-semibold text-ink">{line}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-        )}
-
-        <div className="absolute bottom-[clamp(1.5rem,3vh,3rem)] left-1/2 flex -translate-x-1/2 items-center gap-3">
-          <button type="button" onClick={() => jumpTo(activeIndex - 1)} disabled={activeIndex === 0} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="上一个节点">←</button>
-          <span className="font-mono text-meta text-faint tnum">SCROLL · {activeIndex + 1}/{steps.length}</span>
-          <button type="button" onClick={() => jumpTo(activeIndex + 1)} disabled={activeIndex === steps.length - 1} className="ui-press rounded-full border border-line bg-surface/70 px-4 py-2 text-meta text-muted disabled:opacity-25" aria-label="下一个节点">→</button>
-        </div>
-
-        {/* 「还在继续 · N 条」跟着故事的最后一屏走：有 promo 时它就是那一屏，
-            没有 promo 时才回落到幕尾。中间的步骤不该提前把出口摆出来。 */}
-        {(promo
-          ? outro
-          : step?.actIndex === acts.length - 1 && (step.closer || (!resolved.act.closer && step.beatIndex === resolved.beats.length - 1))) && (
-          <Link href="/archive/" prefetch={false} className="ui-press absolute bottom-[clamp(1.5rem,3vh,3rem)] right-[clamp(8rem,10vw,12rem)] rounded-full border border-line bg-surface/70 px-5 py-2 text-meta text-ink">
-            {now.year}，{now.label} · {now.count.toLocaleString()} 条 →
-          </Link>
-        )}
+      {/* 所有时间轴目标落在同一张卡的开头；具体显示哪一页由上面的事件契约处理。 */}
+      <div aria-hidden className="pointer-events-none absolute left-0 top-0 h-px w-px overflow-hidden">
+        {steps.map((item) => <span key={item.id} id={item.id} className="block h-px w-px" />)}
       </div>
 
-      {/* 锚点只负责把原生滚动距离映射到舞台状态，不占视觉空间。 */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        {steps.map((item, index) => (
-          <span
-            key={item.id}
-            id={item.id}
-            className="absolute left-0 h-px w-px scroll-mt-0"
-            style={{ top: `${index * STEP_DISTANCE_SVH}svh` }}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-75 transition-colors duration-700"
+        style={{ background: `radial-gradient(circle at 72% 44%, ${act.color}1f, transparent 38%)` }}
+      />
+
+      <div className="home-content-container home-act-frame relative flex h-auto flex-col xl:justify-center px-3 pb-3 pt-16 sm:h-full sm:px-page sm:pb-5 sm:pt-6 xl:pb-[clamp(1.5rem,3vh,2.75rem)] xl:pt-[clamp(1.75rem,3.5vh,3.5rem)] xl:pr-[clamp(8rem,10vw,12rem)]">
+        <div
+          className={`home-act-deck relative h-[clamp(28rem,145vw,40rem)] flex-none select-none sm:h-auto sm:min-h-0 sm:flex-1 ${dragging ? 'is-dragging cursor-grabbing' : 'cursor-grab'}`}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={cancelPointer}
+          onClickCapture={onClickCapture}
+          onDragStart={(event) => event.preventDefault()}
+        >
+          {[3, 2, 1].map((depth) => (
+            <span
+              key={depth}
+              aria-hidden
+              className={`home-act-deck__sheet absolute inset-0 rounded-[clamp(1.15rem,1.8vw,2rem)] border bg-surface ${depth === 1 ? 'home-act-deck__sheet--next' : ''}`}
+              style={{
+                opacity: remaining >= depth ? 0.7 - depth * 0.12 : 0,
+                transform: `translate3d(calc(${depth * 0.7}rem + ${dragX * -0.025}px), ${depth * 0.42}rem, 0) rotate(${depth * 0.24}deg)`,
+              }}
+            />
+          ))}
+
+          {remaining > 0 && (
+            <button
+              type="button"
+              data-page-control
+              onClick={() => goTo(activeIndex + 1)}
+              className="home-act-stack-next absolute left-full z-[5] hidden sm:block"
+              aria-label={`点击右下方区域翻到第 ${activeIndex + 2} 页`}
+            />
+          )}
+
+          <div
+            key={step.id}
+            className="home-act-page-enter relative z-[4] grid h-full min-h-0 grid-cols-1 content-start gap-4 overflow-y-auto rounded-[clamp(1.15rem,1.8vw,2rem)] border border-line/90 bg-surface/95 px-[clamp(1rem,4vw,5rem)] py-4 shadow-[0_2.5rem_8rem_rgba(0,0,0,0.34)] sm:gap-5 sm:py-[clamp(1rem,3.5vh,3.5rem)] xl:grid-cols-[minmax(18rem,0.76fr)_minmax(0,1.24fr)] xl:content-normal xl:items-center xl:gap-[clamp(2.5rem,5vw,7rem)] xl:overflow-hidden"
+            style={{
+              transform: dragX ? `translate3d(${dragX * 0.22}px, 0, 0) rotateY(${dragX * -0.018}deg)` : undefined,
+              transformOrigin: dragX < 0 ? 'left center' : 'right center',
+              transition: dragging ? 'none' : dragX ? `transform ${TURN_OUT_MS}ms cubic-bezier(0.4, 0, 1, 1), opacity ${TURN_OUT_MS}ms ease` : undefined,
+              opacity: dragX && !dragging ? 0.72 : 1,
+            }}
+          >
+            {outro && promo ? (
+              <div className="col-span-1 max-h-none overflow-visible pr-1 xl:col-span-2 xl:max-h-full xl:overflow-y-auto">
+                <HomeExplorePromo data={promo} variant="stage" />
+              </div>
+            ) : (
+              <>
+                <div className="min-w-0 border-b border-line/60 pb-4 xl:border-b-0 xl:pb-0">
+                  <div className="flex items-center gap-4">
+                    <span className="font-mono text-meta tracking-[0.2em]" style={{ color: act.color }}>{act.kicker}</span>
+                    <span className="h-px flex-1 bg-line/70" />
+                  </div>
+                  <p className="mt-3 font-mono text-meta text-faint tnum xl:mt-5">{act.years}</p>
+                  <h2 className="mt-2 text-[clamp(1.75rem,8vw,5.75rem)] font-black leading-[0.98] tracking-[-0.04em] text-ink xl:mt-3 xl:text-[clamp(2.5rem,4.2vw,5.75rem)] xl:leading-[0.95]">
+                    {act.title}
+                  </h2>
+                  {!intro && (
+                    <div className="measure-body mt-3 space-y-2 xl:mt-6">
+                      {act.body.map((line) => <p key={line} className="text-body text-muted">{line}</p>)}
+                    </div>
+                  )}
+                  <div className="mt-4 flex items-center gap-4 xl:mt-9">
+                    <span className="font-mono text-meta text-faint tnum">
+                      {String(stepPosition + 2).padStart(2, '0')} / {String(stepCount + 1).padStart(2, '0')}
+                    </span>
+                    <span className="relative h-px flex-1 overflow-hidden bg-line/70">
+                      <span className="absolute inset-y-0 left-0 origin-left bg-current transition-transform duration-500" style={{ color: act.color, transform: `scaleX(${actProgress})` }} />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="min-h-0 min-w-0 max-h-none overflow-visible pr-1 xl:max-h-full xl:overflow-y-auto">
+                  {beat ? (
+                    <StageBeat beat={beat} color={act.color} />
+                  ) : closer ? (
+                    <StageCloser line={closer.line} />
+                  ) : (
+                    <div className="flex min-h-[min(34svh,18rem)] flex-col justify-center border-y border-line/70 py-6 xl:min-h-[52cqh] xl:py-10">
+                      <div className="measure-hero space-y-3">
+                        {(act.body.length > 0 ? act.body : [act.title]).map((line) => (
+                          <p key={line} className="text-h2 font-semibold text-ink">{line}</p>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+
+          <button
+            type="button"
+            data-page-control
+            disabled={activeIndex === 0}
+            onClick={() => goTo(activeIndex - 1)}
+            className="home-act-page-corner home-act-page-corner--prev absolute bottom-0 left-0 z-[8] disabled:pointer-events-none disabled:opacity-0"
+            aria-label="翻到上一页"
           />
-        ))}
+          <button
+            type="button"
+            data-page-control
+            disabled={activeIndex === steps.length - 1}
+            onClick={() => goTo(activeIndex + 1)}
+            className="home-act-page-corner home-act-page-corner--next absolute bottom-0 right-0 z-[8] disabled:pointer-events-none disabled:opacity-0"
+            aria-label="翻到下一页"
+          />
+        </div>
+
+        <div data-page-control className="relative z-10 mt-2 flex shrink-0 items-center gap-3 sm:mt-3">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-0.5 sm:gap-1" aria-label={`第 ${activeIndex + 1} 页，共 ${steps.length} 页`}>
+              {steps.map((item, index) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => goTo(index)}
+                  className="group flex h-[clamp(1.5rem,1.3cqw,2.25rem)] min-w-0 flex-1 items-center"
+                  aria-label={`第 ${index + 1} 页`}
+                  aria-current={index === activeIndex ? 'step' : undefined}
+                >
+                  <span
+                    className="block h-px w-full origin-left transition-[height,opacity,transform] duration-300 group-hover:h-0.5"
+                    style={{
+                      background: index <= activeIndex ? act.color : '#2C3140',
+                      opacity: index === activeIndex ? 1 : index < activeIndex ? 0.55 : 0.9,
+                      transform: index === activeIndex ? 'scaleY(2)' : undefined,
+                    }}
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+          <span className="shrink-0 font-mono text-meta text-faint tnum" aria-live="polite">
+            {String(activeIndex + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')}
+          </span>
+
+          {(promo
+            ? outro
+            : step.actIndex === acts.length - 1 && (step.closer || (!resolved.act.closer && step.beatIndex === resolved.beats.length - 1))) && (
+            <Link href="/archive/" prefetch={false} className="ui-press ml-1 shrink-0 rounded-full border border-line bg-surface/80 px-3 py-2 text-meta text-ink sm:px-5">
+              {now.year}，{now.label} · {now.count.toLocaleString()} 条 →
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   )
@@ -411,7 +425,7 @@ export function HomeActStage({
 /** 幕尾与幕首共用同一张纯文字页版式：一句收束，不额外加标签或尾标。 */
 function StageCloser({ line }: { line: string }) {
   return (
-    <div className="flex min-h-[48svh] flex-col justify-center border-y border-line/70 py-10">
+    <div className="flex min-h-[min(34svh,18rem)] flex-col justify-center border-y border-line/70 py-6 xl:min-h-[52cqh] xl:py-10">
       <h3 className="measure-hero text-h2 font-semibold text-ink">{line}</h3>
     </div>
   )
@@ -419,7 +433,7 @@ function StageCloser({ line }: { line: string }) {
 
 function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
   const body = (
-    <article className="grid min-h-[54svh] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[clamp(1rem,1.5vw,1.75rem)] border border-line/80 bg-surface/35 shadow-[0_2rem_7rem_rgba(0,0,0,0.22)]">
+    <article className="home-act-stage-beat grid min-h-[min(42svh,24rem)] grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[clamp(1rem,1.5vw,1.75rem)] border border-line/80 bg-base/35 shadow-[0_2rem_7rem_rgba(0,0,0,0.22)] xl:min-h-[56cqh]">
       <div className={`relative min-h-0 overflow-hidden ${beat.coverAspect === 'video' ? 'aspect-video shrink-0' : ''}`}>
         {beat.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -432,13 +446,13 @@ function StageBeat({ beat, color }: { beat: ResolvedBeat; color: string }) {
             ))}
           </div>
         ) : (
-          <div className="flex h-full min-h-[30svh] items-center justify-center" style={{ background: `linear-gradient(145deg, ${color}22, transparent 64%)` }}>
+          <div className="flex h-full min-h-[min(24svh,15rem)] items-center justify-center xl:min-h-[31cqh]" style={{ background: `linear-gradient(145deg, ${color}22, transparent 64%)` }}>
             <span className="font-display text-[clamp(4rem,9vw,11rem)] font-black leading-none opacity-20 tnum" style={{ color }}>{beat.emphasis ?? beat.date}</span>
           </div>
         )}
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base via-base/15 to-transparent" />
       </div>
-      <div className="relative p-[clamp(1.5rem,2.4vw,3rem)]">
+      <div className="home-act-stage-beat__copy relative p-[clamp(1.25rem,2vw,2.5rem)]">
         <div className="flex flex-wrap items-center gap-3 font-mono text-meta tnum">
           <span style={{ color }}>{beat.date}</span>
           {beat.kicker && <span className="rounded-full border border-current/30 px-2 py-0.5" style={{ color }}>{beat.kicker}</span>}

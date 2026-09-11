@@ -235,11 +235,13 @@ body {
   }
 }
 
-@keyframes home-act-stage-enter {
+/* 首页三幕的方向性换页：旧页跟着手势侧移，下一页从相反方向轻轻转入。
+   角度保持很小，既看得出“翻过去了”，也不会把正文短暂翻成镜像。 */
+@keyframes home-act-page-enter {
   from {
     opacity: 0;
-    transform: translateY(1.25rem);
-    filter: blur(6px);
+    transform: translate3d(calc(var(--page-direction, 1) * 4rem), 0.45rem, 0) rotateY(calc(var(--page-direction, 1) * -4deg)) scale(0.985);
+    filter: blur(3px);
   }
   to {
     opacity: 1;
@@ -518,8 +520,205 @@ body {
     animation: ui-panel-in 360ms var(--ease-out-expo) both;
   }
 
-  .home-act-stage-enter {
-    animation: home-act-stage-enter 520ms var(--ease-out-expo) both;
+  /* 外框按宽度做查询容器，书页再按自身尺寸做查询容器：
+     页内的最小高度、页角大小都跟着书页走（cqh / cqmin），而不是跟视口或写死的 px。 */
+  .home-act-frame {
+    container-type: inline-size;
+  }
+
+  .home-act-deck {
+    container-type: size;
+    isolation: isolate;
+    perspective: 1400px;
+    touch-action: pan-y;
+  }
+
+  /* 首页容器有 132rem 的宽度上限，4K 屏上书页宽度封顶、高度却跟着 100svh 继续长，
+     会变成竖长的空卡。桌面端给书页一个高宽比上限，多出来的高度由外框上下居中分掉。 */
+  @media (min-width: 1280px) {
+    .home-act-deck {
+      max-height: 72cqw;
+    }
+  }
+
+  .home-act-deck img,
+  .home-act-deck a {
+    -webkit-user-drag: none;
+  }
+
+  .home-act-deck__sheet {
+    border-color: color-mix(in srgb, var(--act-color, #5A5F73) 24%, #2C3140);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.18);
+    transition: opacity 360ms ease, border-color 520ms ease, transform 520ms var(--ease-out-expo);
+  }
+
+  /* 页叠右下方的整块留白都是“下一页”热区，而不只是一条纸边：
+     从卡片半高处起，向右铺到屏幕边、向下铺到本节底边，由舞台的 overflow-hidden 裁齐。
+     时间轴是 fixed + z-30 且只有轨道本身接收指针，所以它所在的那一段仍归时间轴；
+     页码条只在卡片正下方，与这块区域不重叠。 */
+  .home-act-stack-next {
+    top: 50%;
+    bottom: -100svh;
+    width: 100vw;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .home-act-stack-next:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .home-act-deck:has(.home-act-stack-next:hover) .home-act-deck__sheet--next,
+  .home-act-deck:has(.home-act-stack-next:focus-visible) .home-act-deck__sheet--next {
+    border-color: color-mix(in srgb, var(--act-color, #5A5F73) 62%, #E6E4EF);
+    box-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.24), 0 0 1.4rem color-mix(in srgb, var(--act-color, #5A5F73) 18%, transparent);
+  }
+
+  .home-act-deck:has(.home-act-stack-next:hover) .home-act-page-enter,
+  .home-act-deck:has(.home-act-stack-next:focus-visible) .home-act-page-enter {
+    transform: translate3d(-0.14rem, -0.08rem, 0) rotateY(-0.4deg);
+    transform-origin: left center;
+  }
+
+  .home-act-page-enter {
+    transform-origin: center bottom;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    animation: home-act-page-enter 480ms var(--ease-out-expo) both;
+  }
+
+  /* 电子书式页角：热区本身透明，hover / 键盘聚焦时才把折起的一角露出来。
+     手机没有 hover，保留一枚很淡的页角，提示这里除了滑动也可以直接点。 */
+  .home-act-page-corner {
+    --corner-hit: clamp(6rem, 13cqmin, 10rem);
+    --corner-size: calc(var(--corner-hit) * 0.6);
+    width: var(--corner-hit);
+    height: var(--corner-hit);
+    overflow: hidden;
+    border-radius: 0 0 clamp(1.15rem, 1.8vw, 2rem) 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .home-act-page-corner--prev {
+    border-radius: 0 0 0 clamp(1.15rem, 1.8vw, 2rem);
+  }
+
+  .home-act-page-corner::before,
+  .home-act-page-corner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: var(--corner-size);
+    width: var(--corner-size);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 360ms var(--ease-soft-spring), filter 240ms ease;
+  }
+
+  .home-act-page-corner::before {
+    background:
+      linear-gradient(315deg,
+        color-mix(in srgb, var(--act-color, #5A5F73) 24%, #212533) 0 47%,
+        color-mix(in srgb, var(--act-color, #5A5F73) 55%, #E6E4EF) 48% 49%,
+        transparent 50%);
+    filter: drop-shadow(-0.7rem -0.55rem 0.8rem rgba(0, 0, 0, 0.28));
+    right: 0;
+    transform: translate(38%, 38%) scale(0.55);
+    transform-origin: right bottom;
+  }
+
+  .home-act-page-corner::after {
+    right: 0;
+    background: linear-gradient(315deg, transparent 0 48%, color-mix(in srgb, var(--act-color, #5A5F73) 52%, #E6E4EF) 49% 50%, transparent 51%);
+    transform: translate(42%, 42%) scale(0.55);
+    transform-origin: right bottom;
+  }
+
+  .home-act-page-corner--prev::before {
+    left: 0;
+    right: auto;
+    background:
+      linear-gradient(45deg,
+        color-mix(in srgb, var(--act-color, #5A5F73) 24%, #212533) 0 47%,
+        color-mix(in srgb, var(--act-color, #5A5F73) 55%, #E6E4EF) 48% 49%,
+        transparent 50%);
+    filter: drop-shadow(0.7rem -0.55rem 0.8rem rgba(0, 0, 0, 0.28));
+    transform: translate(-38%, 38%) scale(0.55);
+    transform-origin: left bottom;
+  }
+
+  .home-act-page-corner--prev::after {
+    left: 0;
+    right: auto;
+    background: linear-gradient(45deg, transparent 0 48%, color-mix(in srgb, var(--act-color, #5A5F73) 52%, #E6E4EF) 49% 50%, transparent 51%);
+    transform: translate(-42%, 42%) scale(0.55);
+    transform-origin: left bottom;
+  }
+
+  .home-act-page-corner:hover::before,
+  .home-act-page-corner:hover::after,
+  .home-act-page-corner:focus-visible::before,
+  .home-act-page-corner:focus-visible::after {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  .home-act-page-corner:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .home-act-deck:has(.home-act-page-corner--next:hover) .home-act-page-enter,
+  .home-act-deck:has(.home-act-page-corner--next:focus-visible) .home-act-page-enter {
+    transform: translateX(-0.2rem) rotateY(-0.65deg);
+    transform-origin: left center;
+  }
+
+  .home-act-deck:has(.home-act-page-corner--prev:hover) .home-act-page-enter,
+  .home-act-deck:has(.home-act-page-corner--prev:focus-visible) .home-act-page-enter {
+    transform: translateX(0.2rem) rotateY(0.65deg);
+    transform-origin: right center;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    .home-act-page-corner::before,
+    .home-act-page-corner::after {
+      opacity: 0.3;
+      transform: translate(22%, 22%) scale(0.72);
+    }
+
+    .home-act-page-corner--prev::before,
+    .home-act-page-corner--prev::after {
+      transform: translate(-22%, 22%) scale(0.72);
+    }
+  }
+
+  /* 卡片不画“激活态”整屏外框。内部页条仍各自保留标准键盘焦点提示。 */
+  .home-act-stage:focus,
+  .home-act-stage:focus-visible,
+  .home-act-deck:focus,
+  .home-act-deck:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* 1280×720 一类矮桌面仍保留完整事件卡，不让最后两行落进内层滚动区。 */
+  @media (min-width: 1280px) and (max-height: 760px) {
+    .home-act-stage-beat__copy {
+      padding: 1rem 1.25rem;
+    }
+
+    .home-act-stage-beat__copy h3 {
+      margin-top: 0.45rem;
+    }
+
+    .home-act-stage-beat__copy h3 + p,
+    .home-act-stage-beat__copy p + p {
+      margin-top: 0.45rem;
+    }
   }
 
   /* 全站右侧快速时间轴（TimelineRail）：无贯穿竖线，靠分段色与刻度密度表达结构。 */
@@ -535,6 +734,12 @@ body {
     opacity: 1;
   }
 
+  /* 轨道本身已经用游标光点与整列增亮显示键盘焦点，不再套一个贯穿半屏的通用矩形光框。 */
+  .timeline-rail:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
   .timeline-rail__edge {
     background: linear-gradient(to left, rgba(255,255,255,0.018), transparent 72%);
     opacity: 0;
@@ -542,6 +747,7 @@ body {
   }
 
   .timeline-rail:hover .timeline-rail__edge,
+  .timeline-rail:focus-visible .timeline-rail__edge,
   .timeline-rail.is-dragging .timeline-rail__edge {
     opacity: 1;
   }
