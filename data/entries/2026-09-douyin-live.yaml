@@ -185,3 +185,24 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-11-live-01
+  type: live
+  date: "2026-09-11"
+  title: "流放之路2 降临 毕业答辩BD大赛大神赛 时隔多年重考科目二"
+  platform: douyin
+  duration_min: 75
+  games:
+    - path-of-exile-2
+    - maplestory-classic
+    - maplestory
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/e0894ef1f382289b7c8525b1b189c140e9c15f8c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1koY26xEfn"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
