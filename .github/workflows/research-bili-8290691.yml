@@ -1,4 +1,4 @@
-name: Research backup candidate visuals
+name: Apply verified 8290691 findings
 
 on:
   push:
@@ -6,50 +6,263 @@ on:
       - research/bili-8290691-catalog
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  probe:
+  apply:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
-      - name: Capture first frames and storyboard samples
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply verified entries, partial sources, account and local frame covers
+        shell: bash
+        run: |
+          python -m pip install --quiet pillow pyyaml
+          python - <<'PY'
+          from pathlib import Path
+          from io import BytesIO
+          import json, re, urllib.request, urllib.parse
+          from PIL import Image, ImageOps
+
+          ROOT = Path('.')
+          UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
+          H = {'User-Agent': UA, 'Referer': 'https://www.bilibili.com/', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+
+          def get(url, binary=False):
+              req = urllib.request.Request(url, headers=H)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  raw = r.read()
+              return raw if binary else raw.decode('utf-8', 'replace')
+
+          def write_cover(entry_id, bvid):
+              q = urllib.parse.urlencode({'bvid': bvid})
+              pg = json.loads(get('https://api.bilibili.com/x/player/pagelist?' + q))
+              pages = pg.get('data') or []
+              if not pages or not pages[0].get('first_frame'):
+                  raise RuntimeError(f'no first_frame for {bvid}')
+              # This is a frame from the video body, NOT the uploader archive cover.
+              url = pages[0]['first_frame'].replace('http://', 'https://')
+              im = Image.open(BytesIO(get(url, binary=True))).convert('RGB')
+              im = ImageOps.fit(im, (960, 540), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+              out = ROOT / 'public' / 'images' / 'covers' / f'{entry_id}.jpg'
+              out.parent.mkdir(parents=True, exist_ok=True)
+              im.save(out, 'JPEG', quality=88, optimize=True, progressive=True)
+              print('COVER', entry_id, bvid, out, out.stat().st_size)
+
+          def insert_before(path, before_id, new_id, block):
+              p = ROOT / path
+              text = p.read_text(encoding='utf-8')
+              if f'  - id: {new_id}\n' in text:
+                  print('ENTRY EXISTS', new_id)
+                  return
+              anchor = f'  - id: {before_id}\n'
+              if anchor not in text:
+                  raise RuntimeError(f'anchor {before_id} not found in {path}')
+              text = text.replace(anchor, block.rstrip() + '\n\n' + anchor, 1)
+              p.write_text(text, encoding='utf-8')
+              print('INSERTED', new_id, path)
+
+          def entry_span(text, entry_id):
+              anchor = f'  - id: {entry_id}\n'
+              start = text.find(anchor)
+              if start < 0:
+                  raise RuntimeError(f'entry {entry_id} not found')
+              nxt = text.find('\n  - id: ', start + len(anchor))
+              end = len(text) if nxt < 0 else nxt + 1
+              return start, end
+
+          def add_source(path, entry_id, url, source_block):
+              p = ROOT / path
+              text = p.read_text(encoding='utf-8')
+              start, end = entry_span(text, entry_id)
+              block = text[start:end]
+              if url in block:
+                  print('SOURCE EXISTS', entry_id, url)
+                  return
+              pos = block.find('\n    contributed_by:')
+              if pos < 0:
+                  raise RuntimeError(f'contributed_by anchor missing in {entry_id}')
+              block = block[:pos] + '\n' + source_block.rstrip() + block[pos:]
+              p.write_text(text[:start] + block + text[end:], encoding='utf-8')
+              print('SOURCE ADDED', entry_id, url)
+
+          # Register the source account. It is a multi-stream automatic archive and its upload covers are unsafe for site use.
+          accounts = ROOT / 'data' / 'accounts.yaml'
+          atext = accounts.read_text(encoding='utf-8')
+          if '- id: bili-fan-8290691\n' not in atext:
+              account_block = '''- id: bili-fan-8290691
+  platform: bilibili
+  name: "bili_8290691"
+  url: "https://space.bilibili.com/8290691"
+  role: fan-archive
+  active_from: "2021-01"
+  confidence: medium
+  note: "多主播斗鱼自动录制存档号，女流相关标题常为 DOUYU_156277_YYYY_MM_DD_HH_MM_SS。2026-09-11 对 B 站搜索结果 50 页做 SSR 解析后确认存在大量 156277 机器命名录像，并用 pagelist/videoshot/正文首帧做内容级复核。该号同时录制其他主播，存在超长混分P与碎片投稿，不能仅按文件名自动归档；采用前必须看正文画面。投稿自带封面大量为擦边图，禁止作为本站封面，正式采用的条目必须另截视频正文帧，并在 source 标记 cover_unreliable: true。"
+'''
+              marker = '# ═══ 三'
+              idx = atext.find(marker)
+              if idx >= 0:
+                  atext = atext[:idx] + account_block + '\n' + atext[idx:]
+              else:
+                  atext = atext.rstrip() + '\n\n' + account_block
+              accounts.write_text(atext, encoding='utf-8')
+              print('ACCOUNT ADDED')
+
+          entry_0803 = '''  - id: 2022-08-03-live-01
+    type: live
+    date: "2022-08-03"
+    title: "华语乐坛金曲回顾"
+    platform: douyu
+    confidence: medium
+    duration_min: 293
+    cover: "/images/covers/2022-08-03-live-01.jpg"
+    games: []
+    tags: [聊天, 音乐]
+    sources:
+      - url: https://www.bilibili.com/video/BV1tW4y1a7mn
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "15:32:37 起，2:45:12。已用 B 站 storyboard/正文首帧核验：女流直播界面，内容为观看华语乐坛历年金曲合集，年份从约 1993 看到 1988。"
+      - url: https://www.bilibili.com/video/BV16d4y1T7Ma
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "19:54:47 起，31:16。已用 storyboard 核验：同一直播布局与同一金曲年代合集，内容从约 1984 继续到 1983。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的 DOUYU_156277 自动录制中恢复。两段实际内容连续，但第一段约 18:17:49 结束、第二段 19:54:47 才开始，中间约 1:36:58 无存档；因此录像不完整。duration_min=293 按首段开始至末段结束的时间跨度估算，不等同于现存录像时长。标题为按正文内容整理的描述性标题，并非已确认的当日斗鱼房间原题。封面为视频正文帧另截，未使用该 UP 自带封面。"
+'''
+          insert_before('data/entries/2022-08-douyu-live.yaml', '2022-08-04-live-01', '2022-08-03-live-01', entry_0803)
+
+          entry_1014 = '''  - id: 2022-10-14-live-01
+    type: live
+    date: "2022-10-14"
+    title: "Coral Island"
+    platform: douyu
+    confidence: high
+    duration_min: 78
+    cover: "/images/covers/2022-10-14-live-01.jpg"
+    games: [coral-island]
+    sources:
+      - url: https://www.bilibili.com/video/BV11G4y1p7xy
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "DOUYU_156277_2022_10_14_15_38_47，1:17:52。已用 B 站 storyboard/正文首帧抽查全段，直播画面明确显示游戏 Coral Island，末段仍为同一游戏。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的自动录制中恢复。站内此前 10/12 与 10/15-17 均有 Coral Island，唯独 10/14 缺档；本录像经内容级复核确认属于女流当天 Coral Island 直播，因此补入。封面为视频正文帧另截，未使用该 UP 自带封面。"
+'''
+          insert_before('data/entries/2022-10-douyu-live.yaml', '2022-10-15-live-01', '2022-10-14-live-01', entry_1014)
+
+          entry_1203 = '''  - id: 2022-12-03-live-01
+    type: live
+    date: "2022-12-03"
+    title: "看日本住宅改造节目"
+    platform: douyu
+    confidence: medium
+    duration_min: 219
+    cover: "/images/covers/2022-12-03-live-01.jpg"
+    games: []
+    tags: [聊天]
+    sources:
+      - url: https://www.bilibili.com/video/BV1624y1k7JN
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "17:45:34 起，1:59:25。正文画面有斗鱼聊天栏/直播布局，主要内容为观看日本住宅改造类节目。"
+      - url: https://www.bilibili.com/video/BV1nG411T7KG
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "19:44:55 起，1:39:44。与前一 BV 保持同一直播布局与同一节目内容；前一段理论结束约 19:44:59，二者约 4 秒重叠，可高置信视为同场连续切段。"
+    contributed_by: data-agent
+    note: "2026-09-11 从 UID 8290691 的自动录制中恢复。两段连续覆盖约 3:39:09；尚无法证明 17:45:34 就是当天真正开播起点，因此 duration_min=219 只记现存连续录像覆盖，标题为按正文内容整理的描述性标题。封面为视频正文帧另截，未使用该 UP 自带封面。"
+'''
+          insert_before('data/entries/2022-12-douyu-live.yaml', '2022-12-04-live-01', '2022-12-03-live-01', entry_1203)
+
+          # Verified partial backup for 2022-09-03 女鬼桥.
+          add_source(
+              'data/entries/2022-09-douyu-live.yaml',
+              '2022-09-03-live-01',
+              'https://www.bilibili.com/video/BV1BP411V7AX',
+              '''      - url: https://www.bilibili.com/video/BV1BP411V7AX
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "1:50:52。2026-09-11 已用 storyboard/正文首帧核验实际画面为《女鬼桥》；明显短于本条 272 分钟，只作 B 站部分备份，不替代现有 A 站主来源。"'''
+          )
+
+          # Verified continuous partial backup for 2022-12-05 Tunic/狐尔达.
+          add_source(
+              'data/entries/2022-12-douyu-live.yaml',
+              '2022-12-05-live-01',
+              'https://www.bilibili.com/video/BV1GR4y1C76g',
+              '''      - url: https://www.bilibili.com/video/BV1GR4y1C76g
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "16:57:47 起，1:58:40。正文抽帧确认是 Tunic；与下一段在同一个 Boss 战场景衔接。"'''
+          )
+          add_source(
+              'data/entries/2022-12-douyu-live.yaml',
+              '2022-12-05-live-01',
+              'https://www.bilibili.com/video/BV17V4y1P78U',
+              '''      - url: https://www.bilibili.com/video/BV17V4y1P78U
+        kind: replay
+        status: alive
+        account: bili-fan-8290691
+        cover_unreliable: true
+        note: "18:56:22 起，32:31。与前一段理论结束约 18:56:27，仅约 5 秒重叠；两段合计 2:31:11，确认属于同一场 Tunic 直播，但短于条目 264 分钟，只作部分备份。"'''
+          )
+
+          # Local covers from body frames only; never use this uploader's native upload cover.
+          write_cover('2022-08-03-live-01', 'BV1tW4y1a7mn')
+          write_cover('2022-10-14-live-01', 'BV11G4y1p7xy')
+          write_cover('2022-12-03-live-01', 'BV1624y1k7JN')
+
+          # Update the human research handoff with content-level verification and the landing decision.
+          doc = ROOT / 'docs' / 'research' / '2026-09-11-bilibili-8290691-all-entry-comparison.md'
+          dtext = doc.read_text(encoding='utf-8')
+          dtext = dtext.replace('> 状态：**日期级初筛完成；尚未逐条打开视频核验内容**', '> 状态：**日期级初筛完成；首批高价值候选已完成 storyboard / 正文帧内容级复核并落档**')
+          marker = '## 8. 2026-09-11 内容级复核与首批落档'
+          if marker not in dtext:
+              dtext = dtext.rstrip() + '''\n\n## 8. 2026-09-11 内容级复核与首批落档\n\n本轮不再只按机器标题和日期判断，而是调用 B 站 `pagelist`、`videoshot` 与正文 `first_frame`，对高价值候选直接检查视频正文画面。评论区和 B 站弹幕在这些低播放投稿中基本为空，因此 storyboard 比评论区更可靠。\n\n### 已正式补入的新直播日\n\n- **2022-08-03**：`BV1tW4y1a7mn` + `BV16d4y1T7Ma`。两段都能看到女流的斗鱼直播布局，内容为观看华语乐坛历年金曲合集；第一段从约 1993 年看到 1988 年，第二段从约 1984 年继续到 1983 年。中间约 1:36:58 无录像，因此按“确认直播存在、录像不完整”落档，`duration_min=293` 仅按首段开始到末段结束的时间跨度估算，标题为描述性标题。\n- **2022-10-14**：`BV11G4y1p7xy`。正文抽帧全程明确为 **Coral Island**，时长 1:17:52；结合站内 10/12 与 10/15-17 连续 Coral Island 记录，补为 `2022-10-14-live-01`，高置信。\n- **2022-12-03**：`BV1624y1k7JN` + `BV1nG411T7KG`。两段均为女流直播布局，主要内容为观看日本住宅改造类节目；第一段理论结束约 19:44:59，第二段 19:44:55 开始，约 4 秒重叠，确认是同场连续切段。现存覆盖约 3:39:09，但无法证明是否缺开头，因此 `duration_min=219` 只记现存连续覆盖。\n\n### 已追加到现有条目的部分备份\n\n- **2022-12-05《狐尔达》/ Tunic**：`BV1GR4y1C76g` + `BV17V4y1P78U`，画面内容均确认是 Tunic，切段交界还是同一个 Boss 战，时间仅约 5 秒重叠；合计 2:31:11，短于条目 264 分钟，因此仍以斗鱼为主源，只追加为部分 B 站备份。\n- **2022-09-03《女鬼桥》**：`BV1BP411V7AX`，正文确认是《女鬼桥》，1:50:52；只作现有 A 站来源之外的 B 站部分备份。\n\n### 封面硬规则\n\nUID 8290691 的投稿自带封面大量使用擦边图片。**任何来自该账号的正式条目都不得直接使用投稿封面。** 首批三个新增条目均从录像正文 `first_frame` 另截为 960×540 本地 JPG，写入 `/images/covers/<entry-id>.jpg`；同时所有该账号的 source 都显式标记 `cover_unreliable: true`。\n\n### 后续\n\n下一优先级继续内容级检查 `2022-08-25-live-01`（The House of Da Vinci）和 `2022-11-16-live-01`（战神5）的候选拆段，再向其余来源薄弱日期扩展。\n'''
+          doc.write_text(dtext, encoding='utf-8')
+          PY
+
+      - name: Sanity-check YAML and repository validation
         shell: bash
         run: |
           python - <<'PY'
-          import os,json,urllib.request,urllib.parse,time
-          BVIDS=['BV1TP4y1f7Tm','BV1UD4y167aV','BV1XB4y1G7sj','BV1Yt4y1N7P5','BV1wd4y187nf']
-          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36'
-          H={'User-Agent':UA,'Referer':'https://www.bilibili.com/'}
-          os.makedirs('frames',exist_ok=True)
-          def get(u,b=False):
-            try:
-              with urllib.request.urlopen(urllib.request.Request(u,headers=H),timeout=20) as r:
-                x=r.read(); return x if b else x.decode('utf-8','replace')
-            except Exception as e: return None
-          meta=[]
-          for bv in BVIDS:
-            pg=json.loads(get('https://api.bilibili.com/x/player/pagelist?'+urllib.parse.urlencode({'bvid':bv})) or '{}').get('data') or []
-            item={'bvid':bv,'pages':pg}
-            if pg:
-              p=pg[0]; cid=p['cid']; ff=p.get('first_frame')
-              if ff:
-                raw=get(ff.replace('http://','https://'),True)
-                if raw: open(f'frames/{bv}-first.jpg','wb').write(raw)
-              vs=json.loads(get('https://api.bilibili.com/x/player/videoshot?'+urllib.parse.urlencode({'bvid':bv,'cid':cid,'index':1})) or '{}').get('data') or {}
-              imgs=vs.get('image') or []
-              for pos in sorted(set([0,len(imgs)//2,len(imgs)-1])) if imgs else []:
-                u=imgs[pos]; u='https:'+u if u.startswith('//') else u
-                raw=get(u,True)
-                if raw: open(f'frames/{bv}-sheet-{pos+1:02d}.jpg','wb').write(raw)
-              item['sheet_count']=len(imgs)
-            meta.append(item); print(bv,pg[0].get('part') if pg else None,pg[0].get('duration') if pg else None); time.sleep(.6)
-          open('meta.json','w').write(json.dumps(meta,ensure_ascii=False,indent=2))
+          import glob, yaml
+          for p in ['data/accounts.yaml','data/entries/2022-08-douyu-live.yaml','data/entries/2022-09-douyu-live.yaml','data/entries/2022-10-douyu-live.yaml','data/entries/2022-12-douyu-live.yaml']:
+              with open(p, encoding='utf-8') as f:
+                  yaml.safe_load(f)
+              print('YAML OK', p)
           PY
-      - uses: actions/upload-artifact@v7
-        with:
-          name: backup-candidate-visuals
-          path: |
-            meta.json
-            frames/
-          retention-days: 7
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run validate
+
+      - name: Commit verified archive additions to main
+        shell: bash
+        run: |
+          git config user.name "AD"
+          git config user.email "88820009+ArthurADDDDD@users.noreply.github.com"
+          git add data/accounts.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-09-douyu-live.yaml data/entries/2022-10-douyu-live.yaml data/entries/2022-12-douyu-live.yaml docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md public/images/covers/2022-08-03-live-01.jpg public/images/covers/2022-10-14-live-01.jpg public/images/covers/2022-12-03-live-01.jpg
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "data: recover three 2022 livestreams from 8290691"
+          git push origin HEAD:main
