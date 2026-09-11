@@ -9,6 +9,7 @@ import {
 } from '@/lib/correction-api'
 import { loadTurnstile, type TurnstileApi } from '@/lib/turnstile'
 import { MAX_PHOTOS, preparePhotos, submitWithPhotos, type PreparedPhoto } from '@/lib/photo-submit'
+import { PhotoDropzone } from './PhotoDropzone'
 
 /**
  * 访客提交表单，资料纠错和梗投稿共用同一个组件。
@@ -252,59 +253,28 @@ export function SubmissionForm({
       </label>
 
       {allowPhotos && (
-        <div className="mt-4">
-          <p className="text-meta text-faint">
-            有图的话可以一起传（最多 {MAX_PHOTOS} 张）
-          </p>
-          <label className="ui-press mt-2 inline-flex min-h-11 cursor-pointer items-center rounded-lg border border-line bg-base/60 px-4 text-control text-muted hover:border-live/45 hover:text-ink">
-            选择图片
-            <input
-              type="file"
-              accept="image/*"
-              multiple
-              className="sr-only"
-              onChange={async (event) => {
-                const chosen = [...(event.target.files ?? [])]
-                // 同一个文件再选一次时 value 不变、onChange 不触发；清空才能重选。
-                event.target.value = ''
-                if (chosen.length === 0) return
+        <div className="mt-5">
+          <p className="text-meta text-faint">有图的话可以一起传</p>
+          <div className="mt-2">
+            <PhotoDropzone
+              photos={photos}
+              preparing={preparing}
+              max={MAX_PHOTOS}
+              remaining={MAX_PHOTOS - photos.length}
+              onRemove={(index) => setPhotos((current) => current.filter((_, i) => i !== index))}
+              onAdd={async (files) => {
                 setPreparing(true)
                 setError(null)
                 try {
-                  const { prepared, rejected } = await preparePhotos(chosen)
-                  setPhotos((current) => [...current, ...prepared].slice(0, MAX_PHOTOS))
-                  if (rejected.length > 0) setError(`这些没能加进来：${rejected.join('、')}`)
+                  const { prepared, rejected } = await preparePhotos(files, MAX_PHOTOS - photos.length)
+                  if (prepared.length > 0) setPhotos((current) => [...current, ...prepared])
+                  if (rejected.length > 0) setError(`这些没能加进来：${rejected.join('；')}`)
                 } finally {
                   setPreparing(false)
                 }
               }}
             />
-          </label>
-          {preparing && <p className="mt-2 text-meta text-faint">正在压缩…</p>}
-
-          {photos.length > 0 && (
-            <ul className="mt-3 space-y-1.5">
-              {photos.map((photo, index) => (
-                <li key={`${photo.file.name}-${index}`} className="flex items-center gap-3 text-meta text-muted">
-                  <span className="min-w-0 flex-1 truncate">{photo.file.name}</span>
-                  <span className="shrink-0 text-faint tnum">
-                    {(photo.file.size / 1024).toFixed(0)} KB
-                    {photo.originalBytes > photo.file.size && (
-                      <>（已压缩，原 {(photo.originalBytes / 1024 / 1024).toFixed(1)}MB）</>
-                    )}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setPhotos((current) => current.filter((_, i) => i !== index))}
-                    className="ui-press shrink-0 rounded-sm px-1 text-faint hover:text-ink"
-                    aria-label={`移除 ${photo.file.name}`}
-                  >
-                    ✕
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
+          </div>
 
           {/*
             这句是站长定的说法：重点放在「我会认真看」，而不是「你要担责」。

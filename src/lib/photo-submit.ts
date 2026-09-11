@@ -61,10 +61,21 @@ async function downscale(file: File): Promise<File | null> {
   }
 }
 
-export async function preparePhotos(files: File[]): Promise<{ prepared: PreparedPhoto[]; rejected: string[] }> {
+/**
+ * `slots` 是「还能再加几张」，不是整批上限——调用方可能已经挑了两张再拖进来三张。
+ * 用 MAX_PHOTOS 截断的话，那三张会先被截成三张、再在调用方那边被静默丢掉两张，
+ * 用户看到的是「我拖了三张，只进来一张」，而且没有任何解释。
+ */
+export async function preparePhotos(
+  files: File[],
+  slots: number = MAX_PHOTOS,
+): Promise<{ prepared: PreparedPhoto[]; rejected: string[] }> {
   const prepared: PreparedPhoto[] = []
   const rejected: string[] = []
-  for (const file of files.slice(0, MAX_PHOTOS)) {
+  if (files.length > slots) {
+    rejected.push(`超出的 ${files.length - slots} 张没加进来（一次最多 ${MAX_PHOTOS} 张）`)
+  }
+  for (const file of files.slice(0, Math.max(0, slots))) {
     const smaller = (await downscale(file)) ?? file
     if (smaller.size > MAX_PHOTO_BYTES) {
       rejected.push(`${file.name}（${(smaller.size / 1024 / 1024).toFixed(1)}MB，超过 ${MAX_PHOTO_BYTES / 1024 / 1024}MB）`)
