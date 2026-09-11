@@ -23,13 +23,6 @@ const REQUEST_TIMEOUT_MS = 4000
 
 type Reach = { visitors?: number; since?: string | null; truncated?: boolean }
 
-/** `2026-08-31` → `2026 年 8 月`。日期精确到天没有意义，也会让人以为这个数很精确。 */
-function monthLabel(since: string): string | null {
-  const match = /^(\d{4})-(\d{2})/.exec(since)
-  if (!match) return null
-  return `${match[1]} 年 ${Number(match[2])} 月`
-}
-
 /** 取整到一个量级。不说「多」——正好落在整数上时那个字就是错的。 */
 function approximate(n: number): string {
   if (n < 10) return String(n)
@@ -66,15 +59,16 @@ export function SiteReach({ className = '' }: { className?: string }) {
   if (visitors < 1) return null
 
   /*
-   * **不写「建站以来」。** 站比埋点早，接口给的 `since` 是有记录的第一天，
-   * 不是建站那天——写成「建站以来」等于把一个起点不明的数说成完整历史，
-   * 而这个站的规矩是宁可少说也不多说。有 since 就说清从哪个月开始算。
+   * 「建站到现在」是站长定的说法。要说清楚的是：这个数是**下限**，不是完整历史——
+   * 接口给的 `since` 是埋点有记录的第一天（2026-08-31 迁站时 analytics 没跟着
+   * 快照过来，之前的计数清零了），在那之前来过的人不在里面。
+   *
+   * 所以句子里用「大概」，数值也按量级取整，不给精确值；等保留期开始吃掉历史，
+   * 接口会把 truncated 置真，下面那句跟着出现。
    */
-  const since = reach?.since ? monthLabel(reach.since) : null
-
   return (
     <p className={`text-meta text-faint ${className}`}>
-      {since ? `从 ${since} 开始记，` : ''}大概有 <span className="font-mono text-control font-semibold text-ink tnum">{approximate(visitors)}</span> 个人来过这里。
+      建站到现在，大概有 <span className="font-mono text-control font-semibold text-ink tnum">{approximate(visitors)}</span> 个人来过这里。
       {/*
         后台的日桶受保留期约束。等最早那一批开始被清理，这个数就会少算历史——
         接口会自报 truncated，这里跟着改口，而不是让它悄悄往下掉。

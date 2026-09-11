@@ -86,7 +86,15 @@ export function buildSeries(
     id,
     name: getDisplayName(id, name),
     countsEpisodes: !ARCHIVE_BUCKETS.has(id),
-    description: getDisplayDescription(id, description, entries),
+    /*
+     * 描述直接用 data/series.yaml 里的那一句，不再由代码覆盖。
+     *
+     * 原先 getDisplayDescription() 为心灵砒霜和一起 See 各拼一段带派生日期的文字，
+     * 于是同一个字段有两个真相：数据里写一套、代码里又写一套，而页面上看到的是
+     * 代码那套。一起 See 的那段说它「从斗鱼延续到抖音」——实际只在斗鱼，
+     * 2017-12-17 ~ 2023-03-29，这个错就是这样藏了很久没人发现的。
+     */
+    description,
     entries,
     count: entries.length,
     firstDate: entries[0]?.date ?? '',
@@ -105,22 +113,6 @@ const ARCHIVE_BUCKETS = new Set(['night-talk', 'outdoor-live', 'press-events'])
 function getDisplayName(id: string, fallback: string): string {
   if (id === 'night-talk') return '夜话 / 聊天'
   if (id === 'outdoor-live') return '户外直播'
-  return fallback
-}
-
-function getDisplayDescription(id: string, fallback: string, entries: TimelineEntry[]): string {
-  if (entries.length === 0) return fallback
-
-  const firstDate = entries[0].date
-  const lastDate = entries[entries.length - 1].date
-  // 这两段原本写成校对口径（「目前档案已收录 N 期」「已确认 N 场」「为条目数最多的
-  // 栏目」「新的确认记录会自动加入这里」）。那是维护者视角，读者不关心档案的完成度。
-  if (id === 'xinling-pishuang') {
-    return `每周日的情感电台。邮件打开，游戏暂停，从 ${firstDate} 一直读到 ${lastDate}。`
-  }
-  if (id === 'together-see') {
-    return `和观众一起看视频、看节目、看发布会。从斗鱼一路跟到抖音，${firstDate} 起还在继续。`
-  }
   return fallback
 }
 
