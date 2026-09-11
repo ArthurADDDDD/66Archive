@@ -1,4 +1,4 @@
-name: Apply verified 8290691 findings wrapper
+name: Apply HAAK and verified 8290691 follow-up
 
 on:
   push:
@@ -18,40 +18,134 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Reuse verified apply payload
+      - name: Apply verified game and source corrections
         shell: bash
         run: |
-          git fetch origin research/bili-8290691-catalog
-          git show origin/research/bili-8290691-catalog:.github/workflows/research-bili-8290691.yml > /tmp/source-workflow.yml
-          python -m pip install --quiet pillow pyyaml
-          python - <<'PY'
-          import re, subprocess
-          text = open('/tmp/source-workflow.yml', encoding='utf-8').read()
-          m = re.search(r"echo '([A-Za-z0-9+/=]+)' \| base64 -d > /tmp/apply829.py", text)
-          if not m:
-              raise SystemExit('apply payload not found')
-          import base64
-          open('/tmp/apply829.py','wb').write(base64.b64decode(m.group(1)))
-          subprocess.run(['python','/tmp/apply829.py'], check=True)
-          PY
-          # Do not invent a new controlled tag during source recovery; keep the existing broad `聊天` tag only.
           python - <<'PY'
           from pathlib import Path
-          p=Path('data/entries/2022-08-douyu-live.yaml')
-          s=p.read_text(encoding='utf-8').replace('tags: [聊天, 音乐]', 'tags: [聊天]')
-          p.write_text(s, encoding='utf-8')
+
+          ROOT = Path('.')
+
+          def entry_span(text, entry_id):
+              anchor = f'  - id: {entry_id}\n'
+              start = text.find(anchor)
+              if start < 0:
+                  raise RuntimeError(f'entry {entry_id} not found')
+              nxt = text.find('\n  - id: ', start + len(anchor))
+              end = len(text) if nxt < 0 else nxt + 1
+              return start, end
+
+          def add_source(path, entry_id, url, source_block):
+              p = ROOT / path
+              text = p.read_text(encoding='utf-8')
+              start, end = entry_span(text, entry_id)
+              block = text[start:end]
+              if url in block:
+                  print('SOURCE EXISTS', entry_id, url)
+                  return
+              pos = block.find('\n    contributed_by:')
+              if pos < 0:
+                  raise RuntimeError(f'contributed_by missing in {entry_id}')
+              block = block[:pos] + '\n' + source_block.rstrip() + block[pos:]
+              p.write_text(text[:start] + block + text[end:], encoding='utf-8')
+              print('SOURCE ADDED', entry_id, url)
+
+          games = ROOT / 'data/games.yaml'
+          gtext = games.read_text(encoding='utf-8')
+          if '  - id: haak\n' not in gtext:
+              anchor = '  - id: hades\n'
+              if anchor not in gtext:
+                  raise RuntimeError('hades anchor missing in games.yaml')
+              haak = '''  - id: haak
+              name: 勇敢的哈克
+              aliases:
+                - HAAK
+
+          '''
+              gtext = gtext.replace(anchor, haak + anchor, 1)
+              games.write_text(gtext, encoding='utf-8')
+              print('GAME ADDED haak')
+
+          p = ROOT / 'data/entries/2022-08-douyu-live.yaml'
+          text = p.read_text(encoding='utf-8')
+          start, end = entry_span(text, '2022-08-25-live-01')
+          block = text[start:end]
+          block = block.replace('    title: "The House of Da Vinci"\n', '    title: "The House of Da Vinci / 勇敢的哈克"\n', 1)
+          block = block.replace('    games: [the-house-of-da-vinci]\n', '    games: [the-house-of-da-vinci, haak]\n', 1)
+          old_note = '    note: "B站「女流录像小屋」全长录播。"\n'
+          new_note = '    note: "B站「女流录像小屋」全长录播。2026-09-11 经该全长录像与 UID 8290691 分段录像的正文 storyboard 交叉核验：当天前段为 The House of Da Vinci，后半段明确切换到《勇敢的哈克（HAAK）》；因此补登记 haak 游戏归属。"\n'
+          if old_note in block:
+              block = block.replace(old_note, new_note, 1)
+          elif '勇敢的哈克（HAAK）' not in block:
+              raise RuntimeError('unexpected 2022-08-25 note state')
+          p.write_text(text[:start] + block + text[end:], encoding='utf-8')
+          print('ENTRY CORRECTED 2022-08-25-live-01')
+
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1TP4y1f7Tm', '''      - url: https://www.bilibili.com/video/BV1TP4y1f7Tm
+              kind: replay
+              status: alive
+              account: bili-fan-8290691
+              cover_unreliable: true
+              note: "2026-09-11 已用正文 first_frame / storyboard 核验：此段属于 2022-08-25 同场直播，画面为 The House of Da Vinci。只作部分备份，不替代现有全长主源。"''')
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1UD4y167aV', '''      - url: https://www.bilibili.com/video/BV1UD4y167aV
+              kind: replay
+              status: alive
+              account: bili-fan-8290691
+              cover_unreliable: true
+              note: "2026-09-11 正文抽帧确认属于同场直播；该段后部能看到从 The House of Da Vinci 切换至《勇敢的哈克（HAAK）》的过程。只作部分备份。"''')
+          add_source('data/entries/2022-08-douyu-live.yaml', '2022-08-25-live-01', 'https://www.bilibili.com/video/BV1XB4y1G7sj', '''      - url: https://www.bilibili.com/video/BV1XB4y1G7sj
+              kind: replay
+              status: alive
+              account: bili-fan-8290691
+              cover_unreliable: true
+              note: "2026-09-11 正文 first_frame / storyboard 明确为《勇敢的哈克（HAAK）》后半场；与前一分段内容连续。只作部分备份。"''')
+
+          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1Yt4y1N7P5', '''      - url: https://www.bilibili.com/video/BV1Yt4y1N7P5
+              kind: replay
+              status: alive
+              account: bili-fan-8290691
+              cover_unreliable: true
+              note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与另一段合计约 3:31:38，明显短于现有 441 分钟全长主源，只作部分备份。"''')
+          add_source('data/entries/2022-11-douyu-live.yaml', '2022-11-16-live-01', 'https://www.bilibili.com/video/BV1wd4y187nf', '''      - url: https://www.bilibili.com/video/BV1wd4y187nf
+              kind: replay
+              status: alive
+              account: bili-fan-8290691
+              cover_unreliable: true
+              note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。"''')
+
+          doc = ROOT / 'docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md'
+          dtext = doc.read_text(encoding='utf-8')
+          old_row = '| `2022-08-25-live-01`《The House of Da Vinci》 | 仅 `BV1wG4y1k7ef` | `BV1TP4y1f7Tm` + `BV1UD4y167aV` + `BV1XB4y1G7sj`，合计 **03:18:11** | 条目记 254 min，约 78%；可作为拆段式备用，但仍不够完整 |'
+          new_row = '| `2022-08-25-live-01`《The House of Da Vinci / 勇敢的哈克》 | 原仅 `BV1wG4y1k7ef` | `BV1TP4y1f7Tm` + `BV1UD4y167aV` + `BV1XB4y1G7sj`，合计 **03:18:11** | **内容级复核已确认同场由 The House of Da Vinci 切换至 HAAK；已补 `haak` 游戏归属与三段部分备份** |'
+          if old_row in dtext:
+              dtext = dtext.replace(old_row, new_row, 1)
+          marker = '## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核'
+          if marker not in dtext:
+              dtext = dtext.rstrip() + '''
+
+          ## 9. 2026-09-11 第二批：08-25 / 11-16 内容级复核
+
+          ### 2022-08-25
+
+          对现有全长主源 `BV1wG4y1k7ef` 与 UID 8290691 三段正文 storyboard 交叉检查后确认：前段为 **The House of Da Vinci**，`BV1UD4y167aV` 后段能看到同场切换游戏，`BV1XB4y1G7sj` 正文明确为 **HAAK / 勇敢的哈克**；现有全长主源本身也覆盖 HAAK 后半场，因此是原条目内容字段漏记，不是误归日期。
+
+          据此正式登记 `games.yaml` 的 `haak`（名称：勇敢的哈克；别名：HAAK），并把 `2022-08-25-live-01` 的 `games` 改为 `[the-house-of-da-vinci, haak]`。三段 8290691 录像作为部分备份追加，仍以女流录像小屋全长录像为主源。
+
+          ### 2022-11-16
+
+          `BV1Yt4y1N7P5` 与 `BV1wd4y187nf` 正文均确认是 **《战神5》**。两段合计约 3:31:38，短于现有 `BV1624y1y7cs` 的 441 分钟全长录像，因此只增加为部分备份。
+
+          ### 封面
+
+          本批仍执行 UID 8290691 的硬规则：**绝不使用其投稿自带封面**。此次只补已有条目的来源，不新增封面；新增 source 均继续标记 `cover_unreliable: true`。
+          ''' + '\n'
+          doc.write_text(dtext, encoding='utf-8')
+          print('DOC UPDATED')
           PY
 
       - name: Validate
         shell: bash
         run: |
-          python - <<'PY'
-          import yaml
-          for p in ['data/accounts.yaml','data/entries/2022-08-douyu-live.yaml','data/entries/2022-09-douyu-live.yaml','data/entries/2022-10-douyu-live.yaml','data/entries/2022-12-douyu-live.yaml']:
-              with open(p, encoding='utf-8') as f:
-                  yaml.safe_load(f)
-              print('YAML OK', p)
-          PY
           npm ci --ignore-scripts --no-audit --no-fund
           npm run validate
 
@@ -60,6 +154,10 @@ jobs:
         run: |
           git config user.name "AD"
           git config user.email "88820009+ArthurADDDDD@users.noreply.github.com"
-          git add data/accounts.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-09-douyu-live.yaml data/entries/2022-10-douyu-live.yaml data/entries/2022-12-douyu-live.yaml docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md public/images/covers/2022-08-03-live-01.jpg public/images/covers/2022-10-14-live-01.jpg public/images/covers/2022-12-03-live-01.jpg
-          git commit -m "data: recover three 2022 livestreams from 8290691"
+          git add data/games.yaml data/entries/2022-08-douyu-live.yaml data/entries/2022-11-douyu-live.yaml docs/research/2026-09-11-bilibili-8290691-all-entry-comparison.md
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "data: add HAAK to 2022-08-25 livestream"
           git push origin HEAD:main
