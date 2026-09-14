@@ -4,10 +4,12 @@ import { proxyImage } from './platforms'
 /**
  * 栏目 / 系列数据层。
  * 匹配规则（只做精确匹配，不猜标题）：
- * - 视频时代：entry.series === id（series 字段只存在于视频时代）
+ * - entry.series === id 对应的 seriesName
  * - 直播节目：tags 精确等于系列名（心灵砒霜 / 一起See / 戏说聊斋 / 吃鸡佳缘）
  * - 心灵砒霜补充：标题含「砒霜」的条目也计入（2017-03-22 砒霜兼索尼2周年户外、2018-02-25 狗年第一碗砒霜）
- *   ——这两条未带 tag 但标题可确证，data-agent 的 series.yaml 计数口径同样含标题匹配。
+ * - 大周MC补充：标题明确写出「大周MC」「MC复兴大周」或「大周建国史」的条目计入。
+ *   这里不是模糊猜 Minecraft：这些词本身就是当期录像使用的系列名；尤其 2016-06-29
+ *   《MC复兴大周 day1》早于 2017《大周建国史》，用于避免把 2017 误当成整个系列起点。
  * 数字全部构建期派生；页面上「档案确认」数字以这里派生为准。
  * 心灵砒霜的展示文案跟随当前档案的期数与首末日期，但不把“已收录”自动表述成“完整收录”。
  */
@@ -50,6 +52,11 @@ export function isXinlingPishuangEntry(entry: Pick<TimelineEntry, 'title' | 'tag
   return entry.tags.includes('心灵砒霜') || /砒霜/.test(entry.title)
 }
 
+/** 大周MC的档案口径：只认标题中明确出现过的当期系列名，不把普通 Minecraft 场次猜进来。 */
+export function isDazhouMcEntry(entry: Pick<TimelineEntry, 'title'>): boolean {
+  return /大周MC|MC复兴大周|大周建国史/i.test(entry.title)
+}
+
 export function buildSeriesList(ds: Dataset, timeline: TimelineEntry[]): SeriesInfo[] {
   const list: SeriesInfo[] = []
   for (const [id, s] of ds.series) {
@@ -67,8 +74,12 @@ export function buildSeries(
   description: string,
 ): SeriesInfo {
   const isPishuang = id === 'xinling-pishuang'
+  const isDazhouMc = id === 'dazhou-mc'
   const entries = timeline
-    .filter((e) => e.seriesName === name || e.tags.includes(name) || (isPishuang && isXinlingPishuangEntry(e)))
+    .filter((e) => e.seriesName === name
+      || e.tags.includes(name)
+      || (isPishuang && isXinlingPishuangEntry(e))
+      || (isDazhouMc && isDazhouMcEntry(e)))
     .sort((a, b) => a.date.localeCompare(b.date))
 
   const perYearMap = new Map<number, number>()
