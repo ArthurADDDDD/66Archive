@@ -802,20 +802,6 @@ photos:
     caption: null
     source: https://www.bilibili.com/video/BV1Px411G773/?t=3674
     hidden: false
-  - id: 20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
-    src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.jpg
-    thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.thumb.jpg
-    width: 1600
-    height: 900
-    year: '2017'
-    date: '2017-10-18'
-    time: null
-    seq: null
-    sourceRef: 6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
-    title: 线下活动大合影
-    caption: 该场景为2017年6月27日的森见登美彦专访。
-    source: null
-    hidden: false
   - id: 20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y
     src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y.jpg
     thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vlkm3rxj20m80esq3y.thumb.jpg
@@ -842,6 +828,20 @@ photos:
     sourceRef: 6fd3e1b7gy1fh1vm3ph6gj20qo0zkqfd
     title: 站内历史照片 · 2017-10-18
     caption: null
+    source: null
+    hidden: false
+  - id: 20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
+    src: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.jpg
+    thumb: /gallery/photos/20171018074307_6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi.thumb.jpg
+    width: 1600
+    height: 900
+    year: '2017'
+    date: '2017-10-18'
+    time: null
+    seq: null
+    sourceRef: 6fd3e1b7gy1fh1vk7qnkyj21bf0qoqdi
+    title: 线下活动大合影
+    caption: 该场景为2017年6月27日的森见登美彦专访。
     source: null
     hidden: false
   - id: archive-2017-07
@@ -1502,6 +1502,34 @@ photos:
     caption: 双机位直播，时隔数年再现“女流之背”。
     source: https://www.bilibili.com/video/BV1j3411M76h/?t=30
     hidden: false
+  - id: fanart_2022_juece
+    src: /gallery/photos/fanart_2022_juece.jpg
+    thumb: /gallery/photos/fanart_2022_juece.thumb.jpg
+    width: 598
+    height: 589
+    year: '2022'
+    date: '2022-05-15'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 水友投稿：「6」字造型头像
+    caption: 「第一届画6大赛」参赛作品，用大量"6"字排出侧脸剪影，旁附真人照片参考。作者：厥词。
+    source: https://yuba.douyu.com/topic/172296（斗鱼「女流66」鱼吧「第一届画6大赛」，用户"厥词"投稿）
+    hidden: false
+  - id: fanart_2022_zhaoziying
+    src: /gallery/photos/fanart_2022_zhaoziying.jpg
+    thumb: /gallery/photos/fanart_2022_zhaoziying.thumb.jpg
+    width: 1200
+    height: 1600
+    year: '2022'
+    date: '2022-05-23'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 水友投稿：彩铅手绘肖像
+    caption: 「第一届画6大赛」参赛作品，彩铅纯手绘肖像。作者：赵子婴。
+    source: https://yuba.douyu.com/topic/172296（斗鱼「女流66」鱼吧「第一届画6大赛」，用户"赵子婴"投稿）
+    hidden: false
   - id: archive-2022-02
     src: /gallery/photos/archive-2022-02.jpg
     thumb: /gallery/photos/archive-2022-02.thumb.jpg
@@ -1515,6 +1543,20 @@ photos:
     title: 婚后早期共同出镜视频
     caption: 与王师傅拍vlog。
     source: https://www.bilibili.com/video/BV1xY411o7uk/?t=430
+    hidden: false
+  - id: anniv_12_8th_2023
+    src: /gallery/photos/anniv_12_8th_2023.jpg
+    thumb: /gallery/photos/anniv_12_8th_2023.thumb.jpg
+    width: 800
+    height: 450
+    year: '2023'
+    date: '2023-01-28'
+    time: null
+    seq: null
+    sourceRef: null
+    title: 八周年直播画面
+    caption: 直播间角标显示"8周年"字样，鱼吧用户"大周素材"发帖时的直播截图。
+    source: https://yuba.douyu.com/discussion/557/posts（斗鱼「女流66」鱼吧，2023-01-28 用户帖）
     hidden: false
   - id: archive-2023-01
     src: /gallery/photos/archive-2023-01.jpg

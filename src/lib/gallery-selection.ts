@@ -202,4 +202,7 @@ export const FULL_GALLERY_IDS = [
   "archive-2026-03",
   "archive-2026-04",
   "archive-2026-05",
+  "fanart_2022_juece",
+  "fanart_2022_zhaoziying",
+  "anniv_12_8th_2023",
 ] as const
