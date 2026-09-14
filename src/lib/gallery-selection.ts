@@ -205,4 +205,10 @@ export const FULL_GALLERY_IDS = [
   "fanart_2022_juece",
   "fanart_2022_zhaoziying",
   "anniv_12_8th_2023",
+  "fanart_2022_shiyuanyuan",
+  "fanart_2022_huotuizhou",
+  "fanart_2022_mpzzr",
+  "fanart_2022_yiketianmendong_01",
+  "fanart_2022_xiaogulin",
+  "fanart_2022_zcloud",
 ] as const
