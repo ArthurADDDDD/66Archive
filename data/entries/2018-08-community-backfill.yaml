@@ -1,0 +1,17 @@
+# 2018-08 社区补档 / 二创存档
+# 这类条目记录的是社区后来发布的补档或剧情回顾，不冒充原始直播日。
+
+  - id: 2018-08-17-video-01
+    type: video
+    date: "2018-08-17"
+    title: "大周MC第四季：第一、二集补档（010陈）"
+    platform: bilibili
+    confidence: medium
+    games: [minecraft]
+    note: "010陈于 2018-08-17 发布的大周MC补档。原微博明确说明第一、二集录像当时已经被删，此视频删去了侵权地图部分，并重新整理开头、结尾，用于帮助没看直播的观众补齐前两集剧情。当前保留微博中的 t.cn 视频短链；最终落地平台/原视频页仍待复核，因此来源状态先标 unchecked。"
+    sources:
+      - url: "https://t.cn/RkZjJkE"
+        kind: clip
+        status: unchecked
+        note: "010陈 2018-08-17 微博原始视频短链；微博正文明确称其为第一、二集补档。"
+    contributed_by: chatgpt-research
