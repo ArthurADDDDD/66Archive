@@ -1,4 +1,4 @@
-import { getGalleryCollection } from './gallery'
+import { getGalleryCollections } from './gallery-photos-manifest'
 import type { Dataset } from './data'
 import type { Entry } from './schema'
 import type { GameProfile } from './narrative'
@@ -44,8 +44,10 @@ export function buildGameRails(profile: GameProfile, ds: Dataset): RelationRail[
     .map(([tag, n]) => ({ label: tag, href: `/archive/?q=${encodeURIComponent(tag)}`, hint: `${n} 场` }))
   if (tagItems.length) rails.push({ title: '相关栏目', items: tagItems })
 
-  // 同年画廊（素材报告中与这些年份重合的照片）
-  const matched = getGalleryCollection().items.filter((g) => years.has(g.year))
+  // 同年画廊：发布版两个策展顺序（纪念 + 全量）去重后与这些年份重合的照片
+  const collections = getGalleryCollections()
+  const byId = new Map([...collections.featured, ...collections.all].map((p) => [p.id, p]))
+  const matched = [...byId.values()].filter((g) => g.year !== null && years.has(g.year))
   rails.push({
     title: '水友保存的照片',
     items: [{ label: '打开画廊', href: '/gallery/', hint: matched.length ? `${matched.length} 张同年` : undefined }],

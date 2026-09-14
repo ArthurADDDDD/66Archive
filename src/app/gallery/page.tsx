@@ -70,7 +70,7 @@ export default async function GalleryPage() {
             <p className="mt-6 border-l-2 border-today/70 py-1 pl-5 text-body font-medium text-ink">
               <SiteText id="gallery-wanted-note" />
             </p>
-            <Link prefetch={false} href="/contact/" className="ui-press mt-6 inline-block rounded-sm text-body font-medium text-today underline decoration-today/50 underline-offset-8 hover:text-ink">
+            <Link prefetch={false} href="/contact/?intent=photo" className="ui-press mt-6 inline-block rounded-sm text-body font-medium text-today underline decoration-today/50 underline-offset-8 hover:text-ink">
               <SiteText id="gallery-wanted-cta" />
             </Link>
           </div>

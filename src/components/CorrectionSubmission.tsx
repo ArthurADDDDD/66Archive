@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { SubmissionForm } from './SubmissionForm'
 import { SiteText } from './SiteText'
 import { useSiteTexts } from './LiveContentProvider'
@@ -72,13 +73,46 @@ const INTENTS: Intent[] = [
   },
 ]
 
+/**
+ * 从 `?intent=photo` 这类链接过来时，直接把对应的来意打开、并把这张卡滚到视野里。
+ * 拆成单独的子组件是因为 `useSearchParams` 在静态导出下要求外面包一层 `<Suspense>`——
+ * 不拆的话整块表单（以及它挂载时就会触发的 Turnstile 请求）都要陪着一起等这层水合。
+ */
+function IntentFromQuery({ onIntent }: { onIntent: (id: string) => void }) {
+  const params = useSearchParams()
+  useEffect(() => {
+    const intent = params.get('intent')
+    if (intent && INTENTS.some((i) => i.id === intent)) onIntent(intent)
+    // 只在挂载时读一次：这是「从哪个链接点进来的」，不是要跟着地址栏实时联动。
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return null
+}
+
 export function CorrectionSubmission() {
   const [openId, setOpenId] = useState<string | null>(null)
+  const scrollOnOpen = useRef(false)
+  const articleRef = useRef<HTMLElement>(null)
   const t = useSiteTexts()
   const active = INTENTS.find((intent) => intent.id === openId) ?? null
 
+  useEffect(() => {
+    if (active && scrollOnOpen.current) {
+      scrollOnOpen.current = false
+      articleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [active])
+
   return (
-    <article className="ui-card rounded-2xl border border-line bg-surface/55 p-6 sm:col-span-2">
+    <article ref={articleRef} className="ui-card rounded-2xl border border-line bg-surface/55 p-6 sm:col-span-2">
+      <Suspense fallback={null}>
+        <IntentFromQuery
+          onIntent={(id) => {
+            scrollOnOpen.current = true
+            setOpenId(id)
+          }}
+        />
+      </Suspense>
       <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="contact-submit-kicker" /></span>
       <h2 className="mt-3 text-h3 font-medium"><SiteText id="contact-submit-title" /></h2>
       <p className="measure-body mt-2 text-body text-muted">
