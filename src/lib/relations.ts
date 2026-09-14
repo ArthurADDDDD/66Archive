@@ -5,7 +5,7 @@ import type { GameProfile } from './narrative'
 
 /**
  * 关系网络（游戏详情页的出口）。
- * 全部来自数据派生：同年编年史 / 相关栏目（tags ∩ series 名称）/ 同年画廊。
+ * 全部来自数据派生：同年编年史 / 相关栏目 / 同年画廊。
  * 每一类都是可点击的出口——详情页不是终点，是转盘。
  */
 export type RelationItem = {
@@ -29,20 +29,27 @@ export function buildGameRails(profile: GameProfile, ds: Dataset): RelationRail[
     .map((y) => ({ label: `${y} 年`, href: `/archive/?y=${y}` }))
   if (yearItems.length) rails.push({ title: '同年编年史', items: yearItems.slice(0, 4) })
 
-  // 相关栏目：tags 与已登记 series 名称的交集
+  // 相关栏目：优先使用 series.yaml 里显式声明的 game 关系；再补 tags 与系列名的精确交集。
+  // 这样像「大周MC → minecraft」这种已经在数据层确认的关系会真正出现在游戏页上，
+  // 不需要为了做导航而给每一场历史录像补一个展示性 tag。
+  const relatedSeries = [...ds.series.entries()]
+    .filter(([, s]) => s.game === profile.id)
+    .map(([id, s]) => ({ label: s.name, href: `/series/${id}/`, hint: '系列' }))
+
+  const linkedNames = new Set(relatedSeries.map((item) => item.label))
   const seriesNames = new Set([...ds.series.values()].map((s) => s.name))
   const tagCounts = new Map<string, number>()
   for (const e of profile.entries) {
     for (const tag of e.tags) {
-      if (!seriesNames.has(tag)) continue
+      if (!seriesNames.has(tag) || linkedNames.has(tag)) continue
       tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1)
     }
   }
-  const tagItems = [...tagCounts.entries()]
+  const taggedSeries = [...tagCounts.entries()]
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 3)
     .map(([tag, n]) => ({ label: tag, href: `/archive/?q=${encodeURIComponent(tag)}`, hint: `${n} 场` }))
-  if (tagItems.length) rails.push({ title: '相关栏目', items: tagItems })
+  const seriesItems = [...relatedSeries, ...taggedSeries].slice(0, 3)
+  if (seriesItems.length) rails.push({ title: '相关栏目', items: seriesItems })
 
   // 同年画廊：发布版两个策展顺序（纪念 + 全量）去重后与这些年份重合的照片
   const collections = getGalleryCollections()
