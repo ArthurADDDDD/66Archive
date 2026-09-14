@@ -251,11 +251,4 @@ export const FULL_GALLERY_IDS = [
   "fanart_2022_jzy3152",
   "fanart_2022_10wanfushe160",
   "fanart_2022_ryanmumusan_2018",
-  "fanmeet_2023-07-31_chinajoy_yonghu833211836",
-  "fanmeet_2023-07-30_chinajoy_dazhoushenzui",
-  "fanmeet_2023-07-30_chinajoy_liituojianao",
-  "fanmeet_2023-07-30_chinajoy_yanhu",
-  "fanmeet_2023-10-15_offline_kandoinbfashao",
-  "fanmeet_2018_wuhan_carnival_guapijiujiedi",
-  "fanmeet_undated_nandoushuijiaoquan",
 ] as const
