@@ -28,6 +28,11 @@ export type GalleryPhoto = {
   /** 面向读者的策展标签；素材批次、内部考证状态不放进这里。 */
   tags?: string[]
   source: string | null
+  /**
+   * 访客投稿的署名，与 `source`（这张截图出自哪期直播/视频）是两回事，不要混用。
+   * 老照片的清单里没有这个键，所以是可选的——`undefined` 与 `null` 都表示「没有署名」。
+   */
+  credit?: string | null
   /** 后台隐藏开关：已收录但暂不展示（重复、待复核等），不是「删除」。 */
   hidden: boolean
 }

@@ -861,6 +861,9 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
           ) : (
             <span className="mt-3 hidden font-mono text-[10px] text-faint sm:mt-4 sm:block sm:text-meta">来源：{photo.source}</span>
           ))}
+        {photo.credit && (
+          <span className="mt-1 hidden text-[10px] text-faint sm:mt-1.5 sm:block sm:text-meta">{photo.credit}</span>
+        )}
       </div>
     </article>
   )
@@ -1140,6 +1143,9 @@ function Lightbox({
             ) : (
               <span className="shrink-0 font-mono text-meta text-faint">{photo.source}</span>
             ))}
+          {/* 访客投稿的署名。和 source 同一档字重（text-meta text-faint），
+              不给链接不给颜色——写出来但不抢眼是这一行的全部设计意图。 */}
+          {photo.credit && <span className="shrink-0 text-meta text-faint">{photo.credit}</span>}
         </div>
       </div>
     </div>

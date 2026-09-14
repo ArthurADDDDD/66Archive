@@ -41,6 +41,7 @@ function parsePhoto(value: unknown): GalleryPhoto | null {
     title: text('title'),
     caption: text('caption'),
     source: text('source'),
+    credit: text('credit'),
     hidden: raw.hidden === true,
   }
 }
