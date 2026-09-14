@@ -16,3 +16,23 @@
         status: unchecked
         note: "010陈 2018-08-17 微博原始视频短链；微博正文明确称其为第一、二集补档。"
     contributed_by: chatgpt-research
+
+  - id: 2018-08-26-video-01
+    type: video
+    date: "2018-08-26"
+    title: "女流大周月报·八月篇：大周MC"
+    series: dazhou-mc
+    platform: bilibili
+    confidence: high
+    games: [minecraft]
+    note: "010陈发布的《女流大周月报》八月篇，主题为大周MC；微博正文说明包含大结局后的非官方隐藏结局，并明确给出 B站链接。"
+    sources:
+      - url: "https://t.cn/Rk3D7ip"
+        kind: clip
+        status: unchecked
+        note: "010陈微博正文明确标注为 B站链接。"
+      - url: "https://t.cn/Rk3euZS"
+        kind: clip
+        status: unchecked
+        note: "同一微博附带的第二个视频短链，保留作互补入口。"
+    contributed_by: chatgpt-research
