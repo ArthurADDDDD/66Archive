@@ -1,9 +1,10 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { bucketOf, galleryFullSource, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
+import { fetchGalleryLikes, toggleGalleryLike as toggleGalleryLikeApi } from '@/lib/gallery-likes-api'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
@@ -123,13 +124,15 @@ export function GalleryBoard({
   const [boardW, setBoardW] = useState(1120)
   const photos = collection === 'featured' ? featuredPhotos : allPhotos
 
+  // 精选版的分类固定用 FEATURED_CATEGORY_GUIDE 排序展示；全量版没有这份人工排序表，
+  // 有标签就按标签本身在素材里出现的顺序显示——目前只有「画6大赛」这一批用到。
   const tagCounts = useMemo(() => {
     const counts = new Map<string, number>()
-    for (const photo of featuredPhotos) {
+    for (const photo of photos) {
       for (const value of photo.tags ?? []) counts.set(value, (counts.get(value) ?? 0) + 1)
     }
     return counts
-  }, [featuredPhotos])
+  }, [photos])
 
   useEffect(() => {
     const node = boardRef.current
@@ -216,7 +219,7 @@ export function GalleryBoard({
   }
 
   return (
-    <>
+    <GalleryLikesProvider>
       <div className="mb-4 flex border-y border-line/70 py-4">
         <div className="flex w-fit items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
           <button
@@ -340,6 +343,37 @@ export function GalleryBoard({
         </>
       )}
 
+      {/* 全量版没有精选版那份人工排好序的分类表；有标签就按标签本身的顺序出按钮。
+          目前只有「画6大赛」这一批水友投稿带了标签，不影响其余全量版照片——
+          没有标签的照片在「全部」里能看到，但不会长出一个只有自己的空分类。 */}
+      {collection === 'all' && tagCounts.size > 0 && (
+        <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label="按标签筛选">
+          <button
+            type="button"
+            onClick={() => setTag(null)}
+            aria-pressed={tag === null}
+            className={`ui-press shrink-0 rounded-full border px-3.5 py-2 text-control transition-colors ${
+              tag === null ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 text-muted hover:text-ink'
+            }`}
+          >
+            全部 · {allPhotos.length}
+          </button>
+          {[...tagCounts.entries()].map(([name, count]) => (
+            <button
+              key={name}
+              type="button"
+              onClick={() => setTag(name)}
+              aria-pressed={tag === name}
+              className={`ui-press shrink-0 rounded-full border px-3.5 py-2 text-control transition-colors ${
+                tag === name ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 text-muted hover:text-ink'
+              }`}
+            >
+              {name} · {count}
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* 年份轨：和站内其他页面一样的右侧时间轴。悬停出预览，点了跳年份。 */}
       <GalleryYearRail spectrum={spectrum} coverOf={yearCovers} />
 
@@ -419,7 +453,7 @@ export function GalleryBoard({
           <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} visible={visible} onClose={() => setOpenId(null)} onStep={step} />,
           document.body,
         )}
-    </>
+    </GalleryLikesProvider>
   )
 }
 
@@ -504,6 +538,166 @@ function photoAlt(photo: GalleryPhoto) {
   return photo.date ? `${photo.date} 的画面` : '年份待定的画面'
 }
 
+/**
+ * 点赞：匿名、点了立刻可见反馈（乐观更新），真实计数走后台
+ * `/api/likes/gallery`——同一批接口撑着投票和纠错，身份靠签名 cookie 认，
+ * 见公开仓 gallery-likes-api.ts 与后台 lib/likes/*。
+ *
+ * 整块画廊只在挂载时拉一次全量聚合（GET 一次，不按张查），点赞/取消都是
+ * 对这一份内存状态的乐观更新，失败了再悄悄撤回——低风险的匿名互动，
+ * 不值得为一次点赞失败弹个提示打断浏览。
+ */
+type GalleryLikesState = { counts: Record<string, number>; liked: Set<string> }
+
+const GalleryLikesContext = createContext<{
+  countOf: (id: string) => number
+  isLiked: (id: string) => boolean
+  toggle: (id: string) => void
+} | null>(null)
+
+function GalleryLikesProvider({ children }: { children: React.ReactNode }) {
+  const [state, setState] = useState<GalleryLikesState>({ counts: {}, liked: new Set() })
+
+  useEffect(() => {
+    let cancelled = false
+    fetchGalleryLikes()
+      .then((result) => {
+        if (cancelled) return
+        setState({ counts: result.counts, liked: new Set(result.likedByViewer) })
+      })
+      .catch(() => {
+        // 拿不到聚合数据（本地开发没接后台服务、网络问题）就都当「暂无点赞」，
+        // 不影响画廊其余部分——点赞是锦上添花，不是看图的必要条件。
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const toggle = useCallback((id: string) => {
+    const wasLiked = (current: GalleryLikesState) => current.liked.has(id)
+    setState((current) => {
+      const liked = new Set(current.liked)
+      const next = !wasLiked(current)
+      if (next) liked.add(id)
+      else liked.delete(id)
+      return { liked, counts: { ...current.counts, [id]: Math.max(0, (current.counts[id] ?? 0) + (next ? 1 : -1)) } }
+    })
+
+    toggleGalleryLikeApi(id)
+      .then((result) => {
+        setState((current) => {
+          const liked = new Set(current.liked)
+          if (result.liked) liked.add(id)
+          else liked.delete(id)
+          return { liked, counts: { ...current.counts, [id]: result.count } }
+        })
+      })
+      .catch(() => {
+        // 请求失败（限流、网络抖动）：把这次乐观更新原样撤回，不留一个和服务端对不上的本地状态。
+        setState((current) => {
+          const liked = new Set(current.liked)
+          const hadOptimisticallyAdded = liked.has(id)
+          if (hadOptimisticallyAdded) liked.delete(id)
+          else liked.add(id)
+          return {
+            liked,
+            counts: { ...current.counts, [id]: Math.max(0, (current.counts[id] ?? 0) + (hadOptimisticallyAdded ? -1 : 1)) },
+          }
+        })
+      })
+  }, [])
+
+  const value = useMemo(
+    () => ({
+      countOf: (id: string) => state.counts[id] ?? 0,
+      isLiked: (id: string) => state.liked.has(id),
+      toggle,
+    }),
+    [state, toggle],
+  )
+
+  return <GalleryLikesContext.Provider value={value}>{children}</GalleryLikesContext.Provider>
+}
+
+function useGalleryLikes(id: string) {
+  const ctx = useContext(GalleryLikesContext)
+  if (!ctx) throw new Error('useGalleryLikes 必须在 GalleryLikesProvider 内使用')
+  return { liked: ctx.isLiked(id), count: ctx.countOf(id), toggle: () => ctx.toggle(id) }
+}
+
+/** Instagram 同款红心：#ed4956，实心；未点赞时只描边，不填色。 */
+const LIKE_RED = '#ed4956'
+
+function HeartIcon({ liked, size, pop }: { liked: boolean; size: number; pop: boolean }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className={`transition-transform duration-200 ease-[var(--ease-out-expo)] ${pop ? 'scale-125' : 'scale-100'}`}
+      fill={liked ? LIKE_RED : 'none'}
+      stroke={liked ? LIKE_RED : 'currentColor'}
+      strokeWidth={liked ? 0 : 1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 20.5s-7.23-4.35-10.06-8.51C.29 9.36 1.06 5.6 4.53 4.3c2.36-.88 4.87.02 6.68 2.28 1.4-1.75 3.02-2.6 4.69-2.6 1.92 0 3.53 1.04 4.42 2.85 1.6 2.6.6 6.23-2.32 9.66C15.23 16.15 12 20.5 12 20.5z" />
+    </svg>
+  )
+}
+
+/** 点赞数很大的时候按中文习惯折成「万」，跟「1.2k」那套英文缩写不是一个路子。 */
+function formatLikeCount(count: number): string {
+  if (count < 10000) return count.toLocaleString('zh-CN')
+  const wan = count / 10000
+  return `${wan.toFixed(wan >= 100 ? 0 : 1)}万`
+}
+
+/**
+ * 样式照 Instagram 的路子来：未点赞是描边心，点了立刻变实心红心并弹一下——
+ * 这个反馈本身就是「点没点得中」的确认，不用额外文字提示。`showCount` 打开时
+ * 数字紧跟在心形右边，0 赞不显示数字（一屏全是「0」比不显示更打眼、更冷清）。
+ */
+function LikeButton({
+  id,
+  size = 'md',
+  className = '',
+  showCount = false,
+}: {
+  id: string
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
+  showCount?: boolean
+}) {
+  const { liked, count, toggle } = useGalleryLikes(id)
+  const [pop, setPop] = useState(false)
+  const iconSize = size === 'lg' ? 24 : size === 'sm' ? 16 : 20
+
+  return (
+    <button
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation()
+        const willLike = !liked
+        toggle()
+        if (willLike) {
+          setPop(true)
+          window.setTimeout(() => setPop(false), 220)
+        }
+      }}
+      aria-pressed={liked}
+      aria-label={liked ? '取消点赞' : '点赞'}
+      className={`ui-press inline-flex shrink-0 items-center gap-1 rounded-full text-faint transition-colors hover:text-ink ${className}`}
+    >
+      <HeartIcon liked={liked} size={iconSize} pop={pop} />
+      {showCount && count > 0 && (
+        <span className={`font-mono tnum ${size === 'sm' ? 'text-[10px]' : 'text-meta'}`}>{formatLikeCount(count)}</span>
+      )}
+    </button>
+  )
+}
+
 function GalleryThumbnail({
   photo,
   sizes,
@@ -567,6 +761,9 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
       </button>
 
       <div className="p-3 sm:p-5">
+        {/* 点赞单独占一行放在最上面，仿 Instagram 图片下方的操作栏——
+            比塞进日期行显眼得多，一眼就能看见、够得着点。 */}
+        <LikeButton id={photo.id} size="md" className="-ml-1.5 mb-1 p-1.5 hover:bg-raised/70" showCount />
         {/* 日期行也封成一行：清单里有「2021-07-18（活动日）」这种带注的日期，
             在窄卡上会折成两行，又是一张比邻居高一截的卡。 */}
         <p className="truncate font-mono text-[10px] font-medium text-today tnum sm:overflow-visible sm:whitespace-normal sm:text-control">
@@ -627,29 +824,41 @@ function PhotoCell({
       // 行末留白，好过把这几张图硬撑满整行宽度、挤出裁切。
       : { flex: '0 0 auto', width: rowHeight ? rowHeight * ar : undefined }
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      aria-label={`打开大图：${photoAlt(photo)}`}
-      data-analytics-event="content.open"
-      data-analytics-target={`gallery:${photo.id}`}
-      className="group relative block h-full min-w-0 overflow-hidden rounded-[3px] bg-raised outline-none"
-      style={naturalStyle}
-    >
-      <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
-        {/* 列表一律用浏览器按显示宽度挑选的现代格式缩略图。 */}
-        <GalleryThumbnail
-          photo={photo}
-          sizes={uniform ? '(min-width: 1024px) 165px, 33vw' : '(min-width: 1024px) 360px, 50vw'}
-          className="block h-full w-full object-cover transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] group-hover:brightness-110"
-        />
-      </span>
-      {/* 平时是纯图，hover / 聚焦才浮出时间戳——一屏几十张时，常驻文字才是疲劳的来源。 */}
-      <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 pb-1.5 pt-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <span className="truncate font-mono text-meta tnum text-white/90">{photo.date ?? photo.year ?? UNDATED_LABEL}</span>
-        {photo.time && <span className="shrink-0 font-mono text-meta tnum text-white/55">{photo.time}</span>}
-      </span>
-    </button>
+    // 外层从 <button> 改成 <div>：点赞按钮要浮在缩略图上单独可点，
+    // 不能把它塞进「打开大图」那个 <button> 里——按钮不能嵌按钮。
+    // flex 行距分配用的那份 naturalStyle 也跟着挪到这层，视觉效果不变。
+    <div className="group relative h-full min-w-0 overflow-hidden rounded-[3px] bg-raised" style={naturalStyle}>
+      <button
+        type="button"
+        onClick={onOpen}
+        aria-label={`打开大图：${photoAlt(photo)}`}
+        data-analytics-event="content.open"
+        data-analytics-target={`gallery:${photo.id}`}
+        className="block h-full w-full text-left outline-none"
+      >
+        <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
+          {/* 列表一律用浏览器按显示宽度挑选的现代格式缩略图。 */}
+          <GalleryThumbnail
+            photo={photo}
+            sizes={uniform ? '(min-width: 1024px) 165px, 33vw' : '(min-width: 1024px) 360px, 50vw'}
+            className="block h-full w-full object-cover transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] group-hover:brightness-110"
+          />
+        </span>
+        {/* 平时是纯图，hover / 聚焦才浮出时间戳——一屏几十张时，常驻文字才是疲劳的来源。 */}
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 pb-1.5 pt-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+          <span className="truncate font-mono text-meta tnum text-white/90">{photo.date ?? photo.year ?? UNDATED_LABEL}</span>
+          {photo.time && <span className="shrink-0 font-mono text-meta tnum text-white/55">{photo.time}</span>}
+        </span>
+      </button>
+      {/* 小图密度高，点赞常驻显示（不等 hover）才找得到、点得中；
+          深色圆底垫在下面，浅色/白色图也能看清这颗心。 */}
+      <LikeButton
+        id={photo.id}
+        size="sm"
+        className="absolute right-1 top-1 bg-black/45 px-1.5 py-1 text-white/90 backdrop-blur-sm hover:bg-black/65 hover:text-white"
+        showCount
+      />
+    </div>
   )
 }
 
@@ -690,7 +899,9 @@ function LightboxImage({
             : { backgroundImage: galleryThumbBackground(photo.thumb), backgroundSize: 'cover' }
         }
         className={
-          prefetch ? '' : 'max-h-full max-w-full rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]'
+          // min-h-0/min-w-0：img 作为 flex 子项默认 min-height/min-width 是 auto（按内容撑开），
+          // 竖长图（画6大赛那批漫画页常见）高度超出视口时 max-h-full 不生效，顶部/底部被裁掉。
+          prefetch ? '' : 'max-h-full max-w-full min-h-0 min-w-0 rounded-sm object-contain shadow-[0_40px_120px_rgba(0,0,0,0.7)]'
         }
       />
     </picture>
@@ -774,7 +985,11 @@ function Lightbox({
             target="_blank"
             rel="noreferrer"
             aria-label={`打开公开来源：${photoAlt(photo)}`}
-            className="group/media relative flex max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none"
+            // h-full 是关键：这层 <a> 默认高度由内容撑开（align-items: center 不会拉伸它），
+            // 对浏览器来说是「不确定高度」，图片自己的 max-h-full（百分比）会被当成 none 直接失效——
+            // 竖长图（画6大赛那批漫画页）因此顶部/底部都被裁掉，需要 h-full 把这层的高度钉死，
+            // 图片的百分比 max-height 才有一个确定的分母可以算。
+            className="group/media relative flex h-full min-h-0 min-w-0 max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none"
           >
             <LightboxImage photo={photo} onLoad={() => setLoadedSrc(photo.src)} />
             <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">
@@ -823,6 +1038,7 @@ function Lightbox({
           <span className="ml-auto font-mono text-meta tnum text-faint">
             {index + 1} / {total}
           </span>
+          <LikeButton id={photo.id} size="lg" className="p-1 hover:bg-raised/60" showCount />
           <button ref={closeRef} onClick={onClose} className="ui-press rounded-sm px-2 py-1 text-meta text-muted transition-colors hover:text-ink">
             关闭 · Esc
           </button>
