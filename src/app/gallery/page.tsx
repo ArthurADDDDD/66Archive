@@ -51,6 +51,17 @@ export default async function GalleryPage() {
                 />
               </p>
             )}
+            {/* 底部那份「还在找这些」的征集说明很详细，但要翻完两三百张图才看得到——
+                这页流量最大的地方是这里，先给一句短的，愿意细看的人再去底部。 */}
+            <p className="ui-reveal mt-3 text-control text-faint">
+              <Link
+                prefetch={false}
+                href="/contact/?intent=photo"
+                className="ui-press rounded-sm text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
+              >
+                <SiteText id="gallery-submit-teaser" />
+              </Link>
+            </p>
           </div>
         </section>
 

@@ -287,6 +287,12 @@ export function GalleryBoard({
         </div>
       </div>
 
+      {/* 「点赞越多显示越大」不是一眼能看懂的规则，只在切到「整齐」时才用得上，
+          就贴着这个开关出提示——不在全局常驻占地方，也不用单独造一套引导 UI。 */}
+      {collection === 'all' && mode === 'uniform' && (
+        <p className="-mt-2 mb-6 text-meta text-faint">💡 <SiteText id="gallery-boost-hint" /></p>
+      )}
+
       {collection === 'featured' && (
         <>
           <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label="按纪念版分类筛选">
@@ -395,8 +401,69 @@ export function GalleryBoard({
 
       {/* 图墙沿用全站 px-page 的左右安全边距，再给右侧年份轨让出一条：
           轨道的悬停区有 5–7rem 宽，不让路的话最右一列图会被它盖住，点不动。 */}
-      <div className="pb-16 sm:pb-28 md:pr-[5.5rem] xl:pr-[7rem]" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
-        <div ref={boardRef}>
+      <PhotoWall
+        sections={sections}
+        collection={collection}
+        mode={mode}
+        density={density}
+        boardW={boardW}
+        boardRef={boardRef}
+        onOpen={setOpenId}
+      />
+
+      {visible.length === 0 && <p className="py-16 text-center text-meta text-faint"><SiteText id="gallery-empty" /></p>}
+
+      {openIndex >= 0 &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} visible={visible} onClose={() => setOpenId(null)} onStep={step} />,
+          document.body,
+        )}
+    </GalleryLikesProvider>
+  )
+}
+
+/**
+ * 年份分段 + 三种排布模式的图墙。单独拆出来，是因为「整齐」模式要按点赞数算
+ * 哪些照片放大——这份排名要看到当前可见的全部照片才算得准，不能按年份分段
+ * 各算各的（一年只有两三张时，排名毫无意义），所以在这一层（Provider 的
+ * 后代组件，能读到点赞聚合）一次性算好，再按年份分发下去。
+ */
+function PhotoWall({
+  sections,
+  collection,
+  mode,
+  density,
+  boardW,
+  boardRef,
+  onOpen,
+}: {
+  sections: { year: string; photos: GalleryPhoto[] }[]
+  collection: CollectionMode
+  mode: ViewMode
+  density: Density
+  boardW: number
+  boardRef: React.RefObject<HTMLDivElement | null>
+  onOpen: (id: string) => void
+}) {
+  const counts = useGalleryLikeCounts()
+
+  // 「整齐」模式才用得上：按点赞数在当前可见范围内排一次名，前 ~12%（且赞数 > 0）
+  // 判定为「热门」，网格里占 2×2。其它模式忽略这份计算，反正用不上。
+  const boostedIds = useMemo(() => {
+    if (collection === 'featured' || mode !== 'uniform') return new Set<string>()
+    const liked = sections
+      .flatMap((section) => section.photos)
+      .map((photo) => ({ id: photo.id, count: counts[photo.id] ?? 0 }))
+      .filter((entry) => entry.count > 0)
+      .sort((a, b) => b.count - a.count)
+    const boostCount = Math.max(1, Math.ceil(liked.length * 0.12))
+    return new Set(liked.slice(0, boostCount).map((entry) => entry.id))
+  }, [sections, collection, mode, counts])
+
+  return (
+    <div className="gallery-wall pb-16 sm:pb-28" style={{ '--cell-w': DENSITY[density].cell } as React.CSSProperties}>
+      <div ref={boardRef}>
         {sections.map(({ year: y, photos: list }) => (
           <section key={y} id={`gy-${y}`} className="mb-16 scroll-mt-28 sm:mb-24">
             <header className="mb-4 flex items-baseline gap-4">
@@ -420,7 +487,7 @@ export function GalleryBoard({
             {collection === 'featured' ? (
               <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {list.map((p) => (
-                  <FeaturedPhotoCard key={p.id} photo={p} onOpen={() => setOpenId(p.id)} />
+                  <FeaturedPhotoCard key={p.id} photo={p} onOpen={() => onOpen(p.id)} />
                 ))}
               </div>
             ) : mode === 'natural' ? (
@@ -428,7 +495,7 @@ export function GalleryBoard({
                 {buildRows(list, boardW, DENSITY[density].targetH(boardW)).map((row, i) => (
                   <div key={i} className="flex" style={{ gap: GAP, height: row.height }}>
                     {row.photos.map((p) => (
-                      <PhotoCell key={p.id} photo={p} rowHeight={row.height} stretched={row.stretched} onOpen={() => setOpenId(p.id)} />
+                      <PhotoCell key={p.id} photo={p} rowHeight={row.height} stretched={row.stretched} onOpen={() => onOpen(p.id)} />
                     ))}
                   </div>
                 ))}
@@ -436,24 +503,14 @@ export function GalleryBoard({
             ) : (
               <div className="photo-uniform">
                 {list.map((p) => (
-                  <PhotoCell key={p.id} photo={p} uniform onOpen={() => setOpenId(p.id)} />
+                  <PhotoCell key={p.id} photo={p} uniform boosted={boostedIds.has(p.id)} onOpen={() => onOpen(p.id)} />
                 ))}
               </div>
             )}
           </section>
         ))}
-        </div>
       </div>
-
-      {visible.length === 0 && <p className="py-16 text-center text-meta text-faint"><SiteText id="gallery-empty" /></p>}
-
-      {openIndex >= 0 &&
-        typeof document !== 'undefined' &&
-        createPortal(
-          <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} visible={visible} onClose={() => setOpenId(null)} onStep={step} />,
-          document.body,
-        )}
-    </GalleryLikesProvider>
+    </div>
   )
 }
 
@@ -553,6 +610,8 @@ const GalleryLikesContext = createContext<{
   countOf: (id: string) => number
   isLiked: (id: string) => boolean
   toggle: (id: string) => void
+  /** 原始计数表，只给「整齐」网格算排名用——按 id 单查用 countOf。 */
+  counts: Record<string, number>
 } | null>(null)
 
 function GalleryLikesProvider({ children }: { children: React.ReactNode }) {
@@ -613,6 +672,7 @@ function GalleryLikesProvider({ children }: { children: React.ReactNode }) {
       countOf: (id: string) => state.counts[id] ?? 0,
       isLiked: (id: string) => state.liked.has(id),
       toggle,
+      counts: state.counts,
     }),
     [state, toggle],
   )
@@ -624,6 +684,12 @@ function useGalleryLikes(id: string) {
   const ctx = useContext(GalleryLikesContext)
   if (!ctx) throw new Error('useGalleryLikes 必须在 GalleryLikesProvider 内使用')
   return { liked: ctx.isLiked(id), count: ctx.countOf(id), toggle: () => ctx.toggle(id) }
+}
+
+function useGalleryLikeCounts() {
+  const ctx = useContext(GalleryLikesContext)
+  if (!ctx) throw new Error('useGalleryLikeCounts 必须在 GalleryLikesProvider 内使用')
+  return ctx.counts
 }
 
 /** Instagram 同款红心：#ed4956，实心；未点赞时只描边，不填色。 */
@@ -800,11 +866,15 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
   )
 }
 
+/** 「整齐」模式里热门照片占的格数。固定 2×2——封顶，不随点赞数无限变大。 */
+const BOOST_SPAN = 2
+
 function PhotoCell({
   photo,
   uniform = false,
   rowHeight,
   stretched = true,
+  boosted = false,
   onOpen,
 }: {
   photo: GalleryPhoto
@@ -813,11 +883,15 @@ function PhotoCell({
   rowHeight?: number
   /** 这一行是否铺满了容器宽度。false 时关掉 flex-grow——见 buildRows 顶部注释。 */
   stretched?: boolean
+  /** 仅「整齐」模式：这张照片点赞数排进当前可见范围前 12%，网格里占 2×2。 */
+  boosted?: boolean
   onOpen: () => void
 }) {
   const ar = photo.width / photo.height
   const naturalStyle: React.CSSProperties | undefined = uniform
-    ? undefined
+    ? boosted
+      ? { gridColumn: `span ${BOOST_SPAN}`, gridRow: `span ${BOOST_SPAN}` }
+      : undefined
     : stretched
       ? { flex: `${ar} 1 0` }
       // 未铺满的行：宽度按真实宽高比 × 行高算死，不参与 flex-grow 分配剩余空间，
@@ -840,7 +914,13 @@ function PhotoCell({
           {/* 列表一律用浏览器按显示宽度挑选的现代格式缩略图。 */}
           <GalleryThumbnail
             photo={photo}
-            sizes={uniform ? '(min-width: 1024px) 165px, 33vw' : '(min-width: 1024px) 360px, 50vw'}
+            sizes={
+              uniform
+                ? boosted
+                  ? '(min-width: 1024px) 330px, 66vw'
+                  : '(min-width: 1024px) 165px, 33vw'
+                : '(min-width: 1024px) 360px, 50vw'
+            }
             className="block h-full w-full object-cover transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] group-hover:brightness-110"
           />
         </span>

@@ -405,6 +405,8 @@ export const SITE_COPY: SiteCopy = {
     { id: 'gallery-wanted-body', group: '画廊', label: '底部征集 · 正文（一行一段）', text: '这些年留下过很多周年贺图、生日作品、水友创作和直播间里的纪念画面。其中一些如今只剩预览图、转发记录，或者已经失效的原始链接。\n如果你手里还保存着这些年的周年图片、各部祝福、生日作品、老截图，或者知道它们最早的出处，欢迎把线索发给我。' },
     { id: 'gallery-wanted-note', group: '画廊', label: '底部征集 · 强调的一句', text: '如果能同时提供年份、作者、原图或原始链接，会特别有帮助。' },
     { id: 'gallery-wanted-cta', group: '画廊', label: '底部征集 · 链接', text: '提供线索 →' },
+    { id: 'gallery-submit-teaser', group: '画廊', label: '页头附近的投稿指引', text: '手里还留着周年图、生日贺图、老照片？欢迎投稿给我们 →' },
+    { id: 'gallery-boost-hint', group: '画廊', label: '「整齐」模式的点赞提示', text: '点赞靠前的照片会放大显示' },
     { id: 'games-archive-link', group: '游戏厅', label: '右上角链接', text: '去录播室搜一场 →' },
     { id: 'games-summary', group: '游戏厅', label: '页头下方 · 一共多少游戏', vars: ['count'], text: '{count} 个游戏。' },
     { id: 'games-summary-longest', group: '游戏厅', label: '页头下方 · 跨度最长的一款（接在上一句后面）', vars: ['name', 'from', 'to', 'days'], text: '跨得最长的是《{name}》，从 {from} 到 {to}，{days} 天。' },

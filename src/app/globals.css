@@ -984,11 +984,45 @@ button:not(:disabled):active,
   height: 0;
 }
 
+/**
+ * 图墙给右侧年份轨让出的右侧空当。
+ *
+ * 轨道是 `position: fixed; right: 0`，贴的是真实视口右缘（见 TimelineRail 顶部
+ * 注释：挂在 body 上就是为了不受任何祖先 transform 影响）。但图墙的容器
+ * `.site-container-wide` 在宽屏上有 max-width 上限并居中——容器一旦不再撑满
+ * 视口，它右边界到视口右缘之间天然就空出一截，而这里原来写的是固定
+ * `md:pr-[5.5rem] xl:pr-[7rem]`，跟视口宽度完全不挂钩。窄屏下这个值不够，轨道
+ * 会压住最后一列图；宽屏（>~2000px 说撑到 max-width 上限）下容器自己的居中留白
+ * 早就够轨道用了，这份固定 padding 却原样加上去，变成图和轨道之间一段没人
+ * 用到、看着像没对齐的空白——正是这次要修的问题。
+ *
+ * 用 max(0, 需要让出的宽度 − 容器居中天然留出的半边留白) 换算：容器自己的留白够，
+ * 这里就不用再多让；不够，才补差额。`--site-shell-max` 由 `.site-container-wide`
+ * 定义，图墙是它的后代，能直接继承到这个自定义属性。
+ */
+.gallery-wall {
+  --rail-reserve: 0px;
+  padding-right: max(0px, calc(var(--rail-reserve) - (100vw - var(--site-shell-max, 100vw)) * 0.5));
+}
+@media (min-width: 768px) {
+  .gallery-wall {
+    --rail-reserve: 5.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery-wall {
+    --rail-reserve: 7rem;
+  }
+}
+
 /* 「整齐」模式：放弃真实比例，换一眼能点清数量的规则网格。
    「原貌」模式的等高行由 GalleryBoard 自己算（要按容器宽度分行），这里没有对应样式。 */
 .photo-uniform {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--cell-w), 1fr));
+  /* dense：点赞靠前的照片占 2×2（见 GalleryBoard 的 boosted），穿插在正常格子间时
+     自动回填空隙，不然大格子后面小格子按到达顺序排，容易空出难看的洞。 */
+  grid-auto-flow: dense;
   gap: 0.625rem;
 }
 
