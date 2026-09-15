@@ -308,7 +308,7 @@ export const HOMEPAGE_ACTS: Act[] = [
 ]
 
 /**
- * 编年史故事模式（详版，32 节）：替代原来的逐年摘要。
+ * 编年史故事模式（详版，37 节）：替代原来的逐年摘要。
  * 甘蔗精（ganzhe-jing）已按用户要求撤下，等找到正确素材再放回。
  * 规格沿用：hero 配图大卡 / type 字排大卡 / small 小卡。
  * 大周MC 与 回冒险岛 无带封面条目（绝不用假图）→ 字排大卡。见 .claude/docs/04-首页大事件URL调研.md §7/§8。
@@ -533,6 +533,16 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'entry', id: '2015-07-05-live-01', href: '/series/xinling-pishuang/' },
       },
       {
+        id: 'fishballs-200t-2017',
+        date: '2017.06.09',
+        storyYear: 2017,
+        size: 'small',
+        kicker: '年度里程碑',
+        title: '200T 鱼丸达成。',
+        body: '2017 年度直播报告记载：6 月 9 日，直播间鱼丸累计达到 200T。本站将这一节点作为年度里程碑收录。',
+        target: { kind: 'none' },
+      },
+      {
         id: 'dazhou-mc',
         date: '2017.07',
         storyYear: 2017,
@@ -541,6 +551,16 @@ export const STORY_ACTS: Act[] = [
         title: '到这时，大家已经叫「大周」。',
         body: '目前保存下来的《大周 MC》记录从 2017 年 7 月开始。《Minecraft》里的国家名——女皇、六泽天、大周——已经变成斗鱼156277 水友群体共同使用的名字。',
         target: { kind: 'game', id: 'minecraft' },
+      },
+      {
+        id: 'first-chicken-2017',
+        date: '2017.09.16',
+        storyYear: 2017,
+        size: 'small',
+        kicker: '第一次',
+        title: '直播第一次“吃到鸡”。',
+        body: '2017 年度直播报告记载：9 月 16 日，直播第一次“吃到鸡”。当天现存完整录播标题就是《大吉大利今晚吃鸡》。',
+        target: { kind: 'entry', id: '2017-09-16-live-01' },
       },
       {
         id: 'anniversary-2016-live',
@@ -804,6 +824,16 @@ export const STORY_ACTS: Act[] = [
         target: { kind: 'game', id: 'getting-over-it' },
       },
       {
+        id: 'followers-2m-2017',
+        date: '2017.12.12',
+        storyYear: 2017,
+        size: 'small',
+        kicker: '关注里程碑',
+        title: '直播关注数突破 200W。',
+        body: '2017 年度直播报告记载：12 月 12 日，直播关注数突破 200W，并以 SOLO 演唱会庆祝。当天《K歌不停歇》完整录像仍在。',
+        target: { kind: 'entry', id: '2017-12-12-live-01' },
+      },
+      {
         // 第三方剪辑号「bc狼」的相声改编版，bilibili API 核实 pubdate=2018-03-01；
         // 原始事件更早，但没有比这更可靠的锚点，日期只写到月、不假装知道具体哪天。
         id: 'zhushi-ji',
@@ -824,6 +854,26 @@ export const STORY_ACTS: Act[] = [
         title: '多年以后，再搜索「石悦」。',
         body: '中国青年报再次采访。媒体眼里的她，已经从当年的高考状元，变成了游戏主播女流66。',
         target: { kind: 'href', href: 'http://media.people.com.cn/n1/2018/0828/c40606-30254502.html' },
+      },
+      {
+        id: 'voice-live-first-2018',
+        date: '2018.09.24',
+        storyYear: 2018,
+        size: 'small',
+        kicker: '第一次',
+        title: '第一次尝试语音直播。',
+        body: '2018 年度直播报告记载：9 月 24 日首次尝试语音直播。当天档案《回老家过中秋》仍完整保留。',
+        target: { kind: 'entry', id: '2018-09-24-live-01' },
+      },
+      {
+        id: 'douyu-awards-console-no1-2018',
+        date: '2018.09.29',
+        storyYear: 2018,
+        size: 'small',
+        kicker: '斗鱼盛典',
+        title: '主机板块第 1 名。',
+        body: '2018 年度直播报告记载：9 月 29 日，女流获得斗鱼盛典主机板块第 1 名。当天直播内容是《中国式家长》。',
+        target: { kind: 'entry', id: '2018-09-29-live-01' },
       },
       // 甘蔗精（ganzhe-jing）已撤下：等找到正确素材再放。
       {
@@ -1703,7 +1753,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
       storyEndYear: b.storyEndYear,
       size: b.size,
       important: Boolean(b.important),
-      // 首页精简幕：重要锚点显示「重要」，非重要不带任何小标签（用户明确要求）。
+      // 首页精简幕：重要锚点显示「重要」，非重要不带小标签（用户明确要求）。
       kicker: home ? (b.important ? '重要' : undefined) : b.kicker,
       title: fillEmphasis(b.title, vars) ?? b.title,
       body: b.body,
@@ -1779,7 +1829,7 @@ export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): Homepag
   }
 }
 
-/** 编年史故事模式：32 节详版三幕（甘蔗精已撤）。 */
+/** 编年史故事模式：37 节详版三幕（甘蔗精已撤）。 */
 export function resolveStoryActs(ds: Dataset, timeline: TimelineEntry[]): ResolvedAct[] {
   return resolveActs(ds, timeline, STORY_ACTS)
 }
