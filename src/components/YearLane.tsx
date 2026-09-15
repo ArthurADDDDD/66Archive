@@ -122,28 +122,39 @@ export function EraFlow({ rows }: { rows: EraColumn[] }) {
       >
         {rows.map((row, index) => {
           const total = totals[index]
+          const present = row.segments.filter((segment) => segment.count > 0)
           return (
-            <span key={row.year} className="flex h-[clamp(5rem,7.5vw,8rem)] flex-col justify-end gap-[2px]">
+            <span
+              key={row.year}
+              tabIndex={0}
+              className="group relative flex h-[clamp(5rem,7.5vw,8rem)] flex-col justify-end gap-[2px] outline-none"
+            >
+              {/* 悬浮/聚焦时的精确读数：总数，混了不止一个时期时再列一遍分段。 */}
+              <span
+                role="tooltip"
+                className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-line bg-raised px-2 py-1 text-meta text-ink opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
+              >
+                {row.year} 年 · <span className="font-mono tnum">{total.toLocaleString()}</span> 条
+                {present.length > 1 && (
+                  <span className="ml-1 text-faint">
+                    （{present.map((segment) => `${segment.label} ${segment.count}`).join('、')}）
+                  </span>
+                )}
+              </span>
               {total === 0 ? (
-                <span
-                  title={`${row.year} 年 · 没有记录`}
-                  className="block h-[0.375rem] w-full rounded-[0.1875rem] bg-raised/60 ring-1 ring-inset ring-line/50"
-                />
+                <span className="block h-[0.375rem] w-full rounded-[0.1875rem] bg-raised/60 ring-1 ring-inset ring-line/50" />
               ) : (
-                row.segments
-                  .filter((segment) => segment.count > 0)
-                  .map((segment) => (
-                    <span
-                      key={segment.id}
-                      title={`${row.year} 年 · ${segment.label} ${segment.count.toLocaleString()} 条`}
-                      className="block w-full rounded-[0.1875rem]"
-                      style={{
-                        height: `${(segment.count / max) * 100}%`,
-                        minHeight: '0.25rem',
-                        background: segment.color,
-                      }}
-                    />
-                  ))
+                present.map((segment) => (
+                  <span
+                    key={segment.id}
+                    className="block w-full rounded-[0.1875rem]"
+                    style={{
+                      height: `${(segment.count / max) * 100}%`,
+                      minHeight: '0.25rem',
+                      background: segment.color,
+                    }}
+                  />
+                ))
               )}
             </span>
           )

@@ -33,9 +33,27 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
               key={year}
               href={`/archive/?y=${year}`}
               prefetch={false}
-              className="group flex h-full min-w-[1.875rem] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
+              className="group relative flex h-full min-w-[1.875rem] flex-1 flex-col items-center gap-1.5 sm:min-w-0"
               title={`${year} 年 · ${row.count.toLocaleString()} 条`}
             >
+              {/* 悬浮时的精确读数。放在整根柱子（含下面「最多」那行）之上，
+                  bottom-full 量的是这个 Link 自身的高度，所以永远贴着这一列的顶，
+                  不会因为「最多」徽标而被自己挡住。 */}
+              <span
+                role="tooltip"
+                className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-line bg-raised px-2 py-1 text-meta text-ink opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
+              >
+                {year} 年 · <span className="font-mono tnum">{row.count.toLocaleString()}</span> 条
+              </span>
+              {/* 固定高度的一行，不管这一年是不是「最多」都占着——柱子的可用高度
+                  （下面的 flex-1）因此每一列都一样，徽标才不会贴到柱顶上去。 */}
+              <span className="flex h-4 items-end justify-center">
+                {year === topYear && (
+                  <span className="whitespace-nowrap rounded-sm bg-ink px-1.5 py-0.5 text-meta font-semibold text-[#12141C] tnum">
+                    最多
+                  </span>
+                )}
+              </span>
               <span className="relative flex min-h-0 w-full max-w-[clamp(1.25rem,1.5vw,2rem)] flex-1 items-end">
                 <span
                   className="block w-full rounded-t-sm transition-[opacity,filter] group-hover:brightness-150"
@@ -44,11 +62,6 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
                     background: actColorForDate(`${year}-06-01`),
                   }}
                 />
-                {year === topYear && (
-                  <span className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-ink px-1.5 py-0.5 text-meta font-semibold text-[#12141C] tnum">
-                    最多
-                  </span>
-                )}
               </span>
               {/* 手机上只显示偶数年的标签，但必须用 invisible 而不是 hidden：
                   display:none 会把这一格的标签和它上面的 gap 一起从布局里拿掉，
