@@ -24,6 +24,10 @@ type PublicGalleryPhotosModule = {
   getGalleryPhotos: () => unknown[]
 }
 
+type PublicShareCardsModule = {
+  getShareCardRecords: () => { id: string; description: string; image?: string | null }[]
+}
+
 type PublicBeatTarget =
   | { kind: 'entry'; id: string; href?: string }
   | { kind: 'game'; id: string }
@@ -163,12 +167,14 @@ async function main() {
     const galleryPhotosModule = fs.existsSync(galleryPhotosModulePath)
       ? ((await import(pathToFileURL(galleryPhotosModulePath).href)) as PublicGalleryPhotosModule)
       : null
+    const shareCardsModule = (await import(pathToFileURL(path.join(publicRoot, 'src/lib/share-cards.ts')).href)) as PublicShareCardsModule
     const narrativeModule = (await import(pathToFileURL(path.join(publicRoot, 'src/lib/narrative.ts')).href)) as PublicNarrativeModule
     const extraHighlightModule = (await import(pathToFileURL(path.join(publicRoot, 'src/lib/highlight-extras.ts')).href)) as PublicExtraHighlightModule
     const siteCopyModule = (await import(pathToFileURL(path.join(publicRoot, 'src/lib/site-copy.ts')).href)) as PublicSiteCopyModule
     const dataset = dataModule.getDataset()
     const gallery = galleryModule.getGalleryCollection()
     const galleryPhotos = galleryPhotosModule?.getGalleryPhotos() ?? []
+    const shareCards = shareCardsModule.getShareCardRecords()
     const publicHighlights = [...narrativeModule.HIGHLIGHTS, ...extraHighlightModule.EXTRA_HIGHLIGHTS]
 
     const narrative = {
@@ -217,6 +223,7 @@ async function main() {
       },
       gallery,
       galleryPhotos,
+      shareCards,
       narrative,
       siteCopy: siteCopyModule.SITE_COPY,
     }

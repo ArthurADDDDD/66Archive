@@ -29,6 +29,7 @@ import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 export const metadata: Metadata = pageMetadata({
   path: '/',
   description: SITE_DESCRIPTION,
+  shareId: 'home',
 })
 
 /**

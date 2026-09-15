@@ -16,6 +16,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/gallery/',
   title: '纪念画廊',
   description: '从屏风时代到现在，直播间里那些值得纪念的画面。',
+  shareId: 'gallery',
 })
 
 /** 画廊：精选节点与全量年份底片架共用一套发布版浏览体验。 */

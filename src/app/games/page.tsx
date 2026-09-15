@@ -18,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/games/',
   title: '游戏厅',
   description: '她玩过的每一款游戏：第一次是哪天，后来又回来过几次。',
+  shareId: 'games',
 })
 
 /**

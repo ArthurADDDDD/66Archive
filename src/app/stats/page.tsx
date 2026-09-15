@@ -28,6 +28,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/stats/',
   title: '数据',
   description: '关于这份档案的一些观察：哪一年留下的最多，哪款游戏陪得最久。',
+  shareId: 'stats',
 })
 
 /**

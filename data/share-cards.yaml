@@ -1,0 +1,35 @@
+# 分享卡片。链接被转发到微信 / 微博 / QQ / B站动态时，社交卡片显示的文案（og:description）
+# 与图片（og:image），每个固定页面各一份，由后台「分享卡片」页面维护。
+#
+# image 为 null 表示这一页还没单独设过图，前台落到全站默认图（page-metadata.ts 的
+# OG_IMAGE）。它不是手改的字段——由后台上传图片后，CI 落盘步骤写回这里，取值形如
+# /images/og/<id>-<内容哈希>.jpg。
+#
+# 这份文件改了不会立刻生效——og 标签只在构建静态页面时写进 HTML 一次，社交平台的
+# 爬虫不会跑前端 JS 去读运行时接口，所以必须走「暂存 → 推送 → CI 重新构建」这条路，
+# 和改游戏名/系列简介完全同一条路，不是站内文字那种即时生效。
+
+- id: home
+  description: 2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。
+  image: null
+- id: series
+  description: 心灵砒霜、一起 See、夜话……那些反复出现、也各有名字的节目。
+  image: null
+- id: contact
+  description: 想起一场没被收录的直播，或者发现哪里写错了？都可以在这里告诉我。
+  image: null
+- id: archive
+  description: 按年份和月份翻，或者直接搜标题——找到你记得的那一场。
+  image: null
+- id: gallery
+  description: 从屏风时代到现在，直播间里那些值得纪念的画面。
+  image: null
+- id: chronicle
+  description: 从 2010 年的第一支视频到今天，一年一年走下来的路。
+  image: null
+- id: games
+  description: 她玩过的每一款游戏：第一次是哪天，后来又回来过几次。
+  image: null
+- id: stats
+  description: 关于这份档案的一些观察：哪一年留下的最多，哪款游戏陪得最久。
+  image: null

@@ -18,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/contact/',
   title: '联系我们',
   description: '想起一场没被收录的直播，或者发现哪里写错了？都可以在这里告诉我。',
+  shareId: 'contact',
 })
 
 /**

@@ -9,7 +9,7 @@ import { RouteIntentPrefetch } from '@/components/RouteIntentPrefetch'
 import { fetchBakedNavShell } from '@/lib/baked-content'
 import { CONTENT_PATHS, EDITORIAL_ROUTES, NARRATIVE_ROUTES } from '@/lib/live-content'
 import { siteOrigin, siteUrl } from '@/lib/site-url'
-import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from '@/lib/page-metadata'
+import { CURRENT_HOME_OG_IMAGE, CURRENT_SITE_DESCRIPTION, SITE_DESCRIPTION, SITE_NAME } from '@/lib/page-metadata'
 import { IMAGE_PROXY_ORIGIN } from '@/lib/platforms'
 
 const display = Archivo({
@@ -82,14 +82,14 @@ export const metadata: Metadata = {
     locale: 'zh_CN',
     url: siteUrl('/'),
     title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+    description: CURRENT_SITE_DESCRIPTION,
+    images: [{ url: CURRENT_HOME_OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    images: [OG_IMAGE],
+    description: CURRENT_SITE_DESCRIPTION,
+    images: [CURRENT_HOME_OG_IMAGE],
   },
 }
 

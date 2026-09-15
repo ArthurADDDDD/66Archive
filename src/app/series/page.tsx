@@ -23,6 +23,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/series/',
   title: '节目单',
   description: '心灵砒霜、一起 See、夜话……那些反复出现、也各有名字的节目。',
+  shareId: 'series',
 })
 
 const SERIES_COLOR = { themed: '#5BC8E8', video: '#E0A244' } as const

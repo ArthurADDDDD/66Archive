@@ -13,6 +13,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/archive/',
   title: '录播室',
   description: '按年份和月份翻，或者直接搜标题——找到你记得的那一场。',
+  shareId: 'archive',
 })
 
 /**
