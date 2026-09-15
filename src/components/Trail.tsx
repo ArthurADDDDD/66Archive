@@ -145,7 +145,10 @@ export function ResumeStrip({ currentId }: { currentId?: string }) {
   return (
     <aside
       aria-label="接着上次看"
-      className="ui-panel-in fixed bottom-20 right-4 z-40 w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-live/35 bg-base/92 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.38)] backdrop-blur sm:bottom-8 sm:right-24"
+      // bg-base 必须不透明：这是个 fixed 浮层，短列表滚到底时它的位置正好落在
+      // 最后一条记录上——之前 /92 + backdrop-blur 只是模糊底下的字，不是挡住，
+      // 手机上两行字会透出来叠在一起，读不清也像样式坏了。
+      className="ui-panel-in fixed bottom-20 right-4 z-40 w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-live/35 bg-base p-3 shadow-[0_18px_50px_rgba(0,0,0,0.38)] sm:bottom-8 sm:right-24"
     >
       <div className="flex items-start justify-between gap-2">
         <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="trail-resume" /></span>
