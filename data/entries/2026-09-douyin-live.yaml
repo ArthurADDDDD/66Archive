@@ -206,3 +206,23 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-16-live-01
+  type: live
+  date: "2026-09-16"
+  title: "冒险岛 怀旧服第十一天 抽芙莉莲联动宠物"
+  platform: douyin
+  duration_min: 107
+  games:
+    - maplestory
+    - maplestory-classic
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/7da58e54a7c72497a265c88aa758eb7e89ecc668.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1fAeK6PEFT"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
