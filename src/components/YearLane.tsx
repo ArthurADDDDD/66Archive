@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
 import { actColorForDate } from '@/lib/narrative'
 
 /**
@@ -109,71 +112,78 @@ export type EraColumn = {
 /**
  * 时代更替：每一年一根柱子，柱子内部按平台时期分段。
  * 橙色让位给蓝色、蓝色让位给红色——「时代如何变化」这句话本身就是这张图。
+ *
+ * 手机上曾经隔年隐藏标签：这张图不像 YearBarChart 那样有横向滚动兜底，
+ * 一格只有约 14.5px，2 位年份都快放不下，全部显示会真的挤在一起。
+ * 现在给列一个 1.875rem（30px）的最小宽度——跟 YearBarChart 用的是同一个
+ * 数字，那边已经验证够放下标签——桌面版心够宽时 1fr 照常占满，手机上
+ * 列被摁在最小宽度、总宽超出容器时交给外层 overflow-x-auto 横向滚动，
+ * 不再需要隔年藏一半年份。
  */
 export function EraFlow({ rows }: { rows: EraColumn[] }) {
+  const scroller = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const el = scroller.current
+    if (el) el.scrollLeft = el.scrollWidth
+  }, [])
+
   const totals = rows.map((row) => row.segments.reduce((sum, segment) => sum + segment.count, 0))
   const max = Math.max(1, ...totals)
+  const columns = `repeat(${rows.length}, minmax(1.875rem, 1fr))`
 
   return (
     <div>
-      <div
-        className="grid items-end gap-[clamp(0.125rem,0.5vw,0.6rem)]"
-        style={{ gridTemplateColumns: `repeat(${rows.length}, minmax(0, 1fr))` }}
-      >
-        {rows.map((row, index) => {
-          const total = totals[index]
-          const present = row.segments.filter((segment) => segment.count > 0)
-          return (
-            <span
-              key={row.year}
-              tabIndex={0}
-              className="group relative flex h-[clamp(5rem,7.5vw,8rem)] flex-col justify-end gap-[2px] outline-none"
-            >
-              {/* 悬浮/聚焦时的精确读数：总数，混了不止一个时期时再列一遍分段。 */}
+      <div ref={scroller} className="overflow-x-auto [scrollbar-width:thin]">
+        <div className="grid items-end gap-[clamp(0.125rem,0.5vw,0.6rem)]" style={{ gridTemplateColumns: columns }}>
+          {rows.map((row, index) => {
+            const total = totals[index]
+            const present = row.segments.filter((segment) => segment.count > 0)
+            return (
               <span
-                role="tooltip"
-                className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-line bg-raised px-2 py-1 text-meta text-ink opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
+                key={row.year}
+                tabIndex={0}
+                className="group relative flex h-[clamp(5rem,7.5vw,8rem)] flex-col justify-end gap-[2px] outline-none"
               >
-                {row.year} 年 · <span className="font-mono tnum">{total.toLocaleString()}</span> 条
-                {present.length > 1 && (
-                  <span className="ml-1 text-faint">
-                    （{present.map((segment) => `${segment.label} ${segment.count}`).join('、')}）
-                  </span>
+                {/* 悬浮/聚焦时的精确读数：总数，混了不止一个时期时再列一遍分段。 */}
+                <span
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-line bg-raised px-2 py-1 text-meta text-ink opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.45)] transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
+                >
+                  {row.year} 年 · <span className="font-mono tnum">{total.toLocaleString()}</span> 条
+                  {present.length > 1 && (
+                    <span className="ml-1 text-faint">
+                      （{present.map((segment) => `${segment.label} ${segment.count}`).join('、')}）
+                    </span>
+                  )}
+                </span>
+                {total === 0 ? (
+                  <span className="block h-[0.375rem] w-full rounded-[0.1875rem] bg-raised/60 ring-1 ring-inset ring-line/50" />
+                ) : (
+                  present.map((segment) => (
+                    <span
+                      key={segment.id}
+                      className="block w-full rounded-[0.1875rem]"
+                      style={{
+                        height: `${(segment.count / max) * 100}%`,
+                        minHeight: '0.25rem',
+                        background: segment.color,
+                      }}
+                    />
+                  ))
                 )}
               </span>
-              {total === 0 ? (
-                <span className="block h-[0.375rem] w-full rounded-[0.1875rem] bg-raised/60 ring-1 ring-inset ring-line/50" />
-              ) : (
-                present.map((segment) => (
-                  <span
-                    key={segment.id}
-                    className="block w-full rounded-[0.1875rem]"
-                    style={{
-                      height: `${(segment.count / max) * 100}%`,
-                      minHeight: '0.25rem',
-                      background: segment.color,
-                    }}
-                  />
-                ))
-              )}
+            )
+          })}
+        </div>
+        <div className="mt-1.5 grid gap-[clamp(0.125rem,0.5vw,0.6rem)]" style={{ gridTemplateColumns: columns }}>
+          {rows.map((row) => (
+            <span key={row.year} className="text-center font-mono text-meta leading-none text-faint tnum">
+              {String(row.year).slice(2)}
             </span>
-          )
-        })}
+          ))}
+        </div>
       </div>
-      <div
-        className="mt-1.5 grid gap-[clamp(0.125rem,0.5vw,0.6rem)]"
-        style={{ gridTemplateColumns: `repeat(${rows.length}, minmax(0, 1fr))` }}
-      >
-        {rows.map((row) => (
-          // 手机上隔一年隐去一个（用透明度，不能用 hidden——网格列不能塌）
-          <span
-            key={row.year}
-            className={`text-center font-mono text-meta leading-none text-faint tnum ${row.year % 2 ? 'opacity-0 sm:opacity-100' : ''}`}
-          >
-            {String(row.year).slice(2)}
-          </span>
-        ))}
-      </div>
+      <p className="mt-2 text-meta text-faint sm:hidden">← 左右滑动看全部年份</p>
     </div>
   )
 }

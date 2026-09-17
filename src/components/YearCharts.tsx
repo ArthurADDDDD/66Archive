@@ -63,13 +63,11 @@ export function YearBarChart({ rows, topYear }: { rows: YearRow[]; topYear: numb
                   }}
                 />
               </span>
-              {/* 手机上只显示偶数年的标签，但必须用 invisible 而不是 hidden：
-                  display:none 会把这一格的标签和它上面的 gap 一起从布局里拿掉，
-                  于是奇数年的柱子比偶数年多出十几像素的高度，柱底一根一根错开——
-                  柱状图的底线错了，整张图就废了。visibility:hidden 只是不画，格子还在。 */}
-              <span className={`font-mono text-meta leading-3 text-faint tnum ${year % 2 ? 'invisible sm:visible' : ''}`}>
-                {year}
-              </span>
+              {/* 曾经手机上只隔年显示标签，理由是「怕挤」——但每格 30px 的最小宽度
+                  本来就够放下一个 4 位年份（实测 28.8px），加上局部横向滚动，从没
+                  真的挤过。隔年隐藏只是白白让一半的年份看起来「这根柱子没有数字」，
+                  这正是复现过不止一次的反馈，所以去掉：一格一个年份，全部显示。 */}
+              <span className="font-mono text-meta leading-3 text-faint tnum">{year}</span>
             </Link>
           ))}
         </div>
