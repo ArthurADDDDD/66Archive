@@ -226,3 +226,22 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-17-live-01
+  type: live
+  date: "2026-09-17"
+  title: "晚上好"
+  platform: douyin
+  duration_min: 177
+  games:
+    - jiaomeimeikaiche
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/b0aec8627ce7cb7565bf20ea27bbc96e49d32853.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV19Hey6vEY8"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
