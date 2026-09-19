@@ -911,7 +911,14 @@ function PhotoCell({
         aria-label={`打开大图：${photoAlt(photo)}`}
         data-analytics-event="content.open"
         data-analytics-target={`gallery:${photo.id}`}
-        className="block h-full w-full text-left outline-none"
+        /**
+         * `focus-ring-inset`：全局 :focus-visible 的柔光画在盒子外面，会被上面那层
+         * overflow-hidden 整圈裁掉，键盘焦点在网格里等于隐形。
+         * `group/photo`：外层 div 那个 `group` 没有 tabindex，永远不会进 :focus-visible，
+         * 所以下面时间戳条的 `group-focus-visible:` 从来没生效过；命名 group 挂在真正
+         * 被聚焦的这个 button 上才对。hover 仍然走外层那个 group，范围不变。
+         */
+        className="group/photo block h-full w-full text-left outline-none focus-ring-inset"
       >
         <span className={`block h-full ${uniform ? 'aspect-square' : ''}`}>
           {/* 列表一律用浏览器按显示宽度挑选的现代格式缩略图。 */}
@@ -928,7 +935,7 @@ function PhotoCell({
           />
         </span>
         {/* 平时是纯图，hover / 聚焦才浮出时间戳——一屏几十张时，常驻文字才是疲劳的来源。 */}
-        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 pb-1.5 pt-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 pb-1.5 pt-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible/photo:opacity-100">
           <span className="truncate font-mono text-meta tnum text-white/90">{photo.date ?? photo.year ?? UNDATED_LABEL}</span>
           {photo.time && <span className="shrink-0 font-mono text-meta tnum text-white/55">{photo.time}</span>}
         </span>
@@ -1008,6 +1015,8 @@ function Lightbox({
   onStep: (delta: number) => void
 }) {
   const closeRef = useRef<HTMLButtonElement>(null)
+  /** 焦点收束的边界：Tab 只在这个节点内部循环。 */
+  const dialogRef = useRef<HTMLDivElement>(null)
   const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
   const [loadedSrc, setLoadedSrc] = useState<string | null>(null)
 
@@ -1035,6 +1044,31 @@ function Lightbox({
       if (e.key === 'Escape') onClose()
       else if (e.key === 'ArrowLeft') onStep(-1)
       else if (e.key === 'ArrowRight') onStep(1)
+      else if (e.key === 'Tab') {
+        /**
+         * 焦点收束。`aria-modal="true"` 只约束辅助技术的虚拟光标，对物理 Tab 键没有
+         * 任何作用——这一层是 portal 到 body 的，背景既没有 inert 也没有 aria-hidden，
+         * 所以 Tab 走完灯箱里最后一个元素就落到被全屏遮罩完全盖住的页面控件上：
+         * 屏幕上只看得见灯箱，焦点却在背后的站点导航里，按 Enter 会在灯箱后面展开菜单。
+         */
+        const root = dialogRef.current
+        if (!root) return
+        const focusable = Array.from(
+          root.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          ),
+          // getClientRects 对 position:fixed 也成立，offsetParent 不成立。
+        ).filter((el) => el.getClientRects().length > 0)
+        if (focusable.length === 0) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        const active = document.activeElement as HTMLElement | null
+        const outside = !active || !root.contains(active)
+        if (e.shiftKey ? active === first || outside : active === last || outside) {
+          e.preventDefault()
+          ;(e.shiftKey ? last : first).focus()
+        }
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => {
@@ -1047,7 +1081,7 @@ function Lightbox({
   }, [onClose, onStep])
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-label={photoAlt(photo)}>
+    <div ref={dialogRef} className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-label={photoAlt(photo)}>
       <button aria-label="关闭" onClick={onClose} className="absolute inset-0 bg-base/94 backdrop-blur-md" />
 
       {/* 大图独占版面，说明只留一条底栏——竖图在侧栏式灯箱里会被挤得很小。

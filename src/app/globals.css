@@ -155,6 +155,18 @@ body {
   box-shadow: 0 0 0 1.5px rgba(230, 228, 239, 0.65), 0 0 0 5px rgba(230, 228, 239, 0.14);
 }
 
+/**
+ * 上面那两圈柔光都画在 border-box **外面**，所以只要祖先是 overflow:hidden 就会被
+ * 整圈裁掉——元素确实进了 :focus-visible，屏幕上却什么都看不到。
+ * 画廊图块正是这种结构（图块外层要 overflow-hidden 才能裁出圆角与 hover 放大），
+ * 于是用键盘走过整个网格时没有任何焦点提示。这里把同一套柔光改画在盒子里面。
+ *
+ * 选择器带类名（0,2,0）高于上面那条裸 :focus-visible（0,1,0），不依赖样式表顺序。
+ */
+.focus-ring-inset:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(230, 228, 239, 0.85), inset 0 0 0 5px rgba(230, 228, 239, 0.18);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
