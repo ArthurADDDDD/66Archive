@@ -55,6 +55,26 @@ jobs:
       - name: Verify game search matching
         run: npm run test:vote-search
 
+      # 档案载荷的编解码。它守的是一次真实线上事故：JSON 与 JS 分开缓存，
+      # 边缘上两者版本错位时，新解码器会读到旧格式的条目。这个脚本里那 400 条
+      # 「旧格式原样通过」的断言就是那次的回归护栏，不在 CI 里跑等于没有护栏。
+      - name: Verify archive payload encoding
+        run: npm run test:archive-payload
+
+      # 读者看到的每一句页面文字都要在 SITE_COPY.texts 里登记，否则后台改不到它。
+      # 漏登记不会让构建失败，只会让那句话在后台永远改不动——必须由测试挡住。
+      - name: Verify site text registry
+        run: npm run test:site-texts
+
+      # 埋点上报口径：重复点击合并、自动化会话不计入、站内链接解析。
+      # 退化了不会报错，只会让统计悄悄变得不可信。
+      - name: Verify analytics reporting rules
+        run: npm run test:analytics
+
+      # archive:edit 是维护者改单条档案的唯一入口，它直接写 data/** 并提交。
+      - name: Verify archive edit core
+        run: npm run archive:test
+
       # 这条流水线只做校验，产物不发布，所以关掉构建期的内容烤入。
       # 开着的话，每次 push 的构建都要求线上站点此刻可达且三份内容都取得到，
       # 取不到就中止构建——于是站点侧的任何波动都会让 CI 变红，
