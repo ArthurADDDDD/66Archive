@@ -124,6 +124,16 @@ export function buildSeries(
 /** 档案自己分出来的桶，不是她命名的节目。见 SeriesInfo.countsEpisodes。 */
 const ARCHIVE_BUCKETS = new Set(['night-talk', 'outdoor-live', 'press-events'])
 
+/**
+ * 展示名。导出是因为 `/series/[id]/` 的 generateMetadata 拿不到 buildSeries 的结果
+ * （那是页面组件里才算的），此前它直接用 series.yaml 的原始名，于是浏览器标签与
+ * 社交卡片写「聊天」，页面正文的 h1 写「夜话 / 聊天」，同一个页面两个名字。
+ * **注意它只能用来显示**：搜索、标签匹配一律用 series.yaml 里的原始名。
+ */
+export function seriesDisplayName(id: string, fallback: string): string {
+  return getDisplayName(id, fallback)
+}
+
 function getDisplayName(id: string, fallback: string): string {
   if (id === 'night-talk') return '夜话 / 聊天'
   if (id === 'outdoor-live') return '户外直播'
