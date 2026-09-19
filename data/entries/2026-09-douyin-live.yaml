@@ -244,3 +244,26 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-19-live-01
+  type: live
+  date: "2026-09-19"
+  title: "晚上好"
+  platform: douyin
+  duration_min: 187
+  games:
+    - shenkongdangpu
+    - wuthering-waves
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/d79538ac8009a98ff1db978b263133e59bc32dfa.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1hre86xEyh"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1Gneh6fEw7"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
