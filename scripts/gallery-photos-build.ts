@@ -241,6 +241,43 @@ for (const filename of fs.existsSync(INCOMING) ? fs.readdirSync(INCOMING).sort()
   )
 }
 
+/**
+ * 「这次没扫到、但清单里本来有」的条目怎么办。
+ *
+ * 清单是**整份重写**的，而 `photos` 只由两次目录扫描产生：仓库里的 `public/gallery/`，
+ * 和本机的原图目录（默认 `~/Downloads/tmp`）。原图**不进仓库**——这是这个脚本
+ * 开头就写明的设计。于是换一台机器、或者只是把 Downloads 清理掉之后再跑一次，
+ * 那些原图已经不在的条目就不会被扫到，直接从清单里消失，而进程照样退出 0。
+ *
+ * 实测过当前清单：247 条里有 235 条来自不在仓库的原图，239 条带着人工写的
+ * 标题 / 说明 / 来源 / 隐藏状态。也就是说在一台没有那批原图的机器上重跑一次，
+ * 清单会从 247 条掉到 12 条，人工核实过的字段一起消失，全程没有任何提示。
+ * 上面 `loadExisting` 的注释写着「绝不能把后台改过的字段冲掉」——但它只保护了
+ * **扫得到**的那些 id，扫不到的根本走不到合并这一步。
+ *
+ * 判据用「派生文件还在不在仓库里」，而不是「原图还在不在本机」：派生文件才是
+ * 真正发布出去的东西。原图不在只说明这台机器上没有母本，照片本身还在站上。
+ */
+const scannedIds = new Set(photos.map((p) => p.id))
+const carriedOver: Photo[] = []
+const orphaned: string[] = []
+for (const [id, photo] of existing) {
+  if (scannedIds.has(id)) continue
+  const publishedThumb = typeof photo.thumb === 'string' ? path.join(ROOT, 'public', photo.thumb.replace(/^\//, '')) : null
+  if (publishedThumb && fs.existsSync(publishedThumb)) carriedOver.push(photo)
+  else orphaned.push(id)
+}
+photos.push(...carriedOver)
+
+if (orphaned.length > 0 && !process.argv.includes('--prune')) {
+  console.error(`\n✗ 有 ${orphaned.length} 条清单条目这次既没扫到原图、派生文件也不在仓库里：`)
+  for (const id of orphaned.slice(0, 20)) console.error(`    · ${id}`)
+  if (orphaned.length > 20) console.error(`    …… 另有 ${orphaned.length - 20} 条`)
+  console.error('\n  直接写回会把它们连同人工核实过的字段一起删掉，所以这里先停住。')
+  console.error('  确认这些照片本来就该下架，再加 --prune 重跑；否则先检查原图目录传对了没有。\n')
+  process.exit(1)
+}
+
 photos.sort((a, b) => {
   // 年份不明的排在最后，其余按时间正序
   if ((a.year === null) !== (b.year === null)) return a.year === null ? 1 : -1
@@ -256,6 +293,10 @@ const bytes = (dir: string) =>
 
 console.log(`原图目录：${INCOMING}`)
 console.log(`共 ${photos.length} 张（新压 ${built}，复用 ${reused}）`)
+if (carriedOver.length > 0) {
+  console.log(`原图不在本机、按仓库里的派生文件沿用清单原条目：${carriedOver.length} 张`)
+}
+if (orphaned.length > 0) console.log(`--prune：已移除 ${orphaned.length} 条无派生文件的条目`)
 console.log(`派生文件占用：${(bytes(OUT_DIR) / 1024 / 1024).toFixed(1)} MB → ${path.relative(ROOT, OUT_DIR)}`)
 console.log(`年份待定：${undated.length} 张`)
 for (const p of undated) console.log(`  · ${p.id}`)
