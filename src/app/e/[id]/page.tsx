@@ -109,8 +109,12 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       gameId: s.game ?? null,
       color: s.game ? gameColor(s.game) : isGameTimeline ? gameColor(null) : SEGMENT_FALLBACK[i % SEGMENT_FALLBACK.length],
       dim: isGameTimeline && !s.game,
-      from: totalSec ? from / totalSec : i / entry.segments.length,
-      to: totalSec ? Math.min(to / totalSec, 1) : (i + 1) / entry.segments.length,
+      // 与 lib/data.ts 的同一段数学保持一致：两端都夹紧，且 to 不小于 from。
+      // 只夹 to 会让「at 越过 duration_min」的分段得到负宽度，色带上直接消失。
+      from: totalSec ? Math.min(from / totalSec, 1) : i / entry.segments.length,
+      to: totalSec
+        ? Math.max(Math.min(from / totalSec, 1), Math.min(to / totalSec, 1))
+        : (i + 1) / entry.segments.length,
     }
   })
 

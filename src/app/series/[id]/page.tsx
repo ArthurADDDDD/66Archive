@@ -81,7 +81,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const rails = [
     {
       title: '档案检索',
-      items: [{ label: `搜索「${s.name}」的全部记录`, href: `/archive/?q=${encodeURIComponent(s.name)}` }],
+      /**
+       * 搜索词必须用 `def.name`（series.yaml 里的名字，也是 entries 的 tag 字符串），
+       * 不能用 `s.name`——后者是 buildSeries 换过的**展示名**。录播室的搜索是在
+       * title / 来源标题 / 游戏名 / tags / seriesName 上做子串匹配，展示名在任何一条
+       * 记录里都不存在：实测搜「夜话 / 聊天」命中 0 条（该节目实际 144 条），
+       * 搜「户外直播」命中 2 条（实际 130 条，那 2 条只是标题里恰好有这四个字）。
+       * 标签仍然用展示名，读者看到的还是页面上那个名字。
+       */
+      items: [{ label: `搜索「${s.name}」的全部记录`, href: `/archive/?q=${encodeURIComponent(def.name)}` }],
     },
     {
       title: '同期录播',

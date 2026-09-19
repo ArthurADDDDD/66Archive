@@ -199,11 +199,23 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       const from = hms(s.at)
       const next = e.segments[i + 1]
       const to = next ? hms(next.at) : total || from
+      /**
+       * 两端都要夹紧，而且 to 不能小于 from。
+       *
+       * schema 只保证 segments 的 at 递增，**不保证它落在 duration_min 之内**——
+       * 实际数据里有条目的最后几个分段 at 已经越过标称时长（分P录播补进来之后没有
+       * 回头改 duration_min）。此前只夹了 to，于是这些分段得到 from > 1 而 to = 1，
+       * 宽度是负数：色带上那一段直接不画（负 width 是非法值，声明被丢弃），
+       * 而下面的图例仍然逐条列着，同一块 UI 里「条」和「清单」对不上。
+       * 实测受影响的是 4 条条目共 5 段，最窄的 -16.7%。
+       */
+      const f = ratio(total ? Math.min(from / total, 1) : 0)
+      const t = ratio(total ? Math.min(to / total, 1) : 0)
       return {
         game: s.game ?? null,
         name: s.game ? (ds.games.get(s.game)?.name ?? s.game) : s.label,
-        from: ratio(total ? from / total : 0),
-        to: ratio(total ? Math.min(to / total, 1) : 0),
+        from: f,
+        to: Math.max(f, t),
       }
     })
 
