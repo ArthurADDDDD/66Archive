@@ -51,6 +51,15 @@ function commitSigned(root: string, signing: { key: string; format: string } | n
   if (signing) git(root, ['verify-commit', 'HEAD'])
 }
 
+/**
+ * 明确的人工确认。只认整词 `yes`——回车、y、随手敲的任何东西都算中止。
+ * 这条链路的终点是往公开仓 main 直接 push，宁可多问一次。
+ */
+async function confirm(prompt: { question: (q: string) => Promise<string> }, question: string): Promise<boolean> {
+  const answer = await prompt.question(`\n${question} 输入 yes 继续，其它任何输入都会中止：`)
+  return answer.trim().toLowerCase() === 'yes'
+}
+
 async function main() {
   const entryId = process.argv[2]
   if (!entryId || process.argv.length !== 3) {
@@ -95,9 +104,22 @@ async function main() {
 
     console.log('\n========== 完整 before / after diff ==========')
     git(temporaryRoot, ['--no-pager', 'diff', '--no-ext-diff', '--color=always', '--', located.relativePath])
-    console.log(signing
-      ? '========== diff 结束；下一步将请求本机签名，取消请按 Ctrl-C =========='
-      : '========== diff 结束；未配置签名，将直接提交并推送，取消请按 Ctrl-C ==========')
+    console.log('========== diff 结束 ==========')
+
+    /**
+     * 这里必须**真的停下来等人**。
+     *
+     * 此前这一行写的是「取消请按 Ctrl-C」，但它后面没有任何等待窗口——紧接着就是
+     * `git add` + commit + push。未配置签名时更是一路直达公开仓 main：diff 刚滚完，
+     * 同一拍就已经推上去了，那句「取消请按 Ctrl-C」根本没有可按的时机。
+     * 签名的情况还有硬件那一下能当确认，不签名的情况什么都没有。
+     */
+    if (!(await confirm(prompt, signing
+      ? '确认提交（将请求本机签名）并推送到公开仓 main？'
+      : '未配置签名，将直接提交并推送到公开仓 main。确认？'))) {
+      console.log('已中止：没有提交，也没有推送。')
+      return
+    }
 
     const changeId = randomUUID()
     const message = commitMessage(entryId, evidence, changeId)
@@ -114,6 +136,11 @@ async function main() {
       git(temporaryRoot, ['reset', '--soft', latest])
       console.log('\nmain 有无关更新；以下是基于最新 main 重建后的完整 diff：')
       git(temporaryRoot, ['--no-pager', 'diff', '--cached', '--no-ext-diff', '--color=always'])
+      // 基底换了，推上去的就不再是刚才确认过的那一份，所以要重新确认一次。
+      if (!(await confirm(prompt, '基于最新 main 重建后的内容如上。确认推送？'))) {
+        console.log('已中止：本地临时工作树会被清理，公开仓没有任何改动。')
+        return
+      }
       commitSigned(temporaryRoot, signing, message)
     }
 
