@@ -22,7 +22,16 @@ export function useEntryView(defaultView: EntryView = 'grid') {
   const [compact, setCompact] = useState(false)
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY)
+    // 读也要包起来：浏览器设成「阻止所有网站数据」时，访问 window.localStorage
+    // 这个属性本身就抛 SecurityError（不是返回 null）。这里在 effect 里抛，会一路
+    // 冒到全局错误边界，把整页换成一句英文报错——比偏好读不到严重得多。
+    // 写入侧下面本来就有 try/catch，读这一侧此前漏了。
+    let stored: string | null = null
+    try {
+      stored = window.localStorage.getItem(STORAGE_KEY)
+    } catch {
+      // 读不到就按「没存过」处理，用 defaultView。
+    }
     // localStorage 是外部系统，首帧读不到它——只能挂载后同步一次。
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (stored === 'list' || stored === 'grid') setViewState(stored)

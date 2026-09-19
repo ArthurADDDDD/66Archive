@@ -114,6 +114,13 @@ export function SiteNav({
   function beginNavigation(event: ReactMouseEvent<HTMLAnchorElement>, href: string, selected: boolean) {
     cancelIntentPrefetch()
     if (selected) return
+    /**
+     * 带修饰键的点击（Cmd/Ctrl 开新标签、Shift 开新窗口、中键）根本不会让**当前**
+     * 标签页导航，所以不能上重复点击的锁：解锁只靠 `pathname` 变化或 12 秒兜底定时器，
+     * 而当前页压根没换地址。锁着的这 12 秒里，同一个入口的普通点击会被下面的
+     * `preventDefault()` 直接吞掉，按钮还一直显示「XX 打开中」——看起来像页面卡死。
+     */
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return
     if (navigatingToRef.current === href) {
       event.preventDefault()
       return

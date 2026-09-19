@@ -114,8 +114,24 @@ export function SubmissionForm({
     }
   }, [])
 
+  /**
+   * 表单此刻在不在 DOM 里。
+   *
+   * 提交成功后整个 `<form>`（连同下面那个 `ref={widgetRef}` 的容器）会被回执替换掉，
+   * 但**组件本身没有卸载**——所以如果不把这件事写进依赖，下面那个 effect 既不会跑
+   * cleanup、也不会重跑。用户点「再提交一条」时表单是回来了，可容器是个全新的空
+   * 节点，没有任何代码再调 `window.turnstile.render`（全仓只有下面这一处），而
+   * `send()` 的 finally 已经把 token 清空，`canSubmit` 又要求 token 非空——
+   * 结果是验证区一片空白、提交按钮永久灰掉，且没有任何报错。
+   *
+   * 用 `status !== 'success'` 而不是直接把 `status` 放进依赖：'submitting' 期间表单
+   * 还在，重建组件会在令牌正在使用时把它拆掉。
+   */
+  const formMounted = status !== 'success'
+
   useEffect(() => {
     if (!config?.enabled || !config.turnstileSiteKey) return
+    if (!formMounted) return
     const container = widgetRef.current
     if (!container) return
 
@@ -141,7 +157,7 @@ export function SubmissionForm({
       if (id && window.turnstile) window.turnstile.remove(id)
       widgetIdRef.current = null
     }
-  }, [config?.enabled, config?.turnstileSiteKey])
+  }, [config?.enabled, config?.turnstileSiteKey, formMounted])
 
   const limits = config?.limits ?? CORRECTION_CONFIG_FALLBACK.limits
   const trimmedName = name.trim()

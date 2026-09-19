@@ -341,7 +341,19 @@ export function Timeline({
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === '/' && document.activeElement !== searchRef.current) {
+      /**
+       * 「在不在输入框里」必须按**任意可编辑元素**判断，不能只比对页头那一个 input。
+       * 页面上的搜索框不止一个：浮动导航胶囊里还有一个（用的是 SearchField 自己的
+       * ref，不等于 searchRef），手机端弹层里也有一个。只比对 searchRef 的话，在那
+       * 些框里打「/」会被 preventDefault 吞掉字符，再把焦点抢回已经滚出视口的页头
+       * 搜索框——页面猛地弹回顶部，字还没打出来。档案里有 55 条标题带斜杠。
+       */
+      const target = event.target
+      const inEditable =
+        target instanceof HTMLElement &&
+        (target.isContentEditable || target.matches('input, textarea, select'))
+
+      if (event.key === '/' && !inEditable) {
         event.preventDefault()
         searchRef.current?.focus()
       }
