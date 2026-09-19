@@ -13,6 +13,7 @@ import { SeriesKindEyebrow, SeriesNote, SeriesSectionEyebrow } from '@/component
 import { EntryFilterProvider, YearChips } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { buildSeries } from '@/lib/series'
 import { formatDuration } from '@/lib/ui'
 import { KeepDates } from '@/components/KeepDates'
@@ -26,10 +27,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const s = getDataset().series.get(id)
-  return {
-    title: s ? `${s.name} · 节目单` : '节目 · 女流66编年史',
-    alternates: { canonical: `/series/${id}/` },
-  }
+  return pageMetadata({
+    path: `/series/${id}/`,
+    // 站名由根 layout 的 title template 补，这里只给这个节目自己的名字。
+    title: s ? `${s.name} · 节目单` : '节目',
+    // series.yaml 的 description 就是这个节目的人话简介，直接当社交卡片文案用。
+    description: s?.description ?? SITE_DESCRIPTION,
+  })
 }
 
 /**

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { siteUrl } from './site-url'
+import { SITE_NAME } from './site-name'
 import { getShareCardDescription, getShareCardImage } from './share-cards'
 
 /**
@@ -24,7 +25,7 @@ import { getShareCardDescription, getShareCardImage } from './share-cards'
  * 传进来的 `title` 是短名（「录播室」），根 layout 的 `%s · 女流编年史` 负责补站名。
  * `openGraph.title` 则要自己拼全称：社交卡片没有 template 这一层。
  */
-export const SITE_NAME = '女流编年史'
+export { SITE_NAME }
 
 /**
  * 站点级简介与分享卡片图的兜底值。

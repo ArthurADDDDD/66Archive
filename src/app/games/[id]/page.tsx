@@ -11,8 +11,9 @@ import { SiteText } from '@/components/SiteText'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { getDataset, toTimelineEntries } from '@/lib/data'
+import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { proxyImageSrcSet } from '@/lib/platforms'
-import { actColorForDate, allGameIds, getGameProfile } from '@/lib/narrative'
+import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
 
 /**
@@ -28,16 +29,34 @@ export function generateStaticParams() {
   return allGameIds(ds).map((id) => ({ id }))
 }
 
+/**
+ * 社交卡片用的一句话。只说档案里数得出来的东西——场次与首末日期，
+ * 不提时长：`knownDurationCount < sessions` 时时长本来就是部分已知，
+ * 卡片上写个小时数会把「已收录」读成「完整收录」。
+ */
+function gameShareDescription(profile: GameProfile): string {
+  const span =
+    profile.firstDate && profile.lastDate
+      ? profile.firstDate === profile.lastDate
+        ? `${profile.firstDate}`
+        : `${profile.firstDate} 至 ${profile.lastDate}`
+      : null
+  const counted = `档案收录 ${profile.sessions} 场`
+  return `${profile.name}：${span ? `${counted}，${span}` : counted}。只索引，不搬运。`
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const profileId = id === 'maplestory-classic' ? 'maplestory' : id
   const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), profileId)
-  return {
-    title: profile ? `${profile.name} · 游戏收藏架` : '游戏 · 女流66编年史',
+  return pageMetadata({
     // `maplestory-classic` 会 permanentRedirect 到 `/games/maplestory/`，
     // 所以它的 canonical 要指向跳转目标，而不是自己这个会 301 的地址。
-    alternates: { canonical: `/games/${profileId}/` },
-  }
+    path: `/games/${profileId}/`,
+    // 站名由根 layout 的 title template 补，这里只给这一款自己的名字。
+    title: profile ? `${profile.name} · 游戏收藏架` : '游戏',
+    description: profile ? gameShareDescription(profile) : SITE_DESCRIPTION,
+  })
 }
 
 export default async function GamePage({ params }: { params: Promise<{ id: string }> }) {

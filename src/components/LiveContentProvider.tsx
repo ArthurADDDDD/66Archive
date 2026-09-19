@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { SITE_NAME } from '@/lib/site-name'
 import {
   contentPathsFor,
   fetchLiveContent,
@@ -236,18 +237,47 @@ export function useSectionEnabled(sectionId: string): boolean {
  * 静态导出的站点里 `metadata` 是构建期定的，改后台不会动到 HTML 源码里的
  * `<title>`——所以这里在浏览器里改。**爬虫看到的仍然是构建期那一份**：
  * 这是静态站的固有限制，不是漏实现；需要 SEO 跟着变的话得重新构建公开仓。
+ *
+ * ⚠️ `copy.site` 是**站点级**的标题与简介，不是当前这一页的。本组件挂在根 layout 上，
+ * 所以每一页都会跑到——早先它无条件写 `document.title = copy.site.title`，结果是
+ * `pageMetadata()` 刚给每页定好的标题，在内容接口返回的那一刻（实测首页 ~590ms）
+ * 又被整站统一的那一句盖回去。表现正是 `lib/page-metadata.ts` 开头描述、并且那个
+ * 函数本来就是为了修掉的那件事：浏览器标签、收藏夹、历史记录里所有页面一字不差。
+ * 静态 HTML 是对的、爬虫看到的是对的，只有真人用户看到的是错的。
+ *
+ * 所以按页分开处理：
+ * - 首页的 `<title>` 本来就是站名，整句替换；
+ * - 其余页面的标题形如「录播室 · 女流编年史」，只把 template 补上去的那个站名后缀
+ *   换成后台的新站名，页面自己那半截原样保留；
+ * - `<meta name="description">` 只在首页覆盖——别的页面都有自己的简介
+ *   （`pageMetadata()` 的 description 是必填参数），站点级那句盖上去只会更不准。
  */
 export function LiveDocumentMeta() {
   const { copy } = useLiveContent()
+  const pathname = usePathname()
 
   useEffect(() => {
     if (!copy) return
-    if (copy.site.title) document.title = copy.site.title
-    if (copy.site.description) {
+    const isHome = pathname === '/'
+    const siteTitle = copy.site.title
+
+    if (siteTitle) {
+      if (isHome) {
+        document.title = siteTitle
+      } else {
+        // 不用正则：站名里可能有正则元字符，而这里只需要一个后缀替换。
+        const suffix = ` · ${SITE_NAME}`
+        if (document.title.endsWith(suffix)) {
+          document.title = `${document.title.slice(0, -suffix.length)} · ${siteTitle}`
+        }
+      }
+    }
+
+    if (isHome && copy.site.description) {
       const meta = document.querySelector('meta[name="description"]')
       if (meta) meta.setAttribute('content', copy.site.description)
     }
-  }, [copy])
+  }, [copy, pathname])
 
   return null
 }
