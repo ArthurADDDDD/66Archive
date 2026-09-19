@@ -16,16 +16,29 @@ export type GalleryLikesState = {
   likedByViewer: string[]
 }
 
+/**
+ * 与 correction-api.ts / vote-api.ts 同一口径。没有超时的 fetch 在「连上了但对端
+ * 不回」时永远不结算，点赞按钮会一直停在等待态，既不成功也不报错。
+ */
+const REQUEST_TIMEOUT_MS = 20_000
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, {
-    ...init,
-    credentials: 'include',
-    headers: { 'content-type': 'application/json', ...init?.headers },
-  })
-  const body = (await response.json().catch(() => null)) as ({ message?: string } & T) | null
-  if (!response.ok) throw new Error(body?.message ?? '点赞服务暂时不可用')
-  if (!body) throw new Error('点赞服务返回了空响应')
-  return body
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
+  try {
+    const response = await fetch(`${API_BASE}${path}`, {
+      ...init,
+      signal: controller.signal,
+      credentials: 'include',
+      headers: { 'content-type': 'application/json', ...init?.headers },
+    })
+    const body = (await response.json().catch(() => null)) as ({ message?: string } & T) | null
+    if (!response.ok) throw new Error(body?.message ?? '点赞服务暂时不可用')
+    if (!body) throw new Error('点赞服务返回了空响应')
+    return body
+  } finally {
+    clearTimeout(timer)
+  }
 }
 
 export function fetchGalleryLikes(): Promise<GalleryLikesState> {

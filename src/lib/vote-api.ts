@@ -39,16 +39,33 @@ export type VoteTaskDetail = {
 
 const VOTE_API_BASE = (process.env.NEXT_PUBLIC_VOTE_API_BASE ?? '').replace(/\/$/, '')
 
+/**
+ * 与 correction-api.ts 的 REQUEST_TIMEOUT_MS 同一口径。
+ *
+ * 没有超时的 fetch 在「连上了但对端不回」时永远不结算——调用方 await 在那里，
+ * 界面上就是一个转不完的圈，既不成功也不报错，用户只能刷新。correction-api 早就
+ * 加过这道闸，但 vote-api 与 gallery-likes-api 里这个 request<T> 是逐字抄过去的
+ * 第二、三份副本，那次没有同步过来。
+ */
+const REQUEST_TIMEOUT_MS = 20_000
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${VOTE_API_BASE}${path}`, {
-    ...init,
-    credentials: 'include',
-    headers: { 'content-type': 'application/json', ...init?.headers },
-  })
-  const body = (await response.json().catch(() => null)) as ({ message?: string } & T) | null
-  if (!response.ok) throw new Error(body?.message ?? '投票服务暂时不可用')
-  if (!body) throw new Error('投票服务返回了空响应')
-  return body
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
+  try {
+    const response = await fetch(`${VOTE_API_BASE}${path}`, {
+      ...init,
+      signal: controller.signal,
+      credentials: 'include',
+      headers: { 'content-type': 'application/json', ...init?.headers },
+    })
+    const body = (await response.json().catch(() => null)) as ({ message?: string } & T) | null
+    if (!response.ok) throw new Error(body?.message ?? '投票服务暂时不可用')
+    if (!body) throw new Error('投票服务返回了空响应')
+    return body
+  } finally {
+    clearTimeout(timer)
+  }
 }
 
 export async function listVoteTasks(): Promise<VoteTaskSummary[]> {
