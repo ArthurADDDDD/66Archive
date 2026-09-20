@@ -267,3 +267,26 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-20-live-01
+  type: live
+  date: "2026-09-20"
+  title: "晚上好 来光顾我的深夜当铺"
+  platform: douyin
+  duration_min: 182
+  games:
+    - cyberpunk-2077
+    - shenkongdangpu
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/72fae5768b63a167d80e3b316e5aca919d957291.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV11seB6uEv3"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1zzeB6fErM"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
