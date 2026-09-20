@@ -5,16 +5,23 @@ import { encodeArchivePayload, type EncodedArchivePayload } from './archive-payl
 /**
  * 录播室载荷的**构建期身份**。
  *
- * 这份载荷不和 HTML / JS 一起原子切换：`/archive-data.json` 由边缘按
- * `s-maxage=600, stale-while-revalidate=86400` 独立缓存，HTML 只有
- * `s-maxage=60, stale-while-revalidate=300`。两条时钟各走各的，于是发布之后
- * 最长 24 小时里，新的 HTML 都可能配着上一版的载荷——2026-09-09 实测抓到过
- * 一次：`/archive/` 已经是新发布，`/archive-data.json` 还是 4.6 小时前那版。
- * 表现有两种，都很难查：新条目在录播室里看不见（HTML 里的年月计数却已经加一），
- * 以及 `f6e89ca` 那次的整页失败（新解码器拿到旧格式）。
+ * 这份载荷不和 HTML / JS 一起原子切换：`/archive-data.json` 由边缘按 `s-maxage=600`
+ * 独立缓存，HTML 只有 `s-maxage=60`。两条时钟各走各的，于是发布之后新的 HTML 都可能
+ * 配着上一版的载荷——2026-09-09 实测抓到过一次：`/archive/` 已经是新发布，
+ * `/archive-data.json` 还是 4.6 小时前那版。表现有两种，都很难查：新条目在录播室里
+ * 看不见（HTML 里的年月计数却已经加一），以及 `f6e89ca` 那次的整页失败
+ * （新解码器拿到旧格式）。
  *
  * 边缘的后台再验证**要有人请求才会发生**，冷门 PoP 可以一直发旧的；而请求侧的
  * `Cache-Control: no-cache` 顶不动它（实测仍然 HIT），所以「让用户硬刷新」不是解法。
+ *
+ * ⚠️ 2026-09-20：这两处原本还各带一个 `stale-while-revalidate`（载荷 86400、HTML 300），
+ * 已经去掉。那个指令不只对边缘生效，**浏览器自己的缓存也照此行事**：实测普通刷新时
+ * `/archive-data.json?v=…` 的 `transferSize` 是 0——上一版字节被直接交给页面，
+ * 一次网络都不发。于是发布之后普通刷新既纠正不了、也没有任何请求可查，只有
+ * Ctrl+F5 或无痕能绕开，而 86400 让这个状态最长挂满 24 小时。去掉之后两者都改为
+ * 每次带 etag 再验证：命中是 304 空体，1.8MB 不会重下，边缘 s-maxage 原样保留。
+ * 策略写在 nginx vhost 里（宿主机那份才生效，部署流程不会同步它）。
  *
  * 修法是给 URL 带一个由**载荷字节本身**算出来的版本号。这样：
  *
