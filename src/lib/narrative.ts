@@ -39,7 +39,24 @@ export function actColorForDate(date: string): string {
   return '#5A5F73'
 }
 
-/** 时间线卡片规格：hero=配图大卡 / type=字排大卡 / small=小卡 / montage=蒙太奇（首页 ACT II 专用） */
+/**
+ * 节点的**权重**，不是版式。
+ *
+ * 名字是历史遗留：它原本确实选版式——`ActSection` 里一个 `beat.size` 三岔路口，
+ * hero 配图大卡 / type 字排大卡 / small 小卡 / montage 蒙太奇。首页在
+ * `214a87f` 改成可翻页的书页卡（`HomeActStage`）之后，那个组件就没人引用了，
+ * 版式改由「有没有 cover / 有没有 montage 素材」决定。组件已删，这里说清楚
+ * 它现在还剩什么作用，免得下一个人照着旧名字去找那个三岔路口：
+ *
+ * - `story-years.ts` 按 hero > type > montage > small 挑每一年的主卡，
+ *   并据此给出 sparse / normal / highlight 的疏密档；
+ * - `live-content.ts` 按 hero 与否决定封面回源宽度（900 / 640），
+ *   并把 hero 排到前面；
+ * - montage 不参与锚点。
+ *
+ * 也就是说：改这个值仍然会改「哪一条被抬成主卡、封面取多大、排在哪」，
+ * 但**不会**改任何一张卡长什么样。
+ */
 export type BeatSize = 'hero' | 'type' | 'small' | 'montage'
 
 /** 首页「直播间梗」的固定一级分类。没有分类的保留 Highlight 不在新版模块展示。 */
@@ -1531,7 +1548,7 @@ export type ResolvedBeat = {
   /** 蒙太奇幕的分类 chips */
   chips?: string[]
   /** 蒙太奇幕的构建期素材（首页 ACT II 专用） */
-  montage?: { samples: MontageSample[]; stats: MontageStats }
+  montage?: { samples: MontageSample[] }
   /** 栏目在当前档案中的逐年收录量；只用于展示活跃纹理，不声称是完整播出统计。 */
   activity?: YearActivity
 }
@@ -1547,11 +1564,6 @@ export type MontageSample = {
   date: string
   title: string
   cover: string
-}
-
-export type MontageStats = {
-  /** 心灵砒霜期数 */
-  xinling: string
 }
 
 export type ResolvedAct = {
@@ -1649,26 +1661,48 @@ function buildXinlingActivity(timeline: TimelineEntry[]): YearActivity {
   }
 }
 
+/** 现在只有 HomeActStage 那个 3 列九宫格在用，一次正好铺满 6 格。 */
+const MONTAGE_SAMPLES = 6
+
 /**
- * 蒙太奇素材：2016—2022 年带封面的条目等距采样（升序，约 15 张真实封面）；
- * 派生数字（心灵砒霜期数 / 总小时数 / 直播场次）全部从数据算，文案不硬编码。
+ * 采样步长仍然按 15 算，**不是**笔误。
+ *
+ * 这样取到的 6 张与 15 张里的前 6 张逐一相同，首页看上去一个像素都不变——
+ * 这次只想砍掉从没被读过的那 9 条，不想顺带换掉首页在展示哪几张封面。
+ *
+ * ⚠️ 副作用是：等距步长按 15 算、却只取前 6 个点，覆盖的只有池子的前 40%，
+ * 也就是 2016 到 2018 上半年——而这块素材对外叫「2016—2022」。要让它真的
+ * 铺满那七年，把下面的 15 换成 MONTAGE_SAMPLES 即可，但那会换掉首页现在
+ * 展示的那 6 张封面，属于观感决定，留给人来定。
+ */
+const MONTAGE_SAMPLE_STEP_BASIS = 15
+
+/**
+ * 蒙太奇素材：2016—2022 年带封面的条目等距采样（升序，6 张真实封面）。
+ *
+ * 采 6 张是**照着唯一的消费者定的**。这里原先采 15 张，那是 `MontageVideoList`
+ * （可横向滚动的视频条）的用量；首页改成书页卡之后渲染的是 `HomeActStage` 里的
+ * 3 列九宫格，只取 `slice(0, 6)`，多出来的 9 条一直被烤进页面又从没被读过。
+ *
+ * 那一版还在下面挂过一排派生数字（心灵砒霜期数等），随组件一起撤了，所以
+ * 返回值里不再有 `stats`。
+ *
+ * 取的是 15 张里的**前 6 张**，与改动前逐一相同：首页观感不变，见
+ * `MONTAGE_SAMPLE_STEP_BASIS` 的说明。
+ *
+ * ⚠️ 封面仍然烤成 `w=480`。这个数字当初是按 `MontageVideoList` 的
+ * 168/196px 框 @DPR2 量出来的，那个框已经不存在了，而九宫格实际渲染多大
+ * **没有量过**——所以这里原样保留，没有顺手改小：没测过就改只是换一个猜测。
  */
 function buildMontage(timeline: TimelineEntry[]): ResolvedBeat['montage'] {
   const pool = timeline.filter((e) => e.cover && e.date >= '2016-01-01' && e.date <= '2022-12-31').reverse()
-  const step = Math.max(1, Math.floor(pool.length / 15))
+  const step = Math.max(1, Math.floor(pool.length / MONTAGE_SAMPLE_STEP_BASIS))
   const samples: MontageSample[] = pool
     .filter((_, i) => i % step === 0)
-    .slice(0, 15)
+    .slice(0, MONTAGE_SAMPLES)
     .map((e) => ({ id: e.id, date: e.date, title: e.title, cover: e.cover ? proxyImage(e.cover, 480) : null }))
     .filter((s): s is MontageSample => s.cover !== null)
-  // 这里曾经还算过累计时长与直播场次，供蒙太奇下面那排统计用。那排已经撤掉
-  // （见 MontageVideoList 的注释），一并不再计算——留着只会让人以为还有人在读。
-  return {
-    samples,
-    stats: {
-      xinling: timeline.filter(isXinlingPishuangEntry).length.toLocaleString(),
-    },
-  }
+  return { samples }
 }
 
 /** 等距保留一个栏目横跨不同年份的真实封面，避免列表只挤在最近一年。 */

@@ -492,13 +492,15 @@ const isCustomId = (id: string): boolean => id.startsWith('custom-')
 /** 构造一个后台新增的纯文案节点（无档案链接、无封面、无构建期蒙太奇素材）。 */
 function resolveCustomBeat(live: LiveBeat, actId: ActId, home: boolean): ResolvedBeat {
   if (live.size === 'montage' && process.env.NODE_ENV !== 'production') {
-    console.warn(`[live-content] custom beat ${live.id} 使用 montage，没有构建期素材，已按 type 降级渲染`)
+    console.warn(`[live-content] custom beat ${live.id} 使用 montage，没有构建期素材，已按 type 归一`)
   }
   return {
     id: live.id,
     act: actId,
     date: live.date,
-    // 后台自定义 montage 没有构建期素材，统一按 type 字排大卡渲染。
+    // 后台自定义节点没有构建期蒙太奇素材，montage 归一成 type。
+    // （size 现在只影响权重与封面宽度，不选版式——见 narrative.ts 的 BeatSize。
+    //  归一的意义是别让它在 story-years 的排序里占着 montage 那一档。）
     size: live.size === 'montage' ? 'type' : live.size,
     important: live.important,
     kicker: home ? (live.important ? '重要' : undefined) : live.kicker || undefined,
@@ -572,7 +574,7 @@ function resolveCustomHighlight(live: LiveHighlight, emphasisVars: Record<string
  * 不是节点自己的 kicker，这是公开仓 resolveActs 的既定行为，覆盖时必须跟着走，
  * 否则后台勾了「重要」首页却不显示。
  */
-export function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false, deletedIds: string[] = []): ResolvedAct {
+function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false, deletedIds: string[] = []): ResolvedAct {
   const deleted = new Set(deletedIds ?? [])
 
   if (deleted.has(act.act.id)) return { ...act, beats: [] }

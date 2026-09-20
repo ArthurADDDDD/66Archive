@@ -6,7 +6,6 @@ import { SITE_NAME } from '@/lib/site-name'
 import {
   contentPathsFor,
   fetchLiveContent,
-  type LiveAct,
   type LiveContent,
   type LiveCopyBlock,
   type LiveEditorialSection,
@@ -210,11 +209,6 @@ export function mergeSiteCopy(baseline: SiteCopy, live: LiveSiteCopy | null): Si
 }
 
 /** 取某一幕的实时覆盖；没有就返回 null，调用方继续用基线。 */
-export function useLiveAct(scope: 'homeActs' | 'storyActs', actId: string): LiveAct | null {
-  const { narrative } = useLiveContent()
-  return narrative?.[scope].find((act) => act.id === actId) ?? null
-}
-
 /** 取某个板块的实时编排；后台没有这个板块（或整份没拉到）时返回 null。 */
 export function useLiveSection(sectionId: string): LiveEditorialSection | null {
   const { editorial } = useLiveContent()
