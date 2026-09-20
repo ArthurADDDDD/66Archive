@@ -149,6 +149,42 @@
       status: alive
   contributed_by: data-agent
 
+- id: 2010-05-18-video-01
+  type: video
+  date: "2010-05-18"
+  time: "16:57"
+  title: "【女流】十大雷人小游戏排行榜"
+  platform: youku
+  duration_min: 21
+  confidence: high
+  cover: "https://m.ykimg.com/054204085B294450000001013F037FA2"
+  games: []
+  tags: [视频时代]
+  note: "优酷详情页元数据复核（2026-09-20）：页面仍在线，标题、videoId、publishTime 2010-05-18 16:57:20、时长 20:36.93 与封面均明确。此前不在任何目录或条目中，由互联网档案馆 2014-10-30 抓取的本人优酷空间页（i.youku.com/nvliu66）比对发现；该快照另确认上传者为「【女流】」（u.youku.com/user_show/id_UMjQyOTM1MzA4.html）。盘点式视频，页面关键词提到魔兽世界/DNF 等只是举例提及，未据此登记 games。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTc0MDYwMjY4.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
+- id: 2010-06-05-video-01
+  type: video
+  date: "2010-06-05"
+  time: "23:26"
+  title: "【女流】超级玛丽在小游戏界的各种遭遇"
+  platform: youku
+  duration_min: 9
+  confidence: high
+  cover: "https://m.ykimg.com/0542040852532F726A0A4C5B5EF09248"
+  games: [enough-plumbers]
+  tags: [视频时代]
+  note: "优酷详情页元数据复核（2026-09-20）：页面仍在线，标题、videoId、publishTime 2010-06-05 23:26:56、时长 8:53.13 与封面均明确。此前不在任何目录或条目中，由互联网档案馆 2014-10-30 抓取的本人优酷空间页比对发现。游戏由视频简介自带的官方链接 notdoppler.com/enoughplumbers.php 确认为 Enough Plumbers；档案里的 2013-11-02-video-01 是其续作 Enough Plumbers 2，故本条是该系列在档案中的首玩。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTc5MDY3MzI4.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
 - id: 2010-06-13-video-01
   type: video
   date: "2010-06-13"
@@ -508,6 +544,24 @@
   note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
   sources:
     - url: "https://v.youku.com/v_show/id_XNDQzNTY0MDky.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
+- id: 2013-07-16-video-01
+  type: video
+  date: "2013-07-16"
+  time: "20:52"
+  title: "【女流】大叔的末日骑行"
+  platform: youku
+  duration_min: 14
+  confidence: high
+  cover: "https://m.ykimg.com/0542020851E5416B6A0A4143BA9F87CC"
+  games: [icycle]
+  tags: [视频时代]
+  note: "优酷详情页元数据复核（2026-09-20）：页面仍在线，标题、videoId、publishTime 2013-07-16 20:52:11、时长 14:13.70 与封面均明确。此条在 data/catalogs/youku-video-era.csv 中早有一行，但 date 字段只有「07-16 20:52」缺年份，一直未能导入；publishTime 与该实测值吻合到分钟。游戏由互联网档案馆 2013-07-20 快照的页面关键词「Icycle 冰上自行车」确认。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XNTgzNzcxNTcy.html"
       kind: original
       status: alive
   contributed_by: data-agent
