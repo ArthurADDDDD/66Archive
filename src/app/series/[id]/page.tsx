@@ -15,6 +15,7 @@ import { SiteFooter } from '@/components/primitives'
 import { getDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { buildSeries, seriesDisplayName } from '@/lib/series'
+import { coverShareImage } from '@/lib/share-image'
 import { formatDuration } from '@/lib/ui'
 import { KeepDates } from '@/components/KeepDates'
 
@@ -26,8 +27,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const s = getDataset().series.get(id)
+  const ds = getDataset()
+  const s = ds.series.get(id)
+  // 节目自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
+  const cover = s ? await coverShareImage(buildSeries(ds, toTimelineEntries(ds), id, s.name, s.description ?? '').cover) : null
   return pageMetadata({
+    cover,
     path: `/series/${id}/`,
     // 站名由根 layout 的 title template 补，这里只给这个节目自己的名字。
     // 用展示名，和页面正文的 h1 保持一致（`night-talk` 在正文里叫「夜话 / 聊天」）。

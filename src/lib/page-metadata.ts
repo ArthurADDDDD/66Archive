@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { siteUrl } from './site-url'
 import { SITE_NAME } from './site-name'
+import type { ShareImage } from './share-image'
 import { getShareCardDescription, getShareCardImage } from './share-cards'
 
 /**
@@ -55,6 +56,7 @@ export function pageMetadata({
   title,
   description,
   shareId,
+  cover,
 }: {
   /** 站内路径，带尾斜杠，例如 `/archive/` */
   path: string
@@ -71,11 +73,24 @@ export function pageMetadata({
    * 不传（比如 `/e/[id]/` 这种按条目动态生成描述的页面）就原样用 `description` 和全站默认图。
    */
   shareId?: string
+  /**
+   * 这一页自己的封面图，由 `coverShareImage()` 挑出来（只可能是站内托管、尺寸够大的那批）。
+   * 传了就用它当社交卡片图，并按**实际文件尺寸**声明宽高；不传就用全站默认图。
+   *
+   * 注意它和 `shareId` 的分工：`shareId` 是后台为固定页面单独设的图，优先级最高；
+   * 这个是详情页从内容里派生出来的封面，只在没有后台设图时才用得上。
+   */
+  cover?: ShareImage | null
 }): Metadata {
   const url = siteUrl(path)
   const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME
   const shareDescription = shareId ? getShareCardDescription(shareId, description) : description
-  const shareImage = shareId ? getShareCardImage(shareId, OG_IMAGE) : OG_IMAGE
+  const configured = shareId ? getShareCardImage(shareId, OG_IMAGE) : null
+  // 后台单独设过图 > 内容自己的封面 > 全站默认图。
+  const picked: ShareImage =
+    configured && configured !== OG_IMAGE
+      ? { url: configured, width: 1200, height: 630 }
+      : (cover ?? { url: OG_IMAGE, width: 1200, height: 630 })
   return {
     ...(title ? { title } : {}),
     description,
@@ -87,13 +102,13 @@ export function pageMetadata({
       url,
       title: fullTitle,
       description: shareDescription,
-      images: [{ url: shareImage, width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: picked.url, width: picked.width, height: picked.height, alt: fullTitle }],
     },
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description: shareDescription,
-      images: [shareImage],
+      images: [picked.url],
     },
   }
 }

@@ -15,6 +15,7 @@ import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
+import { coverShareImage } from '@/lib/share-image'
 
 /**
  * 游戏详情（Slice B 核心）。
@@ -50,6 +51,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const profileId = id === 'maplestory-classic' ? 'maplestory' : id
   const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), profileId)
   return pageMetadata({
+    // 游戏自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
+    cover: await coverShareImage(profile?.cover),
     // `maplestory-classic` 会 permanentRedirect 到 `/games/maplestory/`，
     // 所以它的 canonical 要指向跳转目标，而不是自己这个会 301 的地址。
     path: `/games/${profileId}/`,

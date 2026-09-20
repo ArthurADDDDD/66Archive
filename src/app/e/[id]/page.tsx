@@ -8,6 +8,7 @@ import { actColorForDate } from '@/lib/narrative'
 import { toSeconds, type Platform } from '@/lib/schema'
 import { buildEntryRails } from '@/lib/relations'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
+import { coverShareImage } from '@/lib/share-image'
 import { InlineTagCalibration } from '@/components/InlineTagCalibration'
 import { TrailRecorder } from '@/components/Trail'
 import { SiteNav } from '@/components/SiteNav'
@@ -50,6 +51,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const entry = getDataset().entries.find((e) => e.id === id)
   // 站名由根 layout 的 title template 补，这里只给这一场自己的名字。
   return pageMetadata({
+    // 这一场自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
+    // 原平台地址（hdslb / ykimg）带防盗链，爬虫取不到，绝不能直接塞进 og:image。
+    cover: await coverShareImage(entry?.cover),
     path: `/e/${id}/`,
     title: entry ? `${entry.date} ${entry.title}` : '记录',
     description: entry
