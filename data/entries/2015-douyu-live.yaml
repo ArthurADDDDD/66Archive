@@ -531,6 +531,11 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM2MDQzMzcyMA==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-10 上传的《女流【心灵砒霜】10.11直播录像》，标题直接写明直播日 10.11，时长 192:54（193 分钟）与本条 duration_min 完全一致。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -607,6 +612,11 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM3MTg0NjY1Ng==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-10-28 上传的《女流【心灵砒霜】10.25直播录像》（c_time 2015-10-28 17:58:31），标题直接写明直播日 10.25。本轮未能从存档页取到该条时长，未据此改动 duration_min。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -720,6 +730,11 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM3NjY1MDc3Mg==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-11-03 上传的《女流【心灵砒霜】10.30直播录像》（c_time 2015-11-03 19:49:26），标题直接写明直播日 10.30。优酷那一份时长 179:32（180 分钟），比本条记录的 188 分钟短约 8 分钟，属不同剪辑，未据此改动 duration_min。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜

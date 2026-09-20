@@ -111,6 +111,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTMwODkzMTMzNg==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号同一支投稿，但标题不同：优酷原题是《【女流】HER STORY ★她的故事★全剧情流程赏析Part 1》，B 站那份题作《herstory第一集配音》。判定同一支的依据是 c_time 2015-08-13 21:19:03 与本条日期一致、时长 26:01（26 分钟）与 duration_min 完全一致，且该条在优酷《HER STORY 全剧情流程赏析合集》专辑里排在 Part 2/3/4 之前。本条标题保留原样未改。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-08-13 投稿。
   - id: 2015-09-04-video-01
@@ -179,6 +184,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM1NTc0OTY0NA==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号同一支投稿：标题《【女流实况】逆转裁判：复苏的逆转第一章》与本条完全一致，c_time 2015-10-09 16:53:27 与本条日期一致，时长 44:40（45 分钟）与 duration_min 一致。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-10-09 投稿。
   - id: 2015-10-17-video-01
