@@ -127,8 +127,12 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTMyNzA5NTE3Mg==.html
+        kind: original
+        status: alive
+        account: youku-official
     contributed_by: data-agent
-    note: B站官方「女流66」2015-09-04 投稿。
+    note: B站官方「女流66」2015-09-04 投稿。2026-09-20 补上优酷官方号同一支投稿：互联网档案馆抓取的优酷空间视频列表页里该条 c_time 为 2015-09-04 14:21:01、时长 30:33（与本条 31 分钟一致）。同系列 Part 2、Part 4 此前不在档案里，已另建 2015-08-18-video-01、2015-09-07-video-01。
   - id: 2015-09-11-video-01
     type: live
     date: '2015-09-11'

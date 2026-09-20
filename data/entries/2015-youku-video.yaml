@@ -1,0 +1,50 @@
+# 2015 年优酷官方号投稿补录（2026-09-20 新建）。
+#
+# 本仓原先把优酷期当成「2010-05 ~ 2015-02」的视频时代，2015-02 之后转斗鱼直播
+# （见 2010-2015-youku-video.yaml 顶部说明）。但互联网档案馆抓取的本人优酷空间
+# 视频列表页（i.youku.com/u/UMjQyOTM1MzA4/videos）显示，官方优酷号在 2015-02 之后
+# **仍在持续投稿**：2015 年 7—9 月至少有 HER STORY 系列、直播录像精剪、
+# 女流杯建筑大赛等；2015-12 之后的抓取里还能看到 Rusty Lake、Inside、
+# 心灵砒霜等更晚的条目。也就是说优酷号并没有在 2015-02 停更。
+#
+# 这个文件只收**已核实到发布时间与时长**的那部分。日期口径与 2015-bilibili-video.yaml
+# 一致：video 条目用上传日期。标题含「直播录像/生放送」的不放这里——那类需要人工
+# 核对片头才能判定是预录还是直播回放，未核对前一律只作为线索记录在
+# data/reports/task-036-youku-space-videos.md，不入库。
+
+- id: 2015-08-18-video-01
+  type: video
+  date: "2015-08-18"
+  time: "14:18"
+  title: "【女流】HER STORY ★她的故事★全剧情流程赏析Part 2"
+  platform: youku
+  duration_min: 25
+  confidence: high
+  cover: "https://m.ykimg.com/0541040855D2D8196A0A4E5F2AB20B27"
+  games: [her-story]
+  tags: [视频时代, 系列解说]
+  note: "优酷空间视频列表复核（2026-09-20）：来自互联网档案馆抓取的本人优酷空间视频列表页（i.youku.com/u/UMjQyOTM1MzA4/videos），列表项自带 c_time 2015-08-18 14:18 与时长 25:21。该列表页的 c_time 已用站内 83 条已定日期的优酷条目交叉验证，82 条完全一致。本系列 Part 3 已存在（2015-09-04-video-01，此前只有 B 站来源），本轮已为其补上同一优酷来源；Part 1 对应的可能是 2015-08-13-video-01《herstory第一集配音》，但两者是否同一支视频未核实，未做合并。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTMxMjc1NDcwNA==.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
+- id: 2015-09-07-video-01
+  type: video
+  date: "2015-09-07"
+  time: "20:50"
+  title: "【女流】HER STORY ★她的故事★全剧情流程赏析Part 4（完结）"
+  platform: youku
+  duration_min: 30
+  confidence: high
+  cover: "https://m.ykimg.com/0541040855ED90C26A0A417EC9EFEE85"
+  games: [her-story]
+  tags: [视频时代, 系列解说]
+  note: "优酷空间视频列表复核（2026-09-20）：来自互联网档案馆抓取的本人优酷空间视频列表页（i.youku.com/u/UMjQyOTM1MzA4/videos），列表项自带 c_time 2015-09-07 20:50 与时长 29:40。该列表页的 c_time 已用站内 83 条已定日期的优酷条目交叉验证，82 条完全一致。本系列 Part 3 已存在（2015-09-04-video-01，此前只有 B 站来源），本轮已为其补上同一优酷来源；Part 1 对应的可能是 2015-08-13-video-01《herstory第一集配音》，但两者是否同一支视频未核实，未做合并。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTMyOTg0NjgxNg==.html"
+      kind: original
+      status: alive
+  contributed_by: data-agent
+
