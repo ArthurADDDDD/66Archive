@@ -11,7 +11,19 @@ import {
 } from '@/lib/archive-payload'
 import type { ArchiveNav } from '@/lib/archive-nav'
 
-let archiveRequest: Promise<ArchivePayload> | null = null
+/**
+ * 模块级的载荷缓存，**按地址建键**。
+ *
+ * 地址里带着按载荷字节算出来的版本号（见 `lib/archive-data-url.ts`），所以
+ * 「换了一份载荷」在这里的表现就是「换了一个 url」。早先这里只存 promise、不存 url，
+ * `if (archiveRequest) return archiveRequest` 把参数整个忽略掉了——同一个标签页
+ * 开着不动、站内来回跳（客户端路由不会重新求值模块），即使新发布之后
+ * `dataUrl` 这个 prop 已经换成新版本，拿回来的仍然是上一版那个 promise，
+ * 而且**一次网络都不会发**，看起来就是「刷新了也还是旧的」。
+ *
+ * 下面 `useEffect` 的依赖里本来就有 `dataUrl`，effect 会重跑；真正把它吞掉的是这一层。
+ */
+let archiveRequest: { url: string; promise: Promise<ArchivePayload> } | null = null
 
 /**
  * 取走首屏预取的结果，并从全局上摘掉（预取脚本见 `app/archive/page.tsx`）。
@@ -51,20 +63,23 @@ function requestArchive(dataUrl: string): Promise<ArchivePayload> {
  * 拿到边缘上可能是上一版的那份，而且不报任何错。
  */
 function fetchArchive(dataUrl: string): Promise<ArchivePayload> {
-  if (archiveRequest) return archiveRequest
+  // 只有地址一致才复用；换了版本号就必须重新取，否则新发布对这个标签页永远不生效。
+  if (archiveRequest && archiveRequest.url === dataUrl) return archiveRequest.promise
   // 首屏预取多半已经在路上了，直接接手，省掉「等水合再发请求」那一整趟。
   // 有意不给它加超时竞速：这份载荷三百多 KB，放弃一个在途请求再从零下载只会更慢；
   // 真失败了下面的 catch 会清掉模块缓存，「重新加载档案」照常能重来。
   const booted = takeBooted()
-  archiveRequest = (booted
+  const promise = (booted
     ? booted.then((data) => (isEncodedPayload(data) ? decodeArchivePayload(data) : requestArchive(dataUrl)))
     : requestArchive(dataUrl)
   ).catch((error) => {
     // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。
-    archiveRequest = null
+    // 只清掉自己这一条：期间可能已经换了新版本的地址，别把它一起抹掉。
+    if (archiveRequest?.url === dataUrl) archiveRequest = null
     throw error
   })
-  return archiveRequest
+  archiveRequest = { url: dataUrl, promise }
+  return promise
 }
 
 export function ArchiveLoader({ nav, dataUrl }: { nav: ArchiveNav; dataUrl: string }) {
