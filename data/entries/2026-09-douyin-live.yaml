@@ -274,9 +274,7 @@
   title: "晚上好 来光顾我的深夜当铺"
   platform: douyin
   duration_min: 182
-  games:
-    - cyberpunk-2077
-    - shenkongdangpu
+  games: [shenkongdangpu]
   tags:
     - 弹幕版
   confidence: medium
