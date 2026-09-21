@@ -152,6 +152,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTMzMjA5ODE5Ng==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "官方优酷同内容投稿，优酷现标题《【直播生放送】★我的老师是只熊★女流解说》（2015-09-11 存档页上的旧标题是《★我的老师是只“熊”★教师节快乐，呵呵哒》，说明该投稿标题后来被改过）；duration 2605 秒≈43 分钟，与 duration_min 一致。⚠️ 日期存疑：优酷 release_date 是 2015-09-10 14:47:08，早于本条的 2015-09-11；本条 type 为 live，而直播不可能晚于同内容的上传时间，故 2015-09-11 很可能只是 B 站投稿日而非直播日。本轮未改日期（真实直播日仍无直接证据），留待人工判断。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-09-11 投稿。
   - id: 2015-09-18-video-01
@@ -168,6 +173,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTMzODU2MzU2MA==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "官方优酷同内容投稿《【女流实况】恐怖游戏湖景小屋4章Lakeview Cabin试玩》，标题与本条完全一致；优酷 video:release_date 2015-09-18 10:26:24（与本条日期同日），og:video:duration 1547 秒≈26 分钟，与 duration_min 一致。2026-09-21 实访页面在线。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-09-18 投稿。
   - id: 2015-10-09-video-01
@@ -237,6 +247,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM3MzE3MjI2MA==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "官方优酷同内容投稿《【女流实况】千万不能看！》，标题与本条完全一致；release_date 2015-10-30 11:16:57（同日），duration 753 秒≈13 分钟，与 duration_min 一致。2026-09-21 实访页面在线。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-10-30 投稿。
   - id: 2015-11-06-video-01
@@ -253,6 +268,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM3OTE0NTQ0NA==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "官方优酷同内容投稿，优酷原标题为《【女流实况】国王密使King's Quest第一章P1》（比本条多了英文名，本条标题保持原样不改）；release_date 2015-11-06 16:42:50（同日），duration 1441 秒≈24 分钟，与 duration_min 一致。2026-09-21 实访页面在线。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-11-06 投稿。
   - id: 2015-12-29-video-01
