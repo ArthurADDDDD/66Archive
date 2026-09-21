@@ -341,8 +341,13 @@
         kind: replay
         status: alive
         cover_unreliable: true
+      - url: https://v.youku.com/v_show/id_XMTI5MzAzMjY1Ng==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "官方优酷《【风之旅人】PS4最新版★女流★试玩直播录像完整版》，上传 2015-07-25 13:51:54，1:50:33（111 分钟）。标题本身没写直播日，归入本场依据三条互相独立的判据：①「PS4最新版」——PS4 版《风之旅人》2015-07-21 才发售，因此排除同一补投里的 2015-02-04 那场（当时只有 PS3 版）；②同补投的 2015-07-23 是「联机」场、89 分钟，与「试玩」不符；③本场 B站补投 P2.1+P2.2 合计 116.5 分钟，与 111 分钟最接近。属强推断，非当期标注；若日后有人能核对片头，应复核本归属。"
     contributed_by: data-agent
-    note: B站「女流录像小屋」风之旅人补投 P2.1/P2.2。
+    note: B站「女流录像小屋」风之旅人补投 P2.1/P2.2（分P标题自带直播日 2015.7.22）。
   - id: 2015-07-23-live-01
     type: live
     date: '2015-07-23'
