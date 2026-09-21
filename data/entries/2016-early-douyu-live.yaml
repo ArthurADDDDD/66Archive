@@ -35,6 +35,15 @@
         status: alive
     contributed_by: data-agent
     note: AcFun「斗鱼录像厅」《【我的世界】斗鱼TV我的世界MC圣诞建筑大赛 女流 作品打分视角！》，发布于 2016-01-04，时长约 2:40:14。
+  - id: 2016-01-05-live-01
+    type: live
+    date: '2016-01-05'
+    title: "游戏：谁是你爸爸？"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2016-01-10-live-01
     type: live
     date: '2016-01-10'
@@ -146,6 +155,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-02-24-live-01
+    type: live
+    date: '2016-02-24'
+    title: "逆途更新了"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2016-02-24 15:36（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-02-24 15:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2016-03-03-live-01
     type: live
     date: '2016-03-03'

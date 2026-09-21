@@ -188,6 +188,51 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」超凡双生节操版 P3.1。
+  - id: 2015-03-18-live-01
+    type: live
+    date: '2015-03-18'
+    title: "我是谁？"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-03-18 11:54（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-03-18 11:43。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-03-27-live-01
+    type: live
+    date: '2015-03-27'
+    title: "女流GTA5线上模式"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-03-27 23:03（CST）的快照里，直播间缩略图时间戳是 2015-03-27 18:18，与快照同日，说明标题对应的就是当天这场直播。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-03-31-live-01
+    type: live
+    date: '2015-03-31'
+    title: "女流GTA5"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-03-31 14:56（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-03-30 19:11。（缩略图仍停在上一场 2015-03-30，是因为本场刚开播、缩略图还没刷新；show_status=1 才是当天开播的直接证据。）本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-04-03-live-01
+    type: live
+    date: '2015-04-03'
+    title: "霸道总裁爱上。。。谁"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-04-03 18:53（CST）的快照里，直播间缩略图时间戳是 2015-04-03 18:40，与快照同日，说明标题对应的就是当天这场直播。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-04-24-live-01
+    type: live
+    date: '2015-04-24'
+    title: "传送门2女流被喷记"
+    platform: douyu
+    confidence: high
+    games: [portal-2]
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-04-24 20:11（CST）的快照里，直播间缩略图时间戳是 2015-04-24 18:11，与快照同日，说明标题对应的就是当天这场直播。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2015-04-29-live-01
     type: live
     date: '2015-04-29'
@@ -562,6 +607,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-10-13-live-01
+    type: live
+    date: '2015-10-13'
+    title: "军师很忙yo yo yo"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-10-13 15:37（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-10-13 15:34。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2015-10-18-live-01
     type: live
     date: '2015-10-18'
@@ -801,6 +855,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-11-24-live-01
+    type: live
+    date: '2015-11-24'
+    title: "士别三日当chuox"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-11-24 15:23（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-11-24 15:16。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2015-11-26-live-01
     type: live
     date: '2015-11-26'
@@ -821,6 +884,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-11-27-live-01
+    type: live
+    date: '2015-11-27'
+    title: "古墓丽影还不结局"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-11-27 17:34（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-11-27 17:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2015-12-13-live-01
     type: live
     date: '2015-12-13'
@@ -861,3 +933,12 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-12-22-live-01
+    type: live
+    date: '2015-12-22'
+    title: "Rusty lake生锈小湖12月章"
+    platform: douyu
+    confidence: high
+    games: [rusty-lake]
+    contributed_by: data-agent
+    note: "直播日由存档的斗鱼直播间页面确定：2015-12-22 22:53（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-12-22 22:45。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
