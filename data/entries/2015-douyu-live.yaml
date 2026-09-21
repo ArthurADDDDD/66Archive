@@ -461,6 +461,22 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」风之旅人补投 P3。
+  - id: 2015-09-04-live-01
+    type: live
+    date: '2015-09-04'
+    title: 第四届MC女流杯建筑大赛
+    platform: douyu
+    confidence: high
+    duration_min: 117
+    games: [minecraft]
+    sources:
+      - url: https://v.youku.com/v_show/id_XMTMyODE4OTg2OA==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "官方优酷《【mc六则天】第四届女流杯建筑大赛》，video:release_date 2015-09-05 20:53:27（直播次日），og:video:duration 7039.55 秒≈117 分钟。duration_min 取此全集时长，不等于当天直播总时长。2026-09-21 实访页面在线。"
+    contributed_by: data-agent
+    note: "直播日 2015-09-04 由存档的斗鱼直播间页面定案，两条互相独立的信号：①2015-09-06 07:22（CST）的存档页上直播间标题就是「第四届MC女流杯建筑大赛」，而 09-03 10:07 的存档页标题还是「药是甜的」；②同一张 09-06 存档页里的直播间缩略图文件名为 156277_1509041751_thumb.jpg，即最后一次开播是 2015-09-04 17:51；09-08 20:17 的存档页缩略图仍停在 09-04 17:51，说明 09-05~09-08 没有开播。因此 09-06 那条标题指向的场次只能是 09-04。标题采用当期斗鱼直播间原文（优酷投稿标题作《【mc六则天】第四届女流杯建筑大赛》）。本条未归入 series: dazhou-mc——「六则天/武则天」与「大周」的谱系关系目前仍是 strongly supported 而非 confirmed，详见 data/reports/task-040-douyu-room-titles-2015.md。"
   - id: 2015-09-09-live-01
     type: live
     date: '2015-09-09'
