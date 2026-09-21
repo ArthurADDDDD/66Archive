@@ -50,7 +50,14 @@ export function useEntrySource(entry: TimelineEntry) {
 
   const displayCover =
     selectedCover ??
-    (coverUnreliable ? null : sourceFallbackCover?.url === selectedSourceUrl ? sourceFallbackCover.cover : null)
+    // `sourceFallbackCover` 为 null 且这一条没有任何来源时，两边都是 undefined，
+    // `undefined === undefined` 会让这个分支意外成立，再取 `.cover` 就炸在 null 上。
+    // 先要求 fallback 真的存在，再比对 URL。
+    (coverUnreliable || !sourceFallbackCover || !selectedSourceUrl
+      ? null
+      : sourceFallbackCover.url === selectedSourceUrl
+        ? sourceFallbackCover.cover
+        : null)
 
   return { sourceIndex, setSourceIndex, selectedSource, displayCover }
 }
