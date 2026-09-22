@@ -407,6 +407,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2615160
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」《【全明星秀】女流心灵砒霜系列节目 20160320期》，标题期号 20160320 与本条日期一致，多分P。2026-09-22 实访可播放。该号为斗鱼官方 A 站录像号（UID 974915）；schema 的 platform 枚举不含 acfun，故不挂 account。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜

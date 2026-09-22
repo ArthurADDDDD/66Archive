@@ -72,6 +72,10 @@
         kind: replay
         parts: 3
         status: alive
+      - url: https://www.acfun.cn/v/ac3013788
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」《【心灵砒霜】女流心灵砒霜 20160807期》，标题期号 20160807 与本条日期一致，多分P（首P 128 分钟）。本条原标题写明是「直播音频」，这一源是同期的**影像**版本，可补上画面。2026-09-22 实访可播放。该号为斗鱼官方 A 站录像号（UID 974915），非女流专属号；schema 的 platform 枚举不含 acfun，故不挂 account。"
     contributed_by: data-agent
 
   - id: 2016-08-08-live-01
