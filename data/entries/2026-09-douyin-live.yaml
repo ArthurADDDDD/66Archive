@@ -312,3 +312,25 @@
       parts: 4
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-22-live-01
+  type: live
+  date: "2026-09-22"
+  title: "寂静岭新作出炉 寂静岭townfall"
+  platform: douyin
+  duration_min: 177
+  games:
+    - townfall
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/cae3eef8e18bac59cdaabdce8ec9738a3ba4887c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Zzh76tEDX"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1B1hJ6AEh5"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
