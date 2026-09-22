@@ -816,9 +816,11 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
           />
         </span>
         {(photo.tags ?? []).length > 0 && (
-          <span className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+          /* 分类角标只是提示，不该压住画面：不设最小宽度、贴角、半透明。
+             以前 min-w 5.25rem 在手机两栏窄卡上几乎占掉半张图宽。 */
+          <span className="pointer-events-none absolute left-1.5 top-1.5 flex flex-wrap gap-1 sm:left-2.5 sm:top-2.5">
             {photo.tags!.map((value) => (
-              <span key={value} className="inline-flex min-w-[5.25rem] items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-black/70 px-2 py-0.5 text-[10px] text-white backdrop-blur-md sm:min-w-[6.5rem] sm:px-2.5 sm:py-1 sm:text-meta">
+              <span key={value} className="inline-flex items-center whitespace-nowrap rounded-full bg-black/55 px-1.5 py-px text-[9px] leading-snug text-white/85 backdrop-blur-sm sm:px-2 sm:py-0.5 sm:text-[11px]">
                 {value}
               </span>
             ))}
