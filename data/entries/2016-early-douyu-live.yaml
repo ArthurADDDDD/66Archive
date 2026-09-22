@@ -15,11 +15,34 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2435495
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】女流2016新年砒霜 元旦特辑（一）》，发布 2016-01-04 17:24，时长 1:22:00。标题自称「元旦特辑」，直接锁定直播日 2016-01-01。标注的（二）为 ac2434529，已不在该号现存投稿列表中（2026-09-23 全量枚举 2351 条未见），视为已删除。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-01-03-live-01
+    type: live
+    date: '2016-01-03'
+    title: "尼德霍格 Nidhogg"
+    platform: douyu
+    confidence: medium
+    duration_min: 131
+    games: []
+    sources:
+      - url: https://www.acfun.cn/v/ac2434647
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】跟着女流一起来玩《尼德霍格(Nidhogg)》吧（一）》，发布 2016-01-04 13:41，时长 53 分钟。"
+      - url: https://www.acfun.cn/v/ac2434644
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）同系列（二），发布 2016-01-04 13:39，时长 1:18:00。"
+    contributed_by: data-agent
+    note: "直播日 2016-01-03：存档斗鱼快照（抓取于 2016-01-04 08:08）的直播间缩略图时间戳为 2016-01-03 18:42，证明该日晚间在播；两段录像次日 2016-01-04 下午 13:39／13:41 连续发布，滞后 1 天，且发布时刻早于当日傍晚，排除了它们取自 01-04 晚间直播的可能。两段合计 131 分钟与一场晚间直播相称。标题取自录像内容；当时快照上的直播间标题是「hello  huangbobo」，但按本仓既定口径，事后抓到的标题不径直认作该场标题，故未采用。games 留空：《尼德霍格 Nidhogg》尚未登记进 data/games.yaml。"
   - id: 2016-01-04-live-01
     type: live
     date: '2016-01-04'
@@ -60,6 +83,14 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2454680
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】十年寒窗，十年砒霜 十八载春梦，十八载圆梦 - 黄渤！》，发布 2016-01-12 10:37，时长 1:25:00。与 ac2454719 同批（相隔 10 分钟）发布，两条相加 85+94=179 分钟，与本条既有的 178 分钟几乎完全吻合，故判定二者是同一场的上下半场。"
+      - url: https://www.acfun.cn/v/ac2454719
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】十年寒窗，十年砒霜 心灵砒霜第2016.10.10期》，发布 2016-01-12 10:47，时长 1:34:00。标题期号「2016.10.10」晚于发布日 9 个月，不可能成立；2016-08-27 有观众评论直接写「日期错了 20160110」。该更正与发布滞后 2 天、以及本条既有的 178 分钟时长三方吻合，故归入 2016-01-10。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -92,15 +123,23 @@
     platform: douyu
     cover: "/images/covers/2016-01-24-live-01.jpg"
     confidence: high
-    duration_min: 97
+    duration_min: 236
     games: []
     tags: [心灵砒霜]
     sources:
       - url: "https://www.bilibili.com/video/BV1Rx411S7Ta"
         kind: replay
         status: alive
+      - url: https://www.acfun.cn/v/ac2487882
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】女流姐姐直播一周年 MC活动纪念》，发布 2016-01-25 14:08，时长 2:05:39，频道归入「我的世界」。这是目前已知 2015 年女流杯建筑大赛与 2016-06-29《MC复兴大周 day1》之间唯一一场有录像的 MC 活动。"
+      - url: https://www.acfun.cn/v/ac2487950
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【全明星秀】女流斗鱼直播一周年纪念日 感谢有你 水友狂送礼物和鱼丸！》，发布 2016-01-25 14:20，时长 1:50:25。与 ac2487882 同批发布，为同场的另一段。"
     contributed_by: data-agent
-    note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+    note: "周年直播日定在 2016-01-24（不是首播周年正日 2015-01-21）：存档斗鱼快照显示 2016-01-24 18:52 房间在播；两条 A 站录像均于次日 2016-01-25 下午发布，滞后 1 天，符合该号 1～4 天的发布规律；而 2016-01-21 14:41 的快照当时仍处下播状态、最后开播停在 2016-01-20 19:16。duration_min 由 97 改为 236（126+110），取两段 A 站录像之和；B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P 的 97 分钟是剪辑版，不代表当日直播全长。"
   - id: 2016-01-31-live-01
     type: live
     date: '2016-01-31'
@@ -129,12 +168,24 @@
     confidence: high
     duration_min: 345
     games: [unravel]
-    note: "B站「女流录像小屋」《毛线小精灵 UNRAVEL》，全长录播。"
+    note: "B站「女流录像小屋」《毛线小精灵 UNRAVEL》，全长录播。A 站「斗鱼录像厅」把同一场切成四段投稿（2016-02-23 上午连续发布），现存（一）（三）（四）三段共 275 分钟，（二）已不在该号投稿列表中；275 分钟加上缺失的（二）与本条 345 分钟的全长录播相合，故判定为同一场。"
     sources:
       - url: "https://www.bilibili.com/video/BV14W411u7yw"
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2555180
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《毛线小灵精：一段走心的旅程 跟女流一起来玩吧（一）》，发布 2016-02-23 10:36，时长 40 分钟。"
+      - url: https://www.acfun.cn/v/ac2555243
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）同系列（三），发布 2016-02-23 10:56，时长 1:56:00。"
+      - url: https://www.acfun.cn/v/ac2555236
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）同系列（四），发布 2016-02-23 10:54，时长 1:59:00。"
     contributed_by: data-agent
   - id: 2016-02-21-live-01
     type: live
@@ -196,6 +247,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2587884
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【全民星秀】女流心灵砒霜系列节目 2010306期》，发布 2016-03-08 18:07，分上下半场两 P。标题期号「2010306」缺一位，还原为 20160306；存档斗鱼快照 2016-03-06 16:36 抓到房间 show_status=1 正在直播、标题写「女流：下午四点砒霜」，与之吻合，故归入 2016-03-06。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -565,6 +620,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2662778
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】久违的心灵砒霜 第20160810期》，发布 2016-04-11 18:38，时长 1:11:00。标题期号「20160810」晚于发布日 4 个月，不可能成立，按月份错写还原为 0410：发布滞后 1 天符合该号规律；本条前一场心灵砒霜是 2016-03-27，间隔两周，与标题「久违的」相合。时长 71 分钟短于本条 169 分钟，应为当日部分片段。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -644,6 +703,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2678564
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】女朋友和游戏哪个更重要？ DC老师你学到了吗？》，发布 2016-04-18 13:14，时长 1:18:00。标题无期号，按发布滞后 1 天归入 2016-04-17（当日档案已有心灵砒霜一场）。时长 78 分钟短于本条 158 分钟，应为当日部分片段。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜

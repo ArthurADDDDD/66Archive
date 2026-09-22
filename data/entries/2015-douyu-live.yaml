@@ -25,6 +25,21 @@
         status: alive
     contributed_by: data-agent
     note: B站官方「女流66」与优酷官方旧号均以《[1.21直播录像]重启之后还是一条好汉》直接标注直播日期 2015-01-21，作为本条主源。AcFun「斗鱼录像厅」于次日发布的 2:02:50《斗鱼首秀 背对摄像头真的好吗》为同场完整录像补源；其 2015-01-22 是投稿日，不另建直播场次。结合 2017-01-21「直播2周年」、2018-01-21「三周年」等连续周年录像，确认 2015-01-21 为首次实际开播；斗鱼官方所述 2015-01-24 为正式签约日。duration_min 取完整补源时长，官方主源现存片段为 34:25。
+  - id: 2015-01-23-live-01
+    type: live
+    date: '2015-01-23'
+    title: "女流之萌音加节奏"
+    platform: douyu
+    confidence: medium
+    duration_min: 149
+    games: []
+    sources:
+      - url: https://www.acfun.cn/v/ac1696480
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【女流】女流之萌音加节奏 让你的耳朵欲罢不能》，发布 2015-01-24 11:09，时长 2:29:00，简介写 www.douyutv.com/nvliu。"
+    contributed_by: data-agent
+    note: "直播日 2015-01-23 由三条证据合定：存档斗鱼快照显示 2015-01-23 19:34 房间在播（直播间标题「女流之背」）；录像次日 2015-01-24 上午 11:09 发布，滞后 1 天，符合该号规律；149 分钟与 19:34 起的一场晚间直播相称。标题取自 A 站投稿标题，不是当日直播间标题。注意与同日已有的优酷短片 2015-01-23-video-01《大金刚热带雨林勇斗马达加斯加企鹅》（12 分钟）区分：二者是否同一场尚未证实。games 留空——当日内容含节奏类游戏，但具体是哪一款未经核实。"
   - id: 2015-01-27-live-01
     type: live
     date: '2015-01-27'
@@ -116,6 +131,21 @@
         cover_unreliable: true
     contributed_by: data-agent
     note: B站「女流录像小屋」《去月球》第一、二幕补投 P2/P3。
+  - id: 2015-02-09-live-01
+    type: live
+    date: '2015-02-09'
+    title: "手残不能玩的游戏"
+    platform: douyu
+    confidence: high
+    duration_min: 107
+    games: []
+    sources:
+      - url: https://www.acfun.cn/v/ac1736364
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【女流】手残不能玩的游戏》，发布 2015-02-10 17:17，时长 1:47:00。简介原文只有一句「2月9日直播部分~~」，直接写明了直播日，是本轮唯一一条由简介自述锁定日期的录像。"
+    contributed_by: data-agent
+    note: "直播日 2015-02-09 由录像简介自述确定（「2月9日直播部分~~」），不是从发布日推的。该日此前在档案中完全空白。同批还有一条 ac1736317《别再说倒背如流这些奇奇怪怪的话了》（发布 2015-02-10 16:58，时长 157 分钟，简介写「Don't Escape 2 和超级马里奥」），与本条相隔 19 分钟发布，很可能是同一场的另一段，但它自己没写日期，故未并入本条、duration_min 也只取已确证的 107 分钟，不代表当日直播全长。games 留空：待登记《Don't Escape 2》，另「超级马里奥」具体是哪一作未经核实。"
   - id: 2015-02-28-live-01
     type: live
     date: '2015-02-28'
@@ -223,6 +253,21 @@
     games: [grand-theft-auto-v]
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2015-03-27 23:03（CST）的快照里，直播间缩略图时间戳是 2015-03-27 18:18，与快照同日，说明标题对应的就是当天这场直播。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-03-30-live-01
+    type: live
+    date: '2015-03-30'
+    title: "PS4开箱"
+    platform: douyu
+    confidence: medium
+    duration_min: 98
+    games: []
+    sources:
+      - url: https://www.acfun.cn/v/ac1816049
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【女流】ps4开箱引来好人小杰的帮忙》，发布 2015-03-31 16:48，时长 1:38:00，简介写 www.douyutv.com/nvliu。"
+    contributed_by: data-agent
+    note: "直播日 2015-03-30：存档斗鱼快照的直播间缩略图时间戳为 2015-03-30 19:11，证明该日晚间在播；录像次日 2015-03-31 16:48 发布，滞后 1 天。与相邻的 2015-03-31-live-01 不冲突——同一张快照（抓取于 2015-03-31 14:56）显示 show_status=1，即 03-31 当天也在播，两场是不同日的两场。标题取自录像内容（PS4 开箱），当时直播间标题挂的是「女流GTA5」；开箱之后接着玩 GTA5 与之相合，但本条不据此断言当日直播间标题即本条标题。"
   - id: 2015-03-31-live-01
     type: live
     date: '2015-03-31'
@@ -916,15 +961,27 @@
     title: "古墓丽影还不结局"
     platform: douyu
     confidence: high
-    duration_min: 116
+    duration_min: 200
     games: [rise-of-the-tomb-raider]
     sources:
+      - url: https://www.acfun.cn/v/ac2359238
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【古墓丽影】X-box中文版-女汉子劳拉又回来啦！（六）-女流66》，发布 2015-11-30 11:55，时长 1:43:00。"
+      - url: https://www.acfun.cn/v/ac2359321
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）同系列（七），发布 2015-11-30 12:31，时长 1:12:00。"
+      - url: https://www.acfun.cn/v/ac2359687
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）同系列（八），发布 2015-11-30 15:41，时长 25 分钟。本条标题里没有「女流」二字，是 2026-09-23 按简介里的 douyutv.com/156277 链接才找出来的。"
       - url: https://www.acfun.cn/v/ac2353769
         kind: replay
         status: alive
-        note: "A站「斗鱼录像厅」《【主机游戏】古墓丽影10：崛起！跟着手残女主播66姐一起来体验36D的晃动画面吧》，发布于 2015-11-27，时长 01:55:56（116 分钟），简介写明 douyutv.com/156277。发布日与本场直播日同日，是这一场的录像本体，2026-09-22 实访可播放。⚠️ 该投稿属 A 站 UID 974915，**不是** accounts.yaml 里已登记的 A 站录像厅频道（u/4397992，枚举范围 2016-05 起）——故本源暂不挂 account，待人类确认两个 UID 的关系后再登记。"
+        note: "⚠️ 存疑源，待人工核对。A站「斗鱼录像厅」（UID 974915）《【主机游戏】古墓丽影10：崛起！……36D的晃动画面吧》，时长 1:55:56。问题在于它的发布时刻是 2015-11-27 16:14（分P 文件 15:58 上传完），而同日 17:34 的斗鱼快照才显示 show_status=1、她那时正在开播——录像早于这场直播 80 分钟就已发布，因此它很可能是**更早一场**古墓丽影的录像（她确有上午播古墓的习惯，见 2015-11-15 直播间标题「上午古墓，下午砒霜」），而不是本场。暂予保留，不擅自摘除。"
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2015-11-27 17:34（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-11-27 17:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+    note: "直播日由存档的斗鱼直播间页面确定：2015-11-27 17:34（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-11-27 17:30。2026-09-23 补入 A 站「斗鱼录像厅」的（六）（七）（八）三段，判据：直播间标题「古墓丽影还不结局」与系列已排到第六至第八段相合、发布滞后 3 天在该号 1～4 天的区间内、三段合计 200 分钟与 17:30 起的一场晚间直播相称。duration_min 由 116 改为 200，取这三段之和；原先的 116 分钟来自存疑源 ac2353769，见该源备注。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
   - id: 2015-12-13-live-01
     type: live
     date: '2015-12-13'
