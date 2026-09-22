@@ -1011,10 +1011,16 @@ button:not(:disabled):active,
  * 用 max(0, 需要让出的宽度 − 容器居中天然留出的半边留白) 换算：容器自己的留白够，
  * 这里就不用再多让；不够，才补差额。`--site-shell-max` 由 `.site-container-wide`
  * 定义，图墙是它的后代，能直接继承到这个自定义属性。
+ *
+ * 居中留白必须先夹到 ≥ 0：`--site-shell-max` 是上限（87.5rem = 1400px），比所有
+ * 手机和平板的视口都宽，这时 `100vw − shell` 是负数，减一个负数等于把它**加**进
+ * padding——375px 的手机上会算出 512px 的右内边距，图墙宽度被挤成 0，一张图都
+ * 看不见。用 `min(100vw, shell)`（与 `--home-act-inset` 同一写法）：容器没撑到
+ * 上限时居中留白就是 0。
  */
 .gallery-wall {
   --rail-reserve: 0px;
-  padding-right: max(0px, calc(var(--rail-reserve) - (100vw - var(--site-shell-max, 100vw)) * 0.5));
+  padding-right: max(0px, calc(var(--rail-reserve) - (100vw - min(100vw, var(--site-shell-max, 100vw))) * 0.5));
 }
 @media (min-width: 768px) {
   .gallery-wall {
