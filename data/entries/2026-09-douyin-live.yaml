@@ -334,3 +334,23 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-22-live-02
+  type: live
+  date: "2026-09-22"
+  title: "控制 共振 抢先体验 惊险刺激动作冒险角色扮演游戏"
+  platform: douyin
+  duration_min: 176
+  games:
+    - control-game
+    - kongzhigongzhen
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/19e951e3275c090d2ae13b79542b7bdb4db6eedb.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1cFhH6rEJE"
+      kind: replay
+      status: alive
+  note: "第二场判定：晚上又开播了 依据录播来源复核收录。"
+  contributed_by: collection-review
