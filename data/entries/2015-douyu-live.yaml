@@ -25,6 +25,21 @@
         status: alive
     contributed_by: data-agent
     note: B站官方「女流66」与优酷官方旧号均以《[1.21直播录像]重启之后还是一条好汉》直接标注直播日期 2015-01-21，作为本条主源。AcFun「斗鱼录像厅」于次日发布的 2:02:50《斗鱼首秀 背对摄像头真的好吗》为同场完整录像补源；其 2015-01-22 是投稿日，不另建直播场次。结合 2017-01-21「直播2周年」、2018-01-21「三周年」等连续周年录像，确认 2015-01-21 为首次实际开播；斗鱼官方所述 2015-01-24 为正式签约日。duration_min 取完整补源时长，官方主源现存片段为 34:25。
+  - id: 2015-01-27-live-01
+    type: live
+    date: '2015-01-27'
+    title: "小游戏直播 I wanna be the xylem"
+    platform: douyu
+    confidence: high
+    duration_min: 88
+    games: []
+    sources:
+      - url: https://www.acfun.cn/v/ac1708393
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」《【女流】01-27小游戏直播 I wanna be the xylem》，发布于 2015-01-29，时长 01:27:30（88 分钟），简介写「来www.douyutv.com/nvliu看女流的背啊」，评论区最早两条为 2015-01-30。标题里的 01-27 即直播日，发布比直播晚两天。2026-09-22 实访可播放。该号是斗鱼官方在 A 站的录像号（UID 974915，覆盖全平台主播），与 accounts.yaml 里女流专属的 bili-fan-record-house（A站 u/4397992，2016-05 起）不是同一个号；因 schema 的 platform 枚举不含 acfun，本源暂不挂 account。"
+    contributed_by: data-agent
+    note: "直播日 2015-01-27。游戏「I wanna be the xylem」尚未登记到 data/games.yaml（与既有的 biantai-rensheng《变态人生大冒险》不是同一款），故 games 留空，待人类登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险），2015-01-28-live-01 为《潜伏之赤途》。"
   - id: 2015-01-29-live-01
     type: live
     date: '2015-01-29'
@@ -886,6 +901,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2353998
+        kind: clip
+        status: alive
+        note: "A站「斗鱼录像厅」《【心灵砒霜】你的女流你的心！心灵砒霜节目 第2015.11.26期》，18 分钟，标题写明期号 2015.11.26，与本条日期一致。这是当期节目的精剪片段（本条 duration_min 294 为完整直播时长），故 kind 取 clip。2026-09-22 实访可播放。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -941,6 +960,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2404437
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」《【心灵砒霜】女流《心灵砒霜》第20151219期 正确「指导」年轻人下药！》，169 分钟，标题写明期号 20151219，与本条日期一致。2026-09-22 实访可播放。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
