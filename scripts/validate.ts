@@ -131,8 +131,15 @@ for (const { file, items } of [...loadDir('entries'), ...loadDir('_demo')]) {
     }
 
     // 数据质量提醒（不阻断合并，但要看得见）
-    if (e.sources.length === 0) warnings.push(`"${e.id}" 没有任何来源链接`)
-    if (e.type === 'live' && !e.duration_min) warnings.push(`"${e.id}" 是直播但缺时长`)
+    // no_public_replay = 已经查过、确实没有公开录像。这种条目没有来源、没有时长都是结论，
+    // 不是待补的缺口，再提醒就成了噪音，会把真正漏填的条目淹掉。
+    if (e.no_public_replay && e.sources.length > 0) {
+      warnings.push(`"${e.id}" 标了 no_public_replay 却又有来源链接，二者矛盾`)
+    }
+    if (!e.no_public_replay) {
+      if (e.sources.length === 0) warnings.push(`"${e.id}" 没有任何来源链接`)
+      if (e.type === 'live' && !e.duration_min) warnings.push(`"${e.id}" 是直播但缺时长`)
+    }
     if (e.confidence === 'low' && !e.note) {
       warnings.push(`"${e.id}" 标了 confidence: low 但没写 note 说明存疑点`)
     }

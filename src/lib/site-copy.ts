@@ -480,6 +480,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'entry-segments-hint-even', group: '条目页 · 观看台', label: '分段 · 说明（时长未知时）', text: '这场时长未知，色带按段数等分，宽度不代表真实时长。' },
     { id: 'entry-segments-empty', group: '条目页 · 观看台', label: '分段 · 还没录入时', text: '尚未录入分段信息。' },
     { id: 'entry-segments-games', group: '条目页 · 观看台', label: '分段 · 还没录入、但知道游戏时（接在上一句后面）', vars: ['games'], text: '已知涉及：{games}。' },
+    { id: 'entry-detail-no-replay', group: '条目页 · 观看台', label: '确认开播、但没有已知公开录像时', text: '直播存在已确认 · 暂未找到公开录像' },
     { id: 'entry-sources-title', group: '条目页 · 观看台', label: '来源 · 标题', text: '在哪儿看' },
     { id: 'entry-sources-hint', group: '条目页 · 观看台', label: '来源 · 说明（多个来源时）', vars: ['count'], text: '{count} 个来源，选中的那个决定所有跳转与上面的封面。' },
     { id: 'entry-sources-empty', group: '条目页 · 观看台', label: '来源 · 一个链接都没有时', text: '还没有可用链接。如果你手上有，欢迎补录。' },

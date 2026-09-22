@@ -93,6 +93,8 @@ export type TimelineEntry = {
   /** 被数据审校明确标成同场、并在时间轴中折叠的其他记录数。 */
   mergedEntryCount: number
   confidence: string
+  /** 已确认开播、但查过之后确实没有公开录像；`sources` 为空是结论不是遗漏。 */
+  noPublicReplay?: boolean
   sourceCount: number
   /** 明确标记为 alive 的来源数；unchecked 不能冒充已核验可用。 */
   aliveCount: number
@@ -241,6 +243,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       sources,
       mergedEntryCount: group.length - 1,
       confidence: e.confidence,
+      noPublicReplay: e.no_public_replay,
       sourceCount: sources.length,
       aliveCount: sources.filter((s) => s.status === 'alive').length,
       uncheckedCount: sources.filter((s) => s.status === 'unchecked').length,

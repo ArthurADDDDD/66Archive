@@ -106,6 +106,14 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
           </div>
         )}
 
+        {entry.sources.length === 0 && entry.noPublicReplay && (
+          <div className="mt-4 border-t border-line pt-4">
+            <p className="text-meta leading-relaxed text-faint">
+              <SiteText id="entry-detail-no-replay" />
+            </p>
+          </div>
+        )}
+
         {entry.sources.length > 0 && (
           <div className="mt-4 border-t border-line pt-4">
             <div className="grid gap-2 sm:grid-cols-2">

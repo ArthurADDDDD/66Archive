@@ -150,6 +150,15 @@ export const Entry = z
     tags: z.array(z.string()).default([]),
     cover: z.string().optional(),
     confidence: Confidence.default('medium'),
+    /**
+     * 「这场直播确认发生过，但目前找不到任何公开录像」。
+     *
+     * 与「采集时漏填来源」是两回事：漏填是待补的缺口，这个是已经查过、确实没有。
+     * 置 true 表示 `sources` 为空是**结论**而不是遗漏——校验不再当成缺口提醒，
+     * 前台会明说「暂未找到公开录像」。证据（存档快照地址、缩略图时间戳等）写在 `note` 里；
+     * 存档快照只是开播证据，不是录像，所以绝不能塞进 `sources` 冒充可看的来源。
+     */
+    no_public_replay: z.boolean().optional(),
     sources: z.array(Source).default([]),
     segments: z.array(Segment).default([]),
     contributed_by: z.string().optional(),

@@ -168,7 +168,7 @@ function checksFor(e, ctx) {
   }
 
   // —— 来源 ——
-  if (!e.sources.length) add('high', 'no-source', '没有任何来源链接')
+  if (!e.sources.length && !e.no_public_replay) add('high', 'no-source', '没有任何来源链接')
   else {
     const alive = e.sources.filter((s) => s.status === 'alive').length
     const dead = e.sources.filter((s) => s.status === 'dead').length

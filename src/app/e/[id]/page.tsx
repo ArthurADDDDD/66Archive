@@ -208,6 +208,13 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               </div>
             )}
 
+            {sources.length === 0 && entry.no_public_replay && (
+              // 查过之后确实没有公开录像。说清楚这是结论而不是「还没录入」，
+              // 否则读者会以为档案漏了。
+              <p className="measure-note mt-5 text-meta leading-relaxed text-live">
+                <SiteText id="entry-detail-no-replay" />
+              </p>
+            )}
             {entry.note && <p className="measure-note mt-5 text-meta leading-relaxed text-faint">{entry.note}</p>}
             {sourceGroup.length > 1 && (
               <p className="measure-note mt-2 text-meta leading-relaxed text-faint">
