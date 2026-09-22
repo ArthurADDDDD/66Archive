@@ -288,3 +288,22 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-21-live-01
+  type: live
+  date: "2026-09-21"
+  title: "玩 深空当铺 第四天 赛博朋克模拟经营店铺"
+  platform: douyin
+  duration_min: 225
+  games:
+    - shenkongdangpu
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/3a980a988884d8ddee1ef33c4f16030600f8e44d.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1bEh663ExD"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
