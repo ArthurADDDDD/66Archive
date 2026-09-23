@@ -72,8 +72,13 @@
    而 UID 形式 `i.youku.com/u/UMjQyOTM1MzA4` 有 199 次，其 `/videos` 列表页还自带
    上传时间与时长。
 
-最有价值的补档证据：**更多 `i.youku.com/u/UMjQyOTM1MzA4/videos/...` 列表页存档**
-（尤其 page_4 之后与 2016 年以后的），或任何能列全那 208 条的目录。
+~~最有价值的补档证据：更多列表页存档，或任何能列全那 208 条的目录。~~
+
+**2026-09-23 已列全（[`task-042`](task-042-youku-official-channel.md)）**：她的优酷自频道 `i.youku.com/i/UMjQyOTM1MzA4`
+至今可访问，滚到底共 **392 条**（2010-05-08 ～ 2021-05-15），全量落在
+[`youku-official-channel.csv`](../catalogs/youku-official-channel.csv)。2014 年及以前全部已在档；
+其余 286 条已逐条分类，并借贴吧 2016–2023 逐日记录（[`tieba-live-log-2016-2023.csv`](../catalogs/tieba-live-log-2016-2023.csv)）校准：
+61 条可补来源、17 条新历史视频、39 条直播录像待定日或待分 P、154 条 2017 年后的精剪短片等。
 
 ### 三条已定位但暂不入库的线索
 
