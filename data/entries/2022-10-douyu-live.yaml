@@ -16,6 +16,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-02-live-01
@@ -38,6 +39,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-03-live-01
@@ -58,6 +60,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-04-live-01
@@ -78,6 +81,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-05-live-01
@@ -98,6 +102,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-06-live-01
@@ -118,6 +123,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-07-live-01
@@ -138,6 +144,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-08-live-01
@@ -158,6 +165,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-09-live-01
@@ -178,9 +186,11 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
       - url: https://www.acfun.cn/v/ac39146832
         kind: replay
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac39146832
@@ -202,10 +212,12 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
       - url: https://www.acfun.cn/v/ac39170704
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: A站将同一场直播拆为两个回放：ac39169940（P1，360.1min）+ ac39170704（P2，347.9min），已合并为一场完整直播，时长相加，只计 1 场。
@@ -227,6 +239,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-12-live-01
@@ -247,6 +260,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-14-live-01
@@ -286,6 +300,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-16-live-01
@@ -306,6 +321,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-17-live-01
@@ -326,6 +342,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-18-live-01
@@ -346,6 +363,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-19-live-01
@@ -366,6 +384,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-20-live-01
@@ -386,6 +405,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-24-live-01
@@ -406,6 +426,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-25-live-01
@@ -426,6 +447,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-26-live-01
@@ -446,6 +468,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-28-live-01
@@ -466,6 +489,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-29-live-01
@@ -486,6 +510,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2022-10-30-live-01
@@ -506,9 +531,11 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
       - url: https://www.acfun.cn/v/ac39500749
         kind: replay
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac39500749
@@ -530,4 +557,5 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent

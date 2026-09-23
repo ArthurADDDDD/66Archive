@@ -72,10 +72,12 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
       - url: https://www.acfun.cn/v/ac3013788
         kind: replay
         status: alive
-        note: "A站「斗鱼录像厅」《【心灵砒霜】女流心灵砒霜 20160807期》，标题期号 20160807 与本条日期一致，多分P（首P 128 分钟）。本条原标题写明是「直播音频」，这一源是同期的**影像**版本，可补上画面。2026-09-22 实访可播放。该号为斗鱼官方 A 站录像号（UID 974915），非女流专属号；schema 的 platform 枚举不含 acfun，故不挂 account。"
+        account: acfun-douyu-recordhall
+        note: "A站「斗鱼录像厅」《【心灵砒霜】女流心灵砒霜 20160807期》，标题期号 20160807 与本条日期一致，多分P（首P 128 分钟）。本条原标题写明是「直播音频」，这一源是同期的**影像**版本，可补上画面。2026-09-22 实访可播放。该号为斗鱼官方 A 站录像号（UID 974915），非女流专属号；（2026-09-23 起已挂 account: acfun-douyu-recordhall。）"
     contributed_by: data-agent
 
   - id: 2016-08-08-live-01
@@ -107,6 +109,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-09-live-02
@@ -134,6 +137,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-10-live-01
@@ -163,6 +167,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-12-live-01
@@ -194,6 +199,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-16-live-01
@@ -225,6 +231,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-17-live-03
@@ -248,14 +255,17 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3029701"
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3029731"
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     segments:
@@ -299,6 +309,7 @@
         kind: replay
         parts: 6
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-22-live-01
@@ -334,10 +345,12 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3042164"
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: A站将同一场按 P1-P5 拆为两个投稿，合并为一场。
@@ -368,6 +381,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-24-live-01
@@ -393,6 +407,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-25-live-01
@@ -422,6 +437,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-26-live-01
@@ -451,6 +467,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-28-live-01
@@ -480,6 +497,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-29-live-01
@@ -509,6 +527,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-08-30-live-01
@@ -536,4 +555,5 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent

@@ -29,6 +29,7 @@
         kind: replay
         parts: 6
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-02-live-01
@@ -58,6 +59,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-03-live-01
@@ -88,6 +90,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-04-live-01
@@ -117,6 +120,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-07-live-01
@@ -152,6 +156,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-10-live-01
@@ -178,6 +183,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-10-live-02
@@ -205,6 +211,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-11-live-01
@@ -233,6 +240,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-12-live-01
@@ -259,6 +267,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-12-live-02
@@ -286,6 +295,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-13-live-01
@@ -314,10 +324,12 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3405022"
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: ac3405022「年会-part1」为同一场A站年会的分Part投稿，与全长源重复，合并；目录中另有 ac3404474 part2，本次未新增。
@@ -348,6 +360,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-16-live-01
@@ -375,6 +388,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-17-live-01
@@ -404,6 +418,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-18-live-01
@@ -435,10 +450,12 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3415701"
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: A站将同一场按 P1-P4 拆为两个投稿，合并为一场。
@@ -468,6 +485,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-21-live-01
@@ -488,10 +506,12 @@
       - url: "https://www.acfun.cn/v/ac3422592"
         kind: replay
         status: alive
+        account: acfun-fan-record-house
         parts: 1
       - url: "https://www.acfun.cn/v/ac3422739"
         kind: replay
         status: alive
+        account: acfun-fan-record-house
         parts: 1
     contributed_by: data-agent
     note: "人工页面复核：A站 ac3422592、ac3422739 标题分别明确为《英雄联盟》part1、part2。"
@@ -521,6 +541,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-25-live-01
@@ -546,6 +567,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
     tags: [户外]
   - id: 2017-01-26-live-01
@@ -572,6 +594,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-27-live-01
@@ -592,6 +615,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2017-01-29-live-01
@@ -617,5 +641,6 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
     tags: [户外]

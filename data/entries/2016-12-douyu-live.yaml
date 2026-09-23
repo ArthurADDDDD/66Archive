@@ -17,6 +17,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-04-live-01
@@ -46,6 +47,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-05-live-01
@@ -77,6 +79,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-07-live-01
@@ -98,6 +101,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-07-live-02
@@ -129,6 +133,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-08-live-01
@@ -160,6 +165,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-09-live-01
@@ -189,6 +195,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-10-live-01
@@ -215,6 +222,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-10-live-02
@@ -242,6 +250,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-11-live-01
@@ -269,6 +278,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-12-live-02
@@ -298,6 +308,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-12-video-01
@@ -319,6 +330,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: 按人工规则：单P短录像，先按切片处理，不计入直播场次。
@@ -346,6 +358,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-16-live-01
@@ -367,6 +380,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-17-live-01
@@ -393,6 +407,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-17-live-02
@@ -418,6 +433,7 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-19-live-01
@@ -447,6 +463,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-21-live-01
@@ -478,6 +495,7 @@
         kind: replay
         parts: 5
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-23-live-01
@@ -507,6 +525,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-24-live-01
@@ -537,6 +556,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-25-live-01
@@ -558,6 +578,7 @@
         kind: replay
         parts: 1
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-25-live-02
@@ -587,6 +608,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-27-live-01
@@ -614,6 +636,7 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-28-live-02
@@ -650,10 +673,12 @@
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
       - url: "https://www.acfun.cn/v/ac3364670"
         kind: replay
         parts: 3
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
     note: A站将同一场按 P1-P6 拆为两个投稿，合并为一场。
@@ -684,6 +709,7 @@
         kind: replay
         parts: 4
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
 
   - id: 2016-12-31-live-01
@@ -710,4 +736,5 @@
         kind: replay
         parts: 2
         status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
