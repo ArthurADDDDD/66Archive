@@ -429,6 +429,47 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2021-02-15-live-01
+    type: live
+    date: "2021-02-15"
+    title: "十二点左右双倍亲密度"
+    platform: douyu
+    confidence: high
+    duration_min: 269
+    games: [pubg, csgo]
+    sources:
+      - url: "https://www.bilibili.com/video/BV1dy4y147qY/?p=61"
+        kind: replay
+        parts: 6
+        status: alive
+        account: bili-fan-warehouser
+        part_details:
+          - page: 61
+            title: "斗鱼-女流66_2021-02-15-2118_02-15-2214_十二点左右双倍亲密度"
+            duration_sec: 3361
+          - page: 62
+            title: "斗鱼-女流66_2021-02-15-2214_02-15-2306_十二点左右双倍亲密度"
+            duration_sec: 3126
+          - page: 63
+            title: "斗鱼-女流66_2021-02-15-2306_02-15-2348_十二点左右双倍亲密度"
+            duration_sec: 2559
+          - page: 64
+            title: "斗鱼-女流66_2021-02-15-2348_02-16-0030_十二点左右双倍亲密度"
+            duration_sec: 2521
+          - page: 65
+            title: "斗鱼-女流66_2021-02-16-0030_02-16-0111_十二点左右双倍亲密度"
+            duration_sec: 2461
+          - page: 66
+            title: "斗鱼-女流66_2021-02-16-0111_02-16-0147_十二点左右双倍亲密度"
+            duration_sec: 2107
+      - url: "https://www.bilibili.com/video/BV1c54y1Y7cf"
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        note: "「秘密录像屋」《【弹幕】女流66_2021-02-16- 加班啦》，267:07，2021-02-16 投稿；标题日期是下播日，内容即本场。"
+    contributed_by: data-agent
+    note: "B站「仓储员」合集 BV1dy4y147qY 的 P61–P66，文件名自带录制时刻 2021-02-15 21:18 至 02-16 01:47，六段合计 4:28:55；直播间标题「十二点左右双倍亲密度」。预览图显示前段为绝地求生、后段为 CS:GO 躲猫猫，与贴吧 2021 直播专贴 2/15「绝地求生 / CS:GO」一致（https://tieba.baidu.com/p/7179137062 46 楼）。2026-08-30 审计报告已称建立本条，但当时未落库，2026-09-23 补建。同一审计所称 2021-02-14「第 3 场绝地求生」（P59–P60，22:56—00:32，1:35:49）经预览图核对是雀魂，即已有的 2021-02-14-live-02，不另建。"
+
   - id: 2021-02-16-live-01
     type: live
     date: "2021-02-16"
