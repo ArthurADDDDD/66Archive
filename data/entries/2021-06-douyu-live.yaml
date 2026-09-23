@@ -717,7 +717,7 @@
     cover: "https://i0.hdslb.com/bfs/archive/4dd330eaaaedda658837e331f22239d6346010dd.png"
     games: [naraka-bladepoint]
     note: "ACFun 将同一场直播拆为 2 个回放视频（ac29949972 含 P1–P5、ac29950812 含 P6–P10，P 编号连续），按一天一条原则合并为单条。；补入
-      A站互补回放：ac29949863"
+      A站互补回放：ac29949863。2026-09-23 全片转写核实为 06-22 一整场（15 点左右开播，约次日 01 点「各位晚安」下播，中途得知 Steam Demo 延期关服）；贴吧 06-23 另有一场，见 2021-06-23-live-01。"
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -770,6 +770,15 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2021-06-23-live-01
+    type: live
+    date: "2021-06-23"
+    title: "永劫无间"
+    platform: douyu
+    confidence: medium
+    games: [naraka-bladepoint]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：永劫无间」（https://tieba.baidu.com/p/7179137062 161 楼）。旁证：06-22 那场录像（2021-06-22-live-01）约 22:30 处她得知 Steam Demo 关服延后一天（官方 06-22 21:57 宣布延至 06-24 01:00），当场说「那明天还可以玩」「明天白天可以玩会儿」。此前曾疑 06-22 那条 613 分钟录像跨了两天，2026-09-23 全片转写核实：开头说「今晚凌晨一点关服」、第 8 段得知延期、第 11 段以「那太累了这一天…各位晚安」收尾，是 06-22 一整场，不含 06-23。本场公开录像暂未找到：录像屋 06-23 起到 06-27 之间没有投稿，KassyTan/zytau 不覆盖这一年。"
   - id: 2021-06-27-live-01
     type: live
     date: "2021-06-27"
