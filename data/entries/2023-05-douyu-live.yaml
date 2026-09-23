@@ -17,6 +17,43 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1ja4y1G79E"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 10
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-01T15_08_18"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-01T15_39_25"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-01T16_10_40"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-01T16_41_55"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-01T17_13_10"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-01T17_44_25"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-01T18_15_40"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-01T18_46_55"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-01T19_18_10"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-01T19_49_25"
+            duration_sec: 542
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-01》，10 个分P 合计 4:50:26，录制窗口 2023-05-01 15:08→2023-05-01 19:58。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41293741
@@ -27,7 +64,7 @@
     title: "BrambleThe Mountain King"
     platform: douyu
     confidence: high
-    duration_min: 291
+    duration_min: 392
     cover: "https://i0.hdslb.com/bfs/archive/f6d21112fe0b9fe4e133121cc0ce9f0058e20df7.jpg"
     games: [bramble-mountain-king]
     sources:
@@ -40,6 +77,52 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1VX4y1U7Ld"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 13
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-03T14_33_20"
+            duration_sec: 1880
+          - page: 2
+            title: "女流66直播录像2023-05-03T15_04_31"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-03T15_35_46"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-03T16_07_01"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-03T16_38_16"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-03T17_09_31"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-03T17_40_46"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-03T18_12_01"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-03T18_43_16"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-03T19_14_31"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-03T19_45_46"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-03T20_17_01"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-03T20_48_16"
+            duration_sec: 1009
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-03》，13 个分P 合计 6:32:05，录制窗口 2023-05-03 14:33→2023-05-03 21:05。 条目时长据此改为 392 分钟（14:33—21:05 连续录像；预览帧显示前约 2 小时为出镜聊天，之后才是 Bramble；原值取自不完整回放）。"
     contributed_by: data-agent
 
   - id: 2023-05-04-live-01
@@ -61,6 +144,43 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1Wk4y1j7nS"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 10
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-04T15_18_08"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-04T15_49_21"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-04T16_20_36"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-04T16_51_51"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-04T17_23_06"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-04T17_54_21"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-04T18_25_36"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-04T18_56_51"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-04T19_28_06"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-04T19_59_21"
+            duration_sec: 1267
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-04》，10 个分P 合计 5:02:31，录制窗口 2023-05-04 15:18→2023-05-04 20:20。"
     contributed_by: data-agent
 
   - id: 2023-05-05-live-01
@@ -86,6 +206,43 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1YL411a7me"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 10
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-05T15_03_10"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-05T15_34_24"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-05T16_05_39"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-05T16_36_54"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-05T17_08_09"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-05T17_39_24"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-05T18_10_39"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-05T18_41_54"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-05T19_13_09"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-05T19_44_24"
+            duration_sec: 463
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-05》，10 个分P 合计 4:49:07，录制窗口 2023-05-05 15:03→2023-05-05 19:52。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41293802
@@ -113,6 +270,40 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV15z4y1a7H5"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 9
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-06T15_07_57"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-06T15_39_05"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-06T16_10_20"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-06T16_41_35"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-06T17_12_50"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-06T17_44_05"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-06T18_15_20"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-06T18_46_35"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-06T19_17_50"
+            duration_sec: 542
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-06》，9 个分P 合计 4:19:10，录制窗口 2023-05-06 15:07→2023-05-06 19:26。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41301023
@@ -180,6 +371,16 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1rP41117HA"
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 1
+        part_details:
+          - page: 1
+            title: "[2023-05-09 15-04-11][女流66][【今日双倍】156277直播间]"
+            duration_sec: 13434
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「Zytau」《[2023-05-09 15-04-11][女流66][【今日双倍】156277直播间]》，1 个分P 合计 3:43:54，录制窗口 2023-05-09 15:04→2023-05-09 18:48。"
     contributed_by: data-agent
 
   - id: 2023-05-10-live-01
@@ -244,6 +445,74 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1Qh41157kq"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 16
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-12T11_50_55"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-12T12_22_03"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-12T12_53_18"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-12T13_24_33"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-12T13_55_48"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-12T14_27_03"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-12T14_58_18"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-12T15_29_33"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-12T16_00_48"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-12T16_32_03"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-12T17_03_18"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-12T17_34_33"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-12T18_05_48"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-12T18_37_03"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-12T19_08_18"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-12T19_39_33"
+            duration_sec: 634
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-12》，16 个分P 合计 7:59:34，录制窗口 2023-05-12 11:50→2023-05-12 19:50。"
+      - url: "https://www.bilibili.com/video/BV1QX4y1y7WQ"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 2
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-12T10_29_50"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-12T11_01_01"
+            duration_sec: 1563
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-12》，2 个分P 合计 0:57:19，录制窗口 2023-05-12 10:29→2023-05-12 11:27。"
     contributed_by: data-agent
 
   - id: 2023-05-13-live-01
@@ -265,6 +534,67 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1hs4y1Q7db"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 18
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-13T10_30_58"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-13T11_02_07"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-13T11_33_22"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-13T12_04_37"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-13T12_35_52"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-13T13_07_07"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-13T13_38_22"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-13T14_09_37"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-13T14_40_52"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-13T15_12_07"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-13T15_43_22"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-13T16_14_37"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-13T16_45_52"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-13T17_17_07"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-13T17_48_22"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-13T18_19_37"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-13T18_50_52"
+            duration_sec: 1876
+          - page: 18
+            title: "女流66直播录像2023-05-13T19_22_07"
+            duration_sec: 905
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-13》，18 个分P 合计 9:06:37，录制窗口 2023-05-13 10:30→2023-05-13 19:37。"
     contributed_by: data-agent
 
   - id: 2023-05-14-live-01
@@ -290,6 +620,74 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1AV4y1k7Sj"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 12
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-14T14_05_52"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-14T14_37_05"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-14T15_08_20"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-14T15_39_35"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-14T16_10_50"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-14T16_42_05"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-14T17_13_20"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-14T17_44_35"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-14T18_15_50"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-14T18_47_05"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-14T19_18_20"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-14T19_49_35"
+            duration_sec: 838
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-14》，12 个分P 合计 5:57:54，录制窗口 2023-05-14 14:05→2023-05-14 20:03。"
+      - url: "https://www.bilibili.com/video/BV17o4y1F7wt"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 6
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-14T10_51_21"
+            duration_sec: 1880
+          - page: 2
+            title: "女流66直播录像2023-05-14T11_22_31"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-14T11_53_46"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-14T12_25_01"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-14T12_56_16"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-14T13_27_31"
+            duration_sec: 1046
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-14》，6 个分P 合计 2:53:50，录制窗口 2023-05-14 10:51→2023-05-14 13:44。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41367556
@@ -317,6 +715,68 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1go4y157o9"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 2
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-15T19_51_34"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-15T20_22_42"
+            duration_sec: 1159
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-15》，2 个分P 合计 0:50:35，录制窗口 2023-05-15 19:51→2023-05-15 20:42。"
+      - url: "https://www.bilibili.com/video/BV1cm4y187kK"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 14
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-15T10_51_09"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-15T11_22_21"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-15T11_53_36"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-15T12_24_51"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-15T12_56_06"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-15T13_27_21"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-15T13_58_36"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-15T14_29_51"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-15T15_01_06"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-15T15_32_21"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-15T16_03_36"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-15T16_34_51"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-15T17_06_06"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-15T17_37_21"
+            duration_sec: 1467
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-15》，14 个分P 合计 7:10:55，录制窗口 2023-05-15 10:51→2023-05-15 18:01。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41374319
@@ -344,6 +804,64 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV13o4y157Xa"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 17
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-16T10_46_35"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-16T11_17_45"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-16T11_49_00"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-16T12_20_15"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-16T12_51_30"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-16T13_22_45"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-16T13_54_00"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-16T14_25_15"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-16T14_56_29"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-16T15_27_44"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-16T15_58_59"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-16T16_30_14"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-16T17_01_29"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-16T17_32_44"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-16T18_03_59"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-16T18_35_14"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-16T19_06_29"
+            duration_sec: 130
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-16》，17 个分P 合计 8:22:26，录制窗口 2023-05-16 10:46→2023-05-16 19:08。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41382280
@@ -367,6 +885,67 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1nu411x7hc"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 18
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-17T10_26_38"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-17T10_57_53"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-17T11_29_08"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-17T12_00_23"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-17T12_31_38"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-17T13_02_53"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-17T13_34_08"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-17T14_05_23"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-17T14_36_38"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-17T15_07_53"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-17T15_39_08"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-17T16_10_23"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-17T16_41_38"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-17T17_12_53"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-17T17_44_08"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-17T18_15_23"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-17T18_46_38"
+            duration_sec: 1876
+          - page: 18
+            title: "女流66直播录像2023-05-17T19_17_53"
+            duration_sec: 913
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-17》，18 个分P 合计 9:06:45，录制窗口 2023-05-17 10:26→2023-05-17 19:33。"
     contributed_by: data-agent
 
   - id: 2023-05-18-live-01
@@ -388,6 +967,67 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1xk4y1s7qj"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 18
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-18T11_01_40"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-18T11_32_46"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-18T12_04_01"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-18T12_35_16"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-18T13_06_31"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-18T13_37_46"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-18T14_09_01"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-18T14_40_16"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-18T15_11_31"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-18T15_42_46"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-18T16_14_01"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-18T16_45_16"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-18T17_16_31"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-18T17_47_46"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-18T18_19_01"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-18T18_50_16"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-18T19_21_31"
+            duration_sec: 1921
+          - page: 18
+            title: "女流66直播录像2023-05-18T19_53_32"
+            duration_sec: 413
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-18》，18 个分P 合计 8:59:10，录制窗口 2023-05-18 11:01→2023-05-18 20:00。"
     contributed_by: data-agent
 
   - id: 2023-05-19-live-01
@@ -417,6 +1057,52 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV15u411x7NW"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 13
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-19T13_15_35"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-19T13_46_46"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-19T14_18_01"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-19T14_49_16"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-19T15_20_31"
+            duration_sec: 155
+          - page: 6
+            title: "女流66直播录像2023-05-19T15_23_51"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-19T15_54_58"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-19T16_26_13"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-19T16_57_28"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-19T17_28_43"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-19T17_59_58"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-19T18_31_13"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-19T19_02_28"
+            duration_sec: 1055
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-19》，13 个分P 合计 6:04:06，录制窗口 2023-05-19 13:15→2023-05-19 19:20。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41414292、ac41413746
@@ -440,6 +1126,67 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1sL411B7hi"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 18
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-20T10_55_37"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-20T11_26_43"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-20T11_57_58"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-20T12_29_13"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-20T13_00_28"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-20T13_31_43"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-20T14_02_58"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-20T14_34_13"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-20T15_05_28"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-20T15_36_43"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-20T16_07_58"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-20T16_39_13"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-20T17_10_28"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-20T17_41_43"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-20T18_12_58"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-20T18_44_13"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-20T19_15_28"
+            duration_sec: 1876
+          - page: 18
+            title: "女流66直播录像2023-05-20T19_46_43"
+            duration_sec: 817
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-20》，18 个分P 合计 9:05:09，录制窗口 2023-05-20 10:55→2023-05-20 20:00。"
     contributed_by: data-agent
 
   - id: 2023-05-21-live-01
@@ -493,6 +1240,58 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1mo4y1G7F9"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 15
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-22T11_44_26"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-22T12_15_32"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-22T12_46_47"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-22T13_18_02"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-22T13_49_17"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-22T14_20_32"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-22T14_51_47"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-22T15_23_02"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-22T15_54_17"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-22T16_25_32"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-22T16_56_47"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-22T17_28_02"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-22T17_59_17"
+            duration_sec: 121
+          - page: 14
+            title: "女流66直播录像2023-05-22T18_01_22"
+            duration_sec: 8644
+          - page: 15
+            title: "女流66直播录像2023-05-22T20_25_29"
+            duration_sec: 705
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-22》，15 个分P 合计 8:53:02，录制窗口 2023-05-22 11:44→2023-05-22 20:37。P14–P15（18:01—20:37）为本场音乐盛典；P1–P13 是此前的塞尔达传说场，见 2023-05-22-live-02。"
     contributed_by: data-agent
 
   - id: 2023-05-23-live-01
@@ -514,6 +1313,31 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1ih4y1x7Sq"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 6
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-23T11_29_27"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-23T12_00_35"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-23T12_31_50"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-23T13_03_05"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-23T13_34_20"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-23T14_05_34"
+            duration_sec: 1617
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-23》，6 个分P 合计 3:03:17，录制窗口 2023-05-23 11:29→2023-05-23 14:32。"
     contributed_by: data-agent
 
   - id: 2023-05-25-live-01
@@ -543,6 +1367,55 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1jd4y1f7MJ"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 14
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-25T10_47_58"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-25T11_19_03"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-25T11_50_18"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-25T12_21_33"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-25T12_52_49"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-25T13_24_03"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-25T13_55_18"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-25T14_26_33"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-25T14_57_48"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-25T15_29_03"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-25T16_00_18"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-25T16_31_33"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-25T17_02_48"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-25T17_34_03"
+            duration_sec: 177
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-25》，14 个分P 合计 6:49:25，录制窗口 2023-05-25 10:47→2023-05-25 17:37。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41447376、ac41447722
@@ -570,6 +1443,58 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1oM4y1v7h4"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 15
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-26T10_38_00"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-26T11_09_07"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-26T11_40_22"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-26T12_11_37"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-26T12_42_51"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-26T13_14_06"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-26T13_45_22"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-26T14_16_36"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-26T14_47_52"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-26T15_19_06"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-26T15_50_22"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-26T16_21_37"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-26T16_52_51"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-26T17_24_06"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-26T17_55_21"
+            duration_sec: 571
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-26》，15 个分P 合计 7:27:15，录制窗口 2023-05-26 10:38→2023-05-26 18:04。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41456450
@@ -624,6 +1549,58 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV15g4y1F7oK"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 15
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-28T11_02_59"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-28T11_34_09"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-28T12_05_24"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-28T12_36_39"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-28T13_07_54"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-28T13_39_09"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-28T14_10_24"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-28T14_41_39"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-28T15_12_53"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-28T15_44_08"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-28T16_15_24"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-28T16_46_38"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-28T17_17_53"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-28T17_49_08"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-28T18_20_23"
+            duration_sec: 434
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-28》，15 个分P 合计 7:24:58，录制窗口 2023-05-28 11:02→2023-05-28 18:27。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41478691
@@ -642,6 +1619,64 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1wm4y1478f"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 17
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-29T11_03_16"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-29T11_34_23"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-29T12_05_38"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-29T12_36_53"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-29T13_08_08"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-29T13_39_23"
+            duration_sec: 1880
+          - page: 7
+            title: "女流66直播录像2023-05-29T14_10_42"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-29T14_41_57"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-29T15_13_12"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-29T15_44_27"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-29T16_15_42"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-29T16_46_57"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-29T17_18_12"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-29T17_49_27"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-29T18_20_42"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-29T18_51_57"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-29T19_23_12"
+            duration_sec: 1434
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-29》，17 个分P 合计 8:44:14，录制窗口 2023-05-29 11:03→2023-05-29 19:47。"
     contributed_by: data-agent
 
   - id: 2023-05-30-live-01
@@ -671,6 +1706,64 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1B24y1A7Zr"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 17
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-30T11_00_12"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-30T11_31_18"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-30T12_02_33"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-30T12_33_48"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-30T13_05_03"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-30T13_36_18"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-30T14_07_33"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-30T14_38_48"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-30T15_10_03"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-30T15_41_18"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-30T16_12_33"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-30T16_43_48"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-30T17_15_03"
+            duration_sec: 1876
+          - page: 14
+            title: "女流66直播录像2023-05-30T17_46_18"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-30T18_17_33"
+            duration_sec: 1876
+          - page: 16
+            title: "女流66直播录像2023-05-30T18_48_48"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-30T19_20_03"
+            duration_sec: 1734
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-30》，17 个分P 合计 8:49:10，录制窗口 2023-05-30 11:00→2023-05-30 19:48。"
     contributed_by: data-agent
 
     note: 补入 A站互补回放：ac41486827、ac41486819
@@ -702,5 +1795,129 @@
         kind: replay
         status: alive
         account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1Du411p7ka"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 18
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-31T11_10_15"
+            duration_sec: 1880
+          - page: 2
+            title: "女流66直播录像2023-05-31T11_41_27"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-31T12_12_42"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-31T12_43_57"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-31T13_15_13"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-31T13_46_27"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-31T14_17_42"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-31T14_48_57"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-31T15_20_12"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-31T15_51_27"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-31T16_22_42"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-31T16_53_57"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-31T17_25_12"
+            duration_sec: 1880
+          - page: 14
+            title: "女流66直播录像2023-05-31T17_56_31"
+            duration_sec: 1876
+          - page: 15
+            title: "女流66直播录像2023-05-31T18_27_46"
+            duration_sec: 1880
+          - page: 16
+            title: "女流66直播录像2023-05-31T18_59_05"
+            duration_sec: 1876
+          - page: 17
+            title: "女流66直播录像2023-05-31T19_30_20"
+            duration_sec: 1876
+          - page: 18
+            title: "女流66直播录像2023-05-31T20_01_35"
+            duration_sec: 530
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-31》，18 个分P 合计 9:00:34，录制窗口 2023-05-31 11:10→2023-05-31 20:10。"
     contributed_by: data-agent
     note: 补入 A站互补回放：ac41494861、ac41494863
+  - id: 2023-05-22-live-02
+    type: live
+    date: '2023-05-22'
+    title: 塞尔达传说
+    platform: douyu
+    confidence: high
+    duration_min: 377
+    games: [zelda-totk]
+    sources:
+      - url: "https://www.bilibili.com/video/BV1mo4y1G7F9"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 15
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-05-22T11_44_26"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-05-22T12_15_32"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-05-22T12_46_47"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-05-22T13_18_02"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-05-22T13_49_17"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-05-22T14_20_32"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-05-22T14_51_47"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-05-22T15_23_02"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-05-22T15_54_17"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-05-22T16_25_32"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-05-22T16_56_47"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-05-22T17_28_02"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-05-22T17_59_17"
+            duration_sec: 121
+          - page: 14
+            title: "女流66直播录像2023-05-22T18_01_22"
+            duration_sec: 8644
+          - page: 15
+            title: "女流66直播录像2023-05-22T20_25_29"
+            duration_sec: 705
+        note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-22》，15 个分P 合计 8:53:02，录制窗口 2023-05-22 11:44→2023-05-22 20:37。P1–P13（11:44—18:01）为本场塞尔达传说；P14–P15（18:01—20:37）为同日斗鱼高校音乐盛典，见 2023-05-22-live-01。"
+    contributed_by: data-agent
+    note: "2026-09-23 据 KassyTan 录像补建：BV1mo4y1G7F9 分P 文件名录制时刻 11:44 起，P1–P13 至 18:01 为塞尔达传说（预览帧确认），18:01 起换成斗鱼高校音乐盛典（即 2023-05-22-live-01）。时长取 P1–P13 合计。"
