@@ -10,6 +10,7 @@ export const PLATFORM_META: Record<
   youtube: { name: 'YouTube', short: 'YT', color: '#FF3B30', host: /youtube\.com|youtu\.be/ },
   douyu: { name: '斗鱼', short: '斗', color: '#FF7E00', host: /douyu\.com/ },
   douyin: { name: '抖音', short: '抖', color: '#25F4EE', host: /douyin\.com/ },
+  acfun: { name: 'AcFun', short: 'A', color: '#FD4C5C', host: /acfun\.cn/ },
 }
 
 export const SOURCE_KIND_LABEL: Record<string, string> = {

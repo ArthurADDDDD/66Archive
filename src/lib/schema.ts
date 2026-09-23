@@ -8,7 +8,7 @@ import { z } from 'zod'
  * 任何改动必须同步更新 docs/02-功能设计.md 的数据模型章节。
  */
 
-export const PLATFORMS = ['youku', 'bilibili', 'youtube', 'douyu', 'douyin'] as const
+export const PLATFORMS = ['youku', 'bilibili', 'youtube', 'douyu', 'douyin', 'acfun'] as const
 export const Platform = z.enum(PLATFORMS)
 export type Platform = z.infer<typeof Platform>
 
