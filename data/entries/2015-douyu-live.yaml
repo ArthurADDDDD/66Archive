@@ -98,8 +98,8 @@
     title: 重温变态人生的大冒险，卒
     platform: douyu
     confidence: high
-    duration_min: 20
-    games: [biantai-rensheng]
+    duration_min: 256
+    games: [biantai-rensheng, im-scared, super-mario-3d-world]
     tags:
       - 直播过渡
     sources:
@@ -112,8 +112,27 @@
         status: alive
         account: youku-official
         note: "她本人优酷号《[1.29直播录像]重温变态人生的大冒险,卒》，上传 2015-01-30 01:16，时长 19:36（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
+      - url: https://v.youku.com/v_show/id_XODgyNjI1MzQ0.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「瓦塔诺GO」播单《女流斗鱼直播录像》里的《女流斗鱼直播录像 - 20150129 - 超清》，15374 秒（≈256 分钟），2015-01-30 上传。音频比对：B站那段 20 分钟《重温变态人生的大冒险》在本录像 43～72 分钟处逐段对齐（得分 0.38～0.83）；官方视频《[无剪辑]独立游戏I'm scared实况录像》（2015-01-30-video-01）在本录像 87～136 分钟处对齐（0.62～1.10）。"
     contributed_by: data-agent
-    note: B站官方「女流66」《[1.29直播录像]重温变态人生的大冒险,卒》，标题直接标注直播日期 2015-01-29。duration_min 仅为现存录像/片段时长，不代表当日完整直播时长。
+    note: "B站官方「女流66」《[1.29直播录像]重温变态人生的大冒险,卒》，标题直接标注直播日期 2015-01-29。duration_min 仅为现存录像/片段时长，不代表当日完整直播时长。 2026-09-24 task-046：找到当天整场录像（优酷「瓦塔诺GO」，256 分钟），duration_min 20→256。画面依次可见贴吧页面、节奏游戏混音关、变态人生大冒险、I'm scared、一款跳舞游戏、《超级马里奥3D世界》。吧友 2015 年说「从 1.29 以后的所有直播录像都在群里/网盘」，这个上传者很可能就是当年录像组的人。"
+  - id: 2015-01-30-live-01
+    type: live
+    date: '2015-01-30'
+    title: "直播标题已遗失"
+    platform: douyu
+    confidence: high
+    duration_min: 189
+    games: []
+    sources:
+      - url: https://v.youku.com/v_show/id_XODgzNzgxNzky.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「瓦塔诺GO」播单《女流斗鱼直播录像》（https://list.youku.com/albumlist/show/id_23412134.html）里的《女流斗鱼直播录像 - 20150130 - 超清》，11353 秒（≈189 分钟），2015-02-01 上传（百度快照里该上传者的视频列表）。该号现在显示 0 个视频，但播单与视频本身仍可播放（2026-09-24 实测）。"
+    contributed_by: data-agent
+    note: "直播日取自上传者标题「20150130」，录像内容互相印证：开场她说「刚刚做完一个视频，然后先要传给公司那边，这边才能开始直播」「大金刚没办法直播……PS3 的游戏今天没办法直播，还是因为延迟的问题」，片尾「周末愉快，不要想我哦，周一见」——2015-01-30 正是周五；同一上传者的另一条《20150129》经音频比对就是 2015-01-29-live-01 那场（见该条）。内容是一串小游戏：一款跳舞游戏（01-29 已开过头）、一款中文文字推理游戏、一款网格解谜、U77 网页小游戏等，游戏名未逐一辨认，games 留空。此前档案 01-30 只有一条视频（2015-01-30-video-01，实为 01-29 直播的片段），没有这天的直播记录。"
   - id: 2015-02-02-live-01
     type: live
     date: '2015-02-02'
@@ -462,6 +481,21 @@
         status: alive
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第三期-Life is Strange奇异人生（2015.6.24）》，4P全长录播，经 view API 确认日期与分P时长。
+  - id: 2015-06-27-live-01
+    type: live
+    date: '2015-06-27'
+    title: "蝙蝠侠：阿卡姆骑士"
+    platform: douyu
+    confidence: medium
+    duration_min: 277
+    games: [batman-arkham-knight]
+    sources:
+      - url: https://www.bilibili.com/video/BV1vZ4y1c7ND
+        kind: replay
+        status: alive
+        note: "B站「孤独时代的Fluctlight」2021-04-11 投稿《女流66 20150626 直播录像》，4P：吃饭 5:08、查房 10:05、游戏P1 119:40、游戏P2 142:10，共 16623 秒（≈277 分钟），带摄像头。"
+    contributed_by: data-agent
+    note: "一场完整的《蝙蝠侠：阿卡姆骑士》直播（摄像头里她穿黑色无袖上衣）。开场她边吃饭边说「我三点准时直播，但是一直播就要开始直播游戏了……所以我就提前来」，随后看别的直播间（超级小桀在玩《60秒！》），片尾「都七点半了，我存一下吧……下周见吧同学们……晚上出去吃大餐了」。游戏开头她回顾「昨天……在 Scarecrow 的工厂里面遇到了小丑，然后他一枪把我们解决了，切换成格登……我各种不适应，就完结了，没再直播」「这个人是昨天我们抓住的那个毒藤女吗」——前一天也播了蝙蝠侠（A站 ac2007546 那场是更早的开局段落，两份录像音频互不重叠，得分 0.08～0.12）。⚠️ 日期存在冲突，故记 medium：上传者标题写「20150626」；但片头 PS4 主界面右上角时钟是「AM 7:05～7:06」，同屏滚动的是本作存档条目「以知識進步為名 - 拔刀相助 - 2015/6/26 8:18:25 PM」「……8:23:07 PM」「……8:24:31 PM」（无法上传到线上储存空间）。她自述下午三点左右开播，这台港版 PS4 的时钟因此是 UTC（AM 7:0x ≈ 北京时间 15:0x）；而主机当前时刻不可能早于它自己的存档时间（6/26 20:24 UTC），所以开播时主机日期至少是 6/27，即北京时间 2015-06-27（周六）15 点左右，最后一次存档对应北京时间 6/27 凌晨 4 点多（前一晚下播后仍在玩）。反方证据：2015 年 3～6 月的已知开播日里没有一个是周末，片尾的「下周见」更像周五。上传者标题的日期可能来自他本地录制文件的时间（若他当时身处比北京晚 15 小时以上的时区就会差一天），无从核实。若确认是 06-26，应改 id。"
   - id: 2015-06-29-live-01
     type: live
     date: '2015-06-29'
@@ -541,6 +575,29 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-07-06-live-01
+    type: live
+    date: '2015-07-06'
+    title: "造完飞机去找狗"
+    platform: douyu
+    confidence: medium
+    games: [besiege, minecraft]
+    sources:
+      - url: https://www.acfun.cn/v/ac2010055
+        kind: clip
+        status: alive
+        note: "A站用户 uid 1515977《66阿姨的Besiege（PS：从此女流不手残）》，发布 2015-07-07，3 分钟，直播片段（摄像头里她穿灰色碎花无袖上衣），片头字幕「今天女流阿姨来为大家演示下 Besiege 这款游戏」。归属到本场属推断：07-07 01:29 的直播间快照显示最近一次开播是 07-06 18:58，标题「造完飞机去找狗」。"
+    contributed_by: data-agent
+    note: "直播日：存档直播间页 2015-07-07 01:29 快照的缩略图时间戳是 2015-07-06 18:58，标题「造完飞机去找狗」（data/catalogs/douyu-room-titles-2015-2016.csv）。内容推断（故 medium）：「造完飞机」对应《Besiege（围攻）》——次日 A站有人投了她玩 Besiege 的直播片段；「去找狗」对应同期 Minecraft 服务器里的找狗任务（07-10 的直播间标题就是「今天就是要找一只狗」，《武则天MC》精剪也说「玩了已经大概一个星期了，一直都没有抓到狗」）。完整录像未找到。"
+  - id: 2015-07-10-live-01
+    type: live
+    date: '2015-07-10'
+    title: "今天就是要找一只狗"
+    platform: douyu
+    confidence: high
+    games: [minecraft]
+    contributed_by: data-agent
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150710075817/http://www.douyutv.com/directory/isgame ：抓取于 2015-07-10 15:58（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-10 15:52，标题就是本条标题。这是 task-046 新查的列表页形式（/directory/isgame、/directory/columnRoom/*、/directory/tag/* 与带参数的首页和 /directory/all），task-044 只查过不带参数的三种。与官方优酷《【武则天MC】女流斗鱼直播录像精剪01》（2015-07-14 上传，XMTI4NDc4OTIyOA==）的主段吻合：精剪 6 分钟处她说「今天我们要搞一个主要的任务，就是要找一只狗，因为我们玩MC啊，玩了已经大概一个星期了，一直都没有抓到狗」——精剪主段很可能出自本场（strongly supported），但精剪是跳剪，可能夹有别场片段，未挂为来源。"
   - id: 2015-07-12-live-01
     type: live
     date: '2015-07-12'
@@ -867,6 +924,10 @@
         status: alive
         account: youku-official
         note: "官方优酷《【mc六则天】第三届女流杯建筑大赛》，上传 2015-08-25 20:43，167 分钟。2026-09-23 实访在线。"
+      - url: https://tv.sohu.com/v/dXMvMjY2NDQ3ODY4LzgxMjc3OTY5LnNodG1s.html
+        kind: replay
+        status: alive
+        note: "她本人搜狐号「女流的频道」《【mc六则天】第三届女流杯建筑大赛》，2015-08-28 15:00 上传，167:12，与官方优酷同一版本。"
     contributed_by: data-agent
     note: "直播日 2015-08-20（七夕）。录像开场 2:08 起她说「今天继续建筑大赛吧……现在几点了，三点十几分，然后录到六点，我休息一个小时，七点之后来播风之旅人」「因为今天是七夕嘛」；2015 年七夕正是 08-20，当晚七点后的《风之旅人》就是既有的 2015-08-20-live-01。开场还带服务器里的人去「亲一口黄渤」（服务器里的黄渤头像）。贴吧同日 16:55 有人问「女流 我的世界用的什么材质包」（https://tieba.baidu.com/p/3986789539）。本条与 live-01 是同一天下午、晚上两段，中间她说要休息一小时，是否同一次开播未证实，故分两条。更正：task-040 曾把第三届推到 08-21（据当天标题「土木工程专业错失人才」），实为 Poly Bridge，见 2015-08-21-live-01。"
   - id: 2015-08-21-live-01
@@ -923,7 +984,7 @@
     title: 第四届MC女流杯建筑大赛
     platform: douyu
     confidence: high
-    duration_min: 117
+    duration_min: 182
     games: [minecraft]
     series: dazhou-mc
     sources:
@@ -932,8 +993,16 @@
         status: alive
         account: youku-official
         note: "官方优酷《【mc六则天】第四届女流杯建筑大赛》，video:release_date 2015-09-05 20:53:27（直播次日），og:video:duration 7039.55 秒≈117 分钟。duration_min 取此全集时长，不等于当天直播总时长。2026-09-21 实访页面在线。"
+      - url: https://www.acfun.cn/v/ac2163929
+        kind: replay
+        status: alive
+        note: "A站用户「萌得激死」（uid 1007883）《第四届MC女流杯建筑大赛 全程录像》，发布 2015-09-05，3P 共 10907 秒（≈182 分钟），简介「9月4日下午女流杯录像」。音频比对：官方优酷 117 分钟版的 30:00、90:00 分别落在本录像 83.5、154 分钟处（得分 0.43～0.84），官方版是剪辑版，这是整场。"
+      - url: https://tv.sohu.com/v/dXMvMjY2NDQ3ODY4LzgxMzcxNzQ0LnNodG1s.html
+        kind: replay
+        status: alive
+        note: "她本人搜狐号「女流的频道」（tv.sohu.com/user/266447868）《【mc六则天】第四届女流杯建筑大赛》，2015-09-06 14:33 上传，117:15，与官方优酷同一剪辑版。"
     contributed_by: data-agent
-    note: "直播日 2015-09-04 由存档的斗鱼直播间页面定案，两条互相独立的信号：①2015-09-06 07:22（CST）的存档页上直播间标题就是「第四届MC女流杯建筑大赛」，而 09-03 10:07 的存档页标题还是「药是甜的」；②同一张 09-06 存档页里的直播间缩略图文件名为 156277_1509041751_thumb.jpg，即最后一次开播是 2015-09-04 17:51；09-08 20:17 的存档页缩略图仍停在 09-04 17:51，说明 09-05~09-08 没有开播。因此 09-06 那条标题指向的场次只能是 09-04。标题采用当期斗鱼直播间原文（优酷投稿标题作《【mc六则天】第四届女流杯建筑大赛》）。2026-09-21 时本条未归入大周MC，因为当时「六则天/武则天」与「大周」的谱系关系只到 strongly supported（见 task-040）。2026-09-23 归入大周MC：同一服务器同一系列的第一、二届录像里已有「大周朝」的说法（见 2015-07-28-live-01 与 task-044 报告），优酷标题同标【mc六则天】。"
+    note: "直播日 2015-09-04 由存档的斗鱼直播间页面定案，两条互相独立的信号：①2015-09-06 07:22（CST）的存档页上直播间标题就是「第四届MC女流杯建筑大赛」，而 09-03 10:07 的存档页标题还是「药是甜的」；②同一张 09-06 存档页里的直播间缩略图文件名为 156277_1509041751_thumb.jpg，即最后一次开播是 2015-09-04 17:51；09-08 20:17 的存档页缩略图仍停在 09-04 17:51，说明 09-05~09-08 没有开播。因此 09-06 那条标题指向的场次只能是 09-04。标题采用当期斗鱼直播间原文（优酷投稿标题作《【mc六则天】第四届女流杯建筑大赛》）。2026-09-21 时本条未归入大周MC，因为当时「六则天/武则天」与「大周」的谱系关系只到 strongly supported（见 task-040）。2026-09-23 归入大周MC：同一服务器同一系列的第一、二届录像里已有「大周朝」的说法（见 2015-07-28-live-01 与 task-044 报告），优酷标题同标【mc六则天】。 2026-09-24 task-046：补 A站整场录像（182 分钟），duration_min 117→182。"
   - id: 2015-09-09-live-01
     type: live
     date: '2015-09-09'
@@ -958,14 +1027,29 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-09-09-live-02
+    type: live
+    date: '2015-09-09'
+    title: "锈湖：磨坊、橙光小游戏"
+    platform: douyu
+    confidence: high
+    duration_min: 145
+    games: [rusty-lake, my-teacher-is-a-bear]
+    sources:
+      - url: https://www.acfun.cn/v/ac2188498
+        kind: replay
+        status: alive
+        note: "A站用户「萌得激死」（uid 1007883）《【女流】9月9日直播 全程录像》，发布 2015-09-10，简介「9月9日下午录像 直播间地址：http://www.douyutv.com/156277」；2P：rusty lake:the mill 70:00、两款橙光的小游戏 75:12。"
+    contributed_by: data-agent
+    note: "09-09 下午这一场，与同日晚上的心灵砒霜（2015-09-09-live-01，B站影忆丶Yi 分P）不是同一段录像（音频互不重叠）。开场她说「从今天开始就恢复直播了，除了周六不直播以外，每周都会直播六天」「上周日没有直播，砒霜的话……明天晚上补给你们吧」「因为我要去日本了」——所以 09-05～09-08 是停播。上半场是《Rusty Lake: The Mill》，下半场两款橙光游戏，第一款开场自述是北京大学起床协会同学做的实验室题材剧情游戏；官方投稿《我的老师是只“熊”》（2015-09-11-video-01，43 分钟）就是从下半场剪出来的：两者音频在本录像 P2 的 32～72 分钟处逐段对齐（得分 0.77～1.08）。"
   - id: 2015-09-10-live-01
     type: live
     date: '2015-09-10'
     title: 心灵砒霜
     platform: douyu
     confidence: high
-    duration_min: 62
-    games: []
+    duration_min: 154
+    games: [medieval-engineers]
     cover: "/images/covers/2015-09-10-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=9
@@ -977,11 +1061,24 @@
         kind: replay
         status: alive
         note: "《女流之心灵砒霜20150910》，2015-10-02 18:56 发布，3748 秒（≈62 分钟），与本条既有时长一致。吧友「龙灵云」2015-10-03 在贴吧整理帖《女流之心灵砒霜合集（优酷超清）》（https://tieba.baidu.com/p/4079886537）逐楼贴出的优酷上传，素材是当年贴吧录像组的录像。2026-09-23 实访在线。"
+      - url: https://www.acfun.cn/v/ac2189813
+        kind: replay
+        status: alive
+        note: "A站用户「萌得激死」（uid 1007883）《【女流】知心女流姐姐专业消除各种负能量》，发布 2015-09-11，简介「9月10日女流全程录像」；2P：「看完片尾，我觉得现在退款还来得及」82:16（Medieval Engineers）、「正片点我」72:02（心灵砒霜）。B站那份 62 分钟在 P2 的 9 分钟之后逐段对齐（得分 0.74～1.00）。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
     series: xinling-pishuang
-    note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+    note: "B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。 2026-09-24 task-046：找到当天整场（A站 154 分钟），duration_min 62→154。前半场她说「上午去公司开会……一看三点半了」「Poly Bridge 已经通关了」，临时买了《Medieval Engineers（中世纪工程师）》，游戏里新建世界的默认名是「Quickstart 2015-09-10 15:42」，与直播日一致；后半场才是补给大家的心灵砒霜（09-09 她说「上周日没有直播……明天晚上补」）。"
+  - id: 2015-09-11-live-01
+    type: live
+    date: '2015-09-11'
+    title: "新作到手：折纸世界"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150911090619/http://www.douyutv.com/directory/columnRoom/game ：抓取于 2015-09-11 17:06（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-09-11 16:57，标题就是本条标题；task-040 的直播间页快照（2015-09-12 14:11）也记过这一标题，缩略图 2015-09-11 18:45。此前档案里 09-11 只有官方投稿《我的老师是只“熊”》（2015-09-11-video-01），该片已查明出自 09-09 那场、改记为视频，本条补上 09-11 当天的直播。「折纸世界」指哪款游戏未确认（同期新作有 PS4《撕纸小邮差：展开》，2015-09-08 发售），games 留空。公开录像暂未找到。"
   - id: 2015-09-13-live-01
     type: live
     date: '2015-09-13'
@@ -1061,6 +1158,18 @@
         status: alive
         account: youku-official
         note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-10 上传的《女流【心灵砒霜】10.11直播录像》，标题直接写明直播日 10.11，时长 192:54（193 分钟）与本条 duration_min 完全一致。"
+      - url: https://v.youku.com/v_show/id_XMTM2NjY2MjMzMg==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151011（中间女流晒各种证书）》，2015-10-22 23:04 上传，11553 秒（≈193 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
+      - url: https://tv.sohu.com/v/cGwvOTA2NDgxNi84MTgxODAxNi5zaHRtbA==.html
+        kind: replay
+        status: alive
+        note: "她本人搜狐号「女流的频道」栏目【心灵砒霜】《【心灵砒霜】10.11直播录像 上》，2015-10-19 上传，86:01。"
+      - url: https://tv.sohu.com/v/cGwvOTA2NDgxNi84MTgxNzk2MS5zaHRtbA==.html
+        kind: replay
+        status: alive
+        note: "同上《【心灵砒霜】10.11直播录像 下》，106:39；上下合计约 193 分钟。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1107,6 +1216,15 @@
     games: [dropsy]
     contributed_by: data-agent
     note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151015084112/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-10-15 16:41（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-15 16:39，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+  - id: 2015-10-16-live-01
+    type: live
+    date: '2015-10-16'
+    title: "刚录视频迟到了"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151016075708/http://www.douyutv.com/directory/all?page=1 ：抓取于 2015-10-16 15:57（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-16 15:54，标题就是本条标题（task-046 新查的带参数列表页）。内容不明。10-16 是周五，仍是《第五届女流杯建筑大赛》的候选日之一（片尾「周日心灵砒霜见」→周五），本条标题不能证明也不能排除。"
   - id: 2015-10-18-live-01
     type: live
     date: '2015-10-18'
@@ -1122,6 +1240,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM2ODA4MzI3Mg==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151018》，2015-10-24 15:49 上传，11184 秒（≈186 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1212,6 +1334,14 @@
         status: alive
         account: youku-official
         note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-10-28 上传的《女流【心灵砒霜】10.25直播录像》（c_time 2015-10-28 17:58:31），标题直接写明直播日 10.25。本轮未能从存档页取到该条时长，未据此改动 duration_min。"
+      - url: https://v.youku.com/v_show/id_XMTM3MTcyMTIwNA==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151025》，2015-10-28 17:42 上传，11967 秒（≈199 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
+      - url: https://tv.sohu.com/v/dXMvMjY2NDQ3ODY4LzgxOTQ1MTk0LnNodG1s.html
+        kind: replay
+        status: alive
+        note: "她本人搜狐号「女流的频道」《女流【心灵砒霜】10.25直播录像》，2015-10-30 15:40 上传，193:58。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1314,7 +1444,7 @@
     title: Life is Strange奇异人生 第五章
     platform: douyu
     confidence: high
-    duration_min: 164
+    duration_min: 225
     games: [life-is-strange]
     sources:
       - url: https://www.bilibili.com/video/BV1qx411E7ae?p=1
@@ -1324,8 +1454,12 @@
       - url: https://www.bilibili.com/video/BV1qx411E7ae?p=2
         kind: replay
         status: alive
+      - url: https://www.bilibili.com/video/BV1TQ4y1h7BG
+        kind: replay
+        status: alive
+        note: "B站「潇灬潇」2023-11-15 投稿《女流返场聊天2015-11-4》，61 分钟，同日晚上的返场聊天。标题日期 11-4 有误，见条目附注。"
     contributed_by: data-agent
-    note: B站「女流录像小屋」《女流过往精彩录像补投第五期-Life is Strange奇异人生（2015.10.29）》，对应第五章。
+    note: "B站「女流录像小屋」《女流过往精彩录像补投第五期-Life is Strange奇异人生（2015.10.29）》，对应第五章。 2026-09-24 task-046：补同日晚上的返场聊天（B站「潇灬潇」，61 分钟），duration_min 164→225。该投稿标题写「2015-11-4」，但内容定在本日：她说「今天下午播奇异人生的时候也有人说……画质」、此前已播过 Undertale（10-23 起）、「今天周四，明天周五更新视频，后天放假，大后天心灵砒霜……可能会有意外情况，如果有意外的话就延期」（当周直播间标题随后改成「这周心灵砒霜改到周五」）、「明天要录的那个视频是一款恐怖游戏……千万不要看」（她的搜狐号 10-30 13:04 上传《【女流实况】千万不能看！》）。另说「暖气应该是11月15号才来吧」「今年感觉冷得有点早」。"
   - id: 2015-10-30-live-01
     type: live
     date: '2015-10-30'
@@ -1346,6 +1480,10 @@
         status: alive
         account: youku-official
         note: "2026-09-21 从互联网档案馆抓取的本人优酷空间（i.youku.com/u/UMjQyOTM1MzA4）补上官方优酷来源：官方号 2015-11-03 上传的《女流【心灵砒霜】10.30直播录像》（c_time 2015-11-03 19:49:26），标题直接写明直播日 10.30。优酷那一份时长 179:32（180 分钟），比本条记录的 188 分钟短约 8 分钟，属不同剪辑，未据此改动 duration_min。"
+      - url: https://v.youku.com/v_show/id_XMTM3NTQzMDcwNA==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151030》，2015-11-02 00:30 上传，11289 秒（≈188 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1384,6 +1522,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM4MjkwNDY1Mg==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151108》，2015-11-10 21:24 上传，11122 秒（≈185 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1413,6 +1555,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM4ODUxODI4MA==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151115》，2015-11-17 12:16 上传，7223 秒（≈120 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1481,6 +1627,10 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」《【心灵砒霜】你的女流你的心！心灵砒霜节目 第2015.11.26期》，18 分钟，标题写明期号 2015.11.26，与本条日期一致。这是当期节目的精剪片段（本条 duration_min 294 为完整直播时长），故 kind 取 clip。2026-09-22 实访可播放。"
+      - url: https://v.youku.com/v_show/id_XMTM5NzQ2MTYyOA==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151126》，2015-11-27 20:08 上传，17624 秒（≈294 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1577,6 +1727,10 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTQxNDIzMzYwNA==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151213》，2015-12-15 18:47 上传，12264 秒（≈204 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1588,9 +1742,9 @@
     title: "路易鬼屋是个好游戏"
     platform: douyu
     confidence: high
-    games: []
+    games: [luigis-mansion-dark-moon]
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照（2015-12-16 06:19）缩略图时间戳 2015-12-15 18:52。标题属当场：吧友 2015-12-15 11:05 截的斗鱼 App「我的关注」页（https://tieba.baidu.com/p/4214892776 1 楼）里，她的直播间当时未开播、标题已是「路易鬼屋是个好游戏」，下播后的快照标题仍是这句——开播前、下播后都是它，本场一直挂着这个标题。同帖吧友说她「今天会在直播中说地址」（前一晚微博「明天直播说」）。「路易鬼屋」是哪一作未能确认，games 留空。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。"
+    note: "直播日：存档斗鱼快照（2015-12-16 06:19）缩略图时间戳 2015-12-15 18:52。标题属当场：吧友 2015-12-15 11:05 截的斗鱼 App「我的关注」页（https://tieba.baidu.com/p/4214892776 1 楼）里，她的直播间当时未开播、标题已是「路易鬼屋是个好游戏」，下播后的快照标题仍是这句——开播前、下播后都是它，本场一直挂着这个标题。同帖吧友说她「今天会在直播中说地址」（前一晚微博「明天直播说」）。「路易鬼屋」是哪一作：2026-09-24 task-046 找到 12-23 列表页快照，那天的标题是「任天堂3ds路易鬼屋」——2015 年 3DS 上只有《路易吉洋楼2》（Dark Moon），本场按同一款登记（推断，12-15 当天没有画面）。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。"
   - id: 2015-12-19-live-01
     type: live
     date: '2015-12-19'
@@ -1611,6 +1765,10 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」《【心灵砒霜】女流《心灵砒霜》第20151219期 正确「指导」年轻人下药！》，169 分钟，标题写明期号 20151219，与本条日期一致。2026-09-22 实访可播放。"
+      - url: https://v.youku.com/v_show/id_XMTQxOTA4NzA1Ng==.html
+        kind: replay
+        status: alive
+        note: "优酷吧友「俺是红领巾」《女流之心灵砒霜20151219》，2015-12-20 22:00 上传，14056 秒（≈234 分钟），与本条时长一致；播单「女流」（https://list.youku.com/albumlist/show/id_26106456.html）。同一上传者 2015-09-29～10-02 还上传了 07-05～09-13 的砒霜（即 task-044 挂上的那 9 条）。2026-09-24 实访在线。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1626,6 +1784,15 @@
     games: [rusty-lake]
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2015-12-22 22:53（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-12-22 22:45。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。存档快照（开播证据，非录像）：https://web.archive.org/web/20151222145352/http://www.douyutv.com/156277"
+  - id: 2015-12-23-live-01
+    type: live
+    date: '2015-12-23'
+    title: "任天堂3ds路易鬼屋"
+    platform: douyu
+    confidence: high
+    games: [luigis-mansion-dark-moon]
+    contributed_by: data-agent
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151223085915/http://www.douyutv.com/directory/cateTag/TVgame/20 ：抓取于 2015-12-23 16:59（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-12-23 16:51，标题就是本条标题；同日 16:11 的首页快照（带 ?vgtime 参数）也列出这一标题（缩略图 16:08）。这是 task-046 新查的列表页形式，档案此前没有这一天。2015 年 3DS 上的路易鬼屋只有《路易吉洋楼2》（Dark Moon，2013），故登记该作；12-15「路易鬼屋是个好游戏」很可能是同一款的第一天。公开录像暂未找到。"
   - id: 2015-12-24-live-01
     type: live
     date: '2015-12-24'
