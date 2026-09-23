@@ -395,8 +395,33 @@
       - url: https://v.douyu.com/show/DrwnvzZXOemvPNaX
         kind: replay
         status: alive
+      - url: "https://www.bilibili.com/video/BV1b24y1U74s"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 6
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-31T23_25_54"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-31T23_54_32"
+            duration_sec: 1721
+          - page: 3
+            title: "女流66直播录像2023-01-01T00_23_13"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2023-01-01T00_51_53"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2023-01-01T01_20_34"
+            duration_sec: 1721
+          - page: 6
+            title: "女流66直播录像2023-01-01T01_49_15"
+            duration_sec: 971
+        note: "B站「KassyTan」《女流66直播录像2022-12-31》，6 个分 P，文件名自带录制时刻 2022-12-31 23:25 至 2023-01-01 01:49，合计 2:39:36，比斗鱼 01 点场回看完整，包含零点前的跨年部分。"
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入。2026-09-23 补：这是 2022-12-31 晚的跨年直播，贴吧 2022 直播专贴记 12/31「看视频聊天跨年」（https://tieba.baidu.com/p/7691737818）；KassyTan 录像从 12-31 23:25 录到 01-01 01:49，斗鱼的「01点场」回看只是零点后那一段。按开播日本应记 2022-12-31，但改 id 会让旧链接失效，本轮只补来源、不改日期，留给维护者定。"
     tags: [一起See]
   - id: 2023-01-07-live-01
     type: live

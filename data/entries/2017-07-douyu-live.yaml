@@ -283,6 +283,16 @@
         account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2017-07-14-live-01
+    type: live
+    date: "2017-07-14"
+    title: "幼儿园 Kindergarten"
+    platform: douyu
+    confidence: medium
+    games: [kindergarten]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「幼儿园(Kindergarten)」（https://tieba.baidu.com/p/4923399696 125 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧 7/12 也记「幼儿园」，而档案 2017-07-12 是《创世战车》，两者冲突待核（见 task-042 §4）；本条只依 7/14 的记录。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+
   - id: 2017-07-15-live-01
     type: live
     date: "2017-07-15"
@@ -740,6 +750,28 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+
+  - id: 2017-07-25-live-01
+    type: live
+    date: "2017-07-25"
+    title: "大周建国史 第5天"
+    platform: douyu
+    confidence: medium
+    duration_min: 134
+    games: [minecraft]
+    sources:
+      - url: "https://v.youku.com/v_show/id_XMjkyNTc2NzQ1Ng==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流】我的世界《大周建国史》全流程第05天Part1》，67:11，2017-07-28 凌晨上传（2026-09-23 频道页实测）。"
+      - url: "https://v.youku.com/v_show/id_XMjkyNTc2ODc4OA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流】我的世界《大周建国史》全流程第05天Part2》，67:09，2017-07-28 凌晨上传（2026-09-23 频道页实测）。"
+    contributed_by: data-agent
+    note: "直播日由三条线索合定：①贴吧 2017 直播专贴记 7/25「我的世界 / 我的世界 minecraft 1.12」（https://tieba.baidu.com/p/4923399696）；②她本人优酷号《大周建国史》全流程按天编号，第 6 天由档案 2017-08-01-live-01 标题「大周MC第六天」锚定，往前数 1.12 服 MC 场次为 7/18、7/19、7/21、7/22（贴吧与档案均有），第 5 天只能是其后、8/1 之前唯一的 MC 场次 7/25；③第 5 天两段于 2017-07-28 凌晨上传，给出上界。三者都是间接证据，没有录像内自报日期，故记 medium。时长按优酷两段合计 134 分，可能不是整场。"
 
   - id: 2017-07-26-live-01
     type: live

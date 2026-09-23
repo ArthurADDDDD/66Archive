@@ -82,6 +82,24 @@
     games: [whos-your-daddy]
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。"
+  - id: 2016-01-07-live-01
+    type: live
+    date: "2016-01-07"
+    title: "Besiege 12月更新版"
+    platform: douyu
+    confidence: medium
+    games: [besiege]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「besiege 12月更新版」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-01-08-live-01
+    type: live
+    date: "2016-01-08"
+    title: "逆转裁判"
+    platform: douyu
+    confidence: medium
+    games: []
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧只写「逆转裁判」，未说哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-01-10-live-01
     type: live
     date: '2016-01-10'
@@ -129,6 +147,15 @@
         note: "A站「斗鱼录像厅」《【主机游戏】Poly bridge 11月更新最新关卡 快来体验吧（一）》，上下半场两 P 共 205 分钟，发布 2016-01-12 10:52。同号另有（二）ac2454768，经音频比对与本条下半场逐秒相同，是重复投稿，不另挂。"
     contributed_by: data-agent
     note: "直播日 2016-01-11 取自贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）：「1/11 Poly bridge11月更新」，与录像标题逐字相合；楼中楼另有补漏「1/11~1/13 poly bridge」。片尾她说「明天见，明天把后面六关过了」，与 01-12 17:58 快照所证的次日开播相接。片中提到同事听说她「见到黄渤了」（01-03 直播间标题「hello huangbobo」），时序一致。"
+  - id: 2016-01-19-live-01
+    type: live
+    date: "2016-01-19"
+    title: "Poly Bridge 最终关"
+    platform: douyu
+    confidence: high
+    games: [poly-bridge]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge最终关」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：2016-01-20 13:40 抓取时直播间标题「女流：poly bridge最终关」，直播间缩略图时间戳 2016-01-19 19:07，与贴吧同日同题。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-01-20-live-01
     type: live
     date: '2016-01-20'
@@ -149,6 +176,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-01-22-live-01
+    type: live
+    date: "2016-01-22"
+    title: "Slime Rancher"
+    platform: douyu
+    confidence: medium
+    games: [slime-rancher]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「slime racher」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-01-24-live-01
     type: live
     date: '2016-01-24'
@@ -175,6 +211,33 @@
         note: "A站「斗鱼录像厅」（UID 974915）《【全明星秀】女流斗鱼直播一周年纪念日 感谢有你 水友狂送礼物和鱼丸！》，发布 2016-01-25 14:20，时长 1:50:25。与 ac2487882 同批发布，为同场的另一段。"
     contributed_by: data-agent
     note: "周年直播日定在 2016-01-24（不是首播周年正日 2015-01-21）：存档斗鱼快照显示 2016-01-24 18:52 房间在播；两条 A 站录像均于次日 2016-01-25 下午发布，滞后 1 天，符合该号 1～4 天的发布规律；而 2016-01-21 14:41 的快照当时仍处下播状态、最后开播停在 2016-01-20 19:16。duration_min 由 97 改为 236（126+110），取两段 A 站录像之和；B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P 的 97 分钟是剪辑版，不代表当日直播全长。"
+  - id: 2016-01-26-live-01
+    type: live
+    date: "2016-01-26"
+    title: "Poly Bridge"
+    platform: douyu
+    confidence: medium
+    games: [poly-bridge]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-01-27-live-01
+    type: live
+    date: "2016-01-27"
+    title: "BOXBOY!"
+    platform: douyu
+    confidence: medium
+    games: [boxboy]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「boxboy」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-01-28-live-01
+    type: live
+    date: "2016-01-28"
+    title: "橙光游戏：潜伏之赤途"
+    platform: douyu
+    confidence: medium
+    games: [qianfu-zhi-chitu]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「潜伏之赤途 （橙光游戏）」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-01-31-live-01
     type: live
     date: '2016-01-31'
@@ -195,6 +258,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-02-01-live-01
+    type: live
+    date: "2016-02-01"
+    title: "塞尔达三角力量试水"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「塞达尔三角力量」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：直播间标题「女流：塞尔达三角力量试水」，缩略图时间戳 2016-02-01 18:32。「三角力量」未说明是哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-02-02-live-01
     type: live
     date: "2016-02-02"
@@ -211,6 +283,24 @@
         note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】 女流——勇者斗恶龙：建造者》，发布 2016-02-14 16:07，时长 1:45:55。"
     contributed_by: data-agent
     note: "直播日 2016-02-02 由片中自述与存档斗鱼快照合定。片头她说「我六点就走了，现在三点，我还有三个小时」，片尾说「年后再玩吧，年后接着玩，我要去收拾行李了，等下坐飞机要走了」——这是回家过年前的最后一场；斗鱼快照显示 2016-02-02 16:24 房间在播（缩略图时间戳），随后直播间标题改为「开开心心回家过年」，下一次开播已是 2016-02-17。前一天 02-01 18:32 那场是傍晚开播的《塞尔达三角力量》，时段对不上下午三点。录像发布滞后 12 天，是春节停更所致，不是反例。标题取自 A 站投稿标题，当日直播间原标题未存档。"
+  - id: 2016-02-17-live-01
+    type: live
+    date: "2016-02-17"
+    title: "火影忍者究极风暴4"
+    platform: douyu
+    confidence: medium
+    games: [naruto-storm-4]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）另见缩略图时间戳 2016-02-17 22:42、标题「月末眼泪流」，说明当晚确有开播。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-02-18-live-01
+    type: live
+    date: "2016-02-18"
+    title: "火影忍者究极风暴4"
+    platform: douyu
+    confidence: medium
+    games: [naruto-storm-4]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-02-19-live-01
     type: live
     date: "2016-02-19"
@@ -277,6 +367,15 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-02-23-live-01
+    type: live
+    date: "2016-02-23"
+    title: "Minecraft 水星生存日记"
+    platform: douyu
+    confidence: medium
+    games: [minecraft]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft ; 地图：水星生存日记」（https://tieba.baidu.com/p/4363790737 7 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-02-24-live-01
     type: live
     date: '2016-02-24'
@@ -287,6 +386,24 @@
     games: [nixizhixingtu-shanyao]
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2016-02-24 15:36（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-02-24 15:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧 2016 年直播游戏专贴（tieba.baidu.com/p/4363790737）当天所发第 9 楼记「2/24 逆袭之星途闪耀（橙光游戏）」——直播间标题里的「逆途」就是这款橙光游戏《逆袭之星途闪耀》的简称，3/2 又记「逆袭之星途闪耀 3月1号更新章」，与 03-09 快照标题「逆袭更新啦」同指一作。"
+  - id: 2016-02-25-live-01
+    type: live
+    date: "2016-02-25"
+    title: "极地战嚎：野蛮纪源"
+    platform: douyu
+    confidence: medium
+    games: [far-cry-primal]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「极地战嚎：野蛮纪源」（https://tieba.baidu.com/p/4363790737 10 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-03-02-live-01
+    type: live
+    date: "2016-03-02"
+    title: "逆袭之星途闪耀 3月1号更新章"
+    platform: douyu
+    confidence: medium
+    games: [nixizhixingtu-shanyao]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆袭之星途闪耀 3月1号更新章（橙光游戏）」（https://tieba.baidu.com/p/4363790737 11 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号《【女流直播生放送】逆袭》（XMTUwNTAwNjI1Ng==，139 分，2016-03-19 上传）可能是这一场或 2/24、3/9 之一，待看录像确认后再挂（见 task-042）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-03-03-live-01
     type: live
     date: '2016-03-03'
@@ -302,6 +419,15 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第十期-Undertale传说之下三周目（2016.3.3）》。
+  - id: 2016-03-04-live-01
+    type: live
+    date: "2016-03-04"
+    title: "Minecraft 1.8.8（B站 MC 主题建筑擂台赛）"
+    platform: douyu
+    confidence: medium
+    games: [minecraft]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft1.8.8（b站MC主题建筑擂台赛）」（https://tieba.baidu.com/p/4363790737 14 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-03-06-live-01
     type: live
     date: '2016-03-06'
@@ -683,6 +809,51 @@
         account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」《星露谷物语-终于更完了》P1，对应 2016.3.31。
+  - id: 2016-04-04-live-01
+    type: live
+    date: "2016-04-04"
+    title: "异星工厂 & SUPERHOT"
+    platform: douyu
+    confidence: medium
+    games: [factorio, superhot]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「1游戏名：factorio异星工厂 ; 2游戏名：SuperHot」（https://tieba.baidu.com/p/4363790737 33 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-05-live-01
+    type: live
+    date: "2016-04-05"
+    title: "HunieCam Studio"
+    platform: douyu
+    confidence: medium
+    games: [huniecam-studio]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「hunie cam studio」（https://tieba.baidu.com/p/4363790737 34 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-06-live-01
+    type: live
+    date: "2016-04-06"
+    title: "逆转裁判5"
+    platform: douyu
+    confidence: medium
+    games: [gyakuten-saiban-5]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 35 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-07-live-01
+    type: live
+    date: "2016-04-07"
+    title: "逆转裁判5"
+    platform: douyu
+    confidence: medium
+    games: [gyakuten-saiban-5]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 36 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-08-live-01
+    type: live
+    date: "2016-04-08"
+    title: "逆转裁判5 第二章结局"
+    platform: douyu
+    confidence: high
+    games: [gyakuten-saiban-5]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 38 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：两次抓取直播间标题均为「逆转裁判5第二章结局」，缩略图时间戳 2016-04-08 23:15。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-04-10-live-01
     type: live
     date: '2016-04-10'
@@ -708,6 +879,24 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-04-11-live-01
+    type: live
+    date: "2016-04-11"
+    title: "传送门2"
+    platform: douyu
+    confidence: medium
+    games: [portal-2]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「传送门2」（https://tieba.baidu.com/p/4363790737 39 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-12-live-01
+    type: live
+    date: "2016-04-12"
+    title: "锈湖：剧院（Rusty Lake Theatre）"
+    platform: douyu
+    confidence: medium
+    games: [rusty-lake]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「生锈小湖解密新章theatre」（https://tieba.baidu.com/p/4363790737 40 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号曾有锈湖剧院生放送，现已不在频道清单（见 task-042 §6）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-04-13-live-01
     type: live
     date: '2016-04-13'
@@ -792,6 +981,24 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-04-18-live-01
+    type: live
+    date: "2016-04-18"
+    title: "逆转裁判5（3DS）"
+    platform: douyu
+    confidence: medium
+    games: [gyakuten-saiban-5]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5（3ds）」（https://tieba.baidu.com/p/4363790737 44 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-04-19-live-01
+    type: live
+    date: "2016-04-19"
+    title: "逆转裁判5"
+    platform: douyu
+    confidence: medium
+    games: [gyakuten-saiban-5]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 45 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-04-20-live-01
     type: live
     date: '2016-04-20'
@@ -1108,6 +1315,15 @@
         account: bili-fan-record-house
     contributed_by: data-agent
 
+  - id: 2016-07-11-live-01
+    type: live
+    date: "2016-07-11"
+    title: "黎明杀机"
+    platform: douyu
+    confidence: medium
+    games: [dead-by-daylight]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「黎明杀机」（https://tieba.baidu.com/p/4363790737 100 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
   - id: 2016-07-12-live-01
     type: live
     date: '2016-07-12'

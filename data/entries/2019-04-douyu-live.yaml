@@ -271,6 +271,16 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-04-15-live-01
+    type: live
+    date: "2019-04-15"
+    title: "跟七号玩英雄联盟"
+    platform: douyu
+    confidence: medium
+    games: [league-of-legends]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「跟七号玩LOL」（https://tieba.baidu.com/p/5995167560 114 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+
   - id: 2019-04-16-live-01
     type: live
     date: "2019-04-16"

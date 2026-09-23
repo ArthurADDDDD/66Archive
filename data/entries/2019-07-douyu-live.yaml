@@ -34,6 +34,37 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-07-03-live-01
+    type: live
+    date: "2019-07-03"
+    title: "我的朋友佩德罗 & 风暴追逐者 & 节奏乒乓"
+    platform: douyu
+    confidence: medium
+    games: [my-friend-pedro, storm-chasers, lofi-ping-pong]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：我的朋友佩德罗/ My Friend Pedro ; 游戏：风暴追逐者/ Storm Chasers ; 游戏：节奏乒乓/ Lofi Ping Pong」（https://tieba.baidu.com/p/5995167560 150 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+
+  - id: 2019-07-04-live-01
+    type: live
+    date: "2019-07-04"
+    title: "唱歌 & 人类一败涂地 MOD & 辐射：避难所 Online"
+    platform: douyu
+    confidence: medium
+    games: [human-fall-flat]
+    tags: [唱歌]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「唱歌 ; 游戏：人类:一败涂地 MOD / Human: Fall Flat ; 游戏：辐射:避难所Online」（https://tieba.baidu.com/p/5995167560 151 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。《辐射：避难所 Online》与单机版不是同一作，未挂 games。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+
+  - id: 2019-07-05-live-01
+    type: live
+    date: "2019-07-05"
+    title: "荒野潜伏者 Stay Silent VR & 百战天虫"
+    platform: douyu
+    confidence: medium
+    games: [worms-wmd]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：荒野潜伏者/ Stay Silent VR ; 游戏：百战天虫」（https://tieba.baidu.com/p/5995167560 152 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。「荒野潜伏者/Stay Silent VR」未登记游戏库；「百战天虫」按游戏库别名挂 W.M.D。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+
   - id: 2019-07-07-live-01
     series: xishuo-fengshen
     type: live
@@ -78,6 +109,16 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+
+  - id: 2019-07-08-live-01
+    type: live
+    date: "2019-07-08"
+    title: "拣爱 & 小林正雪复仇之密室"
+    platform: douyu
+    confidence: medium
+    games: [jian-ai]
+    contributed_by: data-agent
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：拣爱 ; 小林正雪复仇之密室」（https://tieba.baidu.com/p/5995167560 154 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
 
   - id: 2019-07-09-live-01
     type: live

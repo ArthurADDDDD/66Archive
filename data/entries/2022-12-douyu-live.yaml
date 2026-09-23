@@ -131,6 +131,103 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2022-12-09-live-01
+    type: live
+    date: "2022-12-09"
+    title: "重返猴岛"
+    platform: douyu
+    confidence: high
+    duration_min: 265
+    games: [return-to-monkey-island]
+    sources:
+      - url: "https://www.bilibili.com/video/BV18V4y1P7aH"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 11
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-09T15_09_34"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-09T15_38_13"
+            duration_sec: 1713
+          - page: 3
+            title: "女流66直播录像2022-12-09T16_06_46"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2022-12-09T16_35_27"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2022-12-09T17_04_08"
+            duration_sec: 246
+          - page: 6
+            title: "女流66直播录像2022-12-09T17_37_40"
+            duration_sec: 1721
+          - page: 7
+            title: "女流66直播录像2022-12-09T18_06_21"
+            duration_sec: 1721
+          - page: 8
+            title: "女流66直播录像2022-12-09T18_35_02"
+            duration_sec: 1721
+          - page: 9
+            title: "女流66直播录像2022-12-09T19_03_43"
+            duration_sec: 1721
+          - page: 10
+            title: "女流66直播录像2022-12-09T19_32_23"
+            duration_sec: 1721
+          - page: 11
+            title: "女流66直播录像2022-12-09T20_01_04"
+            duration_sec: 173
+    contributed_by: data-agent
+    note: "B站「KassyTan」《女流66直播录像2022-12-09》11 个分 P，文件名自带录制时刻 2022-12-09 15:09 起，合计 4:25:00；预览图为《重返猴岛》，与贴吧 12/9「游戏：重返猴岛/ Return to Monkey Island」（https://tieba.baidu.com/p/7691737818）一致。"
+
+  - id: 2022-12-10-live-01
+    type: live
+    date: "2022-12-10"
+    title: "看视频聊天"
+    platform: douyu
+    confidence: high
+    duration_min: 255
+    games: []
+    tags: [聊天]
+    sources:
+      - url: "https://www.bilibili.com/video/BV1784y1t7RC"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 9
+        part_details:
+          - page: 1
+            title: "女流66直播录像2022-12-10T15_11_03"
+            duration_sec: 1721
+          - page: 2
+            title: "女流66直播录像2022-12-10T15_39_41"
+            duration_sec: 1721
+          - page: 3
+            title: "女流66直播录像2022-12-10T16_08_22"
+            duration_sec: 1721
+          - page: 4
+            title: "女流66直播录像2022-12-10T16_37_03"
+            duration_sec: 1721
+          - page: 5
+            title: "女流66直播录像2022-12-10T17_05_43"
+            duration_sec: 1721
+          - page: 6
+            title: "女流66直播录像2022-12-10T17_34_24"
+            duration_sec: 1721
+          - page: 7
+            title: "女流66直播录像2022-12-10T18_03_05"
+            duration_sec: 1721
+          - page: 8
+            title: "女流66直播录像2022-12-10T18_31_46"
+            duration_sec: 1721
+          - page: 9
+            title: "女流66直播录像2022-12-10T19_00_27"
+            duration_sec: 1559
+    contributed_by: data-agent
+    note: "B站「KassyTan」《女流66直播录像2022-12-10》9 个分 P，录制时刻 2022-12-10 15:11 起，合计 4:15:27；预览图是一起看影视片段，与贴吧 12/10「看视频聊天」（https://tieba.baidu.com/p/7691737818）一致。"
+
   - id: 2022-12-11-live-01
     type: live
     date: "2022-12-11"

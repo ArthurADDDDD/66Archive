@@ -292,6 +292,63 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2023-02-19-live-01
+    type: live
+    date: "2023-02-19"
+    title: "聊天 & 褪黑素 & Brotato"
+    platform: douyu
+    confidence: high
+    duration_min: 396
+    games: [melatonin, brotato]
+    sources:
+      - url: "https://www.bilibili.com/video/BV1yy4y1Z74F"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 13
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-02-19T15_06_53"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-02-19T15_38_00"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-02-19T16_09_15"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-02-19T16_40_30"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-02-19T17_11_45"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-02-19T17_43_00"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-02-19T18_14_15"
+            duration_sec: 1876
+          - page: 8
+            title: "女流66直播录像2023-02-19T18_45_30"
+            duration_sec: 1876
+          - page: 9
+            title: "女流66直播录像2023-02-19T19_16_45"
+            duration_sec: 1876
+          - page: 10
+            title: "女流66直播录像2023-02-19T19_48_00"
+            duration_sec: 1876
+          - page: 11
+            title: "女流66直播录像2023-02-19T20_19_15"
+            duration_sec: 1876
+          - page: 12
+            title: "女流66直播录像2023-02-19T20_50_30"
+            duration_sec: 1876
+          - page: 13
+            title: "女流66直播录像2023-02-19T21_21_45"
+            duration_sec: 1253
+    contributed_by: data-agent
+    note: "B站「KassyTan」《【女流66】直播回放2023-02-19》13 个分 P，录制时刻 2023-02-19 15:06 起，合计 6:36:05；预览图依次为开场聊天、《褪黑素 Melatonin》、《Brotato》。贴吧 2/19 记「游戏：褪黑素/ Melatonin」（https://tieba.baidu.com/p/8207173300）。"
+
   - id: 2023-02-20-live-01
     type: live
     date: "2023-02-20"
@@ -396,6 +453,63 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+
+  - id: 2023-02-25-live-01
+    type: live
+    date: "2023-02-25"
+    title: "森林之子"
+    platform: douyu
+    confidence: high
+    duration_min: 195
+    games: [sons-of-the-forest]
+    sources:
+      - url: "https://www.bilibili.com/video/BV1ND4y137Cz"
+        kind: replay
+        status: alive
+        account: bili-fan-kassytan
+        parts: 7
+        part_details:
+          - page: 1
+            title: "女流66直播录像2023-02-25T15_12_13"
+            duration_sec: 1876
+          - page: 2
+            title: "女流66直播录像2023-02-25T15_43_20"
+            duration_sec: 1876
+          - page: 3
+            title: "女流66直播录像2023-02-25T16_45_50"
+            duration_sec: 1876
+          - page: 4
+            title: "女流66直播录像2023-02-25T17_17_05"
+            duration_sec: 1876
+          - page: 5
+            title: "女流66直播录像2023-02-25T17_48_20"
+            duration_sec: 1876
+          - page: 6
+            title: "女流66直播录像2023-02-25T18_19_35"
+            duration_sec: 1876
+          - page: 7
+            title: "女流66直播录像2023-02-25T18_50_50"
+            duration_sec: 468
+      - url: "https://www.bilibili.com/video/BV17A411275G"
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 1
+        part_details:
+          - page: 1
+            title: "[2023-02-25][女流66][森林之子玩玩看]01"
+            duration_sec: 1733
+      - url: "https://www.bilibili.com/video/BV1k24y1J71K"
+        kind: replay
+        status: alive
+        account: bili-fan-zytau
+        parts: 1
+        part_details:
+          - page: 1
+            title: "[2023-02-25][女流66][森林之子玩玩看]02"
+            duration_sec: 10122
+    contributed_by: data-agent
+    note: "B站「KassyTan」《【女流66】直播回放2023-02-25》7 个分 P，录制时刻 2023-02-25 15:12 起，合计 3:15:24，预览图为《森林之子》；「zytau」同日两条《[2023-02-25][女流66][森林之子玩玩看]01/02》（28:53 + 168:42）是同一场。贴吧 2/25 记「游戏：森林之子/ Sons Of The Forest」（https://tieba.baidu.com/p/8207173300）。"
 
   - id: 2023-02-26-live-01
     type: live
