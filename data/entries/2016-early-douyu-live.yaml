@@ -43,21 +43,6 @@
         note: "A站「斗鱼录像厅」（UID 974915）同系列（二），发布 2016-01-04 13:39，时长 1:18:00。"
     contributed_by: data-agent
     note: "直播日 2016-01-03：存档斗鱼快照（抓取于 2016-01-04 08:08）的直播间缩略图时间戳为 2016-01-03 18:42，证明该日晚间在播；两段录像次日 2016-01-04 下午 13:39／13:41 连续发布，滞后 1 天，且发布时刻早于当日傍晚，排除了它们取自 01-04 晚间直播的可能。两段合计 131 分钟与一场晚间直播相称。标题取自录像内容；当时快照上的直播间标题是「hello  huangbobo」，但按本仓既定口径，事后抓到的标题不径直认作该场标题，故未采用。games 留空：《尼德霍格 Nidhogg》尚未登记进 data/games.yaml。"
-  - id: 2016-01-04-live-01
-    type: live
-    date: '2016-01-04'
-    title: MC圣诞建筑大赛（女流作品打分视角）
-    platform: douyu
-    confidence: high
-    duration_min: 160
-    games: [minecraft]
-    cover: "https://tx-free-imgs.acfun.cn/dotnet/artemis/u/cms/www/201601/041355021n5s4we6.jpg?imageslim"
-    sources:
-      - url: https://www.acfun.cn/v/ac2434832
-        kind: replay
-        status: alive
-    contributed_by: data-agent
-    note: AcFun「斗鱼录像厅」《【我的世界】斗鱼TV我的世界MC圣诞建筑大赛 女流 作品打分视角！》，发布于 2016-01-04，时长约 2:40:14。
   - id: 2016-01-05-live-01
     type: live
     date: '2016-01-05'
@@ -160,6 +145,21 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-02-02-live-01
+    type: live
+    date: "2016-02-02"
+    title: "勇者斗恶龙：建造者"
+    platform: douyu
+    confidence: high
+    duration_min: 106
+    games: [dragon-quest-builders]
+    sources:
+      - url: https://www.acfun.cn/v/ac2533334
+        kind: replay
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】 女流——勇者斗恶龙：建造者》，发布 2016-02-14 16:07，时长 1:45:55。"
+    contributed_by: data-agent
+    note: "直播日 2016-02-02 由片中自述与存档斗鱼快照合定。片头她说「我六点就走了，现在三点，我还有三个小时」，片尾说「年后再玩吧，年后接着玩，我要去收拾行李了，等下坐飞机要走了」——这是回家过年前的最后一场；斗鱼快照显示 2016-02-02 16:24 房间在播（缩略图时间戳），随后直播间标题改为「开开心心回家过年」，下一次开播已是 2016-02-17。前一天 02-01 18:32 那场是傍晚开播的《塞尔达三角力量》，时段对不上下午三点。录像发布滞后 12 天，是春节停更所致，不是反例。标题取自 A 站投稿标题，当日直播间原标题未存档。"
   - id: 2016-02-19-live-01
     type: live
     date: "2016-02-19"
@@ -293,6 +293,11 @@
       - url: https://www.bilibili.com/video/BV1Xx411V7mT?p=2
         kind: replay
         status: alive
+      - url: https://www.acfun.cn/v/ac2592025
+        kind: replay
+        parts: 2
+        status: alive
+        note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】女流 星露谷 全程直播录像》，上下两 P，发布 2016-03-10 15:41。2026-09-23 音频比对：两 P 拼接后与 B站本条 P1+P2 全程逐段对齐（偏移始终在 1 分钟以内，相关分 0.47～0.95），是同一份录像；片头她自述「一次没玩过」、从建角色开始，即她的第一场星露谷。此前目录把它挂在 2016-03-10，是按发布日推的，不对。"
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第十二期-星露谷物语（2016.3.9）》。
   - id: 2016-03-10-live-01
