@@ -70,9 +70,9 @@
         account: bilibili-official
       - url: https://v.youku.com/v_show/id_XMTI1NzkyMTE3Mg==.html
         kind: original
-        status: alive
+        status: dead
         account: youku-official
-        note: "官方优酷同内容投稿，标题与本条完全一致；video:release_date 2015-06-08 20:32:49，og:video:duration 3307.07 秒≈55 分钟，与 duration_min 一致。2026-09-21 实访页面在线。注意优酷上传日比本条日期早 12 天——本条 type 为 video、日期取自 B 站投稿日，两个平台投稿时间不同不构成矛盾；但标题里的「直播录像」意味着原始直播发生在 2015-06-08 之前，而 2015-05-16~06-08 这段斗鱼直播间没有任何存档快照，真实直播日仍无从考证。"
+        note: "官方优酷同内容投稿，标题与本条完全一致；video:release_date 2015-06-08 20:32:49，og:video:duration 3307.07 秒≈55 分钟，与 duration_min 一致。2026-09-21 实访页面在线。注意优酷上传日比本条日期早 12 天——本条 type 为 video、日期取自 B 站投稿日，两个平台投稿时间不同不构成矛盾；但标题里的「直播录像」意味着原始直播发生在 2015-06-08 之前，而 2015-05-16~06-08 这段斗鱼直播间没有任何存档快照，真实直播日仍无从考证。2026-09-23 复查：优酷页面显示「该视频已被下架」，频道列表中也已不存在。"
     contributed_by: data-agent
     note: 经人工核对片头，含视频时代惯用开场语，确认是预先录制的实况视频，并非直播回放；按 B 站官方上传日 2015-06-20 收录。
   - id: 2015-06-26-video-01
@@ -89,6 +89,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTI3MTI1MTQ4OA==.html"
+        kind: original
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流】关掉游戏我就瞎了：雷曼传奇音乐关卡一命通关》，上传 2015-06-26 20:59，时长 06:02（2026-09-23 频道页实测）。归属依据：同题同日官方投稿。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-06-26 投稿。
   - id: 2015-07-23-video-01
@@ -105,6 +110,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTI5MTM5MDc4OA==.html"
+        kind: original
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《★球球大作战★~女流手游试玩：一个在手机上全球撕的游戏~》，上传 2015-07-23 10:54，时长 10:26（2026-09-23 频道页实测）。归属依据：同题同日官方投稿。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-07-23 投稿。
   - id: 2015-08-13-video-01
@@ -185,9 +195,9 @@
         account: bili-fan-record-house
       - url: https://v.youku.com/v_show/id_XMTMzODU2MzU2MA==.html
         kind: original
-        status: alive
+        status: dead
         account: youku-official
-        note: "官方优酷同内容投稿《【女流实况】恐怖游戏湖景小屋4章Lakeview Cabin试玩》，标题与本条完全一致；优酷 video:release_date 2015-09-18 10:26:24（与本条日期同日），og:video:duration 1547 秒≈26 分钟，与 duration_min 一致。2026-09-21 实访页面在线。"
+        note: "官方优酷同内容投稿《【女流实况】恐怖游戏湖景小屋4章Lakeview Cabin试玩》，标题与本条完全一致；优酷 video:release_date 2015-09-18 10:26:24（与本条日期同日），og:video:duration 1547 秒≈26 分钟，与 duration_min 一致。2026-09-21 实访页面在线。2026-09-23 复查：优酷页面显示「该视频已被下架」，频道列表中也已不存在。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-09-18 投稿。
   - id: 2015-10-09-video-01
@@ -225,6 +235,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTM2NjkxMTE2OA==.html"
+        kind: original
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流实况】逆转裁判：复苏的逆转第二章P2》，上传 2015-10-23 09:46，时长 61:54（2026-09-23 频道页实测）。归属依据：同题同日官方投稿。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-10-23 投稿。
   - id: 2015-10-30-video-01

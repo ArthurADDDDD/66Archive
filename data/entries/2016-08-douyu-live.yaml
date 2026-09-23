@@ -78,6 +78,11 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」《【心灵砒霜】女流心灵砒霜 20160807期》，标题期号 20160807 与本条日期一致，多分P（首P 128 分钟）。本条原标题写明是「直播音频」，这一源是同期的**影像**版本，可补上画面。2026-09-22 实访可播放。该号为斗鱼官方 A 站录像号（UID 974915），非女流专属号；（2026-09-23 起已挂 account: acfun-douyu-recordhall。）"
+      - url: "https://v.youku.com/v_show/id_XMTY3NzcwMDkzMg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】女流8月7日读邮件》，上传 2016-08-09 20:42，时长 179:36（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
 
   - id: 2016-08-08-live-01
@@ -351,6 +356,11 @@
         parts: 2
         status: alive
         account: acfun-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTY5NjU2Mzk4OA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】女流8月22日读邮件》，上传 2016-08-23 21:32，时长 177:01（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
 
     note: A站将同一场按 P1-P5 拆为两个投稿，合并为一场。
@@ -498,6 +508,11 @@
         parts: 3
         status: alive
         account: acfun-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTcwNDgzNDkwNA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《女流【心灵砒霜】8月28日读邮件》，上传 2016-08-29 22:02，时长 149:55（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
 
   - id: 2016-08-29-live-01

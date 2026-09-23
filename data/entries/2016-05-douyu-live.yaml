@@ -163,6 +163,16 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】女流心灵砒霜20160508期 喜欢别人的女朋友怎么办》，两 P 共 105 分钟，发布 2016-05-09 16:32。标题期号即直播日；片中观众留言「溜溜妈妈母亲节快乐」，2016-05-08 正是母亲节，互为印证。"
+      - url: "https://v.youku.com/v_show/id_XMTU4MDA1MjQ2MA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】5月8日“片段1”直播生放送》，上传 2016-05-23 00:57，时长 104:37（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
+      - url: "https://v.youku.com/v_show/id_XMTU3OTg5MTMzMg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】5月8日片段2直播生放送》，上传 2016-05-22 18:36，时长 48:21（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags: [心灵砒霜]
 
@@ -410,6 +420,11 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTU4MTAzMTk2MA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】5月22日直播生放送》，上传 2016-05-23 18:16，时长 120:39（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags: [心灵砒霜]
 

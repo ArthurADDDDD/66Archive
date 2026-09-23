@@ -234,10 +234,44 @@
     date: "2016-01-28"
     title: "橙光游戏：潜伏之赤途"
     platform: douyu
-    confidence: medium
+    cover: "/images/covers/2016-01-28-live-01.jpg"
+    confidence: high
+    duration_min: 113
     games: [qianfu-zhi-chitu]
-    contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「潜伏之赤途 （橙光游戏）」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    sources:
+      - url: "https://v.youku.com/v_show/id_XMTQ1OTQzMTUzMg==.html?f=51039998&o=1"
+        kind: replay
+        status: alive
+        note: "优酷播单「女流赤途」中的 01-28 全长录播，上传者「乱世帝王于歪熊」，原题《01-28斗鱼女流玩潜伏游戏--潜伏之赤途（房号156277）》，现存 1:53:23；2026-09-15 人工确认可播放。"
+    contributed_by: chatgpt-research
+    note: "民间录播，优酷原题只写「01-28」、没有年份。此前按 2015-01-28 入库（id 2015-01-28-live-01），2026-09-23 改记 2016-01-28：①优酷视频页 __PAGE_CONF__ 给出上传时间 2016-01-28 20:32:29，与原题日期同日；②贴吧 2016 直播专贴记「1/28 潜伏之赤途 （橙光游戏）」（https://tieba.baidu.com/p/4363790737 2 楼），逐字相合。同一播单另有当晚第二场，见 2016-01-28-live-02。改 id 前核对过后台无按旧 id 记的数据；封面文件随之改名。"
+
+  - id: 2016-01-28-live-02
+    type: live
+    date: "2016-01-28"
+    title: "潜伏之赤途 2-3"
+    platform: douyu
+    cover: "/images/covers/2016-01-28-live-02.jpg"
+    confidence: high
+    duration_min: 160
+    games: [qianfu-zhi-chitu]
+    note: "民间录播，与 2016-01-28-live-01 同一个优酷播单「女流赤途」、同一上传者，原题标「01-29」，保存连续两段：《潜伏之赤途2》1:59:48 + 《潜伏之赤途3》40:44，均注明房号156277，合计约 2:40:32。两段在优酷的上传时间是 2016-01-29 02:03:55 与 02:06:30，160 分钟的直播最晚也得在 01-28 23:20 前开播，所以这是 01-28 当晚的第二场（跨过零点），按开播日记 2016-01-28；上传者标的「01-29」应是按上传或下播时的日期。此前按 2015-01-29 入库（id 2015-01-29-live-02），2026-09-23 改为 2016-01-28-live-02。两段优酷录像 2026-09-23 复查已下架。"
+    segments:
+      - at: "00:00:00"
+        label: "潜伏之赤途2"
+      - at: "01:59:48"
+        label: "潜伏之赤途3"
+    sources:
+      - url: "https://v.youku.com/v_show/id_XMTQ1OTY4MjgwMA==.html?f=51039998&o=1"
+        kind: replay
+        status: dead
+        note: "01-29 第一段：《潜伏之赤途2》，1:59:48；2026-09-15 人工确认可播放。2026-09-23 复查：优酷页面显示「该视频已被下架」。"
+      - url: "https://v.youku.com/v_show/id_XMTQ1OTcyMjU5Mg==.html?f=51039998&o=1"
+        kind: replay
+        status: dead
+        note: "01-29 第二段：《潜伏之赤途3》，40:44；2026-09-15 人工确认可播放。2026-09-23 复查：优酷页面显示「该视频已被下架」。"
+    contributed_by: chatgpt-research
+
   - id: 2016-01-31-live-01
     type: live
     date: '2016-01-31'
@@ -448,6 +482,11 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【全民星秀】女流心灵砒霜系列节目 2010306期》，发布 2016-03-08 18:07，分上下半场两 P。标题期号「2010306」缺一位，还原为 20160306；存档斗鱼快照 2016-03-06 16:36 抓到房间 show_status=1 正在直播、标题写「女流：下午四点砒霜」，与之吻合，故归入 2016-03-06。"
+      - url: "https://v.youku.com/v_show/id_XMTQ5ODE1MjIxNg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《女流【心灵砒霜】3月6号直播生放送》，上传 2016-03-19 16:25，时长 48:28（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -874,6 +913,11 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】久违的心灵砒霜 第20160810期》，发布 2016-04-11 18:38，时长 1:11:00。标题期号「20160810」晚于发布日 4 个月，不可能成立，按月份错写还原为 0410：发布滞后 1 天符合该号规律；本条前一场心灵砒霜是 2016-03-27，间隔两周，与标题「久违的」相合。时长 71 分钟短于本条 169 分钟，应为当日部分片段。"
+      - url: "https://v.youku.com/v_show/id_XMTUzMjM0MTg2OA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】4月10日直播生放送》，上传 2016-04-12 20:19，时长 156:01（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -976,6 +1020,11 @@
         status: alive
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【心灵砒霜】女朋友和游戏哪个更重要？ DC老师你学到了吗？》，发布 2016-04-18 13:14，时长 1:18:00。标题无期号，按发布滞后 1 天归入 2016-04-17（当日档案已有心灵砒霜一场）。时长 78 分钟短于本条 158 分钟，应为当日部分片段。"
+      - url: "https://v.youku.com/v_show/id_XMTUzOTg1MDI2MA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】4月17日直播生放送》，上传 2016-04-19 03:31，时长 143:32（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1064,6 +1113,11 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTU0Nzc5NTc5Ng==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】4月24日直播生放送》，上传 2016-04-25 20:42，时长 150:13（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags:
       - 心灵砒霜
@@ -1386,6 +1440,11 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTY1NzcxMjU2OA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《《Starbound》女流&炸鱼联机实况Day1》，上传 2016-07-25 22:15，时长 141:00（2026-09-23 频道页实测）。归属依据：Starbound 联机 Day1，档案 07-23 即第一天。"
     contributed_by: data-agent
 
   - id: 2016-07-24-live-01
@@ -1403,6 +1462,11 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMTY1OTUyMjMzMg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【心灵砒霜】女流7月24日读邮件》，上传 2016-07-27 02:31，时长 195:35（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
 
   - id: 2016-07-25-live-01

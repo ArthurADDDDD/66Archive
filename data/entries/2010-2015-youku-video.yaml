@@ -36,7 +36,8 @@
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcxNzY2Mjg4.html"
       kind: original
-      status: alive
+      status: dead
+      note: "2026-09-23 复查：优酷页面显示「该视频已被下架」，频道列表中也已不存在。"
   contributed_by: data-agent
 
 - id: 2010-05-10-video-02
@@ -758,7 +759,8 @@
   sources:
     - url: "https://v.youku.com/v_show/id_XNjA1MDcxMTQ0.html"
       kind: original
-      status: alive
+      status: dead
+      note: "2026-09-23 复查：优酷页面显示「该视频已被下架」，频道列表中也已不存在。"
   contributed_by: data-agent
 
 - id: 2013-09-25-video-01

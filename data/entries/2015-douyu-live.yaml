@@ -73,7 +73,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」《【女流】01-27小游戏直播 I wanna be the xylem》，发布于 2015-01-29，时长 01:27:30（88 分钟），简介写「来www.douyutv.com/nvliu看女流的背啊」，评论区最早两条为 2015-01-30。标题里的 01-27 即直播日，发布比直播晚两天。2026-09-22 实访可播放。该号是斗鱼官方在 A 站的录像号（UID 974915，覆盖全平台主播），与 accounts.yaml 里女流专属的 bili-fan-record-house（A站 u/4397992，2016-05 起）不是同一个号；（2026-09-23 起 platform 枚举已含 acfun，本源挂 account: acfun-douyu-recordhall。）"
     contributed_by: data-agent
-    note: "直播日 2015-01-27。游戏「I wanna be the xylem」与既有的 biantai-rensheng《变态人生大冒险》不是同一款，2026-09-23 已单独登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险），2015-01-28-live-01 为《潜伏之赤途》。"
+    note: "直播日 2015-01-27。游戏「I wanna be the xylem」与既有的 biantai-rensheng《变态人生大冒险》不是同一款，2026-09-23 已单独登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险）。（原先并列的「2015-01-28-live-01《潜伏之赤途》」已于 2026-09-23 查明是 2016 年的录像，改为 2016-01-28-live-01。）"
   - id: 2015-01-29-live-01
     type: live
     date: '2015-01-29'
@@ -89,6 +89,11 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XODgyNDgwNDQ0.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《[1.29直播录像]重温变态人生的大冒险,卒》，上传 2015-01-30 01:16，时长 19:36（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     note: B站官方「女流66」《[1.29直播录像]重温变态人生的大冒险,卒》，标题直接标注直播日期 2015-01-29。duration_min 仅为现存录像/片段时长，不代表当日完整直播时长。
   - id: 2015-02-04-live-01
@@ -201,6 +206,11 @@
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XOTAyODE0ODcy.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《女流直播做饭[2015.2.28]》，上传 2015-03-02 02:55，时长 21:55（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     note: B站官方「女流66」《女流直播做饭[2015.2.28]》，标题直接标注直播日期；时长 21:55，为可确认的 2015-02 额外直播日。duration_min 仅为现存录像/片段时长，不代表当日完整直播时长。
   - id: 2015-03-02-live-01
@@ -849,6 +859,16 @@
       - url: https://www.bilibili.com/video/BV1fx411j7ck?p=2
         kind: replay
         status: alive
+      - url: "https://v.youku.com/v_show/id_XMTM3MjQ4MTA1Ng==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】传说之下Undertale高评分游戏P1》，上传 2015-10-29 16:34，时长 150:45（2026-09-23 频道页实测）。归属依据：优酷播单「传说之下undertale全流程一周目」分段；2026-09-23 音频互相关定位到 B站同日录像（多窗口偏移一致，得分 0.5–0.9；另一天只有游戏配乐级别的 0.5 左右）。"
+      - url: "https://v.youku.com/v_show/id_XMTM3MjYxOTQ5Mg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】传说之下Undertale高评分游戏P2》，上传 2015-10-29 18:49，时长 68:15（2026-09-23 频道页实测）。归属依据：优酷播单「传说之下undertale全流程一周目」分段；2026-09-23 音频互相关定位到 B站同日录像（多窗口偏移一致，得分 0.5–0.9；另一天只有游戏配乐级别的 0.5 左右）。"
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第六期-Undertale传说之下（2015.10.23）》。
   - id: 2015-10-25-live-01
@@ -901,6 +921,21 @@
       - url: https://www.bilibili.com/video/BV1Kx41177jR?p=5
         kind: replay
         status: alive
+      - url: "https://v.youku.com/v_show/id_XMTM3MzM5NzgyMA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】传说之下Undertale高评分游戏P3》，上传 2015-10-30 17:24，时长 106:09（2026-09-23 频道页实测）。归属依据：优酷播单「传说之下undertale全流程一周目」分段；2026-09-23 音频互相关定位到 B站同日录像（多窗口偏移一致，得分 0.5–0.9；另一天只有游戏配乐级别的 0.5 左右）。"
+      - url: "https://v.youku.com/v_show/id_XMTM3NTgzNjk3Mg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】传说之下Undertale高评分游戏P4》，上传 2015-11-02 17:50，时长 130:02（2026-09-23 频道页实测）。归属依据：优酷播单「传说之下undertale全流程一周目」分段；2026-09-23 音频互相关定位到 B站同日录像（多窗口偏移一致，得分 0.5–0.9；另一天只有游戏配乐级别的 0.5 左右）。"
+      - url: "https://v.youku.com/v_show/id_XMTM3NjA5Njk0NA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】传说之下Undertale高评分游戏P5》，上传 2015-11-02 20:59，时长 62:36（2026-09-23 频道页实测）。归属依据：优酷播单「传说之下undertale全流程一周目」分段；2026-09-23 音频互相关定位到 B站同日录像（多窗口偏移一致，得分 0.5–0.9；另一天只有游戏配乐级别的 0.5 左右）。"
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第七期-Undertale传说之下（2015.10.26）》。
   - id: 2015-10-27-live-01
@@ -1111,6 +1146,22 @@
         note: "A站「斗鱼录像厅」（UID 974915）同系列（八），发布 2015-11-30 15:41，时长 25 分钟。本条标题里没有「女流」二字，是 2026-09-23 按简介里的 douyutv.com/156277 链接才找出来的。"
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2015-11-27 17:34（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2015-11-27 17:30。2026-09-23 补入 A 站「斗鱼录像厅」的（六）（七）（八）三段，判据：直播间标题「古墓丽影还不结局」与系列已排到第六至第八段相合、发布滞后 3 天在该号 1～4 天的区间内、三段合计 200 分钟与 17:30 起的一场晚间直播相称。duration_min 由 116 改为 200，取这三段之和。2026-09-23 摘除原挂在本条的 ac2353769（116 分钟）：它发布于 2015-11-27 16:14，早于本场 17:30 开播；看片确认那是一场晚上九点多才开播的深夜场（她自述八点半出门吃火锅、九点才意识到要迟到），与本场不是同一场，已另立 2015-11-25-live-01。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+  - id: 2015-12-07-live-01
+    type: live
+    date: "2015-12-07"
+    title: "《节奏天国》治好多年颈椎病"
+    platform: douyu
+    confidence: high
+    duration_min: 85
+    games: [rhythm-heaven]
+    sources:
+      - url: "https://v.youku.com/v_show/id_XMTQwNzczOTk2MA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【直播生放送】《节奏天国》治好多年颈椎病》，上传 2015-12-09 02:05，时长 84:41；视频简介写「12月7日节奏天国直播录像。」（2026-09-23 取自视频页 __PAGE_CONF__）。"
+    contributed_by: data-agent
+    note: "直播日由她本人优酷投稿的简介自报：「12月7日节奏天国直播录像。」。斗鱼直播间存档快照另见 12-03 21:24「3ds节奏天国」、12-06 15:16 正在直播（标题「今天会早点下」）、12-08 19:03 缩略图，这几天都在播；12-03 与 12-08 两场档案暂未建条目。A站斗鱼录像厅 ac2376661《节奏天国精彩过关精选》（2015-12-08 发布，片中说「昨天那个猫狗打羽毛球」）可能取自本场，音频比对被游戏配乐干扰，未能判定，不挂。"
   - id: 2015-12-13-live-01
     type: live
     date: '2015-12-13'

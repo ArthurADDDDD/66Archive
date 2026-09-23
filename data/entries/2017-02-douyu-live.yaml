@@ -384,6 +384,16 @@
         parts: 3
         status: alive
         account: acfun-fan-record-house
+      - url: "https://v.youku.com/v_show/id_XMjY0MDg2MjI4OA==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流】伊森卡特的消失Part1of3》，上传 2017-03-15 18:27，时长 85:05（2026-09-23 频道页实测）。归属依据：伊森卡特的消失 Part1，整段落在 B站 2.18 录像第 2 段；2026-09-23 音频互相关，两处取样偏移一致（得分 0.5–1.1，次优 <0.25）。"
+      - url: "https://v.youku.com/v_show/id_XMjY0MDg4MTIxNg==.html"
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流】伊森卡特的消失Part2of3》，上传 2017-03-15 18:58，时长 107:47（2026-09-23 频道页实测）。归属依据：伊森卡特的消失 Part2，前约 48 分钟与 B站 2.18 录像第 3 段对齐（得分 0.94），其后约 60 分钟 B站未存，按连续录制归入同场。"
     contributed_by: data-agent
 
   - id: 2017-02-20-live-01
