@@ -1,12 +1,13 @@
   - id: 2023-05-01-live-01
     type: live
     date: "2023-05-01"
+    tags: [一起See]
     title: "How to Get Rich"
     platform: douyu
     confidence: high
     duration_min: 294
     cover: "https://tx-free-imgs.acfun.cn/newUpload/4397992_03397b91d4e545f0968a04ba6e1badaa.jpeg?imageslim"
-    games: [overwatch]
+    games: []
     sources:
       - url: "https://www.acfun.cn/v/ac41293737"
         kind: replay
@@ -56,12 +57,12 @@
         note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-05-01》，10 个分P 合计 4:50:26，录制窗口 2023-05-01 15:08→2023-05-01 19:58。"
     contributed_by: data-agent
 
-    note: 补入 A站互补回放：ac41293741
+    note: "补入 A站互补回放：ac41293741 2026-09-23 核对：KassyTan 录像 10 个分P 的首帧全是 Netflix 纪录片《How to Get Rich》（中文字幕），末段是 Netflix 片尾字幕，本场是一起看这部纪录片，不是游戏；原 games: [overwatch] 无依据，已去掉，改标「一起See」。"
 
   - id: 2023-05-03-live-01
     type: live
     date: "2023-05-03"
-    title: "BrambleThe Mountain King"
+    title: "Bramble: The Mountain King"
     platform: douyu
     confidence: high
     duration_min: 392
@@ -1608,12 +1609,13 @@
   - id: 2023-05-29-live-01
     type: live
     date: "2023-05-29"
+    cover: "https://i0.hdslb.com/bfs/storyff/n230529a21ifr05w6upd9vo4jryp0rcg_firsti.jpg"
     title: "塞尔达传说"
     platform: douyu
     confidence: medium
     duration_min: 529
     games: [zelda-totk]
-    note: "B站「直播代录luzhiob」全长录播；标题写“上午十点来塞尔达”。"
+    note: "B站「直播代录luzhiob」全长录播；标题写“上午十点来塞尔达”。 2026-09-23 封面原由 B站投稿兜底（luzhiob 的频道通用横幅），改用 KassyTan 录像中段分P（15:13 起）首帧。"
     sources:
       - url: "https://www.bilibili.com/video/BV1r24y1A7m4"
         kind: replay

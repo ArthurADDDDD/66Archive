@@ -50,8 +50,8 @@
     platform: douyu
     confidence: medium
     duration_min: 149
-    cover: "https://tx-free-imgs.acfun.cn/dotnet/artemis/u/cms/www/201501/241149318cd9.jpg?imageslim"
-    games: []
+    cover: "/images/covers/2015-01-23-live-01.jpg"
+    games: [lumino-city, rhythm-heaven]
     sources:
       - url: https://www.acfun.cn/v/ac1696480
         kind: replay
@@ -59,10 +59,11 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【女流】女流之萌音加节奏 让你的耳朵欲罢不能》，发布 2015-01-24 11:09，时长 2:29:00，简介写 www.douyutv.com/nvliu。"
     contributed_by: data-agent
-    note: "直播日 2015-01-23 由三条证据合定：存档斗鱼快照显示 2015-01-23 19:34 房间在播（直播间标题「女流之背」）；录像次日 2015-01-24 上午 11:09 发布，滞后 1 天，符合该号规律；149 分钟与 19:34 起的一场晚间直播相称。标题取自 A 站投稿标题，不是当日直播间标题。注意与同日已有的优酷短片 2015-01-23-video-01《大金刚热带雨林勇斗马达加斯加企鹅》（12 分钟）区分：二者是否同一场尚未证实。games 留空——当日内容含节奏类游戏，但具体是哪一款未经核实。"
+    note: "直播日 2015-01-23 由三条证据合定：存档斗鱼快照显示 2015-01-23 19:34 房间在播（直播间标题「女流之背」）；录像次日 2015-01-24 上午 11:09 发布，滞后 1 天，符合该号规律；149 分钟与 19:34 起的一场晚间直播相称。标题取自 A 站投稿标题，不是当日直播间标题。注意与同日已有的优酷短片 2015-01-23-video-01《大金刚热带雨林勇斗马达加斯加企鹅》（12 分钟）区分：二者是否同一场尚未证实。games 留空——当日内容含节奏类游戏，但具体是哪一款未经核实。 2026-09-23 看片补 games：录像 20 分钟处起是《节奏天国》的虾子小游戏（界面中文「还剩1组」），40～140 分钟是《卢米诺城》（Lumino City，与前一天 01-22 同一款），标题「萌音加节奏」的「节奏」即节奏天国；节奏天国具体是哪一作未辨认，只挂系列。封面由 A 站投稿的露脸自拍换成录像内的《卢米诺城》画面（2015 年初她直播不露脸）。"
   - id: 2015-01-27-live-01
     type: live
     date: '2015-01-27'
+    cover: "/images/covers/2015-01-27-live-01.jpg"
     title: "小游戏直播 I wanna be the xylem"
     platform: douyu
     confidence: high
@@ -75,10 +76,11 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」《【女流】01-27小游戏直播 I wanna be the xylem》，发布于 2015-01-29，时长 01:27:30（88 分钟），简介写「来www.douyutv.com/nvliu看女流的背啊」，评论区最早两条为 2015-01-30。标题里的 01-27 即直播日，发布比直播晚两天。2026-09-22 实访可播放。该号是斗鱼官方在 A 站的录像号（UID 974915，覆盖全平台主播），与 accounts.yaml 里女流专属的 bili-fan-record-house（A站 u/4397992，2016-05 起）不是同一个号；（2026-09-23 起 platform 枚举已含 acfun，本源挂 account: acfun-douyu-recordhall。）"
     contributed_by: data-agent
-    note: "直播日 2015-01-27。游戏「I wanna be the xylem」与既有的 biantai-rensheng《变态人生大冒险》不是同一款，2026-09-23 已单独登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险）。（原先并列的「2015-01-28-live-01《潜伏之赤途》」已于 2026-09-23 查明是 2016 年的录像，改为 2016-01-28-live-01。）"
+    note: "直播日 2015-01-27。游戏「I wanna be the xylem」与既有的 biantai-rensheng《变态人生大冒险》不是同一款，2026-09-23 已单独登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险）。（原先并列的「2015-01-28-live-01《潜伏之赤途》」已于 2026-09-23 查明是 2016 年的录像，改为 2016-01-28-live-01。） 2026-09-23 A 站投稿封面只有 160×90，封面改用录像 40 分钟处画面。"
   - id: 2015-01-29-live-01
     type: live
     date: '2015-01-29'
+    cover: "https://i0.hdslb.com/bfs/archive/81e7f3271d11e35349a8a373d1129ba156875178.jpg"
     title: 重温变态人生的大冒险，卒
     platform: douyu
     confidence: high
@@ -186,8 +188,8 @@
     platform: douyu
     confidence: high
     duration_min: 116
-    cover: "https://tx-free-imgs.acfun.cn/dotnet/artemis/u/cms/www/201502/271130279kar.jpg?imageslim"
-    games: []
+    cover: "/images/covers/2015-02-10-live-01.jpg"
+    games: [super-mario-3d-world, taiko-no-tatsujin]
     sources:
       - url: https://www.acfun.cn/v/ac1762715
         kind: replay
@@ -195,7 +197,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【女流】又见福利 女流又来直播跳舞了》，发布 2015-02-27 11:30，时长 1:55:34，简介 www.douyutv.com/nvliu。片头约 16 分钟是开播前的等待音乐。"
     contributed_by: data-agent
-    note: "春节停播前倒数第二场。直播日 2015-02-10 由片中自述与存档快照合定：她开场说「今天不好意思啊，让大家久等了，本来是两点半开始」，随后讲零食店「2月11号开始到正月初八不发货」、微博「今天晚上12点」抽奖，并说「我后天坐飞机就走了……明天……新年特别节目，跟大家一起打一局 DOTA2」。斗鱼快照显示春节前最后一次开播是 2015-02-11 17:47，直播间标题正是「水友赛+2点半Braid时空幻境」（与观众打比赛、两点半开播），此后到 02-25 都没有开播——「明天」即 02-11、「后天」离京，今天只能是 02-10。录像发布滞后 17 天，是春节停更所致。内容为 Wii U《舞力全开》（Just Dance），该游戏尚未登记，games 留空待人类登记。标题取自 A 站投稿标题。"
+    note: "春节停播前倒数第二场。直播日 2015-02-10 由片中自述与存档快照合定：她开场说「今天不好意思啊，让大家久等了，本来是两点半开始」，随后讲零食店「2月11号开始到正月初八不发货」、微博「今天晚上12点」抽奖，并说「我后天坐飞机就走了……明天……新年特别节目，跟大家一起打一局 DOTA2」。斗鱼快照显示春节前最后一次开播是 2015-02-11 17:47，直播间标题正是「水友赛+2点半Braid时空幻境」（与观众打比赛、两点半开播），此后到 02-25 都没有开播——「明天」即 02-11、「后天」离京，今天只能是 02-10。录像发布滞后 17 天，是春节停更所致。内容为 Wii U《舞力全开》（Just Dance），该游戏尚未登记，games 留空待人类登记。标题取自 A 站投稿标题。 2026-09-23 看片补 games：约 30～80 分钟是 Wii U《超级马里奥3D世界》（日文界面，用碧琪公主打 World 6），100 分钟以后是 Wii U 日版《太鼓之达人》；开头约 17 分钟处的跳舞游戏结算画面（「Hi-Score! Sunny」）像《舞力全开》但未能确认是哪一作，仍不挂。封面由 A 站投稿的露脸自拍换成录像内的马里奥3D世界画面。"
   - id: 2015-02-28-live-01
     type: live
     date: '2015-02-28'
@@ -324,7 +326,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【女流】ps4开箱引来好人小杰的帮忙》，发布 2015-03-31 16:48，时长 1:38:00，简介写 www.douyutv.com/nvliu。"
     contributed_by: data-agent
-    note: "直播日 2015-03-30：存档斗鱼快照的直播间缩略图时间戳为 2015-03-30 19:11，证明该日晚间在播；录像次日 2015-03-31 16:48 发布，滞后 1 天。与相邻的 2015-03-31-live-01 不冲突——同一张快照（抓取于 2015-03-31 14:56）显示 show_status=1，即 03-31 当天也在播，两场是不同日的两场。标题取自录像内容（PS4 开箱），当时直播间标题挂的是「女流GTA5」；开箱之后接着玩 GTA5 与之相合，但本条不据此断言当日直播间标题即本条标题。"
+    note: "直播日 2015-03-30：存档斗鱼快照的直播间缩略图时间戳为 2015-03-30 19:11，证明该日晚间在播；录像次日 2015-03-31 16:48 发布，滞后 1 天。与相邻的 2015-03-31-live-01 不冲突——同一张快照（抓取于 2015-03-31 14:56）显示 show_status=1，即 03-31 当天也在播，两场是不同日的两场。标题取自录像内容（PS4 开箱），当时直播间标题挂的是「女流GTA5」；开箱之后接着玩 GTA5 与之相合，但本条不据此断言当日直播间标题即本条标题。 2026-09-23 抽看 10/40/60/80/95 分钟：画面一直是摄像头拍桌面与手柄的开箱、PS4 系统设置和下载列表（《南瓜先生大冒险》、THE PLAYROOM 在下载中），抽样处未见任何游戏在玩，games 继续留空。"
   - id: 2015-03-31-live-01
     type: live
     date: '2015-03-31'
@@ -397,6 +399,7 @@
   - id: 2015-06-30-live-01
     type: live
     date: '2015-06-30'
+    cover: "https://i2.hdslb.com/bfs/archive/8663b453eb92d33291314731e36f967baaa6ef72.jpg"
     title: 直播标题已遗失
     platform: douyu
     confidence: high
@@ -855,6 +858,7 @@
   - id: 2015-10-23-live-01
     type: live
     date: '2015-10-23'
+    cover: "https://i2.hdslb.com/bfs/archive/b6bb752d3b384a55209d2eca67896dc74f332211.png"
     title: Undertale传说之下
     platform: douyu
     confidence: high
@@ -908,6 +912,7 @@
   - id: 2015-10-26-live-01
     type: live
     date: '2015-10-26'
+    cover: "https://i2.hdslb.com/bfs/archive/743478a4154cb69f9e85856343f1b83943614a4b.png"
     title: Undertale传说之下
     platform: douyu
     confidence: high
@@ -1133,6 +1138,7 @@
   - id: 2015-11-27-live-01
     type: live
     date: '2015-11-27'
+    cover: "https://tx-free-imgs.acfun.cn/dotnet/artemis/u/cms/www/201511/30114538z9pdb1r7.jpg?imageslim"
     title: "古墓丽影还不结局"
     platform: douyu
     confidence: high

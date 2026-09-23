@@ -342,6 +342,7 @@
   - id: 2016-02-19-live-01
     type: live
     date: "2016-02-19"
+    cover: "https://i0.hdslb.com/bfs/archive/b925e0f0bedc301db44f62f94570d844b7b62ba0.png"
     title: "毛线小精灵 UNRAVEL"
     platform: douyu
     confidence: high
@@ -520,6 +521,7 @@
   - id: 2016-03-09-live-01
     type: live
     date: '2016-03-09'
+    cover: "https://i2.hdslb.com/bfs/archive/65748c2795f6889ba84ad361c14896acc95235f8.png"
     title: 星露谷物语
     platform: douyu
     confidence: high
@@ -1358,6 +1360,7 @@
   - id: 2016-07-10-live-01
     type: live
     date: "2016-07-10"
+    series: xinling-pishuang
     title: "心灵砒霜"
     platform: douyu
     cover: "/images/covers/2016-07-10-live-01.jpg"
@@ -1433,6 +1436,7 @@
   - id: 2016-07-23-live-01
     type: live
     date: "2016-07-23"
+    cover: "https://i2.hdslb.com/bfs/archive/f32d08ad81a8d8e89f5a8ca59f8e92d1c4d28106.jpg"
     title: "星界边境(starbound) day1"
     platform: douyu
     confidence: high
@@ -1454,13 +1458,15 @@
   - id: 2016-07-24-live-01
     type: live
     date: "2016-07-24"
+    series: xinling-pishuang
+    cover: "/images/covers/2016-07-24-live-01.jpg"
     title: "心灵砒霜"
     platform: douyu
     confidence: high
     duration_min: 202
     games: []
     tags: [心灵砒霜]
-    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。"
+    note: "B站「女流录像小屋」《心灵砒霜》，全长录播。 2026-09-23 封面原由 B站投稿封面兜底，是与 06-05、06-26 共用的猫咖照片，改用本场录像 P2 25 分钟处画面。"
     sources:
       - url: "https://www.bilibili.com/video/BV18s41117tG"
         kind: replay

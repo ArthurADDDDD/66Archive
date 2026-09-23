@@ -663,12 +663,13 @@
   - id: 2023-03-12-live-01
     type: live
     date: "2023-03-12"
+    cover: "https://i0.hdslb.com/bfs/storyff/n230312qn2onahtfhkd7ju3sm8p85drv_firsti.jpg"
     title: "大侠立志传"
     platform: douyu
     confidence: high
     duration_min: 382
     games: [daxia-lizhizhuan]
-    note: "B站「直播代录luzhiob」全长录播 382min；「女流录像小屋」217min 为同场较短版本，并入同一 source。"
+    note: "B站「直播代录luzhiob」全长录播 382min；「女流录像小屋」217min 为同场较短版本，并入同一 source。 2026-09-23 封面原由 B站投稿兜底（luzhiob 的频道通用横幅），改用 KassyTan 录像中段分P（15:26 起）首帧。"
     sources:
       - url: "https://www.bilibili.com/video/BV1DY411B7Cb"
         kind: replay

@@ -163,11 +163,12 @@
   - id: 2016-05-08-live-01
     type: live
     date: "2016-05-08"
-    title: "8日"
+    series: xinling-pishuang
+    title: "心灵砒霜"
     platform: douyu
     confidence: high
     duration_min: 149
-    cover: "https://i0.hdslb.com/bfs/archive/e710c5b17b028a4ff756d14d63500ecb45497b4f.jpg"
+    cover: "/images/covers/2016-05-08-live-01.jpg"
     games: []
     sources:
       - url: https://www.bilibili.com/video/BV1Gs411B7c9
@@ -196,6 +197,7 @@
         account: youku-official
         note: "她本人优酷号《【心灵砒霜】5月8日片段2直播生放送》，上传 2016-05-22 18:36，时长 48:21（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
+    note: "2026-09-23 标题原为「8日」（录像屋分P名），改为「心灵砒霜」；封面原为泛用的节目插画，改用斗鱼录像厅录像 40 分钟处画面。"
     tags: [心灵砒霜]
 
   - id: 2016-05-09-live-01
@@ -405,11 +407,12 @@
   - id: 2016-05-22-live-01
     type: live
     date: "2016-05-22"
-    title: "22日"
+    series: xinling-pishuang
+    title: "心灵砒霜"
     platform: douyu
     confidence: high
     duration_min: 121
-    cover: "https://i0.hdslb.com/bfs/archive/77c3d6d2ea49ad3d2846b42eadf466a8f9969955.jpg"
+    cover: "/images/covers/2016-05-22-live-01.jpg"
     games: []
     sources:
       - url: https://www.bilibili.com/video/BV13s411i7iE
@@ -427,6 +430,7 @@
         account: youku-official
         note: "她本人优酷号《【心灵砒霜】5月22日直播生放送》，上传 2016-05-23 18:16，时长 120:39（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
+    note: "2026-09-23 标题原为「22日」，改为「心灵砒霜」；封面原为泛用的节目插画，改用 A 站录像 50 分钟处画面。"
     tags: [心灵砒霜]
 
   - id: 2016-05-23-live-01

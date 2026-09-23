@@ -193,11 +193,12 @@
   - id: 2016-06-05-live-01
     type: live
     date: "2016-06-05"
-    title: "5日"
+    series: xinling-pishuang
+    title: "心灵砒霜"
     platform: douyu
     confidence: high
     duration_min: 132
-    cover: "https://i0.hdslb.com/bfs/archive/ac4907f5be1e982aac40e8b15b90c110686d8892.jpg"
+    cover: "/images/covers/2016-06-05-live-01.jpg"
     games: []
     sources:
       - url: https://www.bilibili.com/video/BV19s411i79W
@@ -215,6 +216,7 @@
         account: youku-official
         note: "她本人优酷号《【心灵砒霜】6月5日直播生放送》，上传 2016-06-06 13:29，时长 78:55（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
+    note: "2026-09-23 标题原为「5日」，改为「心灵砒霜」；封面原是一张猫咖照片（同一张图也出现在 06-26、07-24），不是本场画面，改用 A 站录像 50 分钟处画面。"
     tags: [心灵砒霜]
 
   - id: 2016-06-08-live-01
@@ -354,6 +356,7 @@
   - id: 2016-06-24-live-01
     type: live
     date: "2016-06-24"
+    cover: "https://i2.hdslb.com/bfs/archive/8211e60e0e91fe69a5ab59997edb7fad42591c37.jpg"
     title: "幽灵诡计 day1"
     platform: douyu
     confidence: high
@@ -385,6 +388,7 @@
   - id: 2016-06-25-live-01
     type: live
     date: "2016-06-25"
+    cover: "https://i2.hdslb.com/bfs/archive/8211e60e0e91fe69a5ab59997edb7fad42591c37.jpg"
     title: "幽灵诡计 day2"
     platform: douyu
     confidence: high
@@ -416,13 +420,15 @@
   - id: 2016-06-26-live-01
     type: live
     date: "2016-06-26"
+    series: xinling-pishuang
+    cover: "/images/covers/2016-06-26-live-01.jpg"
     title: "久违的pishuang"
     platform: douyu
     confidence: high
     duration_min: 202
     games: []
     tags: [心灵砒霜]
-    note: "B站「女流录像小屋」《久违的pishuang》，全长录播。"
+    note: "B站「女流录像小屋」《久违的pishuang》，全长录播。 2026-09-23 封面原由 B站投稿封面兜底，是与 06-05、07-24 共用的猫咖照片，改用本场录像 P2 25 分钟处画面。"
     sources:
       - url: "https://www.bilibili.com/video/BV1es411v7vv"
         kind: replay
@@ -438,6 +444,7 @@
   - id: 2016-06-27-live-01
     type: live
     date: "2016-06-27"
+    cover: "https://i0.hdslb.com/bfs/archive/ab84bcb484e4c8d644f7a8ed298b7e4266edca7a.jpg"
     title: "幽灵诡计 day3"
     platform: douyu
     confidence: high
@@ -464,6 +471,7 @@
   - id: 2016-06-28-live-01
     type: live
     date: "2016-06-28"
+    cover: "https://i0.hdslb.com/bfs/archive/ab84bcb484e4c8d644f7a8ed298b7e4266edca7a.jpg"
     title: "幽灵诡计 day4-完结"
     platform: douyu
     confidence: high
