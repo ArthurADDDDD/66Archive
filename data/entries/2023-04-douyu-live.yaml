@@ -344,23 +344,11 @@
             title: "[2023-04-06 20-02-25][女流66][忘差不多了当新游戏玩]"
             duration_sec: 1523
         note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「Zytau」《[2023-04-06 13-29-40][女流66][忘差不多了当新游戏玩]》，2 个分P 合计 6:42:18，录制窗口 2023-04-06 13:29→2023-04-06 20:27。"
-    contributed_by: data-agent
-
-  - id: 2023-04-07-live-01
-    type: live
-    date: "2023-04-07"
-    title: "直播录像"
-    platform: douyu
-    confidence: medium
-    duration_min: 419
-    note: "B站「直播代录luzhiob」全长录播；标题未标注具体内容。"
-    sources:
       - url: "https://www.bilibili.com/video/BV1vc411W7ts"
         kind: replay
         status: alive
-        account: bili-fan-record-house
+        note: "B站「直播代录luzhiob」《女流66 2023-04-07直播录像》，2023-04-08 02:49 投稿；4 个分P 文件名为 2023-04-06T13:29 → 19:28 起，合计 6:58:39，是 04-06 这场的全长录像，标题日期错写成 04-07。2026-09-23 由误建的 2023-04-07-live-01 并入。"
     contributed_by: data-agent
-    games: [sekiro]
 
   - id: 2023-04-08-live-01
     type: live
