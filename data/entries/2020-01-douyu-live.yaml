@@ -1,25 +1,3 @@
-  - id: 2020-01-01-live-01
-    type: live
-    date: "2020-01-01"
-    title: "新年快乐"
-    platform: douyu
-    confidence: high
-    duration_min: 65
-    cover: "https://i0.hdslb.com/bfs/archive/0175ba0fa5e3cb23584d504b244c5ad3be2575bb.png"
-    games: []
-    sources:
-      - url: https://www.bilibili.com/video/BV18J411b7op
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.acfun.cn/v/ac12216546"
-        kind: replay
-        parts: 1
-        status: alive
-        account: acfun-fan-record-house
-    contributed_by: data-agent
-    tags: [聊天]
-
   - id: 2020-01-01-live-02
     type: live
     date: "2020-01-01"

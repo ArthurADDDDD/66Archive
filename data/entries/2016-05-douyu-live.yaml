@@ -138,6 +138,28 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2016-05-07-live-01
+    type: live
+    date: "2016-05-07"
+    title: "黑暗之魂3第八天"
+    platform: douyu
+    confidence: high
+    duration_min: 72
+    cover: "https://i0.hdslb.com/bfs/archive/7aa0b5e7316304387c56a682a31f8c4d68aa64f9.jpg"
+    games: [dark-souls-3]
+    sources:
+      - url: https://www.bilibili.com/video/BV1Gs411B7ta
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac2729380"
+        kind: replay
+        parts: 1
+        status: alive
+        account: acfun-fan-record-house
+    contributed_by: data-agent
+    note: "2026-09-23 由 2016-05-08-live-02 改记 2016-05-07：录像屋标题写「5.8」，但片头说「昨天自己挖的坑…昨天你们看我打」（前一天就是第七天 05-06），片尾说「明天心灵砒霜见吧，后天这个游戏能不能完结」——05-08 是周日心灵砒霜、05-09 第九天完结。贴吧 2016 直播专贴也记 05-06、05-07 两天黑暗之魂3。"
+
   - id: 2016-05-08-live-01
     type: live
     date: "2016-05-08"
@@ -175,27 +197,6 @@
         note: "她本人优酷号《【心灵砒霜】5月8日片段2直播生放送》，上传 2016-05-22 18:36，时长 48:21（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
     tags: [心灵砒霜]
-
-  - id: 2016-05-08-live-02
-    type: live
-    date: "2016-05-08"
-    title: "黑暗之魂3第八天"
-    platform: douyu
-    confidence: high
-    duration_min: 72
-    cover: "https://i0.hdslb.com/bfs/archive/7aa0b5e7316304387c56a682a31f8c4d68aa64f9.jpg"
-    games: [dark-souls-3]
-    sources:
-      - url: https://www.bilibili.com/video/BV1Gs411B7ta
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.acfun.cn/v/ac2729380"
-        kind: replay
-        parts: 1
-        status: alive
-        account: acfun-fan-record-house
-    contributed_by: data-agent
 
   - id: 2016-05-09-live-01
     type: live

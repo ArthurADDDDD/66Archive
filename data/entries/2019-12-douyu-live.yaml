@@ -684,3 +684,32 @@
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [warcraft-3]
+
+  - id: 2019-12-31-live-01
+    type: live
+    date: "2019-12-31"
+    title: "新年快乐"
+    platform: douyu
+    confidence: high
+    duration_min: 65
+    cover: "https://i0.hdslb.com/bfs/archive/0175ba0fa5e3cb23584d504b244c5ad3be2575bb.png"
+    games: []
+    sources:
+      - url: https://www.bilibili.com/video/BV18J411b7op
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac12216546"
+        kind: replay
+        parts: 1
+        status: alive
+        account: acfun-fan-record-house
+      - url: "https://www.bilibili.com/video/BV1aJ411b7fH"
+        kind: replay
+        status: alive
+        account: bili-fan-secret-house
+        parts: 1
+        note: "秘密录像屋《斗鱼-女流66_2019-12-31 大家新年快乐2020好运》，单P 64:45，发布 2020-01-01 11:27；录像文件名按开播日记为 2019-12-31。2026-09-23 补挂。"
+    contributed_by: data-agent
+    tags: [聊天]
+    note: "2019-12-31 晚的跨年直播：贴吧 2019 直播专贴记 12/31「跨年」；秘密录像屋录像文件名为「2019-12-31」、与本条同长 65 分钟；录像屋投稿于 2020-01-01 上午。按开播日记 2019-12-31，2026-09-23 由 2020-01-01-live-01 改为现 id；同日 2020-01-01-live-02 莎木3 不受影响。"

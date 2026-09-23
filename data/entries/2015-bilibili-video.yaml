@@ -8,6 +8,7 @@
     platform: bilibili
     confidence: high
     duration_min: 69
+    cover: "https://i0.hdslb.com/bfs/archive/fd64440496056d768e22a6c494b28a0795390321.jpg"
     games: [im-scared]
     tags: [视频时代]
     sources:
@@ -52,6 +53,11 @@
         kind: original
         status: alive
         account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTI2NjQxNTkyNA==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "她本人优酷号投稿，标题作《【女流】辐射：避难所解说 ，熊孩子也是要生的》，上传 2015-06-20 09:39，时长 9:33，与 B站这支同长到秒；2026-09-23 音频逐分钟对齐（10 个窗口偏移均为 0）确认是同一支视频、两平台标题不同。"
     contributed_by: data-agent
     note: B站官方「女流66」2015-06-20 投稿。
   - id: 2015-06-20-video-02
