@@ -46,6 +46,32 @@
         note: "A站「斗鱼录像厅」（UID 974915）同系列（二），发布 2016-01-04 13:39，时长 1:18:00。"
     contributed_by: data-agent
     note: "直播日 2016-01-03：存档斗鱼快照（抓取于 2016-01-04 08:08）的直播间缩略图时间戳为 2016-01-03 18:42，证明该日晚间在播；两段录像次日 2016-01-04 下午 13:39／13:41 连续发布，滞后 1 天，且发布时刻早于当日傍晚，排除了它们取自 01-04 晚间直播的可能。两段合计 131 分钟与一场晚间直播相称。标题取自录像内容；当时快照上的直播间标题是「hello  huangbobo」，但按本仓既定口径，事后抓到的标题不径直认作该场标题，故未采用。2026-09-23 登记并挂上《尼德霍格》；duration_min 由 131 改为 166（（一）实长 88 分钟＋（二）78 分钟）。"
+  - id: 2016-01-04-live-02
+    type: live
+    date: "2016-01-04"
+    title: "命运交叉的客店 & 放逐之城"
+    platform: douyu
+    confidence: high
+    duration_min: 160
+    games: [mingyun-jiaocha-de-kedian, banished, papers-please]
+    sources:
+      - url: https://www.acfun.cn/v/ac2440577
+        kind: replay
+        status: alive
+        account: acfun-douyu-recordhall
+        note: "A站「斗鱼录像厅」《【橙光游戏】跟着女流姐姐一起来解谜命运交叉的客店吧！》，发布 2016-01-06 15:26，时长 1:05:28。"
+      - url: https://www.acfun.cn/v/ac2440642
+        kind: replay
+        status: alive
+        account: acfun-douyu-recordhall
+        note: "同场《【主机游戏】女流：放逐之城 OR 乱伦之城？ 都这么能生孩子！》，发布 2016-01-06 15:50，时长 55:05。开头「今天怎么总换游戏……第一个游戏太早通关了」，结尾「886明天见啊」。"
+      - url: https://www.acfun.cn/v/ac2441013
+        kind: replay
+        status: alive
+        account: acfun-douyu-recordhall
+        note: "同场《【主机游戏】Paper,Please -《请出示文件》接受女流检察官的审查吧！》，发布 2016-01-06 18:02，时长 40:02。"
+    contributed_by: data-agent
+    note: "直播日 2016-01-04 取自贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）：「1/4 橙光游戏：命运交叉的客店 & banished放逐之城」，次日「1/5 who's your Daddy（谁是你爸爸）& 星之契约」与 01-05 快照直播间标题相合。三段录像同一身衣着、同一房间、白天光线，《放逐之城》一段以「今天怎么总换游戏」开头、以「886明天见」收尾，是同一场下午直播；《请出示文件》那段贴吧没记，但与另两段同批发布、衣着相同。此前（task-041 续五）只能框在 01-04～01-05，现由贴吧记录定案。id 用 live-02：live-01 这个 id 历史上曾指向 2015-12-24 的 MC 圣诞评分，已改名，空出的旧 id 不复用，免得旧链接静默指到另一场。"
   - id: 2016-01-05-live-01
     type: live
     date: '2016-01-05'
@@ -55,7 +81,7 @@
     no_public_replay: true
     games: [whos-your-daddy]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+    note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。"
   - id: 2016-01-10-live-01
     type: live
     date: '2016-01-10'
@@ -86,6 +112,23 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+  - id: 2016-01-11-live-01
+    type: live
+    date: "2016-01-11"
+    title: "Poly Bridge 11月更新最新关卡"
+    platform: douyu
+    confidence: high
+    duration_min: 205
+    games: [poly-bridge]
+    sources:
+      - url: https://www.acfun.cn/v/ac2454741
+        kind: replay
+        parts: 2
+        status: alive
+        account: acfun-douyu-recordhall
+        note: "A站「斗鱼录像厅」《【主机游戏】Poly bridge 11月更新最新关卡 快来体验吧（一）》，上下半场两 P 共 205 分钟，发布 2016-01-12 10:52。同号另有（二）ac2454768，经音频比对与本条下半场逐秒相同，是重复投稿，不另挂。"
+    contributed_by: data-agent
+    note: "直播日 2016-01-11 取自贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）：「1/11 Poly bridge11月更新」，与录像标题逐字相合；楼中楼另有补漏「1/11~1/13 poly bridge」。片尾她说「明天见，明天把后面六关过了」，与 01-12 17:58 快照所证的次日开播相接。片中提到同事听说她「见到黄渤了」（01-03 直播间标题「hello huangbobo」），时序一致。"
   - id: 2016-01-20-live-01
     type: live
     date: '2016-01-20'
@@ -198,6 +241,22 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）同系列（四），发布 2016-02-23 10:54，时长 1:59:00。"
     contributed_by: data-agent
+  - id: 2016-02-20-live-01
+    type: live
+    date: "2016-02-20"
+    title: "街霸5 & 生锈小湖新章 Birthday"
+    platform: douyu
+    confidence: high
+    duration_min: 135
+    games: [street-fighter-v, rusty-lake]
+    sources:
+      - url: https://www.acfun.cn/v/ac2553531
+        kind: replay
+        status: alive
+        account: acfun-douyu-recordhall
+        note: "A站「斗鱼录像厅」《【主机游戏】终极街霸4 女流也玩街霸！》，发布 2016-02-22 15:20，时长 2:15:04。投稿标题写「终极街霸4」是错的：片中角色有劳拉（Laura，《街霸5》新角色），开播即连不上服务器，与 2016-02-16 发售的《街霸5》首周服务器问题相合；2018 年已有观众评论「这是街霸5吧」。录像只含街霸部分。"
+    contributed_by: data-agent
+    note: "直播日 2016-02-20 取自贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）：当天所发第 4 楼「2/20 rusty lake 新章birthday」，同楼楼中楼「街霸5」，均发于 2016-02-20 当日。录像发布滞后 2 天。此前（task-041 续五）只能框在 02-17～02-21，现定案。"
   - id: 2016-02-21-live-01
     type: live
     date: '2016-02-21'
@@ -225,9 +284,9 @@
     platform: douyu
     confidence: high
     no_public_replay: true
-    games: []
+    games: [nixizhixingtu-shanyao]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2016-02-24 15:36（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-02-24 15:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。"
+    note: "直播日由存档的斗鱼直播间页面确定：2016-02-24 15:36（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-02-24 15:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧 2016 年直播游戏专贴（tieba.baidu.com/p/4363790737）当天所发第 9 楼记「2/24 逆袭之星途闪耀（橙光游戏）」——直播间标题里的「逆途」就是这款橙光游戏《逆袭之星途闪耀》的简称，3/2 又记「逆袭之星途闪耀 3月1号更新章」，与 03-09 快照标题「逆袭更新啦」同指一作。"
   - id: 2016-03-03-live-01
     type: live
     date: '2016-03-03'
