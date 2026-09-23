@@ -32,14 +32,14 @@
     platform: douyu
     confidence: high
     duration_min: 100
-    games: []
+    games: [lumino-city]
     sources:
       - url: https://www.acfun.cn/v/ac1694027
         kind: replay
         status: alive
         note: "A站「斗鱼录像厅」（UID 974915）《【女流】女流之背 女流的小游戏时间》，发布 2015-01-23 10:45，时长 1:39:51，简介 www.douyutv.com/nvliu。"
     contributed_by: data-agent
-    note: "首播次日的第二场。直播日 2015-01-22 由两头夹定：① 片中她几次说到「昨天」的直播——「昨天说是收到了 1.57 的鱼丸……伙伴们都很鼓励我，我也很感动」「你截的是昨天直播过那个踢足球的游戏」「（Lumino City）昨天给大家讲了，所有的场景都是真实搭建的」，所以这一场之前一天已经播过；而首播是 2015-01-21，故本场不早于 01-22。② 录像 2015-01-23 10:45 已发布，早于 01-23 19:34 那场，故不晚于 01-22。音频比对另证本片不在首播录像 ac1691798 之内。当天内容含《Lumino City》等小游戏，该游戏尚未登记，games 留空待人类登记。标题取自 A 站投稿标题。"
+    note: "首播次日的第二场。直播日 2015-01-22 由两头夹定：① 片中她几次说到「昨天」的直播——「昨天说是收到了 1.57 的鱼丸……伙伴们都很鼓励我，我也很感动」「你截的是昨天直播过那个踢足球的游戏」「（Lumino City）昨天给大家讲了，所有的场景都是真实搭建的」，所以这一场之前一天已经播过；而首播是 2015-01-21，故本场不早于 01-22。② 录像 2015-01-23 10:45 已发布，早于 01-23 19:34 那场，故不晚于 01-22。音频比对另证本片不在首播录像 ac1691798 之内。当天内容含《Lumino City》（卢米诺城）等小游戏。标题取自 A 站投稿标题。"
   - id: 2015-01-23-live-01
     type: live
     date: '2015-01-23'
@@ -62,14 +62,14 @@
     platform: douyu
     confidence: high
     duration_min: 88
-    games: []
+    games: [i-wanna-be-the-xylem]
     sources:
       - url: https://www.acfun.cn/v/ac1708393
         kind: replay
         status: alive
         note: "A站「斗鱼录像厅」《【女流】01-27小游戏直播 I wanna be the xylem》，发布于 2015-01-29，时长 01:27:30（88 分钟），简介写「来www.douyutv.com/nvliu看女流的背啊」，评论区最早两条为 2015-01-30。标题里的 01-27 即直播日，发布比直播晚两天。2026-09-22 实访可播放。该号是斗鱼官方在 A 站的录像号（UID 974915，覆盖全平台主播），与 accounts.yaml 里女流专属的 bili-fan-record-house（A站 u/4397992，2016-05 起）不是同一个号；因 schema 的 platform 枚举不含 acfun，本源暂不挂 account。"
     contributed_by: data-agent
-    note: "直播日 2015-01-27。游戏「I wanna be the xylem」尚未登记到 data/games.yaml（与既有的 biantai-rensheng《变态人生大冒险》不是同一款），故 games 留空，待人类登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险），2015-01-28-live-01 为《潜伏之赤途》。"
+    note: "直播日 2015-01-27。游戏「I wanna be the xylem」与既有的 biantai-rensheng《变态人生大冒险》不是同一款，2026-09-23 已单独登记。注意与同期两条区分：2015-01-29-live-01《重温变态人生的大冒险，卒》是另一场（B站标题标注 1.29、仅 20 分钟、游戏为变态人生大冒险），2015-01-28-live-01 为《潜伏之赤途》。"
   - id: 2015-01-29-live-01
     type: live
     date: '2015-01-29'
@@ -153,7 +153,7 @@
     platform: douyu
     confidence: high
     duration_min: 264
-    games: []
+    games: [dont-escape-2, new-super-mario-bros-u]
     sources:
       - url: https://www.acfun.cn/v/ac1736364
         kind: replay
@@ -164,7 +164,7 @@
         status: alive
         note: "A站「斗鱼录像厅」（UID 974915）《【女流】别再说倒背如流这些奇奇怪怪的话了》，发布 2015-02-10 16:58，时长 2:36:41，简介「Don't Escape 2 和超级马里奥」。2026-09-23 看片核实为本场后半段：ac1736364 结尾停在《Don't Escape 2》里「现在是4点50了……在院子里设置陷阱」的备战阶段，本片开头紧接着逐项计算这些陷阱能挡掉多少僵尸，游戏进度首尾相接；两片音频比对无任何重叠段。本片后半转玩超级马里奥。"
     contributed_by: data-agent
-    note: "直播日 2015-02-09 由录像简介自述确定（「2月9日直播部分~~」），不是从发布日推的。该日此前在档案中完全空白。2026-09-23 并入同批 ac1736317（157 分钟）：两片同为《Don't Escape 2》、游戏进度首尾相接且音频无重叠，是同一场的前后两段（判据见该源备注）；duration_min 由 107 改为 264（107＋157）。games 留空：待登记《Don't Escape 2》，另「超级马里奥」具体是哪一作未经核实。"
+    note: "直播日 2015-02-09 由录像简介自述确定（「2月9日直播部分~~」），不是从发布日推的。该日此前在档案中完全空白。2026-09-23 并入同批 ac1736317（157 分钟）：两片同为《Don't Escape 2》、游戏进度首尾相接且音频无重叠，是同一场的前后两段（判据见该源备注）；duration_min 由 107 改为 264（107＋157）。2026-09-23 登记并挂上《Don't Escape 2》与《新超级马里奥兄弟U》（ac1736317 结尾退出游戏时 Wii U 主菜单显示「Newスーパーマリオブラザーズ U」）。"
   - id: 2015-02-10-live-01
     type: live
     date: '2015-02-10'
