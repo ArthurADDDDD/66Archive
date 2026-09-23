@@ -764,6 +764,27 @@
       - 心灵砒霜
     series: xinling-pishuang
     note: B站「影忆丶Yi」《女流之心灵砒霜-2015补档》对应分P。
+  - id: 2015-10-12-live-01
+    type: live
+    date: '2015-10-12'
+    title: "【女流实况】你之恋与真实之恋"
+    platform: douyu
+    confidence: high
+    duration_min: 233
+    games: [your-love-and-real-love]
+    tags: [系列解说]
+    sources:
+      - url: https://www.bilibili.com/video/BV1xs41127t8
+        kind: original
+        status: alive
+        account: bili-fan-record-house
+      - url: https://v.youku.com/v_show/id_XMTM1ODE3NDk5Mg==.html
+        kind: original
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【你之恋与真实之恋】后面真的是神展开2015-10-12女流直播录像》，上传 2015-10-12 20:37，时长 233:53（2026-09-23 优酷频道页实测）。"
+    contributed_by: data-agent
+    note: "直播日 2015-10-12，三方独立印证：她本人优酷号的同一录像标题写明「2015-10-12女流直播录像」、上传于当晚 20:37；存档斗鱼快照显示 2015-10-12 19:02 房间在播，直播间标题正是「你之恋与真实之恋」；B站那份 233 分钟录像是 2015-10-17 才投稿的。此前按 B站投稿日记为 2015-10-17，id 为 2015-10-17-video-01，2026-09-23 更正日期并改 id（改名前核对过后台无按旧 id 记的数据）；它是斗鱼直播录像，platform 改为 douyu，并去掉「视频时代」标签。"
   - id: 2015-10-13-live-01
     type: live
     date: '2015-10-13'
