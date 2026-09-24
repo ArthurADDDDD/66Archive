@@ -638,6 +638,11 @@
   - id: fling-to-the-finish
     name: Fling to the Finish
 
+  - id: flow
+    name: 浮游世界
+    aliases:
+      - flOw
+
   - id: forager
     name: 浮岛物语
     aliases:
@@ -1731,6 +1736,10 @@
 
   - id: ship-of-fools
     name: Ship of Fools
+
+  - id: shot-aground
+    name: Shot Aground
+    note: "Rene Rother 的两周原型作（v0.11），2015-02-04 直播中试玩"
 
   - id: sifu
     name: SIFU
