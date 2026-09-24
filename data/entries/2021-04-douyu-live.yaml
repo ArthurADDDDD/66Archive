@@ -828,9 +828,9 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
-  - id: 2021-04-30-live-01
+  - id: 2021-04-29-live-01
     type: live
-    date: "2021-04-30"
+    date: "2021-04-29"
     title: "PS发布会"
     platform: douyu
     confidence: high
@@ -852,3 +852,4 @@
         kind: replay
         status: alive
     contributed_by: data-agent
+    note: "2026-09-24 task-053：日期由 04-30 改为 04-29。斗鱼官方回看这一场开播于 2021-04-29 10:57，场次标题「周四上午11点PS发布会」（04-29 是周四）；录像小屋标题与分P 写作 2021.4.30，是次日（04-30 22:53）投稿时的标注。"

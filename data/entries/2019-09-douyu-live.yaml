@@ -62,6 +62,21 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-09-06-live-02
+    type: live
+    date: "2019-09-06"
+    title: "Dicey dungeons试试运气"
+    platform: douyu
+    confidence: high
+    duration_min: 277
+    games: [pocket-clothier, dicey-dungeons]
+    sources:
+      - url: https://v.douyu.com/show/jNBdvn2nDx0vE2yw
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: "当天下午另开的一场。斗鱼官方回看：场次「Dicey dungeons试试运气」，2019-09-06 15:08 开播，分P《口袋服装店》P1～P3 共 277 分钟；上午 09:07 那场魔兽世界怀旧服排队见 2019-09-06-live-01。贴吧与节目单当天也记骰子地下城、口袋服装店。B站 / A站镜像未找到。2026-09-24 task-053。"
+
   - id: 2019-09-09-live-01
     type: live
     date: "2019-09-09"

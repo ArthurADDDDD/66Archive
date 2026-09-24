@@ -242,7 +242,7 @@
     title: "盐与献祭"
     platform: douyu
     confidence: high
-    duration_min: 278
+    duration_min: 335
     cover: "https://i0.hdslb.com/bfs/archive/479ef8f39cb36b050e8a2260f3e84cd28283771e.jpg"
     games: [salt-and-sacrifice]
     sources:
@@ -255,7 +255,11 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/wLjGvLZr0k0MmO90
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-24 task-053：斗鱼官方回看另有19:43 重连后的最后 57 分钟，B 站录像不含这一段，补挂并按合计订正时长。"
 
   - id: 2022-05-13-live-01
     cover: "https://i1.hdslb.com/bfs/archive/54e48a90343a22a44639ceac8bfb33574c19c456.jpg"
@@ -302,7 +306,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 287
+    duration_min: 405
     cover: "https://i0.hdslb.com/bfs/archive/7a18c59ebe9aa1c7fa72b1a2c1dfe0d780513b9f.jpg"
     games: []
     tags: [心灵砒霜]
@@ -316,7 +320,11 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/kDe0W29kNGaMA4Bz
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-24 task-053：斗鱼官方回看另有19:58 重连后的最后 118 分钟，B 站录像不含这一段，补挂并按合计订正时长。"
 
   - id: 2022-05-16-live-01
     type: live

@@ -623,7 +623,7 @@
     title: "【心灵砒霜】与壮壮的疯狂暴击"
     platform: douyu
     confidence: high
-    duration_min: 136
+    duration_min: 211
     cover: "https://i0.hdslb.com/bfs/archive/e8a2bbf437fbb90f8faa9abf6d637d00a7f57066.jpg"
     games: []
     tags: [心灵砒霜]
@@ -635,6 +635,10 @@
       - at: "00:59:49"
         label: "P3-11.27-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV13s411s7R3
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Ks411s7q7
         kind: replay
         status: alive
@@ -650,23 +654,46 @@
         account: youku-official
         note: "她本人优酷号《女流【心灵砒霜】与壮壮的疯狂暴击》，上传 2016-11-28 08:40，时长 205:37（2026-09-23 频道页实测）。归属依据：同题。"
     contributed_by: data-agent
+    note: "2026-09-24 task-053：时长按录像小屋纯净版 3P 共 211 分钟订正，并补挂该纯净版。"
 
   - id: 2016-11-29-live-01
     type: live
     date: "2016-11-29"
-    title: "在京都"
+    title: "在京都 day1"
     platform: douyu
     confidence: high
-    duration_min: 76
+    duration_min: 217
+    cover: "https://i0.hdslb.com/bfs/archive/e7fefdb25b4aaae14eea644fd64ad918b1d3bea6.jpg"
+    games: []
+    tags: [户外]
+    sources:
+      - url: https://www.bilibili.com/video/BV1es411Y7Nn
+        kind: replay
+        parts: 3
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac3295639
+        kind: replay
+        status: alive
+        account: acfun-fan-record-house
+    contributed_by: data-agent
+    note: "2026-09-24 task-053：录像小屋京都行共三份录像，标题都冠「11.29」：《在京都-day1》（BV1es411Y7Nn，217 分钟，12-02 投稿）、《在京都-day2-part1》（BV15s411s7Lf，171 分钟，12-01 00:44 投稿）、《在京都-day2-part2》（BV1Es411s7Rg，抓娃娃／赌瘾少女，76 分钟）。此前本条只挂了 day2-part2。day1 才是 11-29；day2 按「第二天」与 12-01 凌晨投稿定为 11-30，节目单 11-29、11-30 也都记京都游，day2 的两份录像已移到 2016-11-30-live-01。"
+  - id: 2016-11-30-live-01
+    type: live
+    date: "2016-11-30"
+    title: "在京都 day2"
+    platform: douyu
+    confidence: medium
+    duration_min: 247
     cover: "https://i0.hdslb.com/bfs/archive/a981b2f8c4e6f3972779af02db39e5d1393136df.jpg"
     games: []
     tags: [户外]
-    segments:
-      - at: "00:00:00"
-        label: "zhuawawa"
-      - at: "01:04:16"
-        label: "毒瘾少女"
     sources:
+      - url: https://www.bilibili.com/video/BV15s411s7Lf
+        kind: replay
+        parts: 3
+        status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Es411s7Rg
         kind: replay
         status: alive
@@ -677,3 +704,5 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "直播日：录像小屋《女流-11.29-在京都-day2-part1》（171 分钟，2016-12-01 00:44 投稿）与《day2-part2》（抓娃娃、赌瘾少女，76 分钟，12-01 20:15 投稿）。标题冠的是京都行起始日 11.29，内容是第二天；day1 另有 217 分钟录像挂在 11-29，节目单 11-29、11-30 都记「京都游」，故定为 11-30。日期只凭「day2」与投稿时间推定，confidence 取 medium。2026-09-24 task-053。"
+

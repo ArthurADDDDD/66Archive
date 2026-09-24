@@ -367,7 +367,29 @@
         parts: 4
         status: alive
         account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV1QK4y1n7u5
+        kind: replay
+        parts: 6
+        status: alive
+        account: bili-fan-secret-house
+        note: "前 4P 是本场马里奥3D世界，后 2P「加班」是当晚 22:47 的雀魂（见 2021-02-13-live-02）"
     contributed_by: data-agent
+    note: "2026-09-24 task-053：补挂秘密录像屋弹幕版（含当晚加班段）。"
+
+  - id: 2021-02-13-live-02
+    type: live
+    date: "2021-02-13"
+    title: "雀魂麻將"
+    platform: douyu
+    confidence: high
+    duration_min: 99
+    games: [majsoul]
+    sources:
+      - url: https://v.douyu.com/show/3rob7jK2z6eMgkZl
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: "当晚另开的一场。斗鱼官方回看《P1 2021.2.13 雀魂麻將》，2021-02-13 22:47 开播，98:41；B站秘密录像屋《马里奥3D世界&加班》（BV1QK4y1n7u5，挂在 2021-02-13-live-01）最后两个分P「加班」约 99 分钟也是这一段。即 missing-resources 此前记的「2021-02-13-live-02《雀姬》（1:27:46）仍缺来源」。次日 02-14 晚上同样有一场雀魂（2021-02-14-live-02）。2026-09-24 task-053。"
 
   - id: 2021-02-14-live-01
     type: live
@@ -505,7 +527,7 @@
     title: "马里奥3d世界新DLC"
     platform: douyu
     confidence: high
-    duration_min: 38
+    duration_min: 235
     cover: "https://i0.hdslb.com/bfs/archive/0cd8c66badef8c2b195fed0a850e8cd6c3660eb8.png"
     games: [super-mario-3d-world]
     sources:
@@ -519,6 +541,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-053：时长按已挂的录像小屋《马里奥3d世界新DLC》6P 共 235 分钟订正。"
 
   - id: 2021-02-17-live-01
     type: live

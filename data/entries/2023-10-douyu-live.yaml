@@ -367,14 +367,17 @@
     platform: douyu
     cover: "/images/covers/2023-10-15-live-01.jpg"
     confidence: high
-    duration_min: 266
+    duration_min: 349
     tags: [户外]
-    note: "B站「女流录像小屋」全长录播。"
+    note: "B站「女流录像小屋」全长录播。 2026-09-24 task-053：斗鱼官方回看另有20:05 重连后的最后 83 分钟，B 站录像不含这一段，补挂并按合计订正时长。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Dw411c7fR"
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://v.douyu.com/show/85BAvq8boVKWG4Lm
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2023-10-17-live-01

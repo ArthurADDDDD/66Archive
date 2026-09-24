@@ -262,11 +262,11 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 142
+    duration_min: 238
     cover: "https://i0.hdslb.com/bfs/archive/3be1d89ae5011adb2e445b8bf10731aa2617d0c6.png"
     games: []
     tags: [心灵砒霜, 弹幕版]
-    note: "同一场直播的弹幕版（ac3971648）与纯净版（ac3970580）原本被建模为两条重复条目，已合并（两版本目录标题均注『无聊天部分』）。"
+    note: "同一场直播的弹幕版（ac3971648）与纯净版（ac3970580）原本被建模为两条重复条目，已合并（两版本目录标题均注『无聊天部分』）。 2026-09-24 task-053：时长按录像小屋纯净版 2P 共 238 分钟订正，并补挂该纯净版。"
     segments:
       - at: "00:00:00"
         label: "P1-9.10-心灵砒霜-弹幕版（无聊天部分）"
@@ -281,6 +281,10 @@
       - at: "01:58:44"
         label: "P6-9.10-心灵砒霜-弹幕版（无聊天部分）"
     sources:
+      - url: https://www.bilibili.com/video/BV1zx41147gy
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1ax411478t
         kind: replay
         status: alive
@@ -801,7 +805,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 142
+    duration_min: 219
     cover: "https://i0.hdslb.com/bfs/archive/a7e8262e8479911bb392cc95661919798da3f0d3.png"
     games: []
     tags: [心灵砒霜]
@@ -827,6 +831,10 @@
       - at: "02:09:04"
         label: "P2.8-9.25-心灵砒霜-弹幕版"
     sources:
+      - url: https://www.bilibili.com/video/BV1vx411G7Sg
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Bx411G7hP
         kind: replay
         status: alive
@@ -837,6 +845,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-053：时长按录像小屋纯净版 3P 共 219 分钟订正，并补挂该纯净版。"
 
   - id: 2017-09-27-live-01
     type: live

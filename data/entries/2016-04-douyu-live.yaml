@@ -29,10 +29,10 @@
   - id: 2016-04-30-live-01
     type: live
     date: "2016-04-30"
-    title: "黑暗之魂3第二天"
+    title: "黑暗之魂3第二天 & 心灵砒霜"
     platform: douyu
     confidence: high
-    duration_min: 110
+    duration_min: 306
     cover: "https://i0.hdslb.com/bfs/archive/7aa0b5e7316304387c56a682a31f8c4d68aa64f9.jpg"
     games: [dark-souls-3]
     segments:
@@ -50,4 +50,14 @@
         parts: 2
         status: alive
         account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV1Ls411B7aN
+        kind: replay
+        parts: 3
+        status: alive
+        account: bili-fan-record-house
+      - url: https://www.acfun.cn/v/ac2722963
+        kind: replay
+        status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-053：补上当天的心灵砒霜：录像小屋《4月30日66砒霜直播实录…》（3P 共 196 分钟，05-08 投稿）；节目单 04-30 记「心灵砒霜、黑魂3」，与本条黑魂3第二天是同一天，按一天一条合在本条。"

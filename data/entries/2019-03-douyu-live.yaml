@@ -302,8 +302,13 @@
         parts: 2
         status: alive
         account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV1Pb411e71n
+        kind: replay
+        parts: 5
+        status: alive
+        account: bili-fan-record-house
     note: "同一场（3.10 周日）拆 2 视频：鬼泣5 纯净版（ac5011369，P1）+ 砒霜弹幕版（ac5012009，P2.1-P2.2，次日渲染上传），P
-      编号连续，按一天一条原则合并"
+      编号连续，按一天一条原则合并 2026-09-24 task-053：B站补上心灵砒霜纯净版＋弹幕版：录像小屋《女流-2019.3.10-心灵砒霜》（纯净版 3P 共 194 分钟，另附弹幕版）；此前 B 站只有鬼泣5 那 51 分钟。"
     contributed_by: data-agent
   - id: 2019-03-12-live-01
     cover: "https://i2.hdslb.com/bfs/archive/83513349d1566b232fdfdd4fccbfc5392c489a03.png"

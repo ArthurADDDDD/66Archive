@@ -147,14 +147,19 @@
   - id: 2020-06-06-live-01
     type: live
     date: '2020-06-06'
-    title: 活动
+    title: "六月六呀么六月六"
     platform: douyu
     confidence: high
     games: []
     tags: [聊天]
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六
+    note: "按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：6.6 活动。斗鱼回放标题：六月六呀么六月六 2026-09-24 task-053：补上她本人直播间的整场录像：录像小屋《女流-2020.6.6--六月六呀么六月六》（4P 共 244 分钟），与斗鱼回看标题一致；原 B 站来源是维乐直播间的访谈录。"
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/06/07/b9f5e96a3ba4e185436b261fc25e0286.jpg"
     sources:
+      - url: https://www.bilibili.com/video/BV1bD4y1D7FP
+        kind: replay
+        parts: 4
+        status: alive
+        account: bili-fan-record-house
       - url: https://v.douyu.com/show/1LDR7QNepYBMJzx8
         kind: replay
         status: alive
@@ -173,7 +178,7 @@
         note: "2026-09-10 该录像来自同场活动主持方 Sylvia维乐 的直播间（知名主播访谈录第二期），不是女流本人机位，覆盖范围与本条目 120 分钟的对应关系未核实；仅作补充来源，斗鱼回放仍列首位。"
     contributed_by: data-agent
     time: 15:09
-    duration_min: 120
+    duration_min: 244
   - id: 2020-06-07-live-01
     type: live
     date: "2020-06-07"

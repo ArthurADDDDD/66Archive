@@ -711,7 +711,7 @@
     title: 心灵砒霜
     platform: douyu
     confidence: high
-    duration_min: 119
+    duration_min: 464
     games: [stardew-valley]
     cover: "/images/covers/2016-03-13-live-01.jpg"
     sources:
@@ -720,11 +720,16 @@
         status: alive
         cover_unreliable: true
         account: bili-fan-record-house
+      - url: https://www.bilibili.com/video/BV1yW411a7ZS
+        kind: replay
+        parts: 2
+        status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     tags:
       - 心灵砒霜
     series: xinling-pishuang
-    note: "B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「星露谷物语」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。"
+    note: "B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「星露谷物语」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。 2026-09-24 task-053：补上当天的星露谷物语：录像小屋 2017-12-02 补投的《我承认我落下一期，现在补上-星露谷物语（2016.3.13）》（分P 名 2016.3.13，共 345 分钟）；本条原只有影忆的心灵砒霜 119 分钟。节目单与葵kiss 同期贴吧当天也都记星露谷，按一天一条合在本条。"
   - id: 2016-03-15-live-01
     cover: "https://i2.hdslb.com/bfs/archive/8e930f8848a6389aa73ec43ba2a81b930e0462e7.png"
     type: live

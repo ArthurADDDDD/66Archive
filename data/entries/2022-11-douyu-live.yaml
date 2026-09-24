@@ -152,9 +152,9 @@
     title: "战神5"
     platform: douyu
     confidence: high
-    duration_min: 441
+    duration_min: 704
     games: [god-of-war-ragnarok]
-    note: "B站「女流录像小屋」全长录播。"
+    note: "B站「女流录像小屋」全长录播。 2026-09-24 task-053：斗鱼官方回看另有20:22 起的晚场 263 分钟（与白天同一场次标题，中间约 50 分钟空档），B 站录像不含这一段，补挂并按合计订正时长。"
     sources:
       - url: "https://www.bilibili.com/video/BV1624y1y7cs"
         kind: replay
@@ -172,6 +172,9 @@
         account: bili-fan-8290691
         cover_unreliable: true
         note: "2026-09-11 正文 first_frame / storyboard 核验为《战神5》；与前一段同日同场，只作部分备份，不替代女流录像小屋全长主源。"
+      - url: https://v.douyu.com/show/jNBdvnrZyNzvE2yw
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2022-11-17-live-01

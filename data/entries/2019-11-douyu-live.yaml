@@ -151,6 +151,21 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-11-09-live-02
+    type: live
+    date: "2019-11-09"
+    title: "明日之后第二季~~"
+    platform: douyu
+    confidence: high
+    duration_min: 120
+    games: [lifeafter]
+    sources:
+      - url: https://v.douyu.com/show/wLjGvLQ5g6p7mO90
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: "当天上午另开的一场。斗鱼官方回看：场次「明日之后第二季~~」，2019-11-09 11:45 开播，120 分钟；下午 15:19 起的死亡搁浅见 2019-11-09-live-01。节目单当天记「明日之后第二季122、死亡搁浅」。B站 / A站镜像未找到。2026-09-24 task-053。"
+
   - id: 2019-11-10-live-01
     type: live
     date: "2019-11-10"
