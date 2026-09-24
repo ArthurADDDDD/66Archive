@@ -4,6 +4,7 @@
 # 游戏 id 待人类从候选游戏清单导入 games.yaml 后补充；直播主题名非标准游戏名时 title 保留原写法
 
   - id: 2024-09-10-live-01
+    cover: "https://i0.hdslb.com/bfs/archive/54c2ac07dc7f1fab017a2d71851a6b3c602577c1.jpg"
     type: live
     date: "2024-09-10"
     title: "宇宙机器人"
@@ -30,6 +31,7 @@
     games: [astro-bot]
 
   - id: 2024-09-11-live-01
+    cover: "https://i0.hdslb.com/bfs/archive/21dafafa4b270f0d7fb1957817c5098d959a1400.jpg"
     type: live
     date: "2024-09-11"
     title: "和朋友们 pick park 2"
