@@ -562,7 +562,7 @@
     platform: douyu
     confidence: high
     games: [unheard]
-    note: 按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.18 游戏：疑案追声-黑面观音/ Unheard DLC。斗鱼回放标题：继续听声断案！
+    note: "按女流吧《2020年直播记录》（tieba 6423273786）与斗鱼官方回放 API 对账补入。当日贴吧记录：1.18 游戏：疑案追声-黑面观音/ Unheard DLC。斗鱼回放标题：继续听声断案！ 2026-09-25 task-054：时长订正为 280 分钟，按已挂录像 BV1T7411q7tL 的纯净版全长（3 个分P，分P 名都是当天）；原值只算了其中一部分。"
     cover: "https://sta-op.douyucdn.cn/vod-cover/2020/01/19/2b87a56882ec86e660c96c26e73da15a.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1T7411q7tL
@@ -586,7 +586,7 @@
         status: alive
     contributed_by: data-agent
     time: 15:04
-    duration_min: 162
+    duration_min: 280
   - id: 2020-01-19-live-01
     type: live
     date: "2020-01-19"

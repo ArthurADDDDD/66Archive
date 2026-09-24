@@ -568,7 +568,7 @@
     title: "【心灵砒霜】提到高跟鞋可能是在进行时尚科普"
     platform: douyu
     confidence: high
-    duration_min: 132
+    duration_min: 286
     cover: "https://i0.hdslb.com/bfs/archive/df5f1b86a5928f96a7688f178a9880099d39d47d.jpg"
     games: []
     tags: [心灵砒霜]
@@ -582,7 +582,14 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/ZB5Kv9okGAmMa93x
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/qJgOWxmzkqevkVzL
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-25 task-054：斗鱼官方回看同日另有15:05 开头的 154 分钟（与 17:40 起的心灵砒霜间隔 1 分钟；录像小屋录像只有砒霜那段），现有录像不含这一段，补挂并按合计订正时长为 286 分钟。"
 
   - id: 2022-07-25-live-01
     type: live

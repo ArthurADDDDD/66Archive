@@ -828,7 +828,7 @@
     title: "战神（God of War）"
     platform: douyu
     confidence: high
-    duration_min: 148
+    duration_min: 220
     cover: "https://i0.hdslb.com/bfs/archive/bdf2b1d9a694969659496403f9dde77694eeb17b.png"
     games: [god-of-war-4]
     segments:
@@ -855,6 +855,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 220 分钟，按已挂录像 BV1AW411L7Fh 的纯净版全长（3 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2018-04-25-live-01
     type: live

@@ -723,7 +723,7 @@
     title: "猫头鹰男孩(Owlboy)"
     platform: douyu
     confidence: high
-    duration_min: 146
+    duration_min: 207
     cover: "https://i0.hdslb.com/bfs/archive/a36cd5165e259a2ed96824202dd5f8b2ba59135f.jpg"
     games: [owlboy]
     segments:
@@ -746,6 +746,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 207 分钟，按已挂录像 BV1As411Y7ZF 的纯净版全长（4 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2016-12-31-live-01
     type: live

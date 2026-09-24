@@ -27,7 +27,7 @@
     series: xinling-pishuang
     platform: douyu
     confidence: high
-    duration_min: 137
+    duration_min: 205
     cover: "https://i0.hdslb.com/bfs/archive/ca68814afc935ca33d548f0224d0977c039a60cf.jpg"
     games: []
     tags: [心灵砒霜]
@@ -54,6 +54,7 @@
         account: youku-official
         note: "她本人优酷号《女流【心灵砒霜】9月11日读邮件》，上传 2016-09-13 01:45，时长 164:50（2026-09-23 频道页实测）。归属依据：标题自带直播日期。"
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 205 分钟，按已挂录像 BV1Vs411r7YP 的纯净版全长（3 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2016-09-12-live-01
     type: live
@@ -224,7 +225,7 @@
     title: "逆转裁判6"
     platform: douyu
     confidence: high
-    duration_min: 93
+    duration_min: 217
     cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
@@ -247,6 +248,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 217 分钟，按已挂录像 BV1Ks411t7g6 的纯净版全长（4 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2016-09-18-live-01
     type: live
@@ -342,7 +344,7 @@
     title: "逆转裁判6"
     platform: douyu
     confidence: high
-    duration_min: 129
+    duration_min: 194
     cover: "https://i0.hdslb.com/bfs/archive/dea119f359c1658c314c02acc62c6eb4211fa069.jpg"
     games: [gyakuten-saiban-6]
     segments:
@@ -363,6 +365,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 194 分钟，按已挂录像 BV14s411t7Uc 的纯净版全长（3 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2016-09-23-live-01
     cover: "/images/covers/2016-09-23-live-01.jpg"
@@ -400,7 +403,7 @@
     title: "马不停蹄来拍照"
     platform: douyu
     confidence: high
-    duration_min: 117
+    duration_min: 214
     cover: "https://i0.hdslb.com/bfs/archive/d5b91fd4d794d7692cee2b7998fab42c917aafd7.jpg"
     games: []
     tags: [户外]
@@ -424,6 +427,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 214 分钟，按已挂录像 BV11s411t7Nz 的纯净版全长（4 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2016-09-25-live-01
     type: live

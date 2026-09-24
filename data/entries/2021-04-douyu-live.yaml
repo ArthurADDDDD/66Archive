@@ -230,7 +230,7 @@
     title: "Genesis Noir"
     platform: douyu
     confidence: high
-    duration_min: 119
+    duration_min: 298
     cover: "https://i0.hdslb.com/bfs/archive/4b15329881af3a9d026a10783f04602e61ded021.png"
     games: [genesis-noir]
     segments:
@@ -254,6 +254,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 298 分钟，按已挂录像 BV1xU4y1h7Ed 的纯净版全长（8 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2021-04-14-live-01
     type: live
@@ -619,7 +620,7 @@
     title: "怪物男孩"
     platform: douyu
     confidence: high
-    duration_min: 180
+    duration_min: 385
     cover: "https://i0.hdslb.com/bfs/archive/0e0fe68098149164eeb5ef3213e7f9b02fd99de1.png"
     games: [monster-boy]
     segments:
@@ -644,6 +645,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 385 分钟，按已挂录像 BV1Ef4y1p7pK 的纯净版全长（10 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2021-04-24-live-01
     type: live
@@ -800,7 +802,7 @@
     title: "世界游戏大全51&坎公骑冠剑"
     platform: douyu
     confidence: high
-    duration_min: 137
+    duration_min: 318
     cover: "https://i0.hdslb.com/bfs/archive/3e6d4ea25f902e395afb86ecc08f89ec51657131.png"
     games: [world-games-51, guardian-tales]
     segments:
@@ -827,6 +829,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 318 分钟，按已挂录像 BV1ey4y1s75L 的纯净版全长（9 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2021-04-29-live-01
     type: live

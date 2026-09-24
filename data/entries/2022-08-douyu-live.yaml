@@ -413,7 +413,7 @@
     title: "【心灵砒霜】断电三次的心灵砒霜"
     platform: douyu
     confidence: high
-    duration_min: 171
+    duration_min: 253
     cover: "https://i0.hdslb.com/bfs/archive/cc585dc09fe99ffc165cb1dc03a8d1e75310afa7.jpg"
     games: []
     tags: [心灵砒霜]
@@ -427,7 +427,11 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/wLjGvLZ9382MmO90
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-25 task-054：斗鱼官方回看同日另有15:07 开头的 82 分钟（与 17:19 起的心灵砒霜间隔 50 分钟、同一场次标题，按砒霜前的聊天段计；录像小屋录像只有砒霜那段），现有录像不含这一段，补挂并按合计订正时长为 253 分钟。"
 
   - id: 2022-08-22-live-01
     type: live

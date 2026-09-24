@@ -1100,7 +1100,7 @@
     title: 【2023-01-24 17点场】女流66：【钻粉2.5倍】新年快乐
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 250
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/01/24/35e207329a97b79e2448219a426f3c59.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV17R4y1h7rq
@@ -1138,5 +1138,5 @@
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：时长订正为 250 分钟，按已挂录像 BV17R4y1h7rq 的纯净版全长（8 个分P，分P 名都是当天）；原值只算了其中一部分。"
     games: [maplestory]

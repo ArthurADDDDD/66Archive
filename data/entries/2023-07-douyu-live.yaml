@@ -606,7 +606,7 @@
     title: "糖豆人"
     platform: douyu
     confidence: high
-    duration_min: 147
+    duration_min: 209
     cover: "https://i0.hdslb.com/bfs/archive/295fb8a9f3810cd3fe6440efd9a411741564acb8.jpg"
     games: [fall-guys]
     sources:
@@ -648,6 +648,7 @@
             duration_sec: 176
         note: "2026-09-23 KassyTan/Zytau 逐条处置时补入。B站「KassyTan」《【女流66】直播回放2023-07-10》，7 个分P 合计 3:29:02，录制窗口 2023-07-10 21:36→2023-07-11 01:05。21:36 起录的晚间段，跨零点到 01:05，按开播日记本日。 录像跨零点，按开播日记本日。"
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 209 分钟，按已挂录像 BV1GN411U7zV 的纯净版全长（7 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2023-07-11-live-01
     type: live

@@ -121,6 +121,25 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2019-08-08-live-02
+    type: live
+    date: "2019-08-08"
+    title: "到敦煌了，暴晒（晚上）"
+    platform: douyu
+    confidence: high
+    duration_min: 88
+    games: []
+    tags: [户外]
+    sources:
+      - url: https://v.douyu.com/show/mPyq7ok0gXD71gLY
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/GnzXvb4Do2lM462l
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: "当晚另开的一场。斗鱼官方回看：19:48 与 20:47 两段（间隔 5 分钟）共 88 分钟，与下午 14:18～16:13 那场隔了 3 小时 35 分钟，是敦煌户外的晚间场；下午场见 2019-08-08-live-01。B站 / A站镜像未找到。2026-09-25 task-054。"
+
   - id: 2019-08-12-live-01
     type: live
     date: "2019-08-12"
@@ -345,30 +364,42 @@
     title: 【女流直播】 女流带你走进敦煌 P1 2019.8.8
     platform: douyu
     confidence: high
-    duration_min: 61
+    duration_min: 103
     tags: [户外]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/08/09/3b81c2ef00afb51e31d14e79e94ec048.jpg"
     sources:
       - url: https://v.douyu.com/show/X3JzMaJobkAWPQro
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/6Aw87OpNx1xMYGkg
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/jwzOvpZA0jLMZVRm
+        kind: replay
+        status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：斗鱼官方回看同日另有15:30、15:47 两次重连后的 42 分钟（下午这一段间隔都在 11 分钟以内），现有录像不含这一段，补挂并按合计订正时长为 103 分钟。"
   - id: 2019-08-10-live-01
     type: live
     date: '2019-08-10'
     title: 【女流直播】 斗鱼超级火箭计划 P1 2019.8.11
     platform: douyu
     confidence: high
-    duration_min: 17
+    duration_min: 207
     tags: [户外]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/08/11/ea2ff0e25a4e7275b605e1a633c74b61.jpg"
     sources:
       - url: https://v.douyu.com/show/XqeO74p1Bne7xywG
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/Yo4evybE56N78L62
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/XqeO74p1B0P7xywG
+        kind: replay
+        status: alive
     contributed_by: data-agent
-    note: "斗鱼官方直播回看补入。2026-09-23 由 2019-08-11-live-01 改记 08-10：回看页数据里该段的场次标注为「07点场」，开播时间戳为 2019-08-10 07:23（北京时间），标题里的「2019.8.11」是回看生成（08-11 10:59）的日期，不是直播日。同一字段在 08-14、08-16 两条回看上分别对应 15:09、15:14 开播，与标题一致，可信。斗鱼超级火箭于 2019-08-10 10:35 在青海冷湖发射，贴吧 2019 专贴也记 08-10「冷湖看火箭发射」。回看只有 17 分钟、从 07:23 开始，时间上不含 10:35 的发射；全场实际时长不详（本轮未看片）。"
+    note: "斗鱼官方直播回看补入。2026-09-23 由 2019-08-11-live-01 改记 08-10：回看页数据里该段的场次标注为「07点场」，开播时间戳为 2019-08-10 07:23（北京时间），标题里的「2019.8.11」是回看生成（08-11 10:59）的日期，不是直播日。同一字段在 08-14、08-16 两条回看上分别对应 15:09、15:14 开播，与标题一致，可信。斗鱼超级火箭于 2019-08-10 10:35 在青海冷湖发射，贴吧 2019 专贴也记 08-10「冷湖看火箭发射」。回看只有 17 分钟、从 07:23 开始，时间上不含 10:35 的发射；全场实际时长不详（本轮未看片）。 2026-09-25 task-054：斗鱼官方回看同日另有07:51 重连后的 190 分钟（间隔 11 分钟），现有录像不含这一段，补挂并按合计订正时长为 207 分钟。"
   - id: 2019-08-14-live-01
     type: live
     date: '2019-08-14'

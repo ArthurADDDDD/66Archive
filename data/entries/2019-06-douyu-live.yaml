@@ -693,12 +693,15 @@
     title: 【女流直播】 E3游戏展现场 P4 2019.6.14
     platform: douyu
     confidence: high
-    duration_min: 32
+    duration_min: 140
     tags: [户外, 发布会]
     cover: "https://sta-op.douyucdn.cn/vod-cover/2019/06/14/3ba147824fda97b6610e99a1cd1740d0.jpg"
     sources:
       - url: https://v.douyu.com/show/8pa9v5OKmLqMVrqA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/NbwE7Z1pEoPvn5Zz
+        kind: replay
+        status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：斗鱼官方回看同日另有05:33 重连后的 108 分钟（与 04:59 那段间隔 2 分钟），现有录像不含这一段，补挂并按合计订正时长为 140 分钟。"

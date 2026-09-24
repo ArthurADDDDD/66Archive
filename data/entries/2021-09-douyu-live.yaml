@@ -634,12 +634,15 @@
     title: 【2021-09-27 14点场】女流66：出差参加活动最近随缘见
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 237
     cover: "https://sta-op.douyucdn.cn/vod-cover/2021/09/27/eaff7a6b7012eb9d12378652d464e13c.png"
     sources:
       - url: https://v.douyu.com/show/yVY8WwPLNg8vLOz9
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/a2JEMJ2meDmMNxml
+        kind: replay
+        status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：斗鱼官方回看同日另有16:26 重连后的 117 分钟（间隔 2 分钟），现有录像不含这一段，补挂并按合计订正时长为 237 分钟。"
     tags: [户外, 聊天]

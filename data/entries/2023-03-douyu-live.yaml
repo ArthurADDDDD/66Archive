@@ -1544,7 +1544,7 @@
     title: 【2023-03-14 13点场】女流66：156277直播间
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 450
     cover: "https://sta-op.douyucdn.cn/vod-cover/2023/03/14/cc2d862e1cfb71d358dc8b2fceb98819.png"
     sources:
       - url: https://www.bilibili.com/video/BV1gx4y1K7yc
@@ -1586,7 +1586,7 @@
             duration_sec: 1487
         note: "2026-09-10 同日另一位录制者的备份，共 2:29:51：P1–P4 连续覆盖 17:47–19:52，P5 另起于 20:23（24:47），中间有缺口，且不含 13 点场开头部分；作为附加备份保留。未逐P验证播放与完整性。"
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：时长订正为 450 分钟，按已挂录像 BV1gx4y1K7yc 的纯净版全长（2 个分P，分P 名都是当天）；原值只算了其中一部分。"
     games: [resident-evil-4]
   - id: 2023-03-19-live-01
     type: live

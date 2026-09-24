@@ -511,7 +511,7 @@
     title: "直播2周年"
     platform: douyu
     confidence: high
-    duration_min: 44
+    duration_min: 286
     cover: "https://i0.hdslb.com/bfs/archive/642a6c0adb4c856b12c5c49f16347dc02faf7d83.jpg"
     games: [league-of-legends]
     tags: [聊天]
@@ -531,7 +531,7 @@
         account: acfun-fan-record-house
         parts: 1
     contributed_by: data-agent
-    note: "人工页面复核：A站 ac3422592、ac3422739 标题分别明确为《英雄联盟》part1、part2。"
+    note: "人工页面复核：A站 ac3422592、ac3422739 标题分别明确为《英雄联盟》part1、part2。 2026-09-25 task-054：时长订正为 286 分钟，按已挂录像 BV1rs411b7od 的纯净版全长（5 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2017-01-22-live-01
     type: live
@@ -573,7 +573,7 @@
     title: "事已至此案发现场"
     platform: douyu
     confidence: high
-    duration_min: 14
+    duration_min: 34
     cover: "https://i0.hdslb.com/bfs/archive/7ee1b4baa726b4ea91797313ce47a15227652791.jpg"
     games: []
     segments:
@@ -593,6 +593,7 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
     tags: [户外]
+    note: "2026-09-25 task-054：时长订正为 34 分钟，按已挂录像 BV1Ds411b7Sy 的纯净版全长（2 个分P，分P 名都是当天）；原值只算了其中一部分。"
   - id: 2017-01-26-live-01
     type: live
     date: "2017-01-26"
@@ -647,7 +648,7 @@
     title: "82年的雪碧会上头"
     platform: douyu
     confidence: high
-    duration_min: 32
+    duration_min: 106
     cover: "https://i0.hdslb.com/bfs/archive/991fe5804a460241856f09cf7a9ef6a165d700e1.jpg"
     games: []
     segments:
@@ -667,3 +668,4 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
     tags: [户外]
+    note: "2026-09-25 task-054：时长订正为 106 分钟，按已挂录像 BV13s41187js 的纯净版全长（2 个分P，分P 名都是当天）；原值只算了其中一部分。"

@@ -578,7 +578,7 @@
     title: "沙石镇时光"
     platform: douyu
     confidence: high
-    duration_min: 154
+    duration_min: 228
     cover: "https://i0.hdslb.com/bfs/archive/daf098ba65262016b7eef39c1def54a2a54695f3.jpg"
     games: [sandrock]
     sources:
@@ -591,7 +591,11 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/JmbBMklX2pwW40XA
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-25 task-054：斗鱼官方回看同日另有15:08 开头的 64 分钟（与 16:31 起那段间隔 19 分钟；录像小屋录像只有后段），现有录像不含这一段，补挂并按合计订正时长为 228 分钟。"
 
   - id: 2022-05-28-live-01
     type: live
@@ -673,7 +677,7 @@
     title: "Hellstuck: Rage With Your Friends"
     platform: douyu
     confidence: high
-    duration_min: 495
+    duration_min: 702
     cover: "https://i0.hdslb.com/bfs/archive/0c73adf2cbc637bb7ed80a804f21358d8bf2ff75.jpg"
     games: [hellstuck]
     sources:
@@ -686,7 +690,14 @@
         parts: 1
         status: alive
         account: acfun-fan-record-house
+      - url: https://v.douyu.com/show/JmbBMkl5d0OW40XA
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/a2JEMJgOaO0WNxml
+        kind: replay
+        status: alive
     contributed_by: data-agent
+    note: "2026-09-25 task-054：斗鱼官方回看同日另有15:05 开头的 207 分钟（与 18:49 起那段间隔 17 分钟；录像小屋录像只有后段），现有录像不含这一段，补挂并按合计订正时长为 702 分钟。"
   - id: 2022-05-12-live-01
     type: live
     date: '2022-05-12'

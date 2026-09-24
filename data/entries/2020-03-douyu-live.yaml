@@ -76,7 +76,7 @@
     title: "月影之塔"
     platform: douyu
     confidence: high
-    duration_min: 299
+    duration_min: 437
     cover: "https://i0.hdslb.com/bfs/archive/c12ad09043922d051bfd870f1c2bd6a1bef392b6.png"
     games: [luna-shadow]
     segments:
@@ -101,6 +101,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 437 分钟，按已挂录像 BV1NE411s7BL 的纯净版全长（8 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2020-03-05-live-01
     type: live

@@ -731,14 +731,23 @@
     title: 【2021-11-19 15点场】女流66：【女流】 156277直播间
     platform: douyu
     confidence: high
-    duration_min: 120
+    duration_min: 421
     cover: "https://sta-op.douyucdn.cn/vod-cover/2021/11/19/096e87f6edcdedfdcdb1931640a9664a.png"
     sources:
       - url: https://v.douyu.com/show/6Aw87O6poqXvYGkg
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/brN0MmbdwrrWpyxA
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/2Bj8vGQ5VyQMObnd
+        kind: replay
+        status: alive
+      - url: https://v.douyu.com/show/aRbBv32p38DW6PYV
+        kind: replay
+        status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
+    note: "斗鱼官方直播回看补入 2026-09-25 task-054：斗鱼官方回看同日另有17:10 重连后的 301 分钟（间隔 2 分钟），现有录像不含这一段，补挂并按合计订正时长为 421 分钟。"
     games: [battlefield-2042]
   - id: 2021-11-23-live-01
     type: live

@@ -745,7 +745,7 @@
     title: "牧场物语之橄榄镇与希望的大地"
     platform: douyu
     confidence: high
-    duration_min: 37
+    duration_min: 200
     cover: "https://i0.hdslb.com/bfs/archive/a3337d100f3cdb42b3c9dc7f0296cc54e78159fe.png"
     games: [sos-fomt]
     sources:
@@ -759,6 +759,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 200 分钟，按已挂录像 BV1jh411k7ke 的纯净版全长（6 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2021-02-27-live-01
     type: live
@@ -766,7 +767,7 @@
     title: "节奏医生"
     platform: douyu
     confidence: high
-    duration_min: 40
+    duration_min: 240
     cover: "https://i0.hdslb.com/bfs/archive/930d9a605bebe4cfd912963c4778d12dca58ae62.png"
     games: [rhythm-doctor]
     sources:
@@ -780,6 +781,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：时长订正为 240 分钟，按已挂录像 BV1ey4y177Pi 的纯净版全长（6 个分P，分P 名都是当天）；原值只算了其中一部分。"
 
   - id: 2021-02-28-live-01
     type: live

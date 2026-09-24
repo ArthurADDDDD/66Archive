@@ -633,7 +633,17 @@
         parts: 8
         status: alive
         account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV17W411a7tw
+        kind: clip
+        status: alive
+        account: bili-fan-record-house
+        note: "录像小屋《【女流戏说红楼】第一章：贾瑞之死》，分P 名标 11.19，是当天 66说书 的剪辑章节"
+      - url: https://www.acfun.cn/v/ac4138953
+        kind: clip
+        status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：挂上录像小屋 2017-12 投的「女流戏说红楼」剪辑章节（第一章），按分P 名里的日期对应到本场。"
 
   - id: 2017-11-21-live-01
     type: live
@@ -919,4 +929,23 @@
         parts: 10
         status: alive
         account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV1JW411a7bz
+        kind: clip
+        status: alive
+        account: bili-fan-record-house
+        note: "录像小屋《【女流戏说红楼】第二章：平儿「心知肚明」》，分P 名标 11.26，是当天 66说书 的剪辑章节"
+      - url: https://www.acfun.cn/v/ac4138964
+        kind: clip
+        status: alive
+        account: acfun-fan-record-house
+      - url: https://www.bilibili.com/video/BV1JW411a74y
+        kind: clip
+        status: alive
+        account: bili-fan-record-house
+        note: "录像小屋《【女流戏说红楼】第三章：金钏儿冤死》，分P 名标 11.26，是当天 66说书 的剪辑章节"
+      - url: https://www.acfun.cn/v/ac4138969
+        kind: clip
+        status: alive
+        account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-25 task-054：挂上录像小屋 2017-12 投的「女流戏说红楼」剪辑章节（第二章、第三章），按分P 名里的日期对应到本场。"

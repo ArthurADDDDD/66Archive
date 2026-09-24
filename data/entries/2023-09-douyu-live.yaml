@@ -433,6 +433,21 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2023-09-15-live-02
+    type: live
+    date: "2023-09-15"
+    title: "We Were Here Expeditions（深夜场）"
+    platform: douyu
+    confidence: high
+    duration_min: 112
+    games: [we-were-here-expeditions]
+    sources:
+      - url: https://v.douyu.com/show/8pa9v5NlqJa7VrqA
+        kind: replay
+        status: alive
+    contributed_by: data-agent
+    note: "当晚另开的一场。斗鱼官方回看：22:29 开播、112 分钟，与下午 14:59～19:27 那场（2023-09-15-live-01，录像小屋 268 分钟）隔了 3 小时，场次标题相同，游戏按同一款登记。B站 / A站镜像未找到。2026-09-25 task-054。"
+
   - id: 2023-09-16-live-02
     type: live
     date: "2023-09-16"
