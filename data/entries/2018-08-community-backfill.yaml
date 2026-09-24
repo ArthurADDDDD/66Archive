@@ -11,10 +11,14 @@
     games: [minecraft]
     note: "010陈于 2018-08-17 发布的大周MC补档。原微博明确说明第一、二集录像当时已经被删，此视频删去了侵权地图部分，并重新整理开头、结尾，用于帮助没看直播的观众补齐前两集剧情。当前保留微博中的 t.cn 视频短链；最终落地平台/原视频页仍待复核，因此来源状态先标 unchecked。"
     sources:
+      - url: "https://www.bilibili.com/video/BV1GW411R7d4"
+        kind: clip
+        status: alive
+        note: "010陈本人的 B站号（UID 7125447）《《大周MC·崩坏的世界》1，2集剧情简介》，2018-08-15 23:36 投稿，7:35。简介「做了开头和升华一下结尾，删除了侵权部分地图」，与微博说明一致，按同一作品处理；B站这份比微博早两天发出。2026-09-24 task-048 找到，作为短链之外的稳定来源。"
       - url: "https://t.cn/RkZjJkE"
         kind: clip
         status: unchecked
-        note: "010陈 2018-08-17 微博原始视频短链；微博正文明确称其为第一、二集补档。"
+        note: "010陈 2018-08-17 微博原始视频短链；微博正文明确称其为第一、二集补档。2026-09-24 复查：短链仍跳转到 video.weibo.com/show?fid=1034:4273967305825221，未登录只能看到访客验证页，视频本身是否还在未确认。"
     contributed_by: chatgpt-research
 
   - id: 2018-08-26-video-01
@@ -27,10 +31,10 @@
     games: [minecraft]
     note: "010陈发布的《女流大周月报》八月篇，主题为大周MC；微博正文说明包含大结局后的非官方隐藏结局，并明确给出 B站链接。"
     sources:
-      - url: "https://t.cn/Rk3D7ip"
+      - url: "https://www.bilibili.com/video/BV16W411D75z"
         kind: clip
-        status: unchecked
-        note: "010陈微博正文明确标注为 B站链接。"
+        status: alive
+        note: "010陈（B站 UID 7125447）《【女流大周月报】八月篇：大周MC》，2018-08-26 05:15 投稿，8:15。原先记的是微博里的短链 https://t.cn/Rk3D7ip（微博正文标注为 B站链接）；2026-09-24 task-048 解析短链落点为 av30328381，即本视频，改记 B站原始地址，免得短链服务失效后断链。"
       - url: "https://t.cn/Rk3euZS"
         kind: clip
         status: unchecked

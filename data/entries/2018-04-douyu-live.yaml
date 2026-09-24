@@ -439,10 +439,11 @@
     date: "2018-04-14"
     title: "逃出生天 A Way Out"
     platform: douyu
-    confidence: medium
+    confidence: high
     games: [a-way-out]
+    no_public_replay: true
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：逃出生天/ A Way Out」（https://tieba.baidu.com/p/9079048376 89 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「游戏：逃出生天/ A Way Out」（https://tieba.baidu.com/p/9079048376 89 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。2026-09-24 task-048：录像是有意不发布的，两处同期记录：①女流吧 2018-04-15 21:26《为什么和壮壮一起玩的《A WAY OUT》录像没了？》（https://tieba.baidu.com/p/5650322261），楼主说白天在 B站看到过、晚上就没了，回复「因为这个录像不太正能量，所以没上传」「网盘都没传，除非有人直播的时候录像了，不然就没有了」；②录像导航帖 2018-06-09 吧务答「为什么2018没有4-14日的」：「游戏内容影响不好，所以录像都没有的」（https://tieba.baidu.com/p/5701625222 3 楼楼中楼）。与壮壮同玩、录像被撤两点有两个独立来源，confidence 由 medium 改 high；公开录像的缺失是结论，不是漏找。"
 
   - id: 2018-04-15-live-01
     type: live
