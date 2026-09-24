@@ -2558,6 +2558,8 @@
     name: 境界：灵压对决
     aliases:
       - BLEACH Soul Resonance
+      - BLEACH 境·界-灵压对决
+      - 死神对决
 
   - id: brain-school
     name: 灵活脑学校
@@ -3283,9 +3285,6 @@
   - id: derail-valley
     name: Derail Valley
 
-  - id: sishen-duijue
-    name: 死神对决
-
   - id: feel-the-snow
     name: Feel The Snow
 
@@ -3584,3 +3583,17 @@
     aliases:
       - Portal
       - 传送门1
+
+  - id: hex-shards-of-fate
+    name: 集换英雄HEX
+    aliases:
+      - "HEX: Shards of Fate"
+      - HEX
+
+  - id: snow-bros
+    name: 雪人兄弟
+    aliases:
+      - Snow Bros.
+
+  - id: xingzhi-qiyue
+    name: 星之契约

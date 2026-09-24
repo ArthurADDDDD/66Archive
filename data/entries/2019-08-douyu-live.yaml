@@ -510,7 +510,7 @@
     confidence: high
     duration_min: 319
     cover: "https://i0.hdslb.com/bfs/archive/c36ca48e5e5033782d75bb522004528621df8aeb.png"
-    games: [heave-ho, sishen-duijue, bleach-soul-resonance]
+    games: [heave-ho, bleach-soul-resonance]
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
@@ -525,10 +525,10 @@
         game: heave-ho
       - at: "03:50:04"
         label: "死神对决"
-        game: sishen-duijue
+        game: bleach-soul-resonance
       - at: "04:34:20"
         label: "死神对决"
-        game: sishen-duijue
+        game: bleach-soul-resonance
     sources:
       - url: https://www.bilibili.com/video/BV1i4411274R
         kind: replay
@@ -543,5 +543,5 @@
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: "2026-09-24 task-051：本条原有两份。斗鱼官方回看《境界灵压对决试玩》开播于 2019-08-29 15:07，全长 5:18:40（19120 秒）；B站女流录像小屋《女流-2019.8.30-Heave Ho&死神对决》全长 19122 秒、第一个分P 文件名就是 2019.8.29，两份是同一场，合并到 08-29，删去 2019-08-30-live-01。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也把 Heave Ho 与境界灵压对决记在 08-29、08-30 记「休假」。录像小屋叫「死神对决」、斗鱼标题叫「境界灵压对决」，很可能是同一款游戏，两个游戏 id 暂都保留，待维护者确认后合并。"
+    note: "2026-09-24 task-051：本条原有两份。斗鱼官方回看《境界灵压对决试玩》开播于 2019-08-29 15:07，全长 5:18:40（19120 秒）；B站女流录像小屋《女流-2019.8.30-Heave Ho&死神对决》全长 19122 秒、第一个分P 文件名就是 2019.8.29，两份是同一场，合并到 08-29，删去 2019-08-30-live-01。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也把 Heave Ho 与境界灵压对决记在 08-29、08-30 记「休假」。录像小屋叫「死神对决」、斗鱼标题叫「境界灵压对决」，很可能是同一款游戏，两个游戏 id 暂都保留，待维护者确认后合并。 2026-09-24 task-052：录像 P5/P6 的画面缩略图里是「BLEACH 境·界」标志、正版授权页与掌趣／天马时空／聚逸的厂商标，即《BLEACH 境·界-灵压对决》；「死神对决」是录像小屋的叫法，两个游戏 id 合并为 bleach-soul-resonance。"
 

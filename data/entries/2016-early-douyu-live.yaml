@@ -81,9 +81,9 @@
     platform: douyu
     confidence: high
     no_public_replay: true
-    games: [whos-your-daddy]
+    games: [whos-your-daddy, xingzhi-qiyue]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。"
+    note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。 2026-09-24 task-052：葵kiss 同期贴吧记「who‘s your Daddy（谁是你爸爸）& 星之契约」，节目单也记星之契约，登记。"
   - id: 2016-01-06-live-01
     type: live
     date: "2016-01-06"

@@ -71,7 +71,7 @@
     confidence: high
     duration_min: 248
     cover: "https://i0.hdslb.com/bfs/archive/3a5d309749389a2ce12ad0c70622afefd5cf4df1.jpg"
-    games: [inside-my-radio]
+    games: [inside-my-radio, snow-bros]
     segments:
       - at: "00:00:00"
         label: "P1"
@@ -94,6 +94,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-052：本条录像 P4、P5 分P 名就是「雪人兄弟」，节目单也记「姐弟连线雪人兄弟」，登记。"
 
   - id: 2016-11-09-live-01
     type: live
@@ -474,7 +475,7 @@
     confidence: high
     duration_min: 281
     cover: "https://i0.hdslb.com/bfs/archive/5dafa2b3b77fda4f4e207b9c437de488fc8caf4e.jpg"
-    games: [dark-souls-3]
+    games: [dark-souls-3, hex-shards-of-fate]
     segments:
       - at: "00:00:00"
         label: "P1-11.23-黑暗之魂3DLC-day3"
@@ -497,6 +498,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-052：本条录像 P3、P4 分P 名是「11.23-hex-day3」，节目单也记「集换英雄HEX」，登记。"
 
   - id: 2016-11-24-live-01
     type: live

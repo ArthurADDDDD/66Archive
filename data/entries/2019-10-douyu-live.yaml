@@ -2,17 +2,20 @@
     cover: "https://i0.hdslb.com/bfs/archive/ff3ea0abc50dddd124a30b566463e64fafffc2fc.png"
     type: live
     date: "2019-10-03"
-    title: "过山车之星"
+    title: "牛牛山动物园赚大钱了"
     platform: douyu
     confidence: high
     duration_min: 266
-    games: [planet-coaster]
-    note: "B站「女流录像小屋」《过山车之星》，全长录播。"
+    games: [planet-zoo]
+    note: "B站「女流录像小屋」《过山车之星》，全长录播。 2026-09-24 task-052：斗鱼官方回看列表里 10-03、10-04 各有一场（本场开播 2019-10-03 15:07，另一场 10-04 15:09），是两场不是重复；录像开场约 5 分钟她说「现在是2019年10月3号」。游戏是《动物园之星》（2019-09-24 起向预购玩家开放测试）：她说「得把动物园经营好」「我这牛牛山动物园」、P4 里有「饲养员会自动补给水」「动物都缺水了」，两天斗鱼场次标题都是「牛牛山动物园赚大钱了」，节目单也记动物园之星；录像小屋标题写成了过山车之星。游戏改为 planet-zoo，标题取斗鱼场次标题。"
     sources:
       - url: "https://www.bilibili.com/video/BV15E411D7BD"
         kind: replay
         status: alive
         account: bili-fan-record-house
+      - url: https://v.douyu.com/show/DrwnvzA54mOWPNaX
+        kind: replay
+        status: alive
     contributed_by: data-agent
 
   - id: 2019-10-06-live-01
@@ -458,7 +461,7 @@
   - id: 2019-10-04-live-01
     type: live
     date: '2019-10-04'
-    title: 【女流直播】 过山车之星 P1 2019.10.4
+    title: "牛牛山动物园赚大钱了"
     platform: douyu
     confidence: high
     duration_min: 270
@@ -468,8 +471,8 @@
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
-    games: [planet-coaster]
+    note: "斗鱼官方直播回看补入 2026-09-24 task-052：斗鱼场次标题「牛牛山动物园赚大钱了」，与 10-03 同为《动物园之星》测试版（10-03 录像里在养动物）；回看分P 名与菜单角标写作过山车之星，游戏改为 planet-zoo。"
+    games: [planet-zoo]
   - id: 2019-10-22-live-01
     type: live
     date: '2019-10-22'
