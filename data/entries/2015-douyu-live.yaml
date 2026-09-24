@@ -1150,6 +1150,78 @@
     games: []
     contributed_by: data-agent
     note: "直播日：存档斗鱼快照（2015-09-30）缩略图时间戳 2015-09-29 19:13。标题属当场：同日 18:38 有吧友从直播间分享《旅游照片未整理》（https://tieba.baidu.com/p/4072188846），分享时刻在缩略图时刻之前，说明开播时直播间就挂着这句。内容未知。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+  - id: 2015-09-30-live-01
+    type: live
+    date: '2015-09-30'
+    title: "请出示文件"
+    platform: douyu
+    confidence: high
+    duration_min: 386
+    games: [papers-please]
+    sources:
+      - url: https://www.bilibili.com/video/BV1nW411u75e?p=1
+        kind: replay
+        status: alive
+        cover_unreliable: true
+        account: bili-fan-record-house
+        parts: 4
+        part_details:
+          - page: 1
+            title: "P1.1-2015.9.30-游戏前聊天环节"
+            duration_sec: 3346
+          - page: 2
+            title: "P1.2-2015.9.30-请出示证件 Paper Please"
+            duration_sec: 3664
+          - page: 3
+            title: "P1.3-2015.9.30-请出示证件 Paper Please"
+            duration_sec: 5649
+          - page: 4
+            title: "P1.4-2015.9.30-请出示证件 Paper Please"
+            duration_sec: 10489
+        note: "B站「女流录像小屋」2018-03-29 补投《女流过往精彩录像补-请出示证件 Paper Please》P1.1～P1.4，分P 标 2015.9.30。"
+    contributed_by: data-agent
+    note: "直播日 2015-09-30，不只凭分P 标注。P1.4 结尾她说「我可能明天早上来播，因为我下午就要坐飞机回家了……那就明天9点开播吧……明天就从第26天开始重新玩」；第二天那场（2015-10-01-live-01）开场「国庆快乐」，又说「昨天不是玩到第27天」，两场首尾相接。存档直播间快照 09-30 12:06 仍停在 09-29 的缩略图，与本场下午才开播不矛盾。沈锋整理的节目单也记 09-30「paper please」（节目单由录像文件整理，与补投分P 可能同源）。P1.1 是开播前约 56 分钟的聊天（看明星照片、聊国庆回内蒙老家要不要直播）。画面全屏，没有任务栏时钟。2026-09-24 task-049。"
+  - id: 2015-10-01-live-01
+    type: live
+    date: '2015-10-01'
+    title: "请出示文件（国庆早场）"
+    platform: douyu
+    confidence: high
+    duration_min: 86
+    games: [papers-please]
+    sources:
+      - url: https://www.bilibili.com/video/BV1nW411u75e?p=5
+        kind: replay
+        status: alive
+        cover_unreliable: true
+        account: bili-fan-record-house
+        part_details:
+          - page: 5
+            title: "P2-2015.10.1-请出示证件 Paper Please"
+            duration_sec: 5155
+    contributed_by: data-agent
+    note: "上午场。开场「早啊……一睁眼就9点20了……最后改口成九点半了」「国庆快乐」，说 10 月 7 号回北京，「昨天不是玩到第27天」接的是 09-30 那场的结尾（见 2015-09-30-live-01）。贴吧 2015-10-01 20:12 有人求「签字那游戏 10.1 早上的那部分」（https://tieba.baidu.com/p/4076265658），与本场相合。沈锋整理的节目单这天只写「国庆特辑」。当天下午她坐飞机回家。2026-09-24 task-049。"
+  - id: 2015-10-08-live-01
+    type: live
+    date: '2015-10-08'
+    title: "请出示文件"
+    platform: douyu
+    confidence: medium
+    duration_min: 25
+    games: [papers-please]
+    sources:
+      - url: https://www.bilibili.com/video/BV1nW411u75e?p=6
+        kind: replay
+        status: alive
+        cover_unreliable: true
+        account: bili-fan-record-house
+        part_details:
+          - page: 6
+            title: "P3-2015.10.8-请出示证件 Paper Please"
+            duration_sec: 1485
+        note: "只有 25 分钟，是这一天的一段，不是整场。"
+    contributed_by: data-agent
+    note: "日期只有两处来源：录像小屋补投分P 标「2015.10.8」，沈锋整理的节目单 10-08 记「游戏发展国、外科手术模拟2013、我是面包、paper please」。两者都是按当年录像文件整理的，未必互相独立；这个上传者的补投分P 至少错过一次一天（task-047：奇异人生标 06-24，实为 06-23）。片中没有自报日期、画面无任务栏时钟，只有游戏内日期；内容接着 10-01 的进度（讨论第 30、31 天）。她 10-01 说 10 月 7 号回北京，与 10-08 恢复直播不矛盾。所以 confidence 记 medium。2026-09-24 task-049。"
   - id: 2015-10-11-live-01
     type: live
     date: '2015-10-11'
