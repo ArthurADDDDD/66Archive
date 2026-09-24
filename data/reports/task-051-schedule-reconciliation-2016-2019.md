@@ -1,6 +1,7 @@
 # task-051 沈锋节目单 2016～2019 页与档案逐日对账
 
 > 2026-09-24。接 [task-050](task-050-schedule-reconciliation-2015.md)（2015 页）。节目单只当索引用，不当事实；只有节目单一处的日子不建条目。
+> **2026-09-24 task-052 更正**（见 [task-052](task-052-schedule-tails.md)）：§3 的死神对决／境界灵压对决已确认同一款并合并；§4 把 2019-10-03、10-04 判为节目单有误是错的——那两天玩的就是《动物园之星》测试版，且是两场；§1 降为 low 的六条中四条已找到证据升回 high、两条删除回到候选。
 > 逐日结果：[`shenfeng-schedule-2016-2019-reconciliation.csv`](../catalogs/shenfeng-schedule-2016-2019-reconciliation.csv)（1336 行，一个节目单日期一行）。
 
 ## 0. 结果
