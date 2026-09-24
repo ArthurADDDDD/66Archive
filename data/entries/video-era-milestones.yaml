@@ -12,7 +12,12 @@
   sources:
     - url: "https://v.youku.com/v_show/id_XMTcxMzcyMjAw.html"
       kind: original
+      status: dead
+      note: "2026-09-24 task-048 复查：优酷播放接口返回「该视频已经加密，请输入密码」（错误码 -2002），页面还在，但视频被上传者设了密码，公开无法播放。B站/A站没有这支视频的搬运。"
+    - url: "https://www.bilibili.com/video/BV1rW411y7cc"
+      kind: clip
       status: alive
+      note: "B站「朝闻道夕-初学」《女流66看自己制作的第一个视频《迷画之塔》的反应》，2018-10-07 投稿，7:43。是她 2018 年直播时回看这支视频的片段，不是原片，只能看到其中一部分。"
   contributed_by: data-agent
 - id: 2010-06-30-video-01
   type: video
