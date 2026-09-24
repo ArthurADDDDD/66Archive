@@ -394,26 +394,6 @@
         parts: 5
         status: alive
         account: acfun-fan-record-house
-    contributed_by: data-agent
-
-    note: 补入 B 站「秘密录像屋」BV1hJ411s7hF
-  - id: 2019-12-23-live-01
-    type: live
-    date: "2019-12-23"
-    title: "【心灵砒霜】大家冬至吃饺子了吗"
-    series: xinling-pishuang
-    platform: douyu
-    confidence: high
-    duration_min: 221
-    cover: "https://tx-free-imgs.acfun.cn/o_1dspan5dg12tq55ptp1t8j1vtn0.jpeg?imageslim"
-    games: []
-    tags: [心灵砒霜, 弹幕版]
-    segments:
-      - at: "00:00:00"
-        label: "Part1"
-      - at: "01:50:37"
-        label: "Part2"
-    sources:
       - url: "https://www.acfun.cn/v/ac12132513"
         kind: replay
         parts: 2
@@ -421,6 +401,7 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+    note: "补入 B 站「秘密录像屋」BV1hJ411s7hF 2026-09-24 task-051：A站 ac12132513《女流-2019.12.23-心灵砒霜-弹幕版》标题与本场相同（大家冬至吃饺子了吗），是次日渲染上传的弹幕版，原单独建为 2019-12-23-live-01，现并入本条并删去。2019 年冬至是 12-22（周日），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 12-23 空白。"
   - id: 2019-12-25-live-01
     type: live
     date: '2019-12-25'

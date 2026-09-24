@@ -373,8 +373,8 @@
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
-    games: [world-of-warcraft]
+    note: "斗鱼官方直播回看补入 2026-09-24 task-051：标题「挤进服务器可太难了」是 2019-08-27 开服的魔兽世界怀旧服排队，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记「魔兽世界怀旧服」，游戏改为 wow-classic。"
+    games: [wow-classic]
   - id: 2019-09-11-live-01
     type: live
     date: '2019-09-11'

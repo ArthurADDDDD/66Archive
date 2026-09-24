@@ -784,16 +784,35 @@
     contributed_by: data-agent
   - id: 2019-01-30-live-01
     type: live
-    date: '2019-01-30'
-    title: 【女流直播】 勇者斗恶龙创世小玩家 P12019.1.30
+    date: "2019-01-30"
+    title: "勇者斗恶龙创世小玩家2"
     platform: douyu
     confidence: high
     duration_min: 225
-    cover: "https://sta-op.douyucdn.cn/vod-cover/2019/01/31/a4c669037f27eff6c19f464f24d36c5b.jpg"
+    cover: "https://i0.hdslb.com/bfs/archive/700c1431d98a9f4a4b5d99f38de95404f9a98579.png"
+    games: [dragon-quest-builders-2]
+    segments:
+      - at: "00:00:00"
+        label: "勇者斗恶龙创世小玩家2"
+      - at: "00:56:20"
+        label: "勇者斗恶龙创世小玩家2"
+      - at: "01:52:43"
+        label: "勇者斗恶龙创世小玩家2"
+      - at: "02:49:05"
+        label: "勇者斗恶龙创世小玩家2"
     sources:
+      - url: https://www.bilibili.com/video/BV1eb411y7b9
+        kind: replay
+        status: alive
+        account: bili-fan-record-house
+      - url: "https://www.acfun.cn/v/ac4909237"
+        kind: replay
+        parts: 4
+        status: alive
+        account: acfun-fan-record-house
       - url: https://v.douyu.com/show/8KxjMd88OPYMVLwb
         kind: replay
         status: alive
     contributed_by: data-agent
-    note: 斗鱼官方直播回看补入
-    games: [dragon-quest-builders]
+    note: "2026-09-24 task-051：本条原有两份。B站女流录像小屋 BV1eb411y7b9 与 A站 ac4909237 此前挂在 2018-01-30（投稿标题写成「女流-2018.1.30」），但 B 站投稿时间是 2019-01-31 00:12、四个分P 文件名都是 2019.1.30，《勇者斗恶龙创世小玩家2》2018-12 才发售，时长又与斗鱼官方回看 2019-01-30 15:11 起那一场同为 225 分钟，所以是同一场，合并到 2019-01-30，删去 2018-01-30-live-01。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 2018-01-30 记的是《怪物猎人：世界》，与 2018-01-30-live-02 一致；2019-01-30 记「勇者斗恶龙:创世小玩家2」。"
+

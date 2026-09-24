@@ -6,7 +6,7 @@
     confidence: high
     duration_min: 196
     cover: "https://i0.hdslb.com/bfs/archive/9cda9aa6cf5e26dfb2b4cc9e2d039b3d2d8ef9a0.jpg"
-    games: []
+    games: [true-or-false-game]
     tags: [聊天]
     segments:
       - at: "00:00:00"
@@ -26,6 +26,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「正或误」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「对或错」，都是 True or False（09-25、09-26 一手在玩），登记。"
 
   - id: 2016-10-04-live-01
     type: live

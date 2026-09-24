@@ -637,7 +637,7 @@
     confidence: high
     duration_min: 86
     cover: "https://i0.hdslb.com/bfs/archive/7f83cbc4b2393b04c3624b31e60d543a71d507a5.jpg"
-    games: [stickman]
+    games: [stick-fight-the-game]
     segments:
       - at: "00:00:00"
         label: "P1-10.20-Stickman"
@@ -656,6 +656,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：录像封面画面是《Stick Fight: The Game》（2017-09-28 发售；10-21 画面角标写着 stickfight，10-20 是它的 QUICK MATCH / HOST MATCH 联机菜单），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记「坚持战斗 Stick Fight」，游戏由 stickman 改为 stick-fight-the-game。"
 
   - id: 2017-10-20-live-02
     type: live
@@ -704,7 +705,7 @@
     confidence: high
     duration_min: 248
     cover: "https://i0.hdslb.com/bfs/archive/216f4cb86f3badfbe5f70939aa212ca9f265955d.png"
-    games: [stickman]
+    games: [stick-fight-the-game]
     segments:
       - at: "00:00:00"
         label: "P1-10.21-游戏前聊10块钱的"
@@ -735,6 +736,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：录像封面画面是《Stick Fight: The Game》（2017-09-28 发售；10-21 画面角标写着 stickfight，10-20 是它的 QUICK MATCH / HOST MATCH 联机菜单），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记「坚持战斗 Stick Fight」，游戏由 stickman 改为 stick-fight-the-game。"
 
   - id: 2017-10-22-live-01
     type: live

@@ -275,8 +275,8 @@
     platform: douyu
     confidence: high
     duration_min: 114
-    games: [crossout]
-    note: "B站「女流录像小屋」《创世战车》，全长录播。"
+    games: [crossout, kindergarten]
+    note: "B站「女流录像小屋」《创世战车》，全长录播。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 2017-07-12 16:37 发帖记「7/12 幼儿园(Kindergarten)」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 07-12 也只记幼儿园；本条录像是《创世战车》，同一天两款都玩过，登记幼儿园。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Bx411q7iU"
         kind: replay

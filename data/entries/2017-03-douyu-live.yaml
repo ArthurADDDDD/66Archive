@@ -274,7 +274,7 @@
     confidence: high
     duration_min: 347
     cover: "https://i0.hdslb.com/bfs/archive/ef9b32551dbbce60abb099da9d4fe669cc0a4c40.jpg"
-    games: [league-of-legends]
+    games: [league-of-legends, zelda-botw]
     segments:
       - at: "00:00:00"
         label: "P1-聊天+塞尔达传说"
@@ -303,6 +303,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「塞尔达传说 荒野之息」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，标题「塞尔达传说+LOL」，登记。"
 
   - id: 2017-03-17-live-01
     type: live
@@ -446,7 +447,7 @@
     confidence: high
     duration_min: 307
     cover: "https://i0.hdslb.com/bfs/archive/0a39f5f01e53fd487bfec7bffa5ea6aaa28c33b2.jpg"
-    games: [rusty-lake]
+    games: [rusty-lake, zelda-botw]
     segments:
       - at: "00:00:00"
         label: "Rusty lake"
@@ -465,6 +466,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「rusty lake新章cave / 塞尔达传说 荒野之息」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，标题「rusty lake新章节和塞尔达」，登记。"
 
   - id: 2017-03-25-live-01
     type: live

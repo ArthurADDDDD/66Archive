@@ -983,35 +983,6 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
-  - id: 2018-01-30-live-01
-    type: live
-    date: "2018-01-30"
-    title: "勇者斗恶龙创世小玩家2"
-    platform: douyu
-    confidence: high
-    duration_min: 225
-    cover: "https://i0.hdslb.com/bfs/archive/700c1431d98a9f4a4b5d99f38de95404f9a98579.png"
-    games: [dragon-quest-builders-2]
-    segments:
-      - at: "00:00:00"
-        label: "勇者斗恶龙创世小玩家2"
-      - at: "00:56:20"
-        label: "勇者斗恶龙创世小玩家2"
-      - at: "01:52:43"
-        label: "勇者斗恶龙创世小玩家2"
-      - at: "02:49:05"
-        label: "勇者斗恶龙创世小玩家2"
-    sources:
-      - url: https://www.bilibili.com/video/BV1eb411y7b9
-        kind: replay
-        status: alive
-        account: bili-fan-record-house
-      - url: "https://www.acfun.cn/v/ac4909237"
-        kind: replay
-        parts: 4
-        status: alive
-        account: acfun-fan-record-house
-    contributed_by: data-agent
   - id: 2018-01-30-live-02
     type: live
     date: "2018-01-30"

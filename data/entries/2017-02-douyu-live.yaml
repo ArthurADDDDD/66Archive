@@ -338,7 +338,7 @@
     confidence: high
     duration_min: 201
     cover: "https://i0.hdslb.com/bfs/archive/ebdeb1bd38b97f89e54155564f7b81ed125200f2.jpg"
-    games: [geometry-dash]
+    games: [geometry-dash, kalimba]
     segments:
       - at: "00:00:00"
         label: "1P没错还是几何冲刺"
@@ -357,6 +357,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「（凌晨） KALIMBA / 几何冲刺」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「凌晨KALIMBA试玩、玩两把几何冲刺58」，登记 Kalimba。两处都说是凌晨另开的一小段（节目单记 58 分钟），本条录像只有白天的几何冲刺，那一段没有录像，暂不拆成单独一场。"
 
   - id: 2017-02-18-live-01
     type: live

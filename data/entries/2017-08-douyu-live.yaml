@@ -535,7 +535,7 @@
     confidence: high
     duration_min: 209
     cover: "https://i0.hdslb.com/bfs/archive/f431d33d7e75c512ac5dff48d5a450d9115c8557.jpg"
-    games: [pubg]
+    games: [pubg, ibb-and-obb]
     tags: [聊天]
     segments:
       - at: "00:00:00"
@@ -596,6 +596,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴）（2017-09-18 补记）记「守望先锋 ibb&obb 绝地求生」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「ibb&obb、绝地救生」，登记 ibb & obb；守望先锋只有贴吧一处，未登记。"
 
   - id: 2017-08-11-live-01
     type: live

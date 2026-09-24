@@ -84,6 +84,16 @@
     games: [whos-your-daddy]
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。"
+  - id: 2016-01-06-live-01
+    type: live
+    date: "2016-01-06"
+    title: "来吧来吧撸一棵树"
+    platform: douyu
+    confidence: high
+    games: [minecraft]
+    contributed_by: data-agent
+    note: "直播日：存档直播间页（Wayback 20160106204106，douyutv.com/nvliu）标题「来吧来吧撸一棵树」，缩略图时间戳 2016-01-06 19:17，即当天傍晚开过播。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-06 记「MC直播服」，标题「撸一棵树」正是 MC 开局砍树，两处相合，登记 MC。录像未找到。2026-09-24 task-051。"
+
   - id: 2016-01-07-live-01
     type: live
     date: "2016-01-07"
@@ -99,9 +109,9 @@
     title: "逆转裁判"
     platform: douyu
     confidence: medium
-    games: []
+    games: [gyakuten-saiban-1]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧只写「逆转裁判」，未说哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧只写「逆转裁判」，未说哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆转裁判」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「逆转裁判：复苏的逆转」（即初代第 5 章），登记《逆转裁判1》。"
   - id: 2016-01-10-live-01
     type: live
     date: '2016-01-10'
@@ -150,6 +160,16 @@
         note: "A站「斗鱼录像厅」《【主机游戏】Poly bridge 11月更新最新关卡 快来体验吧（一）》，上下半场两 P 共 205 分钟，发布 2016-01-12 10:52。同号另有（二）ac2454768，经音频比对与本条下半场逐秒相同，是重复投稿，不另挂。"
     contributed_by: data-agent
     note: "直播日 2016-01-11 取自贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）：「1/11 Poly bridge11月更新」，与录像标题逐字相合；楼中楼另有补漏「1/11~1/13 poly bridge」。片尾她说「明天见，明天把后面六关过了」，与 01-12 17:58 快照所证的次日开播相接。片中提到同事听说她「见到黄渤了」（01-03 直播间标题「hello huangbobo」），时序一致。"
+  - id: 2016-01-12-live-01
+    type: live
+    date: "2016-01-12"
+    title: "Poly Bridge"
+    platform: douyu
+    confidence: medium
+    games: [poly-bridge]
+    contributed_by: data-agent
+    note: "直播日：存档直播间页（Wayback 20160113180234、20160115173801）缩略图时间戳 2016-01-12 17:58，即当天傍晚开过播；快照时标题是「收拾行李预计四点来」，拍在下播之后，可能是为次日改的，不用作本场标题。内容只有 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-12「Poly Bridge」一处；01-11、01-19 两场一手都是 Poly Bridge，故登记，confidence 取 medium。录像未找到。2026-09-24 task-051。"
+
   - id: 2016-01-19-live-01
     type: live
     date: "2016-01-19"
@@ -196,7 +216,7 @@
     cover: "/images/covers/2016-01-24-live-01.jpg"
     confidence: high
     duration_min: 236
-    games: []
+    games: [minecraft]
     tags: [心灵砒霜]
     sources:
       - url: "https://www.bilibili.com/video/BV1Rx411S7Ta"
@@ -213,7 +233,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【全明星秀】女流斗鱼直播一周年纪念日 感谢有你 水友狂送礼物和鱼丸！》，发布 2016-01-25 14:20，时长 1:50:25。与 ac2487882 同批发布，为同场的另一段。"
     contributed_by: data-agent
-    note: "周年直播日定在 2016-01-24（不是首播周年正日 2015-01-21）：存档斗鱼快照显示 2016-01-24 18:52 房间在播；两条 A 站录像均于次日 2016-01-25 下午发布，滞后 1 天，符合该号 1～4 天的发布规律；而 2016-01-21 14:41 的快照当时仍处下播状态、最后开播停在 2016-01-20 19:16。duration_min 由 97 改为 236（126+110），取两段 A 站录像之和；B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P 的 97 分钟是剪辑版，不代表当日直播全长。"
+    note: "周年直播日定在 2016-01-24（不是首播周年正日 2015-01-21）：存档斗鱼快照显示 2016-01-24 18:52 房间在播；两条 A 站录像均于次日 2016-01-25 下午发布，滞后 1 天，符合该号 1～4 天的发布规律；而 2016-01-21 14:41 的快照当时仍处下播状态、最后开播停在 2016-01-20 19:16。duration_min 由 97 改为 236（126+110），取两段 A 站录像之和；B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P 的 97 分钟是剪辑版，不代表当日直播全长。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「MC」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「MC直播服」，登记 MC。"
   - id: 2016-01-26-live-01
     type: live
     date: "2016-01-26"
@@ -476,6 +496,26 @@
     games: [far-cry-primal]
     contributed_by: data-agent
     note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「极地战嚎：野蛮纪源」（https://tieba.baidu.com/p/4363790737 10 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+  - id: 2016-02-26-live-01
+    type: live
+    date: "2016-02-26"
+    title: "休息一下。。。。"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日：斗鱼主机游戏分区列表页存档（Wayback 20160226081243，/directory/game/TVgame）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-26 16:07，列表页只列正在直播的房间。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-26 记「逆转裁判录像、聊天」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-051。"
+
+  - id: 2016-02-28-live-01
+    type: live
+    date: "2016-02-28"
+    title: "休息一下。。。。"
+    platform: douyu
+    confidence: high
+    games: []
+    contributed_by: data-agent
+    note: "直播日：斗鱼全部分区列表页存档（Wayback 20160228035658，/directory/all）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-28 11:52。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-28 记「看天线宝宝、看天花板、看越狱兔、画画」，是聊天看视频的一天，games 留空。录像未找到。2026-09-24 task-051。"
+
   - id: 2016-03-02-live-01
     type: live
     date: "2016-03-02"
@@ -570,7 +610,7 @@
     platform: douyu
     confidence: high
     duration_min: 132
-    games: [stardew-valley]
+    games: [stardew-valley, nixizhixingtu-shanyao]
     sources:
       - url: https://www.bilibili.com/video/BV1Xx411V7mT?p=1
         kind: replay
@@ -586,7 +626,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】女流 星露谷 全程直播录像》，上下两 P，发布 2016-03-10 15:41。2026-09-23 音频比对：两 P 拼接后与 B站本条 P1+P2 全程逐段对齐（偏移始终在 1 分钟以内，相关分 0.47～0.95），是同一份录像；片头她自述「一次没玩过」、从建角色开始，即她的第一场星露谷。此前目录把它挂在 2016-03-10，是按发布日推的，不对。"
     contributed_by: data-agent
-    note: B站「女流录像小屋」《女流过往精彩录像补投第十二期-星露谷物语（2016.3.9）》。
+    note: "B站「女流录像小屋」《女流过往精彩录像补投第十二期-星露谷物语（2016.3.9）》。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆袭之星途闪耀」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。"
   - id: 2016-03-10-live-01
     cover: "https://i0.hdslb.com/bfs/archive/aa2f9c3292211e99953c32ffa675a18c18c7a15b.png"
     type: live
@@ -672,7 +712,7 @@
     platform: douyu
     confidence: high
     duration_min: 119
-    games: []
+    games: [stardew-valley]
     cover: "/images/covers/2016-03-13-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1ZN411o7VN?p=8
@@ -684,7 +724,7 @@
     tags:
       - 心灵砒霜
     series: xinling-pishuang
-    note: B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。
+    note: "B站「影忆丶Yi」《女流之心灵砒霜-2016补档》对应分P。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「星露谷物语」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。"
   - id: 2016-03-15-live-01
     cover: "https://i2.hdslb.com/bfs/archive/8e930f8848a6389aa73ec43ba2a81b930e0462e7.png"
     type: live
@@ -875,7 +915,7 @@
     platform: douyu
     confidence: high
     duration_min: 191
-    games: [stardew-valley]
+    games: [stardew-valley, geometry-dash]
     cover: "/images/covers/2016-03-28-live-01.jpg"
     sources:
       - url: https://www.bilibili.com/video/BV1fW411i7Lr?p=3
@@ -888,7 +928,7 @@
         status: alive
         cover_unreliable: true
     contributed_by: data-agent
-    note: B站「女流录像小屋」补投合集《星露谷物语（2016.3.24；3.25；3.28）》P3-P4。
+    note: "B站「女流录像小屋」补投合集《星露谷物语（2016.3.24；3.25；3.28）》P3-P4。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「geometry dash 几何冲刺」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。"
   - id: 2016-03-31-live-01
     type: live
     date: '2016-03-31'
@@ -1592,6 +1632,22 @@
         status: alive
         account: bili-fan-record-house
     contributed_by: data-agent
+
+  - id: 2016-07-27-live-01
+    type: live
+    date: "2016-07-27"
+    title: "上海户外"
+    platform: douyu
+    confidence: high
+    games: []
+    sources:
+      - url: https://www.bilibili.com/video/BV1cs411C7QV
+        kind: clip
+        status: alive
+        account: bili-fan-record-house
+        note: "B站「女流录像小屋」《7.27-上海》，2016-07-27 18:04 投稿，2P 共 4:13，只是片段。"
+    contributed_by: data-agent
+    note: "直播日：存档直播间页（Wayback 20160727181202、20160727201514）缩略图时间戳 2016-07-27 14:08；女流录像小屋当天 18:04 投了《7.27-上海》片段。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 07-27 记「上海户外」，与片段标题一致；快照标题「这几天在香港参加ACG」是这几天的行程说明（次日 07-28 是香港 ACG 索尼发布会）。完整录像未找到。2026-09-24 task-051。"
 
   - id: 2016-07-28-live-01
     cover: "/images/covers/2016-07-28-live-01.jpg"

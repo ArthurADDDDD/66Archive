@@ -6,8 +6,8 @@
     platform: douyu
     confidence: high
     duration_min: 267
-    games: [sumoman]
-    note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。"
+    games: [sumoman, comedy-night]
+    note: "B站「女流录像小屋」《相扑人Sumoman》，全长录播。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「Comedy Night / 相扑人Sumoman」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记喜剧之夜，登记。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Cx411t7jD"
         kind: replay
@@ -223,7 +223,7 @@
     confidence: high
     duration_min: 215
     cover: "https://i0.hdslb.com/bfs/archive/87799d77d40c3f3c22aa390ebda9126db1e9676d.png"
-    games: []
+    games: [pubg]
     tags: [聊天]
     segments:
       - at: "00:00:00"
@@ -253,6 +253,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
+    note: "2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴）（2017-09-18 补记）记「绝地求生」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「尬聊、绝地救生」，登记绝地求生。"
 
   - id: 2017-09-10-live-01
     type: live
