@@ -34,6 +34,8 @@ const MARKER = new RegExp('\\u2063([\\u200b\\u200c\\u200d\\u2060]+)\\u2064', 'g'
 const ANY_MARKER = new RegExp('\\u2063[\\u200b\\u200c\\u200d\\u2060]+\\u2064', 'g')
 
 const ATTR = 'data-i6-edit'
+/** 画廊照片（缩略图卡片、灯箱大图）带着它的 id，见 GalleryBoard。 */
+const PHOTO_ATTR = 'data-gallery-photo'
 const UI_ID = 'i6-live-edit-ui'
 const STYLE_ID = 'i6-live-edit-style'
 const MARKED_ATTRIBUTES = ['placeholder', 'aria-label', 'title', 'alt'] as const
@@ -100,6 +102,8 @@ export function startLiveEditSession(
       eyebrow: c(item.eyebrow, [scope, `@${item.id}`, 'eyebrow']),
       title: c(item.title, [scope, `@${item.id}`, 'title']),
       lede: c(item.lede, [scope, `@${item.id}`, 'lede']),
+      // 整块隐藏的开关要跟着草稿走：后台点「隐藏这一整块」，左边立刻压暗标注。
+      ...(item.hidden ? { hidden: true } : {}),
     })
     return {
       site: copy.site,
@@ -215,6 +219,9 @@ export function startLiveEditSession(
   let publishIndex = new Map<string, LiveEditKey[]>()
   let selected = new Set<string>()
   let hovered: Element | null = null
+  /** 后台暂存了「隐藏」/「移出精选」的照片 id，由后台推来（'gallery-marks'）。 */
+  let photoMarks = { hidden: new Set<string>(), unfeatured: new Set<string>() }
+  let selectedPhoto: string | null = null
   let lastInventory = ''
   let lastPath = ''
   let scanTimer: number | null = null
@@ -232,6 +239,16 @@ html.i6-editing [${ATTR}]{cursor:pointer}
 [${ATTR}].i6-edit-selected{outline:2px solid #34d399!important;outline-offset:2px;background-color:rgba(52,211,153,.16)}
 [${ATTR}~="publish"].i6-edit-selected{outline:2px solid #f59e0b!important;background-color:rgba(245,158,11,.16)}
 [${ATTR}].i6-edit-flash{animation:i6-edit-flash 1.4s ease-out}
+html.i6-editing [${PHOTO_ATTR}]{cursor:pointer}
+[${PHOTO_ATTR}].i6-photo-hover{outline:2px solid #60a5fa!important;outline-offset:2px}
+[${PHOTO_ATTR}].i6-photo-selected{outline:3px solid #60a5fa!important;outline-offset:2px}
+[${PHOTO_ATTR}].i6-photo-hidden,[${PHOTO_ATTR}].i6-photo-unfeatured{opacity:.35;filter:grayscale(1)}
+div[${PHOTO_ATTR}].i6-photo-hidden,article[${PHOTO_ATTR}].i6-photo-hidden,article[${PHOTO_ATTR}].i6-photo-unfeatured{position:relative}
+div[${PHOTO_ATTR}].i6-photo-hidden::after,article[${PHOTO_ATTR}].i6-photo-hidden::after,article[${PHOTO_ATTR}].i6-photo-unfeatured::after{position:absolute;left:6px;top:6px;z-index:5;padding:1px 6px;border-radius:4px;background:#f87171;color:#0b0d12;font:600 11px/1.5 system-ui,-apple-system,"PingFang SC",sans-serif;pointer-events:none}
+div[${PHOTO_ATTR}].i6-photo-hidden::after,article[${PHOTO_ATTR}].i6-photo-hidden::after{content:"已隐藏 · 待发布"}
+article[${PHOTO_ATTR}].i6-photo-unfeatured::after{content:"已移出精选 · 待发布";background:#fbbf24}
+[data-i6-hidden]{opacity:.45;outline:2px dashed #f87171;outline-offset:4px;position:relative}
+[data-i6-hidden]::before{content:"已隐藏 · 访客看不到";position:absolute;right:12px;top:12px;z-index:5;padding:1px 8px;border-radius:4px;background:#f87171;color:#0b0d12;font:600 12px/1.6 system-ui,-apple-system,"PingFang SC",sans-serif}
 @keyframes i6-edit-flash{0%{box-shadow:0 0 0 8px rgba(255,255,255,.4)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
 #${UI_ID}{position:fixed;left:0;top:0;z-index:2147483647;pointer-events:none;padding:2px 7px;border-radius:4px;font:600 12px/1.5 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#0b0d12;white-space:nowrap;display:none}
 `
@@ -319,7 +336,18 @@ html.i6-editing [${ATTR}]{cursor:pointer}
       if (element.getAttribute(ATTR) !== kinds) element.setAttribute(ATTR, kinds)
     }
     paintSelection()
+    paintPhotos()
     report()
+  }
+
+  const paintPhotos = () => {
+    for (const element of document.body.querySelectorAll(`[${PHOTO_ATTR}]`)) {
+      const id = element.getAttribute(PHOTO_ATTR) ?? ''
+      element.classList.toggle('i6-photo-hidden', photoMarks.hidden.has(id))
+      // 「移出精选」只在纪念版的卡片上标：全量里它本来就该在。
+      element.classList.toggle('i6-photo-unfeatured', element.hasAttribute('data-gallery-featured') && photoMarks.unfeatured.has(id))
+      element.classList.toggle('i6-photo-selected', id === selectedPhoto)
+    }
   }
 
   const scheduleScan = () => {
@@ -363,46 +391,73 @@ html.i6-editing [${ATTR}]{cursor:pointer}
     return element && elementKeys.has(element) ? element : null
   }
 
+  /** 文字优先：照片卡片里如果有可改的字，点字就是改字；点在别处才算选中照片。 */
+  const photoFrom = (target: EventTarget | null): Element | null => {
+    if (!editing || !(target instanceof Element) || editableFrom(target)) return null
+    return target.closest(`[${PHOTO_ATTR}]`)
+  }
+
   const setHover = (element: Element | null) => {
     if (hovered === element) return
-    hovered?.classList.remove('i6-edit-hover')
+    hovered?.classList.remove('i6-edit-hover', 'i6-photo-hover')
     hovered = element
     if (!element) {
       tip.style.display = 'none'
       return
     }
-    element.classList.add('i6-edit-hover')
-    const kinds = new Set((elementKeys.get(element) ?? []).map(kindOf))
-    tip.textContent = kinds.has('now') && kinds.has('publish') ? '立即生效 · 需发布' : kinds.has('publish') ? '需发布' : '立即生效'
-    tip.style.background = kinds.has('publish') && !kinds.has('now') ? '#f59e0b' : '#34d399'
+    if (!elementKeys.has(element)) {
+      element.classList.add('i6-photo-hover')
+      tip.textContent = '照片 · 点选可隐藏或移出精选'
+      tip.style.background = '#60a5fa'
+    } else {
+      element.classList.add('i6-edit-hover')
+      const kinds = new Set((elementKeys.get(element) ?? []).map(kindOf))
+      tip.textContent = kinds.has('now') && kinds.has('publish') ? '立即生效 · 需发布' : kinds.has('publish') ? '需发布' : '立即生效'
+      tip.style.background = kinds.has('publish') && !kinds.has('now') ? '#f59e0b' : '#34d399'
+    }
     const rect = element.getBoundingClientRect()
     tip.style.display = 'block'
     tip.style.transform = `translate(${Math.max(0, Math.round(rect.left))}px, ${Math.max(0, Math.round(rect.top - 24))}px)`
   }
 
-  const onOver = (event: Event) => setHover(editableFrom(event.target))
+  const onOver = (event: Event) => setHover(editableFrom(event.target) ?? photoFrom(event.target))
   const onScroll = () => setHover(null)
 
   /** 编辑状态下点到可改的字：拦下链接跳转和翻页，改成选中。按住 Alt / Option 点照常跳转。 */
   const onPress = (event: Event) => {
     if ((event as MouseEvent).altKey) return
-    if (editableFrom(event.target)) event.stopPropagation()
+    if (editableFrom(event.target) || photoFrom(event.target)) event.stopPropagation()
   }
   const onClick = (event: MouseEvent) => {
     if (event.altKey) return
     const element = editableFrom(event.target)
-    if (!element) return
+    if (!element) {
+      const photo = photoFrom(event.target)
+      if (!photo) return
+      event.preventDefault()
+      event.stopPropagation()
+      selectedPhoto = photo.getAttribute(PHOTO_ATTR)
+      selected = new Set()
+      paintSelection()
+      paintPhotos()
+      post({ type: 'select-photo', id: selectedPhoto, featured: photo.hasAttribute('data-gallery-featured') })
+      return
+    }
     event.preventDefault()
     event.stopPropagation()
     const list = elementKeys.get(element) ?? []
     selected = new Set(list.map(keyId))
+    selectedPhoto = null
     paintSelection()
+    paintPhotos()
     post({ type: 'select', items: list.map((key) => ({ key, text: textPreview(element) })) })
   }
   const onKey = (event: KeyboardEvent) => {
-    if (event.key !== 'Escape' || selected.size === 0) return
+    if (event.key !== 'Escape' || (selected.size === 0 && selectedPhoto === null)) return
     selected = new Set()
+    selectedPhoto = null
     paintSelection()
+    paintPhotos()
     post({ type: 'select', items: [] })
   }
 
@@ -447,7 +502,15 @@ html.i6-editing [${ATTR}]{cursor:pointer}
       case 'selected': {
         const list = Array.isArray(data.keys) ? data.keys.filter(isKey) : []
         selected = new Set(list.map(keyId))
+        selectedPhoto = typeof data.photo === 'string' ? data.photo : null
         paintSelection()
+        paintPhotos()
+        break
+      }
+      case 'gallery-marks': {
+        const ids = (value: unknown) => new Set((Array.isArray(value) ? value : []).filter((id): id is string => typeof id === 'string'))
+        photoMarks = { hidden: ids(data.hidden), unfeatured: ids(data.unfeatured) }
+        paintPhotos()
         break
       }
       case 'reveal': {
@@ -501,6 +564,9 @@ html.i6-editing [${ATTR}]{cursor:pointer}
       for (const element of elementKeys.keys()) {
         element.removeAttribute(ATTR)
         element.classList.remove('i6-edit-hover', 'i6-edit-selected', 'i6-edit-flash')
+      }
+      for (const element of document.body.querySelectorAll(`[${PHOTO_ATTR}]`)) {
+        element.classList.remove('i6-photo-hover', 'i6-photo-selected', 'i6-photo-hidden', 'i6-photo-unfeatured')
       }
       document.documentElement.classList.remove('i6-editing', 'i6-edit-outlines')
       style.remove()

@@ -35,6 +35,12 @@ export type GalleryPhoto = {
   credit?: string | null
   /** 后台隐藏开关：已收录但暂不展示（重复、待复核等），不是「删除」。 */
   hidden: boolean
+  /**
+   * 后台「移出精选」：照片仍在全量里，只是不再出现在纪念版。
+   * 精选的顺序与分类在 gallery-selection.ts 里由代码维护，这里只是一个排除开关——
+   * 取消它，照片回到原来的位置。老条目没有这个键，缺省即「不排除」。
+   */
+  unfeatured?: boolean
 }
 
 /**

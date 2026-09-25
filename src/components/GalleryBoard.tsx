@@ -798,7 +798,7 @@ function GalleryThumbnail({
 function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () => void }) {
   const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
   return (
-    <article className="overflow-hidden rounded-xl border border-line/80 bg-surface/45 shadow-[0_14px_40px_rgba(0,0,0,0.12)]">
+    <article data-gallery-photo={photo.id} data-gallery-featured="" className="overflow-hidden rounded-xl border border-line/80 bg-surface/45 shadow-[0_14px_40px_rgba(0,0,0,0.12)]">
       <button
         type="button"
         onClick={onOpen}
@@ -906,7 +906,7 @@ function PhotoCell({
     // 外层从 <button> 改成 <div>：点赞按钮要浮在缩略图上单独可点，
     // 不能把它塞进「打开大图」那个 <button> 里——按钮不能嵌按钮。
     // flex 行距分配用的那份 naturalStyle 也跟着挪到这层，视觉效果不变。
-    <div className="group relative h-full min-w-0 overflow-hidden rounded-[3px] bg-raised" style={naturalStyle}>
+    <div data-gallery-photo={photo.id} className="group relative h-full min-w-0 overflow-hidden rounded-[3px] bg-raised" style={naturalStyle}>
       <button
         type="button"
         onClick={onOpen}
@@ -985,6 +985,8 @@ function LightboxImage({
         decoding="async"
         fetchPriority={prefetch ? 'low' : 'high'}
         onLoad={onLoad}
+        // 现场编辑靠它认出「点的是哪张照片」；预取的邻图不标，免得被当成当前这张。
+        data-gallery-photo={prefetch ? undefined : photo.id}
         style={
           prefetch
             ? { position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }
@@ -1097,7 +1099,11 @@ function Lightbox({
         }}
       >
         {/* 灯箱才去取大图。先把 thumb 放在同一位置当占位，大图到位前不会是一块空白。
-            有公开来源时整张图就是触控区——底栏那行小字在手机上是个太小的靶子。 */}
+            有公开来源时整张图就是触控区——底栏那行小字在手机上是个太小的靶子。
+            但**只有图本身**是：这层 <a> 为了给图片的 max-h-full 一个确定的分母撑满了整列高度，
+            横图上下那两大片空白也算进了链接，想点空白关掉灯箱却跳去了来源页。
+            所以 <a> 自己 pointer-events-none，只把图片设回 auto——点图照样触发链接，
+            点空白则穿透到下面这层，按「点的是这层本身」关闭。 */}
         {sourceHref ? (
           <a
             href={sourceHref}
@@ -1108,7 +1114,7 @@ function Lightbox({
             // 对浏览器来说是「不确定高度」，图片自己的 max-h-full（百分比）会被当成 none 直接失效——
             // 竖长图（画6大赛那批漫画页）因此顶部/底部都被裁掉，需要 h-full 把这层的高度钉死，
             // 图片的百分比 max-height 才有一个确定的分母可以算。
-            className="group/media relative flex h-full min-h-0 min-w-0 max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none"
+            className="group/media pointer-events-none relative flex h-full min-h-0 min-w-0 max-h-full max-w-full items-center justify-center rounded-sm focus-visible:outline-none [&_img]:pointer-events-auto [&_img]:cursor-pointer"
           >
             <LightboxImage photo={photo} onLoad={() => setLoadedSrc(photo.src)} />
             <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-base/80 px-3 py-1.5 text-meta text-ink opacity-0 shadow-lg backdrop-blur transition-opacity group-hover/media:opacity-100 group-focus-visible/media:opacity-100">

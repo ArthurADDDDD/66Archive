@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Eyebrow, PageHeader } from './primitives'
-import { useCopyBlock, useSectionEnabled, useSiteCopy } from './LiveContentProvider'
+import { useCopyBlock, useLiveEditActive, useSectionEnabled, useSiteCopy } from './LiveContentProvider'
 
 /**
  * 首页区块的头部（小标 / 标题 / 引子）与房间入口卡。
@@ -138,14 +138,16 @@ export function LivePageNote({
   className?: string
 }) {
   const block = useCopyBlock('pages', pageId)
+  const editing = useLiveEditActive()
   // 后台把这一整块设为隐藏：整张卡片（含署名 / 收录条数那一行）都不渲染。
-  if (block.hidden) return null
+  // 现场编辑里照样渲染，由会话脚本按 data-i6-hidden 压暗标注，维护者才点得到它、取消隐藏。
+  if (block.hidden && !editing) return null
   const paragraphs = block.lede.split('\n').map((line) => line.trim()).filter((line) => line.length > 0)
   const paragraphColumns = paragraphs.length > 3
     ? [paragraphs.slice(0, Math.ceil(paragraphs.length / 2)), paragraphs.slice(Math.ceil(paragraphs.length / 2))]
     : [paragraphs]
   return (
-    <figure className={`relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12 ${className}`}>
+    <figure data-i6-hidden={block.hidden ? '' : undefined} className={`relative overflow-hidden rounded-3xl border border-video/30 bg-gradient-to-br from-video/[0.09] via-surface/70 to-surface/40 px-6 py-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:px-10 sm:py-10 xl:px-14 xl:py-12 ${className}`}>
       <div className="relative">
         {block.eyebrow && <Eyebrow color={eyebrowColor}>{block.eyebrow}</Eyebrow>}
         {block.title && <h2 className="measure-hero mt-4 text-h2 font-semibold text-ink">{block.title}</h2>}

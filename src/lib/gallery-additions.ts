@@ -46,17 +46,39 @@ function parsePhoto(value: unknown): GalleryPhoto | null {
   }
 }
 
-export async function fetchGalleryAdditions(): Promise<GalleryPhoto[]> {
+export type GalleryOverlay = {
+  /** 还没并入公开仓的新照片 */
+  photos: GalleryPhoto[]
+  /**
+   * 后台已经点了隐藏、但还没落盘进公开仓的照片 id。
+   *
+   * 隐藏写回公开仓要走暂存 → 推送 → 部署，一轮十几分钟；这段时间里构建期那份清单
+   * 还是「显示」。前台在运行时把这些 id 滤掉，隐藏就是即时的。取消隐藏做不到即时：
+   * 已隐藏的照片构建期就被滤掉了，页面里根本没有它，只能等部署。
+   */
+  hiddenIds: Set<string>
+  /** 同理：后台已经「移出精选」、还没落盘的照片 id。只从纪念版里略过，全量照常。 */
+  unfeaturedIds: Set<string>
+}
+
+export async function fetchGalleryOverlay(): Promise<GalleryOverlay> {
   const payload = await fetchJson('/api/content/gallery-additions')
-  if (!payload || typeof payload !== 'object') return []
-  const list = (payload as { photos?: unknown }).photos
-  if (!Array.isArray(list)) return []
-  return list.flatMap((item) => {
+  if (!payload || typeof payload !== 'object') return { photos: [], hiddenIds: new Set(), unfeaturedIds: new Set() }
+  const raw = payload as { photos?: unknown; hiddenIds?: unknown; unfeaturedIds?: unknown }
+  const list = Array.isArray(raw.photos) ? raw.photos : []
+  const photos = list.flatMap((item) => {
     const photo = parsePhoto(item)
     // hidden 在服务端已经滤过一遍；这里再判一次，是因为「后台点了隐藏但图还在页面上」
     // 的代价远高于多写一个条件
     return photo && !photo.hidden ? [photo] : []
   })
+  const ids = (value: unknown) =>
+    new Set((Array.isArray(value) ? value : []).filter((id): id is string => typeof id === 'string' && id.length > 0))
+  return { photos, hiddenIds: ids(raw.hiddenIds), unfeaturedIds: ids(raw.unfeaturedIds) }
+}
+
+export async function fetchGalleryAdditions(): Promise<GalleryPhoto[]> {
+  return (await fetchGalleryOverlay()).photos
 }
 
 /**

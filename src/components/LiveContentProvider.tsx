@@ -47,6 +47,18 @@ export const LiveContentContext = createContext<LiveContent>(EMPTY_CONTENT)
 export const LiveCopyArrivedContext = createContext(false)
 
 /**
+ * 是否在后台「现场编辑」的 iframe 里。
+ *
+ * 只给「被后台隐藏的东西」用：访客看不到的整块文案、画廊照片，在编辑会话里要照样
+ * 渲染出来（由会话脚本压暗并标注），不然维护者在页面上就再也点不到它、取消不了隐藏。
+ */
+export const LiveEditActiveContext = createContext(false)
+
+export function useLiveEditActive(): boolean {
+  return useContext(LiveEditActiveContext)
+}
+
+/**
  * `initial` 是构建期烤进来的后台文案（见 `lib/baked-content.ts`）。
  * 它让 SSG 出来的 HTML 直接就是后台文案：静态导出时客户端组件同样会被
  * 服务端渲染一遍，这里带着内容渲染，读 context 的组件在那一遍就把覆盖应用上了。
@@ -104,7 +116,9 @@ export function LiveContentProvider({
   return (
     <LiveContentContext.Provider value={value}>
       {/* 编辑会话里内容一律以上下文为准，各页烤入的那份要让位，否则草稿会被盖住。 */}
-      <LiveCopyArrivedContext.Provider value={copyArrived || editSession !== null}>{children}</LiveCopyArrivedContext.Provider>
+      <LiveCopyArrivedContext.Provider value={copyArrived || editSession !== null}>
+        <LiveEditActiveContext.Provider value={editSession !== null}>{children}</LiveEditActiveContext.Provider>
+      </LiveCopyArrivedContext.Provider>
     </LiveContentContext.Provider>
   )
 }

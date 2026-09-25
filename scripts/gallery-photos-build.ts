@@ -123,11 +123,13 @@ type Photo = {
   title: string | null
   caption: string | null
   source: string | null
+  credit?: string | null
   hidden: boolean
+  unfeatured?: boolean
 }
 
 /** 后台可编辑的字段。已经存在的条目上这些字段永远保留原值，构建脚本从不覆盖。 */
-const EDITABLE_FIELDS = ['title', 'caption', 'date', 'time', 'year', 'source', 'hidden'] as const
+const EDITABLE_FIELDS = ['title', 'caption', 'date', 'time', 'year', 'source', 'credit', 'hidden', 'unfeatured'] as const
 
 /**
  * 已有清单里的这批字段是「事实」——由人（后台管理画廊）核实、修正过。

@@ -22,6 +22,8 @@ type PublicGalleryModule = {
 
 type PublicGalleryPhotosModule = {
   getGalleryPhotos: () => unknown[]
+  /** 含已隐藏的照片、带 featured 标记；老版本公开仓没有它，退回 getGalleryPhotos。 */
+  getGalleryPhotosForAdmin?: () => unknown[]
 }
 
 type PublicShareCardsModule = {
@@ -173,7 +175,7 @@ async function main() {
     const siteCopyModule = (await import(pathToFileURL(path.join(publicRoot, 'src/lib/site-copy.ts')).href)) as PublicSiteCopyModule
     const dataset = dataModule.getDataset()
     const gallery = galleryModule.getGalleryCollection()
-    const galleryPhotos = galleryPhotosModule?.getGalleryPhotos() ?? []
+    const galleryPhotos = galleryPhotosModule?.getGalleryPhotosForAdmin?.() ?? galleryPhotosModule?.getGalleryPhotos() ?? []
     const shareCards = shareCardsModule.getShareCardRecords()
     const publicHighlights = [...narrativeModule.HIGHLIGHTS, ...extraHighlightModule.EXTRA_HIGHLIGHTS]
 

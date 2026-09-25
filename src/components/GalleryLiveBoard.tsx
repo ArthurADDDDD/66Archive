@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { GalleryPhoto } from '@/lib/gallery-photos'
-import { fetchGalleryAdditions, mergeGalleryPhotos } from '@/lib/gallery-additions'
+import { fetchGalleryOverlay, mergeGalleryPhotos } from '@/lib/gallery-additions'
+import { useLiveEditActive } from './LiveContentProvider'
 import { GalleryBoard } from './GalleryBoard'
 
 /**
@@ -25,20 +26,35 @@ export function GalleryLiveBoard({
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
 }) {
-  const [photos, setPhotos] = useState(allPhotos)
+  const [additions, setAdditions] = useState<GalleryPhoto[]>([])
+  const [hiddenIds, setHiddenIds] = useState<Set<string>>(() => new Set())
+  const [unfeaturedIds, setUnfeaturedIds] = useState<Set<string>>(() => new Set())
+  // 现场编辑里不滤：后台暂存了隐藏 / 移出精选的照片由会话脚本压暗标注，维护者才能在页面上取消。
+  const editing = useLiveEditActive()
 
   useEffect(() => {
     let active = true
-    void fetchGalleryAdditions().then((additions) => {
+    void fetchGalleryOverlay().then((overlay) => {
       // 组件已卸载，或者根本没有增量——两种情况都不该触发一次重渲染
-      if (!active || additions.length === 0) return
-      setPhotos((current) => mergeGalleryPhotos(current, additions))
+      if (!active) return
+      if (overlay.photos.length > 0) setAdditions(overlay.photos)
+      if (overlay.hiddenIds.size > 0) setHiddenIds(overlay.hiddenIds)
+      if (overlay.unfeaturedIds.size > 0) setUnfeaturedIds(overlay.unfeaturedIds)
     })
     return () => {
       active = false
     }
   }, [])
 
+  const visible = useMemo(() => {
+    const keep = (photo: GalleryPhoto) => editing || !hiddenIds.has(photo.id)
+    const keepFeatured = (photo: GalleryPhoto) => keep(photo) && (editing || !unfeaturedIds.has(photo.id))
+    return {
+      featured: hiddenIds.size + unfeaturedIds.size > 0 ? featuredPhotos.filter(keepFeatured) : featuredPhotos,
+      all: mergeGalleryPhotos(hiddenIds.size > 0 ? allPhotos.filter(keep) : allPhotos, additions),
+    }
+  }, [featuredPhotos, allPhotos, additions, hiddenIds, unfeaturedIds, editing])
+
   // 精选是人工挑的策展顺序，新上传的照片没有被挑进去，所以只并进「全量」那一栏。
-  return <GalleryBoard featuredPhotos={featuredPhotos} allPhotos={photos} />
+  return <GalleryBoard featuredPhotos={visible.featured} allPhotos={visible.all} />
 }
