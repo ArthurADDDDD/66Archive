@@ -90,8 +90,8 @@ export type SiteCopy = {
 export const SITE_COPY: SiteCopy = {
   version: 1,
   site: {
-    title: '女流编年史',
-    description: '2010 年至今的视频与直播索引。',
+    title: '女流档案馆',
+    description: '关于女流66的非官方数字档案馆，整理散落在互联网中的录播、游戏、故事与记忆。',
   },
   nav: [
     {

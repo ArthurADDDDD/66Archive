@@ -200,7 +200,7 @@ export function SiteNav({
       {!compact && (
         statusSlot
           ? <span data-live-status-slot className="flex h-11 min-w-[5.5rem] shrink-0 items-center" />
-          : <span className="flex h-11 shrink-0 items-center text-sm font-semibold tracking-tight text-ink">女流编年史</span>
+          : <span className="flex h-11 shrink-0 items-center text-sm font-semibold tracking-tight text-ink">{copy.site.title}</span>
       )}
 
       {/* 桌面：pill 行（保持原样） */}
@@ -271,7 +271,7 @@ export function SiteNav({
         >
           <div className="site-container-wide px-page pb-4 pt-2">
             <p className="px-3 pt-2 text-meta uppercase tracking-[0.16em] text-faint">
-              女流编年史 · Menu
+              {copy.site.title} · Menu
             </p>
             <ul className="mt-1">
               {items.map((item) => {

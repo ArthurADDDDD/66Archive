@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useSiteTexts } from './LiveContentProvider'
+import { useSiteCopy, useSiteTexts } from './LiveContentProvider'
 
 type LiveWindow = {
   sessions: number
@@ -144,6 +144,8 @@ function dayLabel(date: string) {
  * 但降级为中性「待确认」状态，不把旧结论冒充当前事实。
  */
 export function LiveStatusIndicator() {
+  // 站名以后台「标题 · 导航 · 页头」的站点标题为准，改了立即生效。
+  const siteName = useSiteCopy().site.title
   const t = useSiteTexts()
   const pathname = usePathname()
   const [snapshot, setSnapshot] = useState<LiveStatusSnapshot | null>(null)
@@ -390,7 +392,7 @@ export function LiveStatusIndicator() {
                 : 'border border-muted bg-transparent'
           }`} />
         </span>
-        <span>女流编年史</span>
+        <span>{siteName}</span>
       </button>
 
       {statusHint && !open && (

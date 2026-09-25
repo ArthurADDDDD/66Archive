@@ -257,12 +257,17 @@ export function useSectionEnabled(sectionId: string): boolean {
  *
  * 所以按页分开处理：
  * - 首页的 `<title>` 本来就是站名，整句替换；
- * - 其余页面的标题形如「录播室 · 女流编年史」，只把 template 补上去的那个站名后缀
+ * - 其余页面的标题形如「录播室 · 女流档案馆」，只把 template 补上去的那个站名后缀
  *   换成后台的新站名，页面自己那半截原样保留；
  * - `<meta name="description">` 只在首页覆盖——别的页面都有自己的简介
  *   （`pageMetadata()` 的 description 是必填参数），站点级那句盖上去只会更不准。
  */
-export function LiveDocumentMeta() {
+export function LiveDocumentMeta({
+  bakedSiteName = SITE_NAME,
+}: {
+  /** 构建时写进 `<title>` 模板的站名（发布时冻结的后台站名）；认后缀要用它，不是公开仓基线。 */
+  bakedSiteName?: string
+}) {
   const { copy } = useLiveContent()
   const pathname = usePathname()
 
@@ -276,7 +281,7 @@ export function LiveDocumentMeta() {
         document.title = siteTitle
       } else {
         // 不用正则：站名里可能有正则元字符，而这里只需要一个后缀替换。
-        const suffix = ` · ${SITE_NAME}`
+        const suffix = ` · ${bakedSiteName}`
         if (document.title.endsWith(suffix)) {
           document.title = `${document.title.slice(0, -suffix.length)} · ${siteTitle}`
         }
@@ -287,7 +292,7 @@ export function LiveDocumentMeta() {
       const meta = document.querySelector('meta[name="description"]')
       if (meta) meta.setAttribute('content', copy.site.description)
     }
-  }, [copy, pathname])
+  }, [copy, pathname, bakedSiteName])
 
   return null
 }

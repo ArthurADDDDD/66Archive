@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { siteUrl } from './site-url'
-import { SITE_NAME } from './site-name'
+import { BUILD_SITE_NAME } from './site-name-build'
 import type { ShareImage } from './share-image'
 import { getShareCardDescription, getShareCardImage } from './share-cards'
 
@@ -10,7 +10,7 @@ import { getShareCardDescription, getShareCardImage } from './share-cards'
  *
  * 从前只有 canonical 是各页自己写的，`title` 与 `description` 全都继承根 layout 的
  * 那一份——于是 `/chronicle/`、`/archive/`、`/games/` 的浏览器标签、收藏夹条目、
- * 搜索结果标题一字不差，全是「女流编年史」。同时全站一个 `og:` 标签都没有，
+ * 搜索结果标题一字不差，全是站名。同时全站一个 `og:` 标签都没有，
  * 链接贴到微信 / 微博 / QQ / B站动态里只会渲染成一条没有卡片的裸链。
  *
  * 这个函数把这四件事收在一处：给一个路径和一句人话，社交卡片自己长出来。
@@ -23,10 +23,11 @@ import { getShareCardDescription, getShareCardImage } from './share-cards'
  *
  * ## title 走根 layout 的 template
  *
- * 传进来的 `title` 是短名（「录播室」），根 layout 的 `%s · 女流编年史` 负责补站名。
+ * 传进来的 `title` 是短名（「录播室」），根 layout 的 `%s · 站名` 模板负责补站名。
  * `openGraph.title` 则要自己拼全称：社交卡片没有 template 这一层。
  */
-export { SITE_NAME }
+/** 构建期生效的站名：发布时冻结的后台站名，没有就是公开仓基线。 */
+export const SITE_NAME = BUILD_SITE_NAME
 
 /**
  * 站点级简介与分享卡片图的兜底值。
@@ -37,11 +38,12 @@ export { SITE_NAME }
  * 只是给 share-cards.ts 在两份数据文件缺失时兜底，同时也是这两份文件最初的取值来源。
  */
 export const SITE_DESCRIPTION =
-  '2010 年至今的视频与直播索引。只收录链接，不搬运资源——每一次播放都回到原平台。'
+  '关于女流66的非官方数字档案馆：整理散落在互联网中的录播、游戏、故事与记忆。只收录链接，不搬运资源——每一次播放都回到原平台。'
 
 /**
  * 全站默认社交卡片图兜底。1200×630，暗色底 + 站名 + 一句人话，不放任何统计数字。
- * 每个页面都能在后台「分享卡片」页面单独设自己的图；没单独设过的页面用这张。
+ * 每个页面都能在后台「分享卡片」页面单独设自己的图；没单独设过的页面用首页那张，
+ * 首页也没设过才用这张。站名印在图上：后台改站名时可以按新站名重新生成首页那张。
  */
 export const OG_IMAGE = '/images/og/site.jpg'
 
@@ -85,12 +87,12 @@ export function pageMetadata({
   const url = siteUrl(path)
   const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME
   const shareDescription = shareId ? getShareCardDescription(shareId, description) : description
-  const configured = shareId ? getShareCardImage(shareId, OG_IMAGE) : null
-  // 后台单独设过图 > 内容自己的封面 > 全站默认图。
+  const configured = shareId ? getShareCardImage(shareId, CURRENT_HOME_OG_IMAGE) : null
+  // 后台单独设过图 > 内容自己的封面 > 首页的分享图（后台改站名时会重新生成它）> 仓库里那张兜底图。
   const picked: ShareImage =
-    configured && configured !== OG_IMAGE
+    configured && configured !== CURRENT_HOME_OG_IMAGE
       ? { url: configured, width: 1200, height: 630 }
-      : (cover ?? { url: OG_IMAGE, width: 1200, height: 630 })
+      : (cover ?? { url: CURRENT_HOME_OG_IMAGE, width: 1200, height: 630 })
   return {
     ...(title ? { title } : {}),
     description,

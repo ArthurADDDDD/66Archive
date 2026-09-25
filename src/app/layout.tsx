@@ -63,7 +63,8 @@ export const metadata: Metadata = {
    */
   metadataBase: new URL(siteOrigin()),
   /**
-   * `template` 让子页只写短名（「录播室」）就能得到「录播室 · 女流编年史」。
+   * `template` 让子页只写短名（「录播室」）就能得到「录播室 · 女流档案馆」。
+   * 站名取发布时冻结的后台站名（`site-name-build.ts`），不是写死的。
    * `/e/[id]` 的标题自带日期与场次名，也走同一条 template，不要再自己拼站名。
    */
   title: { default: SITE_NAME, template: `%s · ${SITE_NAME}` },
@@ -157,7 +158,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         */}
         <script dangerouslySetInnerHTML={{ __html: CONTENT_BOOT_SCRIPT }} />
         <LiveContentProvider initial={baked}>
-          <LiveDocumentMeta />
+          <LiveDocumentMeta bakedSiteName={SITE_NAME} />
           <SiteAnalytics />
           {/* 站内链接一律 prefetch={false}，由它按鼠标 / 焦点 / 触摸的指向补回预热。 */}
           <RouteIntentPrefetch />
