@@ -397,3 +397,23 @@
       parts: 5
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-25-live-01
+  type: live
+  date: "2026-09-25"
+  title: "中秋快乐"
+  platform: douyin
+  duration_min: 134
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/736d8c9d975baddd62e440ff3ca8193067819f33.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV14ohm6tEQJ"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV19Chm6TEq2"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
