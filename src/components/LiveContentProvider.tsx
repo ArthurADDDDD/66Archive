@@ -172,7 +172,9 @@ export function mergeSiteCopy(baseline: SiteCopy, live: LiveSiteCopy | null): Si
   const mergeBlocks = (baselineBlocks: SiteCopyBlock[], liveBlocks: LiveCopyBlock[]): SiteCopyBlock[] =>
     baselineBlocks.map((block) => {
       const override = liveBlocks.find((candidate) => candidate.id === block.id)
-      return override ? { id: block.id, eyebrow: override.eyebrow, title: override.title, lede: override.lede } : block
+      return override
+        ? { id: block.id, eyebrow: override.eyebrow, title: override.title, lede: override.lede, ...(override.hidden ? { hidden: true } : {}) }
+        : block
     })
 
   return {

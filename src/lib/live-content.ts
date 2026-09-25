@@ -157,7 +157,7 @@ export type LiveNarrative = {
   deletedIds: string[]
 }
 
-export type LiveCopyBlock = { id: string; eyebrow: string; title: string; lede: string }
+export type LiveCopyBlock = { id: string; eyebrow: string; title: string; lede: string; hidden?: boolean }
 
 export type LiveSiteCopy = {
   site: { title: string; description: string }
@@ -294,7 +294,7 @@ function parseBlocks(value: unknown): LiveCopyBlock[] {
   return value
     .map((item): LiveCopyBlock | null =>
       isRecord(item) && typeof item.id === 'string'
-        ? { id: item.id, eyebrow: str(item.eyebrow), title: str(item.title), lede: str(item.lede) }
+        ? { id: item.id, eyebrow: str(item.eyebrow), title: str(item.title), lede: str(item.lede), ...(item.hidden === true ? { hidden: true } : {}) }
         : null,
     )
     .filter((item): item is LiveCopyBlock => item !== null)

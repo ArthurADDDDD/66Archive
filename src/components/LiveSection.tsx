@@ -138,6 +138,8 @@ export function LivePageNote({
   className?: string
 }) {
   const block = useCopyBlock('pages', pageId)
+  // 后台把这一整块设为隐藏：整张卡片（含署名 / 收录条数那一行）都不渲染。
+  if (block.hidden) return null
   const paragraphs = block.lede.split('\n').map((line) => line.trim()).filter((line) => line.length > 0)
   const paragraphColumns = paragraphs.length > 3
     ? [paragraphs.slice(0, Math.ceil(paragraphs.length / 2)), paragraphs.slice(Math.ceil(paragraphs.length / 2))]
