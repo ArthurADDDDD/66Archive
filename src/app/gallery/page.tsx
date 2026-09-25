@@ -10,6 +10,7 @@ import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryLiveBoard } from '@/components/GalleryLiveBoard'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
+import { getLiveWallSummary } from '@/lib/gallery-live-wall'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
@@ -26,6 +27,7 @@ export default async function GalleryPage() {
   const bakedCopy = await fetchBakedPageCopy(['gallery'], { texts: ['gallery-'] })
 
   const collections = getGalleryCollections()
+  const liveWall = getLiveWallSummary()
   const years = [...new Set(collections.all.map((p) => p.year).filter((y): y is string => y !== null))].sort()
 
   return (
@@ -68,7 +70,7 @@ export default async function GalleryPage() {
 
         {collections.all.length > 0 && (
           <section className="site-container-wide px-page pb-20">
-            <GalleryLiveBoard featuredPhotos={collections.featured} allPhotos={collections.all} />
+            <GalleryLiveBoard featuredPhotos={collections.featured} allPhotos={collections.all} liveWall={liveWall} />
           </section>
         )}
 

@@ -22,9 +22,11 @@ import { GalleryBoard } from './GalleryBoard'
 export function GalleryLiveBoard({
   featuredPhotos,
   allPhotos,
+  liveWall,
 }: {
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
+  liveWall: { count: number; hiddenIds: string[] } | null
 }) {
   const [additions, setAdditions] = useState<GalleryPhoto[]>([])
   const [hiddenIds, setHiddenIds] = useState<Set<string>>(() => new Set())
@@ -56,5 +58,5 @@ export function GalleryLiveBoard({
   }, [featuredPhotos, allPhotos, additions, hiddenIds, unfeaturedIds, editing])
 
   // 精选是人工挑的策展顺序，新上传的照片没有被挑进去，所以只并进「全量」那一栏。
-  return <GalleryBoard featuredPhotos={visible.featured} allPhotos={visible.all} />
+  return <GalleryBoard featuredPhotos={visible.featured} allPhotos={visible.all} liveWall={liveWall} />
 }

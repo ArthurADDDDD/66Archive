@@ -11,6 +11,7 @@ import { SearchField } from './SearchField'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 import { SiteText } from './SiteText'
 import { useSiteTexts } from './LiveContentProvider'
+import { GalleryLiveWall } from './GalleryLiveWall'
 
 /**
  * 画廊改版：总览优先的「年份底片架」。
@@ -27,7 +28,10 @@ import { useSiteTexts } from './LiveContentProvider'
 
 type ViewMode = 'natural' | 'uniform'
 type Density = 'loose' | 'normal' | 'dense'
-type CollectionMode = 'featured' | 'all'
+type CollectionMode = 'featured' | 'all' | 'live'
+
+/** 「全直播合集」不走照片墙；用同一个空数组，免得每次渲染都让下游 useMemo 失效。 */
+const NO_PHOTOS: GalleryPhoto[] = []
 
 /**
  * 纪念版分类说明先不露出：分类名本身已经写在筛选按钮上，
@@ -108,9 +112,12 @@ function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) 
 export function GalleryBoard({
   featuredPhotos,
   allPhotos,
+  liveWall,
 }: {
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
+  /** 「全直播合集」：没有生成过合集（清单不存在）时为 null，不出这个标签。 */
+  liveWall?: { count: number; hiddenIds: string[] } | null
 }) {
   const [collection, setCollection] = useState<CollectionMode>('featured')
   const [mode, setMode] = useState<ViewMode>('natural')
@@ -122,7 +129,7 @@ export function GalleryBoard({
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
-  const photos = collection === 'featured' ? featuredPhotos : allPhotos
+  const photos = collection === 'featured' ? featuredPhotos : collection === 'all' ? allPhotos : NO_PHOTOS
 
   // 精选版的分类固定用 FEATURED_CATEGORY_GUIDE 排序展示；全量版没有这份人工排序表，
   // 有标签就按标签本身在素材里出现的顺序显示——目前只有「画6大赛」这一批用到。
@@ -221,13 +228,13 @@ export function GalleryBoard({
   return (
     <GalleryLikesProvider>
       <div className="mb-4 flex border-y border-line/70 py-4">
-        <div className="flex w-fit items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
+        <div className="flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
           <button
             type="button"
             role="tab"
             aria-selected={collection === 'featured'}
             onClick={() => chooseCollection('featured')}
-            className={`ui-press rounded-full px-4 py-2 text-control transition-colors ${
+            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
               collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
@@ -238,17 +245,30 @@ export function GalleryBoard({
             role="tab"
             aria-selected={collection === 'all'}
             onClick={() => chooseCollection('all')}
-            className={`ui-press rounded-full px-4 py-2 text-control transition-colors ${
+            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
               collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
             <SiteText id="gallery-tab-all" vars={{ count: allPhotos.length }} />
           </button>
+          {liveWall && (
+            <button
+              type="button"
+              role="tab"
+              aria-selected={collection === 'live'}
+              onClick={() => chooseCollection('live')}
+              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
+                collection === 'live' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
+              }`}
+            >
+              <SiteText id="gallery-tab-live" vars={{ count: liveWall.count }} />
+            </button>
+          )}
         </div>
 
         {/* 控件回到文档流：原先它们住在一条可拖拽的浮层里，挡图、抢手势，
             还要记住自己被拖到哪儿。手机端不给这一排——小屏上翻图就够了。 */}
-        <div className="ml-auto hidden shrink-0 items-center gap-2 sm:flex">
+        <div className={`ml-auto hidden shrink-0 items-center gap-2 ${collection === 'live' ? '' : 'sm:flex'}`}>
           <SearchField
             value={q}
             onChange={setQ}
@@ -287,6 +307,10 @@ export function GalleryBoard({
         </div>
       </div>
 
+      {collection === 'live' && liveWall ? (
+        <GalleryLiveWall hiddenIds={liveWall.hiddenIds} />
+      ) : (
+      <>
       {/* 「点赞越多显示越大」不是一眼能看懂的规则，只在切到「整齐」时才用得上，
           就贴着这个开关出提示——不在全局常驻占地方，也不用单独造一套引导 UI。 */}
       {collection === 'all' && mode === 'uniform' && (
@@ -419,6 +443,8 @@ export function GalleryBoard({
           <Lightbox photo={visible[openIndex]} index={openIndex} total={visible.length} visible={visible} onClose={() => setOpenId(null)} onStep={step} />,
           document.body,
         )}
+      </>
+      )}
     </GalleryLikesProvider>
   )
 }
