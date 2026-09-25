@@ -117,7 +117,7 @@ export function GalleryBoard({
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
   /** 「全直播合集」：没有生成过合集（清单不存在）时为 null，不出这个标签。 */
-  liveWall?: { count: number; hiddenIds: string[] } | null
+  liveWall?: { count: number; hiddenIds: string[]; manifestUrl: string } | null
 }) {
   const [collection, setCollection] = useState<CollectionMode>('featured')
   const [mode, setMode] = useState<ViewMode>('natural')
@@ -217,12 +217,33 @@ export function GalleryBoard({
 
   const filtered = q.trim().length > 0 || tag !== null
 
+  // 分享出去的「全直播合集」链接：`?view=live`，或只带了某一年的锚点。静态导出读不到
+  // searchParams，只能挂载后在客户端认一次。
+  useEffect(() => {
+    if (!liveWall) return
+    if (new URLSearchParams(window.location.search).get('view') === 'live' || window.location.hash.startsWith('#live-wall-')) {
+      // 一次性的地址恢复，只在带了合集参数时才触发（同 Timeline 的做法）。
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setCollection('live')
+    }
+  }, [liveWall])
+
   const chooseCollection = (next: CollectionMode) => {
     if (next === collection) return
     setCollection(next)
     setTag(null)
     setQ('')
     setOpenId(null)
+    // 标签也写进地址：只有合集有自己的参数，切走时连同选中的那一格、年份锚点一起清掉。
+    const url = new URL(window.location.href)
+    if (next === 'live') {
+      url.searchParams.set('view', 'live')
+    } else {
+      url.searchParams.delete('view')
+      url.searchParams.delete('d')
+      if (url.hash.startsWith('#live-wall-')) url.hash = ''
+    }
+    window.history.replaceState(null, '', url)
   }
 
   return (
@@ -308,7 +329,11 @@ export function GalleryBoard({
       </div>
 
       {collection === 'live' && liveWall ? (
-        <GalleryLiveWall hiddenIds={liveWall.hiddenIds} />
+        <GalleryLiveWall
+          hiddenIds={liveWall.hiddenIds}
+          manifestUrl={liveWall.manifestUrl}
+          renderLike={(likeId) => <LikeButton id={likeId} size="md" showCount />}
+        />
       ) : (
       <>
       {/* 「点赞越多显示越大」不是一眼能看懂的规则，只在切到「整齐」时才用得上，

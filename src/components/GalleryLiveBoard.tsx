@@ -26,7 +26,7 @@ export function GalleryLiveBoard({
 }: {
   featuredPhotos: GalleryPhoto[]
   allPhotos: GalleryPhoto[]
-  liveWall: { count: number; hiddenIds: string[] } | null
+  liveWall: { count: number; hiddenIds: string[]; manifestUrl: string } | null
 }) {
   const [additions, setAdditions] = useState<GalleryPhoto[]>([])
   const [hiddenIds, setHiddenIds] = useState<Set<string>>(() => new Set())

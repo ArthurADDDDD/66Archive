@@ -33,7 +33,13 @@ OUT_DIR = os.path.join(ROOT, 'public', 'gallery', 'live-wall')
 PUBLIC_PREFIX = '/gallery/live-wall/'
 
 COLS = 10
-TILE_W, TILE_H = 160, 90
+# 每张切片出两档：清晰档（大格子用，240×135）只出 AVIF；轻量档（手机与小格子，128×72）
+# 出 AVIF 与 WebP 两份。不认 AVIF 的浏览器一律用轻量 WebP——这一页是「图一乐」，
+# 不值得为少数旧浏览器再存一份最重的清晰 WebP。
+TILE_W, TILE_H = 240, 135
+LITE_W, LITE_H = 128, 72
+AVIF_QUALITY = 45
+WEBP_QUALITY = 70
 ROWS_PER_SLICE = 12
 
 UA = {
@@ -291,7 +297,7 @@ def assemble(cache):
 
     os.makedirs(OUT_DIR, exist_ok=True)
     for name in os.listdir(OUT_DIR):
-        if name.endswith('.webp'):
+        if name.endswith(('.webp', '.avif')):
             os.remove(os.path.join(OUT_DIR, name))
 
     slices, start = [], 0
@@ -306,16 +312,25 @@ def assemble(cache):
         for offset in range(count):
             row, col = divmod(offset, COLS)
             sheet.paste(images[start + offset], (col * TILE_W, row * TILE_H))
-        buffer = io.BytesIO()
-        sheet.save(buffer, 'WEBP', quality=72, method=6)
-        digest = hashlib.sha256(buffer.getvalue()).hexdigest()[:10]
+        lite = sheet.resize((COLS * LITE_W, rows * LITE_H), Image.LANCZOS)
         part = sum(1 for s in slices if s['year'] == year)
-        name = f'{year}-{part}.{digest}.webp'
-        open(os.path.join(OUT_DIR, name), 'wb').write(buffer.getvalue())
-        slices.append({'year': year, 'src': PUBLIC_PREFIX + name, 'first': start, 'count': count})
+
+        def write(image, fmt, tier):
+            buffer = io.BytesIO()
+            if fmt == 'avif':
+                image.save(buffer, 'AVIF', quality=AVIF_QUALITY, speed=4)
+            else:
+                image.save(buffer, 'WEBP', quality=WEBP_QUALITY, method=6)
+            digest = hashlib.sha256(buffer.getvalue()).hexdigest()[:10]
+            name = f'{year}-{part}.{tier}.{digest}.{fmt}'
+            open(os.path.join(OUT_DIR, name), 'wb').write(buffer.getvalue())
+            return PUBLIC_PREFIX + name
+
+        files = {'hd': write(sheet, 'avif', 'hd'), 'lite': write(lite, 'avif', 'lite'), 'liteWebp': write(lite, 'webp', 'lite')}
+        slices.append({'year': year, **files, 'first': start, 'count': count})
         start = end
 
-    manifest = {'version': 1, 'cols': COLS, 'tileW': TILE_W, 'tileH': TILE_H, 'slices': slices, 'tiles': tiles}
+    manifest = {'version': 2, 'cols': COLS, 'slices': slices, 'tiles': tiles}
     text = json.dumps(manifest, ensure_ascii=False, separators=(',', ':'))
     open(os.path.join(OUT_DIR, 'index.json'), 'w', encoding='utf8', newline='\n').write(text + '\n')
     kinds = {}

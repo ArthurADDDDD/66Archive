@@ -1,246 +1,584 @@
 'use client'
 
-import { useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react'
+import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { yearColor } from '@/lib/ui'
 import { SiteText } from './SiteText'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
 /**
- * 画廊「全直播合集」：档案里每一场直播各一帧，按时间拼成一整面墙。
+ * 画廊「全直播合集」：档案里有画面的每一场直播各一帧，按时间铺成一整面墙。
  *
- * 墙本身是**预先拼好的长图**（scripts/live-wall-build.py 生成，按年份切片），不是几千个
- * `<img>`：几千张小图意味着几千次请求，而一面墙真正要的只是「看过去是什么样」。
- * 每一格是哪一场不靠 DOM 表达，而是按指针落点和清单里的顺序算出来——所以格子不必
- * 各自带链接，悬停/轻点时才告诉你这是哪一天。
+ * 这一页是「图一乐」，所以首要约束是**别给站点添流量、别卡**：
  *
- * 清单与切片都在 `/gallery/live-wall/` 下，只有切到这个标签才去取，不拖慢画廊首屏。
+ * - 画面来自预先拼好的年份切片（scripts/live-wall-build.py），不是几千个 `<img>`。每一格用
+ *   `background-position` 从切片里取自己那一块，所以格子可以按「小 / 中 / 大」重排列数。
+ * - 切片分两档：轻量（128×72 一格）与清晰（240×135，仅 AVIF）。按格子**实际显示宽度**挑
+ *   够用的最轻一档——手机默认只拿轻量档；不认 AVIF 的浏览器一律用轻量 WebP。
+ * - 一年的格子接近视口（600px 内）才挂背景图；没滚到的年份一个字节都不取。
+ * - 清单只在切到这个标签时取，地址带内容哈希，可以长缓存。
+ * - 悬停提示自己管自己的状态，指针移动不会让几千个格子重渲染；每年的网格是 memo 的，
+ *   选中/取消只重画涉及的那一两年。格子上不放点赞按钮（几千个订阅同一份点赞状态），
+ *   点赞在选中后的面板里。
  *
- * 图是生成时烤死的，之后在后台隐藏的条目没法从图上抠掉，所以按 `hiddenIds` 在对应
- * 格子上盖一块底色：不显示画面，也不响应悬停。
+ * 地址：`?view=live` 直接打开这个标签（GalleryBoard 读），`#live-wall-<年>` 跳到那一年，
+ * `&d=<条目 id>` 打开时选中那一格并滚过去；选中/取消同步改写地址，面板里可复制链接。
+ *
+ * 全屏：有 Fullscreen API 用真全屏；iPhone Safari 只给 video 全屏，退而用铺满视口的覆盖层。
+ * 全屏时右侧年份轨不出（它跟的是窗口滚动），改由吸顶的年份按钮跳转。
+ *
+ * ⚠️ 所有 `position: fixed` 的东西（选中面板、悬停提示、全屏覆盖层）都必须**挂到 body**：
+ * `<main>` 的入场动画填充模式是 both，结束后仍留着一个单位矩阵 transform，fixed 在它里面会
+ * 相对 main 定位——面板会出现在页面几万像素之下（BackToTop 挂 body 是同一个原因）。
+ * 全屏时整面墙挂到 body 再请求真全屏，面板与提示留在墙里，否则真全屏下看不见。
+ *
+ * 之后在后台隐藏的条目按 `hiddenIds` 直接不出格子；点赞 id 加 `lw-` 前缀与照片分开。
  */
 
 type TileKind = 'f' | 'c'
 type Tile = [id: string, date: string, title: string, kind: TileKind]
-type Slice = { year: string; src: string; first: number; count: number }
-type Manifest = { version: 1; cols: number; tileW: number; tileH: number; slices: Slice[]; tiles: Tile[] }
+type Slice = { year: string; hd: string; lite: string; liteWebp: string; first: number; count: number }
+type Manifest = { version: 2; cols: number; slices: Slice[]; tiles: Tile[] }
+type Cell = { index: number; tile: Tile; slice: Slice; offset: number }
+type Bucket = { year: string; cells: Cell[] }
 
-const MANIFEST_URL = '/gallery/live-wall/index.json'
+type TileSize = 's' | 'm' | 'l'
+type Tier = 'hd' | 'lite' | 'liteWebp'
+
+/** 点赞服务里这面墙的 id 前缀：照片 id 与条目 id 字符集相同，不加前缀就可能撞上。 */
+export const LIVE_WALL_LIKE_PREFIX = 'lw-'
+
+const SIZE_LABEL: Record<TileSize, string> = { s: '小', m: '中', l: '大' }
+
+/** 列数：手机 / 平板 / 桌面三档。 */
+function columnsFor(size: TileSize, width: number) {
+  const table = { s: [6, 8, 10], m: [4, 5, 6], l: [2, 3, 4] }[size]
+  return width < 640 ? table[0] : width < 1024 ? table[1] : table[2]
+}
+
+/**
+ * 挑够用的最轻一档：格子显示宽度 × 像素比（封顶 1.5，再高肉眼也看不出这点差别）
+ * 不超过 150px 就用轻量档。
+ */
+function tierFor(cellWidth: number, avif: boolean): Tier {
+  if (!avif) return 'liteWebp'
+  const need = cellWidth * Math.min(window.devicePixelRatio || 1, 1.5)
+  return need <= 150 ? 'lite' : 'hd'
+}
+
+/** 1×1 的 AVIF：能解出来就说明浏览器认这个格式。 */
+const AVIF_PROBE =
+  'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADrbWV0YQAAAAAAAAAhaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAETAAAAIQAAAChpaW5mAAAAAAABAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAABqaXBycAAAAEtpcGNvAAAAFGlzcGUAAAAAAAAAAQAAAAEAAAAQcGl4aQAAAAADCAgIAAAADGF2MUOBAAwAAAAAE2NvbHJuY2x4AAEADQAGgAAAABdpcG1hAAAAAAAAAAEAAQQBAoMEAAAAKW1kYXQSAAoIGAAGiAhoNCAyExlHh4Yhh5555oAAAJBAyRxhQr4='
+
+function probeAvif(): Promise<boolean> {
+  return new Promise((resolve) => {
+    const image = new Image()
+    image.onload = () => resolve(image.width > 0)
+    image.onerror = () => resolve(false)
+    image.src = AVIF_PROBE
+  })
+}
 
 const KIND_NOTE: Record<TileKind, string | null> = {
   f: null,
   c: '录像封面',
 }
 
-type Pointer = { index: number; x: number; y: number }
+/** 改写地址栏的一个查询参数，不产生历史记录（与录播室筛选同一做法）。 */
+function replaceParam(key: string, value: string | null) {
+  const url = new URL(window.location.href)
+  if (value === null) url.searchParams.delete(key)
+  else url.searchParams.set(key, value)
+  if (url.href !== window.location.href) window.history.replaceState(null, '', url)
+}
 
-export function GalleryLiveWall({ hiddenIds }: { hiddenIds: string[] }) {
+type TipApi = { show: (index: number, x: number, y: number) => void; hide: () => void }
+
+export function GalleryLiveWall({
+  hiddenIds,
+  manifestUrl,
+  renderLike,
+}: {
+  hiddenIds: string[]
+  /** 带内容哈希的清单地址（构建期算好），清单变了地址才变。 */
+  manifestUrl: string
+  /** 选中面板里的点赞按钮。 */
+  renderLike?: (likeId: string) => ReactNode
+}) {
   const [manifest, setManifest] = useState<Manifest | null>(null)
   const [failed, setFailed] = useState(false)
-  const [hover, setHover] = useState<Pointer | null>(null)
   const [picked, setPicked] = useState<number | null>(null)
+  const [size, setSize] = useState<TileSize>('m')
+  const [full, setFull] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const [avif, setAvif] = useState<boolean | null>(null)
+  const [width, setWidth] = useState(0)
+  const [nearYears, setNearYears] = useState<Set<string>>(() => new Set())
+  const rootRef = useRef<HTMLDivElement>(null)
+  const wallRef = useRef<HTMLDivElement>(null)
+  const tipRef = useRef<TipApi | null>(null)
+  /** 选中后要不要把那一格滚到视口中间：来自地址（打开分享链接）时要，自己点的不要。 */
+  const scrollToPicked = useRef(false)
+  const resumeYear = useRef<string | null>(null)
+
+  const hidden = useMemo(() => new Set(hiddenIds), [hiddenIds])
+
+  // 传给每年网格的回调要稳定，否则 memo 形同虚设：点一格会让所有年份一起重画。
+  const togglePick = useCallback((index: number) => {
+    setCopied(false)
+    setPicked((current) => (current === index ? null : index))
+  }, [])
 
   useEffect(() => {
     let active = true
-    fetch(MANIFEST_URL)
+    void probeAvif().then((ok) => active && setAvif(ok))
+    fetch(manifestUrl)
       .then((response) => (response.ok ? (response.json() as Promise<Manifest>) : Promise.reject(new Error(String(response.status)))))
-      .then((data) => active && setManifest(data))
+      .then((data) => {
+        if (!active) return
+        setManifest(data)
+        const wanted = new URLSearchParams(window.location.search).get('d')
+        const index = wanted ? data.tiles.findIndex((tile) => tile[0] === wanted) : -1
+        if (wanted && index >= 0 && !hidden.has(wanted)) {
+          scrollToPicked.current = true
+          setPicked(index)
+        }
+      })
       .catch(() => active && setFailed(true))
     return () => {
       active = false
     }
+    // 只在挂载时取一次；hidden 来自构建期，不会变。
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const hidden = useMemo(() => new Set(hiddenIds), [hiddenIds])
+  // 格子宽度决定用哪一档切片，所以要知道墙有多宽；只在宽度真变了时才更新。
+  useEffect(() => {
+    const node = wallRef.current
+    if (!node) return
+    const measure = () => setWidth((current) => {
+      const next = Math.round(node.getBoundingClientRect().width)
+      return Math.abs(next - current) > 8 ? next : current
+    })
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [manifest, full])
 
-  const years = useMemo(() => {
+  const years = useMemo<Bucket[]>(() => {
     if (!manifest) return []
-    const map = new Map<string, { year: string; slices: Slice[]; count: number }>()
+    const map = new Map<string, Bucket>()
     for (const slice of manifest.slices) {
-      const bucket = map.get(slice.year) ?? { year: slice.year, slices: [], count: 0 }
-      bucket.slices.push(slice)
-      for (let i = slice.first; i < slice.first + slice.count; i += 1) {
-        if (!hidden.has(manifest.tiles[i][0])) bucket.count += 1
+      const bucket = map.get(slice.year) ?? { year: slice.year, cells: [] }
+      for (let offset = 0; offset < slice.count; offset += 1) {
+        const index = slice.first + offset
+        const tile = manifest.tiles[index]
+        if (!hidden.has(tile[0])) bucket.cells.push({ index, tile, slice, offset })
       }
       map.set(slice.year, bucket)
     }
-    return [...map.values()]
+    return [...map.values()].filter((bucket) => bucket.cells.length > 0)
   }, [manifest, hidden])
 
-  // 右侧年份轨：与照片墙同一套，刻度长短按当年场次分档，悬停预览用当年第一张切片。
+  // 右侧年份轨：与照片墙同一套；悬停预览用当年第一张切片的轻量档。
   const marks = useMemo<TimelineRailMark[]>(() => {
-    const max = Math.max(1, ...years.map((bucket) => bucket.count))
+    const max = Math.max(1, ...years.map((bucket) => bucket.cells.length))
     return years.map((bucket) => {
-      const ratio = bucket.count / max
+      const ratio = bucket.cells.length / max
+      const slice = bucket.cells[0].slice
       return {
         id: `live-wall-${bucket.year}`,
         meta: bucket.year,
-        title: `${bucket.count} 场`,
+        title: `${bucket.cells.length} 场`,
         color: yearColor(bucket.year),
-        cover: bucket.slices[0]?.src ?? null,
+        cover: avif === false ? slice.liteWebp : slice.lite,
         weight: (ratio >= 0.6 ? 'lead' : ratio >= 0.25 ? 'major' : 'minor') as TimelineRailMark['weight'],
       }
     })
-  }, [years])
+  }, [years, avif])
 
-  const shown = useMemo(() => (manifest ? manifest.tiles.filter((tile) => !hidden.has(tile[0])) : []), [manifest, hidden])
+  const total = useMemo(() => years.reduce((sum, bucket) => sum + bucket.cells.length, 0), [years])
 
+  // 年份分段进入视口 600px 以内才挂背景图；取过的年份留在集合里，滚回去不再闪。
   useEffect(() => {
-    if (picked === null) return
-    const onKey = (event: KeyboardEvent) => event.key === 'Escape' && setPicked(null)
+    if (years.length === 0) return
+    const observer = new IntersectionObserver(
+      (records) => {
+        const reached = records.filter((record) => record.isIntersecting).map((record) => (record.target as HTMLElement).dataset.year!)
+        if (reached.length > 0) {
+          setNearYears((current) => (reached.every((y) => current.has(y)) ? current : new Set([...current, ...reached])))
+        }
+      },
+      { rootMargin: '600px 0px' },
+    )
+    for (const node of document.querySelectorAll<HTMLElement>('[data-live-year]')) observer.observe(node)
+    return () => observer.disconnect()
+  }, [years, full])
+
+  // 地址里带着年份锚点打开时，那一年的分段要等清单到了才存在，浏览器自己的跳转早落空了。
+  useEffect(() => {
+    if (!manifest || scrollToPicked.current) return
+    const hash = decodeURIComponent(window.location.hash.slice(1))
+    if (hash.startsWith('live-wall-')) document.getElementById(hash)?.scrollIntoView({ block: 'start' })
+  }, [manifest])
+
+  // 选中哪一格就写进地址；清单还没到时不动，免得把分享链接里的 d 先抹掉。
+  useEffect(() => {
+    if (!manifest) return
+    replaceParam('d', picked === null ? null : manifest.tiles[picked][0])
+    if (picked !== null && scrollToPicked.current) {
+      scrollToPicked.current = false
+      window.setTimeout(() => document.querySelector('[data-live-picked]')?.scrollIntoView({ block: 'center' }), 0)
+    }
+  }, [manifest, picked])
+
+  // 真全屏被浏览器自己退掉（按 Esc、系统手势）时，状态跟着回来。
+  useEffect(() => {
+    const onChange = () => {
+      if (!document.fullscreenElement) setFull(false)
+    }
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
+
+  // 墙在 body 与原位之间搬家后：进全屏时请求真全屏（仍在点击的用户激活有效期内），
+  // 并把刚才看的那一年接上。
+  useEffect(() => {
+    const year = resumeYear.current
+    resumeYear.current = null
+    if (full) {
+      const node = rootRef.current
+      if (node?.requestFullscreen && !document.fullscreenElement) void node.requestFullscreen().catch(() => {})
+    }
+    if (year) document.getElementById(`live-wall-${year}`)?.scrollIntoView({ block: 'start' })
+  }, [full])
+
+  // 覆盖层模式下锁住页面本身的滚动，否则滚动会穿透到底下的画廊。
+  useEffect(() => {
+    if (!full) return
+    const root = document.documentElement
+    const previous = root.style.overflow
+    root.style.overflow = 'hidden'
+    return () => {
+      root.style.overflow = previous
+    }
+  }, [full])
+
+  // 切走标签（组件卸载）时一并退出全屏。
+  useEffect(() => () => {
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => {})
+  }, [])
+
+  // Esc 先收起选中的那一格，再退覆盖层（真全屏下 Esc 由浏览器自己处理）。
+  useEffect(() => {
+    if (picked === null && !full) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      if (picked !== null) setPicked(null)
+      else setFull(false)
+    }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [picked])
+  }, [picked, full])
 
-  if (failed) return <p className="py-16 text-center text-meta text-faint">合集清单暂时没有加载成功，稍后再试。</p>
-  if (!manifest) return <p className="py-16 text-center text-meta text-faint">正在铺开……</p>
+  const columns = columnsFor(size, width || 1024)
+  const tier: Tier | null = avif === null || width === 0 ? null : tierFor(width / columns, avif)
 
-  const { cols } = manifest
-
-  /** 指针落在切片的哪一格。落在最后一行的空位、或被隐藏的格子上时返回 null。 */
-  const tileAt = (slice: Slice, event: ReactMouseEvent<HTMLDivElement>) => {
-    const box = event.currentTarget.getBoundingClientRect()
-    const rows = Math.ceil(slice.count / cols)
-    const col = Math.min(cols - 1, Math.max(0, Math.floor(((event.clientX - box.left) / box.width) * cols)))
-    const row = Math.min(rows - 1, Math.max(0, Math.floor(((event.clientY - box.top) / box.height) * rows)))
-    const offset = row * cols + col
-    if (offset >= slice.count) return null
-    const index = slice.first + offset
-    return hidden.has(manifest.tiles[index][0]) ? null : index
+  /** 视口里最靠上的那一年；进出全屏时据此接着看同一年，而不是跳回开头。 */
+  const currentYear = () => {
+    const sections = [...document.querySelectorAll<HTMLElement>('[data-live-year]')]
+    return sections.find((node) => node.getBoundingClientRect().bottom > 120)?.dataset.year ?? null
+  }
+  const enterFull = () => {
+    resumeYear.current = currentYear()
+    setFull(true)
+  }
+  const exitFull = () => {
+    resumeYear.current = currentYear()
+    setFull(false)
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => {})
   }
 
-  const hoverTile = hover ? manifest.tiles[hover.index] : null
-  const pickedTile = picked === null ? null : manifest.tiles[picked]
+  const pick = (index: number | null) => {
+    setCopied(false)
+    setPicked(index)
+  }
 
-  return (
-    <div>
-      <p className="measure-body mb-6 text-body leading-relaxed text-muted tnum">
-        <SiteText
-          id="gallery-live-intro"
-          vars={{ count: shown.length, from: shown[0]?.[1] ?? '', to: shown[shown.length - 1]?.[1] ?? '' }}
-        />
-      </p>
+  const copyLink = (id: string) => {
+    const url = new URL(window.location.href)
+    url.hash = ''
+    url.searchParams.set('view', 'live')
+    url.searchParams.set('d', id)
+    void navigator.clipboard?.writeText(url.href).then(() => setCopied(true), () => {})
+  }
 
-      <nav className="mb-8 flex flex-wrap gap-2" aria-label="跳到年份">
-        {years.map((bucket) => (
-          <a
-            key={bucket.year}
-            href={`#live-wall-${bucket.year}`}
-            className="ui-press shrink-0 rounded-full border border-line/80 px-3 py-1.5 text-meta text-muted tnum transition-colors hover:border-today/60 hover:text-today"
-          >
-            {bucket.year} · {bucket.count}
-          </a>
-        ))}
-      </nav>
+  const jumpToYear = (year: string) => {
+    document.getElementById(`live-wall-${year}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#live-wall-${year}`)
+  }
 
-      <TimelineRail
-        marks={marks}
-        ariaLabel="全直播合集年份时间轴"
-        positionLabel="全直播合集浏览位置"
-        showFrom="md"
-        reserveBottom
-        height="clamp(20rem,60vh,44rem)"
-        magnify={{ radius: 0.14, scale: 2.4 }}
-      />
+  const tiles = manifest?.tiles
+  const pickedTile = picked === null || !tiles ? null : tiles[picked]
 
-      <div className="gallery-wall space-y-8">
-        {years.map((bucket) => (
-          <section key={bucket.year} id={`live-wall-${bucket.year}`} className="scroll-mt-24">
-            <h3 className="mb-2 flex items-baseline gap-3 text-control">
-              <span className="font-mono font-semibold tnum" style={{ color: yearColor(bucket.year) }}>{bucket.year}</span>
-              <span className="text-meta text-faint tnum">{bucket.count} 场</span>
-            </h3>
-            {bucket.slices.map((slice) => {
-              const rows = Math.ceil(slice.count / cols)
-              return (
-                <div
-                  key={slice.src}
-                  className="relative cursor-crosshair select-none bg-raised"
-                  style={{ aspectRatio: `${cols * manifest.tileW} / ${rows * manifest.tileH}` }}
-                  onPointerMove={(event) => {
-                    if (event.pointerType !== 'mouse') return
-                    const index = tileAt(slice, event)
-                    setHover(index === null ? null : { index, x: event.clientX, y: event.clientY })
-                  }}
-                  onPointerLeave={() => setHover(null)}
+  // 浮层：平时挂 body；全屏时整面墙已经挂在 body 上，浮层留在墙里（真全屏只显示这一棵子树）。
+  const float = (node: ReactNode) => (full ? node : createPortal(node, document.body))
+
+  const wall = (
+    <div
+      ref={rootRef}
+      className={full ? 'fixed inset-0 z-50 overflow-y-auto overscroll-contain bg-base px-page pb-24' : undefined}
+    >
+      {failed && <p className="py-16 text-center text-meta text-faint">合集清单暂时没有加载成功，稍后再试。</p>}
+      {!failed && !manifest && <p className="py-16 text-center text-meta text-faint">正在铺开……</p>}
+
+      {manifest && (
+        <>
+          <p className={`measure-body mb-5 text-body leading-relaxed text-muted tnum ${full ? 'hidden' : ''}`}>
+            <SiteText
+              id="gallery-live-intro"
+              vars={{ count: total, from: years[0]?.cells[0].tile[1] ?? '', to: years.at(-1)?.cells.at(-1)?.tile[1] ?? '' }}
+            />
+          </p>
+
+          <div className={`mb-6 flex items-center gap-2 sm:mb-8 sm:items-start sm:gap-3 ${full ? 'sticky top-0 z-10 -mx-page bg-base/95 px-page py-3 backdrop-blur' : ''}`}>
+            {/* 手机上年份按钮排成一行横滑：十二个按钮折成四行会把图墙推出首屏。 */}
+            <nav
+              className="-my-1 flex min-w-0 flex-1 gap-2 overflow-x-auto py-1 [scrollbar-width:none] sm:flex-wrap sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+              aria-label="跳到年份"
+            >
+              {years.map((bucket) => (
+                <a
+                  key={bucket.year}
+                  href={`#live-wall-${bucket.year}`}
                   onClick={(event) => {
-                    const index = tileAt(slice, event)
-                    setPicked(index === picked ? null : index)
+                    event.preventDefault()
+                    jumpToYear(bucket.year)
                   }}
+                  className="ui-press shrink-0 whitespace-nowrap rounded-full border border-line/80 px-3 py-1.5 text-meta text-muted tnum transition-colors hover:border-today/60 hover:text-today"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element -- 静态导出，切片本身就是成品图 */}
-                  <img
-                    src={slice.src}
-                    alt={`${slice.year} 年直播截图拼图`}
-                    width={cols * manifest.tileW}
-                    height={rows * manifest.tileH}
-                    loading="lazy"
-                    decoding="async"
-                    draggable={false}
-                    className="block h-full w-full"
-                  />
-                  {manifest.tiles.slice(slice.first, slice.first + slice.count).map((tile, offset) => {
-                    const index = slice.first + offset
-                    const isHidden = hidden.has(tile[0])
-                    if (!isHidden && index !== picked) return null
-                    const col = offset % cols
-                    const row = Math.floor(offset / cols)
-                    return (
-                      <span
-                        key={tile[0]}
-                        aria-hidden
-                        className={`pointer-events-none absolute ${isHidden ? 'bg-base' : 'outline outline-2 -outline-offset-2 outline-today'}`}
-                        style={{
-                          left: `${(col / cols) * 100}%`,
-                          top: `${(row / rows) * 100}%`,
-                          width: `${100 / cols}%`,
-                          height: `${100 / rows}%`,
-                        }}
-                      />
-                    )
-                  })}
-                </div>
-              )
-            })}
-          </section>
-        ))}
-      </div>
+                  {bucket.year}<span className="hidden sm:inline"> · {bucket.cells.length}</span>
+                </a>
+              ))}
+            </nav>
+            <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+              <div className="flex items-center gap-0.5 rounded-full border border-line/80 bg-surface/50 p-0.5" role="group" aria-label="格子大小">
+                {(Object.keys(SIZE_LABEL) as TileSize[]).map((value) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setSize(value)}
+                    aria-pressed={size === value}
+                    className={`ui-press min-h-8 min-w-8 rounded-full px-2 text-meta transition-colors ${
+                      size === value ? 'bg-raised text-ink' : 'text-faint hover:text-muted'
+                    }`}
+                  >
+                    {SIZE_LABEL[value]}
+                  </button>
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={full ? exitFull : enterFull}
+                aria-pressed={full}
+                aria-label={full ? '退出全屏' : '全屏'}
+                className="ui-press min-h-9 shrink-0 whitespace-nowrap rounded-full border border-line/80 bg-surface/50 px-3 text-meta text-muted transition-colors hover:border-today/60 hover:text-today"
+              >
+                {full ? '✕' : '⤢'}<span className="hidden sm:inline">{full ? ' 退出全屏' : ' 全屏'}</span>
+              </button>
+            </div>
+          </div>
 
-      <p className="mt-8 text-meta text-faint"><SiteText id="gallery-live-note" /></p>
+          {!full && (
+            <TimelineRail
+              marks={marks}
+              ariaLabel="全直播合集年份时间轴"
+              positionLabel="全直播合集浏览位置"
+              showFrom="md"
+              reserveBottom
+              height="clamp(20rem,60vh,44rem)"
+              magnify={{ radius: 0.14, scale: 2.4 }}
+            />
+          )}
 
-      {hoverTile && hover && picked === null && (
-        <div
-          className="pointer-events-none fixed z-40 max-w-[18rem] rounded-md border border-line bg-surface/95 px-3 py-2 text-meta shadow-lg backdrop-blur"
-          style={{ left: Math.min(hover.x + 14, window.innerWidth - 300), top: hover.y + 16 }}
-        >
-          <TileLabel tile={hoverTile} />
-        </div>
+          {/* 手机上全站安全边距约 13%，四列格子只剩 68px 宽；图墙单独放宽到离屏幕边 12px，文字仍守原边距。 */}
+          <div
+            ref={wallRef}
+            className={`space-y-6 max-sm:mx-[calc(0.75rem-var(--page-pad))] sm:space-y-8 ${full ? '' : 'gallery-wall'}`}
+          >
+            {years.map((bucket) => (
+              <YearGrid
+                key={bucket.year}
+                bucket={bucket}
+                cols={manifest.cols}
+                columns={columns}
+                gap={size === 's' ? 0 : size === 'm' ? 2 : 4}
+                tier={nearYears.has(bucket.year) ? tier : null}
+                pickedIndex={picked !== null && bucket.cells.some((cell) => cell.index === picked) ? picked : null}
+                full={full}
+                onPick={togglePick}
+                tipRef={tipRef}
+              />
+            ))}
+          </div>
+
+          <p className={`mt-8 text-meta text-faint ${full ? 'hidden' : ''}`}><SiteText id="gallery-live-note" /></p>
+
+          {float(<HoverTip tiles={manifest.tiles} apiRef={tipRef} suppressed={picked !== null} />)}
+        </>
       )}
 
-      {pickedTile && (
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-surface/95 px-page py-3 backdrop-blur sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[34rem] sm:-translate-x-1/2 sm:rounded-lg sm:border">
-          <div className="flex items-center gap-3">
-            <div className="min-w-0 flex-1 text-control">
+      {pickedTile && float(
+        <div className="fixed inset-x-0 bottom-0 z-[45] border-t border-line bg-surface/95 px-page pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[38rem] sm:-translate-x-1/2 sm:rounded-lg sm:border sm:pb-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="line-clamp-2 min-w-0 flex-1 text-control">
               <TileLabel tile={pickedTile} />
             </div>
+            {renderLike?.(LIVE_WALL_LIKE_PREFIX + pickedTile[0])}
             <Link
               prefetch={false}
               href={`/e/${pickedTile[0]}/`}
-              className="ui-press shrink-0 rounded-sm text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
+              className="ui-press shrink-0 whitespace-nowrap rounded-sm text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
             >
               看这一场 →
             </Link>
             <button
               type="button"
-              onClick={() => setPicked(null)}
+              onClick={() => copyLink(pickedTile[0])}
+              className="ui-press hidden shrink-0 rounded-sm text-meta text-muted underline decoration-line underline-offset-4 hover:text-ink sm:inline"
+            >
+              {copied ? '已复制' : '复制链接'}
+            </button>
+            <button
+              type="button"
+              onClick={() => pick(null)}
               aria-label="关闭"
-              className="ui-press shrink-0 rounded-full px-2 text-muted hover:text-ink"
+              className="ui-press flex min-h-9 min-w-9 shrink-0 items-center justify-center rounded-full text-muted hover:text-ink"
             >
               ✕
             </button>
           </div>
-        </div>
+        </div>,
       )}
+    </div>
+  )
+
+  return full && typeof document !== 'undefined' ? createPortal(wall, document.body) : wall
+}
+
+/**
+ * 一年的网格。memo 住：悬停不经过这里，选中只影响选中格所在的那一年，
+ * 切「小 / 中 / 大」或换档才整体重排。
+ */
+const YearGrid = memo(function YearGrid({
+  bucket,
+  cols,
+  columns,
+  gap,
+  tier,
+  pickedIndex,
+  full,
+  onPick,
+  tipRef,
+}: {
+  bucket: Bucket
+  cols: number
+  columns: number
+  gap: number
+  /** null = 还没滚到附近，不挂背景图。 */
+  tier: Tier | null
+  pickedIndex: number | null
+  full: boolean
+  onPick: (index: number) => void
+  tipRef: React.RefObject<TipApi | null>
+}) {
+  const indexOf = (target: EventTarget) => {
+    const node = (target as HTMLElement).closest<HTMLElement>('[data-i]')
+    return node ? Number(node.dataset.i) : null
+  }
+
+  return (
+    <section
+      id={`live-wall-${bucket.year}`}
+      data-live-year=""
+      data-year={bucket.year}
+      className={full ? 'scroll-mt-32' : 'scroll-mt-24'}
+    >
+      <h3 className="mb-2 flex items-baseline gap-3 text-control">
+        <span className="font-mono font-semibold tnum" style={{ color: yearColor(bucket.year) }}>{bucket.year}</span>
+        <span className="text-meta text-faint tnum">{bucket.cells.length} 场</span>
+      </h3>
+      <div
+        role="img"
+        aria-label={`${bucket.year} 年 ${bucket.cells.length} 场直播的截图`}
+        className="grid cursor-crosshair select-none"
+        style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gap: `${gap}px` }}
+        onPointerMove={(event) => {
+          if (event.pointerType !== 'mouse') return
+          const index = indexOf(event.target)
+          if (index === null) tipRef.current?.hide()
+          else tipRef.current?.show(index, event.clientX, event.clientY)
+        }}
+        onPointerLeave={() => tipRef.current?.hide()}
+        onClick={(event) => {
+          const index = indexOf(event.target)
+          if (index !== null) onPick(index)
+        }}
+      >
+        {bucket.cells.map(({ index, tile, slice, offset }) => {
+          const rows = Math.ceil(slice.count / cols)
+          const col = offset % cols
+          const row = Math.floor(offset / cols)
+          const isPicked = index === pickedIndex
+          return (
+            <div
+              key={tile[0]}
+              data-i={index}
+              data-live-picked={isPicked ? '' : undefined}
+              className={`relative aspect-video bg-raised bg-no-repeat ${isPicked ? 'z-[1] outline outline-2 -outline-offset-2 outline-today' : ''}`}
+              style={tier ? {
+                backgroundImage: `url("${slice[tier]}")`,
+                backgroundSize: `${cols * 100}% ${rows * 100}%`,
+                backgroundPosition: `${cols > 1 ? (col / (cols - 1)) * 100 : 0}% ${rows > 1 ? (row / (rows - 1)) * 100 : 0}%`,
+              } : undefined}
+            />
+          )
+        })}
+      </div>
+    </section>
+  )
+})
+
+/** 悬停提示：状态只在这里，指针每动一下只重画这一小块。 */
+function HoverTip({
+  tiles,
+  apiRef,
+  suppressed,
+}: {
+  tiles: Tile[]
+  apiRef: React.RefObject<TipApi | null>
+  suppressed: boolean
+}) {
+  const [state, setState] = useState<{ index: number; x: number; y: number } | null>(null)
+
+  useEffect(() => {
+    apiRef.current = {
+      show: (index, x, y) => setState({ index, x, y }),
+      hide: () => setState(null),
+    }
+    return () => {
+      apiRef.current = null
+    }
+  }, [apiRef])
+
+  if (!state || suppressed) return null
+  return (
+    <div
+      className="pointer-events-none fixed z-40 max-w-[18rem] rounded-md border border-line bg-surface/95 px-3 py-2 text-meta shadow-lg backdrop-blur"
+      style={{ left: Math.min(state.x + 14, window.innerWidth - 300), top: state.y + 16 }}
+    >
+      <TileLabel tile={tiles[state.index]} />
     </div>
   )
 }
