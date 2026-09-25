@@ -368,10 +368,26 @@
   confidence: medium
   cover: "http://i1.hdslb.com/bfs/archive/750a138a89f992e340a96e1e977b6472ab194128.jpg"
   sources:
-    - url: "https://www.bilibili.com/video/BV1Kzhx6hE44"
+    - url: "https://www.bilibili.com/video/BV1uYhx6vE5L"
       kind: replay
       status: alive
-    - url: "https://www.bilibili.com/video/BV1uYhx6vE5L"
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-09-24-live-01
+  type: live
+  date: "2026-09-24"
+  title: "燕云更新啦"
+  platform: douyin
+  duration_min: 146
+  games:
+    - where-winds-meet
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/ede70a9de4a9271ed9c9502ac9579bb2c481c9e9.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1GeaP6EEZZ"
       kind: replay
       status: alive
   note: "依据录播来源复核收录。"
