@@ -20,7 +20,10 @@ import { TimelineRail, type TimelineRailMark } from './TimelineRail'
  * - 清单只在切到这个标签时取，地址带内容哈希，可以长缓存。
  * - 悬停提示自己管自己的状态，指针移动不会让几千个格子重渲染；每年的网格是 memo 的，
  *   选中/取消只重画涉及的那一两年。格子上不放点赞按钮（几千个订阅同一份点赞状态），
- *   点赞在选中后的面板里。
+ *   点赞在放大视图里。
+ *
+ * 轻点一格 = 放大看（与照片墙的灯箱同一个习惯）：清晰档切片里那一块放大显示，
+ * 点大图进这一场的条目页；左右键 / 左右滑 / ‹ › 翻到相邻场次。
  *
  * 地址：`?view=live` 直接打开这个标签（GalleryBoard 读），`#live-wall-<年>` 跳到那一年，
  * `&d=<条目 id>` 打开时选中那一格并滚过去；选中/取消同步改写地址，面板里可复制链接。
@@ -162,9 +165,14 @@ export function GalleryLiveWall({
       return Math.abs(next - current) > 8 ? next : current
     })
     measure()
+    // 与照片墙同一做法：ResizeObserver 之外再挂 resize 兜底，有些环境会压住 RO 回调。
     const observer = new ResizeObserver(measure)
     observer.observe(node)
-    return () => observer.disconnect()
+    window.addEventListener('resize', measure)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', measure)
+    }
   }, [manifest, full])
 
   const years = useMemo<Bucket[]>(() => {
@@ -201,6 +209,10 @@ export function GalleryLiveWall({
 
   const total = useMemo(() => years.reduce((sum, bucket) => sum + bucket.cells.length, 0), [years])
 
+  // 放大看时的前后翻页顺序（已跳过隐藏条目），以及从格子序号找回它在哪张切片上。
+  const order = useMemo(() => years.flatMap((bucket) => bucket.cells.map((cell) => cell.index)), [years])
+  const cellByIndex = useMemo(() => new Map(years.flatMap((bucket) => bucket.cells.map((cell) => [cell.index, cell] as const))), [years])
+
   // 年份分段进入视口 600px 以内才挂背景图；取过的年份留在集合里，滚回去不再闪。
   useEffect(() => {
     if (years.length === 0) return
@@ -230,7 +242,7 @@ export function GalleryLiveWall({
     replaceParam('d', picked === null ? null : manifest.tiles[picked][0])
     if (picked !== null && scrollToPicked.current) {
       scrollToPicked.current = false
-      window.setTimeout(() => document.querySelector('[data-live-picked]')?.scrollIntoView({ block: 'center' }), 0)
+      window.setTimeout(() => document.querySelector('[data-live-picked]')?.scrollIntoView({ block: 'center', behavior: 'instant' as ScrollBehavior }), 0)
     }
   }, [manifest, picked])
 
@@ -266,6 +278,16 @@ export function GalleryLiveWall({
     }
   }, [full])
 
+  useEffect(() => {
+    if (picked === null || full) return
+    const root = document.documentElement
+    const previous = root.style.overflow
+    root.style.overflow = 'hidden'
+    return () => {
+      root.style.overflow = previous
+    }
+  }, [picked, full])
+
   // 切走标签（组件卸载）时一并退出全屏。
   useEffect(() => () => {
     if (document.fullscreenElement) void document.exitFullscreen().catch(() => {})
@@ -275,13 +297,21 @@ export function GalleryLiveWall({
   useEffect(() => {
     if (picked === null && !full) return
     const onKey = (event: KeyboardEvent) => {
+      if (picked !== null && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+        const at = order.indexOf(picked)
+        if (at < 0) return
+        const next = order[(at + (event.key === 'ArrowLeft' ? -1 : 1) + order.length) % order.length]
+        scrollToPicked.current = true
+        setPicked(next)
+        return
+      }
       if (event.key !== 'Escape') return
       if (picked !== null) setPicked(null)
       else setFull(false)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [picked, full])
+  }, [picked, full, order])
 
   const columns = columnsFor(size, width || 1024)
   const tier: Tier | null = avif === null || width === 0 ? null : tierFor(width / columns, avif)
@@ -402,11 +432,7 @@ export function GalleryLiveWall({
             />
           )}
 
-          {/* 手机上全站安全边距约 13%，四列格子只剩 68px 宽；图墙单独放宽到离屏幕边 12px，文字仍守原边距。 */}
-          <div
-            ref={wallRef}
-            className={`space-y-6 max-sm:mx-[calc(0.75rem-var(--page-pad))] sm:space-y-8 ${full ? '' : 'gallery-wall'}`}
-          >
+          <div ref={wallRef} className={`space-y-6 sm:space-y-8 ${full ? '' : 'gallery-wall'}`}>
             {years.map((bucket) => (
               <YearGrid
                 key={bucket.year}
@@ -429,37 +455,25 @@ export function GalleryLiveWall({
         </>
       )}
 
-      {pickedTile && float(
-        <div className="fixed inset-x-0 bottom-0 z-[45] border-t border-line bg-surface/95 px-page pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur sm:bottom-4 sm:left-1/2 sm:right-auto sm:w-[38rem] sm:-translate-x-1/2 sm:rounded-lg sm:border sm:pb-3">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="line-clamp-2 min-w-0 flex-1 text-control">
-              <TileLabel tile={pickedTile} />
-            </div>
-            {renderLike?.(LIVE_WALL_LIKE_PREFIX + pickedTile[0])}
-            <Link
-              prefetch={false}
-              href={`/e/${pickedTile[0]}/`}
-              className="ui-press shrink-0 whitespace-nowrap rounded-sm text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
-            >
-              看这一场 →
-            </Link>
-            <button
-              type="button"
-              onClick={() => copyLink(pickedTile[0])}
-              className="ui-press hidden shrink-0 rounded-sm text-meta text-muted underline decoration-line underline-offset-4 hover:text-ink sm:inline"
-            >
-              {copied ? '已复制' : '复制链接'}
-            </button>
-            <button
-              type="button"
-              onClick={() => pick(null)}
-              aria-label="关闭"
-              className="ui-press flex min-h-9 min-w-9 shrink-0 items-center justify-center rounded-full text-muted hover:text-ink"
-            >
-              ✕
-            </button>
-          </div>
-        </div>,
+      {pickedTile && picked !== null && float(
+        <LiveLightbox
+          tile={pickedTile}
+          cell={cellByIndex.get(picked) ?? null}
+          cols={manifest?.cols ?? 10}
+          tier={avif === false ? 'liteWebp' : 'hd'}
+          position={order.indexOf(picked)}
+          total={order.length}
+          copied={copied}
+          renderLike={renderLike}
+          onStep={(delta) => {
+            const at = order.indexOf(picked)
+            if (at < 0 || order.length === 0) return
+            scrollToPicked.current = true
+            pick(order[(at + delta + order.length) % order.length])
+          }}
+          onCopy={() => copyLink(pickedTile[0])}
+          onClose={() => pick(null)}
+        />,
       )}
     </div>
   )
@@ -592,5 +606,126 @@ function TileLabel({ tile }: { tile: Tile }) {
       <span className="ml-2 text-ink">{title}</span>
       {note && <span className="ml-2 text-faint">（{note}）</span>}
     </>
+  )
+}
+
+/**
+ * 放大看一格。底色不用 backdrop-blur：身后是几千个带背景图的格子，整屏模糊在中端手机上
+ * 每帧都要重算，打开 / 翻页会明显卡。画面仍取自切片（清晰档一格 240×135），所以最大只放到 480px 宽——
+ * 再大就糊了；要看清楚就点进条目页看录像。
+ */
+function LiveLightbox({
+  tile,
+  cell,
+  cols,
+  tier,
+  position,
+  total,
+  copied,
+  renderLike,
+  onStep,
+  onCopy,
+  onClose,
+}: {
+  tile: Tile
+  cell: Cell | null
+  cols: number
+  tier: Tier
+  position: number
+  total: number
+  copied: boolean
+  renderLike?: (likeId: string) => ReactNode
+  onStep: (delta: number) => void
+  onCopy: () => void
+  onClose: () => void
+}) {
+  const swipe = useRef<{ x: number; y: number } | null>(null)
+  const rows = cell ? Math.ceil(cell.slice.count / cols) : 1
+  const col = cell ? cell.offset % cols : 0
+  const row = cell ? Math.floor(cell.offset / cols) : 0
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${tile[1]} ${tile[2]}`}
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-base/95 px-page"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose()
+      }}
+      onTouchStart={(event) => {
+        const touch = event.touches[0]
+        swipe.current = { x: touch.clientX, y: touch.clientY }
+      }}
+      onTouchEnd={(event) => {
+        const start = swipe.current
+        swipe.current = null
+        if (!start) return
+        const touch = event.changedTouches[0]
+        const dx = touch.clientX - start.x
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(touch.clientY - start.y)) onStep(dx < 0 ? 1 : -1)
+      }}
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="关闭"
+        className="ui-press absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full border border-line/80 bg-surface/80 text-muted hover:text-ink sm:right-6 sm:top-6"
+      >
+        ✕
+      </button>
+
+      <figure className="w-full max-w-[30rem]">
+        <Link
+          prefetch={false}
+          href={`/e/${tile[0]}/`}
+          aria-label={`看这一场：${tile[1]} ${tile[2]}`}
+          className="ui-press block aspect-video w-full overflow-hidden rounded-lg border border-line bg-raised bg-no-repeat shadow-2xl"
+          style={cell ? {
+            backgroundImage: `url("${cell.slice[tier]}")`,
+            backgroundSize: `${cols * 100}% ${rows * 100}%`,
+            backgroundPosition: `${cols > 1 ? (col / (cols - 1)) * 100 : 0}% ${rows > 1 ? (row / (rows - 1)) * 100 : 0}%`,
+          } : undefined}
+        />
+        <figcaption className="mt-3 text-control leading-relaxed">
+          <TileLabel tile={tile} />
+        </figcaption>
+        <div className="mt-4 flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => onStep(-1)}
+            aria-label="上一场"
+            className="ui-press flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line/80 text-muted hover:text-ink"
+          >
+            ‹
+          </button>
+          <span className="shrink-0 font-mono text-meta text-faint tnum">{position + 1} / {total}</span>
+          <button
+            type="button"
+            onClick={() => onStep(1)}
+            aria-label="下一场"
+            className="ui-press flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line/80 text-muted hover:text-ink"
+          >
+            ›
+          </button>
+          <span className="flex-1" />
+          {renderLike?.(LIVE_WALL_LIKE_PREFIX + tile[0])}
+          <button
+            type="button"
+            onClick={onCopy}
+            className="ui-press hidden shrink-0 rounded-sm text-meta text-muted underline decoration-line underline-offset-4 hover:text-ink sm:inline"
+          >
+            {copied ? '已复制' : '复制链接'}
+          </button>
+          <Link
+            prefetch={false}
+            href={`/e/${tile[0]}/`}
+            className="ui-press shrink-0 whitespace-nowrap rounded-sm text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
+          >
+            看这一场 →
+          </Link>
+        </div>
+      </figure>
+    </div>
   )
 }

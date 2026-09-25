@@ -141,10 +141,17 @@ export function GalleryBoard({
     return counts
   }, [photos])
 
+  // 照片墙在切到「全直播合集」时会整块卸载、切回来再重新挂上，所以这里要跟着 isLive 重新量：
+  // 只在挂载时量一次的话，ResizeObserver 还盯着那个已经卸载的旧节点，量出来是 0，
+  // 切回全量版 / 纪念版后整面墙按 0 宽排版，照片全被挤没了。宽度为 0 的读数一律不收。
+  const isLive = collection === 'live'
   useEffect(() => {
     const node = boardRef.current
     if (!node) return
-    const measure = () => setBoardW(node.getBoundingClientRect().width)
+    const measure = () => {
+      const width = node.getBoundingClientRect().width
+      if (width > 0) setBoardW(width)
+    }
     // 三条路一起上：挂载后量一次（首屏那版是按默认宽度排的），容器变化用 ResizeObserver，
     // 再挂一个 resize 兜底——有些环境（后台标签页、不渲染的画中画）会把 RO 的回调压住不发。
     const raf = requestAnimationFrame(measure)
@@ -156,7 +163,7 @@ export function GalleryBoard({
       ro.disconnect()
       window.removeEventListener('resize', measure)
     }
-  }, [])
+  }, [isLive])
 
   const visible = useMemo(() => {
     const tagged = tag ? photos.filter((photo) => photo.tags?.includes(tag)) : photos
@@ -249,13 +256,14 @@ export function GalleryBoard({
   return (
     <GalleryLikesProvider>
       <div className="mb-4 flex border-y border-line/70 py-4">
-        <div className="flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/50 p-1" role="tablist" aria-label="画廊版本">
+        {/* 三个标签在手机上放不下，横滑但不露滚动条（露出来是一条很粗的灰条压在标签下面）。 */}
+        <div className="flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/50 p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="画廊版本">
           <button
             type="button"
             role="tab"
             aria-selected={collection === 'featured'}
             onClick={() => chooseCollection('featured')}
-            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
+            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
               collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
@@ -266,7 +274,7 @@ export function GalleryBoard({
             role="tab"
             aria-selected={collection === 'all'}
             onClick={() => chooseCollection('all')}
-            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
+            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
               collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
@@ -278,7 +286,7 @@ export function GalleryBoard({
               role="tab"
               aria-selected={collection === 'live'}
               onClick={() => chooseCollection('live')}
-              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-control transition-colors ${
+              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
                 collection === 'live' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
               }`}
             >
