@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getDataset } from '@/lib/data'
+import { getPublicDataset } from '@/lib/data'
 import { allGameIds } from '@/lib/narrative'
 import { siteUrl } from '@/lib/site-url'
 
@@ -13,7 +13,7 @@ export const dynamic = 'force-static'
  * `/sitemap.xml`（Next App Router 的 metadata route，构建期生成静态文件）。
  *
  * **数据源刻意和三条动态路由的 `generateStaticParams()` 完全一致**——都是同一个
- * 同步的 `getDataset()`。这样 sitemap 里的地址和真正被静态导出的页面天然一一对应，
+ * 同步的 `getPublicDataset()`。这样 sitemap 里的地址和真正被静态导出的页面天然一一对应，
  * 既不会列出不存在的页面，也不会因为多一条取数途径而在构建期引入新的不稳定依赖。
  *
  * 规模：8 个静态页 + 2600+ 条记录 + 游戏 + 节目，合计不到三千条。sitemap 协议的
@@ -40,7 +40,7 @@ const STATIC_PATHS = [
 const REDIRECTED_GAME_IDS = new Set(['maplestory-classic'])
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const ds = getDataset()
+  const ds = getPublicDataset()
 
   const staticPages: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({ url: siteUrl(path) }))
 

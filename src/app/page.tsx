@@ -21,7 +21,7 @@ import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
 import { TodayInHistoryList, type TodayHistoryRow } from '@/components/TodayInHistoryList'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 
@@ -48,7 +48,7 @@ export default async function HomePage() {
   // 首页渲染的是三幕与高光，不碰编年史那份 storyActs——所以只烤这一半。
   // 其余页面由根 layout 烤入的站点文案与板块编排即可，详见 lib/baked-content.ts。
   const bakedNarrative = await fetchBakedHomeNarrative()
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
   const data = resolveHomepage(ds, timeline)
 

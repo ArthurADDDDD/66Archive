@@ -10,7 +10,7 @@ import { ActivityStrip } from '@/components/ActivityStrip'
 import { MediaFrame } from '@/components/MediaFrame'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LivePageHeader } from '@/components/LiveSection'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { proxyImage } from '@/lib/platforms'
 import { buildSeriesList, type SeriesInfo } from '@/lib/series'
 import { getBilibiliVideoMetaAtBuild } from '@/lib/bilibili'
@@ -46,7 +46,7 @@ export default async function SeriesPage() {
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
   const bakedCopy = await fetchBakedPageCopy(['series'], { texts: ['series-'] })
 
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
   const series = buildSeriesList(ds, timeline)
   const pishuang = series.find((s) => s.id === 'xinling-pishuang')

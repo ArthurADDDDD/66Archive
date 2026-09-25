@@ -10,7 +10,7 @@ import { MaintainerCredits } from '@/components/MaintainerCredits'
 import { SiteFooter } from '@/components/primitives'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { LivePageIntro, LivePageNote } from '@/components/LiveSection'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
@@ -27,7 +27,7 @@ export const metadata: Metadata = pageMetadata({
  * 谁的录像撑起了这份档案，数字自己会说——手写名单迟早和数据对不上。
  */
 function collectSources() {
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const entries = toTimelineEntries(ds)
   const byName = new Map([...ds.accounts.values()].map((account) => [account.name, account]))
   const counts = new Map<string, number>()

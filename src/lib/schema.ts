@@ -159,6 +159,12 @@ export const Entry = z
      * 存档快照只是开播证据，不是录像，所以绝不能塞进 `sources` 冒充可看的来源。
      */
     no_public_replay: z.boolean().optional(),
+    /**
+     * 后台隐藏开关：条目仍在档案里（后台能看见、能取消隐藏），前台一律不展示——
+     * 录播室、条目页、游戏/系列聚合、统计、站点地图都按 `getPublicDataset()` 取数。
+     * 不是删除，也不改任何其他字段。
+     */
+    hidden: z.boolean().optional(),
     sources: z.array(Source).default([]),
     segments: z.array(Segment).default([]),
     contributed_by: z.string().optional(),

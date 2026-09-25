@@ -16,7 +16,7 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import { getDataset } from '../src/lib/data'
+import { getPublicDataset } from '../src/lib/data'
 import { getGalleryPhotos } from '../src/lib/gallery-photos-manifest'
 import { galleryPhotoLabel } from '../src/lib/gallery-photos'
 import { buildSeriesList } from '../src/lib/series'
@@ -28,7 +28,7 @@ const OUT = path.join(ROOT, 'public/data/popular-index.json')
 type IndexEntry = { t: string; d?: string }
 
 function main() {
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
   const items: Record<string, IndexEntry> = {}
 

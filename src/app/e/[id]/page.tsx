@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { buildSourceGroups, getDataset } from '@/lib/data'
+import { buildSourceGroups, getPublicDataset } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META } from '@/lib/platforms'
 import { formatClock, formatDuration, gameColor } from '@/lib/ui'
@@ -43,12 +43,12 @@ export const dynamicParams = false
 const SEGMENT_FALLBACK = ['#5BC8E8', '#E5568A', '#E0A244', '#9B8AFB', '#72C7A5']
 
 export function generateStaticParams() {
-  return getDataset().entries.map((e) => ({ id: e.id }))
+  return getPublicDataset().entries.map((e) => ({ id: e.id }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const entry = getDataset().entries.find((e) => e.id === id)
+  const entry = getPublicDataset().entries.find((e) => e.id === id)
   // 站名由根 layout 的 title template 补，这里只给这一场自己的名字。
   return pageMetadata({
     // 这一场自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const idx = ds.entries.findIndex((e) => e.id === id)
   if (idx === -1) notFound()
 

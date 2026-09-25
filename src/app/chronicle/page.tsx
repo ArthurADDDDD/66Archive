@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { resolveStoryActs } from '@/lib/narrative'
 import { buildStorySections } from '@/lib/story-years'
 import { ChronicleView } from '@/components/ChronicleView'
@@ -21,7 +21,7 @@ export const metadata: Metadata = pageMetadata({
  * （buildStoryYears 只做归位与计数）。完整逐条档案在 /archive/（录播室）。
  */
 export default async function ChroniclePage() {
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const allEntries = toTimelineEntries(ds)
   const visibleEntries =
     process.env.NODE_ENV === 'development' && !ds.isDemo

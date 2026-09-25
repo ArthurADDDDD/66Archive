@@ -18,7 +18,7 @@ import { TrailSection } from '@/components/Trail'
 import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
 import { allGameIds } from '@/lib/narrative'
@@ -58,7 +58,7 @@ export default async function StatsPage() {
     'stats-q-gaps',
   ], { texts: ['stats-', 'trail-'] })
 
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
 
   // —— 01 每一年 ——

@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { getDataset, toTimelineEntries } from './data'
+import { getPublicDataset, toTimelineEntries } from './data'
 import { encodeArchivePayload, type EncodedArchivePayload } from './archive-payload'
 
 /**
@@ -47,7 +47,7 @@ let cached: { payload: EncodedArchivePayload; url: string } | null = null
 function build(): { payload: EncodedArchivePayload; url: string } {
   if (cached) return cached
 
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const allEntries = toTimelineEntries(ds)
   const entries =
     process.env.NODE_ENV === 'development' && !ds.isDemo

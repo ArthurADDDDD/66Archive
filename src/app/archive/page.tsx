@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/page-metadata'
 import { BackToTop } from '@/components/ScrollAffordances'
 import { ArchiveLoader } from '@/components/ArchiveLoader'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { buildArchiveNav } from '@/lib/archive-nav'
 import { archiveDataUrl } from '@/lib/archive-data-url'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
@@ -60,7 +60,7 @@ export default async function ArchivePage() {
   const bakedCopy = await fetchBakedPageCopy([], { texts: ['archive-', 'trail-', 'entry-'] })
   // 首屏「时间定位」的构建期版本。它不依赖那份 2.7MB 的载荷——只是各年各时期的条数
   // 与标题——所以没有理由让用户先看一屏脉冲占位再等请求回来。见 lib/archive-nav.ts。
-  const nav = buildArchiveNav(toTimelineEntries(getDataset()))
+  const nav = buildArchiveNav(toTimelineEntries(getPublicDataset()))
   // 预取脚本与 ArchiveLoader 必须取同一个地址：两边各写一份字面量的话，
   // 只改其中一处就会让预取永远落空或者让「重新加载」悄悄换一个版本，且不报错。
   const dataUrl = archiveDataUrl()

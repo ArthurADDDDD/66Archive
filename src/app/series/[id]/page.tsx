@@ -12,7 +12,7 @@ import { SeriesEpisodes } from '@/components/SeriesEpisodes'
 import { SeriesKindEyebrow, SeriesNote, SeriesSectionEyebrow } from '@/components/SeriesDetailCopy'
 import { EntryFilterProvider, YearChips } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { buildSeries, seriesDisplayName } from '@/lib/series'
 import { coverShareImage } from '@/lib/share-image'
@@ -22,12 +22,12 @@ import { KeepDates } from '@/components/KeepDates'
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return [...getDataset().series.keys()].map((id) => ({ id }))
+  return [...getPublicDataset().series.keys()].map((id) => ({ id }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const s = ds.series.get(id)
   // 节目自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
   const cover = s ? await coverShareImage(buildSeries(ds, toTimelineEntries(ds), id, s.name, s.description ?? '').cover) : null
@@ -64,7 +64,7 @@ const SERIES_DETAIL_COPY_IDS = [
  */
 export default async function SeriesDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const def = ds.series.get(id)
   if (!def) notFound()
 

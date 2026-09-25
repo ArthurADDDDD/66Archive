@@ -8,7 +8,7 @@ import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { GamesLibrary } from '@/components/GamesLibrary'
 import { SiteFooter } from '@/components/primitives'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { allGameIds, getGameProfile } from '@/lib/narrative'
 import { LivePageHeading } from '@/components/LiveSection'
@@ -32,7 +32,7 @@ export default async function GamesPage() {
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
   const bakedCopy = await fetchBakedPageCopy(['games'], { texts: ['games-'] })
 
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
 
   const profiles = allGameIds(ds)

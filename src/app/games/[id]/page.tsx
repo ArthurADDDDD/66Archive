@@ -10,7 +10,7 @@ import { SiteFooter } from '@/components/primitives'
 import { SiteText } from '@/components/SiteText'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
-import { getDataset, toTimelineEntries } from '@/lib/data'
+import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@/lib/narrative'
@@ -26,7 +26,7 @@ import { coverShareImage } from '@/lib/share-image'
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  const ds = getDataset()
+  const ds = getPublicDataset()
   return allGameIds(ds).map((id) => ({ id }))
 }
 
@@ -49,7 +49,7 @@ function gameShareDescription(profile: GameProfile): string {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const profileId = id === 'maplestory-classic' ? 'maplestory' : id
-  const profile = getGameProfile(getDataset(), toTimelineEntries(getDataset()), profileId)
+  const profile = getGameProfile(getPublicDataset(), toTimelineEntries(getPublicDataset()), profileId)
   return pageMetadata({
     // 游戏自己的封面：只有站内托管、尺寸够大的那批会被采用，其余回落到全站默认图。
     cover: await coverShareImage(profile?.cover),
@@ -66,7 +66,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   const { id } = await params
   if (id === 'maplestory-classic') permanentRedirect('/games/maplestory/')
 
-  const ds = getDataset()
+  const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
   const profile = getGameProfile(ds, timeline, id)
   if (!profile) notFound()

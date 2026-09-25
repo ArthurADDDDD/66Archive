@@ -75,6 +75,23 @@ export function getDataset(): Dataset {
   return cache
 }
 
+let publicCache: Dataset | null = null
+
+/**
+ * 前台用的数据集：去掉后台设为 `hidden` 的条目。
+ *
+ * `getDataset()` 本身保持全量——后台快照（scripts/build-snapshot.ts）、校验与审计都靠它，
+ * 在那里过滤会让被隐藏的条目从后台消失，也就再也点不回「显示」。
+ * 所以隐藏只在这一层生效，所有渲染前台的地方都从这里取。
+ */
+export function getPublicDataset(): Dataset {
+  if (publicCache) return publicCache
+  const ds = getDataset()
+  const entries = ds.entries.filter((e) => !e.hidden)
+  publicCache = entries.length === ds.entries.length ? ds : { ...ds, entries }
+  return publicCache
+}
+
 /** 时间轴卡片需要的最小载荷，避免把整个数据集塞进客户端 */
 export type TimelineEntry = {
   id: string
