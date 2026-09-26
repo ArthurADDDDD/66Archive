@@ -697,7 +697,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '执念',
         title: '几何冲刺，终于过了。',
-        body: '从 2016 年夏天开始，这一关一晚上接一晚上地重来。2017 年 2 月 17 日凌晨，终于过了。',
+        body: '从 2016 年夏天开始，这一关一晚上接一晚上地重来。2017 年 2 月 17 日，终于过了。',
         emphasis: '{geometryHours} 个小时',
         target: { kind: 'entry', id: '2017-02-17-live-01' },
       },
@@ -911,7 +911,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '媒体回访',
         title: '多年以后，再搜索「石悦」。',
-        body: '中国青年报再次采访。媒体眼里的她，已经从当年的高考状元，变成了游戏主播女流66。',
+        body: '《中国青年报》专访，标题是「用钻牛角尖的学生思维做直播」。十年前，搜她的名字出来的是高考状元；这一次，写的是游戏主播女流66。',
         target: { kind: 'href', href: 'http://media.people.com.cn/n1/2018/0828/c40606-30254502.html' },
       },
       {
@@ -941,7 +941,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '最长的一天',
         title: '《古剑奇谭三》，播了一整天。',
-        body: '一口气播了九个多小时，这是开播以来最长的一天。',
+        body: '《古剑奇谭三》一口气播了九个多小时，加上前面一场，这一天一共播了 11 个小时——年度直播报告里写着：直播以来最长的一天。',
         target: { kind: 'entry', id: '2018-11-29-live-02' },
       },
       {
@@ -1031,6 +1031,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'kemu-2',
+        cover: '/gallery/photos/fanart_2022_shiyuanyuan.thumb.jpg',
         date: '2020.06.13',
         storyYear: 2020,
         size: 'type',
