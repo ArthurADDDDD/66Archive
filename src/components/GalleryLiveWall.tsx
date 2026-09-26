@@ -162,6 +162,9 @@ export function GalleryLiveWall({
     if (!node) return
     const measure = () => setWidth((current) => {
       const next = Math.round(node.getBoundingClientRect().width)
+      // 0 宽读数不收（同 GalleryBoard）：后台标签页、墙在 body 与原位之间搬家、全屏切换、
+      // 手机浏览器暂停布局时都可能量到 0；收下来 tier 就变成 null，整面墙会暂时没图。
+      if (next <= 0) return current
       return Math.abs(next - current) > 8 ? next : current
     })
     measure()
@@ -610,8 +613,14 @@ function TileLabel({ tile }: { tile: Tile }) {
 }
 
 /**
- * 放大看一格。底色不用 backdrop-blur：身后是几千个带背景图的格子，整屏模糊在中端手机上
- * 每帧都要重算，打开 / 翻页会明显卡。画面仍取自切片（清晰档一格 240×135），所以最大只放到 480px 宽——
+ * 放大看一格。
+ *
+ * 底色按屏幕分两档：手机（< md，768px）只用 95% 深色遮罩，**不开 backdrop-filter**——身后是
+ * 几千个带背景图的格子，整屏模糊在中端手机上每帧都要重算，打开 / 翻页会明显卡；
+ * 平板横屏与桌面（≥ md）改为 85% 遮罩加轻度模糊，让后面的图墙退成背景、又看得出还是画廊。
+ * 用 Tailwind 响应式 class 切换，不靠 JS 监听尺寸。
+ *
+ * 画面仍取自切片（清晰档一格 240×135），所以最大只放到 480px 宽——
  * 再大就糊了；要看清楚就点进条目页看录像。
  */
 function LiveLightbox({
@@ -649,7 +658,7 @@ function LiveLightbox({
       role="dialog"
       aria-modal="true"
       aria-label={`${tile[1]} ${tile[2]}`}
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-base/95 px-page"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-base/95 px-page md:bg-base/85 md:backdrop-blur-sm"
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose()
       }}
