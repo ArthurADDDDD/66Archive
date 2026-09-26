@@ -11,6 +11,7 @@ import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryLiveBoard } from '@/components/GalleryLiveBoard'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 import { getLiveWallSummary } from '@/lib/gallery-live-wall'
+import { galleryAllPhotosUrl } from '@/lib/gallery-all-data'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
@@ -50,7 +51,7 @@ export default async function GalleryPage() {
               <p className="ui-reveal mt-6 text-body text-muted tnum">
                 <SiteText
                   id="gallery-summary"
-                  vars={{ featured: collections.featured.length, all: collections.all.length, from: years[0], to: years[years.length - 1] }}
+                  vars={{ featured: collections.featured.length, all: collections.all.length, live: liveWall?.count ?? 0, from: years[0], to: years[years.length - 1] }}
                 />
               </p>
             )}
@@ -70,7 +71,11 @@ export default async function GalleryPage() {
 
         {collections.all.length > 0 && (
           <section className="site-container-wide px-page pb-20">
-            <GalleryLiveBoard featuredPhotos={collections.featured} allPhotos={collections.all} liveWall={liveWall} />
+            <GalleryLiveBoard
+              featuredPhotos={collections.featured}
+              allSource={{ url: galleryAllPhotosUrl(), count: collections.all.length }}
+              liveWall={liveWall}
+            />
           </section>
         )}
 

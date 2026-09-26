@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, Fragment, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { bucketOf, galleryFullSource, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
@@ -10,7 +10,8 @@ import { yearColor } from '@/lib/ui'
 import { SearchField } from './SearchField'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 import { SiteText } from './SiteText'
-import { useSiteTexts } from './LiveContentProvider'
+import { useSiteText, useSiteTexts } from './LiveContentProvider'
+import { splitSiteText } from '@/lib/site-copy'
 import { GalleryLiveWall } from './GalleryLiveWall'
 
 /**
@@ -112,10 +113,19 @@ function buildRows(photos: GalleryPhoto[], containerW: number, targetH: number) 
 export function GalleryBoard({
   featuredPhotos,
   allPhotos,
+  allCount,
+  allFailed = false,
+  onWantAll,
   liveWall,
 }: {
   featuredPhotos: GalleryPhoto[]
-  allPhotos: GalleryPhoto[]
+  /** 全量版不随 HTML 下发（见 GalleryLiveBoard）：取到之前是 null。 */
+  allPhotos: GalleryPhoto[] | null
+  /** 标签上显示的全量版张数；数据没到时用构建期的数。 */
+  allCount: number
+  allFailed?: boolean
+  /** 切到全量版时通知外层立刻去取（已经取过或正在取就什么都不做）。 */
+  onWantAll?: () => void
   /** 「全直播合集」：没有生成过合集（清单不存在）时为 null，不出这个标签。 */
   liveWall?: { count: number; hiddenIds: string[]; manifestUrl: string } | null
 }) {
@@ -129,7 +139,7 @@ export function GalleryBoard({
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
   const [boardW, setBoardW] = useState(1120)
-  const photos = collection === 'featured' ? featuredPhotos : collection === 'all' ? allPhotos : NO_PHOTOS
+  const photos = collection === 'featured' ? featuredPhotos : collection === 'all' ? (allPhotos ?? NO_PHOTOS) : NO_PHOTOS
 
   // 精选版的分类固定用 FEATURED_CATEGORY_GUIDE 排序展示；全量版没有这份人工排序表，
   // 有标签就按标签本身在素材里出现的顺序显示——目前只有「画6大赛」这一批用到。
@@ -236,6 +246,7 @@ export function GalleryBoard({
   }, [liveWall])
 
   const chooseCollection = (next: CollectionMode) => {
+    if (next === 'all') onWantAll?.()
     if (next === collection) return
     setCollection(next)
     setTag(null)
@@ -256,29 +267,31 @@ export function GalleryBoard({
   return (
     <GalleryLikesProvider>
       <div className="mb-4 flex border-y border-line/70 py-4">
-        {/* 三个标签在手机上放不下，横滑但不露滚动条（露出来是一条很粗的灰条压在标签下面）。 */}
-        <div className="flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-full border border-line/80 bg-surface/50 p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="画廊版本">
+        {/* 手机上三个标签平分一整行：以前是一条横滑的胶囊，360px 宽的屏幕上第三个标签只露出
+            一半，看不出后面还有。每个标签固定两行——名字在上、张数在下（见 TabLabel），
+            胶囊随之改成圆角矩形。sm 起恢复成一条「名字 · 张数」的胶囊。 */}
+        <div className={`grid w-full ${liveWall ? 'grid-cols-3' : 'grid-cols-2'} items-stretch gap-1 rounded-2xl border border-line/80 bg-surface/50 p-1 sm:flex sm:w-fit sm:max-w-full sm:items-center sm:rounded-full`} role="tablist" aria-label="画廊版本">
           <button
             type="button"
             role="tab"
             aria-selected={collection === 'featured'}
             onClick={() => chooseCollection('featured')}
-            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
+            className={`ui-press min-w-0 whitespace-nowrap rounded-xl px-1 py-1.5 text-center text-[13px] leading-snug transition-colors sm:shrink-0 sm:rounded-full sm:px-4 sm:py-2 sm:text-control ${
               collection === 'featured' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            <SiteText id="gallery-tab-featured" vars={{ count: featuredPhotos.length }} />
+            <TabLabel id="gallery-tab-featured" count={featuredPhotos.length} />
           </button>
           <button
             type="button"
             role="tab"
             aria-selected={collection === 'all'}
             onClick={() => chooseCollection('all')}
-            className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
+            className={`ui-press min-w-0 whitespace-nowrap rounded-xl px-1 py-1.5 text-center text-[13px] leading-snug transition-colors sm:shrink-0 sm:rounded-full sm:px-4 sm:py-2 sm:text-control ${
               collection === 'all' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
             }`}
           >
-            <SiteText id="gallery-tab-all" vars={{ count: allPhotos.length }} />
+            <TabLabel id="gallery-tab-all" count={allCount} />
           </button>
           {liveWall && (
             <button
@@ -286,11 +299,11 @@ export function GalleryBoard({
               role="tab"
               aria-selected={collection === 'live'}
               onClick={() => chooseCollection('live')}
-              className={`ui-press shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-control transition-colors sm:px-4 ${
+              className={`ui-press min-w-0 whitespace-nowrap rounded-xl px-1 py-1.5 text-center text-[13px] leading-snug transition-colors sm:shrink-0 sm:rounded-full sm:px-4 sm:py-2 sm:text-control ${
                 collection === 'live' ? 'bg-ink font-medium text-base' : 'text-muted hover:text-ink'
               }`}
             >
-              <SiteText id="gallery-tab-live" vars={{ count: liveWall.count }} />
+              <TabLabel id="gallery-tab-live" count={liveWall.count} />
             </button>
           )}
         </div>
@@ -342,6 +355,19 @@ export function GalleryBoard({
           manifestUrl={liveWall.manifestUrl}
           renderLike={(likeId) => <LikeButton id={likeId} size="md" showCount />}
         />
+      ) : collection === 'all' && !allPhotos ? (
+        <p className="py-16 text-center text-meta text-faint">
+          {allFailed ? (
+            <>
+              全量版暂时没有加载成功。
+              <button type="button" onClick={onWantAll} className="ml-2 text-live underline underline-offset-4">
+                再试一次
+              </button>
+            </>
+          ) : (
+            '正在铺开……'
+          )}
+        </p>
       ) : (
       <>
       {/* 「点赞越多显示越大」不是一眼能看懂的规则，只在切到「整齐」时才用得上，
@@ -419,7 +445,7 @@ export function GalleryBoard({
               tag === null ? 'border-today/70 bg-today/10 text-today' : 'border-line/80 text-muted hover:text-ink'
             }`}
           >
-            全部 · {allPhotos.length}
+            全部 · {allCount}
           </button>
           {[...tagCounts.entries()].map(([name, count]) => (
             <button
@@ -507,6 +533,13 @@ function PhotoWall({
 }) {
   const counts = useGalleryLikeCounts()
 
+  // 打开画廊第一眼看到的就是纪念版最前面这几张（手机两栏、桌面三栏），最大那块内容
+  // 通常就是其中一张。它们要是也懒加载，得等布局算完才开始下载，冷缓存手机上白等约 0.5 秒。
+  const priorityIds = useMemo(
+    () => new Set(sections.flatMap((section) => section.photos).slice(0, 3).map((photo) => photo.id)),
+    [sections],
+  )
+
   // 「整齐」模式才用得上：按点赞数在当前可见范围内排一次名，前 ~12%（且赞数 > 0）
   // 判定为「热门」，网格里占 2×2。其它模式忽略这份计算，反正用不上。
   const boostedIds = useMemo(() => {
@@ -546,7 +579,7 @@ function PhotoWall({
             {collection === 'featured' ? (
               <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {list.map((p) => (
-                  <FeaturedPhotoCard key={p.id} photo={p} onOpen={() => onOpen(p.id)} />
+                  <FeaturedPhotoCard key={p.id} photo={p} priority={priorityIds.has(p.id)} onOpen={() => onOpen(p.id)} />
                 ))}
               </div>
             ) : mode === 'natural' ? (
@@ -823,14 +856,53 @@ function LikeButton({
   )
 }
 
+/**
+ * 画廊版本标签的文字（后台文案形如「纪念版 · {count}」）。
+ *
+ * 手机上拆成两行：名字一行，张数小一号另起一行，名字和张数之间的分隔符（「·」之类）
+ * 不显示；sm 起照原样一行。只是把同一句文字的几段分别包了一层——现场编辑的隐形标记
+ * 跟在整句末尾，仍然落在按钮里，点选不受影响。后台把 `{count}` 删掉，就只剩名字。
+ */
+function TabLabel({ id, count }: { id: string; count: number }) {
+  const parts = splitSiteText(useSiteText(id))
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.kind === 'var') {
+          return part.name === 'count' ? (
+            <span key={index} className="tnum max-sm:block max-sm:text-[11px] max-sm:opacity-70">
+              {count}
+            </span>
+          ) : (
+            <Fragment key={index}>{`{${part.name}}`}</Fragment>
+          )
+        }
+        const next = parts[index + 1]
+        const split = next?.kind === 'var' ? /^([\s\S]*?)(\s*[·•・|｜/:：-]\s*)$/.exec(part.value) : null
+        return split ? (
+          <Fragment key={index}>
+            {split[1]}
+            <span className="max-sm:hidden">{split[2]}</span>
+          </Fragment>
+        ) : (
+          <Fragment key={index}>{part.value}</Fragment>
+        )
+      })}
+    </>
+  )
+}
+
 function GalleryThumbnail({
   photo,
   sizes,
   className,
+  priority = false,
 }: {
   photo: GalleryPhoto
   sizes: string
   className: string
+  /** 首屏那几张：不等布局算完才开始下，HTML 一到就以高优先级取。 */
+  priority?: boolean
 }) {
   const sources = galleryThumbSources(photo.thumb)
   return (
@@ -840,7 +912,8 @@ function GalleryThumbnail({
       <img
         src={photo.thumb}
         alt={photoAlt(photo)}
-        loading="lazy"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
         decoding="async"
         width={photo.width}
         height={photo.height}
@@ -854,7 +927,7 @@ function GalleryThumbnail({
  * 纪念版不是缩略图索引，而是人工整理过的历史节点：日期、标题、备注与分类默认展开。
  * 图片仍然可以点进发布版灯箱，来源也在卡片上直接可见。
  */
-function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () => void }) {
+function FeaturedPhotoCard({ photo, onOpen, priority = false }: { photo: GalleryPhoto; onOpen: () => void; priority?: boolean }) {
   const sourceHref = photo.source ? gallerySourceHref(photo.source) : null
   return (
     <article data-gallery-photo={photo.id} data-gallery-featured="" className="overflow-hidden rounded-xl border border-line/80 bg-surface/45 shadow-[0_14px_40px_rgba(0,0,0,0.12)]">
@@ -870,6 +943,7 @@ function FeaturedPhotoCard({ photo, onOpen }: { photo: GalleryPhoto; onOpen: () 
           {/* 卡片只取响应式缩略图；原图严格等到用户打开灯箱后再请求。 */}
           <GalleryThumbnail
             photo={photo}
+            priority={priority}
             sizes="(min-width: 1280px) 560px, (min-width: 640px) 45vw, 50vw"
             className="block h-full w-full object-contain transition-[transform,filter] duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.015] group-hover:brightness-105 group-focus-visible:brightness-110"
           />

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { GalleryPhoto } from '@/lib/gallery-photos'
 import { fetchGalleryOverlay, mergeGalleryPhotos } from '@/lib/gallery-additions'
 import { useLiveEditActive } from './LiveContentProvider'
@@ -18,16 +18,53 @@ import { GalleryBoard } from './GalleryBoard'
  *
  * 首屏渲染的永远是构建期那一份，增量随后打上去——这也正是「内容服务挂了页面照常」的
  * 实现方式：拉取失败就什么都不发生。
+ *
+ * **全量版不进 HTML**（2026-09-27）：它占了页面数据的九成，首屏却只显示纪念版。这里在
+ * 页面空闲时预取那份静态 JSON（见 `lib/gallery-all-data.ts`），用户先点到全量版就立刻取；
+ * 取到之前全量版显示「正在铺开」，张数先用构建期的数。
  */
+type AllState = { status: 'idle' | 'loading' | 'failed'; photos: null } | { status: 'ready'; photos: GalleryPhoto[] }
+
 export function GalleryLiveBoard({
   featuredPhotos,
-  allPhotos,
+  allSource,
   liveWall,
 }: {
   featuredPhotos: GalleryPhoto[]
-  allPhotos: GalleryPhoto[]
+  /** 全量版数据的地址（带内容版本号）与构建期张数。 */
+  allSource: { url: string; count: number }
   liveWall: { count: number; hiddenIds: string[]; manifestUrl: string } | null
 }) {
+  const [all, setAll] = useState<AllState>({ status: 'idle', photos: null })
+  const loading = useRef(false)
+  const loadAll = useCallback(() => {
+    if (loading.current) return
+    loading.current = true
+    setAll({ status: 'loading', photos: null })
+    fetch(allSource.url)
+      .then((response) => {
+        if (!response.ok) throw new Error(String(response.status))
+        return response.json() as Promise<GalleryPhoto[]>
+      })
+      .then((photos) => setAll({ status: 'ready', photos }))
+      .catch(() => {
+        // 失败了允许再点一次重试
+        loading.current = false
+        setAll({ status: 'failed', photos: null })
+      })
+  }, [allSource.url])
+
+  // 空闲时预取：不和首屏抢带宽与主线程，等用户点到全量版时多半已经在了。
+  useEffect(() => {
+    const idle = window.requestIdleCallback
+    if (idle) {
+      const handle = idle(loadAll, { timeout: 5000 })
+      return () => window.cancelIdleCallback(handle)
+    }
+    const timer = window.setTimeout(loadAll, 2500)
+    return () => window.clearTimeout(timer)
+  }, [loadAll])
+
   const [additions, setAdditions] = useState<GalleryPhoto[]>([])
   const [hiddenIds, setHiddenIds] = useState<Set<string>>(() => new Set())
   const [unfeaturedIds, setUnfeaturedIds] = useState<Set<string>>(() => new Set())
@@ -48,15 +85,25 @@ export function GalleryLiveBoard({
     }
   }, [])
 
+  const allPhotos = all.photos
   const visible = useMemo(() => {
     const keep = (photo: GalleryPhoto) => editing || !hiddenIds.has(photo.id)
     const keepFeatured = (photo: GalleryPhoto) => keep(photo) && (editing || !unfeaturedIds.has(photo.id))
     return {
       featured: hiddenIds.size + unfeaturedIds.size > 0 ? featuredPhotos.filter(keepFeatured) : featuredPhotos,
-      all: mergeGalleryPhotos(hiddenIds.size > 0 ? allPhotos.filter(keep) : allPhotos, additions),
+      all: allPhotos ? mergeGalleryPhotos(hiddenIds.size > 0 ? allPhotos.filter(keep) : allPhotos, additions) : null,
     }
   }, [featuredPhotos, allPhotos, additions, hiddenIds, unfeaturedIds, editing])
 
   // 精选是人工挑的策展顺序，新上传的照片没有被挑进去，所以只并进「全量」那一栏。
-  return <GalleryBoard featuredPhotos={visible.featured} allPhotos={visible.all} liveWall={liveWall} />
+  return (
+    <GalleryBoard
+      featuredPhotos={visible.featured}
+      allPhotos={visible.all}
+      allCount={visible.all?.length ?? allSource.count}
+      allFailed={all.status === 'failed'}
+      onWantAll={loadAll}
+      liveWall={liveWall}
+    />
+  )
 }

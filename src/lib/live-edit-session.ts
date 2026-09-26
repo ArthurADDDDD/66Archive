@@ -397,6 +397,17 @@ article[${PHOTO_ATTR}].i6-photo-unfeatured::after{content:"已移出精选 · �
     return target.closest(`[${PHOTO_ATTR}]`)
   }
 
+  /**
+   * 页内切换控件：画廊的「纪念版 / 全量版 / 超级大合集」这类标签、展开收起、开关按钮。
+   * 它们的字可以改，但它们同时是进入另一块内容的唯一入口——以前点上去只会选中字，
+   * 切不过去，那一栏里的说明文字就永远点不到。所以这类控件：照常切换，同时选中它的字。
+   * 链接不在此列：点链接会整页跳走，仍然只选中。
+   */
+  const pageControlFrom = (target: EventTarget | null): Element | null =>
+    target instanceof Element
+      ? target.closest('[role="tab"], button[aria-pressed], button[aria-expanded], summary')
+      : null
+
   const setHover = (element: Element | null) => {
     if (hovered === element) return
     hovered?.classList.remove('i6-edit-hover', 'i6-photo-hover')
@@ -412,7 +423,8 @@ article[${PHOTO_ATTR}].i6-photo-unfeatured::after{content:"已移出精选 · �
     } else {
       element.classList.add('i6-edit-hover')
       const kinds = new Set((elementKeys.get(element) ?? []).map(kindOf))
-      tip.textContent = kinds.has('now') && kinds.has('publish') ? '立即生效 · 需发布' : kinds.has('publish') ? '需发布' : '立即生效'
+      const kind = kinds.has('now') && kinds.has('publish') ? '立即生效 · 需发布' : kinds.has('publish') ? '需发布' : '立即生效'
+      tip.textContent = pageControlFrom(element) ? `${kind} · 点击同时切换` : kind
       tip.style.background = kinds.has('publish') && !kinds.has('now') ? '#f59e0b' : '#34d399'
     }
     const rect = element.getBoundingClientRect()
@@ -426,6 +438,7 @@ article[${PHOTO_ATTR}].i6-photo-unfeatured::after{content:"已移出精选 · �
   /** 编辑状态下点到可改的字：拦下链接跳转和翻页，改成选中。按住 Alt / Option 点照常跳转。 */
   const onPress = (event: Event) => {
     if ((event as MouseEvent).altKey) return
+    if (pageControlFrom(event.target)) return
     if (editableFrom(event.target) || photoFrom(event.target)) event.stopPropagation()
   }
   const onClick = (event: MouseEvent) => {
@@ -443,8 +456,10 @@ article[${PHOTO_ATTR}].i6-photo-unfeatured::after{content:"已移出精选 · �
       post({ type: 'select-photo', id: selectedPhoto, featured: photo.hasAttribute('data-gallery-featured') })
       return
     }
-    event.preventDefault()
-    event.stopPropagation()
+    if (!pageControlFrom(event.target)) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
     const list = elementKeys.get(element) ?? []
     selected = new Set(list.map(keyId))
     selectedPhoto = null

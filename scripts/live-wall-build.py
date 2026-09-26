@@ -1,5 +1,6 @@
 """
-画廊「全直播合集」生成器：档案里每一场直播各取一帧，按时间拼成按年份切片的长图。
+画廊「全直播合集」（前台叫「超级大合集」）生成器：档案里每一场直播各取一帧，
+再加上视频时代（2014 年及以前）的每一支投稿，按时间拼成按年份切片的长图。
 
     pip install pillow requests pyyaml
     python scripts/live-wall-build.py collect      # 取帧（可中断，重跑只补缺的）
@@ -15,6 +16,10 @@
 3. 没有预览图的稿件用该分 P 的首帧（first_frame）。
 4. 以上都没有时退到条目封面，清单里标成 `c`，前台注明「录像封面」。
 5. 连封面都没有（多是只有开播证据、没有录像的早期场次）就不收进合集。
+
+视频时代的投稿（type: video，日期在 VIDEO_ERA_END 及以前）直接用条目封面——优酷那批
+没有进度条预览图，封面就是视频自己的画面。清单里标成 `v`，前台注明「视频」。
+2015 年以后的零星投稿不收：那时已经进入直播年代，合集按「每一场直播」来排。
 
 拼图时跳过前台已隐藏（`hidden: true`）的条目；之后才隐藏的由前台按 id 盖掉，
 不必为此重新生成。`.local/live-wall-exclude.txt`（每行一个条目 id，可选、不进版本库）
@@ -50,14 +55,25 @@ UA = {
 
 # ---------------------------------------------------------------- 数据
 
+# 视频时代的终点，与前台 chronicle-eras.ts 的 video 段（到 2014 年）一致。
+VIDEO_ERA_END = '2014-12-31'
+
+
+def is_wall_entry(entry):
+    if entry.get('type') == 'live':
+        return True
+    return entry.get('type') == 'video' and str(entry.get('date')) <= VIDEO_ERA_END
+
+
 def load_live_entries():
+    """合集收录的条目：全部直播，加上视频时代的投稿。"""
     entries = []
     folder = os.path.join(ROOT, 'data', 'entries')
     for name in sorted(os.listdir(folder)):
         if not name.endswith(('.yaml', '.yml')):
             continue
         for entry in yaml.safe_load(open(os.path.join(folder, name), encoding='utf8')) or []:
-            if entry.get('type') == 'live':
+            if is_wall_entry(entry):
                 entries.append(entry)
     entries.sort(key=lambda e: (str(e['date']), str(e.get('time') or ''), e['id']))
     return entries
@@ -237,14 +253,15 @@ def collect(cache, retry_kinds):
 
     todo = [e for e in entries if e['id'] not in excludes
             and (e['id'] not in results or results[e['id']]['kind'] in retry_kinds)]
-    print(f'{len(entries)} live entries, {len(todo)} to fetch', flush=True)
+    print(f'{len(entries)} entries (live + video era), {len(todo)} to fetch', flush=True)
     fetch = Fetcher(cache)
     lock = threading.Lock()
     done = [0]
 
     def work(entry):
         try:
-            tile, meta = frame_from_bili(fetch, entry, shared)
+            # 视频时代的投稿直接取封面：见文件头第 5 条之后的说明
+            tile, meta = (None, None) if entry.get('type') == 'video' else frame_from_bili(fetch, entry, shared)
             if tile is None:
                 tile, meta = frame_from_cover(fetch, entry)
         except Exception as error:  # 单条失败不拖垮整批，下次 --retry error 重来
@@ -291,7 +308,7 @@ def assemble(cache):
         if meta['kind'] not in ('frame', 'cover') or not os.path.exists(path):
             continue  # 没有画面的场次不收：合集只放真的截到或找到的图
         img = Image.open(path).convert('RGB').resize((TILE_W, TILE_H), Image.LANCZOS)
-        kind = 'f' if meta['kind'] == 'frame' else 'c'
+        kind = 'v' if entry.get('type') == 'video' else 'f' if meta['kind'] == 'frame' else 'c'
         tiles.append([entry['id'], str(entry['date']), entry['title'], kind])
         images.append(img)
 
