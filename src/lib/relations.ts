@@ -27,7 +27,7 @@ export function buildGameRails(profile: GameProfile, ds: Dataset): RelationRail[
   const yearItems = [...years]
     .sort()
     .map((y) => ({ label: `${y} 年`, href: `/archive/?y=${y}` }))
-  if (yearItems.length) rails.push({ title: '同年编年史', items: yearItems.slice(0, 4) })
+  if (yearItems.length) rails.push({ title: '同年大事件', items: yearItems.slice(0, 4) })
 
   // 相关栏目：优先使用 series.yaml 里显式声明的 game 关系；再补 tags 与系列名的精确交集。
   // 这样像「大周MC → minecraft」这种已经在数据层确认的关系会真正出现在游戏页上，
@@ -91,7 +91,7 @@ export function buildEntryRails(entry: Entry, ds: Dataset): RelationRail[] {
   if (tagItems.length) rails.push({ title: '相关栏目', items: tagItems })
 
   rails.push({
-    title: '同期编年史',
+    title: '同期大事件',
     items: [
       { label: `${year} 年`, href: `/archive/?y=${year}` },
       { label: `${year} 年 ${month} 月`, href: `/archive/?y=${year}&m=${month}` },

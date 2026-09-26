@@ -8,7 +8,7 @@ import { useSiteCopy } from './LiveContentProvider'
 
 export const NAV_ITEMS = [
   { href: '/', label: '首页', id: 'home' },
-  { href: '/chronicle/', label: '编年史', id: 'chronicle' },
+  { href: '/chronicle/', label: '大事件', id: 'chronicle' },
   { href: '/archive/', label: '录播室', id: 'archive' },
   { href: '/games/', label: '游戏', id: 'games' },
   { href: '/series/', label: '节目', id: 'series' },

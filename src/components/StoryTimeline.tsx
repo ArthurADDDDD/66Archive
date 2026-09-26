@@ -1,16 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import type { ResolvedBeat } from '@/lib/narrative'
 import type { StorySection } from '@/lib/story-years'
 import { applyLiveStoryYears } from '@/lib/live-content'
+import { inEra, type ChronicleEraId } from '@/lib/chronicle-eras'
 import { formatDuration } from '@/lib/ui'
 import { contentOpenProps } from '@/lib/analytics-target'
 import { MediaFrame } from './MediaFrame'
 import { Eyebrow } from './primitives'
 import { useLiveContent } from './LiveContentProvider'
 import { SiteText } from './SiteText'
+import { ChronicleEraNext, ChronicleEraTabs } from './ChronicleEraTabs'
 
 /**
  * 故事模式：纵向编辑时间线（年份脊柱）。
@@ -32,15 +34,21 @@ export function StoryTimeline({
   latestYear,
   onOpenArchive,
   eyebrow,
+  era,
+  onEraChange,
 }: {
   sections: StorySection[]
   latestYear: number
   onOpenArchive: (year: number) => void
   /** 面包屑（含故事/档案切换）。缺省时退回静态眉标。 */
   eyebrow?: ReactNode
+  /** 当前显示的时代（视频 / 斗鱼156277 / 抖音），见 lib/chronicle-eras.ts */
+  era: ChronicleEraId
+  onEraChange: (era: ChronicleEraId) => void
 }) {
   const { narrative } = useLiveContent()
   const sections = applyLiveStoryYears(baselineSections, narrative?.storyActs, narrative?.deletedIds ?? [])
+  const visible = inEra(sections, era)
   return (
     <main className="ui-page-in site-container px-page pb-20">
       <section className="ui-reveal pb-8 pt-4 sm:py-12">
@@ -51,13 +59,19 @@ export function StoryTimeline({
         </p>
       </section>
 
-      <div className="relative">
+      <div id="chronicle-era-tabs" className="scroll-mt-24">
+        <ChronicleEraTabs sections={sections} era={era} onChange={onEraChange} />
+      </div>
+
+      <div id="chronicle-era-panel" role="tabpanel" aria-labelledby={`chronicle-era-tab-${era}`} className="relative mt-2">
         {/* 脊柱：手机端贴左，桌面端落在年份栏右缘 */}
         <div aria-hidden className="absolute bottom-0 left-[5px] top-0 w-px bg-line/60 lg:left-[150px]" />
-        {sections.map((section) => (
+        {visible.map((section) => (
           <StorySectionBlock key={section.year} section={section} latestYear={latestYear} onOpenArchive={onOpenArchive} />
         ))}
       </div>
+
+      <ChronicleEraNext sections={sections} era={era} onChange={onEraChange} />
 
       <p className="mt-8 text-meta text-faint">
         <SiteText
@@ -79,8 +93,8 @@ const KIND_PRESENTATION: Record<
   StorySection['kind'],
   { sectionPad: string; yearSize: string; yearTone: string; countGap: string; rowPad: string }
 > = {
-  highlight: { sectionPad: 'py-8 sm:py-12', yearSize: 'text-[38px] sm:text-[52px]', yearTone: 'text-ink', countGap: 'mt-2.5', rowPad: 'py-2' },
-  normal: { sectionPad: 'py-6 sm:py-8', yearSize: 'text-[26px] sm:text-[32px]', yearTone: 'text-ink/85', countGap: 'mt-1.5', rowPad: 'py-1.5' },
+  highlight: { sectionPad: 'py-8 sm:py-12', yearSize: 'text-[38px] sm:text-[52px]', yearTone: 'text-ink', countGap: 'mt-2.5', rowPad: 'py-2.5' },
+  normal: { sectionPad: 'py-6 sm:py-8', yearSize: 'text-[26px] sm:text-[32px]', yearTone: 'text-ink/85', countGap: 'mt-1.5', rowPad: 'py-2' },
   sparse: { sectionPad: 'py-4 sm:py-5', yearSize: 'text-[21px] sm:text-[24px]', yearTone: 'text-faint', countGap: 'mt-1', rowPad: 'py-1' },
 }
 
@@ -207,18 +221,15 @@ function SparseNote({ section, accent }: { section: StorySection; accent: string
 
 /** Type A：完整 Hero。没有真实封面就不放图，也不留同尺寸占位。 */
 /**
- * 编年史正文里的封面框。`chronicle-media-measure` 的宽度在断点之间连续变化，
- * 实测（模拟视口，单位 CSS px）：375→256、414→284、640→458、768→576、
- * 1024→622、1280→678、1440→747、1920→996。`sizes` 按这几个点分段，
- * 宁可略微报大——报小会让浏览器挑到偏糊的一档。
+ * 编年史正文里的封面：左边小图、右边文字。
  *
- * 档位**有意封顶在 900**，那正是原先烤入的唯一宽度：再往上加 1080/1440 会让平板
- * 和高 DPR 桌面下载得比现在更多。这次要解决的只是手机上的过取——375 的屏上
- * 显示宽 256 px 却下载 900 px，DPR 2 也仍有 1.76 倍。实测这 13 张封面：
- * w=900 合计 450,710 B；DPR 2 的手机改挑 540 后 240,510 B（−47%）。
+ * 以前是整幅 16:9 大图（桌面宽约 680 px），斗鱼那一段一半的页面高度都是封面，
+ * 读起来像在翻相册。现在封面缩成缩略图：手机 7rem（112 px）、sm 11rem、lg 14rem
+ * （224 px），文字放在右边，一张卡的高度大致由文字决定。
+ * 显示宽度最多 224 px，DPR 2 下 360 / 540 两档就够了，不再下载 900 宽的图。
  */
-const STORY_COVER_WIDTHS = [360, 540, 720, 900] as const
-const STORY_COVER_SIZES = '(min-width: 1360px) 52vw, (min-width: 1024px) 700px, (min-width: 768px) 76vw, 72vw'
+const STORY_COVER_WIDTHS = [240, 360, 540] as const
+const STORY_COVER_SIZES = '(min-width: 1024px) 224px, (min-width: 640px) 176px, 112px'
 
 function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
   // null 表示用户尚未手动切换：实时后台值到达时仍可接管默认状态。
@@ -247,120 +258,162 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
     )
   }
 
-  const body = (
-    <>
-      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
-        <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: accent }} />
-        {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
-        {beat.kicker && <span>· {beat.kicker}</span>}
-        {beat.important && <MilestoneBadge accent={accent} compact />}
-      </div>
-      {beat.cover && (
-        <div className="mt-4 chronicle-media-measure">
-          <MediaFrame
-            src={beat.cover}
-            alt={beat.title}
-            className="aspect-video w-full"
-            widths={STORY_COVER_WIDTHS}
-            sizes={STORY_COVER_SIZES}
-          >
-            <span className="absolute bottom-2 left-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
-              {displayDate}
-            </span>
-            {beat.durationMinutes && (
-              <span className="absolute bottom-2 right-2 rounded-sm bg-base/70 px-1.5 py-0.5 font-mono text-meta text-ink/90 backdrop-blur-sm tnum">
-                {formatDuration(beat.durationMinutes)}
-              </span>
-            )}
-          </MediaFrame>
-        </div>
-      )}
-      <div className="mt-4 min-w-0">
-        <h3 className="text-h3 font-semibold text-ink transition-colors group-hover:text-white">{beat.title}</h3>
-        {beat.body && <p className="mt-2 text-body text-muted">{beat.body}</p>}
-        {beat.activity && <ActivityTimeline activity={beat.activity} accent={accent} />}
-        {beat.emphasis && (
-          <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
-            {beat.emphasis}
-          </p>
-        )}
-      </div>
-    </>
-  )
-
-  const content = !beat.href ? <div>{body}</div> : (
-    <Link
-      href={beat.href}
-      prefetch={false}
-      target={beat.external ? '_blank' : undefined}
-      rel={beat.external ? 'noreferrer' : undefined}
-      {...contentOpenProps(beat.href)}
-      className="group block"
-    >
-      {body}
-    </Link>
-  )
+  const link = (children: ReactNode, extra: { className?: string; hidden?: boolean } = {}) =>
+    beat.href ? (
+      <Link
+        href={beat.href}
+        prefetch={false}
+        target={beat.external ? '_blank' : undefined}
+        rel={beat.external ? 'noreferrer' : undefined}
+        {...contentOpenProps(beat.href)}
+        className={extra.className}
+        tabIndex={extra.hidden ? -1 : undefined}
+        aria-hidden={extra.hidden || undefined}
+      >
+        {children}
+      </Link>
+    ) : (
+      <span className={extra.className}>{children}</span>
+    )
 
   return (
-    <div>
-      <div className="mb-2 flex justify-end">
+    <div className="group">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex min-w-0 flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
+          <span aria-hidden className="h-1.5 w-1.5 shrink-0 self-center rounded-full" style={{ background: accent }} />
+          {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
+          {beat.kicker && <span>· {beat.kicker}</span>}
+          {beat.important && <MilestoneBadge accent={accent} compact />}
+        </div>
         <button
           type="button"
           onClick={() => setManualOpen(false)}
           aria-expanded
-          className="font-mono text-meta text-faint transition-colors hover:text-live"
+          className="shrink-0 font-mono text-meta text-faint transition-colors hover:text-live"
         >
           收起 ↑
         </button>
       </div>
-      {content}
+
+      {/*
+        精选卡：小封面 + 文字。
+        - 手机：封面和标题并排，正文在下面占满整行（7rem 小图旁边塞正文，一行只剩几个字）。
+        - sm 起：左图右文。封面宽度用 rem，跟着字号走，4K 下不会变成一小块。
+        - 正文宽度按所在栏的百分比（lg 起 85%）：1080p 和 4K 下换行位置成比例，不用固定字数。
+        只有封面和标题是链接：正文在手机上可以「展开全文」，按钮不能套在链接里。
+      */}
+      <div
+        className={`mt-3 ${beat.cover ? 'grid grid-cols-[7rem_minmax(0,1fr)] items-start gap-x-3 gap-y-2 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-x-5 lg:grid-cols-[14rem_minmax(0,1fr)]' : ''}`}
+      >
+        {beat.cover &&
+          link(
+            <MediaFrame
+              src={beat.cover}
+              alt={beat.title}
+              className="aspect-video w-full rounded-sm"
+              widths={STORY_COVER_WIDTHS}
+              sizes={STORY_COVER_SIZES}
+            >
+              {beat.durationMinutes && (
+                <span className="absolute bottom-1 right-1 rounded-sm bg-base/75 px-1 py-px font-mono text-[0.6875rem] text-ink/90 tnum">
+                  {formatDuration(beat.durationMinutes)}
+                </span>
+              )}
+            </MediaFrame>,
+            { className: 'block sm:row-span-2', hidden: true },
+          )}
+        <h3 className="min-w-0 self-center lg:max-w-[85%] text-body font-semibold text-ink sm:self-start sm:text-h3">
+          {link(beat.title, { className: 'transition-colors group-hover:text-white' })}
+        </h3>
+        {(beat.body || beat.emphasis || beat.activity) && (
+          <div className={beat.cover ? 'col-span-2 min-w-0 sm:col-span-1 sm:col-start-2' : 'mt-1.5'}>
+            {beat.body && <ClampText text={beat.body} />}
+            {beat.emphasis && (
+              <p className="mt-2 inline-block rounded-sm border border-line/70 px-2 py-1 text-meta tracking-[0.14em]" style={{ color: accent }}>
+                {beat.emphasis}
+              </p>
+            )}
+            {beat.activity && <ActivityTimeline activity={beat.activity} accent={accent} />}
+          </div>
+        )}
+      </div>
     </div>
+  )
+}
+
+/**
+ * 手机上正文超过 4 行先收起，给一个「展开全文」。桌面不截断。
+ * 只在真的放不下时出现按钮（量 scrollHeight），短正文不会多一个没用的按钮。
+ */
+function ClampText({ text }: { text: string }) {
+  const ref = useRef<HTMLParagraphElement>(null)
+  const [open, setOpen] = useState(false)
+  const [overflows, setOverflows] = useState(false)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+    const measure = () => setOverflows(node.scrollHeight - node.clientHeight > 2)
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [text])
+
+  return (
+    <>
+      <p ref={ref} className={`text-body text-muted lg:max-w-[85%] ${open ? '' : 'max-sm:line-clamp-4'}`}>
+        {text}
+      </p>
+      {(overflows || open) && (
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          className="mt-1 font-mono text-meta text-faint transition-colors hover:text-live sm:hidden"
+          aria-expanded={open}
+        >
+          {open ? '收起 ↑' : '展开全文 ↓'}
+        </button>
+      )}
+    </>
   )
 }
 
 function ActivityTimeline({ activity, accent }: { activity: NonNullable<ResolvedBeat['activity']>; accent: string }) {
   const max = Math.max(...activity.points.map((point) => point.count), 1)
 
+  // 尺寸全部用 rem / em：跟着字号缩放，高分屏上不会是一排 10px 的小字。
   return (
-    <div className="mt-5 chronicle-media-measure rounded-xl border border-line/70 bg-surface/30 px-4 pb-3 pt-3.5 sm:px-5">
-      <div className="flex items-baseline justify-between gap-4">
+    <div className="mt-4 rounded-xl lg:max-w-[85%] border border-line/70 bg-surface/30 px-3 pb-3 pt-3 sm:px-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
         <p className="text-meta font-medium text-ink/90">{activity.label}</p>
-        <p className="text-[11px] text-faint"><SiteText id="chronicle-activity-note" /></p>
+        <p className="text-[0.6875rem] text-faint"><SiteText id="chronicle-activity-note" /></p>
       </div>
-      <div className="mt-3 overflow-x-auto pb-1">
-        <div
-          className="relative grid min-w-[520px] items-end gap-2 pt-5"
-          style={{ gridTemplateColumns: `repeat(${activity.points.length}, minmax(42px, 1fr))` }}
-          role="img"
-          aria-label={`${activity.label}：${activity.points.map((point) => `${point.year} 年 ${point.count} ${activity.unit}`).join('，')}`}
-        >
-          <span aria-hidden className="absolute inset-x-0 bottom-[25px] h-px bg-line" />
-          {activity.points.map((point) => (
-            <div key={point.year} className="relative z-10 flex flex-col items-center">
-              <span className="font-mono text-[10px] text-faint tnum">{point.count}</span>
-              <span
-                aria-hidden
-                className="mt-1 w-2 rounded-full opacity-85"
-                style={{ height: `${12 + Math.round((point.count / max) * 42)}px`, background: accent }}
-              />
-              <span aria-hidden className="mt-1.5 h-2 w-2 rounded-full border-2 border-base" style={{ background: accent }} />
-              <span className="mt-1 font-mono text-[10px] text-faint tnum">{point.year}</span>
-            </div>
-          ))}
-        </div>
+      <div
+        className="relative mt-3 grid items-end gap-1 pt-4"
+        style={{ gridTemplateColumns: `repeat(${activity.points.length}, minmax(0, 1fr))` }}
+        role="img"
+        aria-label={`${activity.label}：${activity.points.map((point) => `${point.year} 年 ${point.count} ${activity.unit}`).join('，')}`}
+      >
+        <span aria-hidden className="absolute inset-x-0 bottom-[1.55rem] h-px bg-line" />
+        {activity.points.map((point) => (
+          <div key={point.year} className="relative z-10 flex min-w-0 flex-col items-center">
+            <span className="font-mono text-[0.625rem] text-faint tnum">{point.count}</span>
+            <span
+              aria-hidden
+              className="mt-1 w-[0.4rem] rounded-full opacity-85"
+              style={{ height: `${0.75 + (point.count / max) * 2.6}rem`, background: accent }}
+            />
+            <span aria-hidden className="mt-1.5 h-2 w-2 rounded-full border-2 border-base" style={{ background: accent }} />
+            {/* 手机上一行放 9 个完整年份太挤，只写后两位 */}
+            <span className="mt-1 font-mono text-[0.625rem] text-faint tnum">
+              <span className="max-sm:hidden">{point.year}</span>
+              <span className="sm:hidden">’{String(point.year).slice(2)}</span>
+            </span>
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
-
-function MemoryTag({ children, accent }: { children: ReactNode; accent: string }) {
-  return (
-    <span
-      className="mt-1.5 inline-flex rounded-full border border-line/70 bg-surface/50 px-2.5 py-0.5 text-[11px] leading-5 tracking-[0.08em]"
-      style={{ color: accent }}
-    >
-      {children}
-    </span>
   )
 }
 
@@ -385,49 +438,66 @@ function MilestoneBadge({ accent, compact = false }: { accent: string; compact?:
 }
 
 /**
- * 没有来源链接的节点不是「档案卡」，而是一句补足时间线的阶段说明。
- * 只保留年月和说明正文，不显示标题、tag 或箭头，避免制造可以点击的暗示。
+ * 非精选条目：没有封面的「小卡」。
+ *
+ * 以前是一行灰色标题 + 一枚小标签，行尾的 → 在宽屏上被推到最右边，
+ * 一年十几行排下来只看得清精选卡，其余像目录。现在每条都是一个完整的小节点：
+ * - 左侧竖线上一颗时代色圆点，和精选卡的圆点是同一套语言；
+ * - 第一行「日期 · 栏目」用时代色，和精选卡的 meta 行一致；
+ * - 标题用正文主色加粗，→ 紧跟在标题后面，不再飘到屏幕另一头；
+ * - 下面一两行正文（摘要），让人不用点进去也知道这件事讲什么。
+ * 文字宽度与精选卡一样按所在栏的百分比（lg 起 85%）。
+ * 没有链接的节点（年度数据、阶段说明）同样排版，只是没有箭头、不可点。
  */
-function StageNote({ beat, accent, className = '' }: { beat: ResolvedBeat; accent?: string; className?: string }) {
-  const text = beat.body?.trim() || beat.title
+function CompactEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  const displayDate = chronicleDate(beat.date)
+  const title = beat.title?.trim()
+  const body = beat.body?.trim()
+  // 阶段说明常常只有正文：拿正文当标题，不重复显示两遍。
+  const heading = title || body || ''
+  const summary = body && body !== heading ? body : ''
+  const showMeta = !hideDate || beat.kicker || beat.important
 
   return (
-    <div className={`grid chronicle-row-measure grid-cols-1 gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)] ${className}`}>
-      <span className="whitespace-nowrap font-mono text-meta text-faint tnum">{chronicleDate(beat.date)}</span>
-      <div>
-        <p className="text-body leading-relaxed text-muted">{text}</p>
-        {beat.important && accent && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
-      </div>
-    </div>
+    <>
+      <span
+        aria-hidden
+        className="absolute left-[calc(-1rem-0.5px)] top-[0.95rem] h-2 w-2 -translate-x-1/2 rounded-full border-2 border-base"
+        style={{ background: accent }}
+      />
+      {showMeta && (
+        <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta tracking-[0.12em]" style={{ color: accent }}>
+          {!hideDate && <span className="font-mono tracking-normal tnum">{displayDate}</span>}
+          {beat.kicker && <span>{!hideDate && '· '}{beat.kicker}</span>}
+          {beat.important && <MilestoneBadge accent={accent} compact />}
+        </span>
+      )}
+      <span className={`block lg:max-w-[85%] text-body font-semibold text-ink sm:text-[1.0625rem] ${showMeta ? 'mt-1' : ''}`}>
+        {heading}
+        {beat.href && (
+          <>
+            {/*
+              U+2060（词连接符）让 → 和标题最后一个字一起换行，箭头不会单独掉到下一行。
+              标题文字必须原样整段输出：现场编辑靠文字末尾的隐形标记认出这是哪条文案，拆开就认不出了。
+            */}
+            {'\u2060'}
+            <span
+              aria-hidden
+              className="ml-1.5 inline-block font-mono text-meta font-normal transition-transform group-hover:translate-x-1"
+              style={{ color: accent }}
+            >
+              →
+            </span>
+          </>
+        )}
+      </span>
+      {summary && <span className="mt-1 block text-meta leading-relaxed text-muted line-clamp-2 sm:text-body lg:max-w-[85%]">{summary}</span>}
+    </>
   )
 }
 
-/**
- * Type B：紧凑主行。
- * 与 secondary 共用同一条左边线和列宽；无链接节点交给 StageNote 显示。
- */
-function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
-  if (!beat.href) {
-    return <StageNote beat={beat} accent={accent} className="border-l border-line/50 py-2 pl-5" />
-  }
-
-  const displayDate = chronicleDate(beat.date)
-  const body = (
-    <div className="grid chronicle-row-linked grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
-      {!hideDate && <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>}
-      <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
-        <span className="block text-body font-medium text-ink transition-colors group-hover:text-white">{beat.title}</span>
-        <span className="flex flex-wrap items-center gap-1.5">
-          {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
-          {beat.important && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
-        </span>
-      </div>
-      <span aria-hidden className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3" style={{ color: accent }}>
-        →
-      </span>
-    </div>
-  )
-
+function CompactEventLink({ beat, className, children }: { beat: ResolvedBeat; className: string; children: ReactNode }) {
+  if (!beat.href) return <div className={className}>{children}</div>
   return (
     <Link
       href={beat.href}
@@ -435,14 +505,24 @@ function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accen
       target={beat.external ? '_blank' : undefined}
       rel={beat.external ? 'noreferrer' : undefined}
       {...contentOpenProps(beat.href)}
-      className="group block rounded border-l border-line/50 py-1.5 pl-5 pr-1 transition-colors hover:bg-surface/50"
+      className={`group ${className} transition-colors hover:bg-surface/50`}
     >
-      {body}
+      {children}
     </Link>
   )
 }
 
-/** Secondary 行：日期不折行；tag 收到标题下方，避免被推到宽屏最右侧。 */
+/** Type B：没有精选卡的年份，第一条用同样的小卡，挂在同一条竖线上。 */
+function HeroRow({ beat, accent, hideDate = false }: { beat: ResolvedBeat; accent: string; hideDate?: boolean }) {
+  return (
+    <div className="border-l border-line/60 pl-4">
+      <CompactEventLink beat={beat} className="relative block rounded-lg px-2 py-2.5">
+        <CompactEvent beat={beat} accent={accent} hideDate={hideDate} />
+      </CompactEventLink>
+    </div>
+  )
+}
+
 function SecondaryList({
   beats,
   accent,
@@ -455,51 +535,14 @@ function SecondaryList({
   rowPad: string
 }) {
   return (
-    <ul className={`space-y-0.5 border-l border-line/50 pl-4 ${className}`}>
-      {beats.map((beat) => {
-        if (!beat.href) {
-          return (
-            <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
-              <StageNote beat={beat} accent={accent} className={`px-1 ${rowPad}`} />
-            </li>
-          )
-        }
-
-        const displayDate = chronicleDate(beat.date)
-        const inner = (
-          <div className="grid chronicle-row-linked grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-1 sm:grid-cols-[108px_minmax(0,1fr)_auto]">
-            <span className="col-start-1 row-start-1 whitespace-nowrap font-mono text-meta text-faint tnum">{displayDate}</span>
-            <div className="chronicle-row-linked__text col-span-2 row-start-2 min-w-0 sm:col-span-1 sm:col-start-2 sm:row-start-1">
-              <span className="block text-body text-muted group-hover:text-ink sm:truncate">{beat.title}</span>
-              <span className="flex flex-wrap items-center gap-1.5">
-                {beat.kicker && <MemoryTag accent={accent}>{beat.kicker}</MemoryTag>}
-                {beat.important && <span className="mt-1.5 inline-flex"><MilestoneBadge accent={accent} compact /></span>}
-              </span>
-            </div>
-            <span
-              aria-hidden
-              className="col-start-2 row-start-1 shrink-0 font-mono text-meta transition-transform group-hover:translate-x-1 sm:col-start-3"
-              style={{ color: accent }}
-            >
-              →
-            </span>
-          </div>
-        )
-        return (
-          <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
-            <Link
-              href={beat.href}
-              prefetch={false}
-              target={beat.external ? '_blank' : undefined}
-              rel={beat.external ? 'noreferrer' : undefined}
-              {...contentOpenProps(beat.href)}
-              className={`group block rounded px-1 transition-colors hover:bg-surface/50 ${rowPad}`}
-            >
-              {inner}
-            </Link>
-          </li>
-        )
-      })}
+    <ul className={`space-y-1 border-l border-line/60 pl-4 ${className}`}>
+      {beats.map((beat) => (
+        <li id={`story-beat-${beat.id}`} key={beat.id} className="scroll-mt-24">
+          <CompactEventLink beat={beat} className={`relative block rounded-lg px-2 ${rowPad}`}>
+            <CompactEvent beat={beat} accent={accent} />
+          </CompactEventLink>
+        </li>
+      ))}
     </ul>
   )
 }

@@ -7,6 +7,7 @@ import {
   type HomeActChangeDetail,
   type HomeActSelectDetail,
 } from '@/lib/home-act-pagination'
+import { tombstoneMatcher } from '@/lib/tombstones'
 import { useLiveContent, useSiteCopy } from './LiveContentProvider'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
@@ -45,10 +46,9 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
   const { narrative } = useLiveContent()
   const copy = useSiteCopy()
   const acts = useMemo(() => {
-    const deletedIds = narrative?.deletedIds ?? []
-    const deleted = new Set(deletedIds)
+    const isDeleted = tombstoneMatcher(narrative?.deletedIds, 'home')
     const baselineActsFiltered = baselineActs
-      .filter((act) => !deleted.has(act.id) && narrative?.homeActs.find((candidate) => candidate.id === act.id)?.visible !== false)
+      .filter((act) => !isDeleted(act.id) && narrative?.homeActs.find((candidate) => candidate.id === act.id)?.visible !== false)
       .map((act) => {
         const live = narrative?.homeActs.find((candidate) => candidate.id === act.id)
         if (!live) return act
@@ -56,7 +56,7 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
           ...live.beats
             .filter(
               (beat) =>
-                !deleted.has(beat.id) &&
+                !isDeleted(beat.id) &&
                 beat.visible !== false &&
                 (act.beats.some((baseline) => baseline.id === beat.id) || beat.id.startsWith('custom-')),
             )
@@ -67,7 +67,7 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
                 : { id: beat.id, date: beat.date, title: beat.title }
             }),
           ...act.beats
-            .filter((beat) => !live.beats.some((candidate) => candidate.id === beat.id) && !deleted.has(beat.id))
+            .filter((beat) => !live.beats.some((candidate) => candidate.id === beat.id) && !isDeleted(beat.id))
             .map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
         ]
         return {
@@ -84,7 +84,7 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
         (live) =>
           live.id.startsWith('custom-') &&
           !baselineActs.some((act) => act.id === live.id) &&
-          !deleted.has(live.id) &&
+          !isDeleted(live.id) &&
           live.visible !== false,
       )
       .map((live) => ({
@@ -94,7 +94,7 @@ export function HomeActRail({ acts: baselineActs, sections: baselineSections }: 
         color: live.color || '#5A5F73',
         closer: live.closer.line || undefined,
         beats: live.beats
-          .filter((beat) => !deleted.has(beat.id) && beat.visible !== false)
+          .filter((beat) => !isDeleted(beat.id) && beat.visible !== false)
           .map((beat) => ({ id: beat.id, date: beat.date, title: beat.title })),
       }))
     return [...baselineActsFiltered, ...customActs]

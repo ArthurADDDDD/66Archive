@@ -1,5 +1,7 @@
 import type { TimelineEntry } from './data'
-import { actColorForDate, type ResolvedAct, type ResolvedBeat } from './narrative'
+import type { ResolvedAct, ResolvedBeat } from './narrative'
+import { byStoryDate } from './story-order'
+import { CHRONICLE_ERAS, eraOfYear } from './chronicle-eras'
 
 /**
  * 故事模式的分段编排。
@@ -95,7 +97,8 @@ export function buildStorySections(acts: ResolvedAct[], timeline: TimelineEntry[
 
   const sections: StorySection[] = []
   for (let year = from; year <= to; year++) {
-    const beats = [...(beatsByYear.get(year) ?? [])]
+    // 同年内按展示日期排（同日保留策展顺序），与后台和实时覆盖同一口径。
+    const beats = byStoryDate(beatsByYear.get(year) ?? [])
 
     // 跨年段只在「后面那些年自己没有故事节点」时才吃掉它们；
     // 否则 2007—2009 这种段落会把中间某一年真实发生的事情吞掉。
@@ -149,7 +152,8 @@ export function buildStorySections(acts: ResolvedAct[], timeline: TimelineEntry[
       featured,
       hero,
       secondary,
-      accent: archiveCount || hasStory ? actColorForDate(`${year}-06-01`) : '#7C8296',
+      // 按大事件的三个时代上色（首页三幕的边界与此不同，2015 在首页属 ACT I）。
+      accent: archiveCount || hasStory ? (CHRONICLE_ERAS.find((era) => era.id === eraOfYear(year))?.color ?? '#7C8296') : '#7C8296',
     })
 
     year = endYear

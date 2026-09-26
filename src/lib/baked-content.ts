@@ -265,8 +265,9 @@ export async function fetchBakedShell(): Promise<LiveContent> {
  * 编年史那边 `homeActs` + `highlights` 是 7,810 字符，同样不读。按幕切开之后
  * 首页 HTML 少 6,174 B、编年史少 1,999 B（brotli）。
  *
- * `deletedIds` 两边都要留——它是「后台删掉了哪些节点」的名单，三个 scope 共用，
- * 丢掉会让已删除的节点重新冒出来。
+ * `deletedIds` 两边都要留——它是「后台删掉了哪些节点」的名单，一份名单里同时有
+ * 三处的墓碑（带 `home.` / `highlight.` / `story.` 前缀，旧的裸 id 三处通用，见
+ * tombstones.ts），丢掉会让已删除的节点重新冒出来。
  *
  * 这只影响**烤入的初始值**。实时内容到达后 `LiveContentProvider` 会整份换成
  * `/api/content/narrative` 的响应，两个页面拿到的仍是完整 narrative。

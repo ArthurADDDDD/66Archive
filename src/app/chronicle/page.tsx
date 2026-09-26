@@ -11,7 +11,7 @@ import { LiveCopySeed } from '@/components/LiveCopySeed'
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
   path: '/chronicle/',
-  title: '编年史',
+  title: '大事件',
   description: '从 2010 年的第一支视频到今天，一年一年走下来的路。',
   shareId: 'chronicle',
 })

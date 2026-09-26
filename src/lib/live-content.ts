@@ -26,6 +26,8 @@
  */
 import { fillEmphasis, type ActId, type MemeCategory, type ResolvedAct, type ResolvedBeat } from './narrative'
 import { proxyImage } from './platforms'
+import { byStoryDate } from './story-order'
+import { tombstoneMatcher } from './tombstones'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 
@@ -106,6 +108,11 @@ export type LiveBeat = {
   body: string
   visible: boolean
   expanded?: boolean
+  /**
+   * 故事模式「精选」：带封面、正文展开的主卡。缺省沿用公开仓基线（size 为 hero 的是精选），
+   * 后台勾过 / 取消过才以后台为准。
+   */
+  featured?: boolean
   date: string
   important: boolean
   size: 'hero' | 'type' | 'small' | 'montage'
@@ -222,6 +229,7 @@ function parseBeat(value: unknown): LiveBeat | null {
     body: str(value.body),
     visible: bool(value.visible, true),
     expanded: typeof value.expanded === 'boolean' ? value.expanded : undefined,
+    featured: typeof value.featured === 'boolean' ? value.featured : undefined,
     date: str(value.date),
     important: bool(value.important),
     size: size === 'hero' || size === 'type' || size === 'montage' ? size : 'small',
@@ -521,7 +529,7 @@ function resolveCustomBeat(live: LiveBeat, actId: ActId, home: boolean): Resolve
 /** 构造一个后台新增的首页幕（无基线档案元数据，count 为 0）。 */
 function resolveCustomAct(live: LiveAct, home: boolean, deletedIds: string[] = []): ResolvedAct {
   const actId = live.id as ActId
-  const deleted = new Set(deletedIds)
+  const isDeleted = tombstoneMatcher(deletedIds, home ? 'home' : 'story')
   return {
     act: {
       id: actId,
@@ -538,7 +546,7 @@ function resolveCustomAct(live: LiveAct, home: boolean, deletedIds: string[] = [
     },
     count: 0,
     beats: live.beats
-      .filter((beat) => !deleted.has(beat.id) && beat.visible !== false)
+      .filter((beat) => !isDeleted(beat.id) && beat.visible !== false)
       .map((beat) => resolveCustomBeat(beat, actId, home)),
   }
 }
@@ -575,21 +583,21 @@ function resolveCustomHighlight(live: LiveHighlight, emphasisVars: Record<string
  * 否则后台勾了「重要」首页却不显示。
  */
 function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false, deletedIds: string[] = []): ResolvedAct {
-  const deleted = new Set(deletedIds ?? [])
+  const isDeleted = tombstoneMatcher(deletedIds, home ? 'home' : 'story')
 
-  if (deleted.has(act.act.id)) return { ...act, beats: [] }
+  if (isDeleted(act.act.id)) return { ...act, beats: [] }
 
   if (!live || !live.visible) {
     if (live && !live.visible) return { ...act, beats: [] }
-    if (deleted.size === 0) return act
-    return { ...act, beats: act.beats.filter((beat) => !deleted.has(beat.id) && !deleted.has(beat.act)) }
+    if ((deletedIds ?? []).length === 0) return act
+    return { ...act, beats: act.beats.filter((beat) => !isDeleted(beat.id) && !isDeleted(beat.act)) }
   }
 
   const liveBeats = new Map(live.beats.map((beat) => [beat.id, beat]))
   // 顺序以后台为准；后台没有的节点（公开仓新加、库里还没同步）接在后面，不丢卡。
   const ordered: ResolvedBeat[] = []
   for (const liveBeat of live.beats) {
-    if (deleted.has(liveBeat.id)) continue
+    if (isDeleted(liveBeat.id)) continue
     const baseline = act.beats.find((beat) => beat.id === liveBeat.id)
     if (baseline) {
       ordered.push(baseline)
@@ -598,11 +606,11 @@ function applyLiveAct(act: ResolvedAct, live: LiveAct | null, home = false, dele
     }
   }
   for (const beat of act.beats) {
-    if (!liveBeats.has(beat.id) && !deleted.has(beat.id) && !deleted.has(beat.act)) ordered.push(beat)
+    if (!liveBeats.has(beat.id) && !isDeleted(beat.id) && !isDeleted(beat.act)) ordered.push(beat)
   }
 
   const beats = ordered
-    .filter((beat) => !deleted.has(beat.id) && !deleted.has(beat.act) && liveBeats.get(beat.id)?.visible !== false)
+    .filter((beat) => !isDeleted(beat.id) && !isDeleted(beat.act) && liveBeats.get(beat.id)?.visible !== false)
     .map((beat): ResolvedBeat => {
       const override = liveBeats.get(beat.id)
       if (!override) return beat
@@ -672,12 +680,12 @@ export function applyLiveActs(
   home = false,
   deletedIds: string[] = [],
 ): ResolvedAct[] {
-  const deleted = new Set(deletedIds ?? [])
+  const isDeleted = tombstoneMatcher(deletedIds, home ? 'home' : 'story')
   const liveActs = live ?? []
   const baselineIds = new Set<string>(acts.map((act) => act.act.id))
 
   const baselineActs = acts
-    .filter((act) => !deleted.has(act.act.id) && liveActs.find((candidate) => candidate.id === act.act.id)?.visible !== false)
+    .filter((act) => !isDeleted(act.act.id) && liveActs.find((candidate) => candidate.id === act.act.id)?.visible !== false)
     .map((act) => applyLiveAct(act, liveActs.find((candidate) => candidate.id === act.act.id) ?? null, home, deletedIds))
 
   const customActs = liveActs
@@ -685,7 +693,7 @@ export function applyLiveActs(
       (act) =>
         isCustomId(act.id) &&
         !baselineIds.has(act.id) &&
-        !deleted.has(act.id) &&
+        !isDeleted(act.id) &&
         act.visible !== false,
     )
     .map((act) => resolveCustomAct(act, home, deletedIds))
@@ -706,14 +714,14 @@ export function applyLiveHighlights(
   emphasisVars: Record<string, string> = {},
   deletedIds: string[] = [],
 ): ResolvedBeat[] {
-  const deleted = new Set(deletedIds ?? [])
+  const isDeleted = tombstoneMatcher(deletedIds, 'highlight')
   const liveHighlights = live ?? []
-  if (liveHighlights.length === 0 && deleted.size === 0) return beats
+  if (liveHighlights.length === 0 && (deletedIds ?? []).length === 0) return beats
 
   const overrides = new Map(liveHighlights.map((highlight) => [highlight.id, highlight]))
   const ordered: ResolvedBeat[] = []
   for (const highlight of liveHighlights) {
-    if (deleted.has(highlight.id)) continue
+    if (isDeleted(highlight.id)) continue
     const baseline = beats.find((beat) => beat.id === highlight.id)
     if (baseline) {
       ordered.push(baseline)
@@ -722,11 +730,11 @@ export function applyLiveHighlights(
     }
   }
   for (const beat of beats) {
-    if (!overrides.has(beat.id) && !deleted.has(beat.id)) ordered.push(beat)
+    if (!overrides.has(beat.id) && !isDeleted(beat.id)) ordered.push(beat)
   }
 
   return ordered
-    .filter((beat) => !deleted.has(beat.id) && overrides.get(beat.id)?.visible !== false)
+    .filter((beat) => !isDeleted(beat.id) && overrides.get(beat.id)?.visible !== false)
     .map((beat) => {
       const override = overrides.get(beat.id)
       if (!override) return beat
@@ -759,8 +767,9 @@ export function applyLiveHighlights(
  * featured 身份由公开仓基线决定；后台可以改顺序和显隐，但不会把多张关键记忆重新压成单张。
  * 全部 featured 被隐藏时由该年第一条 secondary 顶上，不让整年塌成空行。
  *
- * 展示顺序以后台为准：跨年份移动时先按展示日期换到相应年份段，同年内再按后台列表
- * 的顺序排列。无效日期不会猜测，保留公开基线的归位。
+ * 展示顺序：跨年份移动时先按展示日期换到相应年份段；同年内按展示日期排（与后台
+ * 故事模式列表同一口径，见 story-order.ts），同一天的再按后台列表顺序。
+ * 无效日期不会猜测，保留公开基线的归位。
  */
 function storyYearFromDisplayDate(value: string): number | null {
   const match = value.trim().match(/^(\d{4})(?:[.-](?:0[1-9]|1[0-2]))?(?:[.-]\d{1,2})?$/)
@@ -772,18 +781,18 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
   liveActs: LiveAct[] | undefined,
   deletedIds: string[] = [],
 ): T[] {
-  const deleted = new Set(deletedIds ?? [])
+  const isDeleted = tombstoneMatcher(deletedIds, 'story')
   const liveActList = liveActs ?? []
-  if (liveActList.length === 0 && deleted.size === 0) return years
+  if (liveActList.length === 0 && (deletedIds ?? []).length === 0) return years
 
   const overrides = new Map<string, LiveBeat>()
   const order = new Map<string, number>()
   const customByYear = new Map<number, ResolvedBeat[]>()
   let position = 0
   for (const act of liveActList) {
-    if (deleted.has(act.id)) continue
+    if (isDeleted(act.id)) continue
     for (const beat of act.beats) {
-      if (deleted.has(beat.id)) continue
+      if (isDeleted(beat.id)) continue
       if (isCustomId(beat.id)) {
         if (beat.visible === false) continue
         const match = beat.date.match(/^(\d{4})\.(0[1-9]|1[0-2])$/)
@@ -837,7 +846,7 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     }
   }
   const visible = (beat: ResolvedBeat) =>
-    !deleted.has(beat.id) && !deleted.has(beat.act) && overrides.get(beat.id)?.visible !== false
+    !isDeleted(beat.id) && !isDeleted(beat.act) && overrides.get(beat.id)?.visible !== false
 
   // 基线节点也可能被后台改到另一年。先从原年份拿走，再插进展示日期指定的年份；
   // 这只影响故事页面编排，不会改动公开档案条目。
@@ -860,19 +869,24 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     const baselineFeatured = year.featured?.length ? year.featured : year.hero ? [year.hero] : []
     const custom = customByYear.get(year.year) ?? []
     const moved = movedByYear.get(year.year) ?? []
-    const featuredIds = new Set([
+    const baselineFeaturedIds = new Set([
       ...baselineFeatured.map((beat) => beat.id),
       ...moved.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
       ...custom.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
     ])
+    // 精选以后台为准（勾过 / 取消过）；没动过的沿用公开仓基线。
+    const isFeatured = (beat: ResolvedBeat) => overrides.get(beat.id)?.featured ?? baselineFeaturedIds.has(beat.id)
     const source = [...baselineFeatured, ...year.secondary, ...moved, ...custom]
       .filter((beat) => !movedIds.has(beat.id) || moved.some((item) => item.id === beat.id))
       .filter((beat, index, list) => list.findIndex((item) => item.id === beat.id) === index)
     const kept = source.filter(visible)
     kept.sort((a, b) => (order.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (order.get(b.id) ?? Number.MAX_SAFE_INTEGER))
-    const resolved = kept.map(applyBeat)
-    let featured = resolved.filter((beat) => featuredIds.has(beat.id))
-    if (featured.length === 0 && resolved[0]) featured = [resolved[0]]
+    // 先按后台列表排，再按（覆盖后的）展示日期稳定排序：同一天的卡保留后台人工顺序。
+    const resolved = byStoryDate(kept.map(applyBeat))
+    let featured = resolved.filter(isFeatured)
+    // 这一年一张精选都没有时，由第一条顶上——除非管理员明确把这一年的精选都取消了。
+    const explicitlyCleared = resolved.some((beat) => overrides.get(beat.id)?.featured === false)
+    if (featured.length === 0 && resolved[0] && !explicitlyCleared) featured = [resolved[0]]
     const visibleFeaturedIds = new Set(featured.map((beat) => beat.id))
     const secondary = resolved.filter((beat) => !visibleFeaturedIds.has(beat.id))
     return { ...year, featured, hero: featured[0] ?? null, secondary }

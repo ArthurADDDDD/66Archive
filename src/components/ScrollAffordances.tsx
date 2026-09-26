@@ -93,6 +93,24 @@ function PageNavCapsule({
   const pendingResetTimerRef = useRef<number | null>(null)
   // 原先半屏以上的阈值很像组件迟迟没加载；页头离开后就应立即提供入口。
   const shown = y > 96
+  /**
+   * 页头是 sticky 的页面上，胶囊正好浮在页头最左边（直播状态那一格）。以前写死 top-3 / top-4，
+   * 页头这一行的高度一变（导航换行、状态格有无内容），胶囊就比导航高出一截。
+   * 现在量页头这一行的真实位置，让两者垂直居中对齐；页头滚走了（非 sticky 页面）才退回默认位置。
+   */
+  const [alignTop, setAlignTop] = useState<number | null>(null)
+  useEffect(() => {
+    if (!shown) return
+    // 页头上下内边距对称，页头自身的垂直中心就是导航那一行的中心（各页页头结构不同，不去找内层）。
+    const row = document.querySelector<HTMLElement>('header')
+    const capsule = rootRef.current
+    if (!row || !capsule) {
+      setAlignTop(null)
+      return
+    }
+    const rect = row.getBoundingClientRect()
+    setAlignTop(rect.bottom > 0 ? Math.round(rect.top + rect.height / 2 - capsule.offsetHeight / 2) : null)
+  }, [shown, y])
   const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
   const current = items.find((item) => active === item.id || (active === 'entry' && item.id === 'archive')) ?? items[0]
   const pendingItem = items.find((item) => item.href === pendingHref)
@@ -156,7 +174,7 @@ function PageNavCapsule({
       className={`pointer-events-none fixed inset-x-0 top-3 z-40 block transition-[opacity,transform] duration-200 sm:top-4 ${
         shown ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
       }`}
-      style={{ transitionTimingFunction: 'var(--ease-out-expo)' }}
+      style={{ transitionTimingFunction: 'var(--ease-out-expo)', ...(alignTop !== null ? { top: alignTop } : null) }}
     >
       <div className="site-header-container px-page">
         <div
