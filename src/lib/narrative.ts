@@ -1046,13 +1046,14 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'anniversary-2020-reaction',
-        date: '2020.01',
-        storyYear: 2020,
+        // 2026-09-26 更正：这是 YJJ 的直播五周年（2021-06，切片 6/17 上传），不是女流的；id 保留以免后台数据断链
+        date: '2021.06',
+        storyYear: 2021,
         size: 'hero',
-        kicker: '直播五周年',
-        title: '女流与 YJJ 一起看五周年祝福。',
-        body: '五周年，和 YJJ 坐在一起，把水友的祝福一条一条看完。',
-        cover: '/gallery/anniv_10_5th_2020.jpg?v=20260823',
+        kicker: 'YJJ 五周年',
+        title: 'YJJ 直播五周年。',
+        body: '2021 年 6 月，YJJ 直播满五年。66 和他坐在一起，把好友们录的祝福视频一条一条看完，还一起拆了礼物。',
+        cover: 'https://i0.hdslb.com/bfs/archive/237e3348738280e41cdbd87d67d8b147b5531d7e.jpg',
         target: { kind: 'href', href: 'https://www.bilibili.com/video/BV1sq4y1L7sa' },
       },
       {
