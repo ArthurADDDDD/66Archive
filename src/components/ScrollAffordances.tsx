@@ -101,16 +101,26 @@ function PageNavCapsule({
   const [alignTop, setAlignTop] = useState<number | null>(null)
   useEffect(() => {
     if (!shown) return
-    // 页头上下内边距对称，页头自身的垂直中心就是导航那一行的中心（各页页头结构不同，不去找内层）。
-    const row = document.querySelector<HTMLElement>('header')
-    const capsule = rootRef.current
-    if (!row || !capsule) {
-      setAlignTop(null)
-      return
+    /*
+     * 只在胶囊出现的那一刻、以及窗口尺寸变化时量一次，不跟着每一帧滚动量：
+     * 胶囊出现时（y > 96）页头要么是 sticky 的——位置固定，之后不会变；要么已经滚出屏幕。
+     * 以前依赖 y，全站每一帧滚动都要强制算一次布局。
+     */
+    const measure = () => {
+      // 页头上下内边距对称，页头自身的垂直中心就是导航那一行的中心（各页页头结构不同，不去找内层）。
+      const row = document.querySelector<HTMLElement>('header')
+      const capsule = rootRef.current
+      if (!row || !capsule) {
+        setAlignTop(null)
+        return
+      }
+      const rect = row.getBoundingClientRect()
+      setAlignTop(rect.bottom > 0 ? Math.round(rect.top + rect.height / 2 - capsule.offsetHeight / 2) : null)
     }
-    const rect = row.getBoundingClientRect()
-    setAlignTop(rect.bottom > 0 ? Math.round(rect.top + rect.height / 2 - capsule.offsetHeight / 2) : null)
-  }, [shown, y])
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [shown])
   const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
   const current = items.find((item) => active === item.id || (active === 'entry' && item.id === 'archive')) ?? items[0]
   const pendingItem = items.find((item) => item.href === pendingHref)

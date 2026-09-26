@@ -13,14 +13,22 @@
  * `npm run covers:optimize` 并把派生文件一起提交。
  */
 const LOCAL_COVER = /^\/images\/covers\/([^/]+)\.jpg$/i
+/**
+ * 大事件里的早期水友作品封面（`/gallery/anniv_*.jpg|png`）。原图最大 1.6 MB（PNG），
+ * 却只显示成 112–224 px 的小封面，所以同样生成 w360 / w720 两档（同一个脚本）。
+ * 地址上可能带 `?v=` 版本号：派生文件沿用同一个版本号，原图换了缓存也跟着换。
+ */
+const ANNIV_COVER = /^\/gallery\/(anniv_[^/?]+)\.(?:jpg|png)(\?[^#]*)?$/i
 
 export function entryCoverSources(cover: string | null | undefined): { avif: string; webp: string } | null {
   if (!cover) return null
-  const match = LOCAL_COVER.exec(cover)
-  if (!match) return null
-  const stem = `/images/covers/${match[1]}`
+  const local = LOCAL_COVER.exec(cover)
+  const anniv = local ? null : ANNIV_COVER.exec(cover)
+  if (!local && !anniv) return null
+  const stem = local ? `/images/covers/${local[1]}` : `/gallery/${anniv![1]}`
+  const version = anniv?.[2] ?? ''
   return {
-    avif: `${stem}.w360.avif 360w, ${stem}.w720.avif 720w`,
-    webp: `${stem}.w360.webp 360w, ${stem}.w720.webp 720w`,
+    avif: `${stem}.w360.avif${version} 360w, ${stem}.w720.avif${version} 720w`,
+    webp: `${stem}.w360.webp${version} 360w, ${stem}.w720.webp${version} 720w`,
   }
 }

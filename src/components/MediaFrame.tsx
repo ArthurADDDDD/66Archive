@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { proxyImageSrcSet } from '@/lib/platforms'
+import { entryCoverSources } from '@/lib/entry-covers'
 
 /** 视觉框：真实封面，缺失或加载失败（onError）时退化为字排版色块（绝不用假图）。 */
 export function MediaFrame({
@@ -35,22 +36,40 @@ export function MediaFrame({
   // 那个地址，避免一张坏图把之后所有正常封面也永久切到 fallback。
   const [brokenSrc, setBrokenSrc] = useState<string | null>(null)
   const showImage = Boolean(src) && brokenSrc !== src
+  /**
+   * 站内封面（`/images/covers/*`、大事件的 `/gallery/anniv_*`）没法走图片代理，
+   * `proxyImageSrcSet` 对它们返回 null——以前这里就发原图：大事件的小封面只显示
+   * 112–224 px，却在下 960 px 的 jpg、甚至 1.6 MB 的 png。它们有预生成的 w360 / w720
+   * 两档 avif / webp（`npm run covers:optimize`），给了 widths 就用 `<picture>` 让浏览器挑。
+   */
+  const localSources = widths && sizes ? entryCoverSources(src) : null
+  const image = (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src!}
+      srcSet={(widths && proxyImageSrcSet(src, widths)) ?? undefined}
+      sizes={widths && sizes ? sizes : undefined}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+      onError={() => setBrokenSrc(src ?? null)}
+      className="h-full w-full object-cover"
+    />
+  )
 
   return (
     <div className={`relative ${aspect} overflow-hidden rounded-xl border border-line/80 bg-raised ${className}`}>
       {showImage ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src!}
-          srcSet={(widths && proxyImageSrcSet(src, widths)) ?? undefined}
-          sizes={widths && sizes ? sizes : undefined}
-          alt={alt}
-          loading="lazy"
-          decoding="async"
-          referrerPolicy="no-referrer"
-          onError={() => setBrokenSrc(src ?? null)}
-          className="h-full w-full object-cover"
-        />
+        localSources ? (
+          <picture className="block h-full w-full">
+            <source type="image/avif" srcSet={localSources.avif} sizes={sizes} />
+            <source type="image/webp" srcSet={localSources.webp} sizes={sizes} />
+            {image}
+          </picture>
+        ) : (
+          image
+        )
       ) : (
         <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/12 via-raised to-live/8 p-6">
           {fallback ?? <span className="text-meta tracking-widest text-faint">封面待补</span>}

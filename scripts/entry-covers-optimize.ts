@@ -28,6 +28,12 @@ import sharp from 'sharp'
 
 const ROOT = process.cwd()
 const COVERS_DIR = path.join(ROOT, 'public/images/covers')
+/**
+ * 大事件里用作封面的早期水友作品（`public/gallery/anniv_*`，jpg 与 png 都有）。
+ * 原图最大 1.6 MB，显示时只有 112–224 px 宽；命名规则与条目封面相同，
+ * 消费方同是 `lib/entry-covers.ts` 的 `entryCoverSources`。
+ */
+const ANNIV_DIR = path.join(ROOT, 'public/gallery')
 const WIDTHS = [360, 720] as const
 
 type Format = {
@@ -50,17 +56,22 @@ async function upToDate(source: string, destination: string) {
 }
 
 async function main() {
-  const files = (await fs.readdir(COVERS_DIR)).filter((name) => name.endsWith('.jpg')).sort()
+  const covers = (await fs.readdir(COVERS_DIR)).filter((name) => name.endsWith('.jpg')).sort()
+  const anniv = (await fs.readdir(ANNIV_DIR)).filter((name) => /^anniv_.+\.(jpg|png)$/i.test(name)).sort()
+  const files = [
+    ...covers.map((name) => ({ dir: COVERS_DIR, name })),
+    ...anniv.map((name) => ({ dir: ANNIV_DIR, name })),
+  ]
   let built = 0
   let reused = 0
 
-  for (const filename of files) {
-    const source = path.join(COVERS_DIR, filename)
-    const stem = filename.slice(0, -'.jpg'.length)
+  for (const { dir, name: filename } of files) {
+    const source = path.join(dir, filename)
+    const stem = filename.replace(/\.(jpg|png)$/i, '')
 
     for (const width of WIDTHS) {
       for (const format of FORMATS) {
-        const destination = path.join(COVERS_DIR, `${stem}.w${width}.${format.extension}`)
+        const destination = path.join(dir, `${stem}.w${width}.${format.extension}`)
         if (await upToDate(source, destination)) {
           reused++
           continue
@@ -73,12 +84,13 @@ async function main() {
     }
   }
 
-  const generated = (await fs.readdir(COVERS_DIR)).filter((name) => /\.w(360|720)\.(avif|webp)$/.test(name))
-  const bytes = (
-    await Promise.all(generated.map(async (name) => (await fs.stat(path.join(COVERS_DIR, name))).size))
-  ).reduce((sum, size) => sum + size, 0)
+  const generated = [
+    ...(await fs.readdir(COVERS_DIR)).map((name) => path.join(COVERS_DIR, name)),
+    ...(await fs.readdir(ANNIV_DIR)).map((name) => path.join(ANNIV_DIR, name)),
+  ].filter((file) => /\.w(360|720)\.(avif|webp)$/.test(file))
+  const bytes = (await Promise.all(generated.map(async (file) => (await fs.stat(file)).size))).reduce((sum, size) => sum + size, 0)
 
-  console.log(`条目封面：${files.length} 张；新生成 ${built} 个，复用 ${reused} 个`)
+  console.log(`条目封面 ${covers.length} 张、大事件水友作品 ${anniv.length} 张；新生成 ${built} 个，复用 ${reused} 个`)
   console.log(`现代格式派生文件：${generated.length} 个，共 ${(bytes / 1024 / 1024).toFixed(2)} MiB`)
 }
 

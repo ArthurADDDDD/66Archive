@@ -5,6 +5,8 @@ import { createPortal } from 'react-dom'
 import { cancelLandedFlash, flashLandedTarget } from '@/lib/landing-flash'
 import { MediaFrame } from './MediaFrame'
 
+const PREVIEW_COVER_WIDTHS = [360, 540, 720] as const
+
 /**
  * 右侧快速时间轴：全站共用的那条「条儿」。
  *
@@ -332,7 +334,15 @@ export function TimelineRail({
             style={{ top: `${previewPct * 100}%` }}
           >
             {previewMark.cover ? (
-              <MediaFrame src={previewMark.cover} alt="" className="aspect-video w-full rounded-none border-0">
+              // 预览卡最宽 21rem（336 px）。沿轨道拖动时每划过一个刻度就换一张图，
+              // 不给宽度的话每张都是原图（站内封面 960 px、大事件的水友作品最大 1.6 MB）。
+              <MediaFrame
+                src={previewMark.cover}
+                alt=""
+                className="aspect-video w-full rounded-none border-0"
+                widths={PREVIEW_COVER_WIDTHS}
+                sizes="clamp(15rem, 22vw, 21rem)"
+              >
                 <span aria-hidden className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-base/95 to-transparent" />
                 <span className="absolute inset-x-3 bottom-3">
                   <span className="flex flex-wrap items-center gap-1.5">

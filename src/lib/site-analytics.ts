@@ -242,6 +242,50 @@ export function trackWebVital(metric: SiteVitalMetric, value: number) {
   else scheduleFlush()
 }
 
+/**
+ * 首屏加载专项诊断：一次页面加载一份（见 web-vitals-report.ts）。
+ *
+ * 形状与后台 `AnalyticsPerfSampleSchema` 对齐：只有页面**类型**（不带条目 id）、
+ * 各项耗时、LCP 元素是图还是字、网络与进入方式。数值在服务端分桶后即丢弃。
+ */
+export type SitePerfSample = {
+  route: Route['kind'] | 'other'
+  viewport: ViewportClass
+  net: '4g' | '3g' | '2g' | 'slow-2g' | 'unknown'
+  nav: 'navigate' | 'reload' | 'back-forward' | 'prerender' | 'restore' | 'other'
+  lcpElement: 'image' | 'text' | 'video' | 'none'
+  lcpSource: 'local' | 'proxy' | 'remote' | 'none'
+  lcp?: number
+  fcp?: number
+  ttfb?: number
+  lcpPhases?: { ttfb: number; loadDelay: number; loadTime: number; renderDelay: number }
+}
+
+/** 页面加载时的屏幕档位；诊断样本要记「加载那一刻」的，而不是上报时的。 */
+export function currentViewportClass(): ViewportClass {
+  return viewportClass()
+}
+
+/**
+ * 诊断样本**单独发一个请求**，不和 events / vitals 同批。
+ *
+ * 服务端对整批做严格校验：万一前台先上线、后台还不认识 `perf` 字段，同批的浏览与点击
+ * 会被一起拒掉。分开发，最坏情况只是丢这一份诊断样本。
+ */
+export function trackPerfSample(sample: SitePerfSample) {
+  if (typeof window === 'undefined' || isOptedOut() || isAutomatedBrowser()) return
+  const body = JSON.stringify({ version: 1, perf: [sample] })
+  const blob = new Blob([body], { type: 'application/json' })
+  if (navigator.sendBeacon?.(ENDPOINT, blob)) return
+  void fetch(ENDPOINT, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body,
+    keepalive: true,
+    credentials: 'omit',
+  }).catch(() => undefined)
+}
+
 export function trackPageView(pathname: string) {
   const normalized = pathname.replace(/\/+$/, '') || '/'
   if (lastPageViewPath === normalized) return

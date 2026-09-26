@@ -54,8 +54,13 @@ export function ChronicleMobileNav({
     let frame = 0
     const measure = () => {
       frame = 0
+      // 电脑端不显示这颗胶囊，也就不必每帧量位置。
+      if (!narrow.matches) {
+        setInView(false)
+        return
+      }
       const tabs = document.getElementById('chronicle-era-tabs')
-      setInView(narrow.matches && !!tabs && tabs.getBoundingClientRect().bottom < 0)
+      setInView(!!tabs && tabs.getBoundingClientRect().bottom < 0)
     }
     const schedule = () => {
       if (!frame) frame = window.requestAnimationFrame(measure)
