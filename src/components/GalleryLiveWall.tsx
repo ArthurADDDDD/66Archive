@@ -39,7 +39,8 @@ import { TimelineRail, type TimelineRailMark } from './TimelineRail'
  * 之后在后台隐藏的条目按 `hiddenIds` 直接不出格子；点赞 id 加 `lw-` 前缀与照片分开。
  */
 
-type TileKind = 'f' | 'c'
+/** f：录像中段画面；c：录像封面；v：视频时代的投稿（用视频封面）。 */
+type TileKind = 'f' | 'c' | 'v'
 type Tile = [id: string, date: string, title: string, kind: TileKind]
 type Slice = { year: string; hd: string; lite: string; liteWebp: string; first: number; count: number }
 type Manifest = { version: 2; cols: number; slices: Slice[]; tiles: Tile[] }
@@ -86,6 +87,7 @@ function probeAvif(): Promise<boolean> {
 const KIND_NOTE: Record<TileKind, string | null> = {
   f: null,
   c: '录像封面',
+  v: '视频',
 }
 
 /** 改写地址栏的一个查询参数，不产生历史记录（与录播室筛选同一做法）。 */
@@ -202,7 +204,7 @@ export function GalleryLiveWall({
       return {
         id: `live-wall-${bucket.year}`,
         meta: bucket.year,
-        title: `${bucket.cells.length} 场`,
+        title: `${bucket.cells.length} 张`,
         color: yearColor(bucket.year),
         cover: avif === false ? slice.liteWebp : slice.lite,
         weight: (ratio >= 0.6 ? 'lead' : ratio >= 0.25 ? 'major' : 'minor') as TimelineRailMark['weight'],
@@ -524,12 +526,12 @@ const YearGrid = memo(function YearGrid({
     >
       <h3 className="mb-2 flex items-baseline gap-3 text-control">
         <span className="font-mono font-semibold tnum" style={{ color: yearColor(bucket.year) }}>{bucket.year}</span>
-        <span className="text-meta text-faint tnum">{bucket.cells.length} 场</span>
+        <span className="text-meta text-faint tnum">{bucket.cells.length} 张</span>
       </h3>
       <div
         role="img"
-        aria-label={`${bucket.year} 年 ${bucket.cells.length} 场直播的截图`}
-        className="grid cursor-crosshair select-none"
+        aria-label={`${bucket.year} 年 ${bucket.cells.length} 张视频与直播的截图`}
+        className="grid cursor-pointer select-none"
         style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gap: `${gap}px` }}
         onPointerMove={(event) => {
           if (event.pointerType !== 'mouse') return
@@ -688,7 +690,7 @@ function LiveLightbox({
         <Link
           prefetch={false}
           href={`/e/${tile[0]}/`}
-          aria-label={`看这一场：${tile[1]} ${tile[2]}`}
+          aria-label={`打开条目：${tile[1]} ${tile[2]}`}
           className="ui-press block aspect-video w-full overflow-hidden rounded-lg border border-line bg-raised bg-no-repeat shadow-2xl"
           style={cell ? {
             backgroundImage: `url("${cell.slice[tier]}")`,
@@ -703,7 +705,7 @@ function LiveLightbox({
           <button
             type="button"
             onClick={() => onStep(-1)}
-            aria-label="上一场"
+            aria-label="上一格"
             className="ui-press flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line/80 text-muted hover:text-ink"
           >
             ‹
@@ -712,7 +714,7 @@ function LiveLightbox({
           <button
             type="button"
             onClick={() => onStep(1)}
-            aria-label="下一场"
+            aria-label="下一格"
             className="ui-press flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line/80 text-muted hover:text-ink"
           >
             ›
@@ -731,7 +733,7 @@ function LiveLightbox({
             href={`/e/${tile[0]}/`}
             className="ui-press shrink-0 whitespace-nowrap rounded-sm text-meta text-live underline decoration-live/40 underline-offset-4 hover:text-ink"
           >
-            看这一场 →
+            {tile[3] === 'v' ? '看这支视频 →' : '看这一场 →'}
           </Link>
         </div>
       </figure>
