@@ -22,7 +22,8 @@ import { TodayInHistoryList, type TodayHistoryRow } from '@/components/TodayInHi
 import { Eyebrow, SiteFooter } from '@/components/primitives'
 import { LiveRooms, LiveSectionGate, LiveSectionHeading } from '@/components/LiveSection'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
-import { allGameIds, getGameProfile, resolveHomepage } from '@/lib/narrative'
+import { allGameIds, getGameProfile, resolveHomepage, STORY_ACTS } from '@/lib/narrative'
+import { CHRONICLE_ERAS, eraOfYear } from '@/lib/chronicle-eras'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 
 /** 首页不覆盖标题（保持站名本身），只补 canonical 与社交卡片。 */
@@ -144,9 +145,38 @@ export default async function HomePage() {
   const gallery = getGalleryCollections()
   const galleryYears = [...new Set(gallery.all.map((p) => p.year).filter((y): y is string => y !== null))].sort()
   const thumbStep = Math.max(1, Math.floor(gallery.featured.length / 8))
+  // 大事件预览：三个时代，每段挑三件最能代表那一段的事。挑哪几件是编辑判断，写成 id 清单；
+  // 某个 id 在基线里没了就跳过，不拿别的卡顶上。
+  const storyBeats = STORY_ACTS.flatMap((act) => act.beats).map((beat) => ({
+    beat,
+    year: beat.storyYear ?? Number(String(beat.date).slice(0, 4)),
+  }))
+  const beatById = new Map(storyBeats.map((item) => [item.beat.id, item.beat]))
+  const ERA_PICKS: Record<string, string[]> = {
+    video: ['first-video-chronicle', 'journey-video-2013', 'child-of-light-2014'],
+    douyu: ['door-156277', 'xinling-first', 'see-you-around'],
+    douyin: ['back-again', 'duoduo-lail', 'back-maple'],
+  }
+  // 年份带写的是这个平台时代本身：视频时代从 2010 年第一支视频算起（更早的几张卡讲的是上学的年份）。
+  const ERA_YEARS: Record<string, string> = { video: '2010 — 2014', douyu: '2015 — 2023', douyin: '2024 — 现在' }
+  const chronicleEras = CHRONICLE_ERAS.map((era) => {
+    const inEra = storyBeats.filter((item) => Number.isFinite(item.year) && eraOfYear(item.year) === era.id)
+    return {
+      id: era.id,
+      label: era.label,
+      color: era.color,
+      years: ERA_YEARS[era.id] ?? '',
+      count: inEra.length,
+      events: (ERA_PICKS[era.id] ?? []).flatMap((id) => {
+        const beat = beatById.get(id)
+        if (!beat) return []
+        return [{ id, date: String(beat.date).match(/^\d{4}(?:\.\d{2})?/)?.[0] ?? '', title: beat.title }]
+      }),
+    }
+  })
   const explorePromo: ExplorePromoData = {
     chronicle: {
-      acts: [actI, actII, actIII].map(({ act }) => ({ id: act.id, years: act.years, color: act.color })),
+      eras: chronicleEras,
       entries: data.totals.entries,
       years: data.totals.years,
     },

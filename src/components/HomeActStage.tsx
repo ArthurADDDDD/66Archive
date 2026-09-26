@@ -296,7 +296,7 @@ export function HomeActStage({
 
       {/* 左右与导航、下面各节同一条页边距；顶部让开 lg 以下悬浮的菜单胶囊，底部留出与下一节的呼吸。
           xl 起左沿按版心反推（大屏上版心封顶居中），右沿贴近时间轴。 */}
-      <div className="home-content-container home-act-frame relative flex h-auto flex-col px-page pb-[clamp(2.5rem,12vw,4rem)] pt-16 sm:h-full sm:pb-5 xl:max-w-none xl:pl-[var(--home-act-inset)] xl:pr-[var(--home-act-gutter)] xl:pb-[clamp(1.5rem,3vh,2.75rem)] xl:pt-[clamp(1.75rem,3.5vh,3.5rem)]">
+      <div className="home-content-container home-act-frame relative flex h-auto flex-col px-page pb-[clamp(2.5rem,12vw,4rem)] pt-16 sm:h-full sm:pb-5 xl:max-w-none xl:pl-[var(--home-act-inset)] xl:pr-[var(--home-act-gutter)] xl:pb-[clamp(1.5rem,3vh,2.75rem)] xl:pt-[clamp(4.25rem,8vh,5rem)]">
         {/* 各尺寸同一个结构：幕名 / 标题 / 进度直接落在页面上，只随翻页自动换；那张卡才是一叠可翻的纸。
             xl 起左右并排（旧版版式），以下上下排列。 */}
         <div className="flex flex-col gap-4 sm:min-h-0 sm:flex-1 sm:gap-5 xl:grid xl:grid-cols-[minmax(18rem,0.78fr)_minmax(0,1.22fr)] xl:grid-rows-[minmax(0,1fr)] xl:items-center xl:gap-[clamp(3rem,6vw,8rem)]">

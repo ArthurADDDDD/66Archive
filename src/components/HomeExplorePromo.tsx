@@ -8,12 +8,20 @@ import { SiteText } from './SiteText'
  *
  * 幕尾那句收束是故事的句号，但读者此刻正好处在最愿意继续翻的位置——
  * 与其让他们滚回顶部找导航，不如在这儿把两条主路摆出来：
- * 左边编年史（时间轴，按条读），右边画廊（画面，按年看）。
+ * 左边大事件（时间轴，按条读），右边画廊（画面，按年看）。
  * 两边都给一小块真实预览，不是两个空按钮。
  */
 export type ExplorePromoData = {
   chronicle: {
-    acts: { id: string; years: string; color: string }[]
+    /** 大事件的三个时代，每段带三件代表性的事（首页构建期从故事基线里挑，见 app/page.tsx）。 */
+    eras: {
+      id: string
+      label: string
+      color: string
+      years: string
+      count: number
+      events: { id: string; date: string; title: string }[]
+    }[]
     entries: number
     years: number
   }
@@ -48,16 +56,37 @@ export function HomeExplorePromo({ data, variant = 'section' }: { data: ExploreP
           color="#5BC8E8"
           compact={stage}
         >
-          {/* 只列三幕的年份带（本身已经带着那一段的说明），标题留给编年史页自己讲。
-              手机端一行放得下，不用靠截断把话说半句。 */}
-          <ul className={`flex flex-col ${stage ? 'gap-1.5 sm:gap-2.5' : 'gap-2.5'}`}>
-            {data.chronicle.acts.map((act) => (
-              <li key={act.id} className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: act.color }} />
-                <span className="min-w-0 font-mono text-meta tnum text-muted">{act.years}</span>
+          {/*
+            一条缩小版的大事件时间轴：三个时代挂在同一条竖线上，每段列三件代表性的事。
+            右边画廊有八张图，这边以前只有三行年份，左右一重一轻；现在两边的信息量对得上。
+            舞台版在手机上只留时代这一行（事件行放不下，卡内不能出现第二层滚动）。
+          */}
+          <ol className={`relative border-l border-line/60 pl-4 ${stage ? 'space-y-2 sm:space-y-4' : 'space-y-4'}`}>
+            {data.chronicle.eras.map((era) => (
+              <li key={era.id} className="relative">
+                <span
+                  aria-hidden
+                  className="absolute left-[calc(-1rem-0.5px)] top-[0.45em] h-2 w-2 -translate-x-1/2 rounded-full border-2 border-base"
+                  style={{ background: era.color }}
+                />
+                <p className="flex flex-wrap items-baseline gap-x-2 text-meta">
+                  <span className="font-medium" style={{ color: era.color }}>{era.label}</span>
+                  <span className="font-mono text-faint tnum">{era.years}</span>
+                  <span className="text-faint tnum">· {era.count} 件</span>
+                </p>
+                {era.events.length > 0 && (
+                  <ul className={`mt-1.5 space-y-1 ${stage ? 'hidden sm:block' : ''}`}>
+                    {era.events.map((event) => (
+                      <li key={event.id} className="flex min-w-0 items-baseline gap-3 text-control">
+                        <span className="w-[4.5em] shrink-0 font-mono text-meta text-faint tnum">{event.date}</span>
+                        <span className="min-w-0 truncate text-ink/85 transition-colors group-hover:text-ink">{event.title}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
-          </ul>
+          </ol>
         </PromoCard>
 
         {/* 画廊 */}
