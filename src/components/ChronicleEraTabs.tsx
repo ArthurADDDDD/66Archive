@@ -84,26 +84,42 @@ export function ChronicleEraNext({
   era: ChronicleEraId
   onChange: (era: ChronicleEraId) => void
 }) {
+  // 读完一段，底部同时给「上一段」和「下一段」：第一段只有下一段、最后一段只有上一段，
+  // 只有一张时占满整行，两张时左右并排（左边往回、右边往后，和箭头方向一致）。
   const at = CHRONICLE_ERAS.findIndex((item) => item.id === era)
+  const prev = CHRONICLE_ERAS[at - 1]
   const next = CHRONICLE_ERAS[at + 1]
-  if (!next) return null
-  const own = inEra(sections, next.id)
-  return (
-    <button
-      type="button"
-      onClick={() => onChange(next.id)}
-      className="ui-press mt-10 flex w-full items-center justify-between gap-4 rounded-xl border border-line bg-surface/60 px-5 py-4 text-left hover:border-muted"
-    >
-      <span>
-        <span className="block text-meta text-faint">下一段</span>
-        <span className="mt-0.5 flex items-center gap-2 text-h3 font-semibold text-ink">
-          <span aria-hidden className="h-2.5 w-2.5 rounded-full" style={{ background: next.color }} />
-          {next.label}
+  if (!prev && !next) return null
+  const card = (target: (typeof CHRONICLE_ERAS)[number], direction: 'prev' | 'next') => {
+    const own = inEra(sections, target.id)
+    const arrow = <span aria-hidden className="text-h3 text-muted">{direction === 'prev' ? '←' : '→'}</span>
+    return (
+      <button
+        key={direction}
+        type="button"
+        onClick={() => onChange(target.id)}
+        className={`ui-press flex w-full items-center gap-4 rounded-xl border border-line bg-surface/60 px-5 py-4 hover:border-muted ${
+          direction === 'prev' ? 'justify-start text-left' : 'justify-between text-left'
+        }`}
+      >
+        {direction === 'prev' && arrow}
+        <span className="min-w-0">
+          <span className="block text-meta text-faint">{direction === 'prev' ? '上一段' : '下一段'}</span>
+          <span className="mt-0.5 flex items-center gap-2 text-h3 font-semibold text-ink">
+            <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: target.color }} />
+            {target.label}
+          </span>
+          <span className="mt-0.5 block font-mono text-meta text-faint tnum">{rangeLabel(own, target.to)}</span>
         </span>
-        <span className="mt-0.5 block font-mono text-meta text-faint tnum">{rangeLabel(own, next.to)}</span>
-      </span>
-      <span aria-hidden className="text-h3 text-muted">→</span>
-    </button>
+        {direction === 'next' && arrow}
+      </button>
+    )
+  }
+  return (
+    <nav aria-label="切换时代" className={`mt-10 grid gap-3 ${prev && next ? 'sm:grid-cols-2' : ''}`}>
+      {prev && card(prev, 'prev')}
+      {next && card(next, 'next')}
+    </nav>
   )
 }
 

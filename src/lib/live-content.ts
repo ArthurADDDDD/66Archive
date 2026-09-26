@@ -776,7 +776,7 @@ function storyYearFromDisplayDate(value: string): number | null {
   return match ? Number(match[1]) : null
 }
 
-export function applyLiveStoryYears<T extends { year: number; featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
+export function applyLiveStoryYears<T extends { year: number; kind?: 'highlight' | 'normal' | 'sparse'; featured?: ResolvedBeat[]; hero: ResolvedBeat | null; secondary: ResolvedBeat[] }>(
   years: T[],
   liveActs: LiveAct[] | undefined,
   deletedIds: string[] = [],
@@ -869,8 +869,11 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     const baselineFeatured = year.featured?.length ? year.featured : year.hero ? [year.hero] : []
     const custom = customByYear.get(year.year) ?? []
     const moved = movedByYear.get(year.year) ?? []
+    // 只有基线里不是小卡（size 不是 small）的领头卡才算「基线精选」——与 story-years 判断
+    // highlight / normal 的口径相同。没有大卡的年份，构建期会拿第一条小卡顶作 hero 画成紧凑行：
+    // 那只是版式上的领头，不是精选；算进来的话，后台一加精，那条领头卡也会跟着变成大卡。
     const baselineFeaturedIds = new Set([
-      ...baselineFeatured.map((beat) => beat.id),
+      ...baselineFeatured.filter((beat) => beat.size !== 'small').map((beat) => beat.id),
       ...moved.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
       ...custom.filter((beat) => beat.size === 'hero').map((beat) => beat.id),
     ])
@@ -889,6 +892,20 @@ export function applyLiveStoryYears<T extends { year: number; featured?: Resolve
     if (featured.length === 0 && resolved[0] && !explicitlyCleared) featured = [resolved[0]]
     const visibleFeaturedIds = new Set(featured.map((beat) => beat.id))
     const secondary = resolved.filter((beat) => !visibleFeaturedIds.has(beat.id))
-    return { ...year, featured, hero: featured[0] ?? null, secondary }
+    /*
+     * 版式跟着精选走。基线里没有大卡的年份（2006、2025……）是 normal：只把第一张
+     * 精选画成紧凑行，其余精选直接不渲染——后台给这种年份「加精」一张卡，那张卡反而消失了。
+     * 所以只要有人在后台明确加过精（或者这一年有基线大卡），就按精选版式画出全部精选；
+     * 没人动过的年份保持原来的紧凑版式。
+     */
+    const explicitlyFeatured = featured.some((beat) => overrides.get(beat.id)?.featured === true || baselineFeaturedIds.has(beat.id))
+    const kind = year.kind === undefined
+      ? undefined
+      : explicitlyFeatured
+        ? 'highlight' as const
+        : resolved.length === 0
+          ? year.kind
+          : year.kind === 'sparse' || year.kind === 'highlight' ? 'normal' as const : year.kind
+    return { ...year, ...(kind ? { kind } : {}), featured, hero: featured[0] ?? null, secondary }
   })
 }
