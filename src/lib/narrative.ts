@@ -252,7 +252,7 @@ export const HOMEPAGE_ACTS: Act[] = [
       {
         id: 'dazhou-formed',
         important: true,
-        date: '2016',
+        date: '2015',
         size: 'hero',
         title: '这里有了一个名字——大周',
         body: '《我的世界》这款游戏里建起来的「国家」，后来成了整个直播间的名字——大周、六则天、壮王府。',
@@ -857,7 +857,7 @@ export const STORY_ACTS: Act[] = [
         size: 'small',
         kicker: '大周',
         title: '《MC复兴大周》开服。',
-        body: '6 月 29 日，《MC复兴大周》开服，第一天的录像一直留到了今天。更早的第一、二季是哪天开的，本站暂未收录。',
+        body: '6 月 29 日，《MC复兴大周》开服。大周早在 2015 年就建起来了，这一回，是复兴。',
         target: { kind: 'entry', id: '2016-06-29-live-01' },
       },
       {
