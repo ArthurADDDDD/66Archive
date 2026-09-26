@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { proxyImageSrcSet } from '@/lib/platforms'
 import { entryCoverSources } from '@/lib/entry-covers'
+import { galleryThumbSources } from '@/lib/gallery-photos'
 
 /** 视觉框：真实封面，缺失或加载失败（onError）时退化为字排版色块（绝不用假图）。 */
 export function MediaFrame({
@@ -42,7 +43,8 @@ export function MediaFrame({
    * 112–224 px，却在下 960 px 的 jpg、甚至 1.6 MB 的 png。它们有预生成的 w360 / w720
    * 两档 avif / webp（`npm run covers:optimize`），给了 widths 就用 `<picture>` 让浏览器挑。
    */
-  const localSources = widths && sizes ? entryCoverSources(src) : null
+  // 纪念画廊的缩略图（`/gallery/photos/*.thumb.jpg`）同样有 360 / 720 两档（大事件里有卡片直接用画廊图当封面）。
+  const localSources = widths && sizes && src ? (entryCoverSources(src) ?? galleryThumbSources(src)) : null
   const image = (
     // eslint-disable-next-line @next/next/no-img-element
     <img

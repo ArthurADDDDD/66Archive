@@ -444,6 +444,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'taiwan-2013',
+        cover: '/gallery/photos/g55-tb20130327_2236442431_1_1486.thumb.jpg',
         date: '2013.02',
         storyYear: 2013,
         size: 'small',
@@ -455,6 +456,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'journey-video-2013',
+        cover: 'https://m.ykimg.com/05420408523296AA6A0A4D510EF78097',
         date: '2013.07 — 09',
         storyYear: 2013,
         size: 'small',
@@ -466,6 +468,7 @@ export const STORY_ACTS: Act[] = [
       {
         // 2014 只留一张：毕业入职（原 graduation）与《不玩也爱看》《光之子》合在这里。
         id: 'child-of-light-2014',
+        cover: 'https://m.ykimg.com/0542040854759A596A0A4B045B13207F',
         date: '2014.07 — 12',
         storyYear: 2014,
         size: 'small',
@@ -488,6 +491,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'names',
+        cover: '/gallery/photos/g55-t2015_089.thumb.jpg',
         date: '2015.01',
         storyYear: 2015,
         size: 'small',
@@ -567,6 +571,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'anniversary-2016-empress',
+        cover: 'https://i1.hdslb.com/bfs/archive/e7e3fc4c121b6c7ecfc20fda07ee7ed4f047e06e.jpg',
         date: '2016.08',
         storyYear: 2016,
         size: 'small',
@@ -576,6 +581,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'birthday-2016-fanwork',
+        cover: 'https://i2.hdslb.com/bfs/archive/9c4f3db7cf8ae3390e9c87f94f070a33e43a31f3.jpg',
         date: '2016.10',
         storyYear: 2016,
         size: 'small',
@@ -597,6 +603,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'mainstream-2016-cctv',
+        cover: '/gallery/photos/g55-tv20160916_jiayou_01.thumb.jpg',
         date: '2016.09',
         storyYear: 2016,
         size: 'small',
@@ -609,6 +616,7 @@ export const STORY_ACTS: Act[] = [
         // 原「~2016—17」是误判：B 站官方号（女流66）自己发布，用 bilibili API 核实
         // pubdate=2022-01-05，不是第三方多年后的考古重剪，日期按发布时间即代表切片本身的年份。
         id: 'yuanweiji',
+        cover: 'https://i0.hdslb.com/bfs/archive/70a409037f220a5936d5c77f4dbc0ca3e8fb056f.jpg',
         date: '2022.01',
         storyYear: 2022,
         size: 'small',
@@ -620,6 +628,7 @@ export const STORY_ACTS: Act[] = [
       {
         // 同上：B 站官方号自己发布，核实 pubdate=2021-12-24。
         id: 'dalishi',
+        cover: 'https://i0.hdslb.com/bfs/archive/19ff2f3f5c3d39d0cbad14c50901967deef25ad7.jpg',
         date: '2021.12',
         storyYear: 2021,
         size: 'small',
@@ -630,6 +639,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'three-books',
+        cover: 'https://i2.hdslb.com/bfs/archive/61f2f93493a6b6704d644a812eadd0a70bf2b2f1.jpg',
         date: '2017.11',
         storyYear: 2017,
         size: 'type',
@@ -671,6 +681,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'mainstream-2017-outbreak',
+        cover: '/gallery/photos/g55-tb20170207_4969611010_1_2682.thumb.jpg',
         date: '2017.02',
         storyYear: 2017,
         size: 'type',
@@ -745,6 +756,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'liaozhai-2018',
+        cover: 'https://i0.hdslb.com/bfs/archive/df8d3ba65fbf666a9d7f54b98789d8b4cd4b769c.png',
         date: '2018.03.25',
         storyYear: 2018,
         size: 'small',
@@ -765,6 +777,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'dazhou-mc-4',
+        cover: '/gallery/photos/g55-f20180825_live-01_01.thumb.jpg',
         date: '2018.08.10',
         storyYear: 2018,
         size: 'small',
@@ -797,6 +810,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'anniversary-2018-010',
+        cover: 'https://i2.hdslb.com/bfs/archive/ecb702221ad124e540b6d8be0a8158d90d13938c.png',
         date: '2018.01',
         storyYear: 2018,
         size: 'small',
@@ -868,6 +882,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'report-2017',
+        cover: '/gallery/photos/g55-yo20171231_12858288_4.thumb.jpg',
         date: '2017',
         storyYear: 2017,
         size: 'type',
@@ -880,6 +895,7 @@ export const STORY_ACTS: Act[] = [
         // 链接是第三方剪辑号「bc狼」的相声改编版（bilibili API 核实 pubdate=2018-03-01）；
         // 讲述当天按 2018 鱼吧年度直播报告「01-24 讲述壮壮就医历险记」定日。
         id: 'zhushi-ji',
+        cover: '/gallery/photos/archive-2018-01.thumb.jpg',
         date: '2018.01.24',
         storyYear: 2018,
         size: 'small',
@@ -930,6 +946,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'report-2018',
+        cover: '/gallery/photos/g55-yo20190102_47909917_4.thumb.jpg',
         date: '2018',
         storyYear: 2018,
         size: 'type',
@@ -1253,6 +1270,7 @@ export const STORY_ACTS: Act[] = [
       },
       {
         id: 'back-maple',
+        cover: 'https://i2.hdslb.com/bfs/archive/3f0c293d832e22c3b9245df1e99462bc420bfd19.jpg',
         date: '2026.08',
         storyYear: 2026,
         size: 'type',
