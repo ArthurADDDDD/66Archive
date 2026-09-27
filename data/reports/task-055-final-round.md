@@ -54,7 +54,7 @@ task-042 列全她本人优酷自频道（392 条）后，「新历史视频·�
 
 2016 年的 6 条放进新文件 `data/entries/2016-youku-video.yaml`。频道目录对应 20 行改为「已在档案」。
 
-**待人工登记的游戏**（`games` 暂空）：INSIDE、永不孤单（Never Alone）、直至醒来（Until You Wake Up）、说剑、自由之战，以及「捏星之卡比」具体是哪一作。
+**游戏**：按维护者要求新登记 9 款并补进条目——INSIDE、永不孤单（Never Alone）、直至醒来（Until You Wake Up）、说剑（The Swords）、自由之战（Fight For Freedom），以及标题没写游戏名、看画面辨认出的四款：星之卡比 彩虹画笔（「捏星之卡比」）、Agar.io（「全球撕的游戏」）、Duet（「有爱的手游」）、Crazy Freekick（「中国足球新希望」）。E3 微软之行两条不是玩游戏，`games` 留空。
 
 ## 5. 查过、没有结果的
 
