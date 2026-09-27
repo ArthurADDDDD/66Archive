@@ -710,6 +710,14 @@
       - url: https://v.douyu.com/show/Yo4evyKDONxM8L62
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/brN0MmzQ005WpyxA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2022-05-12 17点场】女流66：今天继续呜呜呜」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzKDrem7PNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2022-05-12 19点场】女流66：今天继续呜呜呜」，0:59:27）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [salt-and-sacrifice]

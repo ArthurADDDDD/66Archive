@@ -74,6 +74,14 @@
       - url: https://v.douyu.com/show/jNBdvn2nDx0vE2yw
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/Bjq4MewAOEzv5Ea8
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】口袋服装店 P2 2019.9.6」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzAk0oVWPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】口袋服装店 P3 2019.9.6」，0:36:28）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: "当天下午另开的一场。斗鱼官方回看：场次「Dicey dungeons试试运气」，2019-09-06 15:08 开播，分P《口袋服装店》P1～P3 共 277 分钟；上午 09:07 那场魔兽世界怀旧服排队见 2019-09-06-live-01。贴吧与节目单当天也记骰子地下城、口袋服装店。B站 / A站镜像未找到。2026-09-24 task-053。"
 
@@ -372,6 +380,10 @@
       - url: https://v.douyu.com/show/yVY8WwAJPqV7LOz9
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/brN0Mmdebj67pyxA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 好久不见大雄 P2 2019.9.4」，1:55:49）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [sos-fomt]
@@ -387,6 +399,10 @@
       - url: https://v.douyu.com/show/ZB5Kv9L1jm9Wa93x
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/yVY8WwAJ0p87LOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 挤进服务器可太难了 P2 2019.9.6」，0:35:44）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: "斗鱼官方直播回看补入 2026-09-24 task-051：标题「挤进服务器可太难了」是 2019-08-27 开服的魔兽世界怀旧服排队，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记「魔兽世界怀旧服」，游戏改为 wow-classic。"
     games: [wow-classic]
@@ -402,6 +418,14 @@
       - url: https://v.douyu.com/show/aRbBv3p9J0476PYV
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/ZB5Kv9Lao5jWa93x
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P2 2019.9.11」，2:00:06）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/6Aw87Opx6LmMYGkg
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P3 2019.9.11」，0:40:31）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-world]
@@ -417,6 +441,10 @@
       - url: https://v.douyu.com/show/ERALvEgY3b5M1Vw0
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/2V0JMVam8K57RY5k
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P2 2019.9.12」，2:00:09）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-world]
@@ -432,6 +460,10 @@
       - url: https://v.douyu.com/show/EO0XvN5XVJxWDrBd
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/yVY8WwAxnNA7LOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P2 2019.9.13」，1:49:48）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-world]
@@ -447,6 +479,14 @@
       - url: https://v.douyu.com/show/DrwnvzAnnQjWPNaX
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/8pa9v5O44DLMVrqA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P2 2019.9.16」，2:00:06）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/mPyq7okjjlp71gLY
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P3 2019.9.16」，1:11:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-world]
@@ -462,6 +502,14 @@
       - url: https://v.douyu.com/show/Aox276gP8AoMVz8Z
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/wLjGvLpnz30vmO90
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P2 2019.9.17」，2:00:06）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/3rob7jDjkEZWgkZl
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 怪物猎人：世界 冰原 P3 2019.9.17」，1:30:50）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-world]
@@ -477,6 +525,14 @@
       - url: https://v.douyu.com/show/r90XWgw1ql2Wgk25
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/2V0JMVa9V4D7RY5k
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 被囚禁的掌心 P2 2019.9.18」，2:00:08）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/jNBdvn25rqPvE2yw
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 被囚禁的掌心 P3 2019.9.18」，0:15:52）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [imprisoned-palm]
@@ -492,6 +548,10 @@
       - url: https://v.douyu.com/show/wLjGvLpnR0pvmO90
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/yVY8WwAKV8E7LOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】塞尔达传说 织梦岛 P2 2019.9.21」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [zelda-links-awakening]
@@ -507,6 +567,14 @@
       - url: https://v.douyu.com/show/a4Jj7llmVVj7Dk01
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/3rob7jD6zlyWgkZl
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 塞尔达传说 织梦岛 P2 2019.9.24」，2:00:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/EO0XvN5DzYBWDrBd
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 塞尔达传说 织梦岛 P3 2019.9.24」，1:11:09）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [zelda-links-awakening]
@@ -522,6 +590,14 @@
       - url: https://v.douyu.com/show/ERALvEgOElAM1Vw0
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/kDe0W21AVRPMA4Bz
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 A Short Hi P2 2019.9.27」，2:00:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/GnzXvb4x5ZlM462l
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 A Short Hi P3 2019.9.27」，0:32:45）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [a-short-hike]
@@ -537,6 +613,18 @@
       - url: https://v.douyu.com/show/2V0JMVaEpyD7RY5k
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/JmbBMkGzQ2NM40XA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【女流直播】 Green Hell P2 2019.9.29」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/4xq3WDX3xOrWLGNz
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【女流直播】 Green Hell P3 2019.9.29」，2:00:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/8KxjMd8eajOMVLwb
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【女流直播】 Green Hell P3 2019.9.29」，0:26:42）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [green-hell]

@@ -647,6 +647,14 @@
       - url: https://v.douyu.com/show/1LDR7QlQwKrvJzx8
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/Bjq4Me0zP3Q75Ea8
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2022-06-24 17点场】女流66：男女搭配干活不累糖豆人免费」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/LDBbMA8VrrB7yJRP
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2022-06-24 19点场】女流66：男女搭配干活不累糖豆人免费」，1:00:04）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [fall-guys]
@@ -662,6 +670,14 @@
       - url: https://v.douyu.com/show/JmbBMklJQO9W40XA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/XqeO744rzQ27xywG
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2022-06-25 17点场】女流66：【今日双倍】156277直播间」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/r90XWgYVPpK7gk25
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2022-06-25 19点场】女流66：【今日双倍】156277直播间」，0:33:45）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [fall-guys]

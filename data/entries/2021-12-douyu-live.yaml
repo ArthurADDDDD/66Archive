@@ -722,6 +722,14 @@
       - url: https://v.douyu.com/show/DO84vrrKEDOvedGr
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/XqeO742A99nWxywG
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-12-04 17点场】女流66：【女流】156277直播间~~」，1:21:35）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/JmbBMkb9rxO740XA
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-12-04 18点场】女流66：【女流】156277直播间~~」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [brain-school]
@@ -737,6 +745,14 @@
       - url: https://v.douyu.com/show/brN0Mmb5B4kWpyxA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/mPyq7oZn1Ypv1gLY
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-12-16 17点场】女流66：【女流】周四不休继续Kena」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/jwzOvpB60gDMZVRm
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-12-16 19点场】女流66：【女流】周四不休继续Kena」，1:27:39）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [kena-bridge-of-spirits]
@@ -752,6 +768,10 @@
       - url: https://v.douyu.com/show/Kp1QM8al41JWk4bj
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/1LDR7Q0YZ1BvJzx8
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【2021-12-18 19点场】女流66：【女流】156277直播间」，1:55:34）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     tags: [聊天]

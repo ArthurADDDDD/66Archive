@@ -722,6 +722,14 @@
       - url: https://v.douyu.com/show/2Bj8vGxnyQQ7Obnd
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/yVY8WwPJ2pPvLOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-11-04 19点场】女流66：【女流】potion craft玩玩看」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/Aox276ZR6nK7Vz8Z
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-11-04 21点场】女流66：【女流】potion craft玩玩看」，0:25:33）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [raft]
@@ -761,6 +769,14 @@
       - url: https://v.douyu.com/show/6Aw87O6mbR0vYGkg
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/2V0JMV0rkbDvRY5k
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-11-23 17点场】女流66：【女流】 周二有六」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/8KxjMd9o6wOWVLwb
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-11-23 19点场】女流66：【女流】 周二有六」，1:51:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [metroid-dread]
@@ -776,6 +792,18 @@
       - url: https://v.douyu.com/show/jNBdvnggB1q7E2yw
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/6Aw87O665kdvYGkg
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【2021-11-30 17点场】女流66：【女流】156277直播间~」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzJKAKQvPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【2021-11-30 19点场】女流66：【女流】156277直播间~」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/X3JzMaVkD01WPQro
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【2021-11-30 21点场】女流66：【女流】156277直播间~」，0:18:49）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [majsoul]

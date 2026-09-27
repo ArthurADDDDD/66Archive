@@ -921,6 +921,18 @@
       - url: https://v.douyu.com/show/DO84vrr13dkvedGr
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/3rob7jNP8bb7gkZl
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【2022-01-07 13点场】女流66：【女流】周五中午12点来血源」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/NVm0WKG6eRDWJeBP
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【2022-01-07 15点场】女流66：【女流】周五中午12点来血源」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzJpznGvPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【2022-01-07 17点场】女流66：【女流】周五中午12点来血源」，0:51:29）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [bloodborne]

@@ -455,6 +455,14 @@
       - url: https://v.douyu.com/show/X3JzMaJ1mylWPQro
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/85BAvq4a9N1WG4Lm
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】Green Hell P2 2019.10.1」，2:00:06）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/4xq3WDX4KrpWLGNz
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】Green Hell P3 2019.10.1」，0:52:39）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [green-hell]
@@ -470,6 +478,14 @@
       - url: https://v.douyu.com/show/a2JEMJ5R9027Nxml
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/DO84vr6D249vedGr
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 过山车之星 P2 2019.10.4」，2:00:06）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/8pa9v5O8m9RMVrqA
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 过山车之星 P3 2019.10.4」，0:29:34）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: "斗鱼官方直播回看补入 2026-09-24 task-052：斗鱼场次标题「牛牛山动物园赚大钱了」，与 10-03 同为《动物园之星》测试版（10-03 录像里在养动物）；回看分P 名与菜单角标写作过山车之星，游戏改为 planet-zoo。"
     games: [planet-zoo]
@@ -485,6 +501,18 @@
       - url: https://v.douyu.com/show/DrwnvzbAZ2lvPNaX
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/NVm0WKnbNbBMJeBP
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【女流直播】 牧场物语：重聚矿石镇P2 2019.10.22」，2:00:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/EO0XvNN53EBvDrBd
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【女流直播】 牧场物语：重聚矿石镇P3 2019.10.22」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/r90XWgXwq4gvgk25
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【女流直播】 牧场物语：重聚矿石镇P4 2019.10.22」，0:57:16）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [sos-fomt]
@@ -500,6 +528,10 @@
       - url: https://v.douyu.com/show/1LDR7QND5XVMJzx8
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/yVY8WwZAg5PMLOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 牧场物语 重聚矿石镇 P2 19.10.26」，1:50:35）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [sos-fomt]

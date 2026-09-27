@@ -850,6 +850,14 @@
       - url: https://v.douyu.com/show/85BAvqRp2qw7G4Lm
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/a2JEMJxP6R0vNxml
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-05-05 17点场】女流66：五一派对游戏周假期快乐」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/a2JEMJxP6pnvNxml
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-05-05 19点场】女流66：五一派对游戏周假期快乐」，1:07:39）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [world-games-51]

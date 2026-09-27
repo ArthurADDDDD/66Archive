@@ -1018,6 +1018,14 @@
       - url: https://v.douyu.com/show/kDe0W2QRKGXMA4Bz
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/8KxjMdjJpmovVLwb
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 P2 2021.7.15 怪物猎人物语2破灭之翼」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/1LDR7Q8NXeZvJzx8
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 P3 2021.7.15 怪物猎人物语2破灭之翼」，1:23:26）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [monster-hunter-stories-2]

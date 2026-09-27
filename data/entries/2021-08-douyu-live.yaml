@@ -944,6 +944,10 @@
       - url: https://v.douyu.com/show/r90XWg2og1wMgk25
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/mPyq7o9byBmW1gLY
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【女流直播】 P2 2021.8.12 六六回家遛遛」，1:17:09）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
   - id: 2021-08-14-live-01
@@ -958,6 +962,10 @@
       - url: https://v.douyu.com/show/Yo4evy8G0yNW8L62
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/DrwnvzPGVOGMPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【2021-08-14 16点场】女流66：今儿七夕，在《梦幻西游》手游约个会」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [menghuan-xiyou]
@@ -973,6 +981,14 @@
       - url: https://v.douyu.com/show/a4Jj7lVxR46WDk01
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/qJgOWxP6kmeWkVzL
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-08-15 17点场】女流66：整点送主机400w福利」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/jNBdvnORnwq7E2yw
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-08-15 19点场】女流66：整点送主机400w福利」，1:47:19）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     tags: [心灵砒霜]
@@ -988,6 +1004,14 @@
       - url: https://v.douyu.com/show/ZB5Kv9XB6G2Wa93x
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/JmbBMkqX1gQv40XA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-08-21 17点场】女流66：周六躺着看直播吧」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/yVY8WwPEygovLOz9
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-08-21 19点场】女流66：周六躺着看直播吧」，0:20:47）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [diablo-2]
@@ -1003,6 +1027,18 @@
       - url: https://v.douyu.com/show/DO84vrBpAq0vedGr
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/brN0Mmm59o0MpyxA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【2021-08-24 17点场】女流66：周二双倍亲密度已开启」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/jNBdvnO6KQP7E2yw
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【2021-08-24 19点场】女流66：周二双倍亲密度已开启」，1:59:59）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/0zZVvPbwBX5MO4E2
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【2021-08-24 21点场】女流66：周二双倍亲密度已开启」，0:49:25）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [the-room]

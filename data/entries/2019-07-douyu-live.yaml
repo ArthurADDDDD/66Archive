@@ -451,6 +451,14 @@
       - url: https://v.douyu.com/show/JmbBMkG3N6KM40XA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/jNBdvn2J1DqvE2yw
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【女流直播】 地痞街区 P2 2019.7.23」，1:59:10）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzAQwGGWPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【女流直播】 地痞街区 P3 2019.7.23」，1:25:21）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [streets-of-rogue]
@@ -466,6 +474,18 @@
       - url: https://v.douyu.com/show/1LDR7QDkYy8vJzx8
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/LDBbMAx6lPg7yJRP
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【女流直播】《2020东京奥运》 P2 2019.7.24」，2:00:01）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DO84vr6waeNvedGr
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【女流直播】《2020东京奥运》 P3 2019.7.24」，2:00:03）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/DrwnvzAQl6OWPNaX
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【女流直播】《2020东京奥运》 P4 2019.7.24」，0:27:52）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [tokyo-2020-olympics]
@@ -481,6 +501,18 @@
       - url: https://v.douyu.com/show/mPyq7okmyE571gLY
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/wLjGvLpOVlNvmO90
+        kind: replay
+        status: alive
+        note: "同一场次第 2/4 段（回看列表标题「【女流直播】 月圆之夜  P2 2019.7.27」，2:00:03）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/6Aw87Op4960MYGkg
+        kind: replay
+        status: alive
+        note: "同一场次第 3/4 段（回看列表标题「【女流直播】 月圆之夜  P3 2019.7.27」，2:00:02）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/Qyz171Q6GY07BJj9
+        kind: replay
+        status: alive
+        note: "同一场次第 4/4 段（回看列表标题「【女流直播】 月圆之夜  P4 2019.7.27」，0:16:42）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [night-of-the-full-moon]

@@ -528,6 +528,14 @@
       - url: https://v.douyu.com/show/kDe0W2aegZXMA4Bz
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/0Q8mMYqzx65M49Ad
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2022-02-14 17点场】女流66：怀旧MD经典【龙之弹珠台】」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/wLjGvLGBAmEWmO90
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2022-02-14 19点场】女流66：怀旧MD经典【龙之弹珠台】」，0:05:16）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [dragon-pinball]
@@ -543,6 +551,22 @@
       - url: https://v.douyu.com/show/Kg1VWRxnVpP7GbNA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/Kg1VWRxn5PN7GbNA
+        kind: replay
+        status: alive
+        note: "同一场次第 2/5 段（回看列表标题「【2022-02-26 12点场】女流66：【女流】艾尔登法环Day2一起来吧」，1:58:32）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/n8GzMXzVGOAv6qyP
+        kind: replay
+        status: alive
+        note: "同一场次第 3/5 段（回看列表标题「【2022-02-26 14点场】女流66：【女流】艾尔登法环Day2一起来吧」，1:58:32）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/jNBdvngB2yZ7E2yw
+        kind: replay
+        status: alive
+        note: "同一场次第 4/5 段（回看列表标题「【2022-02-26 16点场】女流66：【女流】艾尔登法环Day2一起来吧」，1:58:32）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/LDBbMABRJYKWyJRP
+        kind: replay
+        status: alive
+        note: "同一场次第 5/5 段（回看列表标题「【2022-02-26 18点场】女流66：【女流】艾尔登法环Day2一起来吧」，1:52:08）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     games: [elden-ring]

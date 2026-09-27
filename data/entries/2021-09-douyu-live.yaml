@@ -88,6 +88,10 @@
       - url: https://v.douyu.com/show/1LDR7Q8VjzrvJzx8
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/LDBbMAmOk8qMyJRP
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【2021-09-03 21点场】女流66：晚间二台~~~~~~」，0:08:29）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: "当晚另开的第二场。斗鱼官方回看：场次「晚间二台~~~~~~」，2021-09-03 19:56 开播，两段共 129 分钟；下午 13:56 起的符文工厂5（332 分钟）见 2021-09-03-live-01。内容未核对，games 留空。B站 / A站镜像未找到。2026-09-24 task-053。"
 
@@ -577,6 +581,14 @@
       - url: https://v.douyu.com/show/0Q8mMYKoLmNv49Ad
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/0zZVvPb3NRjMO4E2
+        kind: replay
+        status: alive
+        note: "同一场次第 2/3 段（回看列表标题「【2021-09-15 17点场】女流66：哈哈哈哈哈哈哈哈 156277」，2:00:00）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
+      - url: https://v.douyu.com/show/2V0JMVbkpQbMRY5k
+        kind: replay
+        status: alive
+        note: "同一场次第 3/3 段（回看列表标题「【2021-09-15 19点场】女流66：哈哈哈哈哈哈哈哈 156277」，0:17:32）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
       - url: https://v.douyu.com/show/jwzOvpQDKJE7ZVRm
         kind: replay
         status: alive
@@ -610,6 +622,10 @@
       - url: https://v.douyu.com/show/Kg1VWRb1mDPWGbNA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/wLjGvLPb1x2vmO90
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【2021-09-24 16点场】女流66：出差参加活动最近随缘见」，0:59:12）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     tags: [户外, 聊天]
@@ -625,6 +641,10 @@
       - url: https://v.douyu.com/show/brN0MmmLQn5MpyxA
         kind: replay
         status: alive
+      - url: https://v.douyu.com/show/ZB5Kv9XV8wZWa93x
+        kind: replay
+        status: alive
+        note: "同一场次第 2/2 段（回看列表标题「【2021-09-26 16点场】女流66：出差参加活动最近随缘见」，1:58:10）。斗鱼把长直播按约 2 小时切成多段回看，条目原先只挂了其中一段；2026-09-27 按斗鱼回看分段列表（getShowReplayList）补挂。"
     contributed_by: data-agent
     note: 斗鱼官方直播回看补入
     tags: [户外, 聊天]
