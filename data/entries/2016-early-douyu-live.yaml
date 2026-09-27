@@ -625,6 +625,7 @@
     confidence: high
     duration_min: 132
     games: [stardew-valley, nixizhixingtu-shanyao]
+    missing_footage: "逆袭之星途闪耀那一段"
     sources:
       - url: https://www.bilibili.com/video/BV1Xx411V7mT?p=1
         kind: replay
@@ -640,7 +641,7 @@
         account: acfun-douyu-recordhall
         note: "A站「斗鱼录像厅」（UID 974915）《【主机游戏】女流 星露谷 全程直播录像》，上下两 P，发布 2016-03-10 15:41。2026-09-23 音频比对：两 P 拼接后与 B站本条 P1+P2 全程逐段对齐（偏移始终在 1 分钟以内，相关分 0.47～0.95），是同一份录像；片头她自述「一次没玩过」、从建角色开始，即她的第一场星露谷。此前目录把它挂在 2016-03-10，是按发布日推的，不对。"
     contributed_by: data-agent
-    note: "B站「女流录像小屋」《女流过往精彩录像补投第十二期-星露谷物语（2016.3.9）》。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆袭之星途闪耀」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。"
+    note: "B站「女流录像小屋」《女流过往精彩录像补投第十二期-星露谷物语（2016.3.9）》。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆袭之星途闪耀」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 也记，登记。 2026-09-27：现存录像（B站 P1+P2 与 A站两 P 是同一份）全程只有星露谷，逆袭那一段不在录像里；当天斗鱼房间标题「逆袭更新啦」（房间截图 2016-03-09 20:00，见 douyu-room-titles-2015-2016.csv）与两份节目单互证当天确实播过。录像小屋是按游戏名从网盘前期录像里挑着补投的，逆袭段没有补投；B站检索、她本人优酷自频道（唯一一条《逆袭》已挂 02-24）均未找到，标 missing_footage 征集。"
   - id: 2016-03-10-live-01
     cover: "https://i0.hdslb.com/bfs/archive/aa2f9c3292211e99953c32ffa675a18c18c7a15b.png"
     type: live
