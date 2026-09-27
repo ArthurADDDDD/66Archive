@@ -1595,7 +1595,7 @@ export const CURATED_GAMES: Record<string, CuratedGame> = {
     aliases: ['Geometry Dash'],
     oneLiner: '从 2016 到 2017，几个晚上，加起来 {hours} 个小时。',
     entryTitlePattern: /几何冲刺/,
-    note: '《几何冲刺》尚未登记入 data/games.yaml（待数据角色补录）；本站以标题匹配归档相关场次。',
+    note: '本页按条目的游戏标签，并以标题里的「几何冲刺」补充匹配，归档相关场次。',
   },
 }
 
