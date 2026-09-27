@@ -432,5 +432,11 @@
     - url: "https://www.bilibili.com/video/BV1Jbho6BEuJ"
       kind: replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV1KXab6GESc"
+      kind: replay
+      status: alive
+      cover: "http://i1.hdslb.com/bfs/archive/e01d1b668509ce713da0ee5031a1759057e75867.jpg"
+      parts: 4
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+  games: [townfall]
