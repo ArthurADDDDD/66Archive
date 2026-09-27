@@ -440,3 +440,25 @@
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
   games: [townfall]
+
+- id: 2026-09-27-live-01
+  type: live
+  date: "2026-09-27"
+  title: "寂静岭最新作townfall"
+  platform: douyin
+  duration_min: 132
+  games:
+    - townfall
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/3ad9bc836fca6696f799189226dd2192caea2257.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1uUah6XEoq"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1wQae6EE5u"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
