@@ -45,6 +45,11 @@ for (const file of walk('src')) {
   for (const match of source.matchAll(/'([a-z][a-z0-9-]*)'/g)) {
     if (registered.has(match[1])) note(match[1], file)
   }
+  // 把 id 交给自家小组件、组件里再 useSiteText(id) 的那种（如画廊标签的 <TabLabel id="…">）：
+  // JSX 属性是双引号，上一条认不出。同样只认已登记的 id。
+  for (const match of source.matchAll(/\bid="([a-z][a-z0-9-]*)"/g)) {
+    if (registered.has(match[1])) note(match[1], file)
+  }
 }
 
 const ids = SITE_COPY.texts.map((item) => item.id)
