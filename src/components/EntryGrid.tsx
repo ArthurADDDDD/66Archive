@@ -202,6 +202,7 @@ function EntryCard({
             <span className="rounded bg-black/70 px-1.5 py-0.5 font-mono text-[11px] font-medium text-live tnum">{entry.sourceCount} 源</span>
           )}
           {dead && <span className="rounded bg-black/70 px-1.5 py-0.5 text-[11px] text-faint">链接已失效</span>}
+          {!dead && entry.missingFootage && <span className="rounded bg-black/70 px-1.5 py-0.5 text-[11px] text-faint">录像不全</span>}
         </span>
 
         {/* 点开＝就地展开，不跳站外。这句提示只在悬停时出现，免得每张卡都挂着一行说明。 */}

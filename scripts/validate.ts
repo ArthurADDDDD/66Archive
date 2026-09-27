@@ -136,6 +136,9 @@ for (const { file, items } of [...loadDir('entries'), ...loadDir('_demo')]) {
     if (e.no_public_replay && e.sources.length > 0) {
       warnings.push(`"${e.id}" 标了 no_public_replay 却又有来源链接，二者矛盾`)
     }
+    if (e.missing_footage && e.sources.length === 0) {
+      warnings.push(`"${e.id}" 标了 missing_footage 却没有任何来源；整场没有录像应改用 no_public_replay`)
+    }
     if (!e.no_public_replay) {
       if (e.sources.length === 0) warnings.push(`"${e.id}" 没有任何来源链接`)
       if (e.type === 'live' && !e.duration_min) warnings.push(`"${e.id}" 是直播但缺时长`)

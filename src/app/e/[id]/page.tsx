@@ -218,9 +218,16 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             )}
             {entry.note && <p className="measure-note mt-5 text-meta leading-relaxed text-faint">{entry.note}</p>}
             {/* 一个能打开的链接都没有：被分享出去的恰恰是这一页，问「谁见过这场」就在这里。 */}
-            {!sources.some((source) => source.status === 'alive') && (
+            {(!sources.some((source) => source.status === 'alive') || entry.missing_footage) && (
               <EntryClue
-                entry={{ id: entry.id, date: entry.date, title: entry.title, sourceCount: sources.length }}
+                entry={{
+                  id: entry.id,
+                  date: entry.date,
+                  title: entry.title,
+                  sourceCount: sources.length,
+                  aliveCount: sources.filter((source) => source.status === 'alive').length,
+                  missingFootage: entry.missing_footage,
+                }}
                 className="measure-body mt-5"
               />
             )}

@@ -156,7 +156,7 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
         )}
 
         {/* 没有一个能打开的链接：这一格就是最该问「谁见过这场」的地方。 */}
-        {entry.aliveCount === 0 && <EntryClue entry={entry} className="mt-4" />}
+        {(entry.aliveCount === 0 || entry.missingFootage) && <EntryClue entry={entry} className="mt-4" />}
 
         <InlineTagCalibration entryId={entry.id} games={entry.games} tags={entry.tags} />
       </div>

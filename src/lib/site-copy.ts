@@ -511,6 +511,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'entry-cover-missing', group: '录播室 · 封面', label: '没有封面时 · 角标（有录像但没取到封面）', text: '暂缺封面' },
     { id: 'entry-clue-title-none', group: '条目页 · 提供线索', label: '标题（还没找到录像时）', text: '这场还没找到录像' },
     { id: 'entry-clue-title-dead', group: '条目页 · 提供线索', label: '标题（链接都失效时）', text: '这场的录像链接都已失效' },
+    { id: 'entry-clue-title-partial', group: '条目页 · 提供线索', label: '标题（有录像但缺一段时）', vars: ['missing'], text: '这场录像不全：{missing}还没找到' },
     { id: 'entry-clue-intro', group: '条目页 · 提供线索', label: '说明', text: '看过这场的录像或切片，或者知道哪里还存着（B站、A站、优酷、网盘、群文件都算）？告诉我一声。只记得一点点也有用，我会逐条去核对。' },
     { id: 'entry-clue-open', group: '条目页 · 提供线索', label: '按钮', text: '我有这场的线索' },
     { id: 'entry-clue-close', group: '条目页 · 提供线索', label: '按钮（展开后）', text: '收起' },

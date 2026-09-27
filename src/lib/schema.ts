@@ -160,6 +160,12 @@ export const Entry = z
      */
     no_public_replay: z.boolean().optional(),
     /**
+     * 「有录像，但不全」：确认这场还播过某一段，现存录像里却没有。
+     * 写缺的是哪一段（如「逆袭之星途闪耀那一段」），前台据此显示「录像不全」并征集线索。
+     * 整场都没有录像用 `no_public_replay`，不用这个；缺什么的证据写在 `note` 里。
+     */
+    missing_footage: z.string().min(1).optional(),
+    /**
      * 后台隐藏开关：条目仍在档案里（后台能看见、能取消隐藏），前台一律不展示——
      * 录播室、条目页、游戏/系列聚合、统计、站点地图都按 `getPublicDataset()` 取数。
      * 不是删除，也不改任何其他字段。

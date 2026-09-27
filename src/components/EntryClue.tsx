@@ -5,7 +5,7 @@ import { SubmissionForm } from './SubmissionForm'
 import { useSiteTexts } from './LiveContentProvider'
 
 /**
- * 「这场还没找到录像」的线索入口。
+ * 「这场还没找到录像 / 录像不全」的线索入口。
  *
  * 档案里有一百多条只知道「这天开过播」的占位条目——日期、标题来自节目单或贴吧记录，
  * 但没有一个能打开的链接。看到这一条的人，恰好是最可能记得「这场我在哪儿看过」的人，
@@ -22,21 +22,28 @@ export function EntryClue({
   entry,
   className,
 }: {
-  entry: { id: string; date: string; title: string; sourceCount: number }
+  entry: { id: string; date: string; title: string; sourceCount: number; aliveCount: number; missingFootage?: string }
   className?: string
 }) {
   const [open, setOpen] = useState(false)
   const t = useSiteTexts()
-  const variant = entry.sourceCount === 0 ? 'none' : 'dead'
+  // 有能看的录像时只可能是「录像不全」；否则按有没有来源分「没找到」和「都失效了」。
+  const variant = entry.aliveCount > 0 && entry.missingFootage ? 'partial' : entry.sourceCount === 0 ? 'none' : 'dead'
   const link = typeof window === 'undefined' ? `/e/${entry.id}/` : `${window.location.origin}/e/${entry.id}/`
   const template = t('entry-clue-template', { date: entry.date, title: entry.title, link })
+  const title =
+    variant === 'partial'
+      ? t('entry-clue-title-partial', { missing: entry.missingFootage ?? '' })
+      : variant === 'none'
+        ? t('entry-clue-title-none')
+        : t('entry-clue-title-dead')
 
   return (
     <section className={`rounded-xl border border-dashed border-live/35 bg-live/[0.04] p-3.5 sm:p-4 ${className ?? ''}`}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="text-control font-medium text-ink">
-            {variant === 'none' ? t('entry-clue-title-none') : t('entry-clue-title-dead')}
+            {title}
           </p>
           <p className="measure-note mt-1 text-meta leading-relaxed text-muted">{t('entry-clue-intro')}</p>
         </div>
