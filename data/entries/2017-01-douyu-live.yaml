@@ -159,6 +159,28 @@
         account: acfun-fan-record-house
     contributed_by: data-agent
 
+  - id: 2017-01-08-live-01
+    type: live
+    date: "2017-01-08"
+    title: "UCG游戏大赏2016 颁奖直播（嘉宾）"
+    platform: douyu
+    confidence: high
+    duration_min: 274
+    cover: "https://i1.hdslb.com/bfs/archive/fe78eb2cce3a0ed95bfd48d661f3a04806a7e9ce.jpg"
+    games: []
+    tags: [户外, 发布会]
+    sources:
+      - url: https://www.bilibili.com/video/BV1Ls411h7TQ
+        kind: replay
+        status: alive
+        note: "游戏时光 VGtime 官方《武人叔、主机人气主播聚首！UCG游戏大赏直播盛典》，2017-01-10 发布，5P 共 4:34:07（主播板块 / PlayStation / XBOX / 独立游戏 / 玩家评选）；简介点名嘉宾「斗鱼主机区人气主播女流」，她在 P1「主播板块」（1:59:04）。"
+      - url: https://www.bilibili.com/video/BV1fs41187mv
+        kind: clip
+        status: alive
+        note: "观众录屏《“2016年UCG游戏大赏” 女流登场！》，13 分钟，简介「65415 1月8日 上海 UCG游戏大赏 女流登场！」，录屏文件时间 2017-01-09 02:19。"
+    contributed_by: data-agent
+    note: "女流 2017 年度直播报告「年度直播大事件」点名的 UCG2016 游戏大赏（上海）。直播在 UCG《游戏机实用技术》的斗鱼房间 65415，不是她本人房间 156277；她作为嘉宾出席，按线下活动记为户外条目（2026-09-27 维护者确认收录）。时长取官方完整回放全长。"
+
   - id: 2017-01-10-live-01
     type: live
     date: "2017-01-10"

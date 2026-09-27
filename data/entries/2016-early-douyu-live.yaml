@@ -80,8 +80,14 @@
     title: "游戏：谁是你爸爸？"
     platform: douyu
     confidence: high
-    no_public_replay: true
+    duration_min: 71
     games: [whos-your-daddy, xingzhi-qiyue]
+    sources:
+      - url: https://v.youku.com/v_show/id_XMTQzOTQwMTQ4NA==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】萌猫萌狗大混战《星之契约》》，2016-01-08 上传，70:40，只含星之契约那一段。归日依据：贴吧 2016 专贴与葵kiss 同期记录只在 1/5 记星之契约；片中预告「10 号」去看黄渤活动，录于 1/10 之前，与此相合。2026-09-27 维护者确认按贴吧线索归入本场。"
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2016-01-05 15:48（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-01-05 15:41。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧「【最全】【持续更新中】2016年女流直播游戏名字专贴」（tieba.baidu.com/p/4363790737，吧务 2016-02-20 起逐日记录，目录见 data/catalogs/tieba-2016-live-log.csv）记「1/5 who's your Daddy（谁是你爸爸）& 星之契约」，与直播间标题一致；A 站那组 160 分钟录像经同一记录定为前一天 01-04，不属本场，本条仍无公开录像。 2026-09-24 task-052：葵kiss 同期贴吧记「who‘s your Daddy（谁是你爸爸）& 星之契约」，节目单也记星之契约，登记。"
   - id: 2016-01-06-live-01
@@ -483,8 +489,14 @@
     title: "逆途更新了"
     platform: douyu
     confidence: high
-    no_public_replay: true
+    duration_min: 139
     games: [nixizhixingtu-shanyao]
+    sources:
+      - url: https://v.youku.com/v_show/id_XMTUwNTAwNjI1Ng==.html
+        kind: replay
+        status: alive
+        account: youku-official
+        note: "她本人优酷号《【女流直播生放送】逆袭》，2016-03-19 上传，139 分钟。录像从游戏开场玩起；2026-09-27 维护者看片确认是《逆袭之星途闪耀》的第一集，即贴吧逐日记录里的首玩日 02-24（03-02、03-09 是后来更新章节的场次）。"
     contributed_by: data-agent
     note: "直播日由存档的斗鱼直播间页面确定：2016-02-24 15:36（CST）的快照 show_status=1，即抓取当下她正在直播，直播间标题就是本条标题；同一快照的直播间缩略图时间戳为 2016-02-24 15:30。本条目前没有任何已知录像：B站「女流录像小屋」全量枚举（2377 条）、A 站斗鱼录像厅、以及按本标题在 B 站检索均无结果。证据明细见 data/catalogs/douyu-room-titles-2015-2016.csv 与 data/reports/task-041-douyu-missing-dates.md。2026-09-23 补证：贴吧 2016 年直播游戏专贴（tieba.baidu.com/p/4363790737）当天所发第 9 楼记「2/24 逆袭之星途闪耀（橙光游戏）」——直播间标题里的「逆途」就是这款橙光游戏《逆袭之星途闪耀》的简称，3/2 又记「逆袭之星途闪耀 3月1号更新章」，与 03-09 快照标题「逆袭更新啦」同指一作。"
   - id: 2016-02-25-live-01
