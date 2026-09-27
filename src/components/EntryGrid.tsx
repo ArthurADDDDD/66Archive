@@ -4,6 +4,7 @@ import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } f
 import { proxyImageSrcSet } from '@/lib/platforms'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody, useEntrySource } from './EntryDetail'
+import { EntryArchiveCover } from './EntryArchiveCover'
 import { SeenDot } from './Trail'
 import { visibleGameIds } from '@/lib/games'
 import { PLATFORM_META } from '@/lib/platforms'
@@ -186,7 +187,7 @@ function EntryCard({
             className={`h-full w-full object-cover transition duration-500 group-hover:scale-[1.04] ${dead ? 'opacity-45 grayscale' : ''}`}
           />
         ) : (
-          <span className="flex h-full items-center justify-center text-meta text-faint">无封面</span>
+          <EntryArchiveCover entry={entry} />
         )}
 
         <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/70 to-transparent" />

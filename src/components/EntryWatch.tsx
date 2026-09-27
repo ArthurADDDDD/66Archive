@@ -5,6 +5,7 @@ import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage, proxyImageSrcSet } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
 import { entryCoverSources } from '@/lib/entry-covers'
+import { EntryArchiveCover, type ArchiveCoverEntry } from './EntryArchiveCover'
 import { useSiteTexts } from './LiveContentProvider'
 
 /**
@@ -62,6 +63,7 @@ export function EntryWatch({
   gameNames,
   entryCover,
   entryTitle,
+  entryDate,
 }: {
   sources: WatchSource[]
   segments: WatchSegment[]
@@ -72,6 +74,8 @@ export function EntryWatch({
   /** 条目级封面兜底；来源自己的封面优先 */
   entryCover: string | null
   entryTitle: string
+  /** 没有任何封面时，字排版档案封面要写日期 */
+  entryDate: string
 }) {
   const defaultIndex = Math.max(0, sources.findIndex((s) => s.status === 'alive'))
   const [sourceIndex, setSourceIndex] = useState(defaultIndex)
@@ -272,7 +276,19 @@ export function EntryWatch({
 
       {/* 来源面板：桌面吸附在右侧（列表再长也够得着），手机排在最上（先决定去哪儿看） */}
       <aside className="order-1 lg:order-2 lg:sticky lg:top-6">
-        <EntryCover source={source} entryCover={entryCover} entryTitle={entryTitle} accent={accent} />
+        <EntryCover
+          source={source}
+          entryCover={entryCover}
+          entryTitle={entryTitle}
+          accent={accent}
+          placeholder={{
+            date: entryDate,
+            title: entryTitle,
+            games: gameNames.map((name) => ({ name })),
+            sourceCount: sources.length,
+            aliveCount: sources.filter((item) => item.status === 'alive').length,
+          }}
+        />
 
         <div className="mt-6">
           <SectionTitle title={t('entry-sources-title')} hint={sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
@@ -385,11 +401,13 @@ function EntryCover({
   entryCover,
   entryTitle,
   accent,
+  placeholder,
 }: {
   source: WatchSource | undefined
   entryCover: string | null
   entryTitle: string
   accent: string
+  placeholder: ArchiveCoverEntry
 }) {
   const sourceCover = proxyImage(source?.cover ?? source?.partDetails?.[0]?.cover, 960)
   const coverUnreliable = Boolean(source?.coverUnreliable)
@@ -439,9 +457,7 @@ function EntryCover({
       className="h-full w-full object-cover"
     />
   ) : (
-    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-video/12 via-raised to-live/8 p-6">
-      <span className="text-center text-meta tracking-widest text-faint">封面待补</span>
-    </div>
+    <EntryArchiveCover entry={placeholder} size="detail" />
   )
 
   // 没有派生文件时不要包 <picture>：空壳只会多一层节点。有的话 avif → webp → 原图，

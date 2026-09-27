@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { InlineTagCalibration } from '@/components/InlineTagCalibration'
+import { EntryArchiveCover } from './EntryArchiveCover'
+import { EntryClue } from './EntryClue'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
@@ -74,7 +76,7 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
 
   return (
     <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
-      <EntryCover cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
+      <EntryCover entry={entry} cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
 
       <div className="flex min-w-0 flex-col p-4 sm:p-[clamp(1.25rem,1.65vw,2.75rem)]">
         <div className={sameTitle ? 'hidden sm:block' : ''}>
@@ -152,6 +154,9 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
             <SelectedSourceParts key={selectedSource?.url} source={selectedSource} />
           </div>
         )}
+
+        {/* 没有一个能打开的链接：这一格就是最该问「谁见过这场」的地方。 */}
+        {entry.aliveCount === 0 && <EntryClue entry={entry} className="mt-4" />}
 
         <InlineTagCalibration entryId={entry.id} games={entry.games} tags={entry.tags} />
       </div>
@@ -245,10 +250,12 @@ export function formatPartDuration(totalSeconds: number): string {
 }
 
 function EntryCover({
+  entry,
   cover,
   title,
   destination,
 }: {
+  entry: TimelineEntry
   cover: string | undefined
   title: string
   destination?: string
@@ -265,7 +272,7 @@ function EntryCover({
           className="h-full w-full object-contain transition duration-500 group-hover/cover:scale-[1.025]"
         />
       ) : (
-        <span className="flex h-full items-center justify-center text-meta text-faint">无封面</span>
+        <EntryArchiveCover entry={entry} size="detail" />
       )}
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover/cover:opacity-80" />
       {destination && (

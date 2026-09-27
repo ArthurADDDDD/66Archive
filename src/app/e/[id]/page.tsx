@@ -10,6 +10,7 @@ import { buildEntryRails } from '@/lib/relations'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { coverShareImage } from '@/lib/share-image'
 import { InlineTagCalibration } from '@/components/InlineTagCalibration'
+import { EntryClue } from '@/components/EntryClue'
 import { TrailRecorder } from '@/components/Trail'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -216,6 +217,13 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               </p>
             )}
             {entry.note && <p className="measure-note mt-5 text-meta leading-relaxed text-faint">{entry.note}</p>}
+            {/* 一个能打开的链接都没有：被分享出去的恰恰是这一页，问「谁见过这场」就在这里。 */}
+            {!sources.some((source) => source.status === 'alive') && (
+              <EntryClue
+                entry={{ id: entry.id, date: entry.date, title: entry.title, sourceCount: sources.length }}
+                className="measure-body mt-5"
+              />
+            )}
             {sourceGroup.length > 1 && (
               <p className="measure-note mt-2 text-meta leading-relaxed text-faint">
                 <SiteText id="entry-same-session" vars={{ count: sourceGroup.length - 1 }} />
@@ -236,6 +244,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             gameNames={games.map((g) => g.name)}
             entryCover={entry.cover ?? null}
             entryTitle={entry.title}
+            entryDate={entry.date}
           />
           {/*
             校对入口以前只挂在录播室里展开的那一行（EntryDetailBody），
