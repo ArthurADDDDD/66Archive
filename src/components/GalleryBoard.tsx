@@ -3,7 +3,7 @@
 import { createContext, Fragment, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
-import { bucketOf, galleryFullSource, type GalleryPhoto, galleryThumbBackground, galleryThumbSources, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
+import { bucketOf, galleryFullSource, type GalleryPhoto, type GalleryQuality, galleryThumbBackground, galleryThumbSourcesAt, sortBucket, UNDATED, UNDATED_LABEL } from '@/lib/gallery-photos'
 import { fetchGalleryLikes, toggleGalleryLike as toggleGalleryLikeApi } from '@/lib/gallery-likes-api'
 import { gallerySourceHref } from '@/lib/gallery-href'
 import { yearColor } from '@/lib/ui'
@@ -33,6 +33,27 @@ type CollectionMode = 'featured' | 'all' | 'live'
 
 /** 「全直播合集」不走照片墙；用同一个空数组，免得每次渲染都让下游 useMemo 失效。 */
 const NO_PHOTOS: GalleryPhoto[] = []
+
+/**
+ * 图墙画质。默认低（省流量、翻得快）；读者可以切到中 / 高，选择记在本机浏览器里。
+ * 用 context 下发，不一路 props 往下传——缩略图埋在 PhotoWall → PhotoCell 好几层里。
+ */
+const QUALITY_OPTIONS: { value: GalleryQuality; label: string; hint: string }[] = [
+  { value: 'low', label: '低', hint: '低画质' },
+  { value: 'medium', label: '中', hint: '中画质' },
+  { value: 'high', label: '高', hint: '高画质（原图尺寸）' },
+]
+const QUALITY_STORAGE_KEY = 'gallery-quality'
+const GalleryQualityContext = createContext<GalleryQuality>('low')
+
+function readStoredQuality(): GalleryQuality {
+  try {
+    const stored = window.localStorage.getItem(QUALITY_STORAGE_KEY)
+    return stored === 'medium' || stored === 'high' ? stored : 'low'
+  } catch {
+    return 'low'
+  }
+}
 
 /**
  * 纪念版分类说明先不露出：分类名本身已经写在筛选按钮上，
@@ -134,7 +155,46 @@ export function GalleryBoard({
   const [density, setDensity] = useState<Density>('normal')
   const [tag, setTag] = useState<string | null>(null)
   const [q, setQ] = useState('')
+  const [quality, setQuality] = useState<GalleryQuality>('low')
+  const [qualityNotice, setQualityNotice] = useState<string | null>(null)
   const t = useSiteTexts()
+
+  // 静态导出拿不到本机偏好，首屏一律按低画质出，挂载后再换成读者上次选的档。
+  useEffect(() => {
+    const stored = readStoredQuality()
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (stored !== 'low') setQuality(stored)
+  }, [])
+
+  useEffect(() => {
+    if (!qualityNotice) return
+    const timer = window.setTimeout(() => setQualityNotice(null), 4000)
+    return () => window.clearTimeout(timer)
+  }, [qualityNotice])
+
+  const chooseQuality = (next: GalleryQuality) => {
+    if (next === quality) return
+    setQuality(next)
+    try {
+      window.localStorage.setItem(QUALITY_STORAGE_KEY, next)
+    } catch {
+      // 无痕窗口等存不了：本次照样生效，只是下次不记得。
+    }
+    const hint = QUALITY_OPTIONS.find((o) => o.value === next)?.hint ?? ''
+    setQualityNotice(
+      next === 'low' ? `已切回${hint}` : `正在换成${hint}，图片要重新加载，稍等一下${next === 'high' ? '（高画质每张更大，流量也更多）' : ''}`,
+    )
+  }
+
+  const qualityControl =
+    collection === 'live' ? null : (
+      <SegmentedControl
+        label="画质"
+        value={quality}
+        options={QUALITY_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
+        onChange={chooseQuality}
+      />
+    )
   const [openId, setOpenId] = useState<string | null>(null)
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
@@ -266,6 +326,7 @@ export function GalleryBoard({
 
   return (
     <GalleryLikesProvider>
+    <GalleryQualityContext.Provider value={quality}>
       <div className="mb-4 flex border-y border-line/70 py-4">
         {/* 手机上三个标签平分一整行：以前是一条横滑的胶囊，360px 宽的屏幕上第三个标签只露出
             一半，看不出后面还有。每个标签固定两行——名字在上、张数在下（见 TabLabel），
@@ -318,6 +379,7 @@ export function GalleryBoard({
             ariaLabel="搜索画面"
             inputClassName="w-[13rem] rounded-md border border-line bg-surface px-3 py-2 text-control text-ink placeholder:text-faint transition-[border-color,background-color] duration-300 hover:bg-raised/70 focus:border-live focus:bg-raised/70 focus:outline-none lg:w-[16rem]"
           />
+          {qualityControl}
           {collection === 'all' && (
             <>
               <SegmentedControl
@@ -348,6 +410,25 @@ export function GalleryBoard({
           </button>
         </div>
       </div>
+
+      {/* 手机上上面那排控件整体不显示，画质开关单独给一行——小屏最在意流量，也最该能选。 */}
+      {qualityControl && (
+        <div className="mb-4 flex items-center gap-2 text-meta text-faint sm:hidden">
+          <span>画质</span>
+          {qualityControl}
+        </div>
+      )}
+
+      {/* 切画质后的提示：新档的图要重新下载，墙上会有一会儿新旧混着出来。 */}
+      <p
+        role="status"
+        aria-live="polite"
+        className={`pointer-events-none fixed inset-x-0 bottom-6 z-40 mx-auto w-fit max-w-[calc(100%-2rem)] rounded-full border border-line/80 bg-raised/95 px-4 py-2 text-center text-meta text-ink shadow-lg transition-opacity duration-300 ${
+          qualityNotice ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        {qualityNotice}
+      </p>
 
       {collection === 'live' && liveWall ? (
         <GalleryLiveWall
@@ -504,6 +585,7 @@ export function GalleryBoard({
         )}
       </>
       )}
+    </GalleryQualityContext.Provider>
     </GalleryLikesProvider>
   )
 }
@@ -904,13 +986,15 @@ function GalleryThumbnail({
   /** 首屏那几张：不等布局算完才开始下，HTML 一到就以高优先级取。 */
   priority?: boolean
 }) {
-  const sources = galleryThumbSources(photo.thumb)
+  const quality = useContext(GalleryQualityContext)
+  const sources = galleryThumbSourcesAt(photo, quality)
+  // 换档时整个 <picture> 以新 key 重挂：只改 <source> 的 srcset，有的浏览器不会重新挑图。
   return (
-    <picture className="block h-full w-full">
-      {sources ? <source type="image/avif" srcSet={sources.avif} sizes={sizes} /> : null}
-      {sources ? <source type="image/webp" srcSet={sources.webp} sizes={sizes} /> : null}
+    <picture key={quality} className="block h-full w-full">
+      {sources.avif ? <source type="image/avif" srcSet={sources.avif} sizes={sizes} /> : null}
+      {sources.webp ? <source type="image/webp" srcSet={sources.webp} sizes={sizes} /> : null}
       <img
-        src={photo.thumb}
+        src={sources.fallback}
         alt={photoAlt(photo)}
         loading={priority ? 'eager' : 'lazy'}
         fetchPriority={priority ? 'high' : undefined}

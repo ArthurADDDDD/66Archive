@@ -93,6 +93,33 @@ export function galleryThumbSources(thumb: string) {
 }
 
 /**
+ * 图墙缩略图的画质档位（画廊页的「画质」开关）。
+ *
+ * - `low`：默认，与 `galleryThumbSources` 相同——360/720 两档交给浏览器按显示宽度挑，省流量；
+ * - `medium`：一律取 720 档（avif/webp），不管格子多小；
+ * - `high`：取灯箱用的原尺寸 `.full.webp`（没有派生文件的图退回原图）。
+ *
+ * 三档都是已经生成好的文件，不另出图。
+ */
+export type GalleryQuality = 'low' | 'medium' | 'high'
+
+export function galleryThumbSourcesAt(
+  photo: Pick<GalleryPhoto, 'thumb' | 'src'>,
+  quality: GalleryQuality,
+): { avif: string | null; webp: string | null; fallback: string } {
+  if (quality === 'high') {
+    return { avif: null, webp: galleryFullSource(photo.src), fallback: photo.src }
+  }
+  const stem = photo.thumb.replace(/\.thumb\.jpg$/i, '')
+  if (stem === photo.thumb) return { avif: null, webp: null, fallback: photo.thumb }
+  if (quality === 'medium') {
+    return { avif: `${stem}.thumb-720.avif`, webp: `${stem}.thumb-720.webp`, fallback: photo.thumb }
+  }
+  const low = galleryThumbSources(photo.thumb)!
+  return { avif: low.avif, webp: low.webp, fallback: photo.thumb }
+}
+
+/**
  * 灯箱大图的现代格式变体。
  *
  * 和缩略图那两档不是一回事：这里**不缩尺寸**，只换编码。实测 122 张原图宽度中位数
