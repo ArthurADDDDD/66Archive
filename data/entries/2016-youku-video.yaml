@@ -1,0 +1,119 @@
+# 2016 年优酷官方号投稿补录（2026-09-27 新建）。
+#
+# 来源是 task-042 列全的她本人优酷自频道目录（data/catalogs/youku-official-channel.csv）里
+# 「新历史视频·档案未收」的 2016 年部分：录制的解说视频与 E3 短片，不是直播录像。
+# 日期口径同 2015-youku-video.yaml：video 条目用上传日期。
+
+- id: 2016-03-21-video-01
+  type: video
+  date: "2016-03-21"
+  time: "13:06"
+  title: "【女流变身剑客】台湾独立游戏《说剑》初体验"
+  platform: youku
+  duration_min: 11
+  confidence: high
+  cover: "https://m.ykimg.com/0541020856EF839B6A0A3F0456D922FF"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-03-21 13:06，时长 10:58。2026-09-27 实访在线、标题一致。日期按上传日。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTUwNjk5NDc3Mg==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
+
+- id: 2016-06-17-video-01
+  type: video
+  date: "2016-06-17"
+  time: "03:39"
+  title: "女流E3微软之行：win10全新体验 跨平台联机服务"
+  platform: youku
+  duration_min: 3
+  confidence: high
+  cover: "https://m.ykimg.com/05410408576302DE6A0A4204DBB9375D"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-06-17 03:39，时长 2:51。2026-09-27 实访在线、标题一致。日期按上传日。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTYxMDg3ODEyMA==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
+
+- id: 2016-06-17-video-02
+  type: video
+  date: "2016-06-17"
+  time: "03:54"
+  title: "女流E3微软之行：快评xbox展前发布会"
+  platform: youku
+  duration_min: 3
+  confidence: high
+  cover: "https://m.ykimg.com/05410101576305126A0A49044683C823"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-06-17 03:54，时长 2:32。2026-09-27 实访在线、标题一致。日期按上传日。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTYxMDg4MjYxNg==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
+
+- id: 2016-07-04-video-01
+  type: video
+  date: "2016-07-04"
+  time: "02:39"
+  title: "【女流】Inside全收集通关解说★全成就解锁隐藏结局★Part1"
+  platform: youku
+  duration_min: 42
+  confidence: high
+  cover: "https://m.ykimg.com/054104085779925E6A0A4C046AD1BC38"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-07-04 02:39，时长 42:25。2026-09-27 实访在线、标题一致。日期按上传日。优酷简介称「这次流程将着重带大家浏览游戏的各个细节，并完成全收集」，是录制的解说视频，不是直播录像（task-042 §8.4）。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTYzMDUzNDM2MA==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
+
+- id: 2016-07-05-video-01
+  type: video
+  date: "2016-07-05"
+  time: "11:10"
+  title: "【女流】Inside全收集通关解说★全成就解锁隐藏结局★Part2"
+  platform: youku
+  duration_min: 53
+  confidence: high
+  cover: "https://m.ykimg.com/05410101577E6BAA641DA4120B7909DA"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-07-05 11:10，时长 52:53。2026-09-27 实访在线、标题一致。日期按上传日。同上 Part 1 的说明：录制的全收集解说，不是直播录像。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTYzMjA0NjkyMA==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
+
+- id: 2016-07-07-video-01
+  type: video
+  date: "2016-07-07"
+  time: "23:20"
+  title: "【女流】Inside全收集通关解说★全成就解锁隐藏结局★Part 3"
+  platform: youku
+  duration_min: 53
+  confidence: high
+  cover: "https://m.ykimg.com/05410101577EF96C641DA4120B437858"
+  games: []
+  tags: []
+  note: "她本人优酷自频道（i.youku.com/i/UMjQyOTM1MzA4）全量目录里的正式投稿（task-042 列为「新历史视频·档案未收」）：上传 2016-07-07 23:20，时长 52:32。2026-09-27 实访在线、标题一致。日期按上传日。优酷简介称「这次流程将着重带大家浏览游戏的各个细节，并完成全收集」，是录制的解说视频，不是直播录像（task-042 §8.4）。"
+  sources:
+    - url: "https://v.youku.com/v_show/id_XMTYzNTM4MjkwOA==.html"
+      kind: original
+      status: alive
+      account: youku-official
+  contributed_by: data-agent
