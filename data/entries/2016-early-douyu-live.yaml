@@ -81,6 +81,7 @@
     platform: douyu
     confidence: high
     duration_min: 71
+    cover: "https://m.ykimg.com/05410408568FB9F86A0A440B04EB6EEE"
     games: [whos-your-daddy, xingzhi-qiyue]
     sources:
       - url: https://v.youku.com/v_show/id_XMTQzOTQwMTQ4NA==.html
@@ -490,6 +491,7 @@
     platform: douyu
     confidence: high
     duration_min: 139
+    cover: "https://m.ykimg.com/0541040856ED4A296A0A4A045BD469BA"
     games: [nixizhixingtu-shanyao]
     sources:
       - url: https://v.youku.com/v_show/id_XMTUwNTAwNjI1Ng==.html
@@ -1656,6 +1658,7 @@
     title: "上海户外"
     platform: douyu
     confidence: high
+    cover: "https://i2.hdslb.com/bfs/archive/ac4907f5be1e982aac40e8b15b90c110686d8892.jpg"
     games: []
     sources:
       - url: https://www.bilibili.com/video/BV1cs411C7QV
