@@ -4,6 +4,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { yearColor } from '@/lib/ui'
+import type { GalleryQuality } from '@/lib/gallery-photos'
 import { SiteText } from './SiteText'
 import { TimelineRail, type TimelineRailMark } from './TimelineRail'
 
@@ -15,7 +16,8 @@ import { TimelineRail, type TimelineRailMark } from './TimelineRail'
  * - 画面来自预先拼好的年份切片（scripts/live-wall-build.py），不是几千个 `<img>`。每一格用
  *   `background-position` 从切片里取自己那一块，所以格子可以按「小 / 中 / 大」重排列数。
  * - 切片分两档：轻量（128×72 一格）与清晰（240×135，仅 AVIF）。按格子**实际显示宽度**挑
- *   够用的最轻一档——手机默认只拿轻量档；不认 AVIF 的浏览器一律用轻量 WebP。
+ *   够用的最轻一档——手机默认只拿轻量档；不认 AVIF 的浏览器一律用轻量 WebP。读者可以用画廊
+ *   共用的「画质」开关改成一律轻量（低）或一律清晰（高），见 `tierFor`。
  * - 一年的格子接近视口（600px 内）才挂背景图；没滚到的年份一个字节都不取。
  * - 清单只在切到这个标签时取，地址带内容哈希，可以长缓存。
  * - 悬停提示自己管自己的状态，指针移动不会让几千个格子重渲染；每年的网格是 memo 的，
@@ -62,11 +64,14 @@ function columnsFor(size: TileSize, width: number) {
 }
 
 /**
- * 挑够用的最轻一档：格子显示宽度 × 像素比（封顶 1.5，再高肉眼也看不出这点差别）
- * 不超过 150px 就用轻量档。
+ * 挑切片档位。画质「中」是原来的自动挑法：够用的最轻一档——格子显示宽度 × 像素比
+ * （封顶 1.5，再高肉眼也看不出这点差别）不超过 150px 就用轻量档。「低」一律轻量（128×72），
+ * 「高」一律清晰（240×135，现有切片里最清楚的一档）。不认 AVIF 的浏览器只有轻量 WebP。
  */
-function tierFor(cellWidth: number, avif: boolean): Tier {
+function tierFor(cellWidth: number, avif: boolean, quality: GalleryQuality): Tier {
   if (!avif) return 'liteWebp'
+  if (quality === 'low') return 'lite'
+  if (quality === 'high') return 'hd'
   const need = cellWidth * Math.min(window.devicePixelRatio || 1, 1.5)
   return need <= 150 ? 'lite' : 'hd'
 }
@@ -104,12 +109,18 @@ export function GalleryLiveWall({
   hiddenIds,
   manifestUrl,
   renderLike,
+  quality = 'medium',
+  qualityControl,
 }: {
   hiddenIds: string[]
   /** 带内容哈希的清单地址（构建期算好），清单变了地址才变。 */
   manifestUrl: string
   /** 选中面板里的点赞按钮。 */
   renderLike?: (likeId: string) => ReactNode
+  /** 画廊共用的画质设置；合集的「中」即原来按格子宽度自动挑档。 */
+  quality?: GalleryQuality
+  /** 画质开关本身：桌面上画廊工具栏在合集页不显示，开关放进合集自己的控件行。 */
+  qualityControl?: ReactNode
 }) {
   const [manifest, setManifest] = useState<Manifest | null>(null)
   const [failed, setFailed] = useState(false)
@@ -319,7 +330,7 @@ export function GalleryLiveWall({
   }, [picked, full, order])
 
   const columns = columnsFor(size, width || 1024)
-  const tier: Tier | null = avif === null || width === 0 ? null : tierFor(width / columns, avif)
+  const tier: Tier | null = avif === null || width === 0 ? null : tierFor(width / columns, avif, quality)
 
   /** 视口里最靠上的那一年；进出全屏时据此接着看同一年，而不是跳回开头。 */
   const currentYear = () => {
@@ -398,6 +409,7 @@ export function GalleryLiveWall({
               ))}
             </nav>
             <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+              {qualityControl && <div className="hidden sm:flex">{qualityControl}</div>}
               <div className="flex items-center gap-0.5 rounded-full border border-line/80 bg-surface/50 p-0.5" role="group" aria-label="格子大小">
                 {(Object.keys(SIZE_LABEL) as TileSize[]).map((value) => (
                   <button

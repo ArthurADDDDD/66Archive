@@ -36,13 +36,40 @@ const NO_PHOTOS: GalleryPhoto[] = []
 
 /**
  * 图墙画质。默认低（省流量、翻得快）；读者可以切到中 / 高，选择记在本机浏览器里。
- * 用 context 下发，不一路 props 往下传——缩略图埋在 PhotoWall → PhotoCell 好几层里。
+ * 纪念版、全量版、全直播合集共用这一个设置。照片墙用 context 下发（缩略图埋在
+ * PhotoWall → PhotoCell 好几层里），合集直接收 prop。
  */
-const QUALITY_OPTIONS: { value: GalleryQuality; label: string; hint: string }[] = [
-  { value: 'low', label: '低', hint: '低画质' },
-  { value: 'medium', label: '中', hint: '中画质' },
-  { value: 'high', label: '高', hint: '高画质（原图尺寸）' },
+const QUALITY_OPTIONS: { value: GalleryQuality; label: string; hint: string; title: string }[] = [
+  { value: 'low', label: '低', hint: '低画质', title: '低画质：小图，省流量，默认' },
+  { value: 'medium', label: '中', hint: '中画质', title: '中画质：统一用较大的缩略图' },
+  { value: 'high', label: '高', hint: '高画质', title: '高画质：照片用原图尺寸，合集用最清晰的一档；流量最大' },
 ]
+
+/** 「画质：低 中 高」——名字写在按钮前面，光有三个字读者不知道在调什么。 */
+function QualityToggle({ value, onChange }: { value: GalleryQuality; onChange: (next: GalleryQuality) => void }) {
+  return (
+    <div className="flex shrink-0 items-center gap-1.5">
+      <span className="text-meta text-muted">画质</span>
+      <div className="flex items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-0.5" role="group" aria-label="画质">
+        {QUALITY_OPTIONS.map((o) => (
+          <button
+            key={o.value}
+            type="button"
+            title={o.title}
+            aria-label={o.title}
+            onClick={() => onChange(o.value)}
+            aria-pressed={value === o.value}
+            className={`ui-press rounded-full px-2.5 py-1.5 text-meta transition-colors ${
+              value === o.value ? 'bg-raised text-ink' : 'text-faint hover:text-muted'
+            }`}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
 const QUALITY_STORAGE_KEY = 'gallery-quality'
 const GalleryQualityContext = createContext<GalleryQuality>('low')
 
@@ -186,15 +213,7 @@ export function GalleryBoard({
     )
   }
 
-  const qualityControl =
-    collection === 'live' ? null : (
-      <SegmentedControl
-        label="画质"
-        value={quality}
-        options={QUALITY_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
-        onChange={chooseQuality}
-      />
-    )
+  const qualityControl = <QualityToggle value={quality} onChange={chooseQuality} />
   const [openId, setOpenId] = useState<string | null>(null)
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
@@ -411,13 +430,9 @@ export function GalleryBoard({
         </div>
       </div>
 
-      {/* 手机上上面那排控件整体不显示，画质开关单独给一行——小屏最在意流量，也最该能选。 */}
-      {qualityControl && (
-        <div className="mb-4 flex items-center gap-2 text-meta text-faint sm:hidden">
-          <span>画质</span>
-          {qualityControl}
-        </div>
-      )}
+      {/* 手机上上面那排控件整体不显示，画质开关单独给一行——小屏最在意流量，也最该能选。
+          三个栏目都给；桌面上全直播合集没有这排工具栏，开关放在合集自己的控件行里。 */}
+      <div className="mb-4 flex items-center sm:hidden">{qualityControl}</div>
 
       {/* 切画质后的提示：新档的图要重新下载，墙上会有一会儿新旧混着出来。 */}
       <p
@@ -435,6 +450,8 @@ export function GalleryBoard({
           hiddenIds={liveWall.hiddenIds}
           manifestUrl={liveWall.manifestUrl}
           renderLike={(likeId) => <LikeButton id={likeId} size="md" showCount />}
+          quality={quality}
+          qualityControl={qualityControl}
         />
       ) : collection === 'all' && !allPhotos ? (
         <p className="py-16 text-center text-meta text-faint">
