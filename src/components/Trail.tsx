@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 'react'
+import { createPortal } from 'react-dom'
 import { clearTrail, readTrail, recordTrail, resumeTarget, subscribeTrail, type TrailItem } from '@/lib/trail'
 import { SiteText } from './SiteText'
 
@@ -96,8 +97,8 @@ export function TrailRecorder({ id, title, date }: { id: string; title: string; 
  * 那一跳正好发生在最该安静的地方。浮层没有这个问题，而且这也正是这个功能被
  * 提出来时的样子：像 B 站换设备后右上角那句「上次看到这里」。
  *
- * 位置避开右下角的回到顶部按钮（bottom-5 right-4 / sm:bottom-8 right-8）与
- * 左下角的 BGM 控件：手机上摞在回到顶部之上，宽屏上挪到它左边。
+ * 位置与显隐见下方 `useNearTopAndAwayFromEnd` 和 className 注释：和 BGM、回到顶部
+ * 同排，只在页面顶部附近出现，读列表时绝不压在条目上。
  *
  * 只在**回来**的时候才有意义，所以：当前就停在那一条上时不显示；关掉之后
  * 这一整天不再出现（关闭意图记在一个日期戳里，换一天回来会重新出现一次）。
@@ -140,38 +141,88 @@ export function ResumeStrip({ currentId }: { currentId?: string }) {
     window.dispatchEvent(new Event(DISMISS_EVENT))
   }, [])
 
+  const nearTop = useNearTopAndAwayFromEnd()
+
   if (!mounted || dismissed || !target || target.id === currentId) return null
 
-  return (
+  // 挂到 body：页面入场动画的 transform 会把 fixed 限制在 main 里（同 BackToTop）。
+  return createPortal(
     <aside
       aria-label="接着上次看"
-      // bg-base 必须不透明：这是个 fixed 浮层，短列表滚到底时它的位置正好落在
-      // 最后一条记录上——之前 /92 + backdrop-blur 只是模糊底下的字，不是挡住，
-      // 手机上两行字会透出来叠在一起，读不清也像样式坏了。
-      className="ui-panel-in fixed bottom-20 right-4 z-40 w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-live/35 bg-base p-3 shadow-[0_18px_50px_rgba(0,0,0,0.38)] sm:bottom-8 sm:right-24"
+      aria-hidden={!nearTop}
+      inert={!nearTop}
+      // 单行胶囊，和左下 BGM、右下回到顶部坐在同一排（都是 bottom-5 / sm:bottom-8、h-11），
+      // 不再在它们上面另起一条两行高的卡片。回到顶部只在「离开第一屏且往上滚」时出现，
+      // 而这条只在第一屏附近出现，两者不会同时占着右下角。
+      //
+      // 手机左边让出 BGM 展开后的宽度（left-4 + 两个 h-11 按钮 ≈ 6.5rem）；
+      // sm 以上固定宽度贴右。bg-base 必须不透明：底下的字透上来会叠成一团。
+      className={`fixed bottom-5 left-[7rem] right-4 z-40 flex h-11 items-center gap-2 rounded-full border border-live/35 bg-base pl-4 pr-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.34)] transition-[opacity,transform] duration-300 sm:bottom-8 sm:left-auto sm:right-8 sm:w-[min(24rem,calc(100vw-14rem))] ${
+        nearTop ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0'
+      }`}
     >
-      <div className="flex items-start justify-between gap-2">
-        <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="trail-resume" /></span>
-        <button
-          type="button"
-          onClick={dismiss}
-          aria-label="今天不再提示"
-          className="ui-press -m-1 shrink-0 rounded-sm p-1 text-meta text-faint transition-colors hover:text-ink"
-        >
-          ✕
-        </button>
-      </div>
       <Link
         prefetch={false}
         href={`/e/${target.id}/`}
-        className="ui-press mt-1.5 flex items-baseline gap-2 text-control text-ink transition-colors hover:text-live"
+        tabIndex={nearTop ? undefined : -1}
+        className="ui-press flex min-w-0 flex-1 items-baseline gap-2 text-control text-ink transition-colors hover:text-live"
       >
-        {target.date && <span className="shrink-0 font-mono text-meta text-faint tnum">{target.date}</span>}
+        <span className="shrink-0 text-meta text-live"><SiteText id="trail-resume" /></span>
+        {/* 手机上一行放不下日期，标题更能让人认出是哪一场。 */}
+        {target.date && <span className="hidden shrink-0 font-mono text-meta text-faint tnum sm:inline">{target.date}</span>}
         <span className="min-w-0 flex-1 truncate">{target.title}</span>
         <span aria-hidden className="shrink-0 font-mono text-meta text-live">→</span>
       </Link>
-    </aside>
+      <button
+        type="button"
+        onClick={dismiss}
+        aria-label="今天不再提示"
+        tabIndex={nearTop ? undefined : -1}
+        className="ui-press flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-meta text-faint transition-colors hover:text-ink"
+      >
+        ✕
+      </button>
+    </aside>,
+    document.body,
   )
+}
+
+/**
+ * 「接着上次」只在**刚回来**的那一刻有用：停在页面顶部附近时出现，
+ * 一旦往下读（超过半屏）或者到了页尾就收起来，回到顶部再出现。
+ *
+ * 之前它常驻右下角，录播室短月份滚到底时正好盖住最后一条——也就是最新的那一场，
+ * 看起来就像「新条目没出来」。页尾判断单独留着：页面短到滚不过半屏时，
+ * 它也不能压在最后几行上。
+ */
+function useNearTopAndAwayFromEnd(): boolean {
+  const [visible, setVisible] = useState(false)
+  useEffect(() => {
+    let frame = 0
+    const update = () => {
+      frame = 0
+      const y = window.scrollY
+      const vh = window.innerHeight
+      const toEnd = document.documentElement.scrollHeight - (y + vh)
+      setVisible(y < vh * 0.5 && toEnd > 160)
+    }
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update)
+    }
+    schedule()
+    window.addEventListener('scroll', schedule, { passive: true })
+    window.addEventListener('resize', schedule, { passive: true })
+    // 切年份 / 月份会改页面高度但不一定滚动，页尾判断要跟着内容变。
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(schedule)
+    observer?.observe(document.body)
+    return () => {
+      if (frame) cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', schedule)
+      window.removeEventListener('resize', schedule)
+      observer?.disconnect()
+    }
+  }, [])
+  return visible
 }
 
 /** 列表 / 网格里的「看过」标记。极淡，一眼扫过去能看出哪些翻过了，但不抢封面。 */
