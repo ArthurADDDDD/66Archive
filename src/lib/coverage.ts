@@ -10,6 +10,13 @@ import type { TimelineEntry } from './data'
  * 全部构建期派生，页面不做任何客户端计算。
  */
 
+export type ConfirmedMissing = {
+  id: string
+  date: string
+  title: string
+  games: string[]
+}
+
 export type CoverageCell = {
   year: number
   month: number
@@ -44,6 +51,8 @@ export type Coverage = {
   noCover: number
   /** 至少命中一项缺口的条目数（去重） */
   todoEntries: number
+  /** 已确认开播、查过之后确实没有公开录像的场次（`no_public_replay` 且没有来源），按日期从新到旧 */
+  confirmedMissing: ConfirmedMissing[]
   yearRows: CoverageYear[]
 }
 
@@ -92,7 +101,11 @@ export function buildCoverage(timeline: TimelineEntry[]): Coverage {
   let noCover = 0
   const todoByYear = new Map<number, number>()
   let todoEntries = 0
+  const confirmedMissing: ConfirmedMissing[] = []
   for (const e of timeline) {
+    if (e.noPublicReplay && e.sourceCount === 0) {
+      confirmedMissing.push({ id: e.id, date: e.date, title: e.title, games: e.games.map((g) => g.name) })
+    }
     const year = Number(e.date.slice(0, 4))
     const lacksDuration = !e.duration_min
     const lacksSource = e.sourceCount === 0
@@ -138,6 +151,7 @@ export function buildCoverage(timeline: TimelineEntry[]): Coverage {
     noSource,
     noCover,
     todoEntries,
+    confirmedMissing: confirmedMissing.sort((a, b) => b.date.localeCompare(a.date)),
     yearRows,
   }
 }

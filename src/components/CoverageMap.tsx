@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import type { Coverage } from '@/lib/coverage'
+import type { ConfirmedMissing, Coverage } from '@/lib/coverage'
 import { GAP_NOTES, noteForMonth, type GapNote } from '@/lib/gap-notes'
 import { actColorForDate } from '@/lib/narrative'
 import { useSiteTexts } from './LiveContentProvider'
@@ -49,6 +49,7 @@ export function CoverageGaps({
     deadOnly,
     noSource,
     yearRows,
+    confirmedMissing,
   } = coverage
 
   const [reading, setReading] = useState<Reading | null>(null)
@@ -73,7 +74,7 @@ export function CoverageGaps({
         「有记录的月份 79%」是覆盖率，和已经撤掉的「时长覆盖率」是同一类校对口径。
         留下的两格正是这一节要说的事：还缺哪些、其中哪些已经知道为什么缺。
       */}
-      <div className="relative grid gap-px bg-line/60 sm:grid-cols-2">
+      <div className={`relative grid gap-px bg-line/60 ${confirmedMissing.length > 0 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
         <Tile label={t('stats-coverage-blank-label')} value={blankMonths.toLocaleString()} unit={t('stats-coverage-blank-unit')} accent="#5BC8E8" />
         <Tile
           label={t('stats-coverage-explained-label')}
@@ -81,6 +82,14 @@ export function CoverageGaps({
           unit={t('stats-coverage-explained-unit', { pending: Math.max(0, blankMonths - explainedBlanks) })}
           accent="#E0A244"
         />
+        {confirmedMissing.length > 0 && (
+          <Tile
+            label={t('stats-coverage-missing-label')}
+            value={confirmedMissing.length.toLocaleString()}
+            unit={t('stats-coverage-missing-unit')}
+            accent="#E85D75"
+          />
+        )}
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
@@ -90,6 +99,9 @@ export function CoverageGaps({
           {expanded ? '收起 ↑' : '展开看每个月 ↓'}
         </button>
       </div>
+
+      {/* 明确找不到录像的场次：补档的人要的就是「具体哪一场」，所以收起时也直接列出 */}
+      {confirmedMissing.length > 0 && <MissingList items={confirmedMissing} />}
 
       {expanded && (
       <div className="border-t border-line/70 p-[clamp(0.875rem,1.4vw,1.5rem)]">
@@ -280,6 +292,53 @@ export function CoverageGaps({
       </div>
       )}
     </div>
+  )
+}
+
+const MISSING_VISIBLE = 6
+
+/** 已确认开播、查过确实没有公开录像的场次。前几场直接露出，其余折进 details。 */
+function MissingList({ items }: { items: ConfirmedMissing[] }) {
+  const t = useSiteTexts()
+  const head = items.slice(0, MISSING_VISIBLE)
+  const rest = items.slice(MISSING_VISIBLE)
+  return (
+    <div className="border-t border-line/70 p-[clamp(0.875rem,1.4vw,1.5rem)]">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <p className="text-meta uppercase tracking-[0.16em] text-faint">{t('stats-coverage-missing-list-title')}</p>
+        <p className="text-meta text-faint">{t('stats-coverage-missing-list-hint')}</p>
+      </div>
+      <ul className="mt-3 divide-y divide-line/50 border-y border-line/50">
+        {head.map((item) => <MissingRow key={item.id} item={item} />)}
+      </ul>
+      {rest.length > 0 && (
+        <details className="group mt-1">
+          <summary className="ui-press inline-flex cursor-pointer list-none items-center gap-1 py-2 text-meta text-faint hover:text-muted [&::-webkit-details-marker]:hidden">
+            {t('stats-coverage-missing-more', { count: rest.length })}
+            <span aria-hidden className="font-mono transition-transform group-open:rotate-90">›</span>
+          </summary>
+          <ul className="divide-y divide-line/50 border-y border-line/50">
+            {rest.map((item) => <MissingRow key={item.id} item={item} />)}
+          </ul>
+        </details>
+      )}
+    </div>
+  )
+}
+
+function MissingRow({ item }: { item: ConfirmedMissing }) {
+  return (
+    <li>
+      <Link
+        prefetch={false}
+        href={`/e/${item.id}/`}
+        className="ui-press flex flex-wrap items-baseline gap-x-3 gap-y-0.5 py-2 transition-colors hover:bg-surface/30"
+      >
+        <span className="shrink-0 font-mono text-meta text-faint tnum">{item.date}</span>
+        <span className="min-w-0 flex-1 truncate text-control text-muted hover:text-ink">{item.title}</span>
+        {item.games.length > 0 && <span className="hidden shrink-0 text-meta text-faint sm:inline">{item.games.slice(0, 2).join(' · ')}</span>}
+      </Link>
+    </li>
   )
 }
 

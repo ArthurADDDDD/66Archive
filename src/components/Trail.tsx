@@ -156,8 +156,8 @@ export function ResumeStrip({ currentId }: { currentId?: string }) {
       // 而这条只在第一屏附近出现，两者不会同时占着右下角。
       //
       // 手机左边让出 BGM 展开后的宽度（left-4 + 两个 h-11 按钮 ≈ 6.5rem）；
-      // sm 以上固定宽度贴右。bg-base 必须不透明：底下的字透上来会叠成一团。
-      className={`fixed bottom-5 left-[7rem] right-4 z-40 flex h-11 items-center gap-2 rounded-full border border-live/35 bg-base pl-4 pr-1.5 shadow-[0_12px_36px_rgba(0,0,0,0.34)] transition-[opacity,transform] duration-300 sm:bottom-8 sm:left-auto sm:right-8 sm:w-[min(24rem,calc(100vw-14rem))] ${
+      // sm 以上固定宽度贴右。底色用和 BGM 同款的半透明 surface + 背景模糊：不加投影（首屏渐变背景上，深色投影会在胶囊四周切出一圈发暗的色块）；它只出现在页面顶部附近，底下不会有需要盖住的正文。
+      className={`fixed bottom-5 left-[7rem] right-4 z-40 flex h-11 items-center gap-2 rounded-full border border-live/30 bg-surface/75 pl-4 pr-1.5 backdrop-blur-md transition-[opacity,transform] duration-300 sm:bottom-8 sm:left-auto sm:right-8 sm:w-[min(24rem,calc(100vw-14rem))] ${
         nearTop ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0'
       }`}
     >
