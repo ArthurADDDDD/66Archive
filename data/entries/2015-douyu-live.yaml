@@ -66,9 +66,10 @@
     title: "I Wanna（版本未定）"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：吧友「主播特写」系列截图帖第二集《66斗鱼直播 艾瑞克特写》2015-01-26 20:26 发（https://tieba.baidu.com/p/3550944499），8 张直播画面截图里她穿浅蓝毛衣配白衬衫领，与 01-23（深蓝针织）、01-27（青绿 V 领）两场的截图都不同，是当天这一场；该系列每集都在当晚发。内容：01-27 那场《超级马里奥》录像（A站 ac1733926）片尾她说「Iwanna的话也可以啦，不过我不知道昨天的那个存储点还有没有啊……而且昨天玩的是哪个版本也」——前一天（01-26）玩的是 I Wanna，但她自己也说不清是哪一版，故 games 留空。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。"
+    note: "直播日：吧友「主播特写」系列截图帖第二集《66斗鱼直播 艾瑞克特写》2015-01-26 20:26 发（https://tieba.baidu.com/p/3550944499），8 张直播画面截图里她穿浅蓝毛衣配白衬衫领，与 01-23（深蓝针织）、01-27（青绿 V 领）两场的截图都不同，是当天这一场；该系列每集都在当晚发。内容：01-27 那场《超级马里奥》录像（A站 ac1733926）片尾她说「Iwanna的话也可以啦，不过我不知道昨天的那个存储点还有没有啊……而且昨天玩的是哪个版本也」——前一天（01-26）玩的是 I Wanna，但她自己也说不清是哪一版，故 games 留空。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-01-27-live-01
     type: live
     date: '2015-01-27'
@@ -255,9 +256,10 @@
     title: "水友赛+2点半Braid时空幻境"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [braid, dota-2]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-02-15、02-25 三次快照的标题都是「水友赛+2点半Braid时空幻境」，缩略图时间戳 2015-02-11 17:47，之后到 02-25 没有新的开播，这是春节停播前的最后一场。内容：前一天的录像（2015-02-10-live-01）里她预告「明天……新年特别节目，跟大家一起打一局 DOTA2」，与标题「水友赛」相合；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 02-11 记「Braid 时空幻境」，与标题一致。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-02-15、02-25 三次快照的标题都是「水友赛+2点半Braid时空幻境」，缩略图时间戳 2015-02-11 17:47，之后到 02-25 没有新的开播，这是春节停播前的最后一场。内容：前一天的录像（2015-02-10-live-01）里她预告「明天……新年特别节目，跟大家一起打一局 DOTA2」，与标题「水友赛」相合；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 02-11 记「Braid 时空幻境」，与标题一致。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-02-28-live-01
     type: live
     date: '2015-02-28'
@@ -366,27 +368,30 @@
     title: "我是谁？"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [super-mario-3d-world]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-03-20 05:19 的快照，缩略图时间戳 2015-03-19 19:18（show_id 2240559，与 03-18、03-20 都不同），标题仍是 03-18 起挂着的「我是谁？」。内容只有转述：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-19 记「马里奥3D世界、生化危机启示录2」；吧友 03-22 说「玛叔那个是wii上的，晚上是pc」，与这几天白天马里奥、晚上 PC 游戏相合。《生化危机：启示录2》只有节目单一处，未登记。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-03-20 05:19 的快照，缩略图时间戳 2015-03-19 19:18（show_id 2240559，与 03-18、03-20 都不同），标题仍是 03-18 起挂着的「我是谁？」。内容只有转述：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-19 记「马里奥3D世界、生化危机启示录2」；吧友 03-22 说「玛叔那个是wii上的，晚上是pc」，与这几天白天马里奥、晚上 PC 游戏相合。《生化危机：启示录2》只有节目单一处，未登记。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-03-20-live-01
     type: live
     date: '2015-03-20'
     title: "我是谁？"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [super-mario-3d-world]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-03-21 13:25 的快照，缩略图时间戳 2015-03-20 17:15（show_id 2253266），标题「我是谁？」。内容只有转述：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-20 记「马里奥3D世界」；吧友 03-22 说「玛叔那个是wii上的，晚上是pc」。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-03-21 13:25 的快照，缩略图时间戳 2015-03-20 17:15（show_id 2253266），标题「我是谁？」。内容只有转述：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-20 记「马里奥3D世界」；吧友 03-22 说「玛叔那个是wii上的，晚上是pc」。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-03-23-live-01
     type: live
     date: '2015-03-23'
     title: "我是谁？"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [ori-and-the-blind-forest]
     contributed_by: data-agent
-    note: "直播日与标题：2015-03-23 17:38 吧友发帖《女流感上直播了。赶紧来看～》（https://tieba.baidu.com/p/3654480373），附的直播间分享卡片即当时的直播间——标题「我是谁？」、分区主机游戏、观众 7037，缩略图是正在进行的游戏画面加右下角摄像头。游戏由画面辨认：底部一排蓝色能量格、绿色生命格和中央光环是《奥日与黑暗森林》（2015-03-11 发售）的界面。直播间标题「我是谁？」从 03-18 起就挂着（见 2015-03-18-live-01）；2026-09-24 task-049 据吧务 ardea1347 2017 年按节目表给出的奥日日期「2015.03.18、21」给 03-18 补登了奥日。那份答复没有列 03-23，本条是截图直接证实的，不受影响；03-19、03-20 也在播（直播间快照），标题相同，玩什么不明。当天她还在超级小桀的直播间客串（A站 ac1805046 画面时钟 2015/3/23 14:27）。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。"
+    note: "直播日与标题：2015-03-23 17:38 吧友发帖《女流感上直播了。赶紧来看～》（https://tieba.baidu.com/p/3654480373），附的直播间分享卡片即当时的直播间——标题「我是谁？」、分区主机游戏、观众 7037，缩略图是正在进行的游戏画面加右下角摄像头。游戏由画面辨认：底部一排蓝色能量格、绿色生命格和中央光环是《奥日与黑暗森林》（2015-03-11 发售）的界面。直播间标题「我是谁？」从 03-18 起就挂着（见 2015-03-18-live-01）；2026-09-24 task-049 据吧务 ardea1347 2017 年按节目表给出的奥日日期「2015.03.18、21」给 03-18 补登了奥日。那份答复没有列 03-23，本条是截图直接证实的，不受影响；03-19、03-20 也在播（直播间快照），标题相同，玩什么不明。当天她还在超级小桀的直播间客串（A站 ac1805046 画面时钟 2015/3/23 14:27）。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-03-25-live-01
     type: live
     date: '2015-03-25'
@@ -420,9 +425,10 @@
     title: "GTA5"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [grand-theft-auto-v]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-03-31 14:56 的快照缩略图时间戳 2015-03-30 19:11，即 03-30 傍晚开过播（快照当下已是 03-31 那场，标题「女流GTA5」属于 03-31）。本场标题未存，按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-30 记「GTA、血源诅咒」；03-27、03-31 两场的直播间标题都是 GTA5，所以登记 GTA5；《血源诅咒》只有节目单一处，未登记为游戏。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-03-31 14:56 的快照缩略图时间戳 2015-03-30 19:11，即 03-30 傍晚开过播（快照当下已是 03-31 那场，标题「女流GTA5」属于 03-31）。本场标题未存，按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 03-30 记「GTA、血源诅咒」；03-27、03-31 两场的直播间标题都是 GTA5，所以登记 GTA5；《血源诅咒》只有节目单一处，未登记为游戏。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-03-31-live-01
     type: live
     date: '2015-03-31'
@@ -449,27 +455,30 @@
     title: "霸道间谍爱上。。我"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [qianfu-zhi-chitu]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150410102247/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-04-10 18:22（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-04-10 18:08，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。游戏据吧友回忆定：2016-02-08 有吧友答「去年直播赤途」是「四月十号和十三号」（https://tieba.baidu.com/p/4341245430 10 楼楼中楼），与标题里的「间谍」相合；2017 年另有吧友称 2015-04-15 是第一次播《潜伏之赤途》大结局（https://tieba.baidu.com/p/5417340368）。内容属转述，日期与标题属一手。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050 补注：上面引的两条吧友说法出自同一人（脚踢惊破天），他自己说是按当年置顶的录像网盘帖记的（「置顶贴有的下」「置顶的貌似被和谐了」），与节目单同出于录像文件日期，不是亲历回忆。本条游戏另有直播间标题里的「间谍」支持，不受影响。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150410102247/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-04-10 18:22（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-04-10 18:08，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。游戏据吧友回忆定：2016-02-08 有吧友答「去年直播赤途」是「四月十号和十三号」（https://tieba.baidu.com/p/4341245430 10 楼楼中楼），与标题里的「间谍」相合；2017 年另有吧友称 2015-04-15 是第一次播《潜伏之赤途》大结局（https://tieba.baidu.com/p/5417340368）。内容属转述，日期与标题属一手。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050 补注：上面引的两条吧友说法出自同一人（脚踢惊破天），他自己说是按当年置顶的录像网盘帖记的（「置顶贴有的下」「置顶的貌似被和谐了」），与节目单同出于录像文件日期，不是亲历回忆。本条游戏另有直播间标题里的「间谍」支持，不受影响。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-04-20-live-01
     type: live
     date: '2015-04-20'
     title: "小游戏大合集"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日与内容：贴吧 2015-04-20 22:22《我就是来问问大家这个是什么游戏》：「在66直播间喊了一下午没人告诉」，次日 09:43 有人答「fire point！6神群里面有安装包的！」（https://tieba.baidu.com/p/3713531707）。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 04-20 记「小游戏大合集：mashing through the motions、kill the Plumber、nekra psaria 3、Doris and the Dragon ep1、rhythm doctor、firepoint」，与贴吧说的 fire point 相合。这些小游戏都未登记，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日与内容：贴吧 2015-04-20 22:22《我就是来问问大家这个是什么游戏》：「在66直播间喊了一下午没人告诉」，次日 09:43 有人答「fire point！6神群里面有安装包的！」（https://tieba.baidu.com/p/3713531707）。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 04-20 记「小游戏大合集：mashing through the motions、kill the Plumber、nekra psaria 3、Doris and the Dragon ep1、rhythm doctor、firepoint」，与贴吧说的 fire point 相合。这些小游戏都未登记，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-04-23-live-01
     type: live
     date: '2015-04-23'
     title: "传送门1"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [portal]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-04-24 04:12 的快照，标题「传送门1」、缩略图时间戳 2015-04-23 19:12。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 04-23 记「传送门1、传颂之物」，与标题一致；《传颂之物》只有节目单一处，未登记。次日（2015-04-24-live-01）的标题是「传送门2女流被喷记」。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-04-24 04:12 的快照，标题「传送门1」、缩略图时间戳 2015-04-23 19:12。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 04-23 记「传送门1、传颂之物」，与标题一致；《传颂之物》只有节目单一处，未登记。次日（2015-04-24-live-01）的标题是「传送门2女流被喷记」。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-04-24-live-01
     type: live
     date: '2015-04-24'
@@ -486,9 +495,10 @@
     title: "FEZ是一个神奇的游戏"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [fez]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150428064854/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-04-28 14:48（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-04-28 14:41，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 17:51 贴吧有人答「正在直播...」（https://tieba.baidu.com/p/3727220108）。次日 04-29 的直播间标题仍是这句，档案另有维护者核实的 2015-04-29-live-01（FEZ）；FEZ 至少播了 04-28、04-29 两天。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150428064854/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-04-28 14:48（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-04-28 14:41，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 17:51 贴吧有人答「正在直播...」（https://tieba.baidu.com/p/3727220108）。次日 04-29 的直播间标题仍是这句，档案另有维护者核实的 2015-04-29-live-01（FEZ）；FEZ 至少播了 04-28、04-29 两天。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-04-29-live-01
     cover: "https://i2.hdslb.com/bfs/archive/898ffb47da87ae271a4bfbfe92a496e284d50997.jpg"
     type: live
@@ -511,27 +521,30 @@
     title: "雷曼传奇"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [rayman-legends]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧同期帖：2015-05-14 19:16（CST）发帖《66刚刚播雷曼传奇水下那关的音乐有谁有吗》（https://tieba.baidu.com/p/3763392456）。A站录像 ac1894602（雷曼，2015-05-14 13:31 已发布）记录的是更早一场（05-10～05-13），不是本场；05-15 的直播间标题仍是「雷曼传奇PS4」，片尾也说「明天继续」，雷曼是连续几天的系列。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日与内容取自贴吧同期帖：2015-05-14 19:16（CST）发帖《66刚刚播雷曼传奇水下那关的音乐有谁有吗》（https://tieba.baidu.com/p/3763392456）。A站录像 ac1894602（雷曼，2015-05-14 13:31 已发布）记录的是更早一场（05-10～05-13），不是本场；05-15 的直播间标题仍是「雷曼传奇PS4」，片尾也说「明天继续」，雷曼是连续几天的系列。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-05-21-live-01
     type: live
     date: '2015-05-21'
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：贴吧 2015-05-22 10:58 有吧友说「昨天在斗鱼看到66」（见 data/catalogs/timeline-2015-daymap.csv）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 05-21 记「着火点 firepoint、如龙、insidemyradio」，没有其他旁证，games 留空。这是 2015-05-16～06-22 空洞里第一个建条目的日子。录像未找到。2026-09-24 task-050。"
+    note: "直播日：贴吧 2015-05-22 10:58 有吧友说「昨天在斗鱼看到66」（见 data/catalogs/timeline-2015-daymap.csv）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 05-21 记「着火点 firepoint、如龙、insidemyradio」，没有其他旁证，games 留空。这是 2015-05-16～06-22 空洞里第一个建条目的日子。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-06-04-live-01
     type: live
     date: '2015-06-04'
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：贴吧 2015-06-05 09:58《昨天看66直播，大约七点她说她那里已经11点了》（https://tieba.baidu.com/p/3807322250）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 06-04 记「三位一体」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：贴吧 2015-06-05 09:58《昨天看66直播，大约七点她说她那里已经11点了》（https://tieba.baidu.com/p/3807322250）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 06-04 记「三位一体」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-06-23-live-01
     cover: "https://i2.hdslb.com/bfs/archive/ed7a80b5c44bfcab8187ac9cd7c789d580779a1f.png"
     type: live
@@ -691,18 +704,20 @@
     title: "肚子还有点儿疼"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft, besiege]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-07-10 05:10、06:30 两次快照，缩略图时间戳 2015-07-09 19:29，标题「肚子还有点儿疼」（快照在下播后，标题可能是下播时改的）。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 07-09 记「MC、围攻」；07-06（造完飞机去找狗）、07-10（今天就是要找一只狗）两场都是这两款，所以登记。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-07-10 05:10、06:30 两次快照，缩略图时间戳 2015-07-09 19:29，标题「肚子还有点儿疼」（快照在下播后，标题可能是下播时改的）。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 07-09 记「MC、围攻」；07-06（造完飞机去找狗）、07-10（今天就是要找一只狗）两场都是这两款，所以登记。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-07-10-live-01
     type: live
     date: '2015-07-10'
     title: "今天就是要找一只狗"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150710075817/http://www.douyutv.com/directory/isgame ：抓取于 2015-07-10 15:58（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-10 15:52，标题就是本条标题。这是 task-046 新查的列表页形式（/directory/isgame、/directory/columnRoom/*、/directory/tag/* 与带参数的首页和 /directory/all），task-044 只查过不带参数的三种。与官方优酷《【武则天MC】女流斗鱼直播录像精剪01》（2015-07-14 上传，XMTI4NDc4OTIyOA==）的主段吻合：精剪 6 分钟处她说「今天我们要搞一个主要的任务，就是要找一只狗，因为我们玩MC啊，玩了已经大概一个星期了，一直都没有抓到狗」——精剪主段很可能出自本场（strongly supported），但精剪是跳剪，可能夹有别场片段，未挂为来源。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150710075817/http://www.douyutv.com/directory/isgame ：抓取于 2015-07-10 15:58（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-10 15:52，标题就是本条标题。这是 task-046 新查的列表页形式（/directory/isgame、/directory/columnRoom/*、/directory/tag/* 与带参数的首页和 /directory/all），task-044 只查过不带参数的三种。与官方优酷《【武则天MC】女流斗鱼直播录像精剪01》（2015-07-14 上传，XMTI4NDc4OTIyOA==）的主段吻合：精剪 6 分钟处她说「今天我们要搞一个主要的任务，就是要找一只狗，因为我们玩MC啊，玩了已经大概一个星期了，一直都没有抓到狗」——精剪主段很可能出自本场（strongly supported），但精剪是跳剪，可能夹有别场片段，未挂为来源。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-07-12-live-01
     type: live
     date: '2015-07-12'
@@ -733,9 +748,10 @@
     title: "交出你手上的钻石镐"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150713065613/http://www.douyutv.com/directory/all ：抓取于 2015-07-13 14:56（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-13 14:53，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是目前已知 2015 年夏季 MC 的最早一个可定日场次（优酷《武则天MC精剪01》07-14 20:36 上传，精剪可能跨多场，故不据此定精剪日期）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150713065613/http://www.douyutv.com/directory/all ：抓取于 2015-07-13 14:56（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-13 14:53，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是目前已知 2015 年夏季 MC 的最早一个可定日场次（优酷《武则天MC精剪01》07-14 20:36 上传，精剪可能跨多场，故不据此定精剪日期）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-07-16-live-01
     type: live
     date: '2015-07-16'
@@ -766,9 +782,10 @@
     title: "我活着回来了"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150717090955/http://www.douyutv.com/directory/all ：抓取于 2015-07-17 17:09（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-17 17:06，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:53 首页快照也列出该直播间（缩略图 15:45）；贴吧同日 15:48 有截图帖《今天是什么节奏...》（https://tieba.baidu.com/p/3900753504）。内容未知。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 07-17 记「MC」；07-13 有一手 MC，但当天内容只有节目单一处，games 不动。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150717090955/http://www.douyutv.com/directory/all ：抓取于 2015-07-17 17:09（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-07-17 17:06，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:53 首页快照也列出该直播间（缩略图 15:45）；贴吧同日 15:48 有截图帖《今天是什么节奏...》（https://tieba.baidu.com/p/3900753504）。内容未知。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 07-17 记「MC」；07-13 有一手 MC，但当天内容只有节目单一处，games 不动。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-07-19-live-01
     type: live
     date: '2015-07-19'
@@ -880,10 +897,11 @@
     title: "大周还认不认我这个王"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [minecraft]
     series: dazhou-mc
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150803081925/http://www.douyutv.com/ ：抓取于 2015-08-03 16:19（CST），她的直播间缩略图时间戳 2015-08-03 16:13，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是她自己的直播间标题第一次出现「大周」二字（ChinaJoy 回京后的第一场 MC）。贴吧同日 20:45：「今天直播有点乱啊，藏猫猫组织的不好」（https://tieba.baidu.com/p/3942526338），20:47「怎么感觉服务器里的人不怎么想玩了」（https://tieba.baidu.com/p/3942541266）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150803081925/http://www.douyutv.com/ ：抓取于 2015-08-03 16:19（CST），她的直播间缩略图时间戳 2015-08-03 16:13，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是她自己的直播间标题第一次出现「大周」二字（ChinaJoy 回京后的第一场 MC）。贴吧同日 20:45：「今天直播有点乱啊，藏猫猫组织的不好」（https://tieba.baidu.com/p/3942526338），20:47「怎么感觉服务器里的人不怎么想玩了」（https://tieba.baidu.com/p/3942541266）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-04-live-01
     type: live
     date: '2015-08-04'
@@ -976,9 +994,10 @@
     title: "反恐精英Online与我的世界"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [counter-strike-online, minecraft]
     contributed_by: data-agent
-    note: "直播日：2015-08-12 那场（2015-08-12-live-01）片尾她说「明天请假，后天播 CS Online 和 MC」；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-13 没有记录、08-14 记「CSOL、MC暮色森林」，与预告逐项一致。预告加节目单是两处来源，但没有当天的快照或录像，故 medium。标题按内容拟。2026-09-24 task-050。"
+    note: "直播日：2015-08-12 那场（2015-08-12-live-01）片尾她说「明天请假，后天播 CS Online 和 MC」；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-13 没有记录、08-14 记「CSOL、MC暮色森林」，与预告逐项一致。预告加节目单是两处来源，但没有当天的快照或录像，故 medium。标题按内容拟。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-16-live-01
     type: live
     date: '2015-08-16'
@@ -1009,18 +1028,20 @@
     title: "我想的美"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-08-18 11:35、11:48 两次快照，缩略图时间戳 2015-08-17 18:35，标题「我想的美」；贴吧同日 17:38《我感觉66心中无数只草泥马奔腾而过》。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-17 记「i wanna be the felios」，标题「我想」正是 I wanna 的谐音。这一款 I wanna 同人作未登记，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-08-18 11:35、11:48 两次快照，缩略图时间戳 2015-08-17 18:35，标题「我想的美」；贴吧同日 17:38《我感觉66心中无数只草泥马奔腾而过》。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-17 记「i wanna be the felios」，标题「我想」正是 I wanna 的谐音。这一款 I wanna 同人作未登记，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-19-live-01
     type: live
     date: '2015-08-19'
     title: "感觉不是很妙"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [neverending-nightmares]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150819103618/http://www.douyutv.com/ ：抓取于 2015-08-19 18:36（CST），她的直播间缩略图时间戳 2015-08-19 18:25，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。游戏据贴吧同期帖：16:15 有人截图问「就现在直播的这个」，16:22 吧务答「游戏名：无尽梦魇」（https://tieba.baidu.com/p/3984090481）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-19 记「MC、无尽梦魇」，与本条游戏一致；MC 一项只有节目单，games 不动。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150819103618/http://www.douyutv.com/ ：抓取于 2015-08-19 18:36（CST），她的直播间缩略图时间戳 2015-08-19 18:25，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。游戏据贴吧同期帖：16:15 有人截图问「就现在直播的这个」，16:22 吧务答「游戏名：无尽梦魇」（https://tieba.baidu.com/p/3984090481）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 08-19 记「MC、无尽梦魇」，与本条游戏一致；MC 一项只有节目单，games 不动。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-20-live-01
     type: live
     date: '2015-08-20'
@@ -1066,57 +1087,63 @@
     title: "土木工程专业错失人才"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [poly-bridge]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2015-08-23 08:47 的快照缩略图时间戳 2015-08-21 17:50，且 08-22～08-25 可证明没有开播（task-040 §4.1），所以这段时间直播间标题没有被新一场覆盖。内容：2015-08-25 吧友发帖《女流日常-8月21日 paly bridge 部分剪辑》（https://tieba.baidu.com/p/3999137934，楼内是一段土豆剪辑链接，土豆旧链接已不可用），标题的「土木工程」即造桥游戏 Poly Bridge。更正：task-040 曾据此标题把第三届女流杯建筑大赛推到 08-21，这一推断不成立。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日由存档的斗鱼直播间页面确定：2015-08-23 08:47 的快照缩略图时间戳 2015-08-21 17:50，且 08-22～08-25 可证明没有开播（task-040 §4.1），所以这段时间直播间标题没有被新一场覆盖。内容：2015-08-25 吧友发帖《女流日常-8月21日 paly bridge 部分剪辑》（https://tieba.baidu.com/p/3999137934，楼内是一段土豆剪辑链接，土豆旧链接已不可用），标题的「土木工程」即造桥游戏 Poly Bridge。更正：task-040 曾据此标题把第三届女流杯建筑大赛推到 08-21，这一推断不成立。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-27-live-01
     type: live
     date: '2015-08-27'
     title: "PT寂静岭"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [pt-silent-hills]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2015-08-28 13:58（CST）快照的直播间标题「PT寂静岭」、缩略图时间戳 2015-08-27 21:30，抓取早于当天下午的开播时间，标题仍是前一晚那场的。贴吧 08-28 15:15 起有《pt这游戏不适合66》（https://tieba.baidu.com/p/4005262163）讨论这场。另有吧友 08-30 求「中元节那天」的寂静岭录像（https://tieba.baidu.com/p/4008992989），2015 年中元节是 08-28，与此差一天，可能 08-28 也播过，未证实。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 08-27 记「poly bridge、御天降魔传」，08-28 才记「寂静岭PT」，与本场快照标题差一天，以快照为准。"
+    note: "直播日由存档的斗鱼直播间页面确定：2015-08-28 13:58（CST）快照的直播间标题「PT寂静岭」、缩略图时间戳 2015-08-27 21:30，抓取早于当天下午的开播时间，标题仍是前一晚那场的。贴吧 08-28 15:15 起有《pt这游戏不适合66》（https://tieba.baidu.com/p/4005262163）讨论这场。另有吧友 08-30 求「中元节那天」的寂静岭录像（https://tieba.baidu.com/p/4008992989），2015 年中元节是 08-28，与此差一天，可能 08-28 也播过，未证实。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 08-27 记「poly bridge、御天降魔传」，08-28 才记「寂静岭PT」，与本场快照标题差一天，以快照为准。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-30-live-01
     type: live
     date: '2015-08-30'
     title: "心灵砒霜"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: []
     tags:
       - 心灵砒霜
     series: xinling-pishuang
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照（2015-08-31 12:28）缩略图时间戳 2015-08-30 21:56。内容：两位吧友分别在 2015-09-08 写「看心灵砒霜8月30号才知」「看8月30心灵砒霜就知道」（https://tieba.baidu.com/p/4029553720），当天是周日，与砒霜的周日档相合；同日 16:07 另有人问「现在的bgm是什么」（https://tieba.baidu.com/p/4009692782）。快照上的直播间标题《脉动游戏男女GO》第四期是节目预告，不是本场内容。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日：存档斗鱼快照（2015-08-31 12:28）缩略图时间戳 2015-08-30 21:56。内容：两位吧友分别在 2015-09-08 写「看心灵砒霜8月30号才知」「看8月30心灵砒霜就知道」（https://tieba.baidu.com/p/4029553720），当天是周日，与砒霜的周日档相合；同日 16:07 另有人问「现在的bgm是什么」（https://tieba.baidu.com/p/4009692782）。快照上的直播间标题《脉动游戏男女GO》第四期是节目预告，不是本场内容。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-08-31-live-01
     type: live
     date: '2015-08-31'
     title: "我的世界"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧同期帖：2015-09-01 00:35 有人发帖《今天的mc直播有人录嘛》，「跪求一发 看看直播抽人抽的谁」（https://tieba.baidu.com/p/4012820107），发帖在午夜后，「今天」指刚过去的 08-31；同日 12:21 另有《【MC公共服】公共服资格小测试开始啦》（https://tieba.baidu.com/p/4011388135）。存档斗鱼快照 08-31 12:28 时尚未开播，与下午开播相合。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 08-31 记「坎巴拉计划、franbow」，与本条贴吧证据（MC）不合；Fran Bow 一手在 09-02，节目单这一行疑似错位，未采用。"
+    note: "直播日与内容取自贴吧同期帖：2015-09-01 00:35 有人发帖《今天的mc直播有人录嘛》，「跪求一发 看看直播抽人抽的谁」（https://tieba.baidu.com/p/4012820107），发帖在午夜后，「今天」指刚过去的 08-31；同日 12:21 另有《【MC公共服】公共服资格小测试开始啦》（https://tieba.baidu.com/p/4011388135）。存档斗鱼快照 08-31 12:28 时尚未开播，与下午开播相合。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 08-31 记「坎巴拉计划、franbow」，与本条贴吧证据（MC）不合；Fran Bow 一手在 09-02，节目单这一行疑似错位，未采用。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-02-live-01
     type: live
     date: '2015-09-02'
     title: "药是甜的"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [fran-bow]
     contributed_by: data-agent
-    note: "直播日由存档的斗鱼直播间页面确定：2015-09-03 10:07 快照的缩略图时间戳 2015-09-02 19:28，其间没有新的开播，标题「药是甜的」即当场标题。内容：贴吧同日 19:35《今天女流播的恐怖游戏叫什么》，19:40、19:44 两位吧友答「Fran bow」（https://tieba.baidu.com/p/4016496912），与标题里的「药」相合（主角靠吃药看见另一个世界）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日由存档的斗鱼直播间页面确定：2015-09-03 10:07 快照的缩略图时间戳 2015-09-02 19:28，其间没有新的开播，标题「药是甜的」即当场标题。内容：贴吧同日 19:35《今天女流播的恐怖游戏叫什么》，19:40、19:44 两位吧友答「Fran bow」（https://tieba.baidu.com/p/4016496912），与标题里的「药」相合（主角靠吃药看见另一个世界）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-03-live-01
     type: live
     date: '2015-09-03'
     title: "我的世界"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日：贴吧长期歌单帖里 2015-09-03 有人「求今天直播5点40多的歌」（https://tieba.baidu.com/p/3890035389）；同日 22:29《66直播我的世界用的哪些mod呀》。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-03 记「MC、kill the plumber2、Gas Pumping Simulator、我为什么死了：重生」，后三款未登记。MC 一项有当天贴吧旁证，但不能确定是整场，故 medium。录像未找到。2026-09-24 task-050。"
+    note: "直播日：贴吧长期歌单帖里 2015-09-03 有人「求今天直播5点40多的歌」（https://tieba.baidu.com/p/3890035389）；同日 22:29《66直播我的世界用的哪些mod呀》。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-03 记「MC、kill the plumber2、Gas Pumping Simulator、我为什么死了：重生」，后三款未登记。MC 一项有当天贴吧旁证，但不能确定是整场，故 medium。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-04-live-01
     cover: "https://m.ykimg.com/0541040855EB0A836A0A400494572D94"
     type: live
@@ -1217,9 +1244,10 @@
     title: "新作到手：折纸世界"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [tearaway-unfolded]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150911090619/http://www.douyutv.com/directory/columnRoom/game ：抓取于 2015-09-11 17:06（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-09-11 16:57，标题就是本条标题；task-040 的直播间页快照（2015-09-12 14:11）也记过这一标题，缩略图 2015-09-11 18:45。此前档案里 09-11 只有官方投稿《我的老师是只“熊”》（2015-09-11-video-01），该片已查明出自 09-09 那场、改记为视频，本条补上 09-11 当天的直播。「折纸世界」指哪款游戏未确认（同期新作有 PS4《撕纸小邮差：展开》，2015-09-08 发售），games 留空。公开录像暂未找到。 2026-09-24 task-050：标题「新作到手：折纸世界」即《Tearaway Unfolded》（PS4，2015-09-08 发售），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-11 也记「折纸世界 tear away」，登记游戏。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150911090619/http://www.douyutv.com/directory/columnRoom/game ：抓取于 2015-09-11 17:06（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-09-11 16:57，标题就是本条标题；task-040 的直播间页快照（2015-09-12 14:11）也记过这一标题，缩略图 2015-09-11 18:45。此前档案里 09-11 只有官方投稿《我的老师是只“熊”》（2015-09-11-video-01），该片已查明出自 09-09 那场、改记为视频，本条补上 09-11 当天的直播。「折纸世界」指哪款游戏未确认（同期新作有 PS4《撕纸小邮差：展开》，2015-09-08 发售），games 留空。公开录像暂未找到。 2026-09-24 task-050：标题「新作到手：折纸世界」即《Tearaway Unfolded》（PS4，2015-09-08 发售），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-11 也记「折纸世界 tear away」，登记游戏。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-13-live-01
     type: live
     date: '2015-09-13'
@@ -1250,27 +1278,30 @@
     title: "打包行李"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：吧友 2015-09-15 11:36 答「前天下午，昨天晚上，都有直播」（https://tieba.baidu.com/p/4039482219 楼中楼），即 09-13 下午的心灵砒霜与 09-14 晚上这一场。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-14 记「打包行李」；09-09 她说过要去日本，09-16 已在户外直播（2015-09-16-live-01），标题按节目单拟。录像未找到。2026-09-24 task-050。"
+    note: "直播日：吧友 2015-09-15 11:36 答「前天下午，昨天晚上，都有直播」（https://tieba.baidu.com/p/4039482219 楼中楼），即 09-13 下午的心灵砒霜与 09-14 晚上这一场。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-14 记「打包行李」；09-09 她说过要去日本，09-16 已在户外直播（2015-09-16-live-01），标题按节目单拟。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-16-live-01
     type: live
     date: '2015-09-16'
     title: "户外信号不好直播推迟"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150916095148/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-09-16 17:51（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-09-16 17:47，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是一场外出途中的户外直播：贴吧 09-15～09-16 讨论她这次因优酷的工作出差、用 Surface 笔记本做户外直播（https://tieba.baidu.com/p/4044238239）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20150916095148/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-09-16 17:51（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-09-16 17:47，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。这是一场外出途中的户外直播：贴吧 09-15～09-16 讨论她这次因优酷的工作出差、用 Surface 笔记本做户外直播（https://tieba.baidu.com/p/4044238239）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-21-live-01
     type: live
     date: '2015-09-21'
     title: "公园"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-09-23 12:51、14:30 两次快照，缩略图时间戳 2015-09-21 13:47，其后到 09-23 没有新的开播；快照上的标题「对不起我尽力了早睡吧」可能是下播后改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-21 记「公园」，按此拟标题（TGS 期间她在日本，可能是户外）。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-09-23 12:51、14:30 两次快照，缩略图时间戳 2015-09-21 13:47，其后到 09-23 没有新的开播；快照上的标题「对不起我尽力了早睡吧」可能是下播后改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-21 记「公园」，按此拟标题（TGS 期间她在日本，可能是户外）。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-27-live-01
     type: live
     date: '2015-09-27'
@@ -1294,18 +1325,20 @@
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：贴吧 2015-09-28《大胸脯女骗子！》16:11 回帖「现在不是在么」（https://tieba.baidu.com/p/4069587139），前面的楼说她前一天承诺「这几天打开直播间随时都能看到她」。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-28 记「折纸小邮差」（即 09-11 那场的《折纸世界》），没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：贴吧 2015-09-28《大胸脯女骗子！》16:11 回帖「现在不是在么」（https://tieba.baidu.com/p/4069587139），前面的楼说她前一天承诺「这几天打开直播间随时都能看到她」。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 09-28 记「折纸小邮差」（即 09-11 那场的《折纸世界》），没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-29-live-01
     type: live
     date: '2015-09-29'
     title: "旅游照片未整理"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照（2015-09-30）缩略图时间戳 2015-09-29 19:13。标题属当场：同日 18:38 有吧友从直播间分享《旅游照片未整理》（https://tieba.baidu.com/p/4072188846），分享时刻在缩略图时刻之前，说明开播时直播间就挂着这句。内容未知。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 09-29 记「MC、漫漫旅途」，无一手旁证，games 不动。"
+    note: "直播日：存档斗鱼快照（2015-09-30）缩略图时间戳 2015-09-29 19:13。标题属当场：同日 18:38 有吧友从直播间分享《旅游照片未整理》（https://tieba.baidu.com/p/4072188846），分享时刻在缩略图时刻之前，说明开播时直播间就挂着这句。内容未知。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：节目单 09-29 记「MC、漫漫旅途」，无一手旁证，games 不动。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-09-30-live-01
     type: live
     date: '2015-09-30'
@@ -1365,9 +1398,10 @@
     title: "18888888888888888888"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "她的生日场。直播日：存档直播间页 2015-10-05 21:43、10-06 12:01 两次快照，标题「18888888888888888888」、缩略图时间戳 2015-10-03 16:51；贴吧同日 16:00《直播时貌似暴露了自己名字》。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-03 记「66生日~」。10-01 她说国庆回内蒙老家，这一场应是在家里播的。录像未找到。2026-09-24 task-050。"
+    note: "她的生日场。直播日：存档直播间页 2015-10-05 21:43、10-06 12:01 两次快照，标题「18888888888888888888」、缩略图时间戳 2015-10-03 16:51；贴吧同日 16:00《直播时貌似暴露了自己名字》。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-03 记「66生日~」。10-01 她说国庆回内蒙老家，这一场应是在家里播的。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-08-live-01
     type: live
     date: '2015-10-08'
@@ -1482,18 +1516,20 @@
     title: "三娃子拯救世界：dropsy"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [dropsy]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151015084112/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-10-15 16:41（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-15 16:39，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151015084112/http://www.douyutv.com/directory/game/TVgame ：抓取于 2015-10-15 16:41（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-15 16:39，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-16-live-01
     type: live
     date: '2015-10-16'
     title: "刚录视频迟到了"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151016075708/http://www.douyutv.com/directory/all?page=1 ：抓取于 2015-10-16 15:57（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-16 15:54，标题就是本条标题（task-046 新查的带参数列表页）。内容不明。10-16 是周五，仍是《第五届女流杯建筑大赛》的候选日之一（片尾「周日心灵砒霜见」→周五），本条标题不能证明也不能排除。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-16 记「小丑多普西、MC」，前一天 10-15 一手是 Dropsy；当天内容只有节目单一处，games 不动。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151016075708/http://www.douyutv.com/directory/all?page=1 ：抓取于 2015-10-16 15:57（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-16 15:54，标题就是本条标题（task-046 新查的带参数列表页）。内容不明。10-16 是周五，仍是《第五届女流杯建筑大赛》的候选日之一（片尾「周日心灵砒霜见」→周五），本条标题不能证明也不能排除。 2026-09-24 task-050：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-16 记「小丑多普西、MC」，前一天 10-15 一手是 Dropsy；当天内容只有节目单一处，games 不动。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-18-live-01
     type: live
     date: '2015-10-18'
@@ -1524,9 +1560,10 @@
     title: "以后直播间名就叫66"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-10-20 13:05 的快照，标题「以后直播间名就叫66」、缩略图时间戳 2015-10-19 19:00（当天 16:19 贴吧还有人问「今天不直播吗」，是傍晚才开的播）。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-19 记「beyond eyes、A bird story、shower with dad、paper please」，10-20 记「paper please、贴条」；而录像小屋把《鸟的故事》那份录像标作 2015.10.20（2015-10-20-live-01）。两处都出自当年录像文件，却差一天，录像里也没有自报日期，《鸟的故事》是哪一天未决，本条 games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-10-20 13:05 的快照，标题「以后直播间名就叫66」、缩略图时间戳 2015-10-19 19:00（当天 16:19 贴吧还有人问「今天不直播吗」，是傍晚才开的播）。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 10-19 记「beyond eyes、A bird story、shower with dad、paper please」，10-20 记「paper please、贴条」；而录像小屋把《鸟的故事》那份录像标作 2015.10.20（2015-10-20-live-01）。两处都出自当年录像文件，却差一天，录像里也没有自报日期，《鸟的故事》是哪一天未决，本条 games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-20-live-01
     cover: "https://i1.hdslb.com/bfs/archive/db6b3f2c816402548d7bfad9e1039300c4c3cf84.png"
     type: live
@@ -1552,18 +1589,20 @@
     title: "这是一个伟大的游戏"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [prison-architect]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151021083454/http://www.douyutv.com/directory/all ：抓取于 2015-10-21 16:34（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-21 16:33，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:59 首页快照也列出（缩略图 15:56）。游戏：贴吧《七点一刻了还在直播啊》（2015-10-21 19:16 发帖，https://tieba.baidu.com/p/4114807887），次日楼中楼答「监狱建筑师」。19:16 仍在播，整个下午都是这款游戏，所以当天上传的《第五届女流杯建筑大赛》（优酷 23:45）不是这一场；task-040 把第五届推到 10-21 的判断不成立。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151021083454/http://www.douyutv.com/directory/all ：抓取于 2015-10-21 16:34（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-10-21 16:33，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:59 首页快照也列出（缩略图 15:56）。游戏：贴吧《七点一刻了还在直播啊》（2015-10-21 19:16 发帖，https://tieba.baidu.com/p/4114807887），次日楼中楼答「监狱建筑师」。19:16 仍在播，整个下午都是这款游戏，所以当天上传的《第五届女流杯建筑大赛》（优酷 23:45）不是这一场；task-040 把第五届推到 10-21 的判断不成立。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-22-live-01
     type: live
     date: '2015-10-22'
     title: "我的世界"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧同期帖：2015-10-23 21:22《求66昨天直播MC的光影shader版本》（https://tieba.baidu.com/p/4118791119）。前一天 10-21 整个下午是《监狱建筑师》，故这场 MC 不是当晚上传的第五届女流杯建筑大赛。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日与内容取自贴吧同期帖：2015-10-23 21:22《求66昨天直播MC的光影shader版本》（https://tieba.baidu.com/p/4118791119）。前一天 10-21 整个下午是《监狱建筑师》，故这场 MC 不是当晚上传的第五届女流杯建筑大赛。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-10-23-live-01
     type: live
     date: '2015-10-23'
@@ -1777,36 +1816,40 @@
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-11-03 22:54 的快照，缩略图时间戳 2015-11-02 17:39；快照上的标题「请假一天~(╯﹏╰)b~病假」看内容是下播后为次日改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-02 记「MC剧情模式、千万不能看」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-11-03 22:54 的快照，缩略图时间戳 2015-11-02 17:39；快照上的标题「请假一天~(╯﹏╰)b~病假」看内容是下播后为次日改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-02 记「MC剧情模式、千万不能看」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-04-live-01
     type: live
     date: '2015-11-04'
     title: "poly bridge更新关卡"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [poly-bridge]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151104080008/http://www.douyutv.com/directory/all ：抓取于 2015-11-04 16:00（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-11-04 15:54，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:48 首页快照也列出（缩略图 15:46）。次日贴吧有人说「昨天66女神直播说有个什么海淘APP」（https://tieba.baidu.com/p/4141705074）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151104080008/http://www.douyutv.com/directory/all ：抓取于 2015-11-04 16:00（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-11-04 15:54，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。同日 15:48 首页快照也列出（缩略图 15:46）。次日贴吧有人说「昨天66女神直播说有个什么海淘APP」（https://tieba.baidu.com/p/4141705074）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-05-live-01
     type: live
     date: '2015-11-05'
     title: "我的世界"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧同期帖：2015-11-05 16:58「现在正在直播 在斗鱼tv 房间号156277」、19:15「现在直播刚刚结束」（https://tieba.baidu.com/p/4142387145）；同日 17:24《女流mc直播的装修队好厉害！》描述当场在服务器里请客人参观（https://tieba.baidu.com/p/4142466866）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日与内容取自贴吧同期帖：2015-11-05 16:58「现在正在直播 在斗鱼tv 房间号156277」、19:15「现在直播刚刚结束」（https://tieba.baidu.com/p/4142387145）；同日 17:24《女流mc直播的装修队好厉害！》描述当场在服务器里请客人参观（https://tieba.baidu.com/p/4142466866）。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-06-live-01
     type: live
     date: '2015-11-06'
     title: "试玩：不机械城"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-11-08 12:09 的快照，标题「试玩：不机械城」、缩略图时间戳 2015-11-06 18:42。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-06 也记「不机械城」。游戏本身未能对应到已登记的条目，games 留空。同日官方投稿《国王密使》第一章是另一支视频（2015-11-06-video-01）。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-11-08 12:09 的快照，标题「试玩：不机械城」、缩略图时间戳 2015-11-06 18:42。沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-06 也记「不机械城」。游戏本身未能对应到已登记的条目，games 留空。同日官方投稿《国王密使》第一章是另一支视频（2015-11-06-video-01）。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-08-live-01
     type: live
     date: '2015-11-08'
@@ -1837,27 +1880,30 @@
     title: "提醒我每天两关小象露露"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [rolo-to-the-rescue]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151110072321/http://www.douyutv.com/directory/all ：抓取于 2015-11-10 15:23（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-11-10 15:16，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。「小象露露」所指的游戏未能确认，games 留空。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：标题里的「小象露露」即《Rolo to the Rescue》（已登记，别名小象露露），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-10 也记「小象露露、请不要碰任何东西、放逐之城」，登记前者；后两款只有节目单。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151110072321/http://www.douyutv.com/directory/all ：抓取于 2015-11-10 15:23（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-11-10 15:16，与抓取只差几分钟，即抓取当下正在直播，标题就是本条标题。「小象露露」所指的游戏未能确认，games 留空。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-24 task-050：标题里的「小象露露」即《Rolo to the Rescue》（已登记，别名小象露露），沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-10 也记「小象露露、请不要碰任何东西、放逐之城」，登记前者；后两款只有节目单。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-11-live-01
     type: live
     date: '2015-11-11'
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：贴吧 2015-11-11 16:23 有人说「今天一听66说一亏本就跑来买了」（零食店双十一，https://tieba.baidu.com/p/4153248856 7 楼），18:06《话说= =小桀还送火箭呢!!!》、19:31「下岗就是失业了 小桀送个火箭以示祝贺」（https://tieba.baidu.com/p/4154031653）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-11 记「放逐之城」，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：贴吧 2015-11-11 16:23 有人说「今天一听66说一亏本就跑来买了」（零食店双十一，https://tieba.baidu.com/p/4153248856 7 楼），18:06《话说= =小桀还送火箭呢!!!》、19:31「下岗就是失业了 小桀送个火箭以示祝贺」（https://tieba.baidu.com/p/4154031653）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-11 记「放逐之城」，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-12-live-01
     type: live
     date: '2015-11-12'
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-11-13 15:40、11-14 00:01 两次快照，缩略图时间戳 2015-11-12 17:10；快照上的「头疼~请假一天.......」看内容是为次日改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-12 记「放逐之城」，games 留空。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-11-13 15:40、11-14 00:01 两次快照，缩略图时间戳 2015-11-12 17:10；快照上的「头疼~请假一天.......」看内容是为次日改的。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-12 记「放逐之城」，games 留空。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-15-live-01
     type: live
     date: '2015-11-15'
@@ -1905,18 +1951,20 @@
     title: "直播标题已遗失"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [rise-of-the-tomb-raider]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-11-18 13:07、13:23 两次快照，缩略图时间戳 2015-11-17 18:24；快照上的「昨天失眠中午睡过了」看内容是为次日改的。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-17 记「游史诗工坊、古墓丽影」；11-15、11-16、11-25、11-27 都有一手的《古墓丽影：崛起》，所以登记，按节目单故 medium。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-11-18 13:07、13:23 两次快照，缩略图时间戳 2015-11-17 18:24；快照上的「昨天失眠中午睡过了」看内容是为次日改的。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-17 记「游史诗工坊、古墓丽影」；11-15、11-16、11-25、11-27 都有一手的《古墓丽影：崛起》，所以登记，按节目单故 medium。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-18-live-01
     type: live
     date: '2015-11-18'
     title: "距离搬家结束还有十二小时"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播搬家。直播日：存档直播间页 2015-11-19 03:05、11-22 22:15 两次快照，标题「距离搬家结束还有十二小时」、缩略图时间戳 2015-11-18 19:12；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-18 记「直播搬家、心灵砒霜」，与标题一致。11-30 吧友说「直播搬家已经不能下载」，当时录像盘里有过这一场。录像未找到。2026-09-24 task-050。"
+    note: "直播搬家。直播日：存档直播间页 2015-11-19 03:05、11-22 22:15 两次快照，标题「距离搬家结束还有十二小时」、缩略图时间戳 2015-11-18 19:12；沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 11-18 记「直播搬家、心灵砒霜」，与标题一致。11-30 吧友说「直播搬家已经不能下载」，当时录像盘里有过这一场。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-11-24-live-01
     type: live
     date: '2015-11-24'
@@ -2006,36 +2054,40 @@
     title: "聊一个小时睡觉"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照（2015-12-01 02:35 抓取）缩略图时间戳 2015-12-01 00:03，是 11-30 晚间开播、跨过零点的一场；次日 12:53 贴吧有人问「昨晚女流下直播前放的背景音乐是啥」（https://tieba.baidu.com/p/4190113693），确认是 11-30 晚上开的播。标题取自该快照，抓取时这一场刚结束、其间没有别的开播。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日：存档斗鱼快照（2015-12-01 02:35 抓取）缩略图时间戳 2015-12-01 00:03，是 11-30 晚间开播、跨过零点的一场；次日 12:53 贴吧有人问「昨晚女流下直播前放的背景音乐是啥」（https://tieba.baidu.com/p/4190113693），确认是 11-30 晚上开的播。标题取自该快照，抓取时这一场刚结束、其间没有别的开播。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-03-live-01
     type: live
     date: '2015-12-03'
     title: "3ds节奏天国"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [rhythm-heaven]
     contributed_by: data-agent
-    note: "直播日由存档斗鱼快照（2015-12-04 11:14）的缩略图时间戳 2015-12-03 21:24 确定；内容：同日 21:47 贴吧《今天660播的3ds的那首歌怎么搜到？》，问的是最后一关、歌词「I am a lady now」（https://tieba.baidu.com/p/4194661273），与直播间标题一致。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日由存档斗鱼快照（2015-12-04 11:14）的缩略图时间戳 2015-12-03 21:24 确定；内容：同日 21:47 贴吧《今天660播的3ds的那首歌怎么搜到？》，问的是最后一关、歌词「I am a lady now」（https://tieba.baidu.com/p/4194661273），与直播间标题一致。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-04-live-01
     type: live
     date: '2015-12-04'
     title: "节奏天国"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [rhythm-heaven]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-12-06 15:16 的快照，缩略图时间戳 2015-12-04 19:53（快照当下已是 12-06 那场，标题「今天会早点下」属于 12-06）。本场标题未存，按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-04 记「节奏天国」；12-03、12-07 两场一手都是《节奏天国》，所以登记，按节目单故 medium。录像未找到（A站 ac2376661 精剪的母场未定）。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-12-06 15:16 的快照，缩略图时间戳 2015-12-04 19:53（快照当下已是 12-06 那场，标题「今天会早点下」属于 12-06）。本场标题未存，按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-04 记「节奏天国」；12-03、12-07 两场一手都是《节奏天国》，所以登记，按节目单故 medium。录像未找到（A站 ac2376661 精剪的母场未定）。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-06-live-01
     type: live
     date: '2015-12-06'
     title: "今天会早点下"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日与标题：存档直播间页 2015-12-06 15:16 的快照正在直播（show_status=1），全部直播列表页 15:41 也在列，标题「今天会早点下」。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-06（周日）记「心灵砒霜」，games 留空；档案现有的 2015 砒霜补档里没有这一期。录像未找到。2026-09-24 task-050。"
+    note: "直播日与标题：存档直播间页 2015-12-06 15:16 的快照正在直播（show_status=1），全部直播列表页 15:41 也在列，标题「今天会早点下」。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-06（周日）记「心灵砒霜」，games 留空；档案现有的 2015 砒霜补档里没有这一期。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-07-live-01
     type: live
     date: "2015-12-07"
@@ -2059,9 +2111,10 @@
     title: "节奏天国"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [rhythm-heaven]
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2015-12-09 10:17、12-10 03:54 两次快照，缩略图时间戳 2015-12-08 19:03；快照上的「雾霾天智商打2折」可能是下播后改的。本场标题按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-08 记「节奏天国」；12-07 一手是《节奏天国》，所以登记，按节目单故 medium。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2015-12-09 10:17、12-10 03:54 两次快照，缩略图时间戳 2015-12-08 19:03；快照上的「雾霾天智商打2折」可能是下播后改的。本场标题按内容拟。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-08 记「节奏天国」；12-07 一手是《节奏天国》，所以登记，按节目单故 medium。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-11-live-01
     type: live
     date: '2015-12-11'
@@ -2107,18 +2160,20 @@
     title: "路易鬼屋是个好游戏"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [luigis-mansion-dark-moon]
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照（2015-12-16 06:19）缩略图时间戳 2015-12-15 18:52。标题属当场：吧友 2015-12-15 11:05 截的斗鱼 App「我的关注」页（https://tieba.baidu.com/p/4214892776 1 楼）里，她的直播间当时未开播、标题已是「路易鬼屋是个好游戏」，下播后的快照标题仍是这句——开播前、下播后都是它，本场一直挂着这个标题。同帖吧友说她「今天会在直播中说地址」（前一晚微博「明天直播说」）。「路易鬼屋」是哪一作：2026-09-24 task-046 找到 12-23 列表页快照，那天的标题是「任天堂3ds路易鬼屋」——2015 年 3DS 上只有《路易吉洋楼2》（Dark Moon），本场按同一款登记（推断，12-15 当天没有画面）。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。 2026-09-24 task-050：节目单 12-15 记「节奏天国」，12-14、12-16 才记路易鬼屋，与本条直播间标题不合，以标题为准。"
+    note: "直播日：存档斗鱼快照（2015-12-16 06:19）缩略图时间戳 2015-12-15 18:52。标题属当场：吧友 2015-12-15 11:05 截的斗鱼 App「我的关注」页（https://tieba.baidu.com/p/4214892776 1 楼）里，她的直播间当时未开播、标题已是「路易鬼屋是个好游戏」，下播后的快照标题仍是这句——开播前、下播后都是它，本场一直挂着这个标题。同帖吧友说她「今天会在直播中说地址」（前一晚微博「明天直播说」）。「路易鬼屋」是哪一作：2026-09-24 task-046 找到 12-23 列表页快照，那天的标题是「任天堂3ds路易鬼屋」——2015 年 3DS 上只有《路易吉洋楼2》（Dark Moon），本场按同一款登记（推断，12-15 当天没有画面）。公开录像暂未找到：已核对仓内各录像目录与贴吧楼内链接，没有命中，不代表确无录像。 2026-09-24 task-050：节目单 12-15 记「节奏天国」，12-14、12-16 才记路易鬼屋，与本条直播间标题不合，以标题为准。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-17-live-01
     type: live
     date: '2015-12-17'
     title: "今天下午4点播"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [rhythm-heaven]
     contributed_by: data-agent
-    note: "直播日与标题：存档直播间页 2015-12-17 23:35、12-18 03:39 两次快照，标题「今天下午4点播」、缩略图时间戳 2015-12-17 19:07；贴吧同日 16:35《今天直播的封面》、21:16《发生了什么事？》（黑屏火箭）。内容：贴吧同日 18:20《66是用什么游戏机玩的节奏天国啊？》，与 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-17 记的「太空工程师、节奏天国」相合；《太空工程师》只有节目单一处，未登记。录像未找到。2026-09-24 task-050。"
+    note: "直播日与标题：存档直播间页 2015-12-17 23:35、12-18 03:39 两次快照，标题「今天下午4点播」、缩略图时间戳 2015-12-17 19:07；贴吧同日 16:35《今天直播的封面》、21:16《发生了什么事？》（黑屏火箭）。内容：贴吧同日 18:20《66是用什么游戏机玩的节奏天国啊？》，与 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-17 记的「太空工程师、节奏天国」相合；《太空工程师》只有节目单一处，未登记。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-19-live-01
     type: live
     date: '2015-12-19'
@@ -2164,9 +2219,10 @@
     title: "任天堂3ds路易鬼屋"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [luigis-mansion-dark-moon]
     contributed_by: data-agent
-    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151223085915/http://www.douyutv.com/directory/cateTag/TVgame/20 ：抓取于 2015-12-23 16:59（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-12-23 16:51，标题就是本条标题；同日 16:11 的首页快照（带 ?vgtime 参数）也列出这一标题（缩略图 16:08）。这是 task-046 新查的列表页形式，档案此前没有这一天。2015 年 3DS 上的路易鬼屋只有《路易吉洋楼2》（Dark Moon，2013），故登记该作；12-15「路易鬼屋是个好游戏」很可能是同一款的第一天。公开录像暂未找到。"
+    note: "斗鱼列表页存档快照（开播证据，非录像）https://web.archive.org/web/20151223085915/http://www.douyutv.com/directory/cateTag/TVgame/20 ：抓取于 2015-12-23 16:59（CST），她的直播间带「正在直播」标记、缩略图时间戳 2015-12-23 16:51，标题就是本条标题；同日 16:11 的首页快照（带 ?vgtime 参数）也列出这一标题（缩略图 16:08）。这是 task-046 新查的列表页形式，档案此前没有这一天。2015 年 3DS 上的路易鬼屋只有《路易吉洋楼2》（Dark Moon，2013），故登记该作；12-15「路易鬼屋是个好游戏」很可能是同一款的第一天。公开录像暂未找到。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-24-live-01
     type: live
     date: '2015-12-24'
@@ -2189,15 +2245,17 @@
     title: "圣诞节直播（模仿各主播）"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档斗鱼快照缩略图时间戳 2015-12-25 19:51；同日 20:01 贴吧求「女流今天直播的女生旋律BGM」（https://tieba.baidu.com/p/4233178491）。内容：次日有吧友求「女流昨天直播模仿各个主播的录像」，楼中楼列出模仿了发发、小桀、王瑞儿、金蝉、七号（https://tieba.baidu.com/p/4234180028）。标题为本站据内容拟写，不是直播间原标题。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。"
+    note: "直播日：存档斗鱼快照缩略图时间戳 2015-12-25 19:51；同日 20:01 贴吧求「女流今天直播的女生旋律BGM」（https://tieba.baidu.com/p/4233178491）。内容：次日有吧友求「女流昨天直播模仿各个主播的录像」，楼中楼列出模仿了发发、小桀、王瑞儿、金蝉、七号（https://tieba.baidu.com/p/4234180028）。标题为本站据内容拟写，不是直播间原标题。公开录像暂未找到：本轮核对了仓内各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站斗鱼录像厅与搬运号、官方优酷号及贴吧楼内链接），没有命中，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2015-12-29-live-01
     type: live
     date: '2015-12-29'
     title: "直播标题已遗失"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：存档直播间页 2016-01-01 02:14、08:18 两次快照，缩略图时间戳 2015-12-29 18:00；快照上的「哎。。。请病假」看内容是这之后改的（12 月底她感冒请病假）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-29 记「刷微博、节奏天国、聊天」，games 留空。同日官方投稿《Rusty Lake 生锈小湖 Hotel》是预录视频（2015-12-29-video-01）。录像未找到。2026-09-24 task-050。"
+    note: "直播日：存档直播间页 2016-01-01 02:14、08:18 两次快照，缩略图时间戳 2015-12-29 18:00；快照上的「哎。。。请病假」看内容是这之后改的（12 月底她感冒请病假）。内容只有节目单：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 12-29 记「刷微博、节奏天国、聊天」，games 留空。同日官方投稿《Rusty Lake 生锈小湖 Hotel》是预录视频（2015-12-29-video-01）。录像未找到。2026-09-24 task-050。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"

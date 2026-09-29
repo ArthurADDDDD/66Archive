@@ -97,9 +97,10 @@
     title: "来吧来吧撸一棵树"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日：存档直播间页（Wayback 20160106204106，douyutv.com/nvliu）标题「来吧来吧撸一棵树」，缩略图时间戳 2016-01-06 19:17，即当天傍晚开过播。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-06 记「MC直播服」，标题「撸一棵树」正是 MC 开局砍树，两处相合，登记 MC。录像未找到。2026-09-24 task-051。"
+    note: "直播日：存档直播间页（Wayback 20160106204106，douyutv.com/nvliu）标题「来吧来吧撸一棵树」，缩略图时间戳 2016-01-06 19:17，即当天傍晚开过播。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-06 记「MC直播服」，标题「撸一棵树」正是 MC 开局砍树，两处相合，登记 MC。录像未找到。2026-09-24 task-051。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
 
   - id: 2016-01-07-live-01
     type: live
@@ -107,18 +108,20 @@
     title: "Besiege 12月更新版"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [besiege]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「besiege 12月更新版」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「besiege 12月更新版」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-08-live-01
     type: live
     date: "2016-01-08"
     title: "逆转裁判"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [gyakuten-saiban-1]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧只写「逆转裁判」，未说哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆转裁判」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「逆转裁判：复苏的逆转」（即初代第 5 章），登记《逆转裁判1》。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。贴吧只写「逆转裁判」，未说哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-24 task-051：葵kiss 当期记录（贴吧 2016/2017 直播游戏名专贴） 记「逆转裁判」，沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 记「逆转裁判：复苏的逆转」（即初代第 5 章），登记《逆转裁判1》。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-10-live-01
     type: live
     date: '2016-01-10'
@@ -173,9 +176,10 @@
     title: "Poly Bridge"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [poly-bridge]
     contributed_by: data-agent
-    note: "直播日：存档直播间页（Wayback 20160113180234、20160115173801）缩略图时间戳 2016-01-12 17:58，即当天傍晚开过播；快照时标题是「收拾行李预计四点来」，拍在下播之后，可能是为次日改的，不用作本场标题。内容只有 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-12「Poly Bridge」一处；01-11、01-19 两场一手都是 Poly Bridge，故登记，confidence 取 medium。录像未找到。2026-09-24 task-051。"
+    note: "直播日：存档直播间页（Wayback 20160113180234、20160115173801）缩略图时间戳 2016-01-12 17:58，即当天傍晚开过播；快照时标题是「收拾行李预计四点来」，拍在下播之后，可能是为次日改的，不用作本场标题。内容只有 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 01-12「Poly Bridge」一处；01-11、01-19 两场一手都是 Poly Bridge，故登记，confidence 取 medium。录像未找到。2026-09-24 task-051。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
 
   - id: 2016-01-19-live-01
     type: live
@@ -183,9 +187,10 @@
     title: "Poly Bridge 最终关"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [poly-bridge]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge最终关」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：2016-01-20 13:40 抓取时直播间标题「女流：poly bridge最终关」，直播间缩略图时间戳 2016-01-19 19:07，与贴吧同日同题。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge最终关」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：2016-01-20 13:40 抓取时直播间标题「女流：poly bridge最终关」，直播间缩略图时间戳 2016-01-19 19:07，与贴吧同日同题。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-20-live-01
     type: live
     date: '2016-01-20'
@@ -212,9 +217,10 @@
     title: "Slime Rancher"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [slime-rancher]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「slime racher」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「slime racher」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-24-live-01
     type: live
     date: '2016-01-24'
@@ -247,18 +253,20 @@
     title: "Poly Bridge"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [poly-bridge]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「poly bridge」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-27-live-01
     type: live
     date: "2016-01-27"
     title: "BOXBOY!"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [boxboy]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「boxboy」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「boxboy」（https://tieba.baidu.com/p/4363790737 2 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-01-28-live-01
     type: live
     date: "2016-01-28"
@@ -369,9 +377,10 @@
     title: "塞尔达三角力量试水"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「塞达尔三角力量」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：直播间标题「女流：塞尔达三角力量试水」，缩略图时间戳 2016-02-01 18:32。「三角力量」未说明是哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「塞达尔三角力量」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：直播间标题「女流：塞尔达三角力量试水」，缩略图时间戳 2016-02-01 18:32。「三角力量」未说明是哪一作，games 暂不挂。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-02-02-live-01
     type: live
     date: "2016-02-02"
@@ -395,18 +404,20 @@
     title: "火影忍者究极风暴4"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [naruto-storm-4]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）另见缩略图时间戳 2016-02-17 22:42、标题「月末眼泪流」，说明当晚确有开播。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）另见缩略图时间戳 2016-02-17 22:42、标题「月末眼泪流」，说明当晚确有开播。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-02-18-live-01
     type: live
     date: "2016-02-18"
     title: "火影忍者究极风暴4"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [naruto-storm-4]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「火影忍者究极风暴4」（https://tieba.baidu.com/p/4363790737 3 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-02-19-live-01
     type: live
     date: "2016-02-19"
@@ -481,9 +492,10 @@
     title: "Minecraft 水星生存日记"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft ; 地图：水星生存日记」（https://tieba.baidu.com/p/4363790737 7 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft ; 地图：水星生存日记」（https://tieba.baidu.com/p/4363790737 7 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-02-24-live-01
     type: live
     date: '2016-02-24'
@@ -507,18 +519,20 @@
     title: "极地战嚎：野蛮纪源"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [far-cry-primal]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「极地战嚎：野蛮纪源」（https://tieba.baidu.com/p/4363790737 10 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「极地战嚎：野蛮纪源」（https://tieba.baidu.com/p/4363790737 10 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-02-26-live-01
     type: live
     date: "2016-02-26"
     title: "休息一下。。。。"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：斗鱼主机游戏分区列表页存档（Wayback 20160226081243，/directory/game/TVgame）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-26 16:07，列表页只列正在直播的房间。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-26 记「逆转裁判录像、聊天」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-051。"
+    note: "直播日：斗鱼主机游戏分区列表页存档（Wayback 20160226081243，/directory/game/TVgame）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-26 16:07，列表页只列正在直播的房间。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-26 记「逆转裁判录像、聊天」，没有其他旁证，games 留空。录像未找到。2026-09-24 task-051。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
 
   - id: 2016-02-28-live-01
     type: live
@@ -526,9 +540,10 @@
     title: "休息一下。。。。"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: []
     contributed_by: data-agent
-    note: "直播日：斗鱼全部分区列表页存档（Wayback 20160228035658，/directory/all）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-28 11:52。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-28 记「看天线宝宝、看天花板、看越狱兔、画画」，是聊天看视频的一天，games 留空。录像未找到。2026-09-24 task-051。"
+    note: "直播日：斗鱼全部分区列表页存档（Wayback 20160228035658，/directory/all）收录了她的直播间，标题「休息一下。。。。」、缩略图 2016-02-28 11:52。内容：沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv） 02-28 记「看天线宝宝、看天花板、看越狱兔、画画」，是聊天看视频的一天，games 留空。录像未找到。2026-09-24 task-051。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
 
   - id: 2016-03-02-live-01
     type: live
@@ -536,9 +551,10 @@
     title: "逆袭之星途闪耀 3月1号更新章"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [nixizhixingtu-shanyao]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆袭之星途闪耀 3月1号更新章（橙光游戏）」（https://tieba.baidu.com/p/4363790737 11 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号《【女流直播生放送】逆袭》（XMTUwNTAwNjI1Ng==，139 分，2016-03-19 上传）可能是这一场或 2/24、3/9 之一，待看录像确认后再挂（见 task-042）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆袭之星途闪耀 3月1号更新章（橙光游戏）」（https://tieba.baidu.com/p/4363790737 11 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号《【女流直播生放送】逆袭》（XMTUwNTAwNjI1Ng==，139 分，2016-03-19 上传）可能是这一场或 2/24、3/9 之一，待看录像确认后再挂（见 task-042）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-03-03-live-01
     cover: "https://i0.hdslb.com/bfs/archive/ed80606aba5f0eb41e4e01bd4c7d7134bc2a4e57.png"
     type: live
@@ -561,9 +577,10 @@
     title: "Minecraft 1.8.8（B站 MC 主题建筑擂台赛）"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [minecraft]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft1.8.8（b站MC主题建筑擂台赛）」（https://tieba.baidu.com/p/4363790737 14 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「minecraft1.8.8（b站MC主题建筑擂台赛）」（https://tieba.baidu.com/p/4363790737 14 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-03-06-live-01
     type: live
     date: '2016-03-06'
@@ -972,45 +989,50 @@
     title: "异星工厂 & SUPERHOT"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [factorio, superhot]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「1游戏名：factorio异星工厂 ; 2游戏名：SuperHot」（https://tieba.baidu.com/p/4363790737 33 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「1游戏名：factorio异星工厂 ; 2游戏名：SuperHot」（https://tieba.baidu.com/p/4363790737 33 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-05-live-01
     type: live
     date: "2016-04-05"
     title: "HunieCam Studio"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [huniecam-studio]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「hunie cam studio」（https://tieba.baidu.com/p/4363790737 34 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「hunie cam studio」（https://tieba.baidu.com/p/4363790737 34 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-06-live-01
     type: live
     date: "2016-04-06"
     title: "逆转裁判5"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [gyakuten-saiban-5]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 35 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 35 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-07-live-01
     type: live
     date: "2016-04-07"
     title: "逆转裁判5"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [gyakuten-saiban-5]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 36 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 36 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-08-live-01
     type: live
     date: "2016-04-08"
     title: "逆转裁判5 第二章结局"
     platform: douyu
     confidence: high
+    no_public_replay: true
     games: [gyakuten-saiban-5]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 38 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：两次抓取直播间标题均为「逆转裁判5第二章结局」，缩略图时间戳 2016-04-08 23:15。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 38 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。另有斗鱼直播间存档快照（data/catalogs/douyu-room-titles-2015-2016.csv）：两次抓取直播间标题均为「逆转裁判5第二章结局」，缩略图时间戳 2016-04-08 23:15。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-10-live-01
     type: live
     date: '2016-04-10'
@@ -1047,18 +1069,20 @@
     title: "传送门2"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [portal-2]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「传送门2」（https://tieba.baidu.com/p/4363790737 39 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「传送门2」（https://tieba.baidu.com/p/4363790737 39 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-12-live-01
     type: live
     date: "2016-04-12"
     title: "锈湖：剧院（Rusty Lake Theatre）"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [rusty-lake]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「生锈小湖解密新章theatre」（https://tieba.baidu.com/p/4363790737 40 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号曾有锈湖剧院生放送，现已不在频道清单（见 task-042 §6）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「生锈小湖解密新章theatre」（https://tieba.baidu.com/p/4363790737 40 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。她本人优酷号曾有锈湖剧院生放送，现已不在频道清单（见 task-042 §6）。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-13-live-01
     type: live
     date: '2016-04-13'
@@ -1154,18 +1178,20 @@
     title: "逆转裁判5（3DS）"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [gyakuten-saiban-5]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5（3ds）」（https://tieba.baidu.com/p/4363790737 44 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5（3ds）」（https://tieba.baidu.com/p/4363790737 44 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-19-live-01
     type: live
     date: "2016-04-19"
     title: "逆转裁判5"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [gyakuten-saiban-5]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 45 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「逆转裁判5」（https://tieba.baidu.com/p/4363790737 45 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-04-20-live-01
     type: live
     date: '2016-04-20'
@@ -1502,9 +1528,10 @@
     title: "黎明杀机"
     platform: douyu
     confidence: medium
+    no_public_replay: true
     games: [dead-by-daylight]
     contributed_by: data-agent
-    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「黎明杀机」（https://tieba.baidu.com/p/4363790737 100 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。"
+    note: "直播日与内容取自贴吧逐日直播记录（同期吧务整理，属转述证据）：「黎明杀机」（https://tieba.baidu.com/p/4363790737 100 楼）。档案此前缺这一天，前后几天的条目与贴吧记录一致，无矛盾。公开录像暂未找到：本轮只核对了仓内已有的各录像目录（B站女流录像小屋/秘密录像屋/仓储员/KassyTan/zytau、A站两个搬运号、优酷号等），没有逐一在各平台重新检索，不代表确无录像。 2026-09-29：B站、AcFun、YouTube 全站检索与女流吧检索均未找到可播放的公开录像，标为 no_public_replay；开播日期与内容以上述旁证为准，录像有待私人存档补档。"
   - id: 2016-07-12-live-01
     cover: "/images/covers/2016-07-12-live-01.jpg"
     type: live
