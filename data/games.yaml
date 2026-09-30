@@ -209,8 +209,14 @@
   - id: auction-king
     name: 竞拍之王
     aliases: []
+    genres:
+      - strategy
+      - party
   - id: avengers
     name: Avengers
+    genres:
+      - action
+      - adventure
 
   - id: baba-is-you
     name: Baba Is You
@@ -266,6 +272,9 @@
   - id: bento-blocks
     name: Bento Blocks
     aliases: []
+    genres:
+      - puzzle
+      - casual
   - id: biped
     name: Biped
     aliases: [只只大冒险]
@@ -361,6 +370,10 @@
   - id: card-devil
     name: 卡片魔王
     aliases: []
+    genres:
+      - roguelike
+      - card
+      - strategy
   - id: castle-crashers
     name: 城堡破坏者
     aliases:
@@ -557,6 +570,9 @@
   - id: daodao-wizard
     name: 叨叨巫师
     aliases: []
+    genres:
+      - card
+      - strategy
   - id: dark-souls-3
     name: 黑暗之魂3
     aliases: [Dark Souls III, 魂3]
@@ -682,6 +698,10 @@
   - id: dig-for-dog
     name: 掘地求狗
     aliases: []
+    genres:
+      - action
+      - adventure
+      - party
   - id: dig-or-die
     name: Dig or Die
     genres:
@@ -932,6 +952,9 @@
   - id: fengbao-pasidui
     name: 风暴怕死队
     aliases: []
+    genres:
+      - roguelike
+      - shooter
 
   - id: fez
     name: 菲斯
@@ -1034,6 +1057,9 @@
 
   - id: fresh-start
     name: Fresh Start
+    genres:
+      - simulation
+      - casual
 
   - id: gangui-shilu
     name: 港诡实录
@@ -1187,6 +1213,10 @@
 
   - id: gupo
     name: 蛊婆
+    genres:
+      - adventure
+      - puzzle
+      - action
 
   - id: gyakuten-saiban-1
     name: 逆转裁判1
@@ -1255,6 +1285,9 @@
 
   - id: headbangers
     name: Headbangers
+    genres:
+      - rhythm
+      - party
 
   - id: heave-ho
     name: Heave Ho
@@ -1279,6 +1312,8 @@
   - id: her-trees
     name: 她的树
     aliases: []
+    genres:
+      - puzzle
   - id: hidden-folks
     name: Hidden Folks
     genres:
@@ -1379,7 +1414,7 @@
   - id: hougong-sanqianren
     name: 后宫三千人
     genres:
-      - visual-novel
+      - chengguang
 
   - id: house-flipper
     name: 房产达人
@@ -1512,6 +1547,9 @@
 
   - id: jian-ai
     name: 拣爱
+    genres:
+      - visual-novel
+      - adventure
 
   - id: jianghu-shiyi
     name: 江湖十一
@@ -1528,6 +1566,8 @@
   - id: jiangshan-beiwang
     name: 江山北望
     aliases: []
+    genres:
+      - visual-novel
   - id: juicy-realm
     name: 恶果之地
     aliases:
@@ -1647,6 +1687,9 @@
     name: 生生不息
     aliases:
       - Life Goes On
+    genres:
+      - puzzle
+      - platformer
 
   - id: lifeafter
     name: 明日之后
@@ -1711,6 +1754,8 @@
     name: 诡秘之主
     aliases:
       - Lord of Mysteries
+    genres:
+      - mmorpg
   - id: lords-of-the-fallen
     name: 堕落之主
     aliases:
@@ -1850,6 +1895,9 @@
   - id: mechanical-carnival
     name: 机械狂欢
     aliases: []
+    genres:
+      - party
+      - horror
   - id: medieval-dynasty
     name: 中世纪王朝
     aliases:
@@ -1904,6 +1952,9 @@
     name: 妈妈把我的游戏藏起来了
     aliases:
       - Mom Hid My Game
+    genres:
+      - puzzle
+      - casual
 
   - id: monopoly-plus
     name: 大富翁
@@ -2062,13 +2113,16 @@
   - id: nvdiao
     name: 女吊
     aliases: []
+    genres:
+      - horror
+      - puzzle
   - id: nvdihou-gong
     name: 传闻中的女帝后宫
     aliases:
       - 橙光
     note: "橙光互动作品，2021-01-28/29 分P标题「橙光 传闻中的女帝后宫」"
     genres:
-      - visual-novel
+      - chengguang
 
   - id: octopath-traveler
     name: 八方旅人
@@ -2419,6 +2473,8 @@
   - id: repair-story
     name: 维修物语
     aliases: []
+    genres:
+      - simulation
   - id: resident-evil-2
     name: 生化危机2
     aliases:
@@ -2637,6 +2693,10 @@
     name: 遗忘之海
     aliases:
       - Sea of Oblivion
+    genres:
+      - rpg
+      - open-world
+      - adventure
   - id: sea-of-thieves
     name: 盗贼之海
     aliases:
@@ -2696,6 +2756,9 @@
     name: 使命战场
     aliases: []
     note: "2021-01-08 条目标题原文；疑为使命召唤手游/战区，具体版本待上线后用户核实"
+    genres:
+      - battle-royale
+      - shooter
 
   - id: ship-of-fools
     name: Ship of Fools
@@ -2706,6 +2769,9 @@
   - id: shot-aground
     name: Shot Aground
     note: "Rene Rother 的两周原型作（v0.11），2015-02-04 直播中试玩"
+    genres:
+      - shooter
+      - action
 
   - id: sifu
     name: SIFU
@@ -2754,6 +2820,9 @@
   - id: snapshots-game
     name: Snapshots
     aliases: []
+    genres:
+      - puzzle
+      - casual
   - id: sos-fomt
     name: 牧场物语：重聚矿石镇
     aliases: [牧场物语重聚矿石镇, 牧场物语矿石镇, 'Story of Seasons: Friends of Mineral Town', 牧场物语]
@@ -3326,6 +3395,9 @@
     name: 战锤40k
     aliases:
       - Warhammer 40000
+    genres:
+      - shooter
+      - action
 
   - id: warm-snow
     name: 暖雪
@@ -3412,6 +3484,8 @@
 
   - id: wo-bei-meinv-baoweile
     name: 我被美女包围了
+    genres:
+      - visual-novel
 
   - id: wo-long
     name: 卧龙：苍天陨落
@@ -3484,6 +3558,9 @@
   - id: wuzhu-xingyuan
     name: 无主星渊
     aliases: []
+    genres:
+      - shooter
+      - action
   - id: xi
     name: 汐
     genres:
@@ -3551,6 +3628,8 @@
 
   - id: youlin-guaitan
     name: 幽林怪谈
+    genres:
+      - action
 
   - id: youtubers-life
     name: Youtubers Life
@@ -3609,6 +3688,9 @@
   - id: zheshi-xieyinggen
     name: 这是谐音梗
     aliases: []
+    genres:
+      - puzzle
+      - party
 
   - id: zhi-jiayi
     name: 纸嫁衣
@@ -3646,6 +3728,8 @@
 
   - id: daochao-jiudian
     name: 岛潮酒店
+    genres:
+      - visual-novel
 
   - id: death-cathedral
     name: 死亡教堂
@@ -3660,9 +3744,14 @@
 
   - id: ditie-fanhua
     name: 地铁繁花
+    genres:
+      - puzzle
+      - adventure
 
   - id: feiyue-13haofang
     name: 飞跃13号房
+    genres:
+      - visual-novel
 
   - id: gaofu-daluandou
     name: 高尔夫大乱斗
@@ -3672,6 +3761,9 @@
 
   - id: guangzhi-chuanshuo
     name: 光之传说
+    genres:
+      - adventure
+      - puzzle
 
   - id: huang-laobing
     name: 黄老饼梦游惊奇
@@ -3702,6 +3794,8 @@
 
   - id: konglong-huashi-lieren
     name: 恐龙化石猎人
+    genres:
+      - simulation
 
   - id: linghuo-naoxueyuan
     name: 灵活脑学院
@@ -3711,6 +3805,9 @@
 
   - id: luoxuan-fengbao
     name: 螺旋风暴
+    genres:
+      - card
+      - strategy
 
   - id: magicraft
     name: 魔法工艺
@@ -3760,6 +3857,9 @@
 
   - id: shendu-buliangtan
     name: 神都不良探
+    genres:
+      - visual-novel
+      - puzzle
 
   - id: sons-of-the-forest
     name: 森林之子
@@ -3779,6 +3879,9 @@
     name: Stickman
     aliases:
       - 火柴人
+    genres:
+      - adventure
+      - puzzle
 
   - id: streets-of-rage-4
     name: 怒之铁拳4
@@ -3852,6 +3955,8 @@
 
   - id: yingzi-gongchang
     name: 影子工场
+    genres:
+      - adventure
 
   - id: yinmi-de-jiaoluo
     name: 隐秘的角落
@@ -3882,6 +3987,9 @@
 
   - id: zuoye-fengle
     name: 作业疯了
+    genres:
+      - puzzle
+      - casual
 
   - id: call-of-duty-black-ops-6
     name: 使命召唤21：黑色行动6
@@ -3910,6 +4018,10 @@
 
   - id: alices-death
     name: 爱丽丝之死
+    genres:
+      - puzzle
+      - adventure
+      - horror
 
   - id: angry-birds
     name: 愤怒的小鸟
@@ -3960,6 +4072,8 @@
 
   - id: baby-escape
     name: 小婴儿逃脱
+    genres:
+      - puzzle
 
   - id: battlefield-2042
     name: 战地2042
@@ -3987,6 +4101,8 @@
     name: 变态人生大冒险
     aliases:
       - 变态人生的大冒险
+    genres:
+      - platformer
 
   - id: bleach-soul-resonance
     name: 境界：灵压对决
@@ -4025,11 +4141,16 @@
     name: 拆！
     aliases:
       - 拆系列
+    genres:
+      - puzzle
 
   - id: change-homeless
     name: 转变
     aliases:
       - Change
+    genres:
+      - simulation
+      - survival
 
   - id: changmeng
     name: 长梦
@@ -4077,6 +4198,8 @@
 
   - id: corporate-climber
     name: Corporate Climber
+    genres:
+      - casual
 
   - id: counter-strike-online
     name: 反恐精英Online
@@ -4104,9 +4227,14 @@
 
   - id: dark-detective
     name: 黑暗侦探
+    genres:
+      - adventure
+      - puzzle
 
   - id: dear-fresh-meat
     name: 亲爱的小鲜肉
+    genres:
+      - chengguang
 
   - id: diablo-2
     name: 暗黑破坏神2
@@ -4155,6 +4283,8 @@
 
   - id: driving-test-sim
     name: 东方驾考模拟器
+    genres:
+      - simulation
 
   - id: earthworms
     name: Earthworms
@@ -4171,6 +4301,9 @@
 
   - id: endless-journey
     name: 无尽旅途
+    genres:
+      - puzzle
+      - adventure
 
   - id: enough-plumbers
     name: Enough Plumbers
@@ -4187,6 +4320,9 @@
 
   - id: famous-painting-parodies
     name: Famous Painting Parodies
+    genres:
+      - puzzle
+      - casual
 
   - id: fitness-lab-switch
     name: 体能实验室
@@ -4208,6 +4344,9 @@
 
   - id: gem-merchant
     name: 宝石商人桌游局
+    genres:
+      - card
+      - strategy
 
   - id: ghost-trick
     name: 幽灵诡计
@@ -4274,6 +4413,9 @@
 
   - id: holy-book-story
     name: 圣书物语
+    genres:
+      - shooter
+      - action
 
   - id: home-sheep-home
     name: 小羊回家
@@ -4308,9 +4450,14 @@
 
   - id: im-the-boss
     name: 我是大老板
+    genres:
+      - card
+      - party
 
   - id: imprisoned-palm
     name: 被囚禁的掌心
+    genres:
+      - visual-novel
 
   - id: incantation-game
     name: 咒
@@ -4329,6 +4476,9 @@
 
   - id: jianjian-shijie
     name: 剪剪世界
+    genres:
+      - puzzle
+      - party
 
   - id: journey
     name: 风之旅人
@@ -4341,6 +4491,8 @@
     name: 巨人の猎手
     aliases:
       - 巨人猎手
+    genres:
+      - action
 
   - id: kena-bridge-of-spirits
     name: 柯娜：精神之桥
@@ -4434,6 +4586,9 @@
 
   - id: nayas-quest
     name: "Naya's Quest"
+    genres:
+      - puzzle
+      - platformer
 
   - id: perdition
     name: Perdition
@@ -4450,6 +4605,9 @@
 
   - id: phoenitopia
     name: Phoenitopia
+    genres:
+      - action
+      - adventure
 
   - id: plants-vs-zombies
     name: 植物大战僵尸
@@ -4472,6 +4630,9 @@
 
   - id: santa-run
     name: SANTA RUN
+    genres:
+      - platformer
+      - casual
 
   - id: soulcaster
     name: 灵魂魔术师
@@ -4494,6 +4655,9 @@
     name: 魔术师之梦
     aliases:
       - "The Illusionist's Dream"
+    genres:
+      - puzzle
+      - adventure
 
   - id: the-impossible-quiz
     name: The Impossible Quiz
@@ -4505,9 +4669,14 @@
     name: 危险的蝎子
     aliases:
       - "The Scorpion Box"
+    genres:
+      - puzzle
 
   - id: the-very-organized-thief
     name: The Very Organized Thief
+    genres:
+      - puzzle
+      - casual
 
   - id: maplestory
     name: 冒险岛
@@ -4534,6 +4703,9 @@
 
   - id: matrix-zero-day-crisis
     name: 矩阵：零日危机
+    genres:
+      - roguelike
+      - shooter
 
   - id: meituan
     name: 美团
@@ -4553,12 +4725,19 @@
 
   - id: mizi-no
     name: Mizi NO!
+    genres:
+      - puzzle
+      - casual
 
   - id: my-teacher-is-a-bear
     name: 我的老师是只“熊”
+    genres:
+      - chengguang
 
   - id: never-look-at-it
     name: 千万不能看！
+    genres:
+      - horror
 
   - id: new-super-mario-bros-wii
     name: 新超级马力欧兄弟 Wii
@@ -4588,7 +4767,7 @@
     aliases:
       - 逆袭
     genres:
-      - visual-novel
+      - chengguang
 
   - id: once-human
     name: 七日世界
@@ -4609,6 +4788,8 @@
     name: 界外狂潮
     aliases:
       - Out of Bounds
+    genres:
+      - shooter
 
   - id: pico-park-2
     name: PICO PARK 2
@@ -4654,6 +4835,9 @@
     name: 捣蛋大作战
     aliases:
       - Rascal Fight
+    genres:
+      - party
+      - action
 
   - id: rayman-legends
     name: 雷曼传奇
@@ -4664,6 +4848,9 @@
 
   - id: reading-people-trilogy
     name: 察言观色三部曲
+    genres:
+      - puzzle
+      - casual
 
   - id: replica-game
     name: Replica
@@ -4675,6 +4862,8 @@
     name: 怀旧小游戏合集
     aliases:
       - 约战对战平台怀旧小游戏
+    genres:
+      - casual
 
   - id: ring-fit-adventure
     name: 健身环大冒险
@@ -4686,6 +4875,9 @@
 
   - id: rogue-hero
     name: 痞子英雄
+    genres:
+      - roguelike
+      - action
 
   - id: ruina
     name: 废都物语
@@ -4728,6 +4920,8 @@
 
   - id: stabbed-by-god
     name: 我被男神捅死了
+    genres:
+      - chengguang
 
   - id: stranded-deep
     name: 怒海求生
@@ -4754,6 +4948,9 @@
 
   - id: supermarket-chaos
     name: 混乱超市
+    genres:
+      - puzzle
+      - casual
 
   - id: techtonica
     name: Techtonica
@@ -4792,6 +4989,9 @@
 
   - id: the-visitor-game
     name: 来访者
+    genres:
+      - visual-novel
+      - puzzle
 
   - id: thehunter
     name: 猎人
@@ -4810,6 +5010,9 @@
     name: 天神镇
     aliases:
       - 天神镇物语
+    genres:
+      - simulation
+      - strategy
 
   - id: tiny-rogues
     name: Tiny Rogues
@@ -4836,6 +5039,9 @@
     aliases:
       - 轨道模型游戏
       - The Train Set Game
+    genres:
+      - simulation
+      - sandbox
 
   - id: train-valley-2
     name: 火车山谷2
@@ -4870,6 +5076,9 @@
 
   - id: twin-tales
     name: 双子传说
+    genres:
+      - adventure
+      - puzzle
 
   - id: undertale
     name: 传说之下
@@ -4906,17 +5115,28 @@
     name: 吟诵者
     aliases:
       - Wandersong（推测）
+    genres:
+      - puzzle
+      - adventure
 
   - id: yiren-zhixia
     name: 异人之下
+    genres:
+      - fighting
+      - action
 
   - id: yongwang-zhiqian
     name: 勇网直前
+    genres:
+      - platformer
+      - puzzle
 
   - id: your-love-and-real-love
     name: 你之恋与真实之恋
 
   # 2026-08-28 标签校准补录：均有直播标题、分段、简介或人工画面证据。
+    genres:
+      - chengguang
   - id: tumbleseed
     name: TumbleSeed
     genres:
@@ -4935,12 +5155,16 @@
     name: "Tiny Toon Adventures: Buster's Hidden Treasure"
     aliases:
       - 兔宝宝历险记
+    genres:
+      - platformer
 
   - id: murder-mystery
     name: 谋杀之谜
 
   - id: mr-blackface
     name: 黑脸先生
+    genres:
+      - platformer
 
   - id: cave-story
     name: 洞窟物语
@@ -5008,6 +5232,8 @@
     name: 嗜血印
     aliases:
       - Bloody Spell
+    genres:
+      - action
 
   - id: vacation-simulator
     name: Vacation Simulator
@@ -5028,6 +5254,9 @@
   - id: reading-people
     name: 察言观色
     note: "按 2020-04-02 回放标题独立登记；与已登记的《察言观色三部曲》分开。"
+    genres:
+      - puzzle
+      - casual
 
   - id: superliminal
     name: Superliminal
@@ -5054,6 +5283,9 @@
 
   - id: wudao-micang
     name: 舞蹈迷藏
+    genres:
+      - rhythm
+      - party
 
   - id: rolo-to-the-rescue
     name: Rolo to the Rescue
@@ -5121,15 +5353,27 @@
 
   - id: jiaomeimeikaiche
     name: 教妹妹开车
+    genres:
+      - simulation
+      - casual
 
   - id: kongzhigongzhen
     name: 控制：共振
+    genres:
+      - action
+      - arpg
 
   - id: orbitals
     name: 轨道双子星
+    genres:
+      - platformer
+      - adventure
+      - party
 
   - id: shenkongdangpu
     name: 深空当铺
+    genres:
+      - simulation
 
   - id: townfall
     name: 寂静岭：townfall
@@ -5148,6 +5392,9 @@
     name: Don't Escape 2
     aliases:
       - 别逃跑2
+    genres:
+      - puzzle
+      - adventure
 
   - id: new-super-mario-bros-u
     name: 新超级马里奥兄弟U
@@ -5192,7 +5439,7 @@
     aliases:
       - 橙光游戏：命运交叉的客店
     genres:
-      - visual-novel
+      - chengguang
 
   - id: street-fighter-v
     name: 街头霸王5
@@ -5233,7 +5480,7 @@
     aliases:
       - "橙光游戏：潜伏之赤途"
     genres:
-      - visual-novel
+      - chengguang
 
   - id: naruto-storm-4
     name: "火影忍者 究极风暴4"
@@ -5492,6 +5739,8 @@
 
   - id: xingzhi-qiyue
     name: 星之契约
+    genres:
+      - rpg
 
   - id: dicey-dungeons
     name: 骰子地下城
@@ -5536,6 +5785,8 @@
     aliases:
       - 說劍
       - The Swords
+    genres:
+      - action
 
   - id: fight-for-freedom
     name: 自由之战
@@ -5563,6 +5814,9 @@
 
   - id: bombanana
     name: BOMBANANA!
+    genres:
+      - party
+      - puzzle
 
   - id: duet
     name: Duet
@@ -5572,3 +5826,6 @@
 
   - id: crazy-freekick
     name: Crazy Freekick
+    genres:
+      - sports
+      - casual
