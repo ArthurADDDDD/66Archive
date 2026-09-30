@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { InlineTagCalibration } from '@/components/InlineTagCalibration'
 import { EntryArchiveCover } from './EntryArchiveCover'
 import { EntryClue } from './EntryClue'
+import { useGameGenres } from './GameGenresContext'
+import { GenreChips } from './GenreChips'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
@@ -73,6 +75,9 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
   const { sourceIndex, setSourceIndex, selectedSource, displayCover } = useEntrySource(entry)
   // 来源标题和记录标题一样时，手机上不再重复一遍（上面那一行已经写着）。
   const sameTitle = !selectedSource || selectedSource.entryTitle === entry.title
+  // 这场里所有游戏的类型（去重）；对照表只有录播室提供，别处为空就不显示。
+  const gameGenres = useGameGenres()
+  const genres = [...new Set(entry.games.flatMap((game) => gameGenres[game.id] ?? []))]
 
   return (
     <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
@@ -101,6 +106,8 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
             <span>{formatDuration(entry.duration_min)}</span>
           </div>
         </div>
+
+        {genres.length > 0 && <GenreChips genres={genres} className="mt-3" />}
 
         {entry.bands.some((band) => band.game) && (
           <div className={sameTitle ? 'sm:mt-4' : 'mt-4'}>

@@ -54,10 +54,20 @@ function build(): { payload: EncodedArchivePayload; url: string } {
       ? allEntries.filter((entry) => entry.uncheckedCount === 0)
       : allEntries
 
+  // 只收录播室里真的出现过、且已有类型的游戏。
+  const gameGenres: Record<string, string[]> = {}
+  for (const entry of entries) {
+    for (const game of entry.games) {
+      const genres = ds.games.get(game.id)?.genres
+      if (genres && genres.length > 0) gameGenres[game.id] = genres
+    }
+  }
+
   const payload = encodeArchivePayload({
     entries,
     isDemo: ds.isDemo,
     hiddenUnreviewed: allEntries.length - entries.length,
+    gameGenres,
   })
 
   // 与 route handler 实际发出去的字节一致：`Response.json` 用的就是 JSON.stringify。

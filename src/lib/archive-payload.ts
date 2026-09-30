@@ -45,16 +45,27 @@ export type EncodedEntry = Omit<
   'bands' | 'sources' | 'primaryUrl' | 'sourceCount' | 'aliveCount' | 'uncheckedCount' | 'deadCount'
 > & { bands: EncodedBand[]; sources: EncodedSource[] }
 
+/**
+ * 游戏 id → 游戏类型（受控词表 id，见 genres.ts）。只收有类型的游戏。
+ *
+ * 放在载荷顶层、而不是塞进每条 `entries[].games`：同一个游戏会出现在几十上百条档案里，
+ * 顶层一份表只写一次。**可选字段**——边缘上还可能是没有它的上一版载荷，缺了就当空表，
+ * 录播室只是不显示类型，不会因此出错；旧 JS 拿到新载荷则直接忽略这个键。
+ */
+export type GameGenreMap = Record<string, string[]>
+
 export type ArchivePayload = {
   entries: TimelineEntry[]
   isDemo: boolean
   hiddenUnreviewed: number
+  gameGenres?: GameGenreMap
 }
 
 export type EncodedArchivePayload = {
   entries: EncodedEntry[]
   isDemo: boolean
   hiddenUnreviewed: number
+  gameGenres?: GameGenreMap
 }
 
 /**

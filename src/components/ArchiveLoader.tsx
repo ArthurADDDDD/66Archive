@@ -2,6 +2,7 @@
 
 import { startTransition, useEffect, useState } from 'react'
 import { Timeline } from './Timeline'
+import { GameGenresProvider } from './GameGenresContext'
 import { SiteNav } from './SiteNav'
 import { SiteText } from './SiteText'
 import {
@@ -110,12 +111,14 @@ export function ArchiveLoader({ nav, dataUrl }: { nav: ArchiveNav; dataUrl: stri
 
   if (payload) {
     return (
-      <Timeline
-        entries={payload.entries}
-        isDemo={payload.isDemo}
-        hiddenUnreviewed={payload.hiddenUnreviewed}
-        extra={<ArchiveBreadcrumb />}
-      />
+      <GameGenresProvider value={payload.gameGenres ?? {}}>
+        <Timeline
+          entries={payload.entries}
+          isDemo={payload.isDemo}
+          hiddenUnreviewed={payload.hiddenUnreviewed}
+          extra={<ArchiveBreadcrumb />}
+        />
+      </GameGenresProvider>
     )
   }
 

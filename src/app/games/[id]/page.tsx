@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { encodeArchiveEntry } from '@/lib/archive-payload'
+import { GenreChips } from '@/components/GenreChips'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { SiteNav } from '@/components/SiteNav'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
@@ -134,6 +135,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
                     : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
                 </p>
               )}
+              <GenreChips genres={profile.genres} className="mt-5" />
               {profile.curated?.note && (
                 <p className="mt-4 text-meta text-faint">ⓘ {profile.curated.note}</p>
               )}
@@ -279,6 +281,7 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
           ? <SiteText id="game-single-summary" vars={{ date: profile.firstDate ?? '', hours: profile.hoursLabel }} />
           : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
       </p>
+      <GenreChips genres={profile.genres} className="mt-4" />
 
       <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start">
         {profile.cover ? (

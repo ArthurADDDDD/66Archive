@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { GENRES } from '@/lib/genres'
+import { GENRES, genreLabel } from '@/lib/genres'
 import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { actColorForDate } from '@/lib/narrative'
 import { proxyImageSrcSet } from '@/lib/platforms'
@@ -70,6 +70,15 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
 
   // 装回对象数组一次，下面的筛选 / 排序 / 渲染完全不用改。
   const games = useMemo(() => toLibraryGames(columns), [columns])
+
+  // 从游戏页 / 录播室点类型标签过来（`/games/?genre=<id>`）：直接按那个类型筛好。
+  // 放在挂载后读，页面仍是静态导出、服务端渲染出来的是不筛选的版本。
+  useEffect(() => {
+    const genre = new URLSearchParams(window.location.search).get('genre')
+    // 网址参数只在浏览器里有，挂载后同步一次是有意的（同 SiteNav 的 portalReady）。
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (genre && GENRES.some((item) => item.id === genre)) setSelectedGenres([genre])
+  }, [])
 
   // 每个类型有多少游戏：只列出至少有一款的类型；一款都没分类时整排筛选不出现。
   const genreOptions = useMemo(() => {
@@ -420,6 +429,10 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
             同一行的瓦片文字块高度各不相同，读下来是参差的。缺什么就占什么，不塌陷。 */}
         <p className="mt-2.5 line-clamp-2 min-h-[2.6em] text-control leading-snug text-ink group-hover:text-live">
           {g.name}
+        </p>
+        {/* 类型固定占一行：没分类的也留出这一行，同一排的瓦片日期仍然对齐。 */}
+        <p className="mt-0.5 min-h-[1.5em] truncate text-meta text-muted" title={g.genres.map(genreLabel).join(' · ')}>
+          {g.genres.map(genreLabel).join(' · ')}
         </p>
         {/* 首播 / 最近两个日期各占一行，不再挤在同一行里靠换行救急：
             瓦片只有两三百像素宽，一行放不下 `YYYY-MM-DD → YYYY-MM-DD`，浏览器会从日期中间断开，
