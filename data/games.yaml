@@ -4301,6 +4301,9 @@
 
   - id: endless-journey
     name: 无尽旅途
+    aliases:
+      - 无尽旅图
+      - Carto
     genres:
       - puzzle
       - adventure
@@ -4780,9 +4783,15 @@
 
   - id: once-upon-a-time-game
     name: Once Upon A Time
+    genres:
+      - card
+      - party
 
   - id: oneway-game
     name: OneWay
+    genres:
+      - puzzle
+      - adventure
 
   - id: out-of-bounds
     name: 界外狂潮
@@ -5073,6 +5082,9 @@
 
   - id: true-or-false-game
     name: True or False
+    genres:
+      - puzzle
+      - casual
 
   - id: twin-tales
     name: 双子传说
@@ -5114,7 +5126,7 @@
   - id: yinsongzhe
     name: 吟诵者
     aliases:
-      - Wandersong（推测）
+      - In Verbis Virtus
     genres:
       - puzzle
       - adventure
@@ -5160,6 +5172,9 @@
 
   - id: murder-mystery
     name: 谋杀之谜
+    genres:
+      - party
+      - puzzle
 
   - id: mr-blackface
     name: 黑脸先生
