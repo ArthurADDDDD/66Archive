@@ -35,6 +35,7 @@ export type LibraryGame = {
   id: string
   name: string
   aliases: string[]
+  genres: string[]
   face: string | null
   sessions: number
   totalMinutes: number
@@ -67,6 +68,7 @@ export const LIBRARY_COLUMNS = [
   'id',
   'name',
   'aliases',
+  'genres',
   'face',
   'sessions',
   'totalMinutes',

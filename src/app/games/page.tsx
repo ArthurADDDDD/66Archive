@@ -46,6 +46,7 @@ export default async function GamesPage() {
     id: p.id,
     name: p.name,
     aliases: p.aliases,
+    genres: p.genres,
     face: p.face,
     sessions: p.sessions,
     totalMinutes: p.totalMinutes,
