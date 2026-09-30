@@ -25,6 +25,7 @@ export const GENRES = [
   { id: 'puzzle', label: '解谜', en: 'Puzzle' },
   { id: 'horror', label: '恐怖', en: 'Horror' },
   { id: 'visual-novel', label: '视觉小说', en: 'Visual Novel / AVG' },
+  { id: 'chengguang', label: '橙光 / 互动文字', en: 'Interactive Fiction (Orange Light / 66RPG)' },
   { id: 'shooter', label: '射击', en: 'FPS / TPS / Shooter' },
   { id: 'battle-royale', label: '大逃杀', en: 'Battle Royale' },
   { id: 'moba', label: 'MOBA', en: 'MOBA' },
