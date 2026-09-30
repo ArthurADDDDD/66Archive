@@ -91,7 +91,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
     if (selectedGenres.includes(UNCLASSIFIED)) {
       list = list.filter((g) => g.genres.length === 0)
     } else if (selectedGenres.length > 0) {
-      // 同时包含所选的全部类型：选得越多范围越窄，「肉鸽 + 动作」才是真的肉鸽动作游戏。
+      // 同时包含所选的全部类型：选得越多范围越窄，「Roguelike + 动作」才是真的 Roguelike 动作游戏。
       list = list.filter((g) => selectedGenres.every((id) => g.genres.includes(id)))
     }
     if (needle) {

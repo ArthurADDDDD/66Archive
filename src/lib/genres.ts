@@ -11,7 +11,7 @@
  * 后台审核助手使用的词表由这份文件同步，改动时两边一并更新。
  */
 export const GENRES = [
-  { id: 'roguelike', label: '肉鸽', en: 'Roguelike / Roguelite' },
+  { id: 'roguelike', label: 'Roguelike', en: 'Roguelike / Roguelite' },
   { id: 'rpg', label: 'RPG', en: 'RPG' },
   { id: 'jrpg', label: 'JRPG', en: 'JRPG（日式角色扮演）' },
   { id: 'arpg', label: '动作 RPG', en: 'Action RPG' },
