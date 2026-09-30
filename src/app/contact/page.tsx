@@ -9,10 +9,9 @@ import { CorrectionSubmission } from '@/components/CorrectionSubmission'
 import { MaintainerCredits } from '@/components/MaintainerCredits'
 import { SiteFooter } from '@/components/primitives'
 import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
-import { LivePageIntro, LivePageNote } from '@/components/LiveSection'
+import { LivePageIntro, LivePageNote, LiveRepoCard } from '@/components/LiveSection'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { PLATFORM_META } from '@/lib/platforms'
-import { REPO_TEXT_PREFIX, REPO_URL, SHOW_REPO_LINK } from '@/lib/site-flags'
 
 /** 标题、简介、canonical 与社交卡片都由 `pageMetadata()` 一次给齐（见该文件注释）。 */
 export const metadata: Metadata = pageMetadata({
@@ -59,11 +58,7 @@ function collectSources() {
 export default async function ContactPage() {
   // 根 layout 只烤 {site, nav}（见 baked-content.ts 的 fetchBakedNavShell）。
   // 这一页真的会渲染后台文案，所以在这里把它需要的那份补回来。
-  const pageCopy = await fetchBakedPageCopy(['contact', 'contact-credits'], { maintainers: true, texts: ['contact-', 'form-'] })
-  // 隐藏仓库卡片时，连它那三句文字也不烤进这一页（见 site-flags.ts）。
-  const bakedCopy = pageCopy && !SHOW_REPO_LINK
-    ? { ...pageCopy, texts: pageCopy.texts.filter((item) => !item.id.startsWith(REPO_TEXT_PREFIX)) }
-    : pageCopy
+  const bakedCopy = await fetchBakedPageCopy(['contact', 'contact-credits', 'contact-repo'], { maintainers: true, texts: ['contact-', 'form-'] })
 
   const { credited, entryCount, firstYear, lastYear } = collectSources()
   return (
@@ -98,23 +93,7 @@ export default async function ContactPage() {
               </div>
             </Link>
 
-            {SHOW_REPO_LINK && (
-              <a
-                href={REPO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
-              >
-                <span className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="contact-repo-kicker" /></span>
-                <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
-                  <div>
-                    <h2 className="text-h3 font-medium">GitHub · 66archive</h2>
-                    <p className="mt-2 text-body text-muted"><SiteText id="contact-repo-body" /></p>
-                  </div>
-                  <span className="text-meta text-live transition-transform group-hover:translate-x-1"><SiteText id="contact-repo-cta" /> ↗</span>
-                </div>
-              </a>
-            )}
+            <LiveRepoCard pageId="contact-repo" href="https://github.com/ArthurADDDDD/66archive" cta={<SiteText id="contact-repo-cta" />} />
           </div>
 
           <section aria-label="贡献者与来源致谢" className="mt-16 flex flex-col border-t border-line pt-10">

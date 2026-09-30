@@ -175,6 +175,36 @@ export function LivePageNote({
   )
 }
 
+/**
+ * 联系页的公开仓库卡片。文字取自子页区块 `contact-repo`，整块可在后台隐藏。
+ *
+ * 隐藏时整张卡片不渲染，`href` 也就不会出现在页面里；现场编辑里照样渲染并压暗标注，
+ * 维护者才点得到它、取消隐藏（同 LivePageNote）。
+ */
+export function LiveRepoCard({ pageId, href, cta }: { pageId: string; href: string; cta: React.ReactNode }) {
+  const block = useCopyBlock('pages', pageId)
+  const editing = useLiveEditActive()
+  if (block.hidden && !editing) return null
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i6-hidden={block.hidden ? '' : undefined}
+      className="ui-card ui-press group rounded-2xl border border-line bg-surface/55 p-6 hover:border-live/40 sm:col-span-2"
+    >
+      {block.eyebrow && <span className="text-meta uppercase tracking-[0.16em] text-live">{block.eyebrow}</span>}
+      <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          {block.title && <h2 className="text-h3 font-medium">{block.title}</h2>}
+          {block.lede && <p className="mt-2 text-body text-muted">{block.lede}</p>}
+        </div>
+        <span className="text-meta text-live transition-transform group-hover:translate-x-1">{cta} ↗</span>
+      </div>
+    </a>
+  )
+}
+
 const ROOM_HREF: Record<string, string> = {
   chronicle: '/chronicle/',
   series: '/series/',

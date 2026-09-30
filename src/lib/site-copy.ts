@@ -266,6 +266,14 @@ export const SITE_COPY: SiteCopy = {
       title: '缺的、错的，都可以在这儿说一声。',
       lede: '这份档案不是一个人翻出来的。你想起一场没被收录的直播，发现哪一处对不上，或者手里存着一张老图——都可以从下面挑一件告诉我。所有线索都由我逐条核对后再改，不会自动生效。',
     },
+    // 联系页的公开仓库卡片。整块可在后台「现场编辑」里隐藏（见 LiveRepoCard）；
+    // 卡片上的三样文字都在这里：小标、标题、说明。「打开仓库」按钮字样仍是页面文字 contact-repo-cta。
+    {
+      id: 'contact-repo',
+      eyebrow: '项目仓库',
+      title: 'GitHub · 66archive',
+      lede: '查看项目源码、数据更新和版本记录。',
+    },
     // 建站的来龙去脉，第一人称。放在致谢区而不是页面最上面：这一段说的是
     // 「这份档案是怎么来的」，和下面的维护者、录播来源是同一件事的三个部分。
     // 换行 = 分段（见 LivePageIntro）。
@@ -553,8 +561,6 @@ export const SITE_COPY: SiteCopy = {
     { id: 'contact-review-title', group: '联系页', label: '一起校对 · 标题', text: '在对应条目里帮忙判断' },
     { id: 'contact-review-body', group: '联系页', label: '一起校对 · 说明', text: '打开对应录像，看过原片以后，再帮忙补标签或者纠错。' },
     { id: 'contact-review-cta', group: '联系页', label: '一起校对 · 链接', text: '打开录播室' },
-    { id: 'contact-repo-kicker', group: '联系页', label: '项目仓库 · 小标', text: '项目仓库' },
-    { id: 'contact-repo-body', group: '联系页', label: '项目仓库 · 说明', text: '查看项目源码、数据更新和版本记录。' },
     { id: 'contact-repo-cta', group: '联系页', label: '项目仓库 · 链接', text: '打开仓库' },
     { id: 'contact-maintainers-kicker', group: '联系页', label: '维护 · 小标', text: '维护' },
     { id: 'contact-maintainers-note', group: '联系页', label: '维护 · 底部说明', text: '想一起补档或校对，可以从上面的 GitHub 仓库找到我。' },
