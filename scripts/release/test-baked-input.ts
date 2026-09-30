@@ -32,17 +32,29 @@ async function main() {
       const key = url.endsWith('site-copy') ? 'copy' : url.split('/').at(-1) as 'narrative' | 'editorial'
       return new Response(JSON.stringify(input.documents[key]), { status: 200 })
     }) as typeof fetch
-    assert.deepEqual(await capture(input.origin, request), input)
+    assert.deepEqual(await capture(input.origin, request, 0), input)
     assert.equal(calls, 6)
-    await assert.rejects(capture(input.origin, (async () => new Response('{}', { status: 503 })) as typeof fetch), /HTTP 503/)
-    await assert.rejects(capture(input.origin, (async () => new Response('{}')) as typeof fetch), /revision/)
+    await assert.rejects(capture(input.origin, (async () => new Response('{}', { status: 503 })) as typeof fetch, 0), /HTTP 503/)
+    await assert.rejects(capture(input.origin, (async () => new Response('{}', { status: 404 })) as typeof fetch, 0), /HTTP 404/)
+    await assert.rejects(capture(input.origin, (async () => new Response('{}')) as typeof fetch, 0), /revision/)
+    // Transient network failures are retried; a permanent one still ends the capture.
+    const flaky: Record<string, number> = {}
+    assert.deepEqual(await capture(input.origin, (async (url: string) => {
+      const key = String(url).split('/').pop() as string
+      flaky[key] = (flaky[key] ?? 0) + 1
+      if (flaky[key] <= 2) throw Object.assign(new TypeError('terminated'), { cause: new Error('other side closed') })
+      return request(url)
+    }) as typeof fetch, 0), input)
+    let dead = 0
+    await assert.rejects(capture(input.origin, (async () => { dead++; throw new TypeError('terminated') }) as typeof fetch, 0), /request failed \(terminated\)/)
+    assert.ok(dead >= 4, 'gives up only after several attempts')
     let counter = 0
     await assert.rejects(capture(input.origin, (async (url: string) => {
       const response = await request(url)
       const payload = await response.json()
       payload.revision = ++counter
       return new Response(JSON.stringify(payload))
-    }) as typeof fetch), /changed during capture/)
+    }) as typeof fetch, 0), /changed during capture/)
     console.log('Frozen input: stable capture, corruption, origin, schema, HTTP and concurrent-change tests passed')
   } finally { fs.rmSync(tmp, { recursive: true, force: true }) }
 }
