@@ -485,3 +485,25 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-09-30-live-01
+  type: live
+  date: "2026-09-30"
+  title: "20个迷宫"
+  platform: douyin
+  duration_min: 121
+  games:
+    - 20migong
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/960d4a8ad4367ebf04f3f341e9e453c2e0ee242c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV17Waf6CE4D"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1W3af6QEpU"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
