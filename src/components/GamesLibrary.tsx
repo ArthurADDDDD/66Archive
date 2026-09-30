@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { GENRES } from '@/lib/genres'
 import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { actColorForDate } from '@/lib/narrative'
 import { proxyImageSrcSet } from '@/lib/platforms'
@@ -56,8 +57,12 @@ const PAGE_SIZE = 60
 const TILE_WIDTHS = [240, 480] as const
 const TILE_SIZES = '(min-width: 1280px) 17vw, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw'
 
+/** 「未分类」不是词表里的类型，只是筛选里给 genres 为空的游戏留的一个入口。 */
+const UNCLASSIFIED = 'unclassified'
+
 export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
   const [q, setQ] = useState('')
+  const [selectedGenres, setSelectedGenres] = useState<string[]>([])
   const [sort, setSort] = useState<SortKey>('newest')
   const [page, setPage] = useState(1)
   const searchPlaceholder = useSiteText('games-search-placeholder')
@@ -66,9 +71,29 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
   // 装回对象数组一次，下面的筛选 / 排序 / 渲染完全不用改。
   const games = useMemo(() => toLibraryGames(columns), [columns])
 
+  // 每个类型有多少游戏：只列出至少有一款的类型；一款都没分类时整排筛选不出现。
+  const genreOptions = useMemo(() => {
+    const counts = new Map<string, number>()
+    let unclassified = 0
+    for (const g of games) {
+      if (g.genres.length === 0) unclassified += 1
+      for (const id of g.genres) counts.set(id, (counts.get(id) ?? 0) + 1)
+    }
+    return {
+      genres: GENRES.filter((genre) => counts.has(genre.id)).map((genre) => ({ ...genre, count: counts.get(genre.id) ?? 0 })),
+      unclassified,
+    }
+  }, [games])
+
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
     let list = games
+    if (selectedGenres.includes(UNCLASSIFIED)) {
+      list = list.filter((g) => g.genres.length === 0)
+    } else if (selectedGenres.length > 0) {
+      // 同时包含所选的全部类型：选得越多范围越窄，「肉鸽 + 动作」才是真的肉鸽动作游戏。
+      list = list.filter((g) => selectedGenres.every((id) => g.genres.includes(id)))
+    }
     if (needle) {
       list = list.filter(
         (g) => g.name.toLowerCase().includes(needle) || g.aliases.some((a) => a.toLowerCase().includes(needle)),
@@ -84,7 +109,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
     else if (sort === 'oldest') sorted.sort((a, b) => byFirstDate(a, b) || byLastDate(a, b) || byName(a, b))
     else sorted.sort((a, b) => byLastDate(a, b) || byFirstDate(a, b) || byName(a, b))
     return sorted
-  }, [games, q, sort])
+  }, [games, q, sort, selectedGenres])
 
   useEffect(() => {
     const isZeroSearch = q.trim().length > 0 && filtered.length === 0
@@ -115,6 +140,15 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
 
   const changeSearch = (value: string) => {
     setQ(value)
+    setPage(1)
+  }
+
+  const toggleGenre = (id: string) => {
+    setSelectedGenres((current) => {
+      if (id === UNCLASSIFIED) return current.includes(UNCLASSIFIED) ? [] : [UNCLASSIFIED]
+      const rest = current.filter((item) => item !== UNCLASSIFIED)
+      return rest.includes(id) ? rest.filter((item) => item !== id) : [...rest, id]
+    })
     setPage(1)
   }
 
@@ -156,6 +190,41 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
         </span>
       </div>
 
+      {genreOptions.genres.length > 0 && (
+        <div role="group" aria-label="按游戏类型筛选" className="mt-3 flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-meta text-faint">类型</span>
+          {genreOptions.genres.map((genre) => (
+            <GenreChip
+              key={genre.id}
+              label={genre.label}
+              count={genre.count}
+              active={selectedGenres.includes(genre.id)}
+              onClick={() => toggleGenre(genre.id)}
+            />
+          ))}
+          {genreOptions.unclassified > 0 && (
+            <GenreChip
+              label="未分类"
+              count={genreOptions.unclassified}
+              active={selectedGenres.includes(UNCLASSIFIED)}
+              onClick={() => toggleGenre(UNCLASSIFIED)}
+            />
+          )}
+          {selectedGenres.length > 0 && (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedGenres([])
+                setPage(1)
+              }}
+              className="ui-press rounded-full px-2.5 py-2 text-meta text-faint underline-offset-2 hover:text-ink hover:underline sm:py-1.5"
+            >
+              清除
+            </button>
+          )}
+        </div>
+      )}
+
       <p className="mt-3 text-meta text-faint">{activeSort?.hint}</p>
 
       <div className="mt-5 flex flex-wrap items-center gap-3 text-meta text-faint tnum">
@@ -165,10 +234,14 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="mt-12 text-body text-muted"><SiteText id="games-search-empty" vars={{ q }} /></p>
+        q.trim() ? (
+          <p className="mt-12 text-body text-muted"><SiteText id="games-search-empty" vars={{ q }} /></p>
+        ) : (
+          <p className="mt-12 text-body text-muted">没有同时符合所选类型的游戏，试试取消一两个类型。</p>
+        )
       ) : (
         <ul
-          key={`${sort}:${q.trim().toLowerCase()}:${currentPage}`}
+          key={`${sort}:${q.trim().toLowerCase()}:${selectedGenres.join(',')}:${currentPage}`}
           className="mt-8 grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-4 sm:gap-y-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {visible.map((g) => (
@@ -183,6 +256,34 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
         </div>
       )}
     </div>
+  )
+}
+
+function GenreChip({
+  label,
+  count,
+  active,
+  onClick,
+}: {
+  label: string
+  count: number
+  active: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      data-analytics-event="filter.use"
+      data-analytics-target="genre"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
+        active ? 'border-live/60 bg-live/10 text-live' : 'border-line text-muted hover:border-muted hover:text-ink'
+      }`}
+    >
+      {label}
+      <span className="ml-1 text-faint tnum">{count}</span>
+    </button>
   )
 }
 

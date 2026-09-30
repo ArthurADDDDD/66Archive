@@ -5,6 +5,8 @@
     aliases:
       - 1,2switch
       - 12switch
+    genres:
+      - party
 
   - id: 10-minutes-till-dawn
     name: 10 Minutes Till Dawn
@@ -28,6 +30,8 @@
     name: 冰与火之舞
     aliases:
       - A Dance of Fire and Ice
+    genres:
+      - rhythm
 
   - id: a-hat-in-time
     name: 时光之帽
@@ -42,6 +46,8 @@
   - id: a-little-to-the-left
     name: A Little to the Left
     aliases: []
+    genres:
+      - puzzle
   - id: a-perfect-day
     name: 完美的一天
 
@@ -50,6 +56,9 @@
     aliases:
       - 瘟疫传说
       - 'A Plague Tale: Innocence'
+    genres:
+      - adventure
+      - action
 
   - id: a-plague-tale-requiem
     name: 瘟疫传说：安魂曲
@@ -57,9 +66,14 @@
       - 瘟疫传说2
       - 瘟疫传说2安魂曲
       - 'A Plague Tale: Requiem'
+    genres:
+      - adventure
+      - action
 
   - id: a-short-hike
     name: A Short Hike
+    genres:
+      - adventure
 
   - id: ai-escape-room
     name: AI密室逃脱
@@ -68,6 +82,9 @@
     name: 心灵杀手2
     aliases:
       - Alan Wake 2
+    genres:
+      - horror
+      - action
 
   - id: alba
     name: 阿尔芭与野生动物的故事
@@ -82,6 +99,8 @@
 
   - id: amazing-cultivation-simulator
     name: 了不起的修仙模拟器
+    genres:
+      - simulation
 
   - id: among-trees
     name: Among Trees
@@ -90,6 +109,8 @@
     name: Among Us
     note: "2020-12-08 条目标题「谁是内鬼」，按 Among Us 登记；中文俗称关联待上线后用户核实"
     aliases: [谁是内鬼, AmongUs]
+    genres:
+      - party
 
   - id: animal-crossing-nh
     name: 集合啦！动物森友会
@@ -97,6 +118,8 @@
       - 动物森友会
       - 集合啦！动物森友会
       - 'Animal Crossing: New Horizons'
+    genres:
+      - simulation
 
   - id: are-you-sleeping
     name: 睡了吗
@@ -106,6 +129,8 @@
     aliases:
       - Arena Breakout
       - 暗区突围无限
+    genres:
+      - shooter
   - id: arknights-endfield
     name: 明日方舟：终末地
     aliases:
@@ -116,6 +141,8 @@
     aliases:
       - 装甲核心6境界天火
       - Armored Core 6
+    genres:
+      - action
 
   - id: assemble-with-care
     name: 用心组装
@@ -127,17 +154,25 @@
 
   - id: ashen
     name: Ashen
+    genres:
+      - arpg
+      - soulslike
 
   - id: assassins-creed-mirage
     name: 刺客信条：幻景
     aliases:
       - 刺客信条幻景
       - 'Assassin''s Creed Mirage'
+    genres:
+      - action
+      - adventure
 
   - id: atomic-heart
     name: 原子之心
     aliases:
       - Atomic Heart
+    genres:
+      - shooter
 
   - id: auction-king
     name: 竞拍之王
@@ -155,10 +190,14 @@
 
   - id: back-4-blood
     name: Back 4 Blood
+    genres:
+      - shooter
 
   - id: baldurs-gate-3
     name: 博德之门3
     aliases: ['Baldur''s Gate 3', BG3, 博德之门 3, Baldur s Gate 3]
+    genres:
+      - rpg
 
   - id: barber-shop-simulator
     name: 乱剪一通
@@ -173,9 +212,14 @@
     name: 战斗方块剧场
     aliases:
       - BattleBlock Theater
+    genres:
+      - platformer
+      - party
 
   - id: bear-and-breakfast
     name: Bear and Breakfast
+    genres:
+      - simulation
 
   - id: bento-blocks
     name: Bento Blocks
@@ -183,22 +227,34 @@
   - id: biped
     name: Biped
     aliases: [只只大冒险]
+    genres:
+      - puzzle
+      - party
 
   - id: black-myth-wukong
     name: 黑神话：悟空
     aliases:
       - 'Black Myth: Wukong'
       - 黑神话悟空
+    genres:
+      - arpg
+      - action
   - id: bloodborne
     name: 血源诅咒
     aliases:
       - 血源
       - Bloodborne
+    genres:
+      - arpg
+      - soulslike
 
   - id: bomb-chicken
     name: 炸弹鸡
     aliases:
       - Bomb Chicken
+    genres:
+      - platformer
+      - puzzle
 
   - id: bossgard
     name: Bossgard
@@ -222,15 +278,23 @@
     name: 传送门：桥梁构造者
     aliases:
       - Bridge Constructor Portal
+    genres:
+      - puzzle
 
   - id: brotato
     name: Brotato
     aliases: [土豆兄弟]
+    genres:
+      - roguelike
+      - shooter
 
   - id: cadence-of-hyrule
     name: 节奏海拉鲁
     aliases:
       - Cadence of Hyrule
+    genres:
+      - rhythm
+      - adventure
 
   - id: call-of-duty-black-ops-7
     name: 使命召唤：黑色行动7
@@ -251,16 +315,22 @@
     name: 小猫钓鱼
     aliases:
       - Cat Goes Fishing
+    genres:
+      - casual
 
   - id: cat-mario
     name: 猫里奥
     aliases:
       - Cat Mario
+    genres:
+      - platformer
 
   - id: celeste
     name: 蔚蓝
     aliases:
       - Celeste
+    genres:
+      - platformer
 
   - id: changan-stone-dance
     name: 长安石之舞
@@ -269,6 +339,8 @@
     name: 中国式家长
     aliases:
       - Chinese Parents
+    genres:
+      - simulation
 
   - id: chip-n-dale
     name: 松鼠大作战
@@ -280,30 +352,45 @@
     aliases:
       - 文明六
       - Civilization VI
+    genres:
+      - strategy
 
   - id: clair-obscur-expedition-33
     name: 33号远征队
     aliases:
       - 'Clair Obscur: Expedition 33'
       - 33号远征
+    genres:
+      - jrpg
   - id: cloudpunk
     name: 云城朋克
     aliases:
       - Cloudpunk
+    genres:
+      - adventure
 
   - id: contra
     name: 魂斗罗
     aliases:
       - Contra
+    genres:
+      - shooter
+      - action
 
   - id: cook-serve-delicious
     name: CookServeDelicious
+    genres:
+      - simulation
 
   - id: cooking-simulator
     name: Cooking Simulator
+    genres:
+      - simulation
 
   - id: coral-island
     name: Coral Island
+    genres:
+      - simulation
 
   - id: core-keeper
     name: 地心护核者
@@ -314,6 +401,9 @@
     name: 创世理想乡
     aliases:
       - Craftopia
+    genres:
+      - survival
+      - sandbox
 
   - id: crayon-shinchan-summer
     name: 蜡笔小新：我与博士的暑假
@@ -332,22 +422,34 @@
     name: 不思议的皇冠
     aliases:
       - Crown Trick
+    genres:
+      - roguelike
+      - strategy
 
   - id: csgo
     name: CSGO
     aliases:
       - 'Counter-Strike: Global Offensive'
+    genres:
+      - shooter
 
   - id: cult-of-the-lamb
     name: 咩咩启示录
     aliases:
       - 咩咩启示录dlc
       - Cult of the Lamb
+    genres:
+      - roguelike
+      - action
+      - simulation
 
   - id: cuphead
     name: 茶杯头
     aliases:
       - Cuphead
+    genres:
+      - action
+      - platformer
 
   - id: curious-expedition
     name: 奇妙探险队
@@ -359,12 +461,19 @@
     aliases:
       - 赛博朋克
       - Cyberpunk 2077
+    genres:
+      - rpg
+      - open-world
+      - shooter
 
   - id: danganronpa-1
     name: 弹丸论破：希望的学园和绝望高中生
     aliases:
       - 弹丸论破
       - Danganronpa
+    genres:
+      - visual-novel
+      - adventure
 
   - id: daodao-wizard
     name: 叨叨巫师
@@ -372,12 +481,18 @@
   - id: dark-souls-3
     name: 黑暗之魂3
     aliases: [Dark Souls III, 魂3]
+    genres:
+      - arpg
+      - soulslike
   - id: dark-souls-remastered
     name: 黑暗之魂：重制版
     aliases:
       - 黑暗之魂1重置版
       - 黑暗之魂重制版
       - Dark Souls Remastered
+    genres:
+      - arpg
+      - soulslike
 
   - id: dashen-guilai
     name: 西游记之大圣归来
@@ -388,6 +503,9 @@
     name: 潜水员戴夫
     aliases:
       - Dave the Diver
+    genres:
+      - adventure
+      - simulation
   - id: daxia-lizhizhuan
     name: 大侠立志传
 
@@ -395,6 +513,10 @@
     name: 死亡细胞
     aliases:
       - Dead Cells
+    genres:
+      - roguelike
+      - metroidvania
+      - action
 
   - id: dead-space
     name: 死亡空间
@@ -405,17 +527,28 @@
     name: 死神来了
     aliases:
       - Death Coming
+    genres:
+      - puzzle
+      - casual
 
   - id: death-stranding
     name: 死亡搁浅
     aliases:
       - Death Stranding
+    genres:
+      - action
+      - adventure
+      - open-world
 
   - id: death-stranding-2-on-the-beach
     name: 死亡搁浅2：冥滩之上
     aliases:
       - Death Stranding 2
       - 死亡搁浅2
+    genres:
+      - action
+      - adventure
+      - open-world
   - id: deliver-us-the-moon
     name: 飞向月球
     aliases:
@@ -426,18 +559,25 @@
     aliases:
       - 三角洲
       - Delta Force
+    genres:
+      - shooter
 
   - id: demons-souls
     name: 恶魔之魂
     aliases:
       - 恶魔之魂重制版
       - Demon's Souls
+    genres:
+      - arpg
+      - soulslike
 
   - id: devil-may-cry-5
     name: 鬼泣5
     aliases:
       - Devil May Cry 5
       - Devi May Cry 5
+    genres:
+      - action
 
   - id: diablo-immortal
     name: 暗黑破坏神：不朽
@@ -454,6 +594,9 @@
 
   - id: dinkum
     name: Dinkum
+    genres:
+      - simulation
+      - survival
 
   - id: disco-elysium
     name: 极乐迪斯科
@@ -488,22 +631,32 @@
     name: DOTA2
     aliases:
       - Dota 2
+    genres:
+      - moba
 
   - id: doudizhu
     name: 欢乐斗地主
     aliases:
       - 斗地主
+    genres:
+      - card
 
   - id: dragon-quest-builders-2
     name: 勇者斗恶龙创世小玩家2
     aliases:
       - DQ建造者
       - DQ Builders 2
+    genres:
+      - sandbox
+      - rpg
 
   - id: dredge
     name: 渔帆暗涌
     aliases:
       - Dredge
+    genres:
+      - adventure
+      - horror
 
   - id: duckov
     name: 逃离鸭科夫
@@ -514,6 +667,10 @@
     aliases:
       - 'Dune: Awakening'
       - 沙丘觉醒
+    genres:
+      - survival
+      - open-world
+      - mmorpg
   - id: dying-light-2
     name: 消逝的光芒2
     aliases:
@@ -525,30 +682,49 @@
       - 真·三国无双8
       - 真三国无双8体验会
       - Dynasty Warriors 9
+    genres:
+      - action
 
   - id: dyson-sphere-program
     name: 戴森球计划
     aliases:
       - Dyson Sphere Program
       - 戴森球
+    genres:
+      - simulation
+      - strategy
 
   - id: eastward
     name: 风来之国
     aliases:
       - Eastward
+    genres:
+      - adventure
+      - rpg
 
   - id: elden-ring
     name: 艾尔登法环
     aliases: [Elden Ring, 老头环]
+    genres:
+      - arpg
+      - soulslike
+      - open-world
   - id: elden-ring-nightreign
     name: 艾尔登法环：黑夜君临
     aliases:
       - Elden Ring Nightreign
       - 老头环黑夜君临
+    genres:
+      - arpg
+      - soulslike
+      - roguelike
   - id: eldest-souls
     name: 上古之魂
     aliases:
       - Eldest Souls
+    genres:
+      - action
+      - soulslike
 
   - id: endoparasitic
     name: Endoparasitic
@@ -560,16 +736,22 @@
     name: 密室逃脱模拟器
     aliases:
       - Escape Simulator
+    genres:
+      - puzzle
 
   - id: ethan-carter
     name: 伊森卡特的消失
     aliases:
       - The Vanishing of Ethan Carter
+    genres:
+      - adventure
 
   - id: euro-truck-simulator-2
     name: 欧洲卡车模拟2
     aliases:
       - Euro Truck Simulator 2
+    genres:
+      - simulation
 
   - id: event-0
     name: 零号事件
@@ -579,6 +761,8 @@
   - id: fall-guys
     name: 糖豆人
     aliases: [Fall Guys, 糖豆人终极淘汰赛, FallGuys]
+    genres:
+      - party
 
   - id: far-lone-sails
     name: 孤帆远航
@@ -589,8 +773,12 @@
     name: 远光84
     aliases:
       - Farlight 84
+    genres:
+      - shooter
   - id: farm-together
     name: Farm Together
+    genres:
+      - simulation
 
   - id: farmers-dynasty
     name: Farmers Dynasty
@@ -600,6 +788,8 @@
     aliases:
       - Farm Simulator 19
       - Farming Simulator 19
+    genres:
+      - simulation
 
   - id: fengbao-pasidui
     name: 风暴怕死队
@@ -608,6 +798,9 @@
   - id: fez
     name: 菲斯
     aliases: [FEZ]
+    genres:
+      - puzzle
+      - platformer
 
   - id: final-fantasy-15
     name: 最终幻想15
@@ -621,9 +814,14 @@
       - FF16
       - Final Fantasy XVI
       - 最终幻想16
+    genres:
+      - arpg
 
   - id: final-station
     name: Final Station
+    genres:
+      - survival
+      - action
 
   - id: finding-paradise
     name: 寻找天堂
@@ -634,6 +832,9 @@
     name: 暗影火炬城
     aliases:
       - 'F.I.S.T.: Forged In Shadow Torch'
+    genres:
+      - metroidvania
+      - action
 
   - id: fling-to-the-finish
     name: Fling to the Finish
@@ -647,16 +848,25 @@
     name: 浮岛物语
     aliases:
       - Forager
+    genres:
+      - simulation
+      - adventure
 
   - id: fortnite
     name: 堡垒之夜
     aliases:
       - Fortnite
+    genres:
+      - battle-royale
+      - shooter
 
   - id: forza-horizon-3
     name: 极限竞速：地平线3
     aliases:
       - Forza Horizon 3
+    genres:
+      - racing
+      - open-world
 
   - id: forza-horizon-4
     name: 极限竞速地平线4
@@ -685,6 +895,9 @@
     name: 几何冲刺
     aliases:
       - Geometry Dash
+    genres:
+      - platformer
+      - rhythm
 
   - id: getting-over-it
     name: 和班尼特福迪一起攻克难关
@@ -696,16 +909,26 @@
     aliases:
       - 对马岛
       - Ghost of Tsushima
+    genres:
+      - action
+      - adventure
+      - open-world
 
   - id: god-of-war-4
     name: 战神4
     aliases:
       - God of War
+    genres:
+      - action
+      - adventure
 
   - id: god-of-war-ragnarok
     name: 战神5
     aliases:
       - God of War Ragnarok
+    genres:
+      - action
+      - adventure
 
   - id: golf-with-your-friends
     name: Golf with your friends
@@ -717,6 +940,8 @@
   - id: goose-goose-duck
     name: Goose Goose Duck
     aliases: [鹅鸭杀]
+    genres:
+      - party
 
   - id: gorogoa
     name: 画中世界
@@ -734,11 +959,19 @@
       - GTA5
       - GTA V
       - Grand Theft Auto V
+    genres:
+      - open-world
+      - action
   - id: green-hell
     name: Green Hell
+    genres:
+      - survival
 
   - id: grime
     name: GRIME
+    genres:
+      - metroidvania
+      - soulslike
 
   - id: gris
     name: GRIS
@@ -747,9 +980,15 @@
     name: 坎公骑冠剑
     aliases:
       - Guardian Tales
+    genres:
+      - rpg
+      - action
 
   - id: guigu-bahuang
     name: 鬼谷八荒
+    genres:
+      - rpg
+      - sandbox
 
   - id: guijia-yitu-2
     name: 归家异途2
@@ -760,6 +999,8 @@
     aliases:
       - 古剑奇谭
       - 古剑奇谭3
+    genres:
+      - rpg
 
   - id: gupo
     name: 蛊婆
@@ -769,15 +1010,27 @@
     aliases:
       - 逆转裁判
       - 逆転裁判
+    genres:
+      - visual-novel
+      - adventure
 
   - id: gyakuten-saiban-2
     name: 逆转裁判2
+    genres:
+      - visual-novel
+      - adventure
 
   - id: gyakuten-saiban-3
     name: 逆转裁判3
+    genres:
+      - visual-novel
+      - adventure
 
   - id: gyakuten-saiban-6
     name: 逆转裁判6
+    genres:
+      - visual-novel
+      - adventure
 
   - id: gylt
     name: GYLT
@@ -789,6 +1042,9 @@
 
   - id: hades
     name: Hades
+    genres:
+      - roguelike
+      - arpg
 
   - id: half-life-alyx
     name: 半衰期Alyx
@@ -805,6 +1061,9 @@
 
   - id: heave-ho
     name: Heave Ho
+    genres:
+      - platformer
+      - party
 
   - id: heiyang
     name: 黑羊
@@ -813,6 +1072,9 @@
     name: 'Hellstuck: Rage With Your Friends'
     aliases:
       - Hellstuck
+    genres:
+      - platformer
+      - party
 
   - id: her-trees
     name: 她的树
@@ -832,16 +1094,25 @@
     name: 乞丐模拟器
     aliases:
       - Hobo Tough Life
+    genres:
+      - simulation
 
   - id: hogwarts-legacy
     name: 霍格沃茨之遗
     aliases:
       - Hogwarts Legacy
       - 霍格沃茨遗产
+    genres:
+      - arpg
+      - open-world
+      - adventure
 
   - id: hollow-knight
     name: 空洞骑士
     aliases: [Hollow Knight]
+    genres:
+      - metroidvania
+      - action
   - id: honor-of-kings-world
     name: 王者荣耀：世界
     aliases:
@@ -898,6 +1169,9 @@
     name: 人类一败涂地
     aliases:
       - Human Fall Flat
+    genres:
+      - puzzle
+      - party
 
   - id: human-resource-machine
     name: 人力资源机器
@@ -906,17 +1180,26 @@
 
   - id: hydroneer
     name: Hydroneer
+    genres:
+      - simulation
 
   - id: ibb-and-obb
     name: ibb & obb
+    genres:
+      - puzzle
+      - platformer
 
   - id: icarus
     name: ICARUS
+    genres:
+      - survival
 
   - id: ice-lakes
     name: 冰湖
     aliases:
       - Ice Lakes
+    genres:
+      - simulation
 
   - id: icycle
     name: Icycle
@@ -934,6 +1217,9 @@
     name: 邪恶冥刻
     aliases:
       - Inscryption
+    genres:
+      - card
+      - roguelike
 
   - id: insomnia-theater-in-the-head
     name: 失眠：头脑中的剧院
@@ -943,11 +1229,15 @@
 
   - id: inside-the-backroom
     name: Inside the Backroom
+    genres:
+      - horror
 
   - id: into-the-dead
     name: 勇闯死人谷
     aliases:
       - Into the Dead
+    genres:
+      - horror
   - id: iris-fall
     name: 彩虹坠入
     aliases:
@@ -980,6 +1270,8 @@
 
   - id: jump-king
     name: Jump King
+    genres:
+      - platformer
 
   - id: just-shapes-and-beats
     name: Just Shapes & Beats
@@ -988,12 +1280,17 @@
     name: Kalimba
     aliases:
       - 克林巴
+    genres:
+      - platformer
+      - puzzle
 
   - id: kartrider
     name: 跑跑卡丁车
     aliases:
       - 跑跑卡丁车手游
       - KartRider
+    genres:
+      - racing
 
   - id: katana-zero
     name: 武士零
@@ -1004,6 +1301,9 @@
     name: 没人会被炸掉
     aliases:
       - Keep Talking and Nobody Explodes
+    genres:
+      - puzzle
+      - party
 
   - id: kero-blaster
     name: 青蛙爆破者
@@ -1029,6 +1329,8 @@
       - 星之卡比
       - 新星同盟
       - Kirby Star Allies
+    genres:
+      - platformer
 
   - id: layers-of-fear
     name: 层层恐惧
@@ -1040,12 +1342,17 @@
     aliases:
       - LOL
       - 亚索
+    genres:
+      - moba
 
   - id: lies-of-p
     name: 匹诺曹的谎言
     aliases:
       - 匹诺曹
       - Lies of P
+    genres:
+      - arpg
+      - soulslike
 
   - id: life-goes-on
     name: 生生不息
@@ -1056,6 +1363,8 @@
     name: 明日之后
     aliases:
       - LifeAfter
+    genres:
+      - survival
   - id: linelight
     name: Linelight
     aliases:
@@ -1065,15 +1374,23 @@
     name: 小小地狱之火
     aliases:
       - Little Inferno
+    genres:
+      - puzzle
 
   - id: little-nightmares
     name: 小小噩梦
     aliases:
       - Little Nightmares
+    genres:
+      - horror
+      - puzzle
 
   - id: little-nightmares-2
     name: 小小梦魇2
     aliases: [Little Nightmares 2, 小小噩梦2, 小小梦魔2]
+    genres:
+      - horror
+      - puzzle
 
   - id: little-witch-in-the-woods
     name: Little Witch in the Woods
@@ -1085,6 +1402,8 @@
     name: 时空勇士
     aliases:
       - Live A Live
+    genres:
+      - jrpg
 
   - id: longzhong-kui-meng
     name: 笼中窥梦
@@ -1097,6 +1416,9 @@
     name: 堕落之主
     aliases:
       - Lords of the Fallen
+    genres:
+      - arpg
+      - soulslike
 
   - id: lost-in-play
     name: Lost in Play
@@ -1107,6 +1429,9 @@
       - 审判之逝
       - 审判之逝湮灭的记忆
       - Lost Judgment
+    genres:
+      - action
+      - adventure
 
   - id: luck-be-a-landlord
     name: 幸运房东
@@ -1125,15 +1450,21 @@
     name: 秘奥法师
     aliases:
       - Mages of Mystralia
+    genres:
+      - adventure
 
   - id: majsoul
     name: 雀魂麻将
     aliases:
       - 雀魂
       - Majsoul
+    genres:
+      - card
 
   - id: manifold-garden
     name: Manifold Garden
+    genres:
+      - puzzle
 
   - id: mantingfang-songshangfanhua
     name: 满庭芳：宋上繁华
@@ -1147,6 +1478,8 @@
     aliases:
       - MapleStory M
       - 冒险岛 枫之传说
+    genres:
+      - mmorpg
 
   - id: maplestory-classic
     name: 冒险岛怀旧服
@@ -1155,6 +1488,8 @@
       - 冒险岛怀旧服二转
       - 冒险岛怀旧服弓箭手
       - 冒险岛怀旧服三区绿水灵
+    genres:
+      - mmorpg
   - id: mario-kart-8-deluxe
     name: 马里奥赛车8豪华版
     aliases:
@@ -1167,6 +1502,8 @@
     aliases:
       - 马里奥派对 超级巨星
       - Mario Party Superstars
+    genres:
+      - party
 
   - id: mario-rabbids
     name: 马里奥+疯兔：王国之战
@@ -1182,6 +1519,9 @@
     name: 解限机
     aliases:
       - Mecha Break
+    genres:
+      - shooter
+      - action
   - id: mechanical-carnival
     name: 机械狂欢
     aliases: []
@@ -1189,11 +1529,16 @@
     name: 中世纪王朝
     aliases:
       - Medieval Dynasty
+    genres:
+      - survival
+      - simulation
 
   - id: meecha-chameleon
     name: 画画躲猫猫
     aliases:
       - MeeCha Chameleon
+    genres:
+      - party
   - id: mengdie
     name: 不可思议之梦蝶
     aliases:
@@ -1203,14 +1548,22 @@
     name: 梦幻西游
     aliases:
       - 梦幻西游畅玩服
+    genres:
+      - mmorpg
   - id: minecraft
     name: 我的世界
     aliases: [Minecraft, MC]
+    genres:
+      - sandbox
+      - survival
   - id: mingmo-yuanxu
     name: 明末：渊虚之羽
     aliases:
       - 明末
       - 渊虚之羽
+    genres:
+      - arpg
+      - soulslike
   - id: mist-detective
     name: 迷雾侦探
     aliases:
@@ -1225,20 +1578,29 @@
     name: 大富翁
     aliases:
       - MONOPOLY PLUS
+    genres:
+      - card
 
   - id: monster-boy
     name: 怪物男孩
     aliases:
       - Monster Boy
+    genres:
+      - platformer
+      - adventure
 
   - id: monster-hunter-rise
     name: 怪物猎人：崛起
     aliases: [怪物猎人崛起, Monster Hunter Rise, 怪物猎人 崛起]
+    genres:
+      - action
 
   - id: monster-hunter-stories-2
     name: 怪物猎人物语2破灭之翼
     aliases:
       - Monster Hunter Stories 2
+    genres:
+      - jrpg
 
   - id: monster-hunter-wilds
     name: 怪物猎人：荒野
@@ -1246,15 +1608,21 @@
       - Monster Hunter Wilds
       - 怪物猎人荒野
       - MONSTER HUNTER WILDS
+    genres:
+      - action
   - id: monster-hunter-world
     name: 怪物猎人：世界
     aliases: [怪物猎人世界, Monster Hunter World, 怪物猎人狩猎季]
+    genres:
+      - action
 
   - id: most
     name: 大多数
 
   - id: move-or-die
     name: Move or Die
+    genres:
+      - party
 
   - id: moving-out
     name: 胡闹搬家
@@ -1271,24 +1639,38 @@
 
   - id: my-friend-pedro
     name: My Friend Pedro
+    genres:
+      - shooter
+      - action
 
   - id: my-time-at-portia
     name: 波西亚时光
     aliases:
       - My Time at Portia
+    genres:
+      - simulation
+      - rpg
 
   - id: naraka-bladepoint
     name: 永劫无间
     aliases:
       - 'Naraka: Bladepoint'
       - 永劫
+    genres:
+      - battle-royale
+      - action
   - id: necesse
     name: Necesse
+    genres:
+      - survival
 
   - id: neon-abyss
     name: 霓虹深渊
     aliases:
       - Neon Abyss
+    genres:
+      - roguelike
+      - shooter
 
   - id: neon-abyss-2
     name: 霓虹深渊2
@@ -1298,6 +1680,9 @@
     name: 仁王2
     aliases:
       - Nioh 2
+    genres:
+      - arpg
+      - soulslike
 
   - id: nioh-3
     name: 仁王3
@@ -1308,6 +1693,9 @@
     name: 无人深空
     aliases:
       - 'No Man''s Sky'
+    genres:
+      - survival
+      - open-world
 
   - id: northgard
     name: Northgard
@@ -1330,6 +1718,8 @@
     name: 八方旅人
     aliases:
       - Octopath Traveler
+    genres:
+      - jrpg
 
   - id: oink-games
     name: 一起来玩吧！Oink Games
@@ -1343,6 +1733,8 @@
 
   - id: only-up
     name: Only Up
+    genres:
+      - platformer
 
   - id: operation-tango
     name: Operation Tango
@@ -1352,38 +1744,59 @@
     aliases:
       - 奥日与萤火意志
       - Ori and the Will of the Wisps
+    genres:
+      - platformer
+      - metroidvania
 
   - id: outer-wilds
     name: 星际拓荒
     aliases: [Outer Wilds]
+    genres:
+      - adventure
+      - puzzle
   - id: overcooked
     name: 煮糊了
     aliases:
       - Overcooked
+    genres:
+      - party
 
   - id: overcooked-2
     name: Overcooked 2
+    genres:
+      - party
 
   - id: overwatch
     name: 守望先锋
     aliases:
       - OW
       - Overwatch
+    genres:
+      - shooter
 
   - id: owlboy
     name: 猫头鹰男孩
     aliases:
       - Owlboy
+    genres:
+      - platformer
+      - adventure
 
   - id: oxygen-not-included
     name: 缺氧
     aliases:
       - Oxygen Not Included
+    genres:
+      - simulation
+      - survival
 
   - id: paper-mario
     name: 纸片马里奥
     aliases:
       - Paper Mario
+    genres:
+      - rpg
+      - adventure
 
   - id: parkasaurus
     name: 恐龙公园
@@ -1398,6 +1811,8 @@
   - id: party-animals
     name: Party Animals
     aliases: [猛兽派对]
+    genres:
+      - party
 
   - id: pascals-wager
     name: 帕斯卡契约
@@ -1408,27 +1823,39 @@
     name: 啪嗒砰
     aliases:
       - Patapon
+    genres:
+      - rhythm
 
   - id: path-of-exile-2
     name: 流放之路2
     aliases:
       - Path of Exile 2
       - POE2
+    genres:
+      - arpg
   - id: payday-3
     name: Payday 3
     aliases: [Payday3]
+    genres:
+      - shooter
 
   - id: peglin
     name: 哥布林弹球
     aliases:
       - Peglin
+    genres:
+      - roguelike
 
   - id: phasmophobia
     name: Phasmophobia
+    genres:
+      - horror
 
   - id: phonopolis
     name: Phonopolis
     aliases: []
+    genres:
+      - adventure
   - id: pico-park
     name: Pico Park
 
@@ -1436,6 +1863,9 @@
     name: 皮克敏3
     aliases:
       - Pikmin 3
+    genres:
+      - strategy
+      - puzzle
 
   - id: pillars-of-the-earth
     name: 圣殿春秋
@@ -1447,21 +1877,31 @@
     name: 过山车之星
     aliases:
       - Planet Coaster
+    genres:
+      - simulation
 
   - id: poly-bridge
     name: Poly Bridge
+    genres:
+      - puzzle
 
   - id: poly-bridge-2
     name: Poly Bridge 2
+    genres:
+      - puzzle
 
   - id: portal-2
     name: 传送门2
     aliases: [Portal 2]
+    genres:
+      - puzzle
   - id: powerwash-simulator
     name: PowerWash Simulator
 
   - id: pro-gymnast
     name: Pro Gymnast
+    genres:
+      - sports
 
   - id: project-007
     name: 007：初露锋芒
@@ -1470,6 +1910,8 @@
       - 007初露锋芒
       - 007 初露锋芒
       - 007，初露锋芒
+    genres:
+      - action
   - id: project-highrise
     name: 大厦管理者
     aliases:
@@ -1482,11 +1924,17 @@
 
   - id: propnight
     name: Propnight
+    genres:
+      - horror
+      - party
 
   - id: psychonauts-2
     name: 脑航员2
     aliases:
       - Psychonauts 2
+    genres:
+      - platformer
+      - adventure
 
   - id: pubg
     name: 绝地求生
@@ -1494,61 +1942,93 @@
       - 吃鸡
       - PUBG
       - PlayerUnknown's Battlegrounds
+    genres:
+      - battle-royale
+      - shooter
 
   - id: pummel-party
     name: 揍击派对
     aliases:
       - Pummel Party
+    genres:
+      - party
 
   - id: puyo-puyo-tetris
     name: 噗哟噗哟vs俄罗斯方块
     aliases: [Puyo Puyo Tetris, 俄罗斯方块大战噗呦噗呦]
+    genres:
+      - puzzle
 
   - id: puyo-puyo-tetris-2
     name: 噗哟噗哟俄罗斯方块2
     aliases: [Puyo Puyo Tetris 2]
+    genres:
+      - puzzle
 
   - id: raft
     name: 木筏求生
     aliases:
       - Raft
       - 木筏生存
+    genres:
+      - survival
 
   - id: ragnarok-rebirth
     name: 仙境传说：重生
     aliases:
       - Ragnarok Rebirth
+    genres:
+      - mmorpg
   - id: rakuen
     name: Rakuen
     aliases: []
+    genres:
+      - adventure
 
   - id: ranch-simulator
     name: Ranch Simulator
     aliases:
       - 牧场模拟器
+    genres:
+      - simulation
 
   - id: reanimal
     name: 生灵重塑
     aliases:
       - REANIMAL
+    genres:
+      - horror
+      - adventure
   - id: red-dead-redemption-2
     name: 荒野大镖客2
     aliases: [Red Dead Redemption 2, RDR2, 大表哥2, 荒野大镖客, 荒野大镖客2, '荒野大镖客:救赎2']
+    genres:
+      - open-world
+      - action
+      - adventure
 
   - id: reigns
     name: 冰火王权
     aliases: [Reigns, 冰火王权Regins, 王权]
+    genres:
+      - card
 
   - id: remnant-2
     name: 遗迹2
     aliases:
       - Remnant 2
+    genres:
+      - shooter
+      - action
 
   - id: remnant-from-the-ashes
     name: 遗迹：灰烬重生
     aliases:
       - 遗迹灰烬重生
       - 'Remnant: From the Ashes'
+    genres:
+      - shooter
+      - action
 
   - id: repair-story
     name: 维修物语
@@ -1557,27 +2037,42 @@
     name: 生化危机2
     aliases:
       - Resident Evil 2
+    genres:
+      - horror
+      - action
 
   - id: resident-evil-3
     name: 生化危机3
     aliases:
       - Resident Evil 3
+    genres:
+      - horror
+      - action
 
   - id: resident-evil-4
     name: 生化危机4
     aliases: [Resident Evil 4, RE4]
+    genres:
+      - horror
+      - action
   - id: resident-evil-8
     name: 生化危机8：村庄
     aliases:
       - 生化危机8
       - 生化危机8村庄
       - Resident Evil Village
+    genres:
+      - horror
+      - action
 
   - id: resident-evil-9
     name: 生化危机9
     aliases:
       - Resident Evil 9
       - 生化危机 9
+    genres:
+      - horror
+      - action
   - id: retirement-simulator
     name: 退休模拟器
 
@@ -1585,11 +2080,15 @@
     name: Return of the Obra Dinn
     aliases:
       - 奥布拉丁恩的回归
+    genres:
+      - puzzle
 
   - id: rhythm-doctor
     name: 节奏医生
     aliases:
       - Rhythm Doctor
+    genres:
+      - rhythm
 
   - id: rhythm-fighter
     name: 节奏快打
@@ -1603,11 +2102,19 @@
       - 节奏天国：奇迹之星
       - 节奏天国：大家的节奏天国
       - Rhythm Heaven Fever
+    genres:
+      - rhythm
   - id: rhythm-royale
     name: Rhythm Royale
+    genres:
+      - rhythm
+      - party
 
   - id: rime
     name: RIME
+    genres:
+      - adventure
+      - puzzle
 
   - id: rise-of-kingdoms
     name: 万国觉醒
@@ -1619,11 +2126,17 @@
     aliases:
       - Rise of the Tomb Raider
       - 古墓丽影10
+    genres:
+      - action
+      - adventure
   - id: risk-of-rain-2
     name: 雨中冒险2
     aliases:
       - 雨中暴毙2
       - Risk of Rain 2
+    genres:
+      - roguelike
+      - shooter
 
   - id: river-city-underground
     name: 热血物语：地下世界
@@ -1634,6 +2147,8 @@
     name: 九十六号公路
     aliases:
       - Road 96
+    genres:
+      - adventure
 
   - id: rock-kingdom-world
     name: 洛克王国：世界
@@ -1653,11 +2168,17 @@
       - Rune Factory 4
       - 符文工房4
       - 符文工房
+    genres:
+      - rpg
+      - simulation
 
   - id: rune-factory-5
     name: 符文工厂5
     aliases:
       - Rune Factory 5
+    genres:
+      - rpg
+      - simulation
 
   - id: rusty-lake
     name: 锈湖
@@ -1666,16 +2187,24 @@
       - 锈湖系列
       - 绣湖系列
       - 生锈小湖
+    genres:
+      - puzzle
   - id: sakuna
     name: 天穗之咲稻姬
     aliases:
       - 天穗之咲稻咲稻姬
       - Sakuna
+    genres:
+      - arpg
+      - simulation
 
   - id: salt-and-sacrifice
     name: 盐与献祭
     aliases:
       - Salt and Sacrifice
+    genres:
+      - arpg
+      - soulslike
 
   - id: salt-and-sanctuary
     name: 盐与避难所
@@ -1686,6 +2215,9 @@
     name: 沙石镇时光
     aliases:
       - My Time at Sandrock
+    genres:
+      - simulation
+      - rpg
 
   - id: sanfu
     name: 三伏
@@ -1699,6 +2231,9 @@
     aliases:
       - Sea of Thieves
       - 海盗之海
+    genres:
+      - adventure
+      - open-world
 
   - id: sekiro
     name: 只狼
@@ -1706,10 +2241,16 @@
       - 隻狼
       - 只狼：影逝二度
       - Sekiro
+    genres:
+      - action
+      - soulslike
 
   - id: shady-part-of-me
     name: Shady Part of Me
     aliases: []
+    genres:
+      - puzzle
+      - platformer
 
   - id: shanhai-lvren
     name: 山海旅人
@@ -1728,6 +2269,8 @@
     name: 莎木3
     aliases:
       - Shenmue III
+    genres:
+      - adventure
 
   - id: shiming-zhanchang
     name: 使命战场
@@ -1743,6 +2286,8 @@
 
   - id: sifu
     name: SIFU
+    genres:
+      - action
 
   - id: sky-children-of-the-light
     name: 光·遇
@@ -1750,6 +2295,8 @@
       - Sky光遇
       - 光遇
       - 'Sky: Children of the Light'
+    genres:
+      - adventure
 
   - id: sky-noon
     name: Sky Noon
@@ -1758,6 +2305,9 @@
     name: 杀戮尖塔
     aliases:
       - Slay the Spire
+    genres:
+      - roguelike
+      - card
 
   - id: slay-the-spire-2
     name: 杀戮尖塔2
@@ -1775,6 +2325,8 @@
   - id: sos-fomt
     name: 牧场物语：重聚矿石镇
     aliases: [牧场物语重聚矿石镇, 牧场物语矿石镇, 'Story of Seasons: Friends of Mineral Town', 牧场物语]
+    genres:
+      - simulation
 
   - id: spelunky-2
     name: 洞穴探险2
@@ -1785,9 +2337,16 @@
     name: 蜘蛛侠2
     aliases:
       - 'Marvel''s Spider-Man 2'
+    genres:
+      - action
+      - adventure
+      - open-world
 
   - id: spiritfarer
     name: Spiritfarer
+    genres:
+      - adventure
+      - simulation
 
   - id: split-fiction
     name: 双影奇境
@@ -1795,6 +2354,9 @@
       - Split Fiction
       - 双影奇景
       - 双人成行2
+    genres:
+      - adventure
+      - party
   - id: spy-party
     name: 间谍派对
     aliases:
@@ -1804,10 +2366,16 @@
     name: 星界边境
     aliases:
       - Starbound
+    genres:
+      - sandbox
+      - survival
 
   - id: stardew-valley
     name: 星露谷物语
     aliases: [Stardew Valley]
+    genres:
+      - simulation
+      - rpg
   - id: starfield
     name: 星空
     aliases:
@@ -1817,17 +2385,25 @@
     name: 蒸汽世界
     aliases:
       - SteamWorld Dig
+    genres:
+      - platformer
+      - metroidvania
 
   - id: steep
     name: 极限巅峰
     aliases:
       - Steep
+    genres:
+      - sports
 
   - id: stick-fight-the-game
     name: "Stick Fight: The Game"
     aliases:
       - Stick Fight
       - 坚持战斗
+    genres:
+      - fighting
+      - party
 
   - id: stilt-fella
     name: 踩高跷
@@ -1839,9 +2415,13 @@
 
   - id: strange-brigade
     name: Strange Brigade
+    genres:
+      - shooter
 
   - id: stray
     name: Stray
+    genres:
+      - adventure
 
   - id: street-fighter-6
     name: 街头霸王6
@@ -1850,17 +2430,25 @@
       - 街霸6
       - Street Fighter
       - Street Fighter 6
+    genres:
+      - fighting
 
   - id: subnautica
     name: 深海迷航
     aliases:
       - Subnautica
+    genres:
+      - survival
+      - adventure
 
   - id: subnautica-2
     name: Subnautica 2
     aliases:
       - Subnautica2
       - 深海迷航2
+    genres:
+      - survival
+      - adventure
   - id: sun-haven
     name: Sun Haven
 
@@ -1873,12 +2461,16 @@
     name: 超级兔子人
     aliases:
       - Super Bunny Man
+    genres:
+      - party
 
   - id: super-mario-3d-world
     name: 超级马里奥3D世界
     aliases:
       - 马里奥3D世界
       - Super Mario 3D World
+    genres:
+      - platformer
 
   - id: super-mario-bros-wonder
     name: 超级马里奥兄弟：惊奇
@@ -1886,6 +2478,8 @@
       - 超级马里奥兄弟 惊奇
       - 马里奥惊奇
       - Super Mario Bros. Wonder
+    genres:
+      - platformer
 
   - id: super-mario-odyssey
     name: 超级马里奥奥德赛
@@ -1893,39 +2487,62 @@
       - 超级马里奥
       - 马里奥奥德赛
       - Super Mario Odyssey
+    genres:
+      - platformer
 
   - id: super-mario-party
     name: 超级马里奥派对
     aliases:
       - 超级马里欧派对
       - Super Mario Party
+    genres:
+      - party
 
   - id: super-smash-bros-ultimate
     name: 任天堂明星大乱斗特别版
     aliases:
       - Super Smash Bros. Ultimate
+    genres:
+      - fighting
 
   - id: supraland
     name: Supraland
+    genres:
+      - puzzle
+      - adventure
 
   - id: taiko-no-tatsujin
     name: 太鼓达人
     aliases:
       - 太鼓の達人
       - Taiko no Tatsujin
+    genres:
+      - rhythm
 
   - id: tangle-tower
     name: Tangle Tower
+    genres:
+      - puzzle
+      - adventure
 
   - id: teardown
     name: Teardown
+    genres:
+      - sandbox
+      - puzzle
 
   - id: the-alters
     name: 多重人生
     aliases:
       - The Alters
+    genres:
+      - survival
+      - adventure
   - id: the-house-of-da-vinci
     name: The House of Da Vinci
+    genres:
+      - puzzle
+      - adventure
 
   - id: the-house-of-da-vinci-2
     name: The House of Da Vinci 2
@@ -1934,21 +2551,32 @@
     name: The House of Da Vinci 3
     aliases:
       - 达芬奇密室3
+    genres:
+      - puzzle
+      - adventure
 
   - id: the-last-guardian
     name: 最后的守护者
     aliases:
       - The Last Guardian
+    genres:
+      - adventure
+      - puzzle
 
   - id: the-last-of-us-2
     name: 最后生还者2
     aliases:
       - The Last of Us Part II
+    genres:
+      - action
+      - adventure
 
   - id: the-long-dark
     name: 漫漫长夜
     aliases:
       - The Long Dark
+    genres:
+      - survival
 
   - id: the-past-within
     name: The Past Within
@@ -1961,10 +2589,15 @@
     name: 采石场惊魂
     aliases:
       - The Quarry
+    genres:
+      - horror
+      - adventure
 
   - id: the-room-4
     name: The Room 4
     aliases: [The Room4]
+    genres:
+      - puzzle
 
   - id: the-room-three
     name: The Room Three
@@ -1981,10 +2614,14 @@
     name: 见证者
     aliases:
       - The Witness
+    genres:
+      - puzzle
 
   - id: there-is-no-game
     name: There Is No Game
     aliases: [Thereis no game]
+    genres:
+      - puzzle
 
   - id: this-is-the-police
     name: 这是警察
@@ -2015,6 +2652,8 @@
     name: 全面战争模拟器
     aliases:
       - Totally Accurate Battle Simulator
+    genres:
+      - simulation
 
   - id: treasure-hunter-simulator
     name: 宝藏猎人模拟器
@@ -2025,14 +2664,22 @@
     name: 特技摩托：崛起
     aliases:
       - Trials Rising
+    genres:
+      - racing
 
   - id: tricky-towers
     name: 难死塔
     aliases:
       - Tricky Towers
+    genres:
+      - puzzle
+      - party
 
   - id: trine-5
     name: Trine 5
+    genres:
+      - platformer
+      - puzzle
 
   - id: trove
     name: 宝藏世界
@@ -2044,6 +2691,9 @@
 
   - id: tunic
     name: Tunic
+    genres:
+      - action
+      - adventure
 
   - id: turmoil
     name: 石油骚动
@@ -2063,20 +2713,31 @@
     name: 终极钓鱼模拟器
     aliases:
       - Ultimate Fishing Simulator
+    genres:
+      - simulation
 
   - id: uncharted-legacy-of-thieves
     name: 神秘海域：盗贼传奇合辑
     aliases:
       - 神秘海域
       - 'Uncharted: Legacy of Thieves'
+    genres:
+      - action
+      - adventure
 
   - id: undermine
     name: UnderMine
+    genres:
+      - roguelike
+      - action
 
   - id: unheard
     name: 疑案追声
     aliases:
       - Unheard
+    genres:
+      - puzzle
+      - adventure
 
   - id: uno
     name: UNO
@@ -2097,6 +2758,8 @@
     aliases:
       - 调酒师的生活
       - 调酒师的生活 VA
+    genres:
+      - visual-novel
 
   - id: valorant
     name: 无畏契约
@@ -2104,13 +2767,21 @@
       - Valorant
       - 瓦洛兰特
       - 瓦
+    genres:
+      - shooter
   - id: vampire-survivors
     name: 吸血鬼幸存者
     aliases:
       - Vampire Survivors
+    genres:
+      - roguelike
+      - action
 
   - id: viewfinder
     name: Viewfinder
+    genres:
+      - puzzle
+      - adventure
 
   - id: voidtrain
     name: 虚空列车
@@ -2119,10 +2790,15 @@
 
   - id: volcanos-daughter
     name: 火山的女儿
+    genres:
+      - roguelike
+      - action
 
   - id: warcraft-3
     name: 魔兽争霸3
     aliases: [魔兽争霸RPG, 魔兽争霸rpg, Warcraft III, 魔兽RPG]
+    genres:
+      - strategy
 
   - id: warhammer-40000
     name: 战锤40k
@@ -2133,16 +2809,28 @@
     name: 暖雪
     aliases:
       - Warm Snow
+    genres:
+      - roguelike
+      - action
 
   - id: we-were-here-expeditions
     name: We Were Here Expeditions
+    genres:
+      - puzzle
+      - adventure
 
   - id: we-were-here-forever
     name: We Were Here Forever
+    genres:
+      - puzzle
+      - adventure
 
   - id: we-were-here-together
     name: We Were Here Together
     aliases: [We werehere together]
+    genres:
+      - puzzle
+      - adventure
 
   - id: we-were-here-too
     name: We Were Here Too
@@ -2161,17 +2849,25 @@
       - Where Winds Meet
       - 燕云
       - 燕云十六声手机端
+    genres:
+      - mmorpg
+      - open-world
+      - action
   - id: whos-your-daddy
     name: Who's Your Daddy
     aliases:
       - 谁是你爸爸
   - id: winkeltje
     name: Winkeltje
+    genres:
+      - simulation
 
   - id: witch-it
     name: 女巫来了
     aliases:
       - Witch It
+    genres:
+      - party
 
   - id: wizard-of-legend
     name: 传奇巫师
@@ -2188,6 +2884,9 @@
       - 卧龙 苍天陨落
       - 卧龙苍天陨落
       - 'Wo Long: Fallen Dynasty'
+    genres:
+      - arpg
+      - soulslike
 
   - id: wonder-boy
     name: 神奇男孩
@@ -2216,6 +2915,8 @@
     aliases:
       - Worms W.M.D
       - 百战天虫
+    genres:
+      - strategy
 
   - id: wuthering-waves
     name: 鸣潮
@@ -2228,6 +2929,9 @@
       - 鸣潮2.7
       - 鸣潮2.5
       - 鸣潮2.2
+    genres:
+      - arpg
+      - open-world
   - id: wuzhu-xingyuan
     name: 无主星渊
     aliases: []
@@ -2237,9 +2941,13 @@
   - id: xianjian-7
     name: 仙剑奇侠传7
     aliases: [仙剑7, 仙剑奇侠传七, 仙剑奇侠传7]
+    genres:
+      - arpg
 
   - id: xianjian-kezhan-2
     name: 仙剑客栈2
+    genres:
+      - simulation
 
   - id: xiaobai-tu-dianshang
     name: 小白兔电商
@@ -2251,6 +2959,8 @@
     name: 轩辕剑7
     aliases:
       - 轩辕剑柒
+    genres:
+      - arpg
 
   - id: xunlong-jue
     name: 寻龙诀
@@ -2290,6 +3000,9 @@
       - 荒野之息
       - 旷野之息
       - 'The Legend of Zelda: Breath of the Wild'
+    genres:
+      - adventure
+      - open-world
 
   - id: zelda-links-awakening
     name: 塞尔达传说：织梦岛
@@ -2297,12 +3010,19 @@
       - 塞尔达传说 织梦岛
       - 织梦岛
       - 'The Legend of Zelda: Link''s Awakening'
+    genres:
+      - adventure
+      - action
 
   - id: zelda-totk
     name: 塞尔达传说：王国之泪
     aliases:
       - 王国之泪
       - 'The Legend of Zelda: Tears of the Kingdom'
+    genres:
+      - adventure
+      - open-world
+      - action
 
   - id: zhanyao-xing
     name: 斩妖行
@@ -2336,6 +3056,8 @@
 
   - id: diaoyu-tiantang
     name: 钓鱼天堂
+    genres:
+      - simulation
 
   - id: ditie-fanhua
     name: 地铁繁花
@@ -2376,6 +3098,8 @@
     name: 魔法工艺
     aliases:
       - Magicraft
+    genres:
+      - roguelike
 
   - id: maolao-shu
     name: 猫和老鼠
@@ -2396,6 +3120,8 @@
 
   - id: quesheng
     name: 雀圣
+    genres:
+      - card
 
   - id: queshi
     name: 雀士
@@ -2446,6 +3172,8 @@
     name: 魔兽世界怀旧服
     aliases:
       - 魔兽怀旧服
+    genres:
+      - mmorpg
 
   - id: xianjian-3d-huhe
     name: 仙剑奇侠传3D回合
@@ -2507,6 +3235,9 @@
     name: 安琪拉之歌
     aliases:
       - Aquaria
+    genres:
+      - metroidvania
+      - adventure
 
   - id: assassins-creed-black-flag
     name: 刺客信条4：黑旗
@@ -2519,6 +3250,8 @@
     aliases:
       - Astro Bot
       - ASTRO BOT
+    genres:
+      - platformer
 
   - id: awakening
     name: 唤醒盒子
@@ -2548,6 +3281,8 @@
     name: 超凡双生
     aliases:
       - "Beyond: Two Souls"
+    genres:
+      - adventure
 
   - id: biantai-rensheng
     name: 变态人生大冒险
@@ -2571,6 +3306,8 @@
     aliases:
       - Brain Training
       - 脑年龄测试
+    genres:
+      - puzzle
 
   - id: candleman
     name: 蜡烛人
@@ -2594,17 +3331,24 @@
     name: 光之子
     aliases:
       - "Child of Light"
+    genres:
+      - rpg
 
   - id: children-of-morta
     name: 莫塔守山人
     aliases:
       - Children of Morta
+    genres:
+      - arpg
+      - roguelike
 
   - id: codenames
     name: 截码战
     aliases:
       - Codenames
       - 代号
+    genres:
+      - party
 
   - id: concrete-genie
     name: 壁中精灵
@@ -2615,6 +3359,9 @@
     name: 控制
     aliases:
       - Control
+    genres:
+      - action
+      - shooter
 
   - id: corporate-climber
     name: Corporate Climber
@@ -2624,6 +3371,8 @@
     aliases:
       - CSonline
       - CSOL
+    genres:
+      - shooter
 
   - id: crossout
     name: 创世战车
@@ -2661,6 +3410,9 @@
     name: 勇者斗恶龙：创世小玩家
     aliases:
       - Dragon Quest Builders
+    genres:
+      - sandbox
+      - rpg
 
   - id: dragonheir-silent-gods
     name: 龙息：神寂
@@ -2694,6 +3446,8 @@
     name: 辐射：避难所
     aliases:
       - Fallout Shelter
+    genres:
+      - simulation
 
   - id: famous-painting-parodies
     name: Famous Painting Parodies
@@ -2716,6 +3470,9 @@
     name: 幽灵诡计
     aliases:
       - Ghost Trick
+    genres:
+      - puzzle
+      - adventure
 
   - id: guess-my-drawing
     name: 你画我猜
@@ -2723,6 +3480,8 @@
       - 我画你猜
       - 你写我猜
       - 你说我猜
+    genres:
+      - party
 
   - id: hand-simulator
     name: Hand Simulator
@@ -2738,14 +3497,21 @@
       - 初音未来FT
       - "Hatsune Miku: Project DIVA F"
       - 初音未来 Project DIVA
+    genres:
+      - rhythm
 
   - id: her-story
     name: 她的故事
     aliases:
       - Her Story
+    genres:
+      - puzzle
+      - adventure
 
   - id: hero-killer
     name: 英雄杀手
+    genres:
+      - card
 
   - id: hi-fi-rush
     name: Hi-Fi RUSH
@@ -2774,6 +3540,8 @@
 
   - id: im-scared
     name: I'm Scared
+    genres:
+      - horror
 
   - id: im-the-boss
     name: 我是大老板
@@ -2798,6 +3566,8 @@
     name: 风之旅人
     aliases:
       - Journey
+    genres:
+      - adventure
 
   - id: ju-ren-lie-shou
     name: 巨人の猎手
@@ -2810,6 +3580,9 @@
       - "Kena: Bridge of Spirits"
       - KENA
       - 精神之桥
+    genres:
+      - action
+      - adventure
 
   - id: kings-quest-2015
     name: 国王密使
@@ -2834,11 +3607,15 @@
     name: 奇异人生
     aliases:
       - Life is Strange
+    genres:
+      - adventure
 
   - id: littlebigplanet
     name: 小小大星球
     aliases:
       - LittleBigPlanet
+    genres:
+      - platformer
 
   - id: lockdown-protocol
     name: LOCKDOWN Protocol
@@ -2852,6 +3629,9 @@
     name: 路易吉洋楼3
     aliases:
       - Luigi's Mansion 3
+    genres:
+      - adventure
+      - puzzle
 
   - id: luma-island
     name: Luma Island
@@ -2927,6 +3707,8 @@
       - MapleStory
       - 冒险岛国服
     note: "父级游戏条目：统计同时覆盖原版《冒险岛》与《冒险岛怀旧服》。在《【女流】回忆冒险岛online》（BV1254y1A7qs）里，她谈起学生时代与弟弟一起玩《冒险岛》的往事：弟弟替她留意父母回来没有，游戏也因此和那段姐弟相伴的日子连在了一起。本站现存录像只能说明可回看的部分，不能代表她与这款游戏的全部时间；具体起始年份与历史累计时长尚无可靠公开记录，不作推算。"
+    genres:
+      - mmorpg
 
   - id: mario-party
     name: 马力欧派对
@@ -2952,6 +3734,9 @@
       - Metroid Dread
       - 银河战士：生存恐惧
       - 梅特罗德：生存恐惧
+    genres:
+      - metroidvania
+      - action
 
   - id: mizi-no
     name: Mizi NO!
@@ -3003,16 +3788,25 @@
     aliases:
       - PicoPark 2
       - 皮克帕克2
+    genres:
+      - puzzle
+      - platformer
+      - party
 
   - id: planet-zoo
     name: 动物园之星
     aliases:
       - Planet Zoo
+    genres:
+      - simulation
 
   - id: pokemon-legends-arceus
     name: 宝可梦传说：阿尔宙斯
     aliases:
       - "Pokemon Legends: Arceus"
+    genres:
+      - rpg
+      - open-world
 
   - id: portal-knights
     name: 传送门骑士
@@ -3031,6 +3825,8 @@
     name: 雷曼传奇
     aliases:
       - Rayman Legends
+    genres:
+      - platformer
 
   - id: reading-people-trilogy
     name: 察言观色三部曲
@@ -3067,11 +3863,16 @@
     aliases:
       - Seeing Stars
       - 往左一点
+    genres:
+      - puzzle
 
   - id: shadow-of-the-colossus
     name: 汪达与巨像
     aliases:
       - Shadow of the Colossus
+    genres:
+      - action
+      - adventure
 
   - id: shawarma-legend
     name: 沙威玛传奇
@@ -3086,6 +3887,8 @@
     aliases:
       - Stranded Deep
       - 怒海余生
+    genres:
+      - survival
 
   - id: streets-of-rogue
     name: 地痞街区
@@ -3151,6 +3954,8 @@
     name: 2020东京奥运
     aliases:
       - Tokyo 2020 Olympics
+    genres:
+      - sports
 
   - id: tracks
     name: Tracks
@@ -3174,6 +3979,9 @@
       - "Trine 4: The Nightmare Prince"
       - Trine 4
       - 三位一体4
+    genres:
+      - platformer
+      - puzzle
 
   - id: true-or-false-game
     name: True or False
@@ -3185,6 +3993,8 @@
     name: 传说之下
     aliases:
       - Undertale
+    genres:
+      - rpg
 
   - id: unravel
     name: 毛线小精灵
@@ -3249,6 +4059,8 @@
 
   - id: beat-saber
     name: Beat Saber
+    genres:
+      - rhythm
 
   - id: in-death
     name: In Death
@@ -3262,6 +4074,8 @@
     name: 逆水寒
     aliases:
       - Justice Online
+    genres:
+      - mmorpg
 
   - id: one-hand-clapping
     name: One Hand Clapping
@@ -3311,6 +4125,8 @@
     name: Rolo to the Rescue
     aliases:
       - 小象露露历险记
+    genres:
+      - puzzle
 
   - id: circus-charlie
     name: Circus Charlie
@@ -3347,6 +4163,8 @@
 
   - id: guiwuzhe2
     name: 鬼武者：剑之道
+    genres:
+      - action
 
   - id: jiaomeimeikaiche
     name: 教妹妹开车
@@ -3362,6 +4180,8 @@
 
   - id: townfall
     name: 寂静岭：townfall
+    genres:
+      - horror
 
   - id: nidhogg
     name: 尼德霍格
@@ -3378,14 +4198,21 @@
     aliases:
       - New Super Mario Bros. U
       - Newスーパーマリオブラザーズ U
+    genres:
+      - platformer
 
   - id: lumino-city
     name: 卢米诺城
     aliases:
       - Lumino City
+    genres:
+      - puzzle
+      - adventure
 
   - id: i-wanna-be-the-xylem
     name: I wanna be the xylem
+    genres:
+      - platformer
 
   - id: banished
     name: 放逐之城
@@ -3396,6 +4223,9 @@
     name: 请出示文件
     aliases:
       - Papers, Please
+    genres:
+      - puzzle
+      - simulation
 
   - id: mingyun-jiaocha-de-kedian
     name: 命运交叉的客店
@@ -3413,6 +4243,8 @@
     name: "围攻"
     aliases:
       - "Besiege"
+    genres:
+      - sandbox
 
   - id: slime-rancher
     name: "史莱姆牧场"
@@ -3435,6 +4267,8 @@
     aliases:
       - "Naruto Shippuden: Ultimate Ninja Storm 4"
       - "火影忍者究极风暴4"
+    genres:
+      - fighting
 
   - id: far-cry-primal
     name: "孤岛惊魂：原始杀戮"
@@ -3459,6 +4293,9 @@
     name: "逆转裁判5"
     aliases:
       - "Phoenix Wright: Ace Attorney – Dual Destinies"
+    genres:
+      - visual-novel
+      - adventure
 
   - id: dead-by-daylight
     name: "黎明杀机"
@@ -3469,6 +4306,8 @@
     name: "LISA"
     aliases:
       - "LISA: The Painful"
+    genres:
+      - rpg
 
   - id: lisa-the-joyful
     name: "LISA: The Joyful"
@@ -3536,6 +4375,9 @@
     name: "奥日与黑暗森林"
     aliases:
       - "Ori and the Blind Forest"
+    genres:
+      - platformer
+      - metroidvania
 
   - id: cube-escape-harveys-box
     name: "逃脱方块：哈维的盒子"
@@ -3547,6 +4389,9 @@
     aliases:
       - "Batman: Arkham Knight"
       - "阿卡姆骑士"
+    genres:
+      - action
+      - adventure
 
   - id: medieval-engineers
     name: "中世纪工程师"
@@ -3559,6 +4404,9 @@
       - "Luigi's Mansion: Dark Moon"
       - "路易鬼屋"
       - "路易吉鬼屋2"
+    genres:
+      - adventure
+      - puzzle
 
   - id: braid
     name: 时空幻境
@@ -3570,6 +4418,8 @@
     aliases:
       - Just Dance
     note: 系列名。2015 年初她在 Wii U 上玩的是哪一作，录像里没能确认。
+    genres:
+      - rhythm
 
   - id: tearaway-unfolded
     name: 折纸世界
@@ -3612,6 +4462,9 @@
     name: INSIDE
     aliases:
       - Inside
+    genres:
+      - puzzle
+      - platformer
 
   - id: never-alone
     name: 永不孤单

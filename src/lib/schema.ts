@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { GENRE_IDS } from './genres'
 
 /**
  * 全项目的数据契约。
@@ -49,6 +50,8 @@ export const Game = z.object({
   aliases: z.array(z.string()).default([]),
   cover: z.string().optional(),
   note: z.string().optional(),
+  /** 游戏类型（受控词表，见 genres.ts）；没核实的留空，前台归入「未分类」 */
+  genres: z.array(z.enum(GENRE_IDS)).default([]),
 })
 export type Game = z.infer<typeof Game>
 

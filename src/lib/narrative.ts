@@ -1984,6 +1984,8 @@ export type GameProfile = {
   id: string
   name: string
   aliases: string[]
+  /** games.yaml 登记的类型（受控词表）；策展游戏没有登记时为空 */
+  genres: string[]
   curated?: CuratedGame
   entries: TimelineEntry[]
   firstDate: string | null
@@ -2057,6 +2059,7 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     id: gameId,
     name,
     aliases: curated?.aliases ?? registered?.aliases ?? [],
+    genres: registered?.genres ?? [],
     curated,
     entries: matches,
     firstDate: first?.date ?? null,
