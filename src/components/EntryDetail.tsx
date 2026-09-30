@@ -107,7 +107,8 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
           </div>
         </div>
 
-        {genres.length > 0 && <GenreChips genres={genres} className="mt-3" />}
+        {/* 手机上标题块收起时，下面的色带没有上边距，这里自己留出下间距 */}
+        {genres.length > 0 && <GenreChips genres={genres} className="mt-3 mb-3 sm:mb-0" />}
 
         {entry.bands.some((band) => band.game) && (
           <div className={sameTitle ? 'sm:mt-4' : 'mt-4'}>

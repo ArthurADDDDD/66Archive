@@ -200,8 +200,14 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
       </div>
 
       {genreOptions.genres.length > 0 && (
-        <div role="group" aria-label="按游戏类型筛选" className="mt-3 flex flex-wrap items-center gap-1.5">
-          <span className="mr-1 text-meta text-faint">类型</span>
+        /* 手机上 29 个类型会排成十几行、把游戏挤到第二屏以下：窄屏改成一行横向滑动
+           （同画廊年份标签的写法），sm 起照常换行。 */
+        <div
+          role="group"
+          aria-label="按游戏类型筛选"
+          className="-my-1 mt-2 flex items-center gap-1.5 overflow-x-auto py-1 [scrollbar-width:none] sm:mt-3 sm:flex-wrap sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+        >
+          <span className="mr-1 shrink-0 text-meta text-faint">类型</span>
           {genreOptions.genres.map((genre) => (
             <GenreChip
               key={genre.id}
@@ -226,7 +232,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
                 setSelectedGenres([])
                 setPage(1)
               }}
-              className="ui-press rounded-full px-2.5 py-2 text-meta text-faint underline-offset-2 hover:text-ink hover:underline sm:py-1.5"
+              className="ui-press shrink-0 whitespace-nowrap rounded-full px-2.5 py-2 text-meta text-faint underline-offset-2 hover:text-ink hover:underline sm:py-1.5"
             >
               清除
             </button>
@@ -286,7 +292,7 @@ function GenreChip({
       data-analytics-target="genre"
       onClick={onClick}
       aria-pressed={active}
-      className={`ui-press rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
+      className={`ui-press shrink-0 whitespace-nowrap rounded-full border px-3 py-2 text-meta transition-colors sm:py-1.5 ${
         active ? 'border-live/60 bg-live/10 text-live' : 'border-line text-muted hover:border-muted hover:text-ink'
       }`}
     >
