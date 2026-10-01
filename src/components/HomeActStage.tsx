@@ -161,19 +161,28 @@ export function HomeActStage({
     setActiveIndex(activeIndexRef.current)
   }, [steps.length])
 
-  const onKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
-    if (event.altKey || event.ctrlKey || event.metaKey) return
-    const target = event.target
-    if (target instanceof HTMLElement && (target.isContentEditable || target.matches('input, textarea, select'))) return
-    const delta = event.key === 'ArrowRight' || event.key === 'PageDown'
-      ? 1
-      : event.key === 'ArrowLeft' || event.key === 'PageUp'
-        ? -1
-        : 0
-    if (!delta) return
-    event.preventDefault()
-    goTo(activeIndexRef.current + delta)
-  }
+  // 挂在 window 上：不必先点中卡片取得焦点，书页处于阅读焦点时方向键就能翻页。
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return
+      const target = event.target
+      if (target instanceof HTMLElement && (target.isContentEditable || target.matches('input, textarea, select'))) return
+      const inside = target instanceof Node && !!rootRef.current?.contains(target)
+      // 焦点在卡外的其他控件（导航、音乐条等）上时不抢键。
+      if (!inside && target instanceof HTMLElement && target !== document.body && target.matches('a, button, [role], [tabindex]')) return
+      if (!inside && !visibleRef.current) return
+      const delta = event.key === 'ArrowRight' || event.key === 'PageDown'
+        ? 1
+        : event.key === 'ArrowLeft' || event.key === 'PageUp'
+          ? -1
+          : 0
+      if (!delta) return
+      event.preventDefault()
+      goTo(activeIndexRef.current + delta)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [goTo])
 
   // 横向拖过之后吞掉紧跟的一次 click：没翻成页时，手指也可能正好停在卡内链接上。
   const suppressNextClick = () => {
@@ -279,7 +288,6 @@ export function HomeActStage({
       id="home-act-stage"
       aria-label="三幕故事，可翻页"
       aria-roledescription="翻页故事"
-      onKeyDown={onKeyDown}
       className="home-act-stage relative block h-auto scroll-mt-0 overflow-hidden bg-base sm:h-[100svh]"
       style={pageStyle}
     >
