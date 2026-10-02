@@ -26,6 +26,10 @@ import { IMAGE_PROXY_ORIGIN } from './platforms'
  * LCP 四段（服务器响应 / 加载前等待 / 下载 / 渲染等待）、LCP 是图还是字、图从哪来、
  * 网络与进入方式。这三项只属于**首次加载的 document**，所以落地页在这里（模块启动时）
  * 就记下，不在上报时读 pathname——站内换页不会把它归错。
+ *
+ * **TTFB 四段（2026-10）**：数据显示服务器响应占首屏 55–80%，而站点是 CDN 上的静态文件，
+ * 时间多半花在「访客 → CDN 节点」这段网络上。再把 TTFB 拆成 等待 / 跳转、DNS、建连
+ * （TCP + TLS）、请求到首字节，才分得清是解析慢、线路慢还是回源慢。
  */
 let started = false
 
@@ -82,8 +86,15 @@ function startPerfSample(lib: typeof import('web-vitals/attribution')) {
   // 只记第一次加载：从往返缓存恢复时 web-vitals 会再报一轮，那已经是另一次「加载」了。
   lib.onTTFB((metric) => {
     if (sent || sample.ttfb !== undefined) return
+    const { attribution } = metric
     sample.ttfb = round(metric.value)
     sample.nav = navClass(metric.navigationType)
+    sample.ttfbPhases = {
+      wait: round(attribution.waitingDuration + attribution.cacheDuration),
+      dns: round(attribution.dnsDuration),
+      connect: round(attribution.connectionDuration),
+      request: round(attribution.requestDuration),
+    }
   })
   lib.onFCP((metric) => {
     if (sent || sample.fcp !== undefined) return

@@ -259,6 +259,8 @@ export type SitePerfSample = {
   fcp?: number
   ttfb?: number
   lcpPhases?: { ttfb: number; loadDelay: number; loadTime: number; renderDelay: number }
+  /** TTFB 再拆四段：等待 / 跳转（含读缓存）、DNS、建连（TCP + TLS）、请求到首字节。 */
+  ttfbPhases?: { wait: number; dns: number; connect: number; request: number }
 }
 
 /** 页面加载时的屏幕档位；诊断样本要记「加载那一刻」的，而不是上报时的。 */
