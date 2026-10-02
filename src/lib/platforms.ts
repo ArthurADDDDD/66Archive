@@ -53,7 +53,12 @@ export function proxyImage(url: string | undefined, width = 480): string | null 
   if (url.startsWith('/')) return url
 
   // B 站元数据接口至今仍可能返回 http 图床地址；统一升级避免 mixed content。
-  const normalized = url.replace(/^http:\/\/((?:[a-z0-9-]+\.)?hdslb\.com)\//i, 'https://$1/')
+  // i0 / i1 / i2.hdslb.com 是同一份图的镜像，一律归到 i0（档案数据里九成以上本来就是 i0）。
+  // 不归一的话，条目页先按数据里的 i0 渲染封面，水合后又从 B 站接口拿到同一张图的 i1 地址，
+  // 代理 URL 不同，浏览器把同一张首屏封面再下载一遍，图片代理还要再冷处理一次。
+  const normalized = url
+    .replace(/^http:\/\/((?:[a-z0-9-]+\.)?hdslb\.com)\//i, 'https://$1/')
+    .replace(/^https:\/\/i\d+\.hdslb\.com\//i, 'https://i0.hdslb.com/')
 
   let policy
   try {
