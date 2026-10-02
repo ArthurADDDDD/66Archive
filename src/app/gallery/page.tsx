@@ -9,6 +9,7 @@ import { BackToTop, MobileQuickNav } from '@/components/ScrollAffordances'
 import { SiteFooter } from '@/components/primitives'
 import { LivePageHeading } from '@/components/LiveSection'
 import { GalleryLiveBoard } from '@/components/GalleryLiveBoard'
+import { GalleryFeatureVideo } from '@/components/GalleryFeatureVideo'
 import { getGalleryCollections } from '@/lib/gallery-photos-manifest'
 import { getLiveWallSummary } from '@/lib/gallery-live-wall'
 import { galleryAllPhotosUrl } from '@/lib/gallery-all-data'
@@ -78,6 +79,8 @@ export default async function GalleryPage() {
             />
           </section>
         )}
+
+        <GalleryFeatureVideo />
 
         {/* 征集：素材没收齐这件事本身要说清楚，不能因为上面有图了就藏起来。 */}
         <section className="site-container px-page pb-24 sm:pb-32">
