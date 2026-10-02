@@ -35,22 +35,32 @@ type CollectionMode = 'featured' | 'all' | 'live'
 const NO_PHOTOS: GalleryPhoto[] = []
 
 /**
- * 图墙画质。默认低（省流量、翻得快）；读者可以切到中 / 高，选择记在本机浏览器里。
- * 纪念版、全量版、全直播合集共用这一个设置。照片墙用 context 下发（缩略图埋在
+ * 图墙画质。默认中（2026-10 起；之前默认低，小格子发糊）；读者可以切到低 / 高，选择记在
+ * 本机浏览器里。纪念版、全量版、全直播合集共用这一个设置。照片墙用 context 下发（缩略图埋在
  * PhotoWall → PhotoCell 好几层里），合集直接收 prop。
  */
+const DEFAULT_QUALITY: GalleryQuality = 'medium'
 const QUALITY_OPTIONS: { value: GalleryQuality; label: string; hint: string; title: string }[] = [
-  { value: 'low', label: '低', hint: '低画质', title: '低画质：小图，省流量，默认' },
-  { value: 'medium', label: '中', hint: '中画质', title: '中画质：统一用较大的缩略图' },
+  { value: 'low', label: '低', hint: '低画质', title: '低画质：小图，最省流量' },
+  { value: 'medium', label: '中', hint: '中画质', title: '中画质：统一用较大的缩略图，默认' },
   { value: 'high', label: '高', hint: '高画质', title: '高画质：照片用原图尺寸，合集用最清晰的一档；流量最大' },
 ]
 
-/** 「画质：低 中 高」——名字写在按钮前面，光有三个字读者不知道在调什么。 */
-function QualityToggle({ value, onChange }: { value: GalleryQuality; onChange: (next: GalleryQuality) => void }) {
+/**
+ * 「画质：低 中 高」——名字写在按钮前面，光有三个字读者不知道在调什么。
+ * `highlight`：第一次进画廊时亮一圈，配合底部那句提示，告诉读者开关在哪。
+ */
+function QualityToggle({ value, onChange, highlight = false }: { value: GalleryQuality; onChange: (next: GalleryQuality) => void; highlight?: boolean }) {
   return (
     <div className="flex shrink-0 items-center gap-1.5">
-      <span className="text-meta text-muted">画质</span>
-      <div className="flex items-center gap-1 rounded-full border border-line/80 bg-surface/50 p-0.5" role="group" aria-label="画质">
+      <span className={`text-meta transition-colors ${highlight ? 'text-live' : 'text-muted'}`}>画质</span>
+      <div
+        className={`flex items-center gap-1 rounded-full border bg-surface/50 p-0.5 transition-[border-color,box-shadow] duration-500 ${
+          highlight ? 'border-live/70 shadow-[0_0_0_3px_rgba(91,200,232,0.18)]' : 'border-line/80'
+        }`}
+        role="group"
+        aria-label="画质"
+      >
         {QUALITY_OPTIONS.map((o) => (
           <button
             key={o.value}
@@ -71,16 +81,37 @@ function QualityToggle({ value, onChange }: { value: GalleryQuality; onChange: (
   )
 }
 const QUALITY_STORAGE_KEY = 'gallery-quality'
-const GalleryQualityContext = createContext<GalleryQuality>('low')
+const QUALITY_HINT_KEY = 'gallery-quality-hint-seen'
+const GalleryQualityContext = createContext<GalleryQuality>(DEFAULT_QUALITY)
 
-function readStoredQuality(): GalleryQuality {
+/** 没选过（或读不了本机存储）返回 null；选过低画质的读者照旧是低，不被新默认值改掉。 */
+function readStoredQuality(): GalleryQuality | null {
   try {
     const stored = window.localStorage.getItem(QUALITY_STORAGE_KEY)
-    return stored === 'medium' || stored === 'high' ? stored : 'low'
+    return stored === 'low' || stored === 'medium' || stored === 'high' ? stored : null
   } catch {
-    return 'low'
+    return null
   }
 }
+
+/**
+ * 第一次进画廊、又从没选过画质的读者，提示一次开关在哪。看过就记下，不再打扰；
+ * 本机存储用不了（无痕、禁止网站数据）时干脆不提示——否则每次进来都会弹。
+ */
+function shouldShowQualityHint(): boolean {
+  try {
+    if (window.localStorage.getItem(QUALITY_STORAGE_KEY) !== null) return false
+    if (window.localStorage.getItem(QUALITY_HINT_KEY) !== null) return false
+    window.localStorage.setItem(QUALITY_HINT_KEY, '1')
+    return true
+  } catch {
+    return false
+  }
+}
+
+const QUALITY_HINT_TEXT = '现在是中画质。上方「画质」可以调：低更省流量，高更清晰'
+const QUALITY_HINT_DELAY_MS = 1_200
+const QUALITY_HINT_DURATION_MS = 8_000
 
 /**
  * 纪念版分类说明先不露出：分类名本身已经写在筛选按钮上，
@@ -182,15 +213,27 @@ export function GalleryBoard({
   const [density, setDensity] = useState<Density>('normal')
   const [tag, setTag] = useState<string | null>(null)
   const [q, setQ] = useState('')
-  const [quality, setQuality] = useState<GalleryQuality>('low')
+  const [quality, setQuality] = useState<GalleryQuality>(DEFAULT_QUALITY)
   const [qualityNotice, setQualityNotice] = useState<string | null>(null)
+  const [qualityHint, setQualityHint] = useState(false)
   const t = useSiteTexts()
 
-  // 静态导出拿不到本机偏好，首屏一律按低画质出，挂载后再换成读者上次选的档。
+  // 静态导出拿不到本机偏好，首屏一律按默认（中）出，挂载后再换成读者上次选的档。
   useEffect(() => {
     const stored = readStoredQuality()
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (stored !== 'low') setQuality(stored)
+    if (stored && stored !== DEFAULT_QUALITY) setQuality(stored)
+  }, [])
+
+  // 首次进入的画质提示：等页面先露出来再出，避免和首屏抢注意力；到时自动收起。
+  useEffect(() => {
+    if (!shouldShowQualityHint()) return
+    const show = window.setTimeout(() => setQualityHint(true), QUALITY_HINT_DELAY_MS)
+    const hide = window.setTimeout(() => setQualityHint(false), QUALITY_HINT_DELAY_MS + QUALITY_HINT_DURATION_MS)
+    return () => {
+      window.clearTimeout(show)
+      window.clearTimeout(hide)
+    }
   }, [])
 
   useEffect(() => {
@@ -200,6 +243,8 @@ export function GalleryBoard({
   }, [qualityNotice])
 
   const chooseQuality = (next: GalleryQuality) => {
+    // 读者已经找到开关了，提示就此收起（点的是当前档也算）。
+    setQualityHint(false)
     if (next === quality) return
     setQuality(next)
     try {
@@ -209,11 +254,12 @@ export function GalleryBoard({
     }
     const hint = QUALITY_OPTIONS.find((o) => o.value === next)?.hint ?? ''
     setQualityNotice(
-      next === 'low' ? `已切回${hint}` : `正在换成${hint}，图片要重新加载，稍等一下${next === 'high' ? '（高画质每张更大，流量也更多）' : ''}`,
+      next === DEFAULT_QUALITY ? `已切回${hint}` : `正在换成${hint}，图片要重新加载，稍等一下${next === 'high' ? '（高画质每张更大，流量也更多）' : ''}`,
     )
   }
 
-  const qualityControl = <QualityToggle value={quality} onChange={chooseQuality} />
+  const qualityControl = <QualityToggle value={quality} onChange={chooseQuality} highlight={qualityHint} />
+  const qualityToast = qualityNotice ?? (qualityHint ? QUALITY_HINT_TEXT : null)
   const [openId, setOpenId] = useState<string | null>(null)
   const boardRef = useRef<HTMLDivElement>(null)
   // 首屏用一个常见桌面宽度排一版，挂载后立刻按真实宽度重排；窗口缩放同样跟着重排。
@@ -434,15 +480,16 @@ export function GalleryBoard({
           三个栏目都给；桌面上全直播合集没有这排工具栏，开关放在合集自己的控件行里。 */}
       <div className="mb-4 flex items-center sm:hidden">{qualityControl}</div>
 
-      {/* 切画质后的提示：新档的图要重新下载，墙上会有一会儿新旧混着出来。 */}
+      {/* 切画质后的提示：新档的图要重新下载，墙上会有一会儿新旧混着出来。
+          第一次进画廊时也借这里说一句画质开关在哪（同时开关本身亮一圈）。 */}
       <p
         role="status"
         aria-live="polite"
         className={`pointer-events-none fixed inset-x-0 bottom-6 z-40 mx-auto w-fit max-w-[calc(100%-2rem)] rounded-full border border-line/80 bg-raised/95 px-4 py-2 text-center text-meta text-ink shadow-lg transition-opacity duration-300 ${
-          qualityNotice ? 'opacity-100' : 'opacity-0'
+          qualityToast ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        {qualityNotice}
+        {qualityToast}
       </p>
 
       {collection === 'live' && liveWall ? (

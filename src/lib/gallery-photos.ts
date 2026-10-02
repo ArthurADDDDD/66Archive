@@ -95,8 +95,8 @@ export function galleryThumbSources(thumb: string) {
 /**
  * 图墙缩略图的画质档位（画廊页的「画质」开关）。
  *
- * - `low`：默认，与 `galleryThumbSources` 相同——360/720 两档交给浏览器按显示宽度挑，省流量；
- * - `medium`：一律取 720 档（avif/webp），不管格子多小；
+ * - `low`：与 `galleryThumbSources` 相同——360/720 两档交给浏览器按显示宽度挑，省流量；
+ * - `medium`：默认（2026-10 起），一律取 720 档（avif/webp），不管格子多小；
  * - `high`：取灯箱用的原尺寸 `.full.webp`（没有派生文件的图退回原图）。
  *
  * 三档都是已经生成好的文件，不另出图。
