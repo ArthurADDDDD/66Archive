@@ -248,7 +248,7 @@ function ArchiveLoadingShell({ nav, failed, onRetry }: { nav: ArchiveNav; failed
 function ArchiveBreadcrumb() {
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live [&~p]:hidden [&~span]:hidden">
-      <span>Chronicle</span>
+      <span>Archive</span>
       <span aria-hidden className="text-faint/50">·</span>
       <span>录播室</span>
     </div>

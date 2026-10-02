@@ -157,11 +157,11 @@ export function ChronicleView({
   )
 }
 
-/** 面包屑：Chronicle · 大事件（页面原名「编年史」，网址仍是 /chronicle/）。故事/档案不再是同一页里的两个模式，切换靠真链接。 */
+/** 面包屑：Timeline · 大事件（页面原名「编年史」，网址仍是 /chronicle/）。故事/档案不再是同一页里的两个模式，切换靠真链接。 */
 function ChronicleBreadcrumb() {
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em] text-live">
-      <span>Chronicle</span>
+      <span>Timeline</span>
       <span aria-hidden className="text-faint/50">·</span>
       <span>大事件</span>
     </div>

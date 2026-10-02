@@ -132,7 +132,7 @@ export const SITE_COPY: SiteCopy = {
     eyebrow: ' ',
     title: '女流',
     body: [
-      '女流，本名石悦。2010 年开始上传游戏解说视频，2015 年起进入直播，从石悦到女流再到66，游戏、分享和直播间里的故事，一直延续至今。',
+      '女流，2010 年开始上传游戏解说视频，2015 年起进入直播。从女流到66，游戏、分享和直播间里的故事，一直延续至今。',
     ],
     primaryAction: '开始',
     secondaryAction: '关于她',
@@ -177,7 +177,7 @@ export const SITE_COPY: SiteCopy = {
   rooms: [
     {
       id: 'chronicle',
-      kicker: 'Chronicle',
+      kicker: 'Timeline',
       title: '大事件',
       body: '走过的路，一条一条。',
     },
@@ -281,7 +281,7 @@ export const SITE_COPY: SiteCopy = {
       id: 'contact-credits',
       eyebrow: 'Memory · 关于本站',
       title: '属于66和i6们的回忆',
-      lede: '最开始只是想帮忙收集一些老录播——尤其是那些不太好找的场次，然后一场一场打上具体的标签。这样想看录播的时候，直接搜游戏名就能找到当年那一场，这样大家就不用在老录播里一个个翻日期（来源比较散，命名比较不好找，有的只有日期就需要人工来核对）。\n就这样，大概的雏形就有了。后来想着来都来了，不如顺手把这些年发生的大伙儿印象深刻的事情也给捋一捋，于是就动手做了。\n不过个人的能力很有限，好多东西没嘛印象了，而且 15-20 年那几年我在念书，也算听姐姐的话，有好好在学习，所以直播看得不算太多，不过中后期的砒霜应该没落下太多（感恩66劝学，感恩心灵砒霜）。所以站里的内容一定有缺、有错，这是实话。\n现在站里能用的几样东西：节目被拆开单独列了出来，喜欢和主播一起 See 的、喜欢心灵砒霜的、喜欢看主播户外的，都可以直接在节目单里找；新来的水友从首页一路往下滑，能看到我整理的一些关键节点，更全、更细的在大事件里；再往下是给新粉丝准备的梗百科。梗这一块我记得最牢的是砒霜，所以目前砒霜的梗最多，其他的想起来一个写一个。\n所以也想请大家搭把手：发现缺的、错的，或者哪个梗还没收进来，都可以在这个页面提交线索。慢慢把它补齐，新观众就能很快地加入我们，知道她是个什么样的人，这十几年她都做了些什么。（感恩Ai，没有Ai就没有这个站哇咔咔）',
+      lede: '最开始只是想帮忙收集一些老录播——尤其是那些不太好找的场次，然后一场一场打上具体的标签。这样想看录播的时候，直接搜游戏名就能找到当年那一场，这样大家就不用在老录播里一个个翻日期（来源比较散，命名比较不好找，有的只有日期就需要人工来核对。除了这个问题以外还有就是缺失条目很难找回，以及部分录播时长对不上，目前比较没办法）。\n就这样，大概的雏形就有了。后来想着来都来了，不如顺手把这些年发生的大伙儿印象深刻的事情也给捋一捋，于是就动手做了。\n不过个人的能力很有限，好多东西没嘛印象了，而且 15-20 年那几年我在念书，也算听姐姐的话，有好好在学习，所以直播看得不算太多，不过中后期的砒霜应该没落下太多（感恩66劝学）。所以站里的内容一定有缺、有错，这是实话。\n现在站里能用的几样东西：节目被拆开单独列了出来，喜欢和主播一起 See 的、喜欢心灵砒霜的、喜欢看主播户外的，都可以直接在节目单里找；新来的水友从首页一路往下滑，能看到我整理的一些关键节点，更全、更细的在大事件里；再往下是给新粉丝准备的梗百科。梗这一块我记得最牢的是砒霜，所以目前砒霜的梗最多，其他的想起来一个写一个。\n所以也想请大家搭把手：发现缺的、错的，或者哪个梗还没收进来，都可以在这个页面提交线索。慢慢把它补齐，新观众就能很快地加入我们，知道她是个什么样的人，这十几年她都做了些什么。',
     },
   ],
   // 目前只有一个人，就如实写一个人，不摆一排占位头像。
@@ -349,7 +349,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'home-today-empty', group: '首页 · 记忆盒', label: '历史上的今天 · 这一天没有记录时', text: '这一天，档案里暂时没有记录。' },
     { id: 'home-games-all', group: '首页 · 玩过的游戏', label: '右侧链接', text: '全部游戏 →' },
     { id: 'home-outro-eyebrow', group: '首页 · 故事最后一页', label: '小标', text: 'NEXT · 接着往下看' },
-    { id: 'home-outro-chronicle-kicker', group: '首页 · 故事最后一页', label: '大事件卡 · 小标', text: 'Chronicle · 大事件' },
+    { id: 'home-outro-chronicle-kicker', group: '首页 · 故事最后一页', label: '大事件卡 · 小标', text: 'Timeline · 大事件' },
     { id: 'home-outro-chronicle-title', group: '首页 · 故事最后一页', label: '大事件卡 · 标题', text: '一条一条地看下去。' },
     { id: 'home-outro-chronicle-body', group: '首页 · 故事最后一页', label: '大事件卡 · 说明', text: '从第一支视频到最近一场，一年一年排好在那儿。' },
     { id: 'home-outro-chronicle-cta', group: '首页 · 故事最后一页', label: '大事件卡 · 链接', text: '打开大事件 →' },
@@ -466,7 +466,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'series-detail-first', group: '节目详情页', label: '引语 · 第一期（场）', vars: ['unit', 'title'], text: '第一{unit}：「{title}」' },
     { id: 'series-detail-first-together', group: '节目详情页', label: '引语 · 一起 See（按整场直播归档）', vars: ['title'], text: '目前最早确认的一场：「{title}」' },
     { id: 'series-detail-archive-count', group: '节目详情页', label: '全部记录 · 标题', vars: ['name', 'count', 'unit'], text: '{name} · 档案里的 {count} {unit}' },
-    { id: 'chronicle-eyebrow', group: '大事件', label: '小标', text: 'Chronicle · 大事件' },
+    { id: 'chronicle-eyebrow', group: '大事件', label: '小标', text: 'Timeline · 大事件' },
     { id: 'chronicle-title', group: '大事件', label: '标题', text: '这些年，一起走过来的路。' },
     { id: 'chronicle-lede', group: '大事件', label: '标题下的说明', text: '从 2010 年那支小游戏解说，到斗鱼156277 的一个个晚上，再到现在的抖音。想翻某一场的录像，去录播室找。' },
     { id: 'chronicle-still-going', group: '大事件', label: '最新一年末尾', text: '这一年还在继续。' },

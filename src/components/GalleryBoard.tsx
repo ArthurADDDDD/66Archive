@@ -96,11 +96,11 @@ const FEATURED_CATEGORY_GUIDE = [
   },
   {
     name: '周年与生日',
-    description: '沿着周年、生日和新年等固定时间节点，留下直播生涯的阶段性纪念。',
+    description: '沿着周年、生日和新年等固定时间节点，留下每个阶段的样子。',
   },
   {
     name: '大周宇宙',
-    description: '记录壮壮、豆豆、YJJ、小涡等成员首次、末次或具有特殊意义的入镜与同框。',
+    description: '记录壮壮、豆豆、YJJ、小涡等成员首次、最近一次或具有特殊意义的入镜与同框。',
   },
   {
     name: '线下活动',
@@ -510,7 +510,7 @@ export function GalleryBoard({
           <section className="mb-10 rounded-2xl border border-line/70 bg-surface/35 p-5 sm:mb-14 sm:p-7" aria-label="纪念版分类说明">
             <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
               <div>
-                <p className="font-mono text-meta uppercase tracking-[0.16em] text-today">Memorial · 纪念版</p>
+                <p className="font-mono text-meta uppercase tracking-[0.16em] text-today">Moments · 纪念版</p>
                 <p className="mt-3 max-w-2xl text-control leading-relaxed text-muted">
                   每张图都经过人工筛选与修订。这里记录的不只是“出现过”，还包括露脸方式、机位与直播间场景的变化，
                   每一次搬家，以及重要成员第一次、最后一次或最有意义的入镜。
