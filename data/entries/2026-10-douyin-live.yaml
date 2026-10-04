@@ -1,0 +1,19 @@
+# 2026-10 douyin live 条目。由后台审批的采集候选新建。
+- id: 2026-10-04-live-01
+  type: live
+  date: "2026-10-04"
+  title: "体验 鸣潮 3 7版本 上 主线剧情「镜锁妄世 心照红尘」"
+  platform: douyin
+  duration_min: 231
+  games:
+    - wuthering-waves
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/1298149448bda6840818ca2a6f7bbb8a675b2b4e.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1G7HE6FE9E"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
