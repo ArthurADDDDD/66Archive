@@ -15,5 +15,54 @@
     - url: "https://www.bilibili.com/video/BV1G7HE6FE9E"
       kind: replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV11mH76SEWr"
+      kind: replay
+      status: alive
+      cover: "http://i1.hdslb.com/bfs/archive/497da1b55c9faa3303f706022734f0cbeefbbbd5.jpg"
+      parts: 6
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-06-live-01
+  type: live
+  date: "2026-10-06"
+  title: "男生女生向前冲"
+  platform: douyin
+  duration_min: 167
+  games:
+    - nanshengnvshengxiangqianchong
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/b4e0a4da8152537a088589ff4e836d16a01d769c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1yYpP61EpU"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1PRpA6kEpX"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-05-live-01
+  type: live
+  date: "2026-10-05"
+  title: "继续鸣潮3 7"
+  platform: douyin
+  duration_min: 95
+  games:
+    - wuthering-waves
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/73464fbb2506ccd11c88d2c124db9908d4a6fdd0.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1h5Hx6LEL9"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1owHx6pE7a"
+      kind: replay
+      status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
