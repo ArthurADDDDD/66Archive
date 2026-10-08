@@ -88,3 +88,25 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-08-live-01
+  type: live
+  date: "2026-10-08"
+  title: "勇敢者试炼"
+  platform: douyin
+  duration_min: 175
+  games:
+    - yongganzhezhishilian
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/be62413226f74c2449776d2c37ef4f7d46a8bf1f.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1VjHX6ZEDN"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1d9HX6aE7D"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
