@@ -70,6 +70,8 @@ export default async function GalleryPage() {
           </div>
         </section>
 
+        <GalleryFeatureVideo />
+
         {collections.all.length > 0 && (
           <section className="site-container-wide px-page pb-20">
             <GalleryLiveBoard
@@ -79,8 +81,6 @@ export default async function GalleryPage() {
             />
           </section>
         )}
-
-        <GalleryFeatureVideo />
 
         {/* 征集：素材没收齐这件事本身要说清楚，不能因为上面有图了就藏起来。 */}
         <section className="site-container px-page pb-24 sm:pb-32">
