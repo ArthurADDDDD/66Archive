@@ -310,10 +310,13 @@ export function LiveStatusIndicator() {
     }
   }, [])
 
-  // 路由变化（含点“回到首页”）后收起浮窗，避免手机端遮住新页面内容
-  useEffect(() => {
-    setOpen(false)
-  }, [pathname])
+  // 路由变化（含点“回到首页”）后收起浮窗，避免手机端遮住新页面内容。
+  // 在渲染期比对上一次的路径来收起，而不是在 effect 里 setState（会多一轮级联渲染）。
+  const [openedOnPath, setOpenedOnPath] = useState(pathname)
+  if (openedOnPath !== pathname) {
+    setOpenedOnPath(pathname)
+    if (open) setOpen(false)
+  }
 
   useEffect(() => {
     if (!open) return
