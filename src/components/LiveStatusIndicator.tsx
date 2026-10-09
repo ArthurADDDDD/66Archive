@@ -310,9 +310,14 @@ export function LiveStatusIndicator() {
     }
   }, [])
 
+  // 路由变化（含点“回到首页”）后收起浮窗，避免手机端遮住新页面内容
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
   useEffect(() => {
     if (!open) return
-    const close = (event: MouseEvent | TouchEvent) => {
+    const close =(event: MouseEvent | TouchEvent) => {
       const path = event.composedPath()
       const root = rootRef.current
       const dialog = dialogRef.current
@@ -458,6 +463,7 @@ export function LiveStatusIndicator() {
               <Link
                 href="/"
                 prefetch={false}
+                onClick={() => setOpen(false)}
                 data-analytics-event="nav.click"
                 data-analytics-target="home"
                 className="ui-press flex min-h-11 w-full items-center justify-between rounded-full border border-line bg-surface px-4 text-control font-medium text-ink transition-colors hover:border-live/60 hover:bg-raised"
