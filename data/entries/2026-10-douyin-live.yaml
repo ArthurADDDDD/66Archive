@@ -111,18 +111,17 @@
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
-- id: 2026-10-10-live-01
+
+- id: 2026-10-10-live-02
   type: live
   date: "2026-10-10"
-  title: "晚上好"
+  title: "看 影之刃零 最新20分钟实机演示 我们又试玩了 影之刃零 他实在是太帅了"
   platform: douyin
-  duration_min: 48
-  tags:
-    - 弹幕版
+  duration_min: 116
   confidence: medium
-  cover: "http://i0.hdslb.com/bfs/archive/01fc9276a2ca6732d0bfa92475224db20cef6261.jpg"
+  cover: "http://i2.hdslb.com/bfs/archive/564bdfd2b84f81c40fbaa45bbbe6d109c16b3198.jpg"
   sources:
-    - url: "https://www.bilibili.com/video/BV1n7pG6fEr8"
+    - url: "https://www.bilibili.com/video/BV1FJpG6tEr3"
       kind: replay
       status: alive
   note: "依据录播来源复核收录。"
