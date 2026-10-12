@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { PresenceIndicator } from './PresenceIndicator'
 import { RotatingAvatar } from './RotatingAvatar'
 import { useSiteCopy } from './LiveContentProvider'
+import { LiveAlertSignup } from './LiveAlertSignup'
 
 /** 「关于女流」的去处：百度百科「女流66」词条（跳转到本人「石悦」词条）。 */
 const ABOUT_HREF = 'https://baike.baidu.com/item/%E5%A5%B3%E6%B5%8166'
@@ -102,6 +103,7 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
             >
               {copy.hero.secondaryAction}
             </a>
+            <LiveAlertSignup />
             </div>
             <PresenceIndicator pageKey="home" mode="global" className="mt-4" />
           </div>

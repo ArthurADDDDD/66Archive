@@ -168,9 +168,12 @@ export function SiteFooter() {
         <br className="hidden sm:block" />
         <SiteText id="site-footer-takedown" />
       </span>
+      <div className="flex shrink-0 items-start gap-5">
+      <Link prefetch={false} href="/privacy/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">隐私说明</Link>
       <Link prefetch={false} href="/contact/" className="ui-press -my-2 shrink-0 rounded-sm py-2 transition-colors hover:text-live">
         <SiteText id="site-footer-contact" />
       </Link>
+      </div>
     </footer>
   )
 }

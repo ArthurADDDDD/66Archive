@@ -31,6 +31,7 @@ const STATIC_PATHS = [
   '/stats/',
   '/gallery/',
   '/contact/',
+  '/privacy/',
 ] as const
 
 /**
