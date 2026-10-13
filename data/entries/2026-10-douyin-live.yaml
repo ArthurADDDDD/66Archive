@@ -131,3 +131,22 @@
       parts: 3
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-12-live-01
+  type: live
+  date: "2026-10-12"
+  title: "和壮壮老Biu玩三个猴子拆炸弹 Bombanana 聋子瞎子哑巴第二期"
+  platform: douyin
+  duration_min: 148
+  games:
+    - bombanana
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/af5bdc936e9b9665c6c5ee7b8ffae479aa3f0e15.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15UpR6BEuv"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
