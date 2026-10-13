@@ -148,5 +148,32 @@
     - url: "https://www.bilibili.com/video/BV15UpR6BEuv"
       kind: replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV1qypR63EcU"
+      kind: replay
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/5135c2fecf3adc83f1bfe319a8c68e1db7ea3514.jpg"
+      parts: 3
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-13-live-01
+  type: live
+  date: "2026-10-13"
+  title: "年度最重磅解谜游戏 沉星之序"
+  platform: douyin
+  duration_min: 149
+  games:
+    - chenxingzhixu
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/9c18abaf97fa6c19deb9228bbb082fce179250fb.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Scpq62EzE"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1B1pi6oEZk"
+      kind: replay
+      status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
