@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
 import { trackSiteEvent } from '@/lib/site-analytics'
 
@@ -17,6 +18,12 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  * 因此先挂手势监听再尝试播放，用户第一次点/按/触屏时无缝补上。
  */
 export function BgmPlayer() {
+  const pathname = usePathname()
+  if (pathname === '/live-alerts' || pathname?.startsWith('/live-alerts/')) return null
+  return <SiteBgmPlayer />
+}
+
+function SiteBgmPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [track, setTrack] = useState<BgmTrack | null>(null)
   const [playing, setPlaying] = useState(false)
@@ -172,9 +179,13 @@ export function BgmPlayer() {
   }, [track, tryPlay])
 
   useEffect(
-    () => () => {
-      if (fadeRef.current !== null) window.clearInterval(fadeRef.current)
-      if (revealTimerRef.current !== null) window.clearTimeout(revealTimerRef.current)
+    () => {
+      const audio = audioRef.current
+      return () => {
+        audio?.pause()
+        if (fadeRef.current !== null) window.clearInterval(fadeRef.current)
+        if (revealTimerRef.current !== null) window.clearTimeout(revealTimerRef.current)
+      }
     },
     [],
   )
