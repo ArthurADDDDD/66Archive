@@ -177,3 +177,26 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-14-live-01
+  type: live
+  date: "2026-10-14"
+  title: "年度最火爆动物园开工"
+  platform: douyin
+  duration_min: 180
+  games:
+    - planet-zoo
+    - planet-zoo-2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/df1c69d47420914a427ac66a15fb55f853f2f790.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1acpU6jEGF"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV18NpU6CE7U"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
