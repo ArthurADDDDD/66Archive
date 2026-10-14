@@ -14,6 +14,7 @@ import { CoverageGaps } from '@/components/CoverageMap'
 import { PopularContent } from '@/components/PopularContent'
 import { PresenceIndicator } from '@/components/PresenceIndicator'
 import { SiteReach } from '@/components/SiteReach'
+import { SiteUpdates } from '@/components/SiteUpdates'
 import { TrailSection } from '@/components/Trail'
 import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
@@ -438,6 +439,7 @@ export default async function StatsPage() {
           </Observation>
         </Section>
 
+        <SiteUpdates />
         <SiteFooter />
       </main>
     </LiveCopySeed>
