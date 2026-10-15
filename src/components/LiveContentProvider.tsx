@@ -1,7 +1,8 @@
 'use client'
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { createLiveContentLoader } from '@/lib/live-content-loader'
 import { SITE_NAME } from '@/lib/site-name'
 import {
   contentPathsFor,
@@ -74,34 +75,25 @@ export function LiveContentProvider({
   const [content, setContent] = useState<LiveContent>(initial ?? EMPTY_CONTENT)
   const [copyArrived, setCopyArrived] = useState(false)
   const pathname = usePathname()
-  // 已经拿到（或已经发出过）的分片。站内换页不该把 site-copy 再拉一遍，
-  // 而换到首页 / 编年史时又必须补上此前没拉的 narrative。
-  const requested = useRef<Set<string>>(new Set())
-  // effect 的依赖必须是稳定值：`contentPathsFor` 每次返回新数组，直接当依赖会每帧重跑。
+  // 每个分片单独复用请求：切页不会丢掉在途响应，慢分片不会阻塞已到达的文案。
+  const [subscribeContent] = useState(() => createLiveContentLoader(fetchLiveContent))
+  // 普通渲染不重复订阅；切页即使需求相同也重新订阅，以便重试上次失败的分片。
   const wanted = contentPathsFor(pathname).join('|')
 
-  useEffect(() => {
-    const missing = wanted.split('|').filter((path) => !requested.current.has(path))
-    if (missing.length === 0) return
-    for (const path of missing) requested.current.add(path)
-
-    let active = true
-    void fetchLiveContent(missing).then((live) => {
-      if (!active) return
-      if (live.copy) setCopyArrived(true)
-      // 逐份回退，不能直接 setContent(live)：这次没拉的分片、以及拉失败的那一份
-      // 都是 null，整份覆盖会把烤进来的内容清掉，页面反而退回公仓基线——
-      // 那正是烤入要解决的问题，写成整份覆盖等于白做。
-      setContent((prev) => ({
+  useEffect(() => subscribeContent(wanted.split('|'), (live) => {
+    if (live.copy) setCopyArrived(true)
+    // 分片到达时只覆盖自身；失败或未请求的部分继续保留已有内容。
+    setContent((prev) => {
+      const next = {
         narrative: live.narrative ?? prev.narrative,
         copy: live.copy ?? prev.copy,
         editorial: live.editorial ?? prev.editorial,
-      }))
+      }
+      return next.narrative === prev.narrative && next.copy === prev.copy && next.editorial === prev.editorial
+        ? prev
+        : next
     })
-    return () => {
-      active = false
-    }
-  }, [wanted])
+  }), [wanted, pathname, subscribeContent])
 
   // 现场编辑（见 lib/live-edit.ts）：只有被后台嵌进 iframe 时才会建立会话，
   // 普通访客这里始终是 null，value 就是原来的 content。

@@ -89,6 +89,9 @@ jobs:
           CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
 
+      - name: Verify live content request lifecycle
+        run: npm run test:live-content
+
       - name: Verify responsive covers and exported image candidates
         run: |
           npm run test:covers
