@@ -200,3 +200,22 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-15-live-01
+  type: live
+  date: "2026-10-15"
+  title: "冒险岛怀旧服开放三转啦"
+  platform: douyin
+  duration_min: 224
+  games:
+    - maplestory-classic
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/774d2be07d91e32786177da1bb05b7d6029a21f6.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV12cJ26oENe"
+      kind: replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
