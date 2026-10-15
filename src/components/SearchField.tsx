@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef, useState, type RefObject } from 'react'
+import { createPortal } from 'react-dom'
+import { useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 
 /**
  * 搜索框，两套完全独立的 DOM：
@@ -41,6 +42,46 @@ export function SearchField({
   const desktopRef = inputRef ?? desktopInternalRef
   const mobileRef = useRef<HTMLInputElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const panelId = useId()
+
+  useLayoutEffect(() => {
+    if (open) mobileRef.current?.focus()
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    let frame = 0
+    const updatePosition = () => {
+      frame = 0
+      if (window.matchMedia('(min-width: 640px)').matches) {
+        setOpen(false)
+        if (document.activeElement === mobileRef.current) desktopRef.current?.focus()
+        return
+      }
+      const rect = rootRef.current?.getBoundingClientRect()
+      if (!rect) return
+      const width = Math.min(280, window.innerWidth * 0.8)
+      const left = Math.min(Math.max(16, rect.left), window.innerWidth - width - 16)
+      setPanel({ top: rect.bottom + 8, left, width })
+    }
+    const schedulePosition = () => {
+      if (!frame) frame = requestAnimationFrame(updatePosition)
+    }
+    const closeOutside = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node) && !panelRef.current?.contains(event.target as Node)) setOpen(false)
+    }
+    window.addEventListener('resize', schedulePosition)
+    window.addEventListener('scroll', schedulePosition, true)
+    document.addEventListener('pointerdown', closeOutside)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('resize', schedulePosition)
+      window.removeEventListener('scroll', schedulePosition, true)
+      document.removeEventListener('pointerdown', closeOutside)
+    }
+  }, [open, desktopRef])
 
   const expand = () => {
     const rect = rootRef.current?.getBoundingClientRect()
@@ -50,16 +91,31 @@ export function SearchField({
       setPanel({ top: rect.bottom + 8, left, width })
     }
     setOpen(true)
-    requestAnimationFrame(() => mobileRef.current?.focus())
   }
 
   return (
-    <div ref={rootRef} className={`group/search relative ${iconClassName ?? ''}`}>
+    <div
+      ref={rootRef}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget) && !panelRef.current?.contains(event.relatedTarget)) setOpen(false)
+      }}
+      onKeyDown={(event) => {
+        if (open && event.key === 'Escape') {
+          event.preventDefault()
+          event.stopPropagation()
+          setOpen(false)
+          triggerRef.current?.focus()
+        }
+      }}
+      className={`group/search relative ${iconClassName ?? ''}`}
+    >
       {/* 移动端：纯图标，无描边无底色 */}
       <button
+        ref={triggerRef}
         type="button"
-        onClick={() => (open ? mobileRef.current?.blur() : expand())}
-        aria-label={`展开搜索：${ariaLabel}`}
+        onClick={() => (open ? setOpen(false) : expand())}
+        aria-label={`${open ? '收起' : '展开'}搜索：${ariaLabel}`}
+        aria-controls={open ? panelId : undefined}
         aria-expanded={open}
         className={`ui-press flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:text-ink active:opacity-70 sm:hidden ${
           open ? 'text-live' : ''
@@ -87,8 +143,10 @@ export function SearchField({
       />
 
       {/* 移动端：贴着图标长出的紧凑弹层，不描边、不撑满视口 */}
-      {open && (
+      {open && createPortal(
         <div
+          ref={panelRef}
+          id={panelId}
           style={{ top: panel.top, left: panel.left, width: panel.width }}
           className="ui-panel-in fixed z-40 rounded-xl bg-surface/95 p-1 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-md sm:hidden"
         >
@@ -98,15 +156,19 @@ export function SearchField({
             data-analytics-trigger="change"
             value={value}
             onChange={(e) => onChange(e.target.value)}
-            onBlur={() => setOpen(false)}
-            onKeyDown={(e) => {
-              if (e.key === 'Escape') mobileRef.current?.blur()
+            onKeyDown={(event) => {
+              if (event.key !== 'Tab') return
+              // 弹层挂在 body 末尾，Tab 仍应从搜索按钮所在位置继续。
+              setOpen(false)
+              triggerRef.current?.focus()
+              if (event.shiftKey) event.preventDefault()
             }}
             placeholder={mobilePlaceholder ?? '搜索'}
             aria-label={ariaLabel}
             className="w-full bg-transparent px-2.5 py-2.5 text-sm text-ink placeholder:text-faint focus:outline-none"
           />
-        </div>
+        </div>,
+        document.body,
       )}
 
       {kbd && (
