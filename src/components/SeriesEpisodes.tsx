@@ -1,5 +1,6 @@
 'use client'
 
+import { decodeHashTarget } from '@/lib/hash-target'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
@@ -96,12 +97,7 @@ export function SeriesEpisodes({
 
   useEffect(() => {
     const revealHashTarget = () => {
-      let targetId = window.location.hash.slice(1)
-      try {
-        targetId = decodeURIComponent(targetId)
-      } catch {
-        // 非法转义片段不是本站生成的链接；保留原值尝试匹配即可。
-      }
+      const targetId = decodeHashTarget(window.location.hash)
       if (targetId) revealTargetRef.current(targetId)
     }
     revealHashTarget()

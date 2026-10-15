@@ -1,5 +1,6 @@
 'use client'
 
+import { decodeHashTarget } from '@/lib/hash-target'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import type { StorySection } from '@/lib/story-years'
@@ -53,7 +54,7 @@ export function ChronicleView({
     }
     // 分段：?era= 优先；旧的 #story-year-2019 / #story-beat-xxx 链接按它所在的年份切到对应时代。
     const fromQuery = p.get('era')
-    const hash = decodeURIComponent(window.location.hash.slice(1))
+    const hash = decodeHashTarget(window.location.hash)
     const hashYear = /^story-year-(\d{4})$/.exec(hash)?.[1]
     const beatYear = hash.startsWith('story-beat-')
       ? storySections.find((section) => [...section.featured, ...section.secondary].some((beat) => `story-beat-${beat.id}` === hash))?.year

@@ -1,5 +1,6 @@
 'use client'
 
+import { decodeHashTarget } from '@/lib/hash-target'
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
@@ -248,7 +249,7 @@ export function GalleryLiveWall({
   // 地址里带着年份锚点打开时，那一年的分段要等清单到了才存在，浏览器自己的跳转早落空了。
   useEffect(() => {
     if (!manifest || scrollToPicked.current) return
-    const hash = decodeURIComponent(window.location.hash.slice(1))
+    const hash = decodeHashTarget(window.location.hash)
     if (hash.startsWith('live-wall-')) document.getElementById(hash)?.scrollIntoView({ block: 'start' })
   }, [manifest])
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { decodeHashTarget } from '@/lib/hash-target'
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react'
@@ -116,7 +117,7 @@ export function HomeActStage({
   // 深链与右侧时间轴都能直接指定某一页；时间轴还会把整张卡带回视口。
   useEffect(() => {
     const syncHash = () => {
-      const id = decodeURIComponent(window.location.hash.slice(1))
+      const id = decodeHashTarget(window.location.hash)
       if (id === 'home-acts' || id === 'home-act-stage') {
         goTo(0, false)
         return
