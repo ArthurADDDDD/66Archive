@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -90,6 +90,8 @@ function PageNavCapsule({
   const [pendingHref, setPendingHref] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
   const rootRef = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const navigationId = useId()
   const pendingResetTimerRef = useRef<number | null>(null)
   // 原先半屏以上的阈值很像组件迟迟没加载；页头离开后就应立即提供入口。
   const shown = y > 96
@@ -163,16 +165,11 @@ function PageNavCapsule({
     const close = (event: MouseEvent | TouchEvent) => {
       if (!rootRef.current?.contains(event.target as Node)) setOpen(false)
     }
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
-    }
     document.addEventListener('mousedown', close)
     document.addEventListener('touchstart', close)
-    document.addEventListener('keydown', onKey)
     return () => {
       document.removeEventListener('mousedown', close)
       document.removeEventListener('touchstart', close)
-      document.removeEventListener('keydown', onKey)
     }
   }, [open])
 
@@ -189,14 +186,25 @@ function PageNavCapsule({
       <div className="site-header-container px-page">
         <div
           ref={rootRef}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+          }}
+          onKeyDown={(event) => {
+            if (event.key !== 'Escape' || !open) return
+            event.preventDefault()
+            event.stopPropagation()
+            setOpen(false)
+            triggerRef.current?.focus()
+          }}
           inert={!shown}
           className="pointer-events-auto relative inline-flex max-w-full items-center overflow-visible rounded-full border border-line/80 bg-base/85 shadow-[0_10px_32px_rgba(0,0,0,0.2)] backdrop-blur-xl"
         >
           <button
+            ref={triggerRef}
             type="button"
             tabIndex={shown ? 0 : -1}
             aria-expanded={shown && open}
-            aria-haspopup="menu"
+            aria-controls={shown && open ? navigationId : undefined}
             aria-busy={Boolean(pendingItem)}
             aria-label={pendingItem ? `${pendingItem.label}打开中` : `${current.label}，打开页面导航`}
             onClick={() => setOpen((value) => !value)}
@@ -228,6 +236,7 @@ function PageNavCapsule({
 
           {shown && open && (
             <nav
+              id={navigationId}
               aria-label="页面导航"
               className="ui-sheet-in absolute left-0 top-full mt-2 w-56 overflow-hidden rounded-2xl border border-line/90 bg-base/95 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl"
             >
