@@ -89,6 +89,9 @@ jobs:
           CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
 
+      - name: Verify route prefetch scheduling
+        run: npm run test:route-prefetch
+
       - name: Verify live content request lifecycle
         run: npm run test:live-content
 

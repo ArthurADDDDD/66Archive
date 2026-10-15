@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react'
 import { createPortal } from 'react-dom'
 import Link, { useLinkStatus } from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useSiteCopy } from './LiveContentProvider'
 
 export const NAV_ITEMS = [
@@ -16,49 +16,6 @@ export const NAV_ITEMS = [
   { href: '/gallery/', label: '画廊', id: 'gallery' },
   { href: '/contact/', label: '联系我们', id: 'contact' },
 ] as const
-
-const INTENT_PREFETCH_DELAY_MS = 100
-
-/**
- * 只预热用户正在指向的页面，不恢复 Next Link 的整排视口预取。
- * hover / focus 给桌面用户一小段提前量；pointer-down 覆盖快速点击与触屏。
- */
-export function useNavIntentPrefetch() {
-  const router = useRouter()
-  const prefetchTimerRef = useRef<number | null>(null)
-  const prefetchedRoutesRef = useRef(new Set<string>())
-
-  function cancelIntentPrefetch() {
-    if (prefetchTimerRef.current === null) return
-    window.clearTimeout(prefetchTimerRef.current)
-    prefetchTimerRef.current = null
-  }
-
-  function prefetchNow(href: string, selected: boolean) {
-    cancelIntentPrefetch()
-    if (selected || prefetchedRoutesRef.current.has(href)) return
-    prefetchedRoutesRef.current.add(href)
-    router.prefetch(href)
-  }
-
-  function queueIntentPrefetch(href: string, selected: boolean) {
-    cancelIntentPrefetch()
-    if (selected || prefetchedRoutesRef.current.has(href)) return
-    prefetchTimerRef.current = window.setTimeout(() => {
-      prefetchTimerRef.current = null
-      prefetchNow(href, selected)
-    }, INTENT_PREFETCH_DELAY_MS)
-  }
-
-  useEffect(
-    () => () => {
-      if (prefetchTimerRef.current !== null) window.clearTimeout(prefetchTimerRef.current)
-    },
-    [],
-  )
-
-  return { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch }
-}
 
 /**
  * 主导航。
@@ -78,7 +35,6 @@ export function SiteNav({
   statusSlot?: boolean
 }) {
   const pathname = usePathname()
-  const { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch } = useNavIntentPrefetch()
   // 导航显示名可以由后台改（去哪个页面是固定的）。拉不到就用基线里的名字。
   const copy = useSiteCopy()
   const items = NAV_ITEMS.map((item) => ({ ...item, label: copy.nav.find((nav) => nav.id === item.id)?.label ?? item.label }))
@@ -112,7 +68,6 @@ export function SiteNav({
    * 后续同目标点击在路由完成前只保留为一次；12 秒后自动放开，避免网络失败时无法重试。
    */
   function beginNavigation(event: ReactMouseEvent<HTMLAnchorElement>, href: string, selected: boolean) {
-    cancelIntentPrefetch()
     if (selected) return
     /**
      * 带修饰键的点击（Cmd/Ctrl 开新标签、Shift 开新窗口、中键）根本不会让**当前**
@@ -215,11 +170,6 @@ export function SiteNav({
               key={item.id}
               href={item.href}
               prefetch={false}
-              onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
-              onMouseLeave={() => cancelIntentPrefetch()}
-              onFocus={() => queueIntentPrefetch(item.href, selected)}
-              onBlur={() => cancelIntentPrefetch()}
-              onPointerDown={() => prefetchNow(item.href, selected)}
               onClick={(event) => beginNavigation(event, item.href, selected)}
               data-analytics-event="nav.click"
               data-analytics-target={item.id}
@@ -281,11 +231,6 @@ export function SiteNav({
                     <Link
                       href={item.href}
                       prefetch={false}
-                      onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
-                      onMouseLeave={() => cancelIntentPrefetch()}
-                      onFocus={() => queueIntentPrefetch(item.href, selected)}
-                      onBlur={() => cancelIntentPrefetch()}
-                      onPointerDown={() => prefetchNow(item.href, selected)}
                       data-analytics-event="nav.click"
                       data-analytics-target={item.id}
                       role="menuitem"

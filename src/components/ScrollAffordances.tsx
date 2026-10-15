@@ -4,7 +4,7 @@ import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NAV_ITEMS, NavItemLabel, SiteNav, useNavIntentPrefetch } from './SiteNav'
+import { NAV_ITEMS, NavItemLabel, SiteNav } from './SiteNav'
 import { useSiteCopy } from './LiveContentProvider'
 
 /**
@@ -85,7 +85,6 @@ function PageNavCapsule({
   const { y } = useScrollState()
   const pathname = usePathname()
   const copy = useSiteCopy()
-  const { cancelIntentPrefetch, prefetchNow, queueIntentPrefetch } = useNavIntentPrefetch()
   const [open, setOpen] = useState(false)
   const [pendingHref, setPendingHref] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
@@ -145,7 +144,6 @@ function PageNavCapsule({
   }, [pathname])
 
   function beginNavigation(href: string, selected: boolean) {
-    cancelIntentPrefetch()
     if (selected) {
       setOpen(false)
       return
@@ -248,11 +246,6 @@ function PageNavCapsule({
                       <Link
                         href={item.href}
                         prefetch={false}
-                        onMouseEnter={() => queueIntentPrefetch(item.href, selected)}
-                        onMouseLeave={() => cancelIntentPrefetch()}
-                        onFocus={() => queueIntentPrefetch(item.href, selected)}
-                        onBlur={() => cancelIntentPrefetch()}
-                        onPointerDown={() => prefetchNow(item.href, selected)}
                         aria-current={selected ? 'page' : undefined}
                         aria-busy={pendingHref === item.href || undefined}
                         onClick={() => beginNavigation(item.href, selected)}
