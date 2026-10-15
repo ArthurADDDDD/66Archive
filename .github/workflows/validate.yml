@@ -7,6 +7,8 @@ on:
     paths:
       - 'data/**'
       - 'src/**'
+      - 'public/images/covers/**'
+      - 'public/gallery/**'
       - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
@@ -16,6 +18,8 @@ on:
     paths:
       - 'data/**'
       - 'src/**'
+      - 'public/images/covers/**'
+      - 'public/gallery/**'
       - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
@@ -84,3 +88,8 @@ jobs:
         env:
           CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
+
+      - name: Verify responsive covers and exported image candidates
+        run: |
+          npm run test:covers
+          npm run audit:covers

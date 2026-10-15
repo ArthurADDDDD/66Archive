@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { proxyImageSrcSet } from '@/lib/platforms'
+import { ResponsiveCover } from './ResponsiveCover'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody, useEntrySource } from './EntryDetail'
 import { EntryArchiveCover } from './EntryArchiveCover'
@@ -169,8 +169,7 @@ function EntryCard({
         }`}
       >
         {displayCover ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <ResponsiveCover
             src={displayCover}
             /*
              * 封面 URL 由 `useEntrySource` 按 w=640 烤好（EntryDetail 展开面板要那个尺寸），
@@ -178,7 +177,7 @@ function EntryCard({
              * w=640 23,196 B、w=320 9,176 B——DPR 1 白下两倍多的像素。
              * 展开面板那张走自己的 sizes，仍然拿得到大图。
              */
-            srcSet={proxyImageSrcSet(displayCover, GRID_COVER_WIDTHS) ?? undefined}
+            widths={GRID_COVER_WIDTHS}
             sizes={GRID_COVER_SIZES}
             alt=""
             loading="lazy"

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { proxyImage, proxyImageSrcSet } from '@/lib/platforms'
+import { proxyImage } from '@/lib/platforms'
+import { ResponsiveCover } from './ResponsiveCover'
 import { AutoScrollText } from './AutoScrollText'
 
 export type SeriesMontageSample = {
@@ -28,8 +29,6 @@ export function SeriesMontage({ samples }: { samples: SeriesMontageSample[] }) {
       <div className="flex gap-3 pb-1">
         {samples.map((sample) => {
           const cover = proxyImage(sample.cover, 480)
-          // 直连来源（例如优酷）改不了尺寸，`proxyImageSrcSet` 返回 null，照常只用 src。
-          const srcSet = proxyImageSrcSet(cover, MONTAGE_WIDTHS)
           return (
             <Link
               key={sample.id}
@@ -38,11 +37,10 @@ export function SeriesMontage({ samples }: { samples: SeriesMontageSample[] }) {
               className="group w-[clamp(10.5rem,15vw,15rem)] shrink-0"
             >
               <div className="relative aspect-video overflow-hidden rounded-lg border border-line/60 bg-raised">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <ResponsiveCover
                   src={cover ?? sample.cover}
-                  srcSet={srcSet ?? undefined}
-                  sizes={srcSet ? MONTAGE_SIZES : undefined}
+                  widths={MONTAGE_WIDTHS}
+                  sizes={MONTAGE_SIZES}
                   alt=""
                   loading="lazy"
                   referrerPolicy="no-referrer"

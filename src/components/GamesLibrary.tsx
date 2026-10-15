@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { GENRES, genreLabel } from '@/lib/genres'
 import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { actColorForDate } from '@/lib/narrative'
-import { proxyImageSrcSet } from '@/lib/platforms'
+import { ResponsiveCover } from './ResponsiveCover'
 import { trackSiteEvent } from '@/lib/site-analytics'
 import { SearchField } from './SearchField'
 import { SiteText } from './SiteText'
@@ -382,12 +382,11 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
       >
         <div className="relative aspect-video overflow-hidden bg-raised">
           {g.face ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <ResponsiveCover
               src={g.face}
               /* 瓦片实际显示 180–260 CSS px，此前无论屏幕如何都下 w=480。
                  给两档让浏览器按 DPR 挑：DPR 1 拿 240（实测约为 480 的 36%），DPR 2 仍拿 480。 */
-              srcSet={proxyImageSrcSet(g.face, TILE_WIDTHS) ?? undefined}
+              widths={TILE_WIDTHS}
               sizes={TILE_SIZES}
               alt=""
               loading="lazy"

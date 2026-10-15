@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { GameCardData } from '@/lib/games'
-import { proxyImageSrcSet } from '@/lib/platforms'
+import { ResponsiveCover } from './ResponsiveCover'
 
 /** 封面缺失 / 加载失败时的档案式字排版封面（不是随机彩色渐变）：
  * 时代 accent 只由首次年份决定（视频 #E0A244 / 斗鱼 #5BC8E8 / 抖音 #FF6B75），
@@ -43,11 +43,10 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
     >
       <div className="relative aspect-video overflow-hidden bg-raised">
         {coverOk ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <ResponsiveCover
             src={p.cover!}
             /* 首页预告卡在 lg 下是四列、约 280 CSS px 宽；两档让 DPR 1 少下一半像素。 */
-            srcSet={proxyImageSrcSet(p.cover, CARD_WIDTHS) ?? undefined}
+            widths={CARD_WIDTHS}
             sizes={CARD_SIZES}
             alt=""
             loading="lazy"

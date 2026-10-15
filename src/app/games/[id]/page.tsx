@@ -195,6 +195,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   )
 }
 
+/** 本地 hero 保留原图：高 DPR 需要 840–960px，现有派生图最大 720px，不能为省流量降清晰度。 */
 /** 游戏页首屏封面：site-container（最宽 87.5rem）里 lg:grid-cols-[1.1fr_.9fr] 的右列。 */
 const HERO_WIDTHS = [480, 960] as const
 const HERO_SIZES = '(min-width: 1024px) 42vw, 92vw'
@@ -206,6 +207,7 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={profile.cover}
+          data-cover-original="full-size"
           /*
            * 753 个游戏页的 LCP 元素。它在 lg:grid-cols-[1.1fr_.9fr] 的右列里，
            * 1440 屏上约 585 CSS px，此前固定请求 w=900：DPR 1 下多了一半像素，
@@ -288,6 +290,7 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={profile.cover}
+            data-cover-original="full-size"
             /*
              * 稀疏游戏页（323 个）的首屏封面：框最宽 26.25rem = 420 px，
              * 却和主 hero 共用同一个 w=900 的 URL。实测 w=900 34,839 B、w=480 16,157 B。
