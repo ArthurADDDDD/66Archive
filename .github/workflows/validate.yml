@@ -89,6 +89,9 @@ jobs:
           CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
 
+      - name: Verify archive audit candidate classification
+        run: npm run test:audit-candidates
+
       - name: Verify route prefetch scheduling
         run: npm run test:route-prefetch
 

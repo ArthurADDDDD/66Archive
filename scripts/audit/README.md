@@ -80,3 +80,25 @@ HOST=0.0.0.0 node scripts/audit/server.mjs
 3. 修改进入 `data/**` 后跑 `npm run validate`；涉及游戏词库 / 搜索行为时再跑 `npm run test:vote-search`。
 
 `verdict: skip` 代表证据不足或暂时拿不准，应留给下一轮或交给能查证的人。不要因为“清点要收尾”就把 skip 随手改成 ok。
+
+## 全库标题线索的只读分级
+
+`node --import tsx scripts/audit-data.ts --output .local/audit/report.json`
+可生成全库质量报告（输出目录须预先创建）。它与本目录的逐条审校页面是不同入口，
+不会写入审校决定，也不修改正式档案。
+
+报告中的 `titleGameCandidates` 保留原有 `entryId`、`title`、`gameId`、`matched`，
+新增 `reviewReason` 和 `relatedGameIds`，按下列顺序呈现：
+
+| 分级 | 含义 |
+| --- | --- |
+| `name-match` | 标题命中词库中的游戏名称，仍须核对来源与具体作品 |
+| `alias-only` | 只命中别名；系列简称、平台名等宽泛别名可能误报 |
+| `shared-term` | 同一个命中词属于多款游戏，相关 ID 列在 `relatedGameIds` |
+| `covered-by-tagged-game` | 所有命中位置都包含在已标注游戏的更长名称或别名中，例如“传送门2”中的“传送门” |
+
+重叠线索不会删除或自动判定为已审校。若同一标题还单独出现短名称，仍保留为前面的待查线索。
+名称命中也不是证据：词库本身可能含宽泛名称，标题可能只是谈论某个游戏。
+这些分级只帮助安排复核顺序，不表示真实性、置信度或漏标结论，不能直接批量写入 `data/**`。
+
+回归检查：`npm run test:audit-candidates`。

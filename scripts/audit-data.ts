@@ -18,8 +18,9 @@ import {
   SeriesFile,
   type Account,
   type Entry,
-  type Game,
 } from '../src/lib/schema'
+
+import { findTitleGameCandidates, type TitleGameCandidate } from './audit/title-game-candidates'
 
 interface Options {
   json: boolean
@@ -70,7 +71,7 @@ interface AuditReport {
   duplicateIds: { id: string; files: string[] }[]
   duplicateUrls: { url: string; entryIds: string[] }[]
   possibleDuplicateEntries: { date: string; title: string; entryIds: string[] }[]
-  titleGameCandidates: { entryId: string; title: string; gameId: string; matched: string }[]
+  titleGameCandidates: TitleGameCandidate[]
   lowConfidenceWithoutNote: { entryId: string; file: string }[]
 }
 
@@ -254,32 +255,6 @@ function findDuplicates(records: EntryRecord[]): Pick<
   }
 }
 
-function containsTerm(title: string, term: string): boolean {
-  const normalizedTitle = title.normalize('NFKC').toLowerCase()
-  const normalizedTerm = term.normalize('NFKC').toLowerCase().trim()
-  if (!normalizedTerm) return false
-  if (/^[a-z0-9]+$/i.test(normalizedTerm)) {
-    const escaped = normalizedTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-    return new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, 'i').test(normalizedTitle)
-  }
-  return normalizedTitle.includes(normalizedTerm)
-}
-
-function titleGameCandidates(records: EntryRecord[], games: Game[]): AuditReport['titleGameCandidates'] {
-  const candidates: AuditReport['titleGameCandidates'] = []
-  for (const { entry } of records) {
-    for (const game of games) {
-      if (entry.games.includes(game.id)) continue
-      const matched = [game.name, ...game.aliases]
-        .filter((term) => term.length >= 2)
-        .sort((a, b) => b.length - a.length)
-        .find((term) => containsTerm(entry.title, term))
-      if (matched) candidates.push({ entryId: entry.id, title: entry.title, gameId: game.id, matched })
-    }
-  }
-  return candidates
-}
-
 function createReport(): AuditReport {
   const records = loadEntries()
   const entries = records.map((record) => record.entry)
@@ -319,7 +294,7 @@ function createReport(): AuditReport {
     },
     missingMonths: collectMissingMonths(records, accounts),
     ...duplicates,
-    titleGameCandidates: titleGameCandidates(records, games),
+    titleGameCandidates: findTitleGameCandidates(entries, games),
     lowConfidenceWithoutNote: records
       .filter(({ entry }) => entry.confidence === 'low' && !entry.note)
       .map(({ entry, file }) => ({ entryId: entry.id, file })),
@@ -359,9 +334,10 @@ function printReport(report: AuditReport): void {
   }
 
   if (report.titleGameCandidates.length) {
-    console.log(`\n  标题明确游戏候选（显示前 ${Math.min(10, report.titleGameCandidates.length)} 条）`)
+    console.log(`\n  候选分级：${Object.entries(countBy(report.titleGameCandidates, (item) => item.reviewReason)).map(([reason, count]) => `${reason} ${count}`).join(' · ')}`)
+    console.log(`\n  标题游戏线索（须核对来源，显示前 ${Math.min(10, report.titleGameCandidates.length)} 条）`)
     for (const item of report.titleGameCandidates.slice(0, 10)) {
-      console.log(`    · ${item.entryId}: ${item.gameId}（命中“${item.matched}”）`)
+      console.log(`    · ${item.entryId}: ${item.gameId}（命中“${item.matched}”；${item.reviewReason}${item.relatedGameIds.length ? `；相关游戏 ${item.relatedGameIds.join(', ')}` : ''}）`)
     }
   }
   console.log('')
