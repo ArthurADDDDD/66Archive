@@ -276,3 +276,25 @@
       cover: "http://i0.hdslb.com/bfs/archive/0699f2ed156ff94ed99a659ec7eaf572fc557c09.jpg"
   note: "中午场（13:07 开播），依据录播来源复核收录。采集时与同日晚场撞号被覆盖，2026-10-16 补回；编号晚于晚场是为不改已发布链接。"
   contributed_by: collection-review
+
+- id: 2026-10-16-live-01
+  type: live
+  date: "2026-10-16"
+  title: "坐我副驾 越过山丘"
+  platform: douyin
+  duration_min: 137
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/cf115c8fb045e0ed0b384fb2e22985454193511f.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1HiJ46wEZP"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1AJJ866Eg9"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
