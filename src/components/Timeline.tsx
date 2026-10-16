@@ -1,6 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { readArchiveQuery, writeArchiveQuery } from '@/lib/archive-query'
 import type { TimelineEntry } from '@/lib/data'
 import { MONTH_CN } from '@/lib/ui'
 import { EntryGrid } from './EntryGrid'
@@ -49,11 +51,6 @@ function formatHoursTag(minutes: number): string {
   return `${Math.round(minutes / 60)} 小时`
 }
 
-/** 当前地址栏就是录播室状态：刷新、分享链接和前进后退都按同一套参数恢复。 */
-function paramsForThisLoad() {
-  return new URLSearchParams(window.location.search)
-}
-
 export function Timeline({
   entries,
   isDemo,
@@ -96,59 +93,36 @@ export function Timeline({
     [entries],
   )
 
-  // 首次进入时恢复分享链接；没有月份参数时停在全年目录。
-  // 静态导出无法在服务端读 searchParams，URL 恢复只能在客户端 effect 里完成，一次性且无外部依赖。
+  const searchParams = useSearchParams()
+  const search = searchParams.toString()
+  const appliedSearch = useRef<string | null>(null)
+
   useEffect(() => {
-    const p = paramsForThisLoad()
-    // 没有查询串就没什么可恢复的，直接退出。
-    //
-    // 下面三个 setter 是无条件调用的：即使算出来的值和初始值完全一样，
-    // `setFilters` 也会传进一个**新的对象**，于是整条 memo 链（筛选 / 年月汇总 /
-    // 标签统计）重算一遍，React 再 reconcile 一次首屏。实测那条链在真实的
-    // 2,711 条数据上是 2.20 ms 中位数（中端手机约 8–12 ms）——而绝大多数进入
-    // 录播室的访问根本没带参数，这一整趟纯属白跑。
-    // 真正的深链仍然照常恢复，只是不再让所有人替它买单。
-    if (!window.location.search) return
-    const requestedYear = Number(p.get('y'))
-    const initialYear = years.includes(requestedYear) ? requestedYear : latestYear
-    const requestedMonth = p.has('m') ? Number(p.get('m')) : null
-    const availableMonths = monthsForYear(initialYear)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setActiveYear(initialYear)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setActiveMonth(requestedMonth !== null && availableMonths.includes(requestedMonth) ? requestedMonth : null)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFilters({
-      q: p.get('q') ?? '',
-      platforms: p.get('p')?.split(',').filter(Boolean) ?? [],
-      types: p.get('t')?.split(',').filter(Boolean) ?? [],
-      games: p.get('g')?.split(',').filter(Boolean) ?? [],
-      onlyAlive: p.get('alive') === '1',
-    })
-  }, [latestYear, monthsForYear, years])
+    // Local controls already applied this state. Avoid replaying each keystroke.
+    if (appliedSearch.current === search) return
+    const initial = appliedSearch.current === null
+    appliedSearch.current = search
+    if (initial && !search) return
+    const restored = readArchiveQuery(search, years, monthsForYear)
+    setActiveYear(restored.year)
+    setActiveMonth(restored.month)
+    setFilters(restored.filters)
+    // Expanded rows and local tags belong to the previous result set.
+    setExpanded(new Set())
+    setTagSelection(EMPTY_TAG_SELECTION)
+    setGridExpandedId(null)
+    setSheetOpen(false)
+  }, [search, monthsForYear, years])
 
   const writeUrl = useCallback((nextFilters: Filters, year: number, month: number | null) => {
-    const p = new URLSearchParams()
-    if (year !== latestYear) p.set('y', String(year))
-    if (month !== null) p.set('m', String(month))
-    if (nextFilters.q) p.set('q', nextFilters.q)
-    if (nextFilters.platforms.length) p.set('p', nextFilters.platforms.join(','))
-    if (nextFilters.types.length) p.set('t', nextFilters.types.join(','))
-    if (nextFilters.games.length) p.set('g', nextFilters.games.join(','))
-    if (nextFilters.onlyAlive) p.set('alive', '1')
-    const qs = p.toString()
+    const qs = writeArchiveQuery(nextFilters, year, month, latestYear)
+    appliedSearch.current = qs
     window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
   }, [latestYear])
 
   const hrefFor = useCallback((year: number, month: number | null) => {
-    const p = new URLSearchParams()
-    if (year !== latestYear) p.set('y', String(year))
-    if (month !== null) p.set('m', String(month))
-    if (filters.platforms.length) p.set('p', filters.platforms.join(','))
-    if (filters.types.length) p.set('t', filters.types.join(','))
-    if (filters.games.length) p.set('g', filters.games.join(','))
-    if (filters.onlyAlive) p.set('alive', '1')
-    const qs = p.toString()
+    // Choosing a date exits full-library text search but retains other filters.
+    const qs = writeArchiveQuery({ ...filters, q: '' }, year, month, latestYear)
     return `/archive/${qs ? `?${qs}` : ''}`
   }, [filters, latestYear])
 
