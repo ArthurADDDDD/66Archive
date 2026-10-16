@@ -125,7 +125,7 @@ export type TimelineEntry = {
   demo?: boolean
 }
 
-  export type TimelineSource = Pick<Source, 'url' | 'kind' | 'status' | 'parts' | 'cover'> & {
+  export type TimelineSource = Pick<Source, 'url' | 'kind' | 'status' | 'parts' | 'cover' | 'label'> & {
     accountName?: string
     /** 来源原本所属条目的标题，帮助用户区分不同录像版本。 */
     entryTitle: string
@@ -211,6 +211,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
           parts: source.parts,
           partDetails: source.part_details,
           coverUnreliable: source.cover_unreliable,
+          label: source.label,
         accountName: source.account ? ds.accounts.get(source.account)?.name : undefined,
         entryTitle: item.title,
       })))

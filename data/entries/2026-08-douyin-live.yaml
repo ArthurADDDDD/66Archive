@@ -295,6 +295,7 @@
       - url: https://www.bilibili.com/video/BV1JFuQ6qEtQ
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     contributed_by: data-agent
 
     duration_min: 89
@@ -330,6 +331,7 @@
       - url: "https://www.bilibili.com/video/BV1JFuQ6qEtQ"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
         cover: "http://i1.hdslb.com/bfs/archive/b0c5a45764dbd52c6ec2b3c785bba79e4bb3abf5.jpg"
         parts: 2
     contributed_by: data-agent
@@ -478,6 +480,7 @@
       - url: "https://www.bilibili.com/video/BV18Abk6GE6L"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 d22a663a-e296-49a7-bd07-0a040ec91fea）。"
     contributed_by: collection-review
 
@@ -493,10 +496,12 @@
       - url: "https://www.bilibili.com/video/BV1re836CEKH/?spm_id_from=333.1007.top_right_bar_window_history.content.click"
         kind: replay
         status: unchecked
+        account: bili-fan-heiji
         parts: 5
       - url: "https://www.bilibili.com/video/BV1D58364E1P"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
         parts: 4
     note: "第二场判定：晚上开播 自动采集候选经人工审批新建（组 50c5c859-d2f4-4540-b252-5abc55e6ee41）。"
     contributed_by: collection-review
@@ -515,6 +520,7 @@
       - url: "https://www.bilibili.com/video/BV1Jf8c62Eyb"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 9bed278d-20bd-4d14-a8f2-7a8ae54ec8c0）。"
     contributed_by: collection-review
 
@@ -530,6 +536,7 @@
       - url: "https://www.bilibili.com/video/BV1ZL8h6tEWR"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 0147360e-8b5b-4333-afa9-eb01cea44816）。"
     contributed_by: collection-review
     games: [lord-of-mysteries]
@@ -546,6 +553,7 @@
       - url: "https://www.bilibili.com/video/BV13uhK6JE3k"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 e1863c71-1598-4f6a-b621-ebee2bc1cc46）。"
     contributed_by: collection-review
     games: [how-to-fish]
@@ -567,6 +575,7 @@
       - url: "https://www.bilibili.com/video/BV1eC8R64EQP"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 3f6ea491-b1bf-40f3-9c66-25b92ef92d4f）。"
     contributed_by: collection-review
 
@@ -586,9 +595,11 @@
       - url: "https://www.bilibili.com/video/BV1zh4o6aEZo"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
       - url: "https://www.bilibili.com/video/BV1AitA6WE3b"
         kind: replay
         status: alive
+        account: bili-fan-record-house
         cover: "http://i0.hdslb.com/bfs/archive/f40d036c5b0cfc91b17a4b2576094f7529ccfc6d.jpg"
     note: "自动采集候选经人工审批新建（组 38ffc806-569a-42e7-a9b8-57b012e74a8b）。"
     contributed_by: collection-review
@@ -609,6 +620,7 @@
       - url: "https://www.bilibili.com/video/BV1jhtP61EY3"
         kind: replay
         status: alive
+        account: bili-fan-kid-replay
     note: "自动采集候选经人工审批新建（组 c18e87ef-3116-4b16-801d-657681b8c56c）。"
     contributed_by: collection-review
 
@@ -629,5 +641,6 @@
       - url: "https://www.bilibili.com/video/BV1pGta6aEFh"
         kind: replay
         status: alive
+        account: bili-fan-heiji
     note: "自动采集候选经人工审批新建（组 d0b88360-4523-456b-8e63-1e21ba4f0546）。"
     contributed_by: collection-review

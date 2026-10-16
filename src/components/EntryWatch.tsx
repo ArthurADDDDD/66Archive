@@ -7,6 +7,7 @@ import { analyticsSourceTarget } from '@/lib/site-analytics'
 import { ResponsiveCover } from './ResponsiveCover'
 import { EntryArchiveCover, type ArchiveCoverEntry } from './EntryArchiveCover'
 import { useSiteTexts } from './LiveContentProvider'
+import { sourceCaption } from '@/lib/source-caption'
 
 /**
  * 一场记录的「观看台」。
@@ -29,6 +30,8 @@ export type WatchSource = {
   parts?: number
   partDetails?: { page: number; title: string; duration_sec?: number; cover?: string }[]
   accountName?: string
+  /** 给读者看的来源说明（schema 的 `label`），卡片第二行优先显示它 */
+  label?: string
   /** 来源原本所属条目的标题；同场多录像时用来区分版本 */
   entryTitle: string
   /** 见 schema 里的注释：平台按视频整体返回的封面对这个来源不准确，展示层不应该拿它兜底。 */
@@ -363,7 +366,9 @@ export function EntryWatch({
                             )}
                             {s.status === 'dead' && <span className="text-faint">已失效</span>}
                           </span>
-                          <span className="mt-0.5 block truncate text-meta text-faint">{s.entryTitle}</span>
+                          {sourceCaption(s, entryTitle) && (
+                            <span className="mt-0.5 block truncate text-meta text-faint">{sourceCaption(s, entryTitle)}</span>
+                          )}
                         </span>
                         <span className={`shrink-0 self-center text-meta ${selected ? 'text-live' : 'text-faint'}`}>
                           {selected ? '当前' : '选它'}

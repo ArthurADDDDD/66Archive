@@ -114,6 +114,11 @@ export const Source = z.object({
   part_details: z.array(SourcePart).optional(),
   /** 存活状态由 scripts/check-links 定期回写，采集时留空即可 */
   status: z.enum(['alive', 'dead', 'unchecked']).default('unchecked'),
+  /**
+   * 给读者看的一句话，显示在来源卡片上，说明这份录像和同场其他来源有什么不同
+   * （如「后半场叨叨巫师（22:55 起）」「P5–P9 是这场」）。考据过程写 `note`，不进界面。
+   */
+  label: z.string().min(1).max(30).optional(),
   note: z.string().optional(),
 }).superRefine((source, ctx) => {
   if (!source.part_details) return

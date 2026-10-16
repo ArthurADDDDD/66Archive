@@ -12,6 +12,7 @@ import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/
 import { formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
+import { sourceCaption } from '@/lib/source-caption'
 import { SiteText } from './SiteText'
 
 /**
@@ -145,7 +146,9 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
                       <span className="ml-2 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
                       {source.accountName && <span className="ml-2 text-faint">{source.accountName}</span>}
                       {(source.parts ?? source.partDetails?.length) && <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 font-mono text-meta text-live">{source.parts ?? source.partDetails?.length}P</span>}
-                      <span className={`mt-0.5 truncate text-meta text-faint ${source.entryTitle === entry.title ? 'hidden sm:block' : 'block'}`}>{source.entryTitle}</span>
+                      {sourceCaption(source, entry.title) && (
+                        <span className="mt-0.5 block truncate text-meta text-faint">{sourceCaption(source, entry.title)}</span>
+                      )}
                     </span>
                     <span className={`shrink-0 whitespace-nowrap font-mono text-meta ${active ? 'text-live' : 'text-faint'}`}>
                       {active ? (
