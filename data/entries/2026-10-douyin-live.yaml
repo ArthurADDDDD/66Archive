@@ -209,6 +209,7 @@
   duration_min: 224
   games:
     - maplestory-classic
+    - daodao-wizard
   tags:
     - 弹幕版
   confidence: medium
@@ -217,5 +218,38 @@
     - url: "https://www.bilibili.com/video/BV12cJ26oENe"
       kind: replay
       status: alive
-  note: "依据录播来源复核收录。"
+    - url: "https://www.bilibili.com/video/BV1SBJ26aE4u"
+      kind: replay
+      status: alive
+      cover: "http://i0.hdslb.com/bfs/archive/31d7fd8911f5d0a0ed0561e034215e3cf9e86eba.jpg"
+      note: "前半场冒险岛怀旧服（20:44 起）"
+    - url: "https://www.bilibili.com/video/BV1phJ16EEPx"
+      kind: replay
+      status: alive
+      cover: "http://i1.hdslb.com/bfs/archive/f1a98099ebea42a69f55aa1944934b5878e913e2.jpg"
+      note: "后半场叨叨巫师（22:55 起）"
+  note: "依据录播来源复核收录。后半场玩叨叨巫师，2026-10-16 补登游戏与分段来源。"
+  contributed_by: collection-review
+
+- id: 2026-10-15-live-02
+  type: live
+  date: "2026-10-15"
+  title: "年度最火爆动物园开工"
+  platform: douyin
+  duration_min: 163
+  games:
+    - planet-zoo-2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/7ca7afae596ee7797a9099a31d4117944a0824db.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1j5Jk6aEw8"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV15EJk6fEep"
+      kind: replay
+      status: alive
+      cover: "http://i0.hdslb.com/bfs/archive/0699f2ed156ff94ed99a659ec7eaf572fc557c09.jpg"
+  note: "中午场（13:07 开播），依据录播来源复核收录。采集时与同日晚场撞号被覆盖，2026-10-16 补回；编号晚于晚场是为不改已发布链接。"
   contributed_by: collection-review

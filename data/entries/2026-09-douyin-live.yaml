@@ -64,6 +64,29 @@
   contributed_by: collection-review
   games: [guiwuzhe2]
 
+- id: 2026-09-03-live-02
+  type: live
+  date: "2026-09-03"
+  title: "黎明行者之血"
+  platform: douyin
+  duration_min: 139
+  games:
+    - the-blood-of-dawnwalker
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/e3e207d766490814f29ba2faa05f946c998842a9.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Wdto6uEH9"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1EWto6FEhs"
+      kind: replay
+      status: alive
+      cover: "http://i1.hdslb.com/bfs/archive/8ce419b288fdd904ddf379c4b1cda77b20e7ef35.jpg"
+  note: "前一场（18:00 开播），依据录播来源复核收录。采集审批时与同日鬼武者场撞号被覆盖，2026-10-16 补回；编号晚于鬼武者场是为不改已发布链接。"
+  contributed_by: collection-review
+
 
 - id: 2026-09-04-live-02
   type: live
