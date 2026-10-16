@@ -47,7 +47,7 @@
   date: "2026-09-03"
   title: "鬼武者"
   platform: douyin
-  duration_min: 120
+  duration_min: 234
   tags:
     - 弹幕版
   confidence: medium
@@ -391,10 +391,39 @@
   confidence: medium
   cover: "http://i1.hdslb.com/bfs/archive/750a138a89f992e340a96e1e977b6472ab194128.jpg"
   sources:
+    - url: "https://www.bilibili.com/video/BV1Kzhx6hE44"
+      kind: replay
+      status: alive
     - url: "https://www.bilibili.com/video/BV1uYhx6vE5L"
       kind: replay
       status: alive
-  note: "依据录播来源复核收录。"
+      cover: "http://i1.hdslb.com/bfs/archive/c3bf56ef99dcdad675c52f04b6573717f3470133.jpg"
+      note: "这份同时录了当天两场：P1–P4 是中午这场（12:28 起），P5–P9 是晚场"
+  note: "中午场（12:28 开播），依据录播来源复核收录。当天晚上 21:03 还有一场，见 2026-09-23-live-02。"
+  contributed_by: collection-review
+
+- id: 2026-09-23-live-02
+  type: live
+  date: "2026-09-23"
+  title: "寂静岭新作出炉 寂静岭townfall"
+  platform: douyin
+  duration_min: 208
+  games:
+    - townfall
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/3432dc48829a2dec5f1fbaa7e07b96569698143c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WJhf6pELK"
+      kind: replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1uYhx6vE5L"
+      kind: replay
+      status: alive
+      cover: "http://i1.hdslb.com/bfs/archive/c3bf56ef99dcdad675c52f04b6573717f3470133.jpg"
+      note: "这份同时录了当天两场：P5–P9 是这场晚场（21:03 起），P1–P4 是中午场"
+  note: "晚场（21:03 开播，跨午夜到 00:29）。录播总标题写的是下播日 09-24，分 P 时间与开播探测都确认是 09-23 晚场；当初被当成日期冲突忽略，2026-10-16 补回。"
   contributed_by: collection-review
 
 - id: 2026-09-24-live-01
