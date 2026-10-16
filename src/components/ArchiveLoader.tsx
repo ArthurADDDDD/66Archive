@@ -5,85 +5,18 @@ import { Timeline } from './Timeline'
 import { GameGenresProvider } from './GameGenresContext'
 import { SiteNav } from './SiteNav'
 import { SiteText } from './SiteText'
-import {
-  decodeArchivePayload,
-  type ArchivePayload,
-  type EncodedArchivePayload,
-} from '@/lib/archive-payload'
+import type { ArchivePayload } from '@/lib/archive-payload'
+import { createArchiveLoader, type ArchiveBootHolder } from '@/lib/archive-loader'
 import type { ArchiveNav } from '@/lib/archive-nav'
 
-/**
- * 模块级的载荷缓存，**按地址建键**。
- *
- * 地址里带着按载荷字节算出来的版本号（见 `lib/archive-data-url.ts`），所以
- * 「换了一份载荷」在这里的表现就是「换了一个 url」。早先这里只存 promise、不存 url，
- * `if (archiveRequest) return archiveRequest` 把参数整个忽略掉了——同一个标签页
- * 开着不动、站内来回跳（客户端路由不会重新求值模块），即使新发布之后
- * `dataUrl` 这个 prop 已经换成新版本，拿回来的仍然是上一版那个 promise，
- * 而且**一次网络都不会发**，看起来就是「刷新了也还是旧的」。
- *
- * 下面 `useEffect` 的依赖里本来就有 `dataUrl`，effect 会重跑；真正把它吞掉的是这一层。
- */
-let archiveRequest: { url: string; promise: Promise<ArchivePayload> } | null = null
-
-/**
- * 取走首屏预取的结果，并从全局上摘掉（预取脚本见 `app/archive/page.tsx`）。
- *
- * **只认一次**是关键：一个已经 settle 的 promise 每次 await 都返回同一个结果，
- * 不摘掉的话，一次预取失败会让「重新加载档案」按钮永远重播那次失败。
- */
-function takeBooted(): Promise<unknown> | null {
-  if (typeof window === 'undefined') return null
-  const holder = window as { __i6i6ArchiveBoot?: Promise<unknown> }
-  const pending = holder.__i6i6ArchiveBoot
-  if (!pending) return null
-  delete holder.__i6i6ArchiveBoot
-  return pending
-}
-
-/** 预取脚本只保证「要么是解析出来的 JSON，要么是 null」，形状还得自己认一遍。 */
-function isEncodedPayload(value: unknown): value is EncodedArchivePayload {
-  return Boolean(value) && Array.isArray((value as EncodedArchivePayload).entries)
-}
-
-/**
- * 解码必须在这里做完，不能留到渲染时按需展开：`Timeline` 的首帧 memo 就要读
- * `aliveCount`（「只看还能播的」筛选）。整份 2,711 条的解码在 node 里量过是毫秒级，
- * 与 JSON.parse 本身（中位数 9.2 ms）相比可以忽略。
- */
-function requestArchive(dataUrl: string): Promise<ArchivePayload> {
-  return fetch(dataUrl).then(async (response) => {
-    if (!response.ok) throw new Error(`archive data returned ${response.status}`)
-    return decodeArchivePayload((await response.json()) as EncodedArchivePayload)
-  })
-}
-
-/**
- * 地址由服务端当 prop 传下来（见 `app/archive/page.tsx`），带着按载荷字节算出的
- * 版本号。**不要在这里写死 `/archive-data.json`**：那样重试会绕开版本号，
- * 拿到边缘上可能是上一版的那份，而且不报任何错。
- */
-function fetchArchive(dataUrl: string): Promise<ArchivePayload> {
-  // 只有地址一致才复用；换了版本号就必须重新取，否则新发布对这个标签页永远不生效。
-  if (archiveRequest && archiveRequest.url === dataUrl) return archiveRequest.promise
-  // 首屏预取多半已经在路上了，直接接手，省掉「等水合再发请求」那一整趟。
-  // 有意不给它加超时竞速：这份载荷三百多 KB，放弃一个在途请求再从零下载只会更慢；
-  // 真失败了下面的 catch 会清掉模块缓存，「重新加载档案」照常能重来。
-  const booted = takeBooted()
-  const promise = (booted
-    ? booted.then((data) => (isEncodedPayload(data) ? decodeArchivePayload(data) : requestArchive(dataUrl)))
-    : requestArchive(dataUrl)
-  ).catch((error) => {
-    // 失败不能永久污染模块缓存；“重试”必须真的再发一次请求。
-    // 只清掉自己这一条：期间可能已经换了新版本的地址，别把它一起抹掉。
-    if (archiveRequest?.url === dataUrl) archiveRequest = null
-    throw error
-  })
-  archiveRequest = { url: dataUrl, promise }
-  return promise
-}
+const fetchArchive = createArchiveLoader({ holder: typeof window === 'undefined' ? undefined : window as ArchiveBootHolder })
 
 export function ArchiveLoader({ nav, dataUrl }: { nav: ArchiveNav; dataUrl: string }) {
+  // A new dataset gets a fresh loading/error state, never the previous version's Timeline.
+  return <ArchiveVersion key={dataUrl} nav={nav} dataUrl={dataUrl} />
+}
+
+function ArchiveVersion({ nav, dataUrl }: { nav: ArchiveNav; dataUrl: string }) {
   const [payload, setPayload] = useState<ArchivePayload | null>(null)
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)

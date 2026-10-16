@@ -5,6 +5,7 @@ import { ArchiveLoader } from '@/components/ArchiveLoader'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { buildArchiveNav } from '@/lib/archive-nav'
 import { archiveDataUrl } from '@/lib/archive-data-url'
+import { archiveBootScript } from '@/lib/archive-loader'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 
@@ -35,19 +36,9 @@ export const metadata: Metadata = pageMetadata({
  * 消费方在 `ArchiveLoader` 的 `fetchArchive`：拿不到就照常自己发请求，所以脚本
  * 没跑、被 CSP 拦掉、或者浏览器太老，行为都和从前一致。
  *
- * 不带 `cache` 选项是有意的：响应头是 `max-age=0, stale-while-revalidate=86400`，
- * 浏览器仍然每次都再验证，但回访时可以先拿缓存里的那份立刻渲染、后台再刷新。
- * 原先写死的 `cache: 'no-cache'` 会把这条路堵掉，让每次进录播室都从零下载。
- *
- * 这条之所以现在还安全，是因为地址带上了按载荷字节算出来的版本号
- * （见 `lib/archive-data-url.ts`）：缓存按完整 URL 建键，新发布换新 URL，
- * 旧条目命不中，所以「先拿缓存那份」拿到的一定是这次发布自己的载荷。
- * 没有版本号的时候这里是个真问题——实测浏览器能拿着 24 小时前的字节
- * `transferSize: 0` 直接渲染，一次网络都不发。
+ * 预取记录 URL，消费方只接收同版本载荷。请求有超时，失败可重新加载。
+ * 不覆盖浏览器默认缓存策略；版本身份由 dataUrl 保证。
  */
-function archiveBootScript(dataUrl: string): string {
-  return `(function(){try{window.__i6i6ArchiveBoot=fetch(${JSON.stringify(dataUrl)}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}catch(e){}})()`
-}
 
 /**
  * 录播室：档案模式。完整 Timeline，能力一条不丢，搜索/筛选/年份/来源全部保留。

@@ -62,6 +62,9 @@ jobs:
       # 档案载荷的编解码。它守的是一次真实线上事故：JSON 与 JS 分开缓存，
       # 边缘上两者版本错位时，新解码器会读到旧格式的条目。这个脚本里那 400 条
       # 「旧格式原样通过」的断言就是那次的回归护栏，不在 CI 里跑等于没有护栏。
+      - name: Verify archive loading and retry lifecycle
+        run: npm run test:archive-loader
+
       - name: Verify archive payload encoding
         run: npm run test:archive-payload
 
