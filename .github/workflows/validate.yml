@@ -59,6 +59,10 @@ jobs:
       - name: Verify game search matching
         run: npm run test:vote-search
 
+      # 录播室筛选面板的游戏列表查找：只滤显示的行、保持场次顺序。
+      - name: Verify archive game list lookup
+        run: npm run test:game-list-filter
+
       # 档案载荷的编解码。它守的是一次真实线上事故：JSON 与 JS 分开缓存，
       # 边缘上两者版本错位时，新解码器会读到旧格式的条目。这个脚本里那 400 条
       # 「旧格式原样通过」的断言就是那次的回归护栏，不在 CI 里跑等于没有护栏。

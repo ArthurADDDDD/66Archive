@@ -73,6 +73,7 @@ export type SiteCopy = {
     /** 逐行，渲染时在行间断行 */
     body: string[]
     primaryAction: string
+    /** 旧版首页次要按钮「关于她」的文字，首页已不再显示；字段留着是为了和内容服务的格式兼容 */
     secondaryAction: string
   }
   /** 首页各区块的小标 / 标题 / 引子 */
@@ -320,6 +321,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'site-live-note-windows', group: '全站 · 直播状态浮窗', label: '底部说明 · 最近 7 / 30 天的口径', text: '最近 7 / 30 天按站内档案已收录的场次统计；档案还没跟上的那几天，用观测补齐。' },
     { id: 'site-live-note-partial', group: '全站 · 直播状态浮窗', label: '底部说明 · 观测期不满时', vars: ['date'], text: '这段时间还没有档案支撑，只统计了 {date} 开始观测到的部分。' },
     { id: 'site-live-note-checked', group: '全站 · 直播状态浮窗', label: '底部说明 · 最近检查', vars: ['time'], text: '最近检查：{time}。' },
+    { id: 'home-hero-archive', group: '首页 · 顶部', label: '首屏按钮 · 进录播室', text: '找录像' },
     { id: 'home-search-link', group: '首页 · 顶部', label: '右上角链接', text: '搜一场你记得的 →' },
     { id: 'home-highlights-pishuang-title', group: '首页 · 直播间梗', label: '心灵砒霜分类 · 系列卡标题', text: '那些星期日，心灵砒霜准时开场' },
     { id: 'home-highlights-pishuang-desc', group: '首页 · 直播间梗', label: '心灵砒霜分类 · 系列卡说明', text: '从早期节目到后来留下的名场面，沿着档案里的真实录像往回看。' },

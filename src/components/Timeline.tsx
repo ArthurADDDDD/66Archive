@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { readArchiveQuery, writeArchiveQuery } from '@/lib/archive-query'
 import type { TimelineEntry } from '@/lib/data'
@@ -84,6 +84,14 @@ export function Timeline({
   const searchRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
   const monthArchiveRef = useRef<HTMLElement>(null)
+  const timeNavRef = useRef<HTMLElement>(null)
+  const sheetRef = useRef<HTMLDialogElement>(null)
+  const sheetPanelRef = useRef<HTMLDivElement>(null)
+  const headerFilterRef = useRef<HTMLButtonElement>(null)
+  /** 实际打开面板的那个按钮：页头和浮动导航各有一个，关掉后回到按下的那一个。 */
+  const sheetOpenerRef = useRef<HTMLElement | null>(null)
+  const sheetTitleId = useId()
+  const sheetDescriptionId = useId()
 
   const monthsForYear = useCallback(
     (year: number) =>
@@ -327,7 +335,8 @@ export function Timeline({
         target instanceof HTMLElement &&
         (target.isContentEditable || target.matches('input, textarea, select'))
 
-      if (event.key === '/' && !inEditable) {
+      // 筛选面板是模态的，背景里的搜索框此时不可聚焦，「/」不该去抢。
+      if (event.key === '/' && !inEditable && !sheetRef.current?.open) {
         event.preventDefault()
         searchRef.current?.focus()
       }
@@ -340,14 +349,44 @@ export function Timeline({
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  const openSheet = useCallback((event: MouseEvent<HTMLElement>) => {
+    sheetOpenerRef.current = event.currentTarget
+    setSheetOpen(true)
+  }, [])
+
+  /**
+   * 筛选面板用原生 `<dialog>` 的模态模式（同开播提醒弹窗）：背景自动 inert，
+   * Tab / Shift+Tab 和读屏的虚拟光标都出不去，Escape 走 cancel 事件。
+   * 这里只补原生不管的三件事：锁背景滚动、初始焦点落在面板上、关掉后焦点回到打开它的按钮。
+   */
   useEffect(() => {
     if (!sheetOpen) return
+    const dialog = sheetRef.current
+    const opener = sheetOpenerRef.current
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    if (dialog && !dialog.open) dialog.showModal()
+    // 落在面板本身而不是第一个按钮：读屏先读到面板名称，手机上也不会因为聚焦输入框弹出键盘。
+    sheetPanelRef.current?.focus({ preventScroll: true })
     return () => {
       document.body.style.overflow = previousOverflow
+      if (dialog?.open) dialog.close()
+      // 浮动导航在页面滚回顶部时会收起（inert / aria-hidden），那时退回页头的筛选按钮。
+      const back =
+        opener && opener.isConnected && !opener.closest('[inert], [aria-hidden="true"]') ? opener : headerFilterRef.current
+      back?.focus({ preventScroll: true })
     }
   }, [sheetOpen])
+
+  /** 搜索时年月导航整块收起，这里是回到按年月浏览的出口。按钮随之消失，焦点交给仍在的控件。 */
+  const clearSearch = useCallback(() => {
+    set({ q: '' })
+    requestAnimationFrame(() => {
+      const input = searchRef.current
+      const target = input && input.getClientRects().length > 0 ? input : timeNavRef.current
+      target?.focus({ preventScroll: true })
+    })
+  }, [set])
 
   return (
     <>
@@ -365,7 +404,8 @@ export function Timeline({
             />
             <button
               type="button"
-              onClick={() => setSheetOpen(true)}
+              onClick={openSheet}
+              aria-haspopup="dialog"
               aria-label={dirtyCount > 0 ? `筛选记录，已启用 ${dirtyCount} 项` : '筛选记录'}
               className="ui-press flex h-11 shrink-0 items-center rounded-full px-3 text-meta text-muted transition-colors hover:bg-raised/70 hover:text-ink sm:h-9"
             >
@@ -392,7 +432,11 @@ export function Timeline({
             />
           </div>
           <button
-            onClick={() => setSheetOpen(true)}
+            ref={headerFilterRef}
+            type="button"
+            onClick={openSheet}
+            aria-haspopup="dialog"
+            aria-label={dirtyCount > 0 ? `筛选记录，已启用 ${dirtyCount} 项` : '筛选记录'}
             className="ui-press relative flex h-11 shrink-0 items-center rounded-md border border-line bg-surface px-3 text-meta text-muted hover:border-live/60 hover:text-ink hover:shadow-[0_8px_25px_rgba(91,200,232,0.08)] sm:h-auto sm:py-2"
           >
             筛选{dirtyCount > 0 && <span className="ml-1.5 tnum text-live">{dirtyCount}</span>}
@@ -431,7 +475,17 @@ export function Timeline({
           )}
         </section>
 
-        <section aria-label="时间定位" className="ui-reveal ui-delay-1 rounded-xl border border-line bg-surface/45 p-3 sm:p-5">
+        {/* 有搜索词时结果是跨全部年份的，时期卡和年度卡帮不上忙，还会把结果推到一屏多以下——
+            整块换成一行提示；清空搜索词后原样回来，选中的年份不变。 */}
+        {searching ? (
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-xl border border-line bg-surface/45 px-4 py-2 text-meta text-muted">
+            <span><SiteText id="archive-year-searching" /></span>
+            <button type="button" onClick={clearSearch} className="ui-press py-2 text-live underline underline-offset-4">
+              清空搜索，按年月浏览
+            </button>
+          </div>
+        ) : (
+        <section ref={timeNavRef} tabIndex={-1} aria-label="时间定位" className="ui-reveal ui-delay-1 rounded-xl border border-line bg-surface/45 p-3 focus:outline-none sm:p-5">
           <div className="grid gap-2 sm:grid-cols-3">
             {ERAS.map((era) => {
               const active = era.id === activeEra.id && !searching
@@ -467,7 +521,7 @@ export function Timeline({
             <div className="mb-2 flex items-center justify-between">
               <h2 className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="archive-year-clues" /></h2>
               <span className="text-meta text-faint">
-                {searching ? <SiteText id="archive-year-searching" /> : <SiteText id="archive-year-pick" vars={{ era: activeEra.label }} />}
+                <SiteText id="archive-year-pick" vars={{ era: activeEra.label }} />
               </span>
             </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -508,8 +562,9 @@ export function Timeline({
             </div>
           </div>
         </section>
+        )}
 
-        <section ref={monthArchiveRef} className="ui-reveal ui-delay-2 mt-7 scroll-mt-24">
+        <section ref={monthArchiveRef} className={`ui-reveal ui-delay-2 scroll-mt-24 ${searching ? 'mt-5' : 'mt-7'}`}>
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3 border-b border-line pb-4">
             <div>
               <p className="text-meta uppercase tracking-[0.16em] tnum" style={{ color: activeEra.color }}>
@@ -662,19 +717,35 @@ export function Timeline({
       </main>
 
       {sheetOpen && (
-        <div className="fixed inset-0 z-50">
-          <button aria-label="关闭筛选" onClick={() => setSheetOpen(false)} className="ui-backdrop-in absolute inset-0 bg-base/80 backdrop-blur-sm" />
-          <div className="ui-sheet-in absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto rounded-t-xl border-t border-line bg-surface p-5 shadow-[0_-20px_70px_rgba(0,0,0,0.3)] sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:origin-top-right sm:rounded-xl sm:border sm:shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
+        <dialog
+          ref={sheetRef}
+          aria-labelledby={sheetTitleId}
+          aria-describedby={sheetDescriptionId}
+          onCancel={(event) => {
+            event.preventDefault()
+            setSheetOpen(false)
+          }}
+          // 浏览器在没有新的用户操作时可能跳过可取消的 cancel、直接关掉对话框；状态要跟上，否则滚动锁不会解开。
+          onClose={() => setSheetOpen(false)}
+          className="fixed inset-0 z-50 m-0 h-full max-h-none w-full max-w-none overflow-hidden border-0 bg-transparent p-0 text-ink backdrop:bg-transparent"
+        >
+          {/* 遮罩点了就关；键盘上有 Escape 和「完成」，所以它不进 Tab 顺序。 */}
+          <button type="button" tabIndex={-1} aria-label="关闭筛选" onClick={() => setSheetOpen(false)} className="ui-backdrop-in absolute inset-0 bg-base/80 backdrop-blur-sm" />
+          <div
+            ref={sheetPanelRef}
+            tabIndex={-1}
+            className="ui-sheet-in absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto overscroll-contain rounded-t-xl border-t border-line bg-surface p-5 shadow-[0_-20px_70px_rgba(0,0,0,0.3)] focus:outline-none sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-16 sm:w-[360px] sm:origin-top-right sm:rounded-xl sm:border sm:shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
+          >
             <div className="mb-5 flex items-center justify-between border-b border-line pb-3">
               <div>
-                <h3 className="text-sm font-medium text-ink">筛选记录</h3>
-                <p className="mt-0.5 text-meta text-faint">搜索词会跨全部年份生效</p>
+                <h2 id={sheetTitleId} className="text-sm font-medium text-ink">筛选记录</h2>
+                <p id={sheetDescriptionId} className="mt-0.5 text-meta text-faint">搜索词会跨全部年份生效</p>
               </div>
-              <button onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 text-meta text-live hover:bg-live/10 sm:py-1">完成</button>
+              <button type="button" onClick={() => setSheetOpen(false)} className="ui-press rounded px-2 py-2 text-meta text-live hover:bg-live/10 sm:py-1">完成</button>
             </div>
             <FilterRail filters={filters} set={set} platformCounts={platformCounts} gameCounts={gameCounts} total={entries.length} matched={filtered.length} />
           </div>
-        </div>
+        </dialog>
       )}
     </>
   )

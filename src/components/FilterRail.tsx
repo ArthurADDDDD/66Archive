@@ -1,5 +1,7 @@
 'use client'
 
+import { useId, useMemo, useState } from 'react'
+import { filterGameList } from '@/lib/game-list-filter'
 import { PLATFORM_META } from '@/lib/platforms'
 import { gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
@@ -29,6 +31,17 @@ function toggle(list: string[], v: string) {
 
 export function FilterRail({ filters, set, platformCounts, gameCounts, total, matched }: Props) {
   const gamePeak = Math.max(1, ...gameCounts.map((game) => game.count))
+  // 列表查找词只活在这块面板里：不进 filters、不写 URL，关掉面板就清空。
+  const [gameKeyword, setGameKeyword] = useState('')
+  const gameListId = useId()
+  const shownGames = useMemo(() => filterGameList(gameCounts, gameKeyword), [gameCounts, gameKeyword])
+  // 已选的游戏单独列在查找框上面：查找词一变，被选中的那几行可能从列表里滤掉，
+  // 但选择本身还在——这里始终看得见、点得掉。
+  const selectedGames = useMemo(
+    () => filters.games.map((id) => gameCounts.find((game) => game.id === id) ?? { id, name: id, count: 0 }),
+    [filters.games, gameCounts],
+  )
+  const keywordActive = gameKeyword.trim() !== ''
   const dirty =
     filters.q || filters.platforms.length || filters.types.length || filters.games.length || filters.onlyAlive
 
@@ -90,10 +103,60 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
       </Section>
 
       <Section label={`游戏 · ${gameCounts.length}`}>
-        {/* 这份列表动辄几百行，只靠灰字排下去读不出轻重：
-            每行垫一条按场次归一化的底纹，量级本身成为可以扫视的形状。 */}
-        <ul className="max-h-64 space-y-px overflow-y-auto pr-1">
-          {gameCounts.map((g) => {
+        {selectedGames.length > 0 && (
+          <div className="mb-3">
+            <p className="mb-1.5 text-meta text-faint">已选 {selectedGames.length} 款 · 点一下取消</p>
+            <ul className="flex flex-wrap gap-1.5">
+              {selectedGames.map((g) => (
+                <li key={g.id}>
+                  <button
+                    type="button"
+                    data-analytics-event="filter.use"
+                    data-analytics-target="game"
+                    onClick={() => set({ games: filters.games.filter((id) => id !== g.id) })}
+                    aria-label={`取消选择 ${g.name}`}
+                    className="ui-press flex min-h-9 items-center gap-1.5 rounded border border-line bg-raised px-2 py-1 text-meta text-ink hover:border-muted"
+                  >
+                    <span aria-hidden className="inline-block h-2 w-2 shrink-0 rounded-sm" style={{ background: gameColor(g.id) }} />
+                    <span className="max-w-[12rem] truncate">{g.name}</span>
+                    <span aria-hidden className="text-faint">×</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="relative mb-2">
+          <input
+            type="search"
+            value={gameKeyword}
+            onChange={(event) => setGameKeyword(event.target.value)}
+            placeholder="在列表里找游戏"
+            aria-label="在游戏列表中查找"
+            aria-controls={gameListId}
+            autoComplete="off"
+            enterKeyHint="search"
+            className="w-full rounded border border-line bg-base/40 px-2.5 py-2 text-meta text-ink placeholder:text-faint focus:border-live focus:outline-none sm:py-1.5"
+          />
+        </div>
+        {/* 读屏用户听得到查找结果有多少条；视觉上只在查找时才显示这行。 */}
+        <p aria-live="polite" className={keywordActive ? 'mb-1.5 text-meta text-faint tnum' : 'sr-only'}>
+          {keywordActive ? `找到 ${shownGames.length} 款` : ''}
+        </p>
+
+        {shownGames.length === 0 ? (
+          <div className="rounded border border-dashed border-line px-3 py-4 text-center text-meta text-muted">
+            <p>列表里没有名称包含「{gameKeyword.trim()}」的游戏。</p>
+            <button type="button" onClick={() => setGameKeyword('')} className="ui-press mt-2 text-live underline underline-offset-4">
+              清空查找
+            </button>
+          </div>
+        ) : (
+        /* 这份列表动辄几百行，只靠灰字排下去读不出轻重：
+            每行垫一条按场次归一化的底纹，量级本身成为可以扫视的形状。 */
+        <ul id={gameListId} className="max-h-64 space-y-px overflow-y-auto pr-1">
+          {shownGames.map((g) => {
             const on = filters.games.includes(g.id)
             const share = Math.round((g.count / gamePeak) * 100)
             return (
@@ -120,6 +183,7 @@ export function FilterRail({ filters, set, platformCounts, gameCounts, total, ma
             )
           })}
         </ul>
+        )}
       </Section>
 
       <Section label="来源">

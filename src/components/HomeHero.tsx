@@ -1,16 +1,15 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { PresenceIndicator } from './PresenceIndicator'
 import { RotatingAvatar } from './RotatingAvatar'
-import { useSiteCopy } from './LiveContentProvider'
+import { useSiteCopy, useSiteText } from './LiveContentProvider'
 import { LiveAlertSignup } from './LiveAlertSignup'
-
-/** 「关于女流」的去处：百度百科「女流66」词条（跳转到本人「石悦」词条）。 */
-const ABOUT_HREF = 'https://baike.baidu.com/item/%E5%A5%B3%E6%B5%8166'
 
 export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYears: number }) {
   const copy = useSiteCopy()
+  const archiveAction = useSiteText('home-hero-archive')
   const heroBody = copy.hero.body.map((line) =>
     line.replace('{archiveYears}', historyYears.toString()).replace(/^十六年/, `${historyYears}年`),
   )
@@ -92,17 +91,16 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
             >
               {copy.hero.primaryAction} <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
-            {/* 次要按钮指向百度百科，不是站内的编年史：编年史就在左上角导航里，
-                谁都看得见，这儿再放一个是重复。而「她是谁」这个问题需要一份长期
-                有人维护的资料——这个站不保证一直有人在维护，百度百科会。 */}
-            <a
-              href={ABOUT_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* 次要按钮直接进录播室，让首屏有一个一步到录像的入口（手机上「开始」不显示）。
+                文字用独立的 home-hero-archive，不沿用 hero.secondaryAction——那个 id
+                在内容服务里存的是旧按钮「关于她」的文字，接着用会让按钮显示错的字。 */}
+            <Link
+              href="/archive/"
+              prefetch={false}
               className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink"
             >
-              {copy.hero.secondaryAction}
-            </a>
+              {archiveAction}
+            </Link>
             <LiveAlertSignup />
             </div>
             <PresenceIndicator pageKey="home" mode="global" className="mt-4" />
