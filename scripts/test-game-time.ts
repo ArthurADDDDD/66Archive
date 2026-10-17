@@ -63,6 +63,11 @@ assert.equal(INDEPENDENT_SEGMENT_MIN_SEC, 300)
   const last = sessionGameTime(session(['paper-mario', 'fall-guys']), 'fall-guys', timeline({ spans: spans(true) }))
   assert.equal(last.verifiedSec, 3414 - 300)
   const unscanned = sessionGameTime(session(['paper-mario', 'fall-guys']), 'paper-mario', timeline({ spans: spans(false) }))
+  // 模型读缩略图得出的分钟级边界：再准也不算已核实
+  const byThumbs = timeline({ spans: spans(true).map((x, i) => (i === 0 ? x : { ...x, evidence: 'thumbnails' as const })) })
+  const thumbs = sessionGameTime(session(['paper-mario', 'fall-guys']), 'paper-mario', byThumbs)
+  assert.equal(thumbs.verifiedSec, 0, 'thumbnails 证据不能冒充人工核对')
+  assert.equal(thumbs.associatedSec, ok.associatedSec)
   assert.equal(unscanned.verifiedSec, 0, '只定位了两端、没查内部，不算已核实')
   assert.equal(unscanned.associatedSec, ok.associatedSec)
   // 终点是分 P 级边界：这一段也不能算已核实

@@ -253,8 +253,15 @@ export const TimelineSpan = z
      * part = 只知道在这个分 P 开头附近（at 必须是 00:00:00）；approx = 误差 ≤1 分钟；exact = ≤10 秒。
      */
     precision: z.enum(['part', 'approx', 'exact']),
-    evidence: z.enum(['part_title', 'recording_break', 'human_watch', 'danmaku', 'other']),
-    /** 已经检查过环节内部，没有遗漏 ≥ INDEPENDENT_SEGMENT_MIN_SEC 的独立环节。「已核实」的必要条件。 */
+    /**
+     * 起点的依据。`human_watch` 只能来自人工在录像里亲自核对（审阅界面记录），
+     * 模型或脚本读平台缩略图帧得出的位置一律写 `thumbnails`——精度可以到 approx，但不算已核实。
+     */
+    evidence: z.enum(['part_title', 'recording_break', 'thumbnails', 'danmaku', 'human_watch', 'other']),
+    /**
+     * 人工检查过环节内部，没有遗漏 ≥ INDEPENDENT_SEGMENT_MIN_SEC 的独立环节。「已核实」的必要条件；
+     * 只能由人工审阅写入，模型或脚本扫过缩略图不算。
+     */
     scanned: z.boolean().optional(),
     note: z.string().optional(),
   })
