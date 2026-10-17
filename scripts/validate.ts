@@ -9,10 +9,12 @@ import {
   AccountsFile,
   EntriesFile,
   GamesFile,
+  GameTimelinesFile,
   SeriesFile,
   TagsFile,
   type Entry,
 } from '../src/lib/schema'
+import { checkGameTimelines } from '../src/lib/game-timeline-check'
 
 const DATA = path.join(process.cwd(), 'data')
 const errors: string[] = []
@@ -153,12 +155,21 @@ for (const { file, items } of [...loadDir('entries'), ...loadDir('_demo')]) {
   }
 }
 
+// —— 游戏时间轴：跳转与游戏环节时长共用的数据，必须和条目严丝合缝 ——
+const timelines = parseOrFail(GameTimelinesFile, load('game-timelines.yaml'), 'game-timelines.yaml') ?? []
+{
+  const checked = checkGameTimelines(entries.filter((e) => !e.demo), timelines)
+  errors.push(...checked.errors)
+  warnings.push(...checked.warnings)
+}
+
 const real = entries.filter((e) => !e.demo)
 const demo = entries.filter((e) => e.demo)
 
 console.log('')
 console.log(`  条目 ${real.length} 条（另有演示数据 ${demo.length} 条）`)
 console.log(`  游戏 ${games.length} · 系列 ${series.length} · 账号 ${accounts.length} · 标签 ${tags.length}`)
+console.log(`  游戏时间轴 ${timelines.length} 条`)
 
 const usedTags = new Set(entries.flatMap((e) => e.tags))
 const unusedTags = tags.filter((t) => !usedTags.has(t.name)).map((t) => t.name)

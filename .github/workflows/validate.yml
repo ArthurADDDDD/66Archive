@@ -63,6 +63,12 @@ jobs:
       - name: Verify archive game list lookup
         run: npm run test:game-list-filter
 
+      # 游戏时间轴契约与游戏环节时长计算。算错时不报错，只会让排行悄悄变样、
+      # 或让跳转落到别的分 P；这里含「各游戏时长之和不超过录像时长」的守恒检查，
+      # 并在真实档案上确认没有时间轴的多游戏场次不给任何游戏计时。
+      - name: Verify game timelines and game time
+        run: npm run test:game-time
+
       # 档案载荷的编解码。它守的是一次真实线上事故：JSON 与 JS 分开缓存，
       # 边缘上两者版本错位时，新解码器会读到旧格式的条目。这个脚本里那 400 条
       # 「旧格式原样通过」的断言就是那次的回归护栏，不在 CI 里跑等于没有护栏。

@@ -8,6 +8,8 @@ import {
   EntriesFile,
   Game,
   GamesFile,
+  GameTimeline,
+  GameTimelinesFile,
   Series,
   SeriesFile,
   Source,
@@ -73,6 +75,19 @@ export function getDataset(): Dataset {
     tags: new Map(tags.map((t) => [t.name, t])),
   }
   return cache
+}
+
+let timelineCache: GameTimeline[] | null = null
+
+/**
+ * 游戏时间轴（data/game-timelines.yaml）。文件不存在即为空：时间轴是逐批人工确认后才写入的，
+ * 没有时间轴的场次按 docs/game-time.md 的口径归入「关联录像」或「未知」，不会因此报错。
+ * 与条目的交叉校验（代表条目、基准来源、游戏）在 scripts/validate.ts。
+ */
+export function getGameTimelines(): GameTimeline[] {
+  if (timelineCache) return timelineCache
+  timelineCache = GameTimelinesFile.parse(readYaml(path.join(DATA, 'game-timelines.yaml')))
+  return timelineCache
 }
 
 let publicCache: Dataset | null = null
