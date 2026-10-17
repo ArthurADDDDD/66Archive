@@ -1,7 +1,8 @@
 import type { Dataset, TimelineEntry } from './data'
+import { summarizeGameTime, type GameTimeSummary } from './game-time'
+import { footageRangeLabel, footageRangeNumbers, toGameTimeView, type GameTimeView } from './game-time-view'
 import { proxyImage } from './platforms'
 import { isXinlingPishuangEntry } from './series'
-import { formatDuration } from './ui'
 
 /**
  * 叙事层 · 策展内容（唯一的前端策展源）
@@ -1729,14 +1730,15 @@ export function fillEmphasis(template: string | undefined, vars: Record<string, 
 }
 
 /** 高光 / 时间线的强调数字派生变量（全部来自数据） */
-function emphasisVars(timeline: TimelineEntry[]): Record<string, string> {
+function emphasisVars(ds: Dataset, timeline: TimelineEntry[]): Record<string, string> {
   const xinlingCount = timeline.filter(isXinlingPishuangEntry).length
   const wukongCount = timeline.filter((e) => e.games.some((g) => g.id === 'black-myth-wukong')).length
-  const geometryMinutes = timeline.filter((e) => e.title.includes('几何冲刺')).reduce((s, e) => s + (e.duration_min ?? 0), 0)
+  // 「这一关一晚上接一晚上地重来，N 个小时」：同晚还打了别的游戏的场次只进区间上限
+  const geometry = toGameTimeView(summarizeGameTime('geometry-dash', timeline.filter((e) => e.title.includes('几何冲刺')), ds.timelines))
   const finalDouyuLive = timeline.find((e) => e.id === '2023-11-30-live-01')
   const douyinReturn = timeline.find((e) => e.id === '2024-08-18-live-01')
   return {
-    geometryHours: Math.round(geometryMinutes / 60).toString(),
+    geometryHours: footageRangeNumbers(geometry) ?? '?',
     xinlingCount: xinlingCount.toLocaleString(),
     wukongCount: wukongCount.toString(),
     douyinReturnDays: finalDouyuLive && douyinReturn ? daysBetween(finalDouyuLive.date, douyinReturn.date).toString() : '—',
@@ -1826,7 +1828,7 @@ function buildMemeMontage(entries: TimelineEntry[], limit = 10): MontageSample[]
 /** 解析一幕里的所有 beat；home=true 时按「重要」口径接管 kicker（非重要锚点不带小标签）。 */
 function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home = false): ResolvedAct[] {
   const entryById = new Map(timeline.map((e) => [e.id, e]))
-  const vars = emphasisVars(timeline)
+  const vars = emphasisVars(ds, timeline)
 
   const resolveBeat = (b: Beat, inheritAct: ActId): ResolvedBeat | null => {
     const actId = b.act ?? inheritAct
@@ -1910,7 +1912,7 @@ function resolveActs(ds: Dataset, timeline: TimelineEntry[], acts: Act[], home =
 export function resolveHomepage(ds: Dataset, timeline: TimelineEntry[]): HomepageData {
   const latestYear = timeline[0]?.date.slice(0, 4) ?? new Date().getFullYear().toString()
   const entryById = new Map(timeline.map((e) => [e.id, e]))
-  const vars = emphasisVars(timeline)
+  const vars = emphasisVars(ds, timeline)
 
   const highlights: ResolvedBeat[] = HIGHLIGHTS.flatMap((h) => {
     const entry = h.entryId ? entryById.get(h.entryId) ?? null : null
@@ -1964,11 +1966,6 @@ export function resolveStoryActs(ds: Dataset, timeline: TimelineEntry[]): Resolv
   return resolveActs(ds, timeline, STORY_ACTS)
 }
 
-/** 首页时间线外的小工具：几何冲刺总时长（games/[id] 详情页用） */
-export function geometryDashTotalHours(timeline: TimelineEntry[]): number {
-  const minutes = timeline.filter((e) => e.title.includes('几何冲刺')).reduce((s, e) => s + (e.duration_min ?? 0), 0)
-  return Math.round(minutes / 60)
-}
 
 /** 游戏详情页数据（games/[id] 用）：字段匹配 ∪ 策展标题匹配 */
 export type GameProfile = {
@@ -1982,10 +1979,14 @@ export type GameProfile = {
   firstDate: string | null
   lastDate: string | null
   sessions: number
-  totalMinutes: number
-  /** 有明确时长（duration_min）的场次数；< sessions 时长统计就是部分已知 */
-  knownDurationCount: number
-  hoursLabel: string
+  /**
+   * 游戏环节时长（口径见 docs/game-time.md）。没有时间轴的多游戏场次不给这款游戏计时，
+   * 只进区间上限；界面必须同时显示已核实量、归属覆盖和未知部分。
+   */
+  time: GameTimeSummary
+  timeView: GameTimeView
+  /** 「相关录像」区间，如「169–213 小时」。不是游玩时长，不能单独当作「玩了多久」展示。 */
+  footageLabel: string
   /** 最近一次场次的封面（详情页用） */
   cover: string | null
   /** 首播那天的封面（游戏库墙用）；无截图时回退到 games.yaml 的已核验 cover */
@@ -2025,13 +2026,14 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     return false
   })
 
-  const totalMinutes = matches.reduce((sum, e) => sum + (e.duration_min ?? 0), 0)
+  const time = summarizeGameTime(gameId, matches, ds.timelines)
+  const timeView = toGameTimeView(time)
   const latestCover = matches.find((e) => e.cover)?.cover ?? null
   const registeredCover = registered?.cover ?? null
   const name = curated?.name ?? registered?.name ?? gameId
   const heroStory = GAME_HERO_STORIES[gameId]
   const oneLiner = heroStory?.oneLiner
-    ?? (curated ? curated.oneLiner.replace('{hours}', Math.round(totalMinutes / 60).toString()) : null)
+    ?? (curated ? curated.oneLiner.replace('{hours}', footageRangeNumbers(timeView) ?? '?') : null)
 
   // timeline 降序：第一个是最近一次，最后一个是首次
   const first = matches.length ? matches[matches.length - 1] : null
@@ -2056,9 +2058,9 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     firstDate: first?.date ?? null,
     lastDate: last?.date ?? null,
     sessions: matches.length,
-    totalMinutes,
-    knownDurationCount: matches.filter((e) => typeof e.duration_min === 'number').length,
-    hoursLabel: formatDuration(totalMinutes),
+    time,
+    timeView,
+    footageLabel: footageRangeLabel(timeView),
     cover: heroStory?.cover
       ? proxyImage(heroStory.cover, 900)
       : latestCover ? proxyImage(latestCover, 900) : registeredCover ? proxyImage(registeredCover, 900) : null,

@@ -20,6 +20,7 @@ import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
+import { footageTitle, verifiedLabel } from '@/lib/game-time-view'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
 import { allGameIds } from '@/lib/narrative'
@@ -93,11 +94,14 @@ export default async function StatsPage() {
   const profiles = allGameIds(ds)
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null)
+  // 按场次排，不按时长排：多游戏直播大量未拆分之前，按时长排出来的只是「已知录像」的名次
+  // （docs/game-time.md §4）。时长作为附属信息，用区间条画出不确定的那一截。
   const longest = [...profiles]
-    .sort((a, b) => b.totalMinutes - a.totalMinutes)
+    .filter((p) => p.sessions > 0)
+    .sort((a, b) => b.sessions - a.sessions || b.timeView.associatedMinutes - a.timeView.associatedMinutes)
     .slice(0, 8)
-    .filter((p) => p.totalMinutes > 0)
-  const maxMinutes = Math.max(1, ...longest.map((p) => p.totalMinutes))
+  const maxMinutes = Math.max(1, ...longest.map((p) => p.timeView.upperMinutes))
+  const verifiedMinutesAll = profiles.reduce((sum, p) => sum + p.timeView.verifiedMinutes, 0)
 
   const revisited = profiles
     .filter((p) => p.entries.length > 0)
@@ -107,7 +111,7 @@ export default async function StatsPage() {
       for (let i = 1; i < years.length; i++) if (Number(years[i]) - Number(years[i - 1]) > 1) gaps += 1
       return { p, years, gaps }
     })
-    .sort((a, b) => b.years.length - a.years.length || b.p.totalMinutes - a.p.totalMinutes)
+    .sort((a, b) => b.years.length - a.years.length || b.p.sessions - a.p.sessions)
     .slice(0, 6)
 
   // —— 04 时代 ——
@@ -271,19 +275,28 @@ export default async function StatsPage() {
                     <span className="font-mono text-meta text-faint tnum">{String(i + 1).padStart(2, '0')}</span>
                     {p.name}
                   </span>
-                  <span className="text-meta text-faint tnum">{p.hoursLabel}</span>
+                  <span className="text-meta text-faint tnum" title={footageTitle(p.timeView)}>
+                    {p.sessions} 场 · 相关录像 {p.footageLabel}
+                  </span>
                 </div>
-                <div className="mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
+                {/* 区间条：实色 = 已归属的相关录像；浅色 = 还没拆分的场次最多可能再占的部分 */}
+                <div className="relative mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
                   <span
-                    className="block h-full rounded-full transition-[width,filter] group-hover:brightness-150"
-                    style={{ width: `${(p.totalMinutes / maxMinutes) * 100}%`, background: '#E5568A' }}
+                    className="absolute inset-y-0 left-0 rounded-full opacity-30"
+                    style={{ width: `${(p.timeView.upperMinutes / maxMinutes) * 100}%`, background: '#E5568A' }}
+                  />
+                  <span
+                    className="absolute inset-y-0 left-0 rounded-full transition-[filter] group-hover:brightness-150"
+                    style={{ width: `${(p.timeView.associatedMinutes / maxMinutes) * 100}%`, background: '#E5568A' }}
                   />
                 </div>
               </Link>
             ))}
           </div>
           <Observation>
-            <SiteText id="stats-longest-summary" vars={{ name: longest[0]?.name ?? '', hours: longest[0]?.hoursLabel ?? '' }} />
+            <SiteText id="stats-longest-sessions" vars={{ name: longest[0]?.name ?? '', sessions: longest[0]?.sessions ?? 0 }} />
+            {' '}
+            <SiteText id="stats-longest-footage-note" vars={{ verified: verifiedLabel({ verifiedMinutes: verifiedMinutesAll }) }} />
           </Observation>
         </Section>
 
