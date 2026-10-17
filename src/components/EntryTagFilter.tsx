@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
 import { gameColor } from '@/lib/ui'
@@ -41,6 +41,7 @@ export function EntryTagFilter({
   color,
   matched,
   title = '这个月都在播什么',
+  foldOnPhone = false,
 }: {
   entries: TimelineEntry[]
   selection: EntryTagSelection
@@ -50,8 +51,16 @@ export function EntryTagFilter({
   matched: number
   /** 这批条目的范围说法；月份之外（例如搜索结果）用别的措辞。 */
   title?: string
+  /**
+   * 手机上先只露出标题一行，点「展开」再看标签。搜索结果用它：这块标签动辄七八行，
+   * 会把第一条结果挤出首屏；按月浏览时它本来就是主角，不折。桌面不受影响。
+   */
+  foldOnPhone?: boolean
 }) {
   const [expanded, setExpanded] = useState(false)
+  const [phoneOpen, setPhoneOpen] = useState(false)
+  const chipsId = useId()
+  const folded = foldOnPhone && !phoneOpen
 
   const games = useMemo(() => {
     const counts = new Map<string, { id: string; name: string; count: number }>()
@@ -94,11 +103,22 @@ export function EntryTagFilter({
 
   return (
     <section aria-label="按游戏和标签筛选当前条目" className="ui-reveal mt-6 rounded-xl border border-line bg-surface/40 p-3 sm:p-4">
-      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <div className={`flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 ${folded ? 'sm:mb-3' : 'mb-3'}`}>
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <h3 className="text-meta uppercase tracking-[0.16em]" style={{ color }}>{title}</h3>
-          <span className="text-meta text-faint"><SiteText id="archive-tags-hint" /></span>
+          <span className={`text-meta text-faint ${folded ? 'hidden sm:inline' : ''}`}><SiteText id="archive-tags-hint" /></span>
         </div>
+        {foldOnPhone && (
+          <button
+            type="button"
+            onClick={() => setPhoneOpen(!phoneOpen)}
+            aria-expanded={phoneOpen}
+            aria-controls={chipsId}
+            className="ui-press -my-2 py-2 text-meta text-live underline underline-offset-4 sm:hidden"
+          >
+            {phoneOpen ? '收起' : `展开 ${total} 个`}
+          </button>
+        )}
         {active && (
           <div className="flex items-center gap-3 text-meta tnum">
             <span className="text-faint">
@@ -115,7 +135,7 @@ export function EntryTagFilter({
         )}
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
+      <div id={chipsId} className={`${folded ? 'hidden sm:flex' : 'flex'} flex-wrap gap-1.5`}>
         {games.slice(0, gameQuota).map((game) => {
           const selected = selection.games.includes(game.id)
           return (

@@ -91,17 +91,18 @@ export function HomeHero({ nowYear, historyYears }: { nowYear: string; historyYe
             >
               {copy.hero.primaryAction} <span className="ml-2 inline-block transition-transform group-hover:translate-y-0.5">↓</span>
             </a>
+            <LiveAlertSignup />
             {/* 次要按钮直接进录播室，让首屏有一个一步到录像的入口（手机上「开始」不显示）。
+                lg 起页头导航整排展开、「录播室」就在上面，这里不再重复，只留「开播提醒」。
                 文字用独立的 home-hero-archive，不沿用 hero.secondaryAction——那个 id
                 在内容服务里存的是旧按钮「关于她」的文字，接着用会让按钮显示错的字。 */}
             <Link
               href="/archive/"
               prefetch={false}
-              className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink"
+              className="ui-press rounded-full border border-line bg-surface/60 px-6 py-3 text-control text-muted hover:border-muted hover:text-ink lg:hidden"
             >
               {archiveAction}
             </Link>
-            <LiveAlertSignup />
             </div>
             <PresenceIndicator pageKey="home" mode="global" className="mt-4" />
           </div>

@@ -619,6 +619,7 @@ export function Timeline({
                     color={activeEra.color}
                     matched={listed.length}
                     title={searching ? t('archive-tags-title-search') : t('archive-tags-title-month')}
+                    foldOnPhone={searching}
                   />
 
                   <div className="mb-4 mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
