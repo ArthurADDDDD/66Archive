@@ -757,8 +757,13 @@
   cover: "https://m.ykimg.com/0542030852272C916A0A4329658FC71E"
   games: [ju-ren-lie-shou]
   tags: [视频时代]
-  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。"
+  note: "详情页复核（2026-08-11）：页面存在明确视频标题、videoId 对应、时长元数据齐全，恢复为 alive。 2026-10-17：优酷原片下架后，在她本人 B 站号找到 2013-09-05 的同片投稿（BV1ks411f7Jc），已补为来源。"
   sources:
+    - url: "https://www.bilibili.com/video/BV1ks411f7Jc"
+      kind: original
+      account: bilibili-official
+      status: alive
+      note: "她本人 B 站号（space.bilibili.com/2304046）2013-09-05 上传的同一条视频，标题《【女流】进击的巨人同人游戏【巨人的猎手】试玩解说》，11:09，简介「自制 新浪微博 weibo.com/nvliu66」。2026-10-17 登录态 B 站检索找到；优酷原片已下架，这是现存站内可播的一份。"
     - url: "https://v.youku.com/v_show/id_XNjA1MDcxMTQ0.html"
       kind: original
       status: dead
