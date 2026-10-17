@@ -14,6 +14,7 @@ import {
   summarizeGameTime,
   type SessionInput,
 } from '../src/lib/game-time'
+import { visibleGameIds } from '../src/lib/games'
 import { allGameIds, getGameProfile } from '../src/lib/narrative'
 import { Entry, GameTimeline, INDEPENDENT_SEGMENT_MIN_SEC, type TimelineSpan } from '../src/lib/schema'
 
@@ -144,6 +145,16 @@ assert.equal(INDEPENDENT_SEGMENT_MIN_SEC, 300)
   assert.equal(sessionGameTime(session(['minecraft'], 60), 'geometry-dash').basis, 'none')
 }
 
+// ── 系列父 ID：与具体作品同挂时算一款；父 ID 继承具体作品的环节 ────────────────
+{
+  const single = sessionGameTime(session(['maplestory', 'maplestory-classic'], 120), 'maplestory-classic')
+  assert.equal(single.basis, 'single', '只玩冒险岛怀旧服、同挂系列父 ID 的场次不是多游戏场次')
+  assert.equal(sessionGameTime(session(['maplestory', 'maplestory-classic'], 120), 'maplestory').associatedSec, 7200, '系列页同样拿到这一场')
+  const t = timeline({ spans: [span({ page: 1, at: '00:00:00', game: 'rusty-lake' }), span({ page: 3, at: '00:00:00', game: 'maplestory-classic' })] })
+  assert.equal(sessionGameTime(session(['rusty-lake', 'maplestory', 'maplestory-classic']), 'maplestory', t).associatedSec, 3414)
+  assert.equal(sessionGameTime(session(['rusty-lake', 'maplestory', 'maplestory-classic']), 'maplestory-classic', t).associatedSec, 3414)
+}
+
 // ── 跳转链接 ────────────────────────────────────────────────────────
 assert.equal(buildJump(`${BV}?p=7`, 3, 0, 'part')?.url, 'https://www.bilibili.com/video/BV1iK4y1v7AT/?p=3', '基准 url 自带的 ?p= 不得残留')
 assert.equal(buildJump(BV, 3, 412, 'approx')?.url, 'https://www.bilibili.com/video/BV1iK4y1v7AT/?p=3&t=412')
@@ -210,6 +221,10 @@ assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial
   assert.deepEqual(checkGameTimelines(entries, [{ ...good, coverage: 'partial', spans: [span({ page: 1, at: '00:00:00', game: 'paper-mario' })] }]).errors, [], 'partial 时允许有游戏不在录像里')
   assert.match(checkGameTimelines(entries, [good, { ...good }]).errors.join('\n'), /同一场只能有一条时间轴/)
   assert.match(errorsOf({ ...good, reviewed: '2999-01-01' }), /在未来/)
+  // 系列父 ID 不要求单独有环节
+  const series = [entry('m1', { games: ['rusty-lake', 'maplestory', 'maplestory-classic'], sources: [{ url: BV, kind: 'replay' }] })]
+  const mt = timeline({ entry: 'm1', spans: [span({ page: 1, at: '00:00:00', game: 'rusty-lake' }), span({ page: 3, at: '00:00:00', game: 'maplestory-classic' })] })
+  assert.deepEqual(checkGameTimelines(series, [mt]).errors, [])
 }
 
 // ── 守恒（随机时间轴）：各游戏关联录像 + 独立环节 + 未核对 = 录像时长；已核实 ⊆ 关联录像 ──
@@ -262,7 +277,7 @@ assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial
       const entry = profile.entries.find((e) => e.id === s.entryId)!
       matched.set(entry.id, (entry.duration_min ?? 0) * 60)
       if (s.basis === 'none') assert.equal(s.associatedSec, 0, `${s.entryId} 归属未知却计了时长`)
-      if (!byEntry.has(s.entryId) && new Set([...entry.games.map((g) => g.id), id]).size > 1) {
+      if (!byEntry.has(s.entryId) && visibleGameIds([...new Set([...entry.games.map((g) => g.id), id])]).length > 1) {
         assert.equal(s.associatedSec, 0, `${s.entryId} 是没有时间轴的多游戏场次，不能给 ${id} 计时`)
       }
     }

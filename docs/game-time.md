@@ -58,6 +58,7 @@
 
 - 一场只按基准来源计时，不同来源的时长永远不相加、不取平均；用基准来源自己的分 P 时长，不用条目的 `duration_min`。`duration_min` 只用于没有时间轴的单游戏场次。
 - 同一场里各游戏的关联录像时长之和，不超过这场的录像时长（测试守住这条）。
+- 系列父 ID（`src/lib/games.ts` 的 `SPECIFIC_GAME_PARENTS`，如 `maplestory` ← `maplestory-classic`）与具体作品同挂时算一款：判断「这场是不是多游戏」时折叠掉父 ID；父 ID 不要求单独有环节，系列页按具体作品的环节计时。
 - 录像不全（`coverage` 不是 `complete`）或有 `unknown` 环节时，这一场的数字只是**下限**。
 - 「未知」部分可能属于这一场的任何一款游戏，计算模块给出每款游戏的上限 `unknownUpperSec`；有长度不明的部分时 `upperOpen` 为真。
 

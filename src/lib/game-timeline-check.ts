@@ -7,6 +7,7 @@
  */
 import { buildSourceGroups } from './data'
 import { parseBasis, recordedSec } from './game-time'
+import { SPECIFIC_GAME_PARENTS, visibleGameIds } from './games'
 import { detectPlatform } from './platforms'
 import { TIMELINE_PLATFORMS, type Entry, type GameTimeline } from './schema'
 
@@ -51,7 +52,9 @@ export function checkGameTimelines(entries: Entry[], timelines: GameTimeline[]):
       if (!entry.games.includes(g)) errors.push(`${where} 的环节引用了 "${g}"，但它不在条目的 games 里`)
     }
     if (t.coverage === 'complete') {
-      const missing = entry.games.filter((g) => !spanGames.has(g))
+      // 系列父 ID 由它的具体作品代表，不要求单独有环节
+      const covered = new Set([...spanGames, ...[...spanGames].flatMap((g) => (SPECIFIC_GAME_PARENTS[g] ? [SPECIFIC_GAME_PARENTS[g]] : []))])
+      const missing = visibleGameIds(entry.games).filter((g) => !covered.has(g))
       if (missing.length) {
         errors.push(`${where} 标了整场覆盖，但 games 里的 ${missing.join('、')} 没有任何环节；要么补环节，要么改 coverage 或 games`)
       }
