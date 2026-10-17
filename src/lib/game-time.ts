@@ -96,7 +96,8 @@ export function recordedSec(timeline: GameTimeline): number {
   return timeline.parts.reduce((sum, part) => sum + part.duration_sec, 0)
 }
 
-type ResolvedSpan = { span: TimelineSpan; startSec: number; endSec: number; startPrecise: boolean; endPrecise: boolean }
+/** startChecked / endChecked：这一端是否由人工在录像里定位到 ≤1 分钟（录像本身的开头结尾天然确定）。 */
+type ResolvedSpan = { span: TimelineSpan; startSec: number; endSec: number; startChecked: boolean; endChecked: boolean }
 
 /** 把环节换算到基准录像的时间上：起点 = 前面分 P 时长之和 + 分 P 内时间。 */
 export function resolveSpans(timeline: GameTimeline): ResolvedSpan[] {
@@ -107,7 +108,8 @@ export function resolveSpans(timeline: GameTimeline): ResolvedSpan[] {
     cursor += part.duration_sec
   }
   const total = cursor
-  const precise = (p: TimelineSpan['precision']) => p !== 'part'
+  // 已核实只认人工：缩略图、弹幕给出的分钟级位置再准，也只是关联录像
+  const checked = (s: TimelineSpan) => s.precision !== 'part' && s.evidence === 'human_watch'
   return timeline.spans.map((span, i) => {
     const next = timeline.spans[i + 1]
     const startSec = (partStart.get(span.page) ?? 0) + toSeconds(span.at)
@@ -116,9 +118,9 @@ export function resolveSpans(timeline: GameTimeline): ResolvedSpan[] {
       span,
       startSec,
       endSec,
-      // 录像开头与结尾本身是确定的：第一个环节的起点、最后一个环节的终点都算精确。
-      startPrecise: i === 0 || precise(span.precision),
-      endPrecise: next ? precise(next.precision) : true,
+      // 录像开头与结尾本身是确定的：第一个环节的起点、最后一个环节的终点都算已定位。
+      startChecked: i === 0 || checked(span),
+      endChecked: next ? checked(next) : true,
     }
   })
 }
@@ -136,7 +138,7 @@ function fromTimeline(session: SessionInput, gameId: string, timeline: GameTimel
     }
     if (r.span.game !== gameId) continue
     associatedSec += length
-    if (r.startPrecise && r.endPrecise && r.span.scanned) verifiedSec += length
+    if (r.startChecked && r.endChecked && r.span.scanned) verifiedSec += length
     jump ??= buildJump(timeline.basis, r.span.page, toSeconds(r.span.at), r.span.precision)
   }
   const partial = timeline.coverage !== 'complete'
