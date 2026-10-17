@@ -133,9 +133,12 @@ export const Source = z.object({
 export type Source = z.infer<typeof Source>
 
 /**
- * 分段：这场几点开始打什么。
- * 本站的核心诉求「每一次直播播了什么游戏」由它承载，
- * 同时驱动详情页的分段进度条与带时间戳的外链跳转。
+ * 分段：这场几点开始打什么。目前只驱动详情页的分段进度条与分段列表。
+ *
+ * ⚠️ `at` 没有记录「基于哪个来源」：现存数据大多是某个来源各分 P 首尾相接的累计值，
+ * 来源续号、缺 P 或跨投稿时与整场时间对不上。所以它**不能**用来生成外链时间戳，
+ * 也不能用来算游戏时长——这两件事由 `GameTimeline`（data/game-timelines.yaml）承担。
+ * 多个编辑入口按 at / game / label 三个字段回写分段，不要往这里加字段。
  */
 export const Segment = z.object({
   at: timecodeStr,
@@ -215,8 +218,121 @@ export function toSeconds(tc: string): number {
   return h * 3600 + m * 60 + s
 }
 
+/**
+ * 「独立环节」的最短时长（秒）。连续这么久、主要活动不是游戏的聊天 / 休息 / 其他节目
+ * 才单独记成 `break`；更短的并入所在的游戏环节。统计口径见 docs/game-time.md。
+ */
+export const INDEPENDENT_SEGMENT_MIN_SEC = 300
+
+/** 时间轴目前只接受分 P 语义已经实测过的平台（B 站页号、A 站 videoList 数组序）。 */
+export const TIMELINE_PLATFORMS = ['bilibili', 'acfun'] as const
+
+/** 计时基准来源的一个分 P 快照：生成时平台返回的页号 / 稳定 id / 时长。 */
+export const TimelinePart = z.object({
+  /** B 站：页号；A 站：videoList 数组序（1 起，跳转 `_N` 用它，不是标题里的 P 号）。 */
+  page: z.number().int().positive(),
+  /** B 站 cid、A 站 video id。用来发现平台重排或替换了分 P。 */
+  id: z.union([z.string().min(1), z.number().int().positive()]),
+  duration_sec: z.number().positive(),
+})
+export type TimelinePart = z.infer<typeof TimelinePart>
+
+/**
+ * 时间轴上的一个环节，从 (`page`, `at`) 开始，到下一个环节开始或录像结束为止。
+ * 恰好写一项：`game`（游戏环节）或 `kind`（`break` 独立环节 / `unknown` 还没核对）。
+ */
+export const TimelineSpan = z
+  .object({
+    page: z.number().int().positive(),
+    /** 分 P 内的时间。 */
+    at: timecodeStr,
+    game: idStr.optional(),
+    kind: z.enum(['break', 'unknown']).optional(),
+    /**
+     * 这个环节**起点**的精度：
+     * part = 只知道在这个分 P 开头附近（at 必须是 00:00:00）；approx = 误差 ≤1 分钟；exact = ≤10 秒。
+     */
+    precision: z.enum(['part', 'approx', 'exact']),
+    evidence: z.enum(['part_title', 'recording_break', 'human_watch', 'danmaku', 'other']),
+    /** 已经检查过环节内部，没有遗漏 ≥ INDEPENDENT_SEGMENT_MIN_SEC 的独立环节。「已核实」的必要条件。 */
+    scanned: z.boolean().optional(),
+    note: z.string().optional(),
+  })
+  .superRefine((span, ctx) => {
+    if (Boolean(span.game) === Boolean(span.kind)) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['game'], message: '每个环节恰好写 game 或 kind 其中一项' })
+    }
+    if (span.precision === 'part' && span.at !== '00:00:00') {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['at'], message: 'precision: part 只能落在分 P 开头（00:00:00）' })
+    }
+    // 分 P 标题、录像断点只能说明「大约在这个分 P 开头」，不能支撑分钟级精度——否则会混进「已核实」
+    if ((span.evidence === 'part_title' || span.evidence === 'recording_break') && span.precision !== 'part') {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['precision'], message: `evidence: ${span.evidence} 只能支撑 precision: part` })
+    }
+  })
+export type TimelineSpan = z.infer<typeof TimelineSpan>
+
+/**
+ * 一场直播的游戏时间轴：精准跳转与游戏环节时长共用的唯一数据。
+ *
+ * 只认一个计时基准来源（`basis`），不同来源的时长永远不相加。环节首尾相接覆盖整份
+ * 基准录像，所以同一场里各游戏的时长之和不会超过录像本身。没有人工确认（`reviewed`）
+ * 的记录不允许入库。
+ */
+export const GameTimeline = z
+  .object({
+    /** 来源分组的代表条目（同场合并时取 id 最小的那条）。 */
+    entry: idStr,
+    /** 计时基准来源，必须是这一场某个条目 sources 里的 url。 */
+    basis: z.string().url(),
+    /** 基准录像是否是整场：partial / unknown 时，这场的时长只是下限。 */
+    coverage: z.enum(['complete', 'partial', 'unknown']),
+    /** 按播放顺序列出这一场用到的分 P；录像时间 = 这些分 P 依次首尾相接。 */
+    parts: z.array(TimelinePart).min(1),
+    spans: z.array(TimelineSpan).min(1),
+    /** 人工确认日期。YAML 里要加引号，否则会被读成日期对象。 */
+    reviewed: z
+      .string({ invalid_type_error: 'reviewed 要加引号写成 "YYYY-MM-DD"（不加引号会被 YAML 读成日期对象）' })
+      .regex(/^\d{4}-\d{2}-\d{2}$/, '日期必须是 YYYY-MM-DD'),
+    note: z.string().optional(),
+  })
+  .superRefine((t, ctx) => {
+    const issue = (path: (string | number)[], message: string) =>
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path, message })
+    const index = new Map<number, number>()
+    t.parts.forEach((part, i) => {
+      if (index.has(part.page)) issue(['parts', i, 'page'], `分 P ${part.page} 重复`)
+      if (i > 0 && part.page <= t.parts[i - 1].page) issue(['parts', i, 'page'], '分 P 必须按页号升序')
+      index.set(part.page, i)
+    })
+    const contiguous = t.parts.every((part, i) => part.page === t.parts[0].page + i)
+    if (t.coverage === 'complete' && (!contiguous || t.parts[0].page !== 1)) {
+      issue(['coverage'], '分 P 不是从 P1 起连续的，基准录像不可能是整场；改为 partial')
+    }
+    let previous = -1
+    t.spans.forEach((span, i) => {
+      const at = index.get(span.page)
+      if (at === undefined) {
+        issue(['spans', i, 'page'], `分 P ${span.page} 不在 parts 里`)
+        return
+      }
+      const offset = toSeconds(span.at)
+      if (offset >= t.parts[at].duration_sec) issue(['spans', i, 'at'], `${span.at} 超出 P${span.page} 的时长`)
+      const position = at * 1e6 + offset
+      if (i === 0 && position !== 0) issue(['spans', 0], '第一个环节必须从第一个分 P 的 00:00:00 开始')
+      if (position <= previous) issue(['spans', i, 'at'], '环节必须按时间严格递增')
+      previous = position
+      const before = t.spans[i - 1]
+      if (before && before.game === span.game && before.kind === span.kind) {
+        issue(['spans', i], '与前一个环节相同，应合并（同一游戏被打断后回来，中间必须隔着别的环节）')
+      }
+    })
+  })
+export type GameTimeline = z.infer<typeof GameTimeline>
+
 export const AccountsFile = z.array(Account)
 export const GamesFile = z.array(Game)
 export const SeriesFile = z.array(Series)
 export const TagsFile = z.array(Tag)
 export const EntriesFile = z.array(Entry)
+export const GameTimelinesFile = z.array(GameTimeline)

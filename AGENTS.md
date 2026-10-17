@@ -150,6 +150,7 @@ curl -s https://nvliu.wiki/api/content/narrative | grep -o '你刚改的那句�
 - **单条、已经核验清楚的修正** → `npm run archive:edit -- <entryId>`，见 [`scripts/ARCHIVE-EDIT.md`](scripts/ARCHIVE-EDIT.md)。
 - **一批条目补同一类字段 / 分类** → `scripts/calibrate/`：机器初判 → 人工逐条确认 → 编译计划 → 人工复核后走批准的写入链路。见 [`scripts/calibrate/README.md`](scripts/calibrate/README.md)。
 - **全库健康清点 / 找矛盾与漏标** → `scripts/audit/`：把全部条目摆出来，机器只负责排序疑点，人类给最终判定。见 [`scripts/audit/README.md`](scripts/audit/README.md)。
+- **游戏时间轴与游戏时长** → 写 `data/game-timelines.yaml`、审阅时间轴、改任何显示游戏时长的界面之前，先读 [`docs/game-time.md`](docs/game-time.md)。「游戏环节时长」、三档时长与排行展示规则只有这一份定义，不要各自换算；旧 `segments` 不能用来生成跳转或计算时长。
 
 `calibrate` 和 `audit` 的本地决策文件都不应自动改写正式档案；真正进入 `data/**` 前必须有清晰的人工确认与 evidence。
 
