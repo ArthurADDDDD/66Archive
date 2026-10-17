@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { buildJump } from '@/lib/game-time'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
@@ -67,6 +68,7 @@ export function EntryWatch({
   entryCover,
   entryTitle,
   entryDate,
+  chapterBasis,
 }: {
   sources: WatchSource[]
   segments: WatchSegment[]
@@ -79,6 +81,7 @@ export function EntryWatch({
   entryTitle: string
   /** 没有任何封面时，字排版档案封面要写日期 */
   entryDate: string
+  chapterBasis?: string
 }) {
   const defaultIndex = Math.max(0, sources.findIndex((s) => s.status === 'alive'))
   const [sourceIndex, setSourceIndex] = useState(defaultIndex)
@@ -294,7 +297,7 @@ export function EntryWatch({
         />
 
         <div className="mt-6">
-          <SectionTitle title={t('entry-sources-title')} hint={sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
+          <SectionTitle title={t('entry-sources-title')} hint={chapterBasis ? t('entry-chapter-basis-hint') : sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
 
           {!source ? (
             <p className="mt-4 rounded-xl border border-line bg-surface/40 px-4 py-4 text-body text-muted">
@@ -549,13 +552,7 @@ function hostLabel(url: string): string {
 }
 
 function partHref(sourceUrl: string, page: number): string {
-  try {
-    const url = new URL(sourceUrl)
-    url.searchParams.set('p', String(page))
-    return url.toString()
-  } catch {
-    return sourceUrl
-  }
+  return buildJump(sourceUrl, page, 0, 'part')?.url ?? sourceUrl
 }
 
 /** 秒 → 「3 小时 45 分」/「43 分」/「50 秒」。分段动辄跨小时，不能只给分钟。 */

@@ -8,6 +8,7 @@ import { useGameGenres } from './GameGenresContext'
 import { GenreChips } from './GenreChips'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
+import { buildJump } from '@/lib/game-time'
 import { detectPlatform, PLATFORM_META, proxyImage, SOURCE_KIND_LABEL } from '@/lib/platforms'
 import { formatDuration, gameColor } from '@/lib/ui'
 import type { Platform } from '@/lib/schema'
@@ -111,7 +112,13 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
         {/* 手机上标题块收起时，下面的色带没有上边距，这里自己留出下间距 */}
         {genres.length > 0 && <GenreChips genres={genres} className="mt-3 mb-3 sm:mb-0" />}
 
-        {entry.bands.some((band) => band.game) && (
+        {entry.chapters && entry.chapterBasis && (
+          <div className={sameTitle ? 'sm:mt-4' : 'mt-4'}>
+            <ReviewedChapters entry={entry} />
+          </div>
+        )}
+
+        {!entry.chapters && entry.bands.some((band) => band.game) && (
           <div className={sameTitle ? 'sm:mt-4' : 'mt-4'}>
             <SegmentBar entry={entry} />
           </div>
@@ -242,13 +249,64 @@ function SelectedSourceParts({ source }: { source: TimelineSource | undefined })
 }
 
 function sourcePartHref(sourceUrl: string, page: number): string {
-  try {
-    const url = new URL(sourceUrl)
-    url.searchParams.set('p', String(page))
-    return url.toString()
-  } catch {
-    return sourceUrl
-  }
+  return buildJump(sourceUrl, page, 0, 'part')?.url ?? sourceUrl
+}
+
+function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
+  const chapters = entry.chapters ?? []
+  const basisPlatform = detectPlatform(entry.chapterBasis ?? '')
+  const platformName = basisPlatform ? PLATFORM_META[basisPlatform]?.name ?? basisPlatform : '录像'
+  const coverage = entry.chapterCoverage === 'complete' ? '基准录像覆盖整场' : '仅覆盖现存录像，时长为下限'
+
+  return (
+    <section className="rounded-xl border border-line bg-base/30 p-3 sm:p-4" aria-label="已审阅章节">
+      <div className="border-b border-line pb-3">
+        <p className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="entry-detail-game-chapters-title" /></p>
+        <p className="mt-1 text-meta leading-relaxed text-faint">
+          <SiteText id="entry-detail-game-chapters-hint" vars={{ platform: platformName, reviewed: entry.chapterReviewed ?? '', coverage }} />
+        </p>
+        <a href={entry.chapterBasis} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-meta text-live underline decoration-live/40 underline-offset-2 hover:decoration-live">
+          {platformName}基准录像 ↗
+        </a>
+      </div>
+      <ol className="divide-y divide-line">
+        {chapters.map((chapter) => {
+          const title = chapter.gameName ?? (chapter.kind === 'break'
+            ? <SiteText id="entry-detail-game-kind-break" />
+            : chapter.kind === 'unknown' ? <SiteText id="entry-detail-game-kind-unknown" /> : chapter.gameId ?? '游戏')
+          const kindNote = chapter.kind === 'break'
+            ? <SiteText id="entry-detail-game-break-note" />
+            : chapter.kind === 'unknown'
+              ? <SiteText id="entry-detail-game-unknown-note" />
+              : chapter.verified
+                ? <SiteText id="entry-detail-game-verified" />
+                : <SiteText id="entry-detail-game-associated" />
+          const jump = chapter.jumpUrl
+          const jumpLabel = basisPlatform === 'acfun' || chapter.precision === 'part'
+            ? <SiteText id="entry-detail-game-jump-part" vars={{ page: String(chapter.page) }} />
+            : <SiteText id="entry-detail-game-jump-time" vars={{ approx: chapter.precision === 'approx' ? '约' : '', at: chapter.at }} />
+
+          return (
+            <li key={chapter.index} className="flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="min-w-0">
+                <p className="font-medium text-ink">{chapter.gameId ? <a href={`/games/${chapter.gameId}/`} className="hover:text-live">{title}</a> : title}</p>
+                <p className="mt-1 font-mono text-meta text-muted">P{chapter.page} {chapter.at} → P{chapter.endPage} {chapter.endAt}</p>
+                <p className="mt-1 text-meta text-faint">约 {formatPartDuration(chapter.durationSec)} · {kindNote}</p>
+              </div>
+              {jump && (
+                <a href={jump} target="_blank" rel="noopener noreferrer" className="ui-press inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-live/40 px-3 py-1.5 text-meta text-live hover:bg-live/10">
+                  {jumpLabel} ↗
+                </a>
+              )}
+            </li>
+          )
+        })}
+      </ol>
+      {chapters.some((chapter) => chapter.jumpUrl?.includes('acfun.cn/')) && (
+        <p className="border-t border-line pt-2 text-meta text-faint"><SiteText id="entry-detail-game-acfun-note" /></p>
+      )}
+    </section>
+  )
 }
 
 export function formatPartDuration(totalSeconds: number): string {

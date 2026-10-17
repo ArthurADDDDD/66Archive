@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { getGameTimelines } from '@/lib/data'
 import { Archivo, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
@@ -150,6 +151,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="preconnect" href={IMAGE_PROXY_ORIGIN} />
       </head>
       <body className="font-sans">
+        {process.env.ARCHIVE_TIMELINE_PREVIEW && <aside className="border-b border-live/30 bg-live/10 px-page py-2 text-center text-meta text-live">本地预览 · {getGameTimelines().length} 场已审阅时间轴 · 尚未发布</aside>}
         {/*
           必须是原生 <script>，不能用 next/script 的 beforeInteractive：实测在 App Router
           下它会被序列化进 RSC 载荷，直到 React 处理到那一条才执行——正好回到

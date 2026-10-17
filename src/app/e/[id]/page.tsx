@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import { GameTimelineChapters } from '@/components/GameTimelineChapters'
+import { chapterClock, gameChapters } from '@/lib/game-chapters'
+import { recordedSec, resolveSpans } from '@/lib/game-time'
 import { notFound } from 'next/navigation'
 import { buildSourceGroups, getPublicDataset } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
@@ -70,9 +73,11 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   if (idx === -1) notFound()
 
   const entry = ds.entries[idx]
+  const representative=(buildSourceGroups(ds.entries).get(entry.id) ?? [entry])[0]
+  const reviewedTimeline=ds.timelines.get(representative.id)
   const platform = PLATFORM_META[entry.platform as Platform]
   const accent = actColorForDate(entry.date)
-  const totalSec = (entry.duration_min ?? 0) * 60
+  const totalSec = reviewedTimeline ? recordedSec(reviewedTimeline) : (entry.duration_min ?? 0) * 60
   const newer = ds.entries[idx - 1]
   const older = ds.entries[idx + 1]
 
@@ -102,7 +107,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   // 整场都没标游戏时（分段其实是录像的分 P / 章节），灰色会把色带糊成一条——
   // 这时按序号发一组可区分的颜色，只为分得开，不代表任何游戏。
   const isGameTimeline = entry.segments.some((s) => s.game)
-  const segments: WatchSegment[] = entry.segments.map((s, i) => {
+  let segments: WatchSegment[] = entry.segments.map((s, i) => {
     const from = toSeconds(s.at)
     const next = entry.segments[i + 1]
     const to = next ? toSeconds(next.at) : totalSec || from
@@ -123,6 +128,16 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         : (i + 1) / entry.segments.length,
     }
   })
+
+  if (reviewedTimeline) {
+    segments = resolveSpans(reviewedTimeline).map(r => ({
+      at:chapterClock(r.startSec),atSec:r.startSec,endSec:r.endSec,
+      name:r.span.game ? (ds.games.get(r.span.game)?.name ?? r.span.game) : r.span.kind==='break' ? '聊天 / 独立环节' : '尚未确认',
+      label:`P${r.span.page} ${r.span.at}`,gameId:r.span.game ?? null,color:gameColor(r.span.game ?? null),dim:!r.span.game,
+      from:totalSec?r.startSec/totalSec:0,to:totalSec?r.endSec/totalSec:0,
+    }))
+    sources.sort((a,b)=>Number(b.url===reviewedTimeline.basis)-Number(a.url===reviewedTimeline.basis))
+  }
 
   const games = visibleGameIds(entry.games).map((g) => ({ id: g, name: ds.games.get(g)?.name ?? g, known: ds.games.has(g) }))
   const seriesDef = entry.series ? ds.series.get(entry.series) : undefined
@@ -178,13 +193,13 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               于是首屏三格里有一格常年摆着一个大大的 0，看起来像缺了什么东西。
               没有分段是常态，不是缺陷，那就干脆不提。
             */}
-            <dl className={`mt-6 grid max-w-md gap-4 border-y border-line/60 py-4 ${entry.segments.length > 0 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+            <dl className={`mt-6 grid max-w-md gap-4 border-y border-line/60 py-4 ${segments.length > 0 ? 'grid-cols-3' : 'grid-cols-2'}`}>
               <Fact
                 value={formatClock(entry.duration_min)}
                 label={entry.duration_min ? '时长 时:分:秒' : '时长未知'}
                 accent={entry.duration_min ? accent : undefined}
               />
-              {entry.segments.length > 0 && <Fact value={String(entry.segments.length)} label="分段" />}
+              {segments.length > 0 && <Fact value={String(segments.length)} label="分段" />}
               <Fact value={String(sources.length)} label="来源" />
             </dl>
 
@@ -241,10 +256,13 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         </div>
       </section>
 
+      {reviewedTimeline && <GameTimelineChapters chapters={gameChapters(reviewedTimeline)} names={Object.fromEntries([...ds.games].map(([id,g])=>[id,g.name]))} reviewed={reviewedTimeline.reviewed} coverage={reviewedTimeline.coverage} />}
+
       {/* 在哪儿看 + 这场里在打什么 */}
       <section className="border-y border-line bg-surface/20 py-12 sm:py-16">
         <div className="site-container px-page">
           <EntryWatch
+            chapterBasis={reviewedTimeline?.basis}
             sources={sources}
             segments={segments}
             totalSec={totalSec}

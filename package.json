@@ -26,7 +26,9 @@
     "test:live-content": "node --import tsx scripts/test-live-content-loader.ts",
     "test:covers": "node --import tsx scripts/test-responsive-cover.tsx && python3 scripts/test-cover-resource-audit.py",
     "audit:covers": "python3 scripts/audit-cover-resources.py",
-    "covers:optimize": "tsx scripts/entry-covers-optimize.ts"
+    "covers:optimize": "tsx scripts/entry-covers-optimize.ts",
+    "test:game-chapters": "node --import tsx scripts/test-game-chapters.ts",
+    "dev:timelines": "NODE_ENV=development ARCHIVE_TIMELINE_PREVIEW=.local/game-timelines-preview.json CONTENT_BAKE_ORIGIN=off NODE_OPTIONS=--max-old-space-size=768 next dev --hostname 127.0.0.1 --port 3012"
   },
   "dependencies": {
     "next": "^15.5.24",

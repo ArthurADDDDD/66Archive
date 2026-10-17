@@ -1,6 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
+import { readLocalTimelinePreview } from './local-timeline-preview'
+import { gameChapters } from './game-chapters'
 import {
   Account,
   AccountsFile,
@@ -90,7 +92,9 @@ let timelineCache: GameTimeline[] | null = null
  */
 export function getGameTimelines(): GameTimeline[] {
   if (timelineCache) return timelineCache
-  timelineCache = GameTimelinesFile.parse(readYaml(path.join(DATA, 'game-timelines.yaml')))
+  const formal = GameTimelinesFile.parse(readYaml(path.join(DATA, 'game-timelines.yaml')))
+  const preview = readLocalTimelinePreview(process.env.ARCHIVE_TIMELINE_PREVIEW)
+  timelineCache = [...new Map([...formal, ...preview].map(t => [t.entry, t])).values()]
   return timelineCache
 }
 
@@ -141,6 +145,25 @@ export type TimelineEntry = {
   seriesName?: string
   /** 分段在时长上的占比，用于卡片上的色带 */
   bands: { game: string | null; name: string; from: number; to: number }[]
+  /** 经审阅时间轴的最小公开投影；仅存在于有正式时间轴的场次。 */
+  chapters?: {
+    index: number
+    kind: 'game' | 'break' | 'unknown'
+    gameId: string | null
+    gameName?: string
+    page: number
+    at: string
+    endPage: number
+    endAt: string
+    durationSec: number
+    verified: boolean
+    precision: 'part' | 'approx' | 'exact'
+    jumpUrl: string | null
+  }[]
+  /** 章节固定按该公开来源计时；切换播放器来源不会改变位置。 */
+  chapterBasis?: string
+  chapterReviewed?: string
+  chapterCoverage?: 'complete' | 'partial' | 'unknown'
   demo?: boolean
 }
 
@@ -236,6 +259,23 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       })))
       .filter((source, index, all) => all.findIndex((candidate) => candidate.url === source.url) === index)
     const total = (e.duration_min ?? 0) * 60
+    const gameTimeline = ds.timelines.get(e.id)
+    const chapters = gameTimeline?.spans.length
+      ? gameChapters(gameTimeline).map((chapter) => ({
+          index: chapter.index,
+          kind: chapter.kind,
+          gameId: chapter.gameId,
+          ...(chapter.gameId ? { gameName: ds.games.get(chapter.gameId)?.name ?? chapter.gameId } : {}),
+          page: chapter.page,
+          at: chapter.at,
+          endPage: chapter.endPage,
+          endAt: chapter.endAt,
+          durationSec: chapter.durationSec,
+          verified: chapter.verified,
+          precision: chapter.precision,
+          jumpUrl: chapter.jump?.url ?? null,
+        }))
+      : undefined
     const rawBands = e.segments.map((s, i) => {
       const from = hms(s.at)
       const next = e.segments[i + 1]
@@ -290,6 +330,12 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
       deadCount: sources.filter((s) => s.status === 'dead').length,
       seriesName: e.series ? ds.series.get(e.series)?.name : undefined,
       bands: total ? bands : [],
+      ...(chapters ? {
+        chapters,
+        chapterBasis: gameTimeline!.basis,
+        chapterReviewed: gameTimeline!.reviewed,
+        chapterCoverage: gameTimeline!.coverage,
+      } : {}),
       demo: e.demo,
     }
   })

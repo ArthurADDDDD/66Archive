@@ -2,6 +2,8 @@
 const nextConfig = {
   // 全站静态导出：无服务端，部署到 Cloudflare Pages / Vercel 成本近零。
   output: 'export',
+  // Bound worker count for local build checks on memory-constrained machines.
+  ...(process.env.ARCHIVE_BUILD_CHECK === '1' ? { experimental: { cpus: 1 } } : {}),
   images: { unoptimized: true },
   trailingSlash: true,
   /**
