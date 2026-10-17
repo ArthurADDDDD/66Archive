@@ -15,6 +15,15 @@ import {
   type SessionInput,
 } from '../src/lib/game-time'
 import { visibleGameIds } from '../src/lib/games'
+import {
+  coverageLabel,
+  footageIncomplete,
+  footageRangeLabel,
+  footageRangeNumbers,
+  footageTitle,
+  verifiedLabel,
+  type GameTimeView,
+} from '../src/lib/game-time-view'
 import { allGameIds, getGameProfile } from '../src/lib/narrative'
 import { Entry, GameTimeline, INDEPENDENT_SEGMENT_MIN_SEC, type TimelineSpan } from '../src/lib/schema'
 
@@ -184,6 +193,25 @@ assert.equal(buildJump('https://b23.tv/abc', 1, 0, 'part'), null)
   assert.equal(mixed.playtimeRankable, false, '有未拆分场次就不能进游玩时长排行')
 }
 
+// ── 界面措辞：区间、核实量、覆盖都从同一处取 ─────────────────────────────
+{
+  const view = (o: Partial<GameTimeView>): GameTimeView => ({ sessions: 10, attributedSessions: 10, unattributedSessions: 0, associatedMinutes: 0, upperMinutes: 0, upperOpen: false, verifiedMinutes: 0, playtimeRankable: false, ...o })
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 2220, upperMinutes: 2220 })), '37 小时')
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 10128, upperMinutes: 12762 })), '169–213 小时')
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 10128, upperMinutes: 12762, upperOpen: true })), '169–213+ 小时')
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 0, upperMinutes: 2340 })), '0–39 小时', '全部未拆分：下限是 0，不是「时长未知」')
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 0, upperMinutes: 0, upperOpen: true })), '时长未知')
+  assert.equal(footageRangeLabel(view({ associatedMinutes: 40, upperMinutes: 40 })), '不到 1 小时')
+  assert.equal(footageRangeNumbers(view({ associatedMinutes: 979, upperMinutes: 1436 })), '16–24')
+  assert.equal(verifiedLabel({ verifiedMinutes: 0 }), '尚未核实')
+  assert.equal(verifiedLabel({ verifiedMinutes: 45 }), '已核实 45 分钟')
+  assert.equal(verifiedLabel({ verifiedMinutes: 185 }), '已核实 3 小时')
+  assert.equal(coverageLabel(view({ sessions: 52, attributedSessions: 44 })), '44/52 场')
+  assert.equal(footageIncomplete(view({ sessions: 4, unattributedSessions: 2 })), true)
+  assert.equal(footageIncomplete(view({ sessions: 52, unattributedSessions: 8 })), false)
+  assert.match(footageTitle(view({ sessions: 52, attributedSessions: 44, unattributedSessions: 8, associatedMinutes: 10128, upperMinutes: 12762 })), /相关录像 169–213 小时 · 尚未核实 · 时长已归属 44\/52 场 · 8 场/)
+}
+
 // ── Schema：结构规则 ────────────────────────────────────────────────
 const rejects = (overrides: Record<string, unknown>, why: string) =>
   assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'complete', parts: parts(100, 100), reviewed: '2026-10-17', spans: [span({ page: 1, at: '00:00:00', game: 'a' })], ...overrides }).success, false, why)
@@ -272,7 +300,7 @@ assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial
     if (!profile) continue
     const summary = summarizeGameTime(id, profile.entries, byEntry)
     associated += summary.associatedSec
-    naive += profile.totalMinutes * 60
+    naive += profile.entries.reduce((sum, e) => sum + (e.duration_min ?? 0), 0) * 60   // 旧口径：整场累加
     for (const s of summary.perSession) {
       const entry = profile.entries.find((e) => e.id === s.entryId)!
       matched.set(entry.id, (entry.duration_min ?? 0) * 60)

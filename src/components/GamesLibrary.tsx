@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { GENRES, genreLabel } from '@/lib/genres'
-import { LIBRARY_COLUMNS, type LibraryColumns, type LibraryGame } from '@/lib/games'
+import { LIBRARY_COLUMNS, libraryTimeView, type LibraryColumns, type LibraryGame } from '@/lib/games'
+import { coverageLabel, footageIncomplete, footageRangeLabel, footageTitle, verifiedLabel } from '@/lib/game-time-view'
 import { actColorForDate } from '@/lib/narrative'
 import { ResponsiveCover } from './ResponsiveCover'
 import { trackSiteEvent } from '@/lib/site-analytics'
@@ -39,7 +40,8 @@ type SortKey = 'newest' | 'oldest' | 'duration' | 'sessions'
 const SORTS: { id: SortKey; label: string; hint: string }[] = [
   { id: 'newest', label: '从新到旧', hint: '按最近一次游玩的日期排，最近在前' },
   { id: 'oldest', label: '从旧到新', hint: '按第一次游玩的日期排，最早在前' },
-  { id: 'duration', label: '玩得最久', hint: '按已知时长排' },
+  // 不叫「玩得最久」：多游戏直播大量未拆分之前，这只是「已知录像」的排序（docs/game-time.md §4）
+  { id: 'duration', label: '相关录像', hint: '按已归属的相关录像时长排。相关录像含聊天与休息，不等于游玩时长；区间上限包含还没拆分的多游戏直播，区间重叠时先后不代表谁玩得更久' },
   { id: 'sessions', label: '播得最多', hint: '按出场场次排' },
 ]
 
@@ -113,7 +115,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
     const byLastDate = (a: LibraryGame, b: LibraryGame) => (b.lastDate ?? '').localeCompare(a.lastDate ?? '')
     const byFirstDate = (a: LibraryGame, b: LibraryGame) => (a.firstDate ?? '').localeCompare(b.firstDate ?? '')
 
-    if (sort === 'duration') sorted.sort((a, b) => b.totalMinutes - a.totalMinutes || byLastDate(a, b) || byName(a, b))
+    if (sort === 'duration') sorted.sort((a, b) => b.associatedMinutes - a.associatedMinutes || b.upperMinutes - a.upperMinutes || byLastDate(a, b) || byName(a, b))
     else if (sort === 'sessions') sorted.sort((a, b) => b.sessions - a.sessions || byLastDate(a, b) || byName(a, b))
     else if (sort === 'oldest') sorted.sort((a, b) => byFirstDate(a, b) || byLastDate(a, b) || byName(a, b))
     else sorted.sort((a, b) => byLastDate(a, b) || byFirstDate(a, b) || byName(a, b))
@@ -370,6 +372,7 @@ function PageButton({
 function LibraryTile({ game: g }: { game: LibraryGame }) {
   // 封面来自首播那天，所以角标的时期色也跟着首播年份走；同页内仍保留这条年代线索。
   const eraColor = g.firstDate ? actColorForDate(g.firstDate) : '#5A5F73'
+  const time = libraryTimeView(g)
 
   return (
     <li>
@@ -455,10 +458,13 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
             <span className="block whitespace-nowrap font-mono">→ {g.lastDate}</span>
           )}
         </p>
-        <p className="text-meta text-faint tnum" title={`${g.totalMinutes.toLocaleString()} 分钟 · ${g.knownDurationCount}/${g.sessions} 场有记录`}>
-          {g.knownDurationCount === 0
-            ? '时长未知'
-            : `${g.totalMinutes >= 60 ? `${Math.round(g.totalMinutes / 60)} 小时` : `${g.totalMinutes} 分钟`}${g.knownDurationCount < g.sessions ? '*' : ''}`}
+        {/* 时长三件套固定两行：相关录像区间（+「时长不全」）/ 核实量 · 归属覆盖。见 docs/game-time.md §4 */}
+        <p className="text-meta text-faint tnum" title={footageTitle(time)}>
+          <span className="block">
+            相关录像 {footageRangeLabel(time)}
+            {footageIncomplete(time) && <span className="text-live"> · 时长不全</span>}
+          </span>
+          <span className="block">{verifiedLabel(time)} · 已归属 {coverageLabel(time)}</span>
         </p>
       </Link>
     </li>

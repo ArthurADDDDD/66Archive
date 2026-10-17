@@ -1,3 +1,5 @@
+import type { GameTimeView } from './game-time-view'
+
 /**
  * 某些条目同时保留系列 ID 与具体作品 ID，便于筛选覆盖整个系列；
  * 紧凑展示时只显示具体作品，避免同一条记录出现两个重复标签。
@@ -24,8 +26,11 @@ export type GameCardData = {
   name: string
   cover: string | null
   sessions: number
-  totalMinutes: number
-  hoursLabel: string
+  /** 「相关录像」区间与它的完整说明（docs/game-time.md §4）。 */
+  footageLabel: string
+  footageTitle: string
+  footageVerified: string
+  footageCoverage: string
   firstDate: string | null
   lastDate: string | null
   curated: boolean
@@ -38,11 +43,29 @@ export type LibraryGame = {
   genres: string[]
   face: string | null
   sessions: number
-  totalMinutes: number
-  knownDurationCount: number
+  /** 以下五项拼回 GameTimeView（见 libraryTimeView）；口径见 docs/game-time.md。 */
+  attributedSessions: number
+  associatedMinutes: number
+  upperMinutes: number
+  upperOpen: boolean
+  verifiedMinutes: number
   firstDate: string | null
   lastDate: string | null
   comebackDays: number
+}
+
+export function libraryTimeView(g: LibraryGame): GameTimeView {
+  return {
+    sessions: g.sessions,
+    attributedSessions: g.attributedSessions,
+    unattributedSessions: g.sessions - g.attributedSessions,
+    associatedMinutes: g.associatedMinutes,
+    upperMinutes: g.upperMinutes,
+    upperOpen: g.upperOpen,
+    verifiedMinutes: g.verifiedMinutes,
+    // 游戏库不出「游玩时长排行」，这一项在客户端用不到，也就不进载荷
+    playtimeRankable: false,
+  }
 }
 
 /**
@@ -71,8 +94,11 @@ export const LIBRARY_COLUMNS = [
   'genres',
   'face',
   'sessions',
-  'totalMinutes',
-  'knownDurationCount',
+  'attributedSessions',
+  'associatedMinutes',
+  'upperMinutes',
+  'upperOpen',
+  'verifiedMinutes',
   'firstDate',
   'lastDate',
   'comebackDays',

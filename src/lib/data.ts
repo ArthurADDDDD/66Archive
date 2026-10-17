@@ -46,6 +46,8 @@ export type Dataset = {
   tags: Map<string, Tag>
   /** 真实数据为空、正在用演示数据兜底时为 true —— 前端必须显著标注 */
   isDemo: boolean
+  /** 游戏时间轴，按代表条目 id 索引（data/game-timelines.yaml；口径见 docs/game-time.md）。 */
+  timelines: Map<string, GameTimeline>
 }
 
 let cache: Dataset | null = null
@@ -73,6 +75,8 @@ export function getDataset(): Dataset {
     series: new Map(series.map((s) => [s.id, s])),
     accounts: new Map(accounts.map((a) => [a.id, a])),
     tags: new Map(tags.map((t) => [t.name, t])),
+    // 演示数据没有时间轴：演示条目的 id 与真实时间轴无关，混进来只会让统计串场
+    timelines: isDemo ? new Map() : new Map(getGameTimelines().map((t) => [t.entry, t])),
   }
   return cache
 }

@@ -14,6 +14,7 @@ import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { proxyImageSrcSet } from '@/lib/platforms'
+import { coverageLabel, footageTitle, verifiedLabel, type GameTimeView } from '@/lib/game-time-view'
 import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
 import { coverShareImage } from '@/lib/share-image'
@@ -33,8 +34,8 @@ export function generateStaticParams() {
 
 /**
  * 社交卡片用的一句话。只说档案里数得出来的东西——场次与首末日期，
- * 不提时长：`knownDurationCount < sessions` 时时长本来就是部分已知，
- * 卡片上写个小时数会把「已收录」读成「完整收录」。
+ * 不提时长：时长只能以「相关录像」区间加覆盖说明的形式出现（docs/game-time.md §4），
+ * 社交卡片放不下那些说明，单写一个小时数会被读成游玩时长。
  */
 function gameShareDescription(profile: GameProfile): string {
   const span =
@@ -131,7 +132,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
               ) : (
                 <p className="measure-body mt-5 text-body text-muted">
                   {profile.sessions > 0
-                    ? <SiteText id="game-summary" vars={{ first: profile.firstDate ?? '', last: profile.lastDate ?? '', sessions: profile.sessions, hours: profile.hoursLabel }} />
+                    ? <SiteText id="game-summary-sessions" vars={{ first: profile.firstDate ?? '', last: profile.lastDate ?? '', sessions: profile.sessions }} />
                     : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
                 </p>
               )}
@@ -154,11 +155,12 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
             <div className="site-container px-page">
               <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-together-title" /></p>
               <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                <Stat value={profile.hoursLabel} label={<SiteText id="game-stat-hours" />} />
+                <Stat value={profile.footageLabel} label={<SiteText id="game-stat-footage" />} />
                 <Stat value={profile.sessions.toLocaleString()} label={<SiteText id="game-stat-sessions" />} />
                 <Stat value={profile.firstDate ?? '—'} label={<SiteText id="game-stat-first" />} />
                 <Stat value={profile.lastDate ?? '—'} label={<SiteText id="game-stat-last" />} />
               </dl>
+              <GameTimeNote view={profile.timeView} className="mt-4" />
               <div className="mt-10 max-w-xl">
                 <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-years-title" /></p>
                 <YearBars rows={yearRows} />
@@ -230,7 +232,7 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base/55 via-transparent to-transparent" />
       {profile.entries.length > 0 && (
         <span className="absolute bottom-3 left-3 hidden rounded-sm bg-base/70 px-2 py-1 text-meta text-ink/90 tnum backdrop-blur-sm sm:inline-flex">
-          {profile.sessions} 场 · {profile.hoursLabel}
+          {profile.sessions} 场 · 相关录像 {profile.footageLabel}
         </span>
       )}
       {profile.heroLinkLabel && (
@@ -258,6 +260,24 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
   )
 }
 
+/**
+ * 时长那一格的必带说明：已核实量、归属覆盖、未知部分（docs/game-time.md §4）。
+ * 「相关录像」这个数字离开这三样就会被读成游玩时长，所以它不能省。
+ */
+function GameTimeNote({ view, className = '' }: { view: GameTimeView; className?: string }) {
+  return (
+    <p className={`measure-body text-meta text-faint ${className}`}>
+      <SiteText id="game-time-note" vars={{ verified: verifiedLabel(view), coverage: coverageLabel(view) }} />
+      {view.unattributedSessions > 0 && (
+        <>
+          {' '}
+          <SiteText id="game-time-unsplit" vars={{ count: view.unattributedSessions }} />
+        </>
+      )}
+    </p>
+  )
+}
+
 function Stat({ value, label }: { value: string; label: React.ReactNode }) {
   return (
     <div>
@@ -280,7 +300,7 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
       <h1 className="mt-3 text-h1 font-semibold text-ink">{profile.name}</h1>
       <p className="mt-3 text-body text-muted">
         {hasEntry
-          ? <SiteText id="game-single-summary" vars={{ date: profile.firstDate ?? '', hours: profile.hoursLabel }} />
+          ? <SiteText id="game-single-summary-date" vars={{ date: profile.firstDate ?? '' }} />
           : <SiteText id="game-summary-empty" vars={{ name: profile.name }} />}
       </p>
       <GenreChips genres={profile.genres} className="mt-4" />
@@ -316,8 +336,12 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
               <dd className="inline text-ink">{profile.sessions} 场</dd>
             </div>
             <div>
-              <dt className="inline text-faint">时长 · </dt>
-              <dd className="inline text-ink">{profile.hoursLabel}</dd>
+              <dt className="inline text-faint">相关录像 · </dt>
+              <dd className="inline text-ink" title={footageTitle(profile.timeView)}>{profile.footageLabel}</dd>
+            </div>
+            <div>
+              <dt className="inline text-faint">核实 · </dt>
+              <dd className="inline text-ink">{verifiedLabel(profile.timeView)}</dd>
             </div>
             <div>
               <dt className="inline text-faint">日期 · </dt>
