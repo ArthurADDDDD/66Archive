@@ -9,7 +9,14 @@
  *
  * 纯函数，不读文件；数据由调用方传入（data.ts 的 getGameTimelines）。
  */
-import { toSeconds, type GameTimeline, type TimelineSpan } from './schema'
+// 只取类型：游戏库这类客户端组件会经 narrative 间接引入本模块，值导入 schema 会把 zod 带进浏览器
+import { SPECIFIC_GAME_PARENTS, visibleGameIds } from './games'
+import type { GameTimeline, TimelineSpan } from './schema'
+
+function toSeconds(tc: string): number {
+  const [h, m, sec] = tc.split(':').map(Number)
+  return h * 3600 + m * 60 + sec
+}
 
 /** 「游玩时长排行」开放门槛：已核实时长至少占关联录像时长的比例。 */
 export const PLAYTIME_RANK_MIN_VERIFIED_SHARE = 0.8
@@ -136,7 +143,8 @@ function fromTimeline(session: SessionInput, gameId: string, timeline: GameTimel
       unknownUpperSec += length
       continue
     }
-    if (r.span.game !== gameId) continue
+    // 系列父 ID（如 maplestory）继承具体作品（maplestory-classic）的环节：父 ID 本身不会有自己的环节
+    if (r.span.game !== gameId && (!r.span.game || SPECIFIC_GAME_PARENTS[r.span.game] !== gameId)) continue
     associatedSec += length
     if (r.startChecked && r.endChecked && r.span.scanned) verifiedSec += length
     jump ??= buildJump(timeline.basis, r.span.page, toSeconds(r.span.at), r.span.precision)
@@ -157,7 +165,8 @@ function fromTimeline(session: SessionInput, gameId: string, timeline: GameTimel
 /** 一场里某款游戏的时长归属。`gameId` 可以不在 session.games 里（策展游戏按标题匹配的场次）。 */
 export function sessionGameTime(session: SessionInput, gameId: string, timeline?: GameTimeline): SessionGameTime {
   if (timeline) return fromTimeline(session, gameId, timeline)
-  const gameCount = new Set([...session.games.map((g) => g.id), gameId]).size
+  // 同时挂了系列父 ID 与具体作品的，算一款：否则只玩冒险岛怀旧服的场次会被当成「两款游戏、时长未拆分」
+  const gameCount = visibleGameIds([...new Set([...session.games.map((g) => g.id), gameId])]).length
   const durationSec = session.duration_min ? session.duration_min * 60 : null
   const base = { entryId: session.id, verifiedSec: 0, associatedSec: 0, unknownUpperSec: 0, upperOpen: false, lowerBound: false, jump: null }
   if (durationSec === null) return { ...base, basis: 'none', upperOpen: true }
