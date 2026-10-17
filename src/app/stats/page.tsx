@@ -1,3 +1,4 @@
+import { timelineTotals } from '@/lib/game-chapters'
 import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { LiveCopySeed } from '@/components/LiveCopySeed'
 import { SiteText } from '@/components/SiteText'
@@ -20,7 +21,7 @@ import { popularIndexUrl } from '@/lib/popular-index-url'
 import { LiveStatsSection as Section } from '@/components/LiveStatsSection'
 import { buildCoverage } from '@/lib/coverage'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
-import { footageTitle, verifiedLabel } from '@/lib/game-time-view'
+import { footageTitle, verifiedLabel, coverageLabel } from '@/lib/game-time-view'
 import { getGameProfile } from '@/lib/narrative'
 import { buildSeriesList } from '@/lib/series'
 import { allGameIds } from '@/lib/narrative'
@@ -101,7 +102,8 @@ export default async function StatsPage() {
     .sort((a, b) => b.sessions - a.sessions || b.timeView.associatedMinutes - a.timeView.associatedMinutes)
     .slice(0, 8)
   const maxMinutes = Math.max(1, ...longest.map((p) => p.timeView.upperMinutes))
-  const verifiedMinutesAll = profiles.reduce((sum, p) => sum + p.timeView.verifiedMinutes, 0)
+  const publicEntryIds = new Set(ds.entries.map(e => e.id))
+  const verifiedMinutesAll = Math.round(timelineTotals([...ds.timelines.values()].filter(t => publicEntryIds.has(t.entry))).verifiedSec / 60)
 
   const revisited = profiles
     .filter((p) => p.entries.length > 0)
@@ -279,6 +281,7 @@ export default async function StatsPage() {
                     {p.sessions} 场 · 相关录像 {p.footageLabel}
                   </span>
                 </div>
+                <p className="mt-1 text-meta text-faint">{verifiedLabel(p.timeView)} · 时长已归属 {coverageLabel(p.timeView)}</p>
                 {/* 区间条：实色 = 已归属的相关录像；浅色 = 还没拆分的场次最多可能再占的部分 */}
                 <div className="relative mt-1.5 h-[6px] overflow-hidden rounded-full bg-raised">
                   <span
