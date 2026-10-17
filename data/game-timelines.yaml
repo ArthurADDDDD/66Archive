@@ -1,0 +1,495 @@
+# 已人工审阅的游戏时间轴；统计口径见 docs/game-time.md。
+- entry: 2017-01-21-live-01
+  basis: https://www.bilibili.com/video/BV1rs411b7od
+  coverage: complete
+  parts:
+  - page: 1
+    id: 13421077
+    duration_sec: 5458
+  - page: 2
+    id: 13421078
+    duration_sec: 3642
+  - page: 3
+    id: 13421079
+    duration_sec: 2636
+  - page: 4
+    id: 13421080
+    duration_sec: 2204
+  - page: 5
+    id: 13421081
+    duration_sec: 3224
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:10:37
+    game: league-of-legends
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 5
+    at: 00:46:02
+    kind: break
+    precision: approx
+    evidence: human_watch
+  reviewed: '2026-10-17'
+- entry: 2017-03-16-live-01
+  basis: https://www.bilibili.com/video/BV1bx411r7kK
+  coverage: complete
+  parts:
+  - page: 1
+    id: 15242744
+    duration_sec: 2062
+  - page: 2
+    id: 15242745
+    duration_sec: 3018
+  - page: 3
+    id: 15242746
+    duration_sec: 2590
+  - page: 4
+    id: 15242747
+    duration_sec: 3242
+  - page: 5
+    id: 15242748
+    duration_sec: 2824
+  - page: 6
+    id: 15242749
+    duration_sec: 3541
+  - page: 7
+    id: 15242750
+    duration_sec: 3543
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:17:36
+    game: zelda-botw
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 3
+    at: 00:04:12
+    game: league-of-legends
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 4
+    at: 00:51:48
+    game: zelda-botw
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2017-10-26-live-01
+  basis: https://www.bilibili.com/video/BV1tx41177EZ
+  coverage: complete
+  parts:
+  - page: 1
+    id: 25648031
+    duration_sec: 1390
+  - page: 2
+    id: 25648032
+    duration_sec: 10492
+  - page: 3
+    id: 25648033
+    duration_sec: 2937
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:06
+    game: rusty-lake
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 3
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: human_watch
+  - page: 3
+    at: 00:31:00
+    game: doudizhu
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2017-10-27-live-01
+  basis: https://www.bilibili.com/video/BV1qx41177R8
+  coverage: complete
+  parts:
+  - page: 1
+    id: 25700071
+    duration_sec: 2293
+  - page: 2
+    id: 25700072
+    duration_sec: 4975
+  - page: 3
+    id: 25700073
+    duration_sec: 4975
+  - page: 4
+    id: 25700074
+    duration_sec: 4974
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:01:24
+    game: pubg
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 4
+    at: 01:15:48
+    game: doudizhu
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2018-07-21-live-01
+  basis: https://www.bilibili.com/video/BV1Ws411K7Ln
+  coverage: complete
+  parts:
+  - page: 1
+    id: 47264370
+    duration_sec: 761
+  - page: 2
+    id: 47264371
+    duration_sec: 7953
+  - page: 3
+    id: 47264372
+    duration_sec: 7953
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:12:30
+    game: octopath-traveler
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 2
+    at: 00:52:01
+    game: pubg
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 3
+    at: 00:02:20
+    game: octopath-traveler
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2020-08-10-live-01
+  basis: https://www.bilibili.com/video/BV1iK4y1v7AT
+  coverage: complete
+  parts:
+  - page: 1
+    id: 222891209
+    duration_sec: 2655
+  - page: 2
+    id: 222904473
+    duration_sec: 2655
+  - page: 3
+    id: 222914143
+    duration_sec: 3414
+  - page: 4
+    id: 222912559
+    duration_sec: 3415
+  - page: 5
+    id: 222914930
+    duration_sec: 3415
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: paper-mario
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    game: fall-guys
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2020-12-01-live-01
+  basis: https://www.bilibili.com/video/BV1qy4y167rB
+  coverage: complete
+  parts:
+  - page: 1
+    id: 261819985
+    duration_sec: 2603
+  - page: 2
+    id: 261824461
+    duration_sec: 2590
+  - page: 3
+    id: 261832328
+    duration_sec: 2592
+  - page: 4
+    id: 261832933
+    duration_sec: 2591
+  - page: 5
+    id: 261832732
+    duration_sec: 2591
+  - page: 6
+    id: 261853834
+    duration_sec: 2708
+  - page: 7
+    id: 261857245
+    duration_sec: 2710
+  - page: 8
+    id: 261861898
+    duration_sec: 2710
+  - page: 9
+    id: 261861870
+    duration_sec: 2710
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:06
+    game: demons-souls
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2021-03-12-live-01
+  basis: https://www.bilibili.com/video/BV1Ep4y1h7u8
+  coverage: complete
+  parts:
+  - page: 1
+    id: 309364550
+    duration_sec: 869
+  - page: 2
+    id: 309393428
+    duration_sec: 2456
+  - page: 3
+    id: 309417632
+    duration_sec: 2457
+  - page: 4
+    id: 309415921
+    duration_sec: 2457
+  - page: 5
+    id: 309413574
+    duration_sec: 2456
+  - page: 6
+    id: 309415204
+    duration_sec: 2320
+  - page: 7
+    id: 309422250
+    duration_sec: 2322
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:08
+    game: csgo
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 6
+    at: 00:00:08
+    game: warcraft-3
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2021-05-06-live-01
+  basis: https://www.bilibili.com/video/BV1KK4y1d7Dz
+  coverage: complete
+  parts:
+  - page: 1
+    id: 334819313
+    duration_sec: 2101
+  - page: 2
+    id: 334827582
+    duration_sec: 2101
+  - page: 3
+    id: 334836345
+    duration_sec: 2423
+  - page: 4
+    id: 334833330
+    duration_sec: 2425
+  - page: 5
+    id: 334837237
+    duration_sec: 2427
+  - page: 6
+    id: 334840492
+    duration_sec: 2424
+  - page: 7
+    id: 334841189
+    duration_sec: 2426
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: wonder-boy-asha
+    precision: approx
+    evidence: thumbnails
+    scanned: true
+  - page: 1
+    at: 00:02:05
+    kind: break
+    precision: approx
+    evidence: human_watch
+  - page: 1
+    at: 00:17:38
+    game: wonder-boy-asha
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2021-07-30-live-02
+  basis: https://www.bilibili.com/video/BV1kA411A7KC
+  coverage: complete
+  parts:
+  - page: 1
+    id: 379737330
+    duration_sec: 2827
+  - page: 2
+    id: 379760807
+    duration_sec: 2829
+  - page: 3
+    id: 379788730
+    duration_sec: 2831
+  - page: 4
+    id: 379790602
+    duration_sec: 2829
+  - page: 5
+    id: 379792829
+    duration_sec: 2830
+  - page: 6
+    id: 379819886
+    duration_sec: 2771
+  - page: 7
+    id: 379829623
+    duration_sec: 2775
+  - page: 8
+    id: 379856446
+    duration_sec: 2995
+  - page: 9
+    id: 379849090
+    duration_sec: 2995
+  - page: 10
+    id: 379852057
+    duration_sec: 2994
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: naraka-bladepoint
+    precision: approx
+    evidence: thumbnails
+    scanned: true
+  - page: 5
+    at: 00:45:16
+    game: sky-children-of-the-light
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 8
+    at: 00:00:08
+    game: naraka-bladepoint
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
+- entry: 2025-12-04-live-02
+  basis: https://www.bilibili.com/video/BV17K2eBgEsz
+  coverage: complete
+  parts:
+  - page: 1
+    id: 34502805667
+    duration_sec: 3601
+  - page: 2
+    id: 34504246604
+    duration_sec: 3601
+  - page: 3
+    id: 34504638615
+    duration_sec: 1956
+  - page: 4
+    id: 34505097886
+    duration_sec: 1040
+  - page: 5
+    id: 34506473981
+    duration_sec: 3195
+  - page: 6
+    id: 34506605869
+    duration_sec: 54
+  - page: 7
+    id: 34507197381
+    duration_sec: 1805
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: a-little-to-the-left
+    precision: approx
+    evidence: thumbnails
+    scanned: true
+  - page: 3
+    at: 00:23:36
+    game: delta-force
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 7
+    at: 00:06:30
+    kind: break
+    precision: approx
+    evidence: human_watch
+  reviewed: '2026-10-17'
+- entry: 2026-08-15-live-01
+  basis: https://www.bilibili.com/video/BV1iXbC6oEos
+  coverage: complete
+  parts:
+  - page: 1
+    id: 40941322860
+    duration_sec: 3601
+  - page: 2
+    id: 40942897208
+    duration_sec: 3601
+  - page: 3
+    id: 40944406490
+    duration_sec: 3601
+  - page: 4
+    id: 40944930797
+    duration_sec: 353
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:17:06
+    game: rusty-lake
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  - page: 2
+    at: 00:27:48
+    game: maplestory-classic
+    precision: approx
+    evidence: human_watch
+    scanned: true
+  reviewed: '2026-10-17'
