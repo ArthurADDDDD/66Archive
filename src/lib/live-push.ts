@@ -105,27 +105,38 @@ export async function enablePush(availability: Extract<PushAvailability, { enabl
   if (permission !== 'granted') permission = await Notification.requestPermission()
   if (permission === 'denied') return 'denied'
   if (permission !== 'granted') return 'dismissed'
-  let subscription: PushSubscription
+  let registration: ServiceWorkerRegistration, subscription: PushSubscription
+  const key = keyBytes(availability.publicKey)
   try {
-    const registration = await navigator.serviceWorker.register(SW_PATH, { scope: '/', updateViaCache: 'none' })
+    registration = await navigator.serviceWorker.register(SW_PATH, { scope: '/', updateViaCache: 'none' })
     await navigator.serviceWorker.ready
-    const key = keyBytes(availability.publicKey)
     const existing = await registration.pushManager.getSubscription()
     if (existing && !sameKey(existing, key)) await existing.unsubscribe()
     subscription = existing && sameKey(existing, key) ? existing : await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key })
   } catch { return 'push-service' } // 典型情况：浏览器连不上自己的推送服务（如部分网络下的 Chrome）
-  let response: Response
-  try {
-    response = await post('subscribe', { subscription: subscription.toJSON(), consent: true, client: { browser: env.browser, platform: env.platform, standalone: env.standalone }, ...(testCode ? { testCode } : {}) })
-  } catch { return 'unavailable' }
-  if (response.status === 201) {
-    const body: unknown = await response.json().catch(() => null)
-    if (body && typeof body === 'object' && 'token' in body && typeof body.token === 'string') { await writeToken(body.token); return 'on' }
+  // 已登记的推送地址只有原设备能重新登记：带上本机的设备令牌；令牌丢失时服务端会核对订阅密钥。
+  // 仍被拒（409）说明服务端记录与本机不一致：换一个全新的浏览器订阅再试一次。
+  const token = await readToken()
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let response: Response
+    try {
+      response = await post('subscribe', { subscription: subscription.toJSON(), consent: true, client: { browser: env.browser, platform: env.platform, standalone: env.standalone },
+        ...(token && attempt === 0 ? { token } : {}), ...(testCode ? { testCode } : {}) })
+    } catch { return 'unavailable' }
+    if (response.status === 201) {
+      const body: unknown = await response.json().catch(() => null)
+      if (body && typeof body === 'object' && 'token' in body && typeof body.token === 'string') { await writeToken(body.token); return 'on' }
+      return 'unavailable'
+    }
+    await subscription.unsubscribe().catch(() => {}) // 服务端没登记：不留下一个永远收不到的本地订阅
+    if (response.status === 409 && attempt === 0) {
+      try { subscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key }) } catch { return 'push-service' }
+      continue
+    }
+    if (response.status === 429) return 'rate-limited'
+    if (response.status === 403 || (response.status === 400 && testCode)) return 'test-code'
     return 'unavailable'
   }
-  await subscription.unsubscribe().catch(() => {}) // 服务端没登记：不留下一个永远收不到的本地订阅
-  if (response.status === 429) return 'rate-limited'
-  if (response.status === 403 || (response.status === 400 && testCode)) return 'test-code'
   return 'unavailable'
 }
 
