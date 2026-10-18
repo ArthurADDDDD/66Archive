@@ -115,8 +115,9 @@ function SignupDialog({ onClose }: { onClose: () => void }) {
           <p id={`${id}-hint`} className="mt-2 text-meta leading-relaxed text-faint">先发一封确认邮件，点击确认后才开始提醒。</p>
           <label className="mt-5 flex cursor-pointer items-start gap-3 text-meta leading-relaxed text-muted">
             <input type="checkbox" required checked={consent} disabled={submitting} onChange={event => setConsent(event.target.checked)} className="mt-0.5 h-4 w-4 shrink-0 accent-live" />
-            <span>我愿意接收开播提醒，并已阅读<Link href="/privacy/" target="_blank" rel="noopener noreferrer" className="text-live underline underline-offset-4">隐私说明</Link>。邮箱不会公开展示。</span>
+            <span>我自愿订阅女流档案馆的开播邮件提醒，同意在检测到女流开播时接收通知，可随时退订。</span>
           </label>
+          <p className="mt-2 pl-7 text-meta leading-relaxed text-faint">女流档案馆是粉丝独立维护的非官方服务，邮箱不会公开展示。邮箱如何使用、保存与退订，见<Link href="/privacy/" target="_blank" rel="noopener noreferrer" className="text-live underline underline-offset-4">隐私说明</Link>。</p>
           <div className="mt-4 text-meta leading-relaxed" aria-live="polite" aria-atomic="true">
             {availability === 'loading' && <p className="text-faint">正在确认订阅是否开放…</p>}
             {availability === 'unavailable' && <p className="rounded-xl border border-line bg-surface/60 p-3 text-muted">开播提醒正在准备中，暂时无法提交订阅。这里填写的邮箱不会保存。</p>}
