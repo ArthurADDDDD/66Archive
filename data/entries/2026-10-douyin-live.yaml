@@ -319,3 +319,27 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-18-live-01
+  type: live
+  date: "2026-10-18"
+  title: "使命召唤最新作"
+  platform: douyin
+  duration_min: 174
+  games:
+    - 23-4
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/4631e3b897e70287ed6d9bd76c95c6bb59609c56.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1vYnV6SEAq"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV14QnV6qEFk"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
