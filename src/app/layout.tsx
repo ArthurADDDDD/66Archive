@@ -72,8 +72,14 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   icons: {
     icon: '/images/avatars/v1_2015.jpg',
-    apple: '/images/avatars/v1_2015.jpg',
+    apple: '/icons/apple-touch-icon.png',
   },
+  /**
+   * 浏览器开播通知需要它：iPhone / iPad 只有「添加到主屏幕」后从图标打开，才能接收网页通知。
+   * 这里只声明名称、图标和独立窗口显示，不带任何离线缓存（service worker 没有 fetch 处理）。
+   */
+  manifest: '/manifest.json',
+  appleWebApp: { capable: true, title: '女流档案馆', statusBarStyle: 'black-translucent' },
   /**
    * 站点级社交卡片兜底。各页用 `pageMetadata()` 覆盖成自己的标题与简介；
    * 没覆盖到的路由（404 等）至少也有图有字，不会渲染成一条裸链。
@@ -159,6 +165,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           全是 defer 的，所以这一句稳稳跑在它们前面。
         */}
         <script dangerouslySetInnerHTML={{ __html: CONTENT_BOOT_SCRIPT }} />
+        {/* 有了 manifest，Android Chrome 可能自动弹出「安装应用」横幅。本站不推销安装：拦下自动提示，浏览器菜单里的手动安装不受影响。 */}
+        <script dangerouslySetInnerHTML={{ __html: "addEventListener('beforeinstallprompt',function(e){e.preventDefault()})" }} />
         <LiveContentProvider initial={baked}>
           <LiveDocumentMeta bakedSiteName={SITE_NAME} />
           <SiteAnalytics />

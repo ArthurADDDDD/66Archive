@@ -3,6 +3,8 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
+import { LiveAlertPushSection } from './LiveAlertPushSection'
+import { readAvailability, type PushAvailability } from '@/lib/live-push'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 const SUBSCRIPTION_PATH = '/api/live-alerts/subscriptions'
@@ -15,7 +17,16 @@ function Bell({ className = '' }: { className?: string }) {
 
 export function LiveAlertSignup() {
   const [open, setOpen] = useState(false)
+  const [testCode, setTestCode] = useState('')
   const trigger = useRef<HTMLButtonElement>(null)
+  // 后台生成的一次性测试链接（#push-test=XXXX）：读出后立刻从地址栏移除，并打开弹窗。
+  useEffect(() => {
+    const code = /(?:^#|&)push-test=([A-Za-z0-9]{10})(?:&|$)/.exec(location.hash)?.[1]
+    if (!code) return
+    history.replaceState(null, '', location.pathname + location.search)
+    const timer = setTimeout(() => { setTestCode(code.toUpperCase()); setOpen(true) })
+    return () => clearTimeout(timer)
+  }, [])
   function close() {
     setOpen(false)
     requestAnimationFrame(() => trigger.current?.focus())
@@ -25,11 +36,11 @@ export function LiveAlertSignup() {
       className="ui-press inline-flex items-center gap-2 rounded-full border border-live/35 bg-live/5 px-5 py-3 text-control font-medium text-live transition-colors hover:border-live/70 hover:bg-live/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-live">
       <Bell className="h-4 w-4" />开播提醒
     </button>
-    {open && createPortal(<SignupDialog onClose={close} />, document.body)}
+    {open && createPortal(<SignupDialog onClose={close} testCode={testCode} onTestCode={setTestCode} />, document.body)}
   </>
 }
 
-function SignupDialog({ onClose }: { onClose: () => void }) {
+function SignupDialog({ onClose, testCode, onTestCode }: { onClose: () => void; testCode: string; onTestCode: (code: string) => void }) {
   const dialog = useRef<HTMLDialogElement>(null)
   const request = useRef<AbortController | null>(null)
   const busy = useRef(false)
@@ -40,6 +51,9 @@ function SignupDialog({ onClose }: { onClose: () => void }) {
   const [submitting, setSubmitting] = useState(false)
   const [confirmed, setConfirmed] = useState(false)
   const [error, setError] = useState('')
+  const [push, setPush] = useState<PushAvailability>({ enabled: false })
+  // 弹窗只在点击后于浏览器端渲染，可以直接读取显示模式。
+  const [standalone] = useState(() => window.matchMedia?.('(display-mode: standalone)').matches || (navigator as Navigator & { standalone?: boolean }).standalone === true)
 
   useEffect(() => {
     dialog.current?.showModal()
@@ -48,6 +62,8 @@ function SignupDialog({ onClose }: { onClose: () => void }) {
     document.body.style.overflow = 'hidden'
     const controller = new AbortController()
     const timeout = setTimeout(() => controller.abort(), 6000)
+    // 浏览器通知与邮件订阅相互独立：接口不可用时只是不显示这一块，邮件部分照常。
+    readAvailability(controller.signal).then(setPush).catch(() => setPush({ enabled: false }))
     fetch(`${CONTENT_ORIGIN}${SUBSCRIPTION_PATH}`, { signal: controller.signal, cache: 'no-store', credentials: 'omit' })
       .then(async response => {
         if (!response.ok) throw new Error('unavailable')
@@ -88,6 +104,8 @@ function SignupDialog({ onClose }: { onClose: () => void }) {
     }
   }
 
+  // 测试阶段只对持有测试码的设备显示（主屏幕 Web App 里可以手动输入测试码）。
+  const showPush = push.enabled && (push.mode === 'public' || !!testCode || standalone)
   return <dialog ref={dialog} aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}
     onCancel={event => { event.preventDefault(); onClose() }}
     onClick={event => { if (event.target === event.currentTarget) {
@@ -103,10 +121,12 @@ function SignupDialog({ onClose }: { onClose: () => void }) {
       <p className="text-meta text-live">下一次开播，不用碰运气。</p>
       <h2 id={`${id}-title`} className="mt-2 text-h2 font-semibold">{confirmed ? '还差一步，确认邮箱' : '开播了，给你写封信。'}</h2>
       <p id={`${id}-description`} className="mt-3 text-body leading-relaxed text-muted">
-        {confirmed ? '请打开邮件里的确认链接，之后才会收到开播提醒。如果没有找到，也看看垃圾邮件箱。' : '留下邮箱，女流在抖音开播时，我们就给你发一封提醒。只提醒开播，随时可以退订。'}
+        {confirmed ? '请打开邮件里的确认链接，之后才会收到开播提醒。如果没有找到，也看看垃圾邮件箱。' : showPush ? '女流在抖音开播时提醒你。可以开启浏览器通知，也可以留下邮箱，两种方式互不影响，随时可以关闭。' : '留下邮箱，女流在抖音开播时，我们就给你发一封提醒。只提醒开播，随时可以退订。'}
       </p>
+      {!confirmed && showPush && push.enabled && <LiveAlertPushSection availability={push} testCode={testCode} onTestCode={onTestCode} />}
       {confirmed ? <button type="button" onClick={onClose} className="ui-press mt-6 min-h-11 w-full rounded-full bg-ink px-5 py-3 text-control font-medium text-base">知道了</button> :
         <form onSubmit={submit} className="mt-6">
+          {showPush && <h3 className="mb-3 text-control font-semibold text-ink">邮件提醒</h3>}
           <label htmlFor={`${id}-email`} className="text-control font-medium">你的邮箱</label>
           <input autoFocus id={`${id}-email`} name="email" type="email" inputMode="email" autoComplete="email" required maxLength={254}
             pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@example.com" value={email}

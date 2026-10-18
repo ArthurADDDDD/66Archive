@@ -1,0 +1,23 @@
+<!-- Source for public/icons/*.png (render with scripts/icons/render-icons.mjs). Original artwork: bell + "66". -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bell" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#8BE2F6"/>
+      <stop offset="0.55" stop-color="#5BC8E8"/>
+      <stop offset="1" stop-color="#3A86DA"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.46" r="0.5">
+      <stop offset="0" stop-color="#5BC8E8" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#5BC8E8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect id="bg" width="512" height="512" rx="__RX__" fill="#12141C"/>
+  <rect width="512" height="512" rx="__RX__" fill="url(#glow)"/>
+  <g transform="translate(256 262) scale(__SCALE__) translate(-256 -262)">
+    <circle cx="256" cy="110" r="17" fill="url(#bell)"/>
+    <path d="M256 118c-70 0-116 52-116 120v62c0 26-12 46-32 62h296c-20-16-32-36-32-62v-62c0-68-46-120-116-120z" fill="url(#bell)"/>
+    <rect x="96" y="356" width="320" height="22" rx="11" fill="url(#bell)"/>
+    <path d="M222 396a34 30 0 0 0 68 0z" fill="url(#bell)"/>
+    <text x="256" y="292" text-anchor="middle" font-family="Inter Display" font-weight="800" font-size="86" letter-spacing="-5" fill="#12141C" fill-opacity="0.5">66</text>
+  </g>
+</svg>
