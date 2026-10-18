@@ -9,10 +9,10 @@
 前台请求同域接口（本地联调同样可用 `NEXT_PUBLIC_CONTENT_ORIGIN`）。所有响应 no-store；写请求要求同源 `Origin`、JSON、2 KiB 以内，并有频率限制。
 
 - `GET /api/live-alerts/push` → `{"enabled":false}`，或 `{"enabled":true,"mode":"public"|"test","publicKey":"<VAPID 公钥>"}`。
-- `POST /api/live-alerts/push/subscribe`：`{"subscription":<PushSubscription.toJSON()>,"consent":true,"client":{"browser","platform","standalone"},"testCode"?}` → 201 `{"status":"subscribed","token":"…"}`。
+- `POST /api/live-alerts/push/subscribe`：`{"subscription":<PushSubscription.toJSON()>,"consent":true,"client":{"browser","platform","standalone"},"token"?,"testCode"?}` → 201 `{"status":"subscribed","token":"…"}`。已在用的推送地址只能由原浏览器重新登记：带上当前设备令牌，或提交与登记时完全相同的订阅密钥（本机令牌丢失后的恢复）；否则返回 409、不做任何改动。前台收到 409 会换一个全新的浏览器订阅再试一次。
 - `POST /api/live-alerts/push/unsubscribe`、`/status`、`/test`、`/renew`：都要带订阅时拿到的设备令牌 `token`。只知道推送地址不能操作订阅。`/test` 给这台设备发一条测试通知（每小时最多 3 次）。
 
-设备令牌存在浏览器的 IndexedDB（`nvliu-live-alerts`）里，服务端只保存它的校验值。重新开启同一个浏览器会换发新令牌，旧令牌随即失效。
+设备令牌存在浏览器的 IndexedDB（`nvliu-live-alerts`）里，服务端只保存它的校验值。每次重新登记都会换发新令牌，旧令牌随即失效。
 
 只接受各浏览器厂商推送服务的地址（Google FCM、Mozilla、Apple、Microsoft WNS），按主机名精确匹配。
 
