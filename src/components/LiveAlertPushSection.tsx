@@ -7,17 +7,23 @@ type Ready = Extract<PushAvailability, { enabled: true }>
 type State = 'checking' | 'off' | 'on' | 'denied' | 'push-service' | 'error' | 'needs-code' | Exclude<PushEnvironment['kind'], 'supported'>
 
 const MESSAGES: Partial<Record<State, string>> = {
-  'in-app': '微信、QQ 等应用里的浏览器不支持网页通知。点右上角「…」选择「在浏览器中打开」后再开启，或使用下面的邮件提醒。',
+  'in-app': '微信、QQ 等应用里的浏览器不支持网页通知。点右上角「…」选择「在浏览器中打开」后再开启，或改用邮件提醒。',
   'ios-install': 'iPhone / iPad 需要先把本站添加到主屏幕：在 Safari 点「分享」→「添加到主屏幕」，再从主屏幕图标打开本站，回到这里开启。需要 iOS 16.4 或更高版本。',
-  'ios-old': '网页通知需要 iOS / iPadOS 16.4 或更高版本。可以使用下面的邮件提醒。',
-  unsupported: '这个浏览器不支持网页通知，可以使用下面的邮件提醒。',
+  'ios-old': '网页通知需要 iOS / iPadOS 16.4 或更高版本。可以改用邮件提醒。',
+  unsupported: '这个浏览器不支持网页通知，可以改用邮件提醒。',
   insecure: '当前连接不支持网页通知。',
   denied: '本站的通知权限已被关闭。请在浏览器的网站设置里允许 nvliu.wiki 发送通知，然后点「重新检查」。',
-  'push-service': '没能连上这个浏览器的推送服务。部分网络环境下 Chrome 等浏览器无法使用推送，可以换用 Edge、Firefox、Safari，或使用下面的邮件提醒。',
+  'push-service': '没能连上这个浏览器的推送服务。部分网络环境下 Chrome 等浏览器无法使用推送，可以换用 Edge、Firefox、Safari，或改用邮件提醒。',
   error: '浏览器通知暂时不可用，请稍后再试。',
 }
 
-export function LiveAlertPushSection({ availability, testCode, onTestCode }: { availability: Ready; testCode: string; onTestCode: (code: string) => void }) {
+export function LiveAlertPushSection({ availability, testCode, onTestCode, onSubscribedChange, onUseEmail }: {
+  availability: Ready
+  testCode: string
+  onTestCode: (code: string) => void
+  onSubscribedChange?: (subscribed: boolean) => void
+  onUseEmail?: () => void
+}) {
   const id = useId()
   const env = useRef<PushEnvironment | null>(null), busy = useRef(false)
   const [state, setState] = useState<State>('checking')
@@ -38,6 +44,12 @@ export function LiveAlertPushSection({ availability, testCode, onTestCode }: { a
     void inspect().then(next => { if (current) setState(next) })
     return () => { current = false }
   }, [testCode]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 父级 Tab 只显示轻量状态；检查中或偶发错误时保留上一次确定的结果。
+  useEffect(() => {
+    if (state === 'on') onSubscribedChange?.(true)
+    else if (state !== 'checking' && state !== 'error') onSubscribedChange?.(false)
+  }, [state, onSubscribedChange])
 
   async function run(name: 'enable' | 'disable' | 'test', task: () => Promise<void>) {
     if (busy.current) return
@@ -65,9 +77,10 @@ export function LiveAlertPushSection({ availability, testCode, onTestCode }: { a
   })
 
   const message = MESSAGES[state]
-  return <section aria-labelledby={`${id}-title`} className="mt-6 rounded-2xl border border-line bg-surface/60 p-4">
+  const offerEmail = !!onUseEmail && state !== 'checking' && state !== 'off' && state !== 'on' && state !== 'needs-code'
+  return <section aria-labelledby={`${id}-title`} className="text-ink">
     <h3 id={`${id}-title`} className="text-control font-semibold text-ink">浏览器通知</h3>
-    <p className="mt-1 text-meta leading-relaxed text-muted">{state === 'on' ? '这台设备已开启，开播时会收到一条通知。' : '不需要邮箱或账号。只对当前浏览器生效，换设备或浏览器需要分别开启。'}</p>
+    <p className="mt-1 text-control leading-relaxed text-muted">{state === 'on' ? '这台设备已开启，开播时会收到一条通知。' : '无需邮箱，开播时直接通过当前设备的系统通知提醒你。'}</p>
     <div aria-live="polite" aria-atomic="true" className="text-meta leading-relaxed">
       {state === 'checking' && <p className="mt-3 text-faint">正在检查这个浏览器…</p>}
       {message && <p className="mt-3 text-muted">{message}</p>}
@@ -83,12 +96,13 @@ export function LiveAlertPushSection({ availability, testCode, onTestCode }: { a
       <button type="button" onClick={enable} disabled={!!action} className="ui-press mt-3 min-h-11 w-full rounded-full bg-live px-5 py-2.5 text-control font-semibold text-base disabled:cursor-not-allowed disabled:opacity-40">
         {action === 'enable' ? '正在开启…' : state === 'push-service' ? '重试' : '开启浏览器通知'}
       </button>
-      <p className="mt-2 text-meta leading-relaxed text-faint">点击后浏览器会询问是否允许通知。开启即表示同意在检测到女流开播时，这台设备收到一条通知；可随时在这里关闭。</p>
+      <p className="mt-2 text-meta leading-relaxed text-faint">只对当前浏览器生效，可随时关闭。点击后浏览器会询问是否允许通知。</p>
     </>}
     {state === 'on' && <div className="mt-3 flex flex-wrap gap-2">
       <button type="button" onClick={test} disabled={!!action} className="ui-press min-h-11 flex-1 rounded-full border border-live/40 px-4 text-control text-live disabled:opacity-40">{action === 'test' ? '正在请求…' : '发送测试通知'}</button>
       <button type="button" onClick={disable} disabled={!!action} className="ui-press min-h-11 flex-1 rounded-full border border-line px-4 text-control text-muted disabled:opacity-40">{action === 'disable' ? '正在关闭…' : '关闭'}</button>
     </div>}
     {state === 'denied' && <button type="button" onClick={recheck} className="ui-press mt-3 min-h-11 rounded-full border border-line px-4 text-control text-muted">重新检查</button>}
+    {offerEmail && <button type="button" onClick={onUseEmail} className="ui-press mt-2 min-h-11 w-full rounded-full border border-line px-4 text-control text-muted hover:border-live/50 hover:text-ink">改用邮件提醒</button>}
   </section>
 }
