@@ -298,3 +298,24 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-17-live-01
+  type: live
+  date: "2026-10-17"
+  title: "和炮炮一起玩 使命召唤23 现代战争4 将军真要南下了"
+  platform: douyin
+  duration_min: 176
+  games:
+    - chenxingzhixu
+    - 23-4
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/bb7c3b5fa01c45db6ccf0927a06ead48ef2e51a1.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1tyJq6iE3V"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
