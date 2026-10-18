@@ -7,7 +7,7 @@ export function GameTimelineChapters({chapters, names, reviewed, coverage}: {
 }) {
   return <section className="site-container px-page py-10 sm:py-14" aria-labelledby="game-chapters-title" data-testid="recording-game-chapters">
     <h2 id="game-chapters-title" className="scroll-mt-24 text-h3 font-semibold text-ink"><SiteText id="entry-game-chapters-title" /></h2>
-    <p className="mt-2 max-w-3xl text-meta leading-relaxed text-muted"><SiteText id="entry-game-chapters-hint" vars={{ platform: chapters[0]?.jump?.platform === 'bilibili' ? 'B站' : 'AcFun', reviewed }} />{coverage === 'complete' ? '基准录像覆盖整场。' : '仅覆盖现存录像，时长为下限。'}</p>
+    <p className="mt-2 max-w-3xl text-meta leading-relaxed text-muted"><SiteText id="entry-game-chapters-hint" vars={{ platform: chapters[0]?.jump?.platform === 'bilibili' ? 'B站' : 'AcFun', reviewed }} />{coverage === 'complete' ? '基准录像覆盖整场。' : '仅覆盖现存录像，时长为下限。'}同款游戏中途休息计入同一环节。</p>
     <ol className="mt-5 divide-y divide-line rounded-xl border border-line px-4 sm:px-6">
       {chapters.map(c=><li key={c.index} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">

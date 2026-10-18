@@ -24,9 +24,23 @@ assert.equal(timelineTotals([t]).verifiedSec,1800)
 const notScanned={...t,spans:t.spans.map(s=>({...s,scanned:false}))}
 assert.equal(timelineTotals([notScanned]).verifiedSec,0)
 const child={...t,spans:t.spans.map(s=>({...s,game:'maplestory-classic'}))}
-assert.equal(chaptersForGame(child,'maplestory').length,3)
-assert.equal(chaptersForGame(child,'maplestory-classic').length,3)
+assert.equal(chaptersForGame(child,'maplestory').length,1)
+assert.equal(chaptersForGame(child,'maplestory-classic').length,1)
 assert.equal(timelineTotals([child]).verifiedSec,1800)
+const rest:GameTimeline={...t,spans:[
+  {...t.spans[0],game:'a'},
+  {page:1,at:'00:05:00',kind:'break',precision:'approx',evidence:'human_watch'},
+  {...t.spans[2],game:'a'},
+]}
+assert.equal(gameChapters(rest).length,1)
+assert.equal(chaptersForGame(rest,'a').length,1)
+assert.equal(gameChapters(rest)[0].endPage,2)
+assert.equal(gameChapters(rest)[0].endAt,'00:15:00')
+assert.equal(gameChapters(rest)[0].jump?.page,1)
+assert.equal(gameChapters(rest)[0].verified,false)
+assert.equal(timelineTotals([rest]).gameSec,1800)
+assert.equal(timelineTotals([rest]).breakSec,0)
+assert.equal(timelineTotals([rest]).verifiedSec,1192)
 const a=gameChapters({...t,basis:'https://www.acfun.cn/v/ac123'})[2]
 assert.equal(a.jump?.url,'https://www.acfun.cn/v/ac123_2')
 assert.equal(a.jump?.seeks,false)
@@ -45,6 +59,12 @@ try {
   const ds=getDataset();const reviewed=getGameTimelines()
   assert.ok(reviewed.length>0)
   assert.deepEqual(checkGameTimelines(ds.entries,reviewed).errors,[])
+  const may6=reviewed.find(t=>t.entry==='2021-05-06-live-01')
+  if(may6) {
+    assert.equal(may6.spans.length,3,'原人工跨度保持不变')
+    assert.equal(chaptersForGame(may6,'wonder-boy-asha').length,1)
+    assert.equal(timelineTotals([may6]).breakSec,0)
+  }
   const loop=reviewed.find(t=>t.entry==='2021-07-30-live-02')
   if(loop) assert.equal(chaptersForGame(loop,'naraka-bladepoint').length,2)
 
