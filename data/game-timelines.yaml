@@ -493,3 +493,4326 @@
     evidence: human_watch
     scanned: true
   reviewed: '2026-10-17'
+- entry: 2015-01-23-live-01
+  basis: https://www.acfun.cn/v/ac1696480
+  coverage: partial
+  parts:
+  - page: 1
+    id: '1879521'
+    duration_sec: 8930.0
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: rhythm-heaven
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:32:50
+    game: lumino-city
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 02:28:40
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2015-01-29-live-01
+  basis: https://www.bilibili.com/video/BV1Gx411A7NC
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 3014343
+    duration_sec: 1176
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:00:31
+    game: biantai-rensheng
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:19:14
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2015-02-09-live-01
+  basis: https://www.acfun.cn/v/ac1736317
+  coverage: partial
+  parts:
+  - page: 1
+    id: '1937301'
+    duration_sec: 9401.0
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: dont-escape-2
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:36:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:41:00
+    game: dont-escape
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:05:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:10:00
+    game: new-super-mario-bros-u
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2015-02-10-live-01
+  basis: https://www.acfun.cn/v/ac1762715
+  coverage: complete
+  parts:
+  - page: 1
+    id: '1978445'
+    duration_sec: 6933.778
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: just-dance
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:22:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:34:00
+    game: super-mario-3d-world
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:28:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:31:00
+    game: taiko-no-tatsujin
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:55:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2015-07-06-live-01
+  basis: https://www.acfun.cn/v/ac2010055
+  coverage: partial
+  parts:
+  - page: 1
+    id: '2366169'
+    duration_sec: 198.0
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:00:05
+    game: besiege
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:03:04
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2015-09-09-live-02
+  basis: https://www.acfun.cn/v/ac2188498
+  coverage: complete
+  parts:
+  - page: 1
+    id: '2649271'
+    duration_sec: 4200.13
+  - page: 2
+    id: '2649283'
+    duration_sec: 4512.08
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: rusty-lake
+    precision: part
+    evidence: part_title
+  - page: 1
+    at: 01:09:55
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:55
+    game: benzuo-dao-yao-kankan-ni-neng-huo-jitian
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:26:55
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:27:15
+    game: ershiyi-shiji-shengming-kexue
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:40:40
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:40:45
+    game: my-teacher-is-a-bear
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2016-01-04-live-02
+  basis: https://www.acfun.cn/v/ac2440577
+  coverage: partial
+  parts:
+  - page: 1
+    id: '3056180'
+    duration_sec: 3927.8
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: mingyun-jiaocha-de-kedian
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2016-02-20-live-01
+  basis: https://www.acfun.cn/v/ac2553531
+  coverage: partial
+  parts:
+  - page: 1
+    id: '3213185'
+    duration_sec: 8104.0
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:01:10
+    game: street-fighter-v
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2016-08-17-live-03
+  basis: https://www.bilibili.com/video/BV1gs411k7r2
+  coverage: partial
+  parts:
+  - page: 1
+    id: 9539529
+    duration_sec: 3984
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:14:27
+    game: tricky-towers
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:05:10
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2017-01-18-live-01
+  basis: https://www.bilibili.com/video/BV1Ss411h7Un
+  coverage: partial
+  parts:
+  - page: 1
+    id: 13296710
+    duration_sec: 1414
+  - page: 2
+    id: 13296711
+    duration_sec: 2897
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: geometry-dash
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-02-17-live-01
+  basis: https://www.bilibili.com/video/BV1cx411y7QX
+  coverage: partial
+  parts:
+  - page: 1
+    id: 14284226
+    duration_sec: 4086
+  - page: 2
+    id: 14284227
+    duration_sec: 4787
+  - page: 3
+    id: 14284228
+    duration_sec: 3202
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: geometry-dash
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-04-04-live-01
+  basis: https://www.bilibili.com/video/BV1Ux411Q7Cd
+  coverage: partial
+  parts:
+  - page: 1
+    id: 15922861
+    duration_sec: 2432
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:10:25
+    game: 1-2-switch
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2017-06-05-live-01
+  basis: https://www.bilibili.com/video/BV17x411a7n9
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 18370093
+    duration_sec: 2564
+  - page: 2
+    id: 18370094
+    duration_sec: 2614
+  - page: 3
+    id: 18370095
+    duration_sec: 2613
+  - page: 4
+    id: 18370096
+    duration_sec: 1135
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:20:19
+    game: 1-2-switch
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:16:42
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2017-08-09-live-01
+  basis: https://www.bilibili.com/video/BV1vx411n7jt
+  coverage: complete
+  parts:
+  - page: 1
+    id: 21605450
+    duration_sec: 6456
+  - page: 2
+    id: 21605451
+    duration_sec: 3051
+  - page: 3
+    id: 21605452
+    duration_sec: 3052
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:53:14
+    precision: approx
+    evidence: thumbnails
+    game: overwatch
+  - page: 1
+    at: 01:04:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:14:00
+    game: ibb-and-obb
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:41:35
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:10:20
+    game: pubg
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2017-09-20-live-01
+  basis: https://www.bilibili.com/video/BV1Lx411x7bS
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 23875036
+    duration_sec: 3482
+  - page: 2
+    id: 23875035
+    duration_sec: 914
+  - page: 3
+    id: 23875037
+    duration_sec: 3443
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: cook-serve-delicious
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: euro-truck-simulator-2
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-10-11-live-01
+  basis: https://www.bilibili.com/video/BV1cx411g7DD
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 24915657
+    duration_sec: 2061
+  - page: 2
+    id: 24915658
+    duration_sec: 3336
+  - page: 3
+    id: 24915659
+    duration_sec: 5101
+  - page: 4
+    id: 24915660
+    duration_sec: 5102
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: euro-truck-simulator-2
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-11-10-live-01
+  basis: https://www.bilibili.com/video/BV1ux41177ak
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 26454892
+    duration_sec: 1131
+  - page: 2
+    id: 26454893
+    duration_sec: 574
+  - page: 3
+    id: 26454894
+    duration_sec: 4533
+  - page: 4
+    id: 26454895
+    duration_sec: 4535
+  - page: 5
+    id: 26454896
+    duration_sec: 4535
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: pubg
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: super-mario-odyssey
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-11-11-live-01
+  basis: https://www.bilibili.com/video/BV17x41177tn
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 26502496
+    duration_sec: 1231
+  - page: 2
+    id: 26502497
+    duration_sec: 1550
+  - page: 3
+    id: 26502498
+    duration_sec: 5184
+  - page: 4
+    id: 26502499
+    duration_sec: 5183
+  - page: 5
+    id: 26502500
+    duration_sec: 5184
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: pubg
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: super-mario-odyssey
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-11-17-live-01
+  basis: https://www.bilibili.com/video/BV1yx411L7F4
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 26789547
+    duration_sec: 1874
+  - page: 2
+    id: 26789548
+    duration_sec: 3414
+  - page: 3
+    id: 26789549
+    duration_sec: 4400
+  - page: 4
+    id: 26789550
+    duration_sec: 4401
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: getting-over-it
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: super-mario-odyssey
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-11-22-live-01
+  basis: https://www.bilibili.com/video/BV1zx411V7UA
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 27041908
+    duration_sec: 1666
+  - page: 2
+    id: 27041909
+    duration_sec: 1954
+  - page: 3
+    id: 27041910
+    duration_sec: 2237
+  - page: 4
+    id: 27041911
+    duration_sec: 5081
+  - page: 5
+    id: 27041912
+    duration_sec: 5082
+  - page: 6
+    id: 27041913
+    duration_sec: 5083
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 1
+    at: 00:19:30
+    game: tiny-toon-busters-hidden-treasure
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-12-08-live-01
+  basis: https://www.bilibili.com/video/BV1xW411h7Zg
+  coverage: complete
+  parts:
+  - page: 1
+    id: 27952370
+    duration_sec: 4300
+  - page: 2
+    id: 27972526
+    duration_sec: 6247
+  - page: 3
+    id: 27952372
+    duration_sec: 5375
+  - page: 4
+    id: 27952373
+    duration_sec: 4537
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:04:18
+    game: ice-lakes
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:02:36
+    game: tracks
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 01:29:24
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:19:54
+    game: pubg
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 01:15:02
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2017-12-09-live-01
+  basis: https://www.bilibili.com/video/BV14W411h7xX
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 27961095
+    duration_sec: 1140
+  - page: 2
+    id: 27961096
+    duration_sec: 4056
+  - page: 3
+    id: 27961097
+    duration_sec: 7834
+  - page: 4
+    id: 27961098
+    duration_sec: 7833
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: murder-mystery
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2017-12-13-live-01
+  basis: https://www.bilibili.com/video/BV19W411h7bR
+  coverage: partial
+  parts:
+  - page: 1
+    id: 28158144
+    duration_sec: 2991
+  - page: 2
+    id: 28158145
+    duration_sec: 3598
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: pubg
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-03-31-live-01
+  basis: https://www.bilibili.com/video/BV1mW411u7oK
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 35331546
+    duration_sec: 2803
+  - page: 2
+    id: 35331547
+    duration_sec: 7184
+  - page: 3
+    id: 35331548
+    duration_sec: 3004
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: mr-blackface
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-04-03-live-01
+  basis: https://www.bilibili.com/video/BV12W411T7mY
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 35586344
+    duration_sec: 593
+  - page: 2
+    id: 35586345
+    duration_sec: 7947
+  - page: 3
+    id: 35586346
+    duration_sec: 5876
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: puyo-puyo-tetris
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: cave-story
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-04-13-live-01
+  basis: https://www.bilibili.com/video/BV15W411L7oe
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 36437797
+    duration_sec: 1045
+  - page: 2
+    id: 36437798
+    duration_sec: 5904
+  - page: 3
+    id: 36437799
+    duration_sec: 7873
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: old-mans-journey
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: the-lives
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-05-10-live-01
+  basis: https://www.bilibili.com/video/BV1fp411f7eU
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 38722764
+    duration_sec: 10550
+  - page: 2
+    id: 38722765
+    duration_sec: 4195
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:15:30
+    game: beat-saber
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:28:01
+    game: ice-lakes
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 02:26:10
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: rec-room
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:40
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:24:30
+    game: beat-saber
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-06-22-live-01
+  basis: https://www.bilibili.com/video/BV1Ws41177oL
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 43137462
+    duration_sec: 1212
+  - page: 2
+    id: 43137463
+    duration_sec: 1375
+  - page: 3
+    id: 43137464
+    duration_sec: 8461
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: comedy-night
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: hand-simulator
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-06-30-live-01
+  basis: https://www.bilibili.com/video/BV1Us4115723
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 44302018
+    duration_sec: 1282
+  - page: 2
+    id: 44302019
+    duration_sec: 3851
+  - page: 3
+    id: 44302020
+    duration_sec: 5299
+  - page: 4
+    id: 44302021
+    duration_sec: 5298
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: farm-together
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: justice-online
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-07-31-live-01
+  basis: https://www.bilibili.com/video/BV15s411w7g7
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 48747552
+    duration_sec: 1743
+  - page: 2
+    id: 48747553
+    duration_sec: 5293
+  - page: 3
+    id: 48747554
+    duration_sec: 5166
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: bomb-chicken
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: justice-online
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-08-09-live-01
+  basis: https://www.bilibili.com/video/BV1Rs411M7bS
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 50191254
+    duration_sec: 1211
+  - page: 2
+    id: 50195741
+    duration_sec: 8042
+  - page: 3
+    id: 50192451
+    duration_sec: 892
+  - page: 4
+    id: 50247340
+    duration_sec: 1260
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:19:29
+    game: overcooked-2
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    game: one-hand-clapping
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-08-17-live-01
+  basis: https://www.bilibili.com/video/BV1hW411X7dk
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 51543179
+    duration_sec: 1502
+  - page: 2
+    id: 51549715
+    duration_sec: 5702
+  - page: 3
+    id: 51574722
+    duration_sec: 7460
+  - page: 4
+    id: 51575048
+    duration_sec: 5772
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: minecraft
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:54
+    game: no-mans-sky
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-08-21-live-01
+  basis: https://www.bilibili.com/video/BV1qW411Q7t5
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 52198412
+    duration_sec: 1841
+  - page: 2
+    id: 52201072
+    duration_sec: 8446
+  - page: 3
+    id: 52200486
+    duration_sec: 5128
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: minecraft
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:35
+    game: starbound
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-09-17-live-01
+  basis: https://www.bilibili.com/video/BV12W411k7Ec
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 55853036
+    duration_sec: 1221
+  - page: 2
+    id: 55869444
+    duration_sec: 6205
+  - page: 3
+    id: 55868741
+    duration_sec: 8355
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:22:24
+    game: witch-it
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:17:30
+    game: 39-days-to-mars
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-10-08-live-01
+  basis: https://www.bilibili.com/video/BV1VW41117ds
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 58519230
+    duration_sec: 1212
+  - page: 2
+    id: 58519357
+    duration_sec: 3010
+  - page: 3
+    id: 58521872
+    duration_sec: 9400
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:19:55
+    game: jian-ai
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    game: old-school-musical
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-11-02-live-01
+  basis: https://www.bilibili.com/video/BV1ub411w7tQ
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 61568936
+    duration_sec: 964
+  - page: 2
+    id: 61573124
+    duration_sec: 6797
+  - page: 3
+    id: 61574197
+    duration_sec: 6799
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:36
+    game: lifeafter
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:42:38
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 01:17:02
+    game: red-dead-redemption-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-11-16-live-01
+  basis: https://www.bilibili.com/video/BV1Tt411m7Nw
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 63377957
+    duration_sec: 1327
+  - page: 2
+    id: 63379653
+    duration_sec: 3965
+  - page: 3
+    id: 63379438
+    duration_sec: 3246
+  - page: 4
+    id: 63381974
+    duration_sec: 8876
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: super-mario-party
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:01:24
+    game: red-dead-redemption-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2018-12-01-live-01
+  basis: https://www.bilibili.com/video/BV19t411X748
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 65374878
+    duration_sec: 2351
+  - page: 2
+    id: 65379916
+    duration_sec: 6897
+  - page: 3
+    id: 65380441
+    duration_sec: 6896
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:02:47
+    game: doudizhu
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-12-07-live-01
+  basis: https://www.bilibili.com/video/BV1qt411S726
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 66176652
+    duration_sec: 1841
+  - page: 2
+    id: 66180439
+    duration_sec: 3157
+  - page: 3
+    id: 66181773
+    duration_sec: 3158
+  - page: 4
+    id: 66182561
+    duration_sec: 3158
+  - page: 5
+    id: 66183085
+    duration_sec: 3158
+  - page: 6
+    id: 66183128
+    duration_sec: 3157
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:17:16
+    game: doudizhu
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-12-11-live-01
+  basis: https://www.bilibili.com/video/BV1dt411q7Mg
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 66705328
+    duration_sec: 1681
+  - page: 2
+    id: 66705306
+    duration_sec: 875
+  - page: 3
+    id: 66707022
+    duration_sec: 10933
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:12:00
+    game: doudizhu
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: super-smash-bros-ultimate
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2018-12-17-live-01
+  basis: https://www.bilibili.com/video/BV16t411e7tq
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 67501073
+    duration_sec: 1004
+  - page: 2
+    id: 67485397
+    duration_sec: 3315
+  - page: 3
+    id: 67486921
+    duration_sec: 3315
+  - page: 4
+    id: 67486766
+    duration_sec: 3315
+  - page: 5
+    id: 67487185
+    duration_sec: 3315
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:06:53
+    game: doudizhu
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: farming-simulator-19
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-01-07-live-01
+  basis: https://www.bilibili.com/video/BV13t411s7yz
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 70570393
+    duration_sec: 221
+  - page: 2
+    id: 70570520
+    duration_sec: 441
+  - page: 3
+    id: 70570576
+    duration_sec: 2054
+  - page: 4
+    id: 70570178
+    duration_sec: 2171
+  - page: 5
+    id: 70570030
+    duration_sec: 2173
+  - page: 6
+    id: 70574625
+    duration_sec: 3145
+  - page: 7
+    id: 70576185
+    duration_sec: 3145
+  - page: 8
+    id: 70576440
+    duration_sec: 3145
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:24
+    game: human-fall-flat
+    precision: approx
+    evidence: thumbnails
+  - page: 6
+    at: 00:00:00
+    game: equilinox
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-03-01-live-01
+  basis: https://www.bilibili.com/video/BV1Ub411b7op
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 78912562
+    duration_sec: 1537
+  - page: 2
+    id: 78912260
+    duration_sec: 1636
+  - page: 3
+    id: 78917551
+    duration_sec: 4107
+  - page: 4
+    id: 78917301
+    duration_sec: 4109
+  - page: 5
+    id: 78917611
+    duration_sec: 4107
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:17:24
+    game: trials-rising
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: mages-of-mystralia
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-03-02-live-01
+  basis: https://www.bilibili.com/video/BV1jb411B7xA
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 79080157
+    duration_sec: 1595
+  - page: 2
+    id: 79081922
+    duration_sec: 2387
+  - page: 3
+    id: 79086652
+    duration_sec: 1275
+  - page: 4
+    id: 79095689
+    duration_sec: 3412
+  - page: 5
+    id: 79101772
+    duration_sec: 3411
+  - page: 6
+    id: 79103217
+    duration_sec: 3412
+  - page: 7
+    id: 79103442
+    duration_sec: 3411
+  - page: 8
+    id: 79099412
+    duration_sec: 3412
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: mages-of-mystralia
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: trials-rising
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-03-04-live-01
+  basis: https://www.bilibili.com/video/BV1yb411i7Z3
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 79424258
+    duration_sec: 664
+  - page: 2
+    id: 79427632
+    duration_sec: 2867
+  - page: 3
+    id: 79428996
+    duration_sec: 2867
+  - page: 4
+    id: 79429613
+    duration_sec: 2867
+  - page: 5
+    id: 79430355
+    duration_sec: 3230
+  - page: 6
+    id: 79430164
+    duration_sec: 3231
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: bloody-spell
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: trials-rising
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-03-16-live-01
+  basis: https://www.bilibili.com/video/BV1db411J7pH
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 81424174
+    duration_sec: 3836
+  - page: 2
+    id: 81424011
+    duration_sec: 3836
+  - page: 3
+    id: 81425690
+    duration_sec: 3246
+  - page: 4
+    id: 81427937
+    duration_sec: 3245
+  - page: 5
+    id: 81427938
+    duration_sec: 3247
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: sekiro
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: trials-rising
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-03-29-live-01
+  basis: https://www.bilibili.com/video/BV1Nb41147ZY
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 83558561
+    duration_sec: 1965
+  - page: 2
+    id: 83564174
+    duration_sec: 2871
+  - page: 3
+    id: 83564165
+    duration_sec: 2872
+  - page: 4
+    id: 83563313
+    duration_sec: 4172
+  - page: 5
+    id: 83564736
+    duration_sec: 4172
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: sekiro
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: unheard
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-04-06-live-01
+  basis: https://www.bilibili.com/video/BV1mb411M7pU
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 84976371
+    duration_sec: 2227
+  - page: 2
+    id: 84979813
+    duration_sec: 4427
+  - page: 3
+    id: 84986059
+    duration_sec: 2951
+  - page: 4
+    id: 84986262
+    duration_sec: 2951
+  - page: 5
+    id: 84986295
+    duration_sec: 2950
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: unheard
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: risk-of-rain-2
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-04-10-live-01
+  basis: https://www.bilibili.com/video/BV1Eb411M78s
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 85673996
+    duration_sec: 1677
+  - page: 2
+    id: 85677409
+    duration_sec: 3296
+  - page: 3
+    id: 85680525
+    duration_sec: 3296
+  - page: 4
+    id: 85680435
+    duration_sec: 3295
+  - page: 5
+    id: 85680384
+    duration_sec: 3297
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:42
+    game: vacation-simulator
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:28:46
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:29:04
+    game: vacation-simulator
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    game: derail-valley
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:20:49
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:26:23
+    game: beat-saber
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2019-05-10-live-02
+  basis: https://www.bilibili.com/video/BV1U4411Y7LP
+  coverage: partial
+  parts:
+  - page: 1
+    id: 91105591
+    duration_sec: 3568
+  - page: 2
+    id: 91104429
+    duration_sec: 3570
+  - page: 3
+    id: 91105195
+    duration_sec: 2767
+  - page: 4
+    id: 91137432
+    duration_sec: 4008
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: mist-detective
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:35:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:05
+    game: rento
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:57:16
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2019-06-10-live-01
+  basis: https://www.bilibili.com/video/BV194411N7Lv
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 96532266
+    duration_sec: 2044
+  - page: 2
+    id: 96533760
+    duration_sec: 2581
+  - page: 3
+    id: 96534455
+    duration_sec: 2581
+  - page: 4
+    id: 96535754
+    duration_sec: 3561
+  - page: 5
+    id: 96539409
+    duration_sec: 3644
+  - page: 6
+    id: 96542352
+    duration_sec: 3574
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: cooking-simulator
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: totally-accurate-battle-simulator
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-06-22-live-01
+  basis: https://www.bilibili.com/video/BV1y4411u7TP
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 98700744
+    duration_sec: 961
+  - page: 2
+    id: 98694227
+    duration_sec: 2394
+  - page: 3
+    id: 98694754
+    duration_sec: 2393
+  - page: 4
+    id: 98695452
+    duration_sec: 2044
+  - page: 5
+    id: 98696441
+    duration_sec: 5161
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: sky-children-of-the-light
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: cadence-of-hyrule
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-07-10-live-01
+  basis: https://www.bilibili.com/video/BV1ex411f7Yt
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 102286945
+    duration_sec: 651
+  - page: 2
+    id: 102298469
+    duration_sec: 3126
+  - page: 3
+    id: 102300946
+    duration_sec: 4379
+  - page: 4
+    id: 102301244
+    duration_sec: 4380
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: sky-noon
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: human-fall-flat
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-08-15-live-01
+  basis: https://www.bilibili.com/video/BV1K4411S7tp
+  coverage: partial
+  parts:
+  - page: 1
+    id: 111003563
+    duration_sec: 1572
+  - page: 2
+    id: 111008297
+    duration_sec: 5644
+  - page: 3
+    id: 111005863
+    duration_sec: 1801
+  - page: 4
+    id: 111016226
+    duration_sec: 5409
+  - page: 5
+    id: 111013032
+    duration_sec: 3712
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: unheard
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2019-08-29-live-01
+  basis: https://www.bilibili.com/video/BV1i4411274R
+  coverage: partial
+  parts:
+  - page: 1
+    id: 114588016
+    duration_sec: 2631
+  - page: 2
+    id: 114616108
+    duration_sec: 3726
+  - page: 3
+    id: 114616847
+    duration_sec: 3725
+  - page: 4
+    id: 114616848
+    duration_sec: 3725
+  - page: 5
+    id: 114615780
+    duration_sec: 2657
+  - page: 6
+    id: 114615546
+    duration_sec: 2658
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: heave-ho
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:01:24
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2019-10-18-live-01
+  basis: https://www.bilibili.com/video/BV1uE411k7gR
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 124175260
+    duration_sec: 1545
+  - page: 2
+    id: 124173649
+    duration_sec: 362
+  - page: 3
+    id: 124181574
+    duration_sec: 2881
+  - page: 4
+    id: 124176205
+    duration_sec: 2024
+  - page: 5
+    id: 124186890
+    duration_sec: 3602
+  - page: 6
+    id: 124184029
+    duration_sec: 2701
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: ring-fit-adventure
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: sos-fomt
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2019-11-22-live-01
+  basis: https://www.bilibili.com/video/BV1WJ411d7Gt
+  coverage: partial
+  parts:
+  - page: 1
+    id: 131116371
+    duration_sec: 3913
+  - page: 2
+    id: 131112203
+    duration_sec: 3292
+  - page: 3
+    id: 131115753
+    duration_sec: 3379
+  - page: 4
+    id: 131116247
+    duration_sec: 3380
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: tangle-tower
+    precision: part
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2019-12-20-live-01
+  basis: https://www.bilibili.com/video/BV1WJ41147ne
+  coverage: complete
+  parts:
+  - page: 1
+    id: 137136394
+    duration_sec: 3024
+  - page: 2
+    id: 137136324
+    duration_sec: 3026
+  - page: 3
+    id: 137132125
+    duration_sec: 1465
+  - page: 4
+    id: 137136688
+    duration_sec: 3354
+  - page: 5
+    id: 137136795
+    duration_sec: 3355
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: feel-the-snow
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:24:24
+    game: ashen
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-03-13-live-01
+  basis: https://www.bilibili.com/video/BV1rE41137T9
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 164471884
+    duration_sec: 1856
+  - page: 2
+    id: 164472609
+    duration_sec: 1860
+  - page: 3
+    id: 164489718
+    duration_sec: 2315
+  - page: 4
+    id: 164489399
+    duration_sec: 2316
+  - page: 5
+    id: 164489814
+    duration_sec: 2320
+  - page: 6
+    id: 164498182
+    duration_sec: 2317
+  - page: 7
+    id: 164499486
+    duration_sec: 2315
+  - page: 8
+    id: 164506299
+    duration_sec: 1786
+  - page: 9
+    id: 164507018
+    duration_sec: 1781
+  - page: 10
+    id: 164506928
+    duration_sec: 1780
+  - page: 11
+    id: 164508195
+    duration_sec: 1783
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: ori-2
+    precision: part
+    evidence: part_title
+  - page: 7
+    at: 00:34:13
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 7
+    at: 00:34:51
+    game: nioh-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-04-02-live-01
+  basis: https://www.acfun.cn/v/ac14432591
+  coverage: partial
+  parts:
+  - page: 1
+    id: '12177349'
+    duration_sec: 2103.731
+  - page: 2
+    id: '12177350'
+    duration_sec: 2105.933
+  - page: 3
+    id: '12175726'
+    duration_sec: 2105.816
+  - page: 4
+    id: '12177484'
+    duration_sec: 2106.933
+  - page: 5
+    id: '12175503'
+    duration_sec: 1908.901
+  - page: 6
+    id: '12175506'
+    duration_sec: 1907.301
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 6
+    at: 00:11:25
+    game: animal-crossing-nh
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-06-02-live-01
+  basis: https://www.bilibili.com/video/BV1ha4y1v7XM
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 197993450
+    duration_sec: 6810
+  - page: 2
+    id: 198004481
+    duration_sec: 6812
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: poly-bridge-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-06-05-live-01
+  basis: https://www.bilibili.com/video/BV1az4y197rv
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 199017346
+    duration_sec: 763
+  - page: 2
+    id: 199036106
+    duration_sec: 3524
+  - page: 3
+    id: 199035998
+    duration_sec: 3525
+  - page: 4
+    id: 199032263
+    duration_sec: 2160
+  - page: 5
+    id: 199031654
+    duration_sec: 2162
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: poly-bridge-2
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:52
+    game: streets-of-rage-4
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-06-12-live-01
+  basis: https://www.bilibili.com/video/BV1kt4y1X7wQ
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 201380077
+    duration_sec: 3544
+  - page: 2
+    id: 201379348
+    duration_sec: 3547
+  - page: 3
+    id: 201379725
+    duration_sec: 3552
+  - page: 4
+    id: 201376194
+    duration_sec: 2142
+  - page: 5
+    id: 201375756
+    duration_sec: 2141
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: world-games-51
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:01:07
+    game: brawl-stars
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-06-13-live-01
+  basis: https://www.bilibili.com/video/BV18Z4y1H7AG
+  coverage: complete
+  parts:
+  - page: 1
+    id: 201749059
+    duration_sec: 2479
+  - page: 2
+    id: 201749736
+    duration_sec: 2486
+  - page: 3
+    id: 201749119
+    duration_sec: 2441
+  - page: 4
+    id: 201748087
+    duration_sec: 2439
+  - page: 5
+    id: 201748095
+    duration_sec: 2294
+  - page: 6
+    id: 201756503
+    duration_sec: 2290
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:02
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:22
+    game: world-games-51
+    precision: approx
+    evidence: thumbnails
+  - page: 5
+    at: 00:00:08
+    game: menghuan-xiyou
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-06-23-live-01
+  basis: https://www.bilibili.com/video/BV1pZ4y1H7gt
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 205039952
+    duration_sec: 1896
+  - page: 2
+    id: 205051231
+    duration_sec: 3750
+  - page: 3
+    id: 205052088
+    duration_sec: 3749
+  - page: 4
+    id: 205046849
+    duration_sec: 2521
+  - page: 5
+    id: 205046880
+    duration_sec: 2522
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: timelie
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    game: zuiqiang-woniu
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-07-04-live-01
+  basis: https://www.bilibili.com/video/BV14T4y177qe
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 208911563
+    duration_sec: 3851
+  - page: 2
+    id: 208911106
+    duration_sec: 3853
+  - page: 3
+    id: 208915855
+    duration_sec: 3852
+  - page: 4
+    id: 208920628
+    duration_sec: 4082
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: world-games-51
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: jiangnan-baijingtu
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-07-25-live-01
+  basis: https://www.bilibili.com/video/BV1ep4y1i7xx
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 216591916
+    duration_sec: 4546
+  - page: 2
+    id: 216595494
+    duration_sec: 4131
+  - page: 3
+    id: 216603425
+    duration_sec: 4132
+  - page: 4
+    id: 216602024
+    duration_sec: 4133
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: menghuan-xiyou
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: superliminal
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-08-11-live-01
+  basis: https://www.bilibili.com/video/BV1qt4y1D7YP
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 223240119
+    duration_sec: 1112
+  - page: 2
+    id: 223250714
+    duration_sec: 3213
+  - page: 3
+    id: 223253739
+    duration_sec: 3213
+  - page: 4
+    id: 223256356
+    duration_sec: 3010
+  - page: 5
+    id: 223254053
+    duration_sec: 3009
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: fall-guys
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:02:30
+    game: grounded
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-08-21-live-01
+  basis: https://www.bilibili.com/video/BV1dC4y1t7BS
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 227212430
+    duration_sec: 3586
+  - page: 2
+    id: 227231813
+    duration_sec: 3587
+  - page: 3
+    id: 227231689
+    duration_sec: 3586
+  - page: 4
+    id: 227239966
+    duration_sec: 4671
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: spiritfarer
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:18
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:36
+    game: pascals-wager
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-09-02-live-01
+  basis: https://www.bilibili.com/video/BV1kp4y1Y7ye
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 231604463
+    duration_sec: 1319
+  - page: 2
+    id: 231612308
+    duration_sec: 5882
+  - page: 3
+    id: 231613526
+    duration_sec: 4716
+  - page: 4
+    id: 231609658
+    duration_sec: 2154
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: other
+  - page: 2
+    at: 00:00:00
+    game: stickman
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:18
+    game: contra
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-09-09-live-01
+  basis: https://www.bilibili.com/video/BV1ua4y1j7bq
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 233812226
+    duration_sec: 3594
+  - page: 2
+    id: 233813410
+    duration_sec: 3595
+  - page: 3
+    id: 233814961
+    duration_sec: 3595
+  - page: 4
+    id: 233815402
+    duration_sec: 2503
+  - page: 5
+    id: 233811240
+    duration_sec: 2505
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: craftopia
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:12
+    game: contra
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-09-18-live-01
+  basis: https://www.bilibili.com/video/BV1CK411P725
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 236588176
+    duration_sec: 661
+  - page: 2
+    id: 236607014
+    duration_sec: 3282
+  - page: 3
+    id: 236610472
+    duration_sec: 3284
+  - page: 4
+    id: 236610970
+    duration_sec: 3284
+  - page: 5
+    id: 236611941
+    duration_sec: 3875
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: pro-gymnast
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:48:18
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 5
+    at: 00:01:24
+    game: fall-guys
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-09-26-live-01
+  basis: https://www.bilibili.com/video/BV1s54y1m7EZ
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 239646101
+    duration_sec: 801
+  - page: 2
+    id: 239875335
+    duration_sec: 4201
+  - page: 3
+    id: 239900097
+    duration_sec: 4201
+  - page: 4
+    id: 239906407
+    duration_sec: 4201
+  - page: 5
+    id: 239904502
+    duration_sec: 5145
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: undermine
+    precision: approx
+    evidence: thumbnails
+  - page: 5
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-10-06-live-01
+  basis: https://www.bilibili.com/video/BV1fy4y1k74X
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 242948796
+    duration_sec: 1965
+  - page: 2
+    id: 242949976
+    duration_sec: 3343
+  - page: 3
+    id: 242951124
+    duration_sec: 3202
+  - page: 4
+    id: 242950858
+    duration_sec: 3201
+  - page: 5
+    id: 242950354
+    duration_sec: 3205
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: fall-guys
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: f1-2020
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-10-13-live-01
+  basis: https://www.bilibili.com/video/BV1fp4y1r7Pn
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 245314120
+    duration_sec: 1146
+  - page: 2
+    id: 245315056
+    duration_sec: 1334
+  - page: 3
+    id: 245333696
+    duration_sec: 3925
+  - page: 4
+    id: 245333785
+    duration_sec: 3924
+  - page: 5
+    id: 245333383
+    duration_sec: 4079
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    game: medieval-dynasty
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: party-animals
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-10-15-live-01
+  basis: https://www.bilibili.com/video/BV1Ci4y1j7e1
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 245994235
+    duration_sec: 1325
+  - page: 2
+    id: 246005188
+    duration_sec: 4448
+  - page: 3
+    id: 246024026
+    duration_sec: 4592
+  - page: 4
+    id: 246020477
+    duration_sec: 4593
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: wudao-micang
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: fall-guys
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-10-20-live-01
+  basis: https://www.bilibili.com/video/BV1f54y167uY
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 247745932
+    duration_sec: 4568
+  - page: 2
+    id: 247747017
+    duration_sec: 4570
+  - page: 3
+    id: 247747019
+    duration_sec: 4570
+  - page: 4
+    id: 247726280
+    duration_sec: 1457
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:08:30
+    game: rolo-to-the-rescue
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 01:09:48
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:48
+    game: circus-charlie
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-11-02-live-01
+  basis: https://www.bilibili.com/video/BV19a411A7oB
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 251991610
+    duration_sec: 2806
+  - page: 2
+    id: 251994082
+    duration_sec: 1245
+  - page: 3
+    id: 252016712
+    duration_sec: 4475
+  - page: 4
+    id: 252016922
+    duration_sec: 4474
+  - page: 5
+    id: 252016215
+    duration_sec: 4474
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: world-games-51
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: pikmin-3
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-11-13-live-01
+  basis: https://www.bilibili.com/video/BV1hZ4y137DC
+  coverage: complete
+  parts:
+  - page: 1
+    id: 255470127
+    duration_sec: 969
+  - page: 2
+    id: 255471833
+    duration_sec: 1579
+  - page: 3
+    id: 255471671
+    duration_sec: 1596
+  - page: 4
+    id: 255496495
+    duration_sec: 3763
+  - page: 5
+    id: 255496893
+    duration_sec: 3763
+  - page: 6
+    id: 255496510
+    duration_sec: 3762
+  - page: 7
+    id: 255505401
+    duration_sec: 3764
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: astro-bot
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: sackboy-big-adventure
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: sakuna
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-11-14-live-01
+  basis: https://www.bilibili.com/video/BV13V411a78z
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 255839007
+    duration_sec: 3426
+  - page: 2
+    id: 255843494
+    duration_sec: 3427
+  - page: 3
+    id: 255857084
+    duration_sec: 3426
+  - page: 4
+    id: 255856521
+    duration_sec: 3427
+  - page: 5
+    id: 255834396
+    duration_sec: 700
+  - page: 6
+    id: 255862546
+    duration_sec: 4242
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: sakuna
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: lifeafter
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2020-11-27-live-01
+  basis: https://www.bilibili.com/video/BV1fA411x7jx
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 260399671
+    duration_sec: 2401
+  - page: 2
+    id: 260420825
+    duration_sec: 2402
+  - page: 3
+    id: 260421040
+    duration_sec: 2402
+  - page: 4
+    id: 260423762
+    duration_sec: 2176
+  - page: 5
+    id: 260422653
+    duration_sec: 2177
+  - page: 6
+    id: 260424444
+    duration_sec: 2178
+  - page: 7
+    id: 260426030
+    duration_sec: 677
+  - page: 8
+    id: 260436797
+    duration_sec: 2425
+  - page: 9
+    id: 260436986
+    duration_sec: 2426
+  - page: 10
+    id: 260437663
+    duration_sec: 2427
+  - page: 11
+    id: 260437189
+    duration_sec: 2426
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: demons-souls
+    precision: part
+    evidence: part_title
+  - page: 7
+    at: 00:00:36
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2020-12-18-live-01
+  basis: https://www.bilibili.com/video/BV15A411s7VD
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 268202351
+    duration_sec: 2744
+  - page: 2
+    id: 268202369
+    duration_sec: 2746
+  - page: 3
+    id: 268260917
+    duration_sec: 2746
+  - page: 4
+    id: 268257386
+    duration_sec: 2746
+  - page: 5
+    id: 268259229
+    duration_sec: 2746
+  - page: 6
+    id: 268252585
+    duration_sec: 1932
+  - page: 7
+    id: 268253533
+    duration_sec: 1933
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: cyberpunk-2077
+    precision: part
+    evidence: part_title
+  - page: 6
+    at: 00:00:00
+    game: free-basketball
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-01-08-live-01
+  basis: https://www.bilibili.com/video/BV1N5411n78z
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 280402512
+    duration_sec: 3395
+  - page: 2
+    id: 280403273
+    duration_sec: 3395
+  - page: 3
+    id: 280398771
+    duration_sec: 3395
+  - page: 4
+    id: 280396753
+    duration_sec: 3395
+  - page: 5
+    id: 280406096
+    duration_sec: 2311
+  - page: 6
+    id: 280406011
+    duration_sec: 2312
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: stardew-valley
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: shiming-zhanchang
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-01-15-live-01
+  basis: https://www.bilibili.com/video/BV1xo4y1o7Ly
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 282890816
+    duration_sec: 406
+  - page: 2
+    id: 282912816
+    duration_sec: 3598
+  - page: 3
+    id: 282930907
+    duration_sec: 3200
+  - page: 4
+    id: 282925861
+    duration_sec: 3328
+  - page: 5
+    id: 282935334
+    duration_sec: 3329
+  - page: 6
+    id: 282936750
+    duration_sec: 4591
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: xianjian-7
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-01-22-live-01
+  basis: https://www.bilibili.com/video/BV1zU4y147D9
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 286038350
+    duration_sec: 701
+  - page: 2
+    id: 286069143
+    duration_sec: 4303
+  - page: 3
+    id: 286082256
+    duration_sec: 4303
+  - page: 4
+    id: 286082891
+    duration_sec: 4303
+  - page: 5
+    id: 286084208
+    duration_sec: 4868
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: shady-part-of-me
+    precision: approx
+    evidence: thumbnails
+  - page: 5
+    at: 00:00:00
+    game: guijia-yitu-2
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-01-25-live-01
+  basis: https://www.bilibili.com/video/BV1Ky4y1p7Yr
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 287583231
+    duration_sec: 566
+  - page: 2
+    id: 287623605
+    duration_sec: 3319
+  - page: 3
+    id: 287619823
+    duration_sec: 3605
+  - page: 4
+    id: 287582631
+    duration_sec: 890
+  - page: 5
+    id: 287612595
+    duration_sec: 3014
+  - page: 6
+    id: 287632190
+    duration_sec: 3014
+  - page: 7
+    id: 287627528
+    duration_sec: 3232
+  - page: 8
+    id: 287642161
+    duration_sec: 3233
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:00:06
+    game: shady-part-of-me
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    game: fall-guys
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: civilization-6
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-01-29-live-01
+  basis: https://www.bilibili.com/video/BV1xh41117Qa
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 289594064
+    duration_sec: 595
+  - page: 2
+    id: 289637388
+    duration_sec: 3303
+  - page: 3
+    id: 289638784
+    duration_sec: 3304
+  - page: 4
+    id: 289636976
+    duration_sec: 3758
+  - page: 5
+    id: 289640790
+    duration_sec: 3445
+  - page: 6
+    id: 289620752
+    duration_sec: 1112
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: gaodian-zhanji
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: nvdihou-gong
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-02-03-live-01
+  basis: https://www.bilibili.com/video/BV1EA411g7aD
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 292298864
+    duration_sec: 3601
+  - page: 2
+    id: 292287181
+    duration_sec: 3602
+  - page: 3
+    id: 292255209
+    duration_sec: 611
+  - page: 4
+    id: 292294698
+    duration_sec: 3297
+  - page: 5
+    id: 292298515
+    duration_sec: 3296
+  - page: 6
+    id: 292284103
+    duration_sec: 2046
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: witch-it
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: pubg
+    precision: part
+    evidence: part_title
+  - page: 6
+    at: 00:00:00
+    game: among-us
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-02-05-live-01
+  basis: https://www.bilibili.com/video/BV1v54y1W7wQ
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 293365003
+    duration_sec: 2123
+  - page: 2
+    id: 293423171
+    duration_sec: 3781
+  - page: 3
+    id: 293424589
+    duration_sec: 3781
+  - page: 4
+    id: 293411628
+    duration_sec: 3782
+  - page: 5
+    id: 293425625
+    duration_sec: 4907
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: dyson-sphere-program
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: lifeafter
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-02-08-live-01
+  basis: https://www.bilibili.com/video/BV1cf4y1r7Xb
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 295098756
+    duration_sec: 3600
+  - page: 2
+    id: 295106887
+    duration_sec: 3602
+  - page: 3
+    id: 295105426
+    duration_sec: 3601
+  - page: 4
+    id: 295108023
+    duration_sec: 3603
+  - page: 5
+    id: 295104450
+    duration_sec: 2538
+  - page: 6
+    id: 295108528
+    duration_sec: 2540
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: yanhua
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: yimeng-jianghu
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-02-15-live-01
+  basis: https://www.bilibili.com/video/BV1c54y1Y7cf
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 298387710
+    duration_sec: 4005
+  - page: 2
+    id: 298398442
+    duration_sec: 4008
+  - page: 3
+    id: 298411210
+    duration_sec: 4009
+  - page: 4
+    id: 298424785
+    duration_sec: 4005
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: pubg
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    game: csgo
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2021-03-09-live-01
+  basis: https://www.bilibili.com/video/BV1uh411Q7gV
+  coverage: complete
+  parts:
+  - page: 1
+    id: 308131228
+    duration_sec: 1124
+  - page: 2
+    id: 308153062
+    duration_sec: 2173
+  - page: 3
+    id: 308186094
+    duration_sec: 2173
+  - page: 4
+    id: 308183324
+    duration_sec: 2173
+  - page: 5
+    id: 308184966
+    duration_sec: 2259
+  - page: 6
+    id: 308186395
+    duration_sec: 2261
+  - page: 7
+    id: 308185972
+    duration_sec: 2259
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: tiny-lands
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: rhythm-doctor
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-03-18-live-01
+  basis: https://www.bilibili.com/video/BV13N411X7YQ
+  coverage: partial
+  parts:
+  - page: 1
+    id: 312044856
+    duration_sec: 683
+  - page: 2
+    id: 312070387
+    duration_sec: 2452
+  - page: 3
+    id: 312103608
+    duration_sec: 2450
+  - page: 4
+    id: 312099669
+    duration_sec: 2306
+  - page: 5
+    id: 312104755
+    duration_sec: 2307
+  - page: 6
+    id: 312107393
+    duration_sec: 2309
+  - page: 7
+    id: 312108239
+    duration_sec: 2306
+  - page: 8
+    id: 312112410
+    duration_sec: 2308
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 7
+    at: 00:00:00
+    game: the-room-4
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2021-04-17-live-02
+  basis: https://www.bilibili.com/video/BV1qU4y1b7ru
+  coverage: complete
+  parts:
+  - page: 1
+    id: 325661283
+    duration_sec: 2520
+  - page: 2
+    id: 325659764
+    duration_sec: 2523
+  - page: 3
+    id: 325660850
+    duration_sec: 2104
+  - page: 4
+    id: 325658253
+    duration_sec: 2102
+  - page: 5
+    id: 325660769
+    duration_sec: 2104
+  - page: 6
+    id: 325668402
+    duration_sec: 2207
+  - page: 7
+    id: 325667529
+    duration_sec: 2210
+  - page: 8
+    id: 325668695
+    duration_sec: 2209
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: guigu-bahuang
+    precision: part
+    evidence: part_title
+  - page: 6
+    at: 00:00:00
+    game: hidden-through-time
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-04-27-live-01
+  basis: https://www.bilibili.com/video/BV1ey4y1s75L
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 330152946
+    duration_sec: 2531
+  - page: 2
+    id: 330152038
+    duration_sec: 2082
+  - page: 3
+    id: 330154270
+    duration_sec: 2080
+  - page: 4
+    id: 330166439
+    duration_sec: 2078
+  - page: 5
+    id: 330167148
+    duration_sec: 2081
+  - page: 6
+    id: 330179082
+    duration_sec: 2079
+  - page: 7
+    id: 330178703
+    duration_sec: 2054
+  - page: 8
+    id: 330178612
+    duration_sec: 2054
+  - page: 9
+    id: 330179972
+    duration_sec: 2053
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 7
+    at: 00:01:45
+    game: guardian-tales
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2021-05-04-live-01
+  basis: https://www.bilibili.com/video/BV1yV41177ye
+  coverage: complete
+  parts:
+  - page: 1
+    id: 333904572
+    duration_sec: 2399
+  - page: 2
+    id: 333903201
+    duration_sec: 1809
+  - page: 3
+    id: 333904161
+    duration_sec: 1807
+  - page: 4
+    id: 333904377
+    duration_sec: 1809
+  - page: 5
+    id: 333908574
+    duration_sec: 2208
+  - page: 6
+    id: 333908742
+    duration_sec: 2212
+  - page: 7
+    id: 333908664
+    duration_sec: 2211
+  - page: 8
+    id: 333908740
+    duration_sec: 2210
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: world-games-51
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: super-mario-party
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-08-04-live-01
+  basis: https://www.bilibili.com/video/BV13v411J7Ef
+  coverage: partial
+  parts:
+  - page: 6
+    id: 382716870
+    duration_sec: 2251
+  - page: 7
+    id: 382720359
+    duration_sec: 2251
+  - page: 8
+    id: 382719832
+    duration_sec: 2251
+  - page: 9
+    id: 382720159
+    duration_sec: 2251
+  - page: 10
+    id: 382716891
+    duration_sec: 481
+  - page: 11
+    id: 382721925
+    duration_sec: 1933
+  - page: 12
+    id: 382721950
+    duration_sec: 1935
+  spans:
+  - page: 6
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 10
+    at: 00:00:00
+    game: rhythm-doctor
+    precision: part
+    evidence: part_title
+  - page: 11
+    at: 00:00:00
+    game: eldest-souls
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-08-06-live-01
+  basis: https://www.bilibili.com/video/BV1Th411B7yT
+  coverage: complete
+  parts:
+  - page: 1
+    id: 383960995
+    duration_sec: 2821
+  - page: 2
+    id: 383953611
+    duration_sec: 2808
+  - page: 3
+    id: 383953359
+    duration_sec: 2808
+  - page: 4
+    id: 383964757
+    duration_sec: 2808
+  - page: 5
+    id: 383963999
+    duration_sec: 2807
+  - page: 6
+    id: 383998151
+    duration_sec: 2807
+  - page: 7
+    id: 383997118
+    duration_sec: 2686
+  - page: 8
+    id: 384000999
+    duration_sec: 2685
+  - page: 9
+    id: 384001978
+    duration_sec: 2685
+  - page: 10
+    id: 384002174
+    duration_sec: 2684
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: eldest-souls
+    precision: part
+    evidence: part_title
+  - page: 7
+    at: 00:00:00
+    game: naraka-bladepoint
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2021-11-17-live-02
+  basis: https://www.bilibili.com/video/BV1XF411h7ff
+  coverage: complete
+  parts:
+  - page: 1
+    id: 444591452
+    duration_sec: 2728
+  - page: 2
+    id: 444605944
+    duration_sec: 2730
+  - page: 3
+    id: 444601955
+    duration_sec: 2732
+  - page: 4
+    id: 444610924
+    duration_sec: 2729
+  - page: 5
+    id: 444610575
+    duration_sec: 2731
+  - page: 6
+    id: 444620348
+    duration_sec: 2498
+  - page: 7
+    id: 444622393
+    duration_sec: 2498
+  - page: 8
+    id: 444622796
+    duration_sec: 2498
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: longzhong-kui-meng
+    precision: part
+    evidence: part_title
+  - page: 6
+    at: 00:00:00
+    game: alt-f4
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2022-06-27-live-01
+  basis: https://www.bilibili.com/video/BV1VN4y1G7er
+  coverage: complete
+  parts:
+  - page: 1
+    id: 757664620
+    duration_sec: 14270
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:08:00
+    game: neon-white
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:58:48
+    game: fall-guys
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2022-11-02-live-01
+  basis: https://www.bilibili.com/video/BV1wd4y1w7WE
+  coverage: partial
+  parts:
+  - page: 1
+    id: 880518249
+    duration_sec: 17101
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:00:06
+    game: endoparasitic
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2022-12-23-live-01
+  basis: https://www.bilibili.com/video/BV143411Q7C5
+  coverage: partial
+  parts:
+  - page: 1
+    id: 934453354
+    duration_sec: 1721
+  - page: 2
+    id: 934458936
+    duration_sec: 1721
+  - page: 3
+    id: 934462822
+    duration_sec: 1721
+  - page: 4
+    id: 934466357
+    duration_sec: 1713
+  - page: 5
+    id: 934470346
+    duration_sec: 1721
+  - page: 6
+    id: 934473925
+    duration_sec: 1721
+  - page: 7
+    id: 934477782
+    duration_sec: 1721
+  - page: 8
+    id: 934481600
+    duration_sec: 1721
+  - page: 9
+    id: 934484879
+    duration_sec: 1721
+  - page: 10
+    id: 934488662
+    duration_sec: 1721
+  - page: 11
+    id: 934492455
+    duration_sec: 1721
+  - page: 12
+    id: 934496033
+    duration_sec: 1711
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: other
+  - page: 1
+    at: 00:03:51
+    game: subnautica
+    precision: approx
+    evidence: thumbnails
+  - page: 10
+    at: 00:19:18
+    game: sky-children-of-the-light
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-02-19-live-01
+  basis: https://www.bilibili.com/video/BV1yy4y1Z74F
+  coverage: complete
+  parts:
+  - page: 1
+    id: 1015895571
+    duration_sec: 1876
+  - page: 2
+    id: 1015901208
+    duration_sec: 1876
+  - page: 3
+    id: 1015905976
+    duration_sec: 1876
+  - page: 4
+    id: 1015911428
+    duration_sec: 1876
+  - page: 5
+    id: 1015919218
+    duration_sec: 1876
+  - page: 6
+    id: 1015929439
+    duration_sec: 1876
+  - page: 7
+    id: 1015934197
+    duration_sec: 1876
+  - page: 8
+    id: 1015939258
+    duration_sec: 1876
+  - page: 9
+    id: 1015944349
+    duration_sec: 1876
+  - page: 10
+    id: 1015949118
+    duration_sec: 1876
+  - page: 11
+    id: 1015953361
+    duration_sec: 1876
+  - page: 12
+    id: 1015957806
+    duration_sec: 1876
+  - page: 13
+    id: 1015962832
+    duration_sec: 1253
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:30:40
+    game: brotato
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:16
+    game: melatonin
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:27:30
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:06:40
+    game: brotato
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-02-24-live-01
+  basis: https://www.bilibili.com/video/BV18M411w74L
+  coverage: complete
+  parts:
+  - page: 1
+    id: 1024088340
+    duration_sec: 1871
+  - page: 2
+    id: 1024094183
+    duration_sec: 1876
+  - page: 3
+    id: 1024100459
+    duration_sec: 1876
+  - page: 4
+    id: 1024106073
+    duration_sec: 1876
+  - page: 5
+    id: 1024111856
+    duration_sec: 1876
+  - page: 6
+    id: 1024117708
+    duration_sec: 1876
+  - page: 7
+    id: 1024123309
+    duration_sec: 1876
+  - page: 8
+    id: 1024129099
+    duration_sec: 1876
+  - page: 9
+    id: 1024135511
+    duration_sec: 1876
+  - page: 10
+    id: 1024141122
+    duration_sec: 1876
+  - page: 11
+    id: 1024147426
+    duration_sec: 1876
+  - page: 12
+    id: 1024153621
+    duration_sec: 1876
+  - page: 13
+    id: 1024159126
+    duration_sec: 1876
+  - page: 14
+    id: 1024164840
+    duration_sec: 1876
+  - page: 15
+    id: 1024178896
+    duration_sec: 1832
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:29:35
+    game: atomic-heart
+    precision: approx
+    evidence: thumbnails
+  - page: 10
+    at: 00:17:21
+    game: wo-long
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-07-13-live-01
+  basis: https://www.bilibili.com/video/BV1994y1B7gu
+  coverage: complete
+  parts:
+  - page: 1
+    id: 1195649923
+    duration_sec: 2061
+  - page: 2
+    id: 1195652536
+    duration_sec: 2061
+  - page: 3
+    id: 1195654921
+    duration_sec: 2061
+  - page: 4
+    id: 1195657005
+    duration_sec: 2061
+  - page: 5
+    id: 1195659055
+    duration_sec: 2061
+  - page: 6
+    id: 1195661113
+    duration_sec: 2061
+  - page: 7
+    id: 1195663171
+    duration_sec: 2061
+  - page: 8
+    id: 1195665130
+    duration_sec: 2061
+  - page: 9
+    id: 1195666929
+    duration_sec: 2061
+  - page: 10
+    id: 1195668996
+    duration_sec: 2061
+  - page: 11
+    id: 1195671110
+    duration_sec: 2061
+  - page: 12
+    id: 1195673445
+    duration_sec: 2061
+  - page: 13
+    id: 1195675314
+    duration_sec: 2061
+  - page: 14
+    id: 1195677124
+    duration_sec: 2061
+  - page: 15
+    id: 1195678573
+    duration_sec: 2061
+  - page: 16
+    id: 1195680216
+    duration_sec: 138
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: bread-and-fred
+    precision: approx
+    evidence: thumbnails
+  - page: 6
+    at: 00:16:24
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 6
+    at: 00:17:06
+    game: fall-guys
+    precision: approx
+    evidence: thumbnails
+  - page: 16
+    at: 00:01:23
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-09-17-live-01
+  basis: https://www.bilibili.com/video/BV1tz4y1L78G
+  coverage: partial
+  parts:
+  - page: 1
+    id: 1272397862
+    duration_sec: 20131
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:00:12
+    game: lies-of-p
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 05:35:24
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-11-01-live-01
+  basis: https://www.bilibili.com/video/BV1Nw411M7tt
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 1318463480
+    duration_sec: 19446
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:13:15
+    game: valorant
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:05:40
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:12:10
+    game: rhythm-royale
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 03:26:05
+    game: valorant
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-11-08-live-01
+  basis: https://www.bilibili.com/video/BV1jH4y1B7gP
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 1326877865
+    duration_sec: 19014
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:25:46
+    game: jiezou-gezi
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 02:39:26
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 02:39:32
+    game: dont-scream
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 03:23:52
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 03:31:13
+    game: pummel-party
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 05:16:13
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-11-09-live-01
+  basis: https://www.bilibili.com/video/BV1kw411T7Sg
+  coverage: partial
+  parts:
+  - page: 1
+    id: 1328026541
+    duration_sec: 11289
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: goose-goose-duck
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:43:14
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:11:08
+    game: fall-guys
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2023-11-17-live-01
+  basis: https://www.acfun.cn/v/ac42983241
+  coverage: complete
+  parts:
+  - page: 1
+    id: '32624995'
+    duration_sec: 14794.415
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:17:55
+    game: rhythm-doctor
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 02:20:30
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 03:01:40
+    game: remnant-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2024-10-03-live-02
+  basis: https://www.bilibili.com/video/BV1kMxRejE36
+  coverage: complete
+  parts:
+  - page: 1
+    id: 26124814957
+    duration_sec: 3601
+  - page: 2
+    id: 26125795939
+    duration_sec: 3600
+  - page: 3
+    id: 26125861075
+    duration_sec: 207
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: other
+  - page: 1
+    at: 00:08:40
+    game: rhythm-heaven
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:49:42
+    kind: unknown
+    precision: approx
+    evidence: other
+  - page: 1
+    at: 00:51:14
+    game: once-human
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:02:28
+    kind: unknown
+    precision: approx
+    evidence: other
+  reviewed: '2026-10-19'
+- entry: 2024-12-06-live-02
+  basis: https://www.bilibili.com/video/BV136iBYoESP
+  coverage: partial
+  parts:
+  - page: 1
+    id: 27209303025
+    duration_sec: 3602
+  - page: 2
+    id: 27210286633
+    duration_sec: 3602
+  - page: 3
+    id: 27211334056
+    duration_sec: 3600
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:13:00
+    game: out-of-bounds
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2024-12-09-live-02
+  basis: https://www.bilibili.com/video/BV1J5qKYEEBF
+  coverage: partial
+  parts:
+  - page: 1
+    id: 27256882967
+    duration_sec: 3601
+  - page: 2
+    id: 27257798973
+    duration_sec: 3602
+  - page: 3
+    id: 27257996690
+    duration_sec: 851
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:02:44
+    game: out-of-bounds
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2024-12-22-live-02
+  basis: https://www.bilibili.com/video/BV1iaCKYtEPz
+  coverage: partial
+  parts:
+  - page: 1
+    id: 27475446507
+    duration_sec: 3602
+  - page: 2
+    id: 27476493689
+    duration_sec: 3601
+  - page: 3
+    id: 27477412012
+    duration_sec: 3226
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:06:13
+    game: mizi-no
+    precision: exact
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2025-12-05-live-02
+  basis: https://www.bilibili.com/video/BV1M72EB2E4M
+  coverage: partial
+  parts:
+  - page: 1
+    id: 34533606276
+    duration_sec: 3601
+  - page: 2
+    id: 34533607822
+    duration_sec: 2881
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:46:56
+    game: duckov
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2026-02-06-live-01
+  basis: https://www.bilibili.com/video/BV1nrFrziEbD
+  coverage: complete
+  parts:
+  - page: 1
+    id: 35858877755
+    duration_sec: 3601
+  - page: 2
+    id: 35860778715
+    duration_sec: 3601
+  - page: 3
+    id: 35861170553
+    duration_sec: 539
+  - page: 4
+    id: 35867068103
+    duration_sec: 3601
+  - page: 5
+    id: 35867266222
+    duration_sec: 1283
+  - page: 6
+    id: 35868970980
+    duration_sec: 3601
+  - page: 7
+    id: 35869951944
+    duration_sec: 2270
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:13:36
+    game: nioh-3
+    precision: approx
+    evidence: thumbnails
+  - page: 4
+    at: 00:00:00
+    game: where-winds-meet
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2026-04-16-live-03
+  basis: https://www.bilibili.com/video/BV1f5daBtEZz
+  coverage: complete
+  parts:
+  - page: 1
+    id: 37559666042
+    duration_sec: 3602
+  - page: 2
+    id: 37561043598
+    duration_sec: 3601
+  - page: 3
+    id: 37561503198
+    duration_sec: 727
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+  - page: 1
+    at: 00:28:10
+    game: auction-king
+    precision: exact
+    evidence: thumbnails
+  - page: 1
+    at: 00:34:40
+    game: bento-blocks
+    precision: exact
+    evidence: thumbnails
+  - page: 3
+    at: 00:12:00
+    kind: unknown
+    precision: exact
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2026-07-04-live-02
+  basis: https://www.bilibili.com/video/BV1AkMP6zEPo
+  coverage: complete
+  parts:
+  - page: 1
+    id: 39654130636
+    duration_sec: 3601
+  - page: 2
+    id: 39655507990
+    duration_sec: 3601
+  - page: 3
+    id: 39656820695
+    duration_sec: 3601
+  - page: 4
+    id: 39657212422
+    duration_sec: 41
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:35:36
+    game: rhythm-heaven
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:24:48
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:30:12
+    game: meecha-chameleon
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2026-09-11-live-01
+  basis: https://www.bilibili.com/video/BV1koY26xEfn
+  coverage: partial
+  parts:
+  - page: 1
+    id: 41798206774
+    duration_sec: 3601
+  - page: 2
+    id: 41799714191
+    duration_sec: 3601
+  - page: 3
+    id: 41801155500
+    duration_sec: 3601
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: other
+  - page: 1
+    at: 00:07:48
+    game: path-of-exile-2
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:15:20
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
+- entry: 2026-09-17-live-01
+  basis: https://www.bilibili.com/video/BV19Hey6vEY8
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 41987409415
+    duration_sec: 3069
+  - page: 2
+    id: 42157737852
+    duration_sec: 1159
+  - page: 3
+    id: 41987736009
+    duration_sec: 2974
+  - page: 4
+    id: 41988000109
+    duration_sec: 3403
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: jiaomeimeikaiche
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: shenkongdangpu
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2026-09-22-live-02
+  basis: https://www.bilibili.com/video/BV1cFhH6rEJE
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 42116253216
+    duration_sec: 2033
+  - page: 2
+    id: 42116382762
+    duration_sec: 1568
+  - page: 3
+    id: 42117235607
+    duration_sec: 2401
+  - page: 4
+    id: 42117500540
+    duration_sec: 2401
+  - page: 5
+    id: 42118285880
+    duration_sec: 2161
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: kongzhigongzhen
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-19'
+- entry: 2026-10-14-live-01
+  basis: https://www.bilibili.com/video/BV1acpU6jEGF
+  coverage: partial
+  parts:
+  - page: 1
+    id: 42742579460
+    duration_sec: 3601
+  - page: 2
+    id: 42743762803
+    duration_sec: 3600
+  - page: 3
+    id: 42745007254
+    duration_sec: 3598
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:05:56
+    game: planet-zoo-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'

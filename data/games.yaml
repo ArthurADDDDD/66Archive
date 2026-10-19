@@ -281,6 +281,9 @@
     genres:
       - puzzle
       - casual
+  - id: benzuo-dao-yao-kankan-ni-neng-huo-jitian
+    name: 本座倒要看看你能活几天
+
   - id: biped
     name: Biped
     aliases: [只只大冒险]
@@ -744,6 +747,9 @@
       - platformer
       - action
 
+  - id: dont-escape
+    name: Don't Escape
+
   - id: dont-starve
     name: 饥荒
     aliases:
@@ -889,6 +895,9 @@
       - simulation
       - sandbox
 
+  - id: ershiyi-shiji-shengming-kexue
+    name: 二十一世纪是生命科学的世纪
+
   - id: escape-simulator
     name: 密室逃脱模拟器
     aliases:
@@ -922,6 +931,11 @@
     aliases: [Fall Guys, 糖豆人终极淘汰赛, FallGuys]
     genres:
       - party
+
+  - id: fallout-shelter-online
+    name: 辐射：避难所 Online
+    aliases:
+      - Fallout Shelter Online
 
   - id: far-lone-sails
     name: 孤帆远航
@@ -2445,6 +2459,11 @@
     genres:
       - horror
       - adventure
+  - id: rec-room
+    name: Rec Room
+    aliases:
+      - RecRoom
+
   - id: red-dead-redemption-2
     name: 荒野大镖客2
     aliases: [Red Dead Redemption 2, RDR2, 大表哥2, 荒野大镖客, 荒野大镖客2, '荒野大镖客:救赎2']
@@ -2475,6 +2494,9 @@
     genres:
       - shooter
       - action
+
+  - id: rento
+    name: RENTO
 
   - id: repair-story
     name: 维修物语
