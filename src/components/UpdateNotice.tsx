@@ -1,31 +1,43 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
+import { usePathname } from 'next/navigation'
+import { UpdateTag } from './UpdateTag'
 import {
-  getUpdateHistory,
   getUpdateNotice,
   shouldShowUpdateNotice,
   UPDATE_NOTICE_STORAGE_KEY,
-  type UpdateHistoryItem,
   type UpdateNoticeData,
 } from '@/lib/update-notice'
 
-// The feature and archive logs are static; reuse them when the visitor opens history.
-const HISTORY = getUpdateHistory()
-
 /**
- * Show feature announcements once per browser, without interrupting navigation.
- * Past feature and collection updates remain available from the card itself.
- * Regular recording imports never change the announcement version.
+ * Recent feature highlights are shown once per browser version.
+ * Mobile is a centered dismissible dialog; desktop keeps a non-blocking card.
+ * Full history lives on /updates/ and opens in a separate tab.
  */
 export function UpdateNotice() {
+  const pathname = usePathname()
   const [notice, setNotice] = useState<UpdateNoticeData | null>(null)
-  const [showHistory, setShowHistory] = useState(false)
-  const listRef = useRef<HTMLDivElement>(null)
+  const [mobile, setMobile] = useState(false)
+  const cardRef = useRef<HTMLElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    // A push-test deep link opens its own dialog. Do not overlap it.
+    const media = window.matchMedia('(max-width: 639px)')
+    const check = () => setMobile(media.matches)
+    check()
+    media.addEventListener('change', check)
+    return () => media.removeEventListener('change', check)
+  }, [])
+
+  useEffect(() => {
+    // Reading history in this tab must never trigger or retain the announcement.
+    if (pathname === '/updates' || pathname?.startsWith('/updates/')) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setNotice(null)
+      return
+    }
+    // A push-test link already opens its own dialog.
     if (window.location.hash.includes('push-test=')) return
     const next = getUpdateNotice()
     if (!next) return
@@ -34,106 +46,122 @@ export function UpdateNotice() {
     try {
       seen = window.localStorage.getItem(UPDATE_NOTICE_STORAGE_KEY)
     } catch {
-      // Storage may be disabled; the card still works for this page.
+      // The current visit still works if storage is unavailable.
     }
     if (!shouldShowUpdateNotice(seen, next)) return
 
-    const timeout = window.setTimeout(() => {
+    const timer = window.setTimeout(() => {
       setNotice(next)
       try {
         window.localStorage.setItem(UPDATE_NOTICE_STORAGE_KEY, next.version)
       } catch {
-        // No account or server-side tracking is needed.
+        // No personal data or server-side tracking is involved.
       }
     }, 1200)
-    return () => window.clearTimeout(timeout)
-  }, [])
+    return () => window.clearTimeout(timer)
+  }, [pathname])
 
-  if (!notice) return null
+  // Only the mobile version blocks the background. Restore scroll and focus on close.
+  useEffect(() => {
+    if (!notice || !mobile) return
+    const previousFocus = document.activeElement
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    closeRef.current?.focus()
+    return () => {
+      document.body.style.overflow = originalOverflow
+      if (previousFocus instanceof HTMLElement) previousFocus.focus()
+    }
+  }, [notice, mobile])
 
-  const rows: UpdateHistoryItem[] = showHistory
-    ? HISTORY
-    : notice.updates.map((update) => ({ ...update, category: '功能' }))
-  const switchView = () => {
-    setShowHistory((current) => !current)
-    if (listRef.current) listRef.current.scrollTop = 0
+  if (!notice || pathname === '/updates' || pathname?.startsWith('/updates/')) return null
+
+  function onCardKeyDown(event: KeyboardEvent<HTMLElement>) {
+    if (event.key === 'Escape') {
+      event.preventDefault()
+      setNotice(null)
+    }
+    if (!mobile || event.key !== 'Tab') return
+    const nodes = cardRef.current?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href]')
+    if (!nodes?.length) return
+    const first = nodes[0]
+    const last = nodes[nodes.length - 1]
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault()
+      last.focus()
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault()
+      first.focus()
+    }
   }
 
   return (
-    <aside
-      aria-labelledby="visitor-update-notice-title"
-      className="ui-sheet-in fixed bottom-4 right-4 z-[90] flex max-h-[min(78dvh,37rem)] w-[min(28rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-live/30 bg-base/95 text-ink shadow-[0_24px_80px_rgba(0,0,0,0.46)] backdrop-blur-xl sm:bottom-6 sm:right-6"
+    <div
+      className="fixed inset-0 z-[90] flex items-center justify-center bg-black/65 p-4 backdrop-blur-[3px] sm:pointer-events-none sm:items-end sm:justify-end sm:bg-transparent sm:p-6 sm:backdrop-blur-none"
+      onMouseDown={(event) => { if (mobile && event.target === event.currentTarget) setNotice(null) }}
     >
-      <header className="shrink-0 border-b border-line/60 px-4 pb-3 pt-4 sm:px-5">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="font-mono text-meta tracking-wide text-live">{showHistory ? '从建站至今' : '最近 30 天'}</p>
-            <h2 id="visitor-update-notice-title" className="mt-1 text-h3 font-semibold">
-              {showHistory ? '全部更新记录' : '网站有新变化啦'}
-            </h2>
-            <p className="mt-1 text-meta leading-relaxed text-muted">
-              {showHistory ? '以前的新功能和补档记录，都能在这里翻。' : '最近这些功能，你可以试试看。'}
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => setNotice(null)}
-            aria-label="关闭更新提醒"
-            className="ui-press -mr-1 -mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-h3 text-muted hover:bg-surface hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
-          >
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-      </header>
-
-      <div
-        id="visitor-update-notice-list"
-        ref={listRef}
-        role="region"
-        aria-label={showHistory ? '全部历史更新记录' : '近期功能更新'}
-        tabIndex={0}
-        className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 sm:px-5 [scrollbar-width:thin] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-live"
+      <aside
+        ref={cardRef}
+        role={mobile ? 'dialog' : 'complementary'}
+        aria-modal={mobile ? true : undefined}
+        aria-labelledby="visitor-update-notice-title"
+        onKeyDown={onCardKeyDown}
+        className="ui-sheet-in pointer-events-auto flex max-h-[min(84dvh,39rem)] w-full max-w-[28rem] flex-col overflow-hidden rounded-[1.5rem] border border-live/35 bg-base text-ink shadow-[0_28px_100px_rgba(0,0,0,0.6)] sm:max-h-[min(78dvh,37rem)] sm:rounded-2xl sm:bg-base/95 sm:shadow-[0_24px_80px_rgba(0,0,0,0.46)] sm:backdrop-blur-xl"
       >
-        <ol className="divide-y divide-line/50">
-          {rows.map((update) => (
-            <li key={`${update.category}-${update.date}-${update.source ?? update.title}`} className="py-3">
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <time dateTime={update.date} className="font-mono text-meta text-faint">
-                  {update.date.replaceAll('-', '.')}
-                </time>
-                {showHistory && (
-                  <span className="rounded bg-live/10 px-1.5 py-0.5 text-[0.6875rem] text-live">{update.category}</span>
-                )}
-                {(update.tags ?? []).slice(0, 2).map((tag) => (
-                  <span key={tag} className="rounded bg-surface px-1.5 py-0.5 text-[0.6875rem] text-muted">{tag}</span>
-                ))}
-              </div>
-              <h3 className="mt-1 text-control font-semibold">{update.title}</h3>
-              <p className="mt-1 text-control leading-relaxed text-muted">{update.text}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
+        <header className="shrink-0 border-b border-line/60 px-5 pb-3 pt-4">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="font-mono text-meta tracking-wide text-live">最近 30 天</p>
+              <h2 id="visitor-update-notice-title" className="mt-1 text-h3 font-semibold">网站有新变化啦</h2>
+              <p className="mt-1 text-meta leading-relaxed text-muted">最近这些功能，你可以试试看。</p>
+            </div>
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={() => setNotice(null)}
+              aria-label="关闭更新提醒"
+              className="ui-press -mr-1 -mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-h3 text-muted hover:bg-surface hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+        </header>
 
-      <footer className="flex shrink-0 items-center justify-between gap-2 border-t border-line/60 px-4 py-3 sm:px-5">
-        <Link
-          href="/stats/#site-updates"
-          prefetch={false}
-          onClick={() => setNotice(null)}
-          className="ui-press inline-flex min-h-11 items-center rounded-md text-meta text-muted hover:text-live focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+        <div
+          role="region"
+          aria-label="近期功能更新"
+          tabIndex={0}
+          className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 [scrollbar-width:thin] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-live"
         >
-          去数据页看看
-        </Link>
-        <button
-          type="button"
-          aria-expanded={showHistory}
-          aria-controls="visitor-update-notice-list"
-          onClick={switchView}
-          className="ui-press inline-flex min-h-11 items-center rounded-full border border-live/35 px-4 text-control font-medium text-live hover:bg-live/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
-        >
-          {showHistory ? '返回最近更新' : '查看全部历史 →'}
-        </button>
-      </footer>
-    </aside>
+          <ol className="divide-y divide-line/50">
+            {notice.updates.map((update) => (
+              <li key={`${update.date}-${update.source ?? update.title}`} className="py-3.5">
+                <div className="flex flex-wrap items-center gap-2">
+                  <time dateTime={update.date} className="mr-1 font-mono text-meta text-faint tnum">
+                    {update.date.replaceAll('-', '.')}
+                  </time>
+                  {(update.tags ?? []).slice(0, 2).map((tag) => <UpdateTag key={tag} label={tag} />)}
+                </div>
+                <h3 className="mt-2 text-control font-semibold text-ink">{update.title}</h3>
+                <p className="mt-1 text-control leading-relaxed text-muted">{update.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <footer className="flex shrink-0 items-center justify-between gap-3 border-t border-line/60 px-5 py-3.5">
+          <p className="text-meta text-faint">只提醒这一次</p>
+          <a
+            href="/updates/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setNotice(null)}
+            className="ui-press inline-flex min-h-11 shrink-0 items-center rounded-full border border-live/45 bg-live/10 px-4 text-control font-medium text-live hover:border-live/70 hover:bg-live/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+          >
+            查看全部历史 ↗
+          </a>
+        </footer>
+      </aside>
+    </div>
   )
 }
