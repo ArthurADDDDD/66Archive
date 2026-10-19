@@ -19,7 +19,7 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  */
 export function BgmPlayer() {
   const pathname = usePathname()
-  if (pathname === '/live-alerts' || pathname?.startsWith('/live-alerts/')) return null
+  if (pathname === '/live-alerts' || pathname?.startsWith('/live-alerts/') || pathname === '/updates' || pathname?.startsWith('/updates/')) return null
   return <SiteBgmPlayer />
 }
 
