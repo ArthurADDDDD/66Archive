@@ -10,11 +10,13 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import { SITE_COPY } from '../src/lib/site-copy'
+import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
+import { updateCopyId } from '../src/lib/update-copy'
 
 /** id 前缀 = 这句话随哪些页面烤进 HTML。新前缀要同时在对应页面的烤入里点名。 */
 const KNOWN_PREFIXES = [
   'site-', 'home-', 'trail-', 'stats-', 'gallery-', 'games-', 'game-', 'series-',
-  'chronicle-', 'archive-', 'entry-', 'contact-', 'form-',
+  'chronicle-', 'archive-', 'entry-', 'contact-', 'form-', 'updates-', 'privacy-',
 ]
 
 function walk(dir: string): string[] {
@@ -49,6 +51,20 @@ for (const file of walk('src')) {
   // JSX 属性是双引号，上一条认不出。同样只认已登记的 id。
   for (const match of source.matchAll(/\bid="([a-z][a-z0-9-]*)"/g)) {
     if (registered.has(match[1])) note(match[1], file)
+  }
+}
+
+// Curated release notes are a bounded, dynamic collection of published entries.
+// Each entry uses a stable id derived from immutable date/source, not its editable text.
+// Verify that every generated id is actually read by the shared UpdateCopy component.
+const updateCopySource = fs.readFileSync('src/components/UpdateCopy.tsx', 'utf8')
+if (!/useSiteText\(updateCopyId\(category, entry, field\)\)/.test(updateCopySource)) {
+  problems.push('UpdateCopy 必须通过 updateCopyId 读取真正的站点文案；不能只登记不用')
+} else {
+  for (const [category, entries] of [['feature', SITE_UPDATES], ['archive', ARCHIVE_UPDATES]] as const) {
+    for (const entry of entries) for (const field of ['title', 'text'] as const) {
+      note(updateCopyId(category, entry, field), 'src/components/UpdateCopy.tsx')
+    }
   }
 }
 
