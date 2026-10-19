@@ -18,6 +18,7 @@ const themeByTag: Record<string, string> = {
   大事件: 'border-violet-400/50 bg-violet-400/15 text-violet-200',
   网站: 'border-teal-400/50 bg-teal-400/15 text-teal-200',
   新名字: 'border-teal-400/50 bg-teal-400/15 text-teal-200',
+  新功能: 'border-teal-400/50 bg-teal-400/15 text-teal-200',
   功能: 'border-cyan-400/50 bg-cyan-400/15 text-cyan-200',
   收录: 'border-emerald-400/50 bg-emerald-400/15 text-emerald-200',
 }
