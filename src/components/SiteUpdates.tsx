@@ -1,6 +1,7 @@
 import { CollectionLog } from './CollectionLog'
 import { UpdateLogFrame } from './UpdateLogFrame'
 import { ARCHIVE_UPDATES, SITE_UPDATES } from '@/lib/site-updates'
+import { UpdateCopy } from './UpdateCopy'
 
 /** 左栏保留功能摘要，右栏自动读取新增内容的收录时间。 */
 export function SiteUpdates() {
@@ -32,9 +33,9 @@ function UpdateLog({ id, title, updates, note }: {
           <li key={`${update.date}-${update.title}`} className="py-4">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <time dateTime={update.date} className="font-mono text-meta text-faint tnum">{update.date.replaceAll('-', '.')}</time>
-              <h3 className="text-body font-medium text-muted">{update.title}</h3>
+              <h3 className="text-body font-medium text-muted"><UpdateCopy category="feature" entry={update} field="title" /></h3>
             </div>
-            <p className="mt-1 text-body text-muted">{update.text}</p>
+            <p className="mt-1 text-body text-muted"><UpdateCopy category="feature" entry={update} field="text" /></p>
           </li>
         ))}
       </ol>
