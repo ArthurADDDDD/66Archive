@@ -44,6 +44,10 @@ export function UpdateNotice() {
       setNotice(null)
       return
     }
+    // Inside live editing, only the dedicated preview shortcut may open this card.
+    // All other editor pages stay unobstructed, including the homepage and privacy page.
+    const preview = liveEditing && new URLSearchParams(window.location.search).get('edit-update-notice') === '1'
+    if (liveEditing && !preview) return
     // A push-test link already opens its own dialog.
     if (!liveEditing && window.location.hash.includes('push-test=')) return
     const next = getUpdateNotice()
