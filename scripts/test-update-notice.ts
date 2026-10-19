@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
 import {
   getUpdateNotice,
   getUpdateHistory,
@@ -38,7 +40,7 @@ assert.equal(getUpdateNotice(today, [
   { date: '2026-08', title: '月份摘要', text: '非完整日期' },
 ]), null, '无效和月份级日期不能成为公告')
 
-// The in-card history must include both types and never inherit the 30-day cutoff.
+// The complete history must include both types and never inherit the 30-day cutoff.
 const history = getUpdateHistory(
   [
     { date: '2026-10-19', title: '本月功能', text: '现在' },
@@ -56,9 +58,6 @@ assert.deepEqual(history.map((entry) => entry.category), ['功能', '收录', '�
 
 // Full history page and notification stay discoverable without changing
 // the storage version or placing music controls on /updates/.
-import { readFileSync } from 'node:fs'
-import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
-
 const completeHistory = getUpdateHistory()
 assert.equal(completeHistory.length, SITE_UPDATES.length + ARCHIVE_UPDATES.length)
 assert.deepEqual(
