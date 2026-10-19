@@ -1,4 +1,4 @@
-import { SITE_UPDATES } from './site-updates'
+import { ARCHIVE_UPDATES, SITE_UPDATES } from './site-updates'
 
 /**
  * Only curated, visitor-facing SITE_UPDATES trigger a new notice.
@@ -55,4 +55,17 @@ export function getUpdateNotice(
 /** Deterministic predicate for repeat visits and newer feature announcements. */
 export function shouldShowUpdateNotice(seenVersion: string | null, notice: UpdateNoticeData | null): boolean {
   return notice !== null && seenVersion !== notice.version
+}
+
+/** The archive viewer includes every logged feature and collection update, even older than 30 days. */
+export type UpdateHistoryItem = VisitorUpdate & { category: '功能' | '收录' }
+
+export function getUpdateHistory(
+  siteUpdates: readonly VisitorUpdate[] = SITE_UPDATES,
+  archiveUpdates: readonly VisitorUpdate[] = ARCHIVE_UPDATES,
+): UpdateHistoryItem[] {
+  return [
+    ...siteUpdates.map((update) => ({ ...update, category: '功能' as const })),
+    ...archiveUpdates.map((update) => ({ ...update, category: '收录' as const })),
+  ].sort((a, b) => b.date.localeCompare(a.date))
 }

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import {
   getUpdateNotice,
+  getUpdateHistory,
   shouldShowUpdateNotice,
   type VisitorUpdate,
 } from '../src/lib/update-notice'
@@ -37,4 +38,19 @@ assert.equal(getUpdateNotice(today, [
   { date: '2026-08', title: '月份摘要', text: '非完整日期' },
 ]), null, '无效和月份级日期不能成为公告')
 
-console.log('visitor update notice: rolling window, grouped tags, once-only and next-version assertions passed')
+// The in-card history must include both types and never inherit the 30-day cutoff.
+const history = getUpdateHistory(
+  [
+    { date: '2026-10-19', title: '本月功能', text: '现在' },
+    { date: '2026-08', title: '建站', text: '最早记录' },
+  ],
+  [
+    { date: '2026-10-18', title: '近期补档', text: '录播' },
+    { date: '2026-08-10', title: '老补档', text: '仍可查看' },
+  ],
+)
+assert.equal(history.length, 4, '全部历史应同时包含功能与补档')
+assert.deepEqual(history.map((entry) => entry.title), ['本月功能', '近期补档', '老补档', '建站'], '历史记录按日期从新到旧')
+assert.deepEqual(history.map((entry) => entry.category), ['功能', '收录', '收录', '功能'])
+
+console.log('visitor update notice: recent and full history, grouped tags, once-only and next-version assertions passed')
