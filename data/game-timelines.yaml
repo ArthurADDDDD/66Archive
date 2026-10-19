@@ -3902,6 +3902,12 @@
     kind: unknown
     precision: part
     evidence: part_title
+  - page: 6
+    at: 00:00:25
+    game: sudoku
+    precision: approx
+    evidence: thumbnails
+    note: P6 约 00:25 起画面可见数独；此前黑场/加载保留 unknown。
   - page: 10
     at: 00:00:00
     game: rhythm-doctor
