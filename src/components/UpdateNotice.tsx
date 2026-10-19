@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { UpdateTag } from './UpdateTag'
 import {
   getUpdateNotice,
@@ -151,15 +152,16 @@ export function UpdateNotice() {
 
         <footer className="flex shrink-0 items-center justify-between gap-3 border-t border-line/60 px-5 py-3.5">
           <p className="text-meta text-faint">只提醒这一次</p>
-          <a
+          <Link
             href="/updates/"
+            prefetch={false}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setNotice(null)}
             className="ui-press inline-flex min-h-11 shrink-0 items-center rounded-full border border-live/45 bg-live/10 px-4 text-control font-medium text-live hover:border-live/70 hover:bg-live/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
           >
             查看全部历史 ↗
-          </a>
+          </Link>
         </footer>
       </aside>
     </div>
