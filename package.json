@@ -21,6 +21,7 @@
     "test:analytics": "tsx scripts/test-site-analytics.ts",
     "test:site-texts": "tsx scripts/test-site-texts.ts",
     "test:collection-log": "node --import tsx scripts/test-collection-log.ts",
+    "test:update-notice": "node --import tsx scripts/test-update-notice.ts",
     "test:audit-candidates": "node --import tsx scripts/test-title-game-candidates.ts",
     "test:route-prefetch": "node --import tsx scripts/test-route-prefetch.ts",
     "test:live-content": "node --import tsx scripts/test-live-content-loader.ts",
