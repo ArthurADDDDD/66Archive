@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { SiteFooter } from '@/components/primitives'
 import { UpdateTag } from '@/components/UpdateTag'
+import { UpdateCopy } from '@/components/UpdateCopy'
+import { SiteText } from '@/components/SiteText'
 import { getUpdateHistory, type UpdateHistoryItem } from '@/lib/update-notice'
 import { pageMetadata } from '@/lib/page-metadata'
 
@@ -31,17 +33,17 @@ export default function UpdatesPage() {
     <main className="min-h-screen">
       <article className="site-container max-w-4xl px-page py-14 sm:py-20">
         <Link href="/" prefetch={false} className="inline-flex min-h-11 items-center text-meta text-live hover:underline">
-          ← 回到首页
+          <SiteText id="updates-back" />
         </Link>
 
         <header className="mt-8 sm:mt-10">
-          <p className="text-meta font-medium tracking-widest text-live">女流档案馆 · 更新记录</p>
-          <h1 className="mt-3 text-h1 font-semibold text-ink">这些日子，我们更新了什么</h1>
+          <p className="text-meta font-medium tracking-widest text-live"><SiteText id="updates-eyebrow" /></p>
+          <h1 className="mt-3 text-h1 font-semibold text-ink"><SiteText id="updates-title" /></h1>
           <p className="mt-5 max-w-2xl text-body leading-relaxed text-muted">
-            新功能、找回的旧录像和照片，都记在这里。往下翻，就能看到以前的变化。
+            <SiteText id="updates-lede" />
           </p>
           <p className="mt-3 text-meta text-faint">
-            这里是精选更新记录，日期按整理完成时间记录，实际开放时间可能稍晚。
+            <SiteText id="updates-note" />
           </p>
         </header>
 
@@ -62,8 +64,8 @@ export default function UpdatesPage() {
                         <UpdateTag label={item.category} />
                         {(item.tags ?? []).slice(0, 2).map((tag) => <UpdateTag key={tag} label={tag} />)}
                       </div>
-                      <h3 className="mt-3 text-h3 font-semibold text-ink">{item.title}</h3>
-                      <p className="mt-2 max-w-2xl text-body leading-relaxed text-muted">{item.text}</p>
+                      <h3 className="mt-3 text-h3 font-semibold text-ink"><UpdateCopy category={item.category === '功能' ? 'feature' : 'archive'} entry={item} field="title" /></h3>
+                      <p className="mt-2 max-w-2xl text-body leading-relaxed text-muted"><UpdateCopy category={item.category === '功能' ? 'feature' : 'archive'} entry={item} field="text" /></p>
                     </li>
                   ))}
                 </ol>
@@ -73,7 +75,7 @@ export default function UpdatesPage() {
         </div>
 
         <p className="mt-8 text-meta text-faint">
-          还有新的变化，之后也会接着记在这里。
+          <SiteText id="updates-ending" />
         </p>
       </article>
       <SiteFooter />
