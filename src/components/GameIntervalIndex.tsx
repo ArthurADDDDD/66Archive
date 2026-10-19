@@ -11,7 +11,7 @@ export function GameIntervalIndex({sessions}:{sessions:GameIntervalSession[]}) {
   if(!visible.length)return null
   return <section className="mb-10" aria-labelledby="game-intervals-title" data-testid="game-interval-index">
     <h2 id="game-intervals-title" className="text-h3 font-semibold text-ink"><SiteText id="game-intervals-title" /></h2>
-    <p className="mt-2 max-w-3xl text-meta leading-relaxed text-muted"><SiteText id="game-intervals-hint" /></p>
+    <p className="mt-2 max-w-3xl text-meta leading-relaxed text-muted"><SiteText id="game-intervals-hint" />同款游戏中途休息计入同一环节。</p>
     <div className="mt-5 grid gap-4 lg:grid-cols-2">
       {visible.map(s=><article key={s.entry} className="min-w-0 rounded-xl border border-line bg-surface/30 p-4 sm:p-5" data-entry={s.entry}>
         <Link prefetch={false} href={`/e/${s.entry}/#game-chapters-title`} className="text-control font-medium text-ink underline decoration-line underline-offset-4 hover:text-live"><time>{s.date}</time> · 查看整场章节 →</Link>

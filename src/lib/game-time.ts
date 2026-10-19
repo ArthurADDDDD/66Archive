@@ -132,12 +132,52 @@ export function resolveSpans(timeline: GameTimeline): ResolvedSpan[] {
   })
 }
 
+/**
+ * 展示与统计用的连续游戏环节；原始审核跨度由 resolveSpans 保留。
+ * 同一具体游戏夹着的 break 归入该游戏，unknown 和另一款游戏不会被跨越。
+ * 合并只改变派生归属；每份源记录的人工证据与已核实秒数独立计算。
+ */
+export type GameSessionSpan = ResolvedSpan & { sourceIndexes: number[]; verifiedSec: number }
+
+export function gameSessionSpans(timeline: GameTimeline): GameSessionSpan[] {
+  const raw = resolveSpans(timeline)
+  const bridged = new Map<number, string>()
+  for (let i = 0; i < raw.length; i++) {
+    if (raw[i].span.kind !== 'break') continue
+    const first = i
+    while (i + 1 < raw.length && raw[i + 1].span.kind === 'break') i++
+    const before = raw[first - 1]?.span.game
+    const after = raw[i + 1]?.span.game
+    // 精确作品 ID 必须相同，不能因为属于同一系列而跨作品合并。
+    if (before && before === after) {
+      for (let j = first; j <= i; j++) bridged.set(j, before)
+    }
+  }
+  const result: GameSessionSpan[] = []
+  for (const [i, resolved] of raw.entries()) {
+    const game = bridged.get(i)
+    const span = game ? { ...resolved.span, game, kind: undefined } as TimelineSpan : resolved.span
+    const verifiedSec = span.game && resolved.startChecked && resolved.endChecked && resolved.span.scanned === true
+      ? resolved.endSec - resolved.startSec : 0
+    const previous = result[result.length - 1]
+    if (span.game && previous?.span.game === span.game) {
+      previous.endSec = resolved.endSec
+      previous.endChecked = resolved.endChecked
+      previous.sourceIndexes.push(i)
+      previous.verifiedSec += verifiedSec
+    } else {
+      result.push({ ...resolved, span, sourceIndexes: [i], verifiedSec })
+    }
+  }
+  return result
+}
+
 function fromTimeline(session: SessionInput, gameId: string, timeline: GameTimeline): SessionGameTime {
   let verifiedSec = 0
   let associatedSec = 0
   let unknownUpperSec = 0
   let jump: GameJump | null = null
-  for (const r of resolveSpans(timeline)) {
+  for (const r of gameSessionSpans(timeline)) {
     const length = r.endSec - r.startSec
     if (r.span.kind === 'unknown') {
       unknownUpperSec += length
@@ -146,7 +186,7 @@ function fromTimeline(session: SessionInput, gameId: string, timeline: GameTimel
     // 系列父 ID（如 maplestory）继承具体作品（maplestory-classic）的环节：父 ID 本身不会有自己的环节
     if (r.span.game !== gameId && (!r.span.game || SPECIFIC_GAME_PARENTS[r.span.game] !== gameId)) continue
     associatedSec += length
-    if (r.startChecked && r.endChecked && r.span.scanned) verifiedSec += length
+    verifiedSec += r.verifiedSec
     jump ??= buildJump(timeline.basis, r.span.page, toSeconds(r.span.at), r.span.precision)
   }
   const partial = timeline.coverage !== 'complete'

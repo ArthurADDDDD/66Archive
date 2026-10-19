@@ -9,6 +9,8 @@ import { getGameTimelines, getPublicDataset, toTimelineEntries } from '../src/li
 import { checkGameTimelines } from '../src/lib/game-timeline-check'
 import {
   buildJump,
+  gameSessionSpans,
+  resolveSpans,
   indexTimelines,
   sessionGameTime,
   summarizeGameTime,
@@ -108,6 +110,32 @@ assert.equal(INDEPENDENT_SEGMENT_MIN_SEC, 300)
   const fall = sessionGameTime(session(['paper-mario', 'fall-guys']), 'fall-guys', t)
   assert.equal(fall.associatedSec, 2655 - 600)
   assert.equal(fall.verifiedSec, 2655 - 600, '两端都是人工定位（终点 = 下一环节的 approx 起点）且内部已查，算已核实')
+}
+
+// ── 同款游戏中途休息并回完整环节，原人工证据不改变 ─────────────────
+{
+  const t = timeline({ parts: parts(1200, 1200), spans: [
+    span({page:1, at:'00:00:00', game:'a', precision:'approx', evidence:'human_watch', scanned:true}),
+    span({page:1, at:'00:05:00', kind:'break', precision:'approx', evidence:'human_watch'}),
+    span({page:2, at:'00:00:00', game:'a', precision:'approx', evidence:'human_watch', scanned:true}),
+  ] })
+  const original = JSON.stringify(t)
+  const a = sessionGameTime(session(['a']), 'a', t)
+  assert.equal(a.associatedSec, 2400, '15分钟休息也包含在同款游戏环节')
+  assert.equal(a.verifiedSec, 1500, '休息未检查，不自动升级已核实；两侧已核实秒数保留')
+  assert.equal(gameSessionSpans(t).length, 1)
+  assert.equal(resolveSpans(t).length, 3, '原始审核记录仍可追溯')
+  assert.equal(JSON.stringify(t), original, '计算不修改人工记录')
+  const unknown = {...t, spans:t.spans.map((s,i)=>i===1?span({...s,kind:'unknown'}):s)}
+  assert.equal(gameSessionSpans(unknown).length,3, '不能吞并unknown')
+  assert.equal(sessionGameTime(session(['a']), 'a', unknown).unknownUpperSec,900)
+  const other = {...t, spans:t.spans.map((s,i)=>i===2?span({...s,game:'b'}):s)}
+  assert.equal(gameSessionSpans(other).length,3, '不同游戏之间的独立环节仍排除')
+  assert.equal(sessionGameTime(session(['a','b']), 'a', other).associatedSec,300)
+  const runs = {...t, spans:[t.spans[0],t.spans[1],span({page:1,at:'00:10:00',kind:'break'}),t.spans[2]]}
+  assert.equal(gameSessionSpans(runs).length,1, '相连休息段也并回同款游戏')
+  const family = {...other,spans:other.spans.map((s,i)=>i===0?span({...s,game:'maplestory'}):i===2?span({...s,game:'maplestory-classic'}):s)}
+  assert.equal(gameSessionSpans(family).length,3,'同系列不同作品不能冒充同款')
 }
 
 // ── 未核对环节：可能属于任何一款，进上限，所有游戏都只是下限 ────────────

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { GameTimelineChapters } from '@/components/GameTimelineChapters'
 import { chapterClock, gameChapters } from '@/lib/game-chapters'
-import { recordedSec, resolveSpans } from '@/lib/game-time'
+import { recordedSec, gameSessionSpans } from '@/lib/game-time'
 import { notFound } from 'next/navigation'
 import { buildSourceGroups, getPublicDataset } from '@/lib/data'
 import { visibleGameIds } from '@/lib/games'
@@ -130,7 +130,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   })
 
   if (reviewedTimeline) {
-    segments = resolveSpans(reviewedTimeline).map(r => ({
+    segments = gameSessionSpans(reviewedTimeline).map(r => ({
       at:chapterClock(r.startSec),atSec:r.startSec,endSec:r.endSec,
       name:r.span.game ? (ds.games.get(r.span.game)?.name ?? r.span.game) : r.span.kind==='break' ? '聊天 / 独立环节' : '尚未确认',
       label:`P${r.span.page} ${r.span.at}`,gameId:r.span.game ?? null,color:gameColor(r.span.game ?? null),dim:!r.span.game,
