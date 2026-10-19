@@ -5,6 +5,7 @@ import './globals.css'
 import { LiveContentProvider, LiveDocumentMeta } from '@/components/LiveContentProvider'
 import { BgmPlayer } from '@/components/BgmPlayer'
 import { LiveStatusIndicator } from '@/components/LiveStatusIndicator'
+import { UpdateNotice } from '@/components/UpdateNotice'
 import { SiteAnalytics } from '@/components/SiteAnalytics'
 import { RouteIntentPrefetch } from '@/components/RouteIntentPrefetch'
 import { fetchBakedNavShell } from '@/lib/baked-content'
@@ -175,6 +176,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {children}
           {/* 直播状态属于全站浮层；挂在 layout 上，站内换页时保持显示与轮询。 */}
           <LiveStatusIndicator />
+          {/* 访客功能更新：本机每个公告版本只显示一次；与直播浮层、订阅逻辑隔离。 */}
+          <UpdateNotice />
           {/* 背景音乐：挂在 layout 上，站内跳页时不会断掉重来 */}
           <BgmPlayer />
         </LiveContentProvider>
