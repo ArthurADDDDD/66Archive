@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { UpdateTag } from './UpdateTag'
 import { UpdateCopy } from './UpdateCopy'
 import { SiteText } from './SiteText'
-import { useSiteText } from './LiveContentProvider'
+import { useLiveEditActive, useSiteText } from './LiveContentProvider'
 import {
   getUpdateNotice,
   shouldShowUpdateNotice,
@@ -21,6 +21,7 @@ import {
  */
 export function UpdateNotice() {
   const pathname = usePathname()
+  const liveEditing = useLiveEditActive()
   const closeLabel = useSiteText('site-update-notice-close')
   const regionLabel = useSiteText('site-update-notice-region')
   const [notice, setNotice] = useState<UpdateNoticeData | null>(null)
@@ -44,7 +45,7 @@ export function UpdateNotice() {
       return
     }
     // A push-test link already opens its own dialog.
-    if (window.location.hash.includes('push-test=')) return
+    if (!liveEditing && window.location.hash.includes('push-test=')) return
     const next = getUpdateNotice()
     if (!next) return
 
@@ -54,18 +55,21 @@ export function UpdateNotice() {
     } catch {
       // The current visit still works if storage is unavailable.
     }
-    if (!shouldShowUpdateNotice(seen, next)) return
+    if (!liveEditing && !shouldShowUpdateNotice(seen, next)) return
 
     const timer = window.setTimeout(() => {
       setNotice(next)
-      try {
-        window.localStorage.setItem(UPDATE_NOTICE_STORAGE_KEY, next.version)
-      } catch {
-        // No personal data or server-side tracking is involved.
+      // A preview must not count as a visitor seeing the release announcement.
+      if (!liveEditing) {
+        try {
+          window.localStorage.setItem(UPDATE_NOTICE_STORAGE_KEY, next.version)
+        } catch {
+          // No personal data or server-side tracking is involved.
+        }
       }
-    }, 1200)
+    }, liveEditing ? 0 : 1200)
     return () => window.clearTimeout(timer)
-  }, [pathname])
+  }, [pathname, liveEditing])
 
   // Only the mobile version blocks the background. Restore scroll and focus on close.
   useEffect(() => {
