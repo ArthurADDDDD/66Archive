@@ -56,7 +56,7 @@ export function UpdateNotice() {
       <header className="shrink-0 border-b border-line/60 px-4 pb-3 pt-4 sm:px-5">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <p className="font-mono text-meta tracking-wide text-live">WHAT'S NEW · 近 30 天</p>
+            <p className="font-mono text-meta tracking-wide text-live">WHAT’S NEW · 近 30 天</p>
             <h2 id="visitor-update-notice-title" className="mt-1 text-h3 font-semibold">女流档案馆更新啦</h2>
             <p className="mt-1 text-meta leading-relaxed text-muted">这次整理了 {notice.updates.length} 项值得看看的网站变化。</p>
           </div>
