@@ -516,6 +516,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2015-01-27-live-01
   basis: https://www.acfun.cn/v/ac1733926
@@ -535,6 +536,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2015-01-29-live-01
   basis: https://www.bilibili.com/video/BV1Gx411A7NC
@@ -549,6 +551,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:31
     game: biantai-rensheng
@@ -559,6 +562,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2015-02-09-live-01
   basis: https://www.acfun.cn/v/ac1736317
@@ -578,6 +582,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:41:00
     game: dont-escape
@@ -588,6 +593,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 01:10:00
     game: new-super-mario-bros-u
@@ -612,6 +618,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:34:00
     game: super-mario-3d-world
@@ -622,6 +629,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 01:31:00
     game: taiko-no-tatsujin
@@ -632,6 +640,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2015-07-06-live-01
   basis: https://www.acfun.cn/v/ac2010055
@@ -646,6 +655,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 00:00:05
     game: besiege
@@ -656,6 +666,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2015-09-09-live-02
   basis: https://www.acfun.cn/v/ac2188498
@@ -678,6 +689,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:00:55
     game: benzuo-dao-yao-kankan-ni-neng-huo-jitian
@@ -688,6 +700,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:27:15
     game: ershiyi-shiji-shengming-kexue
@@ -698,6 +711,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:40:45
     game: my-teacher-is-a-bear
@@ -731,6 +745,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:01:10
     game: street-fighter-v
@@ -750,6 +765,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:14:27
     game: tricky-towers
@@ -760,6 +776,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2017-01-18-live-01
   basis: https://www.bilibili.com/video/BV1Ss411h7Un
@@ -777,6 +794,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: geometry-dash
@@ -816,6 +834,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:10:25
     game: 1-2-switch
@@ -844,6 +863,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:20:19
     game: 1-2-switch
@@ -854,6 +874,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2017-08-09-live-01
   basis: https://www.bilibili.com/video/BV1vx411n7jt
@@ -919,6 +940,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: cook-serve-delicious
@@ -952,6 +974,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   - page: 2
     at: 00:00:00
     game: euro-truck-simulator-2
@@ -983,6 +1006,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: pubg
@@ -1019,6 +1043,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: pubg
@@ -1052,6 +1077,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: getting-over-it
@@ -1091,6 +1117,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 1
     at: 00:19:30
     game: tiny-toon-busters-hidden-treasure
@@ -1101,6 +1128,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2017-12-08-live-01
   basis: https://www.bilibili.com/video/BV1xW411h7Zg
@@ -1149,6 +1177,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2017-12-09-live-01
   basis: https://www.bilibili.com/video/BV14W411h7xX
@@ -1172,6 +1201,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 3
     at: 00:00:00
     game: murder-mystery
@@ -1194,6 +1224,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: pubg
@@ -1219,6 +1250,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   - page: 2
     at: 00:00:00
     game: mr-blackface
@@ -1244,6 +1276,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: puyo-puyo-tetris
@@ -1274,6 +1307,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: old-mans-journey
@@ -1301,6 +1335,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:15:30
     game: beat-saber
@@ -1316,6 +1351,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:00:00
     game: rec-room
@@ -1326,6 +1362,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:24:30
     game: beat-saber
@@ -1351,6 +1388,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: comedy-night
@@ -1384,6 +1422,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: farm-together
@@ -1414,6 +1453,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: bomb-chicken
@@ -1447,6 +1487,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:19:29
     game: overcooked-2
@@ -1480,6 +1521,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: minecraft
@@ -1490,6 +1532,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 4
     at: 00:00:54
     game: no-mans-sky
@@ -1515,6 +1558,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: minecraft
@@ -1525,6 +1569,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 3
     at: 00:00:35
     game: starbound
@@ -1550,6 +1595,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:22:24
     game: witch-it
@@ -1560,6 +1606,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 3
     at: 00:17:30
     game: 39-days-to-mars
@@ -1585,6 +1632,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:19:55
     game: jian-ai
@@ -1615,6 +1663,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:36
     game: lifeafter
@@ -1625,6 +1674,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 01:17:02
     game: red-dead-redemption-2
@@ -1653,6 +1703,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: super-mario-party
@@ -1663,6 +1714,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:01:24
     game: red-dead-redemption-2
@@ -1688,6 +1740,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:02:47
     game: doudizhu
@@ -1698,6 +1751,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2018-12-07-live-01
   basis: https://www.bilibili.com/video/BV1qt411S726
@@ -1727,6 +1781,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:17:16
     game: doudizhu
@@ -1737,6 +1792,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2018-12-11-live-01
   basis: https://www.bilibili.com/video/BV1dt411q7Mg
@@ -1757,6 +1813,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:12:00
     game: doudizhu
@@ -1793,6 +1850,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:06:53
     game: doudizhu
@@ -1838,6 +1896,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 3
     at: 00:00:24
     game: human-fall-flat
@@ -1874,6 +1933,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:17:24
     game: trials-rising
@@ -1919,6 +1979,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: mages-of-mystralia
@@ -1958,6 +2019,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: bloody-spell
@@ -2025,6 +2087,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: sekiro
@@ -2061,6 +2124,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: unheard
@@ -2097,6 +2161,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:42
     game: vacation-simulator
@@ -2107,6 +2172,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:29:04
     game: vacation-simulator
@@ -2122,6 +2188,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 3
     at: 00:26:23
     game: beat-saber
@@ -2150,6 +2217,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 3
     at: 00:00:00
     game: mist-detective
@@ -2160,6 +2228,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 4
     at: 00:00:05
     game: rento
@@ -2170,6 +2239,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2019-06-10-live-01
   basis: https://www.bilibili.com/video/BV194411N7Lv
@@ -2199,6 +2269,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: cooking-simulator
@@ -2235,6 +2306,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: sky-children-of-the-light
@@ -2268,6 +2340,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: sky-noon
@@ -2304,6 +2377,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: unheard
@@ -2314,6 +2388,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2019-08-29-live-01
   basis: https://www.bilibili.com/video/BV1i4411274R
@@ -2343,6 +2418,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: heave-ho
@@ -2350,9 +2426,10 @@
     evidence: part_title
   - page: 5
     at: 00:01:24
-    kind: unknown
+    game: bleach-soul-resonance
     precision: approx
     evidence: thumbnails
+    note: P5 01:24 起画面出现 BLEACH 标志与死神角色；版本/切换秒未细分。
   reviewed: '2026-10-19'
 - entry: 2019-10-18-live-01
   basis: https://www.bilibili.com/video/BV1uE411k7gR
@@ -2382,6 +2459,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: ring-fit-adventure
@@ -2415,6 +2493,7 @@
     kind: unknown
     precision: part
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: tangle-tower
@@ -2446,6 +2525,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 3
     at: 00:00:00
     game: feel-the-snow
@@ -2505,6 +2585,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 7
     at: 00:34:51
     game: nioh-2
@@ -2539,6 +2620,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   - page: 6
     at: 00:11:25
     game: animal-crossing-nh
@@ -2592,6 +2674,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:00:52
     game: streets-of-rage-4
@@ -2628,6 +2711,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:01:07
     game: brawl-stars
@@ -2667,6 +2751,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 3
     at: 00:00:22
     game: world-games-51
@@ -2790,6 +2875,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: fall-guys
@@ -2800,6 +2886,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:02:30
     game: grounded
@@ -2833,6 +2920,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:00:36
     game: pascals-wager
@@ -2861,6 +2949,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: stickman
@@ -2871,6 +2960,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:00:18
     game: contra
@@ -2907,6 +2997,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:00:12
     game: contra
@@ -2943,6 +3034,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 5
     at: 00:01:24
     game: fall-guys
@@ -2979,6 +3071,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2020-10-06-live-01
   basis: https://www.bilibili.com/video/BV1fy4y1k74X
@@ -3005,6 +3098,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   - page: 2
     at: 00:00:00
     game: fall-guys
@@ -3041,6 +3135,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 3
     at: 00:00:00
     game: medieval-dynasty
@@ -3074,6 +3169,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: wudao-micang
@@ -3107,6 +3203,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 未归类片段
   - page: 1
     at: 00:08:30
     game: rolo-to-the-rescue
@@ -3117,6 +3214,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 4
     at: 00:00:48
     game: circus-charlie
@@ -3148,6 +3246,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: world-games-51
@@ -3190,6 +3289,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: astro-bot
@@ -3288,6 +3388,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2020-12-18-live-01
   basis: https://www.bilibili.com/video/BV15A411s7VD
@@ -3388,6 +3489,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: xianjian-7
@@ -3398,6 +3500,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2021-01-22-live-01
   basis: https://www.bilibili.com/video/BV1zU4y147D9
@@ -3464,6 +3567,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:06
     game: shady-part-of-me
@@ -3508,6 +3612,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: gaodian-zhanji
@@ -3583,6 +3688,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: dyson-sphere-program
@@ -3687,6 +3793,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: tiny-lands
@@ -3732,6 +3839,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 7
     at: 00:00:00
     game: the-room-4
@@ -3772,6 +3880,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 3
     at: 00:00:00
     game: guigu-bahuang
@@ -3820,6 +3929,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 7
     at: 00:01:45
     game: guardian-tales
@@ -3860,6 +3970,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: world-games-51
@@ -3902,6 +4013,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 休息 / 切换
   - page: 6
     at: 00:00:25
     game: sudoku
@@ -4018,6 +4130,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:08:00
     game: neon-white
@@ -4042,6 +4155,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 00:00:06
     game: endoparasitic
@@ -4094,6 +4208,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 1
     at: 00:03:51
     game: subnautica
@@ -4169,6 +4284,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 3
     at: 00:06:40
     game: brotato
@@ -4230,6 +4346,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:29:35
     game: atomic-heart
@@ -4304,6 +4421,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 6
     at: 00:17:06
     game: fall-guys
@@ -4314,6 +4432,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2023-09-17-live-01
   basis: https://www.bilibili.com/video/BV1tz4y1L78G
@@ -4328,6 +4447,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:12
     game: lies-of-p
@@ -4338,6 +4458,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2023-11-01-live-01
   basis: https://www.bilibili.com/video/BV1Nw411M7tt
@@ -4352,6 +4473,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:13:15
     game: valorant
@@ -4386,6 +4508,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:25:46
     game: jiezou-gezi
@@ -4396,6 +4519,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 02:39:32
     game: dont-scream
@@ -4406,6 +4530,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 03:31:13
     game: pummel-party
@@ -4416,6 +4541,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2023-11-09-live-01
   basis: https://www.bilibili.com/video/BV1kw411T7Sg
@@ -4435,6 +4561,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 01:11:08
     game: fall-guys
@@ -4454,6 +4581,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:17:55
     game: rhythm-doctor
@@ -4489,6 +4617,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 1
     at: 00:08:40
     game: rhythm-heaven
@@ -4499,6 +4628,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 1
     at: 00:51:14
     game: once-human
@@ -4509,6 +4639,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2024-12-06-live-02
   basis: https://www.bilibili.com/video/BV136iBYoESP
@@ -4529,6 +4660,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:13:00
     game: out-of-bounds
@@ -4554,6 +4686,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:02:44
     game: out-of-bounds
@@ -4579,6 +4712,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:06:13
     game: mizi-no
@@ -4601,6 +4735,13 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
+  - page: 1
+    at: 00:06:32
+    game: a-little-to-the-left
+    precision: approx
+    evidence: thumbnails
+    note: P1 06:32 起出现 A Little to the Left 主菜单与关卡；此前为摄像头/聊天。
   - page: 1
     at: 00:46:56
     game: duckov
@@ -4638,6 +4779,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:13:36
     game: nioh-3
@@ -4683,6 +4825,7 @@
     kind: unknown
     precision: exact
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2026-07-04-live-02
   basis: https://www.bilibili.com/video/BV1AkMP6zEPo
@@ -4706,6 +4849,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:35:36
     game: rhythm-heaven
@@ -4716,6 +4860,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 2
     at: 00:30:12
     game: meecha-chameleon
@@ -4741,6 +4886,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 1
     at: 00:07:48
     game: path-of-exile-2
@@ -4751,6 +4897,13 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
+  - page: 2
+    at: 00:20:43
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+    note: P2 20:43 起出现冒险岛启动器与怀旧服画面；经典/正式服版本未细分。
   reviewed: '2026-10-19'
 - entry: 2026-09-17-live-01
   basis: https://www.bilibili.com/video/BV19Hey6vEY8
@@ -4774,6 +4927,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: jiaomeimeikaiche
@@ -4810,6 +4964,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: kongzhigongzhen
@@ -4835,6 +4990,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:05:56
     game: planet-zoo-2
