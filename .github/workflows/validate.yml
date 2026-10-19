@@ -89,6 +89,10 @@ jobs:
       - name: Verify site text registry
         run: npm run test:site-texts
 
+      # 站点版本公告：近 30 天功能合并、同版本只提醒一次、新功能再次提醒。
+      - name: Verify visitor update notice
+        run: npm run test:update-notice
+
       # 埋点上报口径：重复点击合并、自动化会话不计入、站内链接解析。
       # 退化了不会报错，只会让统计悄悄变得不可信。
       - name: Verify analytics reporting rules
