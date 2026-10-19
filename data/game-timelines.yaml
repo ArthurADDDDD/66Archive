@@ -517,6 +517,25 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-19'
+- entry: 2015-01-27-live-01
+  basis: https://www.acfun.cn/v/ac1733926
+  coverage: partial
+  parts:
+  - page: 1
+    id: '1733926'
+    duration_sec: 5999
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: super-mario-3d-world
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 01:39:45
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-19'
 - entry: 2015-01-29-live-01
   basis: https://www.bilibili.com/video/BV1Gx411A7NC
   coverage: unknown
