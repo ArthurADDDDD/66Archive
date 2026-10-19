@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
 import {
   getUpdateNotice,
   getUpdateHistory,
@@ -38,7 +40,7 @@ assert.equal(getUpdateNotice(today, [
   { date: '2026-08', title: '月份摘要', text: '非完整日期' },
 ]), null, '无效和月份级日期不能成为公告')
 
-// The in-card history must include both types and never inherit the 30-day cutoff.
+// The complete history must include both types and never inherit the 30-day cutoff.
 const history = getUpdateHistory(
   [
     { date: '2026-10-19', title: '本月功能', text: '现在' },
@@ -53,4 +55,21 @@ assert.equal(history.length, 4, '全部历史应同时包含功能与补档')
 assert.deepEqual(history.map((entry) => entry.title), ['本月功能', '近期补档', '老补档', '建站'], '历史记录按日期从新到旧')
 assert.deepEqual(history.map((entry) => entry.category), ['功能', '收录', '收录', '功能'])
 
-console.log('visitor update notice: recent and full history, grouped tags, once-only and next-version assertions passed')
+
+// Full history page and notification stay discoverable without changing
+// the storage version or placing music controls on /updates/.
+const completeHistory = getUpdateHistory()
+assert.equal(completeHistory.length, SITE_UPDATES.length + ARCHIVE_UPDATES.length)
+assert.deepEqual(
+  completeHistory.map(item => item.date),
+  [...completeHistory.map(item => item.date)].sort((a, b) => b.localeCompare(a)),
+  'all history remains newest first',
+)
+assert.match(readFileSync('src/app/updates/page.tsx', 'utf8'), /getUpdateHistory\(\)/)
+assert.match(readFileSync('src/components/UpdateNotice.tsx', 'utf8'), /target="_blank"/)
+assert.match(readFileSync('src/components/UpdateNotice.tsx', 'utf8'), /aria-modal=\{mobile \? true : undefined\}/)
+assert.match(readFileSync('src/components/BgmPlayer.tsx', 'utf8'), /pathname === '\/updates'/)
+assert.match(readFileSync('src/components/primitives.tsx', 'utf8'), /href="\/updates\/"/)
+assert.match(readFileSync('src/app/sitemap.ts', 'utf8'), /'\/updates\/'/)
+
+console.log('visitor update notice: recent and full history, discoverability, silent route and once-only assertions passed')
