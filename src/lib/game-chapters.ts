@@ -16,6 +16,8 @@ export type GameChapter = {
   verifiedSec: number
   precision: TimelineSpan['precision']
   jump: GameJump | null
+  /** 公开短标签：聊天 / 休息 / 切换 / 未归类片段。 */
+  note?: string
 }
 
 export function chapterClock(seconds: number): string {
@@ -36,7 +38,7 @@ export function gameChapters(timeline: GameTimeline): GameChapter[] {
     return { index, gameId:r.span.game ?? null, kind:r.span.game ? 'game' : r.span.kind!,
       page:r.span.page, at:r.span.at, endPage:next?.page ?? last.page, endAt:next?.at ?? chapterClock(last.duration_sec),
       durationSec:r.endSec-r.startSec, verified:Boolean(r.span.game && Math.abs(r.verifiedSec - (r.endSec-r.startSec)) < 1e-6), verifiedSec:r.verifiedSec,
-      precision:r.span.precision, jump:buildJump(timeline.basis,r.span.page,offset,r.span.precision) }
+      precision:r.span.precision, jump:buildJump(timeline.basis,r.span.page,offset,r.span.precision), note:r.span.note }
   })
 }
 

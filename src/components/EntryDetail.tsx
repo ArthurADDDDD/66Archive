@@ -272,12 +272,16 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
       <ol className="divide-y divide-line">
         {chapters.map((chapter) => {
           const title = chapter.gameName ?? (chapter.kind === 'break'
-            ? <SiteText id="entry-detail-game-kind-break" />
-            : chapter.kind === 'unknown' ? <SiteText id="entry-detail-game-kind-unknown" /> : chapter.gameId ?? '游戏')
+            ? <SiteText id="entry-detail-game-kind-chat" />
+            : chapter.kind === 'unknown'
+              ? chapter.label ?? <SiteText id="entry-detail-game-kind-unclassified" />
+              : chapter.gameId ?? '未命名游戏')
           const kindNote = chapter.kind === 'break'
             ? <SiteText id="entry-detail-game-break-note" />
             : chapter.kind === 'unknown'
-              ? <SiteText id="entry-detail-game-unknown-note" />
+              ? (chapter.label ?? '未归类片段') === '未归类片段'
+                ? <SiteText id="entry-detail-game-unclassified-note" />
+                : <SiteText id="entry-detail-game-break-note" />
               : chapter.verified
                 ? <SiteText id="entry-detail-game-verified" />
                 : <SiteText id="entry-detail-game-associated" />
