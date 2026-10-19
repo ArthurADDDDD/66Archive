@@ -4,6 +4,9 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { UpdateTag } from './UpdateTag'
+import { UpdateCopy } from './UpdateCopy'
+import { SiteText } from './SiteText'
+import { useLiveEditActive, useSiteText } from './LiveContentProvider'
 import {
   getUpdateNotice,
   shouldShowUpdateNotice,
@@ -18,6 +21,9 @@ import {
  */
 export function UpdateNotice() {
   const pathname = usePathname()
+  const liveEditing = useLiveEditActive()
+  const closeLabel = useSiteText('site-update-notice-close')
+  const regionLabel = useSiteText('site-update-notice-region')
   const [notice, setNotice] = useState<UpdateNoticeData | null>(null)
   const [mobile, setMobile] = useState(false)
   const cardRef = useRef<HTMLElement>(null)
@@ -38,8 +44,12 @@ export function UpdateNotice() {
       setNotice(null)
       return
     }
+    // Inside live editing, only the dedicated preview shortcut may open this card.
+    // All other editor pages stay unobstructed, including the homepage and privacy page.
+    const preview = liveEditing && new URLSearchParams(window.location.search).get('edit-update-notice') === '1'
+    if (liveEditing && !preview) return
     // A push-test link already opens its own dialog.
-    if (window.location.hash.includes('push-test=')) return
+    if (!liveEditing && window.location.hash.includes('push-test=')) return
     const next = getUpdateNotice()
     if (!next) return
 
@@ -49,18 +59,21 @@ export function UpdateNotice() {
     } catch {
       // The current visit still works if storage is unavailable.
     }
-    if (!shouldShowUpdateNotice(seen, next)) return
+    if (!liveEditing && !shouldShowUpdateNotice(seen, next)) return
 
     const timer = window.setTimeout(() => {
       setNotice(next)
-      try {
-        window.localStorage.setItem(UPDATE_NOTICE_STORAGE_KEY, next.version)
-      } catch {
-        // No personal data or server-side tracking is involved.
+      // A preview must not count as a visitor seeing the release announcement.
+      if (!liveEditing) {
+        try {
+          window.localStorage.setItem(UPDATE_NOTICE_STORAGE_KEY, next.version)
+        } catch {
+          // No personal data or server-side tracking is involved.
+        }
       }
-    }, 1200)
+    }, liveEditing ? 0 : 1200)
     return () => window.clearTimeout(timer)
-  }, [pathname])
+  }, [pathname, liveEditing])
 
   // Only the mobile version blocks the background. Restore scroll and focus on close.
   useEffect(() => {
@@ -112,15 +125,15 @@ export function UpdateNotice() {
         <header className="shrink-0 border-b border-line/60 px-5 pb-3 pt-4">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <p className="font-mono text-meta tracking-wide text-live">最近 30 天</p>
-              <h2 id="visitor-update-notice-title" className="mt-1 text-h3 font-semibold">网站有新变化啦</h2>
-              <p className="mt-1 text-meta leading-relaxed text-muted">最近这些功能，你可以试试看。</p>
+              <p className="font-mono text-meta tracking-wide text-live"><SiteText id="site-update-notice-eyebrow" /></p>
+              <h2 id="visitor-update-notice-title" className="mt-1 text-h3 font-semibold"><SiteText id="site-update-notice-title" /></h2>
+              <p className="mt-1 text-meta leading-relaxed text-muted"><SiteText id="site-update-notice-lede" /></p>
             </div>
             <button
               ref={closeRef}
               type="button"
               onClick={() => setNotice(null)}
-              aria-label="关闭更新提醒"
+              aria-label={closeLabel}
               className="ui-press -mr-1 -mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-h3 text-muted hover:bg-surface hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
             >
               <span aria-hidden="true">×</span>
@@ -130,7 +143,7 @@ export function UpdateNotice() {
 
         <div
           role="region"
-          aria-label="近期功能更新"
+          aria-label={regionLabel}
           tabIndex={0}
           className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 [scrollbar-width:thin] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-live"
         >
@@ -143,15 +156,15 @@ export function UpdateNotice() {
                   </time>
                   {(update.tags ?? []).slice(0, 2).map((tag) => <UpdateTag key={tag} label={tag} />)}
                 </div>
-                <h3 className="mt-2 text-control font-semibold text-ink">{update.title}</h3>
-                <p className="mt-1 text-control leading-relaxed text-muted">{update.text}</p>
+                <h3 className="mt-2 text-control font-semibold text-ink"><UpdateCopy category="feature" entry={update} field="title" /></h3>
+                <p className="mt-1 text-control leading-relaxed text-muted"><UpdateCopy category="feature" entry={update} field="text" /></p>
               </li>
             ))}
           </ol>
         </div>
 
         <footer className="flex shrink-0 items-center justify-between gap-3 border-t border-line/60 px-5 py-3.5">
-          <p className="text-meta text-faint">只提醒这一次</p>
+          <p className="text-meta text-faint"><SiteText id="site-update-notice-once" /></p>
           <Link
             href="/updates/"
             prefetch={false}
@@ -160,7 +173,7 @@ export function UpdateNotice() {
             onClick={() => setNotice(null)}
             className="ui-press inline-flex min-h-11 shrink-0 items-center rounded-full border border-live/45 bg-live/10 px-4 text-control font-medium text-live hover:border-live/70 hover:bg-live/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
           >
-            查看全部历史 ↗
+            <SiteText id="site-update-notice-history" />
           </Link>
         </footer>
       </aside>

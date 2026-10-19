@@ -1,3 +1,4 @@
+import { UPDATE_COPY_TEXTS } from './update-copy'
 /**
  * 站点文案基线（唯一真源在这里，不在组件里散着写）
  * ================================================
@@ -597,6 +598,42 @@ export const SITE_COPY: SiteCopy = {
     {"id": "entry-detail-game-jump-part", "group": "录像展开卡 · 游戏章节", "label": "jump-part", "text": "从第 {page} P 看", "vars": ["page"]},
     {"id": "entry-detail-game-jump-time", "group": "录像展开卡 · 游戏章节", "label": "jump-time", "text": "从{approx} {at} 看", "vars": ["approx", "at"]},
     {"id": "entry-detail-game-acfun-note", "group": "录像展开卡 · 游戏章节", "label": "acfun-note", "text": "AcFun 仅能直接打开分P，页内时间供手动定位。"},
+    // 版本记录是页面可见的文案；日期、归类和发布身份仍由源码维护。
+    ...UPDATE_COPY_TEXTS,
+    { id: 'updates-back', group: '更新记录 · 页头', label: '返回首页', text: '← 回到首页' },
+    { id: 'updates-eyebrow', group: '更新记录 · 页头', label: '眉标', text: '女流档案馆 · 更新记录' },
+    { id: 'updates-title', group: '更新记录 · 页头', label: '标题', text: '这些日子，我们更新了什么' },
+    { id: 'updates-lede', group: '更新记录 · 页头', label: '说明', text: '新功能、找回的旧录像和照片，都记在这里。往下翻，就能看到以前的变化。' },
+    { id: 'updates-note', group: '更新记录 · 页头', label: '日期说明', text: '这里是精选更新记录，日期按整理完成时间记录，实际开放时间可能稍晚。' },
+    { id: 'updates-ending', group: '更新记录 · 页尾', label: '结束语', text: '还有新的变化，之后也会接着记在这里。' },
+    { id: 'site-footer-updates', group: '全站 · 页脚', label: '更新记录入口', text: '更新记录' },
+    { id: 'site-update-notice-eyebrow', group: '全站 · 更新提醒', label: '最近更新时间范围', text: '最近 30 天' },
+    { id: 'site-update-notice-title', group: '全站 · 更新提醒', label: '弹窗标题', text: '网站有新变化啦' },
+    { id: 'site-update-notice-lede', group: '全站 · 更新提醒', label: '弹窗说明', text: '最近这些功能，你可以试试看。' },
+    { id: 'site-update-notice-close', group: '全站 · 更新提醒', label: '关闭按钮', text: '关闭更新提醒' },
+    { id: 'site-update-notice-region', group: '全站 · 更新提醒', label: '内容区域名称', text: '近期功能更新' },
+    { id: 'site-update-notice-once', group: '全站 · 更新提醒', label: '底部提示', text: '只提醒这一次' },
+    { id: 'site-update-notice-history', group: '全站 · 更新提醒', label: '查看历史按钮', text: '查看全部历史 ↗' },
+    { id: 'privacy-back', group: '隐私说明', label: '返回首页', text: '← 回到首页' },
+    { id: 'privacy-updated', group: '隐私说明', label: '更新日期', text: '更新于 2026 年 10 月 18 日 · 开播提醒服务' },
+    { id: 'privacy-title', group: '隐私说明', label: '主标题', text: '你的信息，只用来提醒开播。' },
+    { id: 'privacy-intro', group: '隐私说明', label: '简介', text: '本站是独立维护的粉丝档案站，非主播官方站点。这份说明针对开播提醒服务，包括邮件提醒和浏览器通知两种方式，两者相互独立。邮件提醒需要你主动填写邮箱并点击邮件中的确认按钮；浏览器通知需要你在本站主动点击开启并在浏览器里允许通知。' },
+    { id: 'privacy-collect-title', group: '隐私说明', label: '我们收集什么 · 标题', text: '我们收集什么' },
+    { id: 'privacy-collect-body', group: '隐私说明', label: '我们收集什么 · 内容', text: '你填写的邮箱、申请与确认订阅的时间、同意的说明版本，以及必要的邮件发送状态。为限制恶意请求，我们还会短暂保存根据请求来源地址生成的不可直接读取原地址的校验标识及请求次数；这些限流记录会在两天后清理。邮箱不会公开显示，也不会用于广告或出售给其他人。' },
+    { id: 'privacy-mail-title', group: '隐私说明', label: '邮件什么时候发送 · 标题', text: '邮件什么时候发送' },
+    { id: 'privacy-mail-body', group: '隐私说明', label: '邮件什么时候发送 · 内容', text: '申请订阅时先发送确认邮件。确认后，本站监测到女流66在抖音开启新的直播场次时发送提醒。同一场次通常只提醒一次；观测和邮件投递可能有延迟，不能保证即时到达。未确认的申请不会收到开播提醒。' },
+    { id: 'privacy-providers-title', group: '隐私说明', label: '邮件服务商 · 标题', text: '邮件服务商会处理哪些信息' },
+    { id: 'privacy-providers-body', group: '隐私说明', label: '邮件服务商 · 内容', text: '发送时，所选邮件服务商需要处理你的邮箱和邮件内容，包括其中的确认或退订链接。本站可使用 Resend、Brevo 或 Mailjet 按可用额度发送，不会把你的地址加入它们的独立营销名单。这些服务商可能在境外处理数据，具体处理与保留方式见它们的隐私说明。' },
+    { id: 'privacy-retention-title', group: '隐私说明', label: '保存与退订 · 标题', text: '保存与退订' },
+    { id: 'privacy-retention-body', group: '隐私说明', label: '保存与退订 · 内容', text: '有效订阅期间保存邮箱与确认记录；未确认的申请在三十天后清理。每封开播提醒都包含退订入口，无需登录。退订后，邮箱会从订阅收件列表移除；本站保留不包含明文邮箱的订阅校验标识，以处理重复操作。必要的发送记录最多保留三十天，邮件服务商的记录按它们各自的规则处理。已经发出的邮件无法撤回。' },
+    { id: 'privacy-push-title', group: '隐私说明', label: '浏览器通知 · 标题', text: '浏览器通知' },
+    { id: 'privacy-push-body1', group: '隐私说明', label: '浏览器通知 · 数据', text: '浏览器通知不需要邮箱或账号，只对你开启时所用的浏览器和设备生效。开启时，我们保存浏览器生成的推送地址和加密公钥、一个只存校验值的设备令牌（用于关闭和测试，原值只留在你的浏览器里）、浏览器与系统的大致类型（例如“Chrome · Windows”、是否从主屏幕打开）、开启时间、同意的说明版本，以及必要的发送状态。我们不会把这些信息与邮箱关联。' },
+    { id: 'privacy-push-body2', group: '隐私说明', label: '浏览器通知 · 投递', text: '通知经由你的浏览器厂商提供的推送服务送达：Chrome 等使用 Google，Firefox 使用 Mozilla，Safari 与 iPhone / iPad 使用 Apple，Windows 上的 Edge 使用 Microsoft。通知内容在发出前已加密，只有你的浏览器能解开；推送服务仍会处理推送地址、发送时间等投递所需的信息，处理方式见各厂商的隐私说明。推送服务受理不代表通知一定显示，系统通知设置、勿扰模式和网络都会影响送达。' },
+    { id: 'privacy-push-body3', group: '隐私说明', label: '浏览器通知 · 关闭', text: '你可以随时在开播提醒弹窗里点「关闭」，或在浏览器的网站设置里撤销本站的通知权限。关闭后推送地址和密钥会被立即删除；浏览器撤销权限或订阅失效后，下一次发送会被推送服务拒绝，相应信息随即删除。删除后仅保留不含推送地址和密钥的记录最多三十天，用于处理重复操作；发送记录同样最多保留三十天。' },
+    { id: 'privacy-help-title', group: '隐私说明', label: '请求帮助 · 标题', text: '请求帮助' },
+    { id: 'privacy-help-before', group: '隐私说明', label: '请求帮助 · 链接前', text: '如果需要查询、删除订阅信息，或遇到退订、关闭通知的问题，可通过' },
+    { id: 'privacy-help-link', group: '隐私说明', label: '请求帮助 · 链接', text: '联系我们' },
+    { id: 'privacy-help-after', group: '隐私说明', label: '请求帮助 · 链接后', text: '页面联系维护者。请不要公开贴出确认或退订链接，它们可以操作你的订阅。' },
   ],
 }
 

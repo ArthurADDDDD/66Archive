@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { collectionTimestamp, parseCollectionLogPage, type CollectionLogItem } from '@/lib/collection-log'
 import { UpdateLogFrame } from './UpdateLogFrame'
+import { UpdateCopy } from './UpdateCopy'
 
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 const LABELS = { live: '录播', video: '视频', gallery: '画廊' }
@@ -87,9 +88,9 @@ export function CollectionLog({ history }: { history: readonly { date: string; t
             {history.map((update) => <li key={`${update.date}-${update.title}`} className="py-4">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <time dateTime={update.date} className="font-mono text-meta text-faint tnum">{update.date.replaceAll('-', '.')}</time>
-                <h3 className="text-body font-medium text-muted">{update.title}</h3>
+                <h3 className="text-body font-medium text-muted"><UpdateCopy category="archive" entry={update} field="title" /></h3>
               </div>
-              <p className="mt-1 text-body text-muted">{update.text}</p>
+              <p className="mt-1 text-body text-muted"><UpdateCopy category="archive" entry={update} field="text" /></p>
             </li>)}
           </ol>
         </div>

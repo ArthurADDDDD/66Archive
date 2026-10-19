@@ -169,7 +169,7 @@ export function SiteFooter() {
         <SiteText id="site-footer-takedown" />
       </span>
       <div className="flex shrink-0 items-start gap-5">
-      <Link prefetch={false} href="/updates/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">更新记录</Link>
+      <Link prefetch={false} href="/updates/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live"><SiteText id="site-footer-updates" /></Link>
       <Link prefetch={false} href="/privacy/" className="ui-press -my-2 rounded-sm py-2 transition-colors hover:text-live">隐私说明</Link>
       <Link prefetch={false} href="/contact/" className="ui-press -my-2 shrink-0 rounded-sm py-2 transition-colors hover:text-live">
         <SiteText id="site-footer-contact" />
