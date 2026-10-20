@@ -77,6 +77,12 @@ console.log('\n— 排序 —')
   }
 }
 
+console.log('\n— Reigns 三部作品检索不串位 —')
+check('王权：原版精确命中优先', ids('王权')[0] === 'reigns-classic', ids('王权').slice(0, 5).join(', '))
+check('Reigns：原版精确命中优先', ids('Reigns')[0] === 'reigns-classic', ids('Reigns').slice(0, 5).join(', '))
+check('女王陛下：独立作品优先', ids('Reigns: Her Majesty')[0] === 'reigns-her-majesty', ids('Reigns: Her Majesty').slice(0, 5).join(', '))
+check('Game of Thrones：对应冰火王权', ids('Reigns: Game of Thrones')[0] === 'reigns', ids('Reigns: Game of Thrones').slice(0, 5).join(', '))
+
 console.log('\n— 边界 —')
 check('空关键词不返回任何结果', ids('').length === 0)
 check('纯空白不返回任何结果', ids('   ').length === 0)

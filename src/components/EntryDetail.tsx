@@ -272,8 +272,13 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
       <ol className="divide-y divide-line">
         {chapters.map((chapter) => {
           const title = chapter.gameName ?? (chapter.kind === 'break'
-            ? <SiteText id="entry-detail-game-kind-break" />
-            : chapter.kind === 'unknown' ? <SiteText id="entry-detail-game-kind-unknown" /> : chapter.gameId ?? '游戏')
+            ? chapter.label ?? <SiteText id="entry-detail-game-kind-independent" />
+            : chapter.kind === 'unknown'
+              ? chapter.label && chapter.label !== '未归类片段'
+                ? <>{chapter.label} · <SiteText id="entry-detail-game-kind-unclassified" /></>
+                : <SiteText id="entry-detail-game-kind-unclassified" />
+              : chapter.gameId ?? '未命名游戏')
+          // unknown 只是「还没可靠归属」，仍保留为潜在游戏时长；不能写成「不计入游戏时长」。
           const kindNote = chapter.kind === 'break'
             ? <SiteText id="entry-detail-game-break-note" />
             : chapter.kind === 'unknown'

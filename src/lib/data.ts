@@ -159,6 +159,8 @@ export type TimelineEntry = {
     verified: boolean
     precision: 'part' | 'approx' | 'exact'
     jumpUrl: string | null
+    /** 公开短标签：聊天 / 休息 / 切换 / 未归类片段。 */
+    label?: string
   }[]
   /** 章节固定按该公开来源计时；切换播放器来源不会改变位置。 */
   chapterBasis?: string
@@ -274,6 +276,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
           verified: chapter.verified,
           precision: chapter.precision,
           jumpUrl: chapter.jump?.url ?? null,
+          ...(chapter.kind !== 'game' && chapter.note ? { label: chapter.note } : {}),
         }))
       : undefined
     const rawBands = e.segments.map((s, i) => {

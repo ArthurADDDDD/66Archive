@@ -21,14 +21,20 @@ export function searchGames(games: VoteGame[], keyword: string): VoteGame[] {
   if (!needle) return []
   const scored: Array<{ game: VoteGame; score: number }> = []
   for (const game of games) {
-    const haystacks = [game.name, game.id, ...game.aliases].map(normalizeGameKeyword)
-    // 前缀命中排在包含命中前面：搜「塞尔达」时《塞尔达传说》该在
-    // 《某某（含塞尔达联动）》上面。
+    const titles = [game.name, ...game.aliases].map(normalizeGameKeyword)
+    const id = normalizeGameKeyword(game.id)
+    // 用户输入作品名称时，名字/别名精确命中优先于旧 ID 精确命中：
+    // 游戏目录的历史 id `reigns` 实际对应「冰火王权」，但原版的正式英文名是 Reigns。
+    // 保留 id 可搜索，并维持原有前缀优先于包含的规则。
     let score = -1
-    for (const hay of haystacks) {
-      if (hay.startsWith(needle)) { score = 2; break }
-      if (hay.includes(needle)) score = Math.max(score, 1)
+    for (const title of titles) {
+      if (title === needle) { score = 4; break }
+      if (title.startsWith(needle)) score = Math.max(score, 2)
+      else if (title.includes(needle)) score = Math.max(score, 1)
     }
+    if (id === needle) score = Math.max(score, 3)
+    else if (id.startsWith(needle)) score = Math.max(score, 2)
+    else if (id.includes(needle)) score = Math.max(score, 1)
     if (score > 0) scored.push({ game, score })
   }
   return scored

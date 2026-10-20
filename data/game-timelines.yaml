@@ -516,6 +516,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 未归类片段
   reviewed: '2026-10-19'
 - entry: 2015-01-27-live-01
   basis: https://www.acfun.cn/v/ac1733926
@@ -527,7 +528,7 @@
   spans:
   - page: 1
     at: 00:00:00
-    game: super-mario-3d-world
+    game: new-super-mario-bros-u
     precision: approx
     evidence: thumbnails
   - page: 1
@@ -535,7 +536,8 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+    note: 聊天
+  reviewed: '2026-10-20'
 - entry: 2015-01-29-live-01
   basis: https://www.bilibili.com/video/BV1Gx411A7NC
   coverage: unknown
@@ -549,6 +551,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:31
     game: biantai-rensheng
@@ -559,6 +562,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2015-02-09-live-01
   basis: https://www.acfun.cn/v/ac1736317
@@ -578,6 +582,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: Don't Escape 2→1 切换与零食聊天混合，边界不足
   - page: 1
     at: 00:41:00
     game: dont-escape
@@ -588,6 +593,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 展示 Sonic CD/手机浏览与聊天混合，边界不足
   - page: 1
     at: 01:10:00
     game: new-super-mario-bros-u
@@ -609,17 +615,13 @@
     evidence: thumbnails
   - page: 1
     at: 00:22:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前切换（浏览网页、Wii U 启动）
   - page: 1
-    at: 00:34:00
+    at: 00:32:10
     game: super-mario-3d-world
-    precision: approx
-    evidence: thumbnails
-  - page: 1
-    at: 01:28:00
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 1
@@ -632,6 +634,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2015-07-06-live-01
   basis: https://www.acfun.cn/v/ac2010055
@@ -646,6 +649,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 00:00:05
     game: besiege
@@ -656,6 +660,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2015-09-09-live-02
   basis: https://www.acfun.cn/v/ac2188498
@@ -673,29 +678,14 @@
     game: rusty-lake
     precision: part
     evidence: part_title
-  - page: 1
-    at: 01:09:55
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 2
     at: 00:00:55
     game: benzuo-dao-yao-kankan-ni-neng-huo-jitian
     precision: approx
     evidence: thumbnails
   - page: 2
-    at: 00:26:55
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 2
     at: 00:27:15
     game: ershiyi-shiji-shengming-kexue
-    precision: approx
-    evidence: thumbnails
-  - page: 2
-    at: 00:40:40
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 2
@@ -731,6 +721,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:01:10
     game: street-fighter-v
@@ -747,9 +738,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/看视频（难死塔前）
   - page: 1
     at: 00:14:27
     game: tricky-towers
@@ -760,6 +752,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2017-01-18-live-01
   basis: https://www.bilibili.com/video/BV1Ss411h7Un
@@ -774,9 +767,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 开播聊天（王权前）
   - page: 2
     at: 00:00:00
     game: geometry-dash
@@ -813,9 +807,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（含 Switch 新闻页）
   - page: 1
     at: 00:10:25
     game: 1-2-switch
@@ -841,20 +836,28 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（含 eShop/宣传片）
   - page: 2
     at: 00:20:19
     game: 1-2-switch
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 00:16:42
-    kind: unknown
+    at: 00:17:50
+    game: tumbleseed
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+    note: P3 17:50 起已启动 TumbleSeed（期间报错/重启），21:40 可见稳定游玩；P4 为独立水墨苏绣外景。
+  - page: 4
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: part_title
+    note: 水墨苏绣（外景，非游戏）
+  reviewed: '2026-10-20'
 - entry: 2017-08-09-live-01
   basis: https://www.bilibili.com/video/BV1vx411n7jt
   coverage: complete
@@ -916,9 +919,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊20块钱的
   - page: 2
     at: 00:00:00
     game: cook-serve-delicious
@@ -949,9 +953,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    game: dont-cut-your-hand
     precision: part
     evidence: part_title
+    note: P1 起点起为 DON'T CUT YOUR HAND 标题/实机；P1 分P标题明确。
   - page: 2
     at: 00:00:00
     game: euro-truck-simulator-2
@@ -980,9 +985,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: pubg
@@ -1016,9 +1022,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: pubg
@@ -1049,9 +1056,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: getting-over-it
@@ -1088,19 +1096,21 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 1
     at: 00:19:30
     game: tiny-toon-busters-hidden-treasure
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 00:00:00
-    kind: unknown
-    precision: part
-    evidence: part_title
+    at: 00:01:00
+    game: super-mario-odyssey
+    precision: approx
+    evidence: thumbnails
+    note: P3 60s 起出现 Super Mario Odyssey 标题/实机；P3 0–60s 为 Switch 主界面/更新。
   reviewed: '2026-10-19'
 - entry: 2017-12-08-live-01
   basis: https://www.bilibili.com/video/BV1xW411h7Zg
@@ -1149,6 +1159,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2017-12-09-live-01
   basis: https://www.bilibili.com/video/BV14W411h7xX
@@ -1169,37 +1180,70 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
+  - page: 2
+    at: 00:02:20
+    game: reigns-her-majesty
+    precision: approx
+    evidence: thumbnails
   - page: 3
     at: 00:00:00
     game: murder-mystery
     precision: part
     evidence: part_title
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2017-12-13-live-01
-  basis: https://www.bilibili.com/video/BV19W411h7bR
-  coverage: partial
+  basis: https://www.acfun.cn/v/ac4135224
+  coverage: complete
   parts:
   - page: 1
-    id: 28158144
-    duration_sec: 2991
+    id: 5752771
+    duration_sec: 1494
   - page: 2
-    id: 28158145
-    duration_sec: 3598
+    id: 5752759
+    duration_sec: 1495
+  - page: 3
+    id: 5752792
+    duration_sec: 1798
+  - page: 4
+    id: 5752797
+    duration_sec: 1799
+  - page: 5
+    id: 5752766
+    duration_sec: 1542
+  - page: 6
+    id: 5752801
+    duration_sec: 1544
+  - page: 7
+    id: 5752808
+    duration_sec: 1542
+  - page: 8
+    id: 5752802
+    duration_sec: 1544
+  - page: 9
+    id: 5752815
+    duration_sec: 1544
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
-  - page: 2
+    note: 游戏前聊10块钱的
+  - page: 3
     at: 00:00:00
     game: pubg
     precision: part
     evidence: part_title
-  reviewed: '2026-10-19'
+  - page: 5
+    at: 00:00:00
+    game: the-long-dark
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-20'
 - entry: 2018-03-31-live-01
   basis: https://www.bilibili.com/video/BV1mW411u7oK
   coverage: unknown
@@ -1216,14 +1260,21 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: mr-blackface
     precision: part
     evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: mom-hid-my-game
+    precision: part
+    evidence: part_title
+    note: P3 起点起出现 Mom Hid My Game（Switch 主界面/实机）；P3 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2018-04-03-live-01
   basis: https://www.bilibili.com/video/BV12W411T7mY
@@ -1241,9 +1292,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: puyo-puyo-tetris
@@ -1271,9 +1323,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: old-mans-journey
@@ -1298,11 +1351,12 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（VR 前）
   - page: 1
-    at: 00:15:30
+    at: 00:12:20
     game: beat-saber
     precision: approx
     evidence: thumbnails
@@ -1312,8 +1366,8 @@
     precision: approx
     evidence: thumbnails
   - page: 1
-    at: 02:26:10
-    kind: unknown
+    at: 02:26:40
+    game: in-death
     precision: approx
     evidence: thumbnails
   - page: 2
@@ -1322,16 +1376,11 @@
     precision: approx
     evidence: thumbnails
   - page: 2
-    at: 00:00:40
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 2
     at: 00:24:30
     game: beat-saber
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2018-06-22-live-01
   basis: https://www.bilibili.com/video/BV1Ws41177oL
   coverage: unknown
@@ -1348,9 +1397,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: comedy-night
@@ -1381,9 +1431,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: farm-together
@@ -1411,9 +1462,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（含 Switch 主界面）
   - page: 2
     at: 00:00:00
     game: bomb-chicken
@@ -1444,9 +1496,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 1
     at: 00:19:29
     game: overcooked-2
@@ -1477,19 +1530,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: minecraft
     precision: part
     evidence: part_title
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 4
     at: 00:00:54
     game: no-mans-sky
@@ -1512,19 +1561,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: minecraft
     precision: part
     evidence: part_title
-  - page: 3
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 3
     at: 00:00:35
     game: starbound
@@ -1547,9 +1592,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（Witch It 前）
   - page: 2
     at: 00:22:24
     game: witch-it
@@ -1557,9 +1603,10 @@
     evidence: thumbnails
   - page: 3
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（39 天到火星前）
   - page: 3
     at: 00:17:30
     game: 39-days-to-mars
@@ -1582,9 +1629,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 1
     at: 00:19:55
     game: jian-ai
@@ -1612,17 +1660,13 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
-    at: 00:00:36
+    at: 00:00:00
     game: lifeafter
-    precision: approx
-    evidence: thumbnails
-  - page: 2
-    at: 00:42:38
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 2
@@ -1630,7 +1674,7 @@
     game: red-dead-redemption-2
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2018-11-16-live-01
   basis: https://www.bilibili.com/video/BV1Tt411m7Nw
   coverage: unknown
@@ -1650,19 +1694,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: super-mario-party
     precision: part
     evidence: part_title
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 4
     at: 00:01:24
     game: red-dead-redemption-2
@@ -1688,6 +1728,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:02:47
     game: doudizhu
@@ -1695,9 +1736,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:00:00
-    kind: unknown
+    game: gujian-qitan-3
     precision: part
     evidence: part_title
+    note: P2 起点（39:11）出现古剑奇谭标题/加载，53:35 起实机；按条目标签映射为古剑奇谭三。
   reviewed: '2026-10-19'
 - entry: 2018-12-07-live-01
   basis: https://www.bilibili.com/video/BV1qt411S726
@@ -1724,9 +1766,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（斗地主前）
   - page: 1
     at: 00:17:16
     game: doudizhu
@@ -1734,9 +1777,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:00:00
-    kind: unknown
-    precision: part
-    evidence: part_title
+    game: gujian-qitan-3
+    precision: approx
+    evidence: thumbnails
+    note: P2 起点（全片 30:41）出现古剑奇谭标题/加载，37:19 起实机；按条目标签映射为古剑奇谭三，分P标题未印代数。
   reviewed: '2026-10-19'
 - entry: 2018-12-11-live-01
   basis: https://www.bilibili.com/video/BV1dt411q7Mg
@@ -1754,9 +1798,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（斗地主前）
   - page: 1
     at: 00:12:00
     game: doudizhu
@@ -1790,9 +1835,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（斗地主前）
   - page: 1
     at: 00:06:53
     game: doudizhu
@@ -1835,11 +1881,12 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-  - page: 3
-    at: 00:00:24
+    note: 游戏前聊10块钱的
+  - page: 2
+    at: 00:02:40
     game: human-fall-flat
     precision: approx
     evidence: thumbnails
@@ -1871,11 +1918,12 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（特技摩托前）
   - page: 1
-    at: 00:17:24
+    at: 00:16:25
     game: trials-rising
     precision: approx
     evidence: thumbnails
@@ -1916,9 +1964,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: mages-of-mystralia
@@ -1955,9 +2004,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: bloody-spell
@@ -2022,9 +2072,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 开播聊天
   - page: 2
     at: 00:00:00
     game: sekiro
@@ -2058,9 +2109,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: unheard
@@ -2094,21 +2146,12 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 开播聊天（VR 游戏前）
   - page: 2
     at: 00:00:42
-    game: vacation-simulator
-    precision: approx
-    evidence: thumbnails
-  - page: 2
-    at: 00:28:46
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 2
-    at: 00:29:04
     game: vacation-simulator
     precision: approx
     evidence: thumbnails
@@ -2119,9 +2162,10 @@
     evidence: thumbnails
   - page: 3
     at: 00:20:49
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/浏览 VR 游戏（Beat Saber 前）
   - page: 3
     at: 00:26:23
     game: beat-saber
@@ -2147,9 +2191,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前说会儿封神
   - page: 3
     at: 00:00:00
     game: mist-detective
@@ -2157,9 +2202,10 @@
     evidence: part_title
   - page: 3
     at: 00:35:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 《迷雾侦探》片尾字幕/聊天
   - page: 4
     at: 00:00:05
     game: rento
@@ -2167,9 +2213,10 @@
     evidence: thumbnails
   - page: 4
     at: 00:57:16
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 下播前聊天/抽奖（RENTO 挂机）
   reviewed: '2026-10-19'
 - entry: 2019-06-10-live-01
   basis: https://www.bilibili.com/video/BV194411N7Lv
@@ -2196,9 +2243,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: cooking-simulator
@@ -2232,9 +2280,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: sky-children-of-the-light
@@ -2265,9 +2314,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: sky-noon
@@ -2301,9 +2351,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（讲鬼故事）
   - page: 2
     at: 00:00:00
     game: unheard
@@ -2311,10 +2362,11 @@
     evidence: part_title
   - page: 4
     at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  reviewed: '2026-10-19'
+    game: doraemon-story-of-seasons
+    precision: part
+    evidence: part_title
+    note: P4/P5 标题均为「牧场物语」；抽帧确认为《哆啦A梦 牧场物语》（2019），非《重聚矿石镇》。
+  reviewed: '2026-10-20'
 - entry: 2019-08-29-live-01
   basis: https://www.bilibili.com/video/BV1i4411274R
   coverage: partial
@@ -2340,9 +2392,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的（含 Switch 新闻页）
   - page: 2
     at: 00:00:00
     game: heave-ho
@@ -2350,9 +2403,10 @@
     evidence: part_title
   - page: 5
     at: 00:01:24
-    kind: unknown
+    game: bleach-soul-resonance
     precision: approx
     evidence: thumbnails
+    note: P5 01:24 起画面出现 BLEACH 标志与死神角色；版本/切换秒未细分。
   reviewed: '2026-10-19'
 - entry: 2019-10-18-live-01
   basis: https://www.bilibili.com/video/BV1uE411k7gR
@@ -2379,9 +2433,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（含 Switch 新闻页）
   - page: 2
     at: 00:00:00
     game: ring-fit-adventure
@@ -2412,9 +2467,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: tangle-tower
@@ -2443,9 +2499,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的
   - page: 3
     at: 00:00:00
     game: feel-the-snow
@@ -2501,11 +2558,6 @@
     precision: part
     evidence: part_title
   - page: 7
-    at: 00:34:13
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 7
     at: 00:34:51
     game: nioh-2
     precision: approx
@@ -2536,15 +2588,23 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    game: animal-crossing-nh
     precision: part
     evidence: part_title
+    note: P1–P4 分P标题及画面均为集合啦！动物森友会。
+  - page: 5
+    at: 00:00:00
+    game: reading-people
+    precision: part
+    evidence: part_title
+    note: P5/P6 标题为「察言观色」；P5 抽帧为黑白红「你」字画面与察言观色玩法，确认 reading-people。
   - page: 6
-    at: 00:11:25
+    at: 00:04:50
     game: animal-crossing-nh
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+    note: P6 标题为「察言观色」，但抽帧显示前约 4:50 为察言观色片尾/菜单，之后切到动物森友会机场。
+  reviewed: '2026-10-20'
 - entry: 2020-06-02-live-01
   basis: https://www.bilibili.com/video/BV1ha4y1v7XM
   coverage: unknown
@@ -2588,11 +2648,6 @@
     precision: approx
     evidence: thumbnails
   - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 4
     at: 00:00:52
     game: streets-of-rage-4
     precision: approx
@@ -2621,11 +2676,6 @@
   - page: 1
     at: 00:00:00
     game: world-games-51
-    precision: approx
-    evidence: thumbnails
-  - page: 4
-    at: 00:00:00
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 4
@@ -2667,6 +2717,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 3
     at: 00:00:22
     game: world-games-51
@@ -2787,19 +2838,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的
   - page: 2
     at: 00:00:00
     game: fall-guys
     precision: part
     evidence: part_title
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 4
     at: 00:02:30
     game: grounded
@@ -2829,11 +2876,6 @@
     precision: approx
     evidence: thumbnails
   - page: 4
-    at: 00:00:18
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 4
     at: 00:00:36
     game: pascals-wager
     precision: approx
@@ -2858,19 +2900,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
-    evidence: other
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（4399/旅行/电影话题）
   - page: 2
     at: 00:00:00
     game: stickman
     precision: part
     evidence: part_title
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 4
     at: 00:00:18
     game: contra
@@ -2900,11 +2938,6 @@
   - page: 1
     at: 00:00:00
     game: craftopia
-    precision: approx
-    evidence: thumbnails
-  - page: 4
-    at: 00:00:00
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 4
@@ -2938,17 +2971,12 @@
     game: pro-gymnast
     precision: approx
     evidence: thumbnails
-  - page: 4
-    at: 00:48:18
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
   - page: 5
     at: 00:01:24
     game: fall-guys
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2020-09-26-live-01
   basis: https://www.bilibili.com/video/BV1s54y1m7EZ
   coverage: unknown
@@ -2976,9 +3004,10 @@
     evidence: thumbnails
   - page: 5
     at: 00:00:00
-    kind: unknown
+    game: rise-of-kingdoms
     precision: part
     evidence: part_title
+    note: P5 起点（3:43:24）起出现万国觉醒画面；P5 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2020-10-06-live-01
   basis: https://www.bilibili.com/video/BV1fy4y1k74X
@@ -3002,9 +3031,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    game: art-of-rally
     precision: part
     evidence: part_title
+    note: P1 起点起为 art of rally 赛车画面；P1 分P标题明确。
   - page: 2
     at: 00:00:00
     game: fall-guys
@@ -3038,9 +3068,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（浏览 Steam/等待下载）
   - page: 3
     at: 00:00:00
     game: medieval-dynasty
@@ -3071,9 +3102,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（平遥旅行见闻）
   - page: 2
     at: 00:00:00
     game: wudao-micang
@@ -3104,25 +3136,27 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏暂播中（扣一玩歌姬）
   - page: 1
     at: 00:08:30
     game: rolo-to-the-rescue
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 01:09:48
-    kind: unknown
+    at: 01:10:05
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏结束后浏览 Steam 库/游戏列表
   - page: 4
     at: 00:00:48
     game: circus-charlie
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2020-11-02-live-01
   basis: https://www.bilibili.com/video/BV19a411A7oB
   coverage: unknown
@@ -3145,9 +3179,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前佩奇10块钱的（浏览 Steam）
   - page: 2
     at: 00:00:00
     game: world-games-51
@@ -3187,9 +3222,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（PS5 开箱）
   - page: 2
     at: 00:00:00
     game: astro-bot
@@ -3284,10 +3320,11 @@
     precision: part
     evidence: part_title
   - page: 7
-    at: 00:00:36
-    kind: unknown
+    at: 00:04:30
+    game: world-of-warcraft
     precision: approx
     evidence: thumbnails
+    note: P7 04:30（全片 3:53:26）起出现魔兽世界画面；此前为 Demon’s Souls 结束/桌面/切换。
   reviewed: '2026-10-19'
 - entry: 2020-12-18-live-01
   basis: https://www.bilibili.com/video/BV15A411s7VD
@@ -3385,9 +3422,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
+    evidence: thumbnails
+    note: 开播浏览（B 站活动页）
   - page: 2
     at: 00:00:00
     game: xianjian-7
@@ -3395,9 +3433,16 @@
     evidence: part_title
   - page: 3
     at: 00:00:00
-    kind: unknown
+    game: stardew-valley
     precision: part
     evidence: part_title
+    note: P3 起点（2:07:04）起为星露谷物语实机；P3–P5 分P标题一致。
+  - page: 6
+    at: 00:00:00
+    game: yu-gi-oh-duel-links
+    precision: part
+    evidence: part_title
+    note: P6 起点起为游戏王：决斗链接实机；P6 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2021-01-22-live-01
   basis: https://www.bilibili.com/video/BV1zU4y147D9
@@ -3464,6 +3509,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:06
     game: shady-part-of-me
@@ -3505,9 +3551,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播浏览（Steam 商店）
   - page: 2
     at: 00:00:00
     game: gaodian-zhanji
@@ -3580,9 +3627,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏前聊10块钱的（浏览《戴森球计划》商店页）
   - page: 2
     at: 00:00:00
     game: dyson-sphere-program
@@ -3684,14 +3732,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
-  - page: 2
-    at: 00:00:00
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（聊录像/推荐）
+  - page: 1
+    at: 00:15:30
     game: tiny-lands
-    precision: part
-    evidence: part_title
+    precision: approx
+    evidence: thumbnails
   - page: 5
     at: 00:00:00
     game: rhythm-doctor
@@ -3729,9 +3778,16 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
+    precision: part
+    evidence: thumbnails
+    note: 开播聊天（调整镜头/聊 Hades，Hades 前）
+  - page: 2
+    at: 00:00:00
+    game: hades
     precision: part
     evidence: part_title
+    note: P2 起点（11:23）已见 Hades 实机；P2–P6 旧分段均为 Hades。
   - page: 7
     at: 00:00:00
     game: the-room-4
@@ -3769,9 +3825,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的（游戏停在标题/菜单）
   - page: 3
     at: 00:00:00
     game: guigu-bahuang
@@ -3817,9 +3874,16 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播浏览（Steam《永劫无间》商店页）
+  - page: 1
+    at: 00:16:15
+    game: world-games-51
+    precision: approx
+    evidence: thumbnails
+    note: P1 16:15 起出现世界游戏大全51选择/棋盘画面；此前为桌面/聊天。
   - page: 7
     at: 00:01:45
     game: guardian-tales
@@ -3857,9 +3921,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
     evidence: part_title
+    note: 游戏前聊10块钱的（浏览游戏封面）
   - page: 2
     at: 00:00:00
     game: world-games-51
@@ -3902,6 +3967,7 @@
     kind: unknown
     precision: part
     evidence: part_title
+    note: 休息 / 切换
   - page: 6
     at: 00:00:25
     game: sudoku
@@ -4015,9 +4081,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/开箱（Neon White 前）
   - page: 1
     at: 00:08:00
     game: neon-white
@@ -4042,6 +4109,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   - page: 1
     at: 00:00:06
     game: endoparasitic
@@ -4094,6 +4162,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   - page: 1
     at: 00:03:51
     game: subnautica
@@ -4166,9 +4235,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:27:30
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏间聊天（Brotato 前）
   - page: 3
     at: 00:06:40
     game: brotato
@@ -4227,9 +4297,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 八周年主题待机（原子之心前）
   - page: 1
     at: 00:29:35
     game: atomic-heart
@@ -4300,11 +4371,6 @@
     precision: approx
     evidence: thumbnails
   - page: 6
-    at: 00:16:24
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-  - page: 6
     at: 00:17:06
     game: fall-guys
     precision: approx
@@ -4314,6 +4380,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2023-09-17-live-01
   basis: https://www.bilibili.com/video/BV1tz4y1L78G
@@ -4328,6 +4395,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   - page: 1
     at: 00:00:12
     game: lies-of-p
@@ -4338,6 +4406,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2023-11-01-live-01
   basis: https://www.bilibili.com/video/BV1Nw411M7tt
@@ -4349,9 +4418,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（Headbangers 前）
   - page: 1
     at: 00:13:15
     game: valorant
@@ -4383,17 +4453,13 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/浏览（节奏鸽子前）
   - page: 1
     at: 00:25:46
     game: jiezou-gezi
-    precision: approx
-    evidence: thumbnails
-  - page: 1
-    at: 02:39:26
-    kind: unknown
     precision: approx
     evidence: thumbnails
   - page: 1
@@ -4403,9 +4469,10 @@
     evidence: thumbnails
   - page: 1
     at: 03:23:52
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏间休息（黑屏/桌面）
   - page: 1
     at: 03:31:13
     game: pummel-party
@@ -4416,6 +4483,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2023-11-09-live-01
   basis: https://www.bilibili.com/video/BV1kw411T7Sg
@@ -4432,9 +4500,10 @@
     evidence: thumbnails
   - page: 1
     at: 00:43:14
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏间聊天（鹅鸭杀结束后）
   - page: 1
     at: 01:11:08
     game: fall-guys
@@ -4451,9 +4520,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（节奏医生前）
   - page: 1
     at: 00:17:55
     game: rhythm-doctor
@@ -4486,19 +4556,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
-    evidence: other
+    evidence: thumbnails
+    note: 开播聊天
   - page: 1
     at: 00:08:40
     game: rhythm-heaven
     precision: approx
     evidence: thumbnails
-  - page: 1
-    at: 00:49:42
-    kind: unknown
-    precision: approx
-    evidence: other
   - page: 1
     at: 00:51:14
     game: once-human
@@ -4509,6 +4575,7 @@
     kind: unknown
     precision: approx
     evidence: other
+    note: 聊天
   reviewed: '2026-10-19'
 - entry: 2024-12-06-live-02
   basis: https://www.bilibili.com/video/BV136iBYoESP
@@ -4526,9 +4593,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/浏览（美团 App）
   - page: 2
     at: 00:13:00
     game: out-of-bounds
@@ -4551,9 +4619,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/浏览（美团 App）
   - page: 2
     at: 00:02:44
     game: out-of-bounds
@@ -4576,9 +4645,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天/浏览（美团 App）
   - page: 2
     at: 00:06:13
     game: mizi-no
@@ -4598,9 +4668,16 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（你我的游戏时光前）
+  - page: 1
+    at: 00:06:32
+    game: a-little-to-the-left
+    precision: approx
+    evidence: thumbnails
+    note: P1 06:32 起出现 A Little to the Left 主菜单与关卡；此前为摄像头/聊天。
   - page: 1
     at: 00:46:56
     game: duckov
@@ -4635,9 +4712,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（仁王 3 前）
   - page: 1
     at: 00:13:36
     game: nioh-3
@@ -4683,6 +4761,7 @@
     kind: unknown
     precision: exact
     evidence: thumbnails
+    note: 休息 / 切换
   reviewed: '2026-10-19'
 - entry: 2026-07-04-live-02
   basis: https://www.bilibili.com/video/BV1AkMP6zEPo
@@ -4703,9 +4782,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（节奏天国前）
   - page: 1
     at: 00:35:36
     game: rhythm-heaven
@@ -4713,9 +4793,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:24:48
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏间休息（无信号）
   - page: 2
     at: 00:30:12
     game: meecha-chameleon
@@ -4738,9 +4819,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
-    evidence: other
+    evidence: thumbnails
+    note: 开播聊天
   - page: 1
     at: 00:07:48
     game: path-of-exile-2
@@ -4748,9 +4830,16 @@
     evidence: thumbnails
   - page: 2
     at: 00:15:20
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 游戏间聊天（切换前）
+  - page: 2
+    at: 00:20:43
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+    note: P2 20:43 起出现冒险岛启动器与怀旧服画面；经典/正式服版本未细分。
   reviewed: '2026-10-19'
 - entry: 2026-09-17-live-01
   basis: https://www.bilibili.com/video/BV19Hey6vEY8
@@ -4771,9 +4860,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天
   - page: 2
     at: 00:00:00
     game: jiaomeimeikaiche
@@ -4807,9 +4897,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天（《控制：共振》前）
   - page: 2
     at: 00:00:00
     game: kongzhigongzhen
@@ -4832,9 +4923,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
+    note: 开播聊天
   - page: 1
     at: 00:05:56
     game: planet-zoo-2
