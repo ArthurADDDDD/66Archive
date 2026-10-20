@@ -83,3 +83,21 @@
 - A 站：`/v/ac<号>_<数组序>`，没有可用的秒级参数，只能落到分 P 开头。
 
 快照里的 `id` 和 `duration_sec` 用来定期核对平台是否重排或替换了分 P。
+
+## 6. 缺口、长 unknown 与已复核例外
+
+`npm run test:game-timeline-gaps` 不只会检查「条目标了游戏、时间轴却没有环节」，还会检查：
+
+- 旧 `segments` 里明确写了游戏名的区间，是否与新的 `unknown` 长时间重叠；
+- 是否有 ≥30 分钟的 `unknown` 尚未复核；
+- 本轮已确认的关键游戏段，起点、终点、关联秒数和已核实秒数是否被改动；
+- 条目是否还在使用已退役或误认的游戏标签。
+
+已复核的例外与原因集中在 `scripts/game-timeline-dispositions.ts`：
+
+- `REVIEWED_GAPS`：partial / unknown 覆盖下确实无法在基准录像里补出的游戏；
+- `REVIEWED_CROSS_CHECKS`：旧分段边界过粗、但已确认不是漏归类的交叉命中；
+- `REVIEWED_LONG_UNKNOWNS`：逐段抽帧后仍保留为聊天/浏览的长时间 unknown；
+- `REVIEWED_SPAN_BOUNDS`：关键游戏段的边界与时长回归基准。
+
+**新缺口、新交叉命中或新的长时间 unknown 没有登记时，测试会失败。** 已经修复的条目必须从登记表移除，避免复发时被旧记录静默放行。登记表只记录风险结论，不是自动归类；写入 `data/**` 仍必须有画面证据。
