@@ -57,8 +57,9 @@ export function footageRangeLabel(v: GameTimeView): string {
 }
 
 /**
- * 给读者看的大致时长：「约 37 小时」「169 小时以上」「不到 39 小时」「不到 1 小时」「时长未知」。
+ * 给读者看的大致时长：「37 小时左右」「169 小时以上」「不到 39 小时」「不到 1 小时」「时长未知」。
  * 只说站得住的那一头（有已归属录像就说下限，全部未拆分就说上限），不把区间摆到读者面前。
+ * 一律数字打头：界面上多写成「相关录像 {label}」，「约」打头会读成「相关录像 约 37 小时」。
  */
 export function footageApproxLabel(v: GameTimeView): string {
   const low = hours(v.associatedMinutes)
@@ -66,7 +67,7 @@ export function footageApproxLabel(v: GameTimeView): string {
   if (!v.upperOpen && v.upperMinutes < 60) return v.upperMinutes === 0 ? '时长未知' : '不到 1 小时'
   // 下限不到 1 小时：「X 小时以上」说不出口，只能说上限；上限也开放就是真不知道
   if (low < 1) return v.upperOpen ? '时长未知' : `不到 ${Math.ceil(v.upperMinutes / 60)} 小时`
-  if (high === low && !v.upperOpen) return `约 ${low} 小时`
+  if (high === low && !v.upperOpen) return `${low} 小时左右`
   return `${low} 小时以上`
 }
 

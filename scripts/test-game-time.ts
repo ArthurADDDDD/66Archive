@@ -241,7 +241,7 @@ assert.equal(buildJump('https://b23.tv/abc', 1, 0, 'part'), null)
   assert.match(footageTitle(view({ sessions: 52, attributedSessions: 44, unattributedSessions: 8, associatedMinutes: 10128, upperMinutes: 12762 })), /相关录像 169–213 小时 · 尚未核实 · 时长已归属 44\/52 场 · 8 场/)
 
   // 读者界面的大致时长（docs/game-time.md §4，2026-10-20 修订）：只说站得住的一头，不出现区间与核实字样
-  assert.equal(footageApproxLabel(view({ associatedMinutes: 2220, upperMinutes: 2220 })), '约 37 小时')
+  assert.equal(footageApproxLabel(view({ associatedMinutes: 2220, upperMinutes: 2220 })), '37 小时左右')
   assert.equal(footageApproxLabel(view({ associatedMinutes: 10128, upperMinutes: 12762 })), '169 小时以上')
   assert.equal(footageApproxLabel(view({ associatedMinutes: 2220, upperMinutes: 2220, upperOpen: true })), '37 小时以上')
   assert.equal(footageApproxLabel(view({ associatedMinutes: 0, upperMinutes: 2340 })), '不到 39 小时', '全部未拆分：只说上限')
