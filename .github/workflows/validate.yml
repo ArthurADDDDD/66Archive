@@ -103,6 +103,10 @@ jobs:
       - name: Verify visitor update notice
         run: npm run test:update-notice
 
+      # 申请成功仍需点邮件链接及确认页按钮；不得误称已经订阅成功。
+      - name: Verify email opt-in confirmation guidance
+        run: node scripts/test-email-optin-guidance.mjs
+
       # 埋点上报口径：重复点击合并、自动化会话不计入、站内链接解析。
       # 退化了不会报错，只会让统计悄悄变得不可信。
       - name: Verify analytics reporting rules
