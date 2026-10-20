@@ -21,15 +21,15 @@ export type ReviewedGap = {
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
     entry: '2015-01-27-live-01',
-    games: ['new-super-mario-bros-u', 'i-wanna-be-the-xylem'],
+    games: ['i-wanna-be-the-xylem', 'super-mario-3d-world'],
     status: 'complementary_source',
-    reason: '基准 ac1733926 只覆盖超级马力欧 3D 世界；另两款在互补来源 ac1708393。',
+    reason: 'A站投稿说明与抽帧确认基准 ac1733926 是《新超级马里奥兄弟U》（已改标）；I Wanna 在 ac1708393 片头即可确认，3D 世界在两条来源中均未找到画面。',
   },
   {
     entry: '2015-01-29-live-01',
     games: ['im-scared', 'super-mario-3d-world', 'rhythm-heaven', 'just-dance'],
     status: 'complementary_source',
-    reason: '基准 B 站单 P 仅 19:36，其余游戏记录在两条优酷来源中，未纳入基准。',
+    reason: '基准 B 站单 P 仅 19:36；两条优酷来源只返回反爬/跳转页，未能确认可播放与分 P，标签保留。',
   },
   {
     entry: '2015-07-06-live-01',
@@ -41,7 +41,7 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
     entry: '2016-01-04-live-02',
     games: ['banished', 'papers-please'],
     status: 'complementary_source',
-    reason: '基准 ac2440577 只覆盖《命运交叉的客店》；另两款在互补来源 ac2440642 / ac2441013。',
+    reason: '基准 ac2440577 只覆盖《命运交叉的客店》；ac2440642 片头抽帧为 Banished，ac2441013 片头抽帧为 Papers, Please，两条均可播放。',
   },
   {
     entry: '2016-02-20-live-01',
@@ -53,13 +53,13 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
     entry: '2016-08-17-live-03',
     games: ['starbound', 'overwatch'],
     status: 'complementary_source',
-    reason: '基准 B 站 P1 只含难死塔；旧分段中的星界边境、守望先锋位于未纳入基准的 P2–P5。',
+    reason: '基准 B 站 P1 只含难死塔；A站 ac3029701 的 P1/P2 为星界边境、ac3029731 的 P1/P2 为守望先锋，均从各自视频片头开始。',
   },
   {
     entry: '2017-01-18-live-01',
     games: ['reigns-classic'],
     status: 'complementary_source',
-    reason: '基准 B 站只有 P1/P2（几何冲刺）；王权在 A 站互补来源的 P3/P4。',
+    reason: '基准 B 站只有 P1/P2（几何冲刺）；A站 ac3415701 的 P1/P2 均为王权，从视频片头开始。',
   },
   {
     entry: '2017-02-17-live-01',
@@ -71,31 +71,25 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
     entry: '2017-04-04-live-01',
     games: ['super-bomberman-r', 'zelda-botw'],
     status: 'complementary_source',
-    reason: '基准只有 P1（12Switch）；炸弹人、塞尔达在未纳入基准的后续分 P。',
-  },
-  {
-    entry: '2017-12-13-live-01',
-    games: ['the-long-dark'],
-    status: 'complementary_source',
-    reason: '基准 B 站只有 P1/P2（聊天 + 吃鸡）；漫漫长夜位于未纳入基准的 P3 及 A 站来源。',
+    reason: '基准只有 P1（12Switch）；A站 ac3601511 片头为超级炸弹人R，ac3601510 的 P1/P2 为塞尔达，均从视频片头开始。',
   },
   {
     entry: '2022-11-02-live-01',
     games: ['the-past-within'],
-    status: 'evidence_insufficient',
-    reason: '基准单 P 4:45:01 抽帧 11 个位置均为 Endoparasitic；未找到 The Past Within 画面。',
+    status: 'complementary_source',
+    reason: 'A站 ac39540914（23395s）含 Endoparasitic → The Past Within；The Past Within 约 17180s（4:46:20）开始，可播放。A站无秒级 URL 参数，精确跳转需来源覆盖/结构方案。',
   },
   {
     entry: '2023-09-17-live-01',
     games: ['party-animals'],
     status: 'complementary_source',
-    reason: '基准 B 站只到匹诺曹的谎言；猛兽派对在互补 A 站来源。',
+    reason: 'A站 ac42398567（P2，19499s）约 250s–2550s 为猛兽派对，随后切回匹诺曹的谎言；它是一条独立视频，A站只能跳到分P开头。',
   },
   {
     entry: '2023-11-09-live-01',
     games: ['magicraft'],
     status: 'complementary_source',
-    reason: '基准是《魔法工艺》《鹅鹅鸭》《糖豆人》合集的 P3，只含后两款；魔法工艺在其他分 P。',
+    reason: 'A站 ac42909912（P1，11285s）约 1790s–3870s 为魔法工艺，之后是鹅鹅鸭；它是一条独立视频，A站只能跳到分P开头。',
   },
 ]
 
@@ -110,7 +104,7 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
     entry: '2017-06-05-live-01',
     segmentAt: '00:42:43',
     game: '1-2-switch',
-    reason: '旧 P2 标签写 1-2-Switch，但抽帧显示该段混有 eShop、ARMS 与 1-2-Switch，边界不足，保留 unknown。',
+    reason: '旧 P2 标签写 1-2-Switch，但前段是 eShop/宣传片：ARMS 只出现在预告画面，1-2-Switch 实玩从 20:19 开始；混合段保留 unknown。',
   },
   {
     entry: '2018-09-17-live-01',
@@ -164,7 +158,7 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
     entry: '2020-10-20-live-01',
     segmentAt: '02:32:17',
     game: 'rolo-to-the-rescue',
-    reason: 'P3 后段为复古游戏菜单与切换，具体作品边界不足，保留 unknown。',
+    reason: 'P3 01:09:48–01:10:05 仍是 Rolo 的 NO CONTINUE REMAINING 结算画面，已并入 Rolo；01:10:05 后为主机菜单/游戏列表，保留 unknown。',
   },
   {
     entry: '2021-04-27-live-01',
@@ -240,6 +234,46 @@ export type ReviewedSpanBound = {
 
 /** 本轮修复的关键边界：不仅要求游戏还在，还要求起止和时长没有被悄悄改动。 */
 export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
+  {
+    entry: '2015-01-27-live-01',
+    game: 'new-super-mario-bros-u',
+    page: 1,
+    at: '00:00:00',
+    durationSec: 5985,
+    associatedSec: 5985,
+    verifiedSec: 0,
+    reason: 'A站投稿说明与抽帧均为《新超级马里奥兄弟U》；原时间轴误标为 3D 世界。',
+  },
+  {
+    entry: '2017-12-13-live-01',
+    game: 'pubg',
+    page: 3,
+    at: '00:00:00',
+    durationSec: 3597,
+    associatedSec: 3597,
+    verifiedSec: 0,
+    reason: 'A站完整 9P 源：P2.1/P2.2 为吃鸡，P3.1 起为漫漫长夜。',
+  },
+  {
+    entry: '2017-12-13-live-01',
+    game: 'the-long-dark',
+    page: 5,
+    at: '00:00:00',
+    durationSec: 7716,
+    associatedSec: 7716,
+    verifiedSec: 0,
+    reason: 'A站 P3.1–P3.5 均为漫漫长夜，从 P3.1 片头开始；补回 7,716 秒。',
+  },
+  {
+    entry: '2020-10-20-live-01',
+    game: 'rolo-to-the-rescue',
+    page: 1,
+    at: '00:08:30',
+    durationSec: 12833,
+    associatedSec: 12833,
+    verifiedSec: 0,
+    reason: 'P3 01:09:48 起仍是 Rolo 的 NO CONTINUE REMAINING 结算画面，01:10:05 才回到主机菜单。',
+  },
   {
     entry: '2017-12-09-live-01',
     game: 'reigns-her-majesty',

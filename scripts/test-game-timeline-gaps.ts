@@ -68,6 +68,11 @@ const expected: [string, string][] = [
   ['2019-08-15-live-01', 'doraemon-story-of-seasons'],
   ['2020-04-02-live-01', 'reading-people'],
   ['2020-09-18-live-01', 'pro-gymnast'],
+  // 2026-10-20 第三轮：互补来源 / 标注纠错
+  ['2015-01-27-live-01', 'new-super-mario-bros-u'],
+  ['2017-12-13-live-01', 'pubg'],
+  ['2017-12-13-live-01', 'the-long-dark'],
+  ['2020-10-20-live-01', 'rolo-to-the-rescue'],
 ]
 
 for (const [entryId, game] of expected) {
