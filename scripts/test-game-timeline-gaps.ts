@@ -97,6 +97,18 @@ for (const bound of REVIEWED_SPAN_BOUNDS) {
   close(session.verifiedSec, bound.verifiedSec, tolerance, `${bound.entry} ${bound.game} verified duration changed`)
 }
 
+// 2017-06-05 P4 的旧分 P 标题为水墨苏绣；不能让 P3 TumbleSeed 无边界跨到 P4。
+// P4 画面未经本次独立完整复核，允许日后按证据从 unknown 改为 break，但不可静默归入游戏。
+const embroideryTimeline = timelineByEntry.get('2017-06-05-live-01')
+assert.ok(embroideryTimeline, '2017-06-05 timeline missing')
+const embroideryP4 = embroideryTimeline.spans.find((span) => span.page === 4 && span.at === '00:00:00')
+assert.ok(embroideryP4, '2017-06-05 P4 must have an explicit segment boundary')
+assert.ok(
+  embroideryP4.kind === 'unknown' || embroideryP4.kind === 'break',
+  '2017-06-05 P4 water-ink embroidery cannot silently inherit TumbleSeed',
+)
+assert.equal(embroideryP4.game, undefined, '2017-06-05 P4 must not be counted as a game without new evidence')
+
 // ── 已确认的目录拆分 / 退役标签 ────────────────────────────────────────
 for (const game of EXPECTED_GAMES) {
   assert.equal(dataset.games.get(game.id)?.name, game.name, `${game.id} catalog entry missing or renamed`)
