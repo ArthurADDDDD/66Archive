@@ -134,38 +134,47 @@ assert.ok(entries.get('2017-01-18-live-01')?.games.includes('reigns-classic'))
 assert.ok(!entries.get('2017-01-18-live-01')?.games.includes('reigns'))
 assert.ok(entries.get('2018-10-24-live-01')?.games.includes('reigns'))
 
-// ── coverage: complete 的场次应覆盖条目的全部游戏；partial/unknown 只提示 ──
-const gapKey = (entry: string, games: string[]) => `${entry}|${[...games].sort().join(',')}`
-const currentGaps = new Map<string, { entry: string; games: string[]; coverage: string }>()
+// ── coverage: complete 的场次必须覆盖所有游戏；其余缺口按「单个游戏」审计 ──
+// 同场不同游戏可能分别属于可播放互补源、缺失资源，不能按一整组游戏共用状态。
+const gapKey = (entry: string, game: string) => `${entry}|${game}`
+const currentGaps = new Map<string, { entry: string; game: string; coverage: string }>()
 const completeGaps: string[] = []
 for (const timeline of timelines) {
   const entry = entries.get(timeline.entry)
   if (!entry) continue
   const missing = visibleGames(entry.games ?? []).filter((game) => !represented(game, timeline))
   if (!missing.length) continue
-  const line = `${timeline.entry} (${timeline.coverage}): ${missing.join(', ')}`
-  if (timeline.coverage === 'complete') completeGaps.push(line)
-  else currentGaps.set(gapKey(timeline.entry, missing), { entry: timeline.entry, games: missing, coverage: timeline.coverage })
+  if (timeline.coverage === 'complete') {
+    completeGaps.push(`${timeline.entry} (complete): ${missing.join(', ')}`)
+  } else {
+    for (const game of missing) currentGaps.set(gapKey(timeline.entry, game), { entry: timeline.entry, game, coverage: timeline.coverage })
+  }
 }
 assert.deepEqual(completeGaps, [], `complete timelines missing entry games:\n${completeGaps.join('\n')}`)
 
-const registeredGaps = new Map(REVIEWED_GAPS.map((gap) => [gapKey(gap.entry, gap.games), gap]))
+const registeredGaps = new Map<string, (typeof REVIEWED_GAPS)[number]>()
+for (const gap of REVIEWED_GAPS) {
+  assert.ok(gap.games.length > 0, `${gap.entry} must list one or more missing games`)
+  assert.ok(gap.reason.trim(), `${gap.entry}: every registered gap needs a reason`)
+  for (const game of gap.games) {
+    const key = gapKey(gap.entry, game)
+    assert.ok(!registeredGaps.has(key), `duplicate game gap disposition: ${key}`)
+    registeredGaps.set(key, gap)
+  }
+}
 const unregisteredGaps = [...currentGaps.keys()].filter((key) => !registeredGaps.has(key))
 assert.deepEqual(
   unregisteredGaps,
   [],
-  `new partial/unknown-coverage gaps must be reviewed and added to REVIEWED_GAPS:\n${unregisteredGaps
+  `new partial/unknown-coverage game gaps need disposition:\n${unregisteredGaps
     .map((key) => {
       const gap = currentGaps.get(key)!
-      return `  ${gap.entry} (${gap.coverage}): ${gap.games.join(', ')}`
+      return `  ${gap.entry} (${gap.coverage}): ${gap.game}`
     })
     .join('\n')}`,
 )
 const staleGaps = [...registeredGaps.keys()].filter((key) => !currentGaps.has(key))
-if (staleGaps.length) {
-  console.log(`Game timeline disposition register has ${staleGaps.length} stale gap(s); remove them:`)
-  for (const key of staleGaps) console.log(`  STALE ${key}`)
-}
+assert.deepEqual(staleGaps, [], `registered game gaps no longer exist; remove stale exceptions:\n${staleGaps.join('\n')}`)
 
 // ── 旧 segments 的游戏标签与新 unknown 区间的交叉核对 ─────────────────
 function inferSegmentGame(entry: Entry, span: Entry['segments'][number]): string | undefined {
@@ -240,6 +249,34 @@ const staleLong = Object.keys(REVIEWED_LONG_UNKNOWNS).filter((key) => !longUnkno
 if (staleLong.length) {
   console.log(`Game timeline long-unknown register has ${staleLong.length} stale entr(ies); remove them:`)
   for (const key of staleLong) console.log(`  STALE ${key}`)
+}
+
+// ── 已审阅的「游戏前聊」不再回退成 unknown ────────────────────────
+const reviewedOpeningBreaks: Record<string, string> = {
+  '2017-09-20-live-01': '游戏前聊20块钱的',
+  '2017-11-17-live-01': '游戏前聊10块钱的',
+  '2017-12-13-live-01': '游戏前聊10块钱的',
+  '2018-03-31-live-01': '游戏前聊10块钱的',
+  '2018-08-21-live-01': '游戏前聊10块钱的',
+  '2019-04-06-live-01': '游戏前聊10块钱的',
+  '2019-05-10-live-02': '游戏前说会儿封神',
+  '2019-06-10-live-01': '游戏前聊10块钱的',
+  '2019-08-29-live-01': '游戏前聊10块钱的',
+  '2019-11-22-live-01': '游戏前聊10块钱的',
+  '2019-12-20-live-01': '游戏前聊10块钱的',
+  '2021-04-17-live-02': '游戏前聊10块钱的',
+  '2021-05-04-live-01': '游戏前聊10块钱的',
+}
+for (const [entry, name] of Object.entries(reviewedOpeningBreaks)) {
+  const timeline = timelineByEntry.get(entry)
+  assert.ok(timeline, `missing reviewed opening-chat timeline: ${entry}`)
+  const opening = resolveSpans(timeline)[0]
+  assert.equal(opening?.span.page, 1, `${entry} opening must start at P1`)
+  assert.equal(opening?.span.at, '00:00:00', `${entry} opening must start at 00:00:00`)
+  assert.equal(opening?.span.kind, 'break', `${entry} reviewed opening chat must be an independent break`)
+  assert.ok(opening.span.note?.includes(name), `${entry} must preserve its historical segment name`)
+  assert.ok(opening.endSec - opening.startSec >= 300, `${entry} break must meet the 5-minute policy`)
+  assert.notEqual(opening.span.evidence, 'human_watch', `${entry} must not claim human_watch without continuous human review`)
 }
 
 // ── 守恒与证据等级 ───────────────────────────────────────────────────
