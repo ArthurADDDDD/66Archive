@@ -625,12 +625,6 @@
     precision: approx
     evidence: thumbnails
   - page: 1
-    at: 01:28:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 1
     at: 01:31:00
     game: taiko-no-tatsujin
     precision: approx
@@ -684,34 +678,16 @@
     game: rusty-lake
     precision: part
     evidence: part_title
-  - page: 1
-    at: 01:09:55
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 2
     at: 00:00:55
     game: benzuo-dao-yao-kankan-ni-neng-huo-jitian
     precision: approx
     evidence: thumbnails
   - page: 2
-    at: 00:26:55
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 2
     at: 00:27:15
     game: ershiyi-shiji-shengming-kexue
     precision: approx
     evidence: thumbnails
-  - page: 2
-    at: 00:40:40
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 2
     at: 00:40:45
     game: my-teacher-is-a-bear
@@ -874,7 +850,7 @@
     game: tumbleseed
     precision: approx
     evidence: thumbnails
-    note: P3 21:40 起有 TumbleSeed 画面；P4 为独立的水墨苏绣外景。
+    note: P3 17:50 起已启动 TumbleSeed（期间报错/重启），21:40 可见稳定游玩；P4 为独立水墨苏绣外景。
   - page: 4
     at: 00:00:00
     kind: break
@@ -1129,12 +1105,6 @@
     game: tiny-toon-busters-hidden-treasure
     precision: approx
     evidence: thumbnails
-  - page: 3
-    at: 00:00:00
-    kind: unknown
-    precision: part
-    evidence: part_title
-    note: 休息 / 切换
   - page: 3
     at: 00:01:00
     game: super-mario-odyssey
@@ -1396,12 +1366,6 @@
     precision: approx
     evidence: thumbnails
   - page: 1
-    at: 02:26:10
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 1
     at: 02:26:40
     game: in-death
     precision: approx
@@ -1576,12 +1540,6 @@
     precision: part
     evidence: part_title
   - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 聊天
-  - page: 4
     at: 00:00:54
     game: no-mans-sky
     precision: approx
@@ -1612,12 +1570,6 @@
     game: minecraft
     precision: part
     evidence: part_title
-  - page: 3
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 3
     at: 00:00:35
     game: starbound
@@ -1751,12 +1703,6 @@
     game: super-mario-party
     precision: part
     evidence: part_title
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 4
     at: 00:01:24
     game: red-dead-redemption-2
@@ -2612,12 +2558,6 @@
     precision: part
     evidence: part_title
   - page: 7
-    at: 00:34:13
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 7
     at: 00:34:51
     game: nioh-2
     precision: approx
@@ -2708,12 +2648,6 @@
     precision: approx
     evidence: thumbnails
   - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 4
     at: 00:00:52
     game: streets-of-rage-4
     precision: approx
@@ -2744,12 +2678,6 @@
     game: world-games-51
     precision: approx
     evidence: thumbnails
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 4
     at: 00:01:07
     game: brawl-stars
@@ -2920,12 +2848,6 @@
     precision: part
     evidence: part_title
   - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 4
     at: 00:02:30
     game: grounded
     precision: approx
@@ -2953,12 +2875,6 @@
     game: spiritfarer
     precision: approx
     evidence: thumbnails
-  - page: 4
-    at: 00:00:18
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 4
     at: 00:00:36
     game: pascals-wager
@@ -2994,12 +2910,6 @@
     precision: part
     evidence: part_title
   - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 4
     at: 00:00:18
     game: contra
     precision: approx
@@ -3030,12 +2940,6 @@
     game: craftopia
     precision: approx
     evidence: thumbnails
-  - page: 4
-    at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 4
     at: 00:00:12
     game: contra
@@ -3415,12 +3319,6 @@
     game: demons-souls
     precision: part
     evidence: part_title
-  - page: 7
-    at: 00:00:36
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 7
     at: 00:04:30
     game: world-of-warcraft
@@ -4473,12 +4371,6 @@
     precision: approx
     evidence: thumbnails
   - page: 6
-    at: 00:16:24
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 6
     at: 00:17:06
     game: fall-guys
     precision: approx
@@ -4570,12 +4462,6 @@
     game: jiezou-gezi
     precision: approx
     evidence: thumbnails
-  - page: 1
-    at: 02:39:26
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 聊天
   - page: 1
     at: 02:39:32
     game: dont-scream
@@ -4679,12 +4565,6 @@
     game: rhythm-heaven
     precision: approx
     evidence: thumbnails
-  - page: 1
-    at: 00:49:42
-    kind: unknown
-    precision: approx
-    evidence: other
-    note: 聊天
   - page: 1
     at: 00:51:14
     game: once-human
