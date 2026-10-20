@@ -46,3 +46,7 @@ scripts/audit/PENDING-REVIEW.md
 
 # 本机专用的系列标签人工复核页，不进入公开仓库
 scripts/series-review/
+
+# Site identity PNGs derived from the existing favicon/avatar at dev/build time.
+# The committed /icons/icon-*.png files remain the Web Push notification bell.
+public/icons/site-*.png
