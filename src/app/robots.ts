@@ -20,10 +20,20 @@ export const dynamic = 'force-static'
  * **`/archive-data.json` 绝不能加进来。** `/archive/` 的正文是客户端从这个 JSON 拉的
  * （SSG 出来的 HTML 只是个壳），屏蔽它等于让 Googlebot 渲染出一个空档案页——
  * 那是「屏蔽正常档案页面」的隐蔽形式，只是绕了一层资源依赖。
+ *
+ * **整站拒绝的只有 SEO 审计爬虫。** 它们给站长卖外链 / 关键词报表，不是搜索引擎，
+ * 不会给这里带来任何读者，却是公开后访问日志里最勤快的一批。搜索引擎（含花瓣搜索
+ * PetalBot、百度、必应）和 AI 搜索 / 问答（OAI-SearchBot、ChatGPT-User 等）一律照常放行：
+ * 有人在那些地方问起她的老录像，答案应该能指到这里。
  */
+const SEO_AUDIT_CRAWLERS = ['SemrushBot', 'AhrefsBot', 'DotBot', 'MJ12bot', 'BLEXBot', 'DataForSeoBot', 'SerpstatBot']
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: '*', allow: '/', disallow: ['/api/', '/admin'] }],
+    rules: [
+      { userAgent: '*', allow: '/', disallow: ['/api/', '/admin'] },
+      { userAgent: SEO_AUDIT_CRAWLERS, disallow: '/' },
+    ],
     // 这里是文件不是页面，所以直接拼 origin：`siteUrl()` 会给页面路径补尾斜杠。
     sitemap: `${siteOrigin()}/sitemap.xml`,
   }
