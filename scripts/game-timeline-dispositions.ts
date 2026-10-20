@@ -108,110 +108,19 @@ export type ReviewedCrossCheck = { entry: string; segmentAt: string; game: strin
  */
 export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
   {
-    entry: '2017-06-05-live-01',
-    segmentAt: '00:42:43',
-    game: '1-2-switch',
-    reason: '旧 P2 标签写 1-2-Switch，但前段是 eShop/宣传片：ARMS 只出现在预告画面，1-2-Switch 实玩从 20:19 开始；混合段保留 unknown。',
-  },
-  {
-    entry: '2018-09-17-live-01',
-    segmentAt: '02:03:42',
-    game: '39-days-to-mars',
-    reason: '旧分段从 P3 起点累计；抽帧 17:20 才出现《39 天到火星》标题，17:30 前为浏览器/聊天。',
-  },
-  {
-    entry: '2018-12-07-live-01',
-    segmentAt: '00:00:00',
-    game: 'doudizhu',
-    reason: '旧分段把聊天与斗地主并成一段；抽帧显示斗地主约在 17:16 开始，之前为聊天。',
-  },
-  {
-    entry: '2018-12-11-live-01',
-    segmentAt: '00:00:00',
-    game: 'doudizhu',
-    reason: '抽帧显示 11:55 仍为聊天，斗地主约在 12:00 开始。',
-  },
-  {
-    entry: '2018-12-17-live-01',
-    segmentAt: '00:00:00',
-    game: 'doudizhu',
-    reason: '抽帧显示 6:50 仍为聊天，斗地主约在 6:53 开始。',
-  },
-  {
-    entry: '2019-03-01-live-01',
-    segmentAt: '00:00:00',
-    game: 'trials-rising',
-    reason: '旧分段标签同时含「游戏前聊」；抽帧 17:20 才进入特技摩托菜单，17:24 前为聊天。',
-  },
-  {
-    entry: '2019-05-10-live-02',
-    segmentAt: '01:58:56',
-    game: 'mist-detective',
-    reason: 'P3 35:00 起为迷雾侦探片尾字幕与聊天，不是可玩的游戏环节。',
-  },
-  {
     entry: '2019-05-10-live-02',
     segmentAt: '02:45:02',
     game: 'rento',
-    reason: 'P4 57:16 后画面仍是 RENTO，但出现 Because of inactivity，主播已转去聊天；按独立聊天保留。',
-  },
-  {
-    entry: '2020-10-20-live-01',
-    segmentAt: '00:00:00',
-    game: 'rolo-to-the-rescue',
-    reason: '前 8:30 为主机菜单/游戏选择界面，尚未进入具体作品。',
-  },
-  {
-    entry: '2020-10-20-live-01',
-    segmentAt: '02:32:17',
-    game: 'rolo-to-the-rescue',
-    reason: 'P3 01:09:48–01:10:05 仍是 Rolo 的 NO CONTINUE REMAINING 结算画面，已并入 Rolo；01:10:05 后为主机菜单/游戏列表，保留 unknown。',
-  },
-  {
-    entry: '2021-04-27-live-01',
-    segmentAt: '00:00:00',
-    game: 'world-games-51',
-    reason: '既有复核抽帧显示世界游戏大全 51 约在 16:15 开始；此前为聊天。',
-  },
-  {
-    entry: '2026-02-06-live-01',
-    segmentAt: '00:00:00',
-    game: 'nioh-3',
-    reason: '前 13:36 为开播聊天，仁王 3 从 13:36 开始。',
-  },
-  {
-    entry: '2026-07-04-live-02',
-    segmentAt: '00:00:00',
-    game: 'rhythm-heaven',
-    reason: '抽帧 0–35:35 均为聊天/浏览，节奏天国从 35:36 开始。',
-  },
-  {
-    entry: '2026-07-04-live-02',
-    segmentAt: '01:00:01',
-    game: 'rhythm-heaven',
-    reason: 'P2 24:48 起的 5.4 分钟为游戏间休息/切换，下一款从 30:12 开始。',
+    reason: 'P4 57:16 后画面仍是 RENTO，但出现 Because of inactivity；主播是否已完全停玩无法从静帧确认，保留 unknown。',
   },
 ]
-
 /**
  * 已按多帧抽检复核、仍保留为 unknown 的长时间聊天段（≥30 分钟）。
  * 键：entry|page|at。新增长时间 unknown 必须先复核并登记，否则测试失败。
  */
 export const REVIEWED_LONG_UNKNOWNS: Record<string, string> = {
-  '2017-06-05-live-01|1|00:00:00': '开播聊天；P2 前段混有 eShop/ARMS，无法切成可靠游戏环节。',
-  '2018-09-17-live-01|1|00:00:00': '开播聊天；P3 前段为浏览器/聊天，17:30 才进入 39 天到火星。',
-  '2019-03-29-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2020-10-13-live-01|1|00:00:00': 'P1/P2 为开播聊天与网页浏览；中世纪王朝从 P3 开始。',
-  '2020-11-02-live-01|1|00:00:00': '抽帧为 B 站/网页浏览与 Steam 下载界面，不是游玩。',
-  '2021-02-05-live-01|1|00:00:00': '抽帧为《戴森球计划》商店页浏览，不是游玩。',
-  '2024-12-06-live-02|1|00:00:00': '抽帧为美团 App 页面浏览；该场游戏为 Out of Bounds。',
-  '2024-12-09-live-02|1|00:00:00': '抽帧为聊天/美团 App；Out of Bounds 从 P2 2:44 开始。',
-  '2024-12-22-live-02|1|00:00:00': '抽帧为聊天/美团 App；mizi-no 从 P2 6:13 开始。',
-  '2026-07-04-live-02|1|00:00:00': '开播聊天与浏览；节奏天国从 35:36 开始。',
-  '2026-09-17-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天与弹幕。',
-  '2026-09-22-live-02|1|00:00:00': '抽帧 5 个位置均为摄像头聊天；控制：共振从 P2 开始。',
+  // 2026-10-20 收尾后已无 ≥30 分钟的 unknown；新增长时间 unknown 必须抽帧并在此登记。
 }
-
 export type ReviewedSpanBound = {
   entry: string
   game: string
@@ -228,6 +137,56 @@ export type ReviewedSpanBound = {
 
 /** 本轮修复的关键边界：不仅要求游戏还在，还要求起止和时长没有被悄悄改动。 */
 export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
+  {
+    entry: '2015-02-10-live-01',
+    game: 'super-mario-3d-world',
+    page: 1,
+    at: '00:32:10',
+    durationSec: 3350,
+    associatedSec: 3350,
+    verifiedSec: 0,
+    reason: '抽帧 32:30 已出现 3D World 标题，32:10 为标题/存档选择起点；旧边界 34:00 偏晚 110 秒。',
+  },
+  {
+    entry: '2018-05-10-live-01',
+    game: 'beat-saber',
+    page: 1,
+    at: '00:12:20',
+    durationSec: 4541,
+    associatedSec: 4541,
+    verifiedSec: 0,
+    reason: '抽帧 12:20 已戴上头显，13:10 为 Beat Saber 菜单；旧边界 15:30 偏晚 190 秒。',
+  },
+  {
+    entry: '2018-11-02-live-01',
+    game: 'lifeafter',
+    page: 2,
+    at: '00:00:00',
+    durationSec: 4622,
+    associatedSec: 4622,
+    verifiedSec: 0,
+    reason: 'P2 开头 6 秒已见《明日之后》第三人称画面与犬只同伴；旧边界 P2 0:36 偏晚 36 秒。',
+  },
+  {
+    entry: '2019-01-07-live-01',
+    game: 'human-fall-flat',
+    page: 2,
+    at: '00:02:40',
+    durationSec: 6679,
+    associatedSec: 6679,
+    verifiedSec: 0,
+    reason: '抽帧 P2 2:40 出现 Curve Digital 标志，即《人类一败涂地》启动；旧边界 P3 0:24 偏晚 305 秒。',
+  },
+  {
+    entry: '2019-03-01-live-01',
+    game: 'trials-rising',
+    page: 1,
+    at: '00:16:25',
+    durationSec: 552,
+    associatedSec: 552,
+    verifiedSec: 0,
+    reason: '抽帧 16:25 出现《特技摩托：崛起》世界地图，16:54 已是 TRIALS 地图；旧边界 17:24 偏晚 59 秒。',
+  },
   {
     entry: '2015-01-27-live-01',
     game: 'new-super-mario-bros-u',
@@ -307,16 +266,6 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
     associatedSec: 1470,
     verifiedSec: 0,
     reason: 'P2 0:40 的切换并非独立环节；Rec Room 持续到 24:30。',
-  },
-  {
-    entry: '2018-11-02-live-01',
-    game: 'lifeafter',
-    page: 2,
-    at: '00:00:36',
-    durationSec: 4586,
-    associatedSec: 4586,
-    verifiedSec: 0,
-    reason: '旧 unknown 42:38–1:17:02 抽帧仍为《明日之后》，与 RDR2 的边界在 1:17:02。',
   },
   {
     entry: '2019-08-15-live-01',
