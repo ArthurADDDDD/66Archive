@@ -528,7 +528,7 @@
   spans:
   - page: 1
     at: 00:00:00
-    game: super-mario-3d-world
+    game: new-super-mario-bros-u
     precision: approx
     evidence: thumbnails
   - page: 1
@@ -537,7 +537,7 @@
     precision: approx
     evidence: thumbnails
     note: 聊天
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2015-01-29-live-01
   basis: https://www.bilibili.com/video/BV1Gx411A7NC
   coverage: unknown
@@ -1232,15 +1232,36 @@
     evidence: part_title
   reviewed: '2026-10-20'
 - entry: 2017-12-13-live-01
-  basis: https://www.bilibili.com/video/BV19W411h7bR
-  coverage: partial
+  basis: https://www.acfun.cn/v/ac4135224
+  coverage: complete
   parts:
   - page: 1
-    id: 28158144
-    duration_sec: 2991
+    id: 5752771
+    duration_sec: 1494
   - page: 2
-    id: 28158145
-    duration_sec: 3598
+    id: 5752759
+    duration_sec: 1495
+  - page: 3
+    id: 5752792
+    duration_sec: 1798
+  - page: 4
+    id: 5752797
+    duration_sec: 1799
+  - page: 5
+    id: 5752766
+    duration_sec: 1542
+  - page: 6
+    id: 5752801
+    duration_sec: 1544
+  - page: 7
+    id: 5752808
+    duration_sec: 1542
+  - page: 8
+    id: 5752802
+    duration_sec: 1544
+  - page: 9
+    id: 5752815
+    duration_sec: 1544
   spans:
   - page: 1
     at: 00:00:00
@@ -1248,12 +1269,17 @@
     precision: part
     evidence: part_title
     note: 聊天
-  - page: 2
+  - page: 3
     at: 00:00:00
     game: pubg
     precision: part
     evidence: part_title
-  reviewed: '2026-10-19'
+  - page: 5
+    at: 00:00:00
+    game: the-long-dark
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-20'
 - entry: 2018-03-31-live-01
   basis: https://www.bilibili.com/video/BV1mW411u7oK
   coverage: unknown
@@ -3233,7 +3259,7 @@
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 01:09:48
+    at: 01:10:05
     kind: unknown
     precision: approx
     evidence: thumbnails
@@ -3243,7 +3269,7 @@
     game: circus-charlie
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2020-11-02-live-01
   basis: https://www.bilibili.com/video/BV19a411A7oB
   coverage: unknown
