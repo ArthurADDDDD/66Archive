@@ -106,14 +106,7 @@ export type ReviewedCrossCheck = { entry: string; segmentAt: string; game: strin
  * 旧 `segments` 的游戏标签与新时间轴 unknown 区间重叠，但已确认不是漏归类。
  * 旧分段常使用整场累计时间，边界也比新时间轴粗，不能直接覆盖。
  */
-export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
-  {
-    entry: '2019-05-10-live-02',
-    segmentAt: '02:45:02',
-    game: 'rento',
-    reason: 'P4 57:16 后画面仍是 RENTO，但出现 Because of inactivity；主播是否已完全停玩无法从静帧确认，保留 unknown。',
-  },
-]
+export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = []
 /**
  * 已按多帧抽检复核、仍保留为 unknown 的长时间聊天段（≥30 分钟）。
  * 键：entry|page|at。新增长时间 unknown 必须先复核并登记，否则测试失败。
@@ -137,6 +130,26 @@ export type ReviewedSpanBound = {
 
 /** 本轮修复的关键边界：不仅要求游戏还在，还要求起止和时长没有被悄悄改动。 */
 export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
+  {
+    entry: '2019-04-10-live-01',
+    game: 'vacation-simulator',
+    page: 2,
+    at: '00:00:42',
+    durationSec: 3254,
+    associatedSec: 3254,
+    verifiedSec: 0,
+    reason: 'P2 28:46–29:04 的 18 秒为同一游戏内的菜单/加载间隙，按规则并入 Vacation Simulator，不再单列 unknown。',
+  },
+  {
+    entry: '2021-03-09-live-01',
+    game: 'tiny-lands',
+    page: 1,
+    at: '00:15:30',
+    durationSec: 6713,
+    associatedSec: 6713,
+    verifiedSec: 0,
+    reason: '音频 15:30 主播明确开始玩《Tiny Lands》，16:10 已在描述画面差异；旧边界 P2 0:00 偏晚 194 秒。',
+  },
   {
     entry: '2015-02-10-live-01',
     game: 'super-mario-3d-world',
@@ -241,11 +254,11 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
     entry: '2017-06-05-live-01',
     game: 'tumbleseed',
     page: 3,
-    at: '00:21:40',
-    durationSec: 1313,
-    associatedSec: 1313,
+    at: '00:17:50',
+    durationSec: 1543,
+    associatedSec: 1543,
     verifiedSec: 0,
-    reason: 'P3 21:40 起为 TumbleSeed；P4 抽帧 11 个位置均为水墨苏绣外景（人群、古建、舞台灯），已独立标为 break，不计入游戏。',
+    reason: 'P3 17:50 已启动 TumbleSeed（Home 菜单选中并进入，17:50–18:20 出现游戏报错/重开）；P4 抽帧 11 个位置均为水墨苏绣外景，已独立标为 break。',
   },
   {
     entry: '2018-05-10-live-01',

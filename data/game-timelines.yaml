@@ -582,7 +582,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: Don't Escape 2→1 切换与零食聊天混合，边界不足
   - page: 1
     at: 00:41:00
     game: dont-escape
@@ -593,7 +593,7 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
-    note: 休息 / 切换
+    note: 展示 Sonic CD/手机浏览与聊天混合，边界不足
   - page: 1
     at: 01:10:00
     game: new-super-mario-bros-u
@@ -762,10 +762,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 开播聊天/看视频（难死塔前）
   - page: 1
     at: 00:14:27
     game: tricky-towers
@@ -870,13 +870,7 @@
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 00:16:42
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 聊天
-  - page: 3
-    at: 00:21:40
+    at: 00:17:50
     game: tumbleseed
     precision: approx
     evidence: thumbnails
@@ -2215,17 +2209,6 @@
     game: vacation-simulator
     precision: approx
     evidence: thumbnails
-  - page: 2
-    at: 00:28:46
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 聊天
-  - page: 2
-    at: 00:29:04
-    game: vacation-simulator
-    precision: approx
-    evidence: thumbnails
   - page: 3
     at: 00:00:00
     game: derail-valley
@@ -2233,10 +2216,10 @@
     evidence: thumbnails
   - page: 3
     at: 00:20:49
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 开播聊天/浏览 VR 游戏（Beat Saber 前）
   - page: 3
     at: 00:26:23
     game: beat-saber
@@ -2284,10 +2267,10 @@
     evidence: thumbnails
   - page: 4
     at: 00:57:16
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 下播前聊天/抽奖（RENTO 挂机）
   reviewed: '2026-10-19'
 - entry: 2019-06-10-live-01
   basis: https://www.bilibili.com/video/BV194411N7Lv
@@ -2422,10 +2405,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
-    note: 聊天
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（讲鬼故事）
   - page: 2
     at: 00:00:00
     game: unheard
@@ -3001,10 +2984,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
-    evidence: other
-    note: 聊天
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（4399/旅行/电影话题）
   - page: 2
     at: 00:00:00
     game: stickman
@@ -3215,10 +3198,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 游戏前聊10块钱的（平遥旅行见闻）
   - page: 2
     at: 00:00:00
     game: wudao-micang
@@ -3851,15 +3834,15 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
-    note: 聊天
-  - page: 2
-    at: 00:00:00
+    evidence: thumbnails
+    note: 游戏前聊10块钱的（聊录像/推荐）
+  - page: 1
+    at: 00:15:30
     game: tiny-lands
-    precision: part
-    evidence: part_title
+    precision: approx
+    evidence: thumbnails
   - page: 5
     at: 00:00:00
     game: rhythm-doctor
@@ -3897,10 +3880,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: part
-    evidence: part_title
-    note: 休息 / 切换
+    evidence: thumbnails
+    note: 开播聊天（调整镜头/聊 Hades，Hades 前）
   - page: 2
     at: 00:00:00
     game: hades
@@ -4200,10 +4183,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 开播聊天/开箱（Neon White 前）
   - page: 1
     at: 00:08:00
     game: neon-white
@@ -4354,10 +4337,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:27:30
-    kind: unknown
+    kind: break
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 游戏间聊天（Brotato 前）
   - page: 3
     at: 00:06:40
     game: brotato
