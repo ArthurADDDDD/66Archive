@@ -47,11 +47,24 @@ export default function UpdatesPage() {
           </p>
         </header>
 
+        <nav aria-label="按月份跳转更新记录" className="mt-8 flex flex-wrap gap-2 sm:mt-10">
+          {months.map(([month, items]) => (
+            <a
+              key={month}
+              href={`#updates-${month}`}
+              className="ui-press inline-flex min-h-10 items-center gap-2 rounded-full border border-line/80 bg-surface/50 px-4 font-mono text-meta text-muted transition-colors hover:border-live/50 hover:text-live focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+            >
+              {month.replace('-', '.')}
+              <span className="text-faint">{items.length}</span>
+            </a>
+          ))}
+        </nav>
+
         <div className="mt-12 border-t border-line/70 sm:mt-16">
           {months.map(([month, items]) => (
             <section key={month} aria-labelledby={`updates-${month}`} className="border-b border-line/60 py-7 sm:py-10">
               <div className="grid gap-5 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-8">
-                <h2 id={`updates-${month}`} className="font-mono text-h3 font-semibold text-live tnum">
+                <h2 id={`updates-${month}`} className="scroll-mt-24 font-mono text-h3 font-semibold text-live tnum">
                   {month.replace('-', '.')}
                 </h2>
                 <ol className="min-w-0 divide-y divide-line/50">
