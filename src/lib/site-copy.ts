@@ -584,8 +584,6 @@ export const SITE_COPY: SiteCopy = {
     {"id": "entry-game-chapters-title", "group": "录像页 · 游戏章节", "label": "标题", "text": "这场录像的游戏章节"},
     {"id": "entry-game-chapters-hint", "group": "录像页 · 游戏章节", "label": "基准和审阅提示", "text": "按{platform}基准录像计时，下方各段按钮打开该来源；聊天与休息片段另列。已人工审阅 · {reviewed}；", "vars": ["platform", "reviewed"]},
     {"id": "entry-game-chapters-acfun-hint", "group": "录像页 · 游戏章节", "label": "AcFun 跳转提示", "text": "AcFun 仅能直接打开分P，页内时间供手动定位。"},
-    {"id": "game-intervals-title", "group": "游戏页 · 片段索引", "label": "标题", "text": "直接找到游戏片段"},
-    {"id": "game-intervals-hint", "group": "游戏页 · 片段索引", "label": "说明", "text": "已审阅时间轴中的每一段分别列出，同一场回来继续玩的部分也会保留。其余未拆分录像仍在下方。"},
     {"id": "entry-chapter-basis-hint", "group": "录像页 · 来源", "label": "章节基准说明", "text": "上方章节入口使用已标明的基准录像；这里可以选择其他录像版本。"},
     {"id": "entry-detail-game-chapters-title", "group": "录像展开卡 · 游戏章节", "label": "title", "text": "已审阅章节"},
     {"id": "entry-detail-game-chapters-hint", "group": "录像展开卡 · 游戏章节", "label": "hint", "text": "{platform} 基准录像；切换来源不改变章节位置。审阅于 {reviewed}；{coverage}", "vars": ["platform", "reviewed", "coverage"]},
