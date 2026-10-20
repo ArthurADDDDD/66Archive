@@ -2480,7 +2480,7 @@
 
   - id: reigns
     name: 冰火王权
-    aliases: [Reigns, 冰火王权Regins, 王权]
+    aliases: ["Reigns: Game of Thrones", "Reigns Game of Thrones", "王权：权力的游戏"]
     note: "本 id 对应《Reigns: Game of Thrones》（冰火王权）；原版《Reigns》与《Reigns: Her Majesty》是不同作品，分列 reigns-classic / reigns-her-majesty。"
     genres:
       - card
@@ -2493,7 +2493,7 @@
 
   - id: reigns-her-majesty
     name: 王权：女王陛下
-    aliases: [Reigns Her Majesty, 女王陛下, 王权女王陛下]
+    aliases: ["Reigns: Her Majesty", "Reigns Her Majesty", 女王陛下, 王权女王陛下]
     genres:
       - card
 
