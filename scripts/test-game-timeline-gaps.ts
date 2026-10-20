@@ -279,6 +279,31 @@ for (const [entry, name] of Object.entries(reviewedOpeningBreaks)) {
   assert.notEqual(opening.span.evidence, 'human_watch', `${entry} must not claim human_watch without continuous human review`)
 }
 
+// ── 两款已识别游戏之间的短切换，不能再次保留泛称 unknown ──────────────
+// docs/game-time.md：不足五分钟的切换/短聊并入前一款游戏；若真的怀疑有
+// 尚未识别的第三款游戏，必须在 note 写出具体画面证据，而不是泛称“聊天/切换”。
+const unresolvedShortTransitions: string[] = []
+for (const timeline of timelines) {
+  const resolved = resolveSpans(timeline)
+  for (let i = 1; i < resolved.length - 1; i++) {
+    const previous = resolved[i - 1].span
+    const middle = resolved[i]
+    const following = resolved[i + 1].span
+    if (middle.span.kind !== 'unknown' || !previous.game || !following.game) continue
+    const duration = middle.endSec - middle.startSec
+    if (duration >= 300) continue
+    const note = middle.span.note?.trim() ?? ''
+    if (!note || note === '休息 / 切换' || note === '聊天' || note === '未归类片段') {
+      unresolvedShortTransitions.push(`${timeline.entry} P${middle.span.page} ${middle.span.at} (${duration}s): ${previous.game} → ${following.game}`)
+    }
+  }
+}
+assert.deepEqual(
+  unresolvedShortTransitions,
+  [],
+  `sub-five-minute generic transitions must be attributed to the preceding game, or carry concrete evidence for a genuinely unresolved third game:\n${unresolvedShortTransitions.join('\n')}`,
+)
+
 // ── 守恒与证据等级 ───────────────────────────────────────────────────
 let totalVerified = 0
 for (const timeline of timelines) {
