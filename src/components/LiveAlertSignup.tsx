@@ -124,7 +124,7 @@ function SignupDialog({ onClose, testCode, onTestCode }: { onClose: () => void; 
   const pushReady = push.enabled && (push.mode === 'public' || !!testCode || standalone) ? push : null
   const showTabs = !!pushReady || pushLoading
   const activeTab: Tab = pushReady ? tab : 'email'
-  const emailStatus = mailSent ? '待确认' : ''
+  const emailStatus = mailSent ? '需确认' : ''
   const pushStatus = pushOn ? '已开启' : ''
 
   function chooseTab(next: Tab) {
@@ -177,19 +177,29 @@ function SignupDialog({ onClose, testCode, onTestCode }: { onClose: () => void; 
       <div role={showTabs ? 'tabpanel' : undefined} id={`${id}-email-panel`} aria-labelledby={showTabs ? `${id}-email-tab` : undefined}
         hidden={activeTab !== 'email'} className="mt-5">
         {mailSent ? <div role="status" aria-live="polite">
-          <h3 className="text-h3 font-semibold text-ink">请前往邮箱确认订阅</h3>
-          <p className="mt-3 text-body leading-relaxed text-muted">确认邮件已发送到 <span className="break-all text-ink">{email.trim()}</span>。打开邮件里的确认链接后，订阅才会生效。没找到时也看看垃圾邮件箱。</p>
-          <p className="mt-3 rounded-xl border border-live/25 bg-live/5 p-3 text-meta leading-relaxed text-muted">完成邮箱确认前，还不会收到开播提醒。</p>
-          <button type="button" onClick={onClose} className="ui-press mt-5 min-h-12 w-full rounded-full bg-ink px-5 py-3 text-control font-medium text-base">知道了</button>
+          <div className="inline-flex items-center rounded-full border border-amber-400/50 bg-amber-400/10 px-3 py-1 text-meta font-semibold text-amber-200">尚未完成订阅</div>
+          <h3 className="mt-3 text-h3 font-semibold text-ink">申请已提交，别忘了去邮箱确认！</h3>
+          <p className="mt-3 text-control leading-relaxed text-muted">
+            已收到 <span className="break-all font-medium text-ink">{email.trim()}</span> 的申请。确认邮件可能稍晚到达，<strong className="text-ink">仅提交邮箱还不能收到开播提醒。</strong>
+          </p>
+          <ol className="mt-4 space-y-3 rounded-2xl border border-live/30 bg-live/5 p-4 text-control leading-relaxed">
+            <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-live/20 font-semibold text-live">1</span><span>打开邮箱，找到「女流66开播提醒」的确认邮件。</span></li>
+            <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-live/20 font-semibold text-live">2</span><span>点击邮件里的链接，<strong className="text-ink">再到网页点击「确认订阅」</strong>。</span></li>
+          </ol>
+          <p className="mt-3 text-meta leading-relaxed text-muted">完成网页确认后才会生效。链接有效期为 24 小时；找不到邮件请检查垃圾邮件箱。</p>
+          <button type="button" onClick={onClose} className="ui-press mt-5 min-h-12 w-full rounded-full bg-live px-5 py-3 text-control font-semibold text-base">我去邮箱完成确认</button>
           {pushReady && <button type="button" onClick={() => chooseTab('push')} className="ui-press mt-2 min-h-11 w-full rounded-full border border-line px-5 text-control text-muted hover:border-live/50 hover:text-ink">改用浏览器通知</button>}
         </div> : <form onSubmit={submit}>
-          <p className="text-control leading-relaxed text-muted">填写邮箱并完成确认，开播时就会收到提醒。</p>
+          <div className="rounded-xl border border-live/35 bg-live/5 p-3.5 text-control leading-relaxed">
+            <p className="font-semibold text-ink">订阅需要邮件确认，填写邮箱还不算成功</p>
+            <p className="mt-1.5 text-muted">提交后，请打开收到的邮件，进入确认页面并点击「确认订阅」，提醒才会开启。</p>
+          </div>
           <label htmlFor={`${id}-email`} className="mt-4 block text-control font-medium">你的邮箱</label>
           <input id={`${id}-email`} name="email" type="email" inputMode="email" autoComplete="email" required maxLength={254}
             pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@example.com" value={email}
             onChange={event => { setEmail(event.target.value); setError('') }} disabled={submitting}
             aria-describedby={`${id}-hint`} className="mt-2 min-h-12 w-full rounded-xl border border-line bg-surface px-4 py-3 text-body text-ink placeholder:text-faint focus:border-live focus:outline-none focus:ring-2 focus:ring-live/20 disabled:opacity-60" />
-          <p id={`${id}-hint`} className="mt-2 text-meta leading-relaxed text-faint">先发一封确认邮件，点击确认后才开始提醒。</p>
+          <p id={`${id}-hint`} className="mt-2 text-meta leading-relaxed text-faint">将申请发送至该邮箱，之后还需要在邮件打开的网页上确认。</p>
           <label className="mt-4 flex cursor-pointer items-start gap-3 text-meta leading-relaxed text-muted">
             <input type="checkbox" required checked={consent} disabled={submitting} onChange={event => setConsent(event.target.checked)} className="mt-0.5 h-4 w-4 shrink-0 accent-live" />
             <span>我自愿订阅女流档案馆的开播邮件提醒，同意在检测到女流开播时接收通知，可随时退订。</span>
@@ -202,7 +212,7 @@ function SignupDialog({ onClose, testCode, onTestCode }: { onClose: () => void; 
           </div>
           <button type="submit" disabled={availability !== 'ready' || submitting || !consent}
             className="ui-press mt-4 min-h-12 w-full rounded-full bg-live px-5 py-3 text-control font-semibold text-base transition-opacity disabled:cursor-not-allowed disabled:opacity-40">
-            {submitting ? '正在提交…' : availability === 'unavailable' ? '订阅即将开放' : '发送确认邮件'}
+            {submitting ? '正在提交…' : availability === 'unavailable' ? '订阅即将开放' : '发送确认邮件（还需确认）'}
           </button>
           <p className="mt-3 text-center text-meta leading-relaxed text-faint">提醒来自本站观测，可能稍晚于实际开播。</p>
         </form>}
