@@ -8,7 +8,8 @@
  * 已经修复的缺口必须从清单移除，避免某天复发时被旧记录静默放行。
  */
 
-export type GapStatus = 'complementary_source' | 'evidence_insufficient' | 'mixed_content'
+/** 已有可播放互补源与缺乏可用录像/证据必须分开登记。 */
+export type GapStatus = 'playable_complement' | 'source_unverified' | 'no_known_replay' | 'evidence_insufficient'
 
 export type ReviewedGap = {
   entry: string
@@ -17,30 +18,36 @@ export type ReviewedGap = {
   reason: string
 }
 
-/** partial / unknown 覆盖下，条目标了游戏但基准录像没有对应环节。 */
+/** partial / unknown 覆盖下，按具体游戏区分已有可播放录像、链接受阻与真实缺源。 */
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
     entry: '2015-01-27-live-01',
-    games: ['i-wanna-be-the-xylem', 'super-mario-3d-world'],
-    status: 'complementary_source',
-    reason: 'A站投稿说明与抽帧确认基准 ac1733926 是《新超级马里奥兄弟U》（已改标）；I Wanna 在 ac1708393 片头即可确认，3D 世界在两条来源中均未找到画面。',
+    games: ['i-wanna-be-the-xylem'],
+    status: 'playable_complement',
+    reason: 'A站 ac1708393 片头画面证实 I Wanna，来源可播放；主 basis 为《新超级马里奥兄弟U》。',
+  },
+  {
+    entry: '2015-01-27-live-01',
+    games: ['super-mario-3d-world'],
+    status: 'evidence_insufficient',
+    reason: '3D World 仍有历史标签，但两条 A 站来源均未找到该游戏画面；未找到录像，不能认作已有互补源。',
   },
   {
     entry: '2015-01-29-live-01',
     games: ['im-scared', 'super-mario-3d-world', 'rhythm-heaven', 'just-dance'],
-    status: 'complementary_source',
+    status: 'source_unverified',
     reason: '基准 B 站单 P 仅 19:36；两条优酷来源只返回反爬/跳转页，未能确认可播放与分 P，标签保留。',
   },
   {
     entry: '2015-07-06-live-01',
     games: ['minecraft'],
-    status: 'complementary_source',
+    status: 'no_known_replay',
     reason: '唯一来源是 198 秒片段，只含 Besiege；Minecraft 不在该片段内。',
   },
   {
     entry: '2016-01-04-live-02',
     games: ['banished', 'papers-please'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: '基准 ac2440577 只覆盖《命运交叉的客店》；ac2440642 片头抽帧为 Banished，ac2441013 片头抽帧为 Papers, Please，两条均可播放。',
   },
   {
@@ -52,13 +59,13 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
   {
     entry: '2016-08-17-live-03',
     games: ['starbound', 'overwatch'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: '基准 B 站 P1 只含难死塔；A站 ac3029701 的 P1/P2 为星界边境、ac3029731 的 P1/P2 为守望先锋，均从各自视频片头开始。',
   },
   {
     entry: '2017-01-18-live-01',
     games: ['reigns-classic'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: '基准 B 站只有 P1/P2（几何冲刺）；A站 ac3415701 的 P1/P2 均为王权，从视频片头开始。',
   },
   {
@@ -70,25 +77,25 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
   {
     entry: '2017-04-04-live-01',
     games: ['super-bomberman-r', 'zelda-botw'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: '基准只有 P1（12Switch）；A站 ac3601511 片头为超级炸弹人R，ac3601510 的 P1/P2 为塞尔达，均从视频片头开始。',
   },
   {
     entry: '2022-11-02-live-01',
     games: ['the-past-within'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: 'A站 ac39540914（23395s）含 Endoparasitic → The Past Within；The Past Within 约 17180s（4:46:20）开始，可播放。A站无秒级 URL 参数，精确跳转需来源覆盖/结构方案。',
   },
   {
     entry: '2023-09-17-live-01',
     games: ['party-animals'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: 'A站 ac42398567（P2，19499s）约 250s–2550s 为猛兽派对，随后切回匹诺曹的谎言；它是一条独立视频，A站只能跳到分P开头。',
   },
   {
     entry: '2023-11-09-live-01',
     games: ['magicraft'],
-    status: 'complementary_source',
+    status: 'playable_complement',
     reason: 'A站 ac42909912（P1，11285s）约 1790s–3870s 为魔法工艺，之后是鹅鹅鸭；它是一条独立视频，A站只能跳到分P开头。',
   },
 ]
@@ -192,24 +199,11 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
  */
 export const REVIEWED_LONG_UNKNOWNS: Record<string, string> = {
   '2017-06-05-live-01|1|00:00:00': '开播聊天；P2 前段混有 eShop/ARMS，无法切成可靠游戏环节。',
-  '2017-09-20-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2017-11-17-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2017-12-13-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天（喝茶/闲聊）。',
-  '2018-03-31-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2018-08-21-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
   '2018-09-17-live-01|1|00:00:00': '开播聊天；P3 前段为浏览器/聊天，17:30 才进入 39 天到火星。',
   '2019-03-29-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2019-04-06-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2019-05-10-live-02|1|00:00:00': 'P1/P2 开播聊天；P3 迷雾侦探从 0 开始。',
-  '2019-06-10-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
-  '2019-08-29-live-01|1|00:00:00': '前 43:55 为聊天；结尾出现 Switch 新闻页，不是游玩。',
-  '2019-11-22-live-01|1|00:00:00': 'P1 抽帧 5 个位置均为摄像头聊天。',
-  '2019-12-20-live-01|1|00:00:00': '抽帧 5 个位置均为摄像头聊天。',
   '2020-10-13-live-01|1|00:00:00': 'P1/P2 为开播聊天与网页浏览；中世纪王朝从 P3 开始。',
   '2020-11-02-live-01|1|00:00:00': '抽帧为 B 站/网页浏览与 Steam 下载界面，不是游玩。',
   '2021-02-05-live-01|1|00:00:00': '抽帧为《戴森球计划》商店页浏览，不是游玩。',
-  '2021-04-17-live-02|1|00:00:00': 'P1/P2 抽帧均为《鬼谷八荒》标题/菜单，主播在聊天；P3 才进入游玩。',
-  '2021-05-04-live-01|1|00:00:00': '抽帧为直播/剪辑软件的游戏封面列表，不是游玩。',
   '2024-12-06-live-02|1|00:00:00': '抽帧为美团 App 页面浏览；该场游戏为 Out of Bounds。',
   '2024-12-09-live-02|1|00:00:00': '抽帧为聊天/美团 App；Out of Bounds 从 P2 2:44 开始。',
   '2024-12-22-live-02|1|00:00:00': '抽帧为聊天/美团 App；mizi-no 从 P2 6:13 开始。',
