@@ -367,3 +367,28 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-20-live-01
+  type: live
+  date: "2026-10-20"
+  title: "良心动物园 鼓捣animal"
+  platform: douyin
+  duration_min: 142
+  games:
+    - planet-zoo
+    - planet-zoo-2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/6edea97c7183225ae656fd62a324303be25565eb.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV19Bnw62EMG"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1PLnw6YEyB"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
