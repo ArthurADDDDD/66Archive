@@ -22,12 +22,14 @@ export function searchGames(games: VoteGame[], keyword: string): VoteGame[] {
   const scored: Array<{ game: VoteGame; score: number }> = []
   for (const game of games) {
     const haystacks = [game.name, game.id, ...game.aliases].map(normalizeGameKeyword)
-    // 前缀命中排在包含命中前面：搜「塞尔达」时《塞尔达传说》该在
-    // 《某某（含塞尔达联动）》上面。
+    // 完全匹配优先于前缀/包含：搜原版「Reigns」或「王权」时，
+    // 应把准确的作品排在「Reigns: Game of Thrones」等续作前面。
+    // 仍保留既有前缀 > 包含的排序。
     let score = -1
     for (const hay of haystacks) {
-      if (hay.startsWith(needle)) { score = 2; break }
-      if (hay.includes(needle)) score = Math.max(score, 1)
+      if (hay === needle) { score = 3; break }
+      if (hay.startsWith(needle)) score = Math.max(score, 2)
+      else if (hay.includes(needle)) score = Math.max(score, 1)
     }
     if (score > 0) scored.push({ game, score })
   }
