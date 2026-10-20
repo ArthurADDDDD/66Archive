@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
+import { HISTORICAL_FEATURE_UPDATES, HISTORICAL_ARCHIVE_UPDATES } from '../src/lib/curated-update-history'
+import { UPDATE_COPY_TEXTS, updateCopyId } from '../src/lib/update-copy'
 import {
   getUpdateNotice,
   getUpdateHistory,
@@ -59,7 +61,39 @@ assert.deepEqual(history.map((entry) => entry.category), ['功能', '收录', '�
 // Full history page and notification stay discoverable without changing
 // the storage version or placing music controls on /updates/.
 const completeHistory = getUpdateHistory()
-assert.equal(completeHistory.length, SITE_UPDATES.length + ARCHIVE_UPDATES.length)
+const expectedFeatureCount = SITE_UPDATES.length + HISTORICAL_FEATURE_UPDATES.length
+const expectedArchiveCount = ARCHIVE_UPDATES.length + HISTORICAL_ARCHIVE_UPDATES.length
+assert.ok(HISTORICAL_FEATURE_UPDATES.length >= 35 && HISTORICAL_ARCHIVE_UPDATES.length >= 15, '历史不能只剩少数几条')
+assert.equal(completeHistory.filter(item => item.category === '功能').length, expectedFeatureCount)
+assert.equal(completeHistory.filter(item => item.category === '收录').length, expectedArchiveCount)
+const ids = new Set<string>()
+for (const [kind, entries] of [
+  ['feature', [...SITE_UPDATES, ...HISTORICAL_FEATURE_UPDATES]],
+  ['archive', [...ARCHIVE_UPDATES, ...HISTORICAL_ARCHIVE_UPDATES]],
+] as const) {
+  for (const entry of entries) {
+    assert.ok(/^2026-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12][0-9]|3[01]))?$/.test(entry.date), `更新日期异常: ${entry.date}`)
+    assert.ok(entry.title.trim().length > 0 && entry.text.trim().length > 0)
+    for (const field of ['title', 'text'] as const) {
+      const id = updateCopyId(kind, entry, field)
+      assert.ok(!ids.has(id), `文案稳定 ID 重复: ${id}`)
+      ids.add(id)
+    }
+  }
+}
+assert.equal(UPDATE_COPY_TEXTS.length, ids.size, '每条更新的标题与说明都要登记到后台文案系统')
+assert.ok(UPDATE_COPY_TEXTS.every(item => ids.has(item.id)), '不能存在重复或无法绑定的旧文案')
+assert.equal(
+  getUpdateNotice(new Date(2026, 9, 20))?.version,
+  `${SITE_UPDATES[0].date}:${SITE_UPDATES[0].source}`,
+  '增补历史记录不得改变公告最新版本',
+)
+assert.equal(
+  getUpdateNotice(new Date(2026, 9, 20))?.updates.length,
+  SITE_UPDATES.filter(item => item.date >= '2026-09-20' && item.date <= '2026-10-20').length,
+  '历史增补不能加进仅展示近期变化的弹窗',
+)
+assert.equal(completeHistory.length, expectedFeatureCount + expectedArchiveCount)
 assert.deepEqual(
   completeHistory.map(item => item.date),
   [...completeHistory.map(item => item.date)].sort((a, b) => b.localeCompare(a)),
