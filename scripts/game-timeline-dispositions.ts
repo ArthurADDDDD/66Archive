@@ -255,10 +255,10 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
     game: 'tumbleseed',
     page: 3,
     at: '00:21:40',
-    durationSec: 2448,
-    associatedSec: 2448,
+    durationSec: 1313,
+    associatedSec: 1313,
     verifiedSec: 0,
-    reason: 'P3 抽帧 21:40 起为 TumbleSeed 实机，直到 P4 结束。',
+    reason: 'P3 21:40 起为 TumbleSeed，P4 原始分P明确标为水墨苏绣；P4 录像画面仍需单独复核，不计入游戏。',
   },
   {
     entry: '2018-05-10-live-01',
