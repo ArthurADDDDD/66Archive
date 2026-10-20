@@ -155,10 +155,10 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
     game: 'super-mario-3d-world',
     page: 1,
     at: '00:32:10',
-    durationSec: 3350,
-    associatedSec: 3350,
+    durationSec: 3530,
+    associatedSec: 3530,
     verifiedSec: 0,
-    reason: '抽帧 32:30 已出现 3D World 标题，32:10 为标题/存档选择起点；旧边界 34:00 偏晚 110 秒。',
+    reason: '抽帧 32:30 已出现 3D World 标题，32:10 为标题/存档选择起点；1:28:00–1:31:00 为不足 5 分钟的换游戏间隙，按既有口径并入前款。',
   },
   {
     entry: '2018-05-10-live-01',
