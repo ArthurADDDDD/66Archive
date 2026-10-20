@@ -17,7 +17,6 @@ import { fetchBakedContent, fetchBakedHomeNarrative, pickTexts } from '@/lib/bak
 import { HomeStats } from '@/components/HomeStats'
 import { GameCard } from '@/components/GameCard'
 import type { GameCardData } from '@/lib/games'
-import { coverageLabel, footageTitle, verifiedLabel } from '@/lib/game-time-view'
 import { RandomMemory, type MemoryCandidate } from '@/components/RandomMemory'
 import { TodayInHistoryList, type TodayHistoryRow } from '@/components/TodayInHistoryList'
 import { Eyebrow, SiteFooter } from '@/components/primitives'
@@ -113,8 +112,7 @@ export default async function HomePage() {
   }
 
   // 游戏预告：有场次的游戏按场次取前 8。
-  // 不按时长排：多游戏直播大量未拆分之前，按时长排出来的只是「已知录像」的名次，
-  // 前 8 张卡又放不下已核实量与覆盖说明（docs/game-time.md §4）。
+  // 不按时长排：多游戏直播大量未拆分之前，按时长排出来的只是「已知录像」的名次（docs/game-time.md §4）。
   const gamePreview: GameCardData[] = allGameIds(ds)
     .map((id) => getGameProfile(ds, timeline, id))
     .filter((p): p is NonNullable<typeof p> => p !== null && p.sessions > 0)
@@ -126,9 +124,6 @@ export default async function HomePage() {
       cover: p.cover,
       sessions: p.sessions,
       footageLabel: p.footageLabel,
-      footageTitle: footageTitle(p.timeView),
-      footageVerified: verifiedLabel(p.timeView),
-      footageCoverage: coverageLabel(p.timeView),
       firstDate: p.firstDate,
       lastDate: p.lastDate,
       curated: Boolean(p.curated),

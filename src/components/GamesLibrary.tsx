@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { GENRES, genreLabel } from '@/lib/genres'
 import { LIBRARY_COLUMNS, libraryTimeView, type LibraryColumns, type LibraryGame } from '@/lib/games'
-import { coverageLabel, footageIncomplete, footageRangeLabel, footageTitle, verifiedLabel } from '@/lib/game-time-view'
+import { footageApproxLabel } from '@/lib/game-time-view'
 import { actColorForDate } from '@/lib/narrative'
 import { ResponsiveCover } from './ResponsiveCover'
 import { trackSiteEvent } from '@/lib/site-analytics'
@@ -41,7 +41,7 @@ const SORTS: { id: SortKey; label: string; hint: string }[] = [
   { id: 'newest', label: '从新到旧', hint: '按最近一次游玩的日期排，最近在前' },
   { id: 'oldest', label: '从旧到新', hint: '按第一次游玩的日期排，最早在前' },
   // 不叫「玩得最久」：多游戏直播大量未拆分之前，这只是「已知录像」的排序（docs/game-time.md §4）
-  { id: 'duration', label: '相关录像', hint: '按已归属的相关录像时长排。相关录像含聊天与休息，不等于游玩时长；区间上限包含还没拆分的多游戏直播，区间重叠时先后不代表谁玩得更久' },
+  { id: 'duration', label: '相关录像', hint: '按相关录像的大致时长排，包含聊天与休息' },
   { id: 'sessions', label: '播得最多', hint: '按出场场次排' },
 ]
 
@@ -458,14 +458,8 @@ function LibraryTile({ game: g }: { game: LibraryGame }) {
             <span className="block whitespace-nowrap font-mono">→ {g.lastDate}</span>
           )}
         </p>
-        {/* 时长三件套固定两行：相关录像区间（+「时长不全」）/ 核实量 · 归属覆盖。见 docs/game-time.md §4 */}
-        <p className="text-meta text-faint tnum" title={footageTitle(time)}>
-          <span className="block">
-            相关录像 {footageRangeLabel(time)}
-            {footageIncomplete(time) && <span className="text-live"> · 时长不全</span>}
-          </span>
-          <span className="block">{verifiedLabel(time)} · 已归属 {coverageLabel(time)}</span>
-        </p>
+        {/* 读者只看大致时长；核实量、归属覆盖属于内部校对口径（docs/game-time.md §4） */}
+        <p className="text-meta text-faint tnum">相关录像 {footageApproxLabel(time)}</p>
       </Link>
     </li>
   )

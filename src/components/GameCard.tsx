@@ -92,7 +92,7 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
           →
         </span>
 
-        {/* 桌面 hover：首次 / 最后 / 场次 / 相关录像（时长必须带核实量与归属覆盖，见 docs/game-time.md §4） */}
+        {/* 桌面 hover：首次 / 最后 / 场次 / 相关录像（只给大致时长，见 docs/game-time.md §4） */}
         {p.sessions > 0 && (
           <div className="pointer-events-none absolute inset-0 hidden flex-col justify-center gap-2 bg-base/85 p-5 opacity-0 backdrop-blur-[2px] transition-opacity duration-200 group-hover:opacity-100 sm:flex">
             {(
@@ -101,8 +101,6 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
                 ['最后', p.lastDate ?? '—'],
                 ['场次', `${p.sessions.toLocaleString()} 场`],
                 ['相关录像', p.footageLabel],
-                ['核实', p.footageVerified],
-                ['时长已归属', p.footageCoverage],
               ] as const
             ).map(([label, value]) => (
               <div key={label} className="flex items-baseline justify-between gap-3">
@@ -119,9 +117,8 @@ export function GameCard({ profile: p }: { profile: GameCardData }) {
           <p className="text-meta text-faint tnum">
             {/* 日期整体不断行：`2020-08-10` 里的连字符是浏览器的断行点，
                 卡片一窄就会折成「2020-」+「08-10」，读起来像两个数字。 */}
-            {p.sessions} 场 · <span title={p.footageTitle}>相关录像 {p.footageLabel}</span> · <span className="whitespace-nowrap">{p.firstDate} 起</span>
+            {p.sessions} 场 · 相关录像 {p.footageLabel} · <span className="whitespace-nowrap">{p.firstDate} 起</span>
           </p>
-          <p className="mt-1 text-meta text-muted">{p.footageVerified} · 时长已归属 {p.footageCoverage}</p>
           </div>
         ) : (
           <p className="text-meta text-faint">档案中暂无已标记条目 · 待补录</p>

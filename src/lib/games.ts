@@ -29,11 +29,8 @@ export type GameCardData = {
   name: string
   cover: string | null
   sessions: number
-  /** 「相关录像」区间与它的完整说明（docs/game-time.md §4）。 */
+  /** 「相关录像」大致时长（docs/game-time.md §4）。 */
   footageLabel: string
-  footageTitle: string
-  footageVerified: string
-  footageCoverage: string
   firstDate: string | null
   lastDate: string | null
   curated: boolean
