@@ -14,7 +14,7 @@
     "gallery:optimize": "tsx scripts/gallery-images-optimize.ts",
     "test:vote-search": "tsx scripts/test-vote-search.ts",
     "test:game-list-filter": "tsx scripts/test-game-list-filter.ts",
-    "test:game-time": "node --import tsx scripts/test-game-time.ts",
+    "test:game-time": "node --import tsx scripts/test-game-time.ts && node --import tsx scripts/test-game-timeline-gaps.ts",
     "test:archive-query": "node --import tsx scripts/test-archive-query.ts",
     "test:archive-loader": "node --import tsx scripts/test-archive-loader.ts",
     "test:archive-payload": "tsx scripts/test-archive-payload.ts",
@@ -28,10 +28,10 @@
     "test:covers": "node --import tsx scripts/test-responsive-cover.tsx && python3 scripts/test-cover-resource-audit.py",
     "audit:covers": "python3 scripts/audit-cover-resources.py",
     "covers:optimize": "tsx scripts/entry-covers-optimize.ts",
-    "test:game-chapters": "node --import tsx scripts/test-game-chapters.ts && node --import tsx scripts/test-game-timeline-gaps.ts",
-    "test:game-timeline-gaps": "node --import tsx scripts/test-game-timeline-gaps.ts",
+    "test:game-chapters": "node --import tsx scripts/test-game-chapters.ts",
     "dev:timelines": "node scripts/icons/generate-site-icons.mjs && NODE_ENV=development ARCHIVE_TIMELINE_PREVIEW=.local/game-timelines-preview.json CONTENT_BAKE_ORIGIN=off NODE_OPTIONS=--max-old-space-size=768 next dev --hostname 127.0.0.1 --port 3012",
-    "test:site-icons": "node scripts/test-site-icons.mjs"
+    "test:site-icons": "node scripts/test-site-icons.mjs",
+    "test:game-timeline-gaps": "node --import tsx scripts/test-game-timeline-gaps.ts"
   },
   "dependencies": {
     "next": "^15.5.24",
