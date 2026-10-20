@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run index:popular && next dev",
-    "build": "npm run validate && npm run index:popular && npm run gallery:optimize && npm run covers:optimize && next build",
+    "dev": "node scripts/icons/generate-site-icons.mjs && npm run index:popular && next dev",
+    "build": "node scripts/icons/generate-site-icons.mjs && npm run validate && npm run index:popular && npm run gallery:optimize && npm run covers:optimize && next build",
     "index:popular": "tsx scripts/popular-index-build.ts",
     "start": "next start",
     "lint": "eslint .",
@@ -29,7 +29,8 @@
     "audit:covers": "python3 scripts/audit-cover-resources.py",
     "covers:optimize": "tsx scripts/entry-covers-optimize.ts",
     "test:game-chapters": "node --import tsx scripts/test-game-chapters.ts",
-    "dev:timelines": "NODE_ENV=development ARCHIVE_TIMELINE_PREVIEW=.local/game-timelines-preview.json CONTENT_BAKE_ORIGIN=off NODE_OPTIONS=--max-old-space-size=768 next dev --hostname 127.0.0.1 --port 3012"
+    "dev:timelines": "node scripts/icons/generate-site-icons.mjs && NODE_ENV=development ARCHIVE_TIMELINE_PREVIEW=.local/game-timelines-preview.json CONTENT_BAKE_ORIGIN=off NODE_OPTIONS=--max-old-space-size=768 next dev --hostname 127.0.0.1 --port 3012",
+    "test:site-icons": "node scripts/test-site-icons.mjs"
   },
   "dependencies": {
     "next": "^15.5.24",

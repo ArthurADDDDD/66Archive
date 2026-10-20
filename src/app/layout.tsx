@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   icons: {
     icon: '/images/avatars/v1_2015.jpg',
-    apple: '/icons/apple-touch-icon.png',
+    apple: '/icons/site-apple-touch-icon.png',
   },
   /**
    * 浏览器开播通知需要它：iPhone / iPad 只有「添加到主屏幕」后从图标打开，才能接收网页通知。

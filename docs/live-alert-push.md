@@ -62,7 +62,13 @@ self.addEventListener('push', event => event.waitUntil(self.registration.showNot
 
 `public/manifest.json`（`id` 固定为 `/`，`display: standalone`）和 `public/icons/` 是为 iPhone / iPad 主屏幕 Web App 准备的：iOS 只在从主屏幕图标打开的页面里提供网页推送。manifest 不带任何缓存规则。有了 manifest，Android Chrome 可能自动提示安装，`layout.tsx` 拦下了这个自动提示；浏览器菜单里的手动安装不受影响。
 
-图标源文件与渲染脚本在 `scripts/icons/`，原创图形（铃铛 + “66”），不使用照片。
+网站图标与开播通知图标是两套独立素材：
+
+- 网页 Favicon 仍使用原有的女流头像（`/images/avatars/v1_2015.jpg`）。
+- Android 安装图标（192 / 512 / maskable）以及 iOS 主屏幕图标由 `scripts/icons/generate-site-icons.mjs` 在开发启动和正式构建前，从同一头像自动生成至 `public/icons/site-*.png`。这四个 PNG 是确定性的构建产物，不需要提交二进制文件；改头像或脚本时重新构建即可。
+- 原有 `/icons/icon-192.png` 继续只用于 Service Worker 的开播通知，不改变图标文件和订阅逻辑。其他旧铃铛图标留在仓库作历史素材，不再被 PWA manifest / Apple touch icon 引用。
+
+铃铛图标源文件和原有渲染脚本位于 `scripts/icons/`（铃铛 + “66”）。
 
 ## 测试设备
 
