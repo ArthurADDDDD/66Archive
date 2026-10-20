@@ -50,3 +50,6 @@ scripts/series-review/
 # Site identity PNGs derived from the existing favicon/avatar at dev/build time.
 # The committed /icons/icon-*.png files remain the Web Push notification bell.
 public/icons/site-*.png
+public/favicon.ico
+public/apple-touch-icon.png
+public/apple-touch-icon-precomposed.png

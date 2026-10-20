@@ -27,6 +27,22 @@ for (const [name, size] of expected) {
   assert.notEqual(digest(`${iconDir}/${name}`), bellBefore, `${name} cannot be the push bell`)
 }
 
+for (const name of ['apple-touch-icon.png', 'apple-touch-icon-precomposed.png']) {
+  const metadata = await sharp(`public/${name}`).metadata()
+  assert.equal(metadata.format, 'png', `${name} must be PNG`)
+  assert.equal(metadata.width, 180, `${name} width`)
+  assert.equal(digest(`public/${name}`), digest(`${iconDir}/site-apple-touch-icon.png`), `${name} must match the linked iOS icon`)
+}
+const ico = readFileSync('public/favicon.ico')
+assert.deepEqual([ico.readUInt16LE(0), ico.readUInt16LE(2), ico.readUInt16LE(4)], [0, 1, 2], 'favicon.ico header')
+for (let index = 0; index < 2; index += 1) {
+  const entry = 6 + 16 * index
+  const image = ico.subarray(ico.readUInt32LE(entry + 12), ico.readUInt32LE(entry + 12) + ico.readUInt32LE(entry + 8))
+  const metadata = await sharp(image).metadata()
+  assert.equal(metadata.format, 'png', 'favicon.ico entries embed PNG')
+  assert.equal(metadata.width, ico.readUInt8(entry), 'favicon.ico entry size matches its directory')
+}
+
 const manifest = JSON.parse(readFileSync('public/manifest.json', 'utf8'))
 assert.deepEqual(
   manifest.icons.map((item) => item.src),
