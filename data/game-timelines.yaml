@@ -875,7 +875,12 @@
     precision: approx
     evidence: thumbnails
     note: 聊天
-  reviewed: '2026-10-19'
+  - page: 3
+    at: 00:21:40
+    game: tumbleseed
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-20'
 - entry: 2017-08-09-live-01
   basis: https://www.bilibili.com/video/BV1vx411n7jt
   coverage: complete
@@ -1208,12 +1213,17 @@
     precision: part
     evidence: part_title
     note: 聊天
+  - page: 2
+    at: 00:02:20
+    game: reigns-her-majesty
+    precision: approx
+    evidence: thumbnails
   - page: 3
     at: 00:00:00
     game: murder-mystery
     precision: part
     evidence: part_title
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2017-12-13-live-01
   basis: https://www.bilibili.com/video/BV19W411h7bR
   coverage: partial
@@ -1364,23 +1374,22 @@
     precision: approx
     evidence: thumbnails
     note: 休息 / 切换
+  - page: 1
+    at: 02:26:40
+    game: in-death
+    precision: approx
+    evidence: thumbnails
   - page: 2
     at: 00:00:00
     game: rec-room
     precision: approx
     evidence: thumbnails
   - page: 2
-    at: 00:00:40
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 2
     at: 00:24:30
     game: beat-saber
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2018-06-22-live-01
   basis: https://www.bilibili.com/video/BV1Ws41177oL
   coverage: unknown
@@ -1682,17 +1691,11 @@
     precision: approx
     evidence: thumbnails
   - page: 2
-    at: 00:42:38
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
-  - page: 2
     at: 01:17:02
     game: red-dead-redemption-2
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2018-11-16-live-01
   basis: https://www.bilibili.com/video/BV1Tt411m7Nw
   coverage: unknown
@@ -2397,11 +2400,11 @@
     evidence: part_title
   - page: 4
     at: 00:00:00
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 未归类片段
-  reviewed: '2026-10-19'
+    game: doraemon-story-of-seasons
+    precision: part
+    evidence: part_title
+    note: P4/P5 标题均为「牧场物语」；抽帧确认为《哆啦A梦 牧场物语》（2019），非《重聚矿石镇》。
+  reviewed: '2026-10-20'
 - entry: 2019-08-29-live-01
   basis: https://www.bilibili.com/video/BV1i4411274R
   coverage: partial
@@ -2632,19 +2635,20 @@
     game: animal-crossing-nh
     precision: part
     evidence: part_title
-    note: P1–P4 分P标题及稀疏画面均为集合啦！动物森友会；P5 察言观色未唯一识别，保留 unknown。
+    note: P1–P4 分P标题及画面均为集合啦！动物森友会。
   - page: 5
     at: 00:00:00
-    kind: unknown
+    game: reading-people
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P5/P6 标题为「察言观色」；P5 抽帧为黑白红「你」字画面与察言观色玩法，确认 reading-people。
   - page: 6
-    at: 00:11:25
+    at: 00:04:50
     game: animal-crossing-nh
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+    note: P6 标题为「察言观色」，但抽帧显示前约 4:50 为察言观色片尾/菜单，之后切到动物森友会机场。
+  reviewed: '2026-10-20'
 - entry: 2020-06-02-live-01
   basis: https://www.bilibili.com/video/BV1ha4y1v7XM
   coverage: unknown
@@ -3047,18 +3051,12 @@
     game: pro-gymnast
     precision: approx
     evidence: thumbnails
-  - page: 4
-    at: 00:48:18
-    kind: unknown
-    precision: approx
-    evidence: thumbnails
-    note: 休息 / 切换
   - page: 5
     at: 00:01:24
     game: fall-guys
     precision: approx
     evidence: thumbnails
-  reviewed: '2026-10-19'
+  reviewed: '2026-10-20'
 - entry: 2020-09-26-live-01
   basis: https://www.bilibili.com/video/BV1s54y1m7EZ
   coverage: unknown

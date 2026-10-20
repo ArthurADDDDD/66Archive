@@ -23,7 +23,6 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2c6fc1c77b24db689e4580f5d38425821700a725.jpg"
     confidence: medium
-    games: [meituan]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV199iUYoEVp"
@@ -42,7 +41,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/d23e867cb153f8e5799cd81d7529c416f084ca76.jpg"
     confidence: medium
-    games: [meituan, out-of-bounds]
+    games: [out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV136iBYoESP"
@@ -96,7 +95,7 @@
     platform: douyin
     cover: "https://i1.hdslb.com/bfs/archive/2962e40acc0d1afc2b2b7d4cce40be7efc78e800.jpg"
     confidence: medium
-    games: [meituan, out-of-bounds]
+    games: [out-of-bounds]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1J5qKYEEBF"
@@ -392,7 +391,7 @@
     platform: douyin
     cover: "https://i0.hdslb.com/bfs/archive/2a4fe8d47043fcb670ab82084b309ff9019e6180.jpg"
     confidence: medium
-    games: [meituan, mizi-no]
+    games: [mizi-no]
     note: "来源为 B 站搬运（女流66 抖音直播回放），非官方账号投稿"
     sources:
       - url: "https://www.bilibili.com/video/BV1iaCKYtEPz"

@@ -772,6 +772,12 @@
       - puzzle
       - casual
 
+  - id: doraemon-story-of-seasons
+    name: 哆啦A梦 牧场物语
+    aliases: [Doraemon Story of Seasons, 哆啦A梦牧场物语, 哆啦A梦：牧场物语]
+    genres:
+      - simulation
+
   - id: doraemon-story-of-seasons-2
     name: 哆啦A梦牧场物语2
     genres:
@@ -2475,6 +2481,19 @@
   - id: reigns
     name: 冰火王权
     aliases: [Reigns, 冰火王权Regins, 王权]
+    note: "本 id 对应《Reigns: Game of Thrones》（冰火王权）；原版《Reigns》与《Reigns: Her Majesty》是不同作品，分列 reigns-classic / reigns-her-majesty。"
+    genres:
+      - card
+
+  - id: reigns-classic
+    name: 王权
+    aliases: [Reigns, 王权 Reigns]
+    genres:
+      - card
+
+  - id: reigns-her-majesty
+    name: 王权：女王陛下
+    aliases: [Reigns Her Majesty, 女王陛下, 王权女王陛下]
     genres:
       - card
 
@@ -4737,12 +4756,6 @@
     genres:
       - roguelike
       - shooter
-
-  - id: meituan
-    name: 美团
-    aliases:
-      - 美团app
-      - 美团外卖
 
   - id: metroid-dread
     name: 密特罗德：生存恐惧
