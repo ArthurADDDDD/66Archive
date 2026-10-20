@@ -971,10 +971,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    game: dont-cut-your-hand
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P1 起点起为 DON'T CUT YOUR HAND 标题/实机；P1 分P标题明确。
   - page: 2
     at: 00:00:00
     game: euro-truck-simulator-2
@@ -1128,7 +1128,13 @@
     kind: unknown
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: 休息 / 切换
+  - page: 3
+    at: 00:01:00
+    game: super-mario-odyssey
+    precision: approx
+    evidence: thumbnails
+    note: P3 60s 起出现 Super Mario Odyssey 标题/实机；P3 0–60s 为 Switch 主界面/更新。
   reviewed: '2026-10-19'
 - entry: 2017-12-08-live-01
   basis: https://www.bilibili.com/video/BV1xW411h7Zg
@@ -1250,12 +1256,18 @@
     kind: unknown
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: 聊天
   - page: 2
     at: 00:00:00
     game: mr-blackface
     precision: part
     evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: mom-hid-my-game
+    precision: part
+    evidence: part_title
+    note: P3 起点起出现 Mom Hid My Game（Switch 主界面/实机）；P3 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2018-04-03-live-01
   basis: https://www.bilibili.com/video/BV12W411T7mY
@@ -1748,10 +1760,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:00:00
-    kind: unknown
+    game: gujian-qitan-3
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P2 起点（39:11）出现古剑奇谭标题/加载，53:35 起实机；按条目标签映射为古剑奇谭三。
   reviewed: '2026-10-19'
 - entry: 2018-12-07-live-01
   basis: https://www.bilibili.com/video/BV1qt411S726
@@ -1789,10 +1801,10 @@
     evidence: thumbnails
   - page: 2
     at: 00:00:00
-    kind: unknown
-    precision: part
-    evidence: part_title
-    note: 未归类片段
+    game: gujian-qitan-3
+    precision: approx
+    evidence: thumbnails
+    note: P2 起点（全片 30:41）出现古剑奇谭标题/加载，37:19 起实机；按条目标签映射为古剑奇谭三，分P标题未印代数。
   reviewed: '2026-10-19'
 - entry: 2018-12-11-live-01
   basis: https://www.bilibili.com/video/BV1dt411q7Mg
@@ -2617,6 +2629,12 @@
   spans:
   - page: 1
     at: 00:00:00
+    game: animal-crossing-nh
+    precision: part
+    evidence: part_title
+    note: P1–P4 分P标题及稀疏画面均为集合啦！动物森友会；P5 察言观色未唯一识别，保留 unknown。
+  - page: 5
+    at: 00:00:00
     kind: unknown
     precision: part
     evidence: part_title
@@ -3068,10 +3086,10 @@
     evidence: thumbnails
   - page: 5
     at: 00:00:00
-    kind: unknown
+    game: rise-of-kingdoms
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P5 起点（3:43:24）起出现万国觉醒画面；P5 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2020-10-06-live-01
   basis: https://www.bilibili.com/video/BV1fy4y1k74X
@@ -3095,10 +3113,10 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
+    game: art-of-rally
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P1 起点起为 art of rally 赛车画面；P1 分P标题明确。
   - page: 2
     at: 00:00:00
     game: fall-guys
@@ -3388,7 +3406,13 @@
     kind: unknown
     precision: approx
     evidence: thumbnails
-    note: 聊天
+    note: 休息 / 切换
+  - page: 7
+    at: 00:04:30
+    game: world-of-warcraft
+    precision: approx
+    evidence: thumbnails
+    note: P7 04:30（全片 3:53:26）起出现魔兽世界画面；此前为 Demon’s Souls 结束/桌面/切换。
   reviewed: '2026-10-19'
 - entry: 2020-12-18-live-01
   basis: https://www.bilibili.com/video/BV15A411s7VD
@@ -3497,10 +3521,16 @@
     evidence: part_title
   - page: 3
     at: 00:00:00
-    kind: unknown
+    game: stardew-valley
     precision: part
     evidence: part_title
-    note: 未归类片段
+    note: P3 起点（2:07:04）起为星露谷物语实机；P3–P5 分P标题一致。
+  - page: 6
+    at: 00:00:00
+    game: yu-gi-oh-duel-links
+    precision: part
+    evidence: part_title
+    note: P6 起点起为游戏王：决斗链接实机；P6 分P标题明确。
   reviewed: '2026-10-19'
 - entry: 2021-01-22-live-01
   basis: https://www.bilibili.com/video/BV1zU4y147D9
@@ -3839,7 +3869,13 @@
     kind: unknown
     precision: part
     evidence: part_title
-    note: 聊天
+    note: 休息 / 切换
+  - page: 2
+    at: 00:00:00
+    game: hades
+    precision: part
+    evidence: part_title
+    note: P2 起点（11:23）已见 Hades 实机；P2–P6 旧分段均为 Hades。
   - page: 7
     at: 00:00:00
     game: the-room-4
@@ -3930,6 +3966,12 @@
     precision: approx
     evidence: thumbnails
     note: 聊天
+  - page: 1
+    at: 00:16:15
+    game: world-games-51
+    precision: approx
+    evidence: thumbnails
+    note: P1 16:15 起出现世界游戏大全51选择/棋盘画面；此前为桌面/聊天。
   - page: 7
     at: 00:01:45
     game: guardian-tales
