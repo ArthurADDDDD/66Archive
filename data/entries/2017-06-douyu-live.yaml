@@ -134,7 +134,7 @@
     confidence: high
     duration_min: 149
     cover: "https://i0.hdslb.com/bfs/archive/17357e17328f99dd523ed03de40b930263ab678f.jpg"
-    games: [1-2-switch, tumbleseed]
+    games: [1-2-switch, puyo-puyo-tetris]
     segments:
       - at: "00:00:00"
         label: "P1-6.5-游戏前聊10块钱的"
@@ -143,7 +143,10 @@
         game: 1-2-switch
       - at: "01:26:16"
         label: "P3-6.5-Switch小游戏"
-        game: tumbleseed
+        game: 1-2-switch
+      - at: "01:45:15"
+        label: "P3-6.5-Switch小游戏"
+        game: puyo-puyo-tetris
       - at: "02:09:47"
         label: "P4-6.5-水墨苏绣"
     sources:
@@ -157,7 +160,7 @@
         status: alive
         account: acfun-fan-record-house
     contributed_by: data-agent
-    note: "人工画面复核：B站 P2 约 21:43 为《1-2-Switch》；P3 开场及约 21:42 为《TumbleSeed》。"
+    note: "人工画面复核：B站 P2 约 21:43 为《1-2-Switch》。2026-10-20 勘误：此前记的「P3 开场及约 21:42 为《TumbleSeed》」有误——P3 开场至 16:38 仍是 1-2-Switch，18:59 起启动《噗哟噗哟vs俄罗斯方块》（ぷよぷよテトリスS），21:42 已是其模式选择/对战，直到 P3 结束；全场未见 TumbleSeed，与节目单「1-2SWITCH、PuyoPuyo Tetris」一致。"
 
   - id: 2017-06-06-live-01
     type: live

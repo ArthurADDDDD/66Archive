@@ -523,14 +523,15 @@
   coverage: partial
   parts:
   - page: 1
-    id: '1733926'
+    id: '1933869'
     duration_sec: 5999
   spans:
   - page: 1
     at: 00:00:00
-    game: new-super-mario-bros-u
+    game: super-mario-3d-world
     precision: approx
     evidence: thumbnails
+    note: 2026-10-20 定点纠错：0–20 秒为 SUPER MARIO 3D WORLD 标题，30 秒角色选择，60 秒 WORLD 3-5 地图；全片约 40 个抽样点均为 3D 世界（含 41–59 分钟 WORLD 4-2 暂停菜单、59–62 分钟看网页，均属环节内），未见新超级马里奥兄弟U 横版画面。旧标「新超级马里奥兄弟U」系误认。
   - page: 1
     at: 01:39:45
     kind: unknown
@@ -846,11 +847,11 @@
     precision: approx
     evidence: thumbnails
   - page: 3
-    at: 00:17:50
-    game: tumbleseed
-    precision: approx
+    at: 00:18:59
+    game: puyo-puyo-tetris
+    precision: exact
     evidence: thumbnails
-    note: P3 17:50 起已启动 TumbleSeed（期间报错/重启），21:40 可见稳定游玩；P4 为独立水墨苏绣外景。
+    note: 2026-10-20 定点纠错：P3 0–16:38 仍为 1-2-Switch；16:40–18:58 为 HOME 菜单、1-2-Switch 更新设置与「game card was removed」卡带报错（2 分 19 秒切换间隙，并入 1-2-Switch）；18:54 选中ぷよぷよテトリスS，18:59 Switch 启动画面，19:06 SEGA，19:16 标题，22:40 起对战并持续到 P3 结束。全程未见 TumbleSeed，旧「17:50 起 TumbleSeed」系误认。P4 为独立水墨苏绣外景。
   - page: 4
     at: 00:00:00
     kind: break
@@ -2599,11 +2600,11 @@
     evidence: part_title
     note: P5/P6 标题为「察言观色」；P5 抽帧为黑白红「你」字画面与察言观色玩法，确认 reading-people。
   - page: 6
-    at: 00:04:50
+    at: 00:09:59
     game: animal-crossing-nh
-    precision: approx
+    precision: exact
     evidence: thumbnails
-    note: P6 标题为「察言观色」，但抽帧显示前约 4:50 为察言观色片尾/菜单，之后切到动物森友会机场。
+    note: 2026-10-20 定点纠错：P6 4:50–8:00 仍为《察言观色》章节与小游戏，9:42–9:46 总体结果，9:49–9:51 退出游戏弹窗，9:53–9:58 Windows 桌面（切换间隙并入察言观色）；9:59 起为动森「记录完毕」存档/载入画面，10:45 进入岛上。旧 00:04:50 偏早约 5 分钟。
   reviewed: '2026-10-20'
 - entry: 2020-06-02-live-01
   basis: https://www.bilibili.com/video/BV1ha4y1v7XM
@@ -2972,10 +2973,11 @@
     precision: approx
     evidence: thumbnails
   - page: 5
-    at: 00:01:24
+    at: 00:00:02
     game: fall-guys
-    precision: approx
+    precision: exact
     evidence: thumbnails
+    note: P5 0–1 秒黑屏，1.5 秒起 Fall Guys 黄底标志淡入，随后「正在载入」、约 12 秒进游戏大厅；P4 结尾为 Pro Gymnast 菜单/记录页与约 90 秒黑屏，未见 Fall Guys，起点不前移到 P4。2026-10-20 定点纠错：旧 00:01:24 偏晚 82 秒。
   reviewed: '2026-10-20'
 - entry: 2020-09-26-live-01
   basis: https://www.bilibili.com/video/BV1s54y1m7EZ
@@ -4752,10 +4754,11 @@
     precision: exact
     evidence: thumbnails
   - page: 1
-    at: 00:34:40
+    at: 00:35:38
     game: bento-blocks
     precision: exact
     evidence: thumbnails
+    note: 2026-10-20 定点纠错：34:40–35:05 仍为 Auction King 设置/店铺界面，35:11 退出游戏弹窗，35:14–35:37 黑屏（退出过程，并入前款）；35:38 Steam 库 Bento Blocks 页显示「停止」（已启动），35:41 起为游戏画面。旧 00:34:40 偏早 58 秒。
   - page: 3
     at: 00:12:00
     kind: unknown

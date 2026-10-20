@@ -50,6 +50,8 @@
 | `2020-10-23-live-01` | B站 [BV1VZ4y1V7xZ](https://www.bilibili.com/video/BV1VZ4y1V7xZ) 标题画面及实机确认《三目童子》（Mitsume ga Tooru） | 建目录项并回填全部游戏分段 |
 | `2023-11-08-live-01` | A站分 P 标题明确《节奏鸽子》《DON'T SCREAM》《揍击派对》 | 三款全部回填 |
 
+> **2026-10-20 勘误**：上表 `2017-06-05-live-01` 一行「P3 确认《TumbleSeed》」有误。逐段抽帧显示 P3 开场至 16:38 仍是 1-2-Switch，18:59 起是《噗哟噗哟vs俄罗斯方块》（ぷよぷよテトリスS）直到 P3 结束，HOME 菜单里虽有 TumbleSeed 图标但从未启动。该场 games 已改为 `[1-2-switch, puyo-puyo-tetris]`，据此新建的 `tumbleseed` 目录项已删除。
+
 ## 找回的回放缺口
 
 以下 A站页面均已实际请求并确认 HTTP 200，作为原条目已有 P1/P2/P3 的互补回放补入；没有把标题相同、时长相同的重复稿件再挂一次。

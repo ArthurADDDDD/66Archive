@@ -62,14 +62,14 @@ const expected: [string, string][] = [
   ['2025-12-05-live-02', 'a-little-to-the-left'],
   // 2026-10-20 第二轮
   ['2017-12-09-live-01', 'reigns-her-majesty'],
-  ['2017-06-05-live-01', 'tumbleseed'],
+  ['2017-06-05-live-01', 'puyo-puyo-tetris'],
   ['2018-05-10-live-01', 'in-death'],
   ['2018-11-02-live-01', 'lifeafter'],
   ['2019-08-15-live-01', 'doraemon-story-of-seasons'],
   ['2020-04-02-live-01', 'reading-people'],
   ['2020-09-18-live-01', 'pro-gymnast'],
   // 2026-10-20 第三轮：互补来源 / 标注纠错
-  ['2015-01-27-live-01', 'new-super-mario-bros-u'],
+  ['2015-01-27-live-01', 'super-mario-3d-world'],
   ['2017-12-13-live-01', 'pubg'],
   ['2017-12-13-live-01', 'the-long-dark'],
   ['2020-10-20-live-01', 'rolo-to-the-rescue'],
@@ -103,7 +103,7 @@ for (const bound of REVIEWED_SPAN_BOUNDS) {
 }
 
 // 2017-06-05 P4 的旧分 P 标题为水墨苏绣；11 个位置的抽帧均为外景人群/古建/舞台灯，
-// 已确认是独立非游戏环节，不能让 P3 TumbleSeed 无边界跨到 P4，也不能再退回 unknown。
+// 已确认是独立非游戏环节，不能让 P3 的噗哟噗哟俄罗斯方块无边界跨到 P4，也不能再退回 unknown。
 const embroideryTimeline = timelineByEntry.get('2017-06-05-live-01')
 assert.ok(embroideryTimeline, '2017-06-05 timeline missing')
 const embroideryP4 = embroideryTimeline.spans.find((span) => span.page === 4 && span.at === '00:00:00')
