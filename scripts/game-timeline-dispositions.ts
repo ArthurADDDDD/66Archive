@@ -258,7 +258,7 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
     durationSec: 1313,
     associatedSec: 1313,
     verifiedSec: 0,
-    reason: 'P3 21:40 起为 TumbleSeed，P4 原始分P明确标为水墨苏绣；P4 录像画面仍需单独复核，不计入游戏。',
+    reason: 'P3 21:40 起为 TumbleSeed；P4 抽帧 11 个位置均为水墨苏绣外景（人群、古建、舞台灯），已独立标为 break，不计入游戏。',
   },
   {
     entry: '2018-05-10-live-01',
