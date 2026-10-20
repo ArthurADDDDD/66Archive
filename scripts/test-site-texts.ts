@@ -11,6 +11,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { SITE_COPY } from '../src/lib/site-copy'
 import { SITE_UPDATES, ARCHIVE_UPDATES } from '../src/lib/site-updates'
+import { HISTORICAL_FEATURE_UPDATES, HISTORICAL_ARCHIVE_UPDATES } from '../src/lib/curated-update-history'
 import { updateCopyId } from '../src/lib/update-copy'
 
 /** id 前缀 = 这句话随哪些页面烤进 HTML。新前缀要同时在对应页面的烤入里点名。 */
@@ -61,7 +62,7 @@ const updateCopySource = fs.readFileSync('src/components/UpdateCopy.tsx', 'utf8'
 if (!/useSiteText\(updateCopyId\(category, entry, field\)\)/.test(updateCopySource)) {
   problems.push('UpdateCopy 必须通过 updateCopyId 读取真正的站点文案；不能只登记不用')
 } else {
-  for (const [category, entries] of [['feature', SITE_UPDATES], ['archive', ARCHIVE_UPDATES]] as const) {
+  for (const [category, entries] of [['feature', [...SITE_UPDATES, ...HISTORICAL_FEATURE_UPDATES]], ['archive', [...ARCHIVE_UPDATES, ...HISTORICAL_ARCHIVE_UPDATES]]] as const) {
     for (const entry of entries) for (const field of ['title', 'text'] as const) {
       note(updateCopyId(category, entry, field), 'src/components/UpdateCopy.tsx')
     }
