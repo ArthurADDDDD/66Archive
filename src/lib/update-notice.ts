@@ -1,4 +1,5 @@
 import { ARCHIVE_UPDATES, SITE_UPDATES } from './site-updates'
+import { HISTORICAL_ARCHIVE_UPDATES, HISTORICAL_FEATURE_UPDATES } from './curated-update-history'
 
 /**
  * Only curated, visitor-facing SITE_UPDATES trigger a new notice.
@@ -61,8 +62,8 @@ export function shouldShowUpdateNotice(seenVersion: string | null, notice: Updat
 export type UpdateHistoryItem = VisitorUpdate & { category: '功能' | '收录' }
 
 export function getUpdateHistory(
-  siteUpdates: readonly VisitorUpdate[] = SITE_UPDATES,
-  archiveUpdates: readonly VisitorUpdate[] = ARCHIVE_UPDATES,
+  siteUpdates: readonly VisitorUpdate[] = [...SITE_UPDATES, ...HISTORICAL_FEATURE_UPDATES],
+  archiveUpdates: readonly VisitorUpdate[] = [...ARCHIVE_UPDATES, ...HISTORICAL_ARCHIVE_UPDATES],
 ): UpdateHistoryItem[] {
   return [
     ...siteUpdates.map((update) => ({ ...update, category: '功能' as const })),
