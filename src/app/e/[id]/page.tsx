@@ -132,7 +132,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
   if (reviewedTimeline) {
     segments = gameSessionSpans(reviewedTimeline).map(r => ({
       at:chapterClock(r.startSec),atSec:r.startSec,endSec:r.endSec,
-      name:r.span.game ? (ds.games.get(r.span.game)?.name ?? '未命名游戏') : r.span.kind==='break' ? '聊天' : (r.span.note ?? '未归类片段'),
+      name:r.span.game ? (ds.games.get(r.span.game)?.name ?? '未命名游戏') : r.span.kind==='break' ? (r.span.note ?? '独立环节') : (r.span.note && r.span.note !== '未归类片段' ? `未归类片段（${r.span.note}）` : '未归类片段'),
       label:`P${r.span.page} ${r.span.at}`,gameId:r.span.game ?? null,color:gameColor(r.span.game ?? null),dim:!r.span.game,
       from:totalSec?r.startSec/totalSec:0,to:totalSec?r.endSec/totalSec:0,
     }))

@@ -7,6 +7,9 @@ import type { GameTimeView } from './game-time-view'
 export const SPECIFIC_GAME_PARENTS: Record<string, string> = {
   'elden-ring-nightreign': 'elden-ring',
   'maplestory-classic': 'maplestory',
+  'poly-bridge-2': 'poly-bridge',
+  'planet-zoo-2': 'planet-zoo',
+  'kongzhigongzhen': 'control-game',
 }
 
 export function visibleGameIds(gameIds: string[]): string[] {
