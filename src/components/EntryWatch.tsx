@@ -297,7 +297,7 @@ export function EntryWatch({
         />
 
         <div className="mt-6">
-          <SectionTitle title={t('entry-sources-title')} hint={chapterBasis ? t('entry-chapter-basis-hint') : sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
+          <SectionTitle title={t('entry-sources-title')} hint={chapterBasis && sources.length > 1 ? t('entry-chapter-sources-hint') : sources.length > 1 ? t('entry-sources-hint', { count: sources.length }) : undefined} />
 
           {!source ? (
             <p className="mt-4 rounded-xl border border-line bg-surface/40 px-4 py-4 text-body text-muted">

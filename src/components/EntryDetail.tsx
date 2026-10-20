@@ -256,23 +256,23 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
   const chapters = entry.chapters ?? []
   const basisPlatform = detectPlatform(entry.chapterBasis ?? '')
   const platformName = basisPlatform ? PLATFORM_META[basisPlatform]?.name ?? basisPlatform : '录像'
-  const coverage = entry.chapterCoverage === 'complete' ? '基准录像覆盖整场' : '仅覆盖现存录像，时长为下限'
 
+  // 审阅日期、覆盖程度、核实状态属于内部校对口径，读者这里只看每段是什么、多长、从哪看（docs/game-time.md §4）。
   return (
-    <section className="rounded-xl border border-line bg-base/30 p-3 sm:p-4" aria-label="已审阅章节">
+    <section className="rounded-xl border border-line bg-base/30 p-3 sm:p-4" aria-label="游戏章节">
       <div className="border-b border-line pb-3">
-        <p className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="entry-detail-game-chapters-title" /></p>
+        <p className="text-meta uppercase tracking-[0.16em] text-live"><SiteText id="entry-detail-game-chapters-heading" /></p>
         <p className="mt-1 text-meta leading-relaxed text-faint">
-          <SiteText id="entry-detail-game-chapters-hint" vars={{ platform: platformName, reviewed: entry.chapterReviewed ?? '', coverage }} />
+          <SiteText id="entry-game-chapters-note" vars={{ platform: platformName }} />
         </p>
         <a href={entry.chapterBasis} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-meta text-live underline decoration-live/40 underline-offset-2 hover:decoration-live">
-          {platformName}基准录像 ↗
+          {platformName}录像 ↗
         </a>
       </div>
       <ol className="divide-y divide-line">
         {chapters.map((chapter) => {
           const title = chapter.gameName ?? (chapter.kind === 'break'
-            ? chapter.label ?? <SiteText id="entry-detail-game-kind-independent" />
+            ? chapter.label ?? <SiteText id="entry-detail-game-kind-rest" />
             : chapter.kind === 'unknown'
               ? chapter.label && chapter.label !== '未归类片段'
                 ? <>{chapter.label} · <SiteText id="entry-detail-game-kind-unclassified" /></>
@@ -282,10 +282,8 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
           const kindNote = chapter.kind === 'break'
             ? <SiteText id="entry-detail-game-break-note" />
             : chapter.kind === 'unknown'
-              ? <SiteText id="entry-detail-game-unknown-note" />
-              : chapter.verified
-                ? <SiteText id="entry-detail-game-verified" />
-                : <SiteText id="entry-detail-game-associated" />
+              ? <SiteText id="entry-detail-game-unknown-hint" />
+              : null
           const jump = chapter.jumpUrl
           const jumpLabel = basisPlatform === 'acfun' || chapter.precision === 'part'
             ? <SiteText id="entry-detail-game-jump-part" vars={{ page: String(chapter.page) }} />
@@ -296,7 +294,7 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
               <div className="min-w-0">
                 <p className="font-medium text-ink">{chapter.gameId ? <a href={`/games/${chapter.gameId}/`} className="hover:text-live">{title}</a> : title}</p>
                 <p className="mt-1 font-mono text-meta text-muted">P{chapter.page} {chapter.at} → P{chapter.endPage} {chapter.endAt}</p>
-                <p className="mt-1 text-meta text-faint">约 {formatPartDuration(chapter.durationSec)} · {kindNote}</p>
+                <p className="mt-1 text-meta text-faint">约 {formatPartDuration(chapter.durationSec)}{kindNote && <> · {kindNote}</>}</p>
               </div>
               {jump && (
                 <a href={jump} target="_blank" rel="noopener noreferrer" className="ui-press inline-flex min-h-11 shrink-0 items-center justify-center rounded-full border border-live/40 px-3 py-1.5 text-meta text-live hover:bg-live/10">

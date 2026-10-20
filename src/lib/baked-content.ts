@@ -197,11 +197,16 @@ const BASELINE_TEXT = new Map(SITE_COPY.texts.map((item) => [item.id, item.text]
  * 客户端的基线里本来就有，再烤一遍只是把同一句话多塞进每一页的 HTML。
  * 实测不过滤时条目页多出 50 条文字、约 6 KB，乘上 3,500 个页面就是 27 MB。
  * 覆盖规则不变（见 LiveContentProvider 的 textTable）：没带的 id 一律回退基线。
+ *
+ * 基线里已经退役的 id 也不烤：后台库是 append-only，退役的句子还留在库里，
+ * 但组件只渲染基线登记过的 id（test:site-texts 守着），烤进去只是死字节——
+ * 2026-10-20 退役「尚未核实 / 已审阅章节」这批口径文案时，它们仍出现在约 3,000 个页面的载荷里。
  */
 export function pickTexts(copy: LiveSiteCopy, prefixes: readonly string[]): LiveSiteCopy['texts'] {
   const wanted = [...GLOBAL_TEXT_PREFIXES, ...prefixes]
   return copy.texts.filter(
     (item) =>
+      BASELINE_TEXT.has(item.id) &&
       wanted.some((prefix) => item.id.startsWith(prefix)) &&
       item.text.trim() !== '' &&
       item.text !== BASELINE_TEXT.get(item.id),

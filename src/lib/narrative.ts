@@ -1,6 +1,6 @@
 import type { Dataset, TimelineEntry } from './data'
 import { summarizeGameTime, type GameTimeSummary } from './game-time'
-import { footageRangeLabel, footageRangeNumbers, toGameTimeView, type GameTimeView } from './game-time-view'
+import { footageApproxLabel, footageRangeNumbers, toGameTimeView, type GameTimeView } from './game-time-view'
 import { proxyImage } from './platforms'
 import { isXinlingPishuangEntry } from './series'
 
@@ -1981,11 +1981,11 @@ export type GameProfile = {
   sessions: number
   /**
    * 游戏环节时长（口径见 docs/game-time.md）。没有时间轴的多游戏场次不给这款游戏计时，
-   * 只进区间上限；界面必须同时显示已核实量、归属覆盖和未知部分。
+   * 只进区间上限。核实量、归属覆盖只供内部校对，读者界面只给大概（docs/game-time.md §4）。
    */
   time: GameTimeSummary
   timeView: GameTimeView
-  /** 「相关录像」区间，如「169–213 小时」。不是游玩时长，不能单独当作「玩了多久」展示。 */
+  /** 读者看的「相关录像」大致时长，如「约 37 小时」「169 小时以上」。不是游玩时长。 */
   footageLabel: string
   /** 最近一次场次的封面（详情页用） */
   cover: string | null
@@ -2060,7 +2060,7 @@ export function getGameProfile(ds: Dataset, timeline: TimelineEntry[], gameId: s
     sessions: matches.length,
     time,
     timeView,
-    footageLabel: footageRangeLabel(timeView),
+    footageLabel: footageApproxLabel(timeView),
     cover: heroStory?.cover
       ? proxyImage(heroStory.cover, 900)
       : latestCover ? proxyImage(latestCover, 900) : registeredCover ? proxyImage(registeredCover, 900) : null,

@@ -21,7 +21,7 @@ export const HISTORICAL_FEATURE_UPDATES = [
     "date": "2026-10-17",
     "source": "670f9e61",
     "title": "游戏时长开始按片段统计",
-    "text": "多游戏直播不再把整场时长重复算给每款游戏，已核实的部分会单独标明。",
+    "text": "多游戏直播不再把整场时长重复算给每款游戏。",
     "tags": [
       "游戏",
       "统计"
@@ -445,7 +445,7 @@ export const HISTORICAL_ARCHIVE_UPDATES = [
     "date": "2026-10-17",
     "source": "1f17bcba",
     "title": "首批 12 场游戏时间轴通过核对",
-    "text": "已审阅的 12 场录像有了具体游戏片段，为后续逐场补齐打下基础。",
+    "text": "首批 12 场录像有了具体游戏片段，为后续逐场补齐打下基础。",
     "tags": [
       "游戏",
       "精准定位"

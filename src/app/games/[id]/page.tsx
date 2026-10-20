@@ -14,7 +14,6 @@ import { fetchBakedPageCopy } from '@/lib/baked-content'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
 import { proxyImageSrcSet } from '@/lib/platforms'
-import { coverageLabel, footageTitle, verifiedLabel, type GameTimeView } from '@/lib/game-time-view'
 import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@/lib/narrative'
 import { buildGameRails } from '@/lib/relations'
 import { coverShareImage } from '@/lib/share-image'
@@ -159,7 +158,7 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
                 <Stat value={profile.firstDate ?? '—'} label={<SiteText id="game-stat-first" />} />
                 <Stat value={profile.lastDate ?? '—'} label={<SiteText id="game-stat-last" />} />
               </dl>
-              <GameTimeNote view={profile.timeView} className="mt-4" />
+              <p className="measure-body mt-4 text-meta text-faint"><SiteText id="game-time-hint" /></p>
               <div className="mt-10 max-w-xl">
                 <p className="text-meta uppercase tracking-[0.16em] text-faint"><SiteText id="game-years-title" /></p>
                 <YearBars rows={yearRows} />
@@ -259,24 +258,6 @@ function HeroMedia({ profile }: { profile: NonNullable<ReturnType<typeof getGame
   )
 }
 
-/**
- * 时长那一格的必带说明：已核实量、归属覆盖、未知部分（docs/game-time.md §4）。
- * 「相关录像」这个数字离开这三样就会被读成游玩时长，所以它不能省。
- */
-function GameTimeNote({ view, className = '' }: { view: GameTimeView; className?: string }) {
-  return (
-    <p className={`measure-body text-meta text-faint ${className}`}>
-      <SiteText id="game-time-note" vars={{ verified: verifiedLabel(view), coverage: coverageLabel(view) }} />
-      {view.unattributedSessions > 0 && (
-        <>
-          {' '}
-          <SiteText id="game-time-unsplit" vars={{ count: view.unattributedSessions }} />
-        </>
-      )}
-    </p>
-  )
-}
-
 function Stat({ value, label }: { value: string; label: React.ReactNode }) {
   return (
     <div>
@@ -336,11 +317,7 @@ function SparseHero({ profile }: { profile: NonNullable<ReturnType<typeof getGam
             </div>
             <div>
               <dt className="inline text-faint">相关录像 · </dt>
-              <dd className="inline text-ink" title={footageTitle(profile.timeView)}>{profile.footageLabel}</dd>
-            </div>
-            <div>
-              <dt className="inline text-faint">核实 · </dt>
-              <dd className="inline text-ink">{verifiedLabel(profile.timeView)}</dd>
+              <dd className="inline text-ink">{profile.footageLabel}</dd>
             </div>
             <div>
               <dt className="inline text-faint">日期 · </dt>
