@@ -5977,3 +5977,139 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-21'
+- entry: 2018-07-07-live-01
+  basis: https://www.bilibili.com/video/BV1Ws411p7iW
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 45292804
+    duration_sec: 4403
+  - page: 2
+    id: 45292805
+    duration_sec: 6123
+  - page: 3
+    id: 45292806
+    duration_sec: 8350
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: steamworld-dig
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: steep
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: justice-online
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2017-08-11-live-01
+  basis: https://www.bilibili.com/video/BV1Dx411n7hH
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 21743232
+    duration_sec: 1211
+  - page: 2
+    id: 21743228
+    duration_sec: 1784
+  - page: 3
+    id: 21743229
+    duration_sec: 3727
+  - page: 4
+    id: 21743230
+    duration_sec: 3728
+  - page: 5
+    id: 21743231
+    duration_sec: 3728
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: unknown
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    game: geometry-dash
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: minecraft
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2021-10-27-live-01
+  basis: https://www.bilibili.com/video/BV1XQ4y1U7rS
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 432483567
+    duration_sec: 2029
+  - page: 2
+    id: 432488345
+    duration_sec: 2032
+  - page: 3
+    id: 432488328
+    duration_sec: 2031
+  - page: 4
+    id: 432504229
+    duration_sec: 2397
+  - page: 5
+    id: 432488303
+    duration_sec: 1698
+  - page: 6
+    id: 432503776
+    duration_sec: 1700
+  - page: 7
+    id: 432511605
+    duration_sec: 2694
+  - page: 8
+    id: 432514952
+    duration_sec: 2693
+  - page: 9
+    id: 432514285
+    duration_sec: 2691
+  - page: 10
+    id: 432515737
+    duration_sec: 2694
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: moying-xiazong
+    precision: part
+    evidence: part_title
+  - page: 4
+    at: 00:00:00
+    game: word-game
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: luori-shanqiu
+    precision: part
+    evidence: part_title
+  - page: 7
+    at: 00:00:00
+    game: spelunky-2
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2022-01-26-live-01
+  basis: https://www.bilibili.com/video/BV1pP4y1N74S
+  coverage: partial
+  parts:
+  - page: 1
+    id: 494056886
+    duration_sec: 10345
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: word-game
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'

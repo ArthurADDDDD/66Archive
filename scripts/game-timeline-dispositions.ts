@@ -21,6 +21,12 @@ export type ReviewedGap = {
 /** partial / unknown 覆盖下，按具体游戏区分已有可播放录像、链接受阻与真实缺源。 */
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
+    entry: '2022-01-26-live-01',
+    games: ['majsoul'],
+    status: 'source_unverified',
+    reason: 'basis B站 BV1pP4y1N74S 单 P 10345 秒只录了文字游戏；条目 288 分钟，雀魂部分可能在 A 站 ac33384977 / ac33385054，未核对内容。',
+  },
+  {
     entry: '2015-01-27-live-01',
     games: ['i-wanna-be-the-xylem'],
     status: 'playable_complement',
