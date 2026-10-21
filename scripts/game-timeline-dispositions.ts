@@ -40,12 +40,6 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
   },
   {
     entry: '2019-07-04-live-01',
-    games: ['fallout-shelter'],
-    status: 'evidence_insufficient',
-    reason: '基准 B站 BV1Pt411n7qY 两 P 共 11 张雪碧图全是《辐射：避难所 Online》界面，未见单机版独有画面，也没有其它单机版来源；条目 note 说明单机版与 Online 不是同一作，此标签需人工确认是否误挂。',
-  },
-  {
-    entry: '2019-07-04-live-01',
     games: ['human-fall-flat'],
     status: 'no_known_replay',
     reason: '唱歌与《人类：一败涂地》MOD 两段在 B站 BV1Pt411n7qY 中都不存在（该录像只含 Online）；条目 note 写 B站 / AcFun / YouTube 全站检索均未找到公开录像，待私人存档补档。',
