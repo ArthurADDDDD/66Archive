@@ -6442,3 +6442,25 @@
     precision: part
     evidence: part_title
   reviewed: '2026-10-21'
+- entry: 2023-03-28-live-01
+  basis: https://www.bilibili.com/video/BV11o4y1W7UF
+  coverage: unknown
+  parts:
+  - page: 1
+    id: 1074532792
+    duration_sec: 5623
+  - page: 2
+    id: 1074556929
+    duration_sec: 21805
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: majsoul
+    precision: part
+    evidence: human_watch
+  - page: 1
+    at: 00:37:42
+    kind: break
+    precision: approx
+    evidence: human_watch
+  reviewed: '2026-10-21'
