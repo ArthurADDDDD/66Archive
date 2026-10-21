@@ -109,5 +109,6 @@ export function recordingsForSeries(
 }
 
 export function recordingRange(clip: Pick<GameRecording, 'page' | 'startSec' | 'endSec' | 'startApprox' | 'endApprox'>): string {
-  return `P${clip.page} · ${clip.startApprox ? '约 ' : ''}${chapterClock(clip.startSec)}–${clip.endApprox ? '约 ' : ''}${chapterClock(clip.endSec)}`
+  // 从分 P 开头算起时读者就是从头看，不必写「约 00:00:00」
+  return `P${clip.page} · ${clip.startApprox && clip.startSec > 0 ? '约 ' : ''}${chapterClock(clip.startSec)}–${clip.endApprox ? '约 ' : ''}${chapterClock(clip.endSec)}`
 }
