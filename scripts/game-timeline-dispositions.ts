@@ -21,6 +21,12 @@ export type ReviewedGap = {
 /** partial / unknown 覆盖下，按具体游戏区分已有可播放录像、链接受阻与真实缺源。 */
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
+    entry: '2017-07-12-live-01',
+    games: ['kindergarten'],
+    status: 'no_known_replay',
+    reason: 'Kindergarten 只见于贴吧同期记录与节目单；基准 B站 BV1Bx411q7iU 页 1 经维护者人工核对为纯聊天、页 2 为 Crossout，没有其它录像来源。',
+  },
+  {
     entry: '2015-11-15-live-01',
     games: ['rise-of-the-tomb-raider'],
     status: 'source_unverified',

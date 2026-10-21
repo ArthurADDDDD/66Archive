@@ -6419,3 +6419,26 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-21'
+- entry: 2017-07-12-live-01
+  basis: https://www.bilibili.com/video/BV1Bx411q7iU
+  coverage: partial
+  parts:
+  - page: 1
+    id: 20027955
+    duration_sec: 1983
+  - page: 2
+    id: 20027958
+    duration_sec: 4859
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: part_title
+    note: 聊天
+  - page: 2
+    at: 00:00:00
+    game: crossout
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
