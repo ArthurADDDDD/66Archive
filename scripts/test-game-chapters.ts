@@ -58,7 +58,7 @@ try {
 {
   const ds=getDataset();const reviewed=getGameTimelines()
   assert.ok(reviewed.length>0)
-  assert.deepEqual(checkGameTimelines(ds.entries,reviewed).errors,[])
+  assert.deepEqual(checkGameTimelines(ds.entries,reviewed,new Map([...ds.series].map(([id,s])=>[id,{name:s.name}]))).errors,[])
   const may6=reviewed.find(t=>t.entry==='2021-05-06-live-01')
   if(may6) {
     assert.equal(may6.spans.length,3,'原人工跨度保持不变')

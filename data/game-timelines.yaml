@@ -5432,6 +5432,7 @@
   - page: 2
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   - page: 5
@@ -5457,6 +5458,7 @@
   - page: 1
     at: 00:00:00
     kind: break
+    series: xishuo-liaozhai
     precision: part
     evidence: part_title
   - page: 3
@@ -5501,6 +5503,7 @@
   - page: 3
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   - page: 6
@@ -5534,6 +5537,7 @@
   - page: 2
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   reviewed: '2026-10-21'
@@ -5577,6 +5581,7 @@
   - page: 2
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   - page: 7
@@ -5604,6 +5609,7 @@
   - page: 2
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   reviewed: '2026-10-21'
@@ -5624,6 +5630,7 @@
   - page: 1
     at: 00:00:00
     kind: break
+    series: press-events
     precision: part
     evidence: part_title
   - page: 2
@@ -5659,6 +5666,7 @@
   - page: 3
     at: 00:00:00
     kind: break
+    series: together-see
     precision: part
     evidence: part_title
   reviewed: '2026-10-21'
@@ -5699,6 +5707,7 @@
   - page: 2
     at: 00:00:00
     kind: break
+    series: xinling-pishuang
     precision: part
     evidence: part_title
   - page: 6
@@ -5750,6 +5759,12 @@
     kind: break
     precision: part
     evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    kind: break
+    series: xinling-pishuang
+    precision: part
+    evidence: part_title
   - page: 8
     at: 00:00:00
     game: elden-ring
@@ -5959,6 +5974,7 @@
   - page: 1
     at: 00:00:00
     kind: break
+    series: together-see
     precision: part
     evidence: thumbnails
   - page: 2
@@ -5969,6 +5985,7 @@
   - page: 4
     at: 00:19:18
     kind: break
+    series: together-see
     precision: approx
     evidence: thumbnails
   - page: 9
