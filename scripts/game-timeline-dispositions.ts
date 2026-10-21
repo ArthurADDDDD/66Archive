@@ -21,6 +21,12 @@ export type ReviewedGap = {
 /** partial / unknown 覆盖下，按具体游戏区分已有可播放录像、链接受阻与真实缺源。 */
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
+    entry: '2025-06-10-live-04',
+    games: ['dune-awakening'],
+    status: 'no_known_replay',
+    reason: '同场先玩无主星渊、后体验沙丘：觉醒（直播间标题与合并备注）；现有三份搬运录像（BV1eDM3z4EAa / BV1phM3zgEJb / BV1jyM3zaEyZ，约 104 分钟）经维护者人工核对全是无主星渊，沙丘段录像缺失，待后续补找。',
+  },
+  {
     entry: '2017-07-12-live-01',
     games: ['kindergarten'],
     status: 'no_known_replay',

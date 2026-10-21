@@ -6475,3 +6475,20 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-21'
+- entry: 2025-06-10-live-04
+  basis: https://www.bilibili.com/video/BV1eDM3z4EAa
+  coverage: partial
+  parts:
+  - page: 1
+    id: 30423320221
+    duration_sec: 3601
+  - page: 2
+    id: 30423911338
+    duration_sec: 2655
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: wuzhu-xingyuan
+    precision: part
+    evidence: human_watch
+  reviewed: '2026-10-21'
