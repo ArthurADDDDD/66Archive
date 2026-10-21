@@ -6463,4 +6463,15 @@
     kind: break
     precision: approx
     evidence: human_watch
+  - page: 2
+    at: 04:36:30
+    kind: break
+    series: press-events
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 05:17:30
+    kind: break
+    precision: approx
+    evidence: thumbnails
   reviewed: '2026-10-21'
