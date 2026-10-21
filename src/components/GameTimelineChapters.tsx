@@ -7,8 +7,8 @@ import { chapterDuration, type GameChapter } from '@/lib/game-chapters'
  * 审阅日期、基准录像、覆盖程度与核实状态属于内部校对口径，不在这里展示（docs/game-time.md §4）。
  * `reviewed` / `coverage` 仍由调用方传入，留给以后需要时使用。
  */
-export function GameTimelineChapters({chapters, names}: {
-  chapters:GameChapter[]; names:Record<string,string>; reviewed:string; coverage:string
+export function GameTimelineChapters({chapters, names, seriesNames = {}}: {
+  chapters:GameChapter[]; names:Record<string,string>; seriesNames?:Record<string,string>; reviewed:string; coverage:string
 }) {
   return <section className="site-container px-page py-10 sm:py-14" aria-labelledby="game-chapters-title" data-testid="recording-game-chapters">
     <h2 id="game-chapters-title" className="scroll-mt-24 text-h3 font-semibold text-ink"><SiteText id="entry-game-chapters-title" /></h2>
@@ -16,7 +16,7 @@ export function GameTimelineChapters({chapters, names}: {
     <ol className="mt-5 divide-y divide-line rounded-xl border border-line px-4 sm:px-6">
       {chapters.map(c=><li key={c.index} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
-          <p className="font-medium text-ink">{c.gameId ? <Link prefetch={false} href={`/games/${c.gameId}/`} className="underline decoration-line underline-offset-4 hover:text-live">{names[c.gameId] ?? c.gameId}</Link> : c.kind === 'break' ? (c.note ?? <SiteText id="entry-detail-game-kind-rest" />) : c.note && c.note !== '未归类片段' ? <>{c.note} · <SiteText id="entry-detail-game-kind-unclassified" /></> : <SiteText id="entry-detail-game-kind-unclassified" />}</p>
+          <p className="font-medium text-ink">{c.gameId ? <Link prefetch={false} href={`/games/${c.gameId}/`} className="underline decoration-line underline-offset-4 hover:text-live">{names[c.gameId] ?? c.gameId}</Link> : c.kind === 'break' && c.series ? <Link prefetch={false} href={`/series/${c.series}/`} className="underline decoration-line underline-offset-4 hover:text-live">{seriesNames[c.series] ?? c.series}</Link> : c.kind === 'break' ? (c.note ?? <SiteText id="entry-detail-game-kind-rest" />) : c.note && c.note !== '未归类片段' ? <>{c.note} · <SiteText id="entry-detail-game-kind-unclassified" /></> : <SiteText id="entry-detail-game-kind-unclassified" />}</p>
           <p className="mt-1 font-mono text-meta text-muted">P{c.page} {c.at} → P{c.endPage} {c.endAt}</p>
           <p className="mt-1 text-meta text-faint">约 {chapterDuration(c.durationSec)}{c.kind === 'game'
             ? null

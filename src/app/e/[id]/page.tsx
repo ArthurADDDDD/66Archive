@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { GameTimelineChapters } from '@/components/GameTimelineChapters'
 import { chapterClock, gameChapters } from '@/lib/game-chapters'
+import { seriesDisplayName } from '@/lib/series'
 import { recordedSec, gameSessionSpans } from '@/lib/game-time'
 import { notFound } from 'next/navigation'
 import { buildSourceGroups, getPublicDataset } from '@/lib/data'
@@ -256,7 +257,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         </div>
       </section>
 
-      {reviewedTimeline && <GameTimelineChapters chapters={gameChapters(reviewedTimeline)} names={Object.fromEntries([...ds.games].map(([id,g])=>[id,g.name]))} reviewed={reviewedTimeline.reviewed} coverage={reviewedTimeline.coverage} />}
+      {reviewedTimeline && <GameTimelineChapters chapters={gameChapters(reviewedTimeline)} names={Object.fromEntries([...ds.games].map(([id,g])=>[id,g.name]))} seriesNames={Object.fromEntries([...ds.series].map(([id,s])=>[id,seriesDisplayName(id,s.name)]))} reviewed={reviewedTimeline.reviewed} coverage={reviewedTimeline.coverage} />}
 
       {/* 在哪儿看 + 这场里在打什么 */}
       <section className="border-y border-line bg-surface/20 py-12 sm:py-16">
