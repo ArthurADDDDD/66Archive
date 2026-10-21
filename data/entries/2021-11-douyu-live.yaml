@@ -118,9 +118,9 @@
     platform: douyu
     confidence: high
     duration_min: 440
-    games: [lets-build-a-zoo]
+    games: [lets-build-a-zoo, majsoul]
     tags: [一起See]
-    note: "B站「女流录像小屋」《我回来啦》，全长录播。前半段一起See、后半段玩 Let's Build a Zoo（人工核对，未定位精确切分时间点，暂不拆 segments）。"
+    note: "B站「女流录像小屋」《我回来啦》，全长录播。先一起See，P2 约 17 分起玩 Let's Build a Zoo 到 P4 约 19 分，之后继续一起See看麻将电影，P9 约 28 分起玩雀魂到下播（2026-10-21 平台缩略图与录像单帧核对；旧记「后半段玩 Zoo」不准）。"
     sources:
       - url: "https://www.bilibili.com/video/BV1Fr4y1y7uY"
         kind: replay
@@ -175,7 +175,7 @@
     cover: "https://i0.hdslb.com/bfs/archive/ce068e6c40e7587005d2e0ca0aaf79212c6eab36.png"
     games:
       - phasmophobia
-      - zelda-botw
+      - elden-ring
     segments:
       - at: "00:00:00"
         label: "游戏前聊10块钱的"
