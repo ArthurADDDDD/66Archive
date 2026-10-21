@@ -83,14 +83,18 @@ for (const [kind, entries] of [
 }
 assert.equal(UPDATE_COPY_TEXTS.length, ids.size, '每条更新的标题与说明都要登记到后台文案系统')
 assert.ok(UPDATE_COPY_TEXTS.every(item => ids.has(item.id)), '不能存在重复或无法绑定的旧文案')
+// 以最新功能公告的日期测窗口，而非写死测试编写当天。
+const [noticeYear, noticeMonth, noticeDay] = SITE_UPDATES[0].date.split('-').map(Number)
+const noticeOnNewestDay = new Date(noticeYear, noticeMonth - 1, noticeDay)
+const noticeWindowStart = new Date(Date.UTC(noticeYear, noticeMonth - 1, noticeDay - 30)).toISOString().slice(0, 10)
 assert.equal(
-  getUpdateNotice(new Date(2026, 9, 20))?.version,
+  getUpdateNotice(noticeOnNewestDay)?.version,
   `${SITE_UPDATES[0].date}:${SITE_UPDATES[0].source}`,
   '增补历史记录不得改变公告最新版本',
 )
 assert.equal(
-  getUpdateNotice(new Date(2026, 9, 20))?.updates.length,
-  SITE_UPDATES.filter(item => item.date >= '2026-09-20' && item.date <= '2026-10-20').length,
+  getUpdateNotice(noticeOnNewestDay)?.updates.length,
+  SITE_UPDATES.filter(item => item.date >= noticeWindowStart && item.date <= SITE_UPDATES[0].date).length,
   '历史增补不能加进仅展示近期变化的弹窗',
 )
 assert.equal(completeHistory.length, expectedFeatureCount + expectedArchiveCount)
