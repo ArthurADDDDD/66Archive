@@ -6259,3 +6259,163 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-21'
+- entry: 2015-11-15-live-01
+  basis: https://www.bilibili.com/video/BV1ef4y1Y7T2?p=16
+  coverage: partial
+  parts:
+  - page: 16
+    id: 339990811
+    duration_sec: 7223
+  spans:
+  - page: 16
+    at: 00:00:00
+    kind: break
+    series: xinling-pishuang
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2016-03-09-live-01
+  basis: https://www.bilibili.com/video/BV1Xx411V7mT?p=1
+  coverage: partial
+  parts:
+  - page: 1
+    id: 27050184
+    duration_sec: 3956
+  - page: 2
+    id: 27050185
+    duration_sec: 3956
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: stardew-valley
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2016-03-13-live-01
+  basis: https://www.bilibili.com/video/BV1yW411a7ZS
+  coverage: partial
+  parts:
+  - page: 1
+    id: 27568209
+    duration_sec: 11114
+  - page: 2
+    id: 27568210
+    duration_sec: 9593
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: stardew-valley
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2016-03-28-live-01
+  basis: https://www.bilibili.com/video/BV1fW411i7Lr?p=3
+  coverage: partial
+  parts:
+  - page: 3
+    id: 29693414
+    duration_sec: 5740
+  - page: 4
+    id: 29693415
+    duration_sec: 5739
+  spans:
+  - page: 3
+    at: 00:00:00
+    game: stardew-valley
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2016-04-30-live-01
+  basis: https://www.bilibili.com/video/BV1Js411B7Xn
+  coverage: partial
+  parts:
+  - page: 1
+    id: 7461459
+    duration_sec: 3324
+  - page: 2
+    id: 7461460
+    duration_sec: 3297
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: dark-souls-3
+    precision: part
+    evidence: other
+  reviewed: '2026-10-21'
+- entry: 2016-08-22-live-01
+  basis: https://www.acfun.cn/v/ac3042164
+  coverage: partial
+  parts:
+  - page: 1
+    id: 4078561
+    duration_sec: 663
+  - page: 2
+    id: 4078574
+    duration_sec: 2457
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: contra
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2019-01-20-live-01
+  basis: https://www.acfun.cn/v/ac4881886
+  coverage: partial
+  parts:
+  - page: 1
+    id: 6598515
+    duration_sec: 3638
+  - page: 2
+    id: 6598513
+    duration_sec: 3303
+  - page: 3
+    id: 6598512
+    duration_sec: 3305
+  - page: 4
+    id: 6598440
+    duration_sec: 1344
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: rakuen
+    precision: part
+    evidence: part_title
+  - page: 2
+    at: 00:00:00
+    kind: break
+    series: xinling-pishuang
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2019-03-10-live-01
+  basis: https://www.bilibili.com/video/BV1Nb411e7xp
+  coverage: partial
+  parts:
+  - page: 1
+    id: 80465774
+    duration_sec: 3078
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: devil-may-cry-5
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-21'
+- entry: 2019-07-04-live-01
+  basis: https://www.bilibili.com/video/BV1Pt411n7qY
+  coverage: partial
+  parts:
+  - page: 1
+    id: 104254262
+    duration_sec: 2667
+  - page: 2
+    id: 104255628
+    duration_sec: 2430
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: fallout-shelter-online
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'

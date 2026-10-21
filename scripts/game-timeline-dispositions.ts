@@ -21,6 +21,36 @@ export type ReviewedGap = {
 /** partial / unknown 覆盖下，按具体游戏区分已有可播放录像、链接受阻与真实缺源。 */
 export const REVIEWED_GAPS: ReviewedGap[] = [
   {
+    entry: '2015-11-15-live-01',
+    games: ['rise-of-the-tomb-raider'],
+    status: 'source_unverified',
+    reason: '基准 B站 BV1ef4y1Y7T2?p=16 只含《心灵砒霜-20151115》；《古墓丽影：崛起》上午段的唯一线索是贴吧截图中的网盘分享（文件「古墓丽影10-2.flv」，分享者 gijj1986），分享已失效，未能核对内容。',
+  },
+  {
+    entry: '2016-03-09-live-01',
+    games: ['nixizhixingtu-shanyao'],
+    status: 'no_known_replay',
+    reason: '基准 B站 BV1Xx411V7mT P1+P2 与 A站 ac2592025 逐段对齐，全程只有星露谷；「逆袭之星途闪耀」段录像小屋未补投，B 站与优酷检索也未找到，标 missing_footage。',
+  },
+  {
+    entry: '2016-03-28-live-01',
+    games: ['geometry-dash'],
+    status: 'no_known_replay',
+    reason: 'Geometry Dash 只见于贴吧同期记录与节目单，没有可用录像来源；基准 B站 BV1fW411i7Lr 的 P3–P4 只含星露谷（四张缩略图样本），未能完全排除页内短段。',
+  },
+  {
+    entry: '2019-07-04-live-01',
+    games: ['fallout-shelter'],
+    status: 'evidence_insufficient',
+    reason: '基准 B站 BV1Pt411n7qY 两 P 共 11 张雪碧图全是《辐射：避难所 Online》界面，未见单机版独有画面，也没有其它单机版来源；条目 note 说明单机版与 Online 不是同一作，此标签需人工确认是否误挂。',
+  },
+  {
+    entry: '2019-07-04-live-01',
+    games: ['human-fall-flat'],
+    status: 'no_known_replay',
+    reason: '唱歌与《人类：一败涂地》MOD 两段在 B站 BV1Pt411n7qY 中都不存在（该录像只含 Online）；条目 note 写 B站 / AcFun / YouTube 全站检索均未找到公开录像，待私人存档补档。',
+  },
+  {
     entry: '2022-01-26-live-01',
     games: ['majsoul'],
     status: 'source_unverified',
