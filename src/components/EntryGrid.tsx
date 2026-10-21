@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { ResponsiveCover } from './ResponsiveCover'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody, useEntrySource } from './EntryDetail'
@@ -25,17 +25,31 @@ import type { Platform } from '@/lib/schema'
 const GRID_COVER_WIDTHS = [320, 640] as const
 const GRID_COVER_SIZES = '(min-width: 640px) 296px, 92vw'
 
+/**
+ * 只展示这一场里属于当前页面的几段（如节目页只列属于该节目的片段）时，网格里用它代替整场卡片：
+ * 卡片和展开面板都只讲这几段，不出现整场的标题、时长与来源。
+ */
+export type GridScoped = {
+  title: string
+  cover: string | null
+  durationLabel: string
+  meta: string
+  detail: ReactNode
+}
+
 export function EntryGrid({
   entries,
   expandedId,
   onToggle,
   showFullDate = false,
+  scoped,
 }: {
   entries: TimelineEntry[]
   /** 网格一次只展开一条：整行插入的面板很高，同时开两块就没法对照了。 */
   expandedId: string | null
   onToggle: (id: string) => void
   showFullDate?: boolean
+  scoped?: Record<string, GridScoped>
 }) {
   const gridRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -79,6 +93,7 @@ export function EntryGrid({
   const expandedIndex = expandedId ? entries.findIndex((entry) => entry.id === expandedId) : -1
   const expandedRow = expandedIndex >= 0 ? Math.floor(expandedIndex / columns) : -1
   const expandedEntry = expandedIndex >= 0 ? entries[expandedIndex] : null
+  const expandedScoped = expandedEntry ? scoped?.[expandedEntry.id] : undefined
 
   // entry-landing-stage：年月轴落点时，这一片会短暂退到落点卡后面（见 globals.css）
   return (
@@ -91,12 +106,22 @@ export function EntryGrid({
         const closesExpandedRow = expandedRow >= 0 && lastInRow && Math.floor(index / columns) === expandedRow
         return (
           <Fragment key={entry.id}>
-            <EntryCard
-              entry={entry}
-              expanded={entry.id === expandedId}
-              onToggle={() => onToggle(entry.id)}
-              showFullDate={showFullDate}
-            />
+            {scoped?.[entry.id] ? (
+              <ScopedCard
+                entry={entry}
+                scoped={scoped[entry.id]}
+                expanded={entry.id === expandedId}
+                onToggle={() => onToggle(entry.id)}
+                showFullDate={showFullDate}
+              />
+            ) : (
+              <EntryCard
+                entry={entry}
+                expanded={entry.id === expandedId}
+                onToggle={() => onToggle(entry.id)}
+                showFullDate={showFullDate}
+              />
+            )}
             {closesExpandedRow && expandedEntry && (
               <div ref={panelRef} className="col-span-full">
                 {/* 小三角指回被点的那张卡，行内插入才不会读成「凭空多出来一块」。 */}
@@ -112,7 +137,7 @@ export function EntryGrid({
                 >
                   <div className="flex items-start justify-between gap-3 border-b border-line/70 px-4 py-2.5">
                     <p className="min-w-0 flex-1 truncate text-meta text-faint tnum">
-                      {expandedEntry.date}{expandedEntry.time ? ` ${expandedEntry.time}` : ''} · {expandedEntry.title}
+                      {expandedEntry.date}{expandedEntry.time ? ` ${expandedEntry.time}` : ''} · {expandedScoped ? expandedScoped.title : expandedEntry.title}
                     </p>
                     <button
                       type="button"
@@ -122,7 +147,7 @@ export function EntryGrid({
                       收起
                     </button>
                   </div>
-                  <EntryDetailBody entry={expandedEntry} />
+                  {expandedScoped ? <div className="p-3 sm:p-4">{expandedScoped.detail}</div> : <EntryDetailBody entry={expandedEntry} />}
                 </div>
               </div>
             )}
@@ -130,6 +155,64 @@ export function EntryGrid({
         )
       })}
     </div>
+  )
+}
+
+/** 只含当前页面分段的卡：封面取第一段，时长是这几段的合计，标题不带整场的名字。 */
+function ScopedCard({
+  entry,
+  scoped,
+  expanded,
+  onToggle,
+  showFullDate,
+}: {
+  entry: TimelineEntry
+  scoped: GridScoped
+  expanded: boolean
+  onToggle: () => void
+  showFullDate: boolean
+}) {
+  const dateLabel = showFullDate ? entry.date : entry.date.slice(5).replace('-', '/')
+  return (
+    <button
+      type="button"
+      id={`entry-${entry.id}`}
+      onClick={onToggle}
+      aria-expanded={expanded}
+      aria-controls={`entry-preview-${entry.id}`}
+      className="group ui-press flex min-w-0 scroll-mt-24 flex-col text-left"
+    >
+      <span
+        className={`entry-landing-cover relative block aspect-video w-full overflow-hidden rounded-lg border bg-raised transition-[border-color,box-shadow] duration-300 ${
+          expanded ? 'border-live/70 shadow-[0_10px_30px_rgba(91,200,232,0.16)]' : 'border-line/70 group-hover:border-muted'
+        }`}
+      >
+        {scoped.cover ? (
+          <ResponsiveCover
+            src={scoped.cover}
+            widths={GRID_COVER_WIDTHS}
+            sizes={GRID_COVER_SIZES}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+          />
+        ) : (
+          <span className="flex h-full items-center justify-center px-4 text-center text-h3 text-ink/80">{scoped.title}</span>
+        )}
+        <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/70 to-transparent" />
+        <span className="absolute bottom-1.5 right-1.5 rounded bg-black/70 px-1.5 py-0.5 font-mono text-[11px] font-medium text-white tnum">{scoped.durationLabel}</span>
+      </span>
+      <span className="mt-2 block min-w-0">
+        <span className="line-clamp-2 text-control leading-snug text-ink transition-colors group-hover:text-live">{scoped.title}</span>
+        <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-meta text-faint tnum">
+          <span className="font-mono">{dateLabel}</span>
+          <span className="text-line">·</span>
+          <span>{scoped.meta}</span>
+        </span>
+      </span>
+    </button>
   )
 }
 

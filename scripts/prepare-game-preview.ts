@@ -11,7 +11,8 @@ const raw=fs.readdirSync(source).filter(n=>n.endsWith('.json')).sort().map(n=>JS
 if(raw.some(t=>!t || typeof t!=='object' || 'draft' in t)) throw new Error('Only reviewed timeline files are allowed')
 const timelines=GameTimelinesFile.parse(raw)
 if(!timelines.length || new Set(timelines.map(t=>t.entry)).size!==timelines.length) throw new Error('Empty or duplicate preview')
-const checked=checkGameTimelines(getDataset().entries,timelines)
+const dataset=getDataset()
+const checked=checkGameTimelines(dataset.entries,timelines,new Map([...dataset.series].map(([id,s])=>[id,{name:s.name}])))
 if(checked.errors.length) throw new Error(checked.errors.join('\n'))
 fs.mkdirSync('.local',{recursive:true})
 const target='.local/game-timelines-preview.json'

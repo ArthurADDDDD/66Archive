@@ -9,9 +9,15 @@ import { buildSourceGroups } from './data'
 import { parseBasis, recordedSec } from './game-time'
 import { SPECIFIC_GAME_PARENTS, visibleGameIds } from './games'
 import { detectPlatform } from './platforms'
+import { isSeriesMember } from './series'
 import { TIMELINE_PLATFORMS, type Entry, type GameTimeline } from './schema'
 
-export function checkGameTimelines(entries: Entry[], timelines: GameTimeline[]): { errors: string[]; warnings: string[] } {
+export function checkGameTimelines(
+  entries: Entry[],
+  timelines: GameTimeline[],
+  /** series.yaml 的 id → 原始名；不传则无法校验 `series` 段，出现即报错。 */
+  seriesById: ReadonlyMap<string, { name: string }> = new Map(),
+): { errors: string[]; warnings: string[] } {
   const errors: string[] = []
   const warnings: string[] = []
   const byId = new Map(entries.map((e) => [e.id, e]))
@@ -45,6 +51,21 @@ export function checkGameTimelines(entries: Entry[], timelines: GameTimeline[]):
       errors.push(`${where} 的 basis 平台「${platform ?? '未知'}」还不支持：分 P 与跳转语义只在 ${TIMELINE_PLATFORMS.join('、')} 上实测过`)
     } else if (!parseBasis(t.basis)) {
       errors.push(`${where} 的 basis 里取不到视频号（B 站要有 BV 号，A 站要有 ac 号），无法生成跳转`)
+    }
+
+    // 带 series 的 break：节目必须登记，且这一场本来就属于它（与 buildSeries 同一判定）。
+    for (const [index, span] of t.spans.entries()) {
+      if (!span.series) continue
+      const def = seriesById.get(span.series)
+      if (!def) {
+        errors.push(`${where} 的第 ${index + 1} 个环节引用了未登记的节目 "${span.series}"（series.yaml）`)
+      } else if (!isSeriesMember({
+        title: entry.title,
+        tags: entry.tags,
+        seriesName: entry.series ? seriesById.get(entry.series)?.name : undefined,
+      }, span.series, def.name)) {
+        errors.push(`${where} 的第 ${index + 1} 个环节标了节目 "${span.series}"，但这一场本来不属于该节目（条目 series / tags / 标题判定与节目页一致）`)
+      }
     }
 
     const spanGames = new Set(t.spans.flatMap((s) => (s.game ? [s.game] : [])))

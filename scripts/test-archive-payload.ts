@@ -74,6 +74,32 @@ if (legacyFailures.length > 0) {
 }
 console.log(`✓ 旧格式（未编码）条目 400 条原样通过解码器，不会因为边缘缓存错位而炸`)
 
+/**
+ * 展开行的「跳到」读的是载荷里本来就有的 `chapters`；节目所属（seriesId / seriesName）是其中新增的可选项。
+ * 新字段必须无损往返；缺字段的旧载荷（没有 chapters，或 chapters 里没有节目）要当作「没有」处理而不是抛错。
+ */
+{
+  const base = entries.find((entry) => entry.sources.length > 0)!
+  const chapters: NonNullable<typeof base.chapters> = [
+    { index: 0, kind: 'break', gameId: null, seriesId: 'xinling-pishuang', seriesName: '心灵砒霜', page: 1, at: '00:00:00', endPage: 1, endAt: '00:20:00', durationSec: 1200, verified: false, precision: 'part', jumpUrl: 'https://www.bilibili.com/video/BV1aaaaaaaaa/?p=1' },
+    { index: 1, kind: 'game', gameId: 'minecraft', gameName: 'Minecraft', page: 1, at: '00:20:00', endPage: 1, endAt: '00:40:00', durationSec: 1200, verified: false, precision: 'approx', jumpUrl: 'https://www.bilibili.com/video/BV1aaaaaaaaa/?p=1&t=1200' },
+  ]
+  const withChapters = { ...base, chapters, chapterBasis: 'https://www.bilibili.com/video/BV1aaaaaaaaa/', chapterReviewed: '2026-10-21', chapterCoverage: 'complete' as const }
+  const round = decodeArchiveEntry(encodeArchiveEntry(withChapters))
+  const out: string[] = []
+  diff('chapters', withChapters, round, out)
+  if (out.length > 0) {
+    console.error('\n✗ 带节目的 chapters 往返不一致：\n  ' + out.join('\n  '))
+    process.exit(1)
+  }
+  const oldChapters = decodeArchiveEntry(encodeArchiveEntry({ ...withChapters, chapters: chapters.map(({ seriesId, seriesName, ...rest }) => (void seriesId, void seriesName, rest)) }))
+  if (oldChapters.chapters?.some((c) => c.seriesId || c.seriesName) || round.chapters?.[0]?.seriesName !== '心灵砒霜') {
+    console.error('\n✗ 节目所属：新载荷应带 seriesName，缺字段的旧载荷应安静地没有')
+    process.exit(1)
+  }
+  console.log('✓ 载荷里的 chapters（含可选的节目所属）无损往返；缺字段的旧载荷照常解码')
+}
+
 const encodedBytes = Buffer.byteLength(JSON.stringify(entries.map(encodeArchiveEntry)))
 const plainBytes = Buffer.byteLength(JSON.stringify(entries))
 

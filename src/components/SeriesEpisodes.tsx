@@ -5,8 +5,13 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
 import { flashLandedTarget, scrollToLandingTarget } from '@/lib/landing-flash'
-import { useCopyBlock } from './LiveContentProvider'
-import { EntryGrid } from './EntryGrid'
+import { chapterDuration } from '@/lib/game-chapters'
+import type { GameRecordings } from '@/lib/game-recordings'
+import { PLATFORM_META } from '@/lib/platforms'
+import Link from 'next/link'
+import { useCopyBlock, useSiteTexts } from './LiveContentProvider'
+import { EntryGrid, type GridScoped } from './EntryGrid'
+import { GameRecordingGroup, RecordingClips, RECORDING_TEXTS } from './GameRecordingGroup'
 import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
@@ -28,6 +33,7 @@ export function SeriesEpisodes({
   color,
   count,
   unit = '期',
+  recordings = {},
 }: {
   /**
    * 与 `/archive-data.json` 同一套无损编码（见 `lib/archive-payload.ts`）。
@@ -38,7 +44,13 @@ export function SeriesEpisodes({
   color: string
   count: number
   unit?: string
+  /**
+   * 时间轴里标了本节目的场次 → 只属于本节目的那几段。有这一项的场次在本页只展示这些段，
+   * 不再展示整场；没有的保持整场。计数（期数、年份分布）仍按场次，由上游给出，不受影响。
+   */
+  recordings?: Record<string, GameRecordings>
 }) {
+  const t = useSiteTexts()
   const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
   // 列表上方那行提示走后台文案（见 site-copy.ts 的 series-detail-*-hint）。
   const hint = useCopyBlock('pages', unit === '场' ? 'series-detail-sessions-hint' : 'series-detail-episodes-hint').lede
@@ -223,9 +235,46 @@ export function SeriesEpisodes({
       return next
     })
 
-  const row = (entry: TimelineEntry) => (
-    <EntryRow entry={entry} expanded={expanded.has(entry.id)} showFullDate onToggle={() => toggle(entry.id)} />
-  )
+  const row = (entry: TimelineEntry) => {
+    const scopedClips = recordings[entry.id]
+    return scopedClips?.clips.length ? (
+      <GameRecordingGroup
+        entry={entry}
+        recordings={scopedClips}
+        game={scopedClips.clips[0].game}
+        grid={false}
+        expanded={expanded.has(entry.id)}
+        onToggle={() => toggle(entry.id)}
+        texts={RECORDING_TEXTS.series}
+      />
+    ) : (
+      <EntryRow entry={entry} expanded={expanded.has(entry.id)} showFullDate onToggle={() => toggle(entry.id)} />
+    )
+  }
+
+  // 网格视图：同一批分段卡片，换成网格单元与就地展开面板。
+  const scoped = useMemo(() => {
+    const result: Record<string, GridScoped> = {}
+    for (const entry of visible.slice(0, loadedCount)) {
+      const clips = recordings[entry.id]?.clips
+      if (!clips?.length) continue
+      result[entry.id] = {
+        title: clips[0].game.name,
+        cover: clips[0].cover,
+        durationLabel: chapterDuration(clips.reduce((sum, clip) => sum + clip.durationSec, 0)),
+        meta: `${PLATFORM_META[clips[0].platform].name} · ${t(RECORDING_TEXTS.series.count, { count: clips.length })}`,
+        detail: (
+          <div>
+            <RecordingClips entry={entry} clips={clips} grid texts={RECORDING_TEXTS.series} />
+            <p className="mt-3">
+              <Link prefetch={false} href={`/e/${entry.id}/`} className="ui-press rounded-sm text-meta text-faint hover:text-live">{t(RECORDING_TEXTS.series.archive)}</Link>
+            </p>
+          </div>
+        ),
+      }
+    }
+    return result
+  }, [visible, loadedCount, recordings, t])
 
   return (
     <div>
@@ -294,6 +343,7 @@ export function SeriesEpisodes({
             expandedId={gridExpandedId}
             onToggle={(id) => setGridExpandedId(gridExpandedId === id ? null : id)}
             showFullDate
+            scoped={scoped}
           />
         </div>
       ) : loadedEntries.length > 10 ? (

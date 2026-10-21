@@ -158,7 +158,7 @@ for (const { file, items } of [...loadDir('entries'), ...loadDir('_demo')]) {
 // —— 游戏时间轴：跳转与游戏环节时长共用的数据，必须和条目严丝合缝 ——
 const timelines = parseOrFail(GameTimelinesFile, load('game-timelines.yaml'), 'game-timelines.yaml') ?? []
 {
-  const checked = checkGameTimelines(entries.filter((e) => !e.demo), timelines)
+  const checked = checkGameTimelines(entries.filter((e) => !e.demo), timelines, new Map(series.map((s) => [s.id, { name: s.name }])))
   errors.push(...checked.errors)
   warnings.push(...checked.warnings)
 }

@@ -57,6 +57,22 @@ export function isDazhouMcEntry(entry: Pick<TimelineEntry, 'title'>): boolean {
   return /大周MC|MC复兴大周|大周建国史/i.test(entry.title)
 }
 
+/**
+ * 一场属不属于某个节目：节目页成员（buildSeries）与时间轴里 `series` 段的校验
+ * （game-timeline-check.ts）共用这一个判定，改规则只改这里。
+ * `seriesName` 是条目 `series` 字段对应的系列名；`name` 是 series.yaml 里的原始名，不是展示名。
+ */
+export function isSeriesMember(
+  entry: Pick<TimelineEntry, 'title' | 'tags' | 'seriesName'>,
+  id: string,
+  name: string,
+): boolean {
+  return entry.seriesName === name
+    || entry.tags.includes(name)
+    || (id === 'xinling-pishuang' && isXinlingPishuangEntry(entry))
+    || (id === 'dazhou-mc' && isDazhouMcEntry(entry))
+}
+
 export function buildSeriesList(ds: Dataset, timeline: TimelineEntry[]): SeriesInfo[] {
   const list: SeriesInfo[] = []
   for (const [id, s] of ds.series) {
@@ -73,13 +89,8 @@ export function buildSeries(
   name: string,
   description: string,
 ): SeriesInfo {
-  const isPishuang = id === 'xinling-pishuang'
-  const isDazhouMc = id === 'dazhou-mc'
   const entries = timeline
-    .filter((e) => e.seriesName === name
-      || e.tags.includes(name)
-      || (isPishuang && isXinlingPishuangEntry(e))
-      || (isDazhouMc && isDazhouMcEntry(e)))
+    .filter((e) => isSeriesMember(e, id, name))
     .sort((a, b) => a.date.localeCompare(b.date))
 
   const perYearMap = new Map<number, number>()

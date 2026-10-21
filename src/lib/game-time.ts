@@ -148,8 +148,10 @@ export function gameSessionSpans(timeline: GameTimeline): GameSessionSpan[] {
     while (i + 1 < raw.length && raw[i + 1].span.kind === 'break') i++
     const before = raw[first - 1]?.span.game
     const after = raw[i + 1]?.span.game
+    // 带节目的 break 是有名字的另一档内容，不能被同款游戏吞掉：它要留给节目页，也不计入任何游戏。
+    const named = raw.slice(first, i + 1).some((r) => r.span.series)
     // 精确作品 ID 必须相同，不能因为属于同一系列而跨作品合并。
-    if (before && before === after) {
+    if (!named && before && before === after) {
       for (let j = first; j <= i; j++) bridged.set(j, before)
     }
   }

@@ -3,9 +3,9 @@
 import { useMemo, useState } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
-import { EntryGrid } from './EntryGrid'
-import { EntryRow } from './EntryRow'
-import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
+import type { GameRecordings } from '@/lib/game-recordings'
+import { GameRecordingGroup } from './GameRecordingGroup'
+import { EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 import { SiteText } from './SiteText'
@@ -13,18 +13,16 @@ import { SiteText } from './SiteText'
 const NONE: ReadonlySet<string> = new Set()
 
 /**
- * 游戏详情页的相关场次：整行就地展开播放预览，不把点击行为变成详情页跳转。
- * 电脑上默认全部打开，让多日期、多视频的关系一次呈现；点击整行仍可单独收起或展开。
- *
- * **手机上默认全部收起。** 一场展开后有封面、来源、分 P、标签，差不多一整屏；
- * 十几场默认全开，列表就成了十几屏的长卷，想找某一场只能一路往下滑。
- * 收起来一行一场，配上底部的年月索引（EntryTimeline），才翻得动。
+ * 游戏详情页的相关场次：按游戏章节分 P 展示，完整档案入口保留整场上下文。
+ * 电脑上默认全部打开；手机默认折叠，展开后只显示当前游戏的录像区间。
  *
  * 年份筛选来自上面那张「年份分布」条形图（点某一年就只看那一年），
  * 正倒序则是这里的切换键。右侧年月时间轴从 entries 现算，跟着一起变。
  */
 export function GameSessions({
   entries: encodedEntries,
+  game,
+  recordings,
   color = '#E0A244',
 }: {
   /**
@@ -33,6 +31,8 @@ export function GameSessions({
    * 共同开销，不是某一页的特例。
    */
   entries: EncodedEntry[]
+  game: { id: string; name: string }
+  recordings: Record<string, GameRecordings>
   color?: string
 }) {
   const entries = useMemo(() => encodedEntries.map(decodeArchiveEntry), [encodedEntries])
@@ -42,8 +42,6 @@ export function GameSessions({
   const visible = useMemo(() => applyEntryFilter(entries, year, order, 'desc'), [entries, year, order])
 
   const { view, setView, compact } = useEntryView()
-  // 网格一次只展开一条；列表沿用「默认全开、逐条收合」的对照读法。
-  const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
   // null = 还没动过：电脑默认全开，手机默认全收（compact 挂载后才知道，所以不能写进初始值）。
   const [touched, setTouched] = useState<ReadonlySet<string> | null>(null)
   const expanded = touched ?? (compact ? NONE : allIds)
@@ -63,7 +61,7 @@ export function GameSessions({
   }
 
   const row = (entry: TimelineEntry) => (
-    <EntryRow entry={entry} expanded={expanded.has(entry.id)} showFullDate onToggle={() => toggle(entry.id)} />
+    <GameRecordingGroup entry={entry} recordings={recordings[entry.id]} game={game} grid={view === 'grid'} expanded={expanded.has(entry.id)} onToggle={() => toggle(entry.id)} />
   )
 
   return (
@@ -80,12 +78,12 @@ export function GameSessions({
               </span>
             )}
           </h2>
+          {/* 口径说明（不给读者看）：游戏页只收当前游戏的分 P/片段；外站播放到片段终点不会自动停。 */}
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <ClearYearButton />
           <OrderToggle />
           <EntryViewToggle view={view} setView={setView} compact={compact} />
-          {view === 'list' && (
           <button
             type="button"
             onClick={allExpanded ? collapseAll : expandAll}
@@ -98,24 +96,10 @@ export function GameSessions({
           >
             {allExpanded ? '全部折叠' : '全部展开'}
           </button>
-          )}
         </div>
       </div>
 
-      {view === 'grid' ? (
-        <div className="mt-6 w-full">
-          {/* 网格没有月份小标题，落点会停在某一行中间——轨道跳转时那张卡会自己亮一下。 */}
-          {visible.length > 10 && (
-            <EntryMonthRail key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" />
-          )}
-          <EntryGrid
-            entries={visible}
-            expandedId={gridExpandedId}
-            onToggle={(id) => setGridExpandedId(gridExpandedId === id ? null : id)}
-            showFullDate
-          />
-        </div>
-      ) : visible.length > 10 ? (
+      {visible.length > 10 ? (
         <div className="mt-6 w-full">
           {/* key 让筛选/换序后时间轴从头量一遍，不留上一份的游标位置 */}
           <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" renderEntry={row} />

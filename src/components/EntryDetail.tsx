@@ -272,7 +272,7 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
       <ol className="divide-y divide-line">
         {chapters.map((chapter) => {
           const title = chapter.gameName ?? (chapter.kind === 'break'
-            ? chapter.label ?? <SiteText id="entry-detail-game-kind-rest" />
+            ? chapter.seriesName ?? chapter.label ?? <SiteText id="entry-detail-game-kind-rest" />
             : chapter.kind === 'unknown'
               ? chapter.label && chapter.label !== '未归类片段'
                 ? <>{chapter.label} · <SiteText id="entry-detail-game-kind-unclassified" /></>
@@ -292,7 +292,9 @@ function ReviewedChapters({ entry }: { entry: TimelineEntry }) {
           return (
             <li key={chapter.index} className="flex flex-col gap-2 py-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="min-w-0">
-                <p className="font-medium text-ink">{chapter.gameId ? <a href={`/games/${chapter.gameId}/`} className="hover:text-live">{title}</a> : title}</p>
+                <p className="font-medium text-ink">{chapter.gameId
+                  ? <a href={`/games/${chapter.gameId}/`} className="hover:text-live">{title}</a>
+                  : chapter.seriesId ? <a href={`/series/${chapter.seriesId}/`} className="hover:text-live">{title}</a> : title}</p>
                 <p className="mt-1 font-mono text-meta text-muted">P{chapter.page} {chapter.at} → P{chapter.endPage} {chapter.endAt}</p>
                 <p className="mt-1 text-meta text-faint">约 {formatPartDuration(chapter.durationSec)}{kindNote && <> · {kindNote}</>}</p>
               </div>

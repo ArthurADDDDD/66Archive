@@ -6,6 +6,8 @@ export type GameChapter = {
   index: number
   gameId: string | null
   kind: 'game' | 'break' | 'unknown'
+  /** 仅 kind: break 可带：这一段属于哪个节目（series.yaml id）。 */
+  series?: string
   page: number
   at: string
   endPage: number
@@ -38,12 +40,18 @@ export function gameChapters(timeline: GameTimeline): GameChapter[] {
     return { index, gameId:r.span.game ?? null, kind:r.span.game ? 'game' : r.span.kind!,
       page:r.span.page, at:r.span.at, endPage:next?.page ?? last.page, endAt:next?.at ?? chapterClock(last.duration_sec),
       durationSec:r.endSec-r.startSec, verified:Boolean(r.span.game && Math.abs(r.verifiedSec - (r.endSec-r.startSec)) < 1e-6), verifiedSec:r.verifiedSec,
+      ...(r.span.series ? {series:r.span.series} : {}),
       precision:r.span.precision, jump:buildJump(timeline.basis,r.span.page,offset,r.span.precision), note:r.span.note }
   })
 }
 
 export function chaptersForGame(timeline: GameTimeline, gameId: string): GameChapter[] {
   return gameChapters(timeline).filter(c => c.gameId === gameId || Boolean(c.gameId && SPECIFIC_GAME_PARENTS[c.gameId] === gameId))
+}
+
+/** Reviewed independent segments that belong to one show; they never count as game time. */
+export function chaptersForSeries(timeline: GameTimeline, seriesId: string): GameChapter[] {
+  return gameChapters(timeline).filter(c => c.kind === 'break' && c.series === seriesId)
 }
 
 /** Global verified total counts each actual interval once, including series parents. */

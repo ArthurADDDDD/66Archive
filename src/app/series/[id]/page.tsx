@@ -14,6 +14,7 @@ import { EntryFilterProvider, YearChips } from '@/components/EntryFilters'
 import { SiteFooter } from '@/components/primitives'
 import { getPublicDataset, toTimelineEntries } from '@/lib/data'
 import { pageMetadata, SITE_DESCRIPTION } from '@/lib/page-metadata'
+import { recordingsForSeries } from '@/lib/game-recordings'
 import { buildSeries, seriesDisplayName } from '@/lib/series'
 import { coverShareImage } from '@/lib/share-image'
 import { formatDuration } from '@/lib/ui'
@@ -76,6 +77,12 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
   const unit = id === 'together-see' ? '场' : '期'
   const color = s.category === 'video' ? '#E0A244' : s.category === 'themed' ? '#5BC8E8' : '#A78BFA'
   const dark = isPishuang
+
+  // 时间轴里标了本节目的场次：本页只展示那几段（没有标的场次保持整场）。计数仍按场次，上面的 s.count 不变。
+  const seriesRecordings = Object.fromEntries(s.entries.flatMap((entry) => {
+    const found = recordingsForSeries(entry, { id, name: s.name }, ds.timelines.get(entry.id))
+    return found.clips.length ? [[entry.id, found] as const] : []
+  }))
 
   // 相关：档案检索 + 同年编年史 + 相关游戏（视频时代 games 未登记，留空即跳过）
   const gameIdByName = new Map([...ds.games.values()].map((g) => [g.name, g.id]))
@@ -176,7 +183,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<{ i
               {isTogetherSee && (
                 <SeriesNote pageId="series-detail-together-see" className="mb-4 max-w-3xl text-meta leading-relaxed text-faint" />
               )}
-              <SeriesEpisodes entries={s.entries.map(encodeArchiveEntry)} color={color} count={s.count} unit={unit} />
+              <SeriesEpisodes entries={s.entries.map(encodeArchiveEntry)} color={color} count={s.count} unit={unit} recordings={seriesRecordings} />
             </div>
           </section>
         </EntryFilterProvider>

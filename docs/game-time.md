@@ -34,6 +34,7 @@
     - { page: 3, at: '00:00:00', game: fall-guys, precision: part, evidence: recording_break }
     # 人工定位：{ page: 3, at: '00:07:12', game: ..., precision: approx, evidence: human_watch, scanned: true }
     # 独立环节：{ ..., kind: break }    还没核对：{ ..., kind: unknown }
+    # 属于某个节目的独立环节：{ page: 2, at: '00:31:00', kind: break, series: xinling-pishuang, precision: approx, evidence: human_watch }
   reviewed: "2026-10-17"                 # 人工确认日期，要加引号；没有它不能入库
 ```
 
@@ -42,6 +43,7 @@
 | `page` | B 站页号；A 站为 videoList 数组序（1 起，跳转 `_N` 用它，不是标题里的 P 号） |
 | `precision` | 环节**起点**的精度：`part` 只知道在这个分 P 开头附近（`at` 必须是 `00:00:00`）；`approx` 误差 ≤1 分钟；`exact` ≤10 秒。录像开头和结尾本身算精确 |
 | `evidence` | `part_title` 录像组分 P 标题、`recording_break` 分 P 时长显示录像在此重新开始、`thumbnails` 模型或脚本读平台缩略图帧、`danmaku` 弹幕、`human_watch` 人工在录像里核对、`other`。前两种只能配 `precision: part`。`human_watch` 只能由人工审阅写入 |
+| `series` | 可选，只能与 `kind: break` 同时出现（game、unknown 不能带）。值是 `data/series.yaml` 的系列 id，且这一场本来就属于该系列（`buildSeries` 的同一判定，见 `isSeriesMember`：条目 `series` / 同名标签 / 心灵砒霜与大周MC 的标题特判）。节目页据此在这一场里只展示这些段；它仍是独立环节，**不计入任何游戏时长**，统计口径不变。带 `series` 的 break 夹在同款游戏之间时也不并入该游戏，而是保持独立。旧数据没有这个字段 |
 | `coverage` | 基准录像是否覆盖整场。分 P 不是从 P1 起连续的，不能标 `complete`；`complete` 时条目 `games` 里的每款游戏都必须有环节 |
 
 交叉校验还要求：`entry` 是同场合并组的代表条目，同一场只能有一条；`basis` 是这一场某条来源的 url，平台目前限 B 站、A 站；环节里的游戏都在条目的 `games` 里。时间轴只能经人工确认后写入，生成工具不改 `segments`，也不改条目文件。旧的 `segments` 保留原样，只用于进度条。

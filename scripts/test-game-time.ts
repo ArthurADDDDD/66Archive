@@ -266,6 +266,10 @@ rejects({ parts: [{ page: 2, id: 2, duration_sec: 100 }, { page: 3, id: 3, durat
 rejects({ reviewed: undefined }, '没有人工确认日期不能入库')
 rejects({ spans: [span({ page: 1, at: '00:00:00', game: 'a', precision: 'approx', evidence: 'part_title' })] }, '分 P 标题不能支撑分钟级精度')
 rejects({ spans: [span({ page: 1, at: '00:00:00', game: 'a', precision: 'exact', evidence: 'recording_break' })] }, '录像断点不能支撑秒级精度')
+// series 只能跟 break 走：游戏环节、unknown 不能带节目；旧数据没有这个字段照常通过
+rejects({ spans: [span({ page: 1, at: '00:00:00', game: 'a', series: 'show' })] }, 'game 环节不能带 series')
+rejects({ spans: [span({ page: 1, at: '00:00:00', kind: 'unknown', series: 'show' })] }, 'unknown 环节不能带 series')
+assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial', parts: parts(100, 100), reviewed: '2026-10-17', spans: [span({ page: 1, at: '00:00:00', kind: 'break', series: 'show' })] }).success, true, 'break 可以带 series')
 assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial', parts: [{ page: 6, id: 6, duration_sec: 100 }], reviewed: '2026-10-17', spans: [span({ page: 6, at: '00:00:00', game: 'a' })] }).success, true, '续号来源标 partial 合法')
 
 // ── 交叉校验：与条目对不上的时间轴全部报错 ──────────────────────────────
@@ -289,6 +293,24 @@ assert.equal(GameTimeline.safeParse({ entry: 'e1', basis: BV, coverage: 'partial
   assert.deepEqual(checkGameTimelines(entries, [{ ...good, coverage: 'partial', spans: [span({ page: 1, at: '00:00:00', game: 'paper-mario' })] }]).errors, [], 'partial 时允许有游戏不在录像里')
   assert.match(checkGameTimelines(entries, [good, { ...good }]).errors.join('\n'), /同一场只能有一条时间轴/)
   assert.match(errorsOf({ ...good, reviewed: '2999-01-01' }), /在未来/)
+  // 带 series 的 break：节目必须登记，且这一场本来就属于它（与节目页同一判定）
+  {
+    const shows = new Map([['xinling-pishuang', { name: '心灵砒霜' }], ['night-talk', { name: '聊天' }], ['dazhou-mc', { name: '大周MC' }]])
+    const tagged = (id: string, extra: Record<string, unknown>) => entry(id, { games: ['paper-mario'], sources: [{ url: BV, kind: 'replay' }], ...extra })
+    const withBreak = (seriesId: string, entryId = 'e1') => timeline({
+      entry: entryId, coverage: 'partial',
+      spans: [span({ page: 1, at: '00:00:00', game: 'paper-mario' }), span({ page: 3, at: '00:00:00', kind: 'break', series: seriesId })],
+    })
+    const errorsFor = (e: Entry, seriesId: string) => checkGameTimelines([e], [withBreak(seriesId, e.id)], shows).errors.join('\n')
+    assert.deepEqual(checkGameTimelines([tagged('e1', { title: '砒霜兼户外' })], [withBreak('xinling-pishuang')], shows).errors, [], '标题含砒霜的特判与节目页一致')
+    assert.deepEqual(checkGameTimelines([tagged('e1', { tags: ['聊天'] })], [withBreak('night-talk')], shows).errors, [], '同名标签算成员')
+    assert.deepEqual(checkGameTimelines([tagged('e1', { series: 'night-talk' })], [withBreak('night-talk')], shows).errors, [], '条目 series 字段算成员')
+    assert.match(errorsFor(tagged('e1', {}), 'night-talk'), /本来不属于该节目/)
+    assert.match(errorsFor(tagged('e1', { title: '大周建国史' }), 'xinling-pishuang'), /本来不属于该节目/)
+    assert.match(errorsFor(tagged('e1', {}), 'no-such-show'), /未登记的节目/)
+    assert.match(checkGameTimelines([tagged('e1', { title: '砒霜' })], [withBreak('xinling-pishuang')]).errors.join('\n'), /未登记的节目/, '不给节目表就无法放行 series 段')
+    assert.deepEqual(checkGameTimelines([tagged('e1', {})], [timeline({ coverage: 'partial', spans: [span({ page: 1, at: '00:00:00', game: 'paper-mario' }), span({ page: 3, at: '00:00:00', kind: 'break' })] })]).errors, [], '没有 series 字段的旧数据照常通过')
+  }
   // 系列父 ID 不要求单独有环节
   const series = [entry('m1', { games: ['rusty-lake', 'maplestory', 'maplestory-classic'], sources: [{ url: BV, kind: 'replay' }] })]
   const mt = timeline({ entry: 'm1', spans: [span({ page: 1, at: '00:00:00', game: 'rusty-lake' }), span({ page: 3, at: '00:00:00', game: 'maplestory-classic' })] })

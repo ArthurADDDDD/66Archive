@@ -249,6 +249,12 @@ export const TimelineSpan = z
     game: idStr.optional(),
     kind: z.enum(['break', 'unknown']).optional(),
     /**
+     * 这段独立环节属于哪个节目（series.yaml 的 id），只能与 `kind: break` 同时出现。
+     * 节目页据此只展示这一段；它仍然是 break，不计入任何游戏时长（docs/game-time.md §1）。
+     * 该场条目是否真的属于这个节目由 game-timeline-check.ts 交叉校验。
+     */
+    series: idStr.optional(),
+    /**
      * 这个环节**起点**的精度：
      * part = 只知道在这个分 P 开头附近（at 必须是 00:00:00）；approx = 误差 ≤1 分钟；exact = ≤10 秒。
      */
@@ -268,6 +274,9 @@ export const TimelineSpan = z
   .superRefine((span, ctx) => {
     if (Boolean(span.game) === Boolean(span.kind)) {
       ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['game'], message: '每个环节恰好写 game 或 kind 其中一项' })
+    }
+    if (span.series && span.kind !== 'break') {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['series'], message: 'series 只能与 kind: break 同时出现（游戏环节、unknown 不能带节目）' })
     }
     if (span.precision === 'part' && span.at !== '00:00:00') {
       ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['at'], message: 'precision: part 只能落在分 P 开头（00:00:00）' })
@@ -330,7 +339,8 @@ export const GameTimeline = z
       if (position <= previous) issue(['spans', i, 'at'], '环节必须按时间严格递增')
       previous = position
       const before = t.spans[i - 1]
-      if (before && before.game === span.game && before.kind === span.kind) {
+      // 节目不同的两段 break（如开播聊天 → 心灵砒霜）是两档内容，不算重复
+      if (before && before.game === span.game && before.kind === span.kind && before.series === span.series) {
         issue(['spans', i], '与前一个环节相同，应合并（同一游戏被打断后回来，中间必须隔着别的环节）')
       }
     })

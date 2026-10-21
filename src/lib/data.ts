@@ -3,6 +3,7 @@ import path from 'node:path'
 import yaml from 'js-yaml'
 import { readLocalTimelinePreview } from './local-timeline-preview'
 import { gameChapters } from './game-chapters'
+import { seriesDisplayName } from './series'
 import {
   Account,
   AccountsFile,
@@ -151,6 +152,9 @@ export type TimelineEntry = {
     kind: 'game' | 'break' | 'unknown'
     gameId: string | null
     gameName?: string
+    /** 仅独立环节可带：所属节目（series.yaml id）与展示名，供录播室「跳到」使用。旧载荷没有这两项。 */
+    seriesId?: string
+    seriesName?: string
     page: number
     at: string
     endPage: number
@@ -268,6 +272,7 @@ export function toTimelineEntries(ds: Dataset): TimelineEntry[] {
           kind: chapter.kind,
           gameId: chapter.gameId,
           ...(chapter.gameId ? { gameName: ds.games.get(chapter.gameId)?.name ?? chapter.gameId } : {}),
+          ...(chapter.series ? { seriesId: chapter.series, seriesName: seriesDisplayName(chapter.series, ds.series.get(chapter.series)?.name ?? chapter.series) } : {}),
           page: chapter.page,
           at: chapter.at,
           endPage: chapter.endPage,
