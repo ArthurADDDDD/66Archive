@@ -6130,3 +6130,132 @@
     precision: part
     evidence: part_title
   reviewed: '2026-10-21'
+- entry: 2019-12-25-live-01
+  basis: https://www.bilibili.com/video/BV1mJ411W7my
+  coverage: complete
+  parts:
+  - page: 1
+    id: 138017982
+    duration_sec: 1925
+  - page: 2
+    id: 138010484
+    duration_sec: 6400
+  - page: 3
+    id: 138017229
+    duration_sec: 1690
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    series: night-talk
+    precision: exact
+    evidence: other
+  - page: 2
+    at: 00:00:00
+    game: planet-zoo
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'
+- entry: 2018-04-12-live-01
+  basis: https://www.bilibili.com/video/BV1zW411G7R7
+  coverage: complete
+  parts:
+  - page: 1
+    id: 37391245
+    duration_sec: 4098
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    series: xinling-pishuang
+    precision: exact
+    evidence: other
+  - page: 1
+    at: 00:41:34
+    game: super-bunny-man
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'
+- entry: 2017-09-09-live-01
+  basis: https://www.bilibili.com/video/BV14x41147Jw
+  coverage: complete
+  parts:
+  - page: 1
+    id: 23373774
+    duration_sec: 5190
+  - page: 2
+    id: 23373773
+    duration_sec: 5191
+  - page: 3
+    id: 23373772
+    duration_sec: 2551
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    series: night-talk
+    precision: exact
+    evidence: other
+  - page: 3
+    at: 00:30:19
+    game: pubg
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'
+- entry: 2016-10-03-live-01
+  basis: https://www.bilibili.com/video/BV1Ls411b7dG
+  coverage: complete
+  parts:
+  - page: 1
+    id: 10640298
+    duration_sec: 3930
+  - page: 2
+    id: 10640299
+    duration_sec: 3931
+  - page: 3
+    id: 10640300
+    duration_sec: 3931
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    series: night-talk
+    precision: exact
+    evidence: other
+  - page: 2
+    at: 00:48:26
+    game: true-or-false-game
+    precision: approx
+    evidence: thumbnails
+  - page: 3
+    at: 00:47:45
+    kind: break
+    series: night-talk
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'
+- entry: 2018-11-14-live-02
+  basis: https://www.bilibili.com/video/BV1Wt41127WC
+  coverage: complete
+  parts:
+  - page: 1
+    id: 63126090
+    duration_sec: 1111
+  - page: 2
+    id: 63129854
+    duration_sec: 4530
+  - page: 3
+    id: 63129602
+    duration_sec: 4532
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: other
+  - page: 1
+    at: 00:17:55
+    game: red-dead-redemption-2
+    precision: approx
+    evidence: thumbnails
+  reviewed: '2026-10-21'
