@@ -392,3 +392,42 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-21-live-01
+  type: live
+  date: "2026-10-21"
+  title: "动物园之星2 第四天 大熊猫栖息地建造"
+  platform: douyin
+  duration_min: 181
+  games:
+    - where-winds-meet
+    - planet-zoo-2
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/ebebe96aa0324f8a27108fbd4617f9a0a2f062af.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1DXn66DE5Z"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-21-live-02
+  type: live
+  date: "2026-10-21"
+  title: "良心动物园 鼓捣animal"
+  platform: douyin
+  duration_min: 168
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/dbb6683c8b511740375bc673bc7b1cd04b048047.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV17nnr6YEkM"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
