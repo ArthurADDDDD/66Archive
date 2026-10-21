@@ -35,6 +35,25 @@ assert.ok(middle.clips.every(c => c.url.startsWith(`${basis}/?p=`) && c.game.id 
 assert.ok(middle.clips.every(c => !c.url.includes('BV1bbbbbbbbb')), 'never reuse timing on alternate sources')
 assert.deepEqual(entry, snapshot, 'scoping must never mutate the complete archive record')
 
+// 游戏时间轴常以一个没有来源封面字段的 B站视频为基准；此时不应把原条目已有封面丢掉。
+const sessionCover = 'https://example.com/cover-of-this-session.jpg'
+const sourceCover = 'https://example.com/cover-of-basis.jpg'
+const withEntryCover = { ...entry, cover: sessionCover }
+assert.ok(recordingsForGame(withEntryCover, game, timeline).clips.every(clip => clip.cover === sessionCover),
+  'missing source / part cover falls back to the real session cover')
+const withBasisCover = {
+  ...withEntryCover,
+  sources: withEntryCover.sources.map(source => source.url === basis ? { ...source, cover: sourceCover } : source),
+}
+assert.ok(recordingsForGame(withBasisCover, game, timeline).clips.every(clip => clip.cover === sourceCover),
+  'source cover takes precedence over session cover')
+const withUnreliableSourceCover = {
+  ...withBasisCover,
+  sources: withBasisCover.sources.map(source => source.url === basis ? { ...source, coverUnreliable: true } : source),
+}
+assert.ok(recordingsForGame(withUnreliableSourceCover, game, timeline).clips.every(clip => clip.cover === sessionCover),
+  'a source known to have a wrong cover must not override the session cover')
+
 const switching: GameTimeline = { ...timeline, parts: [timeline.parts[0]], spans: [
   { page: 1, at: '00:00:00', game: game.id, precision: 'exact', evidence: 'human_watch' },
   { page: 1, at: '00:02:00', game: 'other', precision: 'approx', evidence: 'human_watch' },

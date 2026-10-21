@@ -43,6 +43,7 @@ export function EntryGrid({
   onToggle,
   showFullDate = false,
   scoped,
+  detailOverrides,
 }: {
   entries: TimelineEntry[]
   /** 网格一次只展开一条：整行插入的面板很高，同时开两块就没法对照了。 */
@@ -50,6 +51,8 @@ export function EntryGrid({
   onToggle: (id: string) => void
   showFullDate?: boolean
   scoped?: Record<string, GridScoped>
+  /** 其他目录可沿用原有封面卡片，但在展开后展示限定于当前主题的片段。 */
+  detailOverrides?: Record<string, ReactNode>
 }) {
   const gridRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -147,7 +150,7 @@ export function EntryGrid({
                       收起
                     </button>
                   </div>
-                  {expandedScoped ? <div className="p-3 sm:p-4">{expandedScoped.detail}</div> : <EntryDetailBody entry={expandedEntry} />}
+                  {expandedScoped ? <div className="p-3 sm:p-4">{expandedScoped.detail}</div> : detailOverrides?.[expandedEntry.id] ?? <EntryDetailBody entry={expandedEntry} />}
                 </div>
               </div>
             )}

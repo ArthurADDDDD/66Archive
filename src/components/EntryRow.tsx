@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import type { TimelineEntry } from '@/lib/data'
 import { EntryDetailBody } from './EntryDetail'
 import { SeenDot } from './Trail'
@@ -20,12 +21,15 @@ export function EntryRow({
   expanded,
   onToggle,
   showFullDate = false,
+  detail,
 }: {
   entry: TimelineEntry
   expanded: boolean
   onToggle: () => void
   /** 跨年份浏览时保留完整日期；单一时期的列表可保持紧凑的月/日显示。 */
   showFullDate?: boolean
+  /** 保留原来的行布局，只有已定位片段的展开内容按页面主题替换。 */
+  detail?: ReactNode
 }) {
   const isLive = entry.type === 'live'
   const platform = PLATFORM_META[entry.platform as Platform]
@@ -138,7 +142,7 @@ export function EntryRow({
           {/* 点击条目后就地展开；跳转只发生在展开卡片内。 */}
           {expanded && (
             <div id={`entry-preview-${entry.id}`} className="ui-panel-in mt-[clamp(0.5rem,0.8vw,1rem)] overflow-hidden rounded-xl border border-line bg-surface/75 shadow-[0_18px_55px_rgba(0,0,0,0.18)] sm:ml-[clamp(4.5rem,8vw,7rem)] lg:ml-[clamp(6rem,9vw,8rem)]">
-              <EntryDetailBody entry={entry} />
+              {detail ?? <EntryDetailBody entry={entry} />}
             </div>
           )}
       </div>

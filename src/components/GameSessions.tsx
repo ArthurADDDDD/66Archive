@@ -1,11 +1,14 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
+import Link from 'next/link'
 import type { TimelineEntry } from '@/lib/data'
 import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
 import type { GameRecordings } from '@/lib/game-recordings'
-import { GameRecordingGroup } from './GameRecordingGroup'
-import { EntryTimeline } from './EntryTimeline'
+import { RecordingClips, RECORDING_TEXTS } from './GameRecordingGroup'
+import { EntryGrid } from './EntryGrid'
+import { EntryRow } from './EntryRow'
+import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
 import { applyEntryFilter, ClearYearButton, OrderToggle, useEntryFilter } from './EntryFilters'
 import { SiteText } from './SiteText'
@@ -42,6 +45,8 @@ export function GameSessions({
   const visible = useMemo(() => applyEntryFilter(entries, year, order, 'desc'), [entries, year, order])
 
   const { view, setView, compact } = useEntryView()
+  // 封面视图恢复成一场一张卡；展开时才显示该游戏的片段。
+  const [gridExpandedId, setGridExpandedId] = useState<string | null>(null)
   // null = 还没动过：电脑默认全开，手机默认全收（compact 挂载后才知道，所以不能写进初始值）。
   const [touched, setTouched] = useState<ReadonlySet<string> | null>(null)
   const expanded = touched ?? (compact ? NONE : allIds)
@@ -60,8 +65,21 @@ export function GameSessions({
     setTouched(next)
   }
 
+  // 不再把同一场直播拆成四张外观相同的主卡；只覆盖已定位的展开面板。
+  // 没有片段的场次沿用旧版 EntryDetailBody（含真实封面、备选来源和分 P）。
+  const clipDetails = useMemo(() => {
+    const result: Record<string, ReactNode> = {}
+    for (const entry of entries) {
+      const session = recordings[entry.id]
+      if (!session?.clips.length) continue
+      result[entry.id] = <GameClipsPanel entry={entry} game={game} recordings={session} />
+    }
+    return result
+  }, [entries, game, recordings])
+
   const row = (entry: TimelineEntry) => (
-    <GameRecordingGroup entry={entry} recordings={recordings[entry.id]} game={game} grid={view === 'grid'} expanded={expanded.has(entry.id)} onToggle={() => toggle(entry.id)} />
+    <EntryRow entry={entry} expanded={expanded.has(entry.id)} showFullDate
+      onToggle={() => toggle(entry.id)} detail={clipDetails[entry.id]} />
   )
 
   return (
@@ -84,7 +102,7 @@ export function GameSessions({
           <ClearYearButton />
           <OrderToggle />
           <EntryViewToggle view={view} setView={setView} compact={compact} />
-          <button
+          {view === 'list' && <button
             type="button"
             onClick={allExpanded ? collapseAll : expandAll}
             aria-expanded={allExpanded}
@@ -95,13 +113,21 @@ export function GameSessions({
             }`}
           >
             {allExpanded ? '全部折叠' : '全部展开'}
-          </button>
+          </button>}
         </div>
       </div>
 
-      {visible.length > 10 ? (
+      {view === 'grid' ? (
         <div className="mt-6 w-full">
-          {/* key 让筛选/换序后时间轴从头量一遍，不留上一份的游标位置 */}
+          {visible.length > 10 && (
+            <EntryMonthRail key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" />
+          )}
+          <EntryGrid entries={visible} expandedId={gridExpandedId}
+            onToggle={(id) => setGridExpandedId(gridExpandedId === id ? null : id)}
+            showFullDate detailOverrides={clipDetails} />
+        </div>
+      ) : visible.length > 10 ? (
+        <div className="mt-6 w-full">
           <EntryTimeline key={`${year ?? 'all'}-${order}`} entries={visible} color={color} unit="场" renderEntry={row} />
         </div>
       ) : (
@@ -111,6 +137,32 @@ export function GameSessions({
           ))}
         </div>
       )}
+    </div>
+  )
+}
+
+/** 一场一张主封面卡；这里仅提供这款游戏的定位入口，不冒充独立新录像。 */
+function GameClipsPanel({ entry, game, recordings }: {
+  entry: TimelineEntry
+  game: { id: string; name: string }
+  recordings: GameRecordings
+}) {
+  return (
+    <div className="p-4 sm:p-5">
+      <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <p className="text-control font-semibold text-ink">{game.name} · 已定位 {recordings.clips.length} 段</p>
+          <p className="mt-1 text-meta text-muted">
+            下面仅列出这款游戏对应的录像片段。整场上下文、其他内容及备选录像请查看完整档案。
+          </p>
+        </div>
+        <Link prefetch={false} href={`/e/${entry.id}/`}
+          className="ui-press shrink-0 rounded-full border border-line px-3 py-1.5 text-meta text-live hover:border-live/60">
+          <SiteText id="game-rec-archive" />
+        </Link>
+      </div>
+      {/* 片段以紧凑列表展示，不重复堆叠四张同名大封面。 */}
+      <RecordingClips entry={entry} clips={recordings.clips} grid={false} texts={RECORDING_TEXTS.game} />
     </div>
   )
 }

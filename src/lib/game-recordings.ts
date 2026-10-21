@@ -66,8 +66,11 @@ function clipsFromChapters(
         endApprox: i === last && Boolean(endBoundary && endBoundary.precision !== 'exact'),
         url: jump.url, platform: jump.platform,
         manualSeek: jump.platform === 'acfun' && startSec > 0,
+        // 优先分 P 自身截图；缺失时可用同场原始封面作视觉锚点。
+        // 封面只用于识别这一场，不代表该截图一定取自具体游戏的时间段。
         cover: source.partDetails?.find(p => p.page === part.page)?.cover
-          ?? (source.coverUnreliable ? null : source.cover ?? null),
+          ?? (source.coverUnreliable ? null : source.cover ?? null)
+          ?? entry.cover ?? null,
         unavailable: source.status === 'dead',
       })
     }
