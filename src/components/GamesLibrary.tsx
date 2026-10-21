@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { GENRES, genreLabel } from '@/lib/genres'
 import { LIBRARY_COLUMNS, libraryTimeView, type LibraryColumns, type LibraryGame } from '@/lib/games'
 import { footageApproxLabel } from '@/lib/game-time-view'
+import { UNCLASSIFIED_GENRE, filterGamesByGenres } from '@/lib/game-list-filter'
 import { actColorForDate } from '@/lib/narrative'
 import { ResponsiveCover } from './ResponsiveCover'
 import { trackSiteEvent } from '@/lib/site-analytics'
@@ -59,9 +60,6 @@ const PAGE_SIZE = 60
 const TILE_WIDTHS = [240, 480] as const
 const TILE_SIZES = '(min-width: 1280px) 17vw, (min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw'
 
-/** 「未分类」不是词表里的类型，只是筛选里给 genres 为空的游戏留的一个入口。 */
-const UNCLASSIFIED = 'unclassified'
-
 export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
   const [q, setQ] = useState('')
   const [selectedGenres, setSelectedGenres] = useState<string[]>([])
@@ -98,13 +96,8 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase()
-    let list = games
-    if (selectedGenres.includes(UNCLASSIFIED)) {
-      list = list.filter((g) => g.genres.length === 0)
-    } else if (selectedGenres.length > 0) {
-      // 同时包含所选的全部类型：选得越多范围越窄，「Roguelike + 动作」才是真的 Roguelike 动作游戏。
-      list = list.filter((g) => selectedGenres.every((id) => g.genres.includes(id)))
-    }
+    // 多选取并集：属于任一所选类型即显示，「视觉小说 + 橙光」= 两类合起来。
+    let list = filterGamesByGenres(games, selectedGenres)
     if (needle) {
       list = list.filter(
         (g) => g.name.toLowerCase().includes(needle) || g.aliases.some((a) => a.toLowerCase().includes(needle)),
@@ -156,8 +149,8 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
 
   const toggleGenre = (id: string) => {
     setSelectedGenres((current) => {
-      if (id === UNCLASSIFIED) return current.includes(UNCLASSIFIED) ? [] : [UNCLASSIFIED]
-      const rest = current.filter((item) => item !== UNCLASSIFIED)
+      if (id === UNCLASSIFIED_GENRE) return current.includes(UNCLASSIFIED_GENRE) ? [] : [UNCLASSIFIED_GENRE]
+      const rest = current.filter((item) => item !== UNCLASSIFIED_GENRE)
       return rest.includes(id) ? rest.filter((item) => item !== id) : [...rest, id]
     })
     setPage(1)
@@ -223,8 +216,8 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
             <GenreChip
               label="未分类"
               count={genreOptions.unclassified}
-              active={selectedGenres.includes(UNCLASSIFIED)}
-              onClick={() => toggleGenre(UNCLASSIFIED)}
+              active={selectedGenres.includes(UNCLASSIFIED_GENRE)}
+              onClick={() => toggleGenre(UNCLASSIFIED_GENRE)}
             />
           )}
           {selectedGenres.length > 0 && (
@@ -254,7 +247,7 @@ export function GamesLibrary({ columns }: { columns: LibraryColumns }) {
         q.trim() ? (
           <p className="mt-12 text-body text-muted"><SiteText id="games-search-empty" vars={{ q }} /></p>
         ) : (
-          <p className="mt-12 text-body text-muted">没有同时符合所选类型的游戏，试试取消一两个类型。</p>
+          <p className="mt-12 text-body text-muted">没有属于这些类型的游戏。</p>
         )
       ) : (
         <ul

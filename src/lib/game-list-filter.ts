@@ -14,3 +14,19 @@ export function filterGameList<T extends { id: string; name: string }>(games: T[
   if (!needle) return games
   return games.filter((game) => normalizeGameKeyword(game.name).includes(needle) || normalizeGameKeyword(game.id).includes(needle))
 }
+
+/** 游戏厅「未分类」入口：genres 为空的游戏。它不是词表里的类型。 */
+export const UNCLASSIFIED_GENRE = 'unclassified'
+
+/**
+ * 游戏厅类型筛选：多选取**并集**，游戏只要属于任一所选类型就显示（「视觉小说 + 橙光」= 两类合起来）。
+ *
+ * 结果保持输入顺序、每款只出现一次；排序由调用方照常做。空选择原样返回整份列表。
+ * 「未分类」与其他类型互斥（界面上选它会清掉其他类型），选中时只看 genres 为空的游戏。
+ */
+export function filterGamesByGenres<T extends { genres: string[] }>(games: T[], selected: string[]): T[] {
+  if (selected.length === 0) return games
+  if (selected.includes(UNCLASSIFIED_GENRE)) return games.filter((game) => game.genres.length === 0)
+  const wanted = new Set(selected)
+  return games.filter((game) => game.genres.some((id) => wanted.has(id)))
+}
