@@ -125,3 +125,14 @@ export const REVIEWED_GAPS: ReviewedGap[] = [
     reason: 'A站 ac42909912（P1，11285s）约 1790s–3870s 为魔法工艺，之后是鹅鹅鸭；它是一条独立视频，A站只能跳到分P开头。',
   },
 ]
+
+/** Publicly documented cross-session lead; display as context, never as a source. */
+export const RELATED_FOOTAGE_LEADS = [
+  {
+    entry: '2015-07-10-live-01',
+    game: 'minecraft',
+    url: 'https://v.youku.com/v_show/id_XMTI4NDc4OTIyOA==.html',
+    label: '优酷《【武则天MC】女流斗鱼直播录像精剪01》',
+    detail: '官方精剪包含找狗内容，可能来自本场；直播日期未定，不能作为本场整场录像。',
+  },
+] as const

@@ -1,5 +1,6 @@
 'use client'
 
+import { getGameFootageCopy } from '@/lib/game-footage-copy'
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { ResponsiveCover } from './ResponsiveCover'
 import type { TimelineEntry } from '@/lib/data'
@@ -279,7 +280,7 @@ function EntryCard({
 
         {/* 时长是这张卡上唯一的度量衡；未知时不画一个假的短条，直接写「时长未知」。 */}
         <span className="absolute bottom-1.5 right-1.5 rounded bg-black/70 px-1.5 py-0.5 font-mono text-[11px] font-medium text-white tnum">
-          {entry.gameFootageNotice ? '录像缺失' : entry.duration_min ? formatClock(entry.duration_min) : '时长未知'}
+          {entry.gameFootageNotice ? getGameFootageCopy(entry).label : entry.duration_min ? formatClock(entry.duration_min) : '时长未知'}
         </span>
 
         <span className="absolute left-1.5 top-1.5 flex items-center gap-1">

@@ -6,6 +6,7 @@ import { EntryArchiveCover } from './EntryArchiveCover'
 import { EntryClue } from './EntryClue'
 import { useGameGenres } from './GameGenresContext'
 import { GenreChips } from './GenreChips'
+import { getGameFootageCopy } from '@/lib/game-footage-copy'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { buildJump } from '@/lib/game-time'
@@ -74,15 +75,21 @@ export function useEntrySource(entry: TimelineEntry) {
  */
 export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
   if (entry.gameFootageNotice) {
-    const detail = entry.gameFootageNotice === 'partial'
-      ? '仅找到切片，完整录像缺失。'
-      : entry.gameFootageNotice === 'unverified'
-        ? '对应游戏录像缺失，暂未收录可确认的对应片段。'
-        : '对应游戏录像缺失，暂未找到可确认的录像。'
+    const copy = getGameFootageCopy(entry)
     return (
-      <section className="px-4 py-6 sm:px-6" aria-label="游戏录像缺失" data-game-footage={entry.gameFootageNotice}>
-        <p className="text-control font-medium text-ink">{entry.games.map(game => game.name).join(' · ')} · 录像缺失</p>
-        <p className="mt-2 text-meta leading-relaxed text-muted">{detail}</p>
+      <section className="px-4 py-6 sm:px-6" aria-label="游戏录像状态" data-game-footage={entry.gameFootageNotice}>
+        <p className="text-control font-medium text-ink">{entry.games.map(game => game.name).join(' · ')} · {copy.title}</p>
+        <p className="mt-2 text-meta leading-relaxed text-muted">{copy.detail}</p>
+        <a href={`/e/${entry.id}/`} className="mt-3 inline-block text-meta text-live underline underline-offset-2">查看场次档案</a>
+        {copy.relatedLead && (
+          <aside className="mt-4 rounded-md border border-line/70 bg-raised px-3 py-2.5">
+            <p className="text-meta font-medium text-ink">可能相关的精剪（直播日期未定）</p>
+            <a href={copy.relatedLead.url} target="_blank" rel="noreferrer" className="mt-1 inline-block text-meta text-live underline underline-offset-2">
+              {copy.relatedLead.label}
+            </a>
+            <p className="mt-1 text-meta leading-relaxed text-muted">{copy.relatedLead.detail}</p>
+          </aside>
+        )}
       </section>
     )
   }

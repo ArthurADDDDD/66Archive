@@ -23,10 +23,16 @@ export function gameFootageEntry(entry: TimelineEntry, game: string): TimelineEn
   })
   const gap = REVIEWED_GAPS.find(gap => gap.entry === entry.id && gap.games.some(id => matches(id, game)))
   if (gap && gap.status !== 'playable_complement') {
-    return unavailable(gap.status === 'no_known_replay' ? 'missing' : 'unverified')
+    const unchecked = entry.sources.some(source => source.status === 'unchecked')
+    return unavailable(gap.status === 'no_known_replay' && !unchecked ? 'missing' : 'unverified')
   }
   const alive = entry.sources.filter(source => source.status === 'alive')
-  if (!alive.length) return unavailable('missing')
+  if (!alive.length) {
+    return unavailable(entry.sources.some(source => source.status === 'unchecked') ? 'unverified' : 'missing')
+  }
+  if (gap?.status === 'playable_complement' && !entry.chapters?.some(chapter => chapter.gameId && matches(chapter.gameId, game))) {
+    return unavailable('unverified')
+  }
   if (alive.every(source => source.kind === 'clip')) return unavailable('partial')
   if (entry.chapters) {
     const hasGame = entry.chapters.some(chapter => chapter.gameId && matches(chapter.gameId, game))
