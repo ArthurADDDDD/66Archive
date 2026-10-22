@@ -19,6 +19,7 @@ import { buildGameRails } from '@/lib/relations'
 import { coverShareImage } from '@/lib/share-image'
 import { recordingsForGame } from '@/lib/game-recordings'
 import { gameFootageEntry } from '@/lib/game-footage'
+import { sharedSourceIds } from '@/lib/source-scope'
 
 /**
  * 游戏详情（Slice B 核心）。
@@ -73,11 +74,15 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
   const timeline = toTimelineEntries(ds)
   const originalProfile = getGameProfile(ds, timeline, id)
   if (!originalProfile) notFound()
-  const entries = originalProfile.entries.map(entry => gameFootageEntry(entry, id))
+  const shared = sharedSourceIds(timeline)
+  const entries = originalProfile.entries.map(entry => gameFootageEntry(entry, id, shared))
+  const coverEntry = originalProfile.entries.find(entry => entry.cover)
+  const coverWasFiltered = !originalProfile.heroHref && coverEntry
+    && entries.find(entry => entry.id === coverEntry.id)?.cover !== coverEntry.cover
   const profile = {
     ...originalProfile,
     entries,
-    cover: entries.some(entry => entry.sources.length > 0) ? originalProfile.cover : null,
+    cover: !coverWasFiltered && entries.some(entry => entry.sources.length > 0) ? originalProfile.cover : null,
   }
 
   const rails = buildGameRails(profile, ds)
