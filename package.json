@@ -33,7 +33,8 @@
     "test:game-footage": "node --import tsx scripts/test-game-footage.ts",
     "test:game-recordings": "node --import tsx scripts/test-game-recordings.ts",
     "dev:timelines": "node scripts/icons/generate-site-icons.mjs && NODE_ENV=development ARCHIVE_TIMELINE_PREVIEW=.local/game-timelines-preview.json CONTENT_BAKE_ORIGIN=off NODE_OPTIONS=--max-old-space-size=768 next dev --hostname 127.0.0.1 --port 3012",
-    "test:site-icons": "node scripts/test-site-icons.mjs"
+    "test:site-icons": "node scripts/test-site-icons.mjs",
+    "test:source-links": "tsx scripts/test-source-links.tsx"
   },
   "dependencies": {
     "next": "^15.5.24",

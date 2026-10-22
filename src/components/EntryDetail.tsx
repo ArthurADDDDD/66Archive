@@ -7,6 +7,7 @@ import { EntryClue } from './EntryClue'
 import { useGameGenres } from './GameGenresContext'
 import { GenreChips } from './GenreChips'
 import { getGameFootageCopy } from '@/lib/game-footage-copy'
+import { sourceStartHref } from '@/lib/source-links'
 import type { TimelineEntry, TimelineSource } from '@/lib/data'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { buildJump } from '@/lib/game-time'
@@ -107,13 +108,13 @@ function AvailableEntryDetailBody({ entry }: { entry: TimelineEntry }) {
 
   return (
     <div className="grid items-start sm:grid-cols-[minmax(220px,36%)_1fr]">
-      <EntryCover entry={entry} cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource?.url} />
+      <EntryCover entry={entry} cover={displayCover ?? undefined} title={selectedSource?.entryTitle ?? entry.title} destination={selectedSource ? sourceStartHref(selectedSource) : undefined} />
 
       <div className="flex min-w-0 flex-col p-4 sm:p-[clamp(1.25rem,1.65vw,2.75rem)]">
         <div className={sameTitle ? 'hidden sm:block' : ''}>
           {selectedSource ? (
             <a
-              href={selectedSource.url}
+              href={sourceStartHref(selectedSource)}
               target="_blank"
               rel="noopener noreferrer"
               data-analytics-event="source.open"

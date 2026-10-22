@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { buildJump } from '@/lib/game-time'
+import { sourceStartHref } from '@/lib/source-links'
 import { getBilibiliVideoMeta } from '@/lib/bilibili'
 import { detectPlatform, PLATFORM_META, SOURCE_KIND_LABEL, proxyImage } from '@/lib/platforms'
 import { analyticsSourceTarget } from '@/lib/site-analytics'
@@ -306,7 +307,7 @@ export function EntryWatch({
           ) : (
             <div className="mt-4">
               <a
-                href={source.url}
+                href={sourceStartHref(source)}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-analytics-event="source.open"
@@ -469,7 +470,7 @@ function EntryCover({
 
   return (
     <a
-      href={source.url}
+      href={sourceStartHref(source)}
       target="_blank"
       rel="noopener noreferrer"
       data-analytics-event="source.open"

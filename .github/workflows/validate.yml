@@ -129,6 +129,9 @@ jobs:
           CONTENT_BAKE_ORIGIN: 'off'
         run: npm run build
 
+      - name: Verify collection source landing parts
+        run: npm run test:source-links
+
       - name: Verify archive audit candidate classification
         run: npm run test:audit-candidates
 
