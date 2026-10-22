@@ -7,6 +7,7 @@ import { decodeArchiveEntry, type EncodedEntry } from '@/lib/archive-payload'
 import type { GameRecordings } from '@/lib/game-recordings'
 import { RecordingClips, RECORDING_TEXTS } from './GameRecordingGroup'
 import { EntryGrid } from './EntryGrid'
+import { EntryDetailBody } from './EntryDetail'
 import { EntryRow } from './EntryRow'
 import { EntryMonthRail, EntryTimeline } from './EntryTimeline'
 import { EntryViewToggle, useEntryView } from './EntryViewMode'
@@ -66,10 +67,14 @@ export function GameSessions({
   }
 
   // 不再把同一场直播拆成四张外观相同的主卡；只覆盖已定位的展开面板。
-  // 没有片段的场次沿用旧版 EntryDetailBody（含真实封面、备选来源和分 P）。
+  // 对应录像缺失时只显示缺失状态，不再回退整场或其他游戏的来源。
   const clipDetails = useMemo(() => {
     const result: Record<string, ReactNode> = {}
     for (const entry of entries) {
+      if (entry.gameFootageNotice) {
+        result[entry.id] = <EntryDetailBody entry={entry} />
+        continue
+      }
       const session = recordings[entry.id]
       if (!session?.clips.length) continue
       result[entry.id] = <GameClipsPanel entry={entry} game={game} recordings={session} />

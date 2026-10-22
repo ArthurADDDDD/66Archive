@@ -18,6 +18,7 @@ import { actColorForDate, allGameIds, getGameProfile, type GameProfile } from '@
 import { buildGameRails } from '@/lib/relations'
 import { coverShareImage } from '@/lib/share-image'
 import { recordingsForGame } from '@/lib/game-recordings'
+import { gameFootageEntry } from '@/lib/game-footage'
 
 /**
  * 游戏详情（Slice B 核心）。
@@ -70,8 +71,14 @@ export default async function GamePage({ params }: { params: Promise<{ id: strin
 
   const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
-  const profile = getGameProfile(ds, timeline, id)
-  if (!profile) notFound()
+  const originalProfile = getGameProfile(ds, timeline, id)
+  if (!originalProfile) notFound()
+  const entries = originalProfile.entries.map(entry => gameFootageEntry(entry, id))
+  const profile = {
+    ...originalProfile,
+    entries,
+    cover: entries.some(entry => entry.sources.length > 0) ? originalProfile.cover : null,
+  }
 
   const rails = buildGameRails(profile, ds)
   const yearCounts = new Map<string, { count: number; anchorDate: string }>()

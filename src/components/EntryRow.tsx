@@ -113,7 +113,7 @@ export function EntryRow({
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <span style={{ color: platform?.color }}>{platform?.name ?? entry.platform}</span>
               <span className="text-line">·</span>
-              <span>{formatDuration(entry.duration_min)}</span>
+              <span>{entry.gameFootageNotice ? '录像缺失' : formatDuration(entry.duration_min)}</span>
               {/* 翻过 / 看过的淡标记。纯本地，见 lib/trail.ts。 */}
               <SeenDot id={entry.id} />
             </div>

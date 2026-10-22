@@ -138,6 +138,8 @@ export type TimelineEntry = {
   noPublicReplay?: boolean
   /** 有录像但不全：缺的那一段（见 schema 的 `missing_footage`）。 */
   missingFootage?: string
+  /** 游戏厅专用：对应游戏录像缺失，不以同场其他内容替代。 */
+  gameFootageNotice?: 'missing' | 'partial' | 'unverified'
   sourceCount: number
   /** 明确标记为 alive 的来源数；unchecked 不能冒充已核验可用。 */
   aliveCount: number

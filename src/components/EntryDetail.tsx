@@ -73,6 +73,23 @@ export function useEntrySource(entry: TimelineEntry) {
  * 这里只负责内容本身。
  */
 export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
+  if (entry.gameFootageNotice) {
+    const detail = entry.gameFootageNotice === 'partial'
+      ? '仅找到切片，完整录像缺失。'
+      : entry.gameFootageNotice === 'unverified'
+        ? '对应游戏录像缺失，暂未收录可确认的对应片段。'
+        : '对应游戏录像缺失，暂未找到可确认的录像。'
+    return (
+      <section className="px-4 py-6 sm:px-6" aria-label="游戏录像缺失" data-game-footage={entry.gameFootageNotice}>
+        <p className="text-control font-medium text-ink">{entry.games.map(game => game.name).join(' · ')} · 录像缺失</p>
+        <p className="mt-2 text-meta leading-relaxed text-muted">{detail}</p>
+      </section>
+    )
+  }
+  return <AvailableEntryDetailBody entry={entry} />
+}
+
+function AvailableEntryDetailBody({ entry }: { entry: TimelineEntry }) {
   const platform = PLATFORM_META[entry.platform as Platform]
   const { sourceIndex, setSourceIndex, selectedSource, displayCover } = useEntrySource(entry)
   // 来源标题和记录标题一样时，手机上不再重复一遍（上面那一行已经写着）。
@@ -150,7 +167,7 @@ export function EntryDetailBody({ entry }: { entry: TimelineEntry }) {
                   >
                     <span className="min-w-0">
                       <span className="font-medium" style={{ color: sourceMeta?.color }}>{index === 0 ? '主链接' : `备选 ${index}`}</span>
-                      <span className="ml-2 text-faint">{sourceMeta?.name ?? SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
+                      <span className="ml-2 text-faint">{sourceMeta?.name ?? '来源'} · {SOURCE_KIND_LABEL[source.kind] ?? source.kind}</span>
                       {source.accountName && <span className="ml-2 text-faint">{source.accountName}</span>}
                       {(source.parts ?? source.partDetails?.length) && <span className="ml-2 rounded-full border border-line px-1.5 py-0.5 font-mono text-meta text-live">{source.parts ?? source.partDetails?.length}P</span>}
                       {sourceCaption(source, entry.title) && (
