@@ -431,3 +431,24 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-22-live-01
+  type: live
+  date: "2026-10-22"
+  title: "动物园之星2 第五天 看影之刃零最终预告"
+  platform: douyin
+  duration_min: 138
+  games:
+    - planet-zoo-2
+    - planet-zoo
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/0ca21590535b7979bd3896d27157c9468f23be8f.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1EcnH6yEaX"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
