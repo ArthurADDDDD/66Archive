@@ -1,0 +1,120 @@
+{
+  "entry_id": "2016-05-09-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.acfun.cn/v/ac2731879",
+    "title": "5-9黑暗之魂3第九天-完结-高清",
+    "uploader": {
+      "id": 4397992,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 3530393,
+        "metadata_duration_seconds": 3481.067
+      },
+      {
+        "page": 2,
+        "id": 3530389,
+        "metadata_duration_seconds": 1290.667
+      }
+    ]
+  },
+  "comparison_sources": [
+    {
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1xs411B7zV/",
+      "page": 1,
+      "id": 7498379,
+      "metadata_duration_seconds": 6102
+    },
+    {
+      "source_index": null,
+      "url": "https://www.acfun.cn/v/ac2729717",
+      "page": 1,
+      "id": 3525876,
+      "metadata_duration_seconds": 6100.267,
+      "existing_external_candidate": true
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac2729717",
+      "page": 1,
+      "actual_seconds": 5901.458711,
+      "duration_seconds": 6100.386755,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰衣女流摄像头，角色在石板区域与铠甲骑士交战，无画内弹幕"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2731879",
+      "page": 1,
+      "actual_seconds": 3301.462858,
+      "duration_seconds": 3481.0707,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "双王子门前铁栅/石墙，魂0，13瓶，灰衣女流摄像头，画内大弹幕"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2729717",
+      "page": 1,
+      "actual_seconds": 6061.465485,
+      "duration_seconds": 6100.386755,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场石阶/蜡烛区域，魂85000，灰衣摄像头，无内嵌弹幕"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2731879",
+      "page": 1,
+      "actual_seconds": 3441.461755,
+      "duration_seconds": 3481.0707,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "双王子场地王座前Boss登场局部，魂0与画内弹幕"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2731879",
+      "page": 1,
+      "actual_seconds": 3477.659381,
+      "duration_seconds": 3481.181404,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "红色YOU DIED覆盖双王子场地，Boss和战斗血条仍在，魂0，距文件结束约3.5秒"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2729717",
+      "page": 1,
+      "actual_seconds": 6096.659185,
+      "duration_seconds": 6100.284566,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场座椅/蜡烛附近角色移动，魂1108，灰衣女流摄像头，距尾约3.6秒"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xs411B7zV/",
+      "page": 1,
+      "actual_seconds": 6096.008922,
+      "duration_seconds": 6102.044833,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场石阶/蜡烛附近角色，魂1108，灰衣女流摄像头，与长A近尾相近状态但非同帧"
+    }
+  ],
+  "conclusions": [
+    "短A P1三个近尾点依次门栅准备/双王子登场/死亡YOUDIED，最后点距文件结束约3.5秒；长A P1尾部已祭祀场并见1108魂，B长P1近尾同为祭祀场1108魂，端点范围明确不同",
+    "长A5901仍骑士战斗、6061祭祀场85000、6096祭祀场1108；B6096与长A近尾仅相近状态非同帧，不认证整个P1等价",
+    "旧P2三版局部相同不能补全短P1范围；不以2619秒差推实际缺失秒数或猜短稿删剪位置",
+    "未查短P1开头/全程、短P1到P2接缝及独立母场日期；本批不把短A整源失效或替长源认证全场完整"
+  ]
+}

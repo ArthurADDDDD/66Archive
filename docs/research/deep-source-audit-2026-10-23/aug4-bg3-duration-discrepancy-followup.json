@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-24",
+  "human_watch": false,
+  "entry_id": "2023-08-04-live-01",
+  "p3_current_page": {
+    "url": "https://www.acfun.cn/v/ac42013220_1",
+    "id": "31645138",
+    "page_duration_ms": 15907916,
+    "media_duration_sec": 11220.567777
+  },
+  "p3_quality_menu_attempts": [
+    {
+      "selected": "720P",
+      "media_duration_sec": 11220.567777,
+      "decoded_width": 1280,
+      "decoded_height": 720,
+      "ready": 4,
+      "seeking": false
+    },
+    {
+      "selected": "360P",
+      "media_duration_sec": 11220.5,
+      "decoded_width": 1280,
+      "decoded_height": 720,
+      "ready": 4,
+      "seeking": false,
+      "after_brief_muted_play": true
+    }
+  ],
+  "p2_current_page": {
+    "url": "https://www.acfun.cn/v/ac42012985_1",
+    "videoList": [
+      {
+        "id": "31644936",
+        "title": "P2-女流-2023.8.4-Baldur's Gate 3",
+        "durationMillis": 4566715
+      }
+    ],
+    "mediaDuration": 4661.866636,
+    "ready": 4,
+    "seeking": false
+  },
+  "limits": "普通未登录质量菜单的选择标记改变，但decoded尺寸仍1280x720，不能声称已取得不同编码版本；当前页面metadata/media不一致未裁定最终上传缺段。有限验证至此停止同入口/画质循环。"
+}

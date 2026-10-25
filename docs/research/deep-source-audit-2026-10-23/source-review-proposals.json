@@ -1,0 +1,107 @@
+{
+  "format": "source-audit-review-proposals-v1",
+  "baseline": "34b35960",
+  "mode": "review_only",
+  "execution_allowed": false,
+  "requires_human_confirmation": true,
+  "notes": [
+    "这不是已批准的写入计划或archive-edit输入",
+    "不能将机器观察标为human_watch/scanned/reviewed",
+    "账号UID修正见独立逐条CSV",
+    "任何正式写入须重新核对当前main及entry/source身份、经人工确认、单独数据批次验证"
+  ],
+  "items": [
+    {
+      "entry_id": "2017-11-24-live-01",
+      "match_source_url": "https://www.bilibili.com/video/BV12Y411F7WZ",
+      "field": "sources[].kind",
+      "current": "replay",
+      "proposed": "clip",
+      "evidence_summary": "投稿说明称从旧录像找出的短内容，实际播放器7:36，开头观察为摄像头聊天；精确母场归日仍需核对",
+      "page_metadata_duration_seconds": 456,
+      "remove_source": false,
+      "remove_other_sources": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2026-02-07-live-01",
+      "match_source_url": "https://www.bilibili.com/video/BV186AVz5EgM",
+      "field": "sources[].kind",
+      "current": "replay",
+      "proposed": "clip",
+      "evidence_summary": "正式条目备注已称该来源为同日直播切片，API单P264秒；未实播，不能据此改变长版",
+      "page_metadata_duration_seconds": 264,
+      "remove_source": false,
+      "remove_other_sources": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2026-02-07-live-01",
+      "match_source_url": "https://www.bilibili.com/video/BV11QALzCEck",
+      "field": "sources[].kind",
+      "current": "replay",
+      "proposed": "clip",
+      "evidence_summary": "正式条目备注已称该来源为同日直播切片，API单P190秒；未实播，不能据此改变长版",
+      "page_metadata_duration_seconds": 190,
+      "remove_source": false,
+      "remove_other_sources": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2017-08-01-live-01",
+      "match_source_url": "https://v.douyu.com/show/x0zZVvPKRx4WO4E2",
+      "field": "sources[].kind",
+      "current": "replay",
+      "proposed": "clip",
+      "evidence_summary": "页面标题直播时刻且页面时长182.04秒；浏览器未取得播放器，须先确认实际短内容",
+      "page_metadata_duration_seconds": 182.04,
+      "remove_source": false,
+      "remove_other_sources": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2021-11-27-live-01",
+      "field": "games",
+      "current": [
+        "quesheng"
+      ],
+      "proposed": [
+        "majsoul"
+      ],
+      "source_url": "https://www.bilibili.com/video/BV1K34y1R7K1",
+      "preview_cid": 450939573,
+      "evidence_type": "thumbnails",
+      "evidence_summary": "投稿总标题雀魂、分P标题雀圣；独立预览样本显示雀魂标志、角色与麻将对局，未看完完整录像",
+      "change_original_title": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2021-11-29-live-01",
+      "field": "games",
+      "current": [
+        "quesheng"
+      ],
+      "proposed": [
+        "majsoul"
+      ],
+      "source_url": "https://www.bilibili.com/video/BV1CP4y1V7tq",
+      "preview_cid": 452263402,
+      "evidence_type": "thumbnails",
+      "evidence_summary": "投稿总标题雀魂、分P标题雀圣；独立预览样本显示雀魂标志、角色与麻将对局，未看完完整录像",
+      "change_original_title": false,
+      "confirmation_status": "pending_human_review"
+    },
+    {
+      "entry_id": "2026-02-05-live-03",
+      "match_source_url": "https://www.bilibili.com/video/BV1kNNgztEc2",
+      "field": "sources[].kind",
+      "current": "replay",
+      "proposed": "clip",
+      "evidence_summary": "正式条目备注称5.5min同日直播切片，当前API330秒；另有长来源，不能判整场缺失。尚未本轮实播。",
+      "page_metadata_duration_seconds": 330,
+      "remove_source": false,
+      "remove_other_sources": false,
+      "confirmation_status": "pending_human_review"
+    }
+  ]
+}

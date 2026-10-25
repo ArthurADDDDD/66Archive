@@ -1,0 +1,77 @@
+{
+  "entry_id": "2018-12-17-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV16t411e7tq/",
+    "title": "女流-2018.12.17-模拟农场19",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 67501073,
+        "duration_seconds": 1004
+      },
+      {
+        "page": 2,
+        "id": 67485397,
+        "duration_seconds": 3315
+      },
+      {
+        "page": 3,
+        "id": 67486921,
+        "duration_seconds": 3315
+      },
+      {
+        "page": 4,
+        "id": 67486766,
+        "duration_seconds": 3315
+      },
+      {
+        "page": 5,
+        "id": 67487185,
+        "duration_seconds": 3315
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV16t411e7tq/",
+      "page": 1,
+      "actual_seconds": 300.384529,
+      "duration_seconds": 1004,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰黑横条纹女流大摄像头聊天，左侧黑底无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV16t411e7tq/",
+      "page": 1,
+      "actual_seconds": 951.464046,
+      "duration_seconds": 1004,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "欢乐斗地主牌桌、底牌2/A/5、手牌/不出与地主标识，右下同衣摄像头"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV16t411e7tq/?p=2",
+      "page": 2,
+      "actual_seconds": 600.662506,
+      "duration_seconds": 3315,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "田地拖拉机/收割机与操作菜单、小地图、速度表，右下同衣摄像头，支持模拟农场题名内容局部"
+    }
+  ],
+  "conclusions": [
+    "P1两点聊天与欢乐斗地主，P2农机田地实际画面，支持分游戏范围而非整页计农场",
+    "P1近尾951仍是斗地主，不声称精确在该页末切换；P3–5未播放",
+    "母场日期、接缝/完整性未证，无正式写入"
+  ]
+}

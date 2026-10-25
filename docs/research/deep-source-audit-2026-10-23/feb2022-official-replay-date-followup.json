@@ -1,0 +1,131 @@
+{
+  "human_watch": false,
+  "verification_extent": "Root-supplied public Douyu calendar/page metadata and actual stable playback screenshots. This report author did not independently watch. No media downloaded.",
+  "calendar_url": "https://v.douyu.com/authorReplay/8PAbVvrDqAO1",
+  "calendar": [
+    {
+      "date": "2022-02-25",
+      "time": "09:05",
+      "title": "【女流】艾尔登法环，一起来吧",
+      "duration": "11:17:38",
+      "replay_url": "https://v.douyu.com/show/aRbBv32mzVbW6PYV"
+    },
+    {
+      "date": "2022-02-27",
+      "time": "10:17",
+      "title": "【女流】艾尔登法环Day3一起来吧",
+      "duration": "10:28:48",
+      "replay_url": "https://v.douyu.com/show/Aox276Qr268vVz8Z"
+    }
+  ],
+  "feb25": [
+    {
+      "url": "https://v.douyu.com/show/aRbBv32mzVbW6PYV",
+      "part": "P1",
+      "title": "【2022-02-25 09点场】女流66",
+      "published_at": "2022-02-25 12:33:38",
+      "ui_duration": "01:58:32",
+      "listed_pages": [
+        "P1 01:58:32",
+        "P2 01:58:32",
+        "P3 01:58:32",
+        "P4 01:58:32",
+        "P5 16点场 01:58:32",
+        "P6 18点场 01:24:55"
+      ],
+      "sample": {
+        "time_sec": 600.867825,
+        "media_duration_sec": 7112.483333,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "角色选择界面（流浪骑士/剑士/勇者等）。与2/27道具制作菜单不是同一事件；不能据此排除其它时段存在相同内容。"
+      },
+      "limitations": [
+        "只播放P1单点；P2-P6未播放。",
+        "不与2/27矿工点形成同事件匹配。"
+      ]
+    }
+  ],
+  "feb27": [
+    {
+      "url": "https://v.douyu.com/show/Aox276Qr268vVz8Z",
+      "part": "P1",
+      "title": "【2022-02-27 10点场】女流66",
+      "published_at": "2022-02-27 13:33:12",
+      "ui_duration": "01:58:32",
+      "listed_pages": [
+        "P1 01:58:32",
+        "P2 01:58:32",
+        "P3 01:58:37",
+        "P4 01:58:32",
+        "P5 01:58:32",
+        "P6 00:36:00"
+      ],
+      "sample": {
+        "time_sec": 600.142766,
+        "media_duration_sec": 7112.483333,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "“附绳火焰壶”道具制作菜单，等级45，持有卢恩934。",
+        "relation": "未与B站矿工点形成同一事件，不作跨源匹配。"
+      }
+    },
+    {
+      "url": "https://v.douyu.com/show/worZv0aVZ2Z7JBk3",
+      "part": "P2",
+      "title": "2/27 12点场",
+      "published_at": "2022-02-27 15:34:36",
+      "media_duration_sec": 7112.483333,
+      "samples": [
+        {
+          "time_sec": 1300,
+          "readyState": 1,
+          "seeking": true,
+          "accepted": false,
+          "reason": "seeking期间首次定位，不作为稳定画面。"
+        },
+        {
+          "time_sec": 1300.957509,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "归树看门犬boss金雾门房间；角色持杖与大盾，有蓝色法术盾，boss血条近满。",
+          "relation": "与B站P1 8414秒、AcFun index1/2接缝既有同事件/装备范围局部相近，非同一精确帧。"
+        }
+      ]
+    },
+    {
+      "url": "https://v.douyu.com/show/worZv0aVY1Z7JBk3",
+      "part": "P3",
+      "title": "2/27 14点场",
+      "published_at": "2022-02-27 18:00:43",
+      "media_duration_sec": 7117.65,
+      "samples": [
+        {
+          "time_sec": 2605.692909,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "圆桌厅堂书房、坐桌旁头盔NPC、持巨剑角色与蓝金纹外衣。对白被播放器控件遮挡。"
+        },
+        {
+          "time_sec": 2610.875984,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "同一书房局部；不能声称读到遮挡的具体台词。"
+        }
+      ],
+      "relation": "与B站尾16830秒及AcFun第二帖已有圆桌NPC范围局部相近，非逐帧对应。"
+    }
+  ],
+  "limitations": [
+    "2/25 P2-P6未播放；不能用P1角色选择界面推定其它页。",
+    "2/27 B/A只在已记载既有点与新斗鱼样本间建立局部描述对应，未重播B/A旧点。",
+    "不认证整场同一日期、全页等价、精准字幕对应、连续或完整。",
+    "AcFun index3/4没有直接对照的原始斗鱼P2/P3观察，不更新其日期结论。",
+    "根提供样本，本报告非独立审校，human_watch=false。"
+  ]
+}

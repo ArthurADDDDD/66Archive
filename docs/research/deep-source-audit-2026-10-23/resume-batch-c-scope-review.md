@@ -1,0 +1,27 @@
+# Resume batch C: archive and timeline scope review
+
+This is a local-only comparison of [`resume-batch-c-player-followup.md`](resume-batch-c-player-followup.md) and its JSON with the current entries, source metadata, legacy `segments`, and `data/game-timelines.yaml`. No network or browser was used, and no archive data was changed. The player observations below are the reported local samples; they do not establish a whole recording's contents, date, or completeness.
+
+## 2023-08-04 — Baldur's Gate 3
+
+The formal entry [`2023-08-douyu-live.yaml`](../../../data/entries/2023-08-douyu-live.yaml) lists `baldurs-gate-3`, 550 minutes, and four existing sources: Bilibili `BV1iV4y1i7dW` plus AcFun posts `ac42013220`, `ac42013309`, and `ac42012985`. The local metadata inventory describes the linked Bilibili post as P3 (11,221 seconds); the AcFun posts are individually titled P3 (15,908 seconds), P1 (12,534 seconds), and P2 (4,567 seconds). Their titles and upload/page metadata are not independent proof of stream dates or content continuity.
+
+The new candidate [`BV1nk4y1g7go`](https://www.bilibili.com/video/BV1nk4y1g7go) is titled P1 but is not in the formal entry's sources. Its cached page duration is 17,399 seconds. The batch C samples report BG3 footage with another author's watermark and explanatory subtitles at 600 seconds, with the streamer inset, then ordinary BG3 narrative footage without those overlays at 7,200 seconds. This supports mixed activity somewhere in the candidate recording; it does not locate the transition, prove who controls the game at either point, or show whether the candidate overlaps the currently linked P1/P2/P3 sources.
+
+There is no `game-timelines.yaml` record for `2023-08-04-live-01`, and no existing timeline basis refers to this new candidate. The formal entry has no legacy `segments` field. The candidate therefore does not presently affect a stored timeline or segment boundary. Do not promote it to a timeline basis from its P1 title or two samples. A possible follow-up is to establish the provenance and extent of the guide-video activity and compare the candidate's opening/later content with the existing AcFun P1 and Bilibili P3 before deciding whether it is a useful additional source. This batch alone cannot resolve that source-scope question.
+
+## 2023-10-08 — Assassin's Creed Mirage
+
+The formal entry [`2023-10-douyu-live.yaml`](../../../data/entries/2023-10-douyu-live.yaml) lists `assassins-creed-mirage`, 424 minutes, two linked sources, and legacy `segments` at `00:00:00` and `03:31:46`, both labeled with the same game. The linked Bilibili source `BV1gw411r7v9` has cached title P2 and duration 12,707 seconds. The linked AcFun post [`ac42617191`](https://www.acfun.cn/v/ac42617191) has two inner pages according to the local metadata catalog: array page 1 is titled P2 and is 12,706 seconds; array page 2 is titled P1 and is 12,705 seconds. The `parts: 2` field records the page count; it does not encode page-to-session order.
+
+The unlinked candidate [`BV1Cw411w7EW`](https://www.bilibili.com/video/BV1Cw411w7EW) is titled P1 and has cached duration 12,706 seconds. At 1,800 seconds, its reported investigation-menu scene matches the reported scene in AcFun array page 2 (titled P1); AcFun array page 1 (titled P2) shows a different banquet-corridor task scene at the same playback time. This is specific local support for the mapping **Bilibili candidate P1 ↔ AcFun array page 2 / P1**. It also shows why AcFun array position must not be mistaken for the inner P label or presumed stream order. It is a limited point comparison, not proof that the full pages are identical, date-certified, or continuous.
+
+There is no `game-timelines.yaml` record for `2023-10-08-live-01`, and no existing timeline basis uses `ac42617191` or `BV1Cw411w7EW`. The candidate is not currently in the formal source list. The legacy `03:31:46` segment boundary equals 12,706 seconds, the cached duration of the candidate P1 to the second. That is a concrete boundary hypothesis to review: it could be consistent with P1 ending before a later P2 segment, but the same-game labels and a single scene comparison do not prove the boundary's meaning or that the pages meet there without a gap/overlap. No segment change is justified by this batch alone.
+
+Suggested next review: compare the candidate's endpoint and the linked P2 source's opening with the existing 03:31:46 marker, then decide whether the unlinked P1 belongs as an additional source and whether the legacy segment marker has a source-boundary meaning. Keep the observed Bilibili-P1-to-AcFun-array-2-P1 mapping distinct from the AcFun post's array ordering. A precise timeline basis still requires a coherent reviewed recording scope; this batch does not supply one.
+
+## Items for root review
+
+- For August 4, decide whether the mixed opening/later BG3 observations warrant a bounded content/scope follow-up before considering the candidate as a source. It is not a present timeline basis.
+- For October 8, decide whether to validate the candidate-P1 / AcFun-array-2-P1 pairing against the two page boundaries. In particular, assess the exact 12,706-second / `03:31:46` coincidence against the legacy segment marker before proposing any segment or timeline update.
+- No formal `data/**` change is proposed here. Both entries remain represented only by their currently linked sources and stored fields; dates, whole-source coverage, and uninterrupted boundaries remain unconfirmed by these local samples.

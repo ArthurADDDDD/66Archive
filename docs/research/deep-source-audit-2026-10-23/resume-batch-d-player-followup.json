@@ -1,0 +1,796 @@
+{
+  "checked_at": "2026-10-24",
+  "method": "normal_browser_bounded_visual_samples",
+  "human_watch": false,
+  "limitations": "局部画面观察，不代表完整观看、独立日期核实或完整性通过。",
+  "samples": [
+    {
+      "entry_id": "2022-12-16-live-01",
+      "bvid": "BV1dP4y1q7nv",
+      "url": "https://www.bilibili.com/video/BV1dP4y1q7nv",
+      "title": "P2-女流-2022.12.16-黑羊",
+      "metadata_duration_sec": "17949",
+      "queue_index": 17,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1dP4y1q7nv/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17947.74
+      },
+      "visual_observation": "校园教室2D人物剧情/中文对白，叠字黑羊；有剧情游戏画面，具体游戏名未以画面独立认证。"
+    },
+    {
+      "entry_id": "2023-03-15-live-01",
+      "bvid": "BV1eM411H75f",
+      "url": "https://www.bilibili.com/video/BV1eM411H75f",
+      "title": "P1-女流-2023.3.15-生化危机2",
+      "metadata_duration_sec": "12627",
+      "queue_index": 19,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1eM411H75f/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12627
+      },
+      "visual_observation": "粉色8周年直播待机画面与聊天，未见生化危机游玩，不能从单点认无游戏。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1eM411H75f/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 12627,
+          "visual_observation": "3600秒为《生化危机2》雪莉背影在室内铁栏门走廊，支持后段存在游戏，头部待机不能判录像缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-05-12-live-01",
+      "bvid": "BV1Vc411P7zR",
+      "url": "https://www.bilibili.com/video/BV1Vc411P7zR",
+      "title": "P1-女流-2023.5.12-塞尔达传说",
+      "metadata_duration_sec": "16945",
+      "queue_index": 20,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Vc411P7zR/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 16945
+      },
+      "visual_observation": "Switch主菜单选框、塞尔达王国之泪图标，左上实拍手办/拆箱；此点非游戏操作。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1Vc411P7zR/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 16945,
+          "visual_observation": "3600秒为《王国之泪》林克在空岛石桥行走，支持后段游戏，开头主机菜单与实物镜头不能判缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-05-14-live-01",
+      "bvid": "BV1Cc411P7j7",
+      "url": "https://www.bilibili.com/video/BV1Cc411P7j7",
+      "title": "P2-女流-2023.5.14-塞尔达传说",
+      "metadata_duration_sec": "17092",
+      "queue_index": 21,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Cc411P7j7/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17092
+      },
+      "visual_observation": "塞尔达林克在高空圆形石纹平台、黄绿色机关/盾与心数HUD；有实际王国之泪游戏局部。"
+    },
+    {
+      "entry_id": "2023-05-15-live-01",
+      "bvid": "BV1es4y1g7eA",
+      "url": "https://www.bilibili.com/video/BV1es4y1g7eA",
+      "title": "P2-女流-2023.5.15-塞尔达传说",
+      "metadata_duration_sec": "17812",
+      "queue_index": 22,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1es4y1g7eA/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17812
+      },
+      "visual_observation": "林克在神庙机关边缘，旁有石球，心数/小地图HUD；塞尔达游戏局部。"
+    },
+    {
+      "entry_id": "2023-05-16-live-01",
+      "bvid": "BV1XT411t7g3",
+      "url": "https://www.bilibili.com/video/BV1XT411t7g3",
+      "title": "P2-女流-2023.5.16-塞尔达传说",
+      "metadata_duration_sec": "15147",
+      "queue_index": 23,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1XT411t7g3/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 15147
+      },
+      "visual_observation": "林克乘绿色左纳乌装置在水面移动，有电池与心数/时间20:05HUD；王国之泪游玩局部。"
+    },
+    {
+      "entry_id": "2023-05-19-live-01",
+      "bvid": "BV1Fd4y1f7cF",
+      "url": "https://www.bilibili.com/video/BV1Fd4y1f7cF",
+      "title": "P1-女流-2023.5.19-塞尔达传说",
+      "metadata_duration_sec": "14401",
+      "queue_index": 25,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Fd4y1f7cF/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 14395.808
+      },
+      "visual_observation": "林克在夜间石造街道/拱廊，左上实拍手部和桌面；有塞尔达游戏场景，不能单帧证明手部正在操作。"
+    },
+    {
+      "entry_id": "2023-05-21-live-01",
+      "bvid": "BV1Ah4y1o7cu",
+      "url": "https://www.bilibili.com/video/BV1Ah4y1o7cu",
+      "title": "P1-女流-2023.5.21-塞尔达传说",
+      "metadata_duration_sec": "10690",
+      "queue_index": 26,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Ah4y1o7cu/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10690
+      },
+      "visual_observation": "塞尔达食物背包，冰冻鲈鱼/食用菜单、林克与心数/卢比1802；游戏内菜单。"
+    },
+    {
+      "entry_id": "2023-05-21-live-01",
+      "bvid": "BV1BV4y167FM",
+      "url": "https://www.bilibili.com/video/BV1BV4y167FM",
+      "title": "P3-女流-2023.5.21-塞尔达传说",
+      "metadata_duration_sec": "10694",
+      "queue_index": 27,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1BV4y167FM/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10694
+      },
+      "visual_observation": "林克在黑暗石室面对红纹怪物与火光，心数/耐力/小地图HUD；塞尔达战斗局部。"
+    },
+    {
+      "entry_id": "2023-05-26-live-01",
+      "bvid": "BV1yo4y1g79A",
+      "url": "https://www.bilibili.com/video/BV1yo4y1g79A",
+      "title": "P1-女流-2023.5.26-塞尔达传说",
+      "metadata_duration_sec": "13538",
+      "queue_index": 29,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1yo4y1g79A/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13538
+      },
+      "visual_observation": "林克在石造室外道路，左上手部握手柄实拍，心数/小地图HUD；塞尔达游戏局部。"
+    },
+    {
+      "entry_id": "2023-05-27-live-01",
+      "bvid": "BV1JV4y1z7Rh",
+      "url": "https://www.bilibili.com/video/BV1JV4y1z7Rh",
+      "title": "P2-女流-2023.5.27-塞尔达传说",
+      "metadata_duration_sec": "13359",
+      "queue_index": 30,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1JV4y1z7Rh/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13359
+      },
+      "visual_observation": "塞尔达天空地图，圆形岛屿/现位置与地下地面切换标签；游戏内地图。"
+    },
+    {
+      "entry_id": "2023-05-28-live-01",
+      "bvid": "BV18L411q79W",
+      "url": "https://www.bilibili.com/video/BV18L411q79W",
+      "title": "P2 -女流-2023.5.28-塞尔达传说",
+      "metadata_duration_sec": "13507",
+      "queue_index": 31,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV18L411q79W/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13507
+      },
+      "visual_observation": "塞尔达房屋部件购买菜单，室内用楼梯350卢比，右上4345；游戏内建房菜单，不是实物搭建。"
+    },
+    {
+      "entry_id": "2023-05-30-live-01",
+      "bvid": "BV1Rh4y1R7RN",
+      "url": "https://www.bilibili.com/video/BV1Rh4y1R7RN",
+      "title": "P2-女流-2023.5.30-塞尔达传说",
+      "metadata_duration_sec": "10698",
+      "queue_index": 32,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Rh4y1R7RN/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10696.8
+      },
+      "visual_observation": "林克在阴暗地底道路，发现提示/高心数与相机能力HUD；塞尔达局部。"
+    },
+    {
+      "entry_id": "2023-05-30-live-01",
+      "bvid": "BV1bV4y1z7Xy",
+      "url": "https://www.bilibili.com/video/BV1bV4y1z7Xy",
+      "title": "P1-女流-2023.5.30-塞尔达传说",
+      "metadata_duration_sec": "10697",
+      "queue_index": 33,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1bV4y1z7Xy/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10697
+      },
+      "visual_observation": "塞尔达王国之泪完整标题与继续游戏菜单，尚非实际游玩；需后段样本区分活动。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1bV4y1z7Xy/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 10697,
+          "visual_observation": "3600秒为《王国之泪》林克与卓拉人物对话，支持后段存在游戏，头部标题菜单不能判缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-05-31-live-01",
+      "bvid": "BV1Fm4y1t7W4",
+      "url": "https://www.bilibili.com/video/BV1Fm4y1t7W4",
+      "title": "P3-女流-2023.5.31-塞尔达传说",
+      "metadata_duration_sec": "10932",
+      "queue_index": 34,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Fm4y1t7W4/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10932
+      },
+      "visual_observation": "林克在地下石室取得海利亚盾提示，有相机能力/心数HUD；塞尔达游戏局部。"
+    },
+    {
+      "entry_id": "2023-05-31-live-01",
+      "bvid": "BV1MW4y1R71g",
+      "url": "https://www.bilibili.com/video/BV1MW4y1R71g",
+      "title": "P2-女流-2023.5.31-塞尔达传说",
+      "metadata_duration_sec": "10930",
+      "queue_index": 35,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1MW4y1R71g/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10930
+      },
+      "visual_observation": "林克骑马绕木箱/门架计时挑战，时间00:29.63与心数HUD；塞尔达游玩局部。"
+    },
+    {
+      "entry_id": "2023-06-01-live-01",
+      "bvid": "BV1824y1P7za",
+      "url": "https://www.bilibili.com/video/BV1824y1P7za",
+      "title": "P3-女流-2023.6.1-塞尔达传说",
+      "metadata_duration_sec": "12536",
+      "queue_index": 36,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1824y1P7za/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12536
+      },
+      "visual_observation": "林克在高空石台摆放圆形左纳乌装置，电池/心数HUD；塞尔达游玩局部。"
+    },
+    {
+      "entry_id": "2023-06-01-live-01",
+      "bvid": "BV1Sk4y1W7Wy",
+      "url": "https://www.bilibili.com/video/BV1Sk4y1W7Wy",
+      "title": "P1-女流-2023.6.1-塞尔达传说",
+      "metadata_duration_sec": "12535",
+      "queue_index": 37,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Sk4y1W7Wy/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12535
+      },
+      "visual_observation": "塞尔达王国之泪标题/继续游戏菜单，未见实际游玩操作；需后段样本。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1Sk4y1W7Wy/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 12535,
+          "visual_observation": "3600秒为《王国之泪》林克操作左纳乌载具在山岩间，支持后段游戏，头部菜单不能判缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-06-02-live-01",
+      "bvid": "BV1kN4111764",
+      "url": "https://www.bilibili.com/video/BV1kN4111764",
+      "title": "P2-女流-2023.6.2-塞尔达传说",
+      "metadata_duration_sec": "10743",
+      "queue_index": 38,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1kN4111764/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10743
+      },
+      "visual_observation": "林克站在可组装方形房屋前，宁静公主植物拾取提示与耐力HUD；塞尔达建房游戏局部。"
+    },
+    {
+      "entry_id": "2023-06-02-live-01",
+      "bvid": "BV1mh4y1d72p",
+      "url": "https://www.bilibili.com/video/BV1mh4y1d72p",
+      "title": "P3-女流-2023.6.2-塞尔达传说",
+      "metadata_duration_sec": "10742",
+      "queue_index": 39,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1mh4y1d72p/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10742
+      },
+      "visual_observation": "林克在雨中树林/山坡，蓝色伙伴/心数与小地图HUD；塞尔达野外局部。"
+    },
+    {
+      "entry_id": "2023-06-27-live-01",
+      "bvid": "BV1EF411o7ze",
+      "url": "https://www.bilibili.com/video/BV1EF411o7ze",
+      "title": "P2-女流-2023.6.27-最终幻想XVI",
+      "metadata_duration_sec": "13077",
+      "queue_index": 41,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1EF411o7ze/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13075.752993197279
+      },
+      "visual_observation": "FFXVI战斗，Lv40/HP2554、召唤兽图标、敌人Lv35与能力HUD；游戏局部相符。"
+    },
+    {
+      "entry_id": "2023-07-23-live-01",
+      "bvid": "BV1Fk4y1V7F8",
+      "url": "https://www.bilibili.com/video/BV1Fk4y1V7F8",
+      "title": "P1-女流-2023.7.23-遗迹2",
+      "metadata_duration_sec": "10705",
+      "queue_index": 45,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Fk4y1V7F8/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10705
+      },
+      "visual_observation": "遗迹2昏暗石室弓箭瞄准/伤害200、三人队伍/狗图标与弹药HUD；游戏局部。"
+    },
+    {
+      "entry_id": "2023-07-23-live-01",
+      "bvid": "BV1K14y1X7gS",
+      "url": "https://www.bilibili.com/video/BV1K14y1X7gS",
+      "title": "P2-女流-2023.7.23-遗迹2",
+      "metadata_duration_sec": "10709",
+      "queue_index": 46,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1K14y1X7gS/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10709
+      },
+      "visual_observation": "遗迹类红色水晶加载提示，提示闪避/冲刺消耗体力，尚未取得正常操作画面；不判失效。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1K14y1X7gS/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 10709,
+          "visual_observation": "3600秒为《遗迹2》持枪角色在石柱废墟，队友HUD可见，支持后段游戏；600秒加载不是资源故障。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-07-23-live-01",
+      "bvid": "BV1Nz4y1x7vW",
+      "url": "https://www.bilibili.com/video/BV1Nz4y1x7vW",
+      "title": "P3-女流-2023.7.23-遗迹2",
+      "metadata_duration_sec": "10706",
+      "queue_index": 47,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Nz4y1x7vW/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10706
+      },
+      "visual_observation": "游戏内血月祭坛物品制作菜单，召唤类物品与材料数值；与遗迹2内容相符，非纯玩法画面。"
+    },
+    {
+      "entry_id": "2023-07-24-live-01",
+      "bvid": "BV1Vz4y1x7hG",
+      "url": "https://www.bilibili.com/video/BV1Vz4y1x7hG",
+      "title": "P1-女流-2023.7.24-遗迹2",
+      "metadata_duration_sec": "25737",
+      "queue_index": 48,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Vz4y1x7hG/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 25737
+      },
+      "visual_observation": "600秒为Steam《遗迹2》库页面，不能据此认定缺少游戏录像，需补后段。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1Vz4y1x7hG/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 25737,
+          "visual_observation": "3600秒为《遗迹2》戒指与角色装备界面，支持游戏内菜单，不能将600秒Steam库页面解释成游戏缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-07-24-live-01",
+      "bvid": "BV1mx4y197f4",
+      "url": "https://www.bilibili.com/video/BV1mx4y197f4",
+      "title": "P2-女流-2023.7.24-遗迹2",
+      "metadata_duration_sec": "18100",
+      "queue_index": 49,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1mx4y197f4/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 18100
+      },
+      "visual_observation": "600秒为第三人称持枪角色在林地石屋附近，队友与枪械HUD可见，支持《遗迹2》游戏局部。"
+    },
+    {
+      "entry_id": "2023-08-05-live-01",
+      "bvid": "BV1e44y1w7ZR",
+      "url": "https://www.bilibili.com/video/BV1e44y1w7ZR",
+      "title": "P3-女流-2023.8.5-博德之门 3",
+      "metadata_duration_sec": "11202",
+      "queue_index": 53,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1e44y1w7ZR/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11202
+      },
+      "visual_observation": "600秒出现登录弹窗遮挡主画面，左侧可见队伍头像和游戏局部；暂不足以作完整画面判定，需关闭普通弹窗后复核。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1e44y1w7ZR/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 11202,
+          "visual_observation": "3600秒无遮挡《博德之门3》石质废墟、四人队伍和技能栏，支持游戏局部；此前登录弹窗造成画面核对限制，不是录像缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-08-06-live-01",
+      "bvid": "BV1Bk4y1g7V6",
+      "url": "https://www.bilibili.com/video/BV1Bk4y1g7V6",
+      "title": "P3-女流-2023.8.6-博德之门 3",
+      "metadata_duration_sec": "11456",
+      "queue_index": 54,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Bk4y1g7V6/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11456
+      },
+      "visual_observation": "600秒为《博德之门3》队伍在岩壁与绿地间移动，队伍头像和技能栏可见。"
+    },
+    {
+      "entry_id": "2023-08-06-live-01",
+      "bvid": "BV1xm4y1s7qr",
+      "url": "https://www.bilibili.com/video/BV1xm4y1s7qr",
+      "title": "P2-女流-2023.8.6-博德之门 3",
+      "metadata_duration_sec": "11454",
+      "queue_index": 55,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1xm4y1s7qr/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11454
+      },
+      "visual_observation": "600秒为《博德之门3》米佐拉对话，角与翅膀人物、中文字幕及对话选项可见。"
+    },
+    {
+      "entry_id": "2023-08-07-live-01",
+      "bvid": "BV1vF411f7A9",
+      "url": "https://www.bilibili.com/video/BV1vF411f7A9",
+      "title": "P1-女流-2023.8.7-博德之门 3",
+      "metadata_duration_sec": "15505",
+      "queue_index": 56,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1vF411f7A9/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 15505
+      },
+      "visual_observation": "600秒为《博德之门3》游戏HUD与队伍头像，镜头贴近木质建筑遮挡角色；可支持游戏局部，不能推断全片。"
+    },
+    {
+      "entry_id": "2023-08-09-live-01",
+      "bvid": "BV1hV4y1v7DD",
+      "url": "https://www.bilibili.com/video/BV1hV4y1v7DD",
+      "title": "P1-女流-2023.8.9-博德之门 3",
+      "metadata_duration_sec": "13993",
+      "queue_index": 57,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1hV4y1v7DD/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13993
+      },
+      "visual_observation": "600秒为《博德之门3》存档菜单，大量QuickSave条目可见；证明游戏菜单局部，未见该点实战。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1hV4y1v7DD/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 13993,
+          "visual_observation": "3600秒为《博德之门3》回合战斗，顶部行动顺序、紫色室内场地和技能栏可见，支持存档菜单后有游戏。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-08-13-live-01",
+      "bvid": "BV1tu4y1q7td",
+      "url": "https://www.bilibili.com/video/BV1tu4y1q7td",
+      "title": "P3-女流-2023.8.13-博德之门 3",
+      "metadata_duration_sec": "8306",
+      "queue_index": 59,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1tu4y1q7td/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 8304.166
+      },
+      "visual_observation": "600秒为《博德之门3》游戏内书籍阅读界面，背景技能栏可见。"
+    },
+    {
+      "entry_id": "2023-08-14-live-01",
+      "bvid": "BV16u4y197df",
+      "url": "https://www.bilibili.com/video/BV16u4y197df",
+      "title": "P2-女流-2023.8.14-博德之门 3",
+      "metadata_duration_sec": "13404",
+      "queue_index": 60,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV16u4y197df/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13402.848
+      },
+      "visual_observation": "600秒为《博德之门3》人物对话，字幕提及明斯克，对话选项可见。"
+    },
+    {
+      "entry_id": "2023-08-14-live-01",
+      "bvid": "BV1HP411s7nc",
+      "url": "https://www.bilibili.com/video/BV1HP411s7nc",
+      "title": "P1-女流-2023.8.14-博德之门 3",
+      "metadata_duration_sec": "13400",
+      "queue_index": 61,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1HP411s7nc/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 13400
+      },
+      "visual_observation": "600秒为《博德之门3》洞穴场景，队伍HUD、倒地角色与烛台可见。"
+    },
+    {
+      "entry_id": "2023-08-21-live-01",
+      "bvid": "BV1rP411p72o",
+      "url": "https://www.bilibili.com/video/BV1rP411p72o",
+      "title": "P2-女流-2023.8.21-AltF4",
+      "metadata_duration_sec": "12740",
+      "queue_index": 62,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1rP411p72o/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12740
+      },
+      "visual_observation": "600秒为《无畏契约》第一人称枪械对局，比分3:3、计时0:51、技能栏与小地图可见；与投稿AltF4标题不符，需后段检查混合游戏范围。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1rP411p72o/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 12740,
+          "visual_observation": "3600秒仍为《无畏契约》枪械对局，紫色步枪、贤者技能HUD、浅色墙与金属斜坡；与600秒形成两个异游戏局部，无法据此断言全P没有AltF4。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-08-21-live-01",
+      "bvid": "BV1tm4y1M7PG",
+      "url": "https://www.bilibili.com/video/BV1tm4y1M7PG",
+      "title": "P1-女流-2023.8.21-AltF4",
+      "metadata_duration_sec": "12737",
+      "queue_index": 63,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1tm4y1M7PG/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12737
+      },
+      "visual_observation": "600秒为Windows桌面与蓝色音乐播放器Hold your own，未见AltF4游戏，需后段。",
+      "additional_samples": [
+        {
+          "url": "https://www.bilibili.com/video/BV1tm4y1M7PG/",
+          "time": 3600,
+          "ready": 4,
+          "seeking": false,
+          "duration": 12737,
+          "visual_observation": "3600秒为骑士持火把在狭窄梁道跳跃，鸡图标与生命心形HUD，与AltF4标题相符；不能因为P2异游戏便判整场AltF4缺失。"
+        }
+      ]
+    },
+    {
+      "entry_id": "2023-08-30-live-01",
+      "bvid": "BV15u4y1v78f",
+      "url": "https://www.bilibili.com/video/BV15u4y1v78f",
+      "title": "P3-女流-2023.8.30-装甲核心6境界天火",
+      "metadata_duration_sec": "12448",
+      "queue_index": 64,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV15u4y1v78f/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12446.279999999999
+      },
+      "visual_observation": "600秒为《装甲核心6》机甲锁定敌机战斗，机体及射击HUD可见。"
+    },
+    {
+      "entry_id": "2023-08-30-live-01",
+      "bvid": "BV1or4y1X7L4",
+      "url": "https://www.bilibili.com/video/BV1or4y1X7L4",
+      "title": "P1-女流-2023.8.30-装甲核心6境界天火",
+      "metadata_duration_sec": "17816",
+      "queue_index": 65,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1or4y1X7L4/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17816
+      },
+      "visual_observation": "600秒为《装甲核心6》机甲在室内训练区域射击，训练目标与HUD可见。"
+    },
+    {
+      "entry_id": "2023-09-01-live-03",
+      "bvid": "BV1kF411673t",
+      "url": "https://www.bilibili.com/video/BV1kF411673t",
+      "title": "P2-女流-2023.9.1-猛兽派对",
+      "metadata_duration_sec": "6130",
+      "queue_index": 66,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1kF411673t/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 6130
+      },
+      "visual_observation": "600秒为《猛兽派对》毛绒动物在石质平台混战，圆形头像与比分栏可见。"
+    },
+    {
+      "entry_id": "2023-09-18-live-01",
+      "bvid": "BV1p94y1p7Rz",
+      "url": "https://www.bilibili.com/video/BV1p94y1p7Rz",
+      "title": "P1-女流-2023.9.18-匹诺曹的谎言",
+      "metadata_duration_sec": "11652",
+      "queue_index": 71,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1p94y1p7Rz/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11652
+      },
+      "visual_observation": "600秒为《匹诺曹的谎言》近身战斗，蓝色火花、武器HUD与Lies of P叠字可见。"
+    },
+    {
+      "entry_id": "2023-10-05-live-01",
+      "bvid": "BV1pC4y1V7dm",
+      "url": "https://www.bilibili.com/video/BV1pC4y1V7dm",
+      "title": "P1-女流-2023.10.5-刺客信条 幻景",
+      "metadata_duration_sec": "5017",
+      "queue_index": 74,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1pC4y1V7dm/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 5016
+      },
+      "visual_observation": "600秒为《刺客信条：幻景》人物躺卧的暗色剧情画面；支持游戏剧情局部，不证明全场完整。"
+    },
+    {
+      "entry_id": "2023-10-28-live-01",
+      "bvid": "BV1xM411X7yz",
+      "url": "https://www.bilibili.com/video/BV1xM411X7yz",
+      "title": "【女流】2023年10月28日录播《心灵杀手2》P1",
+      "metadata_duration_sec": "10143",
+      "queue_index": 77,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1xM411X7yz/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 10143
+      },
+      "visual_observation": "600秒为《心灵杀手2》赤裸男子背影在暗色林地行走，右上角心率79可见，支持标题游戏局部。"
+    },
+    {
+      "entry_id": "2023-11-25-live-01",
+      "bvid": "BV1MG411S7my",
+      "url": "https://www.bilibili.com/video/BV1MG411S7my",
+      "title": "【女流】2023年11月25日录播《吃香》P2",
+      "metadata_duration_sec": "11728",
+      "queue_index": 83,
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1MG411S7my/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11728
+      },
+      "visual_observation": "600秒为横版暗色探索游戏，持手电男子在室内，叠字游戏名吃香；与标题相符，但游戏身份未用独立材料复核。"
+    }
+  ]
+}

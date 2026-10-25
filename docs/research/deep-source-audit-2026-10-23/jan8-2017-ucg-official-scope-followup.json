@@ -1,0 +1,82 @@
+{
+  "entry_id": "2017-01-08-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1Ls411h7TQ/",
+    "title": "武人叔、主机人气主播聚首 UCG游戏大赏直播盛典",
+    "uploader": {
+      "id": 7979698,
+      "name": "游戏时光VGtime"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 13038590,
+        "title": "主播板块",
+        "duration_seconds": 7144
+      },
+      {
+        "page": 2,
+        "id": 13038591,
+        "title": "PlayStation板块",
+        "duration_seconds": 2791
+      },
+      {
+        "page": 3,
+        "id": 13038592,
+        "title": "XBOX板块",
+        "duration_seconds": 1238
+      },
+      {
+        "page": 4,
+        "id": 13038593,
+        "title": "独立游戏板块",
+        "duration_seconds": 2488
+      },
+      {
+        "page": 5,
+        "id": 13038594,
+        "title": "玩家评选板块",
+        "duration_seconds": 2786
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1Ls411h7TQ/",
+      "page": 1,
+      "actual_seconds": 3500.700832,
+      "duration_seconds": 7143,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑衣男嘉宾持麦坐沙发，UCG/VG台标和游戏装饰，无女流画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Ls411h7TQ/",
+      "page": 1,
+      "actual_seconds": 6001.464622,
+      "duration_seconds": 7143,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "节目内动漫风游戏宣传播片及中文字幕/UCG VG水印，无女流操作认证"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Ls411h7TQ/",
+      "page": 1,
+      "actual_seconds": 1501.462489,
+      "duration_seconds": 7143,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黄色网络抽奖网页，右下舞台两男主持小窗，UCG GAME AWARDS2016标识，无女流画面"
+    }
+  ],
+  "conclusions": [
+    "官方页当前5内页，P1三点分别访谈/播片/抽奖，支持活动混合内容，不全页纯女流出镜或游戏实玩",
+    "本轮3点未定位女流出场，简介列女流只作metadata，不能称全稿无女流；旧观众clip两点不重复抽",
+    "P2–5未播放，未认证活动独立日期/五页接缝/完整性或与观众clip精确范围"
+  ]
+}

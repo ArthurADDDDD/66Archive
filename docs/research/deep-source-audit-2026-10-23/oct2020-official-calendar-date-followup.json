@@ -1,0 +1,103 @@
+{
+  "human_watch": false,
+  "verification_extent": "Root-supplied public calendar/page metadata and actual stable playback screenshots; no Bilibili old points replayed, no media downloaded.",
+  "calendar_url": "https://v.douyu.com/authorReplay/8PAbVvrDqAO1",
+  "calendar_observations": [
+    {
+      "selected_date": "2020-10-02",
+      "listed_time": "15:39",
+      "listed_title": "phasmophobia玩玩",
+      "listed_duration": "03:45:07",
+      "replay_url": "https://v.douyu.com/show/8KxjMdodyYP7VLwb"
+    },
+    {
+      "selected_date": "2020-10-05",
+      "listed_time": "15:05",
+      "listed_title": "party animal~派对游戏",
+      "listed_duration": "04:30:27",
+      "replay_url": "https://v.douyu.com/show/Yo4evy1Yoamv8L62"
+    }
+  ],
+  "replays": [
+    {
+      "url": "https://v.douyu.com/show/8KxjMdodyYP7VLwb",
+      "date": "2020-10-02",
+      "part": "P1",
+      "title": "【女流直播】Phasmophobia P1 2020.10.2",
+      "author": "女流66",
+      "published_at": "2020-10-03 22:54:01",
+      "ui_duration": "02:00:01",
+      "playback": "P1未播放。日历列项对应回放metadata，不把标题作为画面内容证据。"
+    },
+    {
+      "url": "https://v.douyu.com/show/brN0Mm2Jy2QWpyxA",
+      "date": "2020-10-02",
+      "part": "P2",
+      "title": "Phasmophobia P2 2020.10.2",
+      "published_at": "2020-10-03 23:04",
+      "media_duration_sec": [
+        6305.166667,
+        6305.268
+      ],
+      "samples": [
+        {
+          "time_sec": 2970.280255,
+          "media_duration_sec": 6305.268,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "暗走廊、浅衣队友门边持手电、走廊右手金属病床；与B站两帖P4旧约30秒局部相近。"
+        },
+        {
+          "time_sec": 6240.594826,
+          "media_duration_sec": 6305.166667,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "服务器大厅名单装备：Abaddon等级26、Astralis.yyt等级6、六六来溜溜等级6、Sakura断剑等级6，均未准备；与B站P4旧约3300秒大厅状态相符。"
+        }
+      ],
+      "comparison_limit": "未重播B站点；使用旧报告内容作比较，不认证固定offset、整页逐帧或完整范围。"
+    },
+    {
+      "url": "https://v.douyu.com/show/Yo4evy1Yoamv8L62",
+      "date": "2020-10-05",
+      "part": "P1",
+      "title": "女流玩动物派对：挨揍派对？没输过",
+      "author": "女流66",
+      "published_at": "2020-10-05 23:10:00",
+      "ui_duration": "02:00:01",
+      "page_list": [
+        "P2 02:00:06",
+        "P3 00:30:19"
+      ],
+      "samples": [
+        {
+          "time_sec": 600.636457,
+          "media_duration_sec": 7201.999,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "输入名字面板，文字“六六来溜溜”。"
+        },
+        {
+          "time_sec": 1500.364956,
+          "media_duration_sec": 7201.999,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "橙底动物派对个人资料/胜利数、胜率、全球排名面板。此为资料UI而非实战样本。"
+        }
+      ],
+      "not_observed": "没有与B站日期建立事件对应；P2/P3具体链接和画面未观察。"
+    }
+  ],
+  "conclusion": "官方斗鱼10/2日历列项及P2稳定点与B站10/5 P4旧点局部对应，增强P4的10/2范围关联；不能将10/5 B站P4作为Party Animals内容，也不能删去整稿其它部分。10/5斗鱼P1两个稳定点是动物派对名字面板和资料页，不是实战画面；不证明P1全页或整稿范围。",
+  "limitations": [
+    "B站P4旧点未重播；不得据此称人工复核或逐帧相同。",
+    "10/2斗鱼P1未播放，10/5 P2/P3链接与画面未观察。",
+    "UI/页面标题及平台日期不证明整场完整或各段母场日期。",
+    "不推P4恒定offset或整页等价。",
+    "所有画面观察human_watch=false。"
+  ]
+}

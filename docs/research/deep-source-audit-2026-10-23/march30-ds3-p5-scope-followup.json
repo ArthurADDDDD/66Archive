@@ -1,0 +1,61 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3591061_1",
+      "actual_seconds": 1260.001,
+      "duration_seconds": 2529.581356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑魂3暗色走廊持魔法角色/发光法术、魂值286000、蓝灰心形衣女流摄像头，局部相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3591061_1",
+      "actual_seconds": 2480.001,
+      "duration_seconds": 2529.581356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "桌面网页播放器为塞尔达林克山崖宣传图，右侧女流摄像头；不是此点亲玩塞尔达，也非黑魂3实战"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1gx411Q7z9?p=5",
+      "actual_seconds": 1260,
+      "duration_seconds": 2531,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑魂3暗色走廊持魔法角色/发光法术、魂值286000、蓝灰心形衣女流摄像头，局部相近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1gx411Q7z9?p=5",
+      "actual_seconds": 2480,
+      "duration_seconds": 2531,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "桌面网页播放器为塞尔达林克山崖宣传图，右侧女流摄像头；不是此点亲玩塞尔达，也非黑魂3实战"
+    }
+  ],
+  "acfun_video_list": [
+    {
+      "index": 1,
+      "title": "P5-黑暗之魂3DLC2",
+      "id": "5024687",
+      "metadata_ms": 2529000
+    }
+  ],
+  "bilibili_metadata_seconds": [
+    1277,
+    4321,
+    4322,
+    4322,
+    2531
+  ],
+  "limitations": [
+    "局部对应支持A单页P5与B内部P5范围，非整场280min来源等价",
+    "网页宣传图不认亲玩塞尔达或游戏时长",
+    "非独立日期或全片连续性"
+  ]
+}

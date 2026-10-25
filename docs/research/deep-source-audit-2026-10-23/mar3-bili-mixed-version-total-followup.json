@@ -1,0 +1,83 @@
+{
+  "entry_id": "2019-03-03-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1mb411B7qY/",
+    "title": "女流-2019.3.3-心灵砒霜&特技摩托：崛起",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 79265897,
+        "title": "P1-2019.3.3砒霜前聊10块钱的",
+        "duration_seconds": 1658
+      },
+      {
+        "page": 2,
+        "id": 79270285,
+        "title": "P2-2019.3.3-特技摩托：崛起",
+        "duration_seconds": 2006
+      },
+      {
+        "page": 3,
+        "id": 79271653,
+        "title": "P3-2019.3.3-心灵砒霜",
+        "duration_seconds": 3583
+      },
+      {
+        "page": 4,
+        "id": 79275058,
+        "title": "P4-2019.3.3-心灵砒霜",
+        "duration_seconds": 3583
+      },
+      {
+        "page": 5,
+        "id": 79274728,
+        "title": "P5-2019.3.3-心灵砒霜",
+        "duration_seconds": 3583
+      },
+      {
+        "page": 6,
+        "id": 79272608,
+        "title": "P6-2019.3.3-特技摩托：崛起",
+        "duration_seconds": 1833
+      },
+      {
+        "page": 7,
+        "id": 79384988,
+        "title": "P7-2019.3.3-心灵砒霜-弹幕版",
+        "duration_seconds": 10763
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1mb411B7qY/?p=2",
+      "actual_seconds": 600,
+      "duration_seconds": 2006,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "B内部P2 600秒摩托腾空越过大圆筒坡道、计时2.933秒失误0，右上黑衣女流，与此前A纯净P2 600秒2.750秒同一赛道事件局部近似，非同帧"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1mb411B7qY/?p=7",
+      "actual_seconds": 600,
+      "duration_seconds": 10763,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "B内部P7 600秒同一封30岁古战棋视频UP/创作心态来信，录入弹幕及右侧黑衣橙袖女流，与此前A弹幕600秒文本、姿态接近"
+    }
+  ],
+  "prior_evidence": "mar3-trials-programme-scope-followup.json",
+  "conclusions": [
+    "B当前7内页中前6页metadata合计16246秒，与A纯净6页16241秒接近；第7页10763秒为弹幕节目，post总27009秒包含不同版本，不等于450分钟独立直播",
+    "两个画面局部支持B P2对应A纯净P2游戏、B P7对应A弹幕节目；不把总长差10768秒当A漏传，也不把前6页和第7页无重叠地相加计直播/游戏时长",
+    "未全片观看B P1/3/4/5/6或B P7全范围，不证明所有内容重复、逐秒等价或全场完整；日期仍上传标题声明"
+  ]
+}

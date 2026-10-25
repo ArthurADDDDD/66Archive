@@ -1,0 +1,32 @@
+{
+  "entry_id": "2019-11-11-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "source_url": "https://v.douyu.com/show/6Aw87Oaq6jgWYGkg",
+  "page_observations": {
+    "title": "【女流直播】死亡搁浅 P1 2019.11.11",
+    "author_visible": "女流66",
+    "visible_internal_page_list": [
+      {"page": 1, "title": "15点场", "listed_duration": "02:00:04"},
+      {"page": 2, "title": "17点场", "listed_duration": "02:00:01"},
+      {"page": 3, "title": "19点场", "listed_duration": "20:28"}
+    ],
+    "player_observation": {
+      "selected_page": 1,
+      "accessible_progress_label": "00:11/02:00:04",
+      "playback_action": "normal generic play control was clicked; visible scene animation changed",
+      "scene": "Death Stranding backpack-bearing character on an indoor ramp/platform",
+      "ready_state": null,
+      "seeking": null,
+      "exact_current_time_seconds": null,
+      "audio_listened": false
+    },
+    "verification_limit": "UI screenshot/accessibility observation only; page listing is platform metadata; no independent live-date authentication."
+  },
+  "conclusions": [
+    "A normal UI play interaction produced changing Death Stranding gameplay visuals and a11y showed 00:11/02:00:04; do not describe as readyState4 or assert exact seek/current time.",
+    "P1/P2/P3 page listing and durations are visible metadata; this observation samples only a short portion of P1 and does not establish complete coverage.",
+    "The 2019-11-11 page association does not independently authenticate the original live date and was not compared with the 2019-11-08 P2 storyline sample.",
+    "No login was bypassed; no audio was listened to; human_watch=false."
+  ]
+}

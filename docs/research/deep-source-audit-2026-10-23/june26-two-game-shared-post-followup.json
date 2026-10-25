@@ -1,0 +1,93 @@
+{
+  "entry_ids": [
+    "2025-06-26-live-02",
+    "2025-06-26-live-03"
+  ],
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1NSKRzFEK9/?p=6",
+    "title": "【弹幕版】【女流66】【2025-06-26】【新作一起玩死亡搁浅2最高难度】",
+    "uploader": {
+      "id": 12477143,
+      "name": "直播回放巴拉蹦吧"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 30704141719,
+        "title": "女流66_2025-06-26_12_47_13_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 2,
+        "id": 30705125491,
+        "title": "女流66_2025-06-26_13_47_20_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 3,
+        "id": 30706303367,
+        "title": "女流66_2025-06-26_14_47_22_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 4,
+        "id": 30707417675,
+        "title": "女流66_2025-06-26_15_47_26_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 5,
+        "id": 30708663450,
+        "title": "女流66_2025-06-26_16_47_31_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 6,
+        "id": 30708924522,
+        "title": "女流66_2025-06-26_17_47_31_新作一起玩死亡搁浅2最高难度_弹幕版",
+        "duration_seconds": 279
+      },
+      {
+        "page": 7,
+        "id": 30711678582,
+        "title": "女流66_2025-06-26_20_01_45_异人之下二测我来体验体验_弹幕版",
+        "duration_seconds": 3601
+      },
+      {
+        "page": 8,
+        "id": 30712729013,
+        "title": "女流66_2025-06-26_21_01_45_异人之下二测我来体验体验_弹幕版",
+        "duration_seconds": 3405
+      }
+    ],
+    "duration": 279
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1NSKRzFEK9/?p=6",
+      "actual_seconds": 220,
+      "duration_seconds": 279,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P6 220秒死亡搁浅2最终准备菜单：Sam背货、车辆、出发按钮、制造/货物管理/APAS等菜单，右侧黄上衣女流摄像头；菜单不是实际移动游玩"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1NSKRzFEK9/?p=7",
+      "actual_seconds": 600,
+      "duration_seconds": 3601,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P7 600秒异人之下战斗界面，左上王也、对手火焰攻击、血条221，右上黄上衣女流摄像头，明显不是死亡搁浅2"
+    }
+  ],
+  "conclusions": [
+    "实际正常页UID12477143直播回放巴拉蹦吧，和档案旧source.account录像小屋不符，这是档案账号归属校准，不据此评价上传者不可信",
+    "同一post顶层死亡搁浅2标题下确有异人之下P7游戏局部，支持按内部页分别归游戏，不能把所有8P都当DS2",
+    "P6样本菜单与P7样本战斗不是相邻秒级衔接点，不能证明两场之间确切停播/缺失/无缝；题内17:47与20:01只作上传方文件名时间，不独立日期认证",
+    "P1-5/P8未播放；不认证全场完整、不扩充实玩时长或自动改source.account/data"
+  ]
+}

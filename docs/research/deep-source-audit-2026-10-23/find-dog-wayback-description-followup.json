@@ -1,0 +1,49 @@
+{
+  "entry_id": "2015-07-10-live-01",
+  "source_index": null,
+  "human_watch": false,
+  "hypothesis": "H1:历史优酷正文是否明确写素材母场日",
+  "source_url": "https://v.youku.com/v_show/id_XMTI4NDc4OTIyOA==.html",
+  "cdx": {
+    "query": "https://web.archive.org/cdx/search/cdx?url=v.youku.com/v_show/id_XMTI4NDc4OTIyOA%3D%3D.html&output=json&filter=statuscode:200&collapse=timestamp:4",
+    "result_timestamps": [
+      "20150822211123",
+      "20160105145443",
+      "20170802233235",
+      "20180113174520"
+    ],
+    "limit": "HTTP200且每年首条；不是所有快照枚举"
+  },
+  "page_observations": [
+    {
+      "url": "https://web.archive.org/web/20150822211123/http://v.youku.com:80/v_show/id_XMTI4NDc4OTIyOA==.html?",
+      "title": "武则天MC 女流斗鱼直播录像精剪01",
+      "page_body_read": true,
+      "video_playback_checked": false,
+      "observation": "官方女流页面，简介谈Minecraft世界和直播间，未明确素材直播日期；1个月前上传仅历史页面相对上传说明；可见评论无具体正文"
+    },
+    {
+      "url": "https://web.archive.org/web/20160105145443/http://v.youku.com:80/v_show/id_XMTI4NDc4OTIyOA==.html?",
+      "title": "武则天MC 女流斗鱼直播录像精剪01",
+      "page_body_read": true,
+      "video_playback_checked": false,
+      "observation": "官方女流页面，简介谈Minecraft世界和直播间，未明确素材直播日期；5个月前上传仅历史页面相对上传说明；可见评论无具体正文"
+    }
+  ],
+  "conclusions": [
+    "两个已读历史页正文/简介没有明确给出素材直播日，仍不能把上传/相对上传时间当母场日期",
+    "可见评论区为空/未载入，不等于历史没有评论；本轮没有取得评论正文日期线索",
+    "正常导航超时但标题/正文已加载并可读；不把整体超时当页面不可访问，亦未验证历史播放器/媒体可播",
+    "精剪影像可得的既有结论保留，7/10仍强对应候选未唯一裁决，不判任何相关日期整场影像不存在"
+  ],
+  "additional_public_searches": [
+    {
+      "query": "\"XMTI4NDc4OTIyOA\" 女流",
+      "result": "未取得相关可用同期分享/素材日期证据"
+    },
+    {
+      "query": "\"武则天MC\" \"精剪01\" \"7月10\"",
+      "result": "返回无关结果，未作为证据采用"
+    }
+  ]
+}

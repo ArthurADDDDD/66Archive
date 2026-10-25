@@ -1,0 +1,80 @@
+{
+  "entry_id": "2020-10-05-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1yD4y1R7AT/",
+    "title": "女流-2020.10.5-Party Animals",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "selected_part": {
+      "page": 4,
+      "id": 242604320,
+      "title": "P4-2020.10.2-Phasmophobia",
+      "duration_seconds": 3380
+    }
+  },
+  "comparison_sources": [
+    {
+      "entry_id": "2020-10-02-live-01",
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1Xp4y1a7Ni/",
+      "selected_part": {
+        "page": 4,
+        "id": 241829488,
+        "title": "P4-2020.10.2-Phasmophobia",
+        "duration_seconds": 3380
+      }
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1yD4y1R7AT/?p=4",
+      "page": 4,
+      "actual_seconds": 30.34376,
+      "duration_seconds": 3380,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "暗走廊尽头门，近处浅色衣服队友/手电光，Phasmophobia局部"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Xp4y1a7Ni/?p=4",
+      "page": 4,
+      "actual_seconds": 30.39025,
+      "duration_seconds": 3380,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同暗走廊尽头门/同浅色衣队友与手电光，和10/5 P4该点高度相符"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1yD4y1R7AT/?p=4",
+      "page": 4,
+      "actual_seconds": 3300.965778,
+      "duration_seconds": 3380,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "服务器大厅白板，4名未准备玩家及等级26/6/6/6、装备列表及右侧墙牌；无PartyAnimals"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Xp4y1a7Ni/?p=4",
+      "page": 4,
+      "actual_seconds": 3300.963839,
+      "duration_seconds": 3380,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同大厅4名玩家顺序/等级/装备/墙牌与10/5 P4高度相符"
+    }
+  ],
+  "conclusions": [
+    "新30秒与3300秒成对样本在两P4中高度相符：同暗走廊人物及同服务器大厅名单/等级/装备；加上既有300/1500点支持旧P重复的更强范围证据",
+    "两个媒体CID不同，metadata时长同3380，局部吻合不是全页逐帧/无删改认证；未新证原始10/2开播日期",
+    "10/5稿P4不能作为PartyAnimals第四段，不能因此删除前三P/独立A备选或判整场游戏缺失",
+    "本批不复抽旧300/1500点，未检查首末全部帧，不正式批量改data"
+  ]
+}

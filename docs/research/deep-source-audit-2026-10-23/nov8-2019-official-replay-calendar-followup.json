@@ -1,0 +1,90 @@
+{
+  "entry_id": "2019-11-08-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1kE411Y7Eg",
+  "human_watch": false,
+  "verification_extent": "Root-supplied normal public Douyu UI observations and playback screenshots; not independently watched by this report author. No media files downloaded.",
+  "calendar": {
+    "url": "https://v.douyu.com/authorReplay/8PAbVvrDqAO1",
+    "selected_date": "2019-11-08",
+    "listed_replay_time": "2019-11-08 15:04",
+    "listed_title": "溜达溜达搁浅搁浅",
+    "listed_duration": "05:38:34",
+    "note": "Dynamic date filter state; URL has no date query. Listing supports a same-day replay association but does not alone authenticate all source materials."
+  },
+  "douyu_replays": [
+    {
+      "url": "https://v.douyu.com/show/0zZVvPRxBZoMO4E2",
+      "part": "P1",
+      "title": "【女流直播】死亡搁浅P1 2019.11.8",
+      "author": "女流66",
+      "page_published_at": "2019-11-09 00:06:00",
+      "ui_duration": "02:00:03",
+      "observation": {
+        "ui_played_to": "00:20",
+        "visual": "女流灰衫全屏聊天摄像头",
+        "player_internal_state_read": false
+      }
+    },
+    {
+      "url": "https://v.douyu.com/show/Aox276k9L80MVz8Z",
+      "part": "P2",
+      "title": "死亡搁浅P2 2019.11.8",
+      "author": "女流66",
+      "page_published_at": "2019-11-09 00:11:02",
+      "ui_duration": "02:00:02",
+      "player_metadata": {
+        "media_duration_sec": 7202.48
+      },
+      "observations": [
+        {
+          "ui_played_to": "00:26",
+          "visual": "男角色近景、右上女流灰衫摄像头；与B站P2旧31秒剧情局部相近，非同帧",
+          "player_state": "UI playback; internal state not read"
+        },
+        {
+          "time_sec": 600.953817,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "死亡搁浅绿色全息人影及环、灰衫摄像头；与B站P2约600秒局部高度相近但非同帧"
+        },
+        {
+          "time_sec": 7150.957292,
+          "readyState": 4,
+          "seeking": false,
+          "paused": true,
+          "visual": "失落城堡手游双人大厅、169/169与181/181生命、三箱、斗鱼女流66标记；与B站P2约7150秒局部高度相近但非逐帧"
+        }
+      ],
+      "retry_note": "另有一次t600首次定位为readyState1/seeking=true，已排除；只记录后续稳定retry样本。"
+    },
+    {
+      "url": "https://v.douyu.com/show/Qyz171mz6GJ7BJj9",
+      "part": "P3",
+      "title": "死亡搁浅P3 2019.11.8",
+      "player_observation": {
+        "time_sec": 23.561738,
+        "media_duration_sec": 5908.6,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "失落城堡手游大厅双人、炉灶与箱子；生命169/169与172/181",
+        "note": "不同于P2 7150点的状态，不合并为同一画面。"
+      }
+    }
+  ],
+  "independent_context": {
+    "url": "https://ol.gamersky.com/news/201911/1236682.shtml?tag=wap",
+    "status": "root independently opened public article body; schedule context only, not footage content evidence"
+  },
+  "conclusion": "官方回放日历所选11/8日期、11/8 P2标题与两种游戏的分散局部对应，明显增强B站混合P2与11/8回放的关联；斗鱼P3虽题为死亡搁浅，实际样本为失落城堡手游，说明标题不能代表整页。",
+  "limitations": [
+    "不等于B站与斗鱼全页等价或逐帧对应。",
+    "不证明页面/分页连续、无剪接或全场完整。",
+    "不认证全部P2素材来自同一原始母场或精确录制日期。",
+    "P1只有UI播放辅助文本到00:20，未读取其内部media状态。",
+    "新闻只作排播背景；不作为实际视频内容证据。",
+    "所有本轮机器观察human_watch=false；整理者未独立观看。"
+  ]
+}

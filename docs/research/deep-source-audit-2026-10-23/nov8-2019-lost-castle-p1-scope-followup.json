@@ -1,0 +1,59 @@
+{
+  "entry_id": "2019-11-08-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1kE411Y7Eg",
+  "human_watch": false,
+  "verification_extent": "Root-supplied actual playback samples; existing B P1/P2 observations and new public Douyu P3 observations are compared from saved descriptions. No independent replay by this report author; no media downloaded.",
+  "samples": [
+    {
+      "source": "Bilibili BV1kE411Y7Eg P1",
+      "cid": "128790751",
+      "file_title": "2019-11-11 01-00-21",
+      "media_duration_sec": 5430,
+      "time_sec": 600.540278,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "Lost Castle Mobile forest room with two blue-armored characters, gold-red chest, small blue chest, banana/apple drops. Left P1: 246/246 health, 35 coins, 110 purple; right P2: 213/213 health, 18 coins, 70 purple."
+    },
+    {
+      "source": "Douyu 2019-11-08 P3",
+      "url": "https://v.douyu.com/show/Qyz171mz6GJ7BJj9",
+      "media_duration_sec": 5908.6,
+      "time_sec": 1078.954655,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "Cave crystal enemies/wood enemies; P1 287/287 health, P2 186/223. This did not correspond to B P1 600 sample.",
+      "test_hypothesis": "A tentative 478.6-second offset was tried because the media duration difference is 5908.6 minus 5430 seconds. The first seek at t1078 was readyState1/seeking and excluded. The stable retry did not match; duration difference is not a timestamp mapping."
+    },
+    {
+      "source": "Douyu 2019-11-08 P3",
+      "url": "https://v.douyu.com/show/Qyz171mz6GJ7BJj9",
+      "media_duration_sec": 5908.6,
+      "time_sec": 600.956865,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "Forest spiders/cocoon, two blue-armored players; P1 242/242 health, 28 coins, 99 purple; P2 213/213."
+    },
+    {
+      "source": "Douyu 2019-11-08 P3",
+      "url": "https://v.douyu.com/show/Qyz171mz6GJ7BJj9",
+      "media_duration_sec": 5908.6,
+      "time_sec": 650.960885,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "Forest red-gold chest, small blue chest, banana/apple drops; P1 225/246 health, 35 coins, 110 purple; P2 213/213, 14 coins, 70 purple."
+    }
+  ],
+  "cross_source_assessment": "B P1 600.54 and Douyu P3 600.96/650.96 show similar game type, forest setting, blue-armored duo and specific chest/drop elements; health, coin state, camera differ. Supports local Lost Castle content association with the 11/8 replay but is not a same-frame match, constant offset or full-page alignment.",
+  "conclusion": "Together with previously recorded B P2 and Douyu 11/8 P2 local similarities, the new P1/P3 points strengthen an association between Bilibili BV1kE411Y7Eg and the 11/8 official replay. The B page title/file date 11/11 is not confirmed as a live date. This does not establish exact page boundaries, a 478.6-second missing segment, continuity, edit point, or completeness.",
+  "limitations": [
+    "No exact 478.6-second cut/offset inference.",
+    "No full-page equality, timestamp mapping, complete-session claim, or precise mother-session date.",
+    "Black-screen and UI limitations recorded in earlier report remain unchanged.",
+    "Root-provided observations; human_watch=false."
+  ]
+}

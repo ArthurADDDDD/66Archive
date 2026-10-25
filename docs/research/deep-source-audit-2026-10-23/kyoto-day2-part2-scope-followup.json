@@ -1,0 +1,66 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3297657_1",
+      "actual_seconds": 1500.001,
+      "duration_seconds": 3860.566667,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "倾斜镜头中的粉色抓娃娃机、白衣黑裙女子与手持相机同行者"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Es411s7Rg?p=1",
+      "actual_seconds": 1500,
+      "duration_seconds": 3861,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同粉色抓娃娃机/女子/相机事件，画面局部近似"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3297657_2",
+      "actual_seconds": 300.001,
+      "duration_seconds": 701.6996780000001,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "白衣黑背带裙女子手触圆形街机屏幕，日文リングスピード20设置，非仅标题识别活动"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Es411s7Rg?p=2",
+      "actual_seconds": 300,
+      "duration_seconds": 702,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同圆形街机/女子触屏/リングスピード20，局部近似"
+    }
+  ],
+  "acfun_video_list": [
+    {
+      "index": 1,
+      "title": "zhuawawa",
+      "id": "4566861",
+      "metadata_ms": 3856000
+    },
+    {
+      "index": 2,
+      "title": "毒瘾少女",
+      "id": "4566854",
+      "metadata_ms": 701000
+    }
+  ],
+  "bilibili_metadata_seconds": [
+    3862,
+    701
+  ],
+  "date_limit": "A/B当前顶层题名均11.29/day2-part2，与entry2016-11-30日期不同；本批未独立裁定日期，不能按day2/投稿日改日期",
+  "conclusion": "A两页分别与已挂B独立day2-part2两页有局部对应，不能拿A76min只对另一B part1 171min判缺失。",
+  "limitations": [
+    "B另一个part1未内容抽看",
+    "非全片/精确时间轴认证",
+    "不猜街机游戏具体名称或写游戏标签"
+  ]
+}

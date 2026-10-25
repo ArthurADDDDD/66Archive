@@ -1,0 +1,41 @@
+{
+  "entry_id": "2019-11-03-live-01",
+  "source_index": 0,
+  "source_url": "https://www.bilibili.com/video/BV1qE411q7fU?p=1",
+  "human_watch": false,
+  "verification_extent": "Root-supplied public page metadata and one actual player sample. This report author did not independently browse or replay the material. No media downloaded.",
+  "submission_metadata": {
+    "top_level_title": "女流-2019.11.3-心灵砒霜",
+    "visible_submission_date": "2019-11-03 22:50:38",
+    "owner_uid": "29418340",
+    "owner_name": "女流录像小屋",
+    "internal_page_count": 8,
+    "internal_pages": [
+      {"page_index": 1, "cid": "127348104", "title": "P1-2019.11.4-砒霜前聊10块钱的", "metadata_duration_sec": 2339},
+      {"page_index": 2, "cid": "127353139", "title": "P2-2019.11.4-心灵砒霜", "metadata_duration_sec": 2433},
+      {"page_index": 3, "cid": "127353109", "title": "P3-2019.11.4-心灵砒霜", "metadata_duration_sec": 2433},
+      {"page_index": 4, "cid": "127356549", "title": "P4-2019.11.4-心灵砒霜", "metadata_duration_sec": 3602},
+      {"page_index": 5, "cid": "127356470", "title": "P5-2019.11.4-心灵砒霜", "metadata_duration_sec": 3603},
+      {"page_index": 6, "cid": "127353989", "title": "P6-2019.11.4-心灵砒霜", "metadata_duration_sec": 1694},
+      {"page_index": 7, "cid": "127522346", "title": "P7-2019.11.4-心灵砒霜弹幕版", "metadata_duration_sec": 8049},
+      {"page_index": 8, "cid": "127523409", "title": "P8-2019.11.4-心灵砒霜弹幕版", "metadata_duration_sec": 8054}
+    ]
+  },
+  "sample": {
+    "page_index": 1,
+    "cid": "127348104",
+    "media_duration_sec": 2339,
+    "time_sec": 600.38407,
+    "playback_state": {"readyState": 4, "seeking": false, "paused": true, "muted": true},
+    "visual": "A woman in a white/light-pink high-neck top sits in a gray chair, looking down while holding a phone or small object. A silver microphone is visible; a white programme-contact page is on the left. No game image is visible at this sampled moment.",
+    "content_scope": "Supports a programme/pre-chat scene at this one point. Audio content was not listened to; no real-world date is visible in the described frame."
+  },
+  "assessment": "The public submission title/date (2019-11-03), its visible submission timestamp, and all eight internal page titles that say 2019-11-04 are distinct metadata fields. The one sampled P1 point shows programme/pre-chat presentation, but it does not establish when the underlying recording occurred or how it relates to the 2019-11-03 entry. The metadata conflict is a candidate for review, not a basis to move the entry date. It does not establish that P1 is a game segment or resolve whether any Luigi's Mansion 3 footage belongs to this entry.",
+  "limitations": [
+    "Only P1 at approximately 600 seconds was sampled; P2-P8 were not visually checked.",
+    "A sampled programme scene does not establish the page's full contents, continuity, completeness, or relation to another recording.",
+    "Submission date, page titles, and internal page numbering do not independently establish the mother-session date.",
+    "No audio content was checked, no AcFun counterpart was compared, and no formal data or master observation was changed.",
+    "This is a root-supplied machine/local observation record; human_watch=false."
+  ]
+}

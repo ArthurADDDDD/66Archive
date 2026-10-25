@@ -1,0 +1,70 @@
+{
+  "entry_id": "2021-05-22-live-01",
+  "human_watch": false,
+  "sources": [
+    {
+      "source_index": "1",
+      "source_url": "https://www.acfun.cn/v/ac29116535",
+      "title": "女流-2021.5.22-深海迷航",
+      "uploader": {"id": 4397992},
+      "page_count": 6,
+      "page_titles_date_observation": "当前videoList列出P1至P6，标题日期均为2021.5.24",
+      "selected_page": {"page": 2, "id": 24630342, "title_date": "2021.5.24", "metadata_duration_seconds": 3053.8, "media_duration_seconds": 3053.833333},
+      "samples": [
+        {
+          "requested_seconds": 300,
+          "actual_seconds": 300.001,
+          "ready_state": 1,
+          "seeking": true,
+          "paused": true,
+          "valid_visual_sample": false,
+          "observation": "首次定位仍处于seeking，未作为有效画面样本"
+        },
+        {
+          "requested_seconds": 300,
+          "actual_seconds": 300.906508,
+          "ready_state": 4,
+          "seeking": false,
+          "paused": true,
+          "valid_visual_sample": false,
+          "observation": "有界retry后播放器状态稳定；本次未重新截图，不记录画面内容"
+        },
+        {
+          "requested_seconds": 600,
+          "actual_seconds": 600.561225,
+          "ready_state": 4,
+          "seeking": false,
+          "paused": true,
+          "valid_visual_sample": true,
+          "observation": "深海迷航载具驾驶舱与水下HUD；深度165米/1000，目标“先驱者文物-N6M”476米，载具91、电100、温22°C"
+        }
+      ]
+    },
+    {
+      "source_index": "0",
+      "source_url": "https://www.bilibili.com/video/BV1pf4y1h73f",
+      "title": "女流-2021.5.22-深海迷航",
+      "uploader": {"id": 29418340},
+      "page_count": 6,
+      "selected_page": {"page": 2, "metadata_duration_seconds": 3054},
+      "samples": [
+        {
+          "requested_seconds": 600,
+          "actual_seconds": 600.631089,
+          "duration_seconds": 3054,
+          "ready_state": 4,
+          "seeking": false,
+          "paused": true,
+          "valid_visual_sample": true,
+          "observation": "深海迷航同为载具驾驶舱水下HUD；目标N6M约475米、深度166米/1000、载具91、电100、温22°C，前方见鱼/水花"
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "A/B两页约600秒画面中的驾驶舱、N6M目标及HUD数值局部相近，但不是逐帧相同证明。",
+    "A站t=300首次样本readyState1且seeking=true无效；后续retry状态readyState4/nonseeking/paused，但未重新截图，不补写该点画面。",
+    "只支持跨来源P2有局部相似范围；不证明整页相同、独立日期、无缝接续或来源完整。母场2021-05-22与页面/分P标注2021-05-24仍未裁定。",
+    "human_watch=false。"
+  ]
+}

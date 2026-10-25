@@ -1,0 +1,36 @@
+{
+  "human_watch": false,
+  "method": "one_finite_normal_player_retry_after_prior_seek_failures",
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1zG411C7gD",
+      "title_part": "P2",
+      "actual_internal_page": 1,
+      "requested_seconds": 10845,
+      "actual_seconds": 10845,
+      "duration_seconds": 10854,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Alan在酒店木门前举手电，墙面PRIVATE/RESTROOM/MINIBAR/BUFFET字样，枪6/29"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV11C4y1n7Mu",
+      "title_part": "P3",
+      "actual_internal_page": 1,
+      "requested_seconds": 10,
+      "actual_seconds": 10,
+      "duration_seconds": 10854,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Alan在同类酒店木门前举手电，右下枪6/29；木门/布景附近，姿态略不同"
+    }
+  ],
+  "limitations": [
+    "本次成功不抹除此前失败记录",
+    "标题P2/P3为两个独立单页投稿，不是内部页2/3",
+    "近尾与开头局部相近支持接续范围，非逐秒无缝或排除重叠",
+    "未认证全P内容/母场日期"
+  ]
+}

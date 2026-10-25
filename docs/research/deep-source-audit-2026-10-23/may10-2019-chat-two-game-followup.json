@@ -1,0 +1,97 @@
+{
+  "entry_id": "2019-05-10-live-02",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1U4411Y7LP/",
+    "title": "女流-2019.5.10-迷雾侦探&大富翁",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 91105591,
+        "title": "P1-2019.5.10-游戏前说会儿封神",
+        "duration_seconds": 3568
+      },
+      {
+        "page": 2,
+        "id": 91104429,
+        "title": "P2-2019.5.10-游戏前说会儿封神",
+        "duration_seconds": 3570
+      },
+      {
+        "page": 3,
+        "id": 91105195,
+        "title": "P3-2019.5.10-迷雾侦探",
+        "duration_seconds": 2767
+      },
+      {
+        "page": 4,
+        "id": 91137432,
+        "title": "P4-2019.5.10-大富翁",
+        "duration_seconds": 4008
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1U4411Y7LP/",
+      "page": 1,
+      "actual_seconds": 300.581198,
+      "duration_seconds": 3568,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "红白上衣女流大摄像头看手中物，左侧黑底，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1U4411Y7LP/",
+      "page": 1,
+      "actual_seconds": 3501.46133,
+      "duration_seconds": 3568,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "红白上衣女流大摄像头聊天，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1U4411Y7LP/?p=3",
+      "page": 3,
+      "actual_seconds": 300.120276,
+      "duration_seconds": 2767,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝底格子钥匙锁解谜面板及手柄提示，右上同衣主播摄像头；与迷雾侦探页题相符局部，未独立认证版本"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1U4411Y7LP/?p=4",
+      "page": 4,
+      "actual_seconds": 300.619181,
+      "duration_seconds": 4008,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "棋盘骰子与载入中文字，右上同衣摄像头，是视频中的游戏加载画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1U4411Y7LP/?p=4",
+      "page": 4,
+      "actual_seconds": 1201.461471,
+      "duration_seconds": 4008,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "实际棋盘有中国城市、四叶草宝箱、右侧玩家资金、底部交换建设出售抵押赎回控件，与档案Rento关联相符的实玩局部"
+    }
+  ],
+  "conclusions": [
+    "P1两点摄像头聊天；P3解谜面板、P4棋盘实玩支持投稿内含游戏而非整场缺失",
+    "P4 300秒为录制游戏载入画面，非播放器加载失败；1201有实际棋盘",
+    "未播放P2；旧时间轴1:58:56与前两页总7138秒接近仅数值线索，不是认证边界",
+    "未核精确切换、独立母场日期、全片连续或完整；不将聊天计游戏时长，不自动修改正式数据"
+  ]
+}

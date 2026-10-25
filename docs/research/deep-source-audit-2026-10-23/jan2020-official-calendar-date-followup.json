@@ -1,0 +1,78 @@
+{
+  "entry_id": "2020-01-12-live-01",
+  "source_indexes_updated": [0, 1],
+  "human_watch": false,
+  "observation_provider": "Root-supplied public Douyu calendar and normal-player observations; this report author did not independently operate the UI.",
+  "calendar": {
+    "url": "https://v.douyu.com/author-replay/8PAbVvrDqAO1",
+    "date_2020_01_12": {
+      "listed_time": "15:11",
+      "listed_title": "大家下午好呀",
+      "listed_duration": "04:13:27",
+      "replay_url": "https://v.douyu.com/show/8pa9v5jxO8p7VrqA?ap=1",
+      "page_title": "【女流直播】心灵砒霜 P1 2020.1.12 女流66",
+      "page_published_at": "2020-01-12 22:52:49",
+      "ui_parts": ["P1 15点场 02:00:03", "P2 17点场 02:00:08", "P3 19点场 00:13:16"]
+    },
+    "date_2020_01_03": {
+      "listed_time": "12:14",
+      "listed_title": "大家新年快乐，2020好运",
+      "listed_duration": "04:52:37",
+      "replay_url": "https://v.douyu.com/show/Aox276kqdZoMVz8Z?ap=1",
+      "page_title": "【女流直播】莎木3 P1 2020.1.3 女流66",
+      "page_published_at": "2020-01-03 23:37:14",
+      "ui_parts": ["P1 12点场 02:00:03", "P2 14点场 02:00:02", "P3 16点场 00:52:31"]
+    },
+    "url_reuse": "The author-replay calendar URL is reused from prior evidence and is not a new external URL. The two linked replay URLs are new external evidence references."
+  },
+  "samples": [
+    {
+      "url": "https://v.douyu.com/show/8pa9v5jxO8p7VrqA?ap=1",
+      "page": "2020-01-12 P1",
+      "time_sec": 601.158872,
+      "media_duration_sec": 7203.16,
+      "initial_seek": {"time_sec": 600, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Woman in a pale blue/purple hoodie, dark left side with danmaku, silver microphone, curtain/cabinet background. The local arrangement resembles the earlier Bilibili/AcFun January 12 danmaku samples, but no identical danmaku line or distinctive gesture was matched."
+      }
+    },
+    {
+      "url": "https://v.douyu.com/show/8pa9v5jxO8p7VrqA?ap=1",
+      "page": "2020-01-12 P1",
+      "time_sec": 3716.158656,
+      "media_duration_sec": 7203.16,
+      "test_hypothesis": "A candidate position was tested by adding the Bilibili non-danmaku P1 metadata duration (3115 seconds) to a Bilibili P2 sample near 600 seconds. This is an exploratory comparison only, not a fixed offset.",
+      "initial_seek": {"time_sec": 3715, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "A different long white text/letter page was visible. The text was not transcribed. It did not match the shorter Bilibili P2 letter-page sample around 600 seconds."
+      }
+    },
+    {
+      "url": "https://v.douyu.com/show/Aox276kqdZoMVz8Z?ap=1",
+      "page": "2020-01-03 P1",
+      "time_sec": 601.155638,
+      "media_duration_sec": 7203.519999999999,
+      "initial_seek": {"time_sec": 600, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Woman in a pink top holding a small spoon and eating while seated in front of a silver microphone; dark left side with danmaku. This appearance differs from the January 12 hoodie sample."
+      }
+    }
+  ],
+  "assessment": "The January 12 official replay P1 has a local programme/danmaku scene similar in broad layout to earlier Bilibili and AcFun January 12 danmaku P1 samples, without an exact line/action match. A second exploratory point based on a 3115-second metadata duration did not match the shorter Bilibili P2 letter sample; this does not establish a cut, offset, or missing duration. The January 3 official P1 sample shows a different local appearance, but clothing cannot independently establish recording date or exclude other kinds of content elsewhere in that replay. These records support limited comparisons only and do not resolve whether the Bilibili date/title groups or AcFun version correspond to one or multiple mother sessions.",
+  "limitations": [
+    "Only three stable points were checked across the two official replay pages; initial pending seeks were excluded.",
+    "No audio was listened to, no full page/session was watched, and no exact dialogue or frame match was established.",
+    "The 3115-second duration was not treated as a valid fixed time offset; no cut length, missing segment, or non-overlap conclusion follows.",
+    "Calendar listing, replay page title/publication time, interface appearance, and garments do not independently authenticate mother-session dates.",
+    "No new baseline source keys or formal data changes; Bilibili and AcFun existing observation references are to be updated centrally. human_watch=false."
+  ]
+}

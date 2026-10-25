@@ -1,0 +1,30 @@
+# Remaining public-access gaps: local priority review
+
+This is a local-only review of existing evidence tables against the read-only `d019ca1b` archive baseline. No network request, login, challenge bypass, media playback, download, or production-data change was made.
+
+## Scope and counts
+
+The earlier access summary's 268 unresolved observations comprise 266 non-AcFun host citations (`host_deferred_due_challenge`, `login_or_challenge`, or `resume_pending`) plus two AcFun citations carried forward as `imported_partial_metadata`. Of the 266 non-AcFun gap citations, 118 belong to entries with only one registered source (110 video entries and 8 live entries). “Only source” describes archive references, not proof that no other copy exists elsewhere.
+
+The two AcFun partial rows are `2016-01-03-live-01` → [ac2434647](https://www.acfun.cn/v/ac2434647) and `2016-05-09-live-01` → [ac2731879](https://www.acfun.cn/v/ac2731879). Neither is the sole registered entry source. The former has another AcFun source, and the latter has a Bilibili source; existing local reports also record partial player evidence for both. They therefore do not enter the unique-source shortlist. The find-dog clip and already reviewed near-zero-duration cases are also excluded.
+
+## Highest-value unique live-source leads
+
+Four of the eight unique-source live entries in the non-AcFun access gaps have remaining value for a public-page or public-catalog check. All are Youku pages. This shortlist does not claim any page is presently accessible: the current batch received a small HTTP 200 shell with no usable title metadata for 111 Youku URLs, and a separate sample contained a captcha marker. The host was then deferred; no challenge was bypassed.
+
+| Entry | Sole source | Existing local evidence / attempts | Safe next check | Why it remains open |
+| --- | --- | --- | --- | --- |
+| `2015-01-30-live-01` — title lost | [Youku video](https://v.youku.com/v_show/id_XODgzNzgxNzky.html) | Entry note cites the public [Youku album list](https://list.youku.com/albumlist/show/id_23412134.html), with a 2015-01-30-titled upload listed at 11,353 sec. It also records that the uploader's current profile showed zero videos, while the playlist and linked video were playable in a prior check. Current HTML batch did not obtain usable metadata. | If the public album or video page renders without authentication, record only its visible title, duration, upload timestamp and whether it links to the same video ID; stop on any challenge. | The recorded title/duration corroborates an upload listing, not that this is a complete broadcast or that the stream date is exactly Jan 30. The entry title remains lost. |
+| `2015-07-28-live-01` — 第一届女流杯建筑大赛 | [Youku video](https://v.youku.com/v_show/id_XMTI5NzY4MjU4NA==.html) | Entry note records official-account title, upload time 2015-07-31 11:47 and 187 min, and a prior direct page visit. Current HTML batch still returned no usable page metadata. | A normal public official-account video listing or event collection could independently confirm the public title/date/duration without opening a stream. Use only if visible without login; otherwise retain the gap. | Prior page metadata and a successful page visit do not establish what portion of the event is covered or whether footage has gaps. |
+| `2015-10-09-live-01` — 第五届女流杯建筑大赛 | [Youku video](https://v.youku.com/v_show/id_XMTM2NTYxODQ2MA==.html) | Entry note records the creator's official Youku account, upload on 2015-10-21 23:45 and duration 205:46. Current HTML batch returned no usable page metadata. | Compare a publicly visible creator upload list or event listing with the saved entry and note; do not infer date from upload time alone. | The page's title and duration are pre-existing metadata notes; no current content or completeness check is recorded. |
+| `2015-12-07-live-01` — 《节奏天国》治好多年颈椎病 | [Youku video](https://v.youku.com/v_show/id_XMTQwNzczOTk2MA==.html) | Entry note cites a prior page configuration with upload 2015-12-09 02:05, duration 84:41, and description text calling it a Dec 7 Rhythm Heaven livestream recording. Current HTML batch returned no usable page metadata. | A public official-account upload list or normal no-login description page could re-confirm that text. Do not treat the description as verification of full coverage. | Description supports intended date/game association; it does not show whether the 84-minute video covers the complete session or contains interruptions. |
+
+The remaining four unique-source live references are not shortlisted: two are already marked dead in the archive (`2015-09-27-live-01`, `2015-12-11-live-01`); `2016-01-05-live-01` has an existing note saying the surviving video contains only the *星之契约* segment rather than the entry-title game; and `2016-02-24-live-01` has prior direct content review identifying the game and first-play date. These are not clean, unresolved public-page candidates under this task's criteria.
+
+## Assessment
+
+There is one concrete public-catalog route already named in the local record: the Youku album associated with `2015-01-30-live-01`. For the other three shortlisted entries, the useful next step would be to locate and inspect an ordinary public creator upload/event listing, if it is available without authentication. No existing local evidence demonstrates that those listings are currently reachable, so they are conditional routes rather than confirmed fixes for the access gap.
+
+These leads can improve title, uploader-listing, date-text, or duration metadata. None can settle video-content accuracy or whole-session completeness without permissible content review. All four are single registered sources; the archive contains no independent registered mirror for them. No source should be deleted or changed solely because the current page fetch returned a challenge shell.
+
+This is a bounded local prioritization, not a full-content review of the 118 unique-source rows. The other 110 unique-source gaps are video entries and remain outside this four-item priority list. No changes to `data/**` were made; `confidence: low` changes are not applicable.

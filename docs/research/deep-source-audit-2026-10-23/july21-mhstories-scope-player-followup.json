@@ -1,0 +1,108 @@
+{
+  "human_watch": false,
+  "method": "normal_public_player_bounded_samples",
+  "acfun_pages": [
+    {
+      "url": "https://www.acfun.cn/v/ac30343760_1",
+      "count": 1,
+      "title": "P1-2021.7.21-游戏前聊10块钱的",
+      "video_id": "25622428",
+      "metadata_ms": 512998
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac30344411_1",
+      "count": 1,
+      "title": "P6-2021.7.21-怪物猎人物语2破灭之翼",
+      "video_id": "25622998",
+      "metadata_ms": 3338681
+    }
+  ],
+  "bilibili_page_durations": [
+    514,
+    3338,
+    3341,
+    3341,
+    3340,
+    3339
+  ],
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac30343760_1",
+      "actual_seconds": 450.001,
+      "duration_seconds": 513.033333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "怪物猎人物语2标题主菜单，继续游戏高亮；非纯聊天画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bw41197E4?p=1",
+      "actual_seconds": 450,
+      "duration_seconds": 514,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "相同游戏标题主菜单/继续游戏高亮，非纯聊天画面"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac30344411_1",
+      "actual_seconds": 600.001,
+      "duration_seconds": 3338.7,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "紫色区域骑红蓝龙，任务最终决战，草地石壁/小地图位置相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac30344411_1",
+      "actual_seconds": 3300.001,
+      "duration_seconds": 3338.7,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底，无可识别事件，不作为游戏或连续性证据"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac30344411_1",
+      "actual_seconds": 3150.001,
+      "duration_seconds": 3338.7,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "游戏片尾名单，翻译人员栏目及彩绘火焰图案"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bw41197E4?p=6",
+      "actual_seconds": 600,
+      "duration_seconds": 3339,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "紫色区域骑红蓝龙，任务最终决战，草地石壁/小地图位置相近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bw41197E4?p=6",
+      "actual_seconds": 3300,
+      "duration_seconds": 3339,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底，无可识别事件，不作为游戏或连续性证据"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bw41197E4?p=6",
+      "actual_seconds": 3150,
+      "duration_seconds": 3339,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "游戏片尾名单，翻译人员栏目及彩绘火焰图案"
+    }
+  ],
+  "limitations": [
+    "A两个帖仅P1/P6，不据上/下题名当整场",
+    "P1聊天题名不能据此称全P纯聊天",
+    "黑底就绪不等于可识别内容",
+    "非全片同源/连续性或独立日期"
+  ]
+}

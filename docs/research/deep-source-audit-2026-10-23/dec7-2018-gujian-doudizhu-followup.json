@@ -1,0 +1,92 @@
+{
+  "entry_id": "2018-12-07-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1qt411S726/",
+    "title": "女流-2018.12.7-古剑奇谭",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 66176652,
+        "duration_seconds": 1841
+      },
+      {
+        "page": 2,
+        "id": 66180439,
+        "duration_seconds": 3157
+      },
+      {
+        "page": 3,
+        "id": 66181773,
+        "duration_seconds": 3158
+      },
+      {
+        "page": 4,
+        "id": 66182561,
+        "duration_seconds": 3158
+      },
+      {
+        "page": 5,
+        "id": 66183085,
+        "duration_seconds": 3158
+      },
+      {
+        "page": 6,
+        "id": 66183128,
+        "duration_seconds": 3157
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411S726/",
+      "page": 1,
+      "actual_seconds": 300.075282,
+      "duration_seconds": 1841,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "大摄像头白衣女流聊天，麦克风及背后黄色玩偶，未见游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411S726/",
+      "page": 1,
+      "actual_seconds": 1801.760403,
+      "duration_seconds": 1841,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底及右侧白衣女流摄像头，未见古剑游戏；先前1800 seek未就绪样本不使用"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411S726/",
+      "page": 1,
+      "actual_seconds": 1201.763051,
+      "duration_seconds": 1841,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "欢乐斗地主牌桌、底牌J/Q/7、出牌/不出/提示控件和手牌，右侧白衣女流摄像头"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411S726/?p=2",
+      "page": 2,
+      "actual_seconds": 300.637894,
+      "duration_seconds": 3157,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "第三人称持剑角色在树林路径，右侧同衣女流摄像头；与古剑题名相符的游戏局部"
+    }
+  ],
+  "conclusions": [
+    "P1中段有斗地主，首尾局部均摄像头聊天/黑底，不把整页当纯游戏或据标题判古剑",
+    "P2 300秒有第三人称树林中持剑角色与相同白衣主播摄像头，支持题名古剑游戏局部；非逐秒/独立游戏版本认证",
+    "未核P3–6、精确边界、全片连续性或独立母场日期；旧00:30:39不能直接继承为认证边界"
+  ]
+}

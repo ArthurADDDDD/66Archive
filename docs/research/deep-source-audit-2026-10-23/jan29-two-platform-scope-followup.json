@@ -1,0 +1,65 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3437161_2",
+      "actual_seconds": 30,
+      "duration_seconds": 4457.9,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流深蓝白边睡衣，床边竖屏自拍微笑，姿态/布景与B P2 30近似"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV13s41187js?p=2",
+      "actual_seconds": 30,
+      "duration_seconds": 4457.691995464852,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同睡衣床边竖屏自拍微笑，局部相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3437161_1",
+      "actual_seconds": 1890.001,
+      "duration_seconds": 1922.1,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同睡衣床边竖屏自拍，近P1尾，对应B P1近尾姿态附近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV13s41187js?p=1",
+      "actual_seconds": 1890,
+      "duration_seconds": 1923,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同睡衣床边竖屏自拍，近P1尾，姿态略不同"
+    }
+  ],
+  "acfun_pages": [
+    {
+      "index": 1,
+      "title": "P1",
+      "id": "4804426",
+      "metadata_ms": 1920000
+    },
+    {
+      "index": 2,
+      "title": "P2",
+      "id": "4804438",
+      "metadata_ms": 2000
+    }
+  ],
+  "bilibili_metadata_seconds": [
+    1923,
+    4459
+  ],
+  "limitations": [
+    "P2旧API2秒已被历史实播证明不是2秒短源，本次不当首次发现",
+    "四点只支持各P局部范围对应，不证明P1到P2无缝无重叠",
+    "不根据同服装/题名认证日期或全场覆盖",
+    "未重取旧A P2近尾4445秒样本"
+  ]
+}

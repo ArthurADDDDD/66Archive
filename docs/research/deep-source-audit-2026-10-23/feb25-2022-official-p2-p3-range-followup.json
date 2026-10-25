@@ -1,0 +1,48 @@
+{
+  "entry_id": "2022-02-25-live-01",
+  "source_index": null,
+  "source_index_note": "These are additional official replay pages used for a cross-date content comparison; they are not currently formal entry source rows.",
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player observations; this report author did not independently operate the player.",
+  "samples": [
+    {
+      "page": "Douyu 2022-02-25 11:00 session, P2",
+      "url": "https://v.douyu.com/show/jwzOvpBKAAxMZVRm?ap=1",
+      "title": "【2022-02-25 11点场】女流66：【女流】艾尔登法环，一起来吧 女流66",
+      "page_published_at": "2022-02-25 14:28:50",
+      "media_duration_sec": 7112.483333,
+      "initial_seek": {"time_sec": 1300, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "time_sec": 1301.154725,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Tree Sentinel boss encounter: gold-armored mounted figure wielding a long weapon in an outdoor area with green grass and yellow trees."
+      },
+      "comparison": "The sampled Tree Sentinel encounter is visually distinct from the previously recorded 2022-02-27 Douyu P2 Erdtree Watchdog encounter."
+    },
+    {
+      "page": "Douyu 2022-02-25 13:00 session, P3",
+      "url": "https://v.douyu.com/show/6Aw87O69LN0vYGkg?ap=1",
+      "title": "【2022-02-25 13点场】女流66：【女流】艾尔登法环，一起来吧 女流66",
+      "page_published_at": "2022-02-25 16:39:04",
+      "media_duration_sec": 7112.483333,
+      "initial_seek": {"time_sec": 2600, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "time_sec": 2601.158207,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Margit, the Fell Omen boss health bar is visible; the scene shows a stone bridge/castle area, remnants of soldiers, and the player character from behind."
+      },
+      "comparison": "This sampled Margit encounter does not match the previously recorded 2022-02-27 Douyu P3 Roundtable Hold/NPC-dialogue sample."
+    }
+  ],
+  "assessment": "Both new samples show Elden Ring combat at the selected points, and neither selected point matches the specific 2022-02-27 events previously sampled. This establishes only local differences at these sample points. It does not show that the 2022-02-25 pages contain no matching event elsewhere, that the 2022-02-27 pages contain no other content, or which date belongs to the full Bilibili/AcFun submissions.",
+  "limitations": [
+    "Only one stable point was sampled on each page; the initial pending seeks were excluded.",
+    "Douyu P4-P6 were not checked; no full page or full session was watched or listened to.",
+    "Game progression or a different encounter cannot independently prove the real-world session date.",
+    "No source row, formal archive data, or master observation was changed; human_watch=false."
+  ]
+}

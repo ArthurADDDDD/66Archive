@@ -1,0 +1,60 @@
+{
+  "entry_id": "2020-11-24-live-01",
+  "source_index": 0,
+  "source_url": "https://www.bilibili.com/video/BV1Mv411b76N",
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player and public calendar UI observations; this report author did not independently operate the browser.",
+  "bilibili_submission": {
+    "top_level_title": "女流-2020.11.24-恶魔之魂",
+    "owner_uid": "29418340",
+    "internal_page_count": 4,
+    "visible_page_publish_time": "2020-11-25 23:33:00",
+    "internal_pages": [
+      {"page_index": 1, "cid": "259681830", "title": "P1-2020.11.25-佩奇又见佩奇", "metadata_duration_sec": 3081},
+      {"page_index": 2, "cid": "259704066", "title": "P2-2020.11.25-恶魔之魂", "metadata_duration_sec": 3671},
+      {"page_index": 3, "cid": "259704091", "title": "P3-2020.11.25-恶魔之魂", "metadata_duration_sec": 3672},
+      {"page_index": 4, "cid": "259705524", "title": "P4-2020.11.25-恶魔之魂", "metadata_duration_sec": 3673}
+    ]
+  },
+  "samples": [
+    {
+      "page_index": 1,
+      "cid": "259681830",
+      "media_duration_sec": 3081,
+      "time_sec": 600.622171,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Blue-and-white music client home page; the interface visibly shows '25 Nov 周三'. No game image or streamer camera is visible at this point.",
+      "scope_limit": "The visible interface date supports a November 25 clue for this sampled moment; it is not an independently authenticated system clock or mother-session date."
+    },
+    {
+      "page_index": 2,
+      "cid": "259704066",
+      "media_duration_sec": 3671,
+      "time_sec": 600.428492,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Demon's Souls-like scene: a blue-white spectral character holding a long sword walks through a stone bridge/corridor; glowing green statue and suspended brazier visible; displayed soul count 5085; no streamer camera visible.",
+      "scope_limit": "Local visual support for a game scene only; no independent version or player identity authentication."
+    }
+  ],
+  "official_calendar": {
+    "url": "https://v.douyu.com/author-replay/8PAbVvrDqAO1",
+    "date_2020_11_24": "After selecting and confirming 2020-11-24 in the public date picker, the page displayed the selected date and '暂无视频，换个时间看看吧'.",
+    "date_2020_11_25": "After selecting and confirming 2020-11-25 in the public date picker, the page displayed the selected date and '暂无视频，换个时间看看吧'.",
+    "date_parameters": "The selected date was UI state; the visible URL had no date parameter.",
+    "interpretation_limit": "The current calendar did not list a replay for either selected date. This does not prove no stream or no copy exists."
+  },
+  "assessment": "The sampled Bilibili P1 point shows a music-client home page with a visible November 25 weekday/date, while P2 shows a game scene. This is consistent with a pre-game/programme segment followed by game footage and adds a local November 25 clue. The posting date, interface date, page titles and entry date 2020-11-24 remain distinct fields; the sample does not establish the mother-session date. The public Douyu calendar currently listed no replay for either 11/24 or 11/25, which is not evidence that no stream or alternate recording exists.",
+  "limitations": [
+    "Only one point each from Bilibili P1 and P2 was checked; P3-P4 were not played.",
+    "No audio was listened to; no claim is made that all of P1 is non-game content or that the full entry has no game footage.",
+    "The 11/24 and 11/25 calendar results do not prove absence of a stream or other archive copy.",
+    "No mother-session date, full-page equivalence, continuity, completeness, or relation to all adjacent-day submissions is established.",
+    "No formal data or master observation was changed; human_watch=false."
+  ]
+}

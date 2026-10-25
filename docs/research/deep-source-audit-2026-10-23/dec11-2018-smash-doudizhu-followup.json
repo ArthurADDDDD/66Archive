@@ -1,0 +1,90 @@
+{
+  "entry_id": "2018-12-11-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1dt411q7Mg/",
+    "title": "女流-2018.12.11-任天堂明星大乱斗特别版",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 66705328,
+        "duration_seconds": 1681,
+        "title": "P1-2018.12.11-聊天&斗地主"
+      },
+      {
+        "page": 2,
+        "id": 66705306,
+        "duration_seconds": 875,
+        "title": "P2-2018.12.11-任天堂明星大乱斗特别版"
+      },
+      {
+        "page": 3,
+        "id": 66707022,
+        "duration_seconds": 10933,
+        "title": "P3-2018.12.11-任天堂明星大乱斗特别版"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1dt411q7Mg/",
+      "page": 1,
+      "actual_seconds": 300.827368,
+      "duration_seconds": 1681,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "条纹衣女流大摄像头站起伸臂，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dt411q7Mg/",
+      "page": 1,
+      "actual_seconds": 1621.463721,
+      "duration_seconds": 1681,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底及右侧条纹衣摄像头，无大乱斗实战"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dt411q7Mg/",
+      "page": 1,
+      "actual_seconds": 1001.458296,
+      "duration_seconds": 1681,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "欢乐斗地主牌桌、底牌2/J/Q、地主标识/两家不出与手牌，右侧同衣主播摄像头"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dt411q7Mg/?p=2",
+      "page": 2,
+      "actual_seconds": 300.729255,
+      "duration_seconds": 875,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底有中文字幕“能战斗的斗士都倒下了。”及同衣主播摄像头，与游戏开场过场样式相符，不是纯坏帧认证"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dt411q7Mg/?p=3",
+      "page": 3,
+      "actual_seconds": 600.73767,
+      "duration_seconds": 10933,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "大乱斗实战场景，Marth62.9%、Zelda119%、Richter角色HUD与战斗，右侧同衣主播摄像头"
+    }
+  ],
+  "conclusions": [
+    "P1聊天/斗地主/黑底摄像头是混合内容，不能全P计大乱斗或斗地主",
+    "P2局部黑底有字幕不等于失效，P3有大乱斗实战；不因短P2或黑帧剔源",
+    "游戏关联有局部支持，精确边界/原始直播日期/全场完整性未核，无正式写入"
+  ]
+}

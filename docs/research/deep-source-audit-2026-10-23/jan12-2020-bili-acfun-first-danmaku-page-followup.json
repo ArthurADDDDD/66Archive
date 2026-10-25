@@ -1,0 +1,82 @@
+{
+  "entry_id": "2020-01-12-live-01",
+  "baseline_observations": [
+    {"source_index": 0, "platform": "bilibili", "source_url": "https://www.bilibili.com/video/BV1hJ411n7Ti"},
+    {"source_index": 1, "platform": "acfun", "source_url": "https://www.acfun.cn/v/ac12384734"}
+  ],
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player observations; this report author did not independently operate the players.",
+  "bilibili_submission": {
+    "top_level_title": "女流-2020.1.12-心灵砒霜",
+    "owner_uid": "29418340",
+    "internal_page_count": 8,
+    "internal_pages": [
+      {"page_index": 1, "cid": "142283901", "title": "P1-2020.1.3-游戏前聊10块钱的", "metadata_duration_sec": 3115},
+      {"page_index": 2, "cid": "142304029", "title": "P2-2020.1.12-心灵砒霜", "metadata_duration_sec": 4544},
+      {"page_index": 3, "cid": "142303924", "title": "P3-2020.1.12-心灵砒霜", "metadata_duration_sec": 4544},
+      {"page_index": 4, "cid": "142300488", "title": "P4-2020.1.12-心灵砒霜", "metadata_duration_sec": 4545},
+      {"page_index": 5, "cid": "142534139", "title": "P1-2020.1.3-心灵砒霜弹幕版", "metadata_duration_sec": 3799},
+      {"page_index": 6, "cid": "142537489", "title": "P2-2020.1.3-心灵砒霜弹幕版", "metadata_duration_sec": 3801},
+      {"page_index": 7, "cid": "142537623", "title": "P3-2020.1.3-心灵砒霜弹幕版", "metadata_duration_sec": 3799},
+      {"page_index": 8, "cid": "142537154", "title": "P4-2020.1.3-心灵砒霜弹幕版", "metadata_duration_sec": 3801}
+    ]
+  },
+  "acfun_submission": {
+    "url": "https://www.acfun.cn/v/ac12384734",
+    "title": "女流-2020.1.12-心灵砒霜弹幕版",
+    "owner_uid": "4397992",
+    "page_published_at": "2020-01-14",
+    "internal_pages": [
+      {"page_index": 1, "id": "11228640", "title": "P1-2020.1.3-心灵砒霜弹幕版"},
+      {"page_index": 2, "id": "11228635", "title": "P2-2020.1.3-心灵砒霜弹幕版"},
+      {"page_index": 3, "id": "11228917", "title": "P3-2020.1.3-心灵砒霜弹幕版"},
+      {"page_index": 4, "id": "11228642", "title": "P4-2020.1.3-心灵砒霜弹幕版"}
+    ]
+  },
+  "samples": [
+    {
+      "source": "Bilibili BV1hJ411n7Ti internal page 5 / danmaku P1",
+      "cid": "142534139",
+      "media_duration_sec": 3797.898,
+      "initial_seek": {"time_sec": 600, "readyState": 1, "seeking": true, "paused": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "time_sec": 601.158848,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "muted": true,
+        "visual": "Woman in a pale blue/purple hoodie with a silver microphone, curtain/cabinet background; dark left area with dense colorful scrolling danmaku."
+      }
+    },
+    {
+      "source": "AcFun ac12384734 internal page 1",
+      "id": "11228640",
+      "media_duration_sec": 3797.966667,
+      "time_sec": 600.087822,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Similar pale blue/purple hoodie, microphone and room arrangement; dark left area and colorful danmaku. Several visible layout/color/pose elements are locally similar to the Bilibili sample, but this is not a frame-by-frame full-page match."
+    },
+    {
+      "source": "Bilibili BV1hJ411n7Ti internal page 2",
+      "cid": "142304029",
+      "media_duration_sec": 4544,
+      "time_sec": 600.485634,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Woman in the same general hoodie/camera setup with a white programme letter page and streamer camera; no overlaid colorful danmaku at this point."
+    }
+  ],
+  "assessment": "The sampled Bilibili danmaku P1 and AcFun internal page 1 have similar local camera/clothing/room and danmaku presentation at about 600 seconds. This supports a local content association for these sampled programme points, not whole-page equivalence, exact synchronization, continuity, or a shared mother-session date. Bilibili P1 and P5-P8 titles say 2020-01-03 (P1 explicitly says pre-chat); P2-P4 say 2020-01-12. The submission title and entry date say 2020-01-12. This confirms the earlier summary that P1-P4 all said 1/12 was inaccurate: only Bilibili P2-P4 carry 1/12 in their titles. The sample does not resolve whether the differently titled groups represent two sessions, alternate versions, or another relationship.",
+  "limitations": [
+    "Only Bilibili pages 2 and 5, and AcFun page 1, were sampled; Bilibili pages 1, 3, 4, 6-8 and AcFun pages 2-4 were not checked.",
+    "No audio or private message text was transcribed; no contact details or lengthy danmaku text are included.",
+    "No independent mother-session date, whole-page match, continuity, or completeness is established.",
+    "The 2020-01-14 AcFun publication date and 2020-01-03 internal titles do not independently prove the live date.",
+    "No formal data was changed; baseline observation rows await centralized merge. human_watch=false."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "2018-12-06-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1Wt411S7kS/",
+    "title": "女流-2018.12.6-古剑奇谭",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 66030676,
+        "title": "P1-2018.12.6-聊天看视频斗地主",
+        "duration_seconds": 2971
+      },
+      {
+        "page": 2,
+        "id": 66030486,
+        "title": "P2-2018.12.6-古剑奇谭",
+        "duration_seconds": 893
+      },
+      {
+        "page": 3,
+        "id": 66033175,
+        "title": "P3-2018.12.6-古剑奇谭",
+        "duration_seconds": 3362
+      },
+      {
+        "page": 4,
+        "id": 66035623,
+        "title": "P4-2018.12.6-古剑奇谭",
+        "duration_seconds": 3364
+      },
+      {
+        "page": 5,
+        "id": 66035448,
+        "title": "P5-2018.12.6-古剑奇谭",
+        "duration_seconds": 3364
+      },
+      {
+        "page": 6,
+        "id": 66036076,
+        "title": "P6-2018.12.6-古剑奇谭",
+        "duration_seconds": 3364
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1Wt411S7kS/",
+      "actual_seconds": 300,
+      "duration_seconds": 2971,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P1 300秒网页中女流白衣大摄像头与直播网页递归/聊天，非古剑游戏画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Wt411S7kS/",
+      "actual_seconds": 1800,
+      "duration_seconds": 2971,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P1 1800秒浏览器B站视频内另一人物画面/弹幕，右下女流白衣摄像头，属观看视频样式，不当亲自操作游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Wt411S7kS/",
+      "actual_seconds": 2600,
+      "duration_seconds": 2971,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P1 2600秒欢乐斗地主牌桌，有地主标识、两侧不出、底牌Q、手牌Q/J/7、出牌按钮与倒计时，右下白衣女流摄像头；明确存在斗地主游戏局部"
+    }
+  ],
+  "conclusions": [
+    "实际6内页，P1三点分别聊天/观看视频/斗地主，不能按顶层古剑标题把整P或288.6min都计古剑",
+    "档案games只登记古剑的情况下，2600秒牌桌形成补斗地主关联人工审阅候选；不根据标题单独添加，现已取得局部画面",
+    "本批未播放P2-6，不对古剑影像本身或全部页分类下新结论，不删除已有古剑关联或整源",
+    "独立母场日期、斗地主精确起止、完整性/连续性均未核；机器观察不是human_watch"
+  ]
+}

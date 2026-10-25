@@ -1,0 +1,84 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac2729717_2",
+      "actual_seconds": 30,
+      "duration_seconds": 1290.781356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场王座前，1108魂值、13瓶，女流灰上衣；与B P2 30同局部状态，无画内弹幕"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xs411B7zV?p=2",
+      "actual_seconds": 30,
+      "duration_seconds": 1291,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场王座前，1108魂值、13瓶，女流灰上衣，同具体局部状态"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xs411B7zV?p=2",
+      "actual_seconds": 1200,
+      "duration_seconds": 1291,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底游戏片尾职员表，女流双手整理头发"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2731879_2",
+      "actual_seconds": 30,
+      "duration_seconds": 1290.781356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "祭祀场王座前，1108魂值、13瓶，与长A/B相同局部状态，画内弹幕覆盖"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2731879_2",
+      "actual_seconds": 1200.001,
+      "duration_seconds": 1290.781356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底游戏片尾职员表，女流双手整理头发，与B相同事件附近，画内弹幕覆盖"
+    }
+  ],
+  "acfun_long_video_list": [
+    {
+      "index": 1,
+      "title": "双子P1",
+      "id": "3525876",
+      "metadata_ms": 6100267
+    },
+    {
+      "index": 2,
+      "title": "薪王P2-完结",
+      "id": "3525877",
+      "metadata_ms": 1291000
+    }
+  ],
+  "acfun_short_video_list": [
+    {
+      "index": 1,
+      "title": "双子P1",
+      "id": "3530393",
+      "metadata_ms": 3481067
+    },
+    {
+      "index": 2,
+      "title": "薪王P2",
+      "id": "3530389",
+      "metadata_ms": 1290667
+    }
+  ],
+  "limitations": [
+    "两A帖P1不同长度不代表P2也不同范围",
+    "局部对应非全片等价/无缝",
+    "未用上传日期补母场年",
+    "先前短P2开头已有祭祀场样本，本批30秒用于三版本事件对照非首次识别游戏"
+  ]
+}

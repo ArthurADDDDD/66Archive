@@ -1,0 +1,60 @@
+{
+  "entry_id": "2017-12-06-live-01",
+  "human_watch": false,
+  "external_candidate": "https://www.bilibili.com/video/BV1sW411Y7oQ/",
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1sW411Y7oQ/",
+    "title": "女流-12.6-吃鸡佳缘第一期",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 27798549,
+        "title": "P1-12.6-游戏前聊10块钱的",
+        "duration_seconds": 2493
+      },
+      {
+        "page": 2,
+        "id": 27798550,
+        "title": "P2-12.6-女流带你吃鸡",
+        "duration_seconds": 6951
+      },
+      {
+        "page": 3,
+        "id": 27798551,
+        "title": "P3-12.6-女流带你吃鸡",
+        "duration_seconds": 6953
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1sW411Y7oQ/?p=2",
+      "actual_seconds": 600,
+      "duration_seconds": 6951,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "候选B P2 600秒PUBG草地奔跑、弹药30，右上红衣女流；与此前A纯净内页3 600草地场景局部近似，不是同帧"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1sW411Y7oQ/?p=3",
+      "actual_seconds": 6900,
+      "duration_seconds": 6953,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "B P3 6900秒Windows桌面/众多图标与右上红衣女流，非游戏；与此前A纯净P10 1700桌面收尾场景近似但弹幕助手窗口不同，不是同一事件瞬间"
+    }
+  ],
+  "prior_evidence": "dec6-pubg-two-version-scope-followup.json",
+  "conclusions": [
+    "正常B UID29418340，候选存在可定位PUBG局部及非游戏收尾；与此前A对应局部相近，未重复播放A",
+    "内页数量/总时长近似只作范围线索，不证明全部A/B页面等价、无剪接/无缝或整场完整",
+    "没有独立母场日期认证，不按上传日期强归场；外部候选研究层，不自动补正式source",
+    "游戏标题内页近尾也包含桌面/摄像头聊天，不把全部页时长计实玩"
+  ]
+}

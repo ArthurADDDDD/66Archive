@@ -1,0 +1,80 @@
+{
+  "entry_id": "2016-01-24-live-01",
+  "source_index": null,
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1ZN411o7VN/?p=4",
+    "title": "女流之心灵砒霜-2016补档",
+    "uploader": {
+      "id": 15800276,
+      "name": "影忆丶Yi"
+    },
+    "page_count": 14,
+    "selected_part": {
+      "page": 4,
+      "id": 340014999,
+      "title": "直播一周年纪念-20160124",
+      "duration_seconds": 5830
+    },
+    "description_scope": "投稿者自述从优酷考古搬运、原作者优酷ID俺是红领巾、仅做个人Podcast；此为上传者说明，不认证原始直播完整或日期"
+  },
+  "comparison_sources": [
+    {
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+      "existing_samples_seconds": [
+        600.823994,
+        3001.46559,
+        5801.260519
+      ]
+    },
+    {
+      "source_index": "2",
+      "url": "https://www.acfun.cn/v/ac2487950",
+      "existing_samples_seconds": [
+        601.459794,
+        3001.460823,
+        5801.460512,
+        6401.458885
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1ZN411o7VN/?p=4",
+      "page": 4,
+      "actual_seconds": 600.35773,
+      "duration_seconds": 5830,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰衣女流摄像头，左侧动物帽女流旧来信节目与密集文字，与当前B600及A2 601局部相近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ZN411o7VN/?p=4",
+      "page": 4,
+      "actual_seconds": 3000.964037,
+      "duration_seconds": 5830,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰底文字66我要抱抱及灰衣女流摄像头，与当前B3001/A2 3001局部相近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ZN411o7VN/?p=4",
+      "page": 4,
+      "actual_seconds": 5800.964743,
+      "duration_seconds": 5830,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "论坛帖子列表/底部推荐图与灰衣女流大摄像头，与当前B5801/A2 5801局部相近；距旧P4尾约29秒"
+    }
+  ],
+  "conclusions": [
+    "旧影忆P4正常可播、UID15800276/页ID340014999/5830秒与旧97分钟备注指向相容，已从本地历史疑点增加当前页面证据",
+    "新600/3000/5800三点分别旧动物帽节目/66我要抱抱文字/论坛，与现B及A2对应点局部相近，不是逐帧或全片等价认证",
+    "同长度/相近内容不能证明“剪辑”具体编辑操作，历史备注的归属链说明应指明旧BV，不直接套当前BV",
+    "本批3点未见MC不证明旧P4全片无MC，已有A1/A2实际MC影像，不判整场缺失；独立母场日期/全片完整未证"
+  ]
+}

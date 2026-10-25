@@ -1,0 +1,57 @@
+{
+  "entry_id": "2019-11-09-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1kE411v7Uc",
+    "title": "女流-2019.11.9-死亡搁浅",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "page_count": 6,
+    "samples": [
+      {
+        "page": 1,
+        "id": 128553149,
+        "title": "P1-2019.11.9-游戏前聊10块钱的",
+        "metadata_duration_seconds": 2674,
+        "media_duration_seconds": 2674
+      },
+      {
+        "page": 2,
+        "id": 128548752,
+        "title": "P2-2019.11.9-死亡搁浅",
+        "metadata_duration_seconds": 2266,
+        "media_duration_seconds": 2266
+      }
+    ]
+  },
+  "player_observations": [
+    {
+      "url": "https://www.bilibili.com/video/BV1kE411v7Uc/?p=1&t=30",
+      "page": 1,
+      "actual_seconds": 30.702323,
+      "duration_seconds": 2674,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流黑衫全屏聊天摄像头。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1kE411v7Uc/?p=2&t=30",
+      "page": 2,
+      "actual_seconds": 30.908952,
+      "duration_seconds": 2266,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "死亡搁浅背包角色在终端前；此处不是 11 月 8 日稿 P2 所见的剧情近景。页面有登录高清/试看提示，未尝试跨过登录限制；只记录当前实际解码画面。"
+    }
+  ],
+  "conclusions": [
+    "两处播放器样本分别支持P1聊天摄像头和P2死亡搁浅画面，P2与11月8日稿P2既有剧情近景样本不同。",
+    "仅两点内容样本，不能排除其他位置重叠，不能据此裁定母场日期、分段边界或来源完整性。",
+    "页面存在登录高清/试看提示；本轮没有跨过登录提示。静音机器观察，human_watch=false。"
+  ]
+}

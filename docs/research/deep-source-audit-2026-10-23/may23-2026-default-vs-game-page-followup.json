@@ -1,0 +1,77 @@
+{
+  "entry_id": "2026-05-23-live-02",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1wZGq6GEtz",
+  "human_watch": false,
+  "verification_extent": "Root-supplied public Bilibili videoData page map and two muted player screenshots after stable seeking; author did not independently operate or listen to media. No media downloaded.",
+  "submission_metadata": {
+    "title": "【女流66】《鸣潮》3.3下半剧情「在熔解的夜空下」主线剧情 05.23全程直播录像弹幕版",
+    "owner": "不懒bot",
+    "pages": [
+      {
+        "page": 1,
+        "cid": 38559941489,
+        "part_title": "开播聊天+看诡秘之主PV 20:48",
+        "duration_sec": 1781
+      },
+      {
+        "page": 2,
+        "cid": 38560072975,
+        "part_title": "鸣潮3.3下半剧情 21:17",
+        "duration_sec": 1820
+      },
+      {
+        "page": 3,
+        "cid": 38561122856,
+        "part_title": "鸣潮3.3下半剧情 21:48",
+        "duration_sec": 3601
+      },
+      {
+        "page": 4,
+        "cid": 38562628891,
+        "part_title": "鸣潮3.3下半剧情 22:48",
+        "duration_sec": 3317
+      },
+      {
+        "page": 5,
+        "cid": 38563283865,
+        "part_title": "抽达妮娅+专武+看二周年纪念动画 23:44",
+        "duration_sec": 1209
+      }
+    ]
+  },
+  "samples": [
+    {
+      "page": 1,
+      "cid": 38559941489,
+      "time_sec": 600.62331,
+      "media_duration_sec": 1781,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "大画面聊天摄像头：女流穿黑色短袖，红黑色椅子；画面有弹幕。该抽点没有可见游戏。未记录弹幕文字或歌词，也未听音频。"
+    },
+    {
+      "page": 2,
+      "cid": 38560072975,
+      "time_sec": 600.293946,
+      "media_duration_sec": 1820,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "《鸣潮》剧情角色对话场景，角色在阿里曼/绿白十字门前，右上角有女流摄像头。未抄录对白、用户ID或弹幕；未听音频。"
+    }
+  ],
+  "assessment": "当前公开投稿页表为五页：P1标题为开播聊天/看《诡秘之主》PV，P2–P4标题为《鸣潮》剧情，P5标题为抽取达妮娅/专武及周年动画。两个稳定抽点分别显示P1聊天画面和P2《鸣潮》剧情。PV标题不是实际游戏游玩证据；P1单点无游戏不证明整P1无游戏，P2剧情样本也不证明主播亲自操作或整P连续。",
+  "date_assessment": "投稿标题和页级字段标记05.23；这只是当前公开页面元数据，两个画面点不独立认证直播日期或素材母场日期。",
+  "completeness_assessment": "本轮只观察P1与P2各约600秒一个静音稳定点；P3–P5未看。没有完整性、页间连续性、整场覆盖或独立日期认证；不能据P1前聊/看PV标题删除整条或判影像缺失。",
+  "limitations": [
+    "只采样两个页面各一个稳定画面点；P3–P5未看。",
+    "静音截图，不作听音频或确认唱歌结论。",
+    "不抄录画面对白、弹幕、用户ID等内容。",
+    "不把PV观看标题当成游戏亲玩证据。",
+    "无正式data变更；机器观察，human_watch=false。"
+  ]
+}
