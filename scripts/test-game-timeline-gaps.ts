@@ -176,7 +176,7 @@ assert.deepEqual(
 const staleGaps = [...registeredGaps.keys()].filter((key) => !currentGaps.has(key))
 assert.deepEqual(staleGaps, [], `registered game gaps no longer exist; remove stale exceptions:\n${staleGaps.join('\n')}`)
 
-// ── 旧 segments 的游戏标签与新 unknown 区间的交叉核对 ─────────────────
+// ── 旧 segments 的游戏标签与新 unknown / break 区间的交叉核对 ─────────
 function inferSegmentGame(entry: Entry, span: Entry['segments'][number]): string | undefined {
   if (span.game) return span.game
   const label = span.label ?? ''
@@ -186,7 +186,18 @@ function inferSegmentGame(entry: Entry, span: Entry['segments'][number]): string
   })
 }
 
-const currentCrossChecks = new Map<string, { entry: string; segmentAt: string; game: string; overlapSec: number }>()
+type CrossCheck = {
+  entry: string
+  segmentAt: string
+  game: string
+  kind: 'unknown' | 'break'
+  page: number
+  at: string
+  overlapSec: number
+}
+const crossCheckKey = (item: Omit<CrossCheck, 'overlapSec'>) =>
+  `${item.entry}|${item.segmentAt}|${item.game}|${item.kind}|${item.page}|${item.at}`
+const currentCrossChecks = new Map<string, CrossCheck>()
 for (const timeline of timelines) {
   const entry = entries.get(timeline.entry)
   if (!entry?.segments?.length) continue
@@ -198,30 +209,31 @@ for (const timeline of timelines) {
     const next = entry.segments[index + 1]
     const end = next ? hms(next.at) : (entry.duration_min ?? 0) * 60
     for (const raw of resolved) {
-      if (raw.span.kind !== 'unknown') continue
+      if (raw.span.kind !== 'unknown' && raw.span.kind !== 'break') continue
       const overlap = Math.min(end, raw.endSec) - Math.max(start, raw.startSec)
-      if (overlap <= 300) continue
-      currentCrossChecks.set(`${timeline.entry}|${segment.at}|${game}`, {
+      if (overlap < 300) continue
+      const item: CrossCheck = {
         entry: timeline.entry,
         segmentAt: segment.at,
         game,
+        kind: raw.span.kind,
+        page: raw.span.page,
+        at: raw.span.at,
         overlapSec: overlap,
-      })
+      }
+      currentCrossChecks.set(crossCheckKey(item), item)
     }
   }
 }
-const registeredCrossChecks = new Map(REVIEWED_CROSS_CHECKS.map((item) => [`${item.entry}|${item.segmentAt}|${item.game}`, item]))
+const registeredCrossChecks = new Map<string, (typeof REVIEWED_CROSS_CHECKS)[number]>()
+for (const item of REVIEWED_CROSS_CHECKS) {
+  const key = crossCheckKey(item)
+  assert.ok(item.reason.trim(), `${key}: every cross-check exception needs an evidence explanation`)
+  assert.ok(!registeredCrossChecks.has(key), `duplicate cross-check exception: ${key}`)
+  registeredCrossChecks.set(key, item)
+}
 const unregisteredCrossChecks = [...currentCrossChecks.keys()].filter((key) => !registeredCrossChecks.has(key))
-assert.deepEqual(
-  unregisteredCrossChecks,
-  [],
-  `old segments name a game over a long unknown span; review it before changing the timeline:\n${unregisteredCrossChecks
-    .map((key) => {
-      const item = currentCrossChecks.get(key)!
-      return `  ${item.entry} @ ${item.segmentAt}: ${item.game} overlaps unknown by ${Math.round(item.overlapSec / 60)} min`
-    })
-    .join('\n')}`,
-)
+
 const staleCrossChecks = [...registeredCrossChecks.keys()].filter((key) => !currentCrossChecks.has(key))
 if (staleCrossChecks.length) {
   console.log(`Game timeline cross-check register has ${staleCrossChecks.length} stale exception(s); remove them:`)
@@ -252,6 +264,7 @@ if (staleLong.length) {
 }
 
 // ── 已审阅的「游戏前聊」不再回退成 unknown ────────────────────────
+// 回归锁：只保证不被意外改动，不证明正确；改数据时要连同证据一起更新。
 const reviewedOpeningBreaks: Record<string, string> = {
   '2017-09-20-live-01': '游戏前聊20块钱的',
   '2017-11-17-live-01': '游戏前聊10块钱的',
@@ -282,6 +295,7 @@ for (const [entry, name] of Object.entries(reviewedOpeningBreaks)) {
 // ── 两款已识别游戏之间的短切换，不能再次保留泛称 unknown ──────────────
 // docs/game-time.md：不足五分钟的切换/短聊并入前一款游戏；若真的怀疑有
 // 尚未识别的第三款游戏，必须在 note 写出具体画面证据，而不是泛称“聊天/切换”。
+// 回归锁：只保证不被意外改动，不证明正确；改数据时要连同证据一起更新。
 const unresolvedShortTransitions: string[] = []
 for (const timeline of timelines) {
   const resolved = resolveSpans(timeline)
@@ -319,7 +333,20 @@ for (const timeline of timelines) {
   }
 }
 // 本轮没有新增人工核实；这个数字变化时必须说明证据来源。
+// 回归锁：只保证不被意外改动，不证明正确；改数据时要连同证据一起更新。
 assert.equal(totalVerified, 186628, 'verified game time must not change without human review evidence')
+
+// 先执行其余回归检查，再统一报告未确认的交叉冲突。
+assert.deepEqual(
+  unregisteredCrossChecks,
+  [],
+  `old segments name a game over an unknown or break span of at least five minutes; review it before changing the timeline:\n${unregisteredCrossChecks
+    .map((key) => {
+      const item = currentCrossChecks.get(key)!
+      return `  ${item.entry} @ ${item.segmentAt}: ${item.game} overlaps ${item.kind} P${item.page} ${item.at} by ${item.overlapSec.toFixed(3)} sec`
+    })
+    .join('\n')}`,
+)
 
 const publicGameCount = getPublicDataset().games.size
 console.log(
