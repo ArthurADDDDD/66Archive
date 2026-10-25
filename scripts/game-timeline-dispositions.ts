@@ -29,6 +29,11 @@ export type ReviewedCrossCheck = {
  */
 export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
   {
+    entry: '2017-08-19-live-01', segmentAt: '00:00:00', game: 'nidhogg',
+    kind: 'break', page: 1, at: '00:00:00',
+    reason: 'BV1dx411J77f P1 分P标题为「游戏前聊10块钱的」，P1 1/10/20/25 分钟抽帧均为摄像头聊天；旧分段标签是 A 站每个分P统一的「尼德霍格+吃鸡」，不代表 P1 在玩。尼德霍格从 P2 标题画面开始。',
+  },
+  {
     entry: '2017-06-05-live-01', segmentAt: '00:42:43', game: '1-2-switch',
     kind: 'break', page: 1, at: '00:00:00',
     reason: 'P1 抽帧为摄像头聊天/吃饭，约 40:40 才出现 Switch 主页；P2 前 20 分钟为 eShop、预告与购买流程，1-2-Switch 启动约在 P2 20:00，旧分段起点过早。',
