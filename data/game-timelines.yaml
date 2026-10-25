@@ -859,6 +859,35 @@
     evidence: part_title
     note: 水墨苏绣（外景，非游戏）
   reviewed: '2026-10-20'
+- entry: 2016-08-23-live-01
+  basis: https://www.bilibili.com/video/BV1rs411k7e4
+  coverage: complete
+  parts:
+  - page: 1
+    id: 9704302
+    duration_sec: 2212
+  - page: 2
+    id: 9704303
+    duration_sec: 3502
+  - page: 3
+    id: 9704304
+    duration_sec: 2183
+  - page: 4
+    id: 9704305
+    duration_sec: 1033
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: contra
+    precision: part
+    evidence: part_title
+  - page: 3
+    at: 00:00:00
+    game: snow-bros
+    precision: part
+    evidence: part_title
+    note: P3 开头在模拟器里选游戏，一分钟内进入雪人兄弟。
+  reviewed: '2026-10-25'
 - entry: 2017-08-09-live-01
   basis: https://www.bilibili.com/video/BV1vx411n7jt
   coverage: complete
@@ -904,6 +933,41 @@
     precision: approx
     evidence: thumbnails
   reviewed: '2026-10-19'
+- entry: 2017-08-19-live-01
+  basis: https://www.bilibili.com/video/BV1dx411J77f
+  coverage: complete
+  parts:
+  - page: 1
+    id: 22213237
+    duration_sec: 1562
+  - page: 2
+    id: 22213240
+    duration_sec: 4334
+  - page: 3
+    id: 22213235
+    duration_sec: 4219
+  - page: 4
+    id: 22213233
+    duration_sec: 4219
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: part_title
+    note: 游戏前聊10块钱的
+  - page: 2
+    at: 00:00:00
+    game: nidhogg
+    precision: part
+    evidence: part_title
+    note: 尼德霍格2
+  - page: 3
+    at: 00:00:00
+    game: pubg
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-25'
 - entry: 2017-09-20-live-01
   basis: https://www.bilibili.com/video/BV1Lx411x7bS
   coverage: unknown
@@ -1742,6 +1806,46 @@
     evidence: part_title
     note: P2 起点（39:11）出现古剑奇谭标题/加载，53:35 起实机；按条目标签映射为古剑奇谭三。
   reviewed: '2026-10-19'
+- entry: 2018-12-06-live-01
+  basis: https://www.bilibili.com/video/BV1Wt411S7kS
+  coverage: complete
+  parts:
+  - page: 1
+    id: 66030676
+    duration_sec: 2971
+  - page: 2
+    id: 66030486
+    duration_sec: 893
+  - page: 3
+    id: 66033175
+    duration_sec: 3362
+  - page: 4
+    id: 66035623
+    duration_sec: 3364
+  - page: 5
+    id: 66035448
+    duration_sec: 3364
+  - page: 6
+    id: 66036076
+    duration_sec: 3364
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 开播聊天/看视频
+  - page: 1
+    at: 00:32:00
+    game: doudizhu
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    game: gujian-qitan-3
+    precision: part
+    evidence: part_title
+  reviewed: '2026-10-25'
 - entry: 2018-12-07-live-01
   basis: https://www.bilibili.com/video/BV1qt411S726
   coverage: unknown
