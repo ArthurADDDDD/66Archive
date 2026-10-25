@@ -800,7 +800,7 @@
   - id: dragon-quest-builders-2
     name: 勇者斗恶龙创世小玩家2
     aliases:
-      - DQ建造者
+      - DQ建造者2
       - DQ Builders 2
     genres:
       - sandbox
@@ -1678,7 +1678,6 @@
   - id: kirby-star-allies
     name: 星之卡比：新星同盟
     aliases:
-      - 星之卡比
       - 新星同盟
       - Kirby Star Allies
     genres:
@@ -2076,6 +2075,14 @@
     aliases:
       - 'Naraka: Bladepoint'
       - 永劫
+    genres:
+      - battle-royale
+      - action
+  - id: naraka-bladepoint-mobile
+    name: 永劫无间手游
+    aliases:
+      - 永劫无间手机版
+      - 'Naraka: Bladepoint Mobile'
     genres:
       - battle-royale
       - action
@@ -4307,6 +4314,7 @@
     name: 勇者斗恶龙：创世小玩家
     aliases:
       - Dragon Quest Builders
+      - DQ建造者
     genres:
       - sandbox
       - rpg
