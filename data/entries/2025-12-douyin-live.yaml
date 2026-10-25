@@ -39,12 +39,15 @@
       - url: "https://www.bilibili.com/video/BV17K2eBgEsz"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
       - url: "https://www.bilibili.com/video/BV1EP2eBrEQZ"
         kind: replay
         status: alive
+        account: bili-fan-heiji
       - url: "https://www.bilibili.com/video/BV1wR2YBmEdb"
         kind: replay
         status: alive
+        account: bili-fan-bulanbot
     contributed_by: data-agent
 
     duration_min: 254
@@ -75,15 +78,19 @@
       - url: "https://www.bilibili.com/video/BV1Rr2EBFEoH"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
       - url: https://www.bilibili.com/video/BV1Ev2jB4EPg
         kind: replay
         status: alive
+        account: bili-fan-bobi-replay
       - url: "https://www.bilibili.com/video/BV1xr27B3Exk"
         kind: replay
         status: alive
+        account: bili-fan-bulanbot
       - url: "https://www.bilibili.com/video/BV1CP27BiEdS"
         kind: replay
         status: alive
+        account: bili-fan-bulanbot
     contributed_by: data-agent
 
     duration_min: 108
@@ -124,6 +131,7 @@
       - url: "https://www.bilibili.com/video/BV1fi2XBhEeL"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
     contributed_by: data-agent
 
     duration_min: 203
@@ -153,6 +161,7 @@
       - url: "https://www.bilibili.com/video/BV19tm5BjEHj"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
     contributed_by: data-agent
 
     duration_min: 205
@@ -185,6 +194,7 @@
       - url: "https://www.bilibili.com/video/BV1cgq5BYE79"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
     contributed_by: data-agent
 
     duration_min: 153
@@ -236,6 +246,7 @@
       - url: "https://www.bilibili.com/video/BV13yBQBZEP8"
         kind: replay
         status: alive
+        account: bili-fan-clean-replay
     contributed_by: data-agent
 
     duration_min: 138
@@ -280,6 +291,7 @@
       - url: "https://www.bilibili.com/video/BV11HByB8Evv"
         kind: replay
         status: alive
+        account: bili-fan-bobi-replay
     contributed_by: data-agent
 
     duration_min: 244
@@ -320,5 +332,6 @@
       - url: "https://www.bilibili.com/video/BV1tMvkBDE1D"
         kind: replay
         status: alive
+        account: bili-fan-bobi-replay
     contributed_by: data-agent
     duration_min: 164
