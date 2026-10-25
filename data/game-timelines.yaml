@@ -2206,7 +2206,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 《迷雾侦探》片尾字幕/聊天
+    note: 《迷雾侦探》结束后聊天（标志画面/黑屏）
   - page: 4
     at: 00:00:05
     game: rento
@@ -3159,7 +3159,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 游戏暂播中（扣一玩歌姬）
+    note: 游戏暂停中（聊天/查看联机平台）
   - page: 1
     at: 00:08:30
     game: rolo-to-the-rescue
@@ -3170,7 +3170,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 游戏结束后浏览 Steam 库/游戏列表
+    note: 游戏结束后浏览游戏平台的游戏列表
   - page: 4
     at: 00:00:48
     game: circus-charlie
@@ -3445,7 +3445,7 @@
     kind: break
     precision: part
     evidence: thumbnails
-    note: 开播浏览（B 站活动页）
+    note: 开播浏览（WeGame 游戏资讯页）
   - page: 2
     at: 00:00:00
     game: xianjian-7
@@ -3580,7 +3580,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 开播浏览（Steam 商店）
+    note: 开播浏览（Steam 库里的《高殿战记》页）
   - page: 2
     at: 00:00:00
     game: gaodian-zhanji
@@ -3904,7 +3904,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 开播浏览（Steam《永劫无间》商店页）
+    note: 开播浏览（Steam 库里的《永劫无间》页）
   - page: 1
     at: 00:16:15
     game: world-games-51
@@ -4448,7 +4448,7 @@
     kind: break
     precision: approx
     evidence: thumbnails
-    note: 开播聊天（Headbangers 前）
+    note: 开播聊天
   - page: 1
     at: 00:13:15
     game: valorant
