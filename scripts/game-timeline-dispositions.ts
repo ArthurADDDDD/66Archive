@@ -183,9 +183,7 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
  * 已按多帧抽检复核、仍保留为 unknown 的长时间未归属段（≥30 分钟）。
  * 键：entry|page|at。新增长时间 unknown 必须先复核并登记，否则测试失败。
  */
-export const REVIEWED_LONG_UNKNOWNS: Record<string, string> = {
-  '2026-08-10-live-03|2|00:01:45': 'BV1gQuo6TE5V：P2 01:45 标题明确为 The Little Cat and the Sea，随后手册、海面小船与潜水实机持续至39:50，40:05 已是冒险岛怀旧服加载。尚未建立对应游戏条目，暂保留 unknown，不计入冒险岛时长。',
-}
+export const REVIEWED_LONG_UNKNOWNS: Record<string, string> = {}
 export type ReviewedSpanBound = {
   entry: string
   game: string
