@@ -19,6 +19,8 @@
 
   - id: 23-4
     name: 使命召唤23：现代战争4
+    genres:
+      - shooter
 
   - id: 3rd-eye
     name: 3rd eye
@@ -749,6 +751,9 @@
 
   - id: dont-escape
     name: Don't Escape
+    genres:
+      - puzzle
+      - adventure
 
   - id: dont-starve
     name: 饥荒
@@ -942,6 +947,9 @@
     name: 辐射：避难所 Online
     aliases:
       - Fallout Shelter Online
+    genres:
+      - simulation
+      - rpg
 
   - id: far-lone-sails
     name: 孤帆远航
@@ -2481,6 +2489,9 @@
     name: Rec Room
     aliases:
       - RecRoom
+    genres:
+      - party
+      - sandbox
 
   - id: red-dead-redemption-2
     name: 荒野大镖客2
