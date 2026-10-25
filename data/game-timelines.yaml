@@ -6621,3 +6621,513 @@
     precision: part
     evidence: human_watch
   reviewed: '2026-10-21'
+- entry: 2026-05-20-live-01
+  basis: https://www.bilibili.com/video/BV1y5L26VEFM
+  coverage: complete
+  parts:
+  - page: 1
+    id: 38473565567
+    duration_sec: 1125
+  - page: 2
+    id: 38473565710
+    duration_sec: 2476
+  - page: 3
+    id: 38472583657
+    duration_sec: 3601
+  - page: 4
+    id: 38473171561
+    duration_sec: 3361
+  - page: 5
+    id: 38483591505
+    duration_sec: 2477
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: thumbnails
+    note: 开播聊天
+  - page: 2
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+  reviewed: '2026-10-25'
+- entry: 2026-08-03-live-02
+  basis: https://www.bilibili.com/video/BV1FjM966EjU
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40553744586
+    duration_sec: 3601
+  - page: 2
+    id: 40555840320
+    duration_sec: 3601
+  - page: 3
+    id: 40557939885
+    duration_sec: 3601
+  - page: 4
+    id: 40559184371
+    duration_sec: 1720
+  - page: 5
+    id: 40566129519
+    duration_sec: 3601
+  - page: 6
+    id: 40567636346
+    duration_sec: 3601
+  - page: 7
+    id: 40568619659
+    duration_sec: 2626
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: thumbnails
+  - page: 3
+    at: 00:03:00
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+- entry: 2025-05-30-live-02
+  basis: https://www.bilibili.com/video/BV1RF7WzHEdu
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 30230709261
+    duration_sec: 3601
+  - page: 2
+    id: 30231629569
+    duration_sec: 3601
+  - page: 3
+    id: 30232937903
+    duration_sec: 3601
+  - page: 4
+    id: 30233986157
+    duration_sec: 3601
+  - page: 5
+    id: 30235167096
+    duration_sec: 3601
+  - page: 6
+    id: 30235821490
+    duration_sec: 1779
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: elden-ring-nightreign
+    precision: exact
+    evidence: thumbnails
+- entry: 2025-05-31-live-02
+  basis: https://www.bilibili.com/video/BV1KC7PzHEsq
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 30248732395
+    duration_sec: 3601
+  - page: 2
+    id: 30249717063
+    duration_sec: 3601
+  - page: 3
+    id: 30250830007
+    duration_sec: 3601
+  - page: 4
+    id: 30252009376
+    duration_sec: 3601
+  - page: 5
+    id: 30253187882
+    duration_sec: 3601
+  - page: 6
+    id: 30253387188
+    duration_sec: 699
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: elden-ring-nightreign
+    precision: exact
+    evidence: thumbnails
+- entry: 2025-06-01-live-02
+  basis: https://www.bilibili.com/video/BV1ET7rzrEke
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 30272783603
+    duration_sec: 3601
+  - page: 2
+    id: 30273834276
+    duration_sec: 3601
+  - page: 3
+    id: 30274945352
+    duration_sec: 3601
+  - page: 4
+    id: 30275537555
+    duration_sec: 1367
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: elden-ring-nightreign
+    precision: exact
+    evidence: thumbnails
+- entry: 2026-08-04-live-03
+  basis: https://www.bilibili.com/video/BV1Gmuw6HEa5
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40582842883
+    duration_sec: 3601
+  - page: 2
+    id: 40584611690
+    duration_sec: 3601
+  - page: 3
+    id: 40586511001
+    duration_sec: 3601
+  - page: 4
+    id: 40587233524
+    duration_sec: 845
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+- entry: 2025-06-02-live-02
+  basis: https://www.bilibili.com/video/BV1om7DzPEC7
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 30286086186
+    duration_sec: 3601
+  - page: 2
+    id: 30287006923
+    duration_sec: 3601
+  - page: 3
+    id: 30288055760
+    duration_sec: 3601
+  - page: 4
+    id: 30288839033
+    duration_sec: 2707
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: elden-ring-nightreign
+    precision: exact
+    evidence: thumbnails
+- entry: 2026-08-05-live-01
+  basis: https://www.bilibili.com/video/BV1ASMk6EE2z
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40615938772
+    duration_sec: 3601
+  - page: 2
+    id: 40617837922
+    duration_sec: 3601
+  - page: 3
+    id: 40619280878
+    duration_sec: 2718
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+- entry: 2025-06-03-live-04
+  basis: https://www.bilibili.com/video/BV1dv7hzrEcp
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 30302735883
+    duration_sec: 3601
+  - page: 2
+    id: 30303717852
+    duration_sec: 3601
+  - page: 3
+    id: 30304767208
+    duration_sec: 3601
+  - page: 4
+    id: 30305420795
+    duration_sec: 1019
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: elden-ring-nightreign
+    precision: exact
+    evidence: thumbnails
+- entry: 2026-10-20-live-01
+  basis: https://www.bilibili.com/video/BV1PLnw6YEyB
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 42894231867
+    duration_sec: 2401
+  - page: 2
+    id: 42894363606
+    duration_sec: 2401
+  - page: 3
+    id: 42894953848
+    duration_sec: 2401
+  - page: 4
+    id: 42895148638
+    duration_sec: 1331
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+  - page: 1
+    at: 00:06:05
+    game: planet-zoo-2
+    precision: approx
+    evidence: thumbnails
+- entry: 2026-10-21-live-01
+  basis: https://www.bilibili.com/video/BV1DXn66DE5Z
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 42933944443
+    duration_sec: 1230
+  - page: 2
+    id: 42934077949
+    duration_sec: 2372
+  - page: 3
+    id: 42934274993
+    duration_sec: 2401
+  - page: 4
+    id: 42934798623
+    duration_sec: 2401
+  - page: 5
+    id: 42935255926
+    duration_sec: 2430
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 开播聊天及观看游戏宣传片
+  - page: 2
+    at: 00:00:00
+    game: planet-zoo-2
+    precision: part
+    evidence: thumbnails
+- entry: 2026-08-08-live-03
+  basis: https://www.bilibili.com/video/BV1rWu36ZELV
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40723742890
+    duration_sec: 3601
+  - page: 2
+    id: 40725381535
+    duration_sec: 3601
+  - page: 3
+    id: 40726430630
+    duration_sec: 2585
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+  - page: 1
+    at: 00:06:55
+    kind: break
+    precision: approx
+    evidence: thumbnails
+    note: 中途聊天与休息
+  - page: 1
+    at: 00:12:00
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+- entry: 2026-08-10-live-03
+  basis: https://www.bilibili.com/video/BV1gQuo6TE5V
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40788231875
+    duration_sec: 3601
+  - page: 2
+    id: 40789607394
+    duration_sec: 3595
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: approx
+    evidence: thumbnails
+  - page: 1
+    at: 00:11:05
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+  - page: 2
+    at: 00:01:45
+    kind: unknown
+    precision: approx
+    evidence: thumbnails
+    note: The Little Cat and the Sea（已识别作品，待建立游戏条目）
+  - page: 2
+    at: 00:40:05
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+- entry: 2026-10-22-live-01
+  basis: https://www.bilibili.com/video/BV1EcnH6yEaX
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 42963435538
+    duration_sec: 2467
+  - page: 2
+    id: 42963568900
+    duration_sec: 2340
+  - page: 3
+    id: 42964222137
+    duration_sec: 2401
+  - page: 4
+    id: 42964485369
+    duration_sec: 1071
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: thumbnails
+  - page: 2
+    at: 00:01:05
+    game: planet-zoo-2
+    precision: approx
+    evidence: thumbnails
+- entry: 2026-08-11-live-01
+  basis: https://www.bilibili.com/video/BV1HYuB6qEXm
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 40819100193
+    duration_sec: 3601
+  - page: 2
+    id: 40820541263
+    duration_sec: 3600
+  - page: 3
+    id: 40821263592
+    duration_sec: 684
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+- entry: 2026-08-31-live-01
+  basis: https://www.bilibili.com/video/BV1pGta6aEFh
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 41468890494
+    duration_sec: 990
+  - page: 2
+    id: 41469545892
+    duration_sec: 1201
+  - page: 3
+    id: 41468232908
+    duration_sec: 2401
+  - page: 4
+    id: 41469411339
+    duration_sec: 2401
+  - page: 5
+    id: 41470789980
+    duration_sec: 2401
+  - page: 6
+    id: 41471116645
+    duration_sec: 1454
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
+  - page: 2
+    at: 00:03:05
+    kind: break
+    precision: approx
+    evidence: thumbnails
+    note: 无信号、聊天及连麦
+  - page: 3
+    at: 00:06:35
+    game: maplestory-classic
+    precision: approx
+    evidence: thumbnails
+- entry: 2026-09-01-live-01
+  basis: https://www.bilibili.com/video/BV1MKtV69E6z
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 41498840924
+    duration_sec: 1095
+  - page: 2
+    id: 41498968183
+    duration_sec: 1307
+  - page: 3
+    id: 41499428765
+    duration_sec: 2401
+  - page: 4
+    id: 41500215487
+    duration_sec: 2401
+  - page: 5
+    id: 41501393809
+    duration_sec: 2401
+  - page: 6
+    id: 41501525633
+    duration_sec: 1533
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: thumbnails
+  - page: 2
+    at: 00:00:00
+    precision: part
+    evidence: thumbnails
+    game: maplestory-classic
+- entry: 2026-09-16-live-01
+  basis: https://www.bilibili.com/video/BV1fAeK6PEFT
+  coverage: complete
+  reviewed: '2026-10-25'
+  parts:
+  - page: 1
+    id: 41951890989
+    duration_sec: 2401
+  - page: 2
+    id: 41952480921
+    duration_sec: 1146
+  - page: 3
+    id: 41953201838
+    duration_sec: 2873
+  spans:
+  - page: 1
+    at: 00:00:00
+    kind: break
+    precision: part
+    evidence: thumbnails
+  - page: 3
+    at: 00:00:00
+    game: maplestory-classic
+    precision: part
+    evidence: thumbnails
