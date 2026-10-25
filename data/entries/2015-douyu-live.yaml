@@ -171,6 +171,7 @@
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」《女流过往精彩录像补投-风之旅人（2015.2.4/7.22/8.20）》P1.1/P1.2。用户人工核实发现：该 BV 平台封面实际取自 P2/P3（2015.7.22/8.20，已露脸期），与本条目对应的 2015-02-04（尚未露脸期）不符，已标记 cover_unreliable 并改用从 P1 内截取的画面作为封面。 2026-09-24 task-047（登录 720p 画面核查）：画面一手定日：P1.1 开头与 P1.2 1:42～1:54 两次出现 PS3 主界面，右上角时钟「2/4 2:31 PM」「2/4 5:07～5:20 PM」。内容补全：风之旅人之后她玩了 PS3《flOw》（P1.2 1:44 起），打开过《Flower》说明页即退出，又切到 Wii U 菜单，最后在电脑上试玩《Shot Aground》（Rene Rother 的两周原型，v0.11，P1.2 2:04 起；资源管理器 E:\\Games 里 ShotAground_win 修改时间 2015/2/4 11:24）。"
   - id: 2015-02-05-live-01
@@ -209,6 +210,7 @@
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」《去月球》第一、二幕补投 P2/P3。 2026-09-24 task-047（登录 720p 画面核查）：P2 1:44:15 她打开自己的百度网盘，列表第一项「66斗鱼直播 20150205 P3.mp4」292.19 MB、修改时间 2015-02-06 16:08——当天 16:08 之后仍在播，日期一手确认（也说明她自己在网盘里留存过 02-05 的录像）。"
   - id: 2015-02-09-live-01
@@ -300,6 +302,7 @@
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」超凡双生补投 P1.1/P1.2。 2026-09-24 task-047（登录 720p 画面核查）：P1.1 任务栏时钟 14:55～15:07「2015/3/2」，日期一手确认。"
   - id: 2015-03-10-live-01
@@ -321,18 +324,22 @@
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=5
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=6
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1bW411W74m?p=7
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」超凡双生补投 P2.1-P2.5。 2026-09-24 task-047（登录 720p 画面核查）：P2.1 任务栏 14:17～14:33、P2.3 16:21、P2.5 17:59～18:17，均为「2015/3/10」，日期一手确认。"
   - id: 2015-03-11-live-01
@@ -562,12 +569,15 @@
       - url: https://www.bilibili.com/video/BV1px411E7rA?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1px411E7rA?p=3
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1px411E7rA?p=4
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」《女流过往精彩录像补投第三期-Life is Strange奇异人生（2015.6.24）》，4P全长录播，经 view API 确认日期与分P时长。 2026-09-24 task-047 改记 2015-06-23（原 2015-06-24-live-01）：这份录像是观众用自己电脑录下的斗鱼直播间网页（房间标题「【女流】生活真奇怪！」），录屏者任务栏在 P1 1:12:15 显示「17:26 2015/6/23」（第一章刚结束、第二章开场）、P2 0:53:15「18:21 2015/6/23」、P3 0:04:45「18:47 2015/6/23」（在线 9,807 人）。四段依次是第一章、第二章、第二章结尾接第三章、第三章，连续一场，约 16:14 开播。上传者分P 标注的 6.24 与画面时钟不符，以时钟为准。另：她 08-11 读档时第三章存档的日期是 24/6/2015，说明 06-24 她又玩过第三章（缺口图记为可能开播日）。"
   - id: 2015-06-26-live-01
@@ -829,6 +839,7 @@
         kind: replay
         status: alive
         cover_unreliable: true
+        account: bili-fan-record-house
       - url: https://v.youku.com/v_show/id_XMTI5MzAzMjY1Ng==.html
         kind: replay
         status: alive
@@ -966,9 +977,11 @@
       - url: https://www.bilibili.com/video/BV1Jx411E7JV?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Jx411E7JV?p=3
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」《女流过往精彩录像补投第四期-Life is Strange 奇异人生（2015.8.11）》，3P全长录播。 2026-09-24 task-047（登录 720p 画面核查）：P1 开头奇异人生读档面板：「存档2 章节4 日期 11/8/2015」（当场新建）、「存档1 章节3 日期 24/6/2015」，日期一手确认。"
   - id: 2015-08-12-live-01
@@ -1581,6 +1594,7 @@
       - url: https://www.bilibili.com/video/BV1fW411b7Lv?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: "B站「女流录像小屋」《女流过往精彩录像补投-鸟的故事 A Bird Story（2015.10.20）》，2P全长录播。 2026-09-24 task-050：日期只有录像小屋分P 标注一处；沈锋 2017 年答「鸟的故事 2015.10.20」，可他自己的 沈锋整理的节目单（data/catalogs/shenfeng-schedule-2015-2019.csv，按当年录像文件整理，与一手日期约六分之一差一两天） 却把《A bird story》记在 10-19、10-20 只记「paper please、贴条」。几处都出自当年录像文件，彼此却差一天。快照证实 10-19 傍晚开过播，10-20 13:05 时还没开播；全片转写没有自报日期（只说「今天北京的天气非常差」、刚换了模仿 DC 老师的发型），无法判定，confidence 由 high 改为 medium。"
   - id: 2015-10-21-live-01
@@ -1620,6 +1634,7 @@
       - url: https://www.bilibili.com/video/BV1fx411j7ck?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://v.youku.com/v_show/id_XMTM3MjQ4MTA1Ng==.html"
         kind: replay
         status: alive
@@ -1682,15 +1697,19 @@
       - url: https://www.bilibili.com/video/BV1Kx41177jR?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Kx41177jR?p=3
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Kx41177jR?p=4
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1Kx41177jR?p=5
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: "https://v.youku.com/v_show/id_XMTM3MzM5NzgyMA==.html"
         kind: replay
         status: alive
@@ -1725,18 +1744,23 @@
       - url: https://www.bilibili.com/video/BV1wx41177sQ?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1wx41177sQ?p=3
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1wx41177sQ?p=4
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1wx41177sQ?p=5
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1wx41177sQ?p=6
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第八期-Undertale传说之下（2015.10.27）》，6P全长录播。
   - id: 2015-10-28-live-01
@@ -1756,6 +1780,7 @@
       - url: https://www.bilibili.com/video/BV17x411L7HQ?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
     contributed_by: data-agent
     note: B站「女流录像小屋」《女流过往精彩录像补投第九期-Undertale传说之下二周目大结局（2015.10.28）》。
   - id: 2015-10-29-live-01
@@ -1775,10 +1800,12 @@
       - url: https://www.bilibili.com/video/BV1qx411E7ae?p=2
         kind: replay
         status: alive
+        account: bili-fan-record-house
       - url: https://www.bilibili.com/video/BV1TQ4y1h7BG
         kind: replay
         status: alive
         note: "B站「潇灬潇」2023-11-15 投稿《女流返场聊天2015-11-4》，61 分钟，同日晚上的返场聊天。标题日期 11-4 有误，见条目附注。"
+        account: bili-fan-xiaoxiaoxiao
     contributed_by: data-agent
     note: "B站「女流录像小屋」《女流过往精彩录像补投第五期-Life is Strange奇异人生（2015.10.29）》，对应第五章。 2026-09-24 task-046：补同日晚上的返场聊天（B站「潇灬潇」，61 分钟），duration_min 164→225。该投稿标题写「2015-11-4」，但内容定在本日：她说「今天下午播奇异人生的时候也有人说……画质」、此前已播过 Undertale（10-23 起）、「今天周四，明天周五更新视频，后天放假，大后天心灵砒霜……可能会有意外情况，如果有意外的话就延期」（当周直播间标题随后改成「这周心灵砒霜改到周五」）、「明天要录的那个视频是一款恐怖游戏……千万不要看」（她的搜狐号 10-30 13:04 上传《【女流实况】千万不能看！》）。另说「暖气应该是11月15号才来吧」「今年感觉冷得有点早」。"
   - id: 2015-10-30-live-01
