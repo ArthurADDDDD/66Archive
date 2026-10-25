@@ -64,7 +64,7 @@
         status: alive
         account: bili-fan-bulanbot
       - url: "https://www.bilibili.com/video/BV1kNNgztEc2"
-        kind: replay
+        kind: clip
         status: alive
         account: bili-fan-bulanbot
     contributed_by: data-agent
@@ -175,11 +175,11 @@
         status: alive
         account: bili-fan-clean-replay
       - url: "https://www.bilibili.com/video/BV186AVz5EgM"
-        kind: replay
+        kind: clip
         status: alive
         account: bili-fan-heiji
       - url: "https://www.bilibili.com/video/BV11QALzCEck"
-        kind: replay
+        kind: clip
         status: alive
         account: bili-fan-bulanbot
     contributed_by: data-agent
