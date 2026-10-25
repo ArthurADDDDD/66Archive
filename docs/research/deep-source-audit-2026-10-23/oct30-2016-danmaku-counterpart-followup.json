@@ -1,0 +1,63 @@
+{
+  "entry_id": "2016-10-30-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1Us411s7C6/",
+    "title": "女流-10.30-心灵砒霜-弹幕版",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 11260129,
+        "duration_seconds": 4918
+      },
+      {
+        "page": 2,
+        "id": 11260130,
+        "duration_seconds": 5798
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1Us411s7C6/",
+      "page": 1,
+      "actual_seconds": 300.717185,
+      "duration_seconds": 4916.383,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "左白色来信页右白衣女流及黑衣男嘉宾、内嵌弹幕，背景Dark Souls海报"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Us411s7C6/?p=2",
+      "page": 2,
+      "actual_seconds": 3660.904363,
+      "duration_seconds": 5798,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "石油院校毕业三年、油田野外工作、年底MBA考试来信，男女嘉宾/内嵌弹幕，与旧纯净样本同信局部"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Us411s7C6/?p=2",
+      "page": 2,
+      "actual_seconds": 5701.460646,
+      "duration_seconds": 5798,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "来信询问与壮壮用家乡话对话两分钟，男女嘉宾/内嵌弹幕，无实玩游戏"
+    }
+  ],
+  "conclusions": [
+    "两内页有节目来信/男女嘉宾及内嵌弹幕，不把背景Dark Souls海报当亲玩游戏",
+    "P2 3660石油院校/油田工作/MBA来信与旧纯净B P3 1427及A P3局部同主题，属于新弹幕稿样本，不重抽旧点",
+    "metadata总10716秒与纯净10701秒小差不证明具体增删或完整性；P1媒体4916.383与metadata4918双值保留",
+    "未核精确页接缝/全片等价/独立母场日期；5701虽近尾仍不是完整结尾观看"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "entry_id": "2016-01-24-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.acfun.cn/v/ac2487882",
+    "uploader": {
+      "id": 974915,
+      "name": "斗鱼录像厅"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 3122835,
+        "metadata_duration_seconds": 7539
+      }
+    ],
+    "media_duration_seconds": 7539.181356
+  },
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac2487882",
+      "actual_seconds": 601.459481,
+      "duration_seconds": 7539.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Minecraft第一人称建造/大体块雕塑、物品栏/小地图，右侧灰衣红心女流摄像头"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2487882",
+      "actual_seconds": 7201.457781,
+      "duration_seconds": 7539.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "左侧来信文字与女流大摄像头，无游戏；该点不能算Minecraft游戏时长"
+    }
+  ],
+  "conclusions": [
+    "该A源实际有Minecraft与非游戏内容，支持保留游戏影像，不能计整源为纯游戏",
+    "B/A2两个非游戏点局部相近但不认证全片等价；A2 6401有Minecraft，不能把B范围直接继承整A",
+    "独立母场日期/精确接缝/全场完整性均未核，不按B不支持样本判整场缺失"
+  ]
+}

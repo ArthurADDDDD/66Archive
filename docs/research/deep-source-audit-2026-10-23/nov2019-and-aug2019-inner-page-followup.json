@@ -1,0 +1,49 @@
+{
+  "as_of": "2026-10-25",
+  "method": "normal_public_player_muted_bounded_machine_visual_samples",
+  "human_watch": false,
+  "limitations": [
+    "没有听音频或全片观看",
+    "网页显示登录享高清/试看提示，本次仅记录实际已解码局部，不绕登录、不认证整页可播"
+  ],
+  "samples": [
+    {
+      "entry_id": "2019-11-08-live-01",
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1kE411Y7Eg/?p=2",
+      "owner_uid": 406777725,
+      "owner_name": "没被处理过",
+      "page": 2,
+      "cid": 133672592,
+      "page_title": "video",
+      "metadata_duration_sec": 7203,
+      "media_duration_sec": 7203,
+      "time_sec": 31.115164,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "human_watch": false,
+      "visual": "死亡搁浅剧情男角色近景，右上女流灰衫摄像头；字幕“没事的。我会永远陪着你的。”；不是失落城堡画面",
+      "date_limit": "没有画面内现实日期；母场日期未裁决；不能将P1文件名11月11当作P2日期"
+    },
+    {
+      "entry_id": "2019-08-20-live-01",
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1J4411d7L7/?p=3",
+      "owner_uid": 29418340,
+      "owner_name": "女流录像小屋",
+      "page": 3,
+      "cid": 112196435,
+      "page_title": "P3-2019.8.18-牧场物语",
+      "metadata_duration_sec": 3601,
+      "media_duration_sec": 3601,
+      "time_sec": 31.090259,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "human_watch": false,
+      "visual": "牧场物语森林/泉水场景，游戏日历冬季15日（六）11:50",
+      "date_limit": "游戏日历不是现实日期；没有独立母场日证据，8月18/20仍未裁决"
+    }
+  ]
+}

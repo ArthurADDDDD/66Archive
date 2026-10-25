@@ -1,0 +1,124 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac42278013_1",
+      "actual_seconds": 600.001,
+      "duration_seconds": 2984.0996460000006,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Trine金色机械室/三绿机关、紫光管道，三角色协作"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42278013_1",
+      "actual_seconds": 2950.001,
+      "duration_seconds": 2984.0996460000006,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色机械升降平台，左上星2、右上保存图案，门栅与角色"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42278014_1",
+      "actual_seconds": 2950.001,
+      "duration_seconds": 2987.433307000001,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "淡绿片尾名单Writing/Music & Sounds，右侧望远镜法师与桌前人物插画"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42278014_1",
+      "actual_seconds": 30.001,
+      "duration_seconds": 2987.433307000001,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色机械升降平台、两蓝发光连接点、左上星1，角色/绿宝石"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 600,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Steam商店巴别塔圣歌/Chants of Sennaar页面，非Trine游玩"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 2950,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Trine夜色室外场景/火把/三骑士，非A1近尾蓝机械升降场景"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 18850,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "淡绿片尾名单Writing/Music & Sounds，右侧望远镜法师同插画但滚动位置不同"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 15870,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色机械升降平台、星2/保存图案/栅栏，与A1 2950同具体区域及状态附近，姿态不同"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 13530,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "金色机械室三绿机关/紫光管道，与A1 600同具体机关范围，位置与数值不同"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ej41117wj",
+      "actual_seconds": 15930,
+      "duration_seconds": 18891,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色机械升降平台、双蓝连接点/星1，与A2 30同区域/状态附近但不同瞬间"
+    }
+  ],
+  "acfun_pages": [
+    {
+      "url": "https://www.acfun.cn/v/ac42278013_1",
+      "video_id": "31903403",
+      "count": 1,
+      "title": "P1-女流-2023.9.6-Trine 5",
+      "metadata_ms": 2984116
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42278014_1",
+      "video_id": "31903404",
+      "count": 1,
+      "title": "P2-女流-2023.9.6-Trine 5",
+      "metadata_ms": 2987416
+    }
+  ],
+  "bilibili_pages": [
+    {
+      "index": 1,
+      "metadata_seconds": 18891
+    }
+  ],
+  "hypothesis": "尾部范围候选，不是两帖覆盖整315分钟；按尾部对齐提出B15870/13530/15930有限检验并取得局部场景状态相近，非固定偏移认证",
+  "limitations": [
+    "相似机关/片尾不是全程相同或唯一归场证明",
+    "未独立日期/无删改认证",
+    "A单帖P1/P2不等于B的开头两段",
+    "未把差额12919秒写成确定缺失量"
+  ]
+}

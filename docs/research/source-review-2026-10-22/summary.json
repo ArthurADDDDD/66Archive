@@ -1,0 +1,25 @@
+{
+  "entries": 2956,
+  "sourceReferences": 6421,
+  "uniqueSourceUrls": 6363,
+  "flags": {
+    "source-account-unassigned": 568,
+    "entry-confidence-medium": 242,
+    "has-nonofficial-source": 2620,
+    "basis-partial": 27,
+    "no-public-replay": 112,
+    "games-absent-from-basis": 12,
+    "known-game-evidence-insufficient": 3,
+    "basis-unknown": 74,
+    "clip-only": 6,
+    "missing-footage-recorded": 2,
+    "has-unchecked-source": 4
+  },
+  "caveats": [
+    "Flags overlap and count raw entries, not merged live sessions.",
+    "Unassigned accounts are unknown attribution, not proof of a nonofficial uploader.",
+    "Account confidence describes identity; entry confidence does not measure every source.",
+    "Absence from one timeline basis does not prove absence from the live session or complementary sources.",
+    "Metadata inventory only; neither playback validation nor full-session viewing."
+  ]
+}

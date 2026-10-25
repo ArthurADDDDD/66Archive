@@ -1,0 +1,77 @@
+{
+  "entry_id": "2026-10-21-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1DXn66DE5Z",
+  "human_watch": false,
+  "verification_extent": "Root-supplied public Bilibili videoData page map and two muted player screenshots after stable seeking; author did not independently operate or listen to media. No media downloaded.",
+  "submission_metadata": {
+    "title": "【女流66】《动物园之星2》第四天，大熊猫栖息地建造！10.21直播录像弹幕版~",
+    "owner": "服部平次",
+    "registered_owner_uid": "169965283",
+    "pages": [
+      {
+        "page": 1,
+        "cid": 42933944443,
+        "part_title": "1.开播聊天+看燕云PV 20:53",
+        "duration_sec": 1230
+      },
+      {
+        "page": 2,
+        "cid": 42934077949,
+        "part_title": "part2.动物园之星2 21:13",
+        "duration_sec": 2372
+      },
+      {
+        "page": 3,
+        "cid": 42934274993,
+        "part_title": "part3.动物园之星2 21:53",
+        "duration_sec": 2401
+      },
+      {
+        "page": 4,
+        "cid": 42934798623,
+        "part_title": "part4.动物园之星2 22:33",
+        "duration_sec": 2401
+      },
+      {
+        "page": 5,
+        "cid": 42935255926,
+        "part_title": "part5.动物园之星2 23:13",
+        "duration_sec": 2430
+      }
+    ]
+  },
+  "samples": [
+    {
+      "page": 1,
+      "cid": 42933944443,
+      "time_sec": 600.780083,
+      "media_duration_sec": 1230,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "黄短袖、白帽女流的大画面聊天摄像头。未见可见游戏画面；未听音频。"
+    },
+    {
+      "page": 2,
+      "cid": 42934077949,
+      "time_sec": 600.634736,
+      "media_duration_sec": 2372,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "《动物园之星2》经营界面，Nature’s Keepers商店柜台与橙色制服人物，右下角女流摄像头。该局部与P2题名一致；不认证版本或主播操作。未听音频。"
+    }
+  ],
+  "assessment": "当前公开投稿页表共五页。P1在约600秒的单个稳定静音样本为聊天摄像头；标题含“看燕云PV”，但本轮没有观察该PV片段，也没有游戏画面证据。P2约600秒样本显示《动物园之星2》经营界面，与P2页标题相符。P3–P5未观察。保留来源中的游戏关联；P1单点不证明整P无游戏，也不支持删除“燕云”标签。",
+  "date_assessment": "投稿及页级字段关联2026-10-21；两个画面点不独立认证实际直播日或素材母场日期。",
+  "completeness_assessment": "只观察P1、P2各一个约600秒稳定静音点；P3–P5未看。无完整性、页间连续性或独立日期认证，不据单点裁定整场缺失、错日或完整。",
+  "limitations": [
+    "本次两点为根提供的稳定播放器截图和公开页表；作者未独立操作或听取媒体。",
+    "“看燕云PV”只见于P1标题，本轮没有观察PV内容。",
+    "P3–P5未观察；不对未抽样部分作内容结论。",
+    "不改正式data；human_watch=false。"
+  ]
+}

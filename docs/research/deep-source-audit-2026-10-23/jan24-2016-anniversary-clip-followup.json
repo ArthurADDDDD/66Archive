@@ -1,0 +1,65 @@
+{
+  "entry_id": "2016-01-24-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+    "title": "女流直播一周年纪念 2016-01-24 超清",
+    "uploader": {
+      "id": 26781849,
+      "name": "票圏"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 16245492,
+        "duration_seconds": 5831
+      }
+    ],
+    "description_source_link": "http://player.youku.com/embed/XMTQ1ODg5MzQyOA=="
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+      "actual_seconds": 600.823994,
+      "duration_seconds": 5830.6,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流灰衣摄像头，左侧旧来信节目视频中戴动物帽的女流/大段文字，右上优酷水印，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+      "actual_seconds": 3001.46559,
+      "duration_seconds": 5830.6,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰衣女流摄像头，左侧灰底文字“66 我要 抱抱”等，右上优酷水印，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+      "actual_seconds": 5701.467336,
+      "duration_seconds": 5830.6,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰衣女流整理头发，左侧论坛网页列表，右上优酷水印，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Rx411S7Ta/",
+      "actual_seconds": 5801.260519,
+      "duration_seconds": 5830.6,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "近源尾约29秒前仍论坛网页与灰衣摄像头，和A2 5801相同论坛/服装/构图局部相近，非逐帧等价"
+    }
+  ],
+  "conclusions": [
+    "三点均聊天/观看历史内容，当前样本不能支持Minecraft游戏入口，但抽样不证明全片无Minecraft",
+    "条目有97分钟影忆剪辑旧备注，但本地历史复核显示可能指向已移除BV1ZN411o7VN?p=4，不能确定适用于当前BV1Rx；当前B是否剪辑/范围需单独判断，不能据时长差认证缺失",
+    "另一A来源内容需独立核，不因B三点无游戏判整场游戏缺失；未核独立日期/全片/完整性，不正式写data",
+    "新5801两平台点局部相近，B仅到5830.6，A2已在6401见MC；支持来源覆盖不同的审阅疑点，不认证B全片无MC或具体截断秒数"
+  ]
+}

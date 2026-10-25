@@ -1,0 +1,65 @@
+{
+  "submission_url": "https://www.bilibili.com/video/BV1Ty4y1b7TL",
+  "entry_source_keys": [
+    {"entry_id": "2021-03-26-live-01", "source_index": 0, "game_label": "monster-hunter-rise"},
+    {"entry_id": "2021-03-26-live-03", "source_index": 0, "game_label": "guardian-tales"}
+  ],
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player observations and public page metadata; this report author did not independently operate the player.",
+  "submission_metadata": {
+    "top_level_title": "女流-2021.3.26-怪物猎人 崛起&坎公骑冠剑",
+    "owner_uid": "29418340",
+    "internal_page_count": 11,
+    "pages": [
+      {"page_index": 1, "cid": "315634802", "title": "P1-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2190},
+      {"page_index": 2, "cid": "315638825", "title": "P2-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2192},
+      {"page_index": 3, "cid": "315659218", "title": "P3-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2182},
+      {"page_index": 4, "cid": "315658496", "title": "P4-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2185},
+      {"page_index": 5, "cid": "315657739", "title": "P5-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2183},
+      {"page_index": 6, "cid": "315658134", "title": "P6-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2182},
+      {"page_index": 7, "cid": "315667312", "title": "P7-2021.3.26-怪物猎人 崛起", "metadata_duration_sec": 2184},
+      {"page_index": 8, "cid": "315666176", "title": "P8-2021.3.26-坎公骑冠剑", "metadata_duration_sec": 1925},
+      {"page_index": 9, "cid": "315666167", "title": "P9-2021.3.26-坎公骑冠剑", "metadata_duration_sec": 1925},
+      {"page_index": 10, "cid": "315668051", "title": "P10-2021.3.26-坎公骑冠剑", "metadata_duration_sec": 1925},
+      {"page_index": 11, "cid": "315666591", "title": "P11-2021.3.26-坎公骑冠剑", "metadata_duration_sec": 1926}
+    ]
+  },
+  "samples": [
+    {
+      "entry_scope": "2021-03-26-live-01 / Monster Hunter Rise source index 0",
+      "page_index": 1,
+      "cid": "315634802",
+      "media_duration_sec": 2191,
+      "time_sec": 600.633639,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Monster Hunter Rise character creator/customization menu with an orange-haired character; no streamer camera and no combat at this sampled moment.",
+      "scope_limit": "Supports that the sampled page portion is a Monster Hunter Rise creation/customization scene, not a combat segment; no independent game version authentication."
+    },
+    {
+      "entry_scope": "2021-03-26-live-03 / Guardian Tales source index 0",
+      "page_index": 8,
+      "cid": "315666176",
+      "media_duration_sec": 1926,
+      "initial_seek": {"time_sec": 600, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "time_sec": 601.159664,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Pixel-art red-brick castle scene with a controllable character and orange mechanism; emulator frame border visible. No streamer camera. A QR code was present but not read or recorded."
+      },
+      "scope_limit": "Consistent with a Guardian Tales scene at the sampled point; no independent game version authentication."
+    }
+  ],
+  "assessment": "The same 11-page Bilibili submission is referenced by two different 2021-03-26 entries. The default P1 sample supports a Monster Hunter Rise character-creation portion; the Guardian Tales sample is on internal P8, not the default P1. This supports distinct local page scopes for the two entries and shows that opening the shared source at its default page does not directly open the sampled Guardian Tales portion. It does not prove that all P1-P7 or P8-P11 pages contain only the labelled game, that the transitions align with the archive segments, or that either entry/session is complete. Do not remove the shared source or mark content missing based on the shared URL.",
+  "limitations": [
+    "Only pages P1 and P8 were sampled; the other nine pages were not watched.",
+    "No audio was listened to; no page boundary, transition, continuity, duration, or completeness was verified.",
+    "Old entry segments were not used to generate seek positions or duration claims.",
+    "The shared URL is a single submission cited by both source rows; the observations must remain associated with the appropriate page and both baseline keys, not be treated as two independent videos.",
+    "No formal data or master observation was changed; human_watch=false."
+  ]
+}

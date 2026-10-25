@@ -1,0 +1,155 @@
+{
+  "selection": "strong-bili-next-eight-priority-c",
+  "frozen_queue": "strong-bili-next-player-queue.json",
+  "current_status": "current-evidence-status.json",
+  "sampled_count_at_selection": 34,
+  "pending_count_at_selection": 51,
+  "selection_note": "Local-only risk prioritization. The remaining queue is predominantly single-game posts and title-numbered parts; the selected items are justified by specific segment, version, cross-activity, or cross-post questions where available. No title is treated as content evidence.",
+  "items": [
+    {
+      "priority": 1,
+      "queue_index": 40,
+      "entry_id": "2023-06-23-live-01",
+      "bvid": "BV1uX4y1q76f",
+      "url": "https://www.bilibili.com/video/BV1uX4y1q76f",
+      "queue_title": "P2-女流-2023.6.23-最终幻想XVI",
+      "metadata_duration_sec": 17819,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1Tu411h7an (listed P1, metadata 3177 sec)",
+        "https://www.bilibili.com/video/BV11k4y1M7TJ (11-page KassyTan recording; entry note gives 5:48:02)",
+        "https://www.acfun.cn/v/ac41670789 (P1, about 3113 sec)",
+        "https://www.acfun.cn/v/ac41670159 (P3, about 8909 sec)",
+        "https://www.acfun.cn/v/ac41670161 (P4, about 8910 sec)"
+      ],
+      "falsifiable_hypothesis": "A long standalone Bilibili P2 may cover a materially different segment from the short listed Bilibili P1; the currently listed AcFun pages jump from P1 to P3/P4. A sample can establish visible game/activity at that moment, but cannot infer a missing P2 from the catalog gap.",
+      "suggested_sample": "00:00:30-00:01:30 for the actual opening activity, or 04:50:00-04:56:00 near the post's end for a possible transition.",
+      "limits": "No timeline or content observation locally maps this post to AcFun P2 or to a precise same-stream interval."
+    },
+    {
+      "priority": 2,
+      "queue_index": 43,
+      "entry_id": "2023-07-22-live-01",
+      "bvid": "BV1pV411L7jM",
+      "url": "https://www.bilibili.com/video/BV1pV411L7jM",
+      "queue_title": "P1-女流-2023.7.22-Street Fighter",
+      "metadata_duration_sec": 8883,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1hV4y1t7zT (listed P2, 8886 sec)",
+        "https://www.bilibili.com/video/BV1eM4y1p73N (16-page same-date recording; entry note says its earlier window is Street Fighter and later activity moves to Remnant 2)",
+        "https://www.acfun.cn/v/ac41903537 (P1, about 8883 sec)",
+        "https://www.acfun.cn/v/ac41903538 (P2, about 8885 sec)"
+      ],
+      "falsifiable_hypothesis": "This standalone P1 may show Street Fighter 6, consistent with the early session window recorded in the entry note; another game or a different activity at the sample would challenge that narrow mapping.",
+      "suggested_sample": "00:00:30-00:01:30 for visible game/HUD and activity. Compare only with the separately listed 2023-07-22 Remnant 2 post as a distinct live entry, not as an assumed continuation.",
+      "limits": "A sample does not determine the exact event boundary. Existing notes already separate the two same-date entries; this check does not revise that classification."
+    },
+    {
+      "priority": 3,
+      "queue_index": 44,
+      "entry_id": "2023-07-22-live-02",
+      "bvid": "BV1vm4y1L7FB",
+      "url": "https://www.bilibili.com/video/BV1vm4y1L7FB",
+      "queue_title": "P1-女流-2023.7.22-遗迹2",
+      "metadata_duration_sec": 11828,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1yc411c79J (listed P2, 7595 sec)",
+        "https://www.bilibili.com/video/BV1bh4y127Pu (four-page evening recording; entry note gives 21:17-22:52)",
+        "https://www.bilibili.com/video/BV1qu4y1U7A8 (four-page later recording; entry note gives 23:12-01:09 across midnight)",
+        "https://www.acfun.cn/v/ac41903706 (P1, about 11828 sec)",
+        "https://www.acfun.cn/v/ac41910168 (P2, about 7595 sec)"
+      ],
+      "falsifiable_hypothesis": "The standalone P1 may show Remnant 2 from the later 2023-07-22 session described in existing entry notes. A mismatch at the sample would call for reviewing which recording window this post represents.",
+      "suggested_sample": "00:00:30-00:01:30 for visible game/HUD and activity; note that the source is a separate live entry from same-day Street Fighter.",
+      "limits": "The Bilibili P marker does not identify a player-internal page. A game sample does not independently confirm the dated live window or establish that sources are continuous."
+    },
+    {
+      "priority": 4,
+      "queue_index": 51,
+      "entry_id": "2023-08-04-live-01",
+      "bvid": "BV1nk4y1g7go",
+      "url": "https://www.bilibili.com/video/BV1nk4y1g7go",
+      "queue_title": "P1-女流-2023.8.4-Baldur's Gate 3",
+      "metadata_duration_sec": 17399,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV17h4y1r74R (queue index 50 P2; root sampled actual BG3 scene at 4560 sec)",
+        "https://www.bilibili.com/video/BV1iV4y1i7dW (listed P3 title, 11221 sec)",
+        "https://www.acfun.cn/v/ac42013309 (P1 title, about 12534 sec)",
+        "https://www.acfun.cn/v/ac42012985 (P2 title, about 4567 sec)",
+        "https://www.acfun.cn/v/ac42013220 (P3 title, about 15908 sec)"
+      ],
+      "falsifiable_hypothesis": "The standalone P1 may contain Baldur's Gate 3 play that differs from the already sampled P2. A visible game-state sample can test local content mapping; the P1/P2/P3 sequence and their cross-source boundaries remain unknown.",
+      "suggested_sample": "00:00:30-00:01:30 for actual game/activity; optionally compare a same local offset with the already sampled P2 scene at 01:16:00.",
+      "limits": "Prior P2 sampling does not locate its start boundary. Metadata durations and title numbering cannot establish a sequential or complete set."
+    },
+    {
+      "priority": 5,
+      "queue_index": 72,
+      "entry_id": "2023-09-18-live-01",
+      "bvid": "BV1pu4y1z78R",
+      "url": "https://www.bilibili.com/video/BV1pu4y1z78R",
+      "queue_title": "P3-女流-2023.9.18-匹诺曹的谎言",
+      "metadata_duration_sec": 11654,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV18F411S7Ap (P2, 11653 sec; sampled at 1800 sec in current follow-up)",
+        "https://www.bilibili.com/video/BV1ju411w7mS (P2, 14115 sec; sampled at 1800 sec and showed a different scene from the shorter P2)",
+        "https://www.bilibili.com/video/BV1Uw411e7Uj (listed P1 title, 14119 sec)",
+        "https://www.acfun.cn/v/ac42399288 (P3, about 11654 sec)"
+      ],
+      "falsifiable_hypothesis": "This separate P3 candidate may show distinct Lies of P gameplay from both sampled P2 variants. If its scene at a chosen point instead matches one P2 variant, that suggests an overlap question for later review, not proof of duplication.",
+      "suggested_sample": "00:30:00-00:31:00 for visible scene/HUD, then compare the observed frame description with the existing two P2 samples at 00:30:00.",
+      "limits": "The observed P2 scenes differ at 1800 sec; that does not establish the wider relationship among posts. Do not infer post order from P labels."
+    },
+    {
+      "priority": 6,
+      "queue_index": 73,
+      "entry_id": "2023-10-01-live-01",
+      "bvid": "BV1G94y1a7zb",
+      "url": "https://www.bilibili.com/video/BV1G94y1a7zb",
+      "queue_title": "P1-女流-2023.10.1-心灵砒霜弹幕版",
+      "metadata_duration_sec": 6977,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1Yj411477Y (listed P2 title, 6978 sec)",
+        "https://www.acfun.cn/v/ac42555173 (P1 title, about 6976 sec)",
+        "https://www.acfun.cn/v/ac42555168 (P2 title, about 6977 sec)",
+        "Related but different-date program samples are documented for queue indexes 16 and 18 in resume-batch-b-player-followup.md; those were letter-reading segments and are not observations of this 2023-10-01 post."
+      ],
+      "falsifiable_hypothesis": "This P1 may be a letter-reading episode in the named program, similar in format to other-date examples, or may show a different activity. The separate P2 title allows a segment-level comparison.",
+      "suggested_sample": "00:00:30-00:01:30 for visible program/activity; if useful, sample around 01:50:00-01:55:00 near the post end.",
+      "limits": "The other-date program samples only motivate this question; they cannot establish the contents of this post or the sequence between P1 and P2."
+    },
+    {
+      "priority": 7,
+      "queue_index": 75,
+      "entry_id": "2023-10-08-live-01",
+      "bvid": "BV1Cw411w7EW",
+      "url": "https://www.bilibili.com/video/BV1Cw411w7EW",
+      "queue_title": "P1-女流-2023.10.8-刺客信条 幻景",
+      "metadata_duration_sec": 12706,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1gw411r7v9 (listed P2 title, 12707 sec)",
+        "https://www.acfun.cn/v/ac42617191 (one listed AcFun post whose metadata has array1 titled P2 and array2 titled P1; durations about 12706/12705 sec)"
+      ],
+      "falsifiable_hypothesis": "A sample from this standalone P1 post can establish visible game/activity and be compared later with the AcFun post's two array items. It can test whether title-level P1/P2 labels correspond to distinct observed scenes, without assuming array order is the broadcast order.",
+      "suggested_sample": "00:30:00-00:31:00 for visible game/HUD; compare a later sample with AcFun ac42617191 array1 and array2 using their actual array-index navigation, not inferred title order.",
+      "limits": "The metadata array order being P2 then P1 does not by itself prove a platform mistake. This Bilibili sample cannot certify which AcFun array item is equivalent."
+    },
+    {
+      "priority": 8,
+      "queue_index": 80,
+      "entry_id": "2023-11-21-live-01",
+      "bvid": "BV1f34y1c7Nc",
+      "url": "https://www.bilibili.com/video/BV1f34y1c7Nc",
+      "queue_title": "【女流】2023年11月21日录播《大侠立志传》P2",
+      "metadata_duration_sec": 15410,
+      "existing_sources": [
+        "https://www.bilibili.com/video/BV1hQ4y1b7AJ (listed P1, 15412 sec)",
+        "https://www.acfun.cn/v/ac43023987 (P1, about 10276 sec)",
+        "https://www.acfun.cn/v/ac43023986 (P2, about 10276 sec)",
+        "https://www.acfun.cn/v/ac43023984 (P3, about 10275 sec)"
+      ],
+      "falsifiable_hypothesis": "The standalone Bilibili P2 may show a different game state from its listed P1 at the same local offset; its approximately 4:17 duration also differs from each approximately 2:51 AcFun page. A same-offset observation can test only the scene comparison, not whether either source is a cut or complete.",
+      "suggested_sample": "00:30:00-00:31:00 and compare with the listed Bilibili P1 at the same local post offset; describe concrete scene, HUD, and activity.",
+      "limits": "Do not divide or sum durations to infer boundaries, and do not equate Bilibili title P2 with AcFun array index 2 without content evidence."
+    }
+  ]
+}

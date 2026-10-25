@@ -1,0 +1,91 @@
+{
+  "date": "2023-11-20",
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player observations and public page metadata; this report author did not independently operate the players.",
+  "shared_baseline_submission": {
+    "url": "https://www.bilibili.com/video/BV1gw411P79y",
+    "entry_source_keys": [
+      {"entry_id": "2023-11-20-live-01", "source_index": 0, "registered_game": "KarmaZoo"},
+      {"entry_id": "2023-11-20-live-02", "source_index": 0, "registered_game": "大侠立志传"}
+    ],
+    "title": "karmazoo【女流】2023年11月20日录播《大侠立志传》&《因果动物园》P1",
+    "owner_uid": "29418340",
+    "page_count": 1,
+    "page": {"cid": "1339784274", "metadata_duration_sec": 16235, "media_duration_sec": 16235},
+    "samples": [
+      {
+        "time_sec": 601.158413,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "muted": true,
+        "visual": "Steam library/desktop view with desktop device camera visible; no active gameplay is evidenced at this point."
+      },
+      {
+        "time_sec": 12001.157752,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "muted": true,
+        "visual": "大侠立志传-style wooded scene with a small thatched hut, rooster and a HUD showing 38 days; no streamer camera."
+      },
+      {
+        "time_sec": 15001.158693,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "muted": true,
+        "visual": "大侠立志传-style cave scene with a circular viewing area and two characters facing each other; no streamer camera."
+      }
+    ],
+    "excluded_initial_seeks": [
+      {"requested_sec": 600, "readyState": 1, "seeking": true},
+      {"requested_sec": 12000, "readyState": 1, "seeking": true},
+      {"requested_sec": 15000, "readyState": 1, "seeking": true}
+    ]
+  },
+  "existing_karmazoo_counterpart": {
+    "entry_id": "2023-11-20-live-01",
+    "source_index": 1,
+    "url": "https://www.acfun.cn/v/ac43014439",
+    "title": "【女流】2023年11月20日录播《因果动物园》",
+    "owner_uid": "4397992",
+    "page_id": "32657139",
+    "duration_ms": 10336232,
+    "sample": {
+      "time_sec": 600.310928,
+      "media_duration_sec": 10336.266251,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "KarmaZoo black-and-white small animals with heart HUD 8, purple/dark red pixel-art lobby, golden ladder and telescope; no streamer camera."
+    }
+  },
+  "unlinked_bilibili_p2_candidate": {
+    "url": "https://www.bilibili.com/video/BV17z4y1c7o8",
+    "title": "karmazoo【女流】2023年11月20日录播《大侠立志传》&《因果动物园》P2",
+    "owner_uid": "29418340",
+    "page_count": 1,
+    "page": {"cid": "1339784300", "duration_sec": 16236},
+    "page_published_at": "2023-11-22 01:08:24",
+    "sample": {
+      "time_sec": 12000.384951,
+      "media_duration_sec": 16236,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "KarmaZoo white animal with heart HUD 549 in a purple/red pixel-art lobby, with an animal icon unlocked; not the same event as the AcFun t≈600 sample."
+    },
+    "original_submission_page_published_at": "2023-11-22 01:02:02"
+  },
+  "assessment": "The same single-page Bilibili P1 is cited by both the KarmaZoo and 大侠立志传 baseline entries. Its t≈600 sample shows a Steam library/desktop view, and t≈12000/15000 show 大侠立志传-style scenes; these samples support 大侠立志传 content at the tested positions but do not establish that the whole P1 lacks KarmaZoo. The existing AcFun source shows KarmaZoo at t≈600, while a newly identified, unlinked single-page Bilibili P2 candidate shows KarmaZoo at t≈12000. The two KarmaZoo points differ and do not establish exact correspondence, coverage, session continuity or page-boundary alignment. The candidate may provide additional evidence for the KarmaZoo entry, but must not be added automatically.",
+  "limitations": [
+    "Only three points in the shared P1, one point in AcFun, and one point in the candidate P2 were checked; all other page content remains unobserved.",
+    "No audio was listened to; no full-page or full-session continuity/completeness review was made.",
+    "The two Bilibili submissions have publication timestamps on 2023-11-22; those timestamps do not independently authenticate the session date.",
+    "Duration values were recorded as metadata/player fields and not summed or compared to infer missing content or correspondence.",
+    "No formal data/source rows or master observations were changed; human_watch=false."
+  ]
+}

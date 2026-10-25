@@ -1,0 +1,48 @@
+{
+  "entry_ids": [
+    "2026-02-05-live-01",
+    "2026-02-07-live-01"
+  ],
+  "human_watch": false,
+  "hypothesis": "H2:目标日斗鱼历史房间页能否独立对齐争议短源",
+  "queries": [
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=*.douyu.com/156277*&from=20260204&to=20260208&output=json&filter=statuscode:200&collapse=timestamp:6",
+      "result": "504 Gateway Time-out",
+      "meaning": "访问查询缺口，不是无存档或无直播"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.douyu.com/156277&from=20260205&to=20260207&output=json&filter=statuscode:200",
+      "result_timestamps": [
+        "20260207170013"
+      ],
+      "meaning": "本次精确URL/日期/HTTP200条件返回一条，不是所有网址/所有日期枚举"
+    }
+  ],
+  "page_observations": [
+    {
+      "url": "https://web.archive.org/web/20260207170013/https://www.douyu.com/156277",
+      "capture_utc": "2026-02-07T17:00:13Z",
+      "capture_asia_shanghai": "2026-02-08T01:00:13+08:00",
+      "body_read": true,
+      "title": "女流66直播 主机其他游戏直播",
+      "room_heading": "see you around~",
+      "description": "欢迎来到女流66直播间，主机其他游戏",
+      "observation": "正文有女流66/泛游戏分类/关注与榜单等，未见争议短片的特定场内事件、历史回放链接或明确2/5、2/7开播说明；未尝试播放存档媒体",
+      "public_embedded_room_fields": {
+        "room_id": 156277,
+        "show_status": 2,
+        "room_name": "see you around~",
+        "show_time": 1701325772
+      },
+      "show_time_as_utc": "2023-11-30T06:29:32+00:00"
+    }
+  ],
+  "conclusions": [
+    "同期room快照存在，但抓取UTC日期转北京已次日凌晨，不把抓取时间直接当开播时间",
+    "可见标题/元描述不提供短片唯一母场日期，原跨月候选未裁决，不因标题或页面取证缺口改正式归日",
+    "导航整体超时但正文已读，不能当房间不可访问；宽泛查询504也不证明无快照",
+    "精确查询未返回2/5条目不能证明2/5没直播或没其他URL存档；无正式data/human_watch改写",
+    "公开嵌入room字段show_time转换为2023年时间而非2026目标日；字段语义未独立复核，不将该旧数值或show_status当作2月某场的准确开播记录。存档页可读不等于其中每个字段实时。"
+  ]
+}

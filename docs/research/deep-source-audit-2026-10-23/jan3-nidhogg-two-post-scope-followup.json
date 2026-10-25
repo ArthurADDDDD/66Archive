@@ -1,0 +1,52 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac2434647_1",
+      "actual_seconds": 5240.001,
+      "duration_seconds": 5258.157866,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Nidhogg黑背景横版红黄人物对战、GO向右，女流灰开衫蓝V领摄像头"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2434644_1",
+      "actual_seconds": 30,
+      "duration_seconds": 4678.781356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Nidhogg橙背景横版黄人物/GO向右，同布景摄像头；与上一帖近尾背景不同，未精确事件对齐"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2434644_1",
+      "actual_seconds": 4620.001,
+      "duration_seconds": 4678.781356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "左侧黑底/右侧女流手触颈部摄像头，无游戏实战此点"
+    }
+  ],
+  "acfun_pages": [
+    {
+      "url": "https://www.acfun.cn/v/ac2434647_1",
+      "id": "3047770",
+      "ms": 3168533,
+      "initial_media_seconds": 5258.114689
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2434644_1",
+      "id": "3047771",
+      "ms": 4678667,
+      "initial_media_seconds": 4678.781356
+    }
+  ],
+  "prior_evidence": "正式条目旧note已记录首帖实际87:38且校验多出范围，不能把130.8 vs166旧API差额重新宣称缺档。",
+  "limitations": [
+    "两个boundary点不同背景不证明跳剪/缺段/无重叠",
+    "未校验全166分钟是否全部Nidhogg",
+    "日期仍不由服装或发帖日独立认证"
+  ]
+}

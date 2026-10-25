@@ -1,0 +1,100 @@
+{
+  "entry_id": "2017-08-19-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.acfun.cn/v/ac3929159",
+    "title": "女流-8.19-尼德霍格+吃鸡",
+    "uploader": {
+      "id": "4397992",
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "id": "5520579",
+        "title": "P1-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1560000
+      },
+      {
+        "id": "5520620",
+        "title": "P2-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1443000
+      },
+      {
+        "id": "5520621",
+        "title": "P3-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1444000
+      },
+      {
+        "id": "5520588",
+        "title": "P4-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1443000
+      },
+      {
+        "id": "5520593",
+        "title": "P5-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1404000
+      },
+      {
+        "id": "5520654",
+        "title": "P6-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1405000
+      },
+      {
+        "id": "5520668",
+        "title": "P7-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1405000
+      },
+      {
+        "id": "5520667",
+        "title": "P8-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1404000
+      },
+      {
+        "id": "5520669",
+        "title": "P9-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1407000
+      },
+      {
+        "id": "5520678",
+        "title": "P10-8.19-尼德霍格+吃鸡",
+        "duration_ms": 1405000
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3929159_2",
+      "actual_seconds": 600.001,
+      "duration_seconds": 1443.514689,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "A内页2 600秒Nidhogg系列BEACH选关、彩虹城堡、START MATCH，右上棕衬衫女流；与已有B P2 600局部相近；页面面包屑分类显示游戏/我的世界，不能继承为本站游戏标签"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3929159_3",
+      "actual_seconds": 357.001,
+      "duration_seconds": 1444.848022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "A内页3 357秒Nidhogg横向关卡，顶部箭头/进度方块、绿色背景、大生物及角色；与此前B P2 1800同类场景局部，非同帧，不推固定偏移"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3929159_5",
+      "actual_seconds": 600.001,
+      "duration_seconds": 1405.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "A内页5 600秒PUBG READY/WAITING双角色大厅，与此前B P3 600局部相近；大厅非实战；页面导航仍显示我的世界，不能将其当实际游戏归属"
+    }
+  ],
+  "prior_evidence": "aug19-nidhogg-pubg-scope-followup.json",
+  "conclusions": [
+    "A实际10页，正常UID4397992；P2/3有Nidhogg系列、P5 PUBG大厅，支持混合游戏及游戏关联补标审阅",
+    "A页面导航分类我的世界与所观察游戏不符，平台分类不能继承；只观察3点，不声称10页全无Minecraft",
+    "A/B分P不同，只确认局部内容相近，不认证完整性/独立日期/固定offset或无缝；其余A页未播放，具体Nidhogg代数未确认"
+  ]
+}

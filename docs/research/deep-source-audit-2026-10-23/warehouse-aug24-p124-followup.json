@@ -1,0 +1,97 @@
+{
+  "entry_id": "2019-08-24-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1qt411c7xR/?p=124",
+    "title": "斗鱼-女流66",
+    "uploader": {
+      "id": 324445265,
+      "name": "仓储员"
+    },
+    "parts": [
+      {
+        "page": 118,
+        "id": 127095793,
+        "title": "斗鱼-女流66_201908241536258960",
+        "duration_seconds": 1108
+      },
+      {
+        "page": 119,
+        "id": 127096668,
+        "title": "斗鱼-女流66_201908241554477311",
+        "duration_seconds": 1083
+      },
+      {
+        "page": 120,
+        "id": 127097561,
+        "title": "斗鱼-女流66_201908241612418155",
+        "duration_seconds": 1085
+      },
+      {
+        "page": 121,
+        "id": 127098532,
+        "title": "斗鱼-女流66_201908241630384631",
+        "duration_seconds": 1064
+      },
+      {
+        "page": 122,
+        "id": 127099428,
+        "title": "斗鱼-女流66_201908241649201682",
+        "duration_seconds": 1082
+      },
+      {
+        "page": 123,
+        "id": 127100310,
+        "title": "斗鱼-女流66_201908241707130046",
+        "duration_seconds": 1074
+      },
+      {
+        "page": 124,
+        "id": 127101257,
+        "title": "斗鱼-女流66_201908241724589556",
+        "duration_seconds": 773
+      },
+      {
+        "page": 125,
+        "id": 127101983,
+        "title": "斗鱼-女流66_201908271508218214",
+        "duration_seconds": 731
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411c7xR/?p=124",
+      "actual_seconds": 30,
+      "duration_seconds": 773,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P124 30秒为Remnant第三人称实况，红土地、木桩/树枝障碍，左道具栏、右下步枪弹药24，无女流摄像头"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411c7xR/?p=124",
+      "actual_seconds": 5,
+      "duration_seconds": 773,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P124 5秒同游戏红土地木桩走廊、同装备角色与UI，步枪30发；不是P123尾样本的相同地点构图"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qt411c7xR/?p=123",
+      "actual_seconds": 1055,
+      "duration_seconds": 1074,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P123 1055秒为同类Remnant角色装备与森林木障碍场景，步枪30发；可支持相近游戏进程，但未精确衔接到P124"
+    }
+  ],
+  "conclusions": [
+    "正常页UID324445265与登记仓储员匹配，内部P124确存在且可播放游戏局部，formal part_details缺该页不等于录像缺失",
+    "P123/P124画面均支持Remnant游戏归属，但没有摄像头/原始开播字段独立认证女流及日期，题名日期仍只是上传方声明",
+    "未证明两页无缝、无重叠或整场255min全覆盖；P118-122未新播放；P125只有metadata不声称内容已查"
+  ]
+}

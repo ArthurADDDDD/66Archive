@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-25",
+  "human_watch": false,
+  "observations": [
+    {
+      "entry_id": "2018-06-22-live-01",
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1Ws41177oL/",
+      "metadata": {
+        "title": "女流-2018.6.22-Comedy Night（喜剧之夜）& Hand Simulator（手掌模拟器）",
+        "uploader": { "id": 29418340, "name": "女流录像小屋" },
+        "pages": [
+          { "page": 1, "cid": 43137462, "title": "P1-2018.3.22-游戏前聊10块钱的", "duration_seconds": 1212 },
+          { "page": 2, "cid": 43137463, "title": "P2-2018.6.22-Comedy Night（喜剧之夜）", "duration_seconds": 1375 },
+          { "page": 3, "cid": 43137464, "title": "P3-2018.6.22-Hand Simulator（手掌模拟器）", "duration_seconds": 8461 }
+        ]
+      },
+      "sample": {
+        "page": 1,
+        "requested_seek_seconds": 600,
+        "actual_seconds": 600.386684,
+        "player_media_duration_seconds": 1210.890045351474,
+        "metadata_duration_seconds": 1212,
+        "ready_state": 4,
+        "seeking": false,
+        "paused": true,
+        "observation": "女流蓝色条纹短袖、白椅、银麦克风；背景有黑暗之魂海报与展示柜。摄像头聊天为主画面，当前帧未见游戏画面。"
+      }
+    },
+    {
+      "entry_id": "2018-03-22-live-01",
+      "source_index": "0",
+      "url": "https://www.bilibili.com/video/BV1pW411g7Eg/",
+      "metadata": {
+        "title": "女流-2018.3.22-海盗之海 & 绝地求生",
+        "uploader": { "id": 29418340, "name": "女流录像小屋" },
+        "pages": [
+          { "page": 1, "cid": 34611191, "title": "P1-2018.3.22-游戏前聊10块钱的", "duration_seconds": 38 },
+          { "page": 2, "cid": 34621831, "title": "P2-2018.3.22-海盗之海 Sea of Theives", "duration_seconds": 6846 },
+          { "page": 3, "cid": 34621832, "title": "P3-2018.3.22-绝地求生", "duration_seconds": 3151 },
+          { "page": 4, "cid": 34611194, "title": "P4-2018.3.22-绝地求生", "duration_seconds": 4998 }
+        ]
+      },
+      "sample": {
+        "page": 1,
+        "requested_seek_seconds": 20,
+        "actual_seconds": 21.153513,
+        "player_media_duration_seconds": 38,
+        "ready_state": 4,
+        "seeking": false,
+        "paused": true,
+        "observation": "女流深灰长袖、深色椅、银麦克风；背景布局与六月投稿P1不同。当前画面为聊天，没有看到游戏画面。"
+      }
+    }
+  ],
+  "conclusions": [
+    "基线两条B站来源均为source_index=0，且此前没有这两个来源键的观察记录。",
+    "两条P1都标为游戏前聊天，但CID/时长差异很大，抽查帧的服装和背景也不同；这些差异不足以证明其它时段绝不重叠或两场母场日期。",
+    "样本未建立相同谈话/事件对应。只支持各自所抽时点的摄像头聊天画面；不证明六月P1全程无游戏，也不据3月22页名迁移六月来源。",
+    "P2–P4未播放；没有音频核验、完整性或母场日期认证；不修改正式数据。"
+  ]
+}

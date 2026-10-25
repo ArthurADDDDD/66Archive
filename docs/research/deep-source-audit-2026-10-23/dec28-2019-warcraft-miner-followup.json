@@ -1,0 +1,57 @@
+{
+  "entry_id": "2019-12-28-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1oJ411h77v/",
+    "title": "秘密录像屋 2019-12-28 矿工生存之道",
+    "uploader": {
+      "id": 28047516,
+      "name": "账号已注销"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 138670490,
+        "duration_seconds": 6243
+      },
+      {
+        "page": 2,
+        "id": 138663948,
+        "duration_seconds": 6143
+      },
+      {
+        "page": 3,
+        "id": 138669594,
+        "duration_seconds": 1556
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1oJ411h77v/",
+      "page": 1,
+      "actual_seconds": 300.432991,
+      "duration_seconds": 6243,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "棕色高领女流大摄像头聊天，左黑底，无游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1oJ411h77v/?p=3",
+      "page": 3,
+      "actual_seconds": 300.103145,
+      "duration_seconds": 1556,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "魔兽争霸3经典UI、自定义地图矿工Miner/彩色矿石晶体/任务栏/小地图/物品技能面板；无摄像头，不单凭游戏认证主播"
+    }
+  ],
+  "conclusions": [
+    "当前三页来源仍可播，P1聊天与P3魔兽3自定义矿工界面，支持内容但不计整投稿为纯游戏",
+    "P2未播、P1游戏切换未定位、P3仅300点不是结尾全看；无独立母场日期/全场连续完整认证",
+    "注销账号不判资源不存在，234min与metadata小差不判缺失，无正式改写"
+  ]
+}

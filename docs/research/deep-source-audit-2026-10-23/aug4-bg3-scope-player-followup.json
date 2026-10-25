@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-24",
+  "human_watch": false,
+  "entry_id": "2023-08-04-live-01",
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac42013309_1",
+      "time": 600.001,
+      "duration": 12534.099935999986,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "已挂AcFun P1 600秒：海滩影心与白猫游戏画面，右上有榴莲味猛男/bilibili水印，大字讲解字幕说明德鲁伊血量，右下女流摄像头；支持在观看攻略视频式内容，不能当女流亲自操作该点。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42013309_1",
+      "time": 7200.001,
+      "duration": 12534.099935999986,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "已挂AcFun P1 7200秒：绿色衣袖男角色剧情，右下女流摄像头，未见此前作者水印/大字讲解字幕；普通BG3剧情局部，不能仅此证明操作者。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1nk4y1g7go/",
+      "time": 3600,
+      "duration": 17399,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "B站未挂P1在3600秒为上下黑边的石柱建筑CG，右下女流摄像头；与600秒攻略样式不同，不能仅此认亲自游玩。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42012985_1",
+      "time": 600.001,
+      "duration": 4661.866636,
+      "ready": 1,
+      "seeking": true,
+      "visual_observation": "尝试定位600秒时ready=1、seeking=true，画面为BG3石质废墟/队伍HUD，但不能把残留帧认作600秒已定位证据。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42013220_1",
+      "time": 600.001,
+      "duration": 11220.5,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "已挂AcFun P3在600秒为BG3回合战斗，红色熊状敌人、队伍头像/行动顺序，角色倒地；播放器duration11220.5秒与旧metadata15908不同，不能判最终截断。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42012985_1",
+      "time": 600,
+      "duration": 4661.866636,
+      "ready": 4,
+      "seeking": false,
+      "attempt": "one_bounded_retry_after_initial_seek_pending",
+      "visual_observation": "一次有限重试后600秒ready4且seeking=false：BG3队伍在石质圆形废墟台阶，隐蔽成功提示；本次可确认该局部，旧seeking失败记录保留。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1iV4y1i7dW/",
+      "time": 600,
+      "duration": 11221,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "已挂B站P3在600秒为BG3回合战斗，红色熊状敌人、倒地角色与队伍行动顺序，和已挂A站P3的600秒具体局部相符；不等于全片同源。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42013220_1",
+      "time": 11190.001,
+      "duration": 11220.5,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "A站P3在11190秒ready4正常定位：角色站在岩洞木平台，旁有箱/桶，队伍HUD；实播duration11220.5，仅能证明该媒体范围可定位，不能判旧metadata15908秒多出的部分最终丢失。"
+    }
+  ],
+  "conclusion": "现挂A P1也出现观看攻略样式600秒与普通BG3剧情7200秒；B候选3600为CG。现挂A P2经一次有限重试可定位600游戏，A/B已挂P3在600有战斗局部对应，A P3近媒体尾可定位。所有时点不构成全片、独立日期、操作者或无缝认证；A P2/P3实际媒体duration与旧metadata不符，不据此删源。"
+}

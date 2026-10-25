@@ -1,0 +1,51 @@
+{
+  "entry_id": "2019-01-20-live-01",
+  "human_watch": false,
+  "external_candidate": "https://www.bilibili.com/video/BV1bt41187LU/",
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1bt41187LU/",
+    "title": "女流-2019.1.20-Rakuen(乐园)",
+    "uploader": 29418340,
+    "parts": [
+      {
+        "page": 1,
+        "title": "P1-2019.1.20-Rakuen(乐园)",
+        "duration_seconds": 3639
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1bt41187LU/",
+      "actual_seconds": 600,
+      "duration_seconds": 3639,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Rakuen紫天空藤蔓平台、角色位于罐子前，与Ac纯净内页1此前600秒同一游戏场景；角色/下方生物姿态不同，非同帧"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1bt41187LU/",
+      "actual_seconds": 3500,
+      "duration_seconds": 3639,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "3500秒已为红白横条毛衣女流大摄像头聊天、身后黄衣/玩偶及白柜，左侧黑区；B与A纯净P1局部同一聊天布景，证明标题Rakuen内页含聊天，不能整页时长都算游戏"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4881886",
+      "actual_seconds": 3500.001,
+      "duration_seconds": 3638.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "3500秒已为红白横条毛衣女流大摄像头聊天、身后黄衣/玩偶及白柜，左侧黑区；B与A纯净P1局部同一聊天布景，证明标题Rakuen内页含聊天，不能整页时长都算游戏"
+    }
+  ],
+  "conclusions": [
+    "新正常播放外部候选是单内页，与A纯净P1游戏600秒及聊天3500秒局部相符；不是整场193分钟的替代",
+    "A纯净P1及B候选近尾是聊天，不把约60.6分钟全算Rakuen实玩",
+    "未复证完整对应、精确切换点/全片日期或应增正式源；调查only"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "entry_id": "2019-12-10-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1dJ411y7DA",
+  "human_watch": false,
+  "verification_extent": "Root-supplied normal public Bilibili page metadata and muted player screenshots after play/seek/pause; no audio listening and no media downloaded. This is local report assembly, not independent review.",
+  "current_public_page_map": [
+    {
+      "page_number": 1,
+      "cid": 134849428,
+      "part_title": "P2-2019.12.9-佩奇的唱歌歌友会",
+      "duration_sec": 4494
+    },
+    {
+      "page_number": 2,
+      "cid": 134848320,
+      "part_title": "P3-2019.12.10-Deliver Us The Moon",
+      "duration_sec": 2633
+    },
+    {
+      "page_number": 3,
+      "cid": 134836553,
+      "part_title": "P4-2019.12.10-Deliver Us The Moon",
+      "duration_sec": 3601
+    },
+    {
+      "page_number": 4,
+      "cid": 134836039,
+      "part_title": "P5-2019.12.10-Deliver Us The Moon",
+      "duration_sec": 3602
+    },
+    {
+      "page_number": 5,
+      "cid": 134835211,
+      "part_title": "P6-2019.12.10-Deliver Us The Moon",
+      "duration_sec": 3454
+    },
+    {
+      "page_number": 6,
+      "cid": 134836707,
+      "part_title": "P7-2019.12.10-Deliver Us The Moon",
+      "duration_sec": 3456
+    }
+  ],
+  "playback_samples": [
+    {
+      "page_number": 1,
+      "cid": 134849428,
+      "time_sec": 600.607588,
+      "media_duration_sec": 4494,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "audio_checked": false,
+      "visual": "Muted playback screenshot: lyrics/music background, Peppa cartoon in upper-right, and text referring to a newcomer streamer. No Deliver Us The Moon gameplay is visible at this sample. Lyrics/content not transcribed; no claim about hearing singing."
+    },
+    {
+      "page_number": 2,
+      "cid": 134848320,
+      "time_sec": 600.632338,
+      "media_duration_sec": 2633,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "audio_checked": false,
+      "visual": "Muted playback screenshot: Deliver Us The Moon Fortuna database/task-log/tool interface, preparation entries and corridor thumbnail; no host camera visible at this sample."
+    }
+  ],
+  "audit_game_assessment": "当前公开videoData列6页：页号1标题为P2-2019.12.9-佩奇的唱歌歌友会，页号2标题为P3-2019.12.10-Deliver Us The Moon，页号3–6分别为P4–P7 Deliver Us The Moon。页号1 t600.607588稳定画面为歌词/音乐背景、佩奇卡通与新人主播文字，不见游戏；页号2 t600.632338稳定画面为Deliver Us The Moon Fortuna数据库/任务日志/工具界面。题名与该样本相符，但没有独立认证主播身份或母场日期。",
+  "audit_date_assessment": "投稿标题为女流-2019.12.10-Deliver Us The Moon，当前公开页题中页号1标记2019.12.9歌友会，页号2–6标记2019.12.10游戏。它们是当前页级元数据，不能单独裁定素材直播日期或跨日/复用关系。正式条目note与当前页数/页名排列存在范围差异；无历史页表可核对，不能推断何时或是否删除、替换过页面。",
+  "audit_completeness_assessment": "仅抽查当前页号1与2各600秒附近一点。页号1该点无可见游戏不能证明整页/整稿无游戏；页号2单点不能证明全页游戏连续。当前公开六页与正式note所述P1约32分钟聊天、P2–P7游戏范围不一致，但没有历史页表或其它页的逐项内容核验，不能据此判整场缺失、错日、删页或完整性。",
+  "audit_risk_level": "R2_当前页表与历史范围note不一致_仅两页单点",
+  "audit_evidence_refs": "dec10-2019-default-page-scope-followup.json; dec10-2019-default-page-scope-followup.md; specific-unobserved-conflict-triage-2026-10-25.md",
+  "audit_verification_extent": "current public metadata page map for 6 pages; muted stable player samples on page numbers 1 and 2 at ~600s; no audio verification; no historical page map; machine observation only"
+}

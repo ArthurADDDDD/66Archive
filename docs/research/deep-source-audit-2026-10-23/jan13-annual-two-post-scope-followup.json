@@ -1,0 +1,130 @@
+{
+  "entry_id": "2017-01-13-live-01",
+  "human_watch": false,
+  "scope": "bounded_machine_playback_not_full_review",
+  "metadata": [
+    {
+      "url": "https://www.acfun.cn/v/ac3403380",
+      "title": "女流-1.13-A站年会",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "4749788",
+          "title": "P1-1.13-A站年会",
+          "duration_ms": 1440000
+        },
+        {
+          "id": "4749815",
+          "title": "P2-1.13-A站年会",
+          "duration_ms": 5654000
+        },
+        {
+          "id": "4749816",
+          "title": "P3-1.13-A站年会",
+          "duration_ms": 5657000
+        }
+      ],
+      "duration": 1440.2609940000013
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3405022",
+      "title": "女流-1.13-年会-part1",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "4752732",
+          "title": "P1",
+          "duration_ms": 1439000
+        },
+        {
+          "id": "4752750",
+          "title": "P2-A",
+          "duration_ms": 2828000
+        },
+        {
+          "id": "4752749",
+          "title": "P2-B",
+          "duration_ms": 2828000
+        }
+      ],
+      "duration": 1431.4
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3403380",
+      "actual_seconds": 600.001,
+      "duration_seconds": 1440.2609940000013,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "AcFun年会舞台多人节目、中央AC娘图案、紫灯和观众背影，两帖同类舞台场景但构图/姿态不同，非同帧"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3405022",
+      "actual_seconds": 600.001,
+      "duration_seconds": 1431.4,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "AcFun年会舞台多人节目、中央AC娘图案、紫灯和观众背影，两帖同类舞台场景但构图/姿态不同，非同帧"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3403380_2",
+      "actual_seconds": 3428.001,
+      "duration_seconds": 5655.080374000035,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "长稿P2 3428：宴会桌旁观众与舞台、白蓝灯，台上人物被遮挡/不清；非短稿P2-B600相同构图"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3405022_3",
+      "actual_seconds": 600.001,
+      "duration_seconds": 2829.433333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "短稿P2-B600：舞台上黄色服装节目、近桌观众背影、摄影人员；与长稿P2 3428不是相同构图，不能按2828秒拆分强对齐"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3403380_2",
+      "actual_seconds": 5620.001,
+      "duration_seconds": 5655.080374000035,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "共同近尾事件：镜头转向宴会桌，前景三位女性进餐/交谈，右侧黄色上衣，中间短发绿色上衣，背后站立多人、黑绿衣男子扶椅和黄白舞台灯；两点人物动作不同，支持长P2近尾与短P2-B近尾局部对应，非同帧"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3405022_3",
+      "actual_seconds": 2790.001,
+      "duration_seconds": 2829.433333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "共同近尾事件：镜头转向宴会桌，前景三位女性进餐/交谈，右侧黄色上衣，中间短发绿色上衣，背后站立多人、黑绿衣男子扶椅和黄白舞台灯；两点人物动作不同，支持长P2近尾与短P2-B近尾局部对应，非同帧"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3403380_3",
+      "actual_seconds": 600.001,
+      "duration_seconds": 5659.00417000002,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "长稿独立内页3实际媒体5659秒，600秒为黑框眼镜女流近距离举碗筷进餐，后景宴会桌；确有该页可播放内容，不是只按元数据补全"
+    }
+  ],
+  "conclusions": [
+    "两帖各3内页都不是仅几分钟的短切片；第一内页有同类年会舞台局部",
+    "长P2 3428与短P2-B600未得到同构图，不能按2828偏移固定映射；长P2 5620与短P2-B2790有独特宴会桌事件局部对应",
+    "长稿另有独立P3可播放进餐内容，短帖标题part1及仅P1/P2-A/P2-B不代表完整213分钟场次；保留范围受限，不自动删除该source",
+    "未观看短P2-A或长短全页，不证明精确重分段、缺失多少分钟、全场无剪接或原始日期"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "entry_id": "2019-11-08-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1kE411Y7Eg",
+  "page": {
+    "cid": "133672592",
+    "declared_page": "P2",
+    "media_duration_sec": 7203
+  },
+  "human_watch": false,
+  "verification_extent": "root-provided actual playback screenshots; all six samples readyState=4, seeking=false, paused=true; this agent did not independently watch the player",
+  "samples": [
+    {
+      "time_sec": 600.014236,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "死亡搁浅绿色全息人影/环；右上女流灰衫摄像头。"
+    },
+    {
+      "time_sec": 3600.154459,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "死亡搁浅背包角色在岩地旁架梯；女流灰衫摄像头。"
+    },
+    {
+      "time_sec": 5400.421369,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "死亡搁浅“访谈”菜单，见米尔人和赛博综合症文字；女流灰衫摄像头。"
+    },
+    {
+      "time_sec": 6300.462428,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "主画面黑，女流摄像头仍在；不据此判定丢失、剪接或日期。"
+    },
+    {
+      "time_sec": 6600.524862,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "《失落城堡手游》登录标题屏，版本1.0.1.19。"
+    },
+    {
+      "time_sec": 7150.235886,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "《失落城堡手游》双人角色大厅与三宝箱；画内左上“斗鱼·女流66”，生命169/169与181/181。"
+    }
+  ],
+  "conclusion": "P2至少在离散抽查点包含死亡搁浅与失落城堡手游内容；31.115秒的死亡搁浅点不足以把整P2从失落城堡关联中排除。仅支持P2混合内容审阅。",
+  "limitations": [
+    "不认证恰一处转换、精确边界或游戏时长。",
+    "不认证同一母场日期、全片连续性、完整性或无剪辑。",
+    "黑画面样本不作为损坏、缺失或剪辑证据。",
+    "静音视觉观察；未进行音频核验。",
+    "属于主Agent提供的播放样本记录，不是独立审校。"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "entry_id": "2019-08-20-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1J4411d7L7",
+  "human_watch": false,
+  "verification_extent": "Root-supplied normal public playback observations/screenshots; report author did not independently watch. No media downloaded.",
+  "bilibili_samples": [
+    {
+      "part": "P4",
+      "cid": "112197316",
+      "media_duration_sec": 3601,
+      "time_sec": 600.557494,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "牧场物语雪地木工店外，游戏内冬季18日（二）10:06。"
+    },
+    {
+      "part": "P4",
+      "cid": "112197316",
+      "media_duration_sec": 3601,
+      "time_sec": 3300.312988,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "冬季19日（三）18:57，雪地废墟森林。"
+    },
+    {
+      "part": "P5",
+      "cid": "112197202",
+      "media_duration_sec": 3771,
+      "time_sec": 600.442586,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "哆啦A梦大头像剧情，角色站教堂外；未见可读游戏日历。"
+    },
+    {
+      "part": "P5",
+      "cid": "112197202",
+      "media_duration_sec": 3771,
+      "time_sec": 3700.437267,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "农田背景与收纳箱第3层菜单，一份数量1黄色长方物；日期被遮挡，无法读取。"
+    }
+  ],
+  "douyu_counterpart_samples": [
+    {
+      "url": "https://v.douyu.com/show/8pa9v5Odq1PMVrqA",
+      "part": "P2",
+      "time_sec": 6903.117403,
+      "media_duration_sec": 7202.04,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "冬季19日（三）19:00，雪地废墟树林，角色位置稍偏右。与B站P4 3300.312988秒雪地废墟森林局部进度相近但非完全同帧。"
+    }
+  ],
+  "conclusion": "P4新增两点，其中冬季19日雪地废墟树林与斗鱼8/20回放P2的游戏内19:00局部进度相近，增加B P4与8/20回放的局部范围关联。P5新增两处局部点显示哆啦A梦剧情和牧场农田/菜单，但尚未与原始回放形成对应。",
+  "scope_notes": {
+    "bilibili_five_page_metadata_duration_sec": [
+      1831,
+      5373,
+      3601,
+      3601,
+      3771
+    ],
+    "bilibili_sum_sec": 18177,
+    "calendar_replay_duration": "04:00:04",
+    "interpretation": "总时长差异只能提示范围问题仍待核；不据此判P5重复/缺失/应删，也不反向认证斗鱼回放缺少尾段。根后续可按新证据核范围，不重复盲跳P5相同普通点。"
+  },
+  "limitations": [
+    "P4局部相关不是全页/逐帧对应，也不认证整稿同日、连续或完整。",
+    "P5两个样本无原始回放对应，游戏内容的具体来源范围未知。",
+    "不据总时长差异判断删除、遗漏、重复、补传或斗鱼少尾段。",
+    "游戏内日期不能直接当现实日历日期。",
+    "根提供样本，本报告整理非独立审核，human_watch=false。"
+  ]
+}

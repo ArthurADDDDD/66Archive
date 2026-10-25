@@ -1,0 +1,47 @@
+{
+  "entry_id": "2019-11-11-live-01",
+  "source_indices": ["1", "2"],
+  "human_watch": false,
+  "observations": [
+    {
+      "source_index": "1",
+      "source_url": "https://v.douyu.com/show/ERALvENawPn71Vw0",
+      "page_title": "【女流直播】死亡搁浅 P2 2019.11.11",
+      "author_visible": "女流66",
+      "ui_duration": "02:00:01",
+      "playback": {
+        "action": "normal generic play control clicked; a11y progress advanced; pause was attempted but paused state was not read back",
+        "a11y_progress": "00:05",
+        "scene": "Death Stranding truck driving across wasteland",
+        "visible_danmaku": "双十一的快递员们 等",
+        "ready_state": null,
+        "seeking": null,
+        "exact_current_time_seconds": null,
+        "paused_state_confirmed": null,
+        "audio_listened": false
+      }
+    },
+    {
+      "source_index": "2",
+      "source_url": "https://v.douyu.com/show/Drwnvzb8JZQvPNaX",
+      "page_title": "【女流直播】死亡搁浅 P3 2019.11.11",
+      "author_visible": "女流66",
+      "ui_duration": "20:28",
+      "playback": {
+        "action": "normal generic play control clicked; a11y progress advanced; pause was attempted but paused state was not read back",
+        "a11y_progress": "00:04",
+        "scene": "Death Stranding character carrying cargo across a field near a multi-post device",
+        "ready_state": null,
+        "seeking": null,
+        "exact_current_time_seconds": null,
+        "paused_state_confirmed": null,
+        "audio_listened": false
+      }
+    }
+  ],
+  "conclusions": [
+    "Both pages produced brief Death Stranding visuals after normal UI playback clicks; observations are limited to the displayed opening moments.",
+    "No specific event match with the 2019-11-08 mixed P2 was established. These samples neither prove other-range overlap nor authenticate a mother-session date or completeness.",
+    "No readyState/seeking/exact timestamp/paused-state readback or audio verification was obtained; human_watch=false."
+  ]
+}

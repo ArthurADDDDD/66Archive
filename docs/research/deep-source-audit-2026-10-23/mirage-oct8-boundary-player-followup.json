@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-24",
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1Cw411w7EW/",
+      "time": 12676,
+      "duration": 12706,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "P1近尾：巴辛姆蹲在暖橙色室内木质屏风后；左侧探索区域/偷走药剂样本、保持不被发现等任务；警觉红条。"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1gw411r7v9/",
+      "time": 30,
+      "duration": 12705.847,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "B站题P2在30秒：巴辛姆蹲在室外花盆旁，任务已更新植物学家/保持不被发现，字幕谁会想到去花盆里找这些样本呢？只有那些知情的人。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42617191_1",
+      "time": 30.001,
+      "duration": 12705.967048000011,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "AcFun数组1/题P2在30秒：相同花盆旁蹲伏、任务更新与同一句对白，支持B站P2与A数组1的局部对应。"
+    }
+  ],
+  "conclusion": "P1近尾仍在植物学家偷药样本任务，P2开头已完成该任务并离开花盆区域，支持附近任务过程顺序但未覆盖中间60秒；B P2与Ac数组1题P2在30秒局部对白对应。未认证无缝、全片、独立日期，旧segments仍不用于跳转/时长。"
+}

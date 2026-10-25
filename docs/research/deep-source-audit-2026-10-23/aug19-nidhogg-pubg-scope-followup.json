@@ -1,0 +1,83 @@
+{
+  "entry_id": "2017-08-19-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1dx411J77f/",
+    "title": "女流-8.19-尼德霍格+吃鸡",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 22213237,
+        "title": "P1-8.19-游戏前聊10块钱的",
+        "duration_seconds": 1562
+      },
+      {
+        "page": 2,
+        "id": 22213240,
+        "title": "P2-8.19-尼德霍格",
+        "duration_seconds": 4334
+      },
+      {
+        "page": 3,
+        "id": 22213235,
+        "title": "P3-8.19-绝地求生",
+        "duration_seconds": 4219
+      },
+      {
+        "page": 4,
+        "id": 22213233,
+        "title": "P4-8.19-绝地求生",
+        "duration_seconds": 4219
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1dx411J77f/?p=2",
+      "actual_seconds": 600,
+      "duration_seconds": 4333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Nidhogg系列风格城堡彩虹选关地图、ESC BACK与START MATCH按钮，右上棕色衬衫女流摄像头，菜单非实战"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dx411J77f/?p=3",
+      "actual_seconds": 600,
+      "duration_seconds": 4216.837166666666,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "PUBG READY/WAITING大厅双角色，右上同棕衬衫女流摄像头；大厅非实际对局"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dx411J77f/?p=2",
+      "actual_seconds": 1800,
+      "duration_seconds": 4333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P2 1800秒为Nidhogg风格横向关卡，青绿箭头、顶部进度方块、绿色发光背景与角色/投射物，右上女流摄像头；不是PUBG"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dx411J77f/?p=3",
+      "actual_seconds": 1800,
+      "duration_seconds": 4216.837166666666,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P3 1800秒PUBG Erangel全地图，Georgopol/Rozhok/Pochinki地名及航线/标记、右上同女流摄像头，地图界面不当射击实玩时长"
+    }
+  ],
+  "conclusions": [
+    "正常B站实际4内页，元数据总14334秒不等于单页；本地候选报告原单页断言错误，已要求修正",
+    "P2有Nidhogg系列画面，P3有PUBG大厅/地图，支持档案games仅pubg存在补充Nidhogg关联的审阅候选，不自动写data或确定具体代数",
+    "目录含前聊和多游戏，不把239min全算PUBG或Nidhogg；未验证游戏精确边界、P1/P4、独立母场日期/完整性",
+    "A站同场ac3929159本批未访问，不能将B局部结论继承A"
+  ]
+}

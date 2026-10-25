@@ -1,0 +1,58 @@
+{
+  "entry_id": "2019-08-18-live-01",
+  "source_index": 0,
+  "source_url": "https://www.bilibili.com/video/BV1W4411o7R3?p=1",
+  "human_watch": false,
+  "observation_provider": "Root-supplied public metadata and normal-player samples; this report author did not independently operate the player.",
+  "submission": {
+    "top_level_title": "女流-2019.8.18-心灵砒霜",
+    "owner_uid": "29418340",
+    "owner_name": "女流录像小屋",
+    "internal_page_count": 7,
+    "internal_pages": [
+      {"page_index": 1, "cid": "111730085", "title": "P1-2019.8.1-砒霜前聊10块钱的", "metadata_duration_sec": 4476},
+      {"page_index": 2, "cid": "111727517", "title": "P2-2019.8.18-心灵砒霜", "metadata_duration_sec": 2727},
+      {"page_index": 3, "cid": "111729526", "title": "P3-2019.8.18-心灵砒霜", "metadata_duration_sec": 3601},
+      {"page_index": 4, "cid": "111729764", "title": "P4-2019.8.18-心灵砒霜", "metadata_duration_sec": 3601},
+      {"page_index": 5, "cid": "111729717", "title": "P5-2019.8.18-心灵砒霜", "metadata_duration_sec": 3609},
+      {"page_index": 6, "cid": "112155590", "title": "P6-2019.8.18-心灵砒霜弹幕版", "metadata_duration_sec": 9006},
+      {"page_index": 7, "cid": "112156826", "title": "P7-2019.8.18-心灵砒霜弹幕版", "metadata_duration_sec": 9007}
+    ]
+  },
+  "samples": [
+    {
+      "source": "Bilibili BV1W4411o7R3 P1",
+      "cid": "111730085",
+      "media_duration_sec": 4473.266,
+      "time_sec": 600.562829,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Woman in a purple shirt with letter-like pattern, silver microphone, curtain/glass cabinet and samurai figure behind; white programme contact panel on the left."
+    },
+    {
+      "source": "Douyu official 2019-08-18 replay P1",
+      "url": "https://v.douyu.com/show/XqeO74pdn5X7xywG",
+      "title": "【女流直播】 心灵砒霜 P1 2019.8.18 女流66",
+      "page_published_at": "2019-08-18 22:50:01",
+      "media_duration_sec": 7202.6,
+      "initial_seek": {"time_sec": 600, "readyState": 1, "seeking": true, "included_as_visual_evidence": false},
+      "stable_sample": {
+        "time_sec": 601.154615,
+        "readyState": 4,
+        "seeking": false,
+        "paused": true,
+        "visual": "Woman in a similar purple shirt and setting with a silver microphone and white programme contact panel; she is gesturing with both hands in front of her chest."
+      }
+    }
+  ],
+  "assessment": "The two samples share a programme/chat presentation with similar clothing, background, microphone and contact panel, which strengthens a local association between the Bilibili P1 and the official 2019-08-18 replay P1. They are not an exact frame or distinctive dialogue match. This does not establish that the Bilibili P1 title date 2019-08-01 is a typo, prove that all of P1 or the full submission belongs to 2019-08-18, or independently establish the mother-session date.",
+  "limitations": [
+    "Only one point around 600 seconds was checked on each P1; no audio was listened to.",
+    "The 2019-08-01 official replay page was not checked.",
+    "Bilibili P2-P7 were not visually checked; official replay P2/P3 prior points were not repeated.",
+    "Clothing and room setup alone do not identify a unique event or prove a date.",
+    "No formal data or master observation was changed; human_watch=false."
+  ]
+}

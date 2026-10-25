@@ -1,0 +1,118 @@
+{
+  "selection": "strong-bili-next-eight-priority",
+  "frozen_queue": "strong-bili-next-player-queue.json",
+  "source_queue_indexes": "16-84 inclusive",
+  "basis": [
+    "data entry source lists and notes",
+    "data/game-timelines.yaml",
+    "all-site-unlinked-strong-reviewed.csv",
+    "strong-bili-player-root-followup.md"
+  ],
+  "scope_note": "Local prioritization only. No network access or player inspection was performed. These candidate posts are metadata/source-review leads, not confirmed content, same-event identity, completeness, or missing-footage findings. A BV link here is a standalone post; any P marker is title metadata, not an internal player page number.",
+  "items": [
+    {
+      "priority": 1,
+      "queue_index": 78,
+      "entry_id": "2023-11-09-live-01",
+      "bvid": "BV1Lc411X74W",
+      "url": "https://www.bilibili.com/video/BV1Lc411X74W",
+      "queue_title": "【女流】2023年11月9日录播《魔法工艺》《鹅鹅鸭》《糖豆人》P1",
+      "queue_metadata_duration_sec": 11286,
+      "locally_known": "Entry lists Magicraft, Goose Goose Duck, and Fall Guys. Existing timeline basis is a different post, BV1kw411T7Sg, and marks its single page partial: Goose Goose Duck from the start, chat at 00:43:14, Fall Guys at 01:11:08. Entry also has AcFun candidates ac42909912 (P1), ac42909914 (P2), ac42909913 (P3); metadata durations are all about 188 minutes. Existing notes say the three AcFun page titles explicitly list the same three games.",
+      "falsifiable_question": "Does this standalone Bilibili P1 actually show one of the listed games, and if so which? Does the final few minutes show an ending/transition that can be compared with the next standalone post? A different game/activity or an unavailable opening would weaken the assumed title-to-scope mapping.",
+      "suggested_sample": "If playback permits, inspect 00:00:30–00:01:30 for concrete game/activity, then the last 60–90 seconds near 03:08:06 for a transition/ending. Do not infer continuity from adjacent title P numbers.",
+      "limits": "A single 60-second sample cannot establish full-page contents or a continuous relation to P2/P3. The existing timeline is partial and is for BV1kw411T7Sg, not this candidate."
+    },
+    {
+      "priority": 2,
+      "queue_index": 79,
+      "entry_id": "2023-11-09-live-01",
+      "bvid": "BV1VC4y1S7qQ",
+      "url": "https://www.bilibili.com/video/BV1VC4y1S7qQ",
+      "queue_title": "【女流】2023年11月9日录播《魔法工艺》《鹅鹅鸭》《糖豆人》P2",
+      "queue_metadata_duration_sec": 11287,
+      "locally_known": "Same multi-game entry and partial one-page timeline described for queue index 78. AcFun has a P2 title counterpart (ac42909914, about 188 minutes), but no locally recorded player observation establishes that these are the same boundaries or gameplay.",
+      "falsifiable_question": "Which listed game/activity is visible in this standalone P2, and does it differ from P1? Does its opening match a transition, or instead repeat/continue content? This can test the useful scope question without treating P2 as an internal page index.",
+      "suggested_sample": "Inspect 00:00:30–00:01:30 for the opening activity; if possible use a separate sample around 03:05:00–03:08:00 to see whether the post ends naturally or cuts. Compare observations with P1/P3 only; do not assume a fixed offset.",
+      "limits": "No content-level evidence locally. Same-title multi-game metadata cannot assign any specific part to a game or prove same-session order."
+    },
+    {
+      "priority": 3,
+      "queue_index": 68,
+      "entry_id": "2023-09-17-live-01",
+      "bvid": "BV1bN411H7TT",
+      "url": "https://www.bilibili.com/video/BV1bN411H7TT",
+      "queue_title": "P2-女流-2023.9.17-匹诺曹的谎言&猛兽派对",
+      "queue_metadata_duration_sec": 19499,
+      "locally_known": "The entry has two games and duration_min 661. Its existing Bilibili P1 BV1tz4y1L78G has a partial timeline: Lies of P starts at 00:00:12 and a long unknown/chat span starts at 05:35:24. AcFun P1/P2 metadata durations are about 20,130/19,499 seconds. This candidate's title is an explicit P2 marker, but no local content check proves what it contains.",
+      "falsifiable_question": "Does the standalone P2 show Lies of P, Party Animals, or another activity at its opening and later in the post? If it contains the second game, that would help locate an unreviewed scope; if not, title alone does not establish the second game's location.",
+      "suggested_sample": "Check 00:00:30–00:01:30 and one later point near 02:30:00, noting the visible game/HUD/activity at each. Avoid inferring a precise handoff offset from the P1 timeline.",
+      "limits": "A sample cannot settle how much of the page belongs to each game or whether the posts are complementary. Existing timeline only describes the separate P1 basis page."
+    },
+    {
+      "priority": 4,
+      "queue_index": 24,
+      "entry_id": "2023-05-19-live-01",
+      "bvid": "BV14h411F7mm",
+      "url": "https://www.bilibili.com/video/BV14h411F7mm",
+      "queue_title": "P3-女流-2023.5.19-塞尔达传说",
+      "queue_metadata_duration_sec": 2230,
+      "locally_known": "The entry has a 13-part KassyTan Bilibili recording noted as 6:04:06, plus a P1/P2/P3 AcFun title series. The reviewed candidate row says this separate Bilibili post has a single API page and 2,230 seconds (37:10); the AcFun P3 metadata is also 2,230 seconds. It is an unlinked candidate, not evidence of a missing recording.",
+      "falsifiable_question": "Does the final portion of this short standalone post show Zelda gameplay, a stream ending, or a cut to something else? This tests whether its short duration could be a discrete tail segment versus another kind of post; duration alone cannot decide.",
+      "suggested_sample": "Inspect near 00:34:00–00:35:00, then—if time allows—the final minute around 00:36:00. Record visible HUD/activity and whether an ending/cut is actually seen.",
+      "limits": "This is not a full coverage test; the longer existing recording may overlap or be a distinct version. Do not treat the matching AcFun duration as proof of same boundaries."
+    },
+    {
+      "priority": 5,
+      "queue_index": 28,
+      "entry_id": "2023-05-25-live-01",
+      "bvid": "BV14P411Q733",
+      "url": "https://www.bilibili.com/video/BV14P411Q733",
+      "queue_title": "P1-女流-2023.5.25-塞尔达传说",
+      "queue_metadata_duration_sec": 1484,
+      "locally_known": "The entry has an existing 14-part KassyTan Bilibili recording noted as 6:49:25. Its AcFun sources have P1/P2/P3 title labels with metadata durations about 1,454/13,061/10,024 seconds; this candidate is a separate 1-page post at 1,484 seconds. Candidate metadata marks it P1, but title does not prove a stream boundary or contents.",
+      "falsifiable_question": "Does this short standalone P1 show Zelda gameplay throughout its sampled end, or an observable transition/end? Does it resemble the locally cataloged short AcFun P1 in visible activity? Any similarity is local partial evidence only, not equivalence.",
+      "suggested_sample": "Inspect 00:22:00–00:23:00 and, if possible, 00:23:30–00:24:30 near the end. Note scene/HUD and whether the page reaches an apparent end or cuts.",
+      "limits": "No matching visual observation exists locally. Existing long recording and AcFun durations do not establish overlap or completeness."
+    },
+    {
+      "priority": 6,
+      "queue_index": 52,
+      "entry_id": "2023-08-05-live-01",
+      "bvid": "BV1314y1z7HK",
+      "url": "https://www.bilibili.com/video/BV1314y1z7HK",
+      "queue_title": "P1-女流-2023.8.5-博德之门 3",
+      "queue_metadata_duration_sec": 2095,
+      "locally_known": "The entry duration is 561 minutes. It has an existing Bilibili source BV1Ac411F7ct and AcFun P1/P2/P3 title matches at roughly 11,200 seconds each. This separate Bilibili P1 candidate is a single 2,095-second post. Metadata supports a large duration difference among versions/parts, not a gap or error.",
+      "falsifiable_question": "Does the short P1 show Baldur's Gate 3 at an early and late sample, and is a clear cut/end visible near the end? A different game or non-game activity would weaken title-to-content mapping for this post; no outcome proves whole-entry coverage.",
+      "suggested_sample": "Inspect 00:00:30–00:01:30 and near 00:32:00–00:33:00. Capture distinctive game scene/HUD/activity and whether a boundary is visible.",
+      "limits": "The existing Bilibili and AcFun pages may be longer alternate versions or different segmentations. API durations do not establish which recording is complete."
+    },
+    {
+      "priority": 7,
+      "queue_index": 76,
+      "entry_id": "2023-10-17-live-01",
+      "bvid": "BV1E84y1d7U6",
+      "url": "https://www.bilibili.com/video/BV1E84y1d7U6",
+      "queue_title": "【女流】2023年10月17日录播《堕落之主》P2",
+      "queue_metadata_duration_sec": 20465,
+      "locally_known": "The entry duration is 701 minutes. Existing Bilibili P1 BV1VM41197Ru is 21,600 seconds; this separate P2 candidate is 20,465 seconds. Existing AcFun ac42693688 is a single approximately 42,064-second post. Numeric proximity between the two Bilibili posts and AcFun duration is only a follow-up clue; it does not prove adjacency or common coverage.",
+      "falsifiable_question": "Does this standalone P2 visibly contain Lords of the Fallen, and is the first minute clearly a gameplay scene rather than a title/other activity? Compare a later point for consistency; do not infer the exact cut from durations.",
+      "suggested_sample": "Inspect 00:00:30–00:01:30 and around 02:30:00. Record game identity cues/HUD and whether the activity changes.",
+      "limits": "No timeline or player observation is cited for this new post. Even a positive game match does not prove it follows P1 or that the 701-minute entry is fully covered."
+    },
+    {
+      "priority": 8,
+      "queue_index": 58,
+      "entry_id": "2023-08-13-live-01",
+      "bvid": "BV1Nm4y1W7FG",
+      "url": "https://www.bilibili.com/video/BV1Nm4y1W7FG",
+      "queue_title": "P1-女流-2023.8.13-博德之门 3",
+      "queue_metadata_duration_sec": 4321,
+      "locally_known": "The entry has existing AcFun P1/P2/P3 candidates with metadata durations about 4,320/8,336/8,305 seconds; the new Bilibili P1 candidate is a single 4,321-second post. Its other candidate Bilibili P3 is 8,306 seconds. This strong metadata alignment makes it useful for a direct but still local sample; it does not certify content or page order.",
+      "falsifiable_question": "Does the standalone candidate show Baldur's Gate 3 at the sampled start and near its end, and is a boundary visible? This can compare its concrete activity to the separately titled Bilibili P3 without assuming their temporal order.",
+      "suggested_sample": "Inspect 00:00:30–00:01:30 and around 01:05:00–01:10:00. Record visible game/HUD/activity and any ending/cut cue.",
+      "limits": "Duration alignment with AcFun P1 is not proof of same content. No cross-source content equivalence or chronology is established locally."
+    }
+  ]
+}

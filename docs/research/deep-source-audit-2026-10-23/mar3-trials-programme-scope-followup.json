@@ -1,0 +1,126 @@
+{
+  "entry_id": "2019-03-03-live-01",
+  "human_watch": false,
+  "scope": "bounded_machine_playback_not_full_review",
+  "metadata": [
+    {
+      "url": "https://www.acfun.cn/v/ac4989814",
+      "title": "女流-2019.3.3-心灵砒霜&amp;特技摩托：崛起",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "6711179",
+          "title": "P1-2019.3.3砒霜前聊10块钱的",
+          "duration_ms": 1656998
+        },
+        {
+          "id": "6711208",
+          "title": "P2-2019.3.3-特技摩托：崛起",
+          "duration_ms": 2005020
+        },
+        {
+          "id": "6711336",
+          "title": "P3-2019.3.3-心灵砒霜",
+          "duration_ms": 3582690
+        },
+        {
+          "id": "6711337",
+          "title": "P4-2019.3.3-心灵砒霜",
+          "duration_ms": 3582340
+        },
+        {
+          "id": "6711346",
+          "title": "P5-2019.3.3-心灵砒霜",
+          "duration_ms": 3582010
+        },
+        {
+          "id": "6711308",
+          "title": "P6-2019.3.3-特技摩托：崛起",
+          "duration_ms": 1832028
+        }
+      ],
+      "duration": 1657.181356
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4991712",
+      "title": "女流-2019.3.3-心灵砒霜-弹幕版",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "6713218",
+          "title": "P1-2019.3.3-心灵砒霜-弹幕版",
+          "duration_ms": 10762288
+        }
+      ],
+      "duration": 10762.481356
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac4989814_2",
+      "actual_seconds": 600.001,
+      "duration_seconds": 2005.248022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "纯净内页2为特技摩托实玩，场地大圆筒坡道、计时00:02.750、失误0、右上黑衣女流摄像头"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4991712",
+      "actual_seconds": 600.001,
+      "duration_seconds": 10762.481356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "弹幕单页600秒为心灵砒霜来信：30岁做古战棋剧情视频UP、父亲住院及创作心态，黑衣摄像头在右，非游戏画面"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4989814_3",
+      "actual_seconds": 600.001,
+      "duration_seconds": 3582.881356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "纯净内页3 600秒为同一封30岁古战棋视频UP/创作心态来信，与弹幕600秒文本相同、人物动作不同；局部节目对应"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4989814_5",
+      "actual_seconds": 3335.001,
+      "duration_seconds": 3582.214689,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同一封大学生与班上女孩相处、表白后被当朋友的来信；黑衣橙条袖女流摄像头，文本相同动作不同，纯净内页5 3335秒与弹幕10500秒局部节目对应"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4991712",
+      "actual_seconds": 10500.001,
+      "duration_seconds": 10762.481356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同一封大学生与班上女孩相处、表白后被当朋友的来信；黑衣橙条袖女流摄像头，文本相同动作不同，纯净内页5 3335秒与弹幕10500秒局部节目对应"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4989814_6",
+      "actual_seconds": 600.001,
+      "duration_seconds": 1832.248022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "纯净内页6为特技摩托实玩，林木山地摩托越障、计时00:32.889、失误1、右下女流摄像头，表明节目段后另有游戏页"
+    }
+  ],
+  "conclusions": [
+    "纯净内页2与6有Trials Rising实际摩托游戏，中间内页3/5来信节目；游戏录像存在，不能整场判缺",
+    "弹幕单页600/10500分别与纯净内页3 600/5 3335同封来信局部对应，支持心灵砒霜节目范围，不能代替已确认游戏段",
+    "未观看纯净内页1/4，未完整观看弹幕单页或全部页面，不能断言弹幕绝无游戏/全稿节目无剪接/无缝或完整",
+    "B站登记稿metadata总长27009与A16241差异未在本批复核，不把它当缺失时长；原始直播日未独立认证"
+  ]
+}

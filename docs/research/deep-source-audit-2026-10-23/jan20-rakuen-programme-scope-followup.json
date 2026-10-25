@@ -1,0 +1,107 @@
+{
+  "entry_id": "2019-01-20-live-01",
+  "human_watch": false,
+  "scope": "bounded_machine_playback_not_full_review",
+  "metadata": [
+    {
+      "url": "https://www.acfun.cn/v/ac4881886",
+      "title": "女流-2019.1.20-乐园&amp;心灵砒霜",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "6598515",
+          "title": "P1-2019.1.20-Rakuen(乐园)",
+          "duration_ms": 3638000
+        },
+        {
+          "id": "6598513",
+          "title": "P2.1-2019.1.20-心灵砒霜",
+          "duration_ms": 3303000
+        },
+        {
+          "id": "6598512",
+          "title": "P2.2-2019.1.20-心灵砒霜",
+          "duration_ms": 3305000
+        },
+        {
+          "id": "6598440",
+          "title": "P2.3-2019.1.20-心灵砒霜",
+          "duration_ms": 1344000
+        }
+      ],
+      "duration": 3638.181356
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4882221",
+      "title": "女流-2019.1.20-心灵砒霜-弹幕版",
+      "uploader": {
+        "id": "4397992",
+        "name": "女流录像小屋"
+      },
+      "parts": [
+        {
+          "id": "6598887",
+          "title": "P1-2019.1.20-心灵砒霜-弹幕版",
+          "duration_ms": 7956000
+        }
+      ],
+      "duration": 7956.7
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac4881886",
+      "actual_seconds": 600.001,
+      "duration_seconds": 3638.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Rakuen像素游戏，紫天空、树木石阶和藤蔓平台，角色站在罐子附近；右下红白横条上衣女流摄像头"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4882221",
+      "actual_seconds": 600.001,
+      "duration_seconds": 7956.7,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "心灵砒霜来信文字，内容关于梦中场景在生活里再次出现，右侧红白横条上衣女流摄像头，录入弹幕；不是游戏画面"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4881886_2",
+      "actual_seconds": 600.001,
+      "duration_seconds": 3303.748022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "纯净稿内页2：同一段关于梦中场景日后在生活重现的来信，与弹幕单页600秒同文本、同摄像头布景，人物动作不同；支持心灵砒霜局部对应，不是全稿范围证明"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4881886_4",
+      "actual_seconds": 1200.001,
+      "duration_seconds": 1344.6,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同一封研究生担心被安排到外地研究院、如何与导师沟通的来信，同段文本/摄像头构图；人物姿态不同。纯净内页4约1200秒与弹幕单页7808秒局部对应"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4882221",
+      "actual_seconds": 7808.001,
+      "duration_seconds": 7956.7,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同一封研究生担心被安排到外地研究院、如何与导师沟通的来信，同段文本/摄像头构图；人物姿态不同。纯净内页4约1200秒与弹幕单页7808秒局部对应"
+    }
+  ],
+  "conclusions": [
+    "纯净稿P1有Rakuen游戏画面，不可标该场游戏录像整体缺失",
+    "单页弹幕稿标题及两封来信锚点支持它对应纯净稿内页2至4的心灵砒霜局部，不能替代Rakuen入口",
+    "两封来信锚点及接近时长不证明全范围无剪接/完整；内页3未播放",
+    "未独立认证原始直播日期；不得用旧segments作精确跳转或删除整个source"
+  ]
+}

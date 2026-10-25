@@ -1,0 +1,93 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac11707262_2",
+      "actual_seconds": 2178.001,
+      "duration_seconds": 4356.166667,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色雪地/岩壁/木结构，手持蓝色对讲机，两个平台视角略不同的同一附近事件"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac11707262_2",
+      "actual_seconds": 4300.001,
+      "duration_seconds": 4356.166667,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底，未辨识事件，不做连续性证据"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac11707262_2",
+      "actual_seconds": 4200.001,
+      "duration_seconds": 4356.166667,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "圆形星象连线谜题板，上方四角星橙圈，左下白蓝发光线路；两源局部状态相近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1uJ41127q4?p=2",
+      "actual_seconds": 2178,
+      "duration_seconds": 4357,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "蓝色雪地/岩壁/木结构，手持蓝色对讲机，两个平台视角略不同的同一附近事件"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1uJ41127q4?p=2",
+      "actual_seconds": 4300,
+      "duration_seconds": 4357,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "黑底，未辨识事件，不做连续性证据"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1uJ41127q4?p=2",
+      "actual_seconds": 4200,
+      "duration_seconds": 4357,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "圆形星象连线谜题板，上方四角星橙圈，左下白蓝发光线路；两源局部状态相近"
+    }
+  ],
+  "acfun_video_list": [
+    {
+      "index": 1,
+      "title": "Part1",
+      "id": "10998051",
+      "metadata_ms": 2819988
+    },
+    {
+      "index": 2,
+      "title": "Part2",
+      "id": "10998075",
+      "metadata_ms": 4356058,
+      "media_seconds": 4356.166667
+    }
+  ],
+  "bilibili_metadata_seconds": [
+    2823,
+    4357,
+    3602,
+    3603,
+    3289
+  ],
+  "additional_duration_only": {
+    "url": "https://www.bilibili.com/video/BV1uJ41127q4?p=5",
+    "media_seconds": 3289,
+    "visual_sample": false
+  },
+  "conclusion": "A Part2与B内部P2中部和靠尾谜题局部对应；A只有两个内页，不能把119.6分钟总长当B五页294.6分钟的等价全场。",
+  "limitations": [
+    "A Part1未做实际画面观察",
+    "B P3-P5未内容抽看，本次P5仅读duration",
+    "黑底不证明完整/缺失",
+    "未认证全片等价/母场日期/其它B页是否全部新内容"
+  ]
+}

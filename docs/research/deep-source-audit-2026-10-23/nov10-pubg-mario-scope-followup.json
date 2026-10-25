@@ -1,0 +1,79 @@
+{
+  "entry_id": "2017-11-10-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1ux41177ak/",
+    "title": "女流-11.10-绝地求生&\n超级马里奥-奥德赛",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 26454892,
+        "title": "P1-11.10-游戏前聊10块钱的",
+        "duration_seconds": 1131
+      },
+      {
+        "page": 2,
+        "id": 26454893,
+        "title": "P2-11.10-绝地求生",
+        "duration_seconds": 574
+      },
+      {
+        "page": 3,
+        "id": 26454894,
+        "title": "P3-11.10-超级马里奥-奥德赛",
+        "duration_seconds": 4533
+      },
+      {
+        "page": 4,
+        "id": 26454895,
+        "title": "P4-11.10-超级马里奥-奥德赛",
+        "duration_seconds": 4535
+      },
+      {
+        "page": 5,
+        "id": 26454896,
+        "title": "P5-11.10-超级马里奥-奥德赛",
+        "duration_seconds": 4535
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1ux41177ak/?p=2",
+      "actual_seconds": 300,
+      "duration_seconds": 575,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P2 300秒PUBG角色在Pochinki房屋/矮墙间奔跑，右上灰衣女流与蓝衣男性摄像头；实际对局画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ux41177ak/?p=3",
+      "actual_seconds": 300,
+      "duration_seconds": 4533,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P3 300秒超级马里奥奥德赛红色飞船/白色气球飞行过场，右上相同两人摄像头；过场非移动游玩"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1ux41177ak/?p=3",
+      "actual_seconds": 600,
+      "duration_seconds": 4533,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P3 600秒Mario与Cappy在森林关卡、紫色商店/金币及下方移动/飞出去操作提示，支持奥德赛实际游戏环节局部"
+    }
+  ],
+  "conclusions": [
+    "正常B实际5内页，15308秒是投稿总长非单页；源级两游戏均有实际画面，档案现有pubg/super-mario-odyssey关联有局部支持",
+    "短P2约575秒仍有PUBG对局，不因页短直接判精剪无效；P3含过场与游戏，不把全页都算实玩",
+    "P1/P4/P5及A站ac4078341未访问；未观察P2尾/P3头，旧segments不能推出已核精确转换、无缝、完整或日期"
+  ]
+}

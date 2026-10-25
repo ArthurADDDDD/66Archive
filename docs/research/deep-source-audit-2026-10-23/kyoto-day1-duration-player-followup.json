@@ -1,0 +1,69 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3295639_1",
+      "actual_seconds": 145.001,
+      "duration_seconds": 13015.433333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流毛领外套自拍，寺院门/松树/路过灰羽绒女士，与B P1 145局部相符"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3295639_1",
+      "actual_seconds": 12900.001,
+      "duration_seconds": 13015.433333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "石墙步道，女流与举索尼相机同行者、眼镜男子同框；与B P3 4200同事件附近"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1es411Y7Nn?p=1",
+      "actual_seconds": 145,
+      "duration_seconds": 4315.1645,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流毛领外套自拍，寺院门/松树/路过灰羽绒女士，与A 145近似画面"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1es411Y7Nn?p=3",
+      "actual_seconds": 4200,
+      "duration_seconds": 4343.138,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "石墙步道，女流与举索尼相机同行者、眼镜男子同框；姿态不同非同帧"
+    }
+  ],
+  "acfun_video_list": [
+    {
+      "index": 1,
+      "title": "P1",
+      "id": "4562612",
+      "metadata_ms": 293000
+    }
+  ],
+  "bilibili_metadata_pages": [
+    {
+      "page": 1,
+      "duration": 4340
+    },
+    {
+      "page": 2,
+      "duration": 4347
+    },
+    {
+      "page": 3,
+      "duration": 4344
+    }
+  ],
+  "conclusion": "Ac元数据293秒与实播13015.43秒严重不符，已正常定位12900秒，不应以metadata视作5分钟切片或缺失。A开头与B P1局部对应，近尾与B P3同行者/相机事件附近。",
+  "limitations": [
+    "非全程/独立日期认证",
+    "B P1 media与metadata差异原样保留非剪辑量",
+    "A单页与B三页未逐帧/接缝对齐"
+  ]
+}

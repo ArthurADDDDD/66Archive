@@ -1,0 +1,137 @@
+{
+  "entry_id": "2019-08-13-live-01",
+  "human_watch": false,
+  "metadata": [
+    {
+      "url": "https://www.bilibili.com/video/BV1S4411S7ix/",
+      "title": "女流66直播玩大雄房间号156277日期2019年8月13日（所以这到底是什么游戏）斗歌大会女流视角",
+      "uploader": {
+        "id": 23259019,
+        "name": "列支敦士登驻通辽大使"
+      },
+      "parts": [
+        {
+          "page": 1,
+          "id": 110424345,
+          "title": "女流66直播玩大雄房间号156277日期2019年8月13日16_27_17",
+          "duration_seconds": 2370
+        },
+        {
+          "page": 2,
+          "id": 110425903,
+          "title": "女流66直播玩大雄房间号156277日期2019年8月13日17_06_49",
+          "duration_seconds": 4329
+        },
+        {
+          "page": 3,
+          "id": 110424227,
+          "title": "女流66直播玩大雄房间号156277日期2019年8月13日19_51_3418_18_59",
+          "duration_seconds": 2495
+        },
+        {
+          "page": 4,
+          "id": 110425941,
+          "title": "斗歌大会女流视角19_28_04",
+          "duration_seconds": 168
+        },
+        {
+          "page": 5,
+          "id": 110426521,
+          "title": "斗歌大会女流视角19_49_40",
+          "duration_seconds": 1791
+        }
+      ]
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1K4411D7QE/?p=5",
+      "title": "{秘密录像屋}斗鱼天下第一斗歌大赛  2019.08.13----多视角",
+      "uploader": {
+        "id": 28047516,
+        "name": "账号已注销"
+      },
+      "parts": [
+        {
+          "page": 1,
+          "id": 110451874,
+          "title": "官方直播间1",
+          "duration_seconds": 4317
+        },
+        {
+          "page": 2,
+          "id": 110454471,
+          "title": "官方直播间2",
+          "duration_seconds": 2290
+        },
+        {
+          "page": 3,
+          "id": 110455250,
+          "title": "官方直播间3",
+          "duration_seconds": 666
+        },
+        {
+          "page": 4,
+          "id": 110445999,
+          "title": "Npccccccccccccc主持人视角",
+          "duration_seconds": 9148
+        },
+        {
+          "page": 5,
+          "id": 110451400,
+          "title": "导师-----女流视角",
+          "duration_seconds": 9609
+        },
+        {
+          "page": 6,
+          "id": 110449109,
+          "title": "导师-刘飞儿视角",
+          "duration_seconds": 9803
+        }
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1S4411S7ix/",
+      "actual_seconds": 600,
+      "duration_seconds": 2370,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "P1 600秒哆啦A梦角色图标地图菜单、任意门、河流/树林/牧场等地点、下方A确定/B关闭；只观察菜单，不当实际操作时长"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1K4411D7QE/?p=5",
+      "actual_seconds": 600,
+      "duration_seconds": 9609,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "多视角稿内部P5 600秒斗歌节目UI、黑胶唱片/导师头像和评分按钮，右下绿色上衣女流摄像头；不是游戏实况，支持该页女流视角局部"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1S4411S7ix/?p=5",
+      "actual_seconds": 1700,
+      "duration_seconds": 1791,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "第一帖P5近尾1700秒为斗歌节目，选手栏多大王、嵌入外国短发主持人演播室视频，右下绿色上衣女流摄像头；非游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1K4411D7QE/?p=5",
+      "actual_seconds": 9500,
+      "duration_seconds": 9609,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "多视角帖P5近尾9500秒为斗歌成绩表，分数一二三/弹幕评分/总分，右下绿色上衣女流摄像头；与第一帖P5 1700不是相同事件，不强按剩余时长对齐"
+    }
+  ],
+  "conclusions": [
+    "第一帖UID23259019未登记为录像小屋，正常页昵称列支敦士登驻通辽大使；档案source.account错配不等于该上传者内容错误",
+    "第一帖P1为游戏地图菜单而P5为斗歌节目，同帖混内容；第二帖内部P5两个点支持女流节目视角",
+    "第二帖前3页官方直播间、P4主持、P5女流、P6刘飞儿的metadata角色分列，总597.2min不能加作女流385min母场；未播放其它视角",
+    "两帖P5近尾不是同一事件，未完成具体相同节目事件对齐；不能声称第一帖完整或相互无重叠/补足",
+    "日期仍标题声明，独立原始直播日/所有页范围和完整性未验证；节目稿不能代替第一帖已确认游戏菜单的部分"
+  ]
+}

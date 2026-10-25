@@ -1,0 +1,59 @@
+{
+  "entry_id": "2019-10-10-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1pE411o7UJ/",
+    "uploader": {
+      "id": 2406709,
+      "name": "白陆゜"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 122667197,
+        "title": "录播2019.10.10 15.05.18",
+        "duration_seconds": 218
+      },
+      {
+        "page": 2,
+        "id": 122667484,
+        "title": "录播2019.10.10 15.08.50",
+        "duration_seconds": 15862
+      },
+      {
+        "page": 3,
+        "id": 122673325,
+        "title": "喜欢就三连吧 来源av63802046",
+        "duration_seconds": 8
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1pE411o7UJ/?p=2",
+      "page": 2,
+      "actual_seconds": 600.723394,
+      "duration_seconds": 15861.821609977324,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Trine风格横向奇幻关卡，发光箱体/吊挂木轮/角色与绳索、无主播摄像头；支持档案Trine4内容局部，非独立版本/主播认证"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1pE411o7UJ/?p=3",
+      "page": 3,
+      "actual_seconds": 3.623367,
+      "duration_seconds": 7.88883,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "白底点赞投币收藏三连动画，非游戏也非原始直播片尾认证"
+    }
+  ],
+  "conclusions": [
+    "当前三内页，P2有登记Trine4相符的游戏局部；P3仅三连片尾，不将整投稿16088秒全计游戏",
+    "P1未播放；文件名15:05:18/15:08:50仅metadata，不独立认证开播时间或接缝",
+    "UID2406709与登记账号差异仅归档字段审阅，不指控上传者；原始日期/整场完整未认证"
+  ]
+}

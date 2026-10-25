@@ -1,0 +1,65 @@
+{
+  "entry_id": "2016-01-24-live-01",
+  "source_index": "2",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.acfun.cn/v/ac2487950",
+    "uploader": {
+      "id": 974915,
+      "name": "斗鱼录像厅"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 3122848,
+        "metadata_duration_seconds": null
+      }
+    ],
+    "media_duration_seconds": 6624.848022
+  },
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac2487950",
+      "actual_seconds": 601.459794,
+      "duration_seconds": 6624.848022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "旧节目中动物帽女流/大段文字，右侧灰衣女流摄像头，与B600局部相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2487950",
+      "actual_seconds": 6401.458885,
+      "duration_seconds": 6624.848022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "Minecraft空中像素人像和汉字、钻石工具/物品栏/小地图，右侧灰衣女流摄像头；该稿非全片仅读信聊天"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2487950",
+      "actual_seconds": 3001.460823,
+      "duration_seconds": 6624.848022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "灰底文字66我要抱抱与女流摄像头，和B3000相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac2487950",
+      "actual_seconds": 5801.460512,
+      "duration_seconds": 6624.848022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "论坛网页与低头灰衣女流摄像头，和B5801同论坛局部相近，但姿态不同，不声称精确帧对应"
+    }
+  ],
+  "conclusions": [
+    "该A源实际有Minecraft与非游戏内容，支持保留游戏影像，不能计整源为纯游戏",
+    "B/A2两个非游戏点局部相近但不认证全片等价；A2 6401有Minecraft，不能把B范围直接继承整A",
+    "独立母场日期/精确接缝/全场完整性均未核，不按B不支持样本判整场缺失",
+    "数组未提供时长；旧目录110min、投稿级缓存10136秒与本次实播6624.848秒分开保留，不按数组零/缺值判失效",
+    "新5801两平台点局部相近，B仅到5830.6，A2已在6401见MC；支持来源覆盖不同的审阅疑点，不认证B全片无MC或具体截断秒数"
+  ]
+}

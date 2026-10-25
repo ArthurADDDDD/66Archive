@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-24",
+  "human_watch": false,
+  "entry_id": "2023-08-21-live-01",
+  "source_url": "https://www.acfun.cn/v/ac42146493",
+  "method": "normal_browser_bounded_transition_samples",
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 7800.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "7800秒无畏契约紫枪与蓝色冰墙，比分2:2计时1:33，角色技能栏。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9900.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9900秒AltF4骑士火把在金色雕纹石块旁梁道，金币237、鸡HUD。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 11100.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "11100秒AltF4骑士火把在岩壁与木板旁，金币258、鸡HUD。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 8400.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "8400秒无畏契约，紫枪、赛后攻守转换提示与技能HUD。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 8850.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "8850秒无畏契约，摄像头监视视角及特工HUD。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9300.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9300秒无畏契约紫枪对着庭院水井，技能HUD与对局比分栏。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9600.001,
+      "duration": 12739.466667,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9600秒无畏契约客户端对战页，无实际对局，过渡状态。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9750.001,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9750秒AltF4骑士火把跑梁道，金币195。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9825.001,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9825秒AltF4骑士火把跑梁道，金币213。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9650.001,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9650秒无畏契约赛后胜利13:10结算页。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9700.001,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9700秒AltF4插画启动logo，非已进入实际游玩。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9675.001,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9675秒黑底但直播叠字仍在，正常ready4，不能单独解释为资源失败。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9690,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9690秒AltF4插画logo。"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac42146493_1",
+      "time": 9710,
+      "duration": 12739.533633999994,
+      "ready": 4,
+      "seeking": false,
+      "visual_observation": "9710秒AltF4读条插画，尚非实际游玩。"
+    }
+  ],
+  "conclusion": "9300秒仍无畏契约对局、9600对战客户端、9650胜利13:10结算，9675黑底，9690/9700AltF4 logo、9710加载、9750已实际AltF4。该局部切换过程的可见两端缩至9650..9690秒，不是全P唯一切换或精确时间轴边界；游戏实战起算不能使用logo时间。"
+}

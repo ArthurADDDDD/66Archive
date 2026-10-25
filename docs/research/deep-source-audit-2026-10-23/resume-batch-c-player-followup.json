@@ -1,0 +1,161 @@
+{
+  "human_watch": false,
+  "scope": "Eight standalone candidate posts; local samples and three baseline comparisons only.",
+  "rows": [
+    {
+      "queue_index": 73,
+      "bvid": "BV1G94y1a7zb",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1G94y1a7zb/",
+        "time": 60,
+        "ready": 4,
+        "seeking": false,
+        "duration": 6977
+      },
+      "visual_observation": "黑白条纹上衣主播在卧室聊天，右侧白色投稿信箱区域与历史弹幕，未见游戏。"
+    },
+    {
+      "queue_index": 73,
+      "bvid": "BV1G94y1a7zb",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1G94y1a7zb/",
+        "time": 6947,
+        "ready": 4,
+        "seeking": false,
+        "duration": 6977
+      },
+      "visual_observation": "右侧来信正文、主播读信，顶部国庆快乐叠字；支持节目局部与国庆语境，但非独立现实日期证明。"
+    },
+    {
+      "queue_index": 40,
+      "bvid": "BV1uX4y1q76f",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1uX4y1q76f/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17819
+      },
+      "visual_observation": "持长剑披风主角沿开阔草地石路奔跑，右侧任务指示、远处城堡；局部与最终幻想XVI相符。"
+    },
+    {
+      "queue_index": 43,
+      "bvid": "BV1pV411L7jM",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1pV411L7jM/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 8883
+      },
+      "visual_observation": "街霸6训练场隆与金伯莉对打，练习数据/输入历史与无限时间HUD；实际SF6游玩。"
+    },
+    {
+      "queue_index": 44,
+      "bvid": "BV1vm4y1L7FB",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1vm4y1L7FB/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11828
+      },
+      "visual_observation": "遗迹2第三人称持枪角色面对锈红双门，枪械弹药/血耐力HUD和小地图；局部游戏相符。"
+    },
+    {
+      "queue_index": 51,
+      "bvid": "BV1nk4y1g7go",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1nk4y1g7go/",
+        "time": 600,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17399
+      },
+      "visual_observation": "BG3沙滩场景上叠有另一作者水印与大段讲解字幕，右下主播摄像头；像在观看BG3攻略视频，不能据游戏画面认主播实际操作。"
+    },
+    {
+      "queue_index": 51,
+      "bvid": "BV1nk4y1g7go",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1nk4y1g7go/",
+        "time": 7200,
+        "ready": 4,
+        "seeking": false,
+        "duration": 17399
+      },
+      "visual_observation": "BG3近景角色剧情，右下主播摄像头保留，未见此前攻略作者水印/讲解大字幕；支持后段正常游戏剧情，实际操作/切换边界未完整核验。"
+    },
+    {
+      "queue_index": 72,
+      "bvid": "BV1pu4y1z78R",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1pu4y1z78R/",
+        "time": 1800,
+        "ready": 4,
+        "seeking": false,
+        "duration": 11654
+      },
+      "visual_observation": "匹诺曹护身符菜单，钢铁/蓝色守护等物品比较、负重82.9/94.4与数值7421；不同于两个P2在1800秒的场景，未全范围去重。"
+    },
+    {
+      "queue_index": 75,
+      "bvid": "BV1Cw411w7EW",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1Cw411w7EW/",
+        "time": 1800,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12706
+      },
+      "visual_observation": "刺客信条幻景调查菜单，圆形线索网/红色人物节点、合约与任务图标；游戏内界面。"
+    },
+    {
+      "queue_index": 80,
+      "bvid": "BV1f34y1c7Nc",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1f34y1c7Nc/",
+        "time": 1800,
+        "ready": 4,
+        "seeking": false,
+        "duration": 15410
+      },
+      "visual_observation": "大侠角色菜单，51级角色、队友列表、属性与状态；与正式P1同1800秒的武馆对白不同，不能按相近时长认同内容。"
+    }
+  ],
+  "acfun_comparisons": [
+    {
+      "sample": {
+        "url": "https://www.acfun.cn/v/ac42617191_1",
+        "time": 1800.001,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12705.967048000011
+      },
+      "visual_observation": "A站内页1题名P2，角色在宴会任务的石廊，目标进入西边外院地下室/已获口令；与B站P1同秒不同。"
+    },
+    {
+      "sample": {
+        "url": "https://www.acfun.cn/v/ac42617191_2",
+        "time": 1800.001,
+        "ready": 4,
+        "seeking": false,
+        "duration": 12705.13371400001
+      },
+      "visual_observation": "A站内页2题名P1，调查菜单红色人物节点/线索网，与B站题P1的1800秒具体界面对应；支持B P1映射A数组2，不认原数组即直播时间顺序。"
+    }
+  ],
+  "bilibili_comparisons": [
+    {
+      "bvid": "BV1hQ4y1b7AJ",
+      "sample": {
+        "url": "https://www.bilibili.com/video/BV1hQ4y1b7AJ/",
+        "time": 1800,
+        "ready": 4,
+        "seeking": false,
+        "duration": 15412
+      },
+      "visual_observation": "大侠武馆室内与武馆馆主对白，武字挂轴、兵器架与弟子；游戏局部相符，1800秒与候选P2角色菜单不同。"
+    }
+  ]
+}

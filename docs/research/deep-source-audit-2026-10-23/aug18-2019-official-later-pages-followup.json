@@ -1,0 +1,48 @@
+{
+  "entry_id": "2019-08-20-live-01",
+  "source_index": "0",
+  "source_url": "https://www.bilibili.com/video/BV1J4411d7L7",
+  "human_watch": false,
+  "verification_extent": "Root-supplied normal public Douyu playback UI screenshots and player states; report author did not independently watch. No media downloaded.",
+  "calendar": {
+    "url": "https://v.douyu.com/authorReplay/8PAbVvrDqAO1",
+    "selected_date": "2019-08-18",
+    "note": "The author replay calendar was interactively set to 2019-08-18; same public calendar URL was already registered, so it is not counted as a new external URL."
+  },
+  "playback_samples": [
+    {
+      "url": "https://v.douyu.com/show/qJgOWxAV9qlvkVzL",
+      "part": "P2",
+      "title": "心灵砒霜P2 2019.8.18",
+      "author": "女流66",
+      "page_published_at": "2019-08-18 22:23:03",
+      "time_sec": 3600.955975,
+      "media_duration_sec": 7202.08,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "稳定画面为左侧来信文字与右侧紫衣女流摄像头；未抄录邮箱或来信正文。首定位readyState1/seeking=true排除。该节目画面不与B站牧场P5建立事件对应。"
+    },
+    {
+      "url": "https://v.douyu.com/show/JmbBMkGjAnwM40XA",
+      "part": "P3",
+      "title": "心灵砒霜P3 2019.8.18",
+      "author": "女流66",
+      "page_published_at": "2019-08-18 21:55:00",
+      "time_sec": 1800.95341,
+      "media_duration_sec": 3608.32,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "visual": "稳定画面为左侧来信文字与右侧紫衣女流摄像头；未抄录邮箱或来信正文。首定位pending排除。"
+    }
+  ],
+  "conclusion": "8/18官方回放P2/P3各抽一处稳定点，均为来信/聊天节目画面。它们不与B站8/20稿P5已观察到的牧场物语相关画面建立特定事件对应；也不证明各P全页无游戏，或裁定B站P2–P5的日期、范围及完整性。此前B站P5的两处内容观察仍有效且保留。",
+  "limitations": [
+    "两个离散样本只支持被观察时点的节目内容，不将其推广至整页/整场。",
+    "未与B站P5形成特定事件对应，不能据此确认或排除P5来自8/18。",
+    "不认证无缝连续、同一母场或完整性；不以游戏内日期推现实日期。",
+    "来源为根提供的正常公开UI/播放器观察，整理者未独立观看，human_watch=false。",
+    "未改正式data或基线观察。基线仍161/6427观察、6266未逐项；增加2个去重后外部回放URL，现为179。"
+  ]
+}

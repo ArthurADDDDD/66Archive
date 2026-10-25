@@ -1,0 +1,45 @@
+{
+  "entry_id": "2019-07-09-live-01",
+  "source_index": "0",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1vt41137Jc/",
+    "title": "第二季天下第一斗歌大会7.09 女流66组",
+    "uploader": {
+      "id": 285355169,
+      "name": "比赛帮电竞小报"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 104034702,
+        "duration_seconds": 5332
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1vt41137Jc/",
+      "actual_seconds": 300.633672,
+      "duration_seconds": 5330.833,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "女流粉衣大摄像头，左语音房列表及聊天、上方编号1没有十一文字，节目评选环境，未见游戏"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1vt41137Jc/",
+      "actual_seconds": 5001.46616,
+      "duration_seconds": 5330.833,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "同衣女流整理头发，左语音房视频小窗/聊天，上方白色记分列表多个选手及分数，支持斗歌节目环境"
+    }
+  ],
+  "conclusions": [
+    "两点女流粉色上衣摄像头与语音房/歌手编号/评分文字，支持斗歌节目范围，不把普通聊天标签理解为无节目",
+    "UID285355169与档案录像小屋映射不符，应审阅登记账号，不指控UP；实际媒体5330.833与metadata5332双值不作缺失判据",
+    "未听辨音频，不认证唱歌具体段、完整性/首尾/独立直播日期；两个局部不是整场完整审核"
+  ]
+}

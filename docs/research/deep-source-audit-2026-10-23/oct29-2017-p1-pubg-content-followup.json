@@ -1,0 +1,47 @@
+{
+  "entry_id": "2017-10-29-live-01",
+  "source_index": 0,
+  "source_url": "https://www.bilibili.com/video/BV1wx411E7An",
+  "human_watch": false,
+  "observation_provider": "Root-supplied normal-player observations and public page metadata; this report author did not independently operate the player.",
+  "submission": {
+    "title": "女流-10.29-心灵砒霜-弹幕版",
+    "owner_uid": "29418340",
+    "page_count": 2,
+    "pages": [
+      {"page_index": 1, "cid": "25875344", "title": "P1-10.29-砒霜前聊10块钱等的&感受144帧的吃鸡-弹幕版", "metadata_duration_sec": 3246},
+      {"page_index": 2, "cid": "25875345", "title": "P2-10.29-心灵砒霜-弹幕版", "metadata_duration_sec": 7614}
+    ]
+  },
+  "samples": [
+    {
+      "page_index": 1,
+      "cid": "25875344",
+      "time_sec": 2000.107346,
+      "media_duration_sec": 3245.7668707482994,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Island map screen with grid, circular zone and red zone visible; streamer camera appears at upper right. This is consistent with a PUBG map view, not a combat scene."
+    },
+    {
+      "page_index": 1,
+      "cid": "25875344",
+      "time_sec": 2600.461172,
+      "media_duration_sec": 3245.7668707482994,
+      "readyState": 4,
+      "seeking": false,
+      "paused": true,
+      "muted": true,
+      "visual": "Large streamer camera view, dark left area and programme/chat presentation with danmaku; no game image visible at this sampled point."
+    }
+  ],
+  "assessment": "The title-described programme/pre-chat P1 is mixed at the sampled points: t≈2000 displays an island map with circle/red-zone markings and streamer camera, while t≈2600 shows programme/chat presentation without a game image. This supports review of a PUBG content association for the P1 portion, despite the entry's current empty games field, but the map view alone does not establish active gameplay, a complete PUBG segment, game version, or overall entry scope. The programme remains a valid content aspect and is not a reason to remove the whole source.",
+  "limitations": [
+    "Only two static player sample points in P1 were examined; P2 was not played.",
+    "No audio was listened to; no exact start/end boundary, duration of a game segment, continuity, or completeness was established.",
+    "The map screen is consistent with PUBG but does not independently authenticate game identity or active play.",
+    "No old segments were used to calculate seeks or duration; no formal data, source table, or master observation was changed."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "entry_id": "2018-12-17-live-01",
+  "source_index": "1",
+  "human_watch": false,
+  "metadata": {
+    "url": "https://www.acfun.cn/v/ac4792138",
+    "title": "女流-2018.12.17-模拟农场19",
+    "uploader": {
+      "id": 4397992,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 6490077,
+        "metadata_duration_seconds": 1003
+      },
+      {
+        "page": 2,
+        "id": 6489769,
+        "metadata_duration_seconds": 3314
+      },
+      {
+        "page": 3,
+        "id": 6489770,
+        "metadata_duration_seconds": 3314
+      },
+      {
+        "page": 4,
+        "id": 6489811,
+        "metadata_duration_seconds": 3314
+      },
+      {
+        "page": 5,
+        "id": 6489812,
+        "metadata_duration_seconds": 3314
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac4792138",
+      "page": 1,
+      "actual_seconds": 951.458567,
+      "duration_seconds": 1003.914689,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "欢乐斗地主底牌2/A/5，CC手牌2/A/A/K/K/K/J/10/10/10/7/4、两家不出，右下灰黑条纹女流摄像头；与B P1 951局部牌局相近"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac4792138_2",
+      "page": 2,
+      "actual_seconds": 601.459539,
+      "duration_seconds": 3314.181356,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "田地黄色拖拉机停红色收割机旁，左上菜单右下0速度，右侧同衣女流摄像头；与B P2 600局部相近"
+    }
+  ],
+  "conclusions": [
+    "A P1有斗地主、P2农机田地，两处与新B样本独特底牌/手牌及农机位置局部相近，非逐帧等价",
+    "A媒体时长略不同B取整值不是缺失秒数认证",
+    "P3–5未播放，精确接缝/母场独立日期/完整性未核，human_watch false"
+  ]
+}

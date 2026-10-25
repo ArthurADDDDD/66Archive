@@ -1,0 +1,72 @@
+{
+  "entry": "2018-02-18-live-01",
+  "basis": "https://www.bilibili.com/video/BV1ZW411j7oc",
+  "requires_human_review": true,
+  "formal_data_written": false,
+  "evidence_level": "machine_inspected_public_storyboard_samples_and_opening_playback",
+  "parts_snapshot": [
+    {
+      "page": 1,
+      "id": 32215175,
+      "duration_sec": 2057
+    },
+    {
+      "page": 2,
+      "id": 32215176,
+      "duration_sec": 9336
+    },
+    {
+      "page": 3,
+      "id": 32215177,
+      "duration_sec": 4986
+    },
+    {
+      "page": 4,
+      "id": 32215178,
+      "duration_sec": 7398
+    }
+  ],
+  "candidate_intervals": [
+    {
+      "page": 2,
+      "boundary": "game_start",
+      "game": "pubg",
+      "range_sec": [
+        270,
+        280
+      ],
+      "reason": "camera samples followed by PUBG launcher; needs boundary playback confirmation"
+    },
+    {
+      "page": 2,
+      "boundary": "game_end",
+      "game": "pubg",
+      "range_sec": [
+        9149,
+        9159
+      ],
+      "reason": "late PUBG/lobby samples followed by camera; needs boundary playback confirmation"
+    },
+    {
+      "page": 3,
+      "boundary": "non_game_activity_change",
+      "range_sec": [
+        3530,
+        3550
+      ],
+      "reason": "conversation changes to physical building materials, both remain non-game independent content"
+    }
+  ],
+  "remaining_checks": [
+    "confirm exact source playback at each candidate boundary",
+    "inspect P2 internal intervals for independent breaks",
+    "verify full P3/P4 range before assigning complete coverage",
+    "obtain human approval before creating a formal timeline"
+  ],
+  "do_not_infer": [
+    "no missing session conclusion",
+    "no LEGO video-game tag",
+    "no verified game-play duration",
+    "no human_watch or reviewed timestamp"
+  ]
+}

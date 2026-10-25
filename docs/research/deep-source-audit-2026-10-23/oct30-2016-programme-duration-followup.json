@@ -1,0 +1,81 @@
+{
+  "human_watch": false,
+  "samples": [
+    {
+      "url": "https://www.acfun.cn/v/ac3219712_3",
+      "actual_seconds": 1427.001,
+      "duration_seconds": 3562.033333,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "男生石油院校毕业三年/油田野外工作/备考MBA来信，女流白开衫与黑衣男嘉宾；与B P3同信/布景近似"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV19s411s7uD?p=3",
+      "actual_seconds": 1427,
+      "duration_seconds": 3566,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "相同石油院校/MBA来信与男女嘉宾布景，姿态略异；常规登录弹窗关闭后观察"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3219712_1",
+      "actual_seconds": 3500.001,
+      "duration_seconds": 3574.814689,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "大学生分期买iPhone6/分手后偿款来信，男女嘉宾"
+    },
+    {
+      "url": "https://www.acfun.cn/v/ac3219712_2",
+      "actual_seconds": 3500.001,
+      "duration_seconds": 3573.748022,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "28岁男性担心女方大两岁来信，男女嘉宾"
+    }
+  ],
+  "acfun_video_list": [
+    {
+      "index": 1,
+      "title": "P1-10.30-心灵砒霜",
+      "id": "4406765",
+      "metadata_ms": 1206000,
+      "media_seconds": 3574.814689
+    },
+    {
+      "index": 2,
+      "title": "P2-10.30-心灵砒霜",
+      "id": "4406783",
+      "metadata_ms": 385000,
+      "media_seconds": 3573.748022
+    },
+    {
+      "index": 3,
+      "title": "P3-10.30-心灵砒霜",
+      "id": "4406769",
+      "metadata_ms": 2855000,
+      "media_seconds": 3562.033333
+    }
+  ],
+  "bilibili_metadata_seconds": [
+    3566,
+    3568,
+    3567
+  ],
+  "unreviewed_seek": {
+    "url": "https://www.bilibili.com/video/BV19s411s7uD?p=3",
+    "requested_seconds": 3500,
+    "visual_observation": false
+  },
+  "conclusion": "A三页当前媒体合计约178.51分钟，元数据合计74.1分钟不能当短版/缺段。A P3/B P3同来信局部对应；A1/A2各3500秒实播也超过旧时长。",
+  "limitations": [
+    "相加媒体时长非完整性认证",
+    "未检查B第二独立版本BV1Us411s7C6",
+    "非独立母场日期",
+    "未依据内容猜统一偏移或无重复"
+  ]
+}

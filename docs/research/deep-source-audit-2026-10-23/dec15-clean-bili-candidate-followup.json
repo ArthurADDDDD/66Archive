@@ -1,0 +1,54 @@
+{
+  "entry_id": "2017-12-15-live-02",
+  "human_watch": false,
+  "external_candidate": "https://www.bilibili.com/video/BV1mW411b73p/",
+  "metadata": {
+    "url": "https://www.bilibili.com/video/BV1mW411b73p/",
+    "title": "女流-12.15-【吃鸡佳缘】第二期",
+    "uploader": {
+      "id": 29418340,
+      "name": "女流录像小屋"
+    },
+    "parts": [
+      {
+        "page": 1,
+        "id": 28287347,
+        "title": "【吃鸡佳缘】第二期 P1  2017.12.15",
+        "duration_seconds": 3417
+      },
+      {
+        "page": 2,
+        "id": 28287348,
+        "title": "【吃鸡佳缘】第二期 P2  2017.12.15",
+        "duration_seconds": 3419
+      }
+    ]
+  },
+  "samples": [
+    {
+      "url": "https://www.bilibili.com/video/BV1mW411b73p/",
+      "actual_seconds": 3376,
+      "duration_seconds": 3417,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "候选B P1 3376秒PUBG屋顶边、31存活、5/1弹药、角色在墙沿，右上黑衣女流；与此前A纯净内页2 1668屋顶事件局部近似，人物动作不同"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1mW411b73p/?p=2",
+      "actual_seconds": 3360,
+      "duration_seconds": 3419,
+      "ready_state": 4,
+      "seeking": false,
+      "paused": true,
+      "observation": "B P2 3360秒黑/深灰上衣女流大摄像头聊天、白柜/66牌/麦克风，与此前A纯净P4 1655尾部摄像头同布景，动作不同"
+    }
+  ],
+  "prior_evidence": "dec15-pubg-two-version-scope-followup.json",
+  "conclusions": [
+    "正常B UID29418340，候选存在可定位PUBG局部及非游戏收尾；与此前A对应局部相近，未重复播放A",
+    "内页数量/总时长近似只作范围线索，不证明全部A/B页面等价、无剪接/无缝或整场完整",
+    "没有独立母场日期认证，不按上传日期强归场；外部候选研究层，不自动补正式source",
+    "游戏标题内页近尾也包含桌面/摄像头聊天，不把全部页时长计实玩"
+  ]
+}
