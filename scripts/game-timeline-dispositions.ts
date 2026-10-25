@@ -236,12 +236,12 @@ export const REVIEWED_SPAN_BOUNDS: ReviewedSpanBound[] = [
   {
     entry: '2020-09-18-live-01',
     game: 'pro-gymnast',
-    page: 1,
+    page: 2,
     at: '00:00:00',
-    durationSec: 10513,
-    associatedSec: 10513,
+    durationSec: 10513 - 661,
+    associatedSec: 10513 - 661,
     verifiedSec: 0,
-    reason: 'P4 48:18 后抽帧仍为 Pro Gymnast 结算画面；旧 unknown 已并入游戏环节。P5 1.5 秒起即为 Fall Guys 标志，Pro Gymnast 止于 P5 0:02（2026-10-20 定点纠错）。',
+    reason: 'P4 48:18 后抽帧仍为 Pro Gymnast 结算画面；旧 unknown 已并入游戏环节。P5 1.5 秒起即为 Fall Guys 标志，Pro Gymnast 止于 P5 0:02（2026-10-20 定点纠错）。P1 全程停在主菜单聊天，P2 一分钟内进入比赛，起点改为 P2（2026-10-25 抽帧复核）。',
   },
   {
     entry: '2020-09-18-live-01',
