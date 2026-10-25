@@ -2752,6 +2752,12 @@
   spans:
   - page: 1
     at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 游戏前聊（停在 Timelie 标题画面）
+  - page: 2
+    at: 00:00:00
     game: timelie
     precision: approx
     evidence: thumbnails
@@ -2969,6 +2975,12 @@
   spans:
   - page: 1
     at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 游戏前聊（停在 Pro Gymnast 主菜单）
+  - page: 2
+    at: 00:00:00
     game: pro-gymnast
     precision: approx
     evidence: thumbnails
@@ -3000,6 +3012,12 @@
     duration_sec: 5145
   spans:
   - page: 1
+    at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 游戏前聊（停在 UnderMine 菜单）
+  - page: 2
     at: 00:00:00
     game: undermine
     precision: approx
@@ -3468,6 +3486,12 @@
   spans:
   - page: 1
     at: 00:00:00
+    kind: break
+    precision: exact
+    evidence: thumbnails
+    note: 游戏前聊（停在 Shady Part of Me 主菜单）
+  - page: 2
+    at: 00:00:00
     game: shady-part-of-me
     precision: approx
     evidence: thumbnails
@@ -3508,12 +3532,12 @@
   spans:
   - page: 1
     at: 00:00:00
-    kind: unknown
-    precision: approx
+    kind: break
+    precision: exact
     evidence: thumbnails
-    note: 聊天
-  - page: 1
-    at: 00:00:06
+    note: 游戏前聊（停在 Shady Part of Me 主菜单）
+  - page: 2
+    at: 00:00:00
     game: shady-part-of-me
     precision: approx
     evidence: thumbnails
@@ -3789,12 +3813,13 @@
     game: hades
     precision: part
     evidence: part_title
-    note: P2 起点（11:23）已见 Hades 实机；P2–P6 旧分段均为 Hades。
-  - page: 7
-    at: 00:00:00
+    note: P2 起点（11:23）已见 Hades 实机；Hades 到 P5 约 34:45 结束。
+  - page: 5
+    at: 00:35:30
     game: the-room-4
     precision: approx
     evidence: thumbnails
+    note: P5 约 35:00 出现 The Room 菜单、约 36:00 进入首个场景；P6–P8 分P标题沿用 Hades，画面都是 The Room 4。
   reviewed: '2026-10-19'
 - entry: 2021-04-17-live-02
   basis: https://www.bilibili.com/video/BV1qU4y1b7ru
