@@ -34,6 +34,21 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
     reason: 'BV1dx411J77f P1 分P标题为「游戏前聊10块钱的」，P1 1/10/20/25 分钟抽帧均为摄像头聊天；旧分段标签是 A 站每个分P统一的「尼德霍格+吃鸡」，不代表 P1 在玩。尼德霍格从 P2 标题画面开始。',
   },
   {
+    entry: '2026-08-08-live-03', segmentAt: '00:00:00', game: 'maplestory',
+    kind: 'break', page: 1, at: '00:06:55',
+    reason: 'BV1rWu36ZELV：P1 06:50 仍游戏，06:55 已黑屏，07:05–11:55 连续摄像头聊天，12:00 淡回同款游戏；约305秒独立休息被旧整分P游戏标签覆盖。两侧同款在展示中仍按契约合并关联时长。',
+  },
+  {
+    entry: '2026-08-03-live-02', segmentAt: '00:00:00', game: 'maplestory',
+    kind: 'break', page: 1, at: '00:00:00',
+    reason: 'BV1FjM966EjU：P1 每4分钟抽帧及首末帧均为全屏摄像头聊天，未见游戏界面。旧分段以游戏名概括整个分P，但画面支持此段为独立开播聊天。',
+  },
+  {
+    entry: '2026-08-03-live-02', segmentAt: '01:00:01', game: 'maplestory',
+    kind: 'break', page: 1, at: '00:00:00',
+    reason: 'BV1FjM966EjU：P2 每4分钟抽帧及首末帧均为全屏摄像头、吃东西和聊天，未见游戏界面。旧分段以游戏名概括整个分P，但画面支持此段为独立开播聊天。',
+  },
+  {
     entry: '2017-06-05-live-01', segmentAt: '00:42:43', game: '1-2-switch',
     kind: 'break', page: 1, at: '00:00:00',
     reason: 'P1 抽帧为摄像头聊天/吃饭，约 40:40 才出现 Switch 主页；P2 前 20 分钟为 eShop、预告与购买流程，1-2-Switch 启动约在 P2 20:00，旧分段起点过早。',
@@ -165,11 +180,11 @@ export const REVIEWED_CROSS_CHECKS: ReviewedCrossCheck[] = [
   },
 ]
 /**
- * 已按多帧抽检复核、仍保留为 unknown 的长时间聊天段（≥30 分钟）。
+ * 已按多帧抽检复核、仍保留为 unknown 的长时间未归属段（≥30 分钟）。
  * 键：entry|page|at。新增长时间 unknown 必须先复核并登记，否则测试失败。
  */
 export const REVIEWED_LONG_UNKNOWNS: Record<string, string> = {
-  // 2026-10-20 收尾后已无 ≥30 分钟的 unknown；新增长时间 unknown 必须抽帧并在此登记。
+  '2026-08-10-live-03|2|00:01:45': 'BV1gQuo6TE5V：P2 01:45 标题明确为 The Little Cat and the Sea，随后手册、海面小船与潜水实机持续至39:50，40:05 已是冒险岛怀旧服加载。尚未建立对应游戏条目，暂保留 unknown，不计入冒险岛时长。',
 }
 export type ReviewedSpanBound = {
   entry: string
