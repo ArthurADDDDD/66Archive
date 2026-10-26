@@ -451,3 +451,43 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-26-live-01
+  type: live
+  date: "2026-10-26"
+  title: "暗黑破坏神 不朽 福利专场"
+  platform: douyin
+  duration_min: 143
+  games:
+    - diablo-immortal
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/bface5d7fee9721cdab000df438397aa8fbcd558.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV161nZ6JEi9"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-26-live-02
+  type: live
+  date: "2026-10-26"
+  title: "暗黑破坏神 不朽 来啦"
+  platform: douyin
+  duration_min: 34
+  games:
+    - diablo-immortal
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/a40ef7e89b4b0fc21c6d638fc27048939d713d51.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1QBno6KE36"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
