@@ -33,6 +33,11 @@ import { SiteText } from './SiteText'
 const CONTENT_ORIGIN = (process.env.NEXT_PUBLIC_CONTENT_ORIGIN ?? '').replace(/\/$/, '')
 const REQUEST_TIMEOUT_MS = 4000
 const TOP_N = 10
+/**
+ * 向接口多要一些：没有来源的记录要从榜单里滤掉（标题索引里带 `x`），
+ * 只取十条的话滤完可能不满十条。20 是后台 POPULAR_LIMIT_MAX。
+ */
+const FETCH_N = 20
 
 type PopularKind = 'entry' | 'game' | 'series' | 'gallery'
 type PopularItem = { targetKey: string; kind: PopularKind; id: string; count: number }
@@ -41,7 +46,7 @@ type PopularResponse = {
   totalOpens?: number
   items?: PopularItem[]
 }
-type LabelIndex = Record<string, { t?: string; d?: string } | undefined>
+type LabelIndex = Record<string, { t?: string; d?: string; x?: 1 } | undefined>
 
 const KIND_LABEL: Record<PopularKind, string> = { entry: '记录', game: '游戏', series: '节目', gallery: '画廊' }
 
@@ -140,23 +145,26 @@ export function PopularContent({
   useEffect(() => {
     let cancelled = false
     void (async () => {
-      const data = await fetchJson<PopularResponse>(`${CONTENT_ORIGIN}/api/content/popular?limit=${TOP_N}`)
+      const data = await fetchJson<PopularResponse>(`${CONTENT_ORIGIN}/api/content/popular?limit=${FETCH_N}`)
       if (cancelled) return
       if (!data || !Array.isArray(data.items)) {
         setState('unavailable')
         return
       }
-      const ranked = data.items.filter(isPopularItem).slice(0, TOP_N)
-      setItems(ranked)
+      const candidates = data.items.filter(isPopularItem)
+      // 先按接口的前十画出来，索引到了再滤掉没有来源的记录、用后面的补位。
+      setItems(candidates.slice(0, TOP_N))
       setCountedSince(typeof data.countedSince === 'string' ? data.countedSince : null)
       setTotalOpens(typeof data.totalOpens === 'number' ? data.totalOpens : null)
       setState('ready')
-      if (ranked.length === 0) return
+      if (candidates.length === 0) return
       // 标题索引只在真的有排行时才去取：没有榜单就没必要下载整本目录。
       const index = await fetchJson<{ items?: LabelIndex }>(labelIndexUrl)
       if (cancelled) return
       const indexed = index?.items ?? {}
       if (index?.items) setLabels(indexed)
+      const ranked = candidates.filter((item) => !indexed[item.targetKey]?.x).slice(0, TOP_N)
+      setItems(ranked)
       await fillRuntimeGalleryLabels(ranked, indexed, () => cancelled, setLabels)
     })()
     return () => {

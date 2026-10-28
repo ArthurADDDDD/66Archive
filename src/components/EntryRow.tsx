@@ -47,9 +47,10 @@ export function EntryRow({
     <article id={`entry-${entry.id}`} className={`entry-landing-row group relative scroll-mt-24 rounded-lg transition-colors duration-300 ${expanded ? 'bg-surface/25 p-[clamp(0.75rem,1.25vw,1.75rem)]' : 'hover:bg-surface/10'}`}>
       <div className="py-[clamp(0.375rem,0.55vw,0.75rem)]">
         {/* 收起也是点这颗按钮，但那不是「点开」：展开状态下不挂上报属性，
-            否则一次展开加一次收起会被记成两次打开。 */}
+            否则一次展开加一次收起会被记成两次打开。一个来源都没有的记录点开也看不到录像，
+            同样不报，免得它排进「最爱点开」。 */}
         <button
-          {...(expanded ? {} : { 'data-analytics-event': 'content.open', 'data-analytics-target': `entry:${entry.id}` })}
+          {...(expanded || entry.sourceCount === 0 ? {} : { 'data-analytics-event': 'content.open', 'data-analytics-target': `entry:${entry.id}` })}
           onClick={onToggle}
           className="ui-press flex w-full items-start gap-3 rounded-lg py-[clamp(0.5rem,0.7vw,0.875rem)] text-left sm:gap-4"
           aria-expanded={expanded}

@@ -243,7 +243,7 @@ function EntryCard({
     <button
       type="button"
       id={`entry-${entry.id}`}
-      {...(expanded ? {} : { 'data-analytics-event': 'content.open', 'data-analytics-target': `entry:${entry.id}` })}
+      {...(expanded || entry.sourceCount === 0 ? {} : { 'data-analytics-event': 'content.open', 'data-analytics-target': `entry:${entry.id}` })}
       onClick={onToggle}
       aria-expanded={expanded}
       aria-controls={`entry-preview-${entry.id}`}

@@ -25,14 +25,18 @@ import { toTimelineEntries } from '../src/lib/data'
 const ROOT = process.cwd()
 const OUT = path.join(ROOT, 'public/data/popular-index.json')
 
-type IndexEntry = { t: string; d?: string }
+// `x`：这条记录一个来源都没有（只有开播旁证、没有可看的录像）。点进去什么也看不到，
+// 不该排进「最爱点开」，数据页据此把它从榜单里滤掉。
+type IndexEntry = { t: string; d?: string; x?: 1 }
 
 function main() {
   const ds = getPublicDataset()
   const timeline = toTimelineEntries(ds)
   const items: Record<string, IndexEntry> = {}
 
-  for (const entry of ds.entries) items[`entry:${entry.id}`] = { t: entry.title, d: entry.date }
+  for (const entry of ds.entries) {
+    items[`entry:${entry.id}`] = { t: entry.title, d: entry.date, ...(entry.sources?.length ? {} : { x: 1 as const }) }
+  }
   for (const [id, game] of ds.games) items[`game:${id}`] = { t: game.name }
   for (const series of buildSeriesList(ds, timeline)) items[`series:${series.id}`] = { t: series.name }
   // 画廊取的是**画廊页真正在渲染的那份清单**（gallery-photos.yaml），不是旧的
