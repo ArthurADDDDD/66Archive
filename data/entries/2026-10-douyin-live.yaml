@@ -492,3 +492,47 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-10-28-live-01
+  type: live
+  date: "2026-10-28"
+  title: "深空当铺"
+  platform: douyin
+  duration_min: 100
+  games:
+    - shenkongdangpu
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/df0bcaf751ac07a2bbdabfc6d203232ae69d3aac.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1YPs96iEiz"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1CysX6JEcT"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-29-live-01
+  type: live
+  date: "2026-10-29"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 202
+  games:
+    - ying
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/282a5c0060c9645e6da8ff7d4a2b805a73ed3db5.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1wRso6FEeL"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
