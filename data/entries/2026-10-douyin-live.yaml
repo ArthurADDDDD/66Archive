@@ -522,7 +522,7 @@
   date: "2026-10-29"
   title: "国产单机新作 影之刃零 最高难度最高画质首播"
   platform: douyin
-  duration_min: 202
+  duration_min: 364
   games:
     - ying
   tags:
@@ -534,5 +534,102 @@
       kind: replay
       account: bili-fan-kid-replay
       status: alive
-  note: "依据录播来源复核收录。"
+      label: "后半段（12:37 起）"
+    - url: "https://www.bilibili.com/video/BV1vwsd61ENp"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+      cover: "http://i0.hdslb.com/bfs/archive/3689a210cf5c668cbe2ece973566503e52c8708a.jpg"
+      label: "前半段（09:50–11:39）"
+      note: "怪盗基德KID 把这场拆成两个稿件：本稿 P1–P3 为 09:50–11:39，BV1wRso6FEeL 为 12:37 起；中间约一小时两稿都没有。"
+    - url: "https://www.bilibili.com/video/BV1rYsd6sEbz"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/4f8f5372b15472fb9a6faabc7d4c6c231941e4e2.jpg"
+      label: "当天两场合录：P1–P11 是这场"
+      note: "服部平次把 10-29 上午（09:51 起）和晚上（19:14 起）两场录进同一个稿件：P1–P11 是上午场，P12–P19 是晚场。上午场只有这份是完整的。"
+  note: "上午场（09:50 开播，15:59 下播），依据录播来源复核收录。时长取服部平次 P1–P11 的合计，与开播探测一致。当天晚上 19:14 还有一场，见 2026-10-29-live-02。"
+  contributed_by: collection-review
+
+- id: 2026-10-29-live-02
+  type: live
+  date: "2026-10-29"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 316
+  games:
+    - ying
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/edf67f6f8598e93f747184a5e4229ba23ccbbcd5.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Voxw6AEdK"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1rYsd6sEbz"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/4f8f5372b15472fb9a6faabc7d4c6c231941e4e2.jpg"
+      label: "当天两场合录：P12–P19 是这场"
+      note: "服部平次把 10-29 上午（09:51 起）和晚上（19:14 起）两场录进同一个稿件：P1–P11 是上午场，P12–P19 是晚场。"
+  note: "晚场（19:14 开播，跨午夜到 00:30）。录播总标题写的是下播日 10-30，分 P 时间与开播探测都确认是 10-29 晚场。"
+  contributed_by: collection-review
+
+- id: 2026-10-30-live-01
+  type: live
+  date: "2026-10-30"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 289
+  games:
+    - ying
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/52fe5f813bb06ec19219e6d650374b30d73f36b4.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1JpxY6oE8x"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1ALxY6aEUX"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/9f2317e3fde88f60e90d007d4304693ef80ddccd.jpg"
+      label: "当天两场合录：P1–P7 是这场"
+      note: "服部平次把 10-30 中午（11:02 起）和晚上（19:48 起）两场录进同一个稿件：P1–P7 是中午场，P8–P13 是晚场。"
+  note: "中午场（11:02 开播，15:51 下播），依据录播来源复核收录。当天晚上 19:47 还有一场，见 2026-10-30-live-02。"
+  contributed_by: collection-review
+
+- id: 2026-10-30-live-02
+  type: live
+  date: "2026-10-30"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 257
+  games:
+    - ying
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/ce67efdd4d6534d9c538616a5547e8ed57fe5259.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1ALxY6aEUX"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+      cover: "http://i2.hdslb.com/bfs/archive/9f2317e3fde88f60e90d007d4304693ef80ddccd.jpg"
+      label: "当天两场合录：P8–P13 是这场"
+      note: "服部平次把 10-30 中午（11:02 起）和晚上（19:48 起）两场录进同一个稿件：P1–P7 是中午场，P8–P13 是晚场。"
+    - url: "https://www.bilibili.com/video/BV1eWxB6hEcy"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+      note: "怪盗基德KID 仍在分批上传，2026-10-31 上午只到 21:48 那一 P（约 180 分钟）。"
+  note: "晚场（19:47 开播，跨午夜到 00:05）。时长取服部平次 P8–P13 的合计，与开播探测一致；录播总标题写的是下播日 10-31。"
   contributed_by: collection-review
