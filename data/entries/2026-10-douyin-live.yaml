@@ -831,3 +831,23 @@
       label: "初到庞镇"
   note: "晚场（19:47 开播，跨午夜到 00:05）。时长取服部平次 P8–P13 的合计，与开播探测一致；录播总标题写的是下播日 10-31。"
   contributed_by: collection-review
+
+- id: 2026-10-31-live-01
+  type: live
+  date: "2026-10-31"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 274
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/ad0cb6bfb1b3588a4ff14165be7d498d19076f4a.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV13LxC6GEq5"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
