@@ -1,0 +1,20 @@
+# 2026-11 douyin live 条目。由后台审批的采集候选新建。
+- id: 2026-11-01-live-01
+  type: live
+  date: "2026-11-01"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 247
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/aafcdfbda2a321bf1b49c61b63c20024cc3c4f3b.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Eaxx6qEtW"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
