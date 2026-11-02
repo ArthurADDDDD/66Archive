@@ -18,3 +18,23 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-02-live-01
+  type: live
+  date: "2026-11-02"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 283
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/a6d7da40f773c565fa6bafce30ec97abcc7a9d6b.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1gD4F6pEoV"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
