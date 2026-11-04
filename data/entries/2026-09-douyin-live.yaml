@@ -65,6 +65,12 @@
       status: alive
       account: bili-fan-heiji
       cover: "http://i2.hdslb.com/bfs/archive/acaf19bf383729b9013f7ab70a48edf06bc15812.jpg"
+    - url: "https://www.bilibili.com/video/BV1Ustq6ZEZx"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      label: "官方全流程：P1–P2 是这场"
+      note: "女流66 本人上传的《鬼武者：剑之道》全流程，按场次分 P：P1–P2 是 09-03 晚场，P3–P5 是 09-04，P6–P7 是 09-05，P8–P9 是 09-06，P10 是 09-07。各段比整场直播短一些。"
   note: "第二场判定：第二场 自动采集候选经人工审批新建（组 46854978-3f19-4c1b-9030-10ff2a96baec）。"
   contributed_by: collection-review
   games: [guiwuzhe2]
@@ -112,6 +118,12 @@
       kind: replay
       status: alive
       account: bili-fan-heiji
+    - url: "https://www.bilibili.com/video/BV1Ustq6ZEZx"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      label: "官方全流程：P3–P5 是这场"
+      note: "女流66 本人上传的《鬼武者：剑之道》全流程，按场次分 P：P1–P2 是 09-03 晚场，P3–P5 是 09-04，P6–P7 是 09-05，P8–P9 是 09-06，P10 是 09-07。各段比整场直播短一些。"
   note: "自动采集候选经人工审批新建（组 c65efbc7-2f01-4b5c-b148-3c2445410c11）。"
   contributed_by: collection-review
 
@@ -138,6 +150,12 @@
       account: bili-fan-heiji
       cover: "http://i0.hdslb.com/bfs/archive/5fdcec1b2b85a28c336b41134bec7b1445f6c485.jpg"
       parts: 8
+    - url: "https://www.bilibili.com/video/BV1Ustq6ZEZx"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      label: "官方全流程：P6–P7 是这场"
+      note: "女流66 本人上传的《鬼武者：剑之道》全流程，按场次分 P：P1–P2 是 09-03 晚场，P3–P5 是 09-04，P6–P7 是 09-05，P8–P9 是 09-06，P10 是 09-07。各段比整场直播短一些。"
   note: "自动采集候选经人工审批新建（组 5c917a20-5066-4e13-a193-fb87b7c32428）。"
   contributed_by: collection-review
 
@@ -158,6 +176,12 @@
       kind: replay
       status: alive
       account: bili-fan-heiji
+    - url: "https://www.bilibili.com/video/BV1Ustq6ZEZx"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      label: "官方全流程：P8–P9 是这场"
+      note: "女流66 本人上传的《鬼武者：剑之道》全流程，按场次分 P：P1–P2 是 09-03 晚场，P3–P5 是 09-04，P6–P7 是 09-05，P8–P9 是 09-06，P10 是 09-07。各段比整场直播短一些。"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -178,6 +202,12 @@
       kind: replay
       status: alive
       account: bili-fan-heiji
+    - url: "https://www.bilibili.com/video/BV1Ustq6ZEZx"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      label: "官方全流程：P10 是这场"
+      note: "女流66 本人上传的《鬼武者：剑之道》全流程，按场次分 P：P1–P2 是 09-03 晚场，P3–P5 是 09-04，P6–P7 是 09-05，P8–P9 是 09-06，P10 是 09-07。各段比整场直播短一些。"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -229,7 +259,7 @@
   date: "2026-09-11"
   title: "流放之路2 降临 毕业答辩BD大赛大神赛 时隔多年重考科目二"
   platform: douyin
-  duration_min: 75
+  duration_min: 181
   games:
     - path-of-exile-2
     - maplestory-classic
@@ -243,6 +273,11 @@
       kind: replay
       status: alive
       account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1DCY26NEmV"
+      kind: replay
+      status: alive
+      account: bili-fan-heiji
+      label: "只有后半段冒险岛（21:16 起）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 

@@ -545,6 +545,11 @@
         kind: replay
         status: alive
         account: bili-fan-kid-replay
+      - url: "https://www.bilibili.com/video/BV16Dbo6iE4t"
+        kind: replay
+        account: bili-fan-heiji
+        status: alive
+        label: "P1 纯净版，P2 弹幕版"
     note: "自动采集候选经人工审批新建（组 9bed278d-20bd-4d14-a8f2-7a8ae54ec8c0）。"
     contributed_by: collection-review
 

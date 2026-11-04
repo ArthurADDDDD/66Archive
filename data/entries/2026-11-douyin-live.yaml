@@ -16,6 +16,29 @@
       kind: replay
       account: bili-fan-kid-replay
       status: alive
+      label: "晚场，从 19:44 开始录"
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-01-live-02
+  type: live
+  date: "2026-11-01"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 229
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/79235dabfb00e052c03bc6e91abe289cfb7aa8b1.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1yjxx6mEiu"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+      label: "中午场，从 11:38 开始录"
+      note: "这天中午 11:17 开播、15:06 下播；录像从 11:38 开始，开头约 20 分钟没有录到。同一天晚上 19:44 起的那场是 2026-11-01-live-01。"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -36,5 +59,27 @@
       kind: replay
       account: bili-fan-kid-replay
       status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-02-live-02
+  type: live
+  date: "2026-11-02"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 260
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/6549ef88ed480e434cf1cd80b92af68f4fd4c615.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1Ru4K6yEns"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+      label: "晚场，标题写的是下播日 11 月 3 日"
+      note: "这场 11-02 19:59 开播、11-03 00:19 下播，录像分 P 从 20:00 开始。"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
