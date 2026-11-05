@@ -99,7 +99,37 @@
   sources:
     - url: "https://www.bilibili.com/video/BV17yxX65EvM"
       kind: replay
+      status: alive
       account: bili-fan-heiji
+    - url: "https://www.bilibili.com/video/BV1NQxd6KEkc"
+      kind: replay
+      status: alive
+      account: bili-fan-kid-replay
+      cover: "http://i0.hdslb.com/bfs/archive/4a1cdf8914e1604606225220fda398d62af482f5.jpg"
+      parts: 4
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-05-live-01
+  type: live
+  date: "2026-11-05"
+  title: "塞尔达传说 时之笛 重制版 第二天 动作角色扮演游戏"
+  platform: douyin
+  duration_min: 209
+  games:
+    - the-legend-of-zelda-ocarina-of-time
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/22e71084ca54078aa66df43f1e98e9b14339a13a.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1R74h6LEiV"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1eq486CEto"
+      kind: replay
+      account: bili-fan-kid-replay
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
