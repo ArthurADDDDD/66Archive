@@ -83,3 +83,23 @@
       note: "这场 11-02 19:59 开播、11-03 00:19 下播，录像分 P 从 20:00 开始。"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-04-live-01
+  type: live
+  date: "2026-11-04"
+  title: "塞尔达传说 时之笛 重制版 首发体验 动作角色扮演游戏"
+  platform: douyin
+  duration_min: 210
+  games:
+    - the-legend-of-zelda-ocarina-of-time
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/57ee28838125038b5220b57c7ef7481f36edd512.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV17yxX65EvM"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
