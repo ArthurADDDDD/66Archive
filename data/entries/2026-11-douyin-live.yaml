@@ -133,3 +133,23 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-06-live-01
+  type: live
+  date: "2026-11-06"
+  title: "塞尔达传说 时之笛 重制版 第三天 动作角色扮演游戏"
+  platform: douyin
+  duration_min: 204
+  games:
+    - the-legend-of-zelda-ocarina-of-time
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/dd83414f9826ca9b06560b8e9ddd1b4e118f40d9.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1w74z6EENN"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
