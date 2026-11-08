@@ -169,7 +169,13 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1ze4p6aEb6"
       kind: replay
-      account: bili-fan-heiji
       status: alive
+      account: bili-fan-heiji
+    - url: "https://www.bilibili.com/video/BV1of4W6PE5Q"
+      kind: replay
+      status: alive
+      account: bili-fan-kid-replay
+      cover: "http://i1.hdslb.com/bfs/archive/0a2b9a8f626ab56d4b459469f13992d363e11ec1.jpg"
+      parts: 3
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
