@@ -179,3 +179,28 @@
       parts: 3
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-09-live-01
+  type: live
+  date: "2026-11-09"
+  title: "塞尔达传说 时之笛 重制版 第五天 影之刃零郑州线下活动复盘"
+  platform: douyin
+  duration_min: 216
+  games:
+    - phantom-blade-zero
+    - the-legend-of-zelda-ocarina-of-time
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/3b24097d13c664c256ef70f7b1f2deb912107731.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1vbW86ME2p"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1EzWb6kET2"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
