@@ -31,7 +31,8 @@ const SEO_AUDIT_CRAWLERS = ['SemrushBot', 'AhrefsBot', 'DotBot', 'MJ12bot', 'BLE
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: '*', allow: '/', disallow: ['/api/', '/admin'] },
+      // 显式放行站点状态接口（自动抓取需要读取）。Allow 比 /api/ 的 Disallow 更具体，按最长匹配生效。
+      { userAgent: '*', allow: ['/', '/api/content/stream-status'], disallow: ['/api/', '/admin'] },
       { userAgent: SEO_AUDIT_CRAWLERS, disallow: '/' },
     ],
     // 这里是文件不是页面，所以直接拼 origin：`siteUrl()` 会给页面路径补尾斜杠。
