@@ -279,7 +279,7 @@ function HeroEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; acc
   return (
     <div className="group">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 flex-wrap items-baseline gap-x-2 gap-y-1 text-meta uppercase tracking-[0.16em]" style={{ color: accent }}>
+        <div className="flex min-w-0 flex-wrap items-baseline gap-x-2 gap-y-1 text-[0.75rem] uppercase tracking-[0.16em]" style={{ color: accent }}>
           <span aria-hidden className="h-1.5 w-1.5 shrink-0 self-center rounded-full" style={{ background: accent }} />
           {!hideDate && <span className="font-mono normal-case tracking-normal tnum">{displayDate}</span>}
           {beat.kicker && <span>· {beat.kicker}</span>}
@@ -362,7 +362,7 @@ function ClampText({ text }: { text: string }) {
 
   return (
     <>
-      <p ref={ref} className={`text-body text-muted lg:max-w-[85%] ${open ? '' : 'max-sm:line-clamp-4'}`}>
+      <p ref={ref} className={`text-[0.9375rem] leading-[1.8] text-ink/80 sm:text-base lg:max-w-[85%] ${open ? '' : 'max-sm:line-clamp-4'}`}>
         {text}
       </p>
       {(overflows || open) && (
@@ -466,7 +466,7 @@ function CompactEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; 
         style={{ background: accent }}
       />
       {showMeta && (
-        <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-meta tracking-[0.12em]" style={{ color: accent }}>
+        <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.75rem] tracking-[0.12em]" style={{ color: accent }}>
           {!hideDate && <span className="font-mono tracking-normal tnum">{displayDate}</span>}
           {beat.kicker && <span>{!hideDate && '· '}{beat.kicker}</span>}
           {beat.important && <MilestoneBadge accent={accent} compact />}
@@ -491,7 +491,7 @@ function CompactEvent({ beat, accent, hideDate = false }: { beat: ResolvedBeat; 
           </>
         )}
       </span>
-      {summary && <span className="mt-1 block text-meta leading-relaxed text-muted line-clamp-2 sm:text-body lg:max-w-[85%]">{summary}</span>}
+      {summary && <span className="mt-1 block text-[0.875rem] leading-relaxed text-ink/75 line-clamp-2 sm:text-[0.9375rem] lg:max-w-[85%]">{summary}</span>}
     </>
   )
 }
