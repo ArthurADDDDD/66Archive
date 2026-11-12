@@ -25,6 +25,11 @@ export const BGM_VISITED_KEY = 'chronicle-66-bgm-visited'
 export const BGM_LAST_KEY = 'chronicle-66-bgm-last'
 /** 用户主动暂停的记忆：同一设备之后翻页、刷新都保持暂停，直到用户再次手动播放 */
 export const BGM_OFF_KEY = 'chronicle-66-bgm-off'
+/**
+ * 用户主动打开的记忆。音乐默认不响：只有用户自己按过播放（或换一首），
+ * 同一设备之后翻页、刷新才会在首次手势后续上。
+ */
+export const BGM_ON_KEY = 'chronicle-66-bgm-on'
 /** 背景音就该是背景：压低音量，别盖过用户自己在放的东西。 */
 export const BGM_VOLUME = 0.32
 

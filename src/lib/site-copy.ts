@@ -629,6 +629,7 @@ export const SITE_COPY: SiteCopy = {
     { id: 'site-update-notice-region', group: '全站 · 更新提醒', label: '内容区域名称', text: '近期功能更新' },
     { id: 'site-update-notice-once', group: '全站 · 更新提醒', label: '底部提示', text: '只提醒这一次' },
     { id: 'site-update-notice-history', group: '全站 · 更新提醒', label: '查看历史按钮', text: '查看全部历史 ↗' },
+    { id: 'site-update-notice-pill', group: '全站 · 更新提醒', label: '收起时的小角标', text: '网站有新变化' },
     { id: 'privacy-back', group: '隐私说明', label: '返回首页', text: '← 回到首页' },
     { id: 'privacy-updated', group: '隐私说明', label: '更新日期', text: '更新于 2026 年 10 月 18 日 · 开播提醒服务' },
     { id: 'privacy-title', group: '隐私说明', label: '主标题', text: '你的信息，只用来提醒开播。' },

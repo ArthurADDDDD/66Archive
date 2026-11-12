@@ -15,8 +15,10 @@ import {
 } from '@/lib/update-notice'
 
 /**
- * Recent feature highlights are shown once per browser version.
- * Mobile is a centered dismissible dialog; desktop keeps a non-blocking card.
+ * Recent feature highlights are announced once per browser version.
+ * Visitors first get a small pill above the music button, so nothing covers the page;
+ * tapping it opens the full card (mobile: centered dialog, desktop: non-blocking card).
+ * The live-edit preview opens the card directly.
  * Full history lives on /updates/ and opens in a separate tab.
  */
 export function UpdateNotice() {
@@ -25,6 +27,7 @@ export function UpdateNotice() {
   const closeLabel = useSiteText('site-update-notice-close')
   const regionLabel = useSiteText('site-update-notice-region')
   const [notice, setNotice] = useState<UpdateNoticeData | null>(null)
+  const [expanded, setExpanded] = useState(false)
   const [mobile, setMobile] = useState(false)
   const cardRef = useRef<HTMLElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
@@ -63,6 +66,7 @@ export function UpdateNotice() {
 
     const timer = window.setTimeout(() => {
       setNotice(next)
+      setExpanded(liveEditing)
       // A preview must not count as a visitor seeing the release announcement.
       if (!liveEditing) {
         try {
@@ -77,7 +81,7 @@ export function UpdateNotice() {
 
   // Only the mobile version blocks the background. Restore scroll and focus on close.
   useEffect(() => {
-    if (!notice || !mobile) return
+    if (!notice || !mobile || !expanded) return
     const previousFocus = document.activeElement
     const originalOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -86,9 +90,32 @@ export function UpdateNotice() {
       document.body.style.overflow = originalOverflow
       if (previousFocus instanceof HTMLElement) previousFocus.focus()
     }
-  }, [notice, mobile])
+  }, [notice, mobile, expanded])
 
   if (!notice || pathname === '/updates' || pathname?.startsWith('/updates/')) return null
+
+  if (!expanded) {
+    return (
+      <div className="ui-sheet-in fixed bottom-[4.25rem] left-4 z-40 flex items-center rounded-full border border-live/40 bg-surface/90 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur sm:bottom-[5.5rem] sm:left-8">
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          className="ui-press flex min-h-9 items-center gap-2 rounded-l-full pl-3.5 pr-2 text-meta text-ink hover:text-live focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+        >
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-live" />
+          <SiteText id="site-update-notice-pill" />
+        </button>
+        <button
+          type="button"
+          onClick={() => setNotice(null)}
+          aria-label={closeLabel}
+          className="ui-press flex h-9 w-9 items-center justify-center rounded-r-full text-muted hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-live"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+    )
+  }
 
   function onCardKeyDown(event: KeyboardEvent<HTMLElement>) {
     if (event.key === 'Escape') {

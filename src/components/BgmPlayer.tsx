@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { BGM_OFF_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
+import { BGM_OFF_KEY, BGM_ON_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
 import { trackSiteEvent } from '@/lib/site-analytics'
 
 /**
@@ -10,12 +10,10 @@ import { trackSiteEvent } from '@/lib/site-analytics'
  *
  * 1. **离开就停**：切标签页、切到别的应用、锁屏——一律暂停，回来再续上。
  *    这是个视频索引站，用户点开外站视频后老标签页不该还在自己哼。
- * 2. **交互前不碰音频网络**：`preload="none"`，首次正常用户手势到来后才起播。
- * 3. **关了就别再响**：用户手动暂停后写进 localStorage；同一设备之后翻页、刷新都保持暂停，
- *    直到用户再次手动播放或换一首。
- *
- * 浏览器不允许「带声音的自动播放」——首次进站的自动播放大概率被拦，
- * 因此先挂手势监听再尝试播放，用户第一次点/按/触屏时无缝补上。
+ * 2. **默认不响**：没按过播放的访客，点页面上任何东西都不会带出音乐。
+ *    用户自己按过播放（或换一首）后写进 localStorage，同一设备之后翻页、刷新
+ *    才会在首次手势后续上；`preload="none"`，交互前不碰音频网络。
+ * 3. **关了就别再响**：用户手动暂停后清掉「打开」记忆，直到再次手动播放或换一首。
  */
 export function BgmPlayer() {
   const pathname = usePathname()
@@ -96,13 +94,13 @@ function SiteBgmPlayer() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTrack(picked)
 
-    let off = false
+    let on = false
     try {
-      off = window.localStorage.getItem(BGM_OFF_KEY) === '1'
+      on = window.localStorage.getItem(BGM_ON_KEY) === '1'
     } catch {
-      // 隐私模式下记不住暂停偏好；这次仍按默认自动播放处理。
+      // 隐私模式下记不住偏好；按默认不响处理。
     }
-    wantsRef.current = !off
+    wantsRef.current = on
   }, [])
 
   // 监听首次正常手势，让 iOS 的 play() 直接发生在手势调用栈里。
@@ -205,6 +203,7 @@ function SiteBgmPlayer() {
     playAfterTrackChangeRef.current = true
     try {
       window.localStorage.removeItem(BGM_OFF_KEY)
+      window.localStorage.setItem(BGM_ON_KEY, '1')
     } catch {
       // 记不住不影响这次切歌
     }
@@ -220,6 +219,7 @@ function SiteBgmPlayer() {
       wantsRef.current = true
       try {
         window.localStorage.removeItem(BGM_OFF_KEY)
+        window.localStorage.setItem(BGM_ON_KEY, '1')
       } catch {
         // 存不下不影响这一次播放
       }
@@ -230,6 +230,7 @@ function SiteBgmPlayer() {
       el.pause()
       try {
         window.localStorage.setItem(BGM_OFF_KEY, '1')
+        window.localStorage.removeItem(BGM_ON_KEY)
       } catch {
         // 这一次先停下；记不住就只影响这次浏览。
       }
