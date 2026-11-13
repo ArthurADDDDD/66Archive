@@ -274,3 +274,27 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-13-live-01
+  type: live
+  date: "2026-11-13"
+  title: "塞尔达传说 时之笛 重制版 第九天 今日通关大结局"
+  platform: douyin
+  duration_min: 191
+  games:
+    - the-legend-of-zelda-ocarina-of-time
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/dac79f60506faa8ee67d50d609de91a2eb7fa159.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1qrWB6wEir"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1qkW66uExT"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
