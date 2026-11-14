@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { BGM_OFF_KEY, BGM_ON_KEY, BGM_VOLUME, nextTrack, pickTrack, type BgmTrack } from '@/lib/bgm'
 import { trackSiteEvent } from '@/lib/site-analytics'
@@ -18,10 +18,10 @@ import { trackSiteEvent } from '@/lib/site-analytics'
 export function BgmPlayer() {
   const pathname = usePathname()
   if (pathname === '/live-alerts' || pathname?.startsWith('/live-alerts/') || pathname === '/updates' || pathname?.startsWith('/updates/')) return null
-  return <SiteBgmPlayer />
+  return <SiteBgmPlayer pathname={pathname} />
 }
 
-function SiteBgmPlayer() {
+function SiteBgmPlayer({ pathname }: { pathname: string | null }) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [track, setTrack] = useState<BgmTrack | null>(null)
   const [playing, setPlaying] = useState(false)
@@ -38,6 +38,67 @@ function SiteBgmPlayer() {
   const fadeRef = useRef<number | null>(null)
   /** 同一时刻只留一个 play() promise；慢网下连点不会叠出多轮起播请求。 */
   const playAttemptRef = useRef<Promise<boolean> | null>(null)
+
+  const dockRef = useRef<HTMLDivElement>(null)
+
+  /**
+   * 音乐按钮平时固定在视口左下角；滚到页脚时，改为沿着页脚上沿一起上移，
+   * 而不是浮在页脚文字上。向上滚动离开页脚后自动回到原本的底部间距。
+   *
+   * 不改动播放器的播放状态，也不把它放进带入场 transform 的页面容器里：
+   * 那会让 position: fixed 失去相对视口定位的能力。
+   */
+  useLayoutEffect(() => {
+    const dock = dockRef.current
+    if (!dock) return
+
+    let frame = 0
+    let observedFooter: HTMLElement | null = null
+
+    function position() {
+      frame = 0
+      // 回调运行时重新取 ref，确保 TypeScript 和卸载期间都能安全处理。
+      const dock = dockRef.current
+      if (!dock) return
+      // 只认共享的站点页脚；其他组件（如弹窗）自己的 footer 不参与避让。
+      const footer = document.querySelector<HTMLElement>('footer[data-site-footer]')
+      if (footer !== observedFooter) {
+        if (observedFooter) resizeObserver.unobserve(observedFooter)
+        if (footer) resizeObserver.observe(footer)
+        observedFooter = footer
+      }
+
+      // 与原来的 bottom-5 / sm:bottom-8 完全一致。
+      const normalBottom = window.matchMedia('(min-width: 640px)').matches ? 32 : 20
+      const footerTop = footer?.getBoundingClientRect().top
+      const bottom = footerTop === undefined
+        ? normalBottom
+        : Math.max(normalBottom, Math.ceil(window.innerHeight - footerTop + 16))
+
+      // 直接更新定位，不让滚动中的每一帧重新渲染音频组件。
+      dock.style.bottom = `${bottom}px`
+    }
+
+    function schedulePosition() {
+      if (frame === 0) frame = window.requestAnimationFrame(position)
+    }
+
+    // 懒加载区块展开 / 字体尺寸变化可能把页脚推走；不应等到用户再滚动才修正。
+    const resizeObserver = new ResizeObserver(schedulePosition)
+    resizeObserver.observe(document.body)
+    position()
+    window.addEventListener('scroll', schedulePosition, { passive: true })
+    window.addEventListener('resize', schedulePosition)
+    window.visualViewport?.addEventListener('resize', schedulePosition)
+
+    return () => {
+      window.removeEventListener('scroll', schedulePosition)
+      window.removeEventListener('resize', schedulePosition)
+      window.visualViewport?.removeEventListener('resize', schedulePosition)
+      resizeObserver.disconnect()
+      if (frame !== 0) window.cancelAnimationFrame(frame)
+    }
+  }, [pathname, track])
 
   /** 淡入到目标音量：突然炸响比没有音乐更糟 */
   const fadeIn = useCallback(() => {
@@ -263,7 +324,7 @@ function SiteBgmPlayer() {
         <source src={track.m4a} type="audio/mp4; codecs=mp4a.40.2" />
       </audio>
 
-      <div className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/70 bg-surface/70 opacity-45 backdrop-blur transition-opacity hover:opacity-100 focus-within:opacity-100 sm:bottom-8 sm:left-8">
+      <div ref={dockRef} className="group fixed bottom-5 left-4 z-40 flex items-center overflow-hidden rounded-full border border-line/70 bg-surface/70 opacity-45 backdrop-blur transition-opacity hover:opacity-100 focus-within:opacity-100 sm:bottom-8 sm:left-8">
         <button
           type="button"
           data-bgm-control
