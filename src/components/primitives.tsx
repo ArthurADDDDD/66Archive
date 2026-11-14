@@ -161,6 +161,7 @@ export function ArchiveRow({
 export function SiteFooter() {
   return (
     <footer
+      data-site-footer
       className="site-container flex flex-col justify-between gap-4 px-page py-10 text-meta text-faint sm:flex-row"
     >
       <span className="measure-body">
