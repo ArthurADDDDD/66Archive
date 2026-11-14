@@ -57,6 +57,9 @@ function SiteBgmPlayer({ pathname }: { pathname: string | null }) {
 
     function position() {
       frame = 0
+      // 回调运行时重新取 ref，确保 TypeScript 和卸载期间都能安全处理。
+      const dock = dockRef.current
+      if (!dock) return
       // 只认共享的站点页脚；其他组件（如弹窗）自己的 footer 不参与避让。
       const footer = document.querySelector<HTMLElement>('footer[data-site-footer]')
       if (footer !== observedFooter) {
