@@ -297,3 +297,27 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-14-live-01
+  type: live
+  date: "2026-11-14"
+  title: "深空当铺 可能是偷的 正式版第二天 老实赚钱很枯燥吧"
+  platform: douyin
+  duration_min: 214
+  games:
+    - shenkongdangpu
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/5b4cdadda7dc27fb1c30c941f544c534e1f131cb.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1EnsV6YETa"
+      kind: replay
+      account: bili-fan-heiji
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1J7sV6vEh8"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
