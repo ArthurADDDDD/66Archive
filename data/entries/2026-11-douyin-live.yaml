@@ -365,3 +365,21 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-18-live-02
+  type: live
+  date: "2026-11-18"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 164
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/bd274361d5dfbb994bf63a88c28e450550f66e9d.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1zCsD6GEk1"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "第二场判定：这天 23:18 开播、02:02 下播，录像分 P 从 23:18 开始；同日 18:20 起的那场是 2026-11-18-live-01。 依据录播来源复核收录。"
+  contributed_by: collection-review
