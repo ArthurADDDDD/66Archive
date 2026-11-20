@@ -365,6 +365,7 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+  games: [grand-theft-auto-vi]
 
 - id: 2026-11-18-live-02
   type: live
@@ -382,4 +383,45 @@
       account: bili-fan-kid-replay
       status: alive
   note: "第二场判定：这天 23:18 开播、02:02 下播，录像分 P 从 23:18 开始；同日 18:20 起的那场是 2026-11-18-live-01。 依据录播来源复核收录。"
+  contributed_by: collection-review
+  games: [grand-theft-auto-vi]
+
+- id: 2026-11-19-live-01
+  type: live
+  date: "2026-11-19"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 251
+  games:
+    - grand-theft-auto-vi
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/e8fbbba1c2e6f76b671c865469abe75925fc229f.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV15isb6BEoX"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-03-live-01
+  type: live
+  date: "2026-11-03"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 150
+  games:
+    - phantom-blade-zero
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/bbda36073c5dd590cf6cac10e3195ee12b7d667c.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1AmxQ6pEc7"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "录像只保留了开播 20 秒和 21:50 之后约 29 分钟，中间约两小时缺失；时长按本站开播观测 19:49–22:18 记。 依据录播来源复核收录。"
   contributed_by: collection-review
