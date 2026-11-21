@@ -445,3 +445,39 @@
       status: alive
   note: "时长按本站开播观测 18:42–00:14 记；录像仍在分 P 续传。 第二场判定：这天 18:42 开播、次日 00:14 下播，录像分 P 从 18:43 开始；同日 11:18 起的那场是 2026-11-19-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-20-live-01
+  type: live
+  date: "2026-11-20"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 204
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/a28c2187014c8594b4837dea4a1c074ea3d1fa7f.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV16byszvEmn"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-20-live-02
+  type: live
+  date: "2026-11-20"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 222
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/00be488e4e7a7f9435dbabac0a62970d73096a29.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1x3y8zpEGy"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
