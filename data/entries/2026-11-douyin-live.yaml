@@ -525,3 +525,23 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-24-live-01
+  type: live
+  date: "2026-11-24"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 196
+  games:
+    - grand-theft-auto-vi
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/dd7d67e3cb696b79c9de22db953c90fde30bdf71.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1QE1AzdEeq"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
