@@ -289,12 +289,30 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1qrWB6wEir"
       kind: replay
-      account: bili-fan-heiji
       status: alive
+      account: bili-fan-heiji
     - url: "https://www.bilibili.com/video/BV1qkW66uExT"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1eUWB64EFF"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i1.hdslb.com/bfs/archive/055a109826ab931c6fd246344824e9b9c7fa295a.jpg"
+      parts: 4
+    - url: "https://www.bilibili.com/video/BV1BzWB6YEhD"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i2.hdslb.com/bfs/archive/e464ad83ac212b62d98b9d47a50da3c151ca0469.jpg"
+      parts: 4
+    - url: "https://www.bilibili.com/video/BV1dcWB6bER9"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover: "http://i0.hdslb.com/bfs/archive/f54764a2c6c52382f0eb9d9e54529c831b5c4e43.jpg"
+      parts: 5
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -313,12 +331,30 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1EnsV6YETa"
       kind: replay
-      account: bili-fan-heiji
       status: alive
+      account: bili-fan-heiji
     - url: "https://www.bilibili.com/video/BV1J7sV6vEh8"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1V8sV64EyA"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/3d7f77922e48f4b4069e67a4e5d0df3b8e5fa4f4.jpg"
+      parts: 5
+    - url: "https://www.bilibili.com/video/BV1VhsV6dEwS"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/2afbf2529f7c292671afa847f641dea587a831a6.jpg"
+      parts: 5
+    - url: "https://www.bilibili.com/video/BV1aesV69ERy"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover: "http://i1.hdslb.com/bfs/archive/7e920b0383856e81a41803bd9fbfed01190cf905.jpg"
+      parts: 4
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -345,6 +381,24 @@
       account: bili-fan-heiji
       cover: "http://i0.hdslb.com/bfs/archive/1f79f49d98a2aac41a49a8642ad991e6fc3ff001.jpg"
       parts: 4
+    - url: "https://www.bilibili.com/video/BV1NMss63EKu"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i1.hdslb.com/bfs/archive/ef4f7c3c282e510baf5f04e109e576cbf8458f3a.jpg"
+      parts: 4
+    - url: "https://www.bilibili.com/video/BV1KKss6kEaG"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i1.hdslb.com/bfs/archive/9100667cff33d1417614b4744cd3cd0c323a3b6f.jpg"
+      parts: 4
+    - url: "https://www.bilibili.com/video/BV1bFss62E1e"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover: "http://i0.hdslb.com/bfs/archive/b590ebf7dc2cfce248406bd75ba0955ef1af979e.jpg"
+      parts: 5
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -361,8 +415,37 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1vXsU6tEHB"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1b2sS6HEtG?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-18_18_20_33_女流66"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-18_19_20_34_女流66"
+          duration_sec: 1035
+      label: "P1–P2 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1s5sS6VEWa?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "18:21 开播等待"
+          duration_sec: 2353
+        - page: 2
+          title: "19:00 进游戏"
+          duration_sec: 1248
+        - page: 3
+          title: "19:21"
+          duration_sec: 1007
+      label: "P1–P3 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
   games: [grand-theft-auto-vi]
@@ -380,8 +463,59 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1zCsD6GEk1"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1b2sS6HEtG?p=3"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-18_23_17_14_女流66"
+          duration_sec: 3602
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_00_17_14_女流66"
+          duration_sec: 3600
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_01_17_14_女流66"
+          duration_sec: 2714
+      label: "P3–P5 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1s5sS6VEWa?p=4"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 4
+          title: "23:18"
+          duration_sec: 3596
+        - page: 5
+          title: "00:18"
+          duration_sec: 1230
+        - page: 6
+          title: "00:38"
+          duration_sec: 3609
+        - page: 7
+          title: "01:38"
+          duration_sec: 1422
+      label: "P4–P7 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1pLsS6kEWw?p=2"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-18_23_17_14_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_00_17_14_女流66_弹幕版"
+          duration_sec: 3600
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_01_17_14_女流66_弹幕版"
+          duration_sec: 2714
+      label: "P2–P4 是这场（弹幕版）"
   note: "第二场判定：这天 23:18 开播、02:02 下播，录像分 P 从 23:18 开始；同日 18:20 起的那场是 2026-11-18-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
   games: [grand-theft-auto-vi]
@@ -401,8 +535,83 @@
   sources:
     - url: "https://www.bilibili.com/video/BV15isb6BEoX"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1Zss46TEt2?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_11_18_30_女流66"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_12_18_29_女流66"
+          duration_sec: 353
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_12_26_06_女流66"
+          duration_sec: 3601
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_13_27_39_女流66"
+          duration_sec: 3601
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_14_27_39_女流66"
+          duration_sec: 3601
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_15_27_39_女流66"
+          duration_sec: 310
+      label: "P1–P6 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1JJs46rEQc?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_11_18_30_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_12_18_29_女流66_弹幕版"
+          duration_sec: 353
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_12_26_06_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_13_27_39_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_14_27_39_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_15_27_39_女流66_弹幕版"
+          duration_sec: 310
+      label: "P1–P6 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1wws86DESa?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "11:19"
+          duration_sec: 3603
+        - page: 2
+          title: "12:19"
+          duration_sec: 297
+        - page: 3
+          title: "12:27"
+          duration_sec: 3604
+        - page: 4
+          title: "13:27"
+          duration_sec: 3601
+        - page: 5
+          title: "14:27"
+          duration_sec: 2026
+        - page: 6
+          title: "15:01"
+          duration_sec: 1903
+      label: "P1–P6 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -441,8 +650,54 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1tqsa6eEga"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1Zss46TEt2?p=7"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 7
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_18_42_55_女流66"
+          duration_sec: 3602
+        - page: 8
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_19_42_56_女流66"
+          duration_sec: 3601
+        - page: 9
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_20_42_56_女流66"
+          duration_sec: 3600
+      label: "P7–P9 是这场前半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1JJs46rEQc?p=7"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 7
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_18_42_55_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 8
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_19_42_56_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 9
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-19_20_42_56_女流66_弹幕版"
+          duration_sec: 3599
+      label: "P7–P9 是这场前半（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1AtsY68EVX"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/12a7aa3e063fe0374d8227b35ab8559fcf54f2a9.jpg"
+      parts: 3
+      label: "这场的后半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV16Xsa6WEwE"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/ffbc0e8c8e9f5a2b8cd1bf606491084413872dc1.jpg"
+      parts: 3
+      label: "这场的后半（弹幕版）"
   note: "时长按本站开播观测 18:42–00:14 记；录像仍在分 P 续传。 第二场判定：这天 18:42 开播、次日 00:14 下播，录像分 P 从 18:43 开始；同日 11:18 起的那场是 2026-11-19-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -461,8 +716,65 @@
   sources:
     - url: "https://www.bilibili.com/video/BV16byszvEmn"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1jmsq6AEFy?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_11_38_06_女流66"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_12_38_04_女流66"
+          duration_sec: 3602
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_13_38_06_女流66"
+          duration_sec: 3599
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_14_38_04_女流66"
+          duration_sec: 1427
+      label: "P1–P4 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1fksq6vEZu?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_11_38_06_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_12_38_04_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_13_38_06_女流66_弹幕版"
+          duration_sec: 3599
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_14_38_04_女流66_弹幕版"
+          duration_sec: 1427
+      label: "P1–P4 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1Frsq6TE2X?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "11:39 开播 第二章"
+          duration_sec: 3595
+        - page: 2
+          title: "12:39"
+          duration_sec: 3602
+        - page: 3
+          title: "13:39"
+          duration_sec: 3601
+        - page: 4
+          title: "14:39"
+          duration_sec: 1389
+      label: "P1–P4 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -481,8 +793,56 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1x3y8zpEGy"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1jmsq6AEFy?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_19_11_42_女流66"
+          duration_sec: 3602
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_20_11_41_女流66"
+          duration_sec: 3599
+        - page: 7
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_21_11_39_女流66"
+          duration_sec: 3600
+      label: "P5–P7 是这场前半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1fksq6vEZu?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_19_11_42_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_20_11_41_女流66_弹幕版"
+          duration_sec: 3599
+        - page: 7
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-20_21_11_39_女流66_弹幕版"
+          duration_sec: 3600
+      label: "P5–P7 是这场前半（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1Frsq6TE2X?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "19:12 开播"
+          duration_sec: 1002
+        - page: 6
+          title: "19:29"
+          duration_sec: 3597
+        - page: 7
+          title: "20:29~23:56 第二章~第三章"
+          duration_sec: 8739
+      label: "P5–P7 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -501,8 +861,65 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1zMygzXEuP"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1p7y8zEEjS?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_11_45_43_女流66"
+          duration_sec: 3602
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_12_45_44_女流66"
+          duration_sec: 3601
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_13_45_44_女流66"
+          duration_sec: 3599
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_14_45_43_女流66"
+          duration_sec: 2970
+      label: "P1–P4 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1HEy8zmEbo?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_11_45_43_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_12_45_44_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_13_45_44_女流66_弹幕版"
+          duration_sec: 3599
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_14_45_43_女流66_弹幕版"
+          duration_sec: 2970
+      label: "P1–P4 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1Viy8zKEJo?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "11:46 开播"
+          duration_sec: 3602
+        - page: 2
+          title: "12:46"
+          duration_sec: 3601
+        - page: 3
+          title: "13:46"
+          duration_sec: 3601
+        - page: 4
+          title: "14:46"
+          duration_sec: 2932
+      label: "P1–P4 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -521,8 +938,67 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1z9y5zBE8y"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1p7y8zEEjS?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_20_04_25_女流66"
+          duration_sec: 3601
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_21_04_24_女流66"
+          duration_sec: 3600
+      label: "P5–P6 是这场前半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1HEy8zmEbo?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_20_04_25_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-21_21_04_24_女流66_弹幕版"
+          duration_sec: 3600
+      label: "P5–P6 是这场前半（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1Viy8zKEJo?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20:05 开播"
+          duration_sec: 3604
+        - page: 6
+          title: "21:05"
+          duration_sec: 3602
+        - page: 7
+          title: "22:05"
+          duration_sec: 3601
+        - page: 8
+          title: "23:05"
+          duration_sec: 2392
+      label: "P5–P8 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1fTyYzQEjD"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i1.hdslb.com/bfs/archive/cddb64f4d9c53590a49a6e04865b39638d5c1853.jpg"
+      parts: 2
+      label: "这场的后半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1UtyYzMEBd"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/305e19ada86809f4c7ba77d51dd69d9b16f5b142.jpg"
+      parts: 2
+      label: "这场的后半（弹幕版）"
   note: "第二场判定：这天 20:05 开播、23:45 下播，录像分 P 从 20:05 开始；同日 11:45 起的那场是 2026-11-21-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -541,8 +1017,68 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1LVyJz3EEt"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV14Vy3zuEPX?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_12_09_07_女流66"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_13_09_08_女流66"
+          duration_sec: 3601
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_14_09_09_女流66"
+          duration_sec: 3600
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_15_09_08_女流66"
+          duration_sec: 1431
+      label: "P1–P4 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1gPy3zLEWY?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_12_09_07_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_13_09_08_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_14_09_09_女流66_弹幕版"
+          duration_sec: 3600
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_15_09_08_女流66_弹幕版"
+          duration_sec: 1431
+      label: "P1–P4 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV18My3zkEBB?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "12:09"
+          duration_sec: 3601
+        - page: 2
+          title: "13:09"
+          duration_sec: 1015
+        - page: 3
+          title: "13:29"
+          duration_sec: 2389
+        - page: 4
+          title: "14:09"
+          duration_sec: 3601
+        - page: 5
+          title: "15:09"
+          duration_sec: 1414
+      label: "P1–P5 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -561,10 +1097,9 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1gPy3zLEWY?p=5"
       kind: replay
-      account: bili-fan-clean-replay
       status: alive
+      account: bili-fan-clean-replay
       cover_unreliable: true
-      label: "P5–P7 是这场（弹幕版）"
       part_details:
         - page: 5
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_19_34_51_女流66_弹幕版"
@@ -575,17 +1110,17 @@
         - page: 7
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_21_34_50_女流66_弹幕版"
           duration_sec: 3601
+      label: "P5–P7 是这场（弹幕版）"
     - url: "https://www.bilibili.com/video/BV1upy7z4EF7"
       kind: replay
-      account: bili-fan-clean-replay
       status: alive
+      account: bili-fan-clean-replay
       label: "22:34 起的结尾（弹幕版）"
     - url: "https://www.bilibili.com/video/BV14Vy3zuEPX?p=5"
       kind: replay
-      account: bili-fan-clean-replay
       status: alive
+      account: bili-fan-clean-replay
       cover_unreliable: true
-      label: "P5–P8 是这场（纯净版）"
       part_details:
         - page: 5
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_19_34_51_女流66"
@@ -599,6 +1134,20 @@
         - page: 8
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-22_22_34_50_女流66"
           duration_sec: 2382
+      label: "P5–P8 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV18My3zkEBB?p=6"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 6
+          title: "19:36~22:06"
+          duration_sec: 9001
+        - page: 7
+          title: "22:07~23:14"
+          duration_sec: 4083
+      label: "P6–P7 是这场（弹幕版）"
   note: "第二场判定：这天 19:35 开播、23:14 下播，录像分 P 从 19:34 开始；同日 12:09 起的那场是 2026-11-22-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -617,14 +1166,13 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1doyHzUEN6"
       kind: replay
-      account: bili-fan-clean-replay
       status: alive
+      account: bili-fan-clean-replay
     - url: "https://www.bilibili.com/video/BV1o9yHzDE9c?p=1"
       kind: replay
-      account: bili-fan-clean-replay
       status: alive
+      account: bili-fan-clean-replay
       cover_unreliable: true
-      label: "P1–P4 是这场（纯净版）"
       part_details:
         - page: 1
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-23_11_36_20_女流66"
@@ -638,6 +1186,26 @@
         - page: 4
           title: "20亿美元开发的游戏，GTA6他来了_2026-11-23_14_36_18_女流66"
           duration_sec: 1980
+      label: "P1–P4 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1T5ypzMEQz?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "11:36 开播"
+          duration_sec: 3603
+        - page: 2
+          title: "12:36"
+          duration_sec: 3601
+        - page: 3
+          title: "13:36"
+          duration_sec: 3601
+        - page: 4
+          title: "14:36"
+          duration_sec: 1969
+      label: "P1–P4 是这场（弹幕版）"
   note: "这天 11:36 开播、15:09 下播，是当天较早的一场；同日 21:30 起的晚场是 2026-11-23-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -656,8 +1224,50 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1WXyXzXEsY"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1o9yHzDE9c?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-23_21_30_13_女流66"
+          duration_sec: 3602
+      label: "P5 是这场前半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1T5ypzMEQz?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "21:31 开播"
+          duration_sec: 2951
+        - page: 6
+          title: "22:20"
+          duration_sec: 648
+        - page: 7
+          title: "22:31"
+          duration_sec: 3602
+        - page: 8
+          title: "23:31~00:32"
+          duration_sec: 3677
+      label: "P5–P8 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV13FyXzFEkV"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/ff0b67bca95a32fcd39056ffa7fae509c5adf24a.jpg"
+      parts: 4
+    - url: "https://www.bilibili.com/video/BV1FzyQzCEYs"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/e0bc2a6e5265bd79e13d537d1e87bf1c4e6b1c85.jpg"
+      parts: 3
+      label: "这场的后半（纯净版）"
   note: "时长按本站开播观测 21:30–00:32 记；录像中间约 11 分钟没有录到。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -676,8 +1286,65 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1QE1AzdEeq"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1WNyZzcEpm?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_11_58_20_女流66"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_12_58_19_女流66"
+          duration_sec: 3600
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_13_58_19_女流66"
+          duration_sec: 3600
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_14_58_18_女流66"
+          duration_sec: 958
+      label: "P1–P4 是这场（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1HTyZzfESf?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_11_58_20_女流66_弹幕版"
+          duration_sec: 3601
+        - page: 2
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_12_58_19_女流66_弹幕版"
+          duration_sec: 3600
+        - page: 3
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_13_58_19_女流66_弹幕版"
+          duration_sec: 3600
+        - page: 4
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_14_58_18_女流66_弹幕版"
+          duration_sec: 958
+      label: "P1–P4 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1WKyZz8ETQ?p=1"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 1
+          title: "11:58 开播"
+          duration_sec: 3601
+        - page: 2
+          title: "12:58"
+          duration_sec: 3602
+        - page: 3
+          title: "13:59"
+          duration_sec: 3602
+        - page: 4
+          title: "14:59"
+          duration_sec: 927
+      label: "P1–P4 是这场（弹幕版）"
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -696,8 +1363,70 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1oPyBzFE4A"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1WNyZzcEpm?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_20_15_03_女流66"
+          duration_sec: 3602
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_21_15_04_女流66"
+          duration_sec: 3601
+      label: "P5–P6 是这场前半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1HTyZzfESf?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_20_15_03_女流66_弹幕版"
+          duration_sec: 3602
+        - page: 6
+          title: "20亿美元开发的游戏，GTA6他来了_2026-11-24_21_15_04_女流66_弹幕版"
+          duration_sec: 3601
+      label: "P5–P6 是这场前半（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1WKyZz8ETQ?p=5"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover_unreliable: true
+      part_details:
+        - page: 5
+          title: "20:16 开播"
+          duration_sec: 3602
+        - page: 6
+          title: "21:16"
+          duration_sec: 3601
+        - page: 7
+          title: "22:16"
+          duration_sec: 3602
+        - page: 8
+          title: "23:16"
+          duration_sec: 3601
+        - page: 9
+          title: "00:16"
+          duration_sec: 2624
+      label: "P5–P9 是这场（弹幕版）"
+    - url: "https://www.bilibili.com/video/BV1fo1FzAEZa"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/0da122bb944d2f5450b109036a811fef4fb43e34.jpg"
+      parts: 3
+      label: "这场的后半（纯净版）"
+    - url: "https://www.bilibili.com/video/BV1ZF1czcEuh"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i2.hdslb.com/bfs/archive/00eaa8197c49aea27459d5688feb279aa2663395.jpg"
+      parts: 3
+      label: "这场的后半（弹幕版）"
   note: "时长按本站开播观测 20:15–00:59 记；录像只录到 23:15。 第二场判定：这天 20:15 开播、次日 00:59 下播，录像分 P 从 20:15 开始；同日 11:58 起的那场是 2026-11-24-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
 
@@ -839,4 +1568,30 @@
       status: alive
       label: "23:42 起的后半（纯净版）"
   note: "第二场判定：这天 20:42 开播、次日 01:28 下播（21:14 断线约 1 分钟后重连）；同日 12:57 起的那场是 2026-11-25-live-01。 依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-26-live-01
+  type: live
+  date: "2026-11-26"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 111
+  games:
+    - grand-theft-auto-vi
+  confidence: medium
+  cover: "http://i2.hdslb.com/bfs/archive/3205dde2e27bf5f76d05dc0cca31784224fe18bf.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1xxySzyEs2"
+      kind: replay
+      account: bili-fan-clean-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1bjySzDEaQ"
+      kind: replay
+      account: bili-fan-clean-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1nXyUzTEDh"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "依据录播来源复核收录。"
   contributed_by: collection-review
