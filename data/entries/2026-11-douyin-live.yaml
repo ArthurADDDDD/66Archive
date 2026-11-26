@@ -506,12 +506,12 @@
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
-- id: 2026-11-22-live-01
+- id: 2026-11-21-live-02
   type: live
-  date: "2026-11-22"
+  date: "2026-11-21"
   title: "20亿美元开发的游戏 GTA6他来了"
   platform: douyin
-  duration_min: 120
+  duration_min: 220
   games:
     - grand-theft-auto-vi
   tags:
@@ -523,7 +523,47 @@
       kind: replay
       account: bili-fan-kid-replay
       status: alive
+  note: "第二场判定：这天 20:05 开播、23:45 下播，录像分 P 从 20:05 开始；同日 11:45 起的那场是 2026-11-21-live-01。 依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-22-live-01
+  type: live
+  date: "2026-11-22"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 204
+  games:
+    - grand-theft-auto-vi
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/7df45fb243d90a89962b4f1f36a6a9361aceed10.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1LVyJz3EEt"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
   note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-23-live-01
+  type: live
+  date: "2026-11-23"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 182
+  games:
+    - grand-theft-auto-vi
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/16bad7ac9db4057aed7dd7ee2b0fd257ebd62fc7.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1WXyXzXEsY"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "时长按本站开播观测 21:30–00:32 记；录像中间约 11 分钟没有录到。 依据录播来源复核收录。"
   contributed_by: collection-review
 
 - id: 2026-11-24-live-01
@@ -544,4 +584,24 @@
       account: bili-fan-kid-replay
       status: alive
   note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-11-24-live-02
+  type: live
+  date: "2026-11-24"
+  title: "20亿美元开发的游戏 GTA6他来了"
+  platform: douyin
+  duration_min: 284
+  games:
+    - grand-theft-auto-vi
+  tags:
+    - 弹幕版
+  confidence: medium
+  cover: "http://i1.hdslb.com/bfs/archive/45a3e1d465620c4e2404a7d64a216414b0c722f2.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1oPyBzFE4A"
+      kind: replay
+      account: bili-fan-kid-replay
+      status: alive
+  note: "时长按本站开播观测 20:15–00:59 记；录像只录到 23:15。 第二场判定：这天 20:15 开播、次日 00:59 下播，录像分 P 从 20:15 开始；同日 11:58 起的那场是 2026-11-24-live-01。 依据录播来源复核收录。"
   contributed_by: collection-review
