@@ -645,8 +645,8 @@
       account: bilibili-official
       status: alive
       cover: "http://i1.hdslb.com/bfs/archive/2d3b122464f82636878c3a3e56def221a5812361.jpg"
-      label: "官方录像：P7–P8 是这场"
-      note: "女流66 本人把 10-29、10-30 四场录进同一个稿件：P1–P3 是 10-29 上午场，P4–P5 是 10-29 晚场，P6 是 10-30 中午场，P7–P8 是 10-30 晚场。2026-10-31 上午只传到 P8（约 197 分钟），晚场后段可能还在上传。"
+      label: "官方录像：P7–P9 是这场"
+      note: "女流66 本人把 10-29、10-30 四场录进同一个稿件：P1–P3 是 10-29 上午场，P4–P5 是 10-29 晚场，P6 是 10-30 中午场，P7–P9 是 10-30 晚场。之后的场次她继续追加在同一个稿件里，一直到 11-03 的 P20。"
     - url: "https://www.bilibili.com/video/BV1ALxY6aEUX"
       kind: replay
       account: bili-fan-heiji
@@ -679,5 +679,44 @@
       kind: replay
       account: bili-fan-kid-replay
       status: alive
+    - url: "https://www.bilibili.com/video/BV1uNxA6oEGJ?p=10"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      cover_unreliable: true
+      label: "官方录像：P10–P11 是这场"
+      part_details:
+        - page: 10
+          title: "2026-10-31 10点场"
+          duration_sec: 2950
+        - page: 11
+          title: "2026-10-31 11点场"
+          duration_sec: 13059
   note: "依据录播来源复核收录。"
+  contributed_by: collection-review
+
+- id: 2026-10-31-live-02
+  type: live
+  date: "2026-10-31"
+  title: "国产单机新作 影之刃零 最高难度最高画质首播"
+  platform: douyin
+  duration_min: 246
+  games:
+    - phantom-blade-zero
+  confidence: medium
+  sources:
+    - url: "https://www.bilibili.com/video/BV1uNxA6oEGJ?p=12"
+      kind: replay
+      account: bilibili-official
+      status: alive
+      cover_unreliable: true
+      label: "官方录像：P12–P13 是这场"
+      part_details:
+        - page: 12
+          title: "2026-10-31 20点场"
+          duration_sec: 3731
+        - page: 13
+          title: "2026-10-31 21点场"
+          duration_sec: 10545
+  note: "晚场（20:06 开播，跨午夜到 00:12）；同日 10:55 起的中午场是 2026-10-31-live-01。时长按本站开播观测记，官方录像 P12–P13 约 238 分钟。 依据录播来源复核收录。"
   contributed_by: collection-review
