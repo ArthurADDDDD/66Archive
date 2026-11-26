@@ -311,12 +311,30 @@
   sources:
     - url: "https://www.bilibili.com/video/BV1rNWZ6tESP"
       kind: replay
-      account: bili-fan-heiji
       status: alive
+      account: bili-fan-heiji
     - url: "https://www.bilibili.com/video/BV1GwWo6rEGp"
       kind: replay
-      account: bili-fan-kid-replay
       status: alive
+      account: bili-fan-kid-replay
+    - url: "https://www.bilibili.com/video/BV1BuWZ6dE2d"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i2.hdslb.com/bfs/archive/ef6070cf16a46be13ef63909fae7df4f0210308a.jpg"
+      parts: 5
+    - url: "https://www.bilibili.com/video/BV1BGWZ6XEdw"
+      kind: replay
+      status: alive
+      account: bili-fan-bulanbot
+      cover: "http://i2.hdslb.com/bfs/archive/376e8ffd6224337345bb4f608b64f180da696053.jpg"
+      parts: 6
+    - url: "https://www.bilibili.com/video/BV1fGWZ6XEYM"
+      kind: replay
+      status: alive
+      account: bili-fan-clean-replay
+      cover: "http://i0.hdslb.com/bfs/archive/d2a99d26e8a393388e05e5ec465a7586ea60d17c.jpg"
+      parts: 5
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
 
