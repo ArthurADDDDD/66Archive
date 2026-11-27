@@ -1669,3 +1669,26 @@
       status: alive
   note: "依据录播来源复核收录。"
   contributed_by: collection-review
+
+- id: 2026-11-27-live-01
+  type: live
+  date: "2026-11-27"
+  title: "燕云支持dlss5啦"
+  platform: douyin
+  duration_min: 314
+  games:
+    - grand-theft-auto-vi
+    - where-winds-meet
+  confidence: medium
+  cover: "http://i0.hdslb.com/bfs/archive/b4cbe1d48c7bcb7c32279e057d7ea3b141d185a5.jpg"
+  sources:
+    - url: "https://www.bilibili.com/video/BV1fS1tzrEXd"
+      kind: replay
+      account: bili-fan-clean-replay
+      status: alive
+    - url: "https://www.bilibili.com/video/BV1rC1tz2Eom"
+      kind: replay
+      account: bili-fan-clean-replay
+      status: alive
+  note: "依据录播来源复核收录。"
+  contributed_by: collection-review
