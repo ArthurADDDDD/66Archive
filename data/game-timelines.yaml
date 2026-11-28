@@ -7130,3 +7130,41 @@
     game: maplestory-classic
     precision: part
     evidence: thumbnails
+- entry: 2026-11-27-live-01
+  basis: https://www.bilibili.com/video/BV1fS1tzrEXd
+  coverage: complete
+  reviewed: '2026-11-28'
+  note: 分 P 标题写明各段游戏（P1–P4 燕云支持dlss5啦，P5–P7 gta6来啦）；P4 结束到 P5 开始之间有约 4 分钟录像空档，短于 5 分钟。
+  parts:
+  - page: 1
+    id: 43972167510
+    duration_sec: 3601
+  - page: 2
+    id: 43973675812
+    duration_sec: 3600
+  - page: 3
+    id: 43975117887
+    duration_sec: 3600
+  - page: 4
+    id: 43975377457
+    duration_sec: 632
+  - page: 5
+    id: 43976688811
+    duration_sec: 3602
+  - page: 6
+    id: 43977868172
+    duration_sec: 3600
+  - page: 7
+    id: 43978002042
+    duration_sec: 214
+  spans:
+  - page: 1
+    at: 00:00:00
+    game: where-winds-meet
+    precision: part
+    evidence: part_title
+  - page: 5
+    at: 00:00:00
+    game: grand-theft-auto-vi
+    precision: part
+    evidence: part_title
